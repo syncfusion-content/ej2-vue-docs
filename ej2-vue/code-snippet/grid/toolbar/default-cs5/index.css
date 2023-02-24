@@ -1,0 +1,8 @@
+
+ @import "https://cdn.syncfusion.com/ej2/material.css";
+.e-icons.e-collapse::before {
+  content: "\e834";
+}
+.e-icons.e-expand::before {
+  content: "\e83d";
+}
