@@ -1,4 +1,4 @@
-{% raw %}
+
 
 <template>
     <div id="app">
@@ -62,6 +62,4 @@ export default {
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 
-
-{% endraw %}
 

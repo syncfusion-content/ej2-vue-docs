@@ -140,7 +140,7 @@ Let's add the Syncfusion Vue component to the Vue application. Here, the example
 
 Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory.
 
-{% raw %}
+
 
 ```
 <template>
@@ -163,7 +163,6 @@ export default {
 </script>
 ```
 
-{% endraw %}
 
 ## Defining Row Data
 

@@ -1,4 +1,4 @@
-{% raw %}
+
 
 <template>
     <div id="app">
@@ -44,5 +44,4 @@ export default {
 </style>
 
 
-{% endraw %}
 
