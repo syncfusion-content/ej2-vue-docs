@@ -1,0 +1,16 @@
+
+  
+  
+  
+  
+    .e-search::before {
+    content: '\e993';
+    }
+
+    .e-dropdown-btn.e-custom {
+    width: 85px;
+    }
+
+    .e-dropdown-btn.e-custom .e-search::before {
+    font-size: 40px;
+    }

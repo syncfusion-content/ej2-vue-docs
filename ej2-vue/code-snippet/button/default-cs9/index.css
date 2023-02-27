@@ -1,0 +1,11 @@
+
+
+
+
+.e-setting-icon::before {
+  content: '\e434';
+}
+
+button {
+  margin: 25px 5px 20px 20px;
+}
