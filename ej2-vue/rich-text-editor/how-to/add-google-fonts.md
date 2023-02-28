@@ -14,11 +14,11 @@ To use web fonts in Rich Text Editor, it is not needed for the web fonts to be p
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs4/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs4" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs6" %}
 
 The below font style links are referred in the page.
 

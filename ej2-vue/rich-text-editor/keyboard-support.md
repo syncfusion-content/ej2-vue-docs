@@ -50,11 +50,11 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs20/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs20" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs21" %}
 
 ## Markdown formation shortcut key
 
@@ -84,11 +84,11 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs21/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs21" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs22" %}
 
 ## Custom key config
 
@@ -98,11 +98,11 @@ In the following sample, customize the cut, copy, paste toolbar action with `ctr
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs22/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs22" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs23" %}
 
 ## See Also
 

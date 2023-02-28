@@ -1,23 +1,4 @@
 
-  .e-richtexteditor .rte-placeholder {
-    font-family: monospace;
-  }
-</style>
-
-<script>
-  import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
-    provide: {
-      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
-    }
-  }
-</script>
-
-<style>
 
 
 

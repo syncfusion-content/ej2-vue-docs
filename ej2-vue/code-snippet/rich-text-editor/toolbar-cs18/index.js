@@ -1,67 +1,68 @@
 
 import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Image,  Link, HtmlEditor, QuickToolbar, NodeSelection } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorPlugin, Toolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
 
 Vue.use(RichTextEditorPlugin);
+Vue.use(CheckBoxPlugin);
 
 
 new Vue({
 	el: '#app',
 	template: `
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section" id="rteSection">
-        <ejs-richtexteditor ref="rteObj" :quickToolbarSettings="quickToolbarSettings" :toolbarClick="onToolbarClick">
-        <p>Rich Text Editor allows to insert images from online source as well as local
-            computer where you want to insert the image in your content.</p>
-        <p><b>Get started Quick Toolbar to click on the image</b></p>
-        <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-        <img id="rteImageID" style="width:300px; height:300px;transform: rotate(0deg);" alt="Logo" src="https://ej2.syncfusion.com/demos/src/rich-text-editor/images/RTEImage-Feather.png"></ejs-richtexteditor>
+    <div>
+        <div class="col-lg-4 property-section">
+            <div title="Properties" id="property">
+                <table title="Properties" id="property">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <ejs-checkbox label='Enable Floating' ref="checkInstance" :change="onFloatChange" id="float" :checked="false"></ejs-checkbox>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteInstance" :height="340" :toolbarSettings="toolbarSettings"><p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+                        <p><b>Key features:</b></p>
+                        <ul>
+                            <li><p>Provides IFRAME and DIV modes</p></li>
+                            <li><p>Capable of handling markdown editing.</p></li>
+                            <li><p>Contains a modular library to load the necessary functionality on demand.</p></li>
+                            <li><p>Provides a fully customizable toolbar.</p></li>
+                            <li><p>Provides HTML view to edit the source directly for developers.</p></li>
+                            <li><p>Supports third-party library integration.</p></li>
+                            <li><p>Allows preview of modified content before saving it.</p></li>
+                            <li><p>Handles images, hyperlinks, video, hyperlinks, uploads, etc.</p></li>
+                        </ul>
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-</div>
 `,
 
     data: function() {
         return {
-        quickToolbarSettings: {
-            image: [
-                'Replace', 'Align', 'Caption', 'Remove', 'InsertLink', 'OpenImageLink', '-',
-                'EditImageLink', 'RemoveImageLink', 'Display', 'AltText', 'Dimension',
-                {
-                    tooltipText: 'Rotate Left',
-                    template: '<button class="e-tbar-btn e-btn" id="roatateLeft"><span class="e-btn-icon e-icons e-rotate-left"></span>'
-                },
-                {
-                    tooltipText: 'Rotate Right',
-                    template: '<button class="e-tbar-btn e-btn" id="roatateRight"><span class="e-btn-icon e-icons e-rotate-right"></span>'
-                }
-            ]
-        }
+        toolbarSettings: {
+            enableFloating: false
+        },
         };
-        },
+    },
         methods: {
-            onToolbarClick: function(e) {
-            var nodeObj = new NodeSelection();
-            var range = nodeObj.getRange(this.$refs.rteObj.ej2Instances.contentModule.getDocument());
-            var imgEle = nodeObj.getNodeCollection(range)[0];
-            if (e.item.tooltipText === 'Rotate Right') {
-                var transform = (imgEle.style.transform === '') ? 0 :
-                    parseInt(imgEle.style.transform.split('(')[1].split(')')[0], 10);
-                imgEle.style.transform = 'rotate(' + (transform + 90) + 'deg)';
-            }
-            else if (e.item.tooltipText === 'Rotate Left') {
-                var transform = (imgEle.style.transform === '') ? 0 :
-                    Math.abs(parseInt(imgEle.style.transform.split('(')[1].split(')')[0], 10));
-                imgEle.style.transform = 'rotate(-' + (transform + 90) + 'deg)';
-            }
-            }
-        },
+        onFloatChange: function(args) {
+            this.$refs.rteInstance.ej2Instances.toolbarSettings.enableFloating = args.checked;
+            this.$refs.rteInstance.dataBind();
+        }
+    },
     provide:{
-        richtexteditor:[Toolbar, Image,  Link, HtmlEditor, QuickToolbar]
+        richtexteditor:[Toolbar, HtmlEditor]
     }
 
 });

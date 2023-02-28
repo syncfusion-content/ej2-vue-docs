@@ -14,11 +14,11 @@ When the iframeSettings option is enabled, the Rich Text Editor creates the ifra
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs15/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs15" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs16" %}
 
 ## IFrame attributes
 
@@ -26,11 +26,11 @@ The editor allows you to pass an additional attribute to body tag of a `<iframe>
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs16/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs16" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs17" %}
 
 ## Adding external CSS/Script file
 

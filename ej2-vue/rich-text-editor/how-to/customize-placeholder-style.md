@@ -14,8 +14,8 @@ By using `e-rte-placeholder` class, you can customize the placeholder style.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs14/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs14" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs15" %}

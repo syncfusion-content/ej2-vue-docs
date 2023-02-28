@@ -25,11 +25,11 @@ The default mode of [`toolbarSettings.type`](https://ej2.syncfusion.com/vue/docu
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs14/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs14" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs16" %}
 
 ## Multi-row Toolbar
 
@@ -37,11 +37,11 @@ Set the type as MultiRow in [toolbarSettings](../api/rich-text-editor/toolba
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs15/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs15" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs17" %}
 
 ## Floating Toolbar
 
@@ -51,11 +51,11 @@ Enable or disable the floating toolbar using [`enableFloating`](https://ej2.sync
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs16/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs16" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs18" %}
 
 ## Toolbar items
 
@@ -119,11 +119,11 @@ Click the **Ω** command to show the special characters list, and then choose th
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs17/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs17" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs19" %}
 
 ## Quick inline toolbar
 
@@ -142,11 +142,11 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs18/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs18" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs20" %}
 
 > Rich Text Editor features are segregated into individual feature-wise modules. To use quick toolbar, inject the quick toolbar module using the `RichTextEditor.Inject(image, link)`.
 

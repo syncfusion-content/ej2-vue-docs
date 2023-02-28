@@ -1,7 +1,7 @@
 
 
 <template>
-  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarSettings" :fontColor="fontColor" :backgroundColor="backgroundColor">
+  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarSettings" :fontFamily="fontFamily" :fontSize="fontSize">
     <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
@@ -43,13 +43,28 @@
     data() {
       return {
         toolbarSettings: {
-          items: ['FontColor', 'BackgroundColor']
+          items: ['FontName', 'FontSize']
         },
-        fontColor: {
-          modeSwitcher : true
+        fontFamily: {
+          width: '60px',
+          items: [
+            { text: 'Segoe UI', value: 'Segoe UI' },
+            { text: 'Arial', value: 'Arial,Helvetica,sans-serif' },
+            { text: 'Courier New', value: 'Courier New,Courier,monospace' },
+            { text: 'Georgia', value: 'Georgia,serif' },
+            { text: 'Impact', value: 'Impact,Charcoal,sans-serif' },
+            { text: 'Calibri Light', value: 'CalibriLight' }
+          ]
         },
-        backgroundColor: {
-          modeSwitcher : true
+        fontSize: {
+          width: '40px',
+          items: [
+            { text: '8 pt', value: '8pt' },
+            { text: '10 pt', value: '10pt' },
+            { text: '12 pt', value: '12pt' },
+            { text: '14 pt', value: '14pt' },
+            { text: '42 pt', value: '42pt' }
+          ]
         }
       }
     },
@@ -60,14 +75,14 @@
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
 
 

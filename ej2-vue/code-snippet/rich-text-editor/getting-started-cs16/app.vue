@@ -43,10 +43,7 @@
     data() {
       return {
         iframeData: {
-          enable: true,
-          attributes: {
-            readonly: 'readonly'
-          }
+          enable: true
         }
       }
     },

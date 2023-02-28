@@ -40,11 +40,11 @@ The following sample demonstrates the option to add the font name and font size 
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs29/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs29" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs30" %}
 
 ## Custom font and size
 
@@ -54,11 +54,11 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs30/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs30" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs31" %}
 
 ## Font and Background color
 
@@ -70,11 +70,11 @@ The FontColor and the BackgroundColor property has two [mode](https://ej2.syncfu
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs31/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs31" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs32" %}
 
 ## Editor content styles
 

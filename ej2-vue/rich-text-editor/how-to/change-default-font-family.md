@@ -14,8 +14,8 @@ By using [`default`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs5/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs5" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs7" %}

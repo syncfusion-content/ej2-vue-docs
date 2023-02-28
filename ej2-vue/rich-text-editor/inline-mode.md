@@ -22,11 +22,11 @@ Enabling the [onSelection](https://ej2.syncfusion.com/vue/documentation/api/rich
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs19/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs19" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs20" %}
 
 ## See Also
 

@@ -14,8 +14,8 @@ This can be achieved by using `setRange` method in the Rich Text Editor using `N
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs8/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs8" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs10" %}

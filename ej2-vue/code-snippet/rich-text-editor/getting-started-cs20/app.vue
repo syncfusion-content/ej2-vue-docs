@@ -1,7 +1,7 @@
 
 
 <template>
-  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarData">
+  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarData" :inlineMode="inlineModeData">
     <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
@@ -43,24 +43,11 @@
     data() {
       return {
         toolbarData: {
-          items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
-            'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-            'LowerCase', 'UpperCase', '|',
-            'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-            'Outdent', 'Indent', '|',
-            'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
-            'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
-        }
-      }
-    },
-    mounted() {
-      document.addEventListener('keyup', this.onKeyUp);
-    },
-    methods: {
-      onKeyUp (e) {
-        if (e.altKey && e.keyCode === 84) { /* t */
-          // press alt+t to focus the component.
-          this.$refs.defaultRTE.ej2Instances.focusIn();
+          items: ['Bold', 'Italic', 'Underline', 'Formats', '-', 'Alignments', 'OrderedList', 'UnorderedList', 'CreateLink']
+        },
+        inlineModeData: {
+          enable: true,
+          onSelection: true
         }
       }
     },
@@ -71,7 +58,7 @@
 </script>
 
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";

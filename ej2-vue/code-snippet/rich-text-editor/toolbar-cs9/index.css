@@ -1,4 +1,28 @@
 
+  .e-richtexteditor .e-rte-content .e-content pre {
+    padding: 10px;
+    background: #F4F5F7;
+  }
+</style>
+<script>
+import Vue from "vue";
+import { RichTextEditorPlugin, Toolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+
+Vue.use(RichTextEditorPlugin);
+
+export default {
+     data: function() {
+        return {
+          toolbarSettings: {
+          items: ['InsertCode'] },
+        }
+    },
+    provide:{
+        richtexteditor:[Toolbar, HtmlEditor]
+    }
+}
+</script>
+<style>
 
 
 

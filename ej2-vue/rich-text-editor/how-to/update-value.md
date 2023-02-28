@@ -15,8 +15,8 @@ In the `keydown` event handler, the `updateValue` method is called to update the
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs9/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs9" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs11" %}

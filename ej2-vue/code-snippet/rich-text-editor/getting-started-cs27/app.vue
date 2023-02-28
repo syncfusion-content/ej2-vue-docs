@@ -1,44 +1,29 @@
 
 
 <template>
-   <ejs-richtexteditor :value="value" :beforeSanitizeHtml="beforeSanitizeHtml"></ejs-richtexteditor>
+   <ejs-richtexteditor :value="value"></ejs-richtexteditor>
 </template>
 
 <script>
   import Vue from 'vue';
   import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-  import { detach } from "@syncfusion/ej2-base";
 
   Vue.use(RichTextEditorPlugin);
 
   export default {
     data() {
       return {
-        value: `<div>Prevention of Cross Sit Scripting (XSS) </div> <script>alert('hi')<\/script>`
+        value: `<div onmouseover='javascript:alert(1)'>Prevention of Cross Sit Scripting (XSS) </div> <script>alert('hi')<\/script>`
       }
     },
     provide: {
       richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
-    },
-    methods: {
-    beforeSanitizeHtml: function(e) {
-      e.helper = value => {
-        e.cancel = true;
-        let temp = document.createElement("div");
-        temp.innerHTML = value;
-        let scriptTag = temp.querySelector("script");
-        if (scriptTag) {
-          detach(scriptTag);
-        }
-        return temp.innerHTML;
-      };
     }
-  }
   }
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";

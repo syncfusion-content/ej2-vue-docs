@@ -24,11 +24,11 @@ Through the `e-rte-placeholder` class to define our custom font family, font col
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs23/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs23" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs24" %}
 
 ## Character count
 
@@ -46,11 +46,11 @@ The character count color will be modified based on the characters in the Rich T
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs24/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs24" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs25" %}
 
 ## Code view
 
@@ -76,11 +76,11 @@ Customize the undo/redo step count using the [undoRedoSteps](../api/rich-text-ed
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs25/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs25" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs26" %}
 
 ## Prevention of cross-site scripting (XSS)
 
@@ -90,11 +90,11 @@ In the following sample, removed `script` tag and `onmouseover` attribute from c
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs26/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs26" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs27" %}
 
 > It is only applicable to editorMode as HTML.
 
@@ -106,11 +106,11 @@ The following sample demonstrates how to filter `script` tag from value.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs27/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs27" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs28" %}
 
 ## Resizable support
 
@@ -122,11 +122,11 @@ To render the Rich Text Editor in the resizable mode, set the `enableResize` pro
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs10/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs10" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs12" %}
 
 ### Specifying the Minimum and Maximum width and height for Resize
 
@@ -134,11 +134,11 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs11/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs11" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs13" %}
 
 ## Number and Bullet Format Lists
 
@@ -146,8 +146,8 @@ This feature allows the user to change the appearance of the Numbered and Bullet
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs28/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs28" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs29" %}

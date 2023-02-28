@@ -28,11 +28,11 @@ Tables can also be inserted through the `Insert Table` option in the pop-up wher
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs13/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs13" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs15" %}
 
 ## Quick Toolbar
 

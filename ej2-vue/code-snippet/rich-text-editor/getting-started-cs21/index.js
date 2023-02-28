@@ -1,6 +1,6 @@
 
   import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor } from '@syncfusion/ej2-vue-richtexteditor';
+  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
 
   Vue.use(RichTextEditorPlugin);
 
@@ -8,7 +8,7 @@
 new Vue({
 	el: '#app',
 	template: `
-  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarData" :valueTemplate="valueTemplate" editorMode="Markdown">
+  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarData">
     <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
@@ -43,17 +43,14 @@ new Vue({
     data() {
       return {
         toolbarData: {
-          items: ['Bold', 'Italic', 'StrikeThrough', '|',
-            'Formats', 'OrderedList', 'UnorderedList', '|',
-            'CreateLink', 'Image', '|','Undo', 'Redo']
-        },
-        valueTemplate: `The sample is added to showcase **markdown editing**.
-
-  Type or edit the content and apply formatting to view markdown formatted content.
-
-  We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/).
-
-  The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`
+          items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
+            'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
+            'LowerCase', 'UpperCase', '|',
+            'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+            'Outdent', 'Indent', '|',
+            'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
+            'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+        }
       }
     },
     mounted() {
@@ -68,7 +65,7 @@ new Vue({
       }
     },
     provide: {
-      richtexteditor: [Toolbar, Link, Image, MarkdownEditor]
+      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
     }
   
 });

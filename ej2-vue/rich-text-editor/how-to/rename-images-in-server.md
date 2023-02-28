@@ -84,7 +84,7 @@ By using the [`insertImageSettings`](https://ej2.syncfusion.com/vue/documentatio
 
 To configure the server-side handler, refer the below code.
 
-```
+```c#
 [AcceptVerbs("Post")]
 public void Rename()
 {

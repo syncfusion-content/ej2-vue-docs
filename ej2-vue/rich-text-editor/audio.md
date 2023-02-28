@@ -191,7 +191,7 @@ export default {
 
 ```
 
-```
+```c#
 
 using System;
 using System.IO;
@@ -434,7 +434,7 @@ export default {
 
 To configure the server-side handler, refer to the below code.
 
-```
+```c#
 int x = 0;
 string file;
 [AcceptVerbs("Post")]
@@ -556,7 +556,7 @@ export default {
 
 ```
 
-```
+```c#
 
 public void SaveFiles(IList<IFormFile> UploadFiles)
 {

@@ -95,7 +95,7 @@ export default Vue.extend({
 
 To config server-side handler, refer the below code.
 
-``` csharp
+```c#
 int x = 0;
 string file;
  [AcceptVerbs("Post")]

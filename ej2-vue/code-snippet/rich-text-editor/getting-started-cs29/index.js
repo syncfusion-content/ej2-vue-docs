@@ -8,7 +8,7 @@
 new Vue({
 	el: '#app',
 	template: `
-  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarSettings" :fontFamily="fontFamily" :fontSize="fontSize">
+  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarData">
     <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
@@ -42,14 +42,8 @@ new Vue({
 
     data() {
       return {
-        toolbarSettings: {
-          items: ['FontName', 'FontSize']
-        },
-        fontFamily: {
-          width: '60px'
-        },
-        fontSize: {
-          width: '40px'
+        toolbarData: {
+          items: ['NumberFormatList', 'BulletFormatList']
         }
       }
     },

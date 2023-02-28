@@ -90,8 +90,8 @@ In the following example, the paste cleanup related settings are explained with 
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs12/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs12" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs14" %}

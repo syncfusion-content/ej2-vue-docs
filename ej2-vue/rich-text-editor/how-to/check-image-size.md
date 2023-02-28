@@ -16,8 +16,8 @@ In the following, we have validated the image size before uploading and determin
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs13/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs13" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs14" %}

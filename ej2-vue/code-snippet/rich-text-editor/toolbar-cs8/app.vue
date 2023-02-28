@@ -1,10 +1,9 @@
 
 
 <template>
-<div>
-  <ejs-richtexteditor ref="defaultRTE" :placeholder="placeholder" >
+  <ejs-richtexteditor ref="defaultRTE" :placeholder="placeholder" :formatter="formatter" >
     <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-    <p id="key"><b>Key features:</b></p>
+    <p><b>Key features:</b></p>
     <ul>
       <li>
         <p>Provides IFRAME and DIV modes</p>
@@ -20,31 +19,25 @@
       </li>
     </ul>
   </ejs-richtexteditor>
-  <button v-on:click="onClick" class="e-btn">Set Cursor Position</button>
-  </div>
 </template>
 
 <script>
   import Vue from 'vue';
-  import { RichTextEditorPlugin, NodeSelection, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, IHtmlFormatterModel, HTMLFormatter } from '@syncfusion/ej2-vue-richtexteditor';
 
   Vue.use(RichTextEditorPlugin);
 
   export default {
     data() {
+    var customHTMLModel = {
+  keyConfig: {
+'insert-link': 'ctrl+q', // confite the desired key
+}
+}
       return {
         placeholder: "Type Something",
+        formatter: new HTMLFormatter(customHTMLModel), // to configure custom key
     }
-    },
-   methods: {
-     onClick: function(event){
-       var instance = this.$refs.defaultRTE.$el.ej2_instances[0];
-      let element: Element= instance.contentModule.getDocument().getElementById("key");
-      let selectioncursor: NodeSelection = new NodeSelection();
-      let range: Range = document.createRange();
-      range.setStart(element, 1); // to set the range
-      selectioncursor.setRange(document, range); // to set the cursor
-     }
     },
     provide: {
       richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
@@ -53,7 +46,7 @@
 </script>
 
 <style>
-   @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";

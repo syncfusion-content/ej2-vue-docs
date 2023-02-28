@@ -61,11 +61,11 @@ The following sample explains, how to configure `removeUrl` to remove a saved im
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs17/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs17" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs18" %}
 
 ## Insert from web
 
@@ -119,11 +119,11 @@ In the following sample, you can see feature demo.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs18/app.vue %}
+{% include code-snippet/rich-text-editor/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs18" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs19" %}
 
 ### Drag and drop with specific extension images
 

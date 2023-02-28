@@ -18,8 +18,8 @@ The following sample demonstrates how to config the InsertCode button in toolbar
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs7/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs7" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs9" %}

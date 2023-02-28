@@ -14,10 +14,10 @@ It can be achieved by using [`formatter`](https://ej2.syncfusion.com/vue/documen
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rich-text-editor/toolbar-cs6/app.vue %}
+{% include code-snippet/rich-text-editor/toolbar-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs6" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs8" %}
 
 > We need to import `IHtmlFormatterModel` and `HTMLFormatter` to configure the shortcut key.
