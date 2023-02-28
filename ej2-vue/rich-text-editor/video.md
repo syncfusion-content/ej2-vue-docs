@@ -206,7 +206,7 @@ export default {
 
 ```
 
-```harp
+```
 
 using System;
 using System.IO;
@@ -467,7 +467,7 @@ export default {
 
 To configure server-side handler, refer to the below code.
 
-```harp
+```
 int x = 0;
 string file;
 [AcceptVerbs("Post")]
@@ -588,7 +588,7 @@ export default {
 </style>
 ```
 
-```harp
+```
 
 public void SaveFiles(IList<IFormFile> UploadFiles)
 {
