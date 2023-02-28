@@ -1,0 +1,20 @@
+
+
+
+
+  .city {
+    right: 15px;
+    position: absolute;
+  }
+  .combobox {
+    width: 30%;
+    margin: 0 auto;
+  }
+  #app {
+    color: #008cff;
+    height: 40px;
+    position: absolute;
+    top: 10%;
+    width: 90%;
+  }
+
