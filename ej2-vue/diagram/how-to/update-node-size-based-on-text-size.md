@@ -54,8 +54,8 @@ Refer to the following sample for updating the nodes size based on the text size
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/./diagram/how-to/textlimit-cs2/app.vue %}
+{% include code-snippet/diagram/how-to/textlimit-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/./diagram/how-to/textlimit-cs2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/how-to/textlimit-cs2" %}

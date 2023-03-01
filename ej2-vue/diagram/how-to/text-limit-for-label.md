@@ -47,10 +47,10 @@ Refer to the following code sample for limiting the text for labels.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/./diagram/how-to/textlimit-cs1/app.vue %}
+{% include code-snippet/diagram/how-to/textlimit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/./diagram/how-to/textlimit-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/how-to/textlimit-cs1" %}
 
 To perform the text limiting for labels dynamically, set the [`max-width`] attribute for the text box ID which appears at the time of editing the labels text.

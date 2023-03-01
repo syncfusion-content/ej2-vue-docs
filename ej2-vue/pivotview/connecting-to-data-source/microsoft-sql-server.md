@@ -23,7 +23,7 @@ This section describes how to retrieve data from SQL Server database using [Micr
 
 **3.** In the Web API controller (aka, PivotController), **SqlConnection** helps to connect the SQL database (that is, Database1.mdf). Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The **Fill** method of the DataAdapter is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
 
-```harp
+```
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
@@ -53,7 +53,7 @@ namespace PivotController.Controllers
 
 **4.** In the **Get()** method of the **PivotController.cs** file, the **FetchSQLResult** method is used to retrieve the SQL data as a **DataTable**, which is then serialized into JSON using **JsonConvert.SerializeObject()**.
 
-```harp
+```
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Data;

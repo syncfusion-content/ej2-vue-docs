@@ -63,7 +63,7 @@ You can clear the selected cells and selected rows by using a method called [`cl
 
 You can get the selected row indexes by using the [`getSelectedRowIndexes`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#getselectedrowindexes) method. And by using [`getSelectedRecords`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#getSelectedRecords) method, you can get the selected record details.
 
-{{% tabs %}
+{% tabs %}
 {% highlight html tabtitle="app.vue" %}
 {% include code-snippet/gantt/selection-cs14/app.vue %}
 {% endhighlight %}

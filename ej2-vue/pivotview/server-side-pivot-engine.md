@@ -122,7 +122,7 @@ The collection data sources such as List, IEnumerable, and so on are supported. 
 
 In the server-side application **(PivotController)**, a collection type data source is framed in the **DataSource.cs** file as shown in the following.
 
-```harp
+```
 public class PivotViewData
 {
     public string ProductID { get; set; }
@@ -157,14 +157,14 @@ public class PivotViewData
 
 To bind the data source, set its model type **PivotViewData** to **TValue** of the **PivotEngine** class.
 
-```harp
+```
 private PivotEngine<DataSource.PivotViewData> PivotEngine = new PivotEngine<DataSource.PivotViewData>();
 
 ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -230,7 +230,7 @@ The JSON data from a local *.json file type can be connected to the Pivot Table.
 
 In the Server-side application, **sales-analysis.json** file is available under **DataSource** folder and its model type is defined in **DataSource.cs** file.
 
-```harp
+```
 public class PivotJSONData
 {
     public string Date { get; set; }
@@ -255,13 +255,13 @@ public class PivotJSONData
 
 To bind the data source, set its model type **PivotJSONData** to **TValue** of the **PivotEngine** class.
 
-```harp
+```
 private PivotEngine<DataSource.PivotJSONData> PivotEngine = new PivotEngine<DataSource. PivotJSONData>();
 ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -324,7 +324,7 @@ JSON data from any remote server, like a local JSON file, can also be supported.
 
 In the server-side application, the CDN link is used to connect the same **sales-analysis.json** file which is already hosted in the Syncfusion server.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -346,7 +346,7 @@ The CSV data from a local *.csv file type can be connected to the Pivot Table. H
 
 In the server application, the **sales.csv** file is available under the **DataSource** folder, and its model type is defined in the **DataSource.cs** file.
 
-```harp
+```
 public class PivotCSVData
 {
     public string Region { get; set; }
@@ -389,13 +389,13 @@ public class PivotCSVData
 
 To bind the data source, set its model type **PivotCSVData** to **TValue** of the **PivotEngine** class.
 
-```harp
+```
 private PivotEngine<DataSource.PivotCSVData> PivotEngine = new PivotEngine<DataSource. PivotCSVData>();
 ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -459,7 +459,7 @@ CSV data from any remote server, like a local CSV file, can also be supported. I
 
 In the server application, the CDN link is used to connect the same **sales.csv** file which is already hosted in the Syncfusion server.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -479,7 +479,7 @@ public async Task<object> GetData(FetchData param)
 
 In the server-side application, there is a manually created DataTable **BusinessObjectsDataView** by mapping the model type **PivotViewData** in **DataSource.cs** file.
 
-```harp
+```
 public class BusinessObjectsDataView
 {
     public DataTable GetDataTable()
@@ -508,14 +508,14 @@ public class BusinessObjectsDataView
 
 To bind the data source, set its model type **PivotViewData** to **TValue** of the **PivotEngine** class.
 
-```harp
+```
 private PivotEngine<DataSource.PivotViewData> PivotEngine = new PivotEngine<DataSource.PivotViewData>();
 
 ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -581,7 +581,7 @@ The model type has to be defined in the aforementioned data sources. However, th
 
 In the server-side application, an **ExpandoObject** type data source is available under the class **PivotExpandoData** in **DataSource.cs** file.
 
-```harp
+```
 public class PivotExpandoData
 {
     public List<ExpandoObject> Orders { get; set; } = new List<ExpandoObject>();
@@ -607,14 +607,14 @@ public class PivotExpandoData
 
 To bind the data source, set its class **PivotExpandoData** to **TValue** of the **PivotEngine** class.
 
-```harp
+```
 private PivotEngine<DataSource.PivotExpandoData> PivotEngine = new PivotEngine<DataSource.PivotExpandoData>();
 
 ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -672,7 +672,7 @@ export default {
 
 In the server-side application, a data source is framed by dynamic objects which is available under the class **PivotDynamicData** in the **DataSource.cs** file.
 
-```harp
+```
 public class PivotDynamicData
 {
     public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
@@ -717,14 +717,14 @@ public class PivotDynamicData
 
 To bind the data source, set its class **PivotDynamicData** to **TValue** of the **PivotEngine** class.
 
-```harp
+```
 private PivotEngine<DataSource.PivotDynamicData> PivotEngine = new PivotEngine<DataSource.PivotDynamicData>();
 
 ```
 
 Then call the data source in **GetData** method of **PivotController.cs** file.
 
-```harp
+```
 public async Task<object> GetData(FetchData param)
 {
     return await _cache.GetOrCreateAsync("dataSource" + param.Hash,
@@ -784,7 +784,7 @@ export default {
 
 In the server-side application, the [`Memory Cache`](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.caching.memorycache?view=dotnet-plat-ext-5.0) option is used to store the data source and engine properties in RAM, which will be used for UI operations. To improve performance, this limits the execution of all initial rendering code to regenerate the aggregated values during each UI operation. The codes below show how we use the memory cache option in the **GetEngine** method to store engine properties.
 
-```harp
+```
 public async Task<EngineProperties> GetEngine(FetchData param)
 {
     isRendered = false;
