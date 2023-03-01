@@ -64,8 +64,8 @@ Refer to the following sample for creating read-only diagram and performing acti
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/./diagram/how-to/readonly-cs1/app.vue %}
+{% include code-snippet/diagram/how-to/readonly-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/./diagram/how-to/readonly-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/how-to/readonly-cs1" %}

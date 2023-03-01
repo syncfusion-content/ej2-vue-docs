@@ -1,0 +1,21 @@
+---
+layout: post
+title: Right to left in Vue Document editor component | Syncfusion
+description: Learn here all about Right to left in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+control: Right to left 
+platform: ej2-vue
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Right to left in Vue Document editor component
+
+Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/document-editor/right-to-left-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/right-to-left-cs1" %}
