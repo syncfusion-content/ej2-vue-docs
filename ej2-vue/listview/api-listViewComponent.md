@@ -39,8 +39,6 @@ Defaults to *''*
 
 It provides the data to render the ListView component which is mapped with the fields of ListViewhttps://ej2.syncfusion.com/vue/documentation
 
-{% codeBlock src="list-view/datasource-api/index.ts" %}{% endcodeBlock %}
-
 Defaults to *[]*
 
 ### enable `boolean`
@@ -71,8 +69,6 @@ Defaults to *false*
 
 It is used to map keys from the dataSource which extracts the appropriate data from the dataSource with specified mapped with the column fields to render the ListView.
 
-{% codeBlock src="list-view/fields-api/index.ts" %}{% endcodeBlock %}
-
 Defaults to *ListBase.defaultMappedFields*
 
 ### groupTemplate `string`
@@ -80,7 +76,6 @@ Defaults to *ListBase.defaultMappedFields*
 The ListView has an option to custom design the group header title with the help of groupTemplate property.
 Refer the documentation [here] (http://ej2.syncfusion.com/documentation/list-view/customizing-templates.html?lang=typescript#group-template) to know more about this property with demo.
 
-{% codeBlock src="list-view/grouptemplate-api/index.ts" %}{% endcodeBlock %}
 
 Defaults to *null*
 
@@ -89,15 +84,11 @@ Defaults to *null*
 The ListView has an option to custom design the ListView header title with the help of headerTemplate property.
 Refer the documentation [here] (http://ej2.syncfusion.com/documentation/list-view/customizing-templates.html?lang=typescript#header-template) to know more about this property with demo.
 
-{% codeBlock src="list-view/headertemplate-api/index.ts" %}{% endcodeBlock %}
-
 Defaults to *null*
 
 ### headerTitle `string`
 
 It is used to set the title of ListView component.
-
-{% codeBlock src="list-view/fields-api/index.ts" %}{% endcodeBlock %}
 
 Defaults to *""*
 
@@ -124,15 +115,11 @@ Defaults to *undefined*
 It is used to fetch the specific data from dataSource by using where, select key words.
 Refer the documentation [here] (http://ej2.syncfusion.com/documentation/list-view/data-binding.html?lang=typescript#bind-to-remote-data) to know more about this property with demo.
 
-{% codeBlock src="list-view/query-api/index.ts" %}{% endcodeBlock %}
-
 Defaults to *null*
 
 ### showCheckBox `boolean`
 
 Using this property, we can show or hide the `checkbox`.
-
-{% codeBlock src="list-view/showcheckbox-api/index.ts" %}{% endcodeBlock %}
 
 Defaults to *false*
 
@@ -140,15 +127,11 @@ Defaults to *false*
 
 Using this property, we can show or hide the header of ListView component.
 
-{% codeBlock src="list-view/fields-api/index.ts" %}{% endcodeBlock %}
-
 Defaults to *false*
 
 ### showIcon `boolean`
 
 Using this property, we can show or hide the icon of list item.
-
-{% codeBlock src="list-view/showicon-api/index.ts" %}{% endcodeBlock %}
 
 Defaults to *false*
 
@@ -156,16 +139,12 @@ Defaults to *false*
 
 It is used to enable the sorting of list items to be ascending or descending.
 
-{% codeBlock src="list-view/sortorder-api/index.ts" %}{% endcodeBlock %}
-
 Defaults to *'None'*
 
 ### template `string`
 
 The ListView supports to customize the content of each list items with the help of template property.
 Refer the documentation [here](http://ej2.syncfusion.com/documentation/list-view/customizing-templates.html?lang=typescript) to know more about this property with demo.
-
-{% codeBlock src="list-view/template-api/index.ts" %}{% endcodeBlock %}
 
 Defaults to *null*
 
