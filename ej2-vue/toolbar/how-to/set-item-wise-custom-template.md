@@ -17,7 +17,7 @@ either a `string`  or a `query selector`.
 
 The HTML element tag can be given as a string for the template property. Here, the checkbox is rendered as a HTML template.
 
-```hmtl
+```html
 template: "<div><input type='checkbox' id='check1' checked=''>Accept</input></div>"
 
 ```
