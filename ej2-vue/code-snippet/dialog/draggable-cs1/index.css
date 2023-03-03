@@ -1,0 +1,14 @@
+
+
+    #app {
+        color: #008cff;
+        height: 40px;
+        left: 45%;
+        position: absolute;
+        top: 45%;
+        width: 30%;
+    }
+    .control-section {
+        min-height: 355px;
+        margin: 10px;
+    }

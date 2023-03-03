@@ -1,0 +1,15 @@
+
+    
+    
+    #element {
+        display: block;
+        width: 300px;
+        margin: 130px auto;
+        border-radius: 3px;
+        justify-content: center;
+    }
+
+    .e-avatar {
+        background-image: url(./pic01.png);
+        margin: 2px;
+    }

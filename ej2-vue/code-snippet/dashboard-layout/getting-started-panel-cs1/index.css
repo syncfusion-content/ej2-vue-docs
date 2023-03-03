@@ -1,0 +1,19 @@
+
+
+
+
+/* DashboardLayout element styles  */
+#defaultLayout .e-panel .e-panel-container {
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.panel-content {
+    line-height: 80px;
+}
+
+#defaultLayout .e-panel {
+  transition:none !important;
+}

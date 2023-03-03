@@ -323,13 +323,6 @@ export default {
 
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/valueType/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/chart/getting-started/datasource-cs5/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs5" %}
 
 ## Add Chart Title
 

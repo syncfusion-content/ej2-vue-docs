@@ -1,0 +1,30 @@
+
+
+    #app {
+        color: #008cff;
+        height: 40px;
+        left: 45%;
+        position: absolute;
+        top: 45%;
+        width: 30%;
+    }
+    html,
+    body,
+    .control-section {
+        height: 120%;
+        min-height: 200px;
+    }
+    body {
+        overflow-y: scroll;
+    }
+    #loader {
+        color: #008cff;
+        height: 40px;
+        left: 45%;
+        position: absolute;
+        top: 45%;
+        width: 30%;
+    }
+    .e-fixed {
+        position: fixed;
+    }
