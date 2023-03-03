@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+#loader {
+color: #008cff;
+height: 40px;
+left: 45%;
+position: absolute;
+top: 45%;
+width: 30%;
+}
+body {
+padding: 20px0
+}
+.control-title {
+font-weight: 600;
+padding-right: 20px;
+}
+td {
+height: 80px;
+}
+trtd:first-child {
+text-align: right;
+}
+trtd:last-child {
+text-align: left;
+}
+.table-section {
+margin: 0 auto;
+}
+h3 {
+text-align: center;
+font-size: 24px;
+}
