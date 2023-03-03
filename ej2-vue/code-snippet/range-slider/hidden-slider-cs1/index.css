@@ -1,0 +1,19 @@
+
+  
+  
+  
+  
+  #app {
+    height: 40px;
+    position: absolute;
+    width: 98%;
+  }
+  #wrap {
+    box-sizing: border-box;
+    height: 260px;
+    margin: 0 auto;
+    padding: 30px 10px;
+    width: 460px;
+    display: none;
+  }
+  
