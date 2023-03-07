@@ -315,8 +315,6 @@ The following code example depicts how to group the multiple resources on Timeli
 
 ```
 
-{% endtab %}
-
 #### Auto row height
 
 Timeline Year view supports Auto row height. When the feature `rowAutoHeight` is enabled, the row height gets auto-adjusted based on the number of overlapping events occupied in the same time range. If you disable the Auto row height, you have the `+ more` text indicator on each day cell of a Timeline Year view, clicking on which will allow you to view the hidden appointments of a day.
