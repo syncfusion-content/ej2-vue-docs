@@ -104,8 +104,8 @@ Add the Vue Grid component to the `<body>` section of the `index.html` file. To 
 Finally, run the `~/quickstart/index.html` file in the web browser, and it will render the Syncfusion Vue Grid component. The output will appear as follows:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/common/getting-started-es5-cs1/app.vue %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/common/getting-started-es5-cs1/index.html%}
 {% endhighlight %}
 {% endtabs %}
         
@@ -205,8 +205,8 @@ Add the Vue Grid component to the `<body>` section of the `index.html` file. To 
 Finally, run the `~/quickstart/index.html` file in the web browser, and it will render the Syncfusion Vue Grid component. The output will appear as follows:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/common/getting-started-es5-vue3-cs1/app.vue %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/common/getting-started-es5-vue3-cs1/index.html %}
 {% endhighlight %}
 {% endtabs %}
         
