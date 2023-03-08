@@ -10,15 +10,15 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion Vue UI Components in TypeScript with the Options API
 
-This section provides a step-by-step guide on setting up a Vite project with a TypeScript environment and effectively integrating the Syncfusion Vue components with the Options API.
+This section offers a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue components with the [Options API](https://vuejs.org/guide/introduction.html#options-api) effectively. If you need information on getting started with the Vue [Composition API](https://vuejs.org/guide/introduction.html#composition-api), follow this [link](./vue3-ts-composition.md).
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](../system-requirements)
 
-## Creating a Vue application with Vite
+## Set up the Vite project
 
-To get started with developing modern web projects quickly, consider using [Vite](https://vitejs.dev/), a rapid development tool. To create a new Vite project, choose any one of the ways listed [here](https://vitejs.dev/guide/#scaffolding-your-first-vite-project). One of the commands is illustrated below:
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, you can execute one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -30,21 +30,15 @@ or
 yarn create vite
 ```
 
-When using Vite for the first time, it asks to install an additional package. This package is essential for creating a new Vite project, so select "y" to proceed.
+Executing one of the above commands will lead you to set up additional configurations for the project:
+
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
-Need to install the following packages:
-create-vite@latest
-Ok to proceed? (y)
+? Project name: » my-project
 ```
 
-Now, need to select a name for the new project. When choosing a name, it's recommended to use kebab-case for multiple words.
-
-```bash
-? Project name: » vite-project
-```
-
-The next step is to select Vue as the framework for the new project.
+2. Select `Vue` as the framework.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -57,7 +51,8 @@ The next step is to select Vue as the framework for the new project.
   Others
 ```
 
-For this application, choose the TypeScript variant.
+3. Choose `TypeScript` as framework variant to build this Vite project using TypeScript and Vue.
+
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
   JavaScript
@@ -66,25 +61,27 @@ For this application, choose the TypeScript variant.
   Nuxt ↗
 ```
 
-After creating the application, execute the following command to install its dependencies:
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
-cd vite-project
+cd my-project
 npm install
 ```
 
 or
 
 ```bash
-cd vite-project
+cd my-project
 yarn install
 ```
 
-## Add Syncfusion packages to the application
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-To proceed, install the necessary Syncfusion Vue component package in this application. These packages can be found on the public [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry, so select the required component to install.
+## Add Syncfusion packages to the project
 
-This article uses the Schedule component as an example. To install the package for the Schedule component, run the following command:
+In order to proceed, install the required Syncfusion Vue component package from the public [npmjs.com](https://www.npmjs.com/~syncfusionorg) registry.
+
+This article utilizes the Schedule component as an example. So, run the below command to install the Syncfusion Schedule component package.
 
 ```bash
 npm install @syncfusion/ej2-vue-schedule --save
@@ -98,13 +95,17 @@ yarn add @syncfusion/ej2-vue-schedule
 
 ## Import the Syncfusion styles
 
-Once the Syncfusion component packages are installed in this application, import the necessary themes based on the components. To add the styles, simply reference the CSS or SASS files of the Syncfusion Vue components in the following manner.
+Once you have installed the Syncfusion component packages, you will need to import the necessary themes based on the components.
+
+Syncfusion Vue component comes with built-in [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme/), which are available in installed packages. It is quite simple to adapt the Syncfusion Vue components based on the project style by referring to any of the built-in themes.
+
+To add the styles, you can reference the CSS or SASS files of the Syncfusion Vue components as follows:
 
 ### Import CSS styles
 
-To include the required CSS styles for the Schedule component, along with its dependent styles, import them within the `<style>` section of the `src/App.vue` file in the following manner:
+To import the necessary CSS styles for the Schedule component, as well as its dependent styles, into the `src/App.vue` file, you can use the provided code snippet within the `<style>` section. Let's import the `Material` theme for the Schedule component.
 
-```
+```html
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -119,7 +120,7 @@ To include the required CSS styles for the Schedule component, along with its de
 
 ### Import SASS styles
 
-To enable the usage of SASS files within this application, it requires the SASS package to be installed. Install it by executing the following command:
+Run the below command to add the SASS package in order to use SCSS styles for the Schedule component and its dependencies in this project.
 
 ```bash
 npm install sass
@@ -131,9 +132,9 @@ or
 yarn add sass
 ```
 
-In order to use SCSS styles for the Schedule component and its dependencies, import the required styles within the `<style>` section of the `src/App.vue` file using the lang attribute to specify the language as SCSS. This can be accomplished as demonstrated below:
+Then, within the `<style>` section of the `src/App.vue` file, import the necessary styles and specify the language as `SCSS` using the `lang` attribute. Let's import the `Material` theme for the Schedule component.
 
-```
+```html
 <style lang="scss">
   @import '../node_modules/@syncfusion/ej2-base/styles/material.scss';
   @import '../node_modules/@syncfusion/ej2-buttons/styles/material.scss';
@@ -146,7 +147,7 @@ In order to use SCSS styles for the Schedule component and its dependencies, imp
 </style>
 ```
 
-To utilize SASS files, include the following configuration setup in the `vite.config.ts` file.
+To make use of SASS files in a Vite project, add the following configuration setup to the `vite.config.js` file.
 
 ```ts
 export default defineConfig({
@@ -161,20 +162,22 @@ export default defineConfig({
 })
 ```
 
-## Add the Syncfusion Vue component to the application
+You can checkout the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer themes in Vue project.
 
-After completing all the necessary configurations required to render the Syncfusion Vue component with Options API, add the Schedule component using the following steps:
+## Integrate the Syncfusion Vue component to the project
 
-  1. In the `<script>` section of the `src/App.vue` file, import the Schedule component, its child directives, and required modules.
+Once we have finished all the essential configurations for rendering the Syncfusion Vue component with the Options API in your Vite project, proceed with the following steps to add the Schedule component:
 
-```
+  1. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Options API. And import the Schedule component in the `script` section of the `src/App.vue` file.
+
+```html
 <script>
   import { ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView, ResourcesDirective as EResources, ResourceDirective as EResource, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 </script>
 ```
 
   2. The next step is to register the Schedule component and its child directives in Vue.
-  
+
 ```js
 import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 //Component registration
@@ -193,7 +196,7 @@ export default {
 
   3. In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
 
-```
+```html
 <template>
   <div id='app'>
     <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
@@ -214,7 +217,7 @@ export default {
 </template>
 ```
 
-  4. In the `script` section, declare the Schedular appointment values using `datasource` property.
+  4. Declare the values for the `dataSource` property in the `script` section.
 
 ```ts
 <script lang="ts">
@@ -259,7 +262,7 @@ export default {
 </script>
 ```
 
-  5. To create a Schedule with specific views, need to inject the required modules into the Schedule. This can be done by using the `provide` method within the `src/App.vue` file. By injecting the required views, only those views will be loaded and displayed on the Schedule. Here's an example of how to inject the required modules.
+  5. To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
 
 ```ts
 <script lang="ts">
@@ -273,9 +276,9 @@ export default {
 </script>
 ```
 
-  6. To summarize the above steps, update the `src/App.vue` file with the following code:
+The `src/App.vue` file contains the summarized code for the above steps.
 
-```
+```html
 <template>
   <div id='app'>
     <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
@@ -365,9 +368,9 @@ export default {
 </style>
 ```
 
-## Run the application
+## Run the project
 
-To run the application, execute the following command:
+To run the project, execute the following command:
 
 ```bash
 npm run dev
@@ -379,6 +382,6 @@ or
 yarn run dev
 ```
 
-The output will appears as follows.
+The output will appear as follows:
 
 ![vue3-ts-Options](../appearance/images/vue3-ts-options.png)
