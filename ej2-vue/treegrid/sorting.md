@@ -60,10 +60,9 @@ During the sort action, the treegrid component triggers two events. The [`action
 
 ## Touch interaction
 
-When you tap the treegrid header on touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](/images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](/images/msorting.jpg) and then tap the desired treegrid headers.
+When you tap the treegrid header on touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](./images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](./images/msorting.jpg) and then tap the desired treegrid headers.
 
 The following screenshot shows treegrid touch sorting.
 
-<!-- markdownlint-disable MD033 -->
-<img src="../images/touch-sorting.jpg" alt="Touch interaction image" style="width:320px;height: 620px">
-<!-- markdownlint-enable MD033 -->
+<img src="./images/touch-sorting.jpg" alt="Touch interaction image" style="width:320px;height: 620px">
+
