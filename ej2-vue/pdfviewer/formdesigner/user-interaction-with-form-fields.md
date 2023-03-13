@@ -40,8 +40,9 @@ We should inject FormDesigner module and set enableFormDesignerToolbar as true t
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -53,9 +54,10 @@ export default {
       enableFormDesignerToolbar: true
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
 
 }
 </script>
@@ -117,8 +119,9 @@ We provided support to undo/redo the Form Field actions that are performed at ru
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -129,9 +132,10 @@ export default {
       documentPath:"FormDesigner.pdf"
     };
   },
+  
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
 
   methods: {
     undoClicked: function (args) {

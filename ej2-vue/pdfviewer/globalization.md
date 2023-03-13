@@ -93,22 +93,24 @@ height: 640px;
 </style>
 <script>
 import Vue from "vue";
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation } from "@syncfusion/ej2-vue-pdfviewer";
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { L10n, setCulture  } from '@syncfusion/ej2-base';
-
 Vue.use(PdfViewerPlugin);
 
 export default Vue.extend({
     data: function() {
         return {
-        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-        documentPath:"PDF_Succinctly.pdf"
+            serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+            documentPath:"PDF_Succinctly.pdf"
         }
     },
     provide: {
-        PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation]
-    }
-});
+        PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView, 
+                     ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
+                     
+}); 
 //PDF Viewer Arabic Sample Locale
 L10n.load({
     'ar-AE': {

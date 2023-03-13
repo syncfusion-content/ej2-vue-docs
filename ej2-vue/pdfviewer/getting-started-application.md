@@ -21,28 +21,28 @@ This section explains how to use PDF Viewer component in Vue 3 application.
 The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
 
 ```bash
-npm uninstall vue-cli -g
+  npm uninstall vue-cli -g
 ```
 
 Use the following commands to install the latest version of Vue CLI.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+  npm install -g @vue/cli
+  npm install -g @vue/cli-init
 ```
 
 Create a new project using the command below.
 
 ```bash
-vue create quickstart
+  vue create quickstart
 ```
 
 Add the below command to install npm to project.
 
 ```bash
-cd quickstart
-npm install
-npm install vue-class-component@^8.0.0-rc.1
+  cd quickstart
+  npm install
+  npm install vue-class-component@^8.0.0-rc.1
 ```
 
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
@@ -56,7 +56,7 @@ Initiating a new project prompts us to choose the type of project to be used for
  To install PDF Viewer component, use the following command.
 
 ```bash
-npm install @syncfusion/ej2-vue-pdfviewer --save
+  npm install @syncfusion/ej2-vue-pdfviewer --save
 ```
 
 > The **--save** will instruct NPM to include the PDF Viewer package inside the `dependencies` section of the `package.json`.
@@ -89,7 +89,9 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 ```
 <script>
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 </script>
 ```
 
@@ -103,6 +105,7 @@ export default {
   components: {
     "ejs-pdfviewer": PdfViewerComponent
   },
+}
 ```
 
 **Step 3:** Add the component definition in template section.
@@ -129,43 +132,51 @@ export default {
 
   ```
   <template>
-  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"> </ejs-pdfviewer>
+    <ejs-pdfviewer 
+      id="pdfViewer" 
+      :serviceUrl="serviceUrl" 
+      :documentPath="documentPath"> 
+    </ejs-pdfviewer>
   </template>
 
-  <script>
-  import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+<script>
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
   //Component registeration
   export default {
-  name: 'App',
-  // Declaring component and its directives
-  components: {
-  "ejs-pdfviewer": PdfViewerComponent
-  },
-  data () {
-    return {
-    serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-    documentPath:"PDF_Succinctly.pdf"
-    };
-  },
-  provide: {
-  PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
-  }
-  }
-  </script>
+    name: 'App',
+    // Declaring component and its directives
+    components: {
+    "ejs-pdfviewer": PdfViewerComponent
+    },
+    data () {
+      return {
+        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+        documentPath:"PDF_Succinctly.pdf"
+      };
+    },
+
+    provide: {
+      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
+}
+</script>
+
   <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
-  #pdfViewer {
-  height: 640px;
-  }
+    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+    #pdfViewer {
+      height: 640px;
+    }
   </style>
   ```
 
@@ -174,7 +185,7 @@ export default {
 Run the application using the following command.
 
 ```bash
-npm run serve
+  npm run serve
 ```
 
 Web server will be initiated, Open the quick start app in the browser at port [`localhost:8080`](http://localhost:8080/).

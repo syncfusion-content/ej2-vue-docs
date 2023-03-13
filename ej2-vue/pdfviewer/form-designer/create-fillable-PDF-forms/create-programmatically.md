@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create programmatically in Vue Pdfviewer component
+# Create form fields programmatically in Vue Pdfviewer component
 
 The PDF Viewer control provides the option to add, edit and delete the Form Fields. The Form Fields type supported by the PDF Viewer Control are:
 
@@ -84,13 +84,14 @@ You can invoke download action using following code snippet.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch,Annotation, FormDesigner,FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -99,9 +100,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields ]},
 
   methods: {
     downloadClicked: function (args) {
@@ -141,13 +143,14 @@ You can invoke print action using the following code snippet.,
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -156,9 +159,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields ]},
 
   methods: {
     printClicked: function (args) {
@@ -203,11 +207,12 @@ Add the following code snippet to validate the form fields,
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -216,9 +221,10 @@ export default {
       documentPath:"FormDesigner.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
 
   methods: {
     documentLoad: function (args) {
@@ -232,18 +238,18 @@ export default {
 }
 </script>
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
-#pdfViewer {
-  height: 640px;
-}
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+  #pdfViewer {
+    height: 640px;
+  }
 </style>
 
 ```
@@ -282,13 +288,14 @@ The following code explains how to export and import the form field data as FDF.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -297,9 +304,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]},
   methods: {
     // Event triggers on the Export FDF button click.
     exportFdf: function (args) {
@@ -338,13 +346,14 @@ The following code explains how to export and import the form field data as XFDF
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -353,9 +362,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]},
 
   methods: {
     // Event triggers on the Export XFDF button click.
@@ -397,13 +407,14 @@ The following code explains how to export and import the form field data as JSON
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -412,9 +423,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]},
 
   methods: {
     // Event triggers on the Export JSON button click.
@@ -457,14 +469,15 @@ The following code shows how to export the form field data as an object and impo
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
 var exportedData;
+
 export default {
   name: 'app',
   data () {
@@ -473,10 +486,11 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+  
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]},
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]},
+ 
   methods: {
     // Event triggers on the Export Object button click.
     exportDataAsObject: function (args) {
@@ -525,14 +539,15 @@ The following code example explains how to update the signature field properties
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
 var exportedData;
+
 export default {
   name: 'app',
   data () {
@@ -541,9 +556,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]},
 
   methods: {
     // Event triggers on the Update Properties button click.

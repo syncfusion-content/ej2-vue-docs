@@ -52,8 +52,9 @@ Refer to the following code sample to switch to the circle annotation mode.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var viewer;
@@ -65,9 +66,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
 
   methods: {
     documentLoad() {
@@ -142,11 +144,12 @@ The properties of the shape annotations can be set before creating the control u
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView,ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -160,9 +163,10 @@ export default {
       polygonSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
 
 }
 </script>

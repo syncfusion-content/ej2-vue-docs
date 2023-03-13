@@ -55,11 +55,12 @@ Refer to the following code sample to switch to the stamp annotation mode.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView,ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -69,8 +70,8 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
 
   methods: {
     documentLoad() {
@@ -121,11 +122,12 @@ Refer to the following code sample to set the default sticky note annotation set
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView,ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -135,9 +137,10 @@ export default {
       stampSettings: {opacity: 0.3, author: 'Guest User'}
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
 
 }
 </script>

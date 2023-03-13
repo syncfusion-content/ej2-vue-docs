@@ -39,13 +39,11 @@ The PDF Viewer provides API for user interactions options provided in it's built
       </e-items>
     </ejs-toolbar>
 
-    <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;">
-    </input>
+    <input type ="file" id="fileUpload" accept=".pdf" style="display:block;visibility:hidden;width:0;height:0;"></input>
 
     <div class="control-section">
       <ejs-pdfviewer id="pdfviewer" ref="pdfviewer" :pageChange="pageChange" :documentLoad="documentLoad" :serviceUrl="serviceUrl" :documentPath="documentPath" :enableToolbar="enableToolbar"></ejs-pdfviewer>
     </div>
-
 
   </div>
 </template>
@@ -55,12 +53,13 @@ The PDF Viewer provides API for user interactions options provided in it's built
 **Step 3:** Import and inject the modules used for the custom toolbar,
 
 ```ts
+
     import Vue from "vue";
-    import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch } from "@syncfusion/ej2-vue-pdfviewer";
+    import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+             BookmarkView, ThumbnailView, Print, TextSelection, TextSearch } from "@syncfusion/ej2-vue-pdfviewer";
     import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
     import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
     Vue.use(CalendarPlugin);
-
     Vue.use(PdfViewerPlugin);
     Vue.use(ToolbarPlugin);
 
@@ -233,15 +232,14 @@ The PDF Viewer provides API for user interactions options provided in it's built
 
 ```ts
 
-   import Vue from "vue";
-    import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch } from "@syncfusion/ej2-vue-pdfviewer";
+    import Vue from "vue";
+    import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+             BookmarkView, ThumbnailView, Print, TextSelection, TextSearch } from "@syncfusion/ej2-vue-pdfviewer";
     import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
     import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
     Vue.use(CalendarPlugin);
-
     Vue.use(PdfViewerPlugin);
     Vue.use(ToolbarPlugin);
-
     var toolbar;
     var viewer;
     var fileName;
@@ -315,8 +313,8 @@ The PDF Viewer provides API for user interactions options provided in it's built
             }
         },
         provide: {
-            PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]
-        },
+            PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                         ThumbnailView, Print, TextSelection, TextSearch ]},
         methods: {
             openClicked: function (args) {
                 document.getElementById('fileUpload').click();

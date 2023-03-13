@@ -30,8 +30,9 @@ In this mode, the text selection can be performed in the PDF document loaded in 
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -43,8 +44,8 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]}
 
 }
 </script>
@@ -75,8 +76,9 @@ You can switch the interaction mode of PDF Viewer by using the following code sn
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -89,8 +91,8 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
+                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]}
 
 }
 </script>

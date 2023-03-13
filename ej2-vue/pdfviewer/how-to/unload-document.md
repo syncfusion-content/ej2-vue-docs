@@ -23,18 +23,21 @@ The following steps are used to unload the PDF document programmatically.
 <template>
     <div>
         <button v-on:click="unload">Unload Document</button>
+
         <ejs-pdfviewer
             id="pdfViewer"
             :serviceUrl="serviceUrl"
             :documentPath="documentPath">
         </ejs-pdfviewer>
+        
     </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields} from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -45,8 +48,8 @@ export default {
     };
   },
   provide: {
-  PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-              ThumbnailView, Print, TextSelection, TextSearch,Annotation, FormDesigner, FormFields]},
+  PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+               Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
 
   methods: {
     unload: function() {

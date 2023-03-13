@@ -29,8 +29,9 @@ The following code snippet describes how to enable the magnification in PDF View
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, Annotation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -42,8 +43,8 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-                ThumbnailView, Print, TextSelection, TextSearch]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]}
 
 }
 </script>

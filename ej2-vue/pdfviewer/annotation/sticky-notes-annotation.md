@@ -75,11 +75,12 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView,ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -89,9 +90,10 @@ export default {
       stickyNotesSettings: {author: 'Syncfusion'}
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
 
 }
 </script>
@@ -118,11 +120,12 @@ The PDF Viewer control provides an option to disable the sticky note annotations
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView,ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -132,9 +135,10 @@ export default {
       enableStickyNotesAnnotation: false
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
 
 }
 </script>

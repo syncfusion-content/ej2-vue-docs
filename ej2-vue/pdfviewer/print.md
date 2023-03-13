@@ -58,22 +58,25 @@ You can invoke print action using the following code snippet.,
 ```
 
 <template>
-    <div id="app">
-        <ejs-button ref="printBtn" v-on:click.native="printClicked">Print</ejs-button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+  
+    <ejs-button ref="printBtn" v-on:click.native="printClicked">Print</ejs-button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
@@ -88,8 +91,8 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-                ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
   methods: {
     printClicked: function (args) {

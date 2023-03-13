@@ -34,8 +34,9 @@ The following steps are used to import and export annotation as object.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields} from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var exportObject;
@@ -47,21 +48,22 @@ export default {
    };
  },
  provide: {
-   PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-               ThumbnailView, Print, TextSelection, TextSearch,Annotation, FormDesigner, FormFields]},
+   PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
 
  methods: {
   //Export annotation as object.
   exportAnnotation: function() {
-  var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-  viewer.exportAnnotationsAsObject().then(function(value) {
-    exportObject = value;
+    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+    viewer.exportAnnotationsAsObject().then(function(value) {
+      exportObject = value;
     });
   },
+
   //Import annotation that are exported as object.
   importAnnotation: function() {
-  var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-  viewer.importAnnotation(JSON.parse(exportObject));
+    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+    viewer.importAnnotation(JSON.parse(exportObject));
   }
  }
 }

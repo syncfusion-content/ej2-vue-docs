@@ -43,10 +43,12 @@ Refer to the following code sample to switch to the Free Text annotation mode.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -55,9 +57,10 @@ export default {
       documentPath:"PDF_Succinctly.pdf"
     };
   },
+
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
 
   methods: {
     documentLoad() {
@@ -152,10 +155,12 @@ After editing the default values, they will be changed to the selected values. R
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView,ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 var viewer;
+
 export default {
   name: 'app',
   data () {
@@ -165,9 +170,10 @@ export default {
       freetextSettings: {fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}
     };
   },
+  
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
 
 }
 </script>

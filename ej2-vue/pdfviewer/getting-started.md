@@ -22,8 +22,8 @@ You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue appl
 To install Vue CLI, use the following commands.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+  npm install -g @vue/cli
+  npm install -g @vue/cli-init
 ```
 
 ## Create a Vue application
@@ -31,10 +31,10 @@ npm install -g @vue/cli-init
 Start a new Vue application using the following Vue CLI command.
 
 ```bash
-vue init webpack-simple quickstart
+  vue init webpack-simple quickstart
 
-cd quickstart
-npm install
+  cd quickstart
+  npm install
 ```
 
 ## Adding Syncfusion PDF Viewer package
@@ -42,19 +42,19 @@ npm install
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. To install PDF Viewer component, use the following command.
 
 ```bash
-npm install @syncfusion/ej2-vue-pdfviewer --save
+  npm install @syncfusion/ej2-vue-pdfviewer --save
 ```
 
-> The **--save** will instruct NPM to include the PDF Viewer package inside the `dependencies` section of the `package.json`.
+>   The **--save** will instruct NPM to include the PDF Viewer package inside the `dependencies` section of the `package.json`.
 
 ## Registering PDF Viewer component
 
 You can register the Vue PDF Viewer component in your application by using the `Vue.use()` as in the below.
 
 ```ts
-import { PdfViewerPlugin } from '@syncfusion/ej2-vue-pdfviewer';
+  import { PdfViewerPlugin } from '@syncfusion/ej2-vue-pdfviewer';
 
-Vue.use(PdfViewerPlugin);
+  Vue.use(PdfViewerPlugin);
 ```
 
 > Registering `PdfViewerPlugin` in Vue, will register the PDF Viewer component along with its required child directives globally.
@@ -65,15 +65,15 @@ Add the Vue PDF Viewer component’s styles as given below in `<style>` section 
 
 ```
 <style>
-<!-- Material theme used for this sample -->
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css";
+  <!-- Material theme used for this sample -->
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css";
 </style>
 ```
 
@@ -84,14 +84,21 @@ Add the Vue PDF Viewer by using the `<ejs-pdfviewer>` selector in `<template>` s
 ```
 <template>
   <div id="app">
-    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"> </ejs-pdfviewer>
+    <ejs-pdfviewer 
+      id="pdfViewer" 
+      :serviceUrl="serviceUrl" 
+      :documentPath="documentPath"> 
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
+
 export default {
   name: 'app',
   data () {
@@ -101,7 +108,8 @@ export default {
     };
   },
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
   }
 }
 </script>
@@ -112,7 +120,7 @@ export default {
 The Vue PDF Viewer application is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```bash
-npm run dev
+  npm run dev
 ```
 
 Output will be displayed as follows.
@@ -133,15 +141,15 @@ Output will be displayed as follows.
 2. Navigate to the `ASP.NET Core` folder and open it in the command prompt.
 3. Use the below command to restore the required packages.
 
-   ```
-   dotnet restore
-   ```
+```
+  dotnet restore
+```
 
 4. Use the below command to run the web service.
 
-   ```
-   dotnet run
-   ```
+```
+  dotnet run
+```
 
 5. You can see that the PDF Viewer server instance runs in the local host with the port number [`localhost:5001`](https://localhost:5001/) and navigate to the PDF Viewer Web control [`localhost:5001/pdfviewer`](https://localhost:5001/pdfviewer) which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
 
