@@ -24,7 +24,7 @@ new Vue({
      </div>
      <div class='wrapper2'>
         <!-- Specifies the masked timepicker with mask placeholder. -->
-        <ejs-timepicker id="placeholder" :enableMask="true" :maskPlaceholder="maskPlaceholderValue"></ejs-timepicker>
+        <ejs-timepicker id="placeholder" :enableMask="true" maskPlaceholder="maskPlaceholderValue"></ejs-timepicker>
      </div>
   </div>
 `,

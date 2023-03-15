@@ -24,7 +24,7 @@ new Vue({
      </div>
      <div class='wrapper2'>
           <!-- Specifies the masked datetimepicker with mask placeholder. -->
-         <ejs-datetimepicker id="placeholder" :enableMask="true" :maskPlaceholder='maskPlaceholderValue'></ejs-datetimepicker>
+         <ejs-datetimepicker id="placeholder" :enableMask="true" maskPlaceholder='maskPlaceholderValue'></ejs-datetimepicker>
      </div>
   </div>
 `,

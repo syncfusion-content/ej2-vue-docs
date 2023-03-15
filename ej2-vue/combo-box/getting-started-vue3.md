@@ -192,7 +192,6 @@ In the following sample, popup list's width and height have configured.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/combobox/getting-started/popup-cs1" %}
 
 Output be like the below.
 

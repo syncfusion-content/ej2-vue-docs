@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-    <ejs-autocomplete :dataSource='sportsData' :placeholder="waterMark" :floatLabelType= "auto"></ejs-autocomplete>
+    <ejs-autocomplete :dataSource='sportsData' :placeholder="waterMark" floatLabelType= "auto"></ejs-autocomplete>
   </div>
 `,
 

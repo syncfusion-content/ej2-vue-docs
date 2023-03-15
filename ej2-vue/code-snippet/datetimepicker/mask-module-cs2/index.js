@@ -7,7 +7,6 @@ Vue.use(DateTimePickerPlugin);
 export default Vue.extend({
   data: function() {
     return {
-      dateFormat: 'M/d/yyyy hh:mm a'
     };
   },
   provide: {
@@ -24,7 +23,7 @@ new Vue({
      </div>
      <div class='wrapper2'>
         <!-- Specifies the masked datetimepicker with format property. -->
-        <ejs-datetimepicker id="datetimepicker" :enableMask="true" :format='dateFormat'></ejs-datetimepicker>
+        <ejs-datetimepicker id="datetimepicker" :enableMask="true" format='M/d/yyyy hh:mm a'></ejs-datetimepicker>
      </div>
   </div>
 `,

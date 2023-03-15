@@ -9,7 +9,7 @@ new Vue({
 	template: `
     <div id="app">
       <div class='wrapper'>
-         <ejs-datetimepicker :placeholder="Select Date" :floatLabelType="auto"></ejs-datetimepicker>
+         <ejs-datetimepicker :placeholder="waterMark" floatLabelType="auto"></ejs-datetimepicker>
       </div>
     </div>
 `,

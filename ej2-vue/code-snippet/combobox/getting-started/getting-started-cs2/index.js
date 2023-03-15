@@ -10,7 +10,7 @@ new Vue({
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
         <br>
-        <ejs-combobox id='combobox' :dataSource='sportsData' placeholder='Select a game' :floatLabelType= "auto"></ejs-combobox>
+        <ejs-combobox id='combobox' :dataSource='sportsData' placeholder='Select a game' floatLabelType= "auto"></ejs-combobox>
     </div>
   </div>
 `,

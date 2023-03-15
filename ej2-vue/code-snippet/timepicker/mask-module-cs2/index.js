@@ -7,7 +7,6 @@ Vue.use(TimePickerPlugin);
 export default{
   data() {
     return {
-      dateFormat: 'hh:mm a'
     };
   },
   provide: {
@@ -24,7 +23,7 @@ new Vue({
      </div>
      <div class='wrapper2'>
           <!-- Specifies the masked timepicker with format property. -->
-         <ejs-timepicker id="format" :enableMask="true" :format="dateFormat"></ejs-timepicker>
+         <ejs-timepicker id="format" :enableMask="true" format="hh:mm a"></ejs-timepicker>
      </div>
   </div>
 `,
