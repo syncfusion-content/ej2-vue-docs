@@ -1,0 +1,17 @@
+
+
+
+#app {
+    margin: 55px auto;
+}
+.content {
+    padding: 5px;
+}
+
+.vertical_splitter.e-splitter.e-splitter-vertical  {
+  border: none;
+}
+
+.e-splitter {
+    margin: 0 auto;
+}

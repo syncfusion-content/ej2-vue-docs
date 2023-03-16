@@ -1,0 +1,16 @@
+
+
+
+
+/* DashboardLayout element styles  */
+#dashboard_layout .e-panel .e-panel-content {
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 80px;
+}
+
+#dashboard_layout .e-panel {
+  transition:none !important;
+}

@@ -1,0 +1,13 @@
+
+  
+  
+
+.e-card-image {
+    background: url('./sample.jpg');
+    height: 160px;;
+}
+
+.e-card {
+    width: 300px;
+    margin: auto;
+}

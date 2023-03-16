@@ -1,0 +1,10 @@
+
+    
+.predefinedDialogs {
+  height: 100%;
+  min-height: 350px;
+}
+ .e-alert-dialog.customClass {
+    max-width: 350px;
+    max-height: 250px !important;
+}

@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table-section {
+    margin: 0 auto;
+}
+
+tr td:first-child {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.sample-td {
+    padding-top: 10px;
+    min-width: 230px;
+    height: 100px;
+}
+
+h4{
+    text-align: center;
+    font-size: 18px;
+}

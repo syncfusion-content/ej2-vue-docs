@@ -1,0 +1,29 @@
+
+  .e-richtexteditor {
+      min-width: 200px;
+      max-width: 800px;
+      min-height: 100px;
+      max-height: 300px;
+  }
+</style>
+<script>
+import Vue from "vue";
+import { RichTextEditorPlugin, Toolbar, Link, Image, Resize, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+
+Vue.use(RichTextEditorPlugin);
+
+export default {
+    provide:{
+        richtexteditor:[Toolbar, Image, Resize HtmlEditor, Link]
+    }
+}
+</script>
+<style>
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+
+    .api {
+        width: 55%;
+    }
+    .api td {
+        padding-right: 100px;
+        margin-top: 3px;
+    }
+    @media only screen and (max-width: 600px) {
+        .api {
+            width: 100%;
+        }
+        .api td {
+            display: block;
+        }
+    }
+    @media only screen and (min-width: 600px) and (max-width: 1000px) {
+        .api {
+            width: 55%;
+        }
+    }
+</style>
+
+
+<script>
+  import Vue from 'vue';
+  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+  import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+  
+  Vue.use(DropDownListPlugin);
+  Vue.use(RichTextEditorPlugin);
+
+  export default {
+    data() {
+      return {
+        height: 220,
+        shiftEnterPlaceHolder: 'When pressing the shift + enter key',
+        floatLabelType: 'Always',
+        shiftEnterValue: 'BR',
+        shiftEnterData:  [
+            { text: "Create a new <br>", value: "BR" },
+            { text: "Create a new <div>", value: "DIV" },
+            { text: "Create a new <p>", value: "P" }
+        ],
+        fields: { text: 'text', value: 'value' }
+      };
+    },
+    methods: {
+        shiftEnterChange: function() {
+            if (this.$refs.enterOptionInstance.ej2Instances.value === 'BR') {
+                this.$refs.rteInstance.ej2Instances.shiftEnterKey = 'BR';
+            } else if (this.$refs.enterOptionInstance.ej2Instances.value === 'DIV') {
+                this.$refs.rteInstance.ej2Instances.shiftEnterKey = 'DIV';
+            } else if (this.$refs.enterOptionInstance.ej2Instances.value === 'P') {
+                this.$refs.rteInstance.ej2Instances.shiftEnterKey = 'P';
+            }
+        }
+    },
+    provide: {
+      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
+    }
+  }
+</script>
+
+<style>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+#target {
+  user-select: none;
+}
+
+.e-div {
+  width: 40%;
+  border: 1px dashed;
+  height: 150px;
+  margin: 10px;
+  text-align: center;
+  line-height: 150px;
+  display: inline-block;
+}

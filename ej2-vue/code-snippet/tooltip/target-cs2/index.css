@@ -1,0 +1,37 @@
+
+
+
+#container {
+    border: 1px solid #ddd;
+}
+
+#details .info {
+    font-weight: bold;
+    width: 165px;
+    display: inline-block;
+    margin-left: 10px;
+}
+#details .inputs {
+    display: inline-block;
+}
+#details .btn{
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+#details #sample{
+  margin-left:10px;
+}
+#details #clear{
+  margin-left:10px;
+}
+#details {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
