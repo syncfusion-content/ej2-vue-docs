@@ -60,8 +60,8 @@ Import the needed CSS styles for the Toolbar component along with dependency sty
 ```
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 ```
@@ -236,8 +236,8 @@ You have completed all the necessary configurations needed for rendering the Syn
     </script>
     <style>
       @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-      @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-      @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+      @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+      @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
       @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
       .e-tbar-btn .e-icons {
         font-family: "Material_toolbar";
