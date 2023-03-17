@@ -1,0 +1,34 @@
+
+
+
+/* csslint ignore:start */
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-dropdown-icon::before,
+#PivotView .e-pivot-button .e-icons.e-dropdown-icon::before {
+    content: "\e941";
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-pv-filtered::before,
+#PivotView .e-pivot-button .e-icons.e-pv-filtered::before {
+    content: "\e974";
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-pv-filter::before,
+#PivotView .e-pivot-button .e-icons.e-pv-filter::before {
+    content: '\e202';
+}
+
+#PivotView_PivotFieldList .e-icons.e-toggle-field-list::before {
+    content: '\e337';
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-sort::before,
+#PivotView .e-pivot-button .e-icons.e-sort::before {
+    content: '\e306';
+}
+
+#PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-remove::before,
+#PivotView .e-pivot-button .e-icons.e-remove::before {
+    content: '\e201';
+}
+
+/* csslint ignore:end */

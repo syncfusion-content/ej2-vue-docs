@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Syncfusion Vue (ES5) UI Components</title>
+    <!-- Essentail JS2 for Vue  (All components Styles) -->
+    <link href="https://cdn.syncfusion.com/ej2/material.css" rel="stylesheet" type="text/css" />
+    <!-- Vue library file-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js" type="text/javascript"></script>
+    <!-- Essential JS 2 for Vue  global script -->
+    <script src="https://cdn.syncfusion.com/ej2/ej2-vue-es5/dist/ej2-vue.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+    <h2>Syncfusion Vue 2 Grid Component</h2>
+    <div id="app">
+        <ejs-grid :data-source="data" :allow-paging="true" :page-settings='pageSettings'>
+            <e-columns>
+                <e-column field="OrderID" header-text="Order ID" text-align="Right" :is-primary-key="true" width="100"></e-column>
+                <e-column field="CustomerID" header-text="Customer ID"  width="80"></e-column>
+                <e-column field="Freight" header-text="Freight" width="90"></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+    <script>
+        Vue.use(ejs.grids.GridPlugin);
+        new Vue({
+            el: '#app',
+            provide: {
+                grid: [ejs.grids.Page]
+            },
+            data () {
+                return {
+                    data: [
+                            { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
+                            { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
+                            { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
+                            { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
+                            { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
+                            { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
+                            { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
+                            { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
+                            { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
+                    ],
+                    pageSettings: { pageSize: 5 }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

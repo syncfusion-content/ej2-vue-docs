@@ -1,0 +1,11 @@
+
+#sample-list-flat {
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin: auto;
+}
+#flat-list {
+    max-width: 350px;
+    padding: 10px;
+    margin: auto;
+}

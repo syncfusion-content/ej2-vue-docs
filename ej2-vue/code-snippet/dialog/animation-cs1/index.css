@@ -1,0 +1,33 @@
+
+    
+    #customization {
+        display: table;
+        margin: 0 auto;
+    }
+    #app {
+        color: #008cff;
+        height: 40px;
+        left: 45%;
+        position: absolute;
+        top: 45%;
+        width: 30%;
+    }
+    .control-section {
+        height: 100%;
+        min-height: 340px;
+     }
+    .animate {
+        display: table-cell;
+        padding-left: 20px;
+    }
+    #customization .e-btn.e-outline:hover,
+    #customization .e-css.e-btn.e-outline:hover,
+    #customization .e-btn.e-outline:hover:focus,
+    #customization .e-css.e-btn.e-outline:hover:focus,
+    #customization .e-btn.e-outline:focus,
+    #customization .e-css.e-btn.e-outline:focus {
+        background-color: #ffffff;
+        border-color: #0078d6;
+        color:#0078d6;
+        outline: none;
+    }

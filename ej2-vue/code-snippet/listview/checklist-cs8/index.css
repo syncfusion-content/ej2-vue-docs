@@ -1,0 +1,16 @@
+
+ #List {
+        max-width: 300px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+    #List a {
+      text-decoration: none;
+    }
+    #List .e-list-header {
+        background: rgb(2, 120, 215);
+        color: white;
+        font-size: 19px;
+        font-weight: 500;
+    }

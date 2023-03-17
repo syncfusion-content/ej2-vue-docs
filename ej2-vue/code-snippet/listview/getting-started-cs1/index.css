@@ -1,0 +1,12 @@
+
+  
+  #flat-list {
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+  #app {
+    color: #008cff;
+    height: 40px;
+    left: 30%;
+    position: absolute;
+  }

@@ -1,0 +1,14 @@
+
+  
+  
+  
+#wrapper1{
+    min-width: 250px;
+    float: left;
+    margin-left: 100px;
+}
+#wrapper2{
+    min-width: 250px;
+    float: right;
+     margin-right: 100px;
+}

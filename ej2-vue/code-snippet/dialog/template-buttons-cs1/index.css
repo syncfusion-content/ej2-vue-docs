@@ -1,0 +1,22 @@
+
+
+
+#app {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+#target {
+    height: 100%;
+    min-height: 350px;
+}
+.e-ok-icon::before {
+    content: '\e7ff';
+}
+
+.e-close-icon::before {
+    content: '\e825';
+}

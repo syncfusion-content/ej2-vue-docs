@@ -1,0 +1,25 @@
+
+
+
+
+#app {
+    text-align: center;
+    margin: 45px auto;
+}
+.content {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 9px;
+}
+.e-splitter {
+    margin: 0 auto;
+}
+.e-pane {
+  text-align: center;
+  align-items: center;
+  display: grid;
+}
+#collapse {
+  margin-left: 10px;
+}

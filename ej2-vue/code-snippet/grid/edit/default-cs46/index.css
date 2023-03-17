@@ -1,0 +1,9 @@
+
+  
+  .e-row[aria-selected="true"] .e-customizedExpandcell {
+      background-color: #e0e0e0;
+  }
+
+  .e-grid.e-gridhover tr[role='row']:hover {
+      background-color: #eee;
+  }

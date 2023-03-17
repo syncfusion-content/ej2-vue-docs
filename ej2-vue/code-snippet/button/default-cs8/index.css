@@ -1,0 +1,23 @@
+
+
+
+
+.btncontainer {
+  float: left;
+  width: 40%;
+}
+
+.event {
+  float: right;
+  width: 60%;
+  border-left: 1px solid #D7D7D7;
+}
+
+#eventlog b {
+  color: #388e3c;
+}
+
+hr {
+   margin: 1px 10px 1px 0px;
+   border-top: 1px solid #eee;
+}

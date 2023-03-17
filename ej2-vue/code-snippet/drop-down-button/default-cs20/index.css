@@ -1,0 +1,18 @@
+
+  
+  
+  
+  
+    .e-cell {
+    border: 1px solid grey;
+    padding: 8px;
+    }
+
+    .e-table::before {
+    content: '\e705';
+    }
+
+    .e-row {
+    padding-left: 3px;
+    padding-right: 3px;
+    }

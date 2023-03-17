@@ -1,0 +1,51 @@
+
+  .count{
+    float:right;
+  }
+  #List {
+      display: block;
+      margin: auto;
+      border: 1px solid;
+      border-color: #ccc;
+      border-color: rgba(0, 0, 0, 0.12);
+      width: 60%;
+  }
+
+  #List .settings {
+      height: auto;
+  }
+
+  #List .e-list-item {
+      height: auto;
+      padding: 0;
+      cursor: pointer;
+      box-sizing: border-box;
+      border: 0.1px solid #ccc;
+  }
+  #List .e-list-header .e-text {
+      font-family: sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+  }
+  #List #content {
+    margin: 3px;
+  }
+  #List .name {
+      font-size: 12px;
+      line-height: 25px;
+  }
+
+  #info {
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  #postImg {
+     margin: 9px;
+ }
+
+  #postContainer {
+  width: inherit;
+  margin: auto;
+  display: inline-flex;
+}

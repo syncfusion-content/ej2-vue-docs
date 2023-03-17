@@ -1,0 +1,38 @@
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</style>
+
+<style>
+#app {
+    visibility: hidden;
+}
+
+#app .control-group {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#app .control-group table {
+  width: 400px;
+  margin:auto;
+}
+
+#app .control-group table td {
+    height: 70px;
+    width:  150px;
+  }
+
+  #app .control-group table td.left {
+    text-align: left;
+  }  
+  

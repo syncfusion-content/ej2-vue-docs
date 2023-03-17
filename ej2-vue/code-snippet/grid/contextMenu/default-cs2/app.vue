@@ -1,0 +1,46 @@
+
+
+<template>
+    <div id="app">
+        <ejs-grid ref='grid' id='gridcomp' :dataSource='data' :allowSelection='true' :allowPaging='true' height='265px' :contextMenuItems='contextMenuItems' :contextMenuClick='contextMenuClick'>
+            <e-columns>
+                <e-column field='EmployeeID' :isPrimaryKey='true' headerText='Employee ID' textAlign='Right' width=120></e-column>
+                <e-column field='FirstName' headerText='FirstName' width=150></e-column>
+                <e-column field='LastName' headerText='Last Name' width=150></e-column>
+                <e-column field='City' headerText='City' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+import Vue from "vue";
+import { GridPlugin, ContextMenu, Page } from "@syncfusion/ej2-vue-grids";
+import { employeeData } from './datasource.js';
+
+Vue.use(GridPlugin);
+
+export default {
+  data() {
+    return {
+      data: employeeData,
+      contextMenuItems: [{text: 'Copy with headers', target: '.e-content', id: 'copywithheader'}]
+    };
+  },
+  methods: {
+      contextMenuClick: function(args) {
+        if(args.item.id === 'copywithheader') {
+            this.$refs.grid.copy(true);
+        }
+    }
+  },
+  provide: {
+      grid: [ContextMenu, Page]
+  }
+}
+</script>
+<style>
+ @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+</style>
+
+
+

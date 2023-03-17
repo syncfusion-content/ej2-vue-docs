@@ -1,0 +1,21 @@
+
+  
+  
+  
+ .control_wrapper {
+        display: block;
+        max-width: 400px;
+        max-height: 320px;
+        margin: auto;
+        overflow: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
+    #app {
+        width: 350px;
+        margin: 0 auto;
+    }
+     #contentmenutree {
+         padding: 0px;
+         font-size: inherit;
+    }

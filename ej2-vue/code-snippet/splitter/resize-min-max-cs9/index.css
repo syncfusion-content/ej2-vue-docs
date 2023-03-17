@@ -1,0 +1,25 @@
+
+
+
+#app {
+    margin: 65px auto;
+}
+.content {
+    padding: 10px;
+}
+
+.e-splitter {
+    margin: 0 auto;
+}
+
+.default-splitter .e-splitter .e-split-bar .e-resize-handler:before {
+  content: "\e934";
+  font-family: 'e-icons';
+  font-size: 11px;
+  transform: rotate(90deg);
+}
+
+.e-splitter .e-split-bar.e-split-bar-horizontal.e-resizable-split-bar,
+.e-splitter .e-split-bar.e-split-bar-horizontal.e-resizable-split-bar::after {
+  cursor: e-resize;
+}
