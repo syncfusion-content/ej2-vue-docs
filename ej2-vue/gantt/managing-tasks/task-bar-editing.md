@@ -52,15 +52,15 @@ The following code example demonstrates how to enable task dependency editing in
         
 {% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs17" %}
 
-![Alt text](images/user-interaction.png)
+![Alt text](../images/user-interaction.png)
 
 Updating with mouse interaction action
 
-![Alt text](images/cell-edit.png)
+![Alt text](../images/cell-edit.png)
 
 Updating with cell Edit
 
-![Alt text](images/dialog.png)
+![Alt text](../images/dialog.png)
 
 Updating with Dialog
 
@@ -85,17 +85,17 @@ The tasks value can be dynamically updated by using the [`updateRecordById`](htt
 The [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#edittype) is used to define the edit type for any particular column.
 You can set the [`columns.editType`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#edittype) based on data type of the column.
 
-* `numericedit` - [`NumericTextBox`](../numerictextbox) component for integers, double, and decimal data types.
+* `numericedit` - [`NumericTextBox`](https://ej2.syncfusion.com/vue/documentation/numerictextbox/getting-started) component for integers, double, and decimal data types.
 
-* `defaultedit` - [`TextBox`](../textbox) component for string data type.
+* `defaultedit` - [`TextBox`](https://ej2.syncfusion.com/vue/documentation/textbox/getting-started) component for string data type.
 
-* `dropdownedit` - [`DropDownList`](../drop-down-list) component to show all unique values related to that field.
+* `dropdownedit` - [`DropDownList`](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started/) component to show all unique values related to that field.
 
-* `booleanedit` - [`CheckBox`](../check-box) component for boolean data type.
+* `booleanedit` - [`CheckBox`](https://ej2.syncfusion.com/vue/documentation/check-box/getting-started/) component for boolean data type.
 
-* `datepickeredit` - [`DatePicker`](../datepicker) component for date data type.
+* `datepickeredit` - [`DatePicker`](https://ej2.syncfusion.com/vue/documentation/datepicker/getting-started) component for date data type.
 
-* `datetimepickeredit` - [`DateTimePicker`](../datetimepicker) component for date time data type.
+* `datetimepickeredit` - [`DateTimePicker`](https://ej2.syncfusion.com/vue/documentation/datetimepicker/getting-started/) component for date time data type.
 
 Also, you can customize the behavior of the editor component through the [`columns.edit.params`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#edit).
 
@@ -103,11 +103,11 @@ The following table describes cell edit type component and their corresponding e
 
 Edit Type |Component |Example
 -----|-----|-----
-`numericedit` | [`NumericTextBox`](../numerictextbox) | params: { decimals: 2, value: 5 }
-`dropdownedit` | [`DropDownList`](../drop-down-list) | params: { value: 'Germany' }
-`booleanedit` | [`Checkbox`](../check-box) | params: { checked: true}
-`datepickeredit` | [`DatePicker`](../datepicker) | params: { format:'dd.MM.yyyy' }
-`datetimepickeredit` | [`DateTimePicker`](../datetimepicker) | params: { value: new Date() }
+`numericedit` | [`NumericTextBox`](https://ej2.syncfusion.com/vue/documentation/numerictextbox/getting-started) | params: { decimals: 2, value: 5 }
+`dropdownedit` | [`DropDownList`](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started/) | params: { value: 'Germany' }
+`booleanedit` | [`Checkbox`](https://ej2.syncfusion.com/vue/documentation/check-box/getting-started/) | params: { checked: true}
+`datepickeredit` | [`DatePicker`](https://ej2.syncfusion.com/vue/documentation/datepicker/getting-started) | params: { format:'dd.MM.yyyy' }
+`datetimepickeredit` | [`DateTimePicker`](https://ej2.syncfusion.com/vue/documentation/datetimepicker/getting-started/) | params: { value: new Date() }
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

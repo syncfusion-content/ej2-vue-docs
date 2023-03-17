@@ -43,7 +43,7 @@ To render a bubble heat map with size series, set the [bubbleType](https://ej2.s
 
 In heat map, defined with this tile type, the data points will be represented with same sized bubbles and the data value variations are represented with the bubble colors.
 
-To represent the data points with variations in bubble colors, set the [bubbleType](../api/heatmap/cellSettings/#bubbletype) property to **Color**.
+To represent the data points with variations in bubble colors, set the [bubbleType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#bubbletype) property to **Color**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -57,7 +57,7 @@ To represent the data points with variations in bubble colors, set the [bubbleTy
 
 In this bubble heat map type, the sector of the bubble decides the magnitude of data point. If the sector is large, then the data point value will be high.
 
-To render the data points with bubble sector, set the [bubbleType](../api/heatmap/cellSettings/#bubbletype) property to **Sector**.
+To render the data points with bubble sector, set the [bubbleType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#bubbletype) property to **Sector**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -71,7 +71,7 @@ To render the data points with bubble sector, set the [bubbleType](../api/heatma
 
 In this bubble heat map type, you can bind the two data source fields to a single data point. Thereby, each data point represents the two data values with bubble size and bubble color attributes, where the bubble size denotes the magnitude of one data source field and the bubble color denotes the magnitude of another data source field.
 
-To render a bubble heat map with size and color series, set the [bubbleType](../api/heatmap/cellSettings/#bubbletype) property to **SizeAndColor**.
+To render a bubble heat map with size and color series, set the [bubbleType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#bubbletype) property to **SizeAndColor**.
 
 #### Binding data for bubble heat map with size and color attributes
 

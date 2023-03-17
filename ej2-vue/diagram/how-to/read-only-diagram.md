@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Read only diagram in Vue Diagram component
 
-You can create the read-only diagram by using [`DiagramConstraints`](./constrains#diagram-constraints).
+You can create the read-only diagram by using [`DiagramConstraints`](../constraints#diagram-constraints).
 
 ## Step1
 

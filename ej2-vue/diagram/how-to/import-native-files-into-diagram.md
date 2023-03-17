@@ -14,7 +14,7 @@ You can import SVG files into the diagram and the symbol palette, and also you c
 
 ## Step1
 
-Binding the SVG content to the nodes have been discussed in [`Nativenode`](./shapes/#Native).
+Binding the SVG content to the nodes have been discussed in [`Nativenode`](../shapes#Native).
 
 ## Step2
 

@@ -50,7 +50,7 @@ The following sample demonstrates the option to add the font name and font size 
 
 Rich Text Editor supports to provide custom font and size with existing list.
 
-If you want to add additional font names and font sizes to font drop-down, pass the font information as JSON data to the items field of the [`fontSize`](../api/rich-text-editor/fontSize/#fontsize) and the [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontFamily/#fontfamily) property.
+If you want to add additional font names and font sizes to font drop-down, pass the font information as JSON data to the items field of the [`fontSize`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontSize/#fontsize) and the [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontFamily/#fontfamily) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -64,7 +64,7 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
 To apply font color or background color for a selected content of Rich Text Editor, use font color and background color tools.
 
-Rich Text Editor supports to provide customs font color and background color with existing list through the [colorCode](../api/rich-text-editor/fontColor/#colorcode) field of fontColor and backgroundColor.
+Rich Text Editor supports to provide customs font color and background color with existing list through the [colorCode](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontColor/#colorcode) field of fontColor and backgroundColor.
 
 The FontColor and the BackgroundColor property has two [mode](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontColor/#mode) Picker and Palette. Palette mode has predefined set of colorCode and in the picker mode, more colors has been provided. Through [modeSwitcher](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontColor/#modeswitcher), you can able to switch between these two options.
 

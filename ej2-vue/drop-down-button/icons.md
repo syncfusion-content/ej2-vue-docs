@@ -40,7 +40,7 @@ Icon only DropDownButton can be achieved by using [`iconCss`](https://ej2.syncfu
 
 ### DropDownButton with sprite image
 
-Sprite images can be loaded in DropDownButton instead of font icons using [`iconCss`](../api/drop-down-button#iconcss) property.
+Sprite images can be loaded in DropDownButton instead of font icons using [`iconCss`](	https://ej2.syncfusion.com/vue/documentation/api/drop-down-button#iconcss) property.
 
 In this following example, `e-image` class is added with background url of the sprite image along with X and Y positions. The `width` and `height` of the element set as `32px`.
 

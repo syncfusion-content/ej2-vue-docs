@@ -29,7 +29,7 @@ this.$refs.documenteditor.ej2Instances.editor.insertFormField('Dropdown');
 
 ## Get form field names
 
-All the form fields names form current document can be retrieved using [`getFormFieldNames()`](../api/document-editor/#getformfieldnames).
+All the form fields names form current document can be retrieved using [`getFormFieldNames()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#getformfieldnames).
 
 ```ts
 this.$refs.documenteditor.ej2Instances.getFormFieldNames();
@@ -37,7 +37,7 @@ this.$refs.documenteditor.ej2Instances.getFormFieldNames();
 
 ## Get form field properties
 
-Form field properties can be retrieved using [`getFormFieldInfo()`](../api/document-editor/#getformfieldinfo).
+Form field properties can be retrieved using [`getFormFieldInfo()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#getformfieldinfo).
 
 ```ts
 //Text form field

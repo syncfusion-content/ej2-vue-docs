@@ -79,7 +79,7 @@ use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/te
 
 ## Momentum
 
-Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [`type`](..api/chart/technicalIndicatorModel/#type) as `Momentum`and inject `MomentumIndicator` into the `provide`. Momentum indicator will be represented by two lines (upperLine, signalLine).In momentum indicator the upperBand value is always render at the value 100.
+Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `Momentum`and inject `MomentumIndicator` into the `provide`. Momentum indicator will be represented by two lines (upperLine, signalLine).In momentum indicator the upperBand value is always render at the value 100.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

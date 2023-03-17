@@ -32,7 +32,7 @@ Through the `e-rte-placeholder` class to define our custom font family, font col
 
 ## Character count
 
-The Rich Text Editor automatically counts the number of characters in the content are while typing using the [showCharCount](../api/rich-text-editor/#showcharcount) property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the [maxLength](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#maxlength) property. By default, the editor sets the characters limit value is infinity.
+The Rich Text Editor automatically counts the number of characters in the content are while typing using the [showCharCount](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#showcharcount) property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the [maxLength](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#maxlength) property. By default, the editor sets the characters limit value is infinity.
 
 The character count color will be modified based on the characters in the Rich Text Editor.
 
@@ -72,7 +72,7 @@ To undo and redo operations, do one of the following:
 * Press the undo/redo button on the toolbar.
 * Press the **Ctrl + Z/Ctrl + Y** combination on the keyboard.
 
-Customize the undo/redo step count using the [undoRedoSteps](../api/rich-text-editor/#undoredosteps) property. By default, undo/redo actions take 300ms time interval for store the action to the undoRedoManager. The time interval can be customized by using the [undoRedoTimer](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredotimer).
+Customize the undo/redo step count using the [undoRedoSteps](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredosteps) property. By default, undo/redo actions take 300ms time interval for store the action to the undoRedoManager. The time interval can be customized by using the [undoRedoTimer](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredotimer).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -100,7 +100,7 @@ In the following sample, removed `script` tag and `onmouseover` attribute from c
 
 ### Custom cross-site scripting
 
-You can also filter the elements and attributes additionally, which cause the XSS attack through [`beforeSanitizeHtml`](../api/rich-text-editor/#beforesanitizehtml) event. Return the value from the event argument `helper` function to apply in the editor. To prevent the built-in support and make own cross-site scripting rules, set `cancel` argument to true.
+You can also filter the elements and attributes additionally, which cause the XSS attack through [`beforeSanitizeHtml`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#beforesanitizehtml) event. Return the value from the event argument `helper` function to apply in the editor. To prevent the built-in support and make own cross-site scripting rules, set `cancel` argument to true.
 
 The following sample demonstrates how to filter `script` tag from value.
 

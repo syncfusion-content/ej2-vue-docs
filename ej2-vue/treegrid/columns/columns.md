@@ -96,7 +96,7 @@ The following screenshot represents the column resizing in touch device.
 
 ## Column type
 
-Column type can be specified using the [`columns.type`](../../api/treegrid/column/#type) property. It specifies the type of data the column binds.
+Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#type) property. It specifies the type of data the column binds.
 
 If the [`format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
  or [date](../../common/internationalization/#manipulating-datetime)).

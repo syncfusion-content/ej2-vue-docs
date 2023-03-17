@@ -322,7 +322,7 @@ The following code example shows you how to customize the `moreEventsClick` prop
 
 ### How to close the editor window manually
 
-You can close the editor window by using [closeEditor](../api/schedule/#closeeditor) method.  
+You can close the editor window by using [closeEditor](https://ej2.syncfusion.com/vue/documentation/api/schedule#closeeditor) method.  
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

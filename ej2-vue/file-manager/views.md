@@ -31,7 +31,7 @@ By Default, File Manager is rendered with largeicons view. The following example
 
 ## Details View
 
-Details view is an injectable module in the file manager so, it should be injected before rendering the file manager to avail its functionality. The default appearance of the file manager can be changed from largeicons to details view by using the [view](../api/file-manager/#view) property. The following example demonstrate the file manager with details view.
+Details view is an injectable module in the file manager so, it should be injected before rendering the file manager to avail its functionality. The default appearance of the file manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) property. The following example demonstrate the file manager with details view.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

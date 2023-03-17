@@ -28,7 +28,7 @@ In the following sample, the vegetables are grouped according on its category us
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](../api/combo-box/#grouptemplate) property for both inline and fixed headers.
+The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#grouptemplate) property for both inline and fixed headers.
 
 ## See Also
 

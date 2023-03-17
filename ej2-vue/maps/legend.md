@@ -152,7 +152,7 @@ export let population_density = [
     ];
 ```
 
-In the following example, color mapping is added for the ranges from **0** to **200**. If there are any records in the data source that are outside of this range, the color mapping will not be applied. To apply the color for these excluded items, set the [`color`](../api/maps/colorMappingSettingsModel/#color) property alone in the [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/). To enable legend for these items, set the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/) to **true**.
+In the following example, color mapping is added for the ranges from **0** to **200**. If there are any records in the data source that are outside of this range, the color mapping will not be applied. To apply the color for these excluded items, set the [`color`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#color) property alone in the [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/). To enable legend for these items, set the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property of [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/) to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

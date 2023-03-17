@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Retaining client side events in Vue Diagram component
 
-In the diagram, you have the option for saving the diagram and also able to load the serialized JSON into the diagram. Refer to the [`Serialization`](./serialization) for further reference.
+In the diagram, you have the option for saving the diagram and also able to load the serialized JSON into the diagram. Refer to the [`Serialization`](../serialization) for further reference.
 
 ## Step1
 

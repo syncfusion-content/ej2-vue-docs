@@ -33,7 +33,7 @@ The HTML editing mode is the default mode in Rich Text Editor to format the cont
 
 ## Markdown editor
 
-Set the [editorMode](../api/rich-text-editor/#editormode) property as **Markdown**, to create or edit the content and apply formatting to view markdown formatted content.
+Set the [editorMode](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#editormode) property as **Markdown**, to create or edit the content and apply formatting to view markdown formatted content.
 
 The third-party library such as `Marked` or any other library is used to convert markdown into HTML content.
 

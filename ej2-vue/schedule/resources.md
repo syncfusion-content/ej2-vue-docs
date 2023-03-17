@@ -432,7 +432,7 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 
 In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property to only display the custom work days in the Scheduler.
 
-To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](../api/schedule/group/#hidenonworkingdays) to `true` to enable this feature.
+To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) to `true` to enable this feature.
 
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
 
@@ -444,7 +444,7 @@ To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/a
         
 {% previewsample "page.domainurl/code-snippet/schedule/single-level-resource-cs3" %}
 
-> The [`hideNonWorkingDays`](../api/schedule/group/#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bydate).
+> The [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bydate).
 
 ## Compact view in mobile
 

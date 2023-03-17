@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Show hide context menu in Vue Diagram component
 
-In the diagram, you can create the customized context menu. Refer to the [`contextmenu`](./context-menu) for further references.
+In the diagram, you can create the customized context menu. Refer to the [`contextmenu`](../context-menu) for further references.
 
 ## Step1
 

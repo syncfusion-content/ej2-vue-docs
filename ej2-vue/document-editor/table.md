@@ -102,7 +102,7 @@ this.$refs.documenteditor.ej2Instances.selection.selectCell();
 
 ## Delete table
 
-Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](../api/document-editor/editor/#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the entire table. You can use the [`deleteTable()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#deletetable) method of editor instance, if selection is in table. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.deleteTable();
@@ -110,7 +110,7 @@ this.$refs.documenteditor.ej2Instances.editor.deleteTable();
 
 ## Delete row
 
-Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](../api/document-editor/editor/#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of rows. You can use the [`deleteRow()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#deleterow) method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.deleteRow();
@@ -118,7 +118,7 @@ this.$refs.documenteditor.ej2Instances.editor.deleteRow();
 
 ## Delete column
 
-Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](../api/document-editor/editor/#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
+Document Editor allows you to delete the selected number of columns. You can use the [`deleteColumn()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#deletecolumn) method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
 ```ts
 this.$refs.documenteditor.ej2Instances.editor.deleteColumn();

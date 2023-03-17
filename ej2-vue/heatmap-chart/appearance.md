@@ -28,7 +28,7 @@ Change the width, color, and radius of the heat map cells by using the [border](
 
 ### Cell highlighting
 
-Enable or disable the cell highlighting while hovering over the heat map cells by using the [enableCellHighlighting](../api/heatmap/cellSettings/#enablecellhighlighting) property.
+Enable or disable the cell highlighting while hovering over the heat map cells by using the [enableCellHighlighting](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#enablecellhighlighting) property.
 
 >Note: The cell highlighting only works in a SVG rendering mode.
 
@@ -42,7 +42,7 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 
 ### Color gradient mode
 
-The [colorGradientMode](../api/heatmap/paletteSettingsModel/#colorgradientmode) property can be used to set the minimum and maximum values for colors based on row and column.
+The [colorGradientMode](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettingsModel/#colorgradientmode) property can be used to set the minimum and maximum values for colors based on row and column.
 
 Three types of color gradient modes are available.
 
@@ -62,7 +62,7 @@ Three types of color gradient modes are available.
 
 ## Background color
 
-The background color of the HeatMap can be customized using the [backgroundColor](../api/heatmap/#backgroundcolor) property.
+The background color of the HeatMap can be customized using the [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#backgroundcolor) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -86,7 +86,7 @@ Set the margin for the heatmap from its container by using the [margin](https://
 
 ## Title
 
-The title is used to provide a quick information about the data plotted in heatmap. The [text](../api/heatmap/title/#text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#textstyle) property.
+The title is used to provide a quick information about the data plotted in heatmap. The [text](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#textstyle) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -98,7 +98,7 @@ The title is used to provide a quick information about the data plotted in heatm
 
 ## Data label
 
-The visibility of data labels can be toggled using the [showLabel](../api/heatmap/cellSettings/#showlabel) property. By default, the data labels will be visible.
+The visibility of data labels can be toggled using the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#showlabel) property. By default, the data labels will be visible.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -110,7 +110,7 @@ The visibility of data labels can be toggled using the [showLabel](../api/heatma
 
 ### Customize the data label
 
-The label displayed in the HeatMap cell can be changed using the [cellRender](../api/heatmap/#cellrender) event.
+The label displayed in the HeatMap cell can be changed using the [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellrender) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -134,7 +134,7 @@ The text attributes of the data label such as font-family, font-size, and color 
 
 ### Format
 
-The format of the data label, such as currency, decimal, percent etc. can be changed using [format](../api/heatmap/cellSettings/#format) property.
+The format of the data label, such as currency, decimal, percent etc. can be changed using [format](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#format) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

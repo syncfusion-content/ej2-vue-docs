@@ -41,10 +41,9 @@ For spanning the vertical axis along multiple row, you can use [`span`](https://
 
 ## Columns
 
-To split the chart area horizontally into number of columns, use [`columns`](api-columnDirective.html) property of the chart.
+To split the chart area horizontally into number of columns, use [`columns`](https://ej2.syncfusion.com/vue/documentation/api/chart/column/) property of the chart.
 
-* You can allocate space for each column by using the [`width`](api-columnDirective.html#width-string)
-property. The given width can be either in percentage or in pixel.
+* You can allocate space for each column by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/column/#width) property. The given width can be either in percentage or in pixel.
 
 * To associate a horizontal axis to a particular column, specify its index to
 
@@ -62,7 +61,7 @@ property.
         
 {% previewsample "page.domainurl/code-snippet/chart/axis/multiple-panes-cs3" %}
 
-For spanning the horizontal axis along multiple column, you can use [`span`](api-axisDirective.html#span-number) property of an axis.
+For spanning the horizontal axis along multiple column, you can use [`span`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#span) property of an axis.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

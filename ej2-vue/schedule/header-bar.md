@@ -82,7 +82,7 @@ In month view, the date header template is not applicable and therefore the same
 
 The [`dateRangeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#daterangetemplate) option allows you to customize the text content of the date range displayed in the scheduler. By default, the date range text is determined by the scheduler view being used. However, you can use the [`dateRangeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#daterangetemplate) option to override the default text and specify your own custom text to be displayed.
 
-The [`dateRangeTemplate`](../api/schedule/#daterangetemplate) property includes `startDate`, `endDate` and `currentView` options, you can customize the date range text using these available options.
+The [`dateRangeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule#daterangetemplate) property includes `startDate`, `endDate` and `currentView` options, you can customize the date range text using these available options.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

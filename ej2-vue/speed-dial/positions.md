@@ -67,7 +67,7 @@ You can open the Speed Dial action items on mouse hover by setting the [`opensOn
 
 ## Programmatically show/hide Speed Dial items
 
-You can open/close the Speed Dial action items programmatically using [`show`](../api/speed-dial#show) and [`hide`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#hide) methods.
+You can open/close the Speed Dial action items programmatically using [`show`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#show) and [`hide`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#hide) methods.
 
 Below example demonstrates open/close action items on button click.
 

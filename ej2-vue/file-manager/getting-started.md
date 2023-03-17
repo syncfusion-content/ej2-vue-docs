@@ -251,7 +251,7 @@ The following example shows you the File Manager with all feature modules.
         
 {% previewsample "page.domainurl/code-snippet/file-manager/overview-cs1" %}
 
->**Note:** The appearance of the File Manager can be customized by using [cssClass](../api/file-manager/#cssclass) property. This adds a css class to the root of the File Manager which can be used to add new styles or override existing styles to the File Manager.
+>**Note:** The appearance of the File Manager can be customized by using [cssClass](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#cssclass) property. This adds a css class to the root of the File Manager which can be used to add new styles or override existing styles to the File Manager.
 
 ## Switching initial view of the File Manager
 
@@ -298,7 +298,7 @@ It is possible to render the File Manager in right-to-left direction by setting 
 
 ## Specifying the current path of the File Manager
 
-The current path of the File Manager can be specified initially or dynamically using the [path](../api/file-manager/#path) property.
+The current path of the File Manager can be specified initially or dynamically using the [path](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#path) property.
 
 The following code snippet demonstrates specifying the current path in File Manager on rendering.
 

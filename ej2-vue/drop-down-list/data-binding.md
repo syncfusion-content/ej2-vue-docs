@@ -41,7 +41,7 @@ The DropDownList has support to load array of primitive data such as strings and
 
 ### 2. Array of JSON data
 
-The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](../api/drop-down-list/#fields) property.
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) property.
 
 In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
@@ -55,7 +55,7 @@ In the following example, `Id` column and `Game` column from complex data have b
 
 ### 3. Array of Complex data
 
-The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](../api/drop-down-list/#fields) property.
+The DropDownList can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#fields) property.
 
 In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
@@ -69,7 +69,7 @@ In the following example, `Code.Id` column and `Country.Name` column from comple
 
 ## Binding remote data
 
-The DropDownList supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](../api/drop-down-list/#query) property is used to fetch data from the database and bind it to the DropDownList.
+The DropDownList supports retrieval of data from remote data services with the help of `DataManager` component. The [`Query`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#query) property is used to fetch data from the database and bind it to the DropDownList.
 
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 

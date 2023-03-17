@@ -34,7 +34,7 @@ The following sample demonstrates how to modify a cell size using the [`columns`
 
 The spacing between each panel in a row and column can be defined using the [`cellSpacing`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellspacing) property. Adding spacing between the panels will make the layout effective and provides a clear data representation.
 
-The following sample demonstrates the usage of the [`cellSpacing`](../api/dashboard-layout/#cellspacing) property which helps in a neat and clear representation of a data.
+The following sample demonstrates the usage of the [`cellSpacing`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellspacing) property which helps in a neat and clear representation of a data.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -46,7 +46,7 @@ The following sample demonstrates the usage of the [`cellSpacing`](../api/dashbo
 
 ## Graphical representation of layout
 
-These cells combinedly forms a grid-structured layout which will be hidden initially. This grid structured layout can be made visible by enabling the [`showGridLines`](../api/dashboard-layout/#showgridlines) property, which clearly pictures the cells split-up within the layout. These gridlines will be helpful in panels sizing and placement within the layout during initial designing of a dashboard.
+These cells combinedly forms a grid-structured layout which will be hidden initially. This grid structured layout can be made visible by enabling the [`showGridLines`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#showgridlines) property, which clearly pictures the cells split-up within the layout. These gridlines will be helpful in panels sizing and placement within the layout during initial designing of a dashboard.
 
 In the following sample, the grid lines indicate the cells split-up of the layout and the data containers placed over these cells are known as panels.
 
@@ -60,7 +60,7 @@ In the following sample, the grid lines indicate the cells split-up of the layou
 
 ## Rendering component in right-to-left direction
 
-It is possible to render the Dashboard Layout in right-to-left direction by setting the [enableRtl](../api/dashboard-layout/#enablertl) API to true.
+It is possible to render the Dashboard Layout in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#enablertl) API to true.
 
 The following sample demonstrates Dashboard Layout in right-to-left direction.
 

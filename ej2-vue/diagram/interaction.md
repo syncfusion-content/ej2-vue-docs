@@ -228,7 +228,7 @@ The appearance of the user handle can be customized by using the [`size`](https:
 
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
-* When the diagram is zoomed or panned, the [`scrollChange`](../api/diagram/diagram#scrollChange--emittypeiscrollchangeeventargs) event gets triggered.
+* When the diagram is zoomed or panned, the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram#scrollChange--emittypeiscrollchangeeventargs) event gets triggered.
 
 ![Zoom Pan](images/Zoom-pan.gif)
 

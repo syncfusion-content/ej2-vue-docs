@@ -28,7 +28,7 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](../api/multi-select/#grouptemplate) property for both inline and fixed headers.
+The grouping header is also provided with customization option. This allows custom designing using the [`groupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#grouptemplate) property for both inline and fixed headers.
 
 ## Grouping with CheckBox
 

@@ -28,7 +28,7 @@ Refer to the following code example for local data binding.
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/local-data-binding-cs1" %}
 
-> The local data source can also be provided as an instance of the [`DataManager`](../data). By default, [`DataManager`](../data) uses [`JsonAdaptor`](../data/adaptors/#json-adaptor) for local data-binding.
+> The local data source can also be provided as an instance of the [`DataManager`](../data). By default, [`DataManager`](../data) uses [`JsonAdaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#json-adaptor) for local data-binding.
 
 ## Remote data
 

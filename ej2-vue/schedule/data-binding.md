@@ -114,7 +114,7 @@ To send an additional custom parameter to the server-side post, you need to make
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs4" %}
 
-> The parameters added using the [`query`](../api/schedule/eventSettings/#query) property will be sent along with the data request sent to the server on every scheduler actions.
+> The parameters added using the [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#query) property will be sent along with the data request sent to the server on every scheduler actions.
 
 ## Handling failure actions
 
@@ -130,7 +130,7 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/docu
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs5" %}
 
-> The [`actionFailure`](../api/schedule#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/schedule#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
 
 ## Scheduler CRUD actions
 

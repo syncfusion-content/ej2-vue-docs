@@ -54,7 +54,7 @@ The following code example illustrates how to add custom context menu items.
         
 {% previewsample "page.domainurl/code-snippet/diagram/contextmenu/default-cs1" %}
 
-To display the custom context menu items alone, set  the [`showCustomMenuOnly`](../api/diagram/contextMenuSettingsModel#showCustomMenuOnly) property to true.
+To display the custom context menu items alone, set  the [`showCustomMenuOnly`](https://ej2.syncfusion.com/vue/documentation/api/diagram/contextMenuSettingsModel#showCustomMenuOnly) property to true.
 
 ## Template Support for Context menu
 

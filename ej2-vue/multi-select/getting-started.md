@@ -169,7 +169,7 @@ npm run dev
 
 By default, the width of the popup list automatically adjusts according to the MultiSelect input element's width and the height of the popup list has '300px'.
 
-You can also customize the suggestion list height and width using [popupHeight](../api/multi-select/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#popupwidth) properties respectively.
+You can also customize the suggestion list height and width using [popupHeight](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#popupwidth) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 

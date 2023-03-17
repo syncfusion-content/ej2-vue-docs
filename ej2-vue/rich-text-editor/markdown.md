@@ -96,7 +96,7 @@ The Markdown table constants can be changed for the table heading and the column
 
 ## Custom formation
 
-The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using the [`formatter`](../api/rich-text-editor/#formatter)property.
+The Rich Text Editor allows you to customize the markdown syntax by overriding its default syntax. Configure the customized markdown syntax using the [`formatter`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#formatter)property.
 
 This sample demonstrates how to customize tags of markdown formatting.
 

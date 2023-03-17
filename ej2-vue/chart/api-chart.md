@@ -331,7 +331,7 @@ Specifies whether series or data point has to be selectedhttps://ej2.syncfusion.
 
 Defaults to *None*
 
-### selectionModule [`Selection`](./api-selection.html)
+### selectionModule [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/chart#selectionmodule)
 
 `selectionModule` is used to manipulate and add selection to the chart.
 

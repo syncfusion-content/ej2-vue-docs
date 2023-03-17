@@ -33,7 +33,7 @@ The default mode of [`toolbarSettings.type`](https://ej2.syncfusion.com/vue/docu
 
 ## Multi-row Toolbar
 
-Set the type as MultiRow in [toolbarSettings](../api/rich-text-editor/toolbarSettings/#toolbarsettings) to hide the overflowing items in the next row. All toolbar items are visible.
+Set the type as MultiRow in [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) to hide the overflowing items in the next row. All toolbar items are visible.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -45,7 +45,7 @@ Set the type as MultiRow in [toolbarSettings](../api/rich-text-editor/toolba
 
 ## Floating Toolbar
 
-By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using  [`floatingToolbarOffset`](../api/rich-text-editor/#floatingtoolbaroffset).
+By default, toolbar is float at the top of the Rich Text Editor on scrolling. It can be customized by specifying the offset of the floating toolbar from documents top position using  [`floatingToolbarOffset`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#floatingtoolbaroffset).
 
 Enable or disable the floating toolbar using [`enableFloating`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) of the[`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property.
 
@@ -136,7 +136,7 @@ Quick commands are opened as context-menu on clicking the corresponding element.
 | text (`Deprecated`) | 'Cut', 'Copy', 'Paste'.|
 | table | 'TableHeader', 'TableRows', 'TableColumns', 'BackgroundColor', 'TableRemove', 'Alignments', 'TableCellVerticalAlign', 'Styles'.|
 
-Custom tool can be added to the corresponding quick toolbar, using [`quickToolbarSettings`](../api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) property.
+Custom tool can be added to the corresponding quick toolbar, using [`quickToolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) property.
 
 The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#toolbarclick) event.
 

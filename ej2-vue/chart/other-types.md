@@ -54,7 +54,7 @@ In Box and Whisker series `showMean` property is used to show the box and whiske
 
 ## Waterfall Chart
 
-Waterfall chart helps to understand the cumulative effect of the sequentially introduced positive and negative values. To render a Waterfall series, use series [`type`](api-seriesDirective.html#type-any) as `Waterfall` and inject `WaterfallSeries` into the `provide`. [`intermediateSumIndexes`](https://ej2.syncfusion.com/vue/documentation/api-seriesDirective.html#intermediateSumIndexes-any) property of waterfall is used is used to represent the cumulative sum values.
+Waterfall chart helps to understand the cumulative effect of the sequentially introduced positive and negative values. To render a Waterfall series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Waterfall` and inject `WaterfallSeries` into the `provide`. [`intermediateSumIndexes`](https://ej2.syncfusion.com/vue/documentation/api-seriesDirective.html#intermediateSumIndexes-any) property of waterfall is used is used to represent the cumulative sum values.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

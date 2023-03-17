@@ -138,7 +138,7 @@ npm run serve
 
 By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has '300px'.
 
-The height and width of the popup list can also be customized using the [popupHeight](../api/drop-down-list/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#popupwidth) properties respectively
+The height and width of the popup list can also be customized using the [popupHeight](	https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#popupheight) &nbsp;and [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#popupwidth) properties respectively
 
 ```
 <template>
