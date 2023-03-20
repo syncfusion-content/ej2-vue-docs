@@ -117,8 +117,8 @@ In the HeatMap, the legend selection is used to toggle the visibility of cell fo
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/legend-cs8" %}
 
 ## Legend Title
+The legend title displays a specific information about the legend. You can enable the legend title by setting the [title](../api/heatmap/legendSettings/#title) property by providing the text and customizing the legend title text style using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#textstyle) property.
 
-The legend title displays a specific information about the legend. You can enable the legend title by setting the [title](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#title) property by providing the text and customizing the legend title text style using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/titleModel/#textStyle) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

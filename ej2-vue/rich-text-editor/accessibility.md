@@ -23,7 +23,7 @@ The toolbar of Rich Text Editor, assigned the role of Toolbar and has the follow
 | aria-haspopup | Indicates the popup mode of the toolbar. The default value is false. When popup mode is enabled, attribute value has to be changed to true. |
 | aria-disabled | Indicates the disabled state of the toolbar. |
 
-For further details of toolbar ARIA attributes, refer the accessibility of [Toolbar](../../toolbar/accessibility) documentation.
+For further details of toolbar ARIA attributes, refer the accessibility of [Toolbar](https://ej2.syncfusion.com/vue/documentation/toolbar/accessibility/) documentation.
 
 The Rich Text Editor element is assigned the role of application.
 

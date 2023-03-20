@@ -51,11 +51,11 @@ Specifies the direction of the In-place Editor component using the [enableRtl](h
 
 Formatting is a way of representing the value in different format. You can format the following mentioned components with its `format` property, when it passed through the In-place Editor [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) property.
 
-* [DatePicker](../datepicker/date-format/)
-* [DateRangePicker](../daterangepicker/globalization/#customize-the-date-format)
-* [DateTimePicker](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker/#format)
-* [NumericTextBox](../numerictextbox/formats/#custom-formats)
-* [Slider](../slider/format/)
+* [DatePicker](https://ej2.syncfusion.com/vue/documentation/datepicker/date-format/)
+* [DateRangePicker](https://ej2.syncfusion.com/vue/documentation/daterangepicker/globalization/#customize-the-date-format)
+* [DateTimePicker](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker/#timeformat)
+* [NumericTextBox](https://ej2.syncfusion.com/vue/documentation/numerictextbox/formats/)
+* [Slider](https://ej2.syncfusion.com/vue/documentation/range-slider/format/)
 * [TimePicker](https://ej2.syncfusion.com/vue/documentation/api/timepicker#format)
 
 {% tabs %}

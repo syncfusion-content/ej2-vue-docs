@@ -70,5 +70,5 @@ You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-compone
 
 * [Editing](./editing)
 * [Formatting](./formatting)
-* [Open](./open)
-* [Save](./save)
+* [Open](./open-save)
+* [Save](./open-save)

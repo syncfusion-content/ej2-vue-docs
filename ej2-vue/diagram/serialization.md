@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Save
 
-The diagram is serialized as string while saving. The client-side method, [`saveDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#saveDiagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
+The diagram is serialized as string while saving. The client-side method, [`saveDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#savediagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
 
 ```javascript
 export default {
@@ -50,7 +50,7 @@ Diagram can also be saved as raster or vector image files. For more information 
 
 ## Load
 
-Diagram is loaded from the serialized string data by client-side method, [`loadDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#loadDiagram).
+Diagram is loaded from the serialized string data by client-side method, [`loadDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#loaddiagram).
 The following code illustrates how to load the diagram from serialized string data.
 
 ```ts

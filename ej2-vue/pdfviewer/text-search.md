@@ -57,5 +57,5 @@ The following text search methods are available in the PDF Viewer,
 
 ## See also
 
-* [Toolbar items](/toolbar)
-* [Feature Modules](/feature-module)
+* [Toolbar items](./toolbar)
+* [Feature Modules](./feature-module)

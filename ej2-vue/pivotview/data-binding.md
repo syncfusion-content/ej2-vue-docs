@@ -208,7 +208,7 @@ User can use [`WebApiAdaptor`](https://ej2.syncfusion.com/documentation/data/ada
 
 ### Querying in Data Manager
 
-By default, the data manager retrieves all the data from the provider which is mapped in it. The data from the provider can be filtered, sorted, paged, etc. by setting the own query in [`defaultQuery`](https://ej2.syncfusion.com/vue/documentation/api/data/dataManager/#setdefaultquery) property in the data manager instance.
+By default, the data manager retrieves all the data from the provider which is mapped in it. The data from the provider can be filtered, sorted, paged, etc. by setting the own query in `defaultQuery` property in the data manager instance.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

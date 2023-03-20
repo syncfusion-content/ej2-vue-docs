@@ -28,7 +28,7 @@ An annotation can be added to a node/connector by defining the annotation object
 
 ## Add annotations at runtime
 
-* Annotations can be added at runtime by using the client-side method [`addLabels`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#addLabels). The following code illustrates how to add a annotation to a node.
+* Annotations can be added at runtime by using the client-side method [`addLabels`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addlabels). The following code illustrates how to add a annotation to a node.
 
 * The annotation's [`ID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#id-string) property is used to define the name of the annotation and its further used to find the annotation at runtime and do any customization.
 
@@ -42,7 +42,7 @@ An annotation can be added to a node/connector by defining the annotation object
 
 ## Remove annotation
 
-A collection of annotations can be removed from the node by using client-side method [`removeLabels`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#removeLabels). The following code illustrates how to remove a annotation to a node.
+A collection of annotations can be removed from the node by using client-side method [`removeLabels`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#removelabels). The following code illustrates how to remove a annotation to a node.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -54,7 +54,7 @@ A collection of annotations can be removed from the node by using client-side me
 
 ## Update annotation at runtime
 
-You can change any annotation properties at runtime and update it through the client-side method [`dataBind`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#dataBind).
+You can change any annotation properties at runtime and update it through the client-side method `dataBind`.
 
 The following code example illustrates how to change the annotation properties.
 
@@ -158,7 +158,7 @@ The [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textS
 
 Diagram provides a support to add a [`hyperlink`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#hyperLink-hyperlinkmodel) for the nodes/connectors annotation. It can also be customized.
 
-A User can open the hyperlink in the new window, the same tab and the new tab by using the  [`hyperlinkOpenState`](https://ej2.syncfusion.com/vue/documentation/api/annotationModel/hyperlinkmodel#hyperlinkopenstate)  property
+A User can open the hyperlink in the new window, the same tab and the new tab by using the  [`hyperlinkOpenState`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel/#hyperLink-hyperlinkmodel)  property
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -257,7 +257,7 @@ Diagram allows annotation to be interacted by selecting, dragging, rotating, and
 Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, annotation is in view mode. But it can be brought to edit mode in two ways;
 
 * Programmatically
-By using [`startTextEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#startTextEdit) method, edit the text through programmatically.
+By using [`startTextEdit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#starttextedit) method, edit the text through programmatically.
 
 * Interactively
     1. By double-clicking the annotation.
@@ -265,7 +265,7 @@ By using [`startTextEdit`](https://ej2.syncfusion.com/vue/documentation/api/diag
 
 Double-clicking any annotation will enables editing and the node enables first annotation editing. When the focus of editor is lost, the annotation for the node is updated.
 
-When you double-click on the node/connector/diagram model, the [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#doubleClick--emittypeidoubleClickeventargs) event gets triggered.
+When you double-click on the node/connector/diagram model, the [`doubleClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#doubleclick) event gets triggered.
 
 ## Read-only annotations
 

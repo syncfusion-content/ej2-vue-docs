@@ -48,7 +48,7 @@ import { ListViewPlugin } from '@syncfusion/ej2-vue-lists';
 Vue.use(ListViewPlugin);
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `ListView`. Refer [here](../../getting-started/vue-sass/#registering-vue-component) to know more about component registration.
+> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `ListView`. Refer [here](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration/) to know more about component registration.
 
 ## Initialize ListView
 

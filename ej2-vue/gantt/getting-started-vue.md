@@ -101,11 +101,11 @@ Refer to the Gantt's CDN links as follows.
 
 **Syntax:**
 
-> Styles: `http://cdn.syncfusion.com/ej2/{PACKAGE_NAME}/styles/material.css`
+> Styles: `https://cdn.syncfusion.com/ej2/{PACKAGE_NAME}/styles/material.css`
 
 **Example:**
 
-> Styles: [`http://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css`](http://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css)
+> Styles: [`https://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css`](https://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css)
 
 ```js
 <!-- Material theme used for this sample -->
@@ -1422,4 +1422,4 @@ Run the application using the following command.
 npm run serve
 ```
 
-Web server will be initiated, Open the quick start app in the browser at port [`localhost:8080`](http://localhost:8080/).
+Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.

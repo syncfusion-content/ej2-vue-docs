@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.
 
-In diagram, [Layers](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) provide a way to change the properties of all shapes that have been assigned to that layer. The following properties can be set.
+In diagram, [Layers](https://ej2.syncfusion.com/vue/documentation/api/diagram/#layers) provide a way to change the properties of all shapes that have been assigned to that layer. The following properties can be set.
 
 * Visible
 * Lock
@@ -274,7 +274,7 @@ export default {
 
 ### Add layer at runtime
 
-Layers can be added at runtime by using the [`addLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#addLayer) public method.
+Layers can be added at runtime by using the [`addLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addlayer) public method.
 
 The layer's [`ID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layer#id-string) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
 
@@ -319,7 +319,7 @@ export default {
 
 ### Remove layer at runtime
 
-Layers can be removed at runtime by using the [`removeLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#removeLayer) public method.
+Layers can be removed at runtime by using the [`removeLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#removelayer) public method.
 
 The following code illustrates how to remove a layer.
 
@@ -346,7 +346,7 @@ export default {
 
 ### moveObjects
 
-Objects of the layers can be moved by using the [`moveObjects`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#moveObjects) public method.
+Objects of the layers can be moved by using the [`moveObjects`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#moveobjects) public method.
 
 The following code illustrates how to move objects from one layer to another layer from the diagram.
 
@@ -373,7 +373,7 @@ export default {
 
 ### bringLayerForward
 
-Layers can be moved forward at runtime by using the [`bringLayerForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#bringLayerForward) public method.
+Layers can be moved forward at runtime by using the [`bringLayerForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#bringlayerforward) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -400,7 +400,7 @@ export default {
 
 ### sendLayerBackward
 
-Layers can be moved backward at runtime by using the [`sendLayerBackward`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#sendLayerBackward) public method.
+Layers can be moved backward at runtime by using the [`sendLayerBackward`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sendlayerbackward) public method.
 
 The following code illustrates how to send backward to layer.
 
@@ -427,7 +427,7 @@ export default {
 
 ### cloneLayer
 
-Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#cloneLayer) public method.
+Layers can be cloned with its object by using the [`cloneLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#clonelayer) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -454,7 +454,7 @@ export default {
 
 ### getActiveLayer
 
-To get the active layers back in diagram, use the [`getActiveLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#getActiveLayer) public method.
+To get the active layers back in diagram, use the [`getActiveLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#getactivelayer) public method.
 
 The following code illustrates how to bring forward to layer.
 
@@ -481,7 +481,7 @@ export default {
 
 ### setActiveLayer
 
-Set the active layer by using the [`setActiveLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#setActiveLayer) public method.
+Set the active layer by using the [`setActiveLayer`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#setactivelayer) public method.
 
 The following code illustrates how to bring forward to layer.
 

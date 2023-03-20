@@ -214,6 +214,6 @@ Web server will be initiated. Open the quick start app in the browser at port [`
 
 ![Output](images/Vue3-spreadsheet-demo.png)
 
-Refer the following sample, [vue3-spreadsheet-getting-started](https://github.com/SyncfusionExamples/vue3-spreadsheet-getting-started).
+Refer the following sample, vue3-spreadsheet-getting-started.
 
 For Migrating from Vue 2 to Vue 3 refer the Migration [`documentation`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3)

@@ -21,7 +21,7 @@ The Rich Text Editor component is WYSIWYG ("what you see is what you get") edito
 * **Editing**: HTML view to edit the source directly for developers.
 * **[Third-party Integration](./third-party-integration/)**: Supports to integrate third-party library.
 * **Preview**: Preview the modified content before saving it.
-* **[Tools](./image/)**: Handles images, hyperlinks, video, hyperlinks, uploads, and more.
+* **[Tools](./image)**: Handles images, hyperlinks, video, hyperlinks, uploads, and more.
 * **Undo and Redo**: Contains undo/redo manager.
 * **Lists**: Creates bulleted and numbered lists.
 * **[Table](./table/)**: Creates table and its related features.

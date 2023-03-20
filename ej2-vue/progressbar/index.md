@@ -16,7 +16,7 @@ The Essential EJ2 ProgressBar is a control that indicates the progress of a task
 
 1. **[Types](./types/)**: Visualize progress in different shapes (rectangle, circle, and semi-circle) to give a unique appearance to your app design.
 
-2. **[Modes](./modes/)**: Visualize progress in different modes.
+2. **[Modes](../progressbar/states)**: Visualize progress in different modes.
 
 3. **[Customization](./customization/)**: Supports to customize the ProgressBar appearance.
 

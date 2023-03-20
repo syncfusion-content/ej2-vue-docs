@@ -21,7 +21,7 @@ An element can be selected by clicking that element. During single click, all pr
 ![Single Selection](images/single-select.gif)
 
 * While selecting the diagram elements, the following events can be used to do your customization.
-* When selecting/unselecting the diagram elements, the [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectionChange--emittypeiselectionchangeeventargs) event gets triggered.
+* When selecting/unselecting the diagram elements, the [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectionchange) event gets triggered.
 
 ## Selecting a group
 
@@ -43,18 +43,18 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 ## Select/Unselect elements using program
 
-The client-side methods [`select`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#select) and [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#clearselection) help to select or clear the selection of the elements at runtime. The following code example illustrates how to select or clear the selection of an item using program.
+The client-side methods [`select`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#select) and [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#clearselection) help to select or clear the selection of the elements at runtime. The following code example illustrates how to select or clear the selection of an item using program.
 
-Get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectAll#selecteditems-selectormodel) property of the diagram model.
+Get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property of the diagram model.
 
 ## Select entire elements in diagram programmatically
 
-The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectAll) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectAll) method on the diagram.
+The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectAll) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectall) method on the diagram.
 
 ## Drag
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
-* When you drag the elements in the diagram, the [`positionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#positionChange--emittypeidraggingeventargs) event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [`positionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#positionchange) event gets triggered and to do customization in this event.
 
 ![Drag](images/drag.gif)
 
@@ -62,7 +62,7 @@ The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentatio
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
 * When one corner of the selector is dragged, opposite corner is in a static position.
-* When a node is resized, the [`sizeChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#sizeChange--emittypeisizechangeeventargs) event gets triggered.
+* When a node is resized, the [`sizeChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sizechange) event gets triggered.
 
 ![Resize](images/resize.gif)
 
@@ -103,9 +103,9 @@ Source and target points of the selected connectors are represented with two han
 ![Drag End Point Handles](images/connector-end-point.gif)
 
 * If you drag the connector end points, then the following events can be used to do your customization.
-* When the connector source point is changed, the [`sourcePointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#sourcePointChange--emittypeiendchangeeventargs) event gets triggered.
-* When the connector target point is changed, the [`targetPointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#targetPointChange--emittypeiendchangeeventargs) event gets triggered.
-* When you connect connector with ports/node or disconnect from it, the [`connectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#connectionChange--emittypeiconnectionchangeeventargs) event gets triggered.
+* When the connector source point is changed, the [`sourcePointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sourcepointchange) event gets triggered.
+* When the connector target point is changed, the [`targetPointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#targetpointchange) event gets triggered.
+* When you connect connector with ports/node or disconnect from it, the [`connectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#connectionchange) event gets triggered.
 
 ## Straight segment editing
 
@@ -133,11 +133,11 @@ Source and target points of the selected connectors are represented with two han
 
 ## Drag and drop nodes over other elements
 
-Diagram provides support to drop a node/connector over another node/connector. The [`drop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#drop--emittypeidropeventargs) event is raised to notify that an element is dropped over another one and it is disabled, by default. It can enabled with the constraints property.
+Diagram provides support to drop a node/connector over another node/connector. The [`drop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#drop) event is raised to notify that an element is dropped over another one and it is disabled, by default. It can enabled with the constraints property.
 
 ## User handles
 
-* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectAll#selecteditems-selectormodel) property.
+* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property.
 * The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
 
 ## Alignment

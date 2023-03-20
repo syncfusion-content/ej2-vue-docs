@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The diagram can be scrolled by using the vertical and horizontal scrollbars. In addition to the scrollbars,mousewheel can be used to scroll the diagram.
 
-Diagram’s [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) enable you to read the current scroll status, view port size, current zoom, and zoom factor. It also allows you to scroll the diagram programmatically.
+Diagram’s [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#scrollsettings) enable you to read the current scroll status, view port size, current zoom, and zoom factor. It also allows you to scroll the diagram programmatically.
 
 ## Get current scroll status
 
@@ -53,7 +53,7 @@ Autoscroll feature automatically scrolls the diagram, whenever the node or conne
 * Rubber band selection
 * Label dragging
 
-The diagram client-side event [`ScrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) gets triggered when the autoscroll (scrollbars) is changed and you can do your own customization in this event.
+The diagram client-side event [`ScrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#scrollchange) gets triggered when the autoscroll (scrollbars) is changed and you can do your own customization in this event.
 
 The autoscroll behavior in your diagram can be enabled/disabled by using the [`canAutoScroll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettings) property of the diagram. The following code example illustrates how to set autoscroll.
 
@@ -125,4 +125,4 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
 
 ## UpdateViewport
 
-The [`updateViewPort`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) method is used to update the diagram page and view size at runtime.
+The [`updateViewPort`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#updateviewport) method is used to update the diagram page and view size at runtime.
