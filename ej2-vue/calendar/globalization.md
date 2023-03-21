@@ -19,7 +19,7 @@ If you want to go with the different culture other than `English`, follow the be
 
 * Install the CLDR-Data package by using the below command (installs the CLDR JSON data).
 
-To know more about CLDR data, refer to the [CLDR-Data](http://cldr.unicode.org/index/cldr-spec/json) link.
+To know more about CLDR data, refer to the [CLDR-Data](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
 ```
 npm install cldr-data --save

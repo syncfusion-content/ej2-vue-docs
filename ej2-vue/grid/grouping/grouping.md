@@ -121,7 +121,7 @@ In the following sample, type **mun** in **Ship City** column to filter diacriti
 
 ## Sort grouped columns in descending order during initial grouping
 
-By default, grouped columns are sorted in ascending order. To sort grouped columns in descending order during initial grouping, you can set the [field](../api/grid/sortDescriptorModel/#field) and [direction](https://ej2.syncfusion.com/vue/documentation/api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns` property.
+By default, grouped columns are sorted in ascending order. To sort grouped columns in descending order during initial grouping, you can set the [field](https://ej2.syncfusion.com/vue/documentation/api/grid/sortDescriptorModel/#field) and [direction](https://ej2.syncfusion.com/vue/documentation/api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns` property.
 
 The `CustomerID` column will be sorted in descending order when the grid is initially grouped, as shown in the following example.
 

@@ -52,7 +52,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/default-cs2" %}
 
-> * If [`enableAutoFill`](../api/grid/#enableautofill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
+> * If [`enableAutoFill`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableautofill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
 > * It requires the selection [`mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionMode/) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/cellSelectionMode/) to be **Box** and also Batch Editing should be enabled.
 
 ### Limitations of AutoFill
@@ -72,7 +72,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/default-cs3" %}
 
-> To perform paste functionality, it requires the selection [`mode`](../api/grid/selectionMode/) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/cellSelectionMode/) to be **Box** and also Batch Editing should be enabled.
+> To perform paste functionality, it requires the selection [`mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionMode/) to be **Cell**,  [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/cellSelectionMode/) to be **Box** and also Batch Editing should be enabled.
 
 ### Limitations of Paste Functionality
 

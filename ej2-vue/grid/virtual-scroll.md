@@ -36,7 +36,7 @@ The loaded data will be cached and reused when it is needed for next time.
 
 Column virtualization allows you to virtualize columns. It will render columns which are in viewport.You can scroll horizontally to view more columns.
 
-To setup the column virtualization, set the [`enableVirtualization`](../api/grid/#enablevirtualization) and [`enableColumnVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablecolumnvirtualization) properties as `true`.
+To setup the column virtualization, set the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablevirtualization) and [`enableColumnVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablecolumnvirtualization) properties as `true`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -46,7 +46,7 @@ To setup the column virtualization, set the [`enableVirtualization`](../api/grid
         
 {% previewsample "page.domainurl/code-snippet/grid/virtualscroll/default-cs5" %}
 
-> Column's [`width`](../api/grid/column/#width) is required for column virtualization.
+> Column's [`width`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) is required for column virtualization.
 If column's width is not defined then Grid will consider its value as `200px`.
 
 ## Virtualization with Grouping

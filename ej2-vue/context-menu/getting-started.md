@@ -157,7 +157,7 @@ The following example shows a basic ContextMenu component.
 
 ## Rendering items with Separator
 
-The Separators are the horizontal lines that are used to separate the menu items. You cannot select the separators. You can enable separators to group the menu items using the [`separator`](../api/context-menu/menuItemModel#separator) property. Cut, Copy, and Paste menu items are grouped using the `separator` property in the following sample.
+The Separators are the horizontal lines that are used to separate the menu items. You cannot select the separators. You can enable separators to group the menu items using the [`separator`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuItemModel/#separator) property. Cut, Copy, and Paste menu items are grouped using the `separator` property in the following sample.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -167,7 +167,7 @@ The Separators are the horizontal lines that are used to separate the menu items
         
 {% previewsample "page.domainurl/code-snippet/context-menu/default-cs3" %}
 
-> The [`separator`](../api/context-menu/menuItemModel#separator) property `should not` be given along with the other fields in the [`MenuItem`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuItemModel).
+> The [`separator`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuItemModel/#separator) property `should not` be given along with the other fields in the [`MenuItem`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuItemModel).
 
 ## See Also
 

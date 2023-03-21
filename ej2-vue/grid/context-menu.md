@@ -50,7 +50,7 @@ Items| Description
 ## Custom context menu items
 
 The custom context menu items can be added by defining the
-[`contextMenuItems`](../api/grid/#contextmenuitems) as a collection of
+[`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuitems) as a collection of
 [`contextMenuItemModel`](https://ej2.syncfusion.com/vue/documentation/api/grid/contextMenuItemModel/).
 Actions for this customized items can be defined in the
 [`contextMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuclick) event.
@@ -67,7 +67,7 @@ Actions for this customized items can be defined in the
 
 By default, the context menu items will be shown in the Grid using the right mouse click action. Show the context menu items during the left mouse click action using the [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) and context menu's `beforeOpen` events of the Grid.
 
-Using the `onclick` eventlistener of Grid , you can get the clicked position values and send them to the `open` method of the context menu in the `onclick` event of the Grid. Also, we have prevented the default right click action to open the context menu items using the [created](../api/grid/#created) event of the Grid.
+Using the `onclick` eventlistener of Grid , you can get the clicked position values and send them to the `open` method of the context menu in the `onclick` event of the Grid. Also, we have prevented the default right click action to open the context menu items using the [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event of the Grid.
 
 This is demonstrated in the following sample.
 
@@ -79,8 +79,7 @@ This is demonstrated in the following sample.
         
 {% previewsample "page.domainurl/code-snippet/grid/contextMenu/default-cs3" %}
 
-> You can hide or show an item in context menu for specific area inside of grid by defining the
-[`target`](../api/grid/contextMenuItemModel/#target) property.
+> You can hide or show an item in context menu for specific area inside of grid by defining the [`target`](https://ej2.syncfusion.com/vue/documentation/api/grid/contextMenuItemModel/#target) property.
 
 ## Enable or disable context menu items
 

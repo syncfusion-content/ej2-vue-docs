@@ -18,7 +18,7 @@ By default, DatePicker date format, week and month names are specific to English
 The DatePicker component supports only the Gregorian type of calendar. All the Essential JS 2 component are specific to English cultur ('en-US'). If you want to go with the different culture other than English, follow the below steps.
 
 * Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). To know more about CLDR-Data refer the
-[`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) link.
+[`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
 ```
 npm install cldr-data --save

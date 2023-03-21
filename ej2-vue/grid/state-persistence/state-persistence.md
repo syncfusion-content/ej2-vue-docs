@@ -46,7 +46,7 @@ This is because the Grid refreshes its query params for every page load. You can
 
 ## Add a new column in persisted columns list
 
-The Grid columns can be persisted when the [enablePersistence](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablepersistence) property is set to true. If you want to add the new columns with the existing persist state, you can use the Grid inbuilt method such as `column.push` and call the [refreshColumns()](../../api/grid/#refreshcolumns) method for UI changes. Please refer to the following sample for more information.
+The Grid columns can be persisted when the [enablePersistence](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablepersistence) property is set to true. If you want to add the new columns with the existing persist state, you can use the Grid inbuilt method such as `column.push` and call the [refreshColumns()](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method for UI changes. Please refer to the following sample for more information.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

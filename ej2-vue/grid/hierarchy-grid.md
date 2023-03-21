@@ -26,7 +26,7 @@ To use hierarchical binding, inject the **DetailRow** in the **provide** section
 {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid/default-cs2" %}
 
 > * Grid supports n level of child grids.
-> * Hierarchical binding is not supported when [`DetailTemplate`](../api/grid/#detailtemplate) is enabled.
+> * Hierarchical binding is not supported when [`DetailTemplate`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#detailtemplate) is enabled.
 
 ## ExpandAll by external button
 
@@ -45,7 +45,7 @@ and collapse all grid rows by invoking the [`collapseAll`](https://ej2.syncfusio
 ## Expand child grid initially
 
 You can expand a particular child grid at initial rendering by invoking the
-[`expand`](../api/grid/detailRow/#expand) method in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
+[`expand`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#expand) method in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -58,7 +58,7 @@ You can expand a particular child grid at initial rendering by invoking the
 ## Dynamically load child grid data
 
 You can dynamically load child grid dataSource by using the
-[`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event.This [`detailDataBound`](../api/grid/#detaildatabound) event triggers when the child grid is expanded for the first time.
+[`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event.This [`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event triggers when the child grid is expanded for the first time.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -85,9 +85,9 @@ In the below sample, we have bound the child and parent grid with different fiel
 ## Adding Record in ChildGrid
 
 Parent and child grid are related by [`queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field value.
-To maintain this relation in newly added record, You need to set value for [`queryString`](../api/grid/#querystring) field in the added data by the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
+To maintain this relation in newly added record, You need to set value for [`queryString`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field in the added data by the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
 
-In the below demo, **EmployeeID** field relates the parent and child grids. To add a new record in child grid, We have to set the **EmployeeID** field with parent record's [`queryString`](../api/grid/#querystring) field value in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
+In the below demo, **EmployeeID** field relates the parent and child grids. To add a new record in child grid, We have to set the **EmployeeID** field with parent record's [`queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field value in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -99,7 +99,7 @@ In the below demo, **EmployeeID** field relates the parent and child grids. To a
 
 ## Dynamically bind data to child grid based on parent row Data
 
-By default, the [childGrid.queryString](../api/grid/#querystring) describes the relationship between parent and child grids and visualizes the data in a hierarchical structure. Instead of the `queryString` property, we can dynamically bind the datasource to the `childGrid` based on the parent row data using the [detailDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event of the grid.
+By default, the [childGrid.queryString](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) describes the relationship between parent and child grids and visualizes the data in a hierarchical structure. Instead of the `queryString` property, we can dynamically bind the datasource to the `childGrid` based on the parent row data using the [detailDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event of the grid.
 
 While expanding the child Grid, the `detailDataBound` event will be triggered. In this event, based on the EmployeeID column value of parent row data, filter the equally matched data from the `childGrid` datasource using the `DataManager` plugin and bind the filtered data as a datasource to the `childGrid`. This can be demonstrated by the following sample.
 

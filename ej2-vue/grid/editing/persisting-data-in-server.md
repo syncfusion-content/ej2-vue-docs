@@ -18,11 +18,11 @@ The [`DataManager`](../../data) has an option to bind all the CRUD related data 
 > For your information, the ODataAdaptor persists data in the server as per OData protocol.
 
 In the below section, we have explained how to get the edited data details on the server-side using the
-[`UrlAdaptor`](../../data/adaptors/#url-adaptor).
+[`UrlAdaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#url-adaptor).
 
 ## Using URL adaptor
 
-You can use the [`UrlAdaptor`](../../data/adaptors/#url-adaptor) of [`DataManager`](../../data) when binding data source from remote data.
+You can use the [`UrlAdaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#url-adaptor) of [`DataManager`](../../data) when binding data source from remote data.
 In the initial load of grid, data are fetched from remote data and bound to the grid using **url** property of [`DataManager`](../../data).
 You can map The CRUD operation in grid can be mapped to server-side Controller actions using the properties
 **insertUrl**, **removeUrl**, **updateUrl**, **crudUrl** and **batchUrl**.
@@ -80,7 +80,7 @@ export default Vue.extend({
 
 ```
 
-Also, when using the [`UrlAdaptor`](../../data/adaptors/#url-adaptor), you need to return the data as JSON from the controller action and the JSON object must contain
+Also, when using the [`UrlAdaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#url-adaptor), you need to return the data as JSON from the controller action and the JSON object must contain
 a property as **result** with dataSource as its value and one more property **count** with the dataSource total records count as its value.
 
 The following code example describes the above behavior.
