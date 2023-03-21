@@ -50,7 +50,7 @@ and this can be changed to any other culture(Arabic, Deutsch, French, etc) by de
 To load translation object in an application use load function of L10n class.
 
 For more information about localization, refer this
-[`localization`](http://ej2.syncfusion.com/angular/documentation/base/localization.html)
+[`localization`](https://ej2.syncfusion.com/vue/documentation/common/localization/)
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Schedule component
 
-The Scheduler uses `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#datasource) property of Scheduler can be assigned either with the instance of `DataManager` or JavaScript object array collection, as it supports the following two kind of data binding methods:
+The Scheduler uses `DataManager`, which supports both RESTful data service binding and JavaScript object array binding. The [`dataSource`](../api/schedule/eventSettings#datasource) property of Scheduler can be assigned either with the instance of `DataManager` or JavaScript object array collection, as it supports the following two kind of data binding methods:
 
 * Local data
 * Remote data
 
 ## Binding local data
 
-To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#datasource) option of the scheduler within the `eventSettings` property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
+To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](../api/schedule/eventSettings#datasource) option of the scheduler within the [`eventSettings`](../api/schedule/eventSettings/) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -33,7 +33,7 @@ You can also bind different field names to the default event fields as well as i
 
 ## Binding remote data
 
-Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings#datasource) property within `eventSettings`.
+Any kind of remote data services can be bound to the Scheduler. To do so, create an instance of `DataManager` and provide the service URL to the `url` option of `DataManager` and then assign it to the [`dataSource`](../api/schedule/eventSettings#datasource) property within [`eventSettings`](../api/schedule/eventSettings/).
 
 ### Using ODataV4Adaptor
 
@@ -61,11 +61,11 @@ It is possible to create your own custom adaptor by extending the built-in avail
 
 ## Loading data via AJAX post
 
-You can bind the event data through external ajax request and assign it to the `dataSource`property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
+You can bind the event data through external ajax request and assign it to the [`dataSource`](../api/schedule/eventSettings#datasource)property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
 
 `[src/app/App.vue]`
 
-```
+```html
 <template>
     <div id='app'>
       <div id='container'>
@@ -104,7 +104,7 @@ You can bind the event data through external ajax request and assign it to the `
 
 ## Passing additional parameters to the server
 
-To send an additional custom parameter to the server-side post, you need to make use of the `addParams` method of `Query`. Now, assign this `Query` object with additional parameters to the [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#query) property of Scheduler.
+To send an additional custom parameter to the server-side post, you need to make use of the `addParams` method of `Query`. Now, assign this `Query` object with additional parameters to the [`query`](../api/schedule/eventSettings/#query) property of Scheduler.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -114,13 +114,13 @@ To send an additional custom parameter to the server-side post, you need to make
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs4" %}
 
-> The parameters added using the [`query`](../api/schedule/eventSettings/#query) property will be sent along with the data request sent to the server on every scheduler actions.
+> The parameters added using the [`query`](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettings/#query) property will be sent along with the data request sent to the server on every scheduler actions.
 
 ## Handling failure actions
 
-During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/schedule#actionfailure) event of Scheduler.
+During the time of Scheduler interacting with server, there are chances that some server-side exceptions may occur. You can acquire those error messages or exception details in client-side using the [`actionFailure`](../api/schedule#actionfailure) event of Scheduler.
 
-The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/schedule#actionfailure) event contains the error details returned from the server.
+The argument passed to the [`actionFailure`](../api/schedule#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -130,7 +130,7 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/docu
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs5" %}
 
-> The [`actionFailure`](../api/schedule#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/schedule#actionfailure) event will be triggered not only on server returning errors, but also when there is an exception while processing any of the Scheduler CRUD actions.
 
 ## Scheduler CRUD actions
 
@@ -138,7 +138,7 @@ The CRUD (Create, Read, Update and Delete) actions can be performed easily on Sc
 
 `[src/app/App.vue]`
 
-```
+```html
 <template>
     <div id='app'>
       <div id='container'>

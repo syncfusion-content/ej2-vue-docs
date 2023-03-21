@@ -166,7 +166,7 @@ npm run serve
 
 ```
 
-Web server will be initiated. Open the quick start app in the browser at port [`localhost:8080`](http://localhost:8080/).
+Web server will be initiated. Open the quick start app in the browser at port `localhost:8080`.
 
 ![Rich Text Editor in Vue 3](./images/rte-output.png)
 

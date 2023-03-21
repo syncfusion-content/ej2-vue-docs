@@ -212,7 +212,7 @@ export default {
 npm run serve
 ```
 
-The web server will be initiated and open the **quickstart** app in the browser at port [`localhost:8080`](http://localhost:8080/).
+The web server will be initiated and open the **quickstart** app in the browser at port `localhost:8080`.
 
 ![Output](./images/Vue3-pivottable-demo.png)
 

@@ -113,7 +113,7 @@ Add Button component's styles as given below in `<style>` section of the `App.vu
 </style>
 ```
 
-> If you want to refer the combined component styles, please make use of our [`CRG`](https://ej2crg.azurewebsites.net/) (Custom Resource Generator) in your application.
+> If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Run the application
 

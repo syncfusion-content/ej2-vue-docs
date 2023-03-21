@@ -100,5 +100,5 @@ export default {
 
 ## See also
 
-* [Toolbar items](/toolbar)
-* [Feature Modules](/feature-module)
+* [Toolbar items](./toolbar)
+* [Feature Modules](./feature-module)

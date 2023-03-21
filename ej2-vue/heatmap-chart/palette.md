@@ -30,7 +30,7 @@ The smooth transition between the given palette colors can be applied for the he
 
 ### Fixed
 
-In fixed palette type, solid colors are applied to the heat map cells. The data values can be grouped based on the number of colors defined for the heat map. The palette type should be defined as Fixed **Fixed** for the [type](../api/heatmap/paletteSettings/#type) property in the `paletteSettings` property.
+In fixed palette type, solid colors are applied to the heat map cells. The data values can be grouped based on the number of colors defined for the heat map. The palette type should be defined as Fixed **Fixed** for the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings/#type) property in the `paletteSettings` property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -42,7 +42,7 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
 
 ## Defining color stops
 
-You can define the colors ranges or color stops for data values in both gradient and fixed palette types. You need to define the data value in the [value](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteCollection/#value)property for `palette` property to calculate the color stops. The heat map automatically calculates the color stops if the [value](../api/heatmap/paletteCollection/#value) property is not defined. The [label](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteCollection/#label) property is used to provide the additional information about the color that is to be displayed in the legend. If the label is not provided, the value is displayed in the legend. The labels can be automatically calculated based on data values, if both the values and labels are not defined.
+You can define the colors ranges or color stops for data values in both gradient and fixed palette types. You need to define the data value in the [value](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteCollection/#value)property for `palette` property to calculate the color stops. The heat map automatically calculates the color stops if the [value](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteCollection/#value) property is not defined. The [label](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteCollection/#label) property is used to provide the additional information about the color that is to be displayed in the legend. If the label is not provided, the value is displayed in the legend. The labels can be automatically calculated based on data values, if both the values and labels are not defined.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -137,7 +137,7 @@ You can show tooltip on hover to show additional details to end-user by setting 
 
 ## Opens on hover
 
-You can use [`opensOnHover`](../api/speed-dial#opensonhover) property to open actions items on hover itself. By default action items displayed only when clicking the speed dial button.
+You can use [`opensOnHover`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#opensonhover) property to open actions items on hover itself. By default action items displayed only when clicking the speed dial button.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

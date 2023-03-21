@@ -36,7 +36,7 @@ The following sample illustrates how to drag and drop an item within the same li
 
 ## Multiple listbox
 
-To drag and drop an item or group of item between two list boxes can be achieved by setting `allowDragAndDrop` property as `true` and [`scope`](../api/list-box/#scope) property should be set to both the list boxes.
+To drag and drop an item or group of item between two list boxes can be achieved by setting `allowDragAndDrop` property as `true` and [`scope`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#scope) property should be set to both the list boxes.
 
 In the following sample, the `allowDragAndDrop` property is set as `true` and `scope` is set as `combined-list` to enable drop and drop in both list boxes.
 

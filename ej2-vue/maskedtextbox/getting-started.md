@@ -135,7 +135,7 @@ Import the MaskedTextBox component's required CSS references as follows in `src/
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 ```
 
-> If you want to refer the combined component styles, please make use of our [`CRG`](https://ej2crg.azurewebsites.net/) (Custom Resource Generator) in your application.
+> If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
 ## Run the application
 

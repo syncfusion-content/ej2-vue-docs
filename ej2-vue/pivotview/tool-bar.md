@@ -289,4 +289,4 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 
 ## See Also
 
-* [Toolbar Component](../../toolbar/getting-started.html)
+* [Toolbar Component](https://ej2.syncfusion.com/vue/documentation/toolbar/getting-started/)

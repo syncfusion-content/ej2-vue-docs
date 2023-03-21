@@ -84,7 +84,7 @@ The following code example illustrates how to define a palette and how its added
 
 Palettes can be annotated with its header texts.
 
-The [`title`](../api/diagram/palette#title-string) displayed as the header text of palette.
+The [`title`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#title-string) displayed as the header text of palette.
 
 The [`expanded`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#expanded-boolean) property of palette allows to expand/collapse its palette items.
 
@@ -149,8 +149,7 @@ You can customize the size of the individual symbol. The [`symbolWidth`](https:/
         
 {% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes-cs5" %}
 
-The [`symbolMargin`](../api/diagram/symbolPaletteModel/#symbolmargin) property is used to create the space around
-elements, outside of any defined borders.
+The [`symbolMargin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#symbolmargin) property is used to create the space around elements, outside of any defined borders.
 
 ## Symbol Preview
 
@@ -214,7 +213,7 @@ Palette interaction notifies the element enter, leave, and dragging of the symbo
 
 ## DragEnter
 
-[`DragEnter`] [`IDragEnterEventArgs`](../api/diagram/iDragEnterEventArgs) notifies when the element enter into the diagram from symbol palette.
+[`DragEnter`] [`IDragEnterEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iDragEnterEventArgs) notifies when the element enter into the diagram from symbol palette.
 
 ## DragLeave
 

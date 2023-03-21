@@ -87,4 +87,4 @@ In the following code, the rows which contains `TaskId` value as 3 and 4 are sel
 
 ## See Also
 
-* [Touch interaction](./touch-interaction/#selection)
+* [Touch interaction](../touch-interaction#selection)

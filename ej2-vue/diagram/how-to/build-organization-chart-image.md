@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Build organization chart image in Vue Diagram component
 
-In the [`organizationchart`](./automatic-layout/#organizational-chart), bind the text inside the rectangle node annotation. In this section, you can see how to build the organization chart with Image nodes.
+In the [`organizationchart`](../automatic-layout#organizational-chart), bind the text inside the rectangle node annotation. In this section, you can see how to build the organization chart with Image nodes.
 
 ## Step1
 
@@ -37,7 +37,7 @@ export let data = [{
 ## Step2
 
 Image nodes can be created on the organization chart using the `doBinding` method. In this method, you can customize the nodes properties.
-In the following code sample, the image node and annotation properties can be customized. Refer to the [image node](./shapes/#image) for creating the image node.
+In the following code sample, the image node and annotation properties can be customized. Refer to the [image node](../shapes#image) for creating the image node.
 
 ```ts
 

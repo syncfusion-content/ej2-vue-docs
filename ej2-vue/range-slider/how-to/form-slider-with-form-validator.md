@@ -24,7 +24,7 @@ formObj = new FormValidator("#formId", options);
 
 ```
 
-* Set the required property in the FormValidator [rules](https://ej2.syncfusion.com/vue/documentation/api/form-validator#rules) collection. Here, the [min](https://ej2.syncfusion.com/vue/documentation/api/slider#min) property of slider that sets the minimum value in the slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
+* Set the required property in the FormValidator rules collection. Here, the [min](https://ej2.syncfusion.com/vue/documentation/api/slider#min) property of slider that sets the minimum value in the slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
 
 ```ts
 

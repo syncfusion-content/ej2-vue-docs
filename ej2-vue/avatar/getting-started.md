@@ -92,4 +92,4 @@ The following example shows a basic Avatar.
 
 ## See Also
 
-[Types of Avatar](./avatar/types)
+[Types of Avatar](../avatar/types)

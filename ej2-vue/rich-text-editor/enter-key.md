@@ -28,7 +28,7 @@ When the enter key is customized with any of the possible values, pressing the e
 
 ## Shift-Enter key customization
 
-By default, the `<br>` tag will be created while pressing the shift + enter key. The shift + enter key can be customized by using the [`shiftEnterKey`](../api/rich-text-editor/#shiftEnterkey) property where the possible tags that can be used to customize are `<br>`, `<p>`, `<div>`.  
+By default, the `<br>` tag will be created while pressing the shift + enter key. The shift + enter key can be customized by using the [`shiftEnterKey`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#shiftenterkey) property where the possible tags that can be used to customize are `<br>`, `<p>`, `<div>`.  
 
 When the shift + enter key is customized with any of the possible values, pressing the shift + enter key in the editor will create a new tag that is configured. Also, when the shift + enter key is configured the default value of the Rich Text Editor will change respectively with the configured values.
 

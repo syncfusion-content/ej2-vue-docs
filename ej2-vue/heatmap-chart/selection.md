@@ -22,7 +22,7 @@ In the HeatMap, the cell selection is used to select the single or multiple heat
 
 ## Enable single cell selection
 
-In the HeatMap, the [enableMultiSelect](../api/heatmap/#enablemultiselect) property is used to allow single cell selection. When you set the `enableMultiSelect` property to **false**, only one cell is selected. By default, `enableMultiSelect` property is set to **true**.
+In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#enablemultiselect) property is used to allow single cell selection. When you set the `enableMultiSelect` property to **false**, only one cell is selected. By default, `enableMultiSelect` property is set to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

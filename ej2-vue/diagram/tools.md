@@ -16,7 +16,7 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 
 ## Shapes
 
-To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) property. The following code example illustrates how to draw a rectangle at runtime.
+To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) property. The following code example illustrates how to draw a rectangle at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -40,7 +40,7 @@ The following code example illustrates how to draw a path.
 
 ## Connectors
 
-To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
+To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -111,7 +111,7 @@ As all the three behaviors are completely different, you can achieve only one be
 |5th|SingleSelect|Allows you to select individual nodes or connectors.|
 |6th|None|Disables all tools.|
 
-Set the desired [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) to the tool property of the diagram model. The following code illustrates how to enable Zoom pan in the diagram
+Set the desired [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) to the tool property of the diagram model. The following code illustrates how to enable Zoom pan in the diagram
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

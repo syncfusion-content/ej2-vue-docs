@@ -70,7 +70,7 @@ In the following sample, footer element displays the total number of list items 
 
 ## No records template
 
-The AutoComplete is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [`noRecordsTemplate`](../api/auto-complete/#norecordstemplate) property.
+The AutoComplete is provided with support to custom design the popup list content when no data is found and no matches found on search with the help of [`noRecordsTemplate`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#norecordstemplate) property.
 
 In the following sample, popup list content displays the notification of no data available.
 

@@ -317,7 +317,7 @@ To localize the editor’s strings with your own localization, copy the default 
 
 ## RTL
 
-Specifies the direction of the Rich Text Editor component using the [enableRtl](../api/rich-text-editor/#enablertl) property. For writing systems that require it like Arabic, Hebrew, etc., the direction can be switched to right-to-left.
+Specifies the direction of the Rich Text Editor component using the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#enablertl) property. For writing systems that require it like Arabic, Hebrew, etc., the direction can be switched to right-to-left.
 
 **Note:** It will not change based on the locale property.
 

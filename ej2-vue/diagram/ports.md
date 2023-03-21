@@ -83,7 +83,7 @@ The following code example illustrates how to change the port properties.
 
 * The shape of port can be changed by using its shape property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape as path and define path using path data property of port.
 
-* The appearance of ports can be customized by using [`strokeColor`](../api/diagram/port#strokeColor-string),
+* The appearance of ports can be customized by using [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/port#strokeColor-string),
 [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/port#strokeWidth-string), and [`fill`](https://ej2.syncfusion.com/vue/documentation/api/diagram/port#fill-string) properties of the port.
 
 * Customize the port size by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/port#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/port#height-number) properties of port.

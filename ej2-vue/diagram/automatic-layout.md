@@ -37,7 +37,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 ## Radial tree layout
 
-The radial tree layout arranges nodes on a virtual concentric circle around a root node. Sub-trees formed by the branching of child nodes are located radially around the child nodes. This arrangement result in an ever-expanding concentric arrangement with radial proximity to the root node indicating the node level in the hierarchy. The layout [`root`](../api/diagram/layout) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers one of the diagram nodes as the root node.
+The radial tree layout arranges nodes on a virtual concentric circle around a root node. Sub-trees formed by the branching of child nodes are located radially around the child nodes. This arrangement result in an ever-expanding concentric arrangement with radial proximity to the root node indicating the node level in the hierarchy. The layout [`root`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) property can be used to define the root node of the layout. When no root node is set, the algorithm automatically considers one of the diagram nodes as the root node.
 
 To arrange nodes in a radial tree structure, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) of the layout as `RadialTree`. The following code illustrates how to arrange the nodes in a radial tree structure.
 
@@ -189,7 +189,7 @@ The following code example illustrates how to create a complex hierarchical tree
 
 ### Linear Arrangement
 
-Linear arrangement is used to linearly arrange the child nodes in layout, which means the parent node is placed in the center corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The [`arrangement`](../api/diagram/childArrangement/#childarrangement) property of layout is used to enable or disable the linear arrangement in layout. By default arrangement will be `Nonlinear`.
+Linear arrangement is used to linearly arrange the child nodes in layout, which means the parent node is placed in the center corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The [`arrangement`](https://ej2.syncfusion.com/vue/documentation/api/diagram/childArrangement/#childarrangement) property of layout is used to enable or disable the linear arrangement in layout. By default arrangement will be `Nonlinear`.
 
 >Note: If you want to use linear arrangement in diagram layout, you need to inject  LineDistribution module in the diagram. Linear arrangement is applicable only for complex hierarchical tree layout.
 
@@ -270,7 +270,7 @@ The following code illustrates how to align the layout at the top-left of the la
 
 ### Layout spacing
 
-Layout provides support to add space horizontally and vertically between the nodes. The [`horizontalSpacing`](../api/diagram/layout) and [`verticalSpacing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) properties of the layout allows you to set the space between the nodes in horizontally and vertically.
+Layout provides support to add space horizontally and vertically between the nodes. The [`horizontalSpacing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) and [`verticalSpacing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) properties of the layout allows you to set the space between the nodes in horizontally and vertically.
 
 ### Layout margin
 
@@ -297,7 +297,7 @@ The layout orientation can used to arrange the layout based on the direction. th
 |BottomToTop|Aligns the layout from bottom to top. All the roots are placed at bottom of the diagram.|
 |RightToLeft|Aligns the layout from right to left. All the roots are placed at right of the diagram.|
 
-Diagram provides support to customize the  [`orientation`](../api/diagram/layout) of layout. You can set the desired orientation using layout.orientation.
+Diagram provides support to customize the  [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) of layout. You can set the desired orientation using layout.orientation.
 
 >Note: In the diagram the default orientation is TopToBottom.
 
@@ -313,7 +313,7 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
 
 ### Fixed node
 
-Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [`fixedNode`](../api/diagram/layout) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
+Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [`fixedNode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

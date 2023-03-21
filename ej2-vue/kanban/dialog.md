@@ -119,11 +119,11 @@ The modified card data can be persisted in the database using the RESTful web se
 
 > For your information, the ODataAdaptor persists data in the server as per OData protocol.
 
-In the below section covers how to get the edited data details on the server-side using the [`UrlAdaptor`](../../data/adaptors.html#url-adaptor).
+In the below section covers how to get the edited data details on the server-side using the `UrlAdaptor`.
 
 ### URL adaptor
 
-You can use the [`UrlAdaptor`](../../data/adaptors.html#url-adaptor) of `DataManager` when binding data source for remote data. In the initial load of Kanban, data are fetched from remote data and bound to the Kanban using `url` property of `DataManager`.
+You can use the `UrlAdaptor` of `DataManager` when binding data source for remote data. In the initial load of Kanban, data are fetched from remote data and bound to the Kanban using `url` property of `DataManager`.
 
 You can map the CRUD operation in Kanban can be mapped to server-side controller actions using the properties `insertUrl`, `removeUrl`, `updateUrl`, and `crudUrl`.
 

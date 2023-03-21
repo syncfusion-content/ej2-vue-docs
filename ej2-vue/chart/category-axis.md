@@ -42,8 +42,8 @@ By default, category labels are placed between the ticks in an axis, this can al
 
 ## Range
 
-Range of the category axis can be customized using [`minimum`](api-axisDirective.html#minimum-object),
-[`maximum`](api-axisDirective.html#maximum-object) and [`interval`](api-axisDirective.html#interval-number) property of the axis.
+Range of the category axis can be customized using `minimum`,
+`maximum` and `interval` property of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

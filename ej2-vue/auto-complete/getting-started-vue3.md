@@ -141,8 +141,7 @@ npm run serve
 
 ## Custom values
 
-The AutoComplete allows the user to give input as custom value which is not required to present in predefined set of values. By default, this support is enabled by [`allowCustom`](../api/auto-complete/#allowcustom) property. The custom value will be sent to post back handler when a
-form is about to be submitted.
+The AutoComplete allows the user to give input as custom value which is not required to present in predefined set of values. By default, this support is enabled by [`allowCustom`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#allowcustom) property. The custom value will be sent to post back handler when a form is about to be submitted.
 
 ```
 <template>
@@ -186,7 +185,7 @@ form is about to be submitted.
 
 ## Configure the suggestion list
 
-By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has '300px'. The height and width of the popup list can also be customized using the [`popupHeight`](../api/auto-complete/#popupheight) and [`popupWidth`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#popupwidth) property respectively. In the following sample, suggestion list's width and height are configured.
+By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has '300px'. The height and width of the popup list can also be customized using the [`popupHeight`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#popupheight) and [`popupWidth`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#popupwidth) property respectively. In the following sample, suggestion list's width and height are configured.
 
 ```
 <template>

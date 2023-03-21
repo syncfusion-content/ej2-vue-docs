@@ -17,7 +17,7 @@ The Gantt chart is a project management tool which provides a Microsoft Project-
 * [**Data sources**](./data-binding/) - Bind the Grid component with an array of JSON objects or DataManager.
 * [**Editing**](./managing-tasks/): A task’s fields, such as duration, start date, end date, predecessors, and more, can be edited directly in their respective cells using the Edit dialog or interactively using taskbars.
 * [**Task dependencies**](./taskdependency/): Defines task relationships using finish-to-start, start-to-finish, start-to-start, and finish-to-finish task dependency types.
-* [**Customizable timeline**](./timeline/): Displays timescale from minutes to decades easily and also displays the custom texts in timescale. Timeline can be displayed in either one-tier or two-tier layout.
+* [**Customizable timeline**](./timezone): Displays timescale from minutes to decades easily and also displays the custom texts in timescale. Timeline can be displayed in either one-tier or two-tier layout.
 * [**Taskbars**](./task-scheduling/): Supports unscheduled tasks, and it can be customized. Baselines can also be displayed for the tasks.
 * [**Columns**](./columns/): Customizes the columns and adds the custom columns to the Gantt chart at initialization.
 * [**Resources**](./resources/): Resources are represented by staff, equipment, materials, and more. You can show and allocate the resources for each task.

@@ -58,7 +58,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 ## Markdown formation shortcut key
 
-You can use the following key shortcuts when the Rich Text Editor renders with `Markdown` [editMode](../api/rich-text-editor/#editormode).
+You can use the following key shortcuts when the Rich Text Editor renders with `Markdown` [editMode](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#editormode).
 
 | Actions | Keyboard shortcuts |
 |----------------|---------|
@@ -92,7 +92,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 ## Custom key config
 
-Customize the key config for the keyboard interaction of Rich Text Editor, using the [`keyConfig`](../api/rich-text-editor/#keyconfig) property.
+Customize the key config for the keyboard interaction of Rich Text Editor, using the [`keyConfig`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#keyconfig) property.
 
 In the following sample, customize the cut, copy, paste toolbar action with `ctrl+1`, `ctrl+2`, `ctrl+3`, respectively.
 

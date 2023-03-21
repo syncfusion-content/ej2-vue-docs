@@ -51,7 +51,7 @@ You can open the action items in either clockwise or anticlockwise by setting [`
 
 ## Radial menu start and end angle
 
-You can modify the start and end angle of action items by setting [`startAngle`](../api/speed-dial/radialSettingsModel/#startangle) and [`endAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#endangle) properties. If the angle is not defined, the action items are displayed based on the `position` property of the Speed Dial.
+You can modify the start and end angle of action items by setting [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#startangle) and [`endAngle`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#endangle) properties. If the angle is not defined, the action items are displayed based on the `position` property of the Speed Dial.
 
 ```
 <template>
@@ -88,7 +88,7 @@ You can modify the start and end angle of action items by setting [`startAngle`]
 
 ## Offset
 
-You can modify the offset distance between action items and Speed Dial button using [`offset`](../api/speed-dial/radialSettingsModel/#offset) property.
+You can modify the offset distance between action items and Speed Dial button using [`offset`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/radialSettingsModel/#offset) property.
 
 ```
 <template>

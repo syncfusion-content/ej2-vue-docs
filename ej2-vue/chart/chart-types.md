@@ -46,7 +46,7 @@ the `provide`.
 
 * Spline
 
-To render a spline series, use series [`type`](api-seriesDirective.html#type-any) as `Spline` and inject `SplineSeries` into the `provide`.
+To render a spline series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Spline` and inject `SplineSeries` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

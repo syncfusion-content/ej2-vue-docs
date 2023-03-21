@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 # Getting Started with Syncfusion Vue UI Components in JavaScript with the Composition API
 
-This section offers a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue components with the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) effectively. If you need information on getting started with the Vue [Options API](https://vuejs.org/guide/introduction.html#options-api), follow this [link](./vite-vue.md).
+This section offers a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue components with the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) effectively. If you need information on getting started with the Vue [Options API](https://vuejs.org/guide/introduction.html#options-api), follow this [link](./vite-vue).
 
 ## Prerequisites
 

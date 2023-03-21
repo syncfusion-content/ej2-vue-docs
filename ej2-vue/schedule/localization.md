@@ -20,7 +20,7 @@ The Internationalization library provides support for formatting and parsing the
 
 By default, Scheduler is set to follow the English culture ('en-US'). If you want to go with different culture other than English, follow the below steps.
 
-* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this [link](http://cldr.unicode.org/index/cldr-spec/json).
+* Install the `CLDR-Data` package by using the below command (it installs the CLDR JSON data). For more information about CLDR-Data, refer to this [link](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings).
 
 ```
 npm install cldr-data --save
@@ -252,7 +252,7 @@ The following example demonstrates the Scheduler component in 24 hours format.
 
 ## Displaying Scheduler in RTL mode
 
-The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting `enableRtl` to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
+The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting [`enableRtl`](../api/schedule/#enablertl) to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

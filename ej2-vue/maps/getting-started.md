@@ -194,7 +194,7 @@ let usMap: Object =
 
 ```
 
-Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](../api/maps/#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapedata) property.
+Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps/#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapedata) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

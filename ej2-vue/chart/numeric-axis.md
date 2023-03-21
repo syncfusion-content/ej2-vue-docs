@@ -24,7 +24,7 @@ You can use numeric axis to represent numeric values of data in chart. By defaul
 
 ## Range
 
-Range for an axis, will be calculated automatically based on the provided data, you can also customize the range of the axis using [`minimum`](api-axisDirective.html#minimum-any), [`maximum`](api-axisDirective.html#maximum-any) and [`interval`](api-axisDirective.html#interval-any) property of the axis.
+Range for an axis, will be calculated automatically based on the provided data, you can also customize the range of the axis using [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#interval) property of the axis.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -36,8 +36,7 @@ Range for an axis, will be calculated automatically based on the provided data, 
 
 ## Range Padding
 
-Padding can be applied to the minimum and maximum extremes of the axis range by using the
-[`rangePadding`](api-axisDirective.html#rangepadding-any) property. Numeric axis supports following types of padding.
+Padding can be applied to the minimum and maximum extremes of the axis range by using the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) property. Numeric axis supports following types of padding.
 * Round
 * Normal
 * Auto

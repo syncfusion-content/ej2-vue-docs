@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion Vue UI Components in TypeScript with the Options API
 
-This section offers a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue components with the [Options API](https://vuejs.org/guide/introduction.html#options-api) effectively. If you need information on getting started with the Vue [Composition API](https://vuejs.org/guide/introduction.html#composition-api), follow this [link](./vue3-ts-composition.md).
+This section offers a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a TypeScript environment and integrating the Syncfusion Vue components with the [Options API](https://vuejs.org/guide/introduction.html#options-api) effectively. If you need information on getting started with the Vue [Composition API](https://vuejs.org/guide/introduction.html#composition-api), follow this [link](./vue3-ts-composition).
 
 ## Prerequisites
 

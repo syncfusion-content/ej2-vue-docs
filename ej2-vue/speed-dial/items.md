@@ -50,7 +50,7 @@ You can show only text in Speed Dial items by setting [`text`](https://ej2.syncf
 
 ### Icon with text
 
-You can show icon along with text in Speed Dial items by setting [`iconCss`](../api/speed-dial/speedDialItemModel/#iconcss) and [`text`](../api/speed-dial/speedDialItemModel/#text) properties.
+You can show icon along with text in Speed Dial items by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#iconcss) and [`text`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#text) properties.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -62,7 +62,7 @@ You can show icon along with text in Speed Dial items by setting [`iconCss`](../
 
 ### Disabled
 
-You can disable Speed Dial items by setting [`disabled`](../api/speed-dial/speedDialItemModel/#disabled) property as `true`.
+You can disable Speed Dial items by setting [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#disabled) property as `true`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -74,7 +74,7 @@ You can disable Speed Dial items by setting [`disabled`](../api/speed-dial/speed
 
 ## Animation
 
-The Speed Dial items can be animated during the opening and closing of the popup action items. You can customize the animation's `effect`, `delay`, and `duration` by setting [`animation`](../api/speed-dial#animation) property. By default, Speed Dial animates with a `fade` effect and supports all [`speeddialanimation`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialAnimationEffect/) effects.
+The Speed Dial items can be animated during the opening and closing of the popup action items. You can customize the animation's `effect`, `delay`, and `duration` by setting [`animation`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#animation) property. By default, Speed Dial animates with a `fade` effect and supports all [`speeddialanimation`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialAnimationEffect/) effects.
 
 Below example demonstrates the Speed Dial items with applied Zoom effect.
 
@@ -88,4 +88,4 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ## Template
 
-The Speed Dial supports to customize the action items and entire pop-up container by setting [itemTemplate](../api/speed-dial#itemtemplate) and [popupTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#popuptemplate) properties. For more details about templates, check out the link [here](https://ej2.syncfusion.com/vue/documentation/speed-dial/template/).
+The Speed Dial supports to customize the action items and entire pop-up container by setting [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#itemtemplate) and [popupTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#popuptemplate) properties. For more details about templates, check out the link [here](https://ej2.syncfusion.com/vue/documentation/speed-dial/template/).

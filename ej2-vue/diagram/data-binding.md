@@ -47,7 +47,7 @@ To map the user defined JSON data with diagram, configure the fields of [`dataSo
 
 You can bind the diagram with remote data by using [`dataManager`].
 
-It uses two different classes: `DataManager` for processing and `Query` for serving data. `DataManager` communicates with data source and `Query` generates data queries that are read by the [`dataManager`](../api/diagram/dataSourceModel).
+It uses two different classes: `DataManager` for processing and `Query` for serving data. `DataManager` communicates with data source and `Query` generates data queries that are read by the [`dataManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel).
 
 To learn more about data manager, refer to [`Data Manager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel).
 
@@ -69,7 +69,7 @@ This feature allows you to read the data source and perform add or edit or delet
 
 * This feature allows you to define the nodes and connectors collection in the data source and connectionDataSource respectively.
 
-* You can set the data collection in the model’s dataSourceSettings [`dataManager`](../api/diagram/dataSourceModel#dataManager) property. The nodes will be generated based on the data specified in the data source.
+* You can set the data collection in the model’s dataSourceSettings [`dataManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel#dataManager) property. The nodes will be generated based on the data specified in the data source.
 
 * You can set the connector collection in the model’s dataSourceSettings [`connectionDataSource`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel#connectionDataSource) property.
 

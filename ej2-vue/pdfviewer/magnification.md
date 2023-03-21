@@ -64,5 +64,5 @@ The following magnification options are available in the default toolbar of PDF 
 
 ## See also
 
-* [Toolbar items](/toolbar)
-* [Feature Modules](/feature-module)
+* [Toolbar items](./toolbar)
+* [Feature Modules](./feature-module)

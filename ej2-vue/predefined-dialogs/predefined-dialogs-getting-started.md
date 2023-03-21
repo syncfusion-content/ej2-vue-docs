@@ -126,4 +126,4 @@ npm run serve
 
 ```
 
-web server will be initiated, open the quick start app in the browser at port [`localhost:8080`](http://localhost:8080/).
+web server will be initiated, open the quick start app in the browser at port `localhost:8080`.

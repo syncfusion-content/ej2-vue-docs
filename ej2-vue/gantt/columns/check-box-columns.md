@@ -36,7 +36,7 @@ You can enable or disable gantt action for a particular column by setting the [`
 
 Column type can be specified using the `columns.type` property. It specifies the type of data the column binds.
 
-If the `format` is defined for a column, the column uses `type` to select the appropriate format option [number](../common/internationalization/#number-formatting) or [date](../common/internationalization/#manipulating-datetime).
+If the `format` is defined for a column, the column uses `type` to select the appropriate format option [number](https://ej2.syncfusion.com/vue/documentation/common/internationalization/#number-formatting) or [date](https://ej2.syncfusion.com/vue/documentation/common/internationalization/#manipulating-datetime).
 
 Gantt column supports the following types:
 * string

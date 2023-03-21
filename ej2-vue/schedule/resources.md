@@ -20,8 +20,8 @@ The HTML5 JavaScript Scheduler groups the resources based on different criteria.
 
 The default options available within the `resources` collection are as follows,
 
-| Field name | Type | Description |
-|-------|---------| --------------- |
+| Field name |  Type   | Description |
+|------------|---------|----------------|
 | `field` | String | A value that binds to the resource field of event object. |
 | `title` | String | It holds the title of the resource field to be displayed on the event editor window. |
 | `name` | String | A unique resource name used for differentiating various resource objects while grouping. |
@@ -45,7 +45,7 @@ The data for resources can bind with Scheduler either as a local JSON collection
 
 The following code example depicts how to bind the local JSON data to the `dataSource` of `resources` collection.
 
-```
+```html
 <template>
     <div>
         <div id='app'>
@@ -113,7 +113,7 @@ The following code example depicts how to bind the local JSON data to the `dataS
 
 The following code example depicts how to bind the remote data for resources `dataSource`.
 
-```
+```html
 <template>
     <div>
         <div id='app'>
@@ -432,7 +432,7 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 
 In Scheduler, you can set custom work days for each resource and group the Scheduler by date to display these work days. By default, the Scheduler will show all days when it is grouped by date, even if they are not included in the custom work days for the resources. However, you can use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property to only display the custom work days in the Scheduler.
 
-To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](../api/schedule/group/#hidenonworkingdays) to `true` to enable this feature.
+To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property, you need to include it in the configuration options for your Scheduler component. Set the value of [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) to `true` to enable this feature.
 
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
 
@@ -444,7 +444,7 @@ To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/a
         
 {% previewsample "page.domainurl/code-snippet/schedule/single-level-resource-cs3" %}
 
-> The [`hideNonWorkingDays`](../api/schedule/group/#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bydate).
+> The [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#hidenonworkingdays) property only applies when the Scheduler is grouped [`byDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/group/#bydate).
 
 ## Compact view in mobile
 

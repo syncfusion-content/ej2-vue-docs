@@ -73,4 +73,4 @@ You can enable and disable the context menu items using the [`enableItems`](http
         
 {% previewsample "page.domainurl/code-snippet/treegrid/contextMenu/default-cs3" %}
 
-> You can hide or show an item in context menu for specific area inside of treegrid by defining the [`target`](..api/grid/contextMenuItemModel/#target) property.
+> You can hide or show an item in context menu for specific area inside of treegrid by defining the [`target`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/cellSaveEventArgs/#target) property.

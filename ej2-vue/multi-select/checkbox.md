@@ -26,7 +26,7 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
 The MultiSelect component has in-built support to select the all list items using `Select All` options in the header.
 
-When the [`showSelectAll`](../api/multi-select/#showselectall) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [`selectAllText`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#selectalltext).
+When the [`showSelectAll`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#showselectall) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [`selectAllText`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#selectalltext).
 
 For the unSelect All option, by default unSelect All text will show. You can customize the name attribute of the unSelect All option by using
 [`unSelectAllText`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#unselectalltext).
@@ -41,7 +41,7 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 
 ## Selection Limit
 
-Defines the limit of the selected items using [`maximumSelectionLength`](../api/multi-select/#maximumselectionlength).
+Defines the limit of the selected items using [`maximumSelectionLength`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#maximumselectionlength).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -53,7 +53,7 @@ Defines the limit of the selected items using [`maximumSelectionLength`](../api/
 
 ## Selection Reordering
 
-Using [`enableSelectionOrder`](../api/multi-select/#enableselectionorder) to Reorder the selected items in popup visibility state.
+Using [`enableSelectionOrder`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#enableselectionorder) to Reorder the selected items in popup visibility state.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

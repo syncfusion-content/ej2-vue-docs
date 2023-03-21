@@ -101,11 +101,11 @@ Refer to the Gantt's CDN links as follows.
 
 **Syntax:**
 
-> Styles: `http://cdn.syncfusion.com/ej2/{PACKAGE_NAME}/styles/material.css`
+> Styles: `https://cdn.syncfusion.com/ej2/{PACKAGE_NAME}/styles/material.css`
 
 **Example:**
 
-> Styles: [`http://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css`](http://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css)
+> Styles: [`https://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css`](https://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css)
 
 ```js
 <!-- Material theme used for this sample -->
@@ -577,7 +577,7 @@ export default {
 
 ## Enabling editing
 
-The editing feature enables you to edit the tasks in Gantt component. It can be enabled by using the [`editSettings.allowEditing`](../api/gantt/editSettings/#allowediting) and [`editSettings.allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) properties.
+The editing feature enables you to edit the tasks in Gantt component. It can be enabled by using the [`editSettings.allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowediting) and [`editSettings.allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) properties.
 
 To use Editing, inject the [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) module in the `provide` section.
 
@@ -685,7 +685,7 @@ export default {
 
 ### Dialog editing
 
-Modify the task details through dialog by setting edit [`mode`](../api/gantt/editSettings/#mode) property as `Dialog`.
+Modify the task details through dialog by setting edit [`mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#mode) property as `Dialog`.
 
 ```
 
@@ -856,7 +856,7 @@ export default {
 
 ### Dependency editing
 
-Modify the task dependencies using mouse interactions by enabling the [`allowTaskbarEditing`](../api/gantt/editSettings/#allowtaskbarediting) property along with mapping the task dependency data source field to the [`dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property.
+Modify the task dependencies using mouse interactions by enabling the [`allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) property along with mapping the task dependency data source field to the [`dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property.
 
 ```
 
@@ -1142,7 +1142,7 @@ export default {
 
 ## Enable filtering
 
-The filtering feature enables you to view reduced amount of records based on filter criteria. Gantt provides support for menu filtering support for each columns. It can be enabled by setting the [`allowFiltering`](../api/gantt/#allowfiltering) property to `true` along with injecting the `Filter` module as shown in the following code example. Filtering feature can also be customized using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings/) property.
+The filtering feature enables you to view reduced amount of records based on filter criteria. Gantt provides support for menu filtering support for each columns. It can be enabled by setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowfiltering) property to `true` along with injecting the `Filter` module as shown in the following code example. Filtering feature can also be customized using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings/) property.
 
 To use Filtering, inject the [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtermodule) module in the `provide` section.
 
@@ -1251,7 +1251,7 @@ export default {
 
 ## Enable Sorting
 
-The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](../api/gantt/#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow. If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/sortSettings) property.
+The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow. If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/sortSettings) property.
 
 ```
 <template>
@@ -1340,7 +1340,7 @@ export default {
 
 ## Defining eventmarkers
 
-The [`eventMarkers`](../api/gantt/#eventmarkers) property in Gantt component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
+The [`eventMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#eventmarkers) property in Gantt component is used to highlight the important event in Gantt chart part. By using this feature, you can add the lines and label to highlight important days in your project.
 
 To highlight the days, inject the `DayMarkers` module in the `provide` section.
 
@@ -1422,4 +1422,4 @@ Run the application using the following command.
 npm run serve
 ```
 
-Web server will be initiated, Open the quick start app in the browser at port [`localhost:8080`](http://localhost:8080/).
+Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.

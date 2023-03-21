@@ -39,7 +39,7 @@ In the following sample, built-in and injectable based In-place Editor component
 
 Components properties and events can be customized using the In-place Editor [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) property.
 
-In the following code, the [type](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#type) defined as the `Date` and `DatePicker` properties are configured through [model](../api/inplace-editor/#model) property to customize the [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) component at In-place Editor.
+In the following code, the [type](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#type) defined as the `Date` and `DatePicker` properties are configured through [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#type) property to customize the [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) component at In-place Editor.
 
 ```ts
     model: {

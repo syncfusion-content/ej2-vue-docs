@@ -194,7 +194,7 @@ These modules should be injected into the Rich Text Editor through `provide` opt
 
 ## Configure the toolbar
 
-Configure the toolbar with the tools using items field of the [`toolbarSettings`](../api/rich-text-editor/toolbarSettings/#toolbarsettings) property as your application requires.
+Configure the toolbar with the tools using items field of the [`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property as your application requires.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -208,7 +208,7 @@ Configure the toolbar with the tools using items field of the [`toolbarSettings`
 
 ## Insert images and links
 
-The [`image`](../api/rich-text-editor/image/#image) module inserts an image into Rich Text Editor’s content area, and the [`link`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/link/#link) module links external resources such as website URLs, to selected text in the Rich Text Editor’s content, respectively.
+The [`image`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/image/#image) module inserts an image into Rich Text Editor’s content area, and the [`link`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/link/#link) module links external resources such as website URLs, to selected text in the Rich Text Editor’s content, respectively.
 
 The link inject module adds a link icon to the toolbar and the image inject module adds an image icon to the toolbar.
 
@@ -224,7 +224,7 @@ Specifies the items to be rendered in the quick toolbar based on the target elem
 
 ## Retrieve the formatted content
 
-To retrieve the editor contents, use [`value`](../api/rich-text-editor/#value) property of Rich Text Editor.
+To retrieve the editor contents, use [`value`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#value) property of Rich Text Editor.
 
 ```ts
   var rteValue = this.$refs.rteObj.ej2Instances.value;

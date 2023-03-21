@@ -42,7 +42,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 ### Date-time axis
 
-Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the [minimum](../api/heatmap/axis/#minimum) and [maximum](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#maximum) properties.
+Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the [minimum](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#minimum) and [maximum](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#maximum) properties.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -54,7 +54,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ## Inversed axis
 
-Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [isInversed](../api/heatmap/axis/#isinversed) property.
+Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [isInversed](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#isinversed) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -66,7 +66,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ## Opposed axis
 
-In heat map, you can place the axis label in an opposite position of its default axis label position by using the [opposedPosition](../api/heatmap/axis/#opposedposition) property.
+In heat map, you can place the axis label in an opposite position of its default axis label position by using the [opposedPosition](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#opposedposition) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -78,7 +78,7 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ## Label formatting
 
-Heat map supports formatting the axis labels by using the [labelFormat](../api/heatmap/axis/#labelformat) property. Using this property, you can customize the axis label by global string format ('P', 'C', etc) or customized format like '{value}°C'.
+Heat map supports formatting the axis labels by using the [labelFormat](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#labelformat) property. Using this property, you can customize the axis label by global string format ('P', 'C', etc) or customized format like '{value}°C'.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -90,7 +90,7 @@ Heat map supports formatting the axis labels by using the [labelFormat](../api/h
 
 ## Axis intervals
 
-In heat map, you can define an interval between the axis labels using the [interval](../api/heatmap/axis/#interval) property. In date-time axis, you can change the interval mode by using the [intervalType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#intervaltype) property. The date-time axis supports the following interval types:
+In heat map, you can define an interval between the axis labels using the [interval](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#interval) property. In date-time axis, you can change the interval mode by using the [intervalType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#intervaltype) property. The date-time axis supports the following interval types:
 
 * Years
 * Months
@@ -108,7 +108,7 @@ In heat map, you can define an interval between the axis labels using the [inter
 
 ## Axis label increment
 
-Axis label increment in the heat map is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the [increment](../api/heatmap/axis/#increment) property and the default value of this property is **1**.
+Axis label increment in the heat map is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the [increment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#increment) property and the default value of this property is **1**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -120,7 +120,7 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ## Limiting labels in date-time axis
 
-You can display the axis labels at specific time intervals along with the date-time axis using the [showLabelOn](../api/heatmap/axis/#showlabelon) property. This property supports the following types:
+You can display the axis labels at specific time intervals along with the date-time axis using the [showLabelOn](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#showlabelon) property. This property supports the following types:
 
 * None: Displays the axis labels based on the `intervalType` and `interval` property of the axis. This type is default value of the `showLabelOn` property.
 * Years: Displays the axis labels on every year between given date-time range.
@@ -188,7 +188,7 @@ This property provides an option to position the multilevel labels at far, cente
 
 ### Text Customization
 
-The [textStyle](../api/heatmap/multiLevelLabelsModel/#textstyle) property of multilevel labels provides options to customize the size, color, fontFamily, fontWeight, fontStyle, opacity, textAlignment, and textOverflow.
+The [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabelsModel/#textstyle) property of multilevel labels provides options to customize the size, color, fontFamily, fontWeight, fontStyle, opacity, textAlignment, and textOverflow.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -200,7 +200,7 @@ The [textStyle](../api/heatmap/multiLevelLabelsModel/#textstyle) property of mul
 
 ### Border Customization
 
-Using the [border](../api/heatmap/multiLevelLabelsModel/#border) property, you can customize the width, color and type. The type of border are **Rectangle**, **WithoutTopBorder**, **WithoutBottomBorder**, **WithoutTopAndBottomBorder**, **Brace**, and **WithoutBorder**.
+Using the [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabelsModel/#border) property, you can customize the width, color and type. The type of border are **Rectangle**, **WithoutTopBorder**, **WithoutBottomBorder**, **WithoutTopAndBottomBorder**, **Brace**, and **WithoutBorder**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

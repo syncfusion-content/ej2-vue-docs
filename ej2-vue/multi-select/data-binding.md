@@ -41,7 +41,7 @@ The MultiSelect has support to load array of primitive data such as strings and 
 
 ### 2. Array of object
 
-The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](../api/multi-select/#fields) property.
+The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#fields) property.
 
 In the following example, `id` column and `sports` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
@@ -55,7 +55,7 @@ In the following example, `id` column and `sports` column from complex data have
 
 ### 3. Array of complex object
 
-The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](../api/multi-select/#fields) property.
+The MultiSelect can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [fields](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#fields) property.
 
 In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
@@ -69,7 +69,7 @@ In the following example, `Code.Id` column and `Country.Name` column from comple
 
 ## Binding remote data
 
-The MultiSelect supports retrieval of data from remote data services with the help of `DataManager` component. The [Query](../api/multi-select/#query) property is used to fetch data from the database and bind it to the MultiSelect.
+The MultiSelect supports retrieval of data from remote data services with the help of `DataManager` component. The [Query](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#query) property is used to fetch data from the database and bind it to the MultiSelect.
 
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 

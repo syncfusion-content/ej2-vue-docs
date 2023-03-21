@@ -24,7 +24,7 @@ Undo/redo commands can be executed through shortcut keys. Shortcut key for undo 
 
 ## Undo/redo through public APIs
 
-The client-side methods [`undo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) and [`redo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through script.
+The client-side methods [`undo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#undo) and [`redo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#redo) help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through script.
 
 ```javascript
 export default {
@@ -55,7 +55,7 @@ When a change in the diagram is reverted or restored (undo/redo), the historyCha
 
 History list allows to revert or restore multiple changes through a single undo/redo command. For example, revert/restore the fill color change of multiple elements at a time.
 
-The client-side method [`startGroupAction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) is used to notify the diagram to start grouping the changes. The client-side method [`endGroupAction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo fillColor change of multiple elements at a time.
+The client-side method [`startGroupAction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#startgroupaction) is used to notify the diagram to start grouping the changes. The client-side method [`endGroupAction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#endgroupaction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo fillColor change of multiple elements at a time.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -142,7 +142,7 @@ export default {
 
 ## History change event
 
-The [`historyChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram) event triggers, whenever the interaction of the node and connector is take place.
+The [`historyChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#historychange) event triggers, whenever the interaction of the node and connector is take place.
 
 ```javascript
 export default {

@@ -199,9 +199,9 @@ export default {
 };
 ```
 
- Add a series object to the Stock chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeries.html) property and then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeries.html#datasource-object---datamanager) property.
+ Add a series object to the Stock chart by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart#series) property and then set the JSON data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart#datasource) property.
 
-Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxis.html#valuetype-string) for horizontal axis to Category. By default, the axis valueType is Numeric.
+Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxis/#valuetype) for horizontal axis to Category. By default, the axis valueType is Numeric.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -227,7 +227,7 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 
-Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip.html#enable-boolean) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltipModel.html#enable-boolean) property of `crosshairTooltip` in the corresponding axis.
+Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of `crosshairTooltip` in the corresponding axis.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -242,7 +242,7 @@ Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/v
 Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the
 closest point and trackball tooltip displays the information about the point. To use trackball feature, we need to inject `Crosshair` and `Tooltip` into the `provide`.
 
-Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings.html#enable-boolean) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings.html#shared-boolean) property in `tooltip` to true in chart.
+Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings.html#shared-boolean) property in `tooltip` to true in chart.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

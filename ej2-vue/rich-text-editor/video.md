@@ -143,7 +143,7 @@ export default {
 
 ### Server-side action
 
-The selected video can be uploaded to the required destination using the controller action below. Map this method name in [insertVideoSettings.saveUrl](../api/rich-text-editor/videoSettingsModel/#saveurl) and provide the required destination path through [insertVideoSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
+The selected video can be uploaded to the required destination using the controller action below. Map this method name in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveurl) and provide the required destination path through [insertVideoSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
 
 > If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
 
@@ -388,7 +388,7 @@ export default {
 
 The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
 
-You can disable the resize action by configuring `false` for the [insertVideoSettings.resize](../api/rich-text-editor/videoSettingsModel/#resize) property.
+You can disable the resize action by configuring `false` for the [insertVideoSettings.resize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#resize) property.
 
 > If the [minWidth](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minwidth) and [minHeight](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minheight) properties are configured, the video resizing does not shrink below the specified values.
 

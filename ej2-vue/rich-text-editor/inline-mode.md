@@ -30,6 +30,6 @@ Enabling the [onSelection](https://ej2.syncfusion.com/vue/documentation/api/rich
 
 ## See Also
 
-* [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)
-* [How to insert link editing option in the toolbar items](./link/#insert-link)
-* [How to insert image editing option in the toolbar items](./image/#upload-options)
+* [How to edit the quick toolbar settings](../rich-text-editor/toolbar#quick-inline-toolbars)
+* [How to insert link editing option in the toolbar items](../rich-text-editor/link#insert-link)
+* [How to insert image editing option in the toolbar items](../rich-text-editor/image#upload-options)

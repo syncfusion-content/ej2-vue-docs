@@ -48,7 +48,7 @@ import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
 Vue.use(SliderPlugin);
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Slider`. Refer [here](/base/getting-started.html#registering-vue-component) to know more about component registration.
+> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Slider`. Refer [here](https://helpstaging.syncfusion.com:14038/ej2-vue/licensing/license-key-registration) to know more about component registration.
 
 ## Initialize Slider
 

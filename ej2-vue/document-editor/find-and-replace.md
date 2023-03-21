@@ -83,13 +83,13 @@ The [`Search`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/
 
 |API Name|Type |Description|
 |---|---|---|
-|[`findAll()`](../api/document-editor/search/#findall)| Method |Searches for specified text in the whole document and highlights it with yellow.|
+|[`findAll()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/#findall)| Method |Searches for specified text in the whole document and highlights it with yellow.|
 |[`searchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/#searchresults) |Property |This is an instance of [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/).|
-|[`find()`](../api/document-editor/search/#find) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
+|[`find()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/#find) | Method |Find immediate occurrence of specified text from cursor position in the document and highlights it with yellow.|
 
 ### Find the immediate occurrence in the document
 
-Using [`find()`](../api/document-editor/search/#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
+Using [`find()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/#find) method, you can find the immediate occurrence of specified text from current cursor position in the document.
 
 The following example code illustrates how to use find in Document editor.
 
@@ -101,7 +101,7 @@ this.$refs.documenteditor.ej2instances.search.find('Some text', 'None');
 
 ### Find all the occurrences in the document
 
-Using [`findAll()`](../api/document-editor/search/#findall) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
+Using [`findAll()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/search/#findall) method, you can find all the occurrences of specified text in the whole document and highlight it with yellow.
 
 The following example code illustrates how to find All the text in the document.
 
@@ -119,8 +119,8 @@ The [`SearchResults`](https://ej2.syncfusion.com/vue/documentation/api/document-
 |---|---|---|
 |[`length`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/#length)|Property|Returns the total number of results found on the search.|
 |[`index`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/#index)|Property|Returns the index of selected search result. You can change the value for this property to move the selection.|
-|[`replaceAll()`](../api/document-editor/searchResults/#replaceall)|Method|Replaces all the occurrences with specified text.|
-|[`clear()`](../api/document-editor/searchResults/#clear)|Method|Clears the search result.|
+|[`replaceAll()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/#replaceall)|Method|Replaces all the occurrences with specified text.|
+|[`clear()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/searchResults/#clear)|Method|Clears the search result.|
 
 ### Replace all the occurrences
 

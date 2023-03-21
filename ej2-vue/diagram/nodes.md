@@ -35,7 +35,7 @@ To create a node, define the [`node`](https://ej2.syncfusion.com/vue/documentati
 ## Add/Remove node at runtime
 
 * Nodes can be added at runtime by using public method, add and can be removed at runtime by using public method,
-remove. On adding node at runtime, the nodes collection is changed and the [`collectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#collectionChange--emittypecollectionchangeeventargs) event will trigger.
+remove. On adding node at runtime, the nodes collection is changed and the [`collectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#collectionchange) event will trigger.
 
 * The node’s ID property is used to define the name of the node and its further used to find the node at runtime and do any customization.
 
@@ -55,10 +55,10 @@ Nodes can be predefined and added to the palette, and can be dropped into the di
 about adding nodes from symbol palette, refer to [`Symbol Palette`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do your customization.
-* When a symbol is dragged into diagram from symbol palette, the [`dragEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#dragEnter--emittypeidragentereventargs>) event gets triggered.
-* When a symbol is dragged over diagram, the [`dragOver`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#dragOver--emittypeidragovereventargs>) event gets triggered.
-* When a symbol is dragged and dropped from symbol palette to diagram area, the [`drop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#drop--emittypeidropeventargs>) event gets triggered.
-* When a symbol is dragged outside of the diagram, the [`dragLeave`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#dragLeave--emittypeidragleaveeventargs>) event gets triggered.
+* When a symbol is dragged into diagram from symbol palette, the [`dragEnter`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragenter) event gets triggered.
+* When a symbol is dragged over diagram, the [`dragOver`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragover) event gets triggered.
+* When a symbol is dragged and dropped from symbol palette to diagram area, the [`drop`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#drop) event gets triggered.
+* When a symbol is dragged outside of the diagram, the [`dragLeave`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#dragleave) event gets triggered.
 
 ## Create node through data source
 
@@ -258,7 +258,7 @@ The constraints property of the node allows you to enable/disable certain featur
 
 ## Custom properties
 
-The [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#addInfo-object) property of the node allows to maintain additional information to the node.
+The [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#addinfo) property of the node allows to maintain additional information to the node.
 
 ## Stack order
 
@@ -266,7 +266,7 @@ The nodes z-order property specifies the stack order of the node. A node with gr
 
 ## Data flow
 
-Node has the InEdges and OutEdges read-only property. In this property, you can find what are all the connectors that are connected to the node, and then you can find these connectors by using the [`getObject`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#getObject) method in the diagram.
+Node has the InEdges and OutEdges read-only property. In this property, you can find what are all the connectors that are connected to the node, and then you can find these connectors by using the [`getObject`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#getobject) method in the diagram.
 
 ```
 <template>

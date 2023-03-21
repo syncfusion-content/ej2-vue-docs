@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## How to customize context menu in Document Editor
 
-Document Editor allows you to add custom option in context menu. It can be achieved by using the [`addCustomMenu()`](../../api/document-editor/contextMenu/#addcustommenu) method and custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customContentMenuEventArgs/)
+Document Editor allows you to add custom option in context menu. It can be achieved by using the [`addCustomMenu()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contextMenu/#addcustommenu) method and custom action is defined using the [`customContextMenuSelect`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/customContentMenuEventArgs/)
 
 ### Add Custom Option
 
@@ -94,7 +94,7 @@ Document Editor allows you to customize the added custom option and also to hide
 
 #### Hide default context menu items
 
-Using [`addCustomMenu()`](../../api/document-editor/contextMenu/#addcustommenu) method, you can hide the default context menu. By setting second parameter as true.
+Using [`addCustomMenu()`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/contextMenu/#addcustommenu) method, you can hide the default context menu. By setting second parameter as true.
 
 The following code shows how to hide default context menu and add custom option in context menu.
 
