@@ -57,7 +57,7 @@ npm install @syncfusion/ej2-vue-schedule --save
 
 Import the needed css styles for the Scheduler component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
 
-```
+```html
 <style>
     @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
     @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -78,7 +78,7 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 1. Import the Scheduler component in the `<script>` section of the `src/App.vue` file.
 
-     ```
+     ```html
      <script>
         import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective } from "@syncfusion/ej2-vue-schedule";
       </script>
@@ -114,7 +114,7 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 3. Add the component definition in template section.
 
-```
+```html
 
 <template>
     <div id='app'>
@@ -134,7 +134,7 @@ You have completed all the necessary configurations needed for rendering the Syn
         </ejs-schedule>
     </div>
 </template>
-    ```
+```
 
 4. Declare the bound properties in the `script` section. Declare the collection `data` which is bound for the `dataSource` property.
 
@@ -168,11 +168,11 @@ data() {
         ]
     };
 }
-    ```
+```
 
 5. Summarizing the above steps, update the `src/App.vue` file with following code.
 
-```
+```html
 
 <template>
     <div id='app'>

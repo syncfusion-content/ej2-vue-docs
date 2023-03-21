@@ -19,7 +19,7 @@ We can achieve two-way binding with Vue Scheduler by using the `v-model` directi
 
 In the following example, when you change the `selectedDate` value in the Vue Scheduler component, `v-model` will automatically update the value in the Date picker component, and if you change the value in the Date picker component, it will automatically update the value in the Vue Scheduler.
 
-The following example demonstrates how to set the two-way-binding with the `selectedDate` property in the Vue Scheduler.
+The following example demonstrates how to set the two-way-binding with the [`selectedDate`](../api/schedule/#selecteddate) property in the Vue Scheduler.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -33,7 +33,7 @@ The following example demonstrates how to set the two-way-binding with the `sele
 
 In the following example, when you change the `currentDate` value in the Vue Scheduler component, `v-model` will automatically update the value in the Dropdown component, and if you change the value in the Dropdown component, it will automatically update the value in the Vue Scheduler.
 
-The following example demonstrates how to set the two-way-binding with the `currentView` property in the Vue Scheduler.
+The following example demonstrates how to set the two-way-binding with the [`currentView`](../api/schedule/#currentview) property in the Vue Scheduler.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

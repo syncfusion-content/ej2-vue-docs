@@ -83,7 +83,7 @@ Additionally, the regex condition has been added to the Location field, so that 
         
 {% previewsample "page.domainurl/code-snippet/schedule/default-cs1" %}
 
-You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the `actionBegin` event.
+You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`actionBegin`](../api/schedule#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -355,7 +355,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ### Restricting edit action based on specific criteria
 
-You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the `actionBegin` event.
+You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`actionBegin`](../api/schedule#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

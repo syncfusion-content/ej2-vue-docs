@@ -52,7 +52,7 @@ Represents an appointment that is created for an entire day such as holiday even
 
 You can make use of the CSS customization to prevent the display of all-day row appointments on the Scheduler UI.
 
-```
+```html
     <style>
         .e-schedule .e-date-header-wrap .e-schedule-table thead {
            display: none;
@@ -63,7 +63,7 @@ You can make use of the CSS customization to prevent the display of all-day row 
 
 ## Expand all day appointments view on initial load
 
-When you have larger number of appointments in all-day view, you can show all all-day events using `dataBound` event on at initial load. So, user don't have to click the toggle to expand all-day events.
+When you have larger number of appointments in all-day view, you can show all all-day events using [`dataBound`](../api/schedule#databound) event on at initial load. So, user don't have to click the toggle to expand all-day events.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -75,7 +75,7 @@ When you have larger number of appointments in all-day view, you can show all al
 
 ## Customize the rendering of the spanned events
 
-By default, Scheduler will renders the spanned events (appointment with more than 24 hours duration) in the all-day row by setting `AllDayRow` will the default type renders to the `spannedEventPlacement` option within the `eventSettings` property. Now we can customize rendering of the that events inside the work cells itself by modifying the `spannedEventPlacement` option as `TimeSlot`. In this following example, shows how to render the spanned appointments inside the work cells as follows.
+By default, Scheduler will renders the spanned events (appointment with more than 24 hours duration) in the all-day row by setting `AllDayRow` will the default type renders to the `spannedEventPlacement` option within the [`eventSettings`](../api/schedule/eventSettings/) property. Now we can customize rendering of the that events inside the work cells itself by modifying the `spannedEventPlacement` option as `TimeSlot`. In this following example, shows how to render the spanned appointments inside the work cells as follows.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -131,7 +131,7 @@ In this example, a recurring instance that displays on the date 30th Jan 2018 is
 
 ### Edit only the current and following events
 
-To edit only the current and following events enable the property `editFollowingEvents` within `eventSettings` property. The edited occurrence needs to be added as a new event to the dataSource collection, with an additional `followingID` field defined to it. The `followingID` field of edited occurrence usually maps the ID value of the immediate parent event.
+To edit only the current and following events enable the property `editFollowingEvents` within [`eventSettings`](../api/schedule/eventSettings/) property. The edited occurrence needs to be added as a new event to the dataSource collection, with an additional `followingID` field defined to it. The `followingID` field of edited occurrence usually maps the ID value of the immediate parent event.
 
 In this example, a recurring instance that displays on the date 30th Jan 2018 and its following dates are edited with different subject. Therefore, this particular date and its following dates are excluded from the parent recurring event that repeats from 28th January 2018 to 4th February 2018. This can be done by updating the `recurrenceRule` field with the until date value on the parent event. Also, the edited events which is created as a new event should carry the `followingID` field pointing to the immediate parent event's `Id` value.
 
@@ -164,8 +164,8 @@ There are four repeat types available namely,
 
  > Refer [iCalendar](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
 
-| Property | Purpose | Example |
-|-------|---------| --------- |
+| Property  | Purpose | Example |
+|-----------|-----------|------------|
 | FREQ | Maintains the repeat type (Daily, Weekly, Monthly, Yearly) value of the appointment. | FREQ=DAILY;INTERVAL=1|
 | INTERVAL | Maintains the interval value of the appointments. When you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday (Creates an appointment on all days by leaving the interval of one day gap). | FREQ=DAILY;INTERVAL=2|
 | COUNT | It holds the appointmentâ€™s count value. When the COUNT value is 10, then 10 instances of appointments are created in the recurrence series. | FREQ=DAILY;INTERVAL=1;COUNT=10|
@@ -240,7 +240,7 @@ The Scheduler dataSource usually holds the event instances, where each of the in
 The built-in fields available on Scheduler event object are as follows.
 
 | Field name | Description |
-|-------|---------|
+|------------|---------|
 | id | The `id` field needs to be defined as mandatory and this field usually assigns a unique ID value to each of the events.|
 | subject | The `subject` field is optional, and usually assigns the summary text to each of the events.|
 | startTime | The `startTime` field defines the start time of an event and it is mandatory to provide it for any of the valid event objects.|
@@ -258,7 +258,7 @@ The built-in fields available on Scheduler event object are as follows.
 
 ### Binding different field names
 
-When the fields of event instances has the default mapping name, it is not mandatory to map them manually. If a Scheduler's dataSource holds the events collection with different field names, then it is necessary to map them with its equivalent field name within the `eventSettings` property.
+When the fields of event instances has the default mapping name, it is not mandatory to map them manually. If a Scheduler's dataSource holds the events collection with different field names, then it is necessary to map them with its equivalent field name within the [`eventSettings`](../api/schedule/eventSettings/) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -275,7 +275,7 @@ When the fields of event instances has the default mapping name, it is not manda
 Each field of the Scheduler events are provided with additional settings such as options to set default value, to map with appropriate data source fields, to validate every event fields and to provide label values for those fields in the event window.
 
 | Options | Description |
-| ------- | ----------- |
+|---------|-------------|
 | default | Accepts the default value to the applicable fields (Subject, Location and Description), when no values are provided to them from dataSource. |
 | name | Accepts the field name to be mapped from the dataSource fields. |
 | title | Accepts the label values to be displayed for the fields of event editor. |
@@ -293,7 +293,7 @@ In following example, the Subject field in event editor will display its appropr
 
 ## Adding Custom fields
 
-Apart from the default Scheduler fields, the user can include 'n' number of custom fields for appointments. The following code example shows how to include two custom fields namely **Status** and **Priority** within event collection. It is not necessary to bind the custom fields within the `eventSettings`. However, those additional fields can be accessed easily, for internal processing as well as from application end.
+Apart from the default Scheduler fields, the user can include 'n' number of custom fields for appointments. The following code example shows how to include two custom fields namely **Status** and **Priority** within event collection. It is not necessary to bind the custom fields within the [`eventSettings`](../api/schedule/eventSettings/). However, those additional fields can be accessed easily, for internal processing as well as from application end.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -305,7 +305,7 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 
 ## Customize the order of the overlapping events
 
-By default, the scheduler will render the overlapping events based on the start and end time. Now we can customize the order of the overlapping events based on the custom fields by using the `sortComparer` property grouped under the `eventSettings` property. The following code example shows how to sort the appointments based on the custom field as follows.
+By default, the scheduler will render the overlapping events based on the start and end time. Now we can customize the order of the overlapping events based on the custom fields by using the [`sortComparer`](../api/schedule/eventSettings/#sortcomparer) property grouped under the [`eventSettings`](../api/schedule/eventSettings/) property. The following code example shows how to sort the appointments based on the custom field as follows.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -317,7 +317,7 @@ By default, the scheduler will render the overlapping events based on the start 
 
 ## Drag and drop appointments
 
-Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality, it is necessary to inject the module `DragAndDrop` and make sure that `allowDragAndDrop` is set to true on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
+Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality, it is necessary to inject the module `DragAndDrop` and make sure that [`allowDragAndDrop`](../api/schedule#allowdraganddrop) is set to true on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
 
 > By default, drag and drop action is applicable on all Scheduler views, except Agenda, Month-Agenda and Year view.
 
@@ -331,7 +331,7 @@ Appointments can be rescheduled to any time by dragging and dropping them onto t
 
 ### Drag and drop multiple appointments
 
-We can drag and drop multiple appointments by enabling the `allowMultiDrag` property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
+We can drag and drop multiple appointments by enabling the [`allowMultiDrag`](../api/schedule#allowmultidrag) property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
 
 We can also drag multiple events from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
@@ -347,7 +347,7 @@ We can also drag multiple events from one resource to another resource. In this 
 
 ### Disable the drag action
 
-By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set `false` to the `allowDragAndDrop` property.
+By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set `false` to the [`allowDragAndDrop`](../api/schedule#allowdraganddrop) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -359,7 +359,7 @@ By default, you can drag and drop the events within any of the applicable schedu
 
 ### Preventing drag and drop on specific targets
 
-It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `excludeSelectors` option within `dragStart` event. In this example, we have prevented the drag action on all-day row.
+It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `excludeSelectors` option within [`dragStart`](../api/schedule#dragstart) event. In this example, we have prevented the drag action on all-day row.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -371,7 +371,7 @@ It is possible to prevent the drag action on particular target, by passing the t
 
 ### Disable scrolling on drag action
 
-By default, while dragging an appointment to the edges, either top/bottom in the vertical Scheduler or left/right in the timeline Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the `scroll` value within the `dragStart` event arguments.
+By default, while dragging an appointment to the edges, either top/bottom in the vertical Scheduler or left/right in the timeline Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the `scroll` value within the [`dragStart`](../api/schedule#dragstart) event arguments.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -383,7 +383,7 @@ By default, while dragging an appointment to the edges, either top/bottom in the
 
 ### Controlling scroll speed while dragging an event
 
-The speed of the scrolling action while dragging an appointment to the Scheduler edges, can be controlled within the `dragStart` event by setting the desired value to the `scrollBy` and `timeDelay` option whereas its default value is 30 minutes and 100ms.
+The speed of the scrolling action while dragging an appointment to the Scheduler edges, can be controlled within the [`dragStart`](../api/schedule#dragstart) event by setting the desired value to the `scrollBy` and `timeDelay` option whereas its default value is 30 minutes and 100ms.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -395,7 +395,7 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 
 ### Auto navigation of date ranges on dragging an event
 
-When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, you need to set `navigation` to true within the `dragStart` event.
+When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, you need to set `navigation` to true within the [`dragStart`](../api/schedule#dragstart) event.
 
 By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the `timeDelay` within the `dragStart` event.
 
@@ -409,7 +409,7 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 
 ### Setting drag time interval
 
-By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the `interval` option within the `dragStart` event.
+By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the `interval` option within the [`dragStart`](../api/schedule#dragstart) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -439,7 +439,7 @@ In this example, we have used the tree view control as an external source and th
 
 ### Opening the editor window on drag stop
 
-There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. On clicking the cancel button should revert these changes. This can be achieved using the `dragStop` event of Scheduler.
+There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. On clicking the cancel button should revert these changes. This can be achieved using the [`dragStop`](../api/schedule#dragstop) event of Scheduler.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -459,7 +459,7 @@ To enable the inline edit mode, single click on any of the existing appointmentâ
 
 The inline option can be enabled/disabled on the Scheduler by using the allowInline API, whereas its default value is set to false.
 
-While using the `allowInline` the `showQuickInfo` will be turned off. The `quickPopup` will not show on clicking the work cell or clicking the appointment when the `allowInline` property is set to true.
+While using the [`allowInline`](../api/schedule#allowinline) the `showQuickInfo` will be turned off. The `quickPopup` will not show on clicking the work cell or clicking the appointment when the `allowInline` property is set to true.
 In work cells, select multiple cells using keyboard, and then press enter key. The appointment wrapper will be created, and focus will be on the subject field. Also, consider the overlapping scenarios when creating an inline event.
 
 ### Normal Event
@@ -480,7 +480,7 @@ While editing the occurrence from the recurrence series, it is only possible to 
 
 ## Appointment Resizing
 
-Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality, it is necessary to inject the module `Resize` and make sure that `allowResizing` property is set to true.
+Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality, it is necessary to inject the module `Resize` and make sure that [`allowResizing`](../api/schedule#allowresizing) property is set to true.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -492,7 +492,7 @@ Another way of rescheduling an appointment can be done by resizing it through ei
 
 ### Disable the resize action
 
-By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the `allowResizing` property.
+By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the [`allowResizing`](../api/schedule#allowresizing) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -504,7 +504,7 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 
 ### Disable scrolling on resize action
 
-By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `scroll` value within the `resizeStart` event.
+By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `scroll` value within the [`resizeStart`](../api/schedule#resizestart) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -516,7 +516,7 @@ By default, while resizing an appointment, when its handler reaches the extreme 
 
 ### Controlling scroll speed while resizing an event
 
-The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the `resizeStart` event by setting the desired value to the `scrollBy` option.
+The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the [`resizeStart`](../api/schedule#resizestart) event by setting the desired value to the `scrollBy` option.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -528,7 +528,7 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 
 ### Setting resize time interval
 
-By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `interval` option within the `resizeStart` event.
+By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `interval` option within the [`resizeStart`](../api/schedule#resizestart) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -547,7 +547,7 @@ The look and feel of the Scheduler events can be customized using any one of the
 
 ### Using template
 
-Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `template` option available within the `eventSettings` property.
+Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `template` option available within the [`eventSettings`](../api/schedule/eventSettings/) property.
 
 Check out the following video to learn how to customise events using templates in the Vue Scheduler:
 
@@ -563,7 +563,7 @@ The following code example customizes the appointment's default color and time f
         
 {% previewsample "page.domainurl/code-snippet/schedule/event-template-cs1" %}
 
-> All the built-in fields that are mapped to the appropriate field properties within the `eventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
+> All the built-in fields that are mapped to the appropriate field properties within the [`eventSettings`](../api/schedule/eventSettings/), as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
 ### Using eventRendered event
 
@@ -603,7 +603,7 @@ It is possible to set minimal height for appointments on Scheduler using `eventR
 
 ## Block Dates and Times
 
-It is possible to block a set of dates or a particular time ranges on the Scheduler. To do so, define an appointment object within `eventSettings` along with the required time range to block and set the `isBlock` field to true. Usually, the event objects defined with isBlock field set to true will block the entire time cells lying within the appropriate time ranges specified through `startTime` and `endTime` fields.
+It is possible to block a set of dates or a particular time ranges on the Scheduler. To do so, define an appointment object within [`eventSettings`](../api/schedule/eventSettings/) along with the required time range to block and set the `isBlock` field to true. Usually, the event objects defined with isBlock field set to true will block the entire time cells lying within the appropriate time ranges specified through `startTime` and `endTime` fields.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -625,7 +625,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 
 ## Readonly
 
-An interaction with the appointments of Scheduler can be enabled/disabled using the `readonly` property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as `false`.
+An interaction with the appointments of Scheduler can be enabled/disabled using the [`readonly](../api/schedule#readonly) property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as `false`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -693,7 +693,7 @@ The tooltip shows the Scheduler appointment's information in a formatted style b
 
 ### Show or hide built-in tooltip
 
-The tooltip can be displayed for appointments by setting `true` to the `enableTooltip` option within the `eventSettings` property.
+The tooltip can be displayed for appointments by setting `true` to the `enableTooltip` option within the [`eventSettings`](../api/schedule/eventSettings/) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -705,7 +705,7 @@ The tooltip can be displayed for appointments by setting `true` to the `enableTo
 
 ### Customizing event tooltip using template
 
-After enabling the default tooltip, it is possible to customize the display of needed event information on tooltip by making use of the `tooltipTemplate` option within the `eventSettings`.
+After enabling the default tooltip, it is possible to customize the display of needed event information on tooltip by making use of the `tooltipTemplate` option within the [`eventSettings`](../api/schedule/eventSettings/).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -758,7 +758,7 @@ In the following example, the subject of the appointment clicked has been displa
 
 ## Get the current view appointments
 
-To retrieve the appointments present in the current view of the Scheduler, you can make use of the `getCurrentViewEvents` public method. In the following example, the count of current view appointment collection rendered has been traced in `dataBound` event.
+To retrieve the appointments present in the current view of the Scheduler, you can make use of the `getCurrentViewEvents` public method. In the following example, the count of current view appointment collection rendered has been traced in [`dataBound`](../api/schedule#databound) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -770,7 +770,7 @@ To retrieve the appointments present in the current view of the Scheduler, you c
 
 ## Get the entire appointment collections
 
-The entire collection of appointments rendered on the Scheduler can be accessed using the `getEvents` public method. In the following example, the count of entire appointment collection rendered on the Scheduler has been traced in `dataBound` event.
+The entire collection of appointments rendered on the Scheduler can be accessed using the `getEvents` public method. In the following example, the count of entire appointment collection rendered on the Scheduler has been traced in [`dataBound`](../api/schedule#databound) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -782,7 +782,7 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 
 ## Refresh appointments
 
-If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the `refreshEvents` public method.
+If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the [`refreshEvents`](../api/schedule#refreshevents) public method.
 
 ```
 scheduleObj.refreshEvents();

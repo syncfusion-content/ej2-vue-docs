@@ -56,7 +56,7 @@ npm install @syncfusion/ej2-vue-schedule --save
 
 Scheduler CSS files are available in the `ej2-vue-schedule` and its sub-component package folder. It should be referenced as given below within the `<style>` section of `App.vue` file.
 
-```
+```css
 @import '/node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '/node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '/node_modules/@syncfusion/ej2-calendars/styles/material.css';
@@ -71,7 +71,7 @@ Scheduler CSS files are available in the `ej2-vue-schedule` and its sub-componen
 
 Import the Scheduler plugin in your application from the `ej2-vue-schedule` package as given below and register the same using `Vue.use()`.
 
-```
+```html
 import { SchedulePlugin } from '@syncfusion/ej2-vue-schedule';
 
 Vue.use(SchedulePlugin);
@@ -83,7 +83,7 @@ Vue.use(SchedulePlugin);
 
 Add the EJ2 Vue Scheduler using `<ejs-schedule>` to the `<template>` section of the `App.vue` file in src directory.
 
-```
+```html
 <template>
   <div id='app'>
     <ejs-schedule ></ejs-schedule>
@@ -114,7 +114,7 @@ These modules should be injected into the Schedule using the `provide` method wi
 
 `[src/app/app.vue]`
 
-```
+```html
 <template>
   <div id='app'>
     <ejs-schedule ></ejs-schedule>
@@ -147,7 +147,7 @@ The output will display the empty Scheduler.
 
 To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the `dataSource` property available within the `eventSettings` option. To define any appointments, start and end time fields are mandatory. In the following example, you can see the appointment defined with default fields such as Id, Subject, StartTime and EndTime.
 
-```
+```html
 <template>
   <div id='app'>
       <ejs-schedule height='550px' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
@@ -180,7 +180,7 @@ To populate the empty Scheduler with appointments, define either the local JSON 
 
 You can also provide different names to these default fields, for which the custom names of those fields must be mapped appropriately within fields property as shown below.
 
-```
+```html
 <template>
   <div id='app'>
       <ejs-schedule height='550px' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
@@ -226,11 +226,11 @@ The other fields available in Scheduler can be referred from [here](./appointmen
 
 ## Setting date
 
-Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the `selectedDate` property.
+Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the [`selectedDate](../api/schedule#selecteddate) property.
 
 `[src/app/app.vue]`
 
-```
+```html
 <template>
   <div id='app'>
       <ejs-schedule height='550px' :selectedDate='selectedDate'></ejs-schedule>
@@ -256,7 +256,7 @@ Scheduler usually displays the system date as its current date. To change the cu
 
 ## Setting view
 
-Scheduler displays `week` view by default. To change the current view, define the applicable view name to the `currentView` property. The applicable view names are,
+Scheduler displays `week` view by default. To change the current view, define the applicable view name to the [`currentView`](../api/schedule#currentview) property. The applicable view names are,
 
 * Day
 * Week
@@ -271,7 +271,7 @@ Scheduler displays `week` view by default. To change the current view, define th
 * TimelineMonth
 * TimelineYear
 
-```
+```html
 <template>
     <div id='app'>
         <ejs-schedule height='550px' :selectedDate='selectedDate' :currentView='currentView'>

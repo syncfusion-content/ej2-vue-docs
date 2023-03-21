@@ -20,8 +20,8 @@ The Scheduler parent element is assigned with a role of `main`, to denote it as 
 
 The following ARIA attributes are used in the Scheduler.
 
-| Attributes | Description |
-|-------|---------|
+|  Attributes   | Description |
+|---------------|-------------|
 | role="main" |  Attribute added to the Scheduler element describes the actual role of the element and denote it as a main and unique content. |
 | role="button" | Attribute is assigned to the appointments of Scheduler, to denote it as a clickable element. |
 | aria-label | Attribute is set to the Scheduler parent element and its default value is Scheduler's current date. On every time, the date is navigated, this attribute is updated with appropriate current date values. It is also assigned to other scheduler UI elements such as previous and next date navigation buttons depicting its purpose, div element displaying date range in the header bar and appointment elements. |
@@ -31,10 +31,10 @@ The following ARIA attributes are used in the Scheduler.
 
 ## Keyboard interaction
 
-All the Scheduler actions can be controlled via keyboard keys by using the `allowKeyboardInteraction` property which is set to `true` by default. The following are the standard keys that work on Scheduler.
+All the Scheduler actions can be controlled via keyboard keys by using the [`allowKeyboardInteraction`](../api/schedule/#allowkeyboardinteraction) property which is set to `true` by default. The following are the standard keys that work on Scheduler.
 
-Keys | Description |
-|-----|-----|
+|    Keys     | Description |
+|-------------|-------------|
 | <kbd>Alt</kbd> + <kbd>j</kbd> | Focuses the Scheduler element [provided from application end]. |
 | <kbd>Tab</kbd> | Focuses the first or active item on the Scheduler header bar and then move the focus to the next available event elements. If no events present, then focus moves out of the component. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | Reverse focusing of the `Tab` key functionality. Inverse focusing of event elements from the last one and then move onto the first or active item on Scheduler header bar and then moves out of the component.

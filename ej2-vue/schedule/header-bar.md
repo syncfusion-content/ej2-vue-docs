@@ -14,7 +14,7 @@ The header part of Scheduler can be customized easily with the built-in options 
 
 ## Show or Hide header bar
 
-By default, the header bar holds the date and view navigation options, through which the user can switch between the dates and various views. This header bar can be hidden from the UI by setting `false` to the `showHeaderBar` property. It's default value is `true`.
+By default, the header bar holds the date and view navigation options, through which the user can switch between the dates and various views. This header bar can be hidden from the UI by setting `false` to the [`showHeaderBar`](../api/schedule#showheaderbar) property. It's default value is `true`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -38,7 +38,7 @@ Apart from the default date navigation and view options available on the header 
 
 ## How to display the view options within the header bar popup
 
-By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the `enableAdaptiveUI` property.
+By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the [`enableAdaptiveUI`](../api/schedule#enableadaptiveui) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -52,11 +52,11 @@ By default, the header bar holds the view navigation options, through which the 
 
 ## Date header customization
 
-The Scheduler UI that displays the date text on all views are considered as the date header cells. You can customize the date header cells of Scheduler either using `dateHeaderTemplate` or `renderCell` event.
+The Scheduler UI that displays the date text on all views are considered as the date header cells. You can customize the date header cells of Scheduler either using [`dateHeaderTemplate`](../api/schedule#dateheadertemplate) or `renderCell` event.
 
 ### Using date header template
 
-The `dateHeaderTemplate` option is used to customize the date header cells of day, week and work-week views.
+The [`dateHeaderTemplate`](../api/schedule#dateheadertemplate) option is used to customize the date header cells of day, week and work-week views.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

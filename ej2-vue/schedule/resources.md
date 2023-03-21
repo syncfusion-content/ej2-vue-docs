@@ -20,8 +20,8 @@ The HTML5 JavaScript Scheduler groups the resources based on different criteria.
 
 The default options available within the `resources` collection are as follows,
 
-| Field name | Type | Description |
-|-------|---------| --------------- |
+| Field name |  Type   | Description |
+|------------|---------|----------------|
 | `field` | String | A value that binds to the resource field of event object. |
 | `title` | String | It holds the title of the resource field to be displayed on the event editor window. |
 | `name` | String | A unique resource name used for differentiating various resource objects while grouping. |
@@ -45,7 +45,7 @@ The data for resources can bind with Scheduler either as a local JSON collection
 
 The following code example depicts how to bind the local JSON data to the `dataSource` of `resources` collection.
 
-```
+```html
 <template>
     <div>
         <div id='app'>
@@ -113,7 +113,7 @@ The following code example depicts how to bind the local JSON data to the `dataS
 
 The following code example depicts how to bind the remote data for resources `dataSource`.
 
-```
+```html
 <template>
     <div>
         <div id='app'>

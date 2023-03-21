@@ -42,7 +42,7 @@ It is possible to customize the appearance of the cells using both template opti
 
 ### Using template
 
-The `cellTemplate` option accepts the template string and is used to customize the cell background with specific images or appropriate text on the given date values.
+The [`cellTemplate`](../api/schedule/#celltemplate) option accepts the template string and is used to customize the cell background with specific images or appropriate text on the given date values.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -54,7 +54,7 @@ The `cellTemplate` option accepts the template string and is used to customize t
 
 ### Using renderCell event
 
-An alternative to `cellTemplate` is the `renderCell` event, which can also be used to customize the cells with appropriate images or formatted text values.
+An alternative to [`cellTemplate`](../api/schedule/#celltemplate) is the `renderCell` event, which can also be used to customize the cells with appropriate images or formatted text values.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -82,7 +82,7 @@ You can customize cells such as work cells, month cells, all-day cells, header c
 
 ## Customizing cell header in month view
 
-The month header of each date cell in the month view can be customized using the `cellHeaderTemplate` option which accepts the string or HTMLElement. The corresponding date can be accessed with the template.
+The month header of each date cell in the month view can be customized using the [`cellHeaderTemplate`](../api/schedule/#cellheadertemplate) option which accepts the string or HTMLElement. The corresponding date can be accessed with the template.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -94,7 +94,7 @@ The month header of each date cell in the month view can be customized using the
 
 ## Customizing the minimum and maximum date values
 
-Providing the `minDate` and `maxDate` property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
+Providing the [`minDate`](../api/schedule/#mindate) and  [`maxDate`](../api/schedule/#maxdate) property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -104,10 +104,10 @@ Providing the `minDate` and `maxDate` property with some date values, allows the
         
 {% previewsample "page.domainurl/code-snippet/schedule/cell-dimension-cs6" %}
 
->By default, the `minDate` property value is set to new Date(1900, 0, 1) and `maxDate` property value is set to new Date(2099, 11, 31). The user can also set the customized `minDate` and `maxDate` property values.
+>By default, the [`minDate`](../api/schedule/#mindate) property value is set to new Date(1900, 0, 1) and [`maxDate`](../api/schedule/#maxdate) property value is set to new Date(2099, 11, 31). The user can also set the customized `minDate` and `maxDate` property values.
 
 ## How to disable multiple cell and row selection in Schedule
 
-By default, the `allowMultiCellSelection` and `allowMultiRowSelection` properties of the Schedule are set to `true`. So, the Schedule allows user to select multiple cells and rows. If the user want to disable this multiple cell and row selection. The user can disable this feature by setting up `false` to these properties.
+By default, the [`allowMultiCellSelection`](../api/schedule/#allowmulticellselection) and [`allowMultiRowSelection`](../api/schedule/#allowmultirowselection) properties of the Schedule are set to `true`. So, the Schedule allows user to select multiple cells and rows. If the user want to disable this multiple cell and row selection. The user can disable this feature by setting up `false` to these properties.
 
 > You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-ui-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.

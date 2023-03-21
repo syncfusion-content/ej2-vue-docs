@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 By default, the height of the Scheduler rows in Timeline views are static and therefore, when the same time range holds multiple overlapping appointments, a `+n more` text indicator will be displayed. With this feature enabled, you can now view all the overlapping appointments present in those specific time range by auto-adjusting the row height based on the presence of the appointments count, instead of displaying the `+n more` text indicators.
 
-To enable auto row height adjustments on Scheduler Timeline views and Month view, set `true` to the `rowAutoHeight` property whose default value is `false`.
+To enable auto row height adjustments on Scheduler Timeline views and Month view, set `true` to the [`rowAutoHeight`](../api/schedule/#rowautoheight) property whose default value is `false`.
 
 > This auto row height adjustment is applicable only on all the Timeline views as well as on the calendar Month view.
 
@@ -56,7 +56,7 @@ The following example shows how the auto row adjustment feature works on timelin
 
 ## Appointments occupying entire cell
 
-By default, with the feature `rowAutoHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `ignoreWhitespace` with in `eventSettings` whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
+By default, with the feature [`rowAutoHeight`](../api/schedule/#rowautoheight), there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property [`ignoreWhitespace`](../api/schedule/eventSettings/#ignorewhitespace) with in [`eventSettings`](../api/schedule/eventSettings/) whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

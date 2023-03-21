@@ -34,7 +34,7 @@ The required modules should be injected into the Scheduler using the `provide` m
 
 `[src/app.vue]`
 
-```
+```html
   provide: {
     schedule: [Day, Week, WorkWeek, Month, Agenda, MonthAgenda]
   },
