@@ -30,7 +30,7 @@ To use Paging, you need to inject [`Page`](https://ej2.syncfusion.com/vue/docume
 ## Template
 
 You can use custom elements inside the pager instead of default elements.
-The custom elements can be defined by using [`pagerTemplate`](../api/grid/pageSettings/#template).Inside this template, you can access the [`CurrentPage`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#currentpage),[`pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagesize),[`pageCount`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
+The custom elements can be defined by using [`pagerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#template).Inside this template, you can access the [`CurrentPage`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#currentpage),[`pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagesize),[`pageCount`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -54,7 +54,7 @@ The pager Dropdown allows you to change the number of records in the Grid dynami
 
 ## How to render Pager at the Top of the Grid
 
-By default, Pager will be rendered at the bottom of the Grid. You can also render the Pager at the top of the Grid by using the [`dataBound`](../api/grid/#databound) event.
+By default, Pager will be rendered at the bottom of the Grid. You can also render the Pager at the top of the Grid by using the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

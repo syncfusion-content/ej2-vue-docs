@@ -26,7 +26,7 @@ To use Sorting, you need to inject [`Sort`](https://ej2.syncfusion.com/vue/docum
 {% previewsample "page.domainurl/code-snippet/grid/sort/default-cs1" %}
 
 > * Grid column sorted in **Ascending** order. If you click on an already sorted column, then toggles the sort direction.
-> * You can apply and clear sorting by invoking [`sortColumn`](../api/grid/#sortcolumn) and [`clearSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/#clearsorting) methods.
+> * You can apply and clear sorting by invoking [`sortColumn`](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortcolumn) and [`clearSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/#clearsorting) methods.
 > * To disable Sorting for a particular column,
 by specifying [`columns.allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#allowsorting) to false.
 
@@ -68,7 +68,7 @@ When first click a column header it sorts the column in ascending. Again click t
 
 ## Sort foreign key column based on Text
 
-For local data in Grid, sorting will be performed based on the [`foreignKeyValue`](../api/grid/column/#foreignkeyvalue).
+For local data in Grid, sorting will be performed based on the [`foreignKeyValue`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyvalue).
 
 For remote data in Grid, sorting will be performed based on the [`foreignKeyField`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyfield), we need to handle the sorting operation at the server side.
 
@@ -181,7 +181,7 @@ triggers after the sort action complete. Using these events you can perform any 
 {% previewsample "page.domainurl/code-snippet/grid/sort/default-cs4" %}
 
 > [`args.requestType`](https://ej2.syncfusion.com/vue/documentation/api/grid/sortEventArgs/#requesttype) is current action name.
-For example in sorting, the [`args.requestType`](../api/grid/sortEventArgs/#requesttype) value is **sorting**.
+For example in sorting, the [`args.requestType`](https://ej2.syncfusion.com/vue/documentation/api/grid/sortEventArgs/#requesttype) value is **sorting**.
 
 ## Sort Comparer
 
@@ -204,7 +204,7 @@ In the following example, custom sort comparer function was defined in **Custome
 When you tap Grid header on touchscreen devices, then the selected column header is sorted.Also, it will show a popup ![Sorting](images/sorting.jpg)  for multi-column sorting.
 To sort multiple columns, tap the popup![Multi Sorting](images/msorting.jpg) and then tap the desired Grid headers.
 
- The [`allowMultiSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowmultisorting) and [`allowSorting`](../api/grid/#allowsorting) should be **true** then only the popup will be shown.
+ The [`allowMultiSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowmultisorting) and [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) should be **true** then only the popup will be shown.
 
 The following screenshot represents a Grid touch sorting in the device.
 

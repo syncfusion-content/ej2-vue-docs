@@ -49,7 +49,7 @@ Select the option `Default ([Vue 3] babel, eslint)` from the menu.
 
 Once the Vue application is created, install the required Syncfusion Vue component package in the application. All the available Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
 
-Check out the [installation and upgrade](../installation-and-upgrade/installation.md) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
+Check out the [installation and upgrade](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/installation/) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
@@ -210,7 +210,7 @@ export default {
 
 The Grid has an option to define columns as directives. In these column directives, we have properties to customize columns.Let’s check the properties used here:
 
-* We have added [`field`](../api/grid/column/#field) to map with a property name an array of JavaScript objects.
+* We have added [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#field) to map with a property name an array of JavaScript objects.
 * We have added [headerText](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertext) to change the title of columns.
 * We have used `textAlign` to change the alignment of columns.
 By default, columns will be left aligned. To change columns to right align, we need to define [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#textalign) as **Right**.
@@ -260,7 +260,7 @@ If we didn't inject the **Page** module, then the pager will not be rendered in 
 ## Enable Sorting
 
 The sorting feature enables the user to order the records.
-It can be enabled by setting [`allowSorting`](../api/grid/#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow.
+It can be enabled by setting [`allowSorting`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow.
 If we didn't inject the **Sort** module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
@@ -274,7 +274,7 @@ If we didn't inject the **Sort** module, then user not able to sort when click o
 ## Enable Filtering
 
 The filtering feature enables the user to view the reduced amount of records based on filter criteria.
-It can be enabled by setting [`allowFiltering`](../api/grid/#allowfiltering) property as true.
+It can be enabled by setting [`allowFiltering`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) property as true.
 Also, need to inject the **Filter** module in the **provide** section as follow.
 If we didn't inject the **Filter** module, then filter bar will not be rendered in Grid.
 Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#filtersettings) property.
@@ -290,7 +290,7 @@ Filtering feature can be customized using [`filterSettings`](https://ej2.syncfus
 ## Enable Grouping
 
 The grouping feature enables users to view the Grid record in a grouped view.
-It can be enabled by setting [`allowGrouping`](../api/grid/#allowgrouping) property to true.Also, need to inject the **Group** module in the **provide** section as follow.
+It can be enabled by setting [`allowGrouping`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowgrouping) property to true.Also, need to inject the **Group** module in the **provide** section as follow.
 If we didn't inject the **Group** module, then the group drop area will not be rendered in Grid. Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}

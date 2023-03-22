@@ -28,7 +28,7 @@ To enable this feature, you have to set the [`groupSettings.enableLazyLoading`](
 
 ## Handling the lazy load grouping at server-side
 
-You can use the [`UrlAdaptor`](../../data/adaptors/#url-adaptor) of `DataManager` when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the `IsLazyLoad` and `OnDemandGroupInfo` parameters in the `DataManagerRequest` model. Please refer to the below table and screenshots.
+You can use the [`UrlAdaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#url-adaptor) of `DataManager` when binding the remote data. Along with the default server request, this feature will additionally send the below details to handle the lazy load grouping. In the server end, these details are bound with the `IsLazyLoad` and `OnDemandGroupInfo` parameters in the `DataManagerRequest` model. Please refer to the below table and screenshots.
 
 Property Name |Description
 -----|-----
@@ -107,6 +107,6 @@ This is demonstrated in the following sample:
 ## Limitations for lazy load grouping
 
 * Due to the element height limitation in browsers, the maximum number of records loaded by the grid is limited due to the browser capability.
-* DataManager's [`UrlAdaptor`](../../data/adaptors/#url-adaptor) and `JsonAdaptor` only have the built-in lazy load grouping support.
+* DataManager's [`UrlAdaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#url-adaptor) and `JsonAdaptor` only have the built-in lazy load grouping support.
 * Lazy load grouping is not compatible batch editing, row template etc.
 * Programmatic selection is not supported.

@@ -56,7 +56,7 @@ By default, the grid prints all the pages. To print the current page alone, set 
 
 ## Print the hierarchy grid
 
-By default, the grid will be print the master and expanded child grids alone. you can change the print option by using the [`hierarchyPrintMode`](../api/grid/#hierarchyprintmode) property. The available options are,
+By default, the grid will be print the master and expanded child grids alone. you can change the print option by using the [`hierarchyPrintMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/#hierarchyprintmode) property. The available options are,
 
 | Mode     | Behavior    |
 |----------|-------------|

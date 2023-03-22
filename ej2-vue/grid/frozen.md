@@ -41,7 +41,7 @@ The following features are not supported in frozen rows and columns:
 
 You can freeze the Grid columns on the left or right side by using the [`column.freeze`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#freeze) property and the remaining columns will be movable. The grid will automatically move the columns to the left or right position based on the [`column.freeze`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#freeze) value.
 
-Types of the [`column.freeze`](../api/grid/column/#freeze) directions:
+Types of the [`column.freeze`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#freeze) directions:
 
 * **`Left`**: Allows you to freeze the columns at the left.
 * **`Right`**: Allows you to freeze the columns at the right.
@@ -56,7 +56,7 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
         
 {% previewsample "page.domainurl/code-snippet/grid/scroll/default-cs2" %}
 
-> * Freeze Direction is not compatible with the [`isFrozen`](../api/grid/column/#isfrozen) and [`frozenColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#frozencolumns) properties.
+> * Freeze Direction is not compatible with the [`isFrozen`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isfrozen) and [`frozenColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#frozencolumns) properties.
 
 ## Limitations of Freeze Direction
 

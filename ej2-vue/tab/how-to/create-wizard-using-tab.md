@@ -17,7 +17,7 @@ for all mandatory option to proceed to next tabs. Using Tab item's template prop
 
 Create the following contents for each tab in the wizard.
 1. **Search tab:**
-   Created with [DropDownList](../../../drop-down-list/data-binding/) to select the source, destination and type of ticket. A [DatePicker](../../../datepicker/getting-started/) for choosing the date of journey.
+   Created with [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/data-binding/) to select the source, destination and type of ticket. A [DatePicker](../../../datepicker/getting-started/) for choosing the date of journey.
 2. **Train tab:**
    Based on the selected start and end point, populated Grid with random list of available seats and train list. Initially define the columns
    and row selected event for validating, after the source and destination chosen update the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource)

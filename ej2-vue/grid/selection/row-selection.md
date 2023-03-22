@@ -76,7 +76,7 @@ In the demo below, we initially selected the third row using [selectedRowIndex](
 
 ## Get selected records on various pages
 
-Enabling the [selectionSettings.persistSelection](./api-selectionSettings.html#persistselection-boolean) property will persist the selection in all Grid operations.
+Enabling the selectionSettings.persistSelection property will persist the selection in all Grid operations.
 
 So the selection will be maintained on every page even after navigating to another page.
 
@@ -90,4 +90,4 @@ You can get the selected records using the [getSelectedRecords](https://ej2.sync
         
 {% previewsample "page.domainurl/code-snippet/grid/select/default-cs12" %}
 
-> To persist the grid selection, it is necessary to define any one of the columns as a primary key using the [columns.isPrimaryKey](./api-column.html#isprimarykey-boolean) property.
+> To persist the grid selection, it is necessary to define any one of the columns as a primary key using the columns.isPrimaryKey property.

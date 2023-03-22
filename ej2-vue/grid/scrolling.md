@@ -79,7 +79,7 @@ You can scroll the grid content to the selected row position by using the
 
 You can hide the scrollbar of Grid content by using the [`hideScroll`](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidescroll) method when the content doesn't overflow its parent element.
 
-In the following sample, we have invoked the [`hideScroll`](../api/grid/#hidescroll) method inside the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
+In the following sample, we have invoked the [`hideScroll`](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidescroll) method inside the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
