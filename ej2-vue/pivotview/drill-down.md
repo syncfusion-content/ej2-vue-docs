@@ -110,10 +110,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
+    | [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
 
 * `cancel`: It allows user to restrict the current action.
 
@@ -135,10 +135,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
+    | [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
 
 * `actionInfo`: It holds the unique information about the current UI action. For example, if drill down action is completed, the event argument contains information such as field name and the drill information.
 
@@ -156,10 +156,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
-| [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Expand`](./drill-down/#Drill-down-and-drill-up)| Drill down|
+    | [`Collapse`](./drill-down/#Drill-down-and-drill-up)| Drill up|
 
 * `errorInfo`: It holds the error information of the current UI action.
 

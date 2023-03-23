@@ -283,15 +283,15 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Sort field|
-| [`Filter icon`](./field-list/#Filtering-members)| Filter field|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [`Edit icon`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
-| [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
-| [`Field list`](./field-list/#In-built-Field-List)| Open field list|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Sort icon`](./field-list/#Sorting-members)| Sort field|
+    | [`Filter icon`](./field-list/#Filtering-members)| Filter field|
+    | [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+    | [`Edit icon`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
+    | [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
+    | [`Field list`](./field-list/#In-built-Field-List)| Open field list|
+    | [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -317,15 +317,15 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Field sorted|
-| [`Filter icon`](./field-list/#Filtering-members)| Field filtered|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Calculated field edited|
-| [`Calculated field button`](./field-list/#calculated-fields)| Calculated field applied|
-| [`Field list`](./field-list/#In-built-Field-List)| Field list closed|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Field tree sorted|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Sort icon`](./field-list/#Sorting-members)| Field sorted|
+    | [`Filter icon`](./field-list/#Filtering-members)| Field filtered|
+    | [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime)(Value type drop down and menu)| Field aggregated|
+    | [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Calculated field edited|
+    | [`Calculated field button`](./field-list/#calculated-fields)| Calculated field applied|
+    | [`Field list`](./field-list/#In-built-Field-List)| Field list closed|
+    | [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Field tree sorted|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -347,15 +347,15 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Sort icon`](./field-list/#Sorting-members)| Sort field|
-| [`Filter icon`](./field-list/#Filtering-members)| Filter field|
-| [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
-| [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Edit calculated field|
-| [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
-| [`Field list`](./field-list/#In-built-Field-List)| Open field list|
-| [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Sort icon`](./field-list/#Sorting-members)| Sort field|
+    | [`Filter icon`](./field-list/#Filtering-members)| Filter field|
+    | [`Aggregation`](./field-list/#Changing-aggregation-type-of-value-fields-at-runtime) (Value type drop down and menu)| Aggregate field|
+    | [`Edit icon`](./calculated-field/#Editing-the-existing-calculated-field-formula)| Edit calculated field|
+    | [`Calculated field button`](./field-list/#calculated-fields)| Open calculated field dialog|
+    | [`Field list`](./field-list/#In-built-Field-List)| Open field list|
+    | [`Field list tree – Sort icon`](./field-list/#In-built-Field-List)| Sort field tree|
 
 * `errorInfo`: It holds the error information of the current UI action.
 

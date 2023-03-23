@@ -231,13 +231,13 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 5. To create Gantt with additional features, inject the required modules. The following modules are used to extend Gantt's basic functionality.
 
-* [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) : Inject this module to use the editing feature.
-* [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtermodule) : Inject this module to use the filtering feature.
-* [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#sortmodule) : Inject this module to use the sorting feature.
-* [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#selectionmodule) : Inject this module to use the selection feature.
-* [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) : Inject this module to use the toolbar items.
-* [`DayMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#daymarkersmodule) : Inject this module to highlight the days.
-  Register the required array of modules under the key `gantt` in the `provide` section.
+    * [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) : Inject this module to use the editing feature.
+    * [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtermodule) : Inject this module to use the filtering feature.
+    * [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#sortmodule) : Inject this module to use the sorting feature.
+    * [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#selectionmodule) : Inject this module to use the selection feature.
+    * [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) : Inject this module to use the toolbar items.
+    * [`DayMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#daymarkersmodule) : Inject this module to highlight the days.
+    Register the required array of modules under the key `gantt` in the `provide` section.
 
   > Additional feature modules are available [here](./module)
 

@@ -315,13 +315,13 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Sort icon| Sort field|
-| Filter icon| Filter field|
-| Aggregation (Value type drop down and menu)| Aggregate field|
-| Remove icon| Remove field|
-| Edit icon| Edit calculated field|
+    | Action | Action Name|
+    |------|-------------|
+    | Sort icon| Sort field|
+    | Filter icon| Filter field|
+    | Aggregation (Value type drop down and menu)| Aggregate field|
+    | Remove icon| Remove field|
+    | Edit icon| Edit calculated field|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -347,13 +347,13 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Sort icon| Field sorted|
-| Filter icon| Field filtered|
-| Aggregation (Value type drop down and menu)| Field aggregated|
-| Remove icon| Field removed|
-| Edit icon| Calculated field edited|
+    | Action | Action Name|
+    |------|-------------|
+    | Sort icon| Field sorted|
+    | Filter icon| Field filtered|
+    | Aggregation (Value type drop down and menu)| Field aggregated|
+    | Remove icon| Field removed|
+    | Edit icon| Calculated field edited|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -361,13 +361,13 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/pivot-grid/default-cs129/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs129" %}
+    {% tabs %}
+    {% highlight html tabtitle="app.vue" %}
+    {% include code-snippet/pivot-grid/default-cs129/app.vue %}
+    {% endhighlight %}
+    {% endtabs %}
+            
+    {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs129" %}
 
 ### ActionFailure
 
@@ -375,23 +375,23 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Sort icon| Sort field|
-| Filter icon| Filter field|
-| Aggregation (Value type drop down and menu)| Aggregate field|
-| Remove icon| Remove field|
-| Edit icon| Edit calculated field|
+    | Action | Action Name|
+    |------|-------------|
+    | Sort icon| Sort field|
+    | Filter icon| Filter field|
+    | Aggregation (Value type drop down and menu)| Aggregate field|
+    | Remove icon| Remove field|
+    | Edit icon| Edit calculated field|
 
 * `errorInfo`: It holds the error information of the current UI action.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/pivot-grid/default-cs130/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs130" %}
+    {% tabs %}
+    {% highlight html tabtitle="app.vue" %}
+    {% include code-snippet/pivot-grid/default-cs130/app.vue %}
+    {% endhighlight %}
+    {% endtabs %}
+            
+    {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs130" %}
 
 ## See Also
 

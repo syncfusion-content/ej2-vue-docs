@@ -40,7 +40,7 @@ In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/vue/d
 
 ## Multiple-node drag and drop
 
-To drag and drop more than one node, you should enable the [allowMultiSelection](../api/treeview#allowmultiselection) property along with the `allowDragAndDrop` property.
+To drag and drop more than one node, you should enable the [allowMultiSelection](https://ej2.syncfusion.com/vue/documentation/api/treeview#allowmultiselection) property along with the `allowDragAndDrop` property.
 
 To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 

@@ -158,7 +158,7 @@ The following example shows a basic Menu component.
 
 ## Group menu items with separator
 
-The separators are both horizontal and vertical lines used to separate the menu items. You cannot select the separators, but you can enable separators to group the menu items using the [`separator`](../api/menu/menuItemModel#separator) property. The `Open` and `Save` sub menu items are grouped using the `separator` property in the following sample.
+The separators are both horizontal and vertical lines used to separate the menu items. You cannot select the separators, but you can enable separators to group the menu items using the [`separator`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel/#separator) property. The `Open` and `Save` sub menu items are grouped using the `separator` property in the following sample.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -168,7 +168,7 @@ The separators are both horizontal and vertical lines used to separate the menu 
         
 {% previewsample "page.domainurl/code-snippet/menu/getting-started-cs7" %}
 
-> The [`separator`](../api/menu/menuItemModel#separator) property `should not` be given along with
+> The [`separator`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel/#separator) property `should not` be given along with
 the other fields in the [`MenuItem`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel). You can also enable the separator to group **horizontal** menu items.
 
 ## See Also

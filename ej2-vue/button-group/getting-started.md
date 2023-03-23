@@ -28,27 +28,27 @@ The list of dependencies required to use the Button component in your applicatio
 
 * You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications. To install Vue CLI use the following command.
 
-```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
+    ```bash
+    npm install -g @vue/cli
+    npm install -g @vue/cli-init
+    ```
 
 * To setup basic sample use the following Vue CLI commands.
 
-```bash
-vue init webpack-simple quickstart
+    ```bash
+    vue init webpack-simple quickstart
 
-cd quickstart
+    cd quickstart
 
-npm install
+    npm install
 
-```
+    ```
 
 * Install Syncfusion `ButtonGroup` packages using below command.
 
-```bash
-npm install @syncfusion/ej2-splitbuttons --save
-```
+    ```bash
+    npm install @syncfusion/ej2-splitbuttons --save
+    ```
 
 ## Creating Vue Sample
 
