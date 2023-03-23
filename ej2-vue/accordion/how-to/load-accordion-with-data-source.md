@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 You can bind any data object to Accordion items, by mapping it to [`header`](https://ej2.syncfusion.com/vue/documentation/api/accordion/accordionItem#header) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/accordion/accordionItem#content) property.
 
-In the below demo, Data is fetched from an `OData` service using `DataManager`. The result data is formatted as a JSON object with `header`
-and `content` fields, which is set to items property of Accordion.
+In the below demo, Data is fetched from an `OData` service using `DataManager`. The result data is formatted as a JSON object with `header` and `content` fields, which is set to items property of Accordion.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

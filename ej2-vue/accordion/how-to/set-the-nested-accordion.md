@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Set the nested accordion in Vue Accordion component
 
-Accordion supports to render `nested` level of Accordion by using content property. You can give nested Accordion content inside the parent
-Accordion content property by using `id` of nested element. The nested Accordion can be rendered with the use of provided events, such as `clicked` and `expanding`.
+Accordion supports to render `nested` level of Accordion by using content property. You can give nested Accordion content inside the parent Accordion content property by using `id` of nested element. The nested Accordion can be rendered with the use of provided events, such as `clicked` and `expanding`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -18,9 +18,9 @@ To use a different culture other than `English`, follow the below steps:
 
 * Install the `CLDR-Data` package by using the below command (Installs the CLDR JSON data). To know more about CLDR-Data refer to the[`CLDR-Data`](https://cldr.unicode.org/index/cldr-spec/cldr-json-bindings) link.
 
-```
-npm install cldr-data --save
-```
+  ```
+  npm install cldr-data --save
+  ```
 
  Once the package is installed, you can find the culture specific JSON data under the location `/node_modules/cldr-data`.
 

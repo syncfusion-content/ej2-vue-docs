@@ -244,11 +244,8 @@ In root-level paging mode, paging is based on the root-level rows only i.e., it 
 
 ## Enable Sorting
 
-The sorting feature enables the user to order the records.
-It can be enabled by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowsorting) property to true.
-Also, need to inject the `Sort` module in the `provide` section as follow.
-If we didn't inject the `Sort` module, then user not able to sort when click on headers.
-Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/sortSettings) property.
+The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowsorting) property to true. Also, need to inject the `Sort` module in the `provide` section as follow.
+If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/sortSettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

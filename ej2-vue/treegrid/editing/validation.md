@@ -13,8 +13,7 @@ domainurl: ##DomainURL##
 ## Column validation
 
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
-TreeGrid uses `Form Validator` component for column validation.
-You can set validation rules by defining the [`columns.validationRules`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#validationrules).
+TreeGrid uses `Form Validator` component for column validation. You can set validation rules by defining the [`columns.validationRules`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#validationrules).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
