@@ -79,7 +79,7 @@ yarn install
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-## Add Syncfusion Vue packages to the project
+## Add Syncfusion Vue packages
 
 Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
@@ -95,7 +95,7 @@ or
 yarn add @syncfusion/ej2-vue-grids
 ```
 
-## Import the Syncfusion styles
+## Import Syncfusion CSS styles
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
@@ -116,7 +116,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 ```
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Integrate the Syncfusion Vue component to the project
+## Add Syncfusion Vue component
 
 Follow the below steps to add the Vue Grid component using `Options API`:
 
