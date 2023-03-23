@@ -32,21 +32,21 @@ The following list of dependencies is required to use the DashboardLayout compon
 
 * You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
 
-```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
+    ```bash
+    npm install -g @vue/cli
+    npm install -g @vue/cli-init
+    ```
 
 * Start a new project using the below Vue CLI command.
 
-```bash
-vue init webpack-simple quickstart
+    ```bash
+    vue init webpack-simple quickstart
 
-cd quickstart
+    cd quickstart
 
-npm install
+    npm install
 
-```
+    ```
 
 ## Adding Syncfusion packages
 

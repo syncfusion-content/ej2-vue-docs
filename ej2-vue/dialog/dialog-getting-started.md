@@ -69,7 +69,7 @@ Import the needed css styles for the Dialog component along with dependency styl
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Dialog component using following steps.
 
-* Import the Dialog component in the `<script>` section of the `src/App.vue` file.
+*Import the Dialog component in the `<script>` section of the `src/App.vue` file.
 
      ```
      <script>
@@ -77,7 +77,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       </script>
      ```
 
-* Register the Dialog component.
+*Register the Dialog component.
 
 ```javascript
         import { DialogComponent } from "@syncfusion/ej2-vue-popups";
@@ -90,7 +90,7 @@ You have completed all the necessary configurations needed for rendering the Syn
         }
 ```
 
-* Add the component definition in template section.
+*Add the component definition in template section.
 
 ```
     <template>
@@ -103,7 +103,7 @@ You have completed all the necessary configurations needed for rendering the Syn
     </template>
 ```
 
-* Summarizing the above steps, update the `src/App.vue` file with following code.
+*Summarizing the above steps, update the `src/App.vue` file with following code.
 
     ```
     <template>

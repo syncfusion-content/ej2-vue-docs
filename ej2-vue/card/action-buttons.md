@@ -14,14 +14,14 @@ You can include Action buttons within the Card and customize them. Action button
 
 * For adding action buttons you can create button or anchor tag with `e-card-btn` class within the card action element.
 
-```
-    <div class = "e-card">
-        <div class="e-card-actions">
-            <button class="e-card-btn"></button>
-            <a href="#"></a>
+    ```
+        <div class = "e-card">
+            <div class="e-card-actions">
+                <button class="e-card-btn"></button>
+                <a href="#"></a>
+            </div>
         </div>
-    </div>
-```
+    ```
 
 ## Vertical
 

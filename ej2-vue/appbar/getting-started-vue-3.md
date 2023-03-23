@@ -66,7 +66,7 @@ Import the needed CSS styles for the AppBar component along with dependency styl
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the AppBar component using following steps.
 
-  1. Import the AppBar component in the `<script>` section of the `src/App.vue` file.
+  1.Import the AppBar component in the `<script>` section of the `src/App.vue` file.
 
      ```
       <script>
@@ -74,7 +74,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       </script>
 
      ```
-  2. Register the AppBar component in `src/App.vue` file which are used in this example.
+  2.Register the AppBar component in `src/App.vue` file which are used in this example.
 
      ```js
       import { AppBarComponent } from '@syncfusion/ej2-vue-navigations';
@@ -89,7 +89,7 @@ You have completed all the necessary configurations needed for rendering the Syn
 
      In the above code snippet, you have registered AppBar component.
 
-  3. Add the component definition in template section.
+  3.Add the component definition in template section.
 
      ```
       <template>
@@ -103,7 +103,7 @@ You have completed all the necessary configurations needed for rendering the Syn
         </div>
       </template>
      ```
-  4. Summarizing the above steps, update the `src/App.vue` file with following code.
+  4.Summarizing the above steps, update the `src/App.vue` file with following code.
   
      ```
       <template>

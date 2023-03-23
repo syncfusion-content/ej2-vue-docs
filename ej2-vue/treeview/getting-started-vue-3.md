@@ -69,7 +69,7 @@ Import the needed CSS styles for the TreeView component along with dependency st
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the TreeView component using following steps.
 
-  1. Import the TreeView component in the `<script>` section of the `src/App.vue` file.
+  1.Import the TreeView component in the `<script>` section of the `src/App.vue` file.
 
      ```
       <script>
@@ -77,7 +77,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       </script>
 
      ```
-  2. Register the TreeView component in `src/App.vue` file which are used in this example.
+  2.Register the TreeView component in `src/App.vue` file which are used in this example.
 
      ```js
       import { TreeViewComponent } from '@syncfusion/ej2-vue-navigations';
@@ -90,7 +90,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       }
      ```
      In the above code snippet, you have registered TreeView component.
-  3. Add the component definition in template section.
+  3.Add the component definition in template section.
 
      ```
       <template>
@@ -99,7 +99,7 @@ You have completed all the necessary configurations needed for rendering the Syn
      ```
 
      Above is the TreeView component definition, with `fields` property binding definition.
-  4. Declare the bound properties in the `script` section. Declare the collection `data` which is bound for the `fields` property.
+  4.Declare the bound properties in the `script` section. Declare the collection `data` which is bound for the `fields` property.
 
      ```js
       var data =  [
@@ -140,7 +140,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       };
      ```
 
-  5. Summarizing the above steps, update the `src/App.vue` file with following code.
+  5.Summarizing the above steps, update the `src/App.vue` file with following code.
 
      ```
       <template>

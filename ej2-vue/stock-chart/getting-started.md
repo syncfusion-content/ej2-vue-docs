@@ -92,25 +92,25 @@ Vue.use(StockChartPlugin);
 * Add the Vue Stock Chart by using `<ejs-stockchart>` selector in `<template>` section of the `App.vue` file.
 The below example shows a basic stock chart,
 
-```
-<template>
-  <div id="app">
-      <ejs-stockchart></ejs-stockchart>
-  </div>
-</template>
-<script>
-import Vue from 'vue';
-import { StockChartPlugin } from '@syncfusion/ej2-vue-charts';
+    ```
+    <template>
+      <div id="app">
+          <ejs-stockchart></ejs-stockchart>
+      </div>
+    </template>
+    <script>
+    import Vue from 'vue';
+    import { StockChartPlugin } from '@syncfusion/ej2-vue-charts';
 
-Vue.use(StockChartPlugin);
-export default {
-  data () {
-    return {
+    Vue.use(StockChartPlugin);
+    export default {
+      data () {
+        return {
+        }
+      }
     }
-  }
-}
-</script>
-```
+    </script>
+    ```
 
 ## Run the application
 
@@ -118,9 +118,9 @@ The quickstart project is configured to compile and run the application in the b
 
 * Now run the application in the browser using the below command.
 
-```
-npm run dev
-```
+    ```
+    npm run dev
+    ```
 
 ## Module Injection
 

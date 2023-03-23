@@ -59,170 +59,170 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 **1.** Import the Maps component in the `<script>` section of the `src/App.vue` file.
 
-```
-<script>
-import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
-</script>
+    ```
+    <script>
+    import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
+    </script>
 
-```
+    ```
 
 **2.** Register the Maps component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Maps component in the following table.
   
-| Directive Name   | Tag Name    |
-|------------------|-------------|
-| `LayersDirective` | `e-layers` |
-| `LayerDirective`  | `e-layer`  |
+    | Directive Name   | Tag Name    |
+    |------------------|-------------|
+    | `LayersDirective` | `e-layers` |
+    | `LayerDirective`  | `e-layer`  |
 
-```js
-import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
-//Component registeration.
-export default {
-    name: "App",
-    components: {
-      'ejs-maps' : MapsComponent,
-      'e-layers' : LayersDirective,
-      'e-layer' : LayerDirective
+    ```js
+    import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
+    //Component registeration.
+    export default {
+        name: "App",
+        components: {
+        'ejs-maps' : MapsComponent,
+        'e-layers' : LayersDirective,
+        'e-layer' : LayerDirective
+        }
     }
-}
 
-```
+    ```
 
 In the above code snippet, you have registered Maps and the layer directives. Layer directives are used to define the layer settings for the Maps component. **Legend**, **DataLabel** and **MapsTooltip** modules must be imported as legend, data label and tooltip of the Maps component will be used in this example. The **MapAjax** module is imported to process JSON documents in Maps before they are loaded as shape data.
   
 **3.** Add the component definition in template section.
 
-```
-<template>
-    <ejs-maps :titleSettings='titleSettings' :legendSettings='legendSettings'>
-        <e-layers>
-            <e-layer :shapeData='shapeData' :shapePropertyPath='shapePropertyPath' :shapeDataPath='shapeDataPath' :dataSource='dataSource' :shapeSettings='shapeSettings' :dataLabelSettings='dataLabelSettings' :tooltipSettings='tooltipSettings'></e-layer>
-        </e-layers>
-    </ejs-maps>
-</template>
+    ```
+    <template>
+        <ejs-maps :titleSettings='titleSettings' :legendSettings='legendSettings'>
+            <e-layers>
+                <e-layer :shapeData='shapeData' :shapePropertyPath='shapePropertyPath' :shapeDataPath='shapeDataPath' :dataSource='dataSource' :shapeSettings='shapeSettings' :dataLabelSettings='dataLabelSettings' :tooltipSettings='tooltipSettings'></e-layer>
+            </e-layers>
+        </ejs-maps>
+    </template>
 
-```
+    ```
 
 Above is the Maps component definition with `titleSettings` and `legendSettings` properties and layer definitions with `dataSource`, `shapeData`, `shapePropertyPath` and so on.
 
 **4.** Declare the bound properties in the `script` section.
 
-```js
-  data() {
-    return {
-      titleSettings: {
-          text: 'UN security council countries'
-      },
-      shapeData: new MapAjax('https://cdn.syncfusion.com/maps/map-data/world-map.json'),
-      dataSource: [{  "Country": "China", "Membership": "Permanent"},
-            {"Country": "France","Membership": "Permanent" },
-            { "Country": "Russia","Membership": "Permanent"},
-            {"Country": "Kazakhstan","Membership": "Non-Permanent"},
-            { "Country": "Poland","Membership": "Non-Permanent"},
-            {"Country": "Sweden","Membership": "Non-Permanent"}],
-      shapePropertyPath: 'name',
-      shapeDataPath: 'Country',
-      shapeSettings: {
-            colorValuePath: 'Membership',
-            colorMapping: [
-                {
-                    value: 'Permanent', color: '#D84444'
-                },
-                {
-                    value: 'Non-Permanent', color: '#316DB5'
-                }
-            ]
-      },
-      dataLabelSettings: {
+    ```js
+    data() {
+        return {
+        titleSettings: {
+            text: 'UN security council countries'
+        },
+        shapeData: new MapAjax('https://cdn.syncfusion.com/maps/map-data/world-map.json'),
+        dataSource: [{  "Country": "China", "Membership": "Permanent"},
+                {"Country": "France","Membership": "Permanent" },
+                { "Country": "Russia","Membership": "Permanent"},
+                {"Country": "Kazakhstan","Membership": "Non-Permanent"},
+                { "Country": "Poland","Membership": "Non-Permanent"},
+                {"Country": "Sweden","Membership": "Non-Permanent"}],
+        shapePropertyPath: 'name',
+        shapeDataPath: 'Country',
+        shapeSettings: {
+                colorValuePath: 'Membership',
+                colorMapping: [
+                    {
+                        value: 'Permanent', color: '#D84444'
+                    },
+                    {
+                        value: 'Non-Permanent', color: '#316DB5'
+                    }
+                ]
+        },
+        dataLabelSettings: {
+                visible: true,
+                labelPath: 'name',
+                smartLabelMode: 'Trim'
+        },
+        legendSettings: {
+            visible: true
+        },
+        tooltipSettings: {
             visible: true,
-            labelPath: 'name',
-            smartLabelMode: 'Trim'
-      },
-      legendSettings: {
-          visible: true
-      },
-      tooltipSettings: {
-          visible: true,
-          valuePath: 'Country'
-      }
+            valuePath: 'Country'
+        }
+        }
     }
-  }
 
-```
+    ```
 
 **5.** Summarizing the above steps, update the `src/App.vue` file with following code.
 
-```
-<template>
-    <ejs-maps :titleSettings='titleSettings' :legendSettings='legendSettings'>
-        <e-layers>
-            <e-layer :shapeData='shapeData' :shapePropertyPath='shapePropertyPath' :shapeDataPath='shapeDataPath' :dataSource='dataSource' :shapeSettings='shapeSettings' :dataLabelSettings='dataLabelSettings' :tooltipSettings='tooltipSettings'></e-layer>
-        </e-layers>
-    </ejs-maps>
-</template>
+    ```
+    <template>
+        <ejs-maps :titleSettings='titleSettings' :legendSettings='legendSettings'>
+            <e-layers>
+                <e-layer :shapeData='shapeData' :shapePropertyPath='shapePropertyPath' :shapeDataPath='shapeDataPath' :dataSource='dataSource' :shapeSettings='shapeSettings' :dataLabelSettings='dataLabelSettings' :tooltipSettings='tooltipSettings'></e-layer>
+            </e-layers>
+        </ejs-maps>
+    </template>
 
-<script>
-import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
+    <script>
+    import { MapsComponent, LayersDirective, LayerDirective, MapAjax, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps'
 
-export default {
-  name: 'App',
-  components: {
-    'ejs-maps': MapsComponent,
-    'e-layers': LayersDirective,
-    'e-layer': LayerDirective
-  },
-  data() {
-    return {
-      titleSettings: {
-          text: 'UN security council countries'
-      },
-      shapeData: new MapAjax('https://cdn.syncfusion.com/maps/map-data/world-map.json'),
-      dataSource: [{  "Country": "China", "Membership": "Permanent"},
-            {"Country": "France","Membership": "Permanent" },
-            { "Country": "Russia","Membership": "Permanent"},
-            {"Country": "Kazakhstan","Membership": "Non-Permanent"},
-            { "Country": "Poland","Membership": "Non-Permanent"},
-            {"Country": "Sweden","Membership": "Non-Permanent"}],
-      shapePropertyPath: 'name',
-      shapeDataPath: 'Country',
-      shapeSettings: {
-            colorValuePath: 'Membership',
-            colorMapping: [
-                {
-                    value: 'Permanent', color: '#D84444'
-                },
-                {
-                    value: 'Non-Permanent', color: '#316DB5'
-                }
-            ]
-      },
-      dataLabelSettings: {
+    export default {
+    name: 'App',
+    components: {
+        'ejs-maps': MapsComponent,
+        'e-layers': LayersDirective,
+        'e-layer': LayerDirective
+    },
+    data() {
+        return {
+        titleSettings: {
+            text: 'UN security council countries'
+        },
+        shapeData: new MapAjax('https://cdn.syncfusion.com/maps/map-data/world-map.json'),
+        dataSource: [{  "Country": "China", "Membership": "Permanent"},
+                {"Country": "France","Membership": "Permanent" },
+                { "Country": "Russia","Membership": "Permanent"},
+                {"Country": "Kazakhstan","Membership": "Non-Permanent"},
+                { "Country": "Poland","Membership": "Non-Permanent"},
+                {"Country": "Sweden","Membership": "Non-Permanent"}],
+        shapePropertyPath: 'name',
+        shapeDataPath: 'Country',
+        shapeSettings: {
+                colorValuePath: 'Membership',
+                colorMapping: [
+                    {
+                        value: 'Permanent', color: '#D84444'
+                    },
+                    {
+                        value: 'Non-Permanent', color: '#316DB5'
+                    }
+                ]
+        },
+        dataLabelSettings: {
+                visible: true,
+                labelPath: 'name',
+                smartLabelMode: 'Trim'
+        },
+        legendSettings: {
+            visible: true
+        },
+        tooltipSettings: {
             visible: true,
-            labelPath: 'name',
-            smartLabelMode: 'Trim'
-      },
-      legendSettings: {
-          visible: true
-      },
-      tooltipSettings: {
-          visible: true,
-          valuePath: 'Country'
-      }
+            valuePath: 'Country'
+        }
+        }
+    },
+    provide: {
+        maps: [ Legend, DataLabel, MapsTooltip ]
     }
-  },
-  provide: {
-    maps: [ Legend, DataLabel, MapsTooltip ]
-  }
-}
-</script>
+    }
+    </script>
 
-```
+    ```
 
 **6.** Run the application using the following command.
 
-```bash
-npm run serve
+    ```bash
+    npm run serve
 
-```
+    ```
 
 The web server will be initiated and open the **quickstart** app in the browser at port `localhost:8080`.
 

@@ -90,10 +90,7 @@ The below example shows a basic Charts,
 
 * Pie Series
 
-By default pie series will be rendered on assigning JSON data to the series by using
-[`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#datasource) property. Map the field names
-in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#xname) and
-[`yName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#yname) properties of the series.
+By default pie series will be rendered on assigning JSON data to the series by using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#datasource) property. Map the field names in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#yname) properties of the series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -105,6 +102,6 @@ in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/a
 
 * Now run the application in the browser using the below command.
 
-```
-npm run dev
-```
+    ```
+    npm run dev
+    ```

@@ -233,7 +233,7 @@ Output be like the below.
 You can restrict the number of decimals to be entered in the NumericTextBox by using the [`decimals`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#decimals) and [`validateDecimalOnType`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#validatedecimalontype) properties.
 So, you can't enter the number whose precision is greater than the mentioned decimals.
 
-* If `validateDecimalOnType` is false, number of decimals will not be restricted. Else, number of decimals will be restricted while typing in the NumericTextBox.
+*If `validateDecimalOnType` is false, number of decimals will not be restricted. Else, number of decimals will be restricted while typing in the NumericTextBox.
 
     ```
     <template>

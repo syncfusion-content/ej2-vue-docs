@@ -18,20 +18,20 @@ The PDF Viewer control provides the options to add, edit, and delete text markup
 
 There are two ways to highlight a text in the PDF document:
 
-1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select **Highlight** option in the context menu that appears.
+1.Using the context menu
+      * Select a text in the PDF document and right-click it.
+      * Select **Highlight** option in the context menu that appears.
 
-![Alt text](../../pdfviewer/images/highlight_context.png)
+  ![Alt text](../../pdfviewer/images/highlight_context.png)
 
 <!-- markdownlint-disable MD029 -->
-2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
-    * Select the text and the highlight annotation will be added.
-    * You can also select the text and apply the highlight annotation using the **Highlight** button.
+2.Using the annotation toolbar
+      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+      * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
+      * Select the text and the highlight annotation will be added.
+      * You can also select the text and apply the highlight annotation using the **Highlight** button.
 
-![Alt text](../../pdfviewer/images/highlight_button.png)
+  ![Alt text](../../pdfviewer/images/highlight_button.png)
 
 In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
 
@@ -144,20 +144,20 @@ export default {
 
 There are two ways to underline a text in the PDF document:
 
-1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select **Underline** option in the context menu that appears.
+1.Using the context menu
+      * Select a text in the PDF document and right-click it.
+      * Select **Underline** option in the context menu that appears.
 
-![Alt text](../../pdfviewer/images/underline_context.png)
+  ![Alt text](../../pdfviewer/images/underline_context.png)
 
 <!-- markdownlint-disable MD029 -->
-2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
-    * Select the text and the underline annotation will be added.
-    * You can also select the text and apply the underline annotation using the **Underline** button.
+2.Using the annotation toolbar
+      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+      * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
+      * Select the text and the underline annotation will be added.
+      * You can also select the text and apply the underline annotation using the **Underline** button.
 
-![Alt text](../../pdfviewer/images/underline_button.png)
+  ![Alt text](../../pdfviewer/images/underline_button.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -269,20 +269,20 @@ export default {
 
 There are two ways to strikethrough a text in the PDF document:
 
-1. Using the context menu
-    * Select a text in the PDF document and right-click it.
-    * Select **Strikethrough** option in the context menu that appears.
+1.Using the context menu
+      * Select a text in the PDF document and right-click it.
+      * Select **Strikethrough** option in the context menu that appears.
 
-![Alt text](../../pdfviewer/images/strikethrough_context.png)
+  ![Alt text](../../pdfviewer/images/strikethrough_context.png)
 
 <!-- markdownlint-disable MD029 -->
-2. Using the annotation toolbar
-    * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
-    * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
-    * Select the text and the strikethrough annotation will be added.
-    * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
+2.Using the annotation toolbar
+      * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
+      * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
+      * Select the text and the strikethrough annotation will be added.
+      * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button.
 
-![Alt text](../../pdfviewer/images/strikethrough_button.png)
+  ![Alt text](../../pdfviewer/images/strikethrough_button.png)
 
 In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for striking through the text.
 
@@ -394,15 +394,15 @@ export default {
 
 The selected annotation can be deleted by the following ways:
 
-1. Using Delete key
+1.Using Delete key
     * Select the annotation to be deleted.
     * Click the Delete key in the keyboard. The selected annotation will be deleted.
 
-2. Using the annotation toolbar
-    * Select the annotation to be deleted.
-    * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation will be deleted.
+2.Using the annotation toolbar
+      * Select the annotation to be deleted.
+      * Click the **Delete Annotation** button in the annotation toolbar. The selected annotation will be deleted.
 
-![Alt text](../../pdfviewer/images/delete_button.png)
+  ![Alt text](../../pdfviewer/images/delete_button.png)
 
 ## Editing the properties of the text markup annotation
 
@@ -482,9 +482,9 @@ The PDF Viewer performs undo and redo for the changes made in the PDF document. 
 
 Undo and redo actions can be done by the following ways:
 
-1. Using keyboard shortcuts:
+1.Using keyboard shortcuts:
     After performing a text markup annotation action, you can undo it by using Ctrl + Z shortcut and redo by using Ctrl + Y shortcut.
-2. Using toolbar:
+2.Using toolbar:
     Undo and redo can be done using the **Undo** tool and **Redo** tool provided in the toolbar.
 
 Refer to the following code snippet for calling undo and redo actions from the client-side.

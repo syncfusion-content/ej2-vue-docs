@@ -72,16 +72,16 @@ You can create Card with a header in a specific structure. For adding header you
 * You can include heading inside the Card header by adding a `div` element with `e-card-header-caption` class, and also content will be added
  by adding element with `e-card-content`. For detailed information, refer to the [Header and Content](./header-content/).
 
-```
-    <div class = "e-card">                    --> Root Element
-        <div class="e-card-header">           --> Root Header Element
-            <div class="e-card-header-caption">    --> Root Heading Element
-                <div class="e-card-header-title"></div>   --> Heading Title Element
+    ```
+        <div class = "e-card">                    --> Root Element
+            <div class="e-card-header">           --> Root Header Element
+                <div class="e-card-header-caption">    --> Root Heading Element
+                    <div class="e-card-header-title"></div>   --> Heading Title Element
+                </div>
+                <div class="e-card-content"></div>         --> Card content Element
             </div>
-            <div class="e-card-content"></div>         --> Card content Element
         </div>
-    </div>
-```
+    ```
 
 ## Adding Syncfusion Vue Card component in the application
 

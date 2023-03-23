@@ -16,18 +16,18 @@ The following steps explains you on how to define template for Spinner.
 
 * Import the `setSpinner` method from `ej2-vue-popups` library into your `vue` as shown in below.
 
-```ts
-import { setSpinner } from '@syncfusion/ej2-vue-popups';
-```
+        ```ts
+        import { setSpinner } from '@syncfusion/ej2-vue-popups';
+        ```
 
 * Pass your custom template to the `setSpinner` method like as below.
 
-```ts
+        ```ts
 
-// Specify the template content to be displayed in the Spinner
+        // Specify the template content to be displayed in the Spinner
 
-setSpinner({ template: '<div style="width:100%;height:100%" class="custom-rolling"><div></div></div>'});
-```
+        setSpinner({ template: '<div style="width:100%;height:100%" class="custom-rolling"><div></div></div>'});
+        ```
 
 > You should set the template to the Spinner before creating the respective Essential JS 2 component.
 > Also,until we replace `setSpinner` template, the further Essential JS 2 component rendering is created
