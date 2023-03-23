@@ -137,32 +137,32 @@ Output will be displayed as follows.
 
 ## How to run the PDF Viewer web service
 
-1. Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) link.
-2. Navigate to the `ASP.NET Core` folder and open it in the command prompt.
-3. Use the below command to restore the required packages.
+1.Download the sample from the [Web service sample in GitHub](https://github.com/SyncfusionExamples/EJ2-PDFViewer-WebServices) link.
+2.Navigate to the `ASP.NET Core` folder and open it in the command prompt.
+3.Use the below command to restore the required packages.
 
-```
-  dotnet restore
-```
+    ```
+      dotnet restore
+    ```
 
-4. Use the below command to run the web service.
+4.Use the below command to run the web service.
 
-```
-  dotnet run
-```
+    ```
+      dotnet run
+    ```
 
-5. You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001` and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer` which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
+5.You can see that the PDF Viewer server instance runs in the local host with the port number `localhost:5001` and navigate to the PDF Viewer Web control `localhost:5001/pdfviewer` which returns the default get response method. We can bind the link to the `serviceUrl` property of PDF Viewer as below.
 
-```js
-export default {
-  name: 'app',
-  data () {
-    return {
-      serviceUrl:"https://localhost:5001/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
-    };
-  }}
-```
+    ```js
+    export default {
+      name: 'app',
+      data () {
+        return {
+          serviceUrl:"https://localhost:5001/pdfviewer",
+          documentPath:"PDF_Succinctly.pdf"
+        };
+      }}
+    ```
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started).
 

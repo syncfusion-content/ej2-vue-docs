@@ -611,58 +611,58 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 
 * Dependency LineRouting module should be injected to the application as the following code snippet.
 
-```
+        ```
 
-<script>
-import {DiagramPlugin,LineRouting,Diagram,DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
-Diagram.Inject(LineRouting);
-Vue.use(DiagramPlugin);
-</script>
+        <script>
+        import {DiagramPlugin,LineRouting,Diagram,DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
+        Diagram.Inject(LineRouting);
+        Vue.use(DiagramPlugin);
+        </script>
 
-```
+        ```
 
 * Now, the line routing constraints must be included to the default diagram constraints to enable automatic line routing support like below.
 
-```
+        ```
 
-/**
- *  Initialize the Diagram
- */
-  <ejs-diagram #diagram [constraints]='constraints'>
+        /**
+        *  Initialize the Diagram
+        */
+        <ejs-diagram #diagram [constraints]='constraints'>
 
-  <template>
-  <div id="app">
-        <ejs-diagram   :constraints='constraints' ></ejs-diagram>
-    </div>
-</template>
+        <template>
+        <div id="app">
+                <ejs-diagram   :constraints='constraints' ></ejs-diagram>
+            </div>
+        </template>
 
-<script>
-  // Enable line routing constraints.
-let  constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting;
+        <script>
+        // Enable line routing constraints.
+        let  constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting;
 
-</script>
+        </script>
 
-```
+        ```
 
 * The following code block shows how to create the diagram with specifying nodes, connectors, constraints, and necessary modules for line routing.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/diagram/connectors/ConnectorsLineRouting-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRouting-cs1" %}
+        {% tabs %}
+        {% highlight html tabtitle="app.vue" %}
+        {% include code-snippet/diagram/connectors/ConnectorsLineRouting-cs1/app.vue %}
+        {% endhighlight %}
+        {% endtabs %}
+                
+        {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRouting-cs1" %}
 
 * In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1" %}
+        {% tabs %}
+        {% highlight html tabtitle="app.vue" %}
+        {% include code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1/app.vue %}
+        {% endhighlight %}
+        {% endtabs %}
+                
+        {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1" %}
 
 ## Constraints
 
@@ -684,18 +684,18 @@ The following code illustrates how to disable selection.
 
 * The [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#addinfo-Object) property of connectors allows to maintain additional information to connectors.
 
-```javascript
+    ```javascript
 
-let connectors: ConnectorModel = {
-    id: 'connector1',
-    // Defines the information about the connector
-    addInfo:'centralconnector',
-    type: 'Straight',
-    sourceID: 'Transaction',
-    targetID: 'Verification'
-};
+    let connectors: ConnectorModel = {
+        id: 'connector1',
+        // Defines the information about the connector
+        addInfo:'centralconnector',
+        type: 'Straight',
+        sourceID: 'Transaction',
+        targetID: 'Verification'
+    };
 
-```
+    ```
 
 ## Stack Order
 

@@ -32,7 +32,7 @@ In the following example, the `allowMultiSelection` property is enabled.
 
 ## Selected nodes
 
-You can get or set the selected nodes in TreeView at initial rendering and dynamically by using the [selectedNodes](../api/treeview#selectednodes) property. It will return the selected node’s ID as an array.
+You can get or set the selected nodes in TreeView at initial rendering and dynamically by using the [selectedNodes](https://ej2.syncfusion.com/vue/documentation/api/treeview#selectednodes) property. It will return the selected node’s ID as an array.
 
 The [`nodeselecting`](https://ej2.syncfusion.com/vue/documentation/api/treeview#nodeselecting) event is triggered before a node is selected/unselected which can be used to prevent the selection.
 

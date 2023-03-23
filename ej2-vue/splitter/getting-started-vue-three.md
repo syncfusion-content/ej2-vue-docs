@@ -68,7 +68,7 @@ Import the needed css styles for the Splitter component along with dependency st
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Splitter component using following steps.
 
-* Import the Splitter component in the `<script>` section of the `src/App.vue` file.
+*Import the Splitter component in the `<script>` section of the `src/App.vue` file.
 
      ```
      <script>
@@ -76,7 +76,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       </script>
      ```
 
-* Register the Splitter component.
+*Register the Splitter component.
 
 ```javascript
         import { SplitterComponent, PanesDirective, PaneDirective } from "@syncfusion/ej2-vue-layouts";
@@ -91,7 +91,7 @@ You have completed all the necessary configurations needed for rendering the Syn
         }
 ```
 
-* Add the component definition in template section.
+*Add the component definition in template section.
 
 ```
 <template>
@@ -105,7 +105,7 @@ You have completed all the necessary configurations needed for rendering the Syn
 </template>
 ```
 
-* Summarizing the above steps, update the `src/App.vue` file with following code.
+*Summarizing the above steps, update the `src/App.vue` file with following code.
 
 ```
 <template>

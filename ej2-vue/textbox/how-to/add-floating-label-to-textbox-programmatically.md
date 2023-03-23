@@ -22,9 +22,9 @@ Type     | Description
 
 * Import the `Input` modules from `ej2-inputs` library as shown below.
 
-```
-import {Input} from '@syncfusion/ej2-inputs';
-```
+    ```
+    import {Input} from '@syncfusion/ej2-inputs';
+    ```
 
 * Pass the `HTML Input` element and [floatLabelType](https://ej2.syncfusion.com/vue/documentation/api/textbox/#floatlabeltype) property as `Auto` to the `createInput` method.
 
@@ -34,10 +34,10 @@ The `watermark label` will be updated based on the specified `placehol
 
 * You can add the `icons` on the input by passing `buttons` property value with the class name `e-input-group-icon` as parameter to the `createInput` method.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/textbox/floating-label-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/textbox/floating-label-cs1" %}
+  {% tabs %}
+  {% highlight html tabtitle="app.vue" %}
+  {% include code-snippet/textbox/floating-label-cs1/app.vue %}
+  {% endhighlight %}
+  {% endtabs %}
+          
+  {% previewsample "page.domainurl/code-snippet/textbox/floating-label-cs1" %}

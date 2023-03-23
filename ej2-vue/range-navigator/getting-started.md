@@ -88,13 +88,13 @@ Vue.use(RangeNavigatorPlugin);
 * Add the Vue Range Navigator by using `<ejs-rangenavigator>` selector in `<template>` section of the `App.vue` file.
 The below example shows a basic range navigator,
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/rangenavigator/getting-started-cs9/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs9" %}
+    {% tabs %}
+    {% highlight html tabtitle="app.vue" %}
+    {% include code-snippet/rangenavigator/getting-started-cs9/app.vue %}
+    {% endhighlight %}
+    {% endtabs %}
+            
+    {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs9" %}
 
 ## Run the application
 
@@ -102,9 +102,9 @@ The quickstart project is configured to compile and run the application in the b
 
 * Now run the application in the browser using the below command.
 
-```
-npm run dev
-```
+    ```
+    npm run dev
+    ```
 
 ## Module Injection
 

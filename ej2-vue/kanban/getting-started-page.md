@@ -75,107 +75,107 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 * Import the Kanban component in the `<script>` section of the `src/App.vue` file.
 
-```
-<script>
-  import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
-</script>
-```
+    ```
+    <script>
+      import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
+    </script>
+    ```
 
 * Register the Kanban component.
 
-```javascript
-import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
-//Component registration
-export default {
-  name: "App",
-  components: {
-    'ejs-kanban': KanbanComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  },
-}
-```
+    ```javascript
+    import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
+    //Component registration
+    export default {
+      name: "App",
+      components: {
+        'ejs-kanban': KanbanComponent,
+        'e-columns': ColumnsDirective,
+        'e-column': ColumnDirective
+      },
+    }
+    ```
 
 * Add the component definition in template section.
 
-```
-<template>
-  <ejs-kanban id="kanban" keyField="Status">
-    <e-columns>
-      <e-column headerText="To Do" keyField="Open"></e-column>
-      <e-column headerText="In Progress" keyField="InProgress"></e-column>
-      <e-column headerText="Done" keyField="Close"></e-column>
-    </e-columns>
-  </ejs-kanban>
-</template>
-```
+    ```
+    <template>
+      <ejs-kanban id="kanban" keyField="Status">
+        <e-columns>
+          <e-column headerText="To Do" keyField="Open"></e-column>
+          <e-column headerText="In Progress" keyField="InProgress"></e-column>
+          <e-column headerText="Done" keyField="Close"></e-column>
+        </e-columns>
+      </ejs-kanban>
+    </template>
+    ```
 
 * Summarizing the above steps, update the `src/App.vue` file with following code.
 
-```
-<template>
-  <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData" :cardSettings="cardSettings">
-    <e-columns>
-      <e-column headerText="To Do" keyField="Open"></e-column>
-      <e-column headerText="In Progress" keyField="InProgress"></e-column>
-      <e-column headerText="Done" keyField="Close"></e-column>
-    </e-columns>
-  </ejs-kanban>
-</template>
+    ```
+    <template>
+      <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData" :cardSettings="cardSettings">
+        <e-columns>
+          <e-column headerText="To Do" keyField="Open"></e-column>
+          <e-column headerText="In Progress" keyField="InProgress"></e-column>
+          <e-column headerText="Done" keyField="Close"></e-column>
+        </e-columns>
+      </ejs-kanban>
+    </template>
 
-<script>
-import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
+    <script>
+    import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
 
-export default {
-  name: "App",
-  components: {
-    'ejs-kanban': KanbanComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  },
-  data() {
-    return {
-      kanbanData: [
-        {
-            Id: 1,
-            Status: 'Open',
-            Summary: 'Analyze the new requirements gathered from the customer.',
-            Assignee: 'Andrew Fuller'
-        },
-        {
-            Id: 2,
-            Status: 'InProgress',
-            Summary: 'Improve application performance',
-            Assignee: 'Andrew Fuller'
-        },
-        {
-            Id: 3,
-            Status: 'Close',
-            Summary: 'Arrange a web meeting with the customer to get new requirements.',
-            Assignee: 'Janet Leverling'
-        }
-      ],
-      cardSettings: {
-        contentField: "Summary",
-        headerField: "Id"
-      }
+    export default {
+      name: "App",
+      components: {
+        'ejs-kanban': KanbanComponent,
+        'e-columns': ColumnsDirective,
+        'e-column': ColumnDirective
+      },
+      data() {
+        return {
+          kanbanData: [
+            {
+                Id: 1,
+                Status: 'Open',
+                Summary: 'Analyze the new requirements gathered from the customer.',
+                Assignee: 'Andrew Fuller'
+            },
+            {
+                Id: 2,
+                Status: 'InProgress',
+                Summary: 'Improve application performance',
+                Assignee: 'Andrew Fuller'
+            },
+            {
+                Id: 3,
+                Status: 'Close',
+                Summary: 'Arrange a web meeting with the customer to get new requirements.',
+                Assignee: 'Janet Leverling'
+            }
+          ],
+          cardSettings: {
+            contentField: "Summary",
+            headerField: "Id"
+          }
+        };
+      },
     };
-  },
-};
-</script>
+    </script>
 
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
-</style>
+    <style>
+    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+    @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
+    </style>
 
-```
+    ```
 
 ## Running the application
 

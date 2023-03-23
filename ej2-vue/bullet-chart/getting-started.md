@@ -86,19 +86,19 @@ Vue.use(BulletChartPlugin);
 
 * Add the Vue Bullet Chart by using `<ejs-bulletchart>` selector in `<template>` section of the `App.vue` file.
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/bullet-chart/getting-started/initialize-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
+    {% tabs %}
+    {% highlight html tabtitle="app.vue" %}
+    {% include code-snippet/bullet-chart/getting-started/initialize-cs1/app.vue %}
+    {% endhighlight %}
+    {% endtabs %}
+            
+    {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
 
 * Now run the application in the browser using the below command.
 
-```
-npm run dev
-```
+    ```
+    npm run dev
+    ```
 
 ## Module Injection
 

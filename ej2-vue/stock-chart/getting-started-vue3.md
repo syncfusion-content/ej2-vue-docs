@@ -56,181 +56,181 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 **1.** Import the Stock Chart component in the `<script>` section of the `src/App.vue` file.
 
-```
-<script>
-import { StockChartComponent, CandleSeries, DateTime, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChart } from "@syncfusion/ej2-vue-charts";
-</script>
-```
+    ```
+    <script>
+    import { StockChartComponent, CandleSeries, DateTime, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChart } from "@syncfusion/ej2-vue-charts";
+    </script>
+    ```
 
 **2.** Register the Stock Chart component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Stock Chart component in the following table.
-  
-| Directive Name              | Tag Name              |
-|-----------------------------|-----------------------|
-| `SeriesCollectionDirective` | `e-series-collection` |
-| `SeriesDirective`           | `e-series`            |
+      
+    | Directive Name              | Tag Name              |
+    |-----------------------------|-----------------------|
+    | `SeriesCollectionDirective` | `e-series-collection` |
+    | `SeriesDirective`           | `e-series`            |
 
-```js
-import { StockChartComponent, CandleSeries, DateTime, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChart } from "@syncfusion/ej2-vue-charts";
-//Component registeration.
-export default {
-  name: "App",
-  components: {
-    "ejs-stockchart": StockChartComponent,
-    "e-stockchart-series-collection": StockChartSeriesCollectionDirective,
-    "e-stockchart-series": StockChartSeriesDirective
-  },
-};
+    ```js
+    import { StockChartComponent, CandleSeries, DateTime, StockChartSeriesCollectionDirective, StockChartSeriesDirective, StockChart } from "@syncfusion/ej2-vue-charts";
+    //Component registeration.
+    export default {
+      name: "App",
+      components: {
+        "ejs-stockchart": StockChartComponent,
+        "e-stockchart-series-collection": StockChartSeriesCollectionDirective,
+        "e-stockchart-series": StockChartSeriesDirective
+      },
+    };
 
-```
+    ```
 
 In the above code snippet, you have registered Stock Chart and the directives for series. Series directives are used to visualize the data with different Stock Chart types like `Line`, `Hilo`, `Candle` etc.
   
 **3.** Add the component definition in template section.
 
-```
-<template>
-  <ejs-stockchart
-    :primaryXAxis="primaryXAxis"
-    :primaryYAxis="primaryYAxis"
-    :title="title"
-  >
-    <e-stockchart-series-collection>
-      <e-stockchart-series
-        :dataSource="seriesData"
-        type="Candle"
-        volume="volume"
-        xName="date"
-        low="low"
-        high="high"
-        open="open"
-        close="close"
-        yName="open"
-      ></e-stockchart-series>
-    </e-stockchart-series-collection>
-  </ejs-stockchart>
-</template>
+    ```
+    <template>
+      <ejs-stockchart
+        :primaryXAxis="primaryXAxis"
+        :primaryYAxis="primaryYAxis"
+        :title="title"
+      >
+        <e-stockchart-series-collection>
+          <e-stockchart-series
+            :dataSource="seriesData"
+            type="Candle"
+            volume="volume"
+            xName="date"
+            low="low"
+            high="high"
+            open="open"
+            close="close"
+            yName="open"
+          ></e-stockchart-series>
+        </e-stockchart-series-collection>
+      </ejs-stockchart>
+    </template>
 
-```
+    ```
 
 Above is the Stock Chart component with `dataSource` bound to series directives.
 
 **4.** Define the collection `seriesData` which is bound for the `dataSource`, `primaryXAxis`, `primaryYAxis` and `title` properties in the `script` section.
 
-```js
-  data() {
-    return {
-      seriesData: [
-        {
-            date: new Date('2012-04-02'),
-            open: 85.9757,
-            high: 90.6657,
-            low: 85.7685,
-            close: 90.5257,
-            volume: 660187068
-        },
-        {
-            date: new Date('2012-04-09'),
-            open: 89.4471,
-            high: 92,
-            low: 86.2157,
-            close: 86.4614,
-            volume: 912634864
-        },
-        ....
-      ],
-      primaryXAxis: {
-        valueType: "DateTime"
+    ```js
+      data() {
+        return {
+          seriesData: [
+            {
+                date: new Date('2012-04-02'),
+                open: 85.9757,
+                high: 90.6657,
+                low: 85.7685,
+                close: 90.5257,
+                volume: 660187068
+            },
+            {
+                date: new Date('2012-04-09'),
+                open: 89.4471,
+                high: 92,
+                low: 86.2157,
+                close: 86.4614,
+                volume: 912634864
+            },
+            ....
+          ],
+          primaryXAxis: {
+            valueType: "DateTime"
+          },
+          primaryYAxis: {
+            majorTickLines: { color: "transparent", width: 0 },
+          },
+          title: "AAPL Stock Price",
+        };
       },
-      primaryYAxis: {
-        majorTickLines: { color: "transparent", width: 0 },
-      },
-      title: "AAPL Stock Price",
-    };
-  },
 
-```
+    ```
 
 **5.** Summarizing the above steps, update the `src/App.vue` file with following code.
 
-```
-<template>
-  <ejs-stockchart
-    :primaryXAxis="primaryXAxis"
-    :primaryYAxis="primaryYAxis"
-    :title="title"
-  >
-    <e-stockchart-series-collection>
-      <e-stockchart-series
-        :dataSource="seriesData"
-        type="Candle"
-        volume="volume"
-        xName="date"
-        low="low"
-        high="high"
-        open="open"
-        close="close"
-        yName="open"
-      ></e-stockchart-series>
-    </e-stockchart-series-collection>
-  </ejs-stockchart>
-</template>
+    ```
+    <template>
+      <ejs-stockchart
+        :primaryXAxis="primaryXAxis"
+        :primaryYAxis="primaryYAxis"
+        :title="title"
+      >
+        <e-stockchart-series-collection>
+          <e-stockchart-series
+            :dataSource="seriesData"
+            type="Candle"
+            volume="volume"
+            xName="date"
+            low="low"
+            high="high"
+            open="open"
+            close="close"
+            yName="open"
+          ></e-stockchart-series>
+        </e-stockchart-series-collection>
+      </ejs-stockchart>
+    </template>
 
-<script>
-import {
-  StockChartComponent,
-  CandleSeries,
-  DateTime,
-  StockChartSeriesCollectionDirective,
-  StockChartSeriesDirective
-} from "@syncfusion/ej2-vue-charts";
+    <script>
+    import {
+      StockChartComponent,
+      CandleSeries,
+      DateTime,
+      StockChartSeriesCollectionDirective,
+      StockChartSeriesDirective
+    } from "@syncfusion/ej2-vue-charts";
 
-export default {
-  name: "App",
-  components: {
-    "ejs-stockchart": StockChartComponent,
-    "e-stockchart-series-collection": StockChartSeriesCollectionDirective,
-    "e-stockchart-series": StockChartSeriesDirective
-  },
-  data() {
-    return {
-      seriesData: [
-        {
-            date: new Date('2012-04-02'),
-            open: 85.9757,
-            high: 90.6657,
-            low: 85.7685,
-            close: 90.5257,
-            volume: 660187068
-        },
-        {
-            date: new Date('2012-04-09'),
-            open: 89.4471,
-            high: 92,
-            low: 86.2157,
-            close: 86.4614,
-            volume: 912634864
-        },
-        ....
-      ],
-      primaryXAxis: {
-        valueType: "DateTime"
+    export default {
+      name: "App",
+      components: {
+        "ejs-stockchart": StockChartComponent,
+        "e-stockchart-series-collection": StockChartSeriesCollectionDirective,
+        "e-stockchart-series": StockChartSeriesDirective
       },
-      primaryYAxis: {
-        majorTickLines: { color: "transparent", width: 0 },
+      data() {
+        return {
+          seriesData: [
+            {
+                date: new Date('2012-04-02'),
+                open: 85.9757,
+                high: 90.6657,
+                low: 85.7685,
+                close: 90.5257,
+                volume: 660187068
+            },
+            {
+                date: new Date('2012-04-09'),
+                open: 89.4471,
+                high: 92,
+                low: 86.2157,
+                close: 86.4614,
+                volume: 912634864
+            },
+            ....
+          ],
+          primaryXAxis: {
+            valueType: "DateTime"
+          },
+          primaryYAxis: {
+            majorTickLines: { color: "transparent", width: 0 },
+          },
+          title: "AAPL Stock Price",
+        };
       },
-      title: "AAPL Stock Price",
     };
-  },
-};
-</script>
+    </script>
 
-```
+    ```
 
 **6.** Run the application using the following command.
 
-```bash
-npm run serve
-```
+    ```bash
+    npm run serve
+    ```
 
 The web server will be initiated and open the **quickstart** app in the browser at port [`localhost:8080`](http://localhost:8080/).
 

@@ -56,127 +56,127 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 **1.** Import the Range Navigator component in the `<script>` section of the `src/App.vue` file.
 
-```
-<script>
-import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
-RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
-</script>
-```
+  ```
+  <script>
+  import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
+  RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
+  </script>
+  ```
 
 **2.** Register the Range Navigator component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Range Navigator component in the following table.
   
-| Directive Name                            | Tag Name                             |
-|-------------------------------------------|--------------------------------------|
-| `RangenavigatorSeriesCollectionDirective` | `e-rangenavigator-series-collection` |
-| `RangenavigatorSeriesDirective`           | `e-rangenavigator-series`            |
+  | Directive Name                            | Tag Name                             |
+  |-------------------------------------------|--------------------------------------|
+  | `RangenavigatorSeriesCollectionDirective` | `e-rangenavigator-series-collection` |
+  | `RangenavigatorSeriesDirective`           | `e-rangenavigator-series`            |
 
-```js
-import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
-RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
-//Component registeration.
-export default {
-    name: "App",
-    components: {
-    "ejs-rangenavigator": RangeNavigatorComponent,
-    "e-rangenavigator-series-collection": RangenavigatorSeriesCollectionDirective,
-    "e-rangenavigator-series":  RangenavigatorSeriesDirective
-  },
-};
+  ```js
+  import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
+  RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
+  //Component registeration.
+  export default {
+      name: "App",
+      components: {
+      "ejs-rangenavigator": RangeNavigatorComponent,
+      "e-rangenavigator-series-collection": RangenavigatorSeriesCollectionDirective,
+      "e-rangenavigator-series":  RangenavigatorSeriesDirective
+    },
+  };
 
-```
+  ```
 
 In the above code snippet, you have registered Range Navigator and the directives for series. Series directives are used to visualize the data with different chart types like `Line`, `StepLine` etc.
 
 **3.** Add the component definition in template section.
 
-```
-<template>
-    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
-        <e-rangenavigator-series-collection>
-            <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
-            </e-rangenavigator-series>
-        </e-rangenavigator-series-collection>
-    </ejs-rangenavigator>
-</template>
+  ```
+  <template>
+      <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+          <e-rangenavigator-series-collection>
+              <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
+              </e-rangenavigator-series>
+          </e-rangenavigator-series-collection>
+      </ejs-rangenavigator>
+  </template>
 
-```
+  ```
 
 Above is the Range Navigator component with `dataSource` bound to series directives.
 
 **4.** Define the collection `data` which is bound for the `dataSource`, `valueType`, `value` and `labelFormat` properties in the `script` section.
 
-```js
-  data() {
-    return {
-     valueType: 'DateTime',
-     value: [new Date("2008-01-01"), new Date("2010-01-01")],
-     labelFormat: 'MMM-yy',
-     data:[
-        { Date: new Date("2005-01-01"), Close: 21 },
-        { Date: new Date("2006-01-01"), Close: 24 },
-        { Date: new Date("2007-01-01"), Close: 36 },
-        { Date: new Date("2008-01-01"), Close: 38 },
-        { Date: new Date("2009-01-01"), Close: 54 },
-        { Date: new Date("2010-01-01"), Close: 57 },
-        { Date: new Date("2011-01-01"), Close: 62 },
-      ],
-    };
-  },
+  ```js
+    data() {
+      return {
+      valueType: 'DateTime',
+      value: [new Date("2008-01-01"), new Date("2010-01-01")],
+      labelFormat: 'MMM-yy',
+      data:[
+          { Date: new Date("2005-01-01"), Close: 21 },
+          { Date: new Date("2006-01-01"), Close: 24 },
+          { Date: new Date("2007-01-01"), Close: 36 },
+          { Date: new Date("2008-01-01"), Close: 38 },
+          { Date: new Date("2009-01-01"), Close: 54 },
+          { Date: new Date("2010-01-01"), Close: 57 },
+          { Date: new Date("2011-01-01"), Close: 62 },
+        ],
+      };
+    },
 
-```
+  ```
 
 **5.** Summarizing the above steps, update the `src/App.vue` file with following code.
 
-```
-<template>
-    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
-        <e-rangenavigator-series-collection>
-            <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
-            </e-rangenavigator-series>
-        </e-rangenavigator-series-collection>
-    </ejs-rangenavigator>
-</template>
+  ```
+  <template>
+      <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+          <e-rangenavigator-series-collection>
+              <e-rangenavigator-series :dataSource='data' type='StepLine' xName='Date' yName='Close' width=2>
+              </e-rangenavigator-series>
+          </e-rangenavigator-series-collection>
+      </ejs-rangenavigator>
+  </template>
 
-<script>
-import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
-RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
+  <script>
+  import { RangeNavigatorComponent, StepLineSeries, DateTime, RangenavigatorSeriesCollectionDirective,
+  RangenavigatorSeriesDirective } from "@syncfusion/ej2-vue-charts";
 
-export default {
-    name: "App",
-    components: {
-    "ejs-rangenavigator": RangeNavigatorComponent,
-    "e-rangenavigator-series-collection": RangenavigatorSeriesCollectionDirective,
-    "e-rangenavigator-series":  RangenavigatorSeriesDirective
-  },
-  data() {
-    return {
-     valueType: 'DateTime',
-     value: [new Date("2008-01-01"), new Date("2010-01-01")],
-     labelFormat: 'MMM-yy',
-     data:[
-        { Date: new Date("2005-01-01"), Close: 21 },
-        { Date: new Date("2006-01-01"), Close: 24 },
-        { Date: new Date("2007-01-01"), Close: 36 },
-        { Date: new Date("2008-01-01"), Close: 38 },
-        { Date: new Date("2009-01-01"), Close: 54 },
-        { Date: new Date("2010-01-01"), Close: 57 },
-        { Date: new Date("2011-01-01"), Close: 62 },
-      ],
-    };
-  },
-  provide: {
-    rangeNavigator: [ DateTime, StepLineSeries ],
-  },
-};
-</script>
+  export default {
+      name: "App",
+      components: {
+      "ejs-rangenavigator": RangeNavigatorComponent,
+      "e-rangenavigator-series-collection": RangenavigatorSeriesCollectionDirective,
+      "e-rangenavigator-series":  RangenavigatorSeriesDirective
+    },
+    data() {
+      return {
+      valueType: 'DateTime',
+      value: [new Date("2008-01-01"), new Date("2010-01-01")],
+      labelFormat: 'MMM-yy',
+      data:[
+          { Date: new Date("2005-01-01"), Close: 21 },
+          { Date: new Date("2006-01-01"), Close: 24 },
+          { Date: new Date("2007-01-01"), Close: 36 },
+          { Date: new Date("2008-01-01"), Close: 38 },
+          { Date: new Date("2009-01-01"), Close: 54 },
+          { Date: new Date("2010-01-01"), Close: 57 },
+          { Date: new Date("2011-01-01"), Close: 62 },
+        ],
+      };
+    },
+    provide: {
+      rangeNavigator: [ DateTime, StepLineSeries ],
+    },
+  };
+  </script>
 
-```
+  ```
 
 **6.** Run the application using the following command.
 
-```bash
-npm run serve
-```
+  ```bash
+  npm run serve
+  ```
 
 The web server will be initiated and open the **quickstart** app in the browser at port `localhost:8080`.
 

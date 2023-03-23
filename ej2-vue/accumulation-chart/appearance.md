@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Custom Color Palette
 
-You can customize the default color of series or points by providing a custom color palette of your choice by
-using the [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#palettes) property.
+You can customize the default color of series or points by providing a custom color palette of your choice by using the [`palettes`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#palettes) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

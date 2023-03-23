@@ -20,21 +20,21 @@ The following section explains the required steps to build the simple Slider com
 
 * You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
 
-```bash
-npm install -g @vue/cli
-```
+    ```bash
+    npm install -g @vue/cli
+    ```
 
 * To setup basic  sample use the following Vue CLI commands.
 
-```bash
-vue create quickstart
-```
+    ```bash
+    vue create quickstart
+    ```
 
 * Install Syncfusion `Slider` packages using below command.
 
-```bash
-npm install @syncfusion/ej2-vue-inputs --save
-```
+    ```bash
+    npm install @syncfusion/ej2-vue-inputs --save
+    ```
 
 ## Registering Slider component using `Vue.use()`
 

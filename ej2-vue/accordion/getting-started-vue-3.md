@@ -68,7 +68,7 @@ Import the needed css styles for the Accordion component along with dependency s
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Accordion component using following steps.
 
-1. Import the Accordion component in the `<script>` section of the `src/App.vue` file.
+1.Import the Accordion component in the `<script>` section of the `src/App.vue` file.
 
      ```
      <script>
@@ -76,7 +76,7 @@ You have completed all the necessary configurations needed for rendering the Syn
       </script>
      ```
 
-2. Register the Accordion component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Accordion component in the following table.
+2.Register the Accordion component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Accordion component in the following table.
   
      | Directive Name            | Tag Name           |
      | ------------------------- | ------------------ |
@@ -99,7 +99,7 @@ You have completed all the necessary configurations needed for rendering the Syn
 
    In the above code snippet, you have registered Accordion and its child directives. AccordionItem Directive is  used for defining the accordion item.
 
-3. Add the component definition in template section.
+3.Add the component definition in template section.
 
     ```
     <template>
@@ -123,7 +123,7 @@ You have completed all the necessary configurations needed for rendering the Syn
     </template>
     ```
 
-4. Summarizing the above steps, update the `src/App.vue` file with following code.
+4.Summarizing the above steps, update the `src/App.vue` file with following code.
 
     ```
     <template>

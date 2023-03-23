@@ -20,27 +20,27 @@ The following section explains the required steps to build the simple Avatar com
 
 * You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
 
-```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
+    ```bash
+    npm install -g @vue/cli
+    npm install -g @vue/cli-init
+    ```
 
 * To setup basic  sample use the following Vue CLI commands.
 
-```bash
-vue init webpack-simple quickstart
+    ```bash
+    vue init webpack-simple quickstart
 
-cd quickstart
+    cd quickstart
 
-npm install
+    npm install
 
-```
+    ```
 
 * Install Syncfusion `Avatar` packages using below command.
 
-```bash
-npm install @syncfusion/ej2-layouts --save
-```
+    ```bash
+    npm install @syncfusion/ej2-layouts --save
+    ```
 
 ## Using Avatar in Vue Application
 

@@ -152,12 +152,12 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Editing| Edit record|
-| Save| Save edited records|
-| Add| Add new record|
-| Delete| Remove record|
+    | Action | Action Name|
+    |------|-------------|
+    | Editing| Edit record|
+    | Save| Save edited records|
+    | Add| Add new record|
+    | Delete| Remove record|
 
 * `cancel`: It allows user to restrict the current action.
 
@@ -179,12 +179,12 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Save| Edited records saved|
-| Add| New record added|
-| Delete| Record removed |
-| Update| Records updated|
+    | Action | Action Name|
+    |------|-------------|
+    | Save| Edited records saved|
+    | Add| New record added|
+    | Delete| Record removed |
+    | Update| Records updated|
 
 * `actionInfo`: It holds the unique information about the current UI action. For example, if save action is completed, the event argument contains information such as mode of editing and saved records.
 
@@ -202,12 +202,12 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| Editing| Edit record|
-| Save| Save edited records|
-| Add| Add new record|
-| Delete| Remove record|
+    | Action | Action Name|
+    |------|-------------|
+    | Editing| Edit record|
+    | Save| Save edited records|
+    | Add| Add new record|
+    | Delete| Remove record|
 
 * `errorInfo`: It holds the error information of the current UI action.
 

@@ -107,75 +107,75 @@ The following way illustrates how to convert the document as Pdf:
 
 * Using [`serialize`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#serialize) API, convert the document as Sfdt and send it to server-side.
 
-The following example code illustrates how to convert the document to sfdt and pass it to server-side.
+  The following example code illustrates how to convert the document to sfdt and pass it to server-side.
 
-```
-<template>
-    <div id="app">
-    <button id='export' v-on:click="onClick">Export</button>
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
-</template>
-<script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+  ```
+  <template>
+      <div id="app">
+      <button id='export' v-on:click="onClick">Export</button>
+        <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+      </div>
+  </template>
+  <script>
+    import Vue from 'vue';
+    import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
+    Vue.use(DocumentEditorContainerPlugin);
 
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    },
-    methods: {
-      onClick:function() {
-        let obj = this;
-        let http = new XMLHttpRequest();
-        // Replace your running web service Url here
-        http.open('POST', 'http://localhost:62869/api/documenteditor/ExportPdf');
-        http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-        http.responseType = 'json';
-        //Serialize document content as SFDT.
-        let sfdt = { content: obj.$refs.container.ej2Instances.documentEditor.serialize() };
-        //Send the sfdt content to server side.
-        http.send(JSON.stringify(sfdt));
+    export default {
+      data() {
+        return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+        };
+      },
+      provide: {
+        //Inject require modules.
+        DocumentEditorContainer: [Toolbar]
+      },
+      methods: {
+        onClick:function() {
+          let obj = this;
+          let http = new XMLHttpRequest();
+          // Replace your running web service Url here
+          http.open('POST', 'http://localhost:62869/api/documenteditor/ExportPdf');
+          http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+          http.responseType = 'json';
+          //Serialize document content as SFDT.
+          let sfdt = { content: obj.$refs.container.ej2Instances.documentEditor.serialize() };
+          //Send the sfdt content to server side.
+          http.send(JSON.stringify(sfdt));
+        }
       }
-    }
-  };
-</script>
-```
+    };
+  </script>
+  ```
 
 * Using Save API in server-side, you can convert the sfdt to stream.
 * Finally, convert the stream to Pdf using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.
 
-The following example code illustrates how to process the sfdt in server-side.
+  The following example code illustrates how to process the sfdt in server-side.
 
-```c#
-[AcceptVerbs("Post")]
-[HttpPost]
-[EnableCors("AllowAllOrigins")]
-[Route("ExportPdf")]
-public void ExportPdf([FromBody]SaveParameter data)
-{
-    // Converts the sfdt to stream
-    Stream document = WordDocument.Save(data.content, FormatType.Docx);
-    Syncfusion.DocIO.DLS.WordDocument doc = new Syncfusion.DocIO.DLS.WordDocument(document, Syncfusion.DocIO.FormatType.Docx);
-    //Instantiation of DocIORenderer for Word to PDF conversion
-    DocIORenderer render = new DocIORenderer();
-    //Converts Word document into PDF document
-    PdfDocument pdfDocument = render.ConvertToPDF(doc);
-    // Saves the document to server machine file system, you can customize here to save into databases or file servers based on requirement.
-    FileStream fileStream = new FileStream("sample.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite);
-    //Saves the PDF file
-    pdfDocument.Save(fileStream);
-    pdfDocument.Close();
-    fileStream.Close();
-    document.Close();
-}
-```
+  ```c#
+  [AcceptVerbs("Post")]
+  [HttpPost]
+  [EnableCors("AllowAllOrigins")]
+  [Route("ExportPdf")]
+  public void ExportPdf([FromBody]SaveParameter data)
+  {
+      // Converts the sfdt to stream
+      Stream document = WordDocument.Save(data.content, FormatType.Docx);
+      Syncfusion.DocIO.DLS.WordDocument doc = new Syncfusion.DocIO.DLS.WordDocument(document, Syncfusion.DocIO.FormatType.Docx);
+      //Instantiation of DocIORenderer for Word to PDF conversion
+      DocIORenderer render = new DocIORenderer();
+      //Converts Word document into PDF document
+      PdfDocument pdfDocument = render.ConvertToPDF(doc);
+      // Saves the document to server machine file system, you can customize here to save into databases or file servers based on requirement.
+      FileStream fileStream = new FileStream("sample.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite);
+      //Saves the PDF file
+      pdfDocument.Save(fileStream);
+      pdfDocument.Close();
+      fileStream.Close();
+      document.Close();
+  }
+  ```
 
 Get the complete working sample in this [`link`](https://github.com/SyncfusionExamples/Export-document-as-PDF-in-Document-Editor/).

@@ -111,111 +111,111 @@ Below is a list of operators and functions that can be used in the formula to cr
 
 * `-` – subtraction operator.
 
-```ts
-Syntax: X - Y
-```
+    ```ts
+    Syntax: X - Y
+    ```
 
 * `*` – multiplication operator.
 
-```ts
-Syntax: X * Y
-```
+    ```ts
+    Syntax: X * Y
+    ```
 
 * `/` – division operator.
 
-```ts
-Syntax: X / Y
-```
+    ```ts
+    Syntax: X / Y
+    ```
 
 * `^` – power operator.
 
-```ts
-Syntax: X^2
-```
+    ```ts
+    Syntax: X^2
+    ```
 
 * `<` - less than operator.
 
-```ts
-Syntax: X < Y
-```
+    ```ts
+    Syntax: X < Y
+    ```
 
 * `<=` – less than or equal operator.
 
-```ts
-Syntax: X <= Y
-```
+    ```ts
+    Syntax: X <= Y
+    ```
 
 * `>` – greater than operator.
 
-```ts
-Syntax: X > Y
-```
+    ```ts
+    Syntax: X > Y
+    ```
 
 * `>=` – greater than or equal operator.
 
-```ts
-Syntax: X >= Y
-```
+    ```ts
+    Syntax: X >= Y
+    ```
 
 * `==` – equal operator.
 
-```ts
-Syntax: X == Y
-```
+    ```ts
+    Syntax: X == Y
+    ```
 
 * `!=` – not equal operator.
 
-```ts
-Syntax: X != Y
-```
+    ```ts
+    Syntax: X != Y
+    ```
 
 * `|` – OR operator.
 
-```ts
-Syntax: X | Y
-```
+    ```ts
+    Syntax: X | Y
+    ```
 
 * `&` – AND operator.
 
-```ts
-Syntax: X & Y
-```
+    ```ts
+    Syntax: X & Y
+    ```
 
 * `?` – conditional operator.
 
-```ts
-Syntax: condition ? then : else
-```
+    ```ts
+    Syntax: condition ? then : else
+    ```
 
 * `isNaN` – function that checks if the value is not a number.
 
-```ts
-Syntax: isNaN(value)
-```
+    ```ts
+    Syntax: isNaN(value)
+    ```
 
 * `!isNaN` – function that checks if the value is a number.
 
-```ts
-Syntax: isNaN(value)
-```
+    ```ts
+    Syntax: isNaN(value)
+    ```
 
 * `abs` – function that returns the absolute value of a number.
 
-```ts
-Syntax: abs(number)
-```
+    ```ts
+    Syntax: abs(number)
+    ```
 
 * `min` – function that returns the minimum value.
 
-```ts
-Syntax: min(number1, number2)
-```
+    ```ts
+    Syntax: min(number1, number2)
+    ```
 
 * `max` – function that returns the maximum value.
 
-```ts
-Syntax: max(number1, number2)
-```
+    ```ts
+    Syntax: max(number1, number2)
+    ```
 
  > Also, you can use JavaScript [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object properties and methods directly to the formula.
 
@@ -257,11 +257,11 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 
 * `actionName`: It holds the name of the current action began. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
-| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
-| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
+    | [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
+    | [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -287,10 +287,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 
 * `actionName`: It holds the name of the current action completed. The following are the UI actions and their names:
 
-| Action | Action Name|
-|------|-------------|
-| [`Calculated field button`](./calculated-field/#Calculated-Field)| Calculated field applied|
-| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Calculated field edited|
+    | Action | Action Name|
+    |------|-------------|
+    | [`Calculated field button`](./calculated-field/#Calculated-Field)| Calculated field applied|
+    | [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Calculated field edited|
 
 * `fieldInfo`: It holds the selected field information.
 
@@ -312,11 +312,11 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 
 * `actionName`: It holds the name of the current action failed. The following are the UI actions and their names:
 
-| Action | Action Name |
-|------|-------------|
-| [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
-| [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
-| [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
+    | Action | Action Name |
+    |------|-------------|
+    | [`Calculated field button`](./calculated-field/#Calculated-Field)| Open calculated field dialog|
+    | [`Edit icon in calculated field`](./calculated-field/#Editing-through-the-field-list-and-the-grouping-bar)| Edit calculated field|
+    | [`Context menu in the tree view inside the calculated field dialog`](./calculated-field/#Calculated-Field)| Calculated field context menu|
 
 * `errorInfo`: It holds the error information of the current UI action.
 
