@@ -34,9 +34,7 @@ Expand and Collapse state of any child record will be persisted.
 
 Column virtualization allows you to virtualize columns. It will render column only in the current view port and all other columns are rendered on demand during horizontal scrolling.
 
-To setup the column virtualization, set the
-[`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablevirtualization) and
-[`enableColumnVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablecolumnvirtualization) properties as `true`.
+To setup the column virtualization, set the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablevirtualization) and [`enableColumnVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablecolumnvirtualization) properties as `true`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -46,8 +44,7 @@ To setup the column virtualization, set the
         
 {% previewsample "page.domainurl/code-snippet/treegrid/scroll/virtualscroll-cs5" %}
 
-> Column's [`width`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#width) is required for column virtualization.
-If column's width is not defined then tree grid will consider its value as `200px`.
+> Column's [`width`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#width) is required for column virtualization. If column's width is not defined then tree grid will consider its value as `200px`.
 
 ## Limitations for virtualization
 

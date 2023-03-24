@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 Accordion supports custom animations for both expand and collapse actions from the provided animation option of `Animation` library.
 
-Default animation is given as `SlideDown` for expanding the panel and `SlideUp` for collapsing the panel. You can also disable the animation
-by setting animation effect as `none`.
+Default animation is given as `SlideDown` for expanding the panel and `SlideUp` for collapsing the panel. You can also disable the animation by setting animation effect as `none`.
 
 The sample demonstrates some types of animation that suits for Accordion. You can check all the animation effects here.
 

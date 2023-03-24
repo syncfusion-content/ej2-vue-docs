@@ -20,21 +20,21 @@ The following section explains the required steps to build the simple ListView c
 
 * You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
 
-```bash
-npm install -g @vue/cli
-```
+   ```bash
+    npm install -g @vue/cli
+   ```
 
 * To setup basic  sample use the following Vue CLI commands.
 
-```bash
-vue create quickstart
-```
+    ```bash
+     vue create quickstart
+    ```
 
 * Install Syncfusion `ListView` packages using below command.
 
-```bash
-npm install @syncfusion/ej2-vue-lists --save
-```
+    ```bash
+     npm install @syncfusion/ej2-vue-lists --save
+    ```
 
 ## Registering ListView component using `Vue.use()`
 
@@ -42,11 +42,10 @@ Import the ListView Plugin from the Essential JS 2 Vue package and register the 
 
 Refer to the code snippet given below.
 
-```ts
-import { ListViewPlugin } from '@syncfusion/ej2-vue-lists';
-
-Vue.use(ListViewPlugin);
-```
+    ```ts
+     import { ListViewPlugin } from '@syncfusion/ej2-vue-lists';
+     Vue.use(ListViewPlugin);
+   ```
 
 > By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `ListView`. Refer [here](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration/) to know more about component registration.
 

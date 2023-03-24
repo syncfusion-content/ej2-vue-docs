@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Globalization is the combination of internationalization and localization. You can adapt the component to various languages by parsing and formatting the date or number ([Internationalization](../common/internationalization/), and also add culture specific customization and translation to the text ([localization](../common/localization/)).
 
-By default, the Calendar date format, week, and month names are specific to American English culture. It uses the [Essential JavaScript 2 Internationalization](../common/internationalization/) package to parse and format date object based on the culture using the official [UNICODE CLDR](http://cldr.unicode.org/)  JSON data. It provides the [loadCldr](../common/internationalization/#loading-culture-data) method to load the culture-specific CLDR JSON data.
+By default, the Calendar date format, week, and month names are specific to American English culture. It uses the [Essential JavaScript 2 Internationalization](../common/internationalization/) package to parse and format date object based on the culture using the official [UNICODE CLDR](https://cldr.unicode.org/)  JSON data. It provides the [loadCldr](../common/internationalization/#loading-culture-data) method to load the culture-specific CLDR JSON data.
 
 The Calendar component supports only the Gregorian type of calendar. All the Essential JS 2 component are specific to English culture ('en-US').
 If you want to go with the different culture other than `English`, follow the below steps.

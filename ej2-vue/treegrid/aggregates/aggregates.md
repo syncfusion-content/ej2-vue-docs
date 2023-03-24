@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Aggregates in Vue Treegrid component
 
-Aggregate values are displayed in the TreeGrid footer and in parent row footer for child row aggregate values. It can be configured through `aggregates` property. [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/aggregateColumnModel/#field) and [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/aggregateColumnModel/#type)
- are the minimum properties required to represent an aggregate column.
+Aggregate values are displayed in the TreeGrid footer and in parent row footer for child row aggregate values. It can be configured through `aggregates` property. [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/aggregateColumnModel/#field) and [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/aggregateColumnModel/#type) are the minimum properties required to represent an aggregate column.
 
 To use the aggregate feature, you have to inject the `Aggregate` module.
 

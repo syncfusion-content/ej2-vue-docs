@@ -26,10 +26,10 @@ Find can be done by any of the following ways:
 * Use find Next and find Previous buttons to search the given value in the workbook.
 * Select the option button in Find dialog to open the Find and Replace dialog. Then, select the below properties for enhanced searching.
 
-> * `Search within`: To search the target in a sheet (default) or in an entire workbook.
-> * `Search by`: It enhance the search, either By Rows (default), or By Columns.
-> * `Match case`: To find the matched value with case sensitive.
-> * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
+   > * `Search within`: To search the target in a sheet (default) or in an entire workbook.
+   > * `Search by`: It enhance the search, either By Rows (default), or By Columns.
+   > * `Match case`: To find the matched value with case sensitive.
+   > * `Match exact cell contents`: To find the exact matched cell value with entire match cases.
 
 * Using [`find()`](../api/spreadsheet/#find) method to perform find operation.
 
@@ -56,7 +56,7 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 * Use `Ctrl + G` key to open the Go To dialog.
 * Use [`goTo()`](../api/spreadsheet/#goto) method to perform Go To operation.
 
-In the following sample, searching can be done by following ways:
+    In the following sample, searching can be done by following ways:
 
 * Select the Home tab in the Ribbon toolbar, and then select the Search icon.
 * Enter any value in the search textbox.

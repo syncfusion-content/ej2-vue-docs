@@ -91,7 +91,7 @@ When the right edge of the header cell is tapped, a floating handler will be vis
 The following screenshot represents the column resizing in touch device.
 
 <!-- markdownlint-disable MD033 -->
-<img src="/treegrid/images/column-resizing.png" alt="Touch interaction image" style="width:320px;height: 620px">
+<img src="../images/column-resizing.png" alt="Touch interaction image" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
 ## Column type

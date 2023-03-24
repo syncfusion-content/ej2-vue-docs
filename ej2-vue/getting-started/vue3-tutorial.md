@@ -163,12 +163,12 @@ It is required to register the component and any child directives used within th
 
 * Component registration in Vue 2
 
-```js
-import * as Vue from 'vue';
-import { GridPlugin } from '@syncfusion/ej2-vue-grids';
-// Registering component and directives as a single plugin.
-Vue.use(ButtonPlugin);
-```
+  ```js
+  import * as Vue from 'vue';
+  import { GridPlugin } from '@syncfusion/ej2-vue-grids';
+  // Registering component and directives as a single plugin.
+  Vue.use(ButtonPlugin);
+  ```
 
 * Component registration in Vue 3
 

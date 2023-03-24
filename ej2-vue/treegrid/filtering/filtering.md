@@ -98,8 +98,7 @@ You can change the default filter operator by extending `filterModule.filterOper
 
 ## Diacritics
 
-By default, treegrid ignores diacritic characters while filtering. To include diacritic characters, set the
-[`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettingsModel/#ignoreaccent) as `true`.
+By default, treegrid ignores diacritic characters while filtering. To include diacritic characters, set the [`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettingsModel/#ignoreaccent) as `true`.
 
 In the following sample, type **aero** in `Name` column to filter diacritic characters.
 
