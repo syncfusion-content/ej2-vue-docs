@@ -200,8 +200,7 @@ To add a custom parameter to the data request, use the `addParams` method of `Qu
 
 ## Handling HTTP error
 
-During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details
-in client-side using the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event.
+During server interaction from the treegrid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event.
 
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event contains the error details returned from the server.
 
@@ -213,15 +212,13 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/docu
         
 {% previewsample "page.domainurl/code-snippet/treegrid/data-binding/default-cs8" %}
 
-> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event will be triggered not only for the server errors, but
-also when there is an exception while processing the treegrid actions.
+> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the treegrid actions.
 
 ## Load on demand with virtualization
 
 While binding remote data to Tree Grid component, by default Tree Grid renders parent rows in collapsed state. When expanding the root node, the child nodes will be loaded from the remote server.
 
-When using virtualization with remote data binding, it helps you to improve the tree grid performance while loading a large set of data by setting [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablevirtualization) as true. The Tree Grid UI virtualization allows it to render only rows and columns visible within the view-port without buffering the entire datasource.
-[`hasChildMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#haschildmapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
+When using virtualization with remote data binding, it helps you to improve the tree grid performance while loading a large set of data by setting [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablevirtualization) as true. The Tree Grid UI virtualization allows it to render only rows and columns visible within the view-port without buffering the entire datasource.[`hasChildMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#haschildmapping) property maps the field name in data source, that denotes whether current record holds any child records. This is useful internally to show expand icon while binding child data on demand.
 
 ```
 <template>

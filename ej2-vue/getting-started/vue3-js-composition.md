@@ -31,17 +31,16 @@ yarn create vite
 
 Executing one of the above commands will lead you to set up additional configurations for the project:
 
-1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
-
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 ```bash
 ? Project name: » my-project
 ```
 
-2. Select `Vue` as the framework.
+2.Select `Vue` as the framework.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
-  Vanilla
+Vanilla
 > Vue
   React
   Preact
@@ -50,7 +49,7 @@ Executing one of the above commands will lead you to set up additional configura
   Others
 ```
 
-3. Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
+3.Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -60,7 +59,7 @@ Executing one of the above commands will lead you to set up additional configura
   Nuxt ↗
 ```
 
-4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -169,7 +168,7 @@ You can checkout the [themes topic](https://ej2.syncfusion.com/vue/documentation
 
 Once we have finished all the essential configurations for rendering the Syncfusion Vue component with the Composition API in your Vite project, proceed with the following steps to add the Grid component:
 
-  1. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Composition API. And import the Grid component in the `script` section of the `src/App.vue` file.
+  1.First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Composition API. And import the Grid component in the `script` section of the `src/App.vue` file.
 
 ```html
 <script setup>
@@ -177,7 +176,7 @@ Once we have finished all the essential configurations for rendering the Syncfus
 </script>
 ```
    
-  2. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
+  2.In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
 
 ```html
 <template>
@@ -193,7 +192,7 @@ Once we have finished all the essential configurations for rendering the Syncfus
 </template>
 ```
 
-  3. Declare the values for the `dataSource` property in the `script` section.
+  3.Declare the values for the `dataSource` property in the `script` section.
 
 ```js
 <script setup>

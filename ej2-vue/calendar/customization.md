@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Customization in Vue Calendar component
 
-Each day cell of the Calendar can be customized by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs)
+Each day cell of the Calendar can be customized by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs)
 event.
 
 The following section demonstrates how to disable or highlight specific dates in the Calendar.
 
 ## Disable weekends
 
-You can disable weekends of every month in the Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar renderDayCellEventArgs#renderdaycelleventargs) event. The `renderDayCell` event offers the following arguments on each day cell creation to help you disable the dates.
+You can disable weekends of every month in the Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. The `renderDayCell` event offers the following arguments on each day cell creation to help you disable the dates.
 
 | **View** | **Description** |
 | --- | --- |
@@ -37,7 +37,7 @@ The following example demonstrates how to disable weekends of every month.
 
 ## Day cell format
 
-You can also highlight specific dates by adding custom CSS or element to the day cell by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs#renderdaycelleventargs) event. You can customize the appearance of the Calendar by overriding the existing styles. The following list of CSS class names are used to customize the Calendar component.
+You can also highlight specific dates by adding custom CSS or element to the day cell by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. You can customize the appearance of the Calendar by overriding the existing styles. The following list of CSS class names are used to customize the Calendar component.
 
 | **Class Name** | **Description** |
 | --- | --- |
@@ -65,7 +65,7 @@ The following example highlights the World Health Day (every 7th April) and Worl
 
 ## Highlight Weekends
 
-You can highlight the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar renderDayCellEventArgs#renderdaycelleventargs) event. The following example demonstrates how to highlights the weekends of every month.
+You can highlight the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs) event. The following example demonstrates how to highlights the weekends of every month.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

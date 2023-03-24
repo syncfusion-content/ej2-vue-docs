@@ -31,13 +31,13 @@ yarn create vite
 
 Executing one of the above commands will lead you to set up additional configurations for the project:
 
-1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2. Select `Vue` as the framework.
+2.Select `Vue` as the framework.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -50,7 +50,7 @@ Executing one of the above commands will lead you to set up additional configura
   Others
 ```
 
-3. Choose `TypeScript` as framework variant to build this Vite project using TypeScript and Vue.
+3.Choose `TypeScript` as framework variant to build this Vite project using TypeScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -60,7 +60,7 @@ Executing one of the above commands will lead you to set up additional configura
   Nuxt ↗
 ```
 
-4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -167,7 +167,7 @@ You can checkout the [themes topic](https://ej2.syncfusion.com/vue/documentation
 
 Once we have finished all the essential configurations for rendering the Syncfusion Vue component with the Composition API in your Vite project, proceed with the following steps to add the Schedule component:
 
-  1. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Composition API. And import the Schedule component in the `script` section of the `src/App.vue` file.
+  1.First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Composition API. And import the Schedule component in the `script` section of the `src/App.vue` file.
 
 ```html
 <script setup>
@@ -175,7 +175,7 @@ Once we have finished all the essential configurations for rendering the Syncfus
 </script>
 ```
    
-  2. In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
+  2.In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
 
 ```html
 <template>
@@ -198,7 +198,7 @@ Once we have finished all the essential configurations for rendering the Syncfus
 </template>
 ```
 
-  3. Declare the values for the `dataSource` property in the `script` section.
+  3.Declare the values for the `dataSource` property in the `script` section.
 
 ```ts
 <script setup>
@@ -233,7 +233,7 @@ const eventSettings: EventSettingsModel = {
 </script>
 ```
 
-  4. To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
+  4.To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
 
 ```ts
 <script setup lang="ts">
@@ -334,4 +334,4 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-ts-composition](../appearance/images/vue3-ts-composition.png)
+![vue3-ts-composition](../common/appearance/images/vue3-ts-composition.png)

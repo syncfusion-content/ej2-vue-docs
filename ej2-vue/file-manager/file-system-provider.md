@@ -693,11 +693,9 @@ In ASP.NET Core, NodeJS file system provider allows the users to manage the file
 
 * Install the ej2-filemanager-node-filesystem package by running the below command.
 
- ```ts
-
-npm install @syncfusion/ej2-filemanager-node-filesystem
-
- ```
+   ```ts
+     npm install @syncfusion/ej2-filemanager-node-filesystem
+   ```
 
 * After installing the package, navigate to the ej2-filemanager-node-filesystem package folder within the node-modules
 * Run the command **npm install** command.
@@ -706,31 +704,25 @@ npm install @syncfusion/ej2-filemanager-node-filesystem
 
 * Clone the ej2-filemanager-node-filesystem using the following command.
 
-```ts
-
-git clone  https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem.git node-filesystem-provider
-
-```
+  ```ts
+    git clone  https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem.git node-filesystem-provider
+  ```
 
 * After cloning, open the root folder and run the command **npm install** command.
 
 After installing the packages, set the root folder directory of the physical file system in the package JSON under scripts sections as follows.
 
-```ts
-
-"start": "node filesystem-server.js -d D:/Projects"
-
-```
+   ```ts
+    "start": "node filesystem-server.js -d D:/Projects"
+   ```
 
 > **Note:** By default, the root directory will be configured to set `C:/Users` as the root directory.
 
 To set the port in which the project to be hosted and the root directory of the file system. Run the following command.
 
-```ts
-
-set PORT=3000 && node filesystem-server.js -d D:/Projects
-
-```
+   ```ts
+     set PORT=3000 && node filesystem-server.js -d D:/Projects
+   ```
 
 > **Note:** By default, the service will run `8090` port.
 
@@ -799,11 +791,11 @@ Follow the given steps to generate the secret access key:
 
 * In the new dialog window, click the **Other service account** option to navigate to the Google service accounts console to generate the secret key.
 
-![authentication](images/firebase.png)
+   ![authentication](images/firebase.png)
 
 * Now, open the Firebase service project from the Google services console, and generate a Secret key.
 
-![generate_key](images/generate_key.png)
+    ![generate_key](images/generate_key.png)
 
 * After generating the secret key, replace secret key JSON in the access_key.json file in the Firebase Realtime Database provider project to enable authentication for performing read and write operations.
 
@@ -811,33 +803,30 @@ To interpolate with the Firebase Realtime Database, create a project under Fireb
 
 > **Note:** By default, rules of a Firebase project will be **false**. To read and write the data, configure the  **Rules** as given in the following code snippet in the *Rules* tab in the Firebase Realtime Database project.
 
-```ts
-
-{
-  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
-  "rules": {
+    ```ts
+    {
+    /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+    "rules": {
     ".read": "auth!=null",
     ".write": "auth!=null"
-  }
-}
+    }
+   }
+  ```
 
-```
+   Then, create a root node and add children to the root node. Refer to the following code snippet for the structure of JSON.
 
-Then, create a root node and add children to the root node. Refer to the following code snippet for the structure of JSON.
-
-```ts
-
-{
-  "Files" : [ {
-    "caseSensitive" : false,
-    "dateCreated" : "8/22/2019 5:17:55 PM",
-    "dateModified" : "8/22/2019 5:17:55 PM",
-    "filterId" : "0/",
-    "filterPath" : "/",
-    "hasChild" : false,
-    "id" : "5",
-    "isFile" : false,
-    "isRoot" : true,
+   ```ts
+   {
+     "Files" : [ {
+     "caseSensitive" : false,
+     "dateCreated" : "8/22/2019 5:17:55 PM",
+     "dateModified" : "8/22/2019 5:17:55 PM",
+     "filterId" : "0/",
+     "filterPath" : "/",
+     "hasChild" : false,
+     "id" : "5",
+     "isFile" : false,
+     "isRoot" : true,
     "name" : "Music",
     "parentId" : "0",
     "selected" : false,
@@ -861,10 +850,9 @@ Then, create a root node and add children to the root node. Refer to the followi
     "showHiddenItems" : false,
     "size" : 0,
     "type" : ""
-  }]
- }
-
-```
+    }]
+   }
+ ```
 
 Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
 
@@ -872,19 +860,15 @@ After that, clone the [`firebase-realtime-database-apscore-file-provider`](https
 
 Register the Firebase Realtime Database by assigning *Firebase Realtime Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in controller part of the ASP.NET Core application.
 
-```ts
-
-void RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAccountKeyPath)
-
-```
+   ```ts
+   void RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAccountKeyPath)
+   ```
 
 **Example:**
 
-```ts
-
-void RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", "{give the service account key path}");
-
-```
+  ```ts
+   void RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", "{give the service account key path}");
+   ```
 
 In the above code,
 
@@ -953,11 +937,9 @@ The IBM Cloud Object Storage file provider module allows you work with the IBM C
 
 * Install the ej2-filemanager-ibm-cos-node-file-provider npm package by running the below command.
 
- ```ts
-
-npm install @syncfusion/ej2-filemanager-ibm-cos-node-file-provider
-
-```
+  ```ts
+   npm install @syncfusion/ej2-filemanager-ibm-cos-node-file-provider
+  ```
 
 * After installing the package, navigate to the ej2-filemanager-ibm-cos-node-file-provider package folder within the node-modules.
 
@@ -967,21 +949,17 @@ npm install @syncfusion/ej2-filemanager-ibm-cos-node-file-provider
 
 * Clone the filemanager-ibm-cos-node-file-provider using the following command.
 
-```ts
-
-git clone  https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider.git
-
-```
+   ```ts
+    git clone  https://github.com/SyncfusionExamples/filemanager-ibm-cos-node-file-provider.git
+  ```
 
 * After cloning, open the root folder and run the command **npm install** command.
 
 To set the port in which the project to be hosted. Run the following command.
 
-```ts
-
-set PORT=3000 && node index.js
-
-```
+  ```ts
+   set PORT=3000 && node index.js
+  ```
 
 > **Note:** By default, the service will run `8090` port.
 

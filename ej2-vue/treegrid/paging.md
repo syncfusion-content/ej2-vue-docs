@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Paging in Vue Treegrid component
 
-Paging provides an option to display TreeGrid data in page segments. To enable paging, set the [`allowPaging`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowpaging) to true. When paging is enabled, pager component renders at the bottom of the treegrid.
-Paging options can be configured through the [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pagesettings).
+Paging provides an option to display TreeGrid data in page segments. To enable paging, set the [`allowPaging`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#allowpaging) to true. When paging is enabled, pager component renders at the bottom of the treegrid. Paging options can be configured through the [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pagesettings).
 
 To use paging, inject the [`Page`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pagermodule) module in the grid.
 
@@ -51,7 +50,7 @@ pageSettings: {pageSize: 7, pageSizes: true},
 ```
 
 <!-- markdownlint-disable MD033 -->
-<img src="/treegrid/images/pagesizes.png" alt="Page size dropdown">
+<img src="./images/pagesizes.png" alt="Page size dropdown">
 <!-- markdownlint-enable MD033 -->
 
 ## How to render Pager at the Top of the TreeGrid

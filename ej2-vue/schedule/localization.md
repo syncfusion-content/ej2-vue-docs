@@ -30,15 +30,15 @@ Once the package is installed, you can find the culture specific JSON data under
 
 * Now import the installed CLDR JSON data into the `app.vue` file. To import JSON data, you need to install the JSON plugin loader. Here, we have used the SystemJS JSON plugin loader.
 
-```bash
-npm install systemjs-plugin-json --save-dev
-```
+   ```bash
+     npm install systemjs-plugin-json --save-dev
+   ```
 
 * Once installed, configure the `system.config.js` configuration settings as shown in the following code to map the `systemjs-plugin-json` loader.
 
-```ts
-System.config({
-    paths: {
+   ```ts
+    System.config({
+     paths: {
         'syncfusion:': 'npm:@syncfusion/'
     },
     map: {
@@ -61,29 +61,29 @@ System.config({
     },
     meta: {
         '*.json': { loader: 'plugin-json' }
-    },
-    packages: {
+     },
+     packages: {
         'app': { main: 'app', defaultExtension: 'js' },
         'cldr-data': { main: 'index.js', defaultExtension: 'js' }
-    }
-});
-System.import('app');
+     }
+    });
+   System.import('app');
 
-```
+  ```
 
 * Now import the required cultures from the installed location to `app.vue` file as given in the following code example.
 
-```ts
-//import the loadCldr from ej2-base
-import { loadCldr} from '@syncfusion/ej2-base';
+   ```ts
+    //import the loadCldr from ej2-base
+     import { loadCldr} from '@syncfusion/ej2-base';
 
-loadCldr(
-    require('cldr-data/supplemental/numberingSystems.json'),
-    require('cldr-data/main/fr-CH/ca-gregorian.json'),
-    require('cldr-data/main/fr-CH/numbers.json'),
-    require('cldr-data/main/fr-CH/timeZoneNames.json')
-);
-```
+    loadCldr(
+       require('cldr-data/supplemental/numberingSystems.json'),
+       require('cldr-data/main/fr-CH/ca-gregorian.json'),
+       require('cldr-data/main/fr-CH/numbers.json'),
+       require('cldr-data/main/fr-CH/timeZoneNames.json')
+     );
+  ```
 
 * Set the culture to Scheduler by using the `locale` property.
 

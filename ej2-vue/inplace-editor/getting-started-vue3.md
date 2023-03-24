@@ -20,24 +20,23 @@ This section explains how to use Syncfusion Vue In-place Editor component in Vue
 
 The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
 
-```bash
-npm uninstall vue-cli -g
-```
+    ```bash
+      npm uninstall vue-cli -g
+    ```
 
 Use the following commands to install the latest version of Vue CLI.
 
-```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
+    ```bash
+       npm install -g @vue/cli
+       npm install -g @vue/cli-init
+    ```
 
 Create a new project using the command below.
 
-```bash
-vue create quickstart
-cd quickstart
-
-```
+   ```bash
+     vue create quickstart
+     cd quickstart
+   ```
 
 Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
 
@@ -77,7 +76,7 @@ Import the needed css styles for the In-place Editor component along with depend
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the In-place Editor component using following steps.
 
-* Import the In-place Editor component in the `<script>` section of the `src/App.vue` file.
+*Import the In-place Editor component in the `<script>` section of the `src/App.vue` file.
 
      ```
      <script>
@@ -85,9 +84,9 @@ You have completed all the necessary configurations needed for rendering the Syn
       </script>
      ```
 
-* Register the In-place Editor component.
+*Register the In-place Editor component.
 
-```javascript
+  ```javascript
         import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
         //Component registeration
         export default {
@@ -96,33 +95,33 @@ You have completed all the necessary configurations needed for rendering the Syn
                 "ejs-inplaceeditor": InPlaceEditorComponent,
             }
         }
-```
+   ```
 
-* Add the component definition in template section.
+*Add the component definition in template section.
 
-```
-<template>
+  ```
+  <template>
     <div id="app">
         <ejs-inplaceeditor id="inplace_editor" type="Text" value="Andrew" :model="model">
         </ejs-inplaceeditor>
     </div>
-</template>
-```
+    </template>
+  ```
 
-* Summarizing the above steps, update the `src/App.vue` file with following code.
+*Summarizing the above steps, update the `src/App.vue` file with following code.
 
-```
-<template>
+  ```
+  <template>
     <div id="app">
         <ejs-inplaceeditor id="inplace_editor" type="Text" value="Andrew" :model="model">
         </ejs-inplaceeditor>
-    </div>
-</template>
+     </div>
+   </template>
 
-<script>
-import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
+  <script>
+   import { InPlaceEditorComponent } from "@syncfusion/ej2-vue-inplace-editor";
 
-export default {
+  export default {
   name: "App",
   components: {
     "ejs-inplaceeditor": InPlaceEditorComponent
@@ -131,26 +130,26 @@ export default {
     return {
        model: {
       placeholder: 'Enter employee name'
-  },
+   },
     };
-  }
-};
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material.css";
-</style>
+   }
+  };
+  </script>
+   <style>
+   @import "../node_modules/@syncfusion/ej2-base/styles/material.css"; 
+   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+   @import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material.css";
+   </style>
 
-<style>
+  <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
@@ -162,19 +161,17 @@ export default {
   @import "../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-inplace-editor/styles/material.css";
-</style>
+  </style>
 
-```
+ ```
 
 ## Running the application
 
 Run the application using the following command.
 
-```bash
-
-npm run serve
-
-```
+  ```bash
+     npm run serve
+  ```
 
 Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.
 

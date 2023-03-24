@@ -102,18 +102,18 @@ You have completed all the necessary configurations needed  for rendering the Sy
 
     >Note: By default, LargeIcons view will be initialized in the File Manager. If Grid view is required then the DetailsView module needs to be injected using `provide`.
 
-4. Summarizing the above steps, update the `src/App.vue` file with following code.
+4.Summarizing the above steps, update the `src/App.vue` file with following code.
 
-  ```
-    <template>
-    <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"></ejs-filemanager>
-  </template>
+   ```
+      <template>
+     <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"></ejs-filemanager>
+    </template>
 
-  <script>
+    <script>
 
-  import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+   import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-  export default {
+     export default {
       name: "App",
       components: {
         "ejs-filemanager": FileManagerComponent
@@ -130,11 +130,11 @@ You have completed all the necessary configurations needed  for rendering the Sy
             uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
             downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
           },
-      };
+       };
+     }
     }
-  }
-  </script>
-  <style>
+   </script>
+   <style>
       @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
       @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
       @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
@@ -145,8 +145,8 @@ You have completed all the necessary configurations needed  for rendering the Sy
       @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
       @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
       @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
-  </style>
-  ```
+   </style>
+ ```
 
 ## Running the application
 

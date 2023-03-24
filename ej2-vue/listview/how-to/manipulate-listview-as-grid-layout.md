@@ -28,15 +28,13 @@ In this section, we will discuss about rendering of list items in grid layout.
 
 * Now, add the below CSS to list item. This will make list items to render in grid layout
 
-```
-
-#element .e-list-item {
+   ```
+   #element .e-list-item {
         height: 100px;
         width: 100px;
-        float: left;
-}
-
-```
+        float: left; 
+     }  
+   ```
 
 In the below sample, we have rendered List items in grid layout.
 
@@ -56,11 +54,9 @@ In this section, we will discuss about ListView data manipulations.
 
 We can add list item using [`addItem`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#additem) API. This will accept array of data as argument.
 
-```ts
-
- this.$refs.listViewInstance.addItem([{text: 'Apricot', id: '32'}]);
-
-```
+   ```ts
+    this.$refs.listViewInstance.addItem([{text: 'Apricot', id: '32'}]);
+   ```
 
 In the below sample, you can add new fruit item by clicking add button which will open dialog box with fruit name and image URL text box. After entering the item details, click the add button. This will add your new fruit item.
 
@@ -68,11 +64,9 @@ In the below sample, you can add new fruit item by clicking add button which wil
 
 We can remove list item using [`removeItem`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#removeitem) API. This will accept fields with `id` or list item element as argument.
 
-```ts
-
- this.$refs.listViewInstance.removeItem({id: '32'});
-
-```
+   ```ts
+    this.$refs.listViewInstance.removeItem({id: '32'});
+   ```
 
 In the below sample, you can remove fruit by hovering the fruit item which will show delete button and click that delete button to delete that fruit from your list.
 
@@ -80,19 +74,14 @@ In the below sample, you can remove fruit by hovering the fruit item which will 
 
 Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set [`sortOrder`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#sortorder) as `Ascending` or `Descending`.
 
-```ts
-
-<ejs-listview sortOrder='Ascending'></ejs-listview>
-
-```
-
+   ```ts
+    <ejs-listview sortOrder='Ascending'></ejs-listview>
+   ```
 We can also set sorting after component initialization.
 
-```ts
-
-this.$refs.listViewInstance.sortOrder = 'Ascending'
-
-```
+   ```ts
+    this.$refs.listViewInstance.sortOrder = 'Ascending'
+   ```
 
 In the below sample, we have sorted fruits in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
 
@@ -100,16 +89,13 @@ In the below sample, we have sorted fruits in `Ascending` order. To sort it in d
 
 Listview data can be filtered with the help of [`dataManager`](https://ej2.syncfusion.com/vue/documentation/data/getting-started/). After filtering the data, update ListView [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#datasource) with filtered data.
 
-```ts
-
-let value = this.$refs.textboxEle.value;  //input text box value
-let filteredData = new DataManager(this.listdata).executeLocal(
+   ```ts
+   let value = this.$refs.textboxEle.value;  //input text box value
+   let filteredData = new DataManager(this.listdata).executeLocal(
         new Query().where("text", "startswith", value, true)
-);
-
-listViewInstance.dataSource = filteredData;
-
-```
+   );
+   listViewInstance.dataSource = filteredData;
+  ```
 
 In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/documentation/data/querying/?no-cache=1#filter-operators) of input text to filter data in DataManager.
 
