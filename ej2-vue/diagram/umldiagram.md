@@ -146,8 +146,7 @@ The following code example illustrates how to create a composition.
 
 ## Dependency
 
-Dependency is a directed relationship, which is used to show that some UML elements needs or depends on other model elements for specifications. Dependency is shown as dashed line with opened arrow.
-To create a dependency, define the relationship property of connector as “dependency”.
+Dependency is a directed relationship, which is used to show that some UML elements needs or depends on other model elements for specifications. Dependency is shown as dashed line with opened arrow. To create a dependency, define the relationship property of connector as “dependency”.
 
 The following code example illustrates how to create an dependency.
 
@@ -161,8 +160,7 @@ The following code example illustrates how to create an dependency.
 
 ## Inheritance
 
-Inheritance is also called as “generalization”. Inheritance is a binary taxonomic directed relationship between a more general classifier (super class) and a more specific classifier (subclass).
-Inheritance is shown as a line with hollow triangle.
+Inheritance is also called as “generalization”. Inheritance is a binary taxonomic directed relationship between a more general classifier (super class) and a more specific classifier (subclass). Inheritance is shown as a line with hollow triangle. To create an inheritance, define the relationship as “inheritance”.
 
 To create an inheritance, define the relationship as “inheritance”.
 

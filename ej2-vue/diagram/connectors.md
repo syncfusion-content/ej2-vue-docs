@@ -56,7 +56,7 @@ Connectors can be interactively drawn by clicking and dragging on the Diagram su
 
 ## Update Connector at runtime
 
-Various Connector properties such as `sourcePoint`, `targetPoint`,`style`,`sourcePortID`,`targetPortID` etc can be update at the run time .
+Various Connector properties such as `sourcePoint`,`targetPoint`,`style`,`sourcePortID`,`targetPortID` etc can be update at the run time .
 
 * The following code example illustrates how to update a connector's source point,target point,styles properties  at runtime.
 
@@ -534,8 +534,7 @@ The flip types are as follows:
 
 ## Bridging
 
-Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. By default [`bridgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bridgeDirection-BridgeDirection) is set to top. Depending upon the direction given bridging direction appears.
-Bridging can be enabled/disabled either with the [`connector.constraints`] or [`diagram.constraints`]. The following code example illustrates how to enable line bridging.
+Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. By default [`bridgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bridgeDirection-BridgeDirection) is set to top. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [`connector.constraints`] or [`diagram.constraints`]. The following code example illustrates how to enable line bridging.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
