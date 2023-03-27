@@ -142,7 +142,7 @@
   export default {
     provide: {
       ribbon: [RibbonFileMenu, RibbonColorPicker]
-    },  
+    },
     data: function () {
       return {
         largeSize: RibbonItemSize.Large,
