@@ -143,6 +143,9 @@ new Vue({
     </ejs-ribbon>
   </template>
 `,
+  provide: {
+    ribbon: [RibbonFileMenu, RibbonColorPicker]
+  },
   data: function () {
     return {
       largeSize: RibbonItemSize.Large,
@@ -151,7 +154,7 @@ new Vue({
         visible: true,
         menuItems: [
           { text: "New", iconCss: "e-icons e-file-new", id: "new" },
-          { text: "Open", iconCss: "e-icons e-folder-open", id: "Open" },
+          { text: "Open", iconCss: "e-icons e-folder-open", id: "open" },
           { text: "Rename", iconCss: "e-icons e-rename", id: "rename" },
           { text: "Save as", iconCss: "e-icons e-save", id: "save" }
         ]
