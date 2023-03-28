@@ -39,6 +39,7 @@ The following examples shows the data filtering is done with StartsWith type.
 ## Filter item count
 
 You can specify the filter suggestion item count through [`suggestionCount`](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#suggestioncount) property of AutoComplete.
+
 The following example, to restrict the suggestion list item counts as 5.
 
 {% tabs %}

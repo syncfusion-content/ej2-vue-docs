@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Remote data in Vue Grid component
 
-To bind remote data to grid component, assign service data as an instance of `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property.
-To interact with remote data source,  provide the endpoint `url`.
+To bind remote data to grid component, assign service data as an instance of `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property. To interact with remote data source,  provide the endpoint `url`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -88,8 +87,7 @@ export default Vue.extend({
 </style>
 ```
 
-The response object should contain properties `Items` and `Count` whose values are a collection of entities and the total count of
-the entities respectively.
+The response object should contain properties `Items` and `Count` whose values are a collection of entities and the total count of the entities respectively.
 
 The sample response object should look like below.
 

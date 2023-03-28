@@ -62,9 +62,9 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 ## Clear selection programmatically
 
-You can clear the Grid selection programmatically by using the [clearSelection](https://ej2.syncfusion.com/vue/documentation/api-grid.html#clearSelection) method.
+You can clear the Grid selection programmatically by using the [clearSelection](https://ej2.syncfusion.com/vue/documentation/api/grid#clearselection) method.
 
-In the demo below, we initially selected the third row using [selectedRowIndex](https://ej2.syncfusion.com/vue/documentation/api-grid.html#selectedrowindex-number). You can clear this selection by calling the [clearSelection](https://ej2.syncfusion.com/vue/documentation/api-grid.html#clearSelection) method in the button click event.
+In the demo below, we initially selected the third row using [selectedRowIndex](https://ej2.syncfusion.com/vue/documentation/api/grid#selectedrowindex). You can clear this selection by calling the [clearSelection](https://ej2.syncfusion.com/vue/documentation/api/grid#clearselection) method in the button click event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -80,7 +80,7 @@ Enabling the selectionSettings.persistSelection property will persist the select
 
 So the selection will be maintained on every page even after navigating to another page.
 
-You can get the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/vue/documentation/api-grid.html#getSelectedRecords) method.
+You can get the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/vue/documentation/api/grid#getselectedrecords) method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

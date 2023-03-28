@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Export multiple grids in Vue Grid component
 
-PDF export provides an option for exporting multiple grids to same file.
-In this exported document, each grid will be exported to new page of document in same file.
+PDF export provides an option for exporting multiple grids to same file. In this exported document, each grid will be exported to new page of document in same file.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

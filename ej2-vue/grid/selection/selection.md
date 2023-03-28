@@ -10,21 +10,17 @@ domainurl: ##DomainURL##
 
 # Selection in Vue Grid component
 
-Selection provides an option to highlight a row or cell or column.
-Selection can be done through simple Mouse down or Arrow keys.
-To disable selection in the Grid, set the [`allowSelection`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowselection) to false.
+Selection provides an option to highlight a row or cell or column. Selection can be done through simple Mouse down or Arrow keys. To disable selection in the Grid, set the [`allowSelection`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowselection) to false.
 
-The grid supports two types of selection that can be set by using the
-[`selectionSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#type).They are:
+The grid supports two types of selection that can be set by using the [`selectionSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#type).They are:
 
 * **`Single`** - The `Single` value is set by default. Allows you to select only a single row or cell or column.
-* **`Multiple`** - Allows you to select multiple rows or cells or columns.
-To perform the multi-selection, press and hold CTRL key and click the desired rows or cells or columns.
-To select range of rows or cells or columns, press and hold the SHIFT key and click the rows or cells or columns.
+* **`Multiple`** - Allows you to select multiple rows or cells or columns. To perform the multi-selection, press and hold CTRL key and click the desired rows or cells or columns. To select range of rows or cells or columns, press and hold the SHIFT key and click the rows or cells or columns.
 
 To get start quickly with Selection Options, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=4jpiXQMvud0" %}
+
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -36,8 +32,7 @@ To get start quickly with Selection Options, you can check on this video:
 
 ## Selection mode
 
-Grid supports three types of selection mode which can be set by using
-[`selectionSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#mode). They are:
+Grid supports three types of selection mode which can be set by using [`selectionSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#mode). They are:
 
 * **`Row`** - The `row` value is set by default. Allows you to select rows only.
 * **`Cell`** - Allows you to select cells only.
@@ -53,9 +48,7 @@ Grid supports three types of selection mode which can be set by using
 
 ## Touch interaction
 
-When you tap Grid row on touch screen devices, then the tapped row is selected.
-Also, it will show a popup ![Selection](../images/selection.jpg)  for multi-row-selection.
-To select multiple rows or cells, tap the popup![Multi Selection](../images/mselection.jpg)  and then tap the desired rows or cells.
+When you tap Grid row on touch screen devices, then the tapped row is selected. Also, it will show a popup ![Selection](../images/selection.jpg)  for multi-row-selection. To select multiple rows or cells, tap the popup![Multi Selection](../images/mselection.jpg)  and then tap the desired rows or cells.
 
 > For multi-selection, It requires the selection [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#type) to be `Multiple`.
 

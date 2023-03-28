@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Sorting
 
-The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can achieved using
-[`sortOrder`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#sortorder) property. Sort order can be `None`, `Ascending` or `Descending`.
+The ListBox supports sorting of available items in the alphabetical order that can be either ascending or descending. This can achieved using [`sortOrder`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#sortorder) property. Sort order can be `None`, `Ascending` or `Descending`.
 
 In the following example, the `SortOrder` is set as `Descending`.
 

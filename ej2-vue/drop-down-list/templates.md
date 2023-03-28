@@ -14,8 +14,7 @@ The DropDownList has been provided with several options to customize each list i
 
 ## Item template
 
-The content of each list item within the DropDownList can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#itemtemplate)
-property.
+The content of each list item within the DropDownList can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#itemtemplate) property.
 
 In the following sample, each list item is split into two columns to display relevant data's.
 

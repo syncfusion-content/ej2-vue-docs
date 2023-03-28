@@ -15,19 +15,19 @@ from DataManager.
 
 ## Key features
 
-* **[Data Binding](/treeview/data-binding/)**: Binds the TreeView component with an array of JavaScript objects or `DataManager`.
+* **[Data Binding](../treeview/data-binding)**: Binds the TreeView component with an array of JavaScript objects or `DataManager`.
 
-* **[CheckBox](/treeview/check-box/)**: Allows you to select more than one node in TreeView without affecting the UI appearance.
+* **[CheckBox](../treeview/check-box)**: Allows you to select more than one node in TreeView without affecting the UI appearance.
 
-* **[Drag and Drop](/treeview/drag-and-drop/)**: Allows you to drag and drop any node in TreeView.
+* **[Drag and Drop](../treeview/drag-and-drop)**: Allows you to drag and drop any node in TreeView.
 
-* **[Multi Selection](/treeview/multiple-selection/)**: Allows you to select more than one node in TreeView.
+* **[Multi Selection](../treeview/multiple-selection)**: Allows you to select more than one node in TreeView.
 
-* **[Node Editing](/treeview/node-editing/)**: Allows you to change the text of a node in TreeView.
+* **[Node Editing](../treeview/node-editing)**: Allows you to change the text of a node in TreeView.
 
-* **[Sorting](/api/treeview/#sortorder)**: Allows display of the TreeView nodes in an `ascending`
+* **[Sorting](https://ej2.syncfusion.com/vue/documentation/api/treeview#sortorder)**: Allows display of the TreeView nodes in an `ascending`
 or a `descending` order.
 
-* **[Template](/treeview/template/)**: Allows you to customize the nodes in TreeView.
+* **[Template](../treeview/template)**: Allows you to customize the nodes in TreeView.
 
-* **[Accessibility](/treeview/accessibility/)**: Provides built-in accessibility support that helps to access all the TreeView component features through the keyboard, on-screen readers, or other assistive technology devices.
+* **[Accessibility](../treeview/accessibility)**: Provides built-in accessibility support that helps to access all the TreeView component features through the keyboard, on-screen readers, or other assistive technology devices.

@@ -14,7 +14,7 @@ The immutable mode optimizes the Grid re-rendering performance by using the obje
 
 To enable this feature, you have to set the [`enableImmutableMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableImmutableMode) property as **true**.
 
->* This feature uses the primary key value for data comparison. So, you need to provide the [`isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) column.
+> This feature uses the primary key value for data comparison. So, you need to provide the [`isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) column.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

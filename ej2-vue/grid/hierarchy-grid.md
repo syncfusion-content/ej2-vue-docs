@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 The Grid allows display of table data in a hierarchical structure to visualize relations between parent and child records.This feature is enabled by defining the [`childGrid`](https://ej2.syncfusion.com/vue/documentation/api/grid/#childgrid) and [`childGrid.queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring).
 
-The [`childGrid`](https://ej2.syncfusion.com/vue/documentation/api/grid/#childgrid) describes the options of grid and the
-[`childGrid.queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) describes the relation between parent and child grids.
+The [`childGrid`](https://ej2.syncfusion.com/vue/documentation/api/grid/#childgrid) describes the options of grid and the [`childGrid.queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) describes the relation between parent and child grids.
 
 To use hierarchical binding, inject the **DetailRow** in the **provide** section.
 
@@ -26,13 +25,11 @@ To use hierarchical binding, inject the **DetailRow** in the **provide** section
 {% previewsample "page.domainurl/code-snippet/grid/hierarchy-grid/default-cs2" %}
 
 > * Grid supports n level of child grids.
-> * Hierarchical binding is not supported when [`DetailTemplate`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#detailtemplate) is enabled.
+> * Hierarchical binding is not supported when [`DetailTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detailtemplate) is enabled.
 
 ## ExpandAll by external button
 
-By default, grid renders in collapsed state.
-You can expand all child grid rows by invoking the [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#expandall) method,
-and collapse all grid rows by invoking the [`collapseAll`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#collapseall) through an external button.
+By default, grid renders in collapsed state. You can expand all child grid rows by invoking the [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#expandall) method, and collapse all grid rows by invoking the [`collapseAll`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#collapseall) through an external button.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -44,8 +41,7 @@ and collapse all grid rows by invoking the [`collapseAll`](https://ej2.syncfusio
 
 ## Expand child grid initially
 
-You can expand a particular child grid at initial rendering by invoking the
-[`expand`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#expand) method in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
+You can expand a particular child grid at initial rendering by invoking the [`expand`](https://ej2.syncfusion.com/vue/documentation/api/grid/detailRow/#expand) method in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -57,8 +53,7 @@ You can expand a particular child grid at initial rendering by invoking the
 
 ## Dynamically load child grid data
 
-You can dynamically load child grid dataSource by using the
-[`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event.This [`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event triggers when the child grid is expanded for the first time.
+You can dynamically load child grid dataSource by using the [`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event.This [`detailDataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#detaildatabound) event triggers when the child grid is expanded for the first time.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -84,8 +79,7 @@ In the below sample, we have bound the child and parent grid with different fiel
 
 ## Adding Record in ChildGrid
 
-Parent and child grid are related by [`queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field value.
-To maintain this relation in newly added record, You need to set value for [`queryString`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field in the added data by the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
+Parent and child grid are related by [`queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field value. To maintain this relation in newly added record, You need to set value for [`queryString`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field in the added data by the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
 
 In the below demo, **EmployeeID** field relates the parent and child grids. To add a new record in child grid, We have to set the **EmployeeID** field with parent record's [`queryString`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querystring) field value in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
 

@@ -28,8 +28,7 @@ In the following sample, vegetables are grouped according on its category using 
 
 ## Customization
 
-The grouping header is also provided with customization option. This allows custom designing
-using the `groupTemplate` property for both inline and fixed headers.
+The grouping header is also provided with customization option. This allows custom designing using the `groupTemplate` property for both inline and fixed headers.
 
 ## See Also
 

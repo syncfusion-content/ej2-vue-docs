@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Row drag and drop in Vue Grid component
 
-The Grid Row drag and drop allows you to drag grid rows and drop to another Grid or custom component.To enable Row drag and drop in the Grid, set the [`allowRowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowrowdraganddrop) to true.
-The target component on which the Grid rows to be dropped can be set by using
-[`targetID`](https://ej2.syncfusion.com/vue/documentation/api/grid/rowDropSettings/#targetid).
+The Grid Row drag and drop allows you to drag grid rows and drop to another Grid or custom component.To enable Row drag and drop in the Grid, set the [`allowRowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowrowdraganddrop) to true. The target component on which the Grid rows to be dropped can be set by using [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/grid/rowDropSettings/#targetid).
 
 To use Row Drag and Drop, you need to inject `RowDD` in the `provide` section.
 
@@ -39,8 +37,7 @@ By setting the [targetID](https://ej2.syncfusion.com/vue/documentation/api/grid/
 {% previewsample "page.domainurl/code-snippet/grid/row/default-cs2" %}
 
 > * Selection feature must be enabled for row drag and drop.
-> * Multiple rows can be selected by clicking and dragging inside the grid.
-For multiple row selection, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#type) property must be set to `Multiple`.
+> * Multiple rows can be selected by clicking and dragging inside the grid. For multiple row selection, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#type) property must be set to `Multiple`.
 
 ## Limitations of row drag and drop
 

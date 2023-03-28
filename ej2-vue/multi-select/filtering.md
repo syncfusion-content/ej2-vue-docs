@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in Vue Multi select component
 
-The MultiSelect has built-in support to filter data items when [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowfiltering) is enabled. The filter
-operation starts as soon as you start typing characters in the MultiSelect input.
+The MultiSelect has built-in support to filter data items when [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
 
 To display filtered items in the popup, filter the required data and return it to the MultiSelect via `updateData` method by using the [filtering](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#filtering) event.
 

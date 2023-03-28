@@ -56,7 +56,7 @@ In this demo, the **ShipCountry** column is frozen at the left and the **Custome
         
 {% previewsample "page.domainurl/code-snippet/grid/scroll/default-cs2" %}
 
-> * Freeze Direction is not compatible with the [`isFrozen`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isfrozen) and [`frozenColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#frozencolumns) properties.
+> Freeze Direction is not compatible with the [`isFrozen`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isfrozen) and [`frozenColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#frozencolumns) properties.
 
 ## Limitations of Freeze Direction
 

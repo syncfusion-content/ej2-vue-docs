@@ -22,8 +22,7 @@ To print the Grid, use the [`Print`](https://ej2.syncfusion.com/vue/documentatio
 
 ## Page Setup
 
-Some of the print options cannot be configured through JavaScript code. So, you have to customize the layout, paper size,
-and margin options using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
+Some of the print options cannot be configured through JavaScript code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
 
 * [`Chrome`](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [`Firefox`](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)

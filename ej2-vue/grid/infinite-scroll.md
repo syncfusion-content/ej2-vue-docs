@@ -14,7 +14,7 @@ Infinite scrolling is used to load a huge amount of data without degrading the G
 
 To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 
-> * In this feature, Grid will not make a new data request when you visit the same page again.
+> In this feature, Grid will not make a new data request when you visit the same page again.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -59,6 +59,5 @@ To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enab
 * Cell selection will not be persisted in cache mode.
 * Infinite scrolling is not compatible with batch editing, detail template and hierarchy features.
 * The group records cannot be collapsed in cache mode.
-* The aggregated information and total group items are displayed based on the current view items. To get these information regardless of the view items, refer to the
-[`Group with Page`](./grouping/#Group-with-paging) topic.
+* The aggregated information and total group items are displayed based on the current view items. To get these information regardless of the view items, refer to the [`Group with Page`](./grouping/#Group-with-paging) topic.
 * Programmatic selection using the [`selectRows`](https://ej2.syncfusion.com/vue/documentation/api/grid/#selectrows) and [`selectRow`](https://ej2.syncfusion.com/vue/documentation/api/grid/#selectrow) method is not supported in infinite scrolling.

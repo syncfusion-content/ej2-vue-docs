@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Pdf export in Vue Grid component
 
-PDF export allows exporting Grid data to PDF document. You need to use the
- [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexport) method for exporting.
- To enable PDF export in the grid, set the [`allowPdfExport`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowpdfexport) as true.
+PDF export allows exporting Grid data to PDF document. You need to use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexport) method for exporting. To enable PDF export in the grid, set the [`allowPdfExport`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowpdfexport) as true.
 
 To use PDF export, inject **PdfExport** module in the **provide** section.
 
