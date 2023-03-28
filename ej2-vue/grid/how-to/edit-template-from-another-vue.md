@@ -13,7 +13,6 @@ domainurl: ##DomainURL##
 You can achieve the dialog template editing using another vue page.
 
 ```
-
 <template>
     <div id="app">
          <ejs-grid :dataSource="data" :editSettings="editSettings" :actionBegin="actionBegin" :actionComplete="actionComplete" :toolbar="toolbar" height="273px">
@@ -92,13 +91,11 @@ export default {
 }
 
 </style>
-
 ```
 
 Create new vue page with the name of `dialogtemp.vue` and paste the below code.
 
 ```
-
 <template>
   <div formGroup="orderForm">
     <div class="form-row">
@@ -168,5 +165,4 @@ export default {
   }
 };
 </script>
-
 ```

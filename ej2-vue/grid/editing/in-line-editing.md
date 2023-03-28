@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # In line editing in Vue Grid component
 
-In Normal edit mode, when you start editing the currently selected record is changed to edit state.You can change the cell values and save edited data to the data source.
-To enable Normal edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) as **Normal**.
+In Normal edit mode, when you start editing the currently selected record is changed to edit state.You can change the cell values and save edited data to the data source. To enable Normal edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) as **Normal**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

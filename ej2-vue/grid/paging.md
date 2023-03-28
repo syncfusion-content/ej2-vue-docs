@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Paging in Vue Grid component
 
-Paging provides an option to display Grid data in page segments. To enable paging, set the [`allowPaging`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowpaging) to true. When paging is enabled, pager component renders at the bottom of the grid.
-Paging options can be configured through the [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/).
+Paging provides an option to display Grid data in page segments. To enable paging, set the [`allowPaging`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowpaging) to true. When paging is enabled, pager component renders at the bottom of the grid. Paging options can be configured through the [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/).
 
 In the below sample, [`pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagesize) is calculated based on the grid height by using the [`load`](https://ej2.syncfusion.com/vue/documentation/api/grid/#load) event.
 
@@ -29,8 +28,7 @@ To use Paging, you need to inject [`Page`](https://ej2.syncfusion.com/vue/docume
 
 ## Template
 
-You can use custom elements inside the pager instead of default elements.
-The custom elements can be defined by using [`pagerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#template).Inside this template, you can access the [`CurrentPage`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#currentpage),[`pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagesize),[`pageCount`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
+You can use custom elements inside the pager instead of default elements. The custom elements can be defined by using [`pagerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#template).Inside this template, you can access the [`CurrentPage`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#currentpage),[`pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagesize),[`pageCount`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

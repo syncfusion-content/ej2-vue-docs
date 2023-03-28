@@ -64,7 +64,7 @@ import { DropDownTreePlugin } from '@syncfusion/ej2-vue-dropdowns';
 Vue.use(DropDownTreePlugin);
 ```
 
-Note : By Registering Component Plugin in Vue, all child directives are also globally registered.
+Note: By Registering Component Plugin in Vue, all child directives are also globally registered.
 
 ### Using Vue.component()
 

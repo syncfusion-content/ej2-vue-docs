@@ -18,8 +18,7 @@ This section explains how to use Syncfusion Vue Grid component in Vue 3 applicat
 
 ## Getting Started with Grid Components and Vue CLI
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications.
-At first it is mostly recommended to uninstall the old Vue CLI package from your system. Vue CLI versions above `4.5.0` are mandatory for creating applications using Vue 3.
+You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications. At first it is mostly recommended to uninstall the old Vue CLI package from your system. Vue CLI versions above `4.5.0` are mandatory for creating applications using Vue 3.
 
 ```bash
 npm uninstall vue-cli -g
@@ -200,6 +199,6 @@ Web server will be initiated. Open the quick start app in the browser at port [`
 
 ![Output](images/Vue3-grid-demo.PNG)
 
-Refer the following sample, [vue3-grid-getting-started](https://github.com/SyncfusionExamples/EJ2-Vue3-gettingstarted).
+> **Sample**: Refer the following sample, [vue3-grid-getting-started](https://github.com/SyncfusionExamples/EJ2-Vue3-gettingstarted).
 
 For Migrating from Vue 2 to Vue 3 refer the Migration [`documentation`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3)

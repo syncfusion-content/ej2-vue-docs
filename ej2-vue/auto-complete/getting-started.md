@@ -22,8 +22,7 @@ To get start quickly with AutoComplete Component using Vue CLI, you can check on
 
 ## Dependencies
 
-The list of dependencies required to use the AutoComplete component in your application
-is given below:
+The list of dependencies required to use the AutoComplete component in your application is given below:
 
 ```javascript
 |-- @syncfusion/ej2-vue-dropdowns

@@ -20,9 +20,7 @@ Row virtualization allows you to load and render rows only in content viewport. 
 
 To setup the row virtualization, you need to define [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablevirtualization) as true and content height by [`height`](https://ej2.syncfusion.com/vue/documentation/api/grid/#height) property.
 
-The number of records displayed in the Grid is determined implicitly by height of content area. Also you have an option to define visible number of records by
-[`pageSettings.pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#pagesize) property.
-The loaded data will be cached and reused when it is needed for next time.
+The number of records displayed in the Grid is determined implicitly by height of content area. Also you have an option to define visible number of records by [`pageSettings.pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#pagesize) property. The loaded data will be cached and reused when it is needed for next time.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -46,8 +44,7 @@ To setup the column virtualization, set the [`enableVirtualization`](https://ej2
         
 {% previewsample "page.domainurl/code-snippet/grid/virtualscroll/default-cs5" %}
 
-> Column's [`width`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) is required for column virtualization.
-If column's width is not defined then Grid will consider its value as `200px`.
+> Column's [`width`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) is required for column virtualization. If column's width is not defined then Grid will consider its value as `200px`.
 
 ## Virtualization with Grouping
 
@@ -67,15 +64,12 @@ To get these information regardless of the view items, refer to the
 [`Group with Page`](./grouping#group-with-paging) topic.
 * The page size provided must be two times larger than the number of visible rows in the grid.
 If the page size is failed to meet this condition then the size will be determined by grid.
-* The height of the grid content is calculated using the row height and total number of records
-in the data source and hence features which changes row height such as text wrapping are not supported.
-If you want to increase the row height to accommodate the content then you can specify the
-[`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowheight) as below to ensure all the table rows are in same height.
+* The height of the grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowheight) as below to ensure all the table rows are in same height.
 
-```
-<ejs-grid :dataSource='data' rowHeight=50>
-</ejs-grid>
-```
+    ```
+    <ejs-grid :dataSource='data' rowHeight=50>
+    </ejs-grid>
+    ```
 
 * Programmatic selection using [`selectRows`](https://ej2.syncfusion.com/vue/documentation/api/grid/#selectrows) method is not supported in virtual scrolling.
 

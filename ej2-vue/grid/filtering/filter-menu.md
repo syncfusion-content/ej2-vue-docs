@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Filter menu in Vue Grid component
 
-You can enable filter menu by setting the [`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#type) as **Menu**.
-The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
+You can enable filter menu by setting the [`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#type) as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -44,8 +43,7 @@ In the following sample, dropdown is used  as custom component in the OrderID co
 
 ## Customizing filter menu operators list
 
- You can customize the default filter operator list by defining the
-  [`filterSettings.operators`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#operators) property. The available options are:
+You can customize the default filter operator list by defining the [`filterSettings.operators`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#operators) property. The available options are:
 
 * `stringOperator`- defines customized string operator list.
 * `numberOperator` - defines customized number operator list.
@@ -63,8 +61,7 @@ In the following sample, we have customized string filter operators.
 
 ## Enable different filter for a column
 
-You can use both **Menu** and **Checkbox** filter in a same Grid. To do so, set the
-[`column.filter.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#filter) as **Menu** or **Checkbox**.
+You can use both **Menu** and **Checkbox** filter in a same Grid. To do so, set the [`column.filter.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#filter) as **Menu** or **Checkbox**.
 
 In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`column.filter.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#filter).
 

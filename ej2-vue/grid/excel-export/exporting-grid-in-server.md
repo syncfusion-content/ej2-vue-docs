@@ -27,20 +27,20 @@ To Export the Grid in server side, You need to call the [`serverExcelExport`](ht
 
 ```ts
 
-        public ActionResult ExcelExport([FromForm] string gridModel)
-        {
-            GridExcelExport exp = new GridExcelExport();
-            Grid gridProperty = ConvertGridObject(gridModel);
-            return exp.ExcelExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
-        }
+public ActionResult ExcelExport([FromForm] string gridModel)
+{
+    GridExcelExport exp = new GridExcelExport();
+    Grid gridProperty = ConvertGridObject(gridModel);
+    return exp.ExcelExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
+}
 
-        private Grid ConvertGridObject(string gridProperty)
-        {
-           Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
-           GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
-           GridModel.Columns = cols.columns;
-           return GridModel;
-        }
+private Grid ConvertGridObject(string gridProperty)
+{
+    Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
+    GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
+    GridModel.Columns = cols.columns;
+    return GridModel;
+}
 
 ```
 
@@ -99,20 +99,20 @@ In the below demo, we have invoked the above method inside the [`toolbarClick`](
 
 ```ts
 
-        public ActionResult CsvGridExport([FromForm] string gridModel)
-        {
-            GridExcelExport exp = new GridExcelExport();
-            Grid gridProperty = ConvertGridObject(gridModel);
-            return exp.CsvExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
-        }
+public ActionResult CsvGridExport([FromForm] string gridModel)
+{
+    GridExcelExport exp = new GridExcelExport();
+    Grid gridProperty = ConvertGridObject(gridModel);
+    return exp.CsvExport<OrdersDetails>(gridProperty, OrdersDetails.GetAllRecords());
+}
 
-        private Grid ConvertGridObject(string gridProperty)
-        {
-           Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
-           GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
-           GridModel.Columns = cols.columns;
-           return GridModel;
-        }
+private Grid ConvertGridObject(string gridProperty)
+{
+    Grid GridModel = (Grid)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(Grid));
+    GridColumnModel cols = (GridColumnModel)Newtonsoft.Json.JsonConvert.DeserializeObject(gridProperty, typeof(GridColumnModel));
+    GridModel.Columns = cols.columns;
+    return GridModel;
+}
 
 ```
 

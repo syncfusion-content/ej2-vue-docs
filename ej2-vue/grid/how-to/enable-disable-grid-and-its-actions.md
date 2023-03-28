@@ -14,37 +14,31 @@ You can enable/disable the Grid and its actions by applying/removing correspondi
 
 To enable/disable the grid and its actions, follow the given steps:
 
-**Step 1**:
-
-Create CSS class with custom style to override the default style of Grid.
+**Step 1**: Create CSS class with custom style to override the default style of Grid.
 
 ```
-    .disablegrid {
-        pointer-events: none;
-        opacity: 0.4;
-    }
-    .wrapper {
-        cursor: not-allowed;
-    }
-
+.disablegrid {
+    pointer-events: none;
+    opacity: 0.4;
+}
+.wrapper {
+    cursor: not-allowed;
+}
 ```
 
-**Step 2**:
-
-Add/Remove the CSS class to the Grid in the click event handler of Button.
+**Step 2**: Add/Remove the CSS class to the Grid in the click event handler of Button.
 
 ```ts
-    btnClick(args) {
-      if (this.$refs.Grid.$el.classList.contains('disablegrid')) {
-          this.$refs.Grid.$el.classList.remove('disablegrid');
-          document.getElementById("GridParent").classList.remove('wrapper');
-      }
-      else {
-          this.$refs.Grid.$el.classList.add('disablegrid');
-          document.getElementById("GridParent").classList.add('wrapper');
-      }
+btnClick(args) {
+    if (this.$refs.Grid.$el.classList.contains('disablegrid')) {
+        this.$refs.Grid.$el.classList.remove('disablegrid');
+        document.getElementById("GridParent").classList.remove('wrapper');
     }
-
+    else {
+        this.$refs.Grid.$el.classList.add('disablegrid');
+        document.getElementById("GridParent").classList.add('wrapper');
+    }
+}
 ```
 
 In the below demo, the button click will enable/disable the Grid and its actions.

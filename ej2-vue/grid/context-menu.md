@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Context menu in Vue Grid component
 
-The Grid has options to show the context menu when right clicked on it. To enable this feature,
-you need to define either default or custom item in the
-[`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuitems).
+The Grid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuitems).
 
 To use the context menu, inject the **ContextMenu** module in the **provide** section.
 
@@ -49,11 +47,7 @@ Items| Description
 
 ## Custom context menu items
 
-The custom context menu items can be added by defining the
-[`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuitems) as a collection of
-[`contextMenuItemModel`](https://ej2.syncfusion.com/vue/documentation/api/grid/contextMenuItemModel/).
-Actions for this customized items can be defined in the
-[`contextMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuclick) event.
+The custom context menu items can be added by defining the [`contextMenuItems`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuitems) as a collection of [`contextMenuItemModel`](https://ej2.syncfusion.com/vue/documentation/api/grid/contextMenuItemModel/). Actions for this customized items can be defined in the [`contextMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#contextmenuclick) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

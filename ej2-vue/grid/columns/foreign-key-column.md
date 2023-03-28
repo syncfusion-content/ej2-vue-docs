@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Foreign key column in Vue Grid component
 
-Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#datasource),[`column.foreignKeyField`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyfield) and [`column.foreignKeyValue`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyvalue) properties.
+Foreign key column can be enabled by using [`column.dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#datasource), [`column.foreignKeyField`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyfield) and [`column.foreignKeyValue`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyvalue) properties.
 
 * [`column.dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#datasource) - Defines the foreign data.
 * [`column.foreignKeyField`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#foreignkeyfield) - Defines the mapping column name to the foreign data.
@@ -31,8 +31,8 @@ In the following example, `Employee Name` is a foreign column which shows `First
 
 ## Use edit template in foreignkey column
 
-By default, foreign key column uses dropdown component for editing.
-You can render other than the dropdown by using the [`column.edit`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#edit) property.
+By default, foreign key column uses dropdown component for editing. You can render other than the dropdown by using the [`column.edit`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#edit) property.
+
 The following example demonstrates the way of using edit template in foreign column.
 
 In the following example, The `Employee Name` is a foreign key column and while editing, AutoComplete component is rendered instead of DropDownList.
@@ -61,8 +61,7 @@ In the following example, The `Employee Name` is a foreign key column. DropDownL
 
 ## Perform aggregation in foreignkey column
 
-Default aggregations are not supported in a foreign key column. You can achieve aggregation for the foreign key column by using custom the aggregates.
-The following example demonstrates the way to achieve aggregation in foreign key column.
+Default aggregations are not supported in a foreign key column. You can achieve aggregation for the foreign key column by using custom the aggregates. The following example demonstrates the way to achieve aggregation in foreign key column.
 
 In the following example, The `Employee Name` is a foreign key column and the aggregation for the foreign column was calculated in customAggregateFn.
 

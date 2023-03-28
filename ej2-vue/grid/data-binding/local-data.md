@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Local data in Vue Grid component
 
-To bind local data to the grid, you can assign a JavaScript object array to the
-[`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the grid, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property. The local data source can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -29,9 +28,7 @@ You can add/delete the datasource records through an external button. To reflect
 
 Please follow the below steps to refresh the grid after datasource change.
 
-**Step 1**:
-
-Add/delete the datasource record by using the following code.
+**Step 1**: Add/delete the datasource record by using the following code.
 
 ```ts
     this.data.unshift(customData); // Add a new record.
@@ -39,9 +36,7 @@ Add/delete the datasource record by using the following code.
     this.data.splice(selectedRow, 1); // Delete a record.
 ```
 
-**Step 2**:
-
-When applied the changes in dataSource then refresh Grid at own.
+**Step 2**: When applied the changes in dataSource then refresh Grid at own.
 
 ```ts
     this.data = [...this.data]; // Refresh the Grid dataSource.

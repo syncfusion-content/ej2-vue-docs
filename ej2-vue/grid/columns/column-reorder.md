@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Column reorder in Vue Grid component
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the grid.
-To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowreordering) to true.
+Reordering can be done by drag and drop of a particular column header from one index to another index within the grid. To enable reordering, set the [`allowReordering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowreordering) to true.
 
 To use Reordering, you need to inject `Reorder` module in the `provide` section.
 

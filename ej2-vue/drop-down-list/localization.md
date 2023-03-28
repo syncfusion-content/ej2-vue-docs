@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in Vue Drop down list component
 
-The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#norecordstemplate)
-and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the DropDownList.
+The Localization library allows you to localize static text content of the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#norecordstemplate) and [actionFailureTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#actionfailuretemplate) &nbsp;properties according to the culture currently assigned to the DropDownList.
 
 | Locale key | en-US (default)  |
 |------------|------------------|

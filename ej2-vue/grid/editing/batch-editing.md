@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Batch editing in Vue Grid component
 
-In Batch edit mode, when you double-click on the grid cell, then the target cell changed to edit state.You can bulk save (added, changed and deleted data in the single request) to data source by click on the toolbar's **Update** button or by externally invoking the [`batchSave`](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/#batchsave) method.
-To enable Batch edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) as **Batch**.
+In Batch edit mode, when you double-click on the grid cell, then the target cell changed to edit state.You can bulk save (added, changed and deleted data in the single request) to data source by click on the toolbar's **Update** button or by externally invoking the [`batchSave`](https://ej2.syncfusion.com/vue/documentation/api/grid/edit/#batchsave) method. To enable Batch edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) as **Batch**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -64,8 +63,7 @@ By default, grid will show the confirm dialog when saving or cancelling or perfo
 {% previewsample "page.domainurl/code-snippet/grid/edit/default-cs4" %}
 
 > * [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#showconfirmdialog) requires the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) to be **Batch**
-> * If [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#showconfirmdialog)
-set to **false**, then confirmation dialog does not display in batch editing.
+> * If [`editSettings.showConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#showconfirmdialog) set to **false**, then confirmation dialog does not display in batch editing.
 
 ## How to make editing in single click and arrow keys
 

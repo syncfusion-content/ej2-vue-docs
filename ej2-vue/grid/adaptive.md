@@ -36,7 +36,7 @@ The grid will render the row elements in vertical order while setting the [`rowR
         
 {% previewsample "page.domainurl/code-snippet/grid/adaptive-cs2" %}
 
-> * [`enableAdaptiveUI`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableadaptiveui) property must be enabled for vertical row rendering.
+> [`enableAdaptiveUI`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableadaptiveui) property must be enabled for vertical row rendering.
 
 ### Supported features by vertical row rendering
 
