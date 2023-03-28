@@ -15,8 +15,7 @@ Circular gauge provide supports for internationalization for below gauge element
 * Axis label.
 * Tooltip.
 
-For more information about number formatter you can refer
-[`internationalization`](http://ej2.syncfusion.com/documentation/base/intl.html).
+For more information about number formatter you can refer [`internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization/).
 
 <!-- markdownlint-disable MD036 -->
 
