@@ -552,6 +552,60 @@ export default {
 </style>
 ```
 
+### Roles
+
+SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to limit data access within a cube. Each role defines a set of permissions that can be granted to a single user or groups of users. It is used to manage security by limiting access to sensitive data and determining who has access to and can change the cube. It can be configured using the [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#roles) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasourcesettings).
+
+> The [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#roles) property can be used to specify one or more roles to the OLAP cube, separated by commas.
+
+```
+<template>
+    <div id="app">
+        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height= "height"> </ejs-pivotview>
+    </div>
+</template>
+
+<script>
+import Vue from "vue";
+import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+
+Vue.use(PivotViewPlugin);
+
+export default {
+  data () {
+    return {
+      dataSourceSettings: {
+        catalog: 'Adventure Works DW 2008 SE',
+        cube: 'Adventure Works',
+        providerType: 'SSAS',
+        roles: 'Role1',
+        url: 'https://bi.syncfusion.com/olap/msmdpump.dll',
+        localeIdentifier: 1033,
+        rows: [
+            { name: '[Customer].[Customer Geography]', caption: 'Customer Geography' },
+        ],
+        columns: [
+            { name: '[Product].[Product Categories]', caption: 'Product Categories' },
+            { name: '[Measures]', caption: 'Measures' },
+        ],
+        values: [
+            { name: '[Measures].[Customer Count]', caption: 'Customer Count' },
+            { name: '[Measures].[Internet Sales Amount]', caption: 'Internet Sales Amount' }
+        ]
+      },
+      height: 350
+    }
+  },
+  provide: {
+        pivotview: []
+    }
+}
+</script>
+<style>
+@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+</style>
+```
+
 ## OLAP Cube: Elements
 
 ### Field list
