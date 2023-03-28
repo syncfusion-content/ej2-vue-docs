@@ -26,7 +26,7 @@ When we enable the [`enableAdaptiveUI`](https://ej2.syncfusion.com/vue/documenta
 
 ## Vertical row rendering
 
-The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/rowRenderingMode/) property value as **Vertical**.
+The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](https://ej2.syncfusion.com/vue/documentation/api/grid#rowrenderingmode) property value as **Vertical**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -215,7 +215,7 @@ To customize the grid column, follow the given steps:
 
 ## Display custom tooltip for columns
 
-To display a custom ToolTip ([`EJ2 Tooltip`](../../../tooltip/getting-started)), you can render the Grid control inside the Tooltip component and set the target as `.e-rowcell`. The tooltip is displayed when hovering the grid cells.
+To display a custom ToolTip [`EJ2 Tooltip`](https://ej2.syncfusion.com/vue/documentation/tooltip/getting-started/), you can render the Grid control inside the Tooltip component and set the target as `.e-rowcell`. The tooltip is displayed when hovering the grid cells.
 
 Change the tooltip content for the grid cells by using the following code in the [`beforeRender`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#beforerender) event.
 
