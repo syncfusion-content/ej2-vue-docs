@@ -208,6 +208,18 @@ To render a stacked step area series, use series `type` as `StackingStepArea` an
         
 {% previewsample "page.domainurl/code-snippet/chart/series/area-cs7" %}
 
+* Range Step Area
+
+To render the range step area series, use the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#type) as a `RangeStepArea` and inject the `RangeStepAreaSeries` into the `provide`.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/area-cs11/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/area-cs11" %}
+
 * Multicolored area
 
 To render a multicolored area series, use the series type as `MultiColoredArea`, and inject the `MultiColoredAreaSeries` into the `provide`. The required `segments` of the series can be customized using the `value`, `color`, and `dashArray`.

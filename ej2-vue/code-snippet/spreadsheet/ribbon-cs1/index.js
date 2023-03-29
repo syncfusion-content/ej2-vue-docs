@@ -30,8 +30,8 @@ new Vue({
    data: () => {
     return {
       dataSource: data,
-      openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open';
-    saveUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save';
+      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
+    saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save';
     }
   },
   methods: {

@@ -13,7 +13,7 @@ Vue.use(SpreadsheetPlugin);
 export default {
    data: () => {
     return {
-      openUrl: 'https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open',
+      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
     }
   },
   methods: {

@@ -38,7 +38,7 @@ new Vue({
       width2: 130,
       width3: 120,
       saveUrl:
-        "https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save",
+        "https://services.syncfusion.com/vue/production/api/spreadsheet/save",
     };
   },
   methods: {
@@ -55,7 +55,7 @@ new Vue({
           formData.append("fileName", "Sample");
           formData.append("saveType", "Xlsx");
           fetch(
-            "https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/save",
+            "https://services.syncfusion.com/vue/production/api/spreadsheet/save",
             {
               method: "POST",
               headers: { Authorization: "YOUR TEXT" },

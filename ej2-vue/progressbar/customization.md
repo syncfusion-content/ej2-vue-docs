@@ -75,7 +75,7 @@ export default Vue.extend({
 
 ## Thickness
 
-You can customize the thickness of the track  using `trackThickness` and progress using `progressThickness` to render the ProgressBar with different appearances.
+ Customize the thickness of the track using [`trackThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#trackthickness), progress using [`progressThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#progressthickness) and secondary progress using [`secondaryProgressThickness`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#secondaryprogressthickness) to render the progress bar with different appearances.
 
 `App.vue`
 
@@ -91,6 +91,7 @@ You can customize the thickness of the track  using `trackThickness` and progres
              height='60'
              width='90%'
              :trackThickness='trackThickness'
+             :secondaryProgressThickness='secondaryProgressThickness'
              :progressThickness='progressThickness'
              :value='value'
              :animation='animation'
@@ -116,6 +117,7 @@ export default Vue.extend({
        delay: 0
        },
     trackThickness:24,
+    secondaryProgressThickness: 20,
     progressThickness:24,
     value:100
       };
@@ -283,7 +285,7 @@ export default Vue.extend({
 
 ## Progress color and track color
 
-We can customize the color of progress and track by using  **progressColor** and **trackColor** property.
+Customize the color of progress, secondary progress, and track by using the [`progressColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#progresscolor), [`secondaryProgressColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#secondaryprogresscolor), and [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/progressBarModel/#trackcolor) properties.
 
 `App.vue`
 
@@ -300,6 +302,7 @@ We can customize the color of progress and track by using  **progressColor** and
              width='90%'
              :trackThickness='trackThickness'
              :progressThickness='progressThickness'
+             :secondaryProgressColor='secondaryProgressColor'
              :value='value'
              progressColor='#E3165B'
              trackColor='#F8C7D8'
@@ -327,6 +330,7 @@ export default Vue.extend({
        },
     trackThickness:24,
     progressThickness:24,
+    secondaryProgressColor: 'green',
     value:100
     };
   },
