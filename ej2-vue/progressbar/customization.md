@@ -70,7 +70,7 @@ export default Vue.extend({
     display: -webkit-box;
 }
 </style>
-
+s
 ```
 
 ## Thickness

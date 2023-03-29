@@ -65,32 +65,31 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 **2.** Register the Linear Gauge component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Linear Gauge component in the following table.
   
-        | Directive Name     | Tag Name    |
-        |--------------------|-------------|
-        | `AxesDirective`    | `e-axes`    |
-        | `AxisDirective`    | `e-axis`    |
-        | `PointersDirective`| `e-pointers`|
-        | `PointerDirective` | `e-pointer` |
-        | `RangesDirective`  | `e-ranges`  |
-        | `RangeDirective`   | `e-range`   |
+| Directive Name     | Tag Name    |
+|--------------------|-------------|
+| `AxesDirective`    | `e-axes`    |
+| `AxisDirective`    | `e-axis`    |
+| `PointersDirective`| `e-pointers`|
+| `PointerDirective` | `e-pointer` |
+| `RangesDirective`  | `e-ranges`  |
+| `RangeDirective`   | `e-range`   |
 
-        ```js
-        import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
-        //Component registeration.
-        export default {
-            name: "App",
-            components: {
-            'ejs-lineargauge' : LinearGaugeComponent,
-            'e-axes' : AxesDirective,
-            'e-axis' : AxisDirective,
-            'e-pointers': PointersDirective,
-            'e-pointer' : PointerDirective,
-            'e-ranges' : RangesDirective,
-            'e-range' : RangeDirective
-            }
+```js
+    import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
+    //Component registeration.
+    export default {
+        name: "App",
+        components: {
+        'ejs-lineargauge' : LinearGaugeComponent,
+        'e-axes' : AxesDirective,
+        'e-axis' : AxisDirective,
+        'e-pointers': PointersDirective,
+        'e-pointer' : PointerDirective,
+        'e-ranges' : RangesDirective,
+        'e-range' : RangeDirective
         }
-
-        ```
+    }
+```
 
 In the above code snippet, you have registered Linear Gauge and the directives for axis, pointer and range. Axis directives are used to define the axis settings for the Linear Gauge component. Pointer and range directives are used to define the properties of pointer and  range respectively.
   
