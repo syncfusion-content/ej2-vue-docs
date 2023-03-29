@@ -38,7 +38,7 @@ The following table shows Built-in toolbar items and its action.
         
 {% previewsample "page.domainurl/code-snippet/grid/toolbar/default-cs1" %}
 
-> * The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) has options to define both built-in and custom toolbar items.
+> The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) has options to define both built-in and custom toolbar items.
 
 ### Show only icons in built-in toolbar items
 

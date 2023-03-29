@@ -54,4 +54,4 @@ By default, the popup list width value is set as `auto`. Depending on the mentio
 
 You can customize the trigger character by using the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#mentionchar) property in the Mention component. The trigger character triggers the suggestion list to display in the target area.
 
-By default, the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#mentionchar) is `@`.
+> By default, the [mentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#mentionchar) is `@`.

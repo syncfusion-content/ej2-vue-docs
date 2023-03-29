@@ -13,11 +13,11 @@ domainurl: ##DomainURL##
 You can hide the sorting options on the excel filter dialog by setting display as none for the following classes.
 
 ```
-    .e-excel-ascending,
-    .e-excel-descending,
-    .e-separator.e-excel-separator {
-    display: none;
-    }
+.e-excel-ascending,
+.e-excel-descending,
+.e-separator.e-excel-separator {
+display: none;
+}
 ```
 
 {% tabs %}

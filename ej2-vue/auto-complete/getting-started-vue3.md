@@ -43,8 +43,7 @@ Initiating a new project prompts us to choose the type of project to be used for
 
 ## Adding Syncfusion AutoComplete package in the application
 
- Syncfusion Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-The AutoComplete component will be used in this example. To install it use the following command.
+Syncfusion Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. The AutoComplete component will be used in this example. To install it use the following command.
 
 ```bash
 npm install @syncfusion/ej2-vue-dropdowns --save
@@ -229,8 +228,6 @@ By default, suggestion list width automatically adjusts according to the AutoCom
     }
 </style>
 ```
-
-Output be like the below.
 
 ![AutoComplete suggestion list customized height and width](./images/popup.png)
 

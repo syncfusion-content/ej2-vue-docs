@@ -10,10 +10,7 @@ domainurl: ##DomainURL##
 
 # Column resizing in Vue Grid component
 
-Columns width can be resized by clicking and dragging at the right edge of the column header.While dragging, the width of a respective column will be resized immediately.
-Each column can be auto resized by double-clicking at the right edge of the column header.
-It will fit the width of that column based on widest cell content.
-To enable the column resize, set the [`allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowresizing) property to true.
+Columns width can be resized by clicking and dragging at the right edge of the column header.While dragging, the width of a respective column will be resized immediately. Each column can be auto resized by double-clicking at the right edge of the column header. It will fit the width of that column based on widest cell content. To enable the column resize, set the [`allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowresizing) property to true.
 
 To use the column resize, inject `Resize` module in the `provide` section.
 
@@ -26,6 +23,7 @@ To use the column resize, inject `Resize` module in the `provide` section.
 {% previewsample "page.domainurl/code-snippet/grid/column/default-cs15" %}
 
 > You can disable Resizing for a particular column, by specifying [`columns.allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#allowresizing) to false.
+
 > In RTL mode, you can click and drag the left edge of header cell to resize the column.
 
 ## Min and max width

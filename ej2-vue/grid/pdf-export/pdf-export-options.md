@@ -94,8 +94,8 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 ## Change page size
 
-Page size can be customized for the exported document using the [`pdfExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties).
-Supported page sizes are:
+Page size can be customized for the exported document using the [`pdfExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties). Supported page sizes are:
+
 * Letter
 * Note
 * Legal

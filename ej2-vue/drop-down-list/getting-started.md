@@ -150,8 +150,7 @@ export default Vue.extend({
 
 ## Run the application
 
-After completing the configuration required to render a basic DropDownList, run the following command to
-display the output in your default browser.
+After completing the configuration required to render a basic DropDownList, run the following command to display the output in your default browser.
 
 ```
 npm run dev

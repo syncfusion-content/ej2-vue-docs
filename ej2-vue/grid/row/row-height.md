@@ -36,4 +36,4 @@ In the below example, the row height for the row with OrderID as '10249' is set 
         
 {% previewsample "page.domainurl/code-snippet/grid/row/default-cs4" %}
 
-> * In virtual scrolling mode, it is not applicable to set the `rowHeight` using the `rowDataBound` event.
+> In virtual scrolling mode, it is not applicable to set the `rowHeight` using the `rowDataBound` event.

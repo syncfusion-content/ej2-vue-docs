@@ -22,5 +22,4 @@ To autofit a column, you need to inject `Resize` module in the `provide` section
         
 {% previewsample "page.domainurl/code-snippet/grid/column/default-cs1" %}
 
-> You can autofit all columns, by invoking the [`autoFitColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#autofitcolumns)
-method without column name.
+> You can autofit all columns, by invoking the [`autoFitColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#autofitcolumns) method without column name.

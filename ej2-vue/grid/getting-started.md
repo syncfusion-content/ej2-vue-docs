@@ -166,8 +166,7 @@ export default {
 
 ## Defining Row Data
 
-Data for the Grid component is bind by using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and value is defined in the vue component.
-It accepts either array of JavaScript object or **DataManager** instance.
+Data for the Grid component is bind by using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and value is defined in the vue component. It accepts either array of JavaScript object or **DataManager** instance.
 
 ```
 <template>
@@ -212,10 +211,9 @@ The Grid has an option to define columns as directives. In these column directiv
 
 * We have added [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#field) to map with a property name an array of JavaScript objects.
 * We have added [headerText](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertext) to change the title of columns.
-* We have used `textAlign` to change the alignment of columns.
-By default, columns will be left aligned. To change columns to right align, we need to define [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#textalign) as **Right**.
-* Also, we have used another useful property, [format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format).
-Using this, we can format number and date values to standard or custom formats.
+* We have used `textAlign` to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#textalign) as **Right**.
+* Also, we have used another useful property, [format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format). Using this, we can format number and date values to standard or custom formats.
+
 Here, we have defined it for the conversion of numeric values to currency.
 
 ```
@@ -259,9 +257,7 @@ If we didn't inject the **Page** module, then the pager will not be rendered in 
 
 ## Enable Sorting
 
-The sorting feature enables the user to order the records.
-It can be enabled by setting [`allowSorting`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow.
-If we didn't inject the **Sort** module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortsettings) property.
+The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow. If we didn't inject the **Sort** module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -273,11 +269,7 @@ If we didn't inject the **Sort** module, then user not able to sort when click o
 
 ## Enable Filtering
 
-The filtering feature enables the user to view the reduced amount of records based on filter criteria.
-It can be enabled by setting [`allowFiltering`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) property as true.
-Also, need to inject the **Filter** module in the **provide** section as follow.
-If we didn't inject the **Filter** module, then filter bar will not be rendered in Grid.
-Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#filtersettings) property.
+The filtering feature enables the user to view the reduced amount of records based on filter criteria. It can be enabled by setting [`allowFiltering`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) property as true. Also, need to inject the **Filter** module in the **provide** section as follow. If we didn't inject the **Filter** module, then filter bar will not be rendered in Grid. Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#filtersettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -289,9 +281,7 @@ Filtering feature can be customized using [`filterSettings`](https://ej2.syncfus
 
 ## Enable Grouping
 
-The grouping feature enables users to view the Grid record in a grouped view.
-It can be enabled by setting [`allowGrouping`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowgrouping) property to true.Also, need to inject the **Group** module in the **provide** section as follow.
-If we didn't inject the **Group** module, then the group drop area will not be rendered in Grid. Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#groupsettings) property.
+The grouping feature enables users to view the Grid record in a grouped view. It can be enabled by setting [`allowGrouping`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowgrouping) property to true.Also, need to inject the **Group** module in the **provide** section as follow. If we didn't inject the **Group** module, then the group drop area will not be rendered in Grid. Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -303,10 +293,7 @@ If we didn't inject the **Group** module, then the group drop area will not be r
 
 ## Enable Aggregate
 
-The Aggregate feature enables users to view the aggregates of Grid records.
-It can be enabled by configured through **e-aggregates** directive.
-The **field** and **type** are the minimum properties required to represent an aggregate column.Also, need to inject the **Aggregate** module in the **provide** section as follow.
-If we didn't inject the **Aggregate** module, then the footer table will not be rendered in Grid. Check [`aggregate`](./aggregates) to know more about its configuration.
+The Aggregate feature enables users to view the aggregates of Grid records. It can be enabled by configured through **e-aggregates** directive. The **field** and **type** are the minimum properties required to represent an aggregate column.Also, need to inject the **Aggregate** module in the **provide** section as follow. If we didn't inject the **Aggregate** module, then the footer table will not be rendered in Grid. Check [`aggregate`](./aggregates) to know more about its configuration.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

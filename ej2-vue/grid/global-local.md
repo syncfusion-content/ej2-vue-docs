@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The `Localization` library allows you to localize default text content of the Grid.
-The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/grid/#locale) value and translation object.
+The `Localization` library allows you to localize default text content of the Grid. The grid component has static text on some features (like group drop area text, pager information text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/grid/#locale) value and translation object.
 
 The following list of properties and its values are used in the grid.
 
@@ -146,8 +145,7 @@ The `Internationalization` library is used to globalize number, date, and time v
 
 ## Right to Left - RTL
 
-RTL provides an option to switch the text direction and layout of Grid component from right to left.It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc).
-To enable RTL in the Grid, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablertl) to true.
+RTL provides an option to switch the text direction and layout of Grid component from right to left.It improves the user experiences and accessibility for users who use right-to-left languages(Arabic, Farsi, Urdu, etc). To enable RTL in the Grid, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablertl) to true.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

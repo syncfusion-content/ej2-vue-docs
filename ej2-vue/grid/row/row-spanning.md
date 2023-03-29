@@ -24,4 +24,4 @@ Also Grid supports the spanning of rows and columns for same cells. `Lunch Break
         
 {% previewsample "page.domainurl/code-snippet/grid/column/spanning-cs2" %}
 
-> * To disable the spanning for particular grid page, we need to use `requestType` from [`QueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/queryCellInfoEventArgs/) event argument.
+> To disable the spanning for particular grid page, we need to use `requestType` from [`QueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/queryCellInfoEventArgs/) event argument.

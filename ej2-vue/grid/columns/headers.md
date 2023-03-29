@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Header text
 
-By default, column header title is displayed from column [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#field) value.
-To override the default header title, you have to define the [`headerText`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertext) value.
+By default, column header title is displayed from column [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#field) value. To override the default header title, you have to define the [`headerText`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertext) value.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -43,9 +42,7 @@ You can change the orientation of the header text by using the [`customAttribute
 
 To change the Orientation of Header Text, Ensure the following steps:
 
-**Step 1**:
-
-Create a css class with orientation style for grid header cell.
+**Step 1**: Create a css class with orientation style for grid header cell.
 
 ```
 .orientationcss .e-headercelldiv {
@@ -53,17 +50,13 @@ Create a css class with orientation style for grid header cell.
 }
 ```
 
-**Step 2**:
-
-Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property.
+**Step 2**: Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property.
 
 ```
-    <e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' :customAttributes='customAttributes' width=80></e-column>
+<e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' :customAttributes='customAttributes' width=80></e-column>
 ```
 
-**Step 3**:
-
-Resize the header cell height by using the following code.
+**Step 3**: Resize the header cell height by using the following code.
 
 ```ts
 setHeaderHeight(args) {

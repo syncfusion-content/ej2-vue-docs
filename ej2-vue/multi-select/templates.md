@@ -18,8 +18,7 @@ To customize MultiSelect dropdown items Using templates, you can check on this v
 
 ## Item template
 
-The content of each list item within the MultiSelect can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#itemtemplate)
-property.
+The content of each list item within the MultiSelect can be customized with the help of [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#itemtemplate) property.
 
 In the following sample, each list item is split into two columns to display relevant data's.
 

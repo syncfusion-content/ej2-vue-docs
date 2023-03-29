@@ -58,7 +58,7 @@ In the following examples, data filtering is done with `endsWith` type.
 
 ## Case sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by passing the fourth optional parameter of the `where` clause
+Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by passing the fourth optional parameter of the `where` clause.
 
 The following example shows how to perform case-sensitive filter
 
@@ -72,8 +72,7 @@ The following example shows how to perform case-sensitive filter
 
 ## Diacritics Filtering
 
-The DropDownList supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it
-easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#ignoreaccent) is enabled
+The DropDownList supports diacritics filtering which will ignore the [diacritics](https://en.wikipedia.org/wiki/Diacritic) and makes it easier to filter the results in international characters lists when the [ignoreAccent](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#ignoreaccent) is enabled.
 
 In the following sample,data with diacritics are bound as dataSource for DropDownList.
 

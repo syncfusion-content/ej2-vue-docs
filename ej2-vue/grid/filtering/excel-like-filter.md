@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Excel like filter in Vue Grid component
 
-You can enable Excel like filter by defining.
-[`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings#type) as `Excel`.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
+You can enable Excel like filter by defining. [`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings#type) as `Excel`.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

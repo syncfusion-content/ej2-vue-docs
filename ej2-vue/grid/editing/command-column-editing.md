@@ -33,7 +33,7 @@ The available built-in command buttons are:
 
 ## Custom command column
 
- The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#commands) property and the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#commandClick) event.
+The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#commands) property and the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#commandClick) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

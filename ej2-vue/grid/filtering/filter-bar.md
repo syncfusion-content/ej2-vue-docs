@@ -10,13 +10,11 @@ domainurl: ##DomainURL##
 
 # Filter bar in Vue Grid component
 
-By defining the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) to true,
-then filter bar row will be rendered next to header which allows you to filter data.
-You can filter the records with different expressions depending upon the column type.
+By defining the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) to true, then filter bar row will be rendered next to header which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 
- **Filter bar Expressions:**
+**Filter bar Expressions:**
 
- You can enter the following filter expressions(operators) manually in the filter bar.
+You can enter the following filter expressions(operators) manually in the filter bar.
 
 Expression |Example |Description |Column Type
 -----|-----|-----|-----
