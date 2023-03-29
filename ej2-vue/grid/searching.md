@@ -113,3 +113,7 @@ In the following sample, we have performed the searching with multiple keywords 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/search/default-cs9" %}
+
+## See also
+
+* [How to perform search by using Wildcard and LIKE operator filter](./filtering/filtering/#wildcard-and-like-operator-filter)
