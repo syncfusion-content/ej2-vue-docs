@@ -156,6 +156,23 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/custom-header-cs2" %}
 
+### To change the PDF orientation
+
+By default, the PDF document is created in **Portrait** orientation. You can change the orientation of the PDF document by using the `args.pdfLayoutSettings.orientation` argument settings in the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforesave) event.
+
+The possible values are:
+
+* **Portrait** - Used to display content in a vertical layout.
+* **Landscape** - Used to display content in a horizontal layout.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/spreadsheet/open-save-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/open-save-cs3" %}
+
 ### Supported file formats
 
 The following list of Excel file formats are supported in Spreadsheet:

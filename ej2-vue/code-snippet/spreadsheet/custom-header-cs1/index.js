@@ -17,7 +17,7 @@ new Vue({
   data: () => {
     return {
       openUrl:
-        "https://ej2services.syncfusion.com/production/web-services/api/spreadsheet/open",
+        "https://services.syncfusion.com/vue/production/api/spreadsheet/open",
     };
   },
   methods: {
