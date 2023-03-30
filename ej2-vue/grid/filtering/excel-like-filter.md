@@ -34,3 +34,7 @@ You can enable Excel like filter by defining. [`filterSettings.type`](https://ej
   },
 
 ```
+
+## See also
+
+* [How to perform filter by using Wildcard and LIKE operator filter](./filtering/#wildcard-and-like-operator-filter)
