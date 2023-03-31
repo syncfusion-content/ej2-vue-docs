@@ -14,16 +14,16 @@ This section explains the basic system requirements to work with Syncfusion Vue 
 
 * Vue supported version >= `2.6+`.
 
-* Required [vue-class-component](https://www.npmjs.com/package/vue-class-component) package.
-    * `Vue 2.6` - Use the `7.2.6` version.
-    * `Vue 2.7` - This package is not needed.
-    * `Vue 3+` - Use `^8.0.0-rc.1` version.
-
 * Required [node](https://nodejs.org/en/) version >= `16+`, and the supported [npm](https://www.npmjs.com/) version will be installed along with the node version. Use the following command to check the node's version.
 
 ```bash
 node --version
 ```
+
+> The [vue-class-components](https://www.npmjs.com/package/vue-class-component) package is required before the 2023 Volume 1 (v21.1.35) release. 
+>    * `Vue 2.6` - Use the `7.2.6` version.
+>    * `Vue 2.7` - This package is not needed.
+>    * `Vue 3+` - Use `^8.0.0-rc.1` version. 
 
 ## Browser support
 

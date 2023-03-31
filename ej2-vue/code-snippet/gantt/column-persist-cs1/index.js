@@ -1,7 +1,7 @@
 
 import Vue from "vue";
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { data } from './datasource.js';
+import { projectNewData } from './data-source.js';
 
 Vue.use(GanttPlugin);
 
@@ -34,7 +34,7 @@ new Vue({
 
   data() {
     return {
-      data: data,
+      data: projectNewData,
       taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -58,7 +58,7 @@ new Vue({
             field: any;
             headerText: any;
             template: any;
-            headerTemplate: any;
+            headerTemplate  ;
         }) => {
             let headerText = gridColumnsState.find((colColumnsState) => colColumnsState.field === col.field)['headerText'];
             let colTemplate = gridColumnsState.find((colColumnsState) => colColumnsState.field === col.field)['template'];

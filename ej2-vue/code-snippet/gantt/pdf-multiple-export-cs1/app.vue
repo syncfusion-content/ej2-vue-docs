@@ -13,7 +13,7 @@
 import Vue from "vue";
 import { GanttPlugin, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { ganttData  } from './data-source.js';
+import {editingData  } from './data-source.js';
 Vue.use(GanttPlugin);
 export default {
   data: function() {

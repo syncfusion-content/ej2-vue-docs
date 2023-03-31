@@ -26,14 +26,14 @@ new Vue({
                 duration: 'Duration',
                 dependency: 'Predecessor',
                 parentID: 'parentID'
-            }
-        };
+            },
+       
         actionFailure: function(args){
-            let span: HTMLElement = document.createElement('span');
-            this.element.parentNode.insertBefore(span, gantt.element);
+            let span = document.createElement('span');
+            this.element.parentNode.insertBefore(span,gantt.element);
             span.style.color = '#FF0000'
             span.innerHTML = 'Server exception: 404 Not found';
-    },
+    }, };
   }
 
 });

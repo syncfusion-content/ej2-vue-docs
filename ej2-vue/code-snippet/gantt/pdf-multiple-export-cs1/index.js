@@ -2,7 +2,7 @@
 import Vue from "vue";
 import { GanttPlugin, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-import { ganttData  } from './data-source.js';
+import {editingData  } from './data-source.js';
 Vue.use(GanttPlugin);
 ;
 new Vue({
@@ -18,8 +18,8 @@ new Vue({
 
   data: function() {
       return{
-        fData: [ganttData[0]],
-        sData: [ganttData[1]],
+        fData: [editingData[0]],
+        sData: [editingData[1]],
         height1:'280px',
         height2:'250px',
         taskFields: {

@@ -2,13 +2,15 @@
 import Vue from "vue";
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
 import { Ajax } from '@syncfusion/ej2-base';
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+Vue.use(ButtonPlugin);
 Vue.use(GanttPlugin);
 ;
 new Vue({
 	el: '#app',
 	template: `
      <div>
-        <ejs-button id="databind" cssClass="e-info" v-on:click.native="databind">Bind Data</ejs-button>
+        <ejs-button id="databind"  v-on:click.native="databind">Bind Data</ejs-button>
         <br>
         <br>
         <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height" :projectStartDate="projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
@@ -17,6 +19,7 @@ new Vue({
 
   data: function() {
       return{
+        data:[],
             height: '450px',
             taskFields: {
                 id: 'TaskId',
@@ -34,9 +37,9 @@ new Vue({
   methods: {
       databind: function(e){
         let ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/GanttData","GET");
-        this.showSpinner();
+        this.$refs.gantt.showSpinner();
         ajax.send();
-        ajax.onSuccess = function (data: string) {
+        ajax.onSuccess = function (data) {
         this.hideSpinner();
         this.dataSource = (JSON.parse(data)).Items;
         this.refresh();

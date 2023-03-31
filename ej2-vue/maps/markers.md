@@ -126,6 +126,41 @@ The latitude and longitude values are used to determine the location of each mar
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs67" %}
 
+## Repositioning the marker using drag and drop
+
+The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [enableDrag](https://helpej2.syncfusion.com/vue/documentation/api/maps/markerSettingsModel/#enabledrag) property to **true** in the [markerSettings](https://helpej2.syncfusion.com/vue/documentation/api/maps/markerSettingsModel) property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/maps/getting-started-cs100/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/maps/getting-started-cs100" %}
+
+The data of the drag and dropped marker in the marker data source can be customized using the [markerDragStart](https://helpej2.syncfusion.com/vue/documentation/api/maps#markerdragstart) and the [markerDragEnd](https://helpej2.syncfusion.com/vue/documentation/api/maps#markerdragend) events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
+
+|   Argument Name      |   Description                               |
+|----------------------| --------------------------------------------|
+|   dataIndex          |   It represents the index of the data of the dragged marker in the marker data source.                          |
+|   latitude           |   It represents the latitude coordinate point of the dragged marker.                                            |
+|   longitude          |   It represents the longitude coordinate point for the dragged marker.                                          |
+|   markerIndex        |   It represents the index of the marker setting.                                                                |
+|   layerIndex         |   It represents the index of the layer in which the marker belongs.                                             |
+|   name               |   It represents the name of the event.                                                                          |
+|   x                  |   It represents the horizontal location of the mouse pointer on the map when the drag action is performed.      |
+|   y                  |   It represents the vertical location of the mouse pointer on the map when the drag action is performed.        |
+
+The following example shows how to use marker drag events to customize the data of the drag and dropped marker in the marker data source.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/maps/getting-started-cs101/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/maps/getting-started-cs101" %}
+
 ## Marker zooming
 
 The Maps can be initially scaled to the center value based on the marker distance. This can be achieved by setting the [`shouldZoomInitially`](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#shouldzoominitially) property in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/) as **true**.

@@ -14,7 +14,6 @@ new Vue({
         <e-column field='TaskName' :headerTemplate='projectName' width=150></e-column>
         <e-column field='StartDate' :headerTemplate='dateTemplate' width=150></e-column>
         <e-column field='Duration' :headerTemplate='durationTemplate' width=150></e-column>
-        <e-column field='Progress' :headerTemplate='projectName' width=150></e-column>
         <e-column field='Progress' :headerTemplate='progressTemplate' width=150></e-column>
       </e-columns>
       <template v-slot:projectName="{data}">
