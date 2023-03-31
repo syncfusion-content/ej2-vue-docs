@@ -7,6 +7,7 @@ Vue.use(GanttPlugin);
 new Vue({
 	el: '#app',
 	template: `
+    <div>
     <p class="e-text"> The parent container can be resizable by dragging the bottom-right corner.</p>
      <div class='e-ganttresize'>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :width = "width" :editSettings="editSettings"></ejs-gantt>

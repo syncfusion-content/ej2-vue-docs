@@ -3,12 +3,12 @@
 
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :resources="resources" :resourceFields="resourceFields":taskFields = "taskFields" :height = "height" :editSettings= "editSettings">
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :resources="resources" :resourceFields="resourceFields" :taskFields = "taskFields" :height = "height" :editSettings= "editSettings">
           <e-columns>
             <e-column field="TaskID"></e-column>
             <e-column
               field="TaskName"
-              :editType="dropdownedit"
+              editType="dropdownedit"
               :edit="dpParams"
             ></e-column>
             <e-column field="StartDate"></e-column>
@@ -20,9 +20,10 @@
 <script>
 import Vue from "vue";
 import { GanttPlugin, ContextMenu, Edit, Selection, Toolbar} from "@syncfusion/ej2-vue-gantt";
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { DropDownListPlugin,DropDownList } from '@syncfusion/ej2-dropdowns';
 import { editingData, editingResources} from './data-source.js';
 Vue.use(GanttPlugin);
+Vue.use(DropDownListPlugin);
 let elem;
 let dropdownlistObj;
 export default {

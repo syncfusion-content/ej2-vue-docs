@@ -4,7 +4,7 @@
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields"   :height="height" :includeWeekend="true" :timelineSettings="timelineSettings" :timezone="timezone" :durationUnit="durationUnit" :dateFormat="dateFormat"
-        :dayWorkingTime="dayWorkingTime">
+        >
         </ejs-gantt>
     </div>
 </template>

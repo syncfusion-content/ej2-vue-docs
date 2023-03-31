@@ -1,7 +1,7 @@
 
 import Vue from "vue";
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { data } from './datasource.js';
+import { projectNewData } from './data-source.js';
 
 Vue.use(GanttPlugin);
 
@@ -26,7 +26,7 @@ new Vue({
 
   data() {
     return {
-      data: data,
+      data: projectNewData,
       taskFields: {
             id: 'TaskID',
             name: 'TaskName',
@@ -40,14 +40,14 @@ new Vue({
   methods: {
     dataBound: function () {
         let cloned =  this.$refs.gantt.ej2Instances.addOnPersist;
-        this.$refs.gantt.ej2Instances.addOnPersist = function (key: any) {
-            key = key.filter((item: string)  => item !== "columns");
+        this.$refs.gantt.ej2Instances.addOnPersist = function (key) {
+            key = key.filter((item)  => item !== "columns");
             return cloned.call(this, key);
         };
     },
      clickAdd: function () {
         let obj = { field: "Progress", headerText: 'Progress', width: 100 };
-        this.$refs.gantt.ej2Instances.columns.push(obj as any); //you can add the columns by using the Gantt columns method
+        this.$refs.gantt.ej2Instances.columns.push(obj); //you can add the columns by using the Gantt columns method
         this.$refs.gantt.ej2Instances.treeGrid.refreshColumns();
     },
      clickRemove: function () {

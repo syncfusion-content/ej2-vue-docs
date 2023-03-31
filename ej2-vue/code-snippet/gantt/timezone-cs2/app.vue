@@ -4,7 +4,7 @@
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields"   :height="height" :includeWeekend="true" :editSettings="editSettings" :timelineSettings="timelineSettings" :timezone="timezone" :durationUnit="durationUnit" :dateFormat="dateFormat" :actionComplete= "actionComplete"
-        :dayWorkingTime="dayWorkingTime">
+        >
         </ejs-gantt>
     </div>
 </template>
@@ -152,11 +152,11 @@ export default {
         gantt: [ Selection, Edit]
     },
     methods:{
-        actionComplete(args: any) {
+        actionComplete(args) {
             if (args.action == "TaskbarEditing") {
                 console.log(args.data.ganttProperties.endDate);
             }
-        }
+        }}
     };
 </script>
 
