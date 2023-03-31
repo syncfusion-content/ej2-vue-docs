@@ -171,3 +171,37 @@ this.$refs.documenteditor.ej2Instances.editor.applyStyle('New Linked');
 //Clear direct formatting and apply the specified style
 this.$refs.documenteditor.ej2Instances.editor.applyStyle('New Linked', true);
 ```
+
+## Get Styles
+
+You can get the styles in the document using the below code snippet.
+
+```typescript
+//Get paragraph styles
+let paragraphStyles = this.$refs.documenteditor.ej2Instances.documentEditor.getStyles('Paragraph');
+//Get character styles
+let paragraphStyles = this.$refs.documenteditor.ej2Instances.documentEditor.getStyles('Character');
+```
+
+## Modify an existing style
+
+You can modify a existing style with the specified style properties using [`createStyle`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#createStyle) method. If modifyExistingStyle parameter is set to `true` the style properties is updated to the existing style.
+
+The following illustrate to modify an existing style.
+
+```typescript
+let styleJson: any = {
+    "type": "Paragraph",
+    "name": "Heading 1",
+    "characterFormat": {
+        "fontSize": 32,
+        "fontFamily": "Calibri"
+    }
+};
+this.$refs.documenteditor.ej2Instances.documentEditor.editor.createStyle(styleName, true);
+```
+
+> If modifyExistingStyle parameter is set to true and a style already exists with same name, it modifies the specified properties in the existing style.
+> If modifyExistingStyle parameter is set to false and a style already exists with same name, it creates a new style with unique name by appending ‘_1’. Hence, the newly style will not have the specified name.
+> If no style exists with same name, it creates a new style.
+Footer
