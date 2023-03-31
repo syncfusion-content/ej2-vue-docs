@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-         <ejs-accumulationchart id="container" centerLabel="centerLabel">
+         <ejs-accumulationchart id="container" :centerLabel="centerLabel">
             <e-accumulation-series-collection>
                 <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' innerRadius='65%'> </e-accumulation-series>
             </e-accumulation-series-collection>
