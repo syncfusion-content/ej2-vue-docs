@@ -51,6 +51,44 @@ You can define the distance of footer content from the bottom of the page by usi
 this.$refs.documenteditor.ej2Instances.selection.sectionFormat.footerDistance = 72;
 ```
 
+## Columns
+
+You can define the number of columns, column width, and space between columns for the pages in a section.
+
+The following code example illustrates how to define the two columns layout for the pages in a section.
+
+```javascript
+let column = new SelectionColumnFormat(this.$refs.documenteditor.ej2Instances.selection);
+column.width = 216;
+column.space = 36;
+this.$refs.documenteditor.ej2Instances.selection.sectionFormat.columns = [column, column];
+this.$refs.documenteditor.ej2Instances.selection.sectionFormat.lineBetweenColumns = true;
+```
+
+## Breaks
+
+You can insert Column break. The following code indicate that the text following the column break will begin in the next column.
+
+```javascript
+this.$refs.documentEditor.ej2Instances.editor.insertColumnBreak();
+```
+
+You can insert next page section break to start the new section on the next page.
+
+The following code example illustrates how to insert a next page section break.
+
+```javascript
+this.$refs.documentEditor.ej2Instances.editor.insertSectionBreak(SectionBreakType.NewPage);
+```
+
+You can insert continuous section break to start the new section on the same page
+
+The following code example illustrates how to insert a continuous section break
+
+```javascript
+this.$refs.documentEditor.ej2Instances.editor.insertSectionBreak(SectionBreakType.Continuous);
+```
+
 ## See Also
 
 *[Page setup dialog](../document-editor/dialog#page-setup-dialog)

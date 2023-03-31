@@ -58,18 +58,23 @@ var textfieldInfo = this.$refs.documenteditor.ej2Instances.getFormFieldInfo('Tex
 textfieldInfo.defaultValue = "Hello";
 textfieldInfo.format = "Uppercase";
 textfieldInfo.type = "Text";
+textfieldInfo.name = "Text2";
 this.$refs.documenteditor.ej2Instances.setFormFieldInfo('Text1',textfieldInfo);
 
 // Set checkbox form field properties
 var checkboxfieldInfo = this.$refs.documenteditor.ej2Instances.getFormFieldInfo('Check1');
 checkboxfieldInfo.defaultValue = true;
+checkboxfieldInfo.name = "Check2";
 this.$refs.documenteditor.ej2Instances.setFormFieldInfo('Check1',checkboxfieldInfo);
 
 // Set checkbox form field properties
 var dropdownfieldInfo = this.$refs.documenteditor.ej2Instances.getFormFieldInfo('Drop1');
-dropdownfieldInfo.dropDownItems = ['One','Two', 'Three']
+dropdownfieldInfo.dropDownItems = ['One','Two', 'Three'];
+dropdownfieldInfo.name = "Drop2";
 this.$refs.documenteditor.ej2Instances.setFormFieldInfo('Drop1',dropdownfieldInfo);
 ```
+
+>Note:If a form field already exists in the document with the new name specified, the old form field name property will be cleared and it will not be accessible. Ensure the new name is unique.
 
 ## Export form field data
 
