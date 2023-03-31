@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-         <ejs-accumulationchart id="container" centerLabel="centerLabel">
+         <ejs-accumulationchart id="container" :centerLabel="centerLabel">
             <e-accumulation-series-collection>
                 <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' innerRadius='65%'> </e-accumulation-series>
             </e-accumulation-series-collection>
@@ -28,6 +28,7 @@ export default {
             ],
         centerLabel: {
             text : 'Mobile<br>Browsers<br>Statistics',
+            hoverTextFormat: '${point.x} <br> Browser Share <br> ${point.y}%',
             textStyle:{
                 fontWeight: '900',
                 size: '15px',

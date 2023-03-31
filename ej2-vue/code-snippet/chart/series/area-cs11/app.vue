@@ -12,7 +12,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { ChartPlugin, SplineRangeAreaSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, RangeStepAreaSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -63,7 +63,7 @@ export default {
     };
   },
   provide: {
-    chart: [RangeStepAreaAeries, Category]
+    chart: [RangeStepAreaSeries, Category]
   },
 };
 </script>
