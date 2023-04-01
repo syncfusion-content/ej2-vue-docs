@@ -36,7 +36,7 @@ export default {
         let ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/GanttData","GET");
         this.showSpinner();
         ajax.send();
-        ajax.onSuccess = function (data: string) {
+        ajax.onSuccess = function (data) {
         this.hideSpinner();
         this.dataSource = (JSON.parse(data)).Items;
         this.refresh();

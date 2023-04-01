@@ -9,8 +9,8 @@
 <script>
 import Vue from "vue";
 import { L10n, loadCldr, setCulture } from '@syncfusion/ej2-base';
-import * as cagregorian from './ca-gregorian.json';
-import * as numbers from './numbers.json';
+import * as cagregorian from './ca-gregorian.js';
+import * as numbers from './numbers.js';
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
 

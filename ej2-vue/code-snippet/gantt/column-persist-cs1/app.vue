@@ -22,7 +22,7 @@
 <script>
 import Vue from "vue";
 import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { data } from './datasource.js';
+import { projectNewData } from './data-source.js';
 
 Vue.use(GanttPlugin);
 
@@ -38,7 +38,7 @@ var headTemplate = Vue.component("header", {
 export default {
   data() {
     return {
-      data: data,
+      data: projectNewData,
       taskFields: {
             id: 'TaskID',
             name: 'TaskName',

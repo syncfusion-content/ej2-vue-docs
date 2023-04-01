@@ -3,10 +3,10 @@
 
 <template>
      <div>
-    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings = "splitterSettings" :filterSettings="filterSettings" :allowFiltering= "">
+    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings = "splitterSettings" :filterSettings="filterSettings" :allowFiltering= true>
         <e-columns>
           <e-column field='TaskID' headerText='Task ID' textAlign='Left' width='100'></e-column>
-          <e-column field='TaskName':filter= 'filter' headerText='Task Name' width='150'></e-column>
+          <e-column field='TaskName' :filter= 'filter' headerText='Task Name' width='150'></e-column>
           <e-column field='StartDate' headerText='Start Date' width='150'></e-column>
           <e-column field='Duration' headerText='Duration' width='150'></e-column>
           <e-column field='Progress' headerText='Progress' width='150'></e-column>
@@ -19,7 +19,8 @@ import Vue from "vue";
 import { GanttPlugin, Filter, } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
 Vue.use(GanttPlugin);
-import { DropDownList } from "@syncfusion/ej2-dropdowns";
+import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns';
+Vue.use(DropDownListPlugin);
 import { DataManager } from "@syncfusion/ej2-data";
 import {createElement} from "@syncfusion/ej2-base";
 

@@ -33,9 +33,9 @@ new Vue({
                 allowTaskbarEditing: true,
                 showDeleteConfirmDialog: true
             },
-  },
+  
   provide: {
-      gantt: [, Edit, Selection, Toolbar]
-  }
+      gantt: [ Edit, Selection, Toolbar]
+  }}}}
 
-});
+);

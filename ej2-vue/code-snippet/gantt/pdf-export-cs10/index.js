@@ -1,9 +1,9 @@
 
 import Vue from "vue";
-import { Gantt, Toolbar, PdfExport, Selection, PdfQueryTimelineCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
+import { GanttPlugin, Toolbar, PdfExport, Selection, PdfQueryTimelineCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
-import { ganttData  } from './data-source.js';
+import {editingData  } from './data-source.js';
 Vue.use(GanttPlugin);
 ;
 new Vue({
@@ -17,7 +17,7 @@ new Vue({
 
   data: function() {
       return{
-        data: ganttData,
+        data:editingData,
         height:'450px',
         taskFields: {
             id: 'TaskID',

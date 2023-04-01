@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :holidays = "holidays" :enableCriticalPath="true" :editSettings="editSettings"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :enableCriticalPath="true" :editSettings="editSettings"></ejs-gantt>
     </div>
 `,
 

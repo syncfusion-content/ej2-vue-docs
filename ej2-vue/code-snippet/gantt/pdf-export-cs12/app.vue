@@ -8,16 +8,14 @@
 </template>
 <script>
 import Vue from "vue";
-import { Gantt, Toolbar, PdfExport, Selection, PdfExportProperties } from "@syncfusion/ej2-vue-gantt";
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
-import { PdfColor } from '@syncfusion/ej2-pdf-export';
-import { PdfPaddings } from '@syncfusion/ej2-gantt/src/export/pdf-base/pdf-borders';
-import { ganttData  } from './data-source.js';
+import { GanttPlugin, Toolbar, PdfExport, Selection, PdfExportProperties } from "@syncfusion/ej2-vue-gantt";
+import { PdfColor,PdfPaddings  } from '@syncfusion/ej2-pdf-export';
+import {editingData  } from './data-source.js';
 Vue.use(GanttPlugin);
 export default {
   data: function() {
       return{
-        data: ganttData,
+        data:editingData,
         height:'450px',
         taskFields: {
             id: 'TaskID',
@@ -30,7 +28,7 @@ export default {
         toolbar: ['PdfExport'],
         toolbarClick: (args) => {
                 if (args.item.id === 'GanttContainer_pdfexport') {
-                    let exportProperties: PdfExportProperties = {
+                    let exportProperties = {
                       fontFamily: 1,
                       columnHeader: {
                          backgroundColor: new PdfColor(179, 219, 255)
