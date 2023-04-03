@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { ChartPlugin, LineSeries, Category, ErrorBar } from "@syncfusion/ej2-vue-charts";
 

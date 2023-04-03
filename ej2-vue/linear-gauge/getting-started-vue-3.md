@@ -75,20 +75,20 @@ You have completed all the necessary configurations needed for rendering the Syn
 | `RangeDirective`   | `e-range`   |
 
 ```js
-    import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
-    //Component registeration.
-    export default {
-        name: "App",
-        components: {
-        'ejs-lineargauge' : LinearGaugeComponent,
-        'e-axes' : AxesDirective,
-        'e-axis' : AxisDirective,
-        'e-pointers': PointersDirective,
-        'e-pointer' : PointerDirective,
-        'e-ranges' : RangesDirective,
-        'e-range' : RangeDirective
-        }
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
+//Component registeration.
+export default {
+    name: "App",
+    components: {
+      'ejs-lineargauge' : LinearGaugeComponent,
+      'e-axes' : AxesDirective,
+      'e-axis' : AxisDirective,
+      'e-pointers': PointersDirective,
+      'e-pointer' : PointerDirective,
+      'e-ranges' : RangesDirective,
+      'e-range' : RangeDirective
     }
+}
 ```
 
 In the above code snippet, you have registered Linear Gauge and the directives for axis, pointer and range. Axis directives are used to define the axis settings for the Linear Gauge component. Pointer and range directives are used to define the properties of pointer and  range respectively.

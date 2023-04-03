@@ -23,6 +23,7 @@ export default {
             axes: [{
                 labelStyle: {
                     position: 'Inside',
+                    //Label format set as currency.
                     format: 'c'
                 }
             }]
