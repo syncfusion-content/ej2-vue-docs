@@ -302,6 +302,7 @@ Customize the color of progress, secondary progress, and track by using the [`pr
              width='90%'
              :trackThickness='trackThickness'
              :progressThickness='progressThickness'
+             :secondaryProgress = '90' 
              :secondaryProgressColor='secondaryProgressColor'
              :value='value'
              progressColor='#E3165B'
@@ -331,7 +332,7 @@ export default Vue.extend({
     trackThickness:24,
     progressThickness:24,
     secondaryProgressColor: 'green',
-    value:100
+    value:70
     };
   },
   provide: {},

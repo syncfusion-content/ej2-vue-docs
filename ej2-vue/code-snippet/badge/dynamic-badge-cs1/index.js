@@ -119,11 +119,13 @@ new Vue({
     },
     methods: {
         butonClick: function() {
-            for (let data of this.data) {
-                if (data["badge"] !== "") {
-                    ++data["messages"];
-                }
-            }
+            let badgeElements = Array.prototype.slice.call(
+                document.getElementById("lists").getElementsByClassName("e-badge")
+            );
+            badgeElements.forEach((element) => {
+                element.textContent =
+                    Number(element.textContent.split(" ")[0]) + 1 + " New";
+            });
         }
     }
 

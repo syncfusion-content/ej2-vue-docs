@@ -30,11 +30,11 @@ export default {
     primaryXAxis: {
             valueType: 'Double',
             title: 'Overs'
-        };
+        },
     primaryYAxis: {
             title: 'Runs'
-        };
-    title: 'England - Run Rate';
+        },
+    title: 'England - Run Rate',
     };
   },
   provide: {

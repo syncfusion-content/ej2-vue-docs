@@ -27,7 +27,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 <td>Client-side</td>
 <td>
 
-```typescript
+```
 <template>
     <ejs-documenteditorcontainer></ejs-documenteditorcontainer>
 </template>
@@ -36,7 +36,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 </td>
 <td>
 
-```typescript
+```
 <template>
     <ejs-documenteditorcontainer :documentEditorSettings="settings"></ejs-documenteditorcontainer>
 </template>
@@ -57,7 +57,7 @@ As a backward compatibility to create older format SFDT files, refer the followi
 <td>Server-side C#</td>
 <td>
 
-```c#
+```
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 ```
@@ -65,7 +65,7 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 </td>
 <td>
 
-```c#
+```
 WordDocument sfdtDocument = WordDocument.Load(stream, formatType);
 sfdtDocument.OptimizeSfdt = false;
 string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
@@ -77,14 +77,14 @@ string sfdt = Newtonsoft.Json.JsonConvert.SerializeObject(sfdtDocument);
 <td>Server-side Java</td>
 <td>
 
-```java
+```
 String sfdtDocument = WordProcessorHelper.load(stream, formatType);
 ```
 
 </td>
 <td>
 
-```java
+```
 String sfdtDocument = WordProcessorHelper.load(stream, formatType, false);
 ```
 
@@ -102,7 +102,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Client-side</td>
 <td>
 
-```typescript
+```
 <template>
     <ejs-documenteditorcontainer :documentEditorSettings="settings"></ejs-documenteditorcontainer>
 </template>
@@ -123,7 +123,7 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Server-side C#</td>
 <td>
 
-```c#
+```
 using(Syncfusion.DocIO.DLS.WordDocument docIODocument = WordDocument.Save(optimizedSfdt)) {
 sfdtDocument = WordDocument.Load(docIODocument);
 sfdtDocument.OptimizeSfdt = false;
@@ -137,7 +137,7 @@ string oldSfdt = JsonSerializer.Serialize(sfdtDocument);
 <td>Server-side Java</td>
 <td>
 
-```java
+```
 WordDocument docIODocument = WordProcessorHelper.save(optimizedSfdt));
 String oldSfdt = WordProcessorHelper.load(docIODocument, false);
 ```
