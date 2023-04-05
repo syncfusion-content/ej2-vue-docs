@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-        <ejs-grid ref='grid' id='Grid' :dataSource='parentData' :childGrid='childGrid' :toolbar='["ExcelExport"]' :toolbarClick='toolbarClick' :allowExcelExport='true'>
+        <ejs-grid ref='grid' id='Grid' :dataSource='parentData' :childGrid='childGrid' :toolbar='["ExcelExport"]' :toolbarClick='toolbarClick' :beforeExcelExport='beforeExcelExport' :allowExcelExport='true'>
                 <e-columns>
                     <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120></e-column>
                     <e-column field='FirstName' headerText='FirstName' width=150></e-column>
@@ -44,6 +44,9 @@ export default {
             };
             this.$refs.grid.excelExport(exportProperties);
         }
+      },
+      beforeExcelExport: function(args) {
+        args.isChild = true;
       }
   },
   provide: {

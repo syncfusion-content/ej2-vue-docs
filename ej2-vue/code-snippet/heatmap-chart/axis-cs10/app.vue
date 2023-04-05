@@ -41,11 +41,18 @@ export default {
             labels: ['Laptop', 'Mobile', 'Gaming', 'Cosmetics', 'Fragnance', 'Watches', 'Handbags', 'Apparels', 'Kitchenware', 'Furniture', 'Home Decor'],
             multiLevelLabels: [
                 {
+                    overflow:'Trim',
+                    alignment: 'Near',
+                     textStyle: {
+                        color: 'black',
+                        fontWeight: 'Bold'
+                    },
+                    border: { type: 'Rectangle', color: '#a19d9d' },
                     categories: [
                         { start: 0, end: 2, text: 'Electronics', },
                         { start: 3, end: 4, text: 'Beauty and personal care', maximumTextWidth: 50},
                         { start: 5, end: 7, text: 'Fashion', },
-                        { start: 8, end: 10, text: 'Household', },
+                        { start: 8, end: 10, text: 'Household', }
                     ]
                 }
             ]
@@ -54,17 +61,35 @@ export default {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             multiLevelLabels: [
                 {
+                    border: { type: 'Brace', color: '#a19d9d' },
                     categories: [
                         { start: 0, end: 2, text: 'Q1' },
                         { start: 3, end: 5, text: 'Q2' },
                         { start: 6, end: 8, text: 'Q3' },
                         { start: 9, end: 11, text: 'Q4' }
                     ]
+                },
+                {
+                    border: { type: 'Brace', color: '#a19d9d' },
+                    categories: [
+                      { start: 0, end: 5, text: 'First Half Yearly' },
+                      {
+                        start: 6,
+                        end: 11,
+                        text: 'Second Half Yearly'
+                      }
+                    ]
+                },
+                {
+                    border: { type: 'Brace', color: '#a19d9d' }
+                    categories: [
+                        { start: 0, end: 11, text: 'Yearly' }
+                    ]
                 }
             ]
         },
         legendSettings: {
-            visible: false,
+            visible: false
         },
         paletteSettings: {
             palette: [{ color: '#F0C27B' },
