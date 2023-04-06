@@ -20,7 +20,8 @@ new Vue({
         return {
             enableRtl: true,
             tooltip: {
-                type:['Pointer', 'Range'],
+                type: ['Pointer', 'Range'],
+                format: 'Pointer : {value} ',
                 enable: true,
                 enableAnimation: false
             },
