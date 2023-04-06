@@ -450,7 +450,7 @@ provide: {
 
 ### Customizing the zoom toolbar
 
-The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#toolbarsettings) option in the [zoomSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel). The following properties can be used to customize the zoom toolbar.
+The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#toolbarsettings) option in the [zoomSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/). The following properties can be used to customize the zoom toolbar.
 
 * [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarSettingsModel/#backgroundcolor) - It is used to customize the background color of the zoom toolbar.
 * [borderOpacity](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarSettingsModel/#borderopacity) - It is used to customize the opacity of the border of the zoom toolbar.
@@ -471,7 +471,7 @@ The zoom toolbar can be customized by using the [toolbarSettings](https://ej2.sy
 <!-- markdownlint-disable MD036 -->
 **Customizing the buttons in the zoom toolbar**
 
-The appearance of the buttons in the zoom toolbar can be customized by using the [buttonSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarSettingsModel/#buttonsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel). The following properties can be used to customize the zoom toolbar buttons.
+The appearance of the buttons in the zoom toolbar can be customized by using the [buttonSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarSettingsModel/#buttonsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel) property. The following properties can be used to customize the zoom toolbar buttons.
 
 * [fill](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarButtonSettingsModel/#fill) - It is used to set the background color of the buttons.
 * [color](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarButtonSettingsModel/#color) - It is used to customize the color of the icons inside the button.
@@ -496,7 +496,7 @@ The appearance of the buttons in the zoom toolbar can be customized by using the
 <!-- markdownlint-disable MD036 -->
 **Customizing the tooltip of the zoom toolbar**
 
-The appearance of the tooltip of the zoom toolbar can be customized by using the [tooltipSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarTooltipSettingsModel/) option in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel). The following properties are available to customize the zoom toolbar tooltip.
+The appearance of the tooltip of the zoom toolbar can be customized by using the [tooltipSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarSettingsModel/#tooltipsettings) option in the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel/#toolbarsettings) of the [zoomSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomSettingsModel) property. The following properties are available to customize the zoom toolbar tooltip.
 
 * [visible](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarTooltipSettingsModel/#visible) - Enables or disables the tooltip of the zoom toolbar.
 * [fill](https://ej2.syncfusion.com/vue/documentation/api/maps/zoomToolbarTooltipSettingsModel/#fill) - It is used to change the background color of the tooltip of the zoom toolbar.
