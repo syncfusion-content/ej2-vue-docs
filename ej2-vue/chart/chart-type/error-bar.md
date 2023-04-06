@@ -82,7 +82,7 @@ To customize the error bar cap length, width and fill color, you can use [`error
         
 {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs6" %}
 
-**Customizing Error Bar Color**
+## Customizing Error Bar Color
 
 To customize the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error and vertical negative and positive error for an individual point using [`verticalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalerror), [`horizoontalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalnegativeerror) and [`verticalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalpositiveerror) properties.
 

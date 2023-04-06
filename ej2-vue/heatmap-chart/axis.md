@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Axis in Vue Heatmap chart component
 
-Heat map consists of two axes namely, X-axis and Y-axis that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the heat map.
+HeatMap consists of two axes namely, X-axis and Y-axis that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the HeatMap.
 
 ## Types
 
-There are three different axis types available in the heat map, which defines the data type of the axis labels. You can define the axis type by using the [valueType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#valuetype) property in the heat map.
+There are three different axis types available in the HeatMap, which defines the data type of the axis labels. You can define the axis type by using the [valueType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#valuetype) property in the HeatMap.
 
 ### Category axis
 
@@ -54,7 +54,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ## Inversed axis
 
-Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [isInversed](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#isinversed) property.
+HeatMap supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [isInversed](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#isinversed) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -66,7 +66,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ## Opposed axis
 
-In heat map, you can place the axis label in an opposite position of its default axis label position by using the [opposedPosition](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#opposedposition) property.
+In HeatMap, you can place the axis label in an opposite position of its default axis label position by using the [opposedPosition](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#opposedposition) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -78,7 +78,7 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ## Label formatting
 
-Heat map supports formatting the axis labels by using the [labelFormat](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#labelformat) property. Using this property, you can customize the axis label by global string format ('P', 'C', etc) or customized format like '{value}°C'.
+HeatMap supports formatting the axis labels by using the [labelFormat](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#labelformat) property. Using this property, you can customize the axis label by global string format ('P', 'C', etc) or customized format like '{value}°C'.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -90,7 +90,7 @@ Heat map supports formatting the axis labels by using the [labelFormat](https://
 
 ## Axis intervals
 
-In heat map, you can define an interval between the axis labels using the [interval](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#interval) property. In date-time axis, you can change the interval mode by using the [intervalType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#intervaltype) property. The date-time axis supports the following interval types:
+In HeatMap, you can define an interval between the axis labels using the [interval](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#interval) property. In date-time axis, you can change the interval mode by using the [intervalType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#intervaltype) property. The date-time axis supports the following interval types:
 
 * Years
 * Months
@@ -108,7 +108,7 @@ In heat map, you can define an interval between the axis labels using the [inter
 
 ## Axis label increment
 
-Axis label increment in the heat map is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the [increment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#increment) property and the default value of this property is **1**.
+Axis label increment in the HeatMap is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the [increment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#increment) property and the default value of this property is **1**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -136,21 +136,19 @@ You can display the axis labels at specific time intervals along with the date-t
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/axis-cs9" %}
 
-## Multi Level Labels
+## Multilevel Labels
 
-You can add many levels of labels using the [multiLevelLabels](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#multilevellabels) property.
-This property can be configured using the following properties:
+Multilevel labels are used to classify a group of axis labels as a single category, which is then displayed with a label. By using [multiLevelLabels](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#multilevellabels), you can add multiple levels on top of the axis labels.
 
-* Categories
-* Overflow
-* Alignment
-* Text style
-* Border
+To divide and group the axis labels, you can use `multiLevelLabels` property. The starting and ending indexes of the axis labels can be set using the [start](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#start) and [end](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#end) properties in the [categories](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/). The [text](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#text) property can be used to specify a name for the grouped axis labels.
 
-### Categories
+The multilevel labels can be customized by using the following properties.
+* [overflow](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabels/#overflow) - It is used to trim or wrap the multilevel labels when the label overflows the intended space. NOTE: This property is only for x-axis.
+* [alignment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabels/#alignment) - It is used to place and align the multilevel labels.
+* [maximumTextWidth](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#maximumtextwidth) - It is used to set the maximum width of the text. When the text length exceeds the maximum text width, the overflow action will be performed.
+* [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabels/#textstyle) - It is used to customize the font style of the multilevel labels.
+* [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabels/#border) - It is used to customize the border of the multilevel labels displayed in the x-axis and y-axis.
 
-Using this property, you can configure [start](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#start), [end](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#end), [text](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#text), [maximumTextWidth](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelCategoriesModel/#maximumtextwidth) of the
-multilevel labels.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -159,53 +157,3 @@ multilevel labels.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/axis-cs10" %}
-
-### Overflow
-
-Using this property, you can trim and wrap the multilevel labels.
-
->Note: This support works in x-axis only.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/heatmap-chart/axis-cs11/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/axis-cs11" %}
-
-### Alignment
-
-This property provides an option to position the multilevel labels at far, center, and near.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/heatmap-chart/axis-cs12/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/axis-cs12" %}
-
-### Text Customization
-
-The [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabelsModel/#textstyle) property of multilevel labels provides options to customize the size, color, fontFamily, fontWeight, fontStyle, opacity, textAlignment, and textOverflow.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/heatmap-chart/axis-cs13/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/axis-cs13" %}
-
-### Border Customization
-
-Using the [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/multiLevelLabelsModel/#border) property, you can customize the width, color and type. The type of border are **Rectangle**, **WithoutTopBorder**, **WithoutBottomBorder**, **WithoutTopAndBottomBorder**, **Brace**, and **WithoutBorder**.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/heatmap-chart/axis-cs14/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/heatmap-chart/axis-cs14" %}

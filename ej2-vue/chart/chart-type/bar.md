@@ -22,6 +22,18 @@ To render a bar series, use series [`type`](https://ej2.syncfusion.com/vue/docum
         
 {% previewsample "page.domainurl/code-snippet/chart/series/bar-cs1" %}
 
+##  Bar space and width
+
+The [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#columnspacing) and [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#columnwidth) properties are used to customize the space between bars.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/bar-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/bar-cs" %}
+
 ## Grouped Bar
 
 You can use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#groupname) property to group the data points in the bar type charts. Data points with same group name are grouped together.

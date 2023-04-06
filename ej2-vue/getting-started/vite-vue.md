@@ -34,13 +34,13 @@ yarn create vite
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2.Select `Vue` as the framework. It will creates a Vue 3 project.
+2. Select `Vue` as the framework. It will creates a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -53,7 +53,7 @@ Using one of the above commands will lead you to set up additional configuration
   Others
 ```
 
-3.Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
+3. Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -63,7 +63,7 @@ Using one of the above commands will lead you to set up additional configuration
   Nuxt ↗
 ```
 
-4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -120,7 +120,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 Follow the below steps to add the Vue Grid component using `Options API`:
 
-  1.First, import the Grid component in the `script` section of the **src/App.vue** file.
+  1. First, import the Grid component in the `script` section of the **src/App.vue** file.
 
 ```html
 <script>
@@ -128,7 +128,7 @@ Follow the below steps to add the Vue Grid component using `Options API`:
 </script>
 ```
    
-  2.The next step is to register the Grid component and its child directives in Vue.
+  2. The next step is to register the Grid component and its child directives in Vue.
 
 ```js
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
@@ -143,7 +143,7 @@ export default {
 }
 ``` 
 
-  3.In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
+  3. In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
 
 ```html
 <template>
@@ -159,7 +159,7 @@ export default {
 </template>
 ```
 
-  4.Declare the values for the `dataSource` property in the `script` section.
+  4. Declare the values for the `dataSource` property in the `script` section.
 
 ```js
 data() {

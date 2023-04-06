@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-         <ejs-chart id="container":title='title' :primaryXAxis='primaryXAxis'>
+         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
             </e-series-collection>

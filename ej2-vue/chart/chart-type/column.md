@@ -22,6 +22,18 @@ To render a column series, use series [`type`](https://ej2.syncfusion.com/vue/do
         
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs13" %}
 
+## Column space and width
+
+The [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#columnspacing) and [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#columnwidth) properties are used to customize the space between columns.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/column-cs23/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs23" %}
+
 ## Grouped column
 
 You can use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#groupname) property to group the data points in the column type charts. Data points with same group name are grouped together.
