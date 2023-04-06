@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Filtering in Vue Grid component
 
-Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/). To use filter, inject `Filter` module in the `provide` section.
+Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/).
 
 To get start quickly with Filtering Options, you can check on this video:
 
