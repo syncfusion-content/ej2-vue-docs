@@ -40,6 +40,6 @@ data () {
     }
 },
 provide: {
-    maps: [Marker, Zoom]
+    maps: [Zoom]
 }
 });
