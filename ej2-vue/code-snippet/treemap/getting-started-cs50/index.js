@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div class="control_wrapper">
-        <ejs-treemap id="treemap"  :dataSource='dataSource' :weightValuePath='weightValuePath' :levels='levels' :palette= 'palette'></ejs-treemap>
+        <ejs-treemap id="treemap"  :dataSource='dataSource' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings' :levels='levels' :palette= 'palette'></ejs-treemap>
     </div>
 `,
 
@@ -36,10 +36,13 @@ new Vue({
     ],
     palette: ["#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"],
     weightValuePath: 'EmployeesCount',
+    leafItemSettings:{
+      showLabels:false
+    },
     levels: [
-        { groupPath: 'Country', headerTemplate:'<div>{{Country}}</div>', headerPosition:'Center', border: { color: 'black', width: 0.5 } },
-        { groupPath: 'JobDescription',headerTemplate:'<div>{{JobDescription}}</div>', headerPosition:'Center', border: { color: 'black', width: 0.5 } },
-        { groupPath: 'JobGroup',headerTemplate:'<div>{{JobGroup}}</div>', headerPosition:'Far', border: { color: 'black', width: 0.5 } },
+        { groupPath: 'Country', headerFormat:' ', headerTemplate:'<div>${Country}</div>', headerPosition:'Center', border: { color: 'black', width: 0.5 } },
+        { groupPath: 'JobDescription', headerFormat:' ', headerTemplate:'<div>${JobDescription}</div>', headerPosition:'Center', border: { color: 'black', width: 0.5 } },
+        { groupPath: 'JobGroup', headerFormat:' ', headerTemplate:'<div>${JobGroup}</div>', headerPosition:'Far', border: { color: 'black', width: 0.5 } },
     ]
     }
   }

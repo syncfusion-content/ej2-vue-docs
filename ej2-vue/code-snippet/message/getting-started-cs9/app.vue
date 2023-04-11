@@ -4,13 +4,15 @@
   <div class=" msg-template-section">
     <div class="content-section">
       <ejs-button id="showBtn" ref="showBtn" content="Show pull request" cssClass="e-outline e-primary e-success msg-hidden" v-on:click.native="showClick"></ejs-button>
-      <ejs-message id="msg_template" ref="msgTemplate" severity="Success" :closed="closed">
-        <div>
-          <h1>Merged pull request</h1>
-          <p>Pull request #41 merged after a successful build</p>
-          <ejs-button id="commitBtn" cssClass="e-link" content="View commit"></ejs-button>
-          <ejs-button id="closeBtn" cssClass="e-link" content="Dismiss" v-on:click.native="dismissClick"></ejs-button>
-        </div>
+      <ejs-message id="msg_template" ref="msgTemplate" severity="Success" :content="'contentTemplate'" :closed="closed">
+        <template v-slot:contentTemplate>
+          <div>
+            <h1>Merged pull request</h1>
+            <p>Pull request #41 merged after a successful build</p>
+            <ejs-button id="commitBtn" cssClass="e-link" content="View commit"></ejs-button>
+            <ejs-button id="closeBtn" cssClass="e-link" content="Dismiss" v-on:click.native="dismissClick"></ejs-button>
+          </div>
+        </template>
       </ejs-message>
     </div>
   </div>

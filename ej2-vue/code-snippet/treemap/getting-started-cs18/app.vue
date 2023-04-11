@@ -44,7 +44,7 @@ export default {
         ],
         leafItemSettings: {
           showLabels: false,
-          labelTemplate: '<div style="background-color: red">{{:Company}}</div>',
+          labelTemplate: '<div style="background-color: red">${Company}</div>',
           templatePosition: 'Center'
         }
     }
@@ -54,7 +54,7 @@ export default {
         let labelElementGroup = document.getElementById('container_Label_Template_Group');
         labelElementGroup.remove();
     }
-}
+  }
 }
 </script>
 
