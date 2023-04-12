@@ -99,20 +99,6 @@ To collapse the selected grouped row from an external button by using the [`expa
         
 {% previewsample "page.domainurl/code-snippet/grid/group/default-cs7" %}
 
-## Diacritics filter
-
-By default, grid ignores diacritic characters while filtering. To include diacritic characters, set the [`filterSettings.ignoreAccent`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#ignoreaccent) as **true**.
-
-In the following sample, type **mun** in **Ship City** column to filter diacritic characters.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/grid/filter/default-cs11/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/filter/default-cs11" %}
-
 ## Sort grouped columns in descending order during initial grouping
 
 By default, grouped columns are sorted in ascending order. To sort grouped columns in descending order during initial grouping, you can set the [field](https://ej2.syncfusion.com/vue/documentation/api/grid/sortDescriptorModel/#field) and [direction](https://ej2.syncfusion.com/vue/documentation/api/grid/sortDescriptorModel/#direction-string) in the `sortSettings.columns` property.
