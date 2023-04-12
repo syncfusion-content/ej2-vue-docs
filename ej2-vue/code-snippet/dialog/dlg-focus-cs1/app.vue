@@ -7,7 +7,7 @@
         <!-- Render Button to open the Dialog -->
         <ejs-button id='dlgbtn' v-on:click.native="dialogBtnClick">Open Dialog</ejs-button>
         <!-- Render Dialog -->
-        <ejs-dialog id="dialog" ref="Dialog" :header='header' :target='target' :width='width' :buttons='buttons' :visible='visible' :open="onOpen">
+        <ejs-dialog id="dialog" ref="Dialog" :header='header' :target='target' :width='width' :buttons='buttons' :open="onOpen">
            <div class='form-group'><label for='email'>Email:</label>
                 <input type='email' class='form-control' id='email'>
             </div>
