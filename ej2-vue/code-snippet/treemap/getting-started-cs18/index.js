@@ -44,7 +44,7 @@ new Vue({
         ],
         leafItemSettings: {
           showLabels: false,
-          labelTemplate: '<div style="background-color: red">{{:Company}}</div>',
+          labelTemplate: '<div style="background-color: red">${Company}</div>',
           templatePosition: 'Center'
         }
     }

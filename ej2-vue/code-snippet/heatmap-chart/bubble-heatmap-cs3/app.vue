@@ -8,7 +8,7 @@
 </template>
 <script>
 import Vue from 'vue';
-import { HeatMapPlugin, Legend, Adaptor } from '@syncfusion/ej2-vue-heatmap';
+import { HeatMapPlugin, Legend, Adaptor, Tooltip } from '@syncfusion/ej2-vue-heatmap';
 Vue.use(HeatMapPlugin);
 
 export default {
@@ -65,7 +65,7 @@ export default {
     }
   },
  provide:{
-    heatmap:[Legend, Adaptor]
+    heatmap:[Legend, Adaptor, Tooltip]
 }
 }
 </script>

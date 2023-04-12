@@ -37,7 +37,7 @@ Vue.use(TreeMapPlugin);
 export default {
    data () {
     return {
-      dataSource:  [
+       dataSource:  [
             { Continent: "China", Company: "Volkswagen", Sales: 3005994 },
             { Continent: "China", Company: "General Motors", Sales: 1230044 },
             { Continent: "China", Company: "Honda", Sales: 1197023 },
@@ -65,12 +65,11 @@ export default {
         ],
         leafItemSettings: {
           showLabels: false,
-          labelTemplate: '<div style="background-color: red">{{:Company}}</div>',
+          labelTemplate: '<div style="background-color: red">${Company}</div>',
           templatePosition: 'Center'
         }
-    }
+     }
   }
-}
 }
 </script>
 ```
