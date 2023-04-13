@@ -11,7 +11,7 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' columnWidth=0.5 columnSpacing=0.5 type='Column' xName='country' yName='gold' name='Gold' fill='red' :border='border'> </e-series>
+                <e-series :dataSource='seriesData' columnWidth=0.5 columnSpacing=0.5 type='Column' xName='country' yName='gold' name='Gold' fill='red' :border='border' dashArray='4' opacity='0.4'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -30,7 +30,7 @@ new Vue({
              { country: "Sweden", gold: 30 }
               ],
         border: {
-            color: 'green',
+            color: 'black',
             width: 2
         },
         primaryXAxis: {

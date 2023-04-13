@@ -37,7 +37,7 @@ export default {
         },
         title: "Annual Temperature Comparisone",
         border:{
-            width: 5,
+            width: 2,
             color: 'white'  
         }
     };

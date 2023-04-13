@@ -4,8 +4,8 @@
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='RangeColumn'  xName='x' low='low' high='high' fill="blue" :border="border"></e-series>
-                <e-series :dataSource='seriesData2' type='RangeColumn'  xName='x' low='low' high='high' fill="red" :border="border"></e-series>
+                <e-series :dataSource='seriesData1' type='RangeColumn'  xName='x' low='low' high='high' fill="blue" :border="border" dashArray='2.5' opacity='0.8'></e-series>
+                <e-series :dataSource='seriesData2' type='RangeColumn'  xName='x' low='low' high='high' fill="red" :border="border" dashArray='2.5' opacity='0.8'></e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

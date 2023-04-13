@@ -11,10 +11,10 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y' name='USA'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y1' name='UK'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y2' name='Canada'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y3' name='China'> </e-series>
+            <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y' name='USA' fill="red" dashArray="5" :border="border"> </e-series>
+            <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y1' name='UK' fill="yellow" dashArray="5" :border="border"> </e-series>
+            <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y2' name='Canada' fill="green" dashArray="5" :border="border"> </e-series>
+            <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y3' name='China' fill="blue" dashArray="5" :border="border"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -36,7 +36,11 @@ new Vue({
             interval: 1,
             valueType: 'Category'
         },
-         title: "Mobile Game Market by Country"
+         title: "Mobile Game Market by Country",
+         border:{
+          width: 1,
+          color: 'black'
+         }
     };
   },
   provide: {

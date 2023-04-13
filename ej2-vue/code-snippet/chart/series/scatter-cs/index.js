@@ -4,12 +4,12 @@ import { ChartPlugin, ScatterSeries } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
-let series1: Object[] = [];
-let series2: Object[] = [];
-let point1: Object;
-let value: number = 80;
-let value1: number = 70;
-let i: number;
+let series1 = [];
+let series2 = [];
+let point1;
+let value = 80;
+let value1 = 70;
+let i;
 for (i = 1; i < 50; i++) {
     if (Math.random() > 0.5) {
         value += Math.random();
@@ -38,8 +38,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container">
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Scatter' xName='x' yName='y' name='Male' opacity=0.7> </e-series>
-                <e-series :dataSource='seriesData2' type='Scatter' xName='x' yName='y' name='Female' opacity=0.7> </e-series>
+            <e-series :dataSource='seriesData1' type='Scatter' xName='x' yName='y' name='Male' opacity=0.7 fill="red" :marker="marker"> </e-series>
+            <e-series :dataSource='seriesData2' type='Scatter' xName='x' yName='y' name='Female' opacity=0.7 fill="green" :marker="marker"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -48,7 +48,12 @@ new Vue({
   data() {
     return {
       seriesData1: series1,
-      seriesData2: series2
+      seriesData2: series2,
+      marker:{
+        shape: 'Triangle',
+        height: 7,
+        width: 7
+      }
     };
   },
   provide: {

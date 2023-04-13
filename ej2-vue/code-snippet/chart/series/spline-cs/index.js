@@ -11,8 +11,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Spline' xName='x' yName='y' name='London'  width=2
-                :marker='marker'> </e-series>
+            <e-series :dataSource='seriesData' type='Spline' xName='x' yName='y' name='London'  width=2
+            :marker='marker' fill="red" :border="border" dashArray='2.5'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -31,7 +31,10 @@ new Vue({
            valueType: 'Category'
         },
       marker: { visible: true, width: 10, height: 10 },
-      title: "Climate Graph-2012"
+      title: "Climate Graph-2012",
+      border:{
+        width: 2, color:'yellow'
+      }
     };
   },
   provide: {

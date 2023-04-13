@@ -24,7 +24,7 @@ new Vue({
      { x: 2008, y: 27 }, { x: 2009, y: 32 }, { x: 2010, y: 35 },
      { x: 2011, y: 30 }],
       primaryXAxis: {
-          title: 'Year',
+          title: 'Year', coefficient: 50,
           minimum: 2004, maximum: 2012, interval: 1
         },
          primaryYAxis: {

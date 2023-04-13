@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartPlugin, StepAreaSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, SplineAreaSeries } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -9,11 +9,11 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='StepArea' xName='x' yName='y' name='India'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
+      <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+        <e-series-collection>
+          <e-series :dataSource='seriesData' type='SplineArea' xName='x' yName='y' name='India'> </e-series>
+        </e-series-collection>
+      </ejs-chart>
     </div>
 `,
 
@@ -31,15 +31,15 @@ new Vue({
     primaryXAxis: {
             valueType: 'Double',
             title: 'Overs'
-        };
+        },
     primaryYAxis: {
             title: 'Runs'
-        };
-    title: 'England - Run Rate';
+        },
+    title: 'England - Run Rate',
     };
   },
   provide: {
-    chart: [StepAreaSeries]
+    chart: [SplineAreaSeries]
   }
 
 });
