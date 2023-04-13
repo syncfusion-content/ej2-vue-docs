@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartPlugin, SplineRangeAreaSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, RangeStepAreaSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -11,8 +11,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='SplineRangeArea' xName='x' high='high' low='low' name='England'> </e-series>
-                <e-series :dataSource='seriesData1' type='SplineRangeArea' xName='x' high='high' low='low' name='India'> </e-series>
+                <e-series :dataSource='seriesData' type='RangeStepArea' xName='x' high='high' low='low' name='England'> </e-series>
+                <e-series :dataSource='seriesData1' type='RangeStepArea' xName='x' high='high' low='low' name='India'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -64,7 +64,7 @@ new Vue({
     };
   },
   provide: {
-    chart: [SplineRangeAreaSeries, Category]
+    chart: [RangeStepAreaSeries, Category]
   },
 
 });

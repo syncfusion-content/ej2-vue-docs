@@ -4,7 +4,7 @@
     <div id="app">
          <ejs-chart id="container">
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Bubble' size='size' xName='x' yName='y' name='pound' fill="blue"> </e-series>
+                <e-series :dataSource='seriesData1' type='Bubble' size='size' xName='x' yName='y' name='pound' fill="blue" :border="border"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -30,7 +30,11 @@ export default {
         { x: 99, y: 0.2, size: 0.128, text: 'Japan' },
         { x: 86.1, y: 4.0, size: 0.115, text: 'Mexico' },
         { x: 92.6, y: 6.6, size: 0.096, text: 'Philippines' },
-        { x: 61.3, y: 14.5, size: 0.162, text: 'Nigeria' }]
+        { x: 61.3, y: 14.5, size: 0.162, text: 'Nigeria' }],
+        border:{
+          width: 2,
+          color : 'black'
+        }
     };
   },
   provide: {

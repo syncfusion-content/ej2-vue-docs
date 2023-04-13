@@ -11,7 +11,7 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Hilo'xName='x' high='high' low='low' name='India'> </e-series>
+            <e-series :dataSource='seriesData' type='Hilo' xName='x' high='high' low='low' name='India' fill="blue"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

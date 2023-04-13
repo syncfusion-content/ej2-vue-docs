@@ -8,21 +8,29 @@ Vue.use(AccumulationChartPlugin);
 new Vue({
 	el: '#app',
 	template: `
-    <div id="app">
-         <ejs-accumulationchart id="container">
-            <e-accumulation-series-collection>
-                <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' innerRadius='40%'> </e-accumulation-series>
-            </e-accumulation-series-collection>
-        </ejs-accumulationchart>
-    </div>
+  <div id="app">
+  <ejs-accumulationchart id="container" :centerLabel="centerLabel">
+     <e-accumulation-series-collection>
+         <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' innerRadius='65%'> </e-accumulation-series>
+     </e-accumulation-series-collection>
+  </ejs-accumulationchart>
+</div>
 `,
 
   data() {
     return {
       seriesData: [
-           { x: 'Jan', y: 3, fill: '#498fff', text:'January' }, { x: 'Feb', y: 3.5, fill: '#ffa060', text: 'February' },
-           { x: 'Mar', y: 7, fill: '#ff68b6', text: 'March' }, { x: 'Apr', y: 13.5, fill: '#81e2a1', text: 'April' }
-            ]
+        { x: 'Chrome', y: 61.3, text: 'Chrome: 61.3%' },
+        { x: 'Safari', y: 24.6, text: 'Safari: 24.6%' },
+        { x: 'Edge', y: 5.0, text: 'Edge: 5.0%' },
+        { x: 'Samsung Internet', y: 2.7, text:  'Samsung Internet: 2.7%' },
+        { x: 'Firefox', y: 2.6, text: 'Firefox: 2.6%' },
+        { x: 'Others', y: 3.6, text:  'Others: 3.6%' }
+        ],
+        centerLabel:{
+          text : 'Mobile<br>Browsers<br>Statistics',
+          hoverTextFormat: '${point.x} <br> Browser Share <br> ${point.y}%'
+        }
         };
   },
   provide: {

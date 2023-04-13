@@ -53,7 +53,7 @@ export default {
       },primaryYAxis: {
         title: "Expense",
         lineStyle: { width: 0 },
-        interval: 20,
+        interval: 50,
         minorTickLines: { width: 0 },
         majorTickLines: { width: 0 },
         majorGridLines: { width: 1 },

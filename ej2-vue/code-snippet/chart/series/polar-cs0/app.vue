@@ -23,8 +23,8 @@ export default {
      { x: 2008, y: 27 }, { x: 2009, y: 32 }, { x: 2010, y: 35 },
      { x: 2011, y: 30 }],
       primaryXAxis: {
-          title: 'Year',
-          minimum: 2004, maximum: 2012, interval: 1, startAngle: 270
+          title: 'Year', startAngle: 90,
+          minimum: 2004, maximum: 2012, interval: 1, coefficient: 40
         },
          primaryYAxis: {
             minimum: 20, maximum: 40, interval: 5,

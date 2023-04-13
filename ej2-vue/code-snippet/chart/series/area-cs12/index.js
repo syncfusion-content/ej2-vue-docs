@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartPlugin, SplineRangeAreaSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, RangeStepAreaSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -11,8 +11,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='SplineRangeArea' xName='x' high='high' low='low' name='England'> </e-series>
-                <e-series :dataSource='seriesData1' type='SplineRangeArea' xName='x' high='high' low='low' name='India'> </e-series>
+                <e-series :dataSource='seriesData' type='RangeStepArea' xName='x' high='high' low='low' name='England' :border="border" dashArray='5.5'> </e-series>
+                <e-series :dataSource='seriesData1' type='RangeStepArea' xName='x' high='high' low='low' name='India' :border="border" dashArray='5.5'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -21,7 +21,7 @@ new Vue({
   data() {
     return {
       seriesData:[
-            { x: 'Jan', high: 14, low: 4 },
+            { x: 'Jan', high: 14, low: 7 },
             { x: 'Feb', high: 17, low: 7 },
             { x: 'Mar', high: 20, low: 10 },
             { x: 'Apr', high: 22, low: 12 },
@@ -32,10 +32,10 @@ new Vue({
             { x: 'Sep', high: 20, low: 10 },
             { x: 'Oct', high: 22, low: 12 },
             { x: 'Nov', high: 20, low: 10 },
-            { x: 'Dec', high: 17, low: 7 }
+            { x: 'Dec', high: 20, low: 7 }
         ],
       seriesData1:[
-            { x: 'Jan', high: 29, low: 19 },
+            { x: 'Jan', high: 29, low: 22 },
             { x: 'Feb', high: 32, low: 22 },
             { x: 'Mar', high: 35, low: 25 },
             { x: 'Apr', high: 37, low: 27 },
@@ -46,7 +46,7 @@ new Vue({
             { x: 'Sep', high: 35, low: 25 },
             { x: 'Oct', high: 37, low: 27 },
             { x: 'Nov', high: 35, low: 25 },
-            { x: 'Dec', high: 32, low: 22 }
+            { x: 'Dec', high: 35, low: 22 }
         ],
         primaryXAxis: {
             valueType: 'Category',
@@ -60,11 +60,15 @@ new Vue({
             maximum: 40,
             majorTickLines: { width: 0 }
         },
-        title: 'Monthly Temperature Range'
+        title: 'Monthly Temperature Range',
+        border: {
+          width: 2,
+          color: 'Yellow'
+        }
     };
   },
   provide: {
-    chart: [SplineRangeAreaSeries, Category]
+    chart: [RangeStepAreaSeries, Category]
   },
 
 });

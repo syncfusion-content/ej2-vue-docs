@@ -4,7 +4,7 @@
     <div id="app">
          <ejs-chart id="container" :title='title'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Area'xName='x' yName='y' name='Product A'
+                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' name='Product A'
                 fill='green' width=2 :border='border' opacity=0.4> </e-series>
             </e-series-collection>
         </ejs-chart>

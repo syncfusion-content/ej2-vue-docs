@@ -22,7 +22,7 @@ To render a area series, use series [`type`](https://ej2.syncfusion.com/vue/docu
         
 {% previewsample "page.domainurl/code-snippet/chart/series/area-cs1" %}
 
-* Multicolored area
+## Multicolored area
 
 To render a multicolored area series, use the series type as `MultiColoredArea`, and inject the `MultiColoredAreaSeries` into the `provide`. The required `segments` of the series can be customized using the `value`, `color`, and `dashArray`.
 
@@ -56,7 +56,7 @@ The following properties can be used to customize the `area` series.
 The following properties in the `border` can be used to customize the border of the Area Chart.
 
 * [`width`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/borderModel/#width) - Specifies the width for the border of the Area Chart.
-[`color`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/borderModel/#color) - Specifies the Color for the border of the Area Chart.
+* [`color`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/borderModel/#color) - Specifies the Color for the border of the Area Chart.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

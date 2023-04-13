@@ -1,19 +1,40 @@
 
 import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import {
-  ChartPlugin,
-  BarSeries,
-  Category,
-  DataLabel,
-  Tooltip,
-  Legend,
-} from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, BarSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
-export default Vue.extend({
-  data: function () {
+;
+new Vue({
+	el: '#app',
+	template: `
+    <div id="app">
+         <ejs-chart id="container":title='title' :primaryXAxis='primaryXAxis'>
+            <e-series-collection>
+            <e-series :dataSource="seriesData" type="Bar" xName="x" yName="y" name="USA Total" width="2" 
+            groupName="USA" columnWidth="0.7" columnSpacing="0.1" >
+          </e-series>
+          <e-series :dataSource="seriesData1" type="Bar" xName="x" yName="y" name="USA Gold" width="2" 
+            groupName="USA" columnWidth="0.7" columnSpacing="0.1" >
+          </e-series>
+          <e-series :dataSource="seriesData2" type="Bar" xName="x" yName="y" name="UK Total" width="2" 
+            groupName="UK" columnWidth="0.7" columnSpacing="0.1">
+          </e-series>
+          <e-series :dataSource="seriesData3" type="Bar" xName="x" yName="y" name="UK Gold" width="2" 
+            groupName="UK" columnWidth="0.7" columnSpacing="0.1">
+          </e-series>
+          <e-series :dataSource="seriesData4" type="Bar" xName="x" yName="y" name="China Total" width="2" 
+            groupName="China" columnWidth="0.7" columnSpacing="0.1">
+          </e-series>
+          <e-series :dataSource="seriesData5" type="Bar" xName="x" yName="y" name="China Gold" width="2" 
+            groupName="China" columnWidth="0.7" columnSpacing="0.1">
+          </e-series>
+            </e-series-collection>
+        </ejs-chart>
+    </div>
+`,
+
+  data: function() {
     return {
       seriesData: [
         { x: "2012", y: 104 },
@@ -50,8 +71,6 @@ export default Vue.extend({
         { x: "2016", y: 26 },
         { x: "2020", y: 38 },
       ],
-
-      //Initializing Primary X Axis
       primaryXAxis: {
         valueType: "Category",
         interval: 1,
@@ -66,7 +85,6 @@ export default Vue.extend({
         lineStyle: { width: 0 },
         labelStyle: { color: "transparent" },
       },
-
       marker: {
         dataLabel: {
           visible: true,
@@ -79,106 +97,11 @@ export default Vue.extend({
       },
 
       title: "Olympics Medal Tally",
+
     };
   },
   provide: {
-    chart: [BarSeries, Legend, DataLabel, Category, Tooltip],
-  },
-});
-new Vue({
-	el: '#app',
-	template: `
-  <ejs-chart
-    style="display: block"
-    align="center"
-    id="container"
-    :title="title"
-    :primaryXAxis="primaryXAxis"
-    :primaryYAxis="primaryYAxis"
-    :chartArea="chartArea"
-    :tooltip="tooltip"
-  >
-    <e-series-collection>
-      <e-series
-        :dataSource="seriesData"
-        type="Bar"
-        xName="x"
-        yName="y"
-        name="USA Total"
-        width="2"
-        :marker="marker"
-        groupName="USA"
-        columnWidth="0.7"
-        columnSpacing="0.1"
-      >
-      </e-series>
-      <e-series
-        :dataSource="seriesData1"
-        type="Bar"
-        xName="x"
-        yName="y"
-        name="USA Gold"
-        width="2"
-        :marker="marker"
-        groupName="USA"
-        columnWidth="0.5"
-        columnSpacing="0.1"
-      >
-      </e-series>
-      <e-series
-        :dataSource="seriesData2"
-        type="Bar"
-        xName="x"
-        yName="y"
-        name="UK Total"
-        width="2"
-        :marker="marker"
-        groupName="UK"
-        columnWidth="0.7"
-        columnSpacing="0.1"
-      >
-      </e-series>
-      <e-series
-        :dataSource="seriesData3"
-        type="Bar"
-        xName="x"
-        yName="y"
-        name="UK Gold"
-        width="2"
-        :marker="marker"
-        groupName="UK"
-        columnWidth="0.5"
-        columnSpacing="0.1"
-      >
-      </e-series>
-      <e-series
-        :dataSource="seriesData4"
-        type="Bar"
-        xName="x"
-        yName="y"
-        name="China Total"
-        width="2"
-        :marker="marker"
-        groupName="China"
-        columnWidth="0.7"
-        columnSpacing="0.1"
-      >
-      </e-series>
-      <e-series
-        :dataSource="seriesData5"
-        type="Bar"
-        xName="x"
-        yName="y"
-        name="China Gold"
-        width="2"
-        :marker="marker"
-        groupName="China"
-        columnWidth="0.5"
-        columnSpacing="0.1"
-      >
-      </e-series>
-    </e-series-collection>
-  </ejs-chart>
-`,
+    chart: [BarSeries, Category]
+  }
 
 });
