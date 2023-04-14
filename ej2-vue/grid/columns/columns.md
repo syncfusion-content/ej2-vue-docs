@@ -275,3 +275,4 @@ In the following sample, the `rowDataBound` event of the Grid is used to set the
 * [Complex Data Binding with list of Array Of Objects](../how-to/list-of-array-of-objects)
 * [Custom tooltip for the header in Vue Grid](https://www.syncfusion.com/forums/144654/custom-tooltip-for-the-header-in-vue-grid)
 * [Display only multiple field name in one column in Vue Grid](https://www.syncfusion.com/forums/162397/display-only-multiple-field-name-in-one-column-in-vue-grid)
+* [How to change the data source or columns dynamically](../data-binding/how-to-change-the-data-source-or-columns-dynamically)

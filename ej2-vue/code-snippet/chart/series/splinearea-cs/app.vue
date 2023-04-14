@@ -4,7 +4,7 @@
   <div id="app">
        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
           <e-series-collection>
-              <e-series :dataSource='seriesData' type='SplineArea' xName='x' yName='y' name='India' fill="red" dashArray="5" :border="border"> </e-series>
+              <e-series :dataSource='seriesData' type='SplineArea' xName='x' yName='y' name='India' fill="red" dashArray="5" :border="border" :marker='marker' opacity='0.6'> </e-series>
           </e-series-collection>
       </ejs-chart>
   </div>
@@ -38,7 +38,10 @@ data() {
   border:{
     width: 3,
     color: 'yellow'
-  }
+  },
+  marker: {
+      visible: true
+    }
   };
 },
 provide: {

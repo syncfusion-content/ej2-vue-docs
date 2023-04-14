@@ -4,7 +4,7 @@
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StepArea' xName='x' yName='y' name='India' fill="blue" :border="border" dashArray="5"> </e-series>
+                <e-series :dataSource='seriesData' type='StepArea' xName='x' yName='y' name='India' fill="blue" :border="border" dashArray="5" opacity='0.6' :marker='marker'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -36,9 +36,10 @@ export default {
         },
     title: 'England - Run Rate',
     border: {
-      width: 5,
+      width: 2,
       color: 'black'
-    }
+    },
+    marker: { visible: true }
     };
   },
   provide: {

@@ -11,10 +11,10 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y' name='USA'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y1' name='UK'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y2' name='Canada'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y3' name='China'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y' name='USA' opacity=0.7 fill="red" :border="border" dashArray="5"> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y1' name='UK' opacity=0.7 fill="yellow" :border="border" dashArray="5"> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y2' name='Canada' opacity=0.7 fill="green" :border="border" dashArray="5"> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y3' name='China' opacity=0.7 fill="blue" :border="border" dashArray="5"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -36,7 +36,11 @@ new Vue({
         primaryXAxis: {
             valueType: 'DateTime'
         },
-         title: "Annual Temperature Comparisone"
+         title: "Annual Temperature Comparisone",
+         border:{
+          width: 2,
+          color: 'white'  
+      }
     };
   },
   provide: {

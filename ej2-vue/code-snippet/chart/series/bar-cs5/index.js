@@ -11,7 +11,7 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' columnSpacing=0.5 columnWidth=0.5 type='Bar' xName='x' yName='y' name='India' fill='red' :border='border'> </e-series>
+                <e-series :dataSource='seriesData' columnSpacing=0.25 columnWidth=0.75 type='Bar' xName='x' yName='y' name='India' fill='green' opacity='0.8' dashArray='4' :border='border'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

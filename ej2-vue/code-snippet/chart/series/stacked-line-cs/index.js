@@ -9,21 +9,19 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="chartcontainer"
-        :title="title"
-        :primaryXAxis="primaryXAxis"
-        :primaryYAxis="primaryYAxis"
-        :tooltip="tooltip"
-        :chartArea="chartArea">
-            <e-series-collection>
-               <e-series :dataSource="seriesData" type="StackingLine100" xName="x"          yName="y" name="John" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y1"            name="Peter" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y2"
-              name="Steve" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y3"
-               name="Charle" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            </e-series-collection>
-        </ejs-chart>
+    <ejs-chart id="chartcontainer"
+    :title="title"
+    :primaryXAxis="primaryXAxis"
+    :primaryYAxis="primaryYAxis"
+    :tooltip="tooltip"
+    :chartArea="chartArea">
+    <e-series-collection>
+      <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y" name="John" width="2" dashArray="5,1" :marker="marker" fill="red" ></e-series>
+      <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y1" name="Peter" width="2" dashArray="5,1" :marker="marker" fill="yellow" ></e-series>
+      <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y2" name="Steve" width="2" dashArray="5,1" :marker="marker" fill="green" ></e-series>
+      <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y3" name="Charle" width="2" dashArray="5,1" :marker="marker" fill="blue" ></e-series>
+    </e-series-collection>
+</ejs-chart>
     </div>
 `,
 

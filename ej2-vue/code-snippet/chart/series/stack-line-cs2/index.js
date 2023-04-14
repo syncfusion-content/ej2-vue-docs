@@ -15,14 +15,12 @@ new Vue({
         :primaryYAxis="primaryYAxis"
         :tooltip="tooltip"
         :chartArea="chartArea">
-            <e-series-collection>
-               <e-series :dataSource="seriesData" type="StackingLine100" xName="x"          yName="y" name="John" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y1"            name="Peter" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y2"
-              name="Steve" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y3"
-               name="Charle" width="2" dashArray="5,1" :marker="marker" ></e-series>
-            </e-series-collection>
+        <e-series-collection>
+          <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y" name="John" width="2" dashArray="5,1" :marker="marker" fill="red" ></e-series>
+          <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y1" name="Peter" width="2" dashArray="5,1" :marker="marker" fill="yellow" ></e-series>
+          <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y2" name="Steve" width="2" dashArray="5,1" :marker="marker" fill="green" ></e-series>
+          <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y3" name="Charle" width="2" dashArray="5,1" :marker="marker" fill="blue"></e-series>
+        </e-series-collection>
         </ejs-chart>
     </div>
 `,
@@ -54,7 +52,7 @@ new Vue({
       },primaryYAxis: {
         title: "Expense",
         lineStyle: { width: 0 },
-        interval: 20,
+        interval: 50,
         minorTickLines: { width: 0 },
         majorTickLines: { width: 0 },
         majorGridLines: { width: 1 },

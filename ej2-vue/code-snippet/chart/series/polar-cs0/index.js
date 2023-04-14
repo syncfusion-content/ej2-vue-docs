@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartPlugin, RadarSeries, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, PolarSeries, LineSeries } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -11,7 +11,7 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Radar' xName='x' yName='y' drawType='Line'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Line'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -25,18 +25,18 @@ new Vue({
      { x: 2011, y: 30 }],
       primaryXAxis: {
           title: 'Year',
-          minimum: 2004, maximum: 2012, interval: 1
+          minimum: 2004, maximum: 2012, interval: 1, startAngle: 90
         },
          primaryYAxis: {
             minimum: 20, maximum: 40, interval: 5,
-            title: 'Efficiency',
+            title: 'Efficiency', 
             labelFormat: '{value}%'
         },
       title: "Efficiency of oil-fired power production"
     };
   },
   provide: {
-    chart: [RadarSeries, LineSeries]
+    chart: [PolarSeries, LineSeries]
   },
 
 });

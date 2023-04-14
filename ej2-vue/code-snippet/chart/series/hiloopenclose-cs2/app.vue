@@ -5,7 +5,7 @@
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='HiloOpenClose' xName='x' high='high' low='low'
-                open='open' close='close' name='SHIRPUR-G' bearFillColor= '#e56590' bullFillColor= '#f8b883'> </e-series>
+                open='open' close='close' name='SHIRPUR-G' bearFillColor= 'green' bullFillColor= 'red'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

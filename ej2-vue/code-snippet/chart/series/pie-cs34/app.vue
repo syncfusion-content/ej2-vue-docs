@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       seriesData: [
-      { x: 'Chrome', y: 61.3, text: 'Chrome: 61.3%' },
+            { x: 'Chrome', y: 61.3, text: 'Chrome: 61.3%' },
             { x: 'Safari', y: 24.6, text: 'Safari: 24.6%' },
             { x: 'Edge', y: 5.0, text: 'Edge: 5.0%' },
             { x: 'Samsung Internet', y: 2.7, text:  'Samsung Internet: 2.7%' },

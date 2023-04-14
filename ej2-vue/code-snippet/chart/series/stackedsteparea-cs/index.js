@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartPlugin, StackingAreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingStepAreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -11,10 +11,10 @@ new Vue({
     <div id="app">
          <ejs-chart :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y' name='Organic'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y1' name='Fair-trade'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y2' name='Veg Alternatives'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y3' name='Others'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y' name='Organic' fill="red" :border="border" dashArray="5.5" opacity='0.6'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y1' name='Fair-trade' fill="yellow" :border="border" dashArray="5.5" opacity='0.6'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y2' name='Veg Alternatives' fill="green" :border="border" dashArray="5.5" opacity='0.6'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y3' name='Others' fill="blue" :border="border" dashArray="5.5"> </e-series opacity='0.6'>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -42,11 +42,15 @@ new Vue({
         primaryXAxis: {
             valueType: 'DateTime'
         },
-         title: "Trend in Sales of Ethical Produce"
+        title: "Trend in Sales of Ethical Produce",
+        border:{
+          width: 2,
+          color: 'black'
+        }
     };
   },
   provide: {
-    chart: [StackingAreaSeries, DateTime]
+    chart: [StackingStepAreaSeries, DateTime]
   },
 
 });
