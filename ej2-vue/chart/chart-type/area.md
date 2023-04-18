@@ -68,5 +68,5 @@ The following properties in the `border` can be used to customize the border of 
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

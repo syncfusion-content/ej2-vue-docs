@@ -26,9 +26,9 @@ To render a scatter series, use series [`type`](https://ej2.syncfusion.com/vue/d
 
 The following properties can be used to customize the `scatter` series.
 
-* [fill](../api/chart/seriesModel/#fill) – Specifies the color of the series.
-* [opacity](../api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](../api/chart/seriesModel/#fill).
-* [shape](../api/chart/chartShape/) - Specifies the shape of the scatter series.
+* [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill) – Specifies the color of the series.
+* [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill).
+* [shape](https://ej2.syncfusion.com/vue/documentation/api/chart/chartShape/) - Specifies the shape of the scatter series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -40,5 +40,5 @@ The following properties can be used to customize the `scatter` series.
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

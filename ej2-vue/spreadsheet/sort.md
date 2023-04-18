@@ -143,7 +143,7 @@ You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-compone
 
 ## See Also
 
-* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list.md)
+* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list)
 * [Hyperlink](./link)
 * [Filtering](./filter)
 * [Undo Redo](./undo-redo)

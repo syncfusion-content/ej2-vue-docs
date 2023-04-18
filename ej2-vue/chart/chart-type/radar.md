@@ -51,5 +51,5 @@ You can customize the radius of the radar series using [`coefficient`](https://e
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

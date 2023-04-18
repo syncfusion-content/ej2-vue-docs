@@ -11,8 +11,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='SplineRangeArea' xName='x' high='high' low='low' name='England'> </e-series>
-                <e-series :dataSource='seriesData1' type='SplineRangeArea' xName='x' high='high' low='low' name='India'> </e-series>
+            <e-series :dataSource='seriesData' type='SplineRangeArea' xName='x' high='high' low='low' name='England' fill="yellow" :border="border" opacity=0.6 dashArray="5"> </e-series>
+            <e-series :dataSource='seriesData1' type='SplineRangeArea' xName='x' high='high' low='low' name='India' fill="red" :border="border" opacity=0.6 dashArray="5"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -59,6 +59,9 @@ new Vue({
             minimum: 0,
             maximum: 40,
             majorTickLines: { width: 0 }
+        },
+        border:{
+          width: 2, color: 'brown'
         },
         title: 'Monthly Temperature Range'
     };

@@ -24,5 +24,5 @@ In EJ2 chart, you can draw a chart in vertical manner by changing orientation of
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

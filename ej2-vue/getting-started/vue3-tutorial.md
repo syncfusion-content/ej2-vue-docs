@@ -35,7 +35,7 @@ Initiating a new project prompts us to choose the type of project to be used for
 
 Once the Vue 3 application is created, install the required Syncfusion Vue component package in the application. All the available Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
 
-Check out the [installation and upgrade](../installation-and-upgrade/installation.md) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
+Check out the [installation and upgrade](../installation-and-upgrade/installation) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save

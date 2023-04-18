@@ -43,5 +43,5 @@ By default, bullFillColor is set as red and bearFillColor is set as green.
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

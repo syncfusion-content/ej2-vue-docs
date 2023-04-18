@@ -24,5 +24,5 @@ Histogram type charts can provide a visual display of large amounts of data that
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)
