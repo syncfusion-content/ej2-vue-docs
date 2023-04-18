@@ -35,5 +35,5 @@ The following table represents the supported Vue versions by different Syncfusio
 
 | Version | Syncfusion Vue components version |
 | ------------- | ------------- |
-|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto.html) | 20.3.47 and above |
-|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html) | 19.2.44 and above |
+|[Vue v2.7](https://blog.vuejs.org/posts/vue-2-7-naruto) | 20.3.47 and above |
+|[Vue v3.0](https://blog.vuejs.org/posts/vue-3-as-the-new-default) | 19.2.44 and above |
