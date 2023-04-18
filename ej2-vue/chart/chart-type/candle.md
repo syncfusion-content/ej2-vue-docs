@@ -69,5 +69,5 @@ candles. By default is set to be false. The fill color of the candle will be def
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

@@ -38,5 +38,5 @@ By default, the negativeFillColor as ‘#E94649’ and the summaryFillColor as �
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)

@@ -52,5 +52,5 @@ In Box and Whisker series `showMean` property is used to show the box and whiske
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)
