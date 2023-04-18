@@ -24,5 +24,5 @@ Pareto charts are used to find the cumulative values of data in different catego
 
 ## See Also
 
-* [Data label](./data-labels.md)
-* [Tooltip](./tool-tip.md)
+* [Data label](../data-labels.md)
+* [Tooltip](../tool-tip.md)

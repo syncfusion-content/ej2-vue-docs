@@ -27,10 +27,10 @@ inject `StackingBarSeries` into the `provide`.
 
 The following properties can be used to customize the `100% stacked bar` series.
 
-* [fill](../api/chart/seriesModel/#fill) – Specifies the color of the series.
-* [opacity](../api/chart/seriesModel/#opacity) – Specifies the opacity of [Fill](../api/chart/seriesModel/#fill).
-* [dashArray](../api/chart/seriesModel/#dasharray) – Specifies the dashes of series.
-* [border](../api/chart/borderModel/#properties) – Specifies the [Color](../api/chart/borderModel/#color) and [Width](../api/chart/borderModel/#width) of series border.
+* [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill) – Specifies the color of the series.
+* [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [Fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill).
+* [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes of series.
+* [border](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#properties) – Specifies the [Color](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#color) and [Width](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#width) of series border.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -42,5 +42,5 @@ The following properties can be used to customize the `100% stacked bar` series.
 
 ## See Also
 
-* [Data label](./data-labels/)
-* [Tooltip](./tool-tip/)
+* [Data label](../data-labels/)
+* [Tooltip](../tool-tip/)
