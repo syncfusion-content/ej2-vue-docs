@@ -137,7 +137,7 @@ The properties of pivot table can be assigned in `<ejs-pivotview>` tag and that 
 
 ## Assigning sample data to the pivot table
 
-The Pivot Table component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/).
+The Pivot Table component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 
 ```
@@ -198,21 +198,21 @@ export default {
 
 Now that pivot table is initialized and assigned with sample data, will further move to showcase the component by organizing appropriate fields in row, column, value and filter axes.
 
-In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/), four major axes -  [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters) plays a vital role in defining and organizing fields from the bound data source, to render the entire pivot table component in a desired format.
+In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings), four major axes -  [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) plays a vital role in defining and organizing fields from the bound data source, to render the entire pivot table component in a desired format.
 
-[`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows) – Collection of fields that needs to be displayed in row axis of the pivot table.
+[`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) – Collection of fields that needs to be displayed in row axis of the pivot table.
 
-[`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) – Collection of fields that needs to be displayed in column axis of the pivot table.
+[`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) – Collection of fields that needs to be displayed in column axis of the pivot table.
 
-[`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) – Collection of fields that needs to be displayed as aggregated numeric values in the pivot table.
+[`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) – Collection of fields that needs to be displayed as aggregated numeric values in the pivot table.
 
-[`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters) - Collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table.
+[`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) - Collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table.
 
 In-order to define each field in the respective axis, the following basic properties should be set.
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#name): It allows to set the field name from the bound data source. It’s casing should match exactly like in the data source and if not set properly, the pivot table will not be rendered.
-* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#caption): It allows to set the field caption, which is the alias name of the field that needs to be displayed in the pivot table.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#type): It allows to set the summary type of the field. By default, **Sum** is applied.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#name): It allows to set the field name from the bound data source. It’s casing should match exactly like in the data source and if not set properly, the pivot table will not be rendered.
+* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#caption): It allows to set the field caption, which is the alias name of the field that needs to be displayed in the pivot table.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#type): It allows to set the summary type of the field. By default, **Sum** is applied.
 
 In this illustration, "Year" and "Quarter" are added in column, "Country" and "Products" in row, and "Sold" and "Amount" in value section respectively.
 
@@ -226,7 +226,7 @@ In this illustration, "Year" and "Quarter" are added in column, "Country" and "P
 
 ## Applying formatting to a value field
 
-Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [`formatSetting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/) with its [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#name) and [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#format) properties and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/). In this illustration, the [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/).
+Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [`formatSetting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/) with its [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) and [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#format) properties and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/). In this illustration, the [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/).
 
 > Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 
@@ -258,7 +258,7 @@ provide: {
 
 ## Enable Pivot Field List
 
-The field list allows to add or remove fields and also rearrange the fields between different axes, including column, row, value, and filter along with filter and sort options dynamically at runtime. It can be enabled by setting the [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showfieldlist) property to **true**. To know more about field list, [`refer`](./field-list) here.
+The field list allows to add or remove fields and also rearrange the fields between different axes, including column, row, value, and filter along with filter and sort options dynamically at runtime. It can be enabled by setting the [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showfieldlist) property to **true**. To know more about field list, [`refer`](./field-list) here.
 
 > If the `FieldList` module is not injected, the Field List will not be rendered with the pivot table component.
 
@@ -272,7 +272,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 
 ## Enable Grouping Bar
 
-The grouping bar feature automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and alter pivot table at runtime. It also provides option to sort, filter and remove fields. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showgroupingbar) property to **true**. To know more about grouping bar, [`refer`](./grouping-bar) here.
+The grouping bar feature automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and alter pivot table at runtime. It also provides option to sort, filter and remove fields. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showgroupingbar) property to **true**. To know more about grouping bar, [`refer`](./grouping-bar) here.
 
 > If the `GroupingBar` module is not injected, the grouping bar will not be rendered with the pivot table component.
 
@@ -298,7 +298,7 @@ The filter axis contains collection of fields that would act as master filter ov
 
 ## Calculated field
 
-The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/) from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#allowcalculatedfield) property to **true** in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [`refer`](./calculated-field) here.
+The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/) from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowcalculatedfield) property to **true** in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [`refer`](./calculated-field) here.
 
 > If the `CalculatedField` module is not injected, the calculated field popup will not be rendered with the pivot table component. Moreover calculated field is applicable only for value fields.
 
