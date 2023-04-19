@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 ## Virtual Scrolling
 
-The virtual scrolling option allows you to load the large amounts of data without performance degradation by rendering rows and columns only in the content viewport. The data will refresh dynamically on vertical or horizontal scroll. This feature can be enabled by setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property to **true**.
+The virtual scrolling option allows you to load the large amounts of data without performance degradation by rendering rows and columns only in the content viewport. The data will refresh dynamically on vertical or horizontal scroll. This feature can be enabled by setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) property to **true**.
 
 To use the virtual scrolling feature, inject the `VirtualScroll` module in to the pivot table.
 
@@ -28,7 +28,7 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module in to th
 
 **Limitations for virtual scrolling**
 
-* In virtual scrolling, the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/#columnwidth) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/) should be in pixel and percentage values are not accepted.
+* In virtual scrolling, the [`columnWidth`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) should be in pixel and percentage values are not accepted.
 * Resizing columns, setting width to individual columns which affects the calculation used to pick the correct page on scrolling.
 * Grouping, which takes additional time to splitting the raw items into the provided format.
 * Date Formatting, which takes additional time to convert date format.
@@ -39,7 +39,7 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module in to th
 
 > This property is applicable only for the relational data source.
 
-When we bind one million raw data, the pivot table will process all raw data to generate aggregated data during initial rendering and report manipulation. But in data compression, the data will be compressed based on the uniqueness of the raw data, and unique records will be provided as input for the Pivot Table. The compressed data will be used for further operations at all times, reducing the looping complexity and improving the performance of the pivot table. For example, if the pivot table  is connected to one million raw data aggregated to 1,000 unique data means, it will be rendered within 3 seconds rather than 10 seconds. You can enable this option by using the [`allowDataCompression`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowdatacompression) property along with [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) property.
+When we bind one million raw data, the pivot table will process all raw data to generate aggregated data during initial rendering and report manipulation. But in data compression, the data will be compressed based on the uniqueness of the raw data, and unique records will be provided as input for the Pivot Table. The compressed data will be used for further operations at all times, reducing the looping complexity and improving the performance of the pivot table. For example, if the pivot table  is connected to one million raw data aggregated to 1,000 unique data means, it will be rendered within 3 seconds rather than 10 seconds. You can enable this option by using the [`allowDataCompression`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowdatacompression) property along with [`enableVirtualization`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property.
 
 > This options will only function when the virtual scrolling is enabled.
 
@@ -65,7 +65,7 @@ When we bind one million raw data, the pivot table will process all raw data to 
 
 ## Virtual scrolling for static field list
 
-Virtual scrolling automatically works with "Popup" field list on setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property in the Pivot Table to **true**. Incase of static field list, which act as a separate component, user need to enable [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property in the Pivot Table and also pass the report information to pivot table instance via the [`load`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#load) event of the field list.
+Virtual scrolling automatically works with "Popup" field list on setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) property in the Pivot Table to **true**. Incase of static field list, which act as a separate component, user need to enable [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) property in the Pivot Table and also pass the report information to pivot table instance via the [`load`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#load) event of the field list.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
