@@ -19,7 +19,7 @@ The field list can be displayed in two different formats to interact with pivot 
 
 ## In-built Field List (Popup)
 
-To enable the field list in pivot table UI, set the [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showfieldlist) property in pivot view to **true**. A small icon will appear on the top left corner of the pivot table and clicking on this icon, field list dialog will appear.
+To enable the field list in pivot table UI, set the [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showfieldlist) property in pivot view to **true**. A small icon will appear on the top left corner of the pivot table and clicking on this icon, field list dialog will appear.
 
 > The field list icon will be displayed at the top right corner of the pivot table, when grouping bar is enabled.
 
@@ -75,9 +75,9 @@ To enable search box in the pivot table's built-in popup field list UI, set the 
 
 ## Group fields under desired folder name
 
-In the field list UI, you can display fields by grouping them under the desired folder name. It can only be configured via code-behind by setting the [`groupName`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property in [`fieldMapping`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#fieldmapping).
+In the field list UI, you can display fields by grouping them under the desired folder name. It can only be configured via code-behind by setting the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#groupname) property in[`fieldMapping`](https://ej2.syncfusion.com/react/documentation/api/pivotview/dataSourceSettings/#fieldmapping).
 
-> You can only group fields to one level using the [`groupName`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property.
+> You can only group fields to one level using the [`groupName`](https://ej2.syncfusion.com/react/documentation/api/pivotview/fieldOptionsModel/#groupname) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -95,7 +95,7 @@ Using check box besides each field, end user can select or unselect to add or re
 
 ## Remove specific field(s) from displaying
 
-When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
+When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#excludefields).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -131,7 +131,7 @@ Using the sort icon besides each field in row and column axes, members can be ar
 
 ## Calculated fields
 
-The calculated field support allows end user to add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. To enable this support in Field List UI, set the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowcalculatedfield) property in pivot table to **true** in pivot table. Now a button will be seen automatically inside the field list UI which will invoke the calculated field dialog on click. To know more about calculated field, [`refer`](./calculated-field) here.
+The calculated field support allows end user to add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. To enable this support in Field List UI, set the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#allowcalculatedfield) property in pivot table to **true** in pivot table. Now a button will be seen automatically inside the field list UI which will invoke the calculated field dialog on click. To know more about calculated field, [`refer`](./calculated-field) here.
 
 ![output](images/gs_calc_button.png "Enabling calculated field in field list UI")
 <br/>
@@ -152,13 +152,13 @@ End user can perform calculations over a group of values using the aggregation o
 
 ## Defer layout update
 
-Defer layout update support to update the pivot table only on demand and not during every user action. To enable this support in Field List UI, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowdeferlayoutupdate) property to **true** in pivot table. Now a check box inside Field List UI will be seen in checked state, allowing pivot table to update only on demand. To know more about defer layout, [`refer`](./defer-update) here.
+Defer layout update support to update the pivot table only on demand and not during every user action. To enable this support in Field List UI, set the [`allowDeferLayoutUpdate`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#allowdeferlayoutupdate) property to **true** in pivot table. Now a check box inside Field List UI will be seen in checked state, allowing pivot table to update only on demand. To know more about defer layout, [`refer`](./defer-update) here.
 
 ![output](images/fieldlist_deferupdate.png)
 
 ## Show built-in Field List (Popup) over specific target
 
-By passing the target element to the built-in field list dialog module in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#databound) event, the field list dialog will be displayed over the appropriate target element on a web page. By default, the Pivot Table's parent element is used as the target element to display the built-in field list dialog.
+By passing the target element to the built-in field list dialog module in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#databound) event, the field list dialog will be displayed over the appropriate target element on a web page. By default, the Pivot Table's parent element is used as the target element to display the built-in field list dialog.
 
 The sample code below shows the built-in field list dialog using `document.body` as the target element.
 
@@ -172,7 +172,7 @@ The sample code below shows the built-in field list dialog using `document.body
 
 ## Show field list using toolbar
 
-It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showtoolbar) properties in pivot table to **true**. Also, include the item **FieldList** within the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#toolbar) property in pivot table. When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
+It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showtoolbar) properties in pivot table to **true**. Also, include the item **FieldList** within the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#toolbar) property in pivot table. When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -235,7 +235,7 @@ The [`enginePopulated`](https://ej2.syncfusion.com/vue/documentation/api/pivotfi
 
 * The event [`enginePopulated`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist#enginepopulated) is triggered in field list whenever the report gets modified. The updated report is passed to the pivot table via [`updateView`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist#updateview) method written within this event to refresh the same.
 
-* Likewise, [`enginePopulated`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enginepopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`update`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist#update) method written within this event to refresh the same.
+* Likewise, [`enginePopulated`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#enginepopulated) event is triggered in pivot table whenever the report gets modified. The updated report is passed to the field list via [`update`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist#update) method written within this event to refresh the same.
 
 The event [`enginePopulated`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist#enginepopulated) is triggered after engine is populated. It has following parameters - `dataSourceSettings`, `pivotFieldList` and `pivotValues`.
 
@@ -265,7 +265,7 @@ For example, if we perform a sort operation within the field list, the field lis
 
 ### OnFieldDropped
 
-The event [`onFieldDropped`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#onfielddropped) fires whenever a field is dropped in an axis. It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this illustration, we have modified the `droppedField` caption through this event at runtime.
+The event [`onFieldDropped`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#onfielddropped) fires whenever a field is dropped in an axis. It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this illustration, we have modified the `droppedField` caption through this event at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

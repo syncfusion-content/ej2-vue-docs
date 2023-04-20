@@ -43,11 +43,11 @@ End user can perform calculations over a group of values (exclusively for value 
 
 ## Assigning aggregation type for value fields through API
 
-For each value field, the aggregation type can be set using the property [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#type) in [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values). Meanwhile, aggregation types like **DifferenceFrom** and **PercentageOfDifferenceFrom** can check for specific field of specific item using [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#basefield) and [`baseItem`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#baseitem) properties. Likewise, **PercentageOfParentTotal** type can for specific field using [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#basefield) property. For instance, the aggregation type **DifferenceFrom** would intake the specified field and its corresponding member as input and its value is compared across other members in the same field and also across different fields to formulate an appropriate output value.  
+For each value field, the aggregation type can be set using the property [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#basefield) in [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values). Meanwhile, aggregation types like **DifferenceFrom** and **PercentageOfDifferenceFrom** can check for specific field of specific item using [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#basefield) and [`baseItem`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#basefield) properties. Likewise, **PercentageOfParentTotal** type can for specific field using [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#basefield) property. For instance, the aggregation type **DifferenceFrom** would intake the specified field and its corresponding member as input and its value is compared across other members in the same field and also across different fields to formulate an appropriate output value.  
 
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#type): It allows to set the aggregate type of the field.
-* [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#basefield): It allows to set the specific field to aggregate the values.
-* [`baseItem`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#baseitem): It allows to set the specific member to aggregate the values.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#type): It allows to set the aggregate type of the field.
+* [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#basefield): It allows to set the specific field to aggregate the values.
+* [`baseItem`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#baseitem): It allows to set the specific member to aggregate the values.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -83,7 +83,7 @@ By default, all the aggregation types are displayed in the dropdown menu availab
 
 ## Hiding aggregation type from button text
 
-By default, in value axis each field would be displayed by its name and aggregation type together. To hide aggregation type and display field name alone, set the property [`showAggregationOnValueField`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showaggregationonvaluefield) in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **false**.
+By default, in value axis each field would be displayed by its name and aggregation type together. To hide aggregation type and display field name alone, set the property [`showAggregationOnValueField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#showaggregationonvaluefield)  in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) to **false**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -95,7 +95,7 @@ By default, in value axis each field would be displayed by its name and aggregat
 
 ## Hiding aggregation type icon from UI
 
-By default, the icon to set aggregation type is enabled in the grouping bar. To disable this icon, set the property [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#groupingbarsettings) in [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#groupingbarsettings) to **false**.
+By default, the icon to set aggregation type is enabled in the grouping bar. To disable this icon, set the property [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingBarSettings/#showvaluetypeicon) in [`groupingBarSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupingBarSettings/) to **false**.
 
 > Icon to change the aggregation type can be hidden only in Grouping Bar but not in Field List at the moment.
 

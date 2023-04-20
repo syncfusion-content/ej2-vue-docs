@@ -49,7 +49,7 @@ When you type URL and Enter key to the Rich Text Editor, the typed URL will be a
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 
-![link-quick](./images/link-quick.png)
+![link-quick](./image/link-quick.png)
 
 The quick toolbar for the Link has the following options.
 

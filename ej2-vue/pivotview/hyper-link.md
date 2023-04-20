@@ -113,7 +113,7 @@ The pivot table has an option to show hyperlink option to the cells based on spe
 
 ## Event
 
-The event [`hyperlinkCellClick`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#hyperlinkcellclick) fires on every hyperlink cell click.
+The event [`hyperlinkCellClick`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#hyperlinkcellclick) fires on every hyperlink cell click.
 
 It has following parameters - `Cancel` and `CurrentCell`. The parameter `CurrentCell` is used to customize the host cell element by any means. Meanwhile, when the parameter `Cancel` is set to **true**, applied customization will not be updated to the host cell element.
 

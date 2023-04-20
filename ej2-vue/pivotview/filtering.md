@@ -24,7 +24,7 @@ The following are the three different types of filtering:
 
 ## Member filtering
 
-Allows to view the pivot table with selective records based on included and excluded members in each field. By default, member filter option is enabled by the [`allowMemberFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowmemberfilter) boolean property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
+Allows to view the pivot table with selective records based on included and excluded members in each field. By default, member filter option is enabled by the [`allowMemberFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#allowmemberfilter) boolean property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/). This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
 
 ![output](images/fieldlist_filtericon.png "Member filter icon in field list")
 <br/>
@@ -34,12 +34,12 @@ Allows to view the pivot table with selective records based on included and excl
 <br/>
 ![output](images/filter_grid_gb.png "Resultant pivot table on member filter")
 
-Meanwhile filtering can also be configured at code behind using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) while initial rendering of the component. The basic settings required to add filter criteria are:
+Meanwhile filtering can also be configured at code behind using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/) while initial rendering of the component. The basic settings required to add filter criteria are:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#name): It allows to set the appropriate field name.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type): It allows to set the filter type as **Include** or **Exclude** to include or exclude field members respectively.
-* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#items): It allows to set the members which needs to be either included or excluded from display.
-* [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount): It allows to set level count of the field to fetch data from the cube. **NOTE: This property applicable only for OLAP data source.**
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#name): It allows to set the appropriate field name.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#type): It allows to set the filter type as **Include** or **Exclude** to include or exclude field members respectively.
+* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#items): It allows to set the members which needs to be either included or excluded from display.
+* [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filterModel/#levelcount): It allows to set level count of the field to fetch data from the cube. **NOTE: This property applicable only for OLAP data source.**
 
 > When specifying unavailable or inappropriate members to include or exclude filter items collection, they will be ignored.
 
@@ -93,7 +93,7 @@ Meanwhile, end user can utilize the search option to refine the members from the
 
 > This property is applicable only for OLAP data sources.
 
-Allows to load members inside the filter dialog on-demand by setting the [`loadOnDemandInMemberEditor`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#loadondemandinmembereditor) property to **true**. By default, first level is loaded in the member editor from the OLAP cube. So, the member editor will be opened quickly, without any performance constraints. By default, this property is set to **true** and the search will only be applied to the level members that are loaded. In the meantime, the next level members can be added using either of the following methods.
+Allows to load members inside the filter dialog on-demand by setting the [`loadOnDemandInMemberEditor`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#loadondemandinmembereditor) property to **true**. By default, first level is loaded in the member editor from the OLAP cube. So, the member editor will be opened quickly, without any performance constraints. By default, this property is set to **true** and the search will only be applied to the level members that are loaded. In the meantime, the next level members can be added using either of the following methods.
 
 * By clicking on the expander button of the respective member, only its child members will be loaded.
 * Select a level from the drop-down list that will load all members up to the chosen level from the cube.
@@ -125,7 +125,7 @@ If the property is set to **false**, all members of all levels will be queried a
 
 > This property is applicable only for OLAP data sources.
 
-Allows user to load the members on the basis of the level number set in the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) property in the [`filterSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). By default, this property is set to **1** and the search will only take place within the members of the first level.
+Allows user to load the members on the basis of the level number set in the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filterModel/#levelcount) property in the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettingsModel/#filtersettings). By default, this property is set to **1** and the search will only take place within the members of the first level.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -137,7 +137,7 @@ Allows user to load the members on the basis of the level number set in the [`le
 
 ![output](images/level-count.png)
 
-In the example above, we set [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) as **2** for the "Customer Geography" dimension in [`filterSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). So, the "Customer Geography" dimension is loaded with the "Country" and "State-Province" levels during initial loading itself. The search will therefore be applied only to the members of the "Country" and "State-Province" levels. After that, you can load members to the next level on-demand by expanding the respective "State-Province" node (or) by selecting the "City" level from the drop-down list.
+In the example above, we set [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filterModel/#levelcount) as **2** for the "Customer Geography" dimension in [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettingsModel/#filtersettings). So, the "Customer Geography" dimension is loaded with the "Country" and "State-Province" levels during initial loading itself. The search will therefore be applied only to the members of the "Country" and "State-Province" levels. After that, you can load members to the next level on-demand by expanding the respective "State-Province" node (or) by selecting the "City" level from the drop-down list.
 
 ## Label filtering
 
@@ -147,20 +147,20 @@ The label filtering helps to view the pivot table with selective header text in 
 * Filtering number data type
 * Filtering date data type
 
-The label filtering dialog can be enabled by setting the [`allowLabelFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowlabelfilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Label" tab to perform label filtering operations.
+The label filtering dialog can be enabled by setting the [`allowLabelFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#allowmemberfilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Label" tab to perform label filtering operations.
 
 ### Filtering string data type through code
 
-This type of filtering is exclusively applicable for fields with members in string data type. The filtering can be configured using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) through code-behind. The properties required for label filter are:
+This type of filtering is exclusively applicable for fields with members in string data type. The filtering can be configured using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/) through code-behind. The properties required for label filter are:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#name): Sets the field name.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type): Sets the filter type as **Label** to the field.
-* [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#condition): Sets the operator type such as **Equals**, **GreaterThan**, **LessThan**, etc.
-* [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value1): Sets the start value.
-* [`value2`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value2): Sets the end value. It is applicable only for the operator such as **Between** and **NotBetween**.
-* [`selectedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#selectedfield): Sets level name of a dimension, where the filter settings are to be applied. **NOTE: This property applicable only for OLAP data source.**
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#name): Sets the field name.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#type): Sets the filter type as **Label** to the field.
+* [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the operator type such as **Equals**, **GreaterThan**, **LessThan**, etc.
+* [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#value1): Sets the start value.
+* [`value2`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#value2): Sets the end value. It is applicable only for the operator such as **Between** and **NotBetween**.
+* [`selectedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filterModel/#selectedfield): Sets level name of a dimension, where the filter settings are to be applied. **NOTE: This property applicable only for OLAP data source.**
 
-For example, in a "Country" field, to show countries names that contains "United" text alone, set [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value1) to "United" and [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#condition) to **Contains** for desired output in pivot table.
+For example, in a "Country" field, to show countries names that contains "United" text alone, set [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#value1) to "United" and [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition) to **Contains** for desired output in pivot table.
 **Operators** that can be used in label filtering are:
 
 | Operator | Description |
@@ -190,9 +190,9 @@ For example, in a "Country" field, to show countries names that contains "United
 
 ### Filtering number data type through code
 
-This type of filtering is exclusively applicable for fields with members in number data type. The filtering can be configured in a similar way explained in the previous section - "Filtering string data type through code", except the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type) property setting. For number data type, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type) property to **Number** enumeration.
+This type of filtering is exclusively applicable for fields with members in number data type. The filtering can be configured in a similar way explained in the previous section - "Filtering string data type through code", except the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#type) property setting. For number data type, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#type) property to **Number** enumeration.
 
-For example, in a "Sold" field, to show the values less than "40000", set [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value1) to "40000" and [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#condition) to **LessThan** for desired output in pivot table.
+For example, in a "Sold" field, to show the values less than "40000", set [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#value1) to "40000" and [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition) to **LessThan** for desired output in pivot table.
 <!-- markdownlint-disable MD028 -->
 > Operators like **Equals**, **DoesNotEquals**, **GreaterThan**, **GreaterThanOrEqualTo**, **LessThan**, **LessThanOrEqualTo**, **Between**, and **NotBetween** are alone applicable for number data type.
 
@@ -209,9 +209,9 @@ For example, in a "Sold" field, to show the values less than "40000", set [`valu
 
 ### Filtering date data type through code
 
-This type of filtering is exclusively applicable for fields with members in date data type. The filtering can be configured in a similar way explained in the prior section - "Filtering string data type through code", except the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type) property setting. For date data type, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type) property to **Date** enumeration.
+This type of filtering is exclusively applicable for fields with members in date data type. The filtering can be configured in a similar way explained in the prior section - "Filtering string data type through code", except the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#type) property setting. For date data type, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#type) property to **Date** enumeration.
 
-For example, in a "Delivery Date" field, to show the delivery records of the first week of the year 2019, then set [`Value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value1) to "2016" and [`Condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#condition) to **Before** for desired output in pivot table.
+For example, in a "Delivery Date" field, to show the delivery records of the first week of the year 2019, then set [`Value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#value1) to "2016" and [`Condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition) to **Before** for desired output in pivot table.
 
 > Operators like **Equals**, **DoesNotEquals**, **Before**, **BeforeOrEqualTo**, **After**, **AfterOrEqualTo**, **Between**, and **NotBetween** are alone applicable for date data type.
 
@@ -236,19 +236,19 @@ End user can clear the applied label filter by simply click the "Clear" option a
 
 The value filtering helps to perform filter operation based only on value fields and its resultant aggregated values over other fields defined in row and column axes.
 
-The value filtering dialog can be enabled by setting the [`allowValueFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowvaluefilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
+The value filtering dialog can be enabled by setting the [`allowValueFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#allowvaluefilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
 
-The value filtering can also be configured using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) through code-behind. The properties required for value filter are:
+The value filtering can also be configured using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/) through code-behind. The properties required for value filter are:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#name): Sets the normal field name.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#type): Sets the filter type as **Value**to the field.
-* [`measure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#measure): Sets the value field name.
-* [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#condition): Sets the operator type such as **Equals**, **GreaterThan**, **LessThan** etc.
-* [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value1): Sets the start value.
-* [`value2`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value2): Sets the end value. It is applicable only for the operator such as **Between** and **NotBetween**.
-* [`selectedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#selectedfield): Sets level name of a dimension, where the filter settings are to be applied. **NOTE: This property applicable only for OLAP data source.**
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the normal field name.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the filter type as **Value**to the field.
+* [`measure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the value field name.
+* [`condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the operator type such as **Equals**, **GreaterThan**, **LessThan** etc.
+* [`value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the start value.
+* [`value2`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition): Sets the end value. It is applicable only for the operator such as **Between** and **NotBetween**.
+* [`selectedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filterModel/#selectedfield): Sets level name of a dimension, where the filter settings are to be applied. **NOTE: This property applicable only for OLAP data source.**
 
-For example, to show the data where total sum of units sold for each country exceeding 2000, set [`Value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#value1) to "1500" and [`Condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#condition) to **GreaterThan** in the "Country" field.
+For example, to show the data where total sum of units sold for each country exceeding 2000, set [`Value1`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#value1) to "1500" and [`Condition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/#condition) to **GreaterThan** in the "Country" field.
 
 **Operators** that can be used in value filtering are:
 
@@ -281,10 +281,10 @@ End user can clear the applied value filter by simply click the "Clear" option a
 
 ### MemberFiltering
 
-The event [`memberFiltering`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#memberfiltering) triggers before applying filter using the dialog, that is, specifically while clicking the **"OK"** button. Using this event user can view or modify the applied [`filter settings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) such as filter items, type of filter, conditions, etc. It has following parameters:
+The event [`memberFiltering`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#memberfiltering) triggers before applying filter using the dialog, that is, specifically while clicking the **"OK"** button. Using this event user can view or modify the applied [filter settings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/) such as filter items, type of filter, conditions, etc. It has following parameters:
 
 * `cancel` - Boolean property, when the parameter `cancel` is set to **true**, applied filtering will not be updated
-* [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) - It holds current [`filter settings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/).
+* [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/) - It holds current [filter settings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/filter/).
 * `dataSourceSettings` - It holds updated datasource settings.
 
 {% tabs %}
@@ -297,7 +297,7 @@ The event [`memberFiltering`](https://ej2.syncfusion.com/vue/documentation/api/p
 
 ### MemberEditorOpen
 
-The event [`memberEditorOpen`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#membereditoropen) fires while opening member editor dialog. It allows to customize the field members to be displayed in the dialog. It has the following parameters
+The event [`memberEditorOpen`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#membereditoropen) fires while opening member editor dialog. It allows to customize the field members to be displayed in the dialog. It has the following parameters
 
 * `fieldName`: It holds the name of the appropriate field.
 

@@ -175,22 +175,22 @@ export default {
 
 ### Adding OLAP cube elements to row, column, value and filter axes
 
-Now that pivot table is initialized and assigned with sample OLAP data source, will further move to showcase the component by organizing appropriate [OLAP cube elements](#olap-cube-elements) in [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) axes.
+Now that pivot table is initialized and assigned with sample OLAP data source, will further move to showcase the component by organizing appropriate [OLAP cube elements](#olap-cube-elements) in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters) axes.
 
-In [`dataSourceSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#datasourcesettings) property, four major axes [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) plays a vital role in defining and organizing [OLAP cube elements](#olap-cube-elements) from the bound data source, to render the entire pivot table component in a desired format.
+In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) property, four major axes [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters) plays a vital role in defining and organizing [OLAP cube elements](#olap-cube-elements) from the bound data source, to render the entire pivot table component in a desired format.
 
-[`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies, NamedSet, Calculated Members etc.,) that needs to be displayed in row axis of the pivot table.
+[`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies, NamedSet, Calculated Members etc.,) that needs to be displayed in row axis of the pivot table.
 
-[`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies, NamedSet, Calculated Members etc.,) that needs to be displayed in column axis of the pivot table.
+[`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies, NamedSet, Calculated Members etc.,) that needs to be displayed in column axis of the pivot table.
 
-[`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Measures, Calculated Measures) that needs to be displayed as aggregated numeric values in the pivot table.
+[`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) – Collection of [OLAP cube elements](#olap-cube-elements) (such as Measures, Calculated Measures) that needs to be displayed as aggregated numeric values in the pivot table.
 
-[`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) - Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies and Calculated Members) that would act as master filter over the data bound in row, column and value axes of the pivot table.
+[`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters) - Collection of [OLAP cube elements](#olap-cube-elements) (such as Hierarchies and Calculated Members) that would act as master filter over the data bound in row, column and value axes of the pivot table.
 
 In-order to define each [OLAP cube element](#olap-cube-elements) in the respective axis, the following basic properties should be set.
 
-* [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#name): It allows to set the unique name of the hierarchies, named set, measures, calculated members etc., from the bound OLAP data source. It’s casing should match exactly like in the data source and if not set properly, the pivot table will be rendered as empty.
-* [`caption`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#caption): It allows to set the caption, which is the alias name of the unique name that needs to be displayed in the pivot table. If not provided, unique name will be displayed.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptions/#name): It allows to set the unique name of the hierarchies, named set, measures, calculated members etc., from the bound OLAP data source. It’s casing should match exactly like in the data source and if not set properly, the pivot table will be rendered as empty.
+* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptions/#caption): It allows to set the caption, which is the alias name of the unique name that needs to be displayed in the pivot table. If not provided, unique name will be displayed.
 
 In this sample, "Product Categories" is added in column, "Customer Geography" in row, and "Customer Count" and "Internet Sales Amount" in value axes respectively.
 
@@ -204,7 +204,7 @@ In this sample, "Product Categories" is added in column, "Customer Geography" in
 
 ### Applying formatting to measures
 
-Formatting defines a way in which values should be displayed in pivot table. For example, format **"C0"** denotes the values should be displayed in currency pattern without decimal points. To do so, define the [`formatSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#iformatsettings) with its [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) and [`format`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#format) properties. In this sample, the [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) property is set as "[Measures].[Internet Sales Amount]", a measure from value axis and its format is set as "C0". Likewise, we can set format for other measures as well.
+Formatting defines a way in which values should be displayed in pivot table. For example, format **"C0"** denotes the values should be displayed in currency pattern without decimal points. To do so, define the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#formatsettings) with its [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#name) and [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#format) properties. In this sample, the [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/#name) property is set as "[Measures].[Internet Sales Amount]", a measure from value axis and its format is set as "C0". Likewise, we can set format for other measures as well.
 
 > Only measures from value axis, which is in the form of numeric data values are applicable for formatting.
 
@@ -218,7 +218,7 @@ Formatting defines a way in which values should be displayed in pivot table. For
 
 ### Enable grouping bar
 
-The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube-elements) from the bound data source and allows end users to drag [OLAP cube elements](#olap-cube-elements) between different axes such as [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters), and change pivot view at runtime. Sorting, filtering and removing of elements is also possible. It can be enabled by setting the [`showGroupingBar`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#showgroupingbar) property to **true** and by injecting the **GroupingBar** module as follows.
+The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube-elements) from the bound data source and allows end users to drag [OLAP cube elements](#olap-cube-elements) between different axes such as [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters), and change pivot view at runtime. Sorting, filtering and removing of elements is also possible. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/?no-cache=1#showgroupingbar) property to **true** and by injecting the **GroupingBar** module as follows.
 
 > If the **GroupingBar** module is not injected, the grouping bar will not be rendered with the pivot table component.
 
@@ -232,7 +232,7 @@ The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube
 
 ### Enable pivot field list
 
-The component provides a built-in Field List similar to Microsoft Excel. It allows you to add or remove [OLAP cube elements](#olap-cube-elements) and also rearrange the [OLAP cube elements](#olap-cube-elements) between different axes, including [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) along with filter and sort options dynamically at runtime. It can be enabled by setting the [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showfieldlist) property to **true** and by injecting the **FieldList** module as follows.
+The component provides a built-in Field List similar to Microsoft Excel. It allows you to add or remove [OLAP cube elements](#olap-cube-elements) and also rearrange the [OLAP cube elements](#olap-cube-elements) between different axes, including [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#filters) along with filter and sort options dynamically at runtime. It can be enabled by setting the [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/?no-cache=1#showfieldlist) property to **true** and by injecting the **FieldList** module as follows.
 
 > If the **FieldList** module is not injected, the Field List will not be rendered with the pivot table component.
 
@@ -246,7 +246,7 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 
 ### Exploring filter axis
 
-The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) and [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
+The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) and [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -265,15 +265,15 @@ The two types of calculated fields are as follows:
 * **Calculated Measure** – Creates a new measure through user-defined expression.
 * **Calculated Dimension** – Creates a new dimension through user-defined expression.
 
-It can be customized using the [`calculatedFieldsSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFields/#icalculatedfields) property through code behind. The setting required for calculate field feature at code behind are:
-* [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFields/#name): It allows to set the unique name for new calculated field.
-* [`formula`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFields/#formula): It allows to set the user-defined expression.
-* [`hierarchyUniqueName`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFields/#hierarchyuniquename): It allows to specify dimension unique name whose hierarchies alone should be used in the expression. This will be applicable only for calculated dimension.
-* [`formatString`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFields/#formatstring): It allows to set the format string for the resultant calculated field.
+It can be customized using the [`calculatedFieldsSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#calculatedfieldsettings) property through code behind. The setting required for calculate field feature at code behind are:
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#name): It allows to set the unique name for new calculated field.
+* [`formula`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#formula): It allows to set the user-defined expression.
+* [`hierarchyUniqueName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#hierarchyuniquename): It allows to specify dimension unique name whose hierarchies alone should be used in the expression. This will be applicable only for calculated dimension.
+* [`formatString`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#formatstring): It allows to set the format string for the resultant calculated field.
 
-You need to set [`isCalculatedField`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#iscalculatedfield) property to true, while adding calculated fields to respective axis through code behind.
+You need to set [`isCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptions/#iscalculatedfield) property to true, while adding calculated fields to respective axis through code behind.
 
-Also calculated fields can be added at run time through the built-in dialog. The dialog can be enabled by setting the [`allowCalculatedField`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module as follows. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation.
+Also calculated fields can be added at run time through the built-in dialog. The dialog can be enabled by setting the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/?no-cache=1#allowcalculatedfield) property to **true** and by injecting the **CalculatedField** module as follows. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation.
 
 > If the **CalculatedField** module is not injected, the calculated field dialog will not be rendered with the pivot table component. Moreover calculated measure can be added only in value axis.
 
@@ -385,7 +385,7 @@ Previous changes can be cleared by using the "Clear" option while performing ope
 
 #### Virtual Scrolling
 
-Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on vertical or horizontal scroll position. This feature can be enabled by setting the [`enableVirtualization`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property to **true**.
+Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on vertical or horizontal scroll position. This feature can be enabled by setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) property to **true**.
 
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the pivot table.
 
@@ -399,7 +399,7 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
 
 ##### Limitations for virtual scrolling
 
-* The [`columnWidth`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) should be in pixels. The percentage value is not accepted.
+* The [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/#columnwidth) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/) should be in pixels. The percentage value is not accepted.
 * Resizing columns and setting the width of individual columns will affect scrolling and is therefore not recommended.
 * The grand totals option is not supported by virtual scrolling.
 
@@ -423,7 +423,7 @@ Output will be displayed as follows.
 
 ## Data Binding
 
-To bind OLAP datasource to the pivot table, you need to specify following properties under [`dataSourceSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#datasourcesettings) option.
+To bind OLAP datasource to the pivot table, you need to specify following properties under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasourcesettings) option.
 
 | Properties|Description |
 |-----|-----|
@@ -470,7 +470,7 @@ You can place measures in different position in row or column axis either thorou
 
 Named set is a multidimensional expression (MDX) that returns a set of dimension members, which can be created by combining the cube data, arithmetic operators, numbers, and functions.
 
-You can bind the named sets in the pivot table by setting it's unique name in the [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#name) property either in row or column axis and [`isNamedSet`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#isnamedset) boolean property to **true**. In this sample, we have added "Core Product Group" named set in the column axis.
+You can bind the named sets in the pivot table by setting it's unique name in the [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptions/#name) property either in row or column axis and [`isNamedSet`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptions/#isnamedset) boolean property to **true**. In this sample, we have added "Core Product Group" named set in the column axis.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -482,10 +482,10 @@ You can bind the named sets in the pivot table by setting it's unique name in th
 
 ### Configuring authentication
 
-Users can configure basic authentication information to access the OLAP cube using the [`authentication`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#authentication) property. The settings required to configure are as follows:
+Users can configure basic authentication information to access the OLAP cube using the [`authentication`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#authentication) property. The settings required to configure are as follows:
 
-* [`userName`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iAuthenticationInfo/#username): It allows the user to set a username that recognizes the basic authentication of the IIS.
-* [`password`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iAuthenticationInfo/#password): It allows to set the appropriate password.
+* [`userName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/authenticationModel/#username): It allows the user to set a username that recognizes the basic authentication of the IIS.
+* [`password`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/authenticationModel/#password): It allows to set the appropriate password.
 
 > If the user does not configure the authentication, a default popup will appear in the browser to get the authentication information.
 
@@ -554,9 +554,9 @@ export default {
 
 ### Roles
 
-SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to limit data access within a cube. Each role defines a set of permissions that can be granted to a single user or groups of users. It is used to manage security by limiting access to sensitive data and determining who has access to and can change the cube. It can be configured using the [`roles`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#roles) property in [`dataSourceSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview#datasourcesettings).
+SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/analysis-services/multidimensional-models/roles-and-permissions-analysis-services?view=asallproducts-allversions) to limit data access within a cube. Each role defines a set of permissions that can be granted to a single user or groups of users. It is used to manage security by limiting access to sensitive data and determining who has access to and can change the cube. It can be configured using the [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#roles) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasourcesettings).
 
-> The [`roles`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#roles) property can be used to specify one or more roles to the OLAP cube, separated by commas.
+> The [`roles`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#roles) property can be used to specify one or more roles to the OLAP cube, separated by commas.
 
 ```
 <template>
@@ -658,7 +658,7 @@ User-defined hierarchy organizes the members of a dimension into hierarchical st
 
 #### Named set
 
-A named set is a collection of tuples and members, which can be defined and saved as a part of the cube definition. Named set records reside inside the sets folder, which is under a dimension element. These elements can be dragged to [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) or [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) axis via grouping bar or field list at runtime. To work with a lengthy, complex, or commonly used expression easier, Multidimensional Expressions (MDX) allows you to define a named set.
+A named set is a collection of tuples and members, which can be defined and saved as a part of the cube definition. Named set records reside inside the sets folder, which is under a dimension element. These elements can be dragged to [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows) or [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) axis via grouping bar or field list at runtime. To work with a lengthy, complex, or commonly used expression easier, Multidimensional Expressions (MDX) allows you to define a named set.
 
 #### Calculated field
 

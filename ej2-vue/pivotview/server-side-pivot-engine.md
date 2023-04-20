@@ -34,7 +34,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 **1.** Run the **PivotController** (Server-side) application which will be hosted in IIS shortly.
 
-**2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property of `dataSourceSettings`.
+**2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettingsModel/#mode) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#url) property of `dataSourceSettings`.
 
 ```javascript
 <script>
@@ -118,7 +118,7 @@ The server-side Pivot Engine supports the following data sources,
 
 #### Collection
 
-The collection data sources such as List, IEnumerable, and so on are supported. This can be bound using the **GetData** controller method. Also, in the Pivot Table sample, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **JSON**, which is also the default enumeration value.
+The collection data sources such as List, IEnumerable, and so on are supported. This can be bound using the **GetData** controller method. Also, in the Pivot Table sample, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) to **JSON**, which is also the default enumeration value.
 
 In the server-side application **(PivotController)**, a collection type data source is framed in the **DataSource.cs** file as shown in the following.
 
@@ -342,7 +342,7 @@ public async Task<object> GetData(FetchData param)
 
 #### CSV
 
-The CSV data from a local *.csv file type can be connected to the Pivot Table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collect data that can be bound to the server-side pivot engine. Also, in the Pivot Table sample, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) as **CSV**.
+The CSV data from a local *.csv file type can be connected to the Pivot Table. Here, the file can be read by the **StreamReader** option, which will give the result in the string format. The resultant string needs to be converted to collect data that can be bound to the server-side pivot engine. Also, in the Pivot Table sample, set the [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#type) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) as **CSV**.
 
 In the server application, the **sales.csv** file is available under the **DataSource** folder, and its model type is defined in the **DataSource.cs** file.
 

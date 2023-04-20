@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Calculated field in Vue Pivotview component
 
-Allows end user to create a new calculated field in the pivot table, based on available fields from the bound data source or using simple formula with basic arithmetic operators. It can be added at runtime through the built-in dialog, invoked from Field List UI. To do so, set the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowcalculatedfield) property in pivot table to **true** in the pivot table. End user can now see a "CALCULATED FIELD" button enabled in Field List UI automatically, which on clicking will invoke the calculated field dialog and perform necessary operation.
+Allows end user to create a new calculated field in the pivot table, based on available fields from the bound data source or using simple formula with basic arithmetic operators. It can be added at runtime through the built-in dialog, invoked from Field List UI. To do so, set the [`allowCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#allowcalculatedfield) property in pivot table to **true** in the pivot table. End user can now see a "CALCULATED FIELD" button enabled in Field List UI automatically, which on clicking will invoke the calculated field dialog and perform necessary operation.
 
-Calculated field can also be included in the pivot table through code behind using the [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/). The required properties to create a new calculate field are:
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/#name): It allows to indicate the calculated field with a unique name.
-* [`formula`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/#formula): It allows to set the formula.
-* [`formatString`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/#formatstring): It helps to set the number format for the resultant value.
+Calculated field can also be included in the pivot table through code behind using the [`calculatedFieldsSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/). The required properties to create a new calculate field are:
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#name): It allows to indicate the calculated field with a unique name.
+* [`formula`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/#formula): It allows to set the formula.
+* [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettings/): It helps to set the number format for the resultant value.
 
 To use calculated field option, you need to inject the `CalculatedField` module in pivot table.
 
@@ -231,11 +231,11 @@ Below is a list of operators and functions that can be used in the formula to cr
 
 ### CalculatedFieldCreate
 
-The event [`calculatedFieldCreate`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#calculatedfieldcreate) fires while closing the dialog on "OK" button click. It allows to customize the new or existing calculated field information obtained from the dialog. It has the following parameters
+The event [`calculatedFieldCreate`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#calculatedfieldcreate) fires while closing the dialog on "OK" button click. It allows to customize the new or existing calculated field information obtained from the dialog. It has the following parameters
 
 * `calculatedField`: It holds the new or existing calculated field information obtained from dialog.
 
-* [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/): It holds the [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCalculatedFieldSettings/) property of the pivot report.
+* [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/): It holds the [`calculatedFieldSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/calculatedFieldSettings/) property of the pivot report.
 
 * `cancel`: It is a boolean property and by setting this to true , the customization done in calculated field dialog won’t be applied to calculated field.
 

@@ -11,11 +11,11 @@ domainurl: ##DomainURL##
 
 ## JSON
 
-For JSON data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) needs to be set as `JSON`. By default, the default value is assumed as `JSON`.
+For JSON data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) needs to be set as `JSON`. By default, the default value is assumed as `JSON`.
 
 ### Binding JSON data via local
 
-In-order to bind local JSON data to the pivot table user can assign the local variable holding the JSON data to the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
+In-order to bind local JSON data to the pivot table user can assign the local variable holding the JSON data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -25,7 +25,7 @@ In-order to bind local JSON data to the pivot table user can assign the local va
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs19" %}
 
-Using local variable, the JSON data can also be bound to the pivot table using [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) option with the help of `JsonAdaptor`. Here the instance of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) holding JSON data is assigned to [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). The use of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) is optional here.
+Using local variable, the JSON data can also be bound to the pivot table using [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) option with the help of `JsonAdaptor`. Here the instance of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) holding JSON data is assigned to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/). The use of [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/) is optional here.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -35,7 +35,7 @@ Using local variable, the JSON data can also be bound to the pivot table using [
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs20" %}
 
-In the meantime, the JSON data from the local *.json file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to JSON data that can be assigned to the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). The following code example illustrates the same.
+In the meantime, the JSON data from the local *.json file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to JSON data that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/). The following code example illustrates the same.
 
 ```javascript
 import Vue from "vue";
@@ -80,7 +80,7 @@ export default {
 
 ### Binding JSON data via remote
 
-In-order to bind remote JSON data, mention the endpoint [`URL`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property. The [`URL`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property supports both direct downloadable file (*.json) and web service URL.
+In-order to bind remote JSON data, mention the endpoint [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) property. The [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.json) and web service URL.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -92,13 +92,13 @@ In-order to bind remote JSON data, mention the endpoint [`URL`](https://helpej2.
 
 ## CSV
 
-For CSV data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) needs to be set as `CSV` mandatorily.
+For CSV data binding, the `type` property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) needs to be set as `CSV` mandatorily.
 
 > The CSV format is considered to be the most compact format compared to JSON since it is half the size of JSON. This helps to reduce the bandwidth while transferring to the browser.
 
 ### Binding CSV data via local
 
-In-order to bind local CSV data to the pivot table, user needs to convert it as string array and then directly assign it to the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
+In-order to bind local CSV data to the pivot table, user needs to convert it as string array and then directly assign it to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -108,7 +108,7 @@ In-order to bind local CSV data to the pivot table, user needs to convert it as 
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/csvdata-cs1" %}
 
-In the meantime, the CSV data from the local *.csv file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to string array that can be assigned to the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). The following code example illustrates the same.
+In the meantime, the CSV data from the local *.csv file type can also be connected to the pivot table via the file uploader option. Here, the resulting string after uploading the file needs to be converted to string array that can be assigned to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/). The following code example illustrates the same.
 
 ```javascript
 import Vue from "vue";
@@ -156,7 +156,7 @@ export default {
 
 ### Binding CSV data via remote
 
-In-order to bind remote CSV data, mention the endpoint [`URL`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property. The [`URL`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property supports both direct downloadable file (*.csv) and web service URL.
+In-order to bind remote CSV data, mention the endpoint [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#url) under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) property. The [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#url) property supports both direct downloadable file (*.csv) and web service URL.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -168,11 +168,11 @@ In-order to bind remote CSV data, mention the endpoint [`URL`](https://helpej2.s
 
 ## Remote Data Binding
 
-To interact with remote data source, provide the endpoint [`url`](https://ej2.syncfusion.com/documentation/data/adaptors/#url-adaptor) within [`DataManager`](https://ej2.syncfusion.com/documentation/data/adaptors/#data-adaptors) along with appropriate [`adaptor`](https://ej2.syncfusion.com/documentation/data/adaptors/#data-adaptors). By default, [`DataManager`](https://ej2.syncfusion.com/documentation/data/adaptors/#data-adaptors) uses [`ODataAdaptor`](https://ej2.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
+To interact with remote data source, provide the endpoint `url` within `DataManager` along with appropriate [`adaptor`](https://ej2.syncfusion.com/vue/documentation/data/adaptors.html). By default, `DataManager` uses `ODataAdaptor` for remote data-binding.
 
 ### Binding with OData services
 
-OData is a standardized protocol for creating and consuming data. User can retrieve data from OData service using the [`DataManager`](https://ej2.syncfusion.com/documentation/data/adaptors/#data-adaptors). Refer to the following code example for remote data binding using OData service.
+OData is a standardized protocol for creating and consuming data. User can retrieve data from OData service using the `DataManager`. Refer to the following code example for remote data binding using OData service.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -184,7 +184,7 @@ OData is a standardized protocol for creating and consuming data. User can retri
 
 ### Binding with OData V4 services
 
-The OData V4 is an improved version of OData protocols, and the [`DataManager`](https://ej2.syncfusion.com/documentation/data/adaptors/#data-adaptors) can be used to retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
+The OData V4 is an improved version of OData protocols, and the `DataManager` can be used to retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the [`ODataV4Adaptor`](https://ej2.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -220,27 +220,27 @@ By default, the data manager retrieves all the data from the provider which is m
 
 ## Mapping
 
-One can define field information like alias name (caption), data type, aggregation type, show and hide subtotals etc. using the [`fieldMapping`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#fieldmapping) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). The available options are,
+One can define field information like alias name (caption), data type, aggregation type, show and hide subtotals etc. using the [`fieldMapping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#fieldmapping) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/). The available options are,
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#name) - It is to specify the appropriate field name.
-* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#caption) - It is to set the alias name (caption) to the specific field. Instead of actual field name, the alias name (caption) will be set in the UI of the pivot table.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#type) - It is to display values in the pivot table with appropriate aggregation such as sum, product, count, average, minimum, maximum, etc. Its default value is **sum**. This option is applicable only for relational data source.
-* [`axis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#axis) - It will help to display the field in specified axis such as row/column/value/filter axis of the pivot table.
-* [`showNoDataItems`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#shownodataitems) - It is to show all the members of a specific field to the pivot table, even if there are no data in the intersection of the row and column. The default value is **false**. This option is applicable only for relational data source.
-* [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#basefield) - For the aggregate types like "DifferenceFrom" or "PercentageOfDifferenceFrom" or "PercentageOfParentTotal", selective field is assigned for comparison via this property.
-* [`baseItem`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#baseitem) For the aggregate types like "DifferenceFrom" or "PercentageOfDifferenceFrom" or "PercentageOfParentTotal", selective member in a field is assigned for comparison via this property.
-* [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#expandall) - It is to expand or collapse all headers of a specific field in row and column axes of the pivot table. The default value is **false**.
-* [`showSubTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#showsubtotals) - It is to show or hide sub-totals of a specific field in row and column axis of the pivot table. The default value is **true**.
-* [`isNamedSet`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#isnamedset) - It is to set whether the specified field is named set or not. In general, the named set is a set of dimension members or a set expression (MDX query) to be created as a dimension in the SSAS OLAP cube itself. The default value is **false** and this option is applicable only for OLAP data source.
-* [`isCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#iscalculatedfield) - It is to set whether the specified field is a calculated field or not. In general, a calculated field is created from the bound data source or using simple formula with basic arithmetic operators in the pivot table. The default value is **false** and this option is applicable only for OLAP data source.
-* [`showFilterIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#showfiltericon) - It is to show or hide the filter icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This filter icon is used to filter the members of a specified field at runtime in the pivot table. The default value is **true**.
-* [`showSortIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#showsorticon) - It is to show or hide the sort icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This sort icon is used to order members of a specified field either in ascending or descending at runtime. The default value is **true**.
-* [`showRemoveIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#showremoveicon) - It is to show or hide the remove icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This remove icon is used to remove the specified field during runtime. The default value is **true**.
-* [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#showvaluetypeicon) - It is to show or hide the value type icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This value type icon helps to select the appropriate aggregation type to specified value field at runtime. The default value is **true**.
-* [`showEditIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#showediticon) - It is to show or hide the edit icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This edit icon is used to modify caption, formula, and format of a specified calculated field at runtime. The default value is **true**.
-* [`allowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#allowdraganddrop) - It is to restrict specific field's button from being dragged on runtime in the grouping bar and field list UI. This will prevent from altering the current report. The default value is **true**.
-* [`dataType`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#datatype) - It is to specify the type of the field like 'string', 'number', 'datetime', 'date', and 'boolean'.
-* [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) - It is to display fields in the field list UI by grouping them under the desired folder name.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#name) - It is to specify the appropriate field name.
+* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#caption) - It is to set the alias name (caption) to the specific field. Instead of actual field name, the alias name (caption) will be set in the UI of the pivot table.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#type) - It is to display values in the pivot table with appropriate aggregation such as sum, product, count, average, minimum, maximum, etc. Its default value is **sum**. This option is applicable only for relational data source.
+* [`axis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#axis) - It will help to display the field in specified axis such as row/column/value/filter axis of the pivot table.
+* [`showNoDataItems`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#shownodataitems) - It is to show all the members of a specific field to the pivot table, even if there are no data in the intersection of the row and column. The default value is **false**. This option is applicable only for relational data source.
+* [`baseField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#basefield) - For the aggregate types like "DifferenceFrom" or "PercentageOfDifferenceFrom" or "PercentageOfParentTotal", selective field is assigned for comparison via this property.
+* [`baseItem`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#baseitem) For the aggregate types like "DifferenceFrom" or "PercentageOfDifferenceFrom" or "PercentageOfParentTotal", selective member in a field is assigned for comparison via this property.
+* [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#expandAll) - It is to expand or collapse all headers of a specific field in row and column axes of the pivot table. The default value is **false**.
+* [`showSubTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#showsubtotals) - It is to show or hide sub-totals of a specific field in row and column axis of the pivot table. The default value is **true**.
+* [`isNamedSet`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#isnamedset) - It is to set whether the specified field is named set or not. In general, the named set is a set of dimension members or a set expression (MDX query) to be created as a dimension in the SSAS OLAP cube itself. The default value is **false** and this option is applicable only for OLAP data source.
+* [`isCalculatedField`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#iscalculatedfield) - It is to set whether the specified field is a calculated field or not. In general, a calculated field is created from the bound data source or using simple formula with basic arithmetic operators in the pivot table. The default value is **false** and this option is applicable only for OLAP data source.
+* [`showFilterIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#showfiltericon) - It is to show or hide the filter icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This filter icon is used to filter the members of a specified field at runtime in the pivot table. The default value is **true**.
+* [`showSortIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#showsorticon) - It is to show or hide the sort icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This sort icon is used to order members of a specified field either in ascending or descending at runtime. The default value is **true**.
+* [`showRemoveIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#showremoveicon) - It is to show or hide the remove icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This remove icon is used to remove the specified field during runtime. The default value is **true**.
+* [`showValueTypeIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#showvaluetypeicon) - It is to show or hide the value type icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This value type icon helps to select the appropriate aggregation type to specified value field at runtime. The default value is **true**.
+* [`showEditIcon`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#showediticon) - It is to show or hide the edit icon of a specific field which will be displayed on the button of the grouping bar and field list UI. This edit icon is used to modify caption, formula, and format of a specified calculated field at runtime. The default value is **true**.
+* [`allowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#allowdraganddrop) - It is to restrict specific field's button from being dragged on runtime in the grouping bar and field list UI. This will prevent from altering the current report. The default value is **true**.
+* [`dataType`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#datatype) - It is to specify the type of the field like 'string', 'number', 'datetime', 'date', and 'boolean'.
+* [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#groupname) - It is to display fields in the field list UI by grouping them under the desired folder name.
 
 The main purpose of these mapping options is to configure each field that is not part of the initial pivot report. Even if any field that is part of this mapping is defined here, the value set in the initial report will have the highest preceding.
 
@@ -257,7 +257,7 @@ In the below code sample, visibility of the field button icons are configured.
 
 ## Values in row axis
 
-By default, the value fields are plotted in column axis. To plot those fields in row axis, use the [`valueAxis`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#valueaxis) property by setting its value as **row**. By default, it holds the value **column**.
+By default, the value fields are plotted in column axis. To plot those fields in row axis, use the [`valueAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#valueaxis) property by setting its value as **row**. By default, it holds the value **column**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -269,7 +269,7 @@ By default, the value fields are plotted in column axis. To plot those fields in
 
 ## Values at different positions
 
-By default, the value fields are placed at the end of the row or column axis. To place those value fields in different positions, use the [`valueIndex`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#valueindex) property and set the value to an appropriate index position. Its default value is **-1**, which denotes the last position. The [`valueIndex`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#valueindex) property is dependent on the [`valueAxis`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#valueaxis) property.
+By default, the value fields are placed at the end of the row or column axis. To place those value fields in different positions, use the [`valueIndex`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#valueindex) property and set the value to an appropriate index position. Its default value is **-1**, which denotes the last position. The `valueIndex` property is dependent on the [`valueAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#valueaxis) property.
 
 > This support is only available for relational data sources. Also, enable the [`showValuesButton`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist/#showvaluesbutton) property in the grouping bar and field list UI to **true** to re-arrange the values fields at different positions via user interaction.
 
@@ -283,7 +283,7 @@ By default, the value fields are placed at the end of the row or column axis. To
 
 ## Show 'no data' items
 
-By default, the pivot table only shows the field item if it has data in its row or column combination. To show all items that do not have data in row and column combination in the pivot table, use the [`showNoDataItems`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#shownodataitems) property by settings its value to **true** for the desired fields. In the following code sample, rows of the "County" and "State" fields do not have data in all combination with "Date" column field.
+By default, the pivot table only shows the field item if it has data in its row or column combination. To show all items that do not have data in row and column combination in the pivot table, use the [`showNoDataItems`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldListFieldOptions/#shownodataitems) property by settings its value to **true** for the desired fields. In the following code sample, rows of the "County" and "State" fields do not have data in all combination with "Date" column field.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -295,7 +295,7 @@ By default, the pivot table only shows the field item if it has data in its row 
 
 ## Show value headers always
 
-To show value header always in pivot table, even if it holds a single value, use the [`alwaysShowValueHeader`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#alwaysshowvalueheader) property by settings its value as **true**.
+To show value header always in pivot table, even if it holds a single value, use the [`alwaysShowValueHeader`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#alwaysshowvalueheader) property by settings its value as **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -307,7 +307,7 @@ To show value header always in pivot table, even if it holds a single value, use
 
 ## Customize empty value cells
 
-User can show custom string in empty value cells using the [`emptyCellsTextContent`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#emptycellstextcontent) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) of the pivot table. Since the property is of string data type, user can fill empty value cells with any value like "0", "-", "*", "(blank)", etc. Its common for all value fields and can be configured through code behind.
+User can show custom string in empty value cells using the [`emptyCellsTextContent`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#emptycellsTextcontent) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) of the pivot table. Since the property is of string data type, user can fill empty value cells with any value like "0", "-", "*", "(blank)", etc. Its common for all value fields and can be configured through code behind.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -321,7 +321,7 @@ User can show custom string in empty value cells using the [`emptyCellsTextConte
 
 ### Load
 
-The event [`load`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#load) fires before initiate rendering of pivot table. It holds following parameters like`dataSourceSettings`, `fieldsType` and `pivotView`. In this event user can customize data source settings before initiating pivot table render module.
+The event [`load`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#load) fires before initiate rendering of pivot table. It holds following parameters like`dataSourceSettings`, `fieldsType` and `pivotView`. In this event user can customize data source settings before initiating pivot table render module.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

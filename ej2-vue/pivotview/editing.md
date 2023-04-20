@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 > This feature is applicable only for the relational data source.
 
-Cell edit allows to add, delete, or update the raw items of any value cell from the pivot table. The raw items can be viewed in a data grid inside a new window on double-clicking the appropriate value cell. In the data grid, CRUD operations can be performed by double-clicking the cells or using toolbar options. Once user finishes editing raw items, aggregation will be performed for the updated values in pivot table component immediately. This support can be enabled by setting the [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) to **true**.
+Cell edit allows to add, delete, or update the raw items of any value cell from the pivot table. The raw items can be viewed in a data grid inside a new window on double-clicking the appropriate value cell. In the data grid, CRUD operations can be performed by double-clicking the cells or using toolbar options. Once user finishes editing raw items, aggregation will be performed for the updated values in pivot table component immediately. This support can be enabled by setting the [`allowEditing`](https://ej2.syncfusion.com/angular/documentation/api/pivotview/cellEditSettingsModel/#allowediting) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/) to **true**.
 
 The CRUD operations available in the data grid toolbar and command column are:
 
@@ -33,7 +33,7 @@ The following are the supported edit types in the data grid:
 
 ## Normal
 
-In normal edit mode, when user starts editing, the state of the currently selected row alone will be completely changed to edit state. User can change the cell values and save it to the data source by clicking "Update" toolbar button. To enable the normal edit, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) to **Normal**.
+In normal edit mode, when user starts editing, the state of the currently selected row alone will be completely changed to edit state. User can change the cell values and save it to the data source by clicking "Update" toolbar button. To enable the normal edit, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/) to **Normal**.
 
 > The normal edit mode **Normal** is set as the default mode for editing.
 
@@ -47,7 +47,7 @@ In normal edit mode, when user starts editing, the state of the currently select
 
 ## Dialog
 
-In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) to **Dialog**.
+In dialog edit mode, when user starts editing, the currently selected row data will be shown in an exclusive dialog. User can change cell values and save it to the data source by clicking "Save" button in the dialog. To enable the dialog edit, set the [`Mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/) to **Dialog**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -59,7 +59,7 @@ In dialog edit mode, when user starts editing, the currently selected row data w
 
 ## Batch
 
-In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) to **Batch**. You can perform bulk save (added, changed, and deleted data in the single request) to the data source by clicking the toolbar's **Update** button.
+In batch edit mode, when user double-clicks any data grid cell, the state of target cell is changed to edit state. User can perform bulk changes and finally save (added, changed, and deleted data in the single request) to the data source by clicking "Update" toolbar button. To enable the batch edit, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/#mode) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/) to **Batch**. You can perform bulk save (added, changed, and deleted data in the single request) to the data source by clicking the toolbar's **Update** button.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -71,7 +71,7 @@ In batch edit mode, when user double-clicks any data grid cell, the state of tar
 
 ## Command column
 
-An additional column appended in the data grid layout holds the command buttons to perform the CRUD operation. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) to **true**.
+An additional column appended in the data grid layout holds the command buttons to perform the CRUD operation. To enable the command columns, set the [`allowCommandColumns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/#allowcommandcolumns) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettingsModel/) to **true**.
 
 The available built-in command buttons are:
 
@@ -92,7 +92,7 @@ The available built-in command buttons are:
 
 ## Inline Editing
 
-Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editsettings) to **true**.
+Allows editing of a value cell directly without the use of an external edit dialog. It is applicable if and only if a single raw data is used for the value of the cell. It is applicable to all editing modes, such as normal, batch, dialog and column commands. It can be enabled by setting the [`allowInlineEditing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/cellEditSettings/#allowinlineediting) property in [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#editsettings) to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -118,7 +118,7 @@ Users can also add, delete, or update the underlying raw items of any data point
 
 ### EditCompleted
 
-The event [`editCompleted`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#editcompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the database which is connected to the component. It has the following parameters.
+The event [`editCompleted`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#editcompleted) triggers when values cells are edited completely. The event provides edited cell(s) information along with its previous cell value. It also helps to do the CRUD operation by manually updating the database which is connected to the component. It has the following parameters.
 
 * `currentData` - It holds the current raw data of the edited cells.
 

@@ -17,10 +17,10 @@ Allows you to specify the required display format that should be used in values 
 * Percentage
 * Custom
 
-You can apply format for the numeric values using the following properties in the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/).
+You can apply format for the numeric values using the following properties in the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#formatsettings).
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name): It allows to specify the field name.
-* [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#format): It allows to specify the format of the respective field.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#name): It allows to specify the field name.
+* [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#format): It allows to specify the format of the respective field.
 
 Possible formatting values are:
 
@@ -32,8 +32,8 @@ Possible formatting values are:
 
 Other properties include:
 
-* [`useGrouping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#usegrouping): It allows to enable or disable the separator, for example, $100,000,000 or $100000000 respectively. By default, it will be set as **true**.
-* [`currency`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#currency): It allows to set the currency code which needs to considered for the currency formatting.
+* [`useGrouping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#usegrouping): It allows to enable or disable the separator, for example, $100,000,000 or $100000000 respectively. By default, it will be set as **true**.
+* [`currency`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#currency): It allows to set the currency code which needs to considered for the currency formatting.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -49,7 +49,7 @@ You can also format the values at runtime using the formatting dialog. This opti
 
 ## Custom format
 
-You can add any custom format directly to the [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#format) property in the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/). Custom format can be achieved by using one or more format specifiers listed in the below table.
+You can add any custom format directly to the [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#format) property in the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#formatsettings). Custom format can be achieved by using one or more format specifiers listed in the below table.
 
 | Specifier | Description | Input | Format Output |
 | ------- |--------------- | ---------------- | --------------- |
@@ -61,7 +61,7 @@ You can add any custom format directly to the [`format`](https://ej2.syncfusion.
 | ; | Denotes separate formats for positive, negative and zero values. | { format: '###.##;(###.00);-0' } | '(120.00)'    |
 | 'String' (single Quotes) | Denotes the characters that are enclosed in the single quote (') to be replaced in the resulting string. | { format: "####.00 '@'" } | "123.00 @"    |
 
->NOTE: If custom format is defined, certain properties such as [`useGrouping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#usegrouping) and [`currency`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#currency) will not be considered.
+>NOTE: If custom format is defined, certain properties such as [`useGrouping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#usegrouping) and [`currency`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/formatSettingsModel/#currency) will not be considered.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -99,11 +99,11 @@ You can invoke the formatting dialog by clicking an external button using the `S
 
 ### NumberFormatting
 
-The event [`numberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#numberformatting) fires while closing the number formatting dialog on "OK" button click. It allows the user to restrict the customization settings done by the user. It has the following parameters
+The event [`numberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#numberformatting) fires while closing the number formatting dialog on "OK" button click. It allows the user to restrict the customization settings done by the user. It has the following parameters
 
 * `formatName`: It holds the name of the field.
 
-* [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/): It holds the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/) property of the pivot report.
+* [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#formatsettings): It holds the [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#formatsettings) property of the pivot report.
 
 * `cancel`: It is a boolean property and by setting this to true , the customization done in number formatting dialog won’t be applied.
 

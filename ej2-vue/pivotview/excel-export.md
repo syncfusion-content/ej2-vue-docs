@@ -52,7 +52,7 @@ Excel export provides support to export multiple pivot tables into new sheets. T
 
 ## Changing the pivot table style while exporting
 
-The Excel export provides an option to change colors for headers, caption and records in pivot table before exporting. In-order to apply colors, define **theme** settings in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to change colors for headers, caption and records in pivot table before exporting. In-order to apply colors, define **theme** settings in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/angular/documentation/api/pivotview#excelexport) method.
 
 >By default, material theme is applied to exported Excel document.
 
@@ -66,7 +66,7 @@ The Excel export provides an option to change colors for headers, caption and re
 
 ## Add header and footer while exporting
 
-The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define **header** and **footer** properties in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define **header** and **footer** properties in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#excelexport) method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -78,7 +78,7 @@ The Excel export provides an option to include header and footer content for the
 
 ## Changing the file name while exporting
 
-The Excel export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
+The Excel export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#excelexport) method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
