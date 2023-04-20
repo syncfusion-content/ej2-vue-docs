@@ -12,10 +12,10 @@ domainurl: ##DomainURL##
 
 In pivot table component, pivot chart would act as an additional visualization component with its basic and important characteristic like drill down and drill up, 15+ chart types, series customization, axis customization, legend customization, export, print and tooltip. Its main purpose is to show the pivot data in graphical format.
 
-If user prefers, the pivot chart component can also be displayed individually with pivot values and can change the report dynamically with the help of field list and grouping bar. Using the [`displayOption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/displayOptionModel/) property in pivot table, user can set the visibility of grid and chart in pivot table component. It holds below properties,
+If user prefers, the pivot chart component can also be displayed individually with pivot values and can change the report dynamically with the help of field list and grouping bar. Using the [`displayOption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) property in pivot table, user can set the visibility of grid and chart in pivot table component. It holds below properties,
 
-* [`view`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/displayOptionModel/#view): Specifies the pivot table component to display grid alone or chart alone or both.
-* [`primary`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/displayOptionModel/#primary): Specifies the pivot table to display either grid or chart as primary component during initial loading. It is applicable only when setting the property [`view`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/displayOptionModel/#view) to **Both**.
+* [`view`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption): Specifies the pivot table component to display grid alone or chart alone or both.
+* [`primary`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption): Specifies the pivot table to display either grid or chart as primary component during initial loading. It is applicable only when setting the property [`view`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) to **Both**.
 
 >You should inject the `PivotChart` module to make the its features available in the pivot table.
 
@@ -31,7 +31,7 @@ The below sample displays the pivot chart component based on the pivot report bo
 
 ## Data binding
 
-End user can bind both local and remote data binding options available in the component to feed the data. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#datasource) property can be assigned either with an instance of `DataManager` or JavaScript object array collection.
+End user can bind both local and remote data binding options available in the component to feed the data. The [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property can be assigned either with an instance of `DataManager` or JavaScript object array collection.
 For more information [`refer`](./data-binding) here.
 
 ## Chart Types
@@ -60,7 +60,7 @@ Supports 21 different types of charts as follows,
 * Polar
 * Radar
 
-**Line** is the default pivot chart type. User can change the pivot chart type by using the property [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeries/#type) in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeries/).
+**Line** is the default pivot chart type. User can change the pivot chart type by using the property [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 In the below code sample, the pivot chart type is set as **Bar**.
 
@@ -81,7 +81,7 @@ Supports 4 different types of accumulation charts as follows,
 * Funnel
 * Pyramid
 
-As like other chart types it can be changed using the property [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeriesModel/#type) in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeriesModel/).
+As like other chart types it can be changed using the property [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 In the below code sample, the **Pie** chart is rendered, and the other accumulation charts can be switched using the drop-down list.
 
@@ -128,7 +128,7 @@ If the column has more than one header, then need to mention all the headers sep
 
 ### Label Customization
 
-The data labels are visible by default showing header name. Its visibility can be modified using the `visible` boolean property in `dataLabel`. With regard to the label arrangement, the **Smart Labels** options help to arrange labels efficiently without overlapping. It can be disabled by setting the `enableSmartLabels` property in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) as "false".
+The data labels are visible by default showing header name. Its visibility can be modified using the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) boolean property in `dataLabel`. With regard to the label arrangement, the **Smart Labels** options help to arrange labels efficiently without overlapping. It can be disabled by setting the `enableSmartLabels` property in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) as "false".
 The `position` property in `dataLabel` allows to specify the position of the data label. The available options are,
 * `Outside`: Positions the label outside the point. It is the default option.
 * `Inside`: Positions the label inside the point.
@@ -155,7 +155,7 @@ The **Connector Line** will be visible when the data label is placed outside the
 
 ### Pie and Doughnut Customization
 
-User can draw pie and doughnut charts within the specified range using the `startAngle` and `endAngle` properties in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeriesModel/). The default value of the `startAngle` property is **0**, and the `endAngle` property is **360**. By customizing these properties, user can draw semi pie and semi doughnut charts.
+User can draw pie and doughnut charts within the specified range using the `startAngle` and `endAngle` properties in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). The default value of the `startAngle` property is **0**, and the `endAngle` property is **360**. By customizing these properties, user can draw semi pie and semi doughnut charts.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -165,7 +165,7 @@ User can draw pie and doughnut charts within the specified range using the `star
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs184" %}
 
-Users can get doughnut chart from pie chart and vice-versa using the `innerRadius` property in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeriesModel/). If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
+Users can get doughnut chart from pie chart and vice-versa using the `innerRadius` property in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
 > It takes the value only in percentage.
 
 {% tabs %}
@@ -178,7 +178,7 @@ Users can get doughnut chart from pie chart and vice-versa using the `innerRadiu
 
 ### Exploding Series Points
 
-Exploding can be enabled by setting the `explode` property in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeriesModel/) to **true**. The series points will be exploded either on mouse click or touch.
+Exploding can be enabled by setting the `explode` property in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **true**. The series points will be exploded either on mouse click or touch.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -190,7 +190,7 @@ Exploding can be enabled by setting the `explode` property in [`chartSeries`](ht
 
 ## Field List
 
-User can enable the field list by setting the property [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showfieldlist) in pivot table as **true**.
+User can enable the field list by setting the property [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showfieldlist) in pivot table as **true**.
 By using this, user can customize the report dynamically and view the result in pivot chart. For more information regarding the field list, refer the [field list](./field-list) topic.
 
 In the following sample, the `Popup` mode of field list is enabled in the pivot chart.
@@ -205,7 +205,7 @@ In the following sample, the `Popup` mode of field list is enabled in the pivot 
 
 ## Grouping Bar
 
-User can enable the grouping bar by setting the property [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#showgroupingbar) in pivot table as **true**. The grouping bar in pivot chart shows a dropdown list in value axis instead of buttons. The dropdown list holds list of value fields bounded in the [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/) and it can be switched to draw the pivot chart with the selected value field. This has been defined as the default behavior in the pivot chart component. For more information regarding the grouping bar, refer the [grouping bar](./grouping-bar) topic.
+User can enable the grouping bar by setting the property [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showgroupingbar) in pivot table as **true**. The grouping bar in pivot chart shows a dropdown list in value axis instead of buttons. The dropdown list holds list of value fields bounded in the [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) and it can be switched to draw the pivot chart with the selected value field. This has been defined as the default behavior in the pivot chart component. For more information regarding the grouping bar, refer the [grouping bar](./grouping-bar) topic.
 
 > For multiple axis support, buttons will be placed in value axis instead of dropdown list.
 
@@ -229,7 +229,7 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
 
 ## Single Axis
 
-By default, the pivot chart will be drawn with the value field (measure) which is set first in the report under value axis. But, user can change to specific value field using the property [`value`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/#value) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/).
+By default, the pivot chart will be drawn with the value field (measure) which is set first in the report under value axis. But, user can change to specific value field using the property [`value`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -241,7 +241,7 @@ By default, the pivot chart will be drawn with the value field (measure) which i
 
 ## Multiple Axis
 
-User can draw the pivot chart with multiple value fields by setting the property [`enableMultipleAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/#enablemultipleaxis) to **true**. In the following sample, the pivot chart will be drawn with both the “Sold” and “Amount” value fields available in the data source.
+User can draw the pivot chart with multiple value fields by setting the property [`enableMultipleAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **true**. In the following sample, the pivot chart will be drawn with both the “Sold” and “Amount” value fields available in the data source.
 
 > The multiple axis support is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
@@ -253,7 +253,7 @@ User can draw the pivot chart with multiple value fields by setting the property
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs191" %}
 
-If the user binds more value fields, the result will be multiple pivot charts, and each chart will shrink within the parent container height. To avoid this, set the [`enableScrollOnMultiAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/#enablescrollonmultiaxis) property in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/) to **true**. By doing so, each pivot chart will only shrink to a minimal "160px" - "180px" height showing a vertical scrollbar for a clear view.
+If the user binds more value fields, the result will be multiple pivot charts, and each chart will shrink within the parent container height. To avoid this, set the [`enableScrollOnMultiAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) property in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **true**. By doing so, each pivot chart will only shrink to a minimal "160px" - "180px" height showing a vertical scrollbar for a clear view.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -263,7 +263,7 @@ If the user binds more value fields, the result will be multiple pivot charts, a
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs192" %}
 
-Meanwhile, there is another way to display multiple values in a chart. In this approach, the series drawn from multiple values are grouped and displayed in a single chart. And, based on the values, multiple Y axis scales will be framed with different ranges. This can be achieved by setting the properties [`enableMultipleAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/#enablemultipleaxis) as **true** and [`multipleAxisMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/#multipleaxismode) as `Single` in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/).
+Meanwhile, there is another way to display multiple values in a chart. In this approach, the series drawn from multiple values are grouped and displayed in a single chart. And, based on the values, multiple Y axis scales will be framed with different ranges. This can be achieved by setting the properties [`enableMultipleAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) as **true** and [`multipleAxisMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) as `Single` in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 In the following code sample, the pivot chart can be seen as a single chart with multiple value fields such as **Sold** and **Amount** that are drawn as multiple Y axis.
 
@@ -275,7 +275,7 @@ In the following code sample, the pivot chart can be seen as a single chart with
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs193" %}
 
-Additionally, to display chart series for multiple values within a single y-axis, set the properties [`enableMultipleAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/#enablemultipleaxis) to **true** and the [`multipleAxisMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/#multipleaxismode) to **Combined**, in the [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/).
+Additionally, to display chart series for multiple values within a single y-axis, set the properties [`enableMultipleAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **true** and the [`multipleAxisMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **Combined**, in the [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 > The y-axis range values will be formatted using the first value field on the value axis. For example, if the first value field is in currency format and the remaining value fields are in different number formats or no format, the y-axis range values will be displayed in the currency format of the first value field.
 
@@ -291,7 +291,7 @@ The pivot chart in the following code sample can be seen as a single chart with 
 
 ### Show point color based on members
 
-When multiple axes are enabled, you can display the same color for each member in the column axis by setting the [`showPointColorByMembers`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/#showpointcolorbymembers) property to **true** in the [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettingsModel/). As a result, the end user can easily identify each member across different measures in the entire chart.
+When multiple axes are enabled, you can display the same color for each member in the column axis by setting the [`showPointColorByMembers`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) property to **true** in the [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). As a result, the end user can easily identify each member across different measures in the entire chart.
 
 Furthermore, end user can see or hide specific members across different measures in the entire chart with a single click on the legend item.
 
@@ -305,7 +305,7 @@ Furthermore, end user can see or hide specific members across different measur
 
 ## Series customization
 
-User can customize series of the pivot chart using [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeries/) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/). The changes handled in the property will be reflected commonly in all chart series.
+User can customize series of the pivot chart using [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). The changes handled in the property will be reflected commonly in all chart series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -315,7 +315,7 @@ User can customize series of the pivot chart using [`chartSeries`](https://ej2.s
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs196" %}
 
-User can also customize the pivot chart series individually using the [`chartSeriesCreated`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotViewModel/#chartseriescreated) event, which occurs after the pivot chart series has been created. You can customize each series individually by iterating them.
+User can also customize the pivot chart series individually using the [`chartSeriesCreated`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartseriescreated) event, which occurs after the pivot chart series has been created. You can customize each series individually by iterating them.
 
 In the following sample, the even series are hidden in the pivot chart.
 
@@ -329,7 +329,7 @@ In the following sample, the even series are hidden in the pivot chart.
 
 ## Axis Customization
 
-User can customize axis of the pivot chart using [`primaryXAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/#primaryxaxis) and [`primaryYAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/#primaryyaxis) properties in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/).
+User can customize axis of the pivot chart using [`primaryXAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) and [`primaryYAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) properties in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 In the following sample, title of y-axis and x-axis are customized.
 
@@ -345,7 +345,7 @@ In the following sample, title of y-axis and x-axis are customized.
 
 ## Legend customization
 
-User can customize legend using [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotChartSettingsLegendSettings/) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/). By default, legend will be visible and it can be hidden by setting the property [`visible`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotChartSettingsLegendSettings/#visible) in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotChartSettingsLegendSettings/) as **false**.
+User can customize legend using [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). By default, legend will be visible and it can be hidden by setting the property [`visible`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) as **false**.
 
 The pivot chart support different types of legend shapes as follows,
 
@@ -360,9 +360,9 @@ The pivot chart support different types of legend shapes as follows,
 * Cross
 * HorizontalLine
 
-Here **SeriesType** would act as the default shape and it can changed using the property [`LegendShape`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeries/#legendshape) in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotSeries/#legendshape).
+Here **SeriesType** would act as the default shape and it can changed using the property [`LegendShape`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
-Also user can set the position of the legend in pivot chart using the property [`position`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotChartSettingsLegendSettings/#position) in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotChartSettingsLegendSettings/). The available options to set the legend position are as follows,
+Also user can set the position of the legend in pivot chart using the property [`position`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). The available options to set the legend position are as follows,
 
 * Auto: Places the legend based on area type. This is the default.
 * Top: Displays the legend at the top of the pivot chart.
@@ -387,9 +387,9 @@ In the following sample, the legend shape and its position can be customized.
 
 ### Marker and crossHair
 
-User can enable and customize the marker and crosshair using [`marker`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotChartSeriesMarkerSettings/) and [`crosshair`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/#crosshair) properties in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/) respectively.
+User can enable and customize the marker and crosshair using [`marker`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) and [`crosshair`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) properties in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) respectively.
 
-Also user can enable and customize the crosshair tooltip for axes using [`crosshairTooltip`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotAxisModel/#crosshairtooltip).
+Also user can enable and customize the crosshair tooltip for axes using `crosshairTooltip`.
 
 > Marker and crosshair is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
@@ -405,14 +405,14 @@ In the following sample, the marker and crosshair can be enabled and customized.
 
 ### Zooming and panning
 
-User can customize zooming and panning option using the property [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettings/) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/).
+User can customize zooming and panning option using the property [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 The pivot chart support four types of zooming which can be set as follows,
 
-* [`enablePinchZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettingsModel/#enablepinchzooming)
-* [`enableSelectionZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettingsModel/#enableselectionzooming)
-* [`enableDeferredZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettingsModel/#enabledeferredzooming)
-* [`enableMouseWheelZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettingsModel/#enablemousewheelzooming)
+* [`enablePinchZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings)
+* [`enableSelectionZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings)
+* [`enableDeferredZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings)
+* [`enableMouseWheelZooming`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings)
 
 and three modes of zooming direction that specifies whether to zoom vertically or horizontally or in both ways which are,
 
@@ -420,7 +420,7 @@ and three modes of zooming direction that specifies whether to zoom vertically o
 * y: Pivot chart can be zoomed  vertically.
 * x,y: Pivot chart can be zoomed both vertically and horizontally.
 
-This can be set using the property [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettings/#mode) in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettings/). By default, if the pivot chart is zoomed, a toolbar would display with the options - Zoom, ZoomIn, ZoomOut, Pan, Reset. User can also customize its option using the property [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettings/#toolbaritems) in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotZoomSettings/).
+This can be set using the property [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). By default, if the pivot chart is zoomed, a toolbar would display with the options - Zoom, ZoomIn, ZoomOut, Pan, Reset. User can also customize its option using the property [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 > Zooming and panning is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
@@ -436,9 +436,9 @@ In the following sample, all the four types of zooming are enabled with toolbar 
 
 ### Tooltip
 
-By default, tooltip for the pivot chart is enabled. User can customize it by using the property [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotTooltipSettings/) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/chartSettings/).
+By default, tooltip for the pivot chart is enabled. User can customize it by using the property [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
-> The tooltip can be disabled by setting the property [`enable`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotTooltipSettings/#enable) in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotTooltipSettings/) as **false**.
+> The tooltip can be disabled by setting the property [`enable`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) as **false**.
 
 In the following sample, the default appearance of tooltip is modified.
 
@@ -452,7 +452,7 @@ In the following sample, the default appearance of tooltip is modified.
 
 ## Export
 
-The pivot chart can be exported using the [`chartExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#chartexport) method which holds parameters like export type, file name, PDF orientation, width, and height in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
+The pivot chart can be exported using the [`chartExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartexport) method which holds parameters like export type, file name, PDF orientation, width, and height in the same order. The mandatory parameters for this method are export type and file name whereas other parameters are optional.
 
 The following are the four export types:
 

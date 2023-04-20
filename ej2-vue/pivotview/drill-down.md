@@ -28,7 +28,7 @@ Allows to drill only the current position of the selected member and exclude the
 
 > This property is applicable only for the relational data source.
 
-Allows to either expand or collapse all headers that are displayed in row and column axes. To display all headers in expanded state, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#expandall) to **true** and to collapse all headers, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#expandall) to **false**. By default, [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#expandall) property is set to **false**.
+Allows to either expand or collapse all headers that are displayed in row and column axes. To display all headers in expanded state, set the property [`expandAll`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) to **true** and to collapse all headers, set the property [`expandAll`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) to **false**. By default, [`expandAll`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) property is set to **false**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -42,7 +42,7 @@ Allows to either expand or collapse all headers that are displayed in row and co
 
 > This property is applicable only for the relational data source.
 
-Allows to expand or collapse all headers for specific fields (only) in row and column axes. To expand headers for a specific field in row or column axis, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#expandAll) in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows) or [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) to **true**. By default, [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/fieldOptionsModel/#expandAll) property in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows) or [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) is set to **false**.
+Allows to expand or collapse all headers for specific fields (only) in row and column axes. To expand headers for a specific field in row or column axis, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#expandall) in [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) or [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) to **true**. By default, [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#expandall) property in [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) or [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) is set to **false**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -56,12 +56,12 @@ Allows to expand or collapse all headers for specific fields (only) in row and c
 
 > This option is applicable only for the relational data source.
 
-In addition to the previous topic, there is an enhancement to expand all headers expect specific header(s) and similarly to collapse all headers except specific header(s). To achieve this, [`drilledMember`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#drilledmembers)  is used. The required properties of the [`drilledMember`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/) are explained below:
+In addition to the previous topic, there is an enhancement to expand all headers expect specific header(s) and similarly to collapse all headers except specific header(s). To achieve this, [`drilledMember`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#drilledmembers) is used. The required properties of the [`drilledMember`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#drilledmembers) are explained below:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/#name): It allows to set the field name whose member(s) needs to be specifically drilled.
-* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/#items): It allows to set the exact member(s) which needs to be drilled.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#name): It allows to set the field name whose member(s) needs to be specifically drilled.
+* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#items): It allows to set the exact member(s) which needs to be drilled.
 
-> The [`drilledMember`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#drilledmembers) option always works in vice-versa with respect to the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#expandall) in pivot table. For example, if [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#expandall) is set to **true**, then the member(s) added in [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/#items) collection alone will be in collapsed state.
+> The [`drilledMember`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#drilledmembers) option always works in vice-versa with respect to the property [`expandAll`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) in pivot table. For example, if [`expandAll`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) is set to **true**, then the member(s) added in [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#items) collection alone will be in collapsed state.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -73,11 +73,11 @@ In addition to the previous topic, there is an enhancement to expand all headers
 
 ## Expand specific member(s)
 
-End user can also manually expand or collapse specific member(s) in each fields under row and column axes using the [`drilledMembers`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/) from code behind. The required properties of the [`drilledMembers`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/) are explained below:
+End user can also manually expand or collapse specific member(s) in each fields under row and column axes using the [`drilledMembers`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#drilledmembers) from code behind. The required properties of the [`drilledMembers`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#drilledmembers) are explained below:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/#name): It allows to set the field name whose member(s) needs to be specifically drilled.
-* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/#items): It allows to set the exact member(s) which needs to be drilled.
-* [`delimiter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/drillOptions/#delimiter): It allows to separate next level of member from its parent member.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#name): It allows to set the field name whose member(s) needs to be specifically drilled.
+* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#items): It allows to set the exact member(s) which needs to be drilled.
+* [`delimiter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#delimiter): It allows to separate next level of member from its parent member.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -89,7 +89,7 @@ End user can also manually expand or collapse specific member(s) in each fields 
 
 ## Event
 
-The event [`drill`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#aggregatecellinfo) triggers every time when a field is expanded or collapsed. For instance using this event user can alter delimiter and drill action for the respective item. It has the following parameters:
+The event [`drill`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#aggregatecellinfo) triggers every time when a field is expanded or collapsed. For instance using this event user can alter delimiter and drill action for the respective item. It has the following parameters:
 
 * `drillInfo` - It holds the current drilled item information.
 * `pivotview` - It holds pivot table instance.

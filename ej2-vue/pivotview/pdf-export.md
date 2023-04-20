@@ -34,7 +34,7 @@ PDF export provides an option for exporting multiple pivot tables to same file. 
 
 ## Export table and chart into the same document
 
-When the [`displayOption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/displayOptionModel/) is set to **Both**, you can export both the table and the chart into the same PDF document. To achieve this, use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method and set the `exportBothTableAndChart` parameter to **true**.
+When the [`displayOption`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) is set to **Both**, you can export both the table and the chart into the same PDF document. To achieve this, use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method and set the `exportBothTableAndChart` parameter to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -148,7 +148,7 @@ The below code illustrates the PDF export customization options.
 
 ### Changing the file name while exporting
 
-The PDF export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/react/documentation/api/pivotview#pdfexport) method.
+The PDF export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -160,7 +160,7 @@ The PDF export provides an option to change file name of the document before exp
 
 ### Changing page orientation while exporting
 
-The PDF export provides an option to change page orientation of the document before exporting. In-order to change the page orientation, define **pageOrientation** property in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#pdfexport) method. By default, the page orientation will be in **Portrait** and it can be changed to **Landscape** based on user requirement.
+The PDF export provides an option to change page orientation of the document before exporting. In-order to change the page orientation, define **pageOrientation** property in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method. By default, the page orientation will be in **Portrait** and it can be changed to **Landscape** based on user requirement.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -172,7 +172,7 @@ The PDF export provides an option to change page orientation of the document bef
 
 ### Changing page size while exporting
 
-The PDF export provides an option to change page size of the document before exporting. In-order to change the page size, define **pageSize** property in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#pdfexport) method.
+The PDF export provides an option to change page size of the document before exporting. In-order to change the page size, define **pageSize** property in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method.
 
 **Supported page sizes are:** Letter, Note, Legal, A0, A1, A2, A3, A5, A6, A7, A8, A9, B0, B1, B2, B3, B4, B5, Archa, Archb, Archc, Archd, Arche, Flsa, HalfLetter, Letter11x17, Ledger.
 
@@ -188,7 +188,7 @@ The PDF export provides an option to change page size of the document before exp
 
 Before exporting, you can change the height and width of the PDF document. To achieve this, use the **height** and **width** properties in the [`beforeExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#beforeexport) event.
 
-> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+> This option is only available if [`enableVirtualization`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -202,7 +202,7 @@ Before exporting, you can change the height and width of the PDF document. To ac
 
 Before exporting, you can split and export the pivot table columns on each page of the PDF document by using the **columnSize** property in the [`beforeExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#beforeexport) event.
 
-> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+> This option is only available if [`enableVirtualization`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -214,7 +214,7 @@ Before exporting, you can split and export the pivot table columns on each page 
 
 ## Changing the pivot table style while exporting
 
-The PDF export provides an option to change colors for headers, caption and records in pivot table before exporting. In-order to apply colors, define **theme** settings in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#pdfexport) method.
+The PDF export provides an option to change colors for headers, caption and records in pivot table before exporting. In-order to apply colors, define **theme** settings in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method.
 
 > By default, material theme is applied to exported PDF document.
 

@@ -63,15 +63,15 @@ For example, if the user wants to display the "Product_ID" data field with a gro
 <br/>
 ![output](images/number-group-updated.png "Applied grouping settings updated in pivot table for number grouping")
 
-Number grouping can also be configured using the [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#groupsettings) property through code-behind. The properties required are:
+Number grouping can also be configured using the [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#igroupsettings) property through code-behind. The properties required are:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#name): Allows user to set the field name.
-* [`rangeInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#rangeinterval): Allows user to set the interval between two numbers.
-* [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#startingat): Allows user to set the starting number.
-* [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#endingat): Allows user to set the ending number.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#type): Allows user to set the group type. For number grouping, **Number** is set.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#name): Allows user to set the field name.
+* [`rangeInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#rangeinterval): Allows user to set the interval between two numbers.
+* [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#startingat): Allows user to set the starting number.
+* [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#endingat): Allows user to set the ending number.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#type): Allows user to set the group type. For number grouping, **Number** is set.
 
-> If starting and ending numbers specified in [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#startingat) and [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#endingat) properties are in-between the number range, then rest of the numbers will be grouped and placed in “Out of Range” section introduced specific to this feature.
+> If starting and ending numbers specified in [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#startingat) and [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#endingat) properties are in-between the number range, then rest of the numbers will be grouped and placed in “Out of Range” section introduced specific to this feature.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -121,15 +121,15 @@ The "**Interval by**" option is used to separate the selected date fields into y
 <br/>
 ![output](images/date-group-updated.png "Applied grouping settings updated in pivot table for date grouping")
 
-Date grouping can also be configured using the [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#groupsettings) property through code-behind. The properties required are:
+Date grouping can also be configured using the [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#igroupsettings) property through code-behind. The properties required are:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#name): Allows user to set the field name.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#type): Allows user to set the group type. For date grouping, **Date** is set.
-* [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#startingat): Allows user to set starting date.
-* [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#endingat): Allows user to set ending date.
-* [`groupInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#groupinterval): Allows user to set interval in year, quarter, month, day, hour, minute, or second pattern.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#name): Allows user to set the field name.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#type): Allows user to set the group type. For date grouping, **Date** is set.
+* [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#startingat): Allows user to set starting date.
+* [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#endingat): Allows user to set ending date.
+* [`groupInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#groupinterval): Allows user to set interval in year, quarter, month, day, hour, minute, or second pattern.
 
-> From the date format "YYYY-DD-MM HH:MM:SS", if user wants to display only year and month, then the [`groupInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#groupinterval) property should be set with **Years** and **Months** alone. Also, user can shuffle the order of year, quarter, month, day, hour, minute, or second based on their requirement and display the same in the pivot table.
+> From the date format "YYYY-DD-MM HH:MM:SS", if user wants to display only year and month, then the [`groupInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#groupinterval) property should be set with **Years** and **Months** alone. Also, user can shuffle the order of year, quarter, month, day, hour, minute, or second based on their requirement and display the same in the pivot table.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -183,19 +183,19 @@ User can also apply new custom grouping options to an existing custom field by r
 <br/>
 ![output](images/nested-custom-group-updated.png "Applied grouping settings updated in pivot table for custom grouping")
 
-Custom grouping can also be configured using the [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#groupsettings) property through code-behind. The properties required are:
+Custom grouping can also be configured using the [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#igroupsettings) property through code-behind. The properties required are:
 
-* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#name): Allows user to set the field name.
-* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#caption): Allows user to set the caption name for custom grouping field.
-* [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/): Allows user to set the custom groups.
-* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/#type): Allows user to set the group type. For custom grouping, **Custom** is set.
+* [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#name): Allows user to set the field name.
+* [`caption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#caption): Allows user to set the caption name for custom grouping field.
+* [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#customgroups): Allows user to set the custom groups.
+* [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#type): Allows user to set the group type. For custom grouping, **Custom** is set.
 
-The available custom group properties in [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/) property are:
+The available custom group properties in [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#customgroups) property are:
 
-* [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/#groupname): Allows user to set the group name (or title) for selected headers.
-* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/#items): It allows to set the headers which needs to be grouped from display.
+* [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#groupname): Allows user to set the group name (or title) for selected headers.
+* [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#items): It allows to set the headers which needs to be grouped from display.
 
-> When the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/#groupname) with the headers listed in [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/#items) in the [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/) property is grouped by the defined [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/customGroups/#groupname) and the rest is grouped by its own name in the pivot table.
+> When the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#groupname) with the headers listed in [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#items) in the [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#customgroups) property is grouped by the defined [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#groupname) and the rest is grouped by its own name in the pivot table.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
