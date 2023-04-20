@@ -39,6 +39,7 @@ new Vue({
             },
             xAxis: {
                 labels: ['Laptop', 'Mobile', 'Gaming', 'Cosmetics', 'Fragnance', 'Watches', 'Handbags', 'Apparels', 'Kitchenware', 'Furniture', 'Home Decor'],
+                border: { type: 'Rectangle', width:1, color: '#a19d9d' },
                 multiLevelLabels: [
                     {
                         overflow: 'Trim',

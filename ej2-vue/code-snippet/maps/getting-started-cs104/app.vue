@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-          <div class='wrapper'>
+          <div>
             <ejs-maps :zoomSettings='zoomSettings'>
                 <e-layers>
                     <e-layer :shapeData='shapeData' :shapeSettings='shapeSettings'></e-layer>
@@ -50,11 +50,5 @@ provide: {
 }
 }
 </script>
-<style>
-  .wrapper {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-</style>
 
 
