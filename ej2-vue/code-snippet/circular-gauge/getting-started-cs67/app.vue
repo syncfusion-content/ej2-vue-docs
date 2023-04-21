@@ -25,8 +25,7 @@ export default {
                 enableAnimation: false
             },
             legendSettings:{
-               visible:true,
-               position:'Right'
+               visible:true
             },
             axes: [{
                 direction: 'AntiClockWise',

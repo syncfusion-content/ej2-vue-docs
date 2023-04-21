@@ -3,7 +3,7 @@
 
 <template>
     <div id="app">
-        <ejs-heatmap id="heatmap" :titleSettings='titleSettings' :xAxis='xAxis' :yAxis='yAxis' :dataSource='dataSource' :dataSourceSettings='dataSourceSettings' :paletteSettings='paletteSettings' :cellSettings='cellSettings' :legendSettings='legendSettings' :tooltipRender='tooltipRender'></ejs-heatmap>
+        <ejs-heatmap id="heatmap" :titleSettings='titleSettings' :xAxis='xAxis' :yAxis='yAxis' :dataSource='dataSource' :paletteSettings='paletteSettings' :cellSettings='cellSettings' :legendSettings='legendSettings' :tooltipRender='tooltipRender'></ejs-heatmap>
     </div>
 </template>
 <script>
