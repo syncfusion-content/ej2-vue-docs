@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-          <div class='wrapper'>
+          <div>
             <ejs-maps ref="maps" :legendSettings='legendSettings' :markerDragStart='markerDragStart' :markerDragEnd='markerDragEnd'>
                 <e-layers>
                     <e-layer :shapeData='shapeData' :shapeSettings='shapeSettings' :markerSettings='markerSettings'></e-layer>
@@ -72,11 +72,5 @@ methods:{
 }
 }
 </script>
-<style>
-  .wrapper {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-</style>
 
 

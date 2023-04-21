@@ -34,13 +34,13 @@ yarn create vite
 
 Using one of the above commands will lead you to set up additional configurations for the project:
 
-1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
 ```
 
-2. Select `Vue` as the framework. It will creates a Vue 3 project.
+2.Select `Vue` as the framework. It will creates a Vue 3 project.
 
 ```bash
 ? Select a framework: » - Use arrow-keys. Return to submit.
@@ -53,7 +53,7 @@ Using one of the above commands will lead you to set up additional configuration
   Others
 ```
 
-3. Choose `TypeScript` as framework variant to build this Vite project using TypeScript and Vue.
+3.Choose `TypeScript` as framework variant to build this Vite project using TypeScript and Vue.
 
 ```bash
 ? Select a variant: » - Use arrow-keys. Return to submit.
@@ -63,7 +63,7 @@ Using one of the above commands will lead you to set up additional configuration
   Nuxt ↗
 ```
 
-4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
 
 ```bash
 cd my-project
@@ -119,7 +119,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 Follow the below steps to add the Vue Schedule component using `Composition API`:
 
-  1. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Composition API. And import the Schedule component in the `script` section of the **src/App.vue** file.
+1.First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the Composition API. And import the Schedule component in the `script` section of the **src/App.vue** file.
 
 ```html
 <script setup>
@@ -127,7 +127,7 @@ Follow the below steps to add the Vue Schedule component using `Composition API`
 </script>
 ```
    
-  2. In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
+2.In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
 
 ```html
 <template>
@@ -150,7 +150,7 @@ Follow the below steps to add the Vue Schedule component using `Composition API`
 </template>
 ```
 
-  3. Declare the values for the `dataSource` property in the `script` section.
+3.Declare the values for the `dataSource` property in the `script` section.
 
 ```ts
 <script setup>
@@ -185,7 +185,7 @@ const eventSettings: EventSettingsModel = {
 </script>
 ```
 
-  4. To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
+4.To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
 
 ```ts
 <script setup lang="ts">

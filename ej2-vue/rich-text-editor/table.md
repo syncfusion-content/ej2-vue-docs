@@ -42,7 +42,7 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 `Table Header` command is available with quick toolbar option through which the header row can be added or removed from the inserted table. The following image illustrates the table header.
 
-![table-header](./image/table_header.png)
+![table-header](./images/table_header.png)
 
 ## Insert Rows
 
@@ -54,13 +54,13 @@ Quick toolbar is opened by clicking the table. It has different sets of commands
 
 `Columns` can be inserted to the left or right side of the required table cell through the quick toolbar. Also, the focused column can be deleted. The following screenshot shows the available options of the column item.
 
-![table-column](./image/table_column.png)
+![table-column](./images/table_column.png)
 
 ## Set Color
 
 The background color can be set for each table cell through the `background color` command available with quick toolbar.
 
-![table-background-color](./image/table_bg_color.png)
+![table-background-color](./images/table_bg_color.png)
 
 ## Delete Table
 
@@ -76,7 +76,7 @@ Text inside the table can be aligned to top, middle, or bottom using the `tableC
 
 Text inside the table can be aligned left, right, or center using the `tableCellHorizontalAlign` tool of the quick toolbar.
 
-![table-horizontal](./image/table_horizontal.png)
+![table-horizontal](./images/table_horizontal.png)
 
 ## Table Styles
 
