@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowPaging='true' :allowTextWrap='true' :editSettings='editSettings' :pageSettings='pageSettings' :toolbar='toolbar' height='175px' :created='created'>
@@ -16,32 +14,32 @@
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { TextBox } from "@syncfusion/ej2-inputs";
 import { purchaseData } from './datasource.js';
+import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { RichTextEditor, Toolbar as RTEToolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-richtexteditor';
+
+RichTextEditor.Inject(RTEToolbar, Link, Image, HtmlEditor, QuickToolbar);
 
 Vue.use(GridPlugin);
 
-let tbElem;
-let textEditor;
+let rteElem;
+let richTextEditor;
 
 function createShipAddressFn() {
-  tbElem = document.createElement("textarea");
-  return tbElem;
+  rteElem = document.createElement("textarea");
+  return rteElem;
 }
 function destroyShipAddressFn() {
-  textEditor.destroy();
+  richTextEditor.destroy();
 }
 function readShipAddressFn() {
-  return textEditor.value;
+  return richTextEditor.value;
 }
 function writeShipAddressFn(args) {
-  textEditor = new TextBox({
-    multiline: true,
+  richTextEditor = new RichTextEditor({
     value: args.rowData[args.column.field],
-    floatLabelType: "Auto",
   });
-  textEditor.appendTo(tbElem);
+  richTextEditor.appendTo(rteElem);
 }
 
 export default {

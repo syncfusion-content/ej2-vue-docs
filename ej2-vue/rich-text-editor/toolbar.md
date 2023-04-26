@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The Rich Text Editor toolbar contains a collection of tools such as bold, italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
 
-To create Rich Text Editor with Markdown editing feature, inject the [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbar/#toolbar) module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
+To create Rich Text Editor with Markdown editing feature, inject the [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#toolbarsettings) module to the Rich Text Editor using the `RichTextEditor.Inject(Toolbar)` method.
 
 The Rich Text Editor allows you to configure different types of toolbar using [`toolbarSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarType/#toolbartype) property. The types of toolbar are:
 

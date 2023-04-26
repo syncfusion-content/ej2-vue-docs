@@ -208,7 +208,7 @@ Configure the toolbar with the tools using items field of the [`toolbarSettings`
 
 ## Insert images and links
 
-The [`image`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/image/#image) module inserts an image into Rich Text Editor’s content area, and the [`link`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/link/#link) module links external resources such as website URLs, to selected text in the Rich Text Editor’s content, respectively.
+The [`image`](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/image) module inserts an image into Rich Text Editor’s content area, and the [`link`](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/link) module links external resources such as website URLs, to selected text in the Rich Text Editor’s content, respectively.
 
 The link inject module adds a link icon to the toolbar and the image inject module adds an image icon to the toolbar.
 
