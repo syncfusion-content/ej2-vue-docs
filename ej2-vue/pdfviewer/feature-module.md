@@ -48,5 +48,5 @@ Refer to the following table.
 
 ## See also
 
-* [Toolbar items](/toolbar)
+* [Toolbar items](../pdfviewer/toolbar)
 * [Toolbar customization](../pdfviewer/how-to/toolbar-customization)
