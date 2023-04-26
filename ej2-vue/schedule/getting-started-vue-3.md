@@ -1,49 +1,71 @@
 ---
 layout: post
-title: Getting started vue 3 with Vue Schedule component | Syncfusion
-description:  Checkout and learn about Getting started vue 3 with Vue Schedule component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue 3 
+title: Getting started Vue 3 using Composition API with Vue Scheduler component | Syncfusion
+description:  Checkout and learn about Getting started Vue 3 using Composition API with Vue Scheduler component of Syncfusion Essential JS 2 and more details.
+control: Getting started Vue 3 using Composition API 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Schedule Component in Vue 3
+# Getting Started with Syncfusion Scheduler Component in Vue 3 using Composition API
 
-This section explains how to use Schedule component in Vue 3 application.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Scheduler component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Creating Vue application using Vue CLI
+## Set up the Vite project
 
-The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
-
-```bash
-npm uninstall vue-cli -g
-```
-
-Use the following commands to install the latest version of Vue CLI.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use the below command.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+npm create vite@latest
 ```
 
-Create a new project using the command below.
+Using the above command will lead you to set up additional configurations for the project as below:
+
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
-vue create quickstart
-cd quickstart
-
+? Project name: » my-project
 ```
 
-Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
+2.Select `Vue` as the framework. It will creates a Vue 3 project.
 
-![Reference](./images/vue3-terminal.png)
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
+```
 
-## Adding Syncfusion Schedule package in the application
+3.Choose `JavaScript` as framework variant to build this Vite project using JavaScript and Vue.
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
+```
+
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+
+```bash
+cd my-project
+npm install
+```
+Now that `my-project` is ready to run with default settings, let's add Syncfusion Scheduler component to the project.
+
+## Adding Syncfusion Vue Scheduler package in the application
 
 All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 
@@ -59,14 +81,14 @@ Import the needed css styles for the Scheduler component along with dependency s
 
 ```html
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 </style>
 ```
 
@@ -74,207 +96,173 @@ Import the needed css styles for the Scheduler component along with dependency s
 
 ## Adding Syncfusion Vue Scheduler component in the application
 
-You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Scheduler component using following steps.
+Follow the below steps to add the Vue Scheduler component using `Composition API`:
 
-1.Import the Scheduler component in the `<script>` section of the `src/App.vue` file.
+1.First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Scheduler component in the `script` section of the **src/App.vue** file. And inject the required views using the vue `provide` method.
 
-     ```html
-     <script>
-        import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective } from "@syncfusion/ej2-vue-schedule";
-      </script>
-     ```
+```html
+<script setup>
+import { provide } from "vue";
+import {
+  ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView,
+  ResourcesDirective as EResources, ResourceDirective as EResource,
+  Day, Week, WorkWeek, Month, Agenda
+} from "@syncfusion/ej2-vue-schedule";
 
-2.Register the Scheduler component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Scheduler component in the following table.
+provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
+</script>
+```
+   
+2.In the `template` section, define the Scheduler component with the [selectedDate](https://ej2.syncfusion.com/vue/documentation/api/schedule/#selecteddate), [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule/#eventsettings) properties and [resources](https://ej2.syncfusion.com/vue/documentation/api/schedule/#resources) definition with [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/resourcesModel/#datasource) property.
 
-    | Directive Name   | Tag Name    |
-    |------------------|-------------|
-    | `ViewsDirective` | `e-views` |
-    | `ViewDirective`  | `e-view`  |
-    | `ResourcesDirective`  | `e-resources`  |
-    | `ResourceDirective`  | `e-resource`  |
-    | `HeaderRowsDirective`  | `e-header-rows`  |
-    | `HeaderRowDirective`  | `e-header-row`  |
+```html
+<template>
+  <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+    <e-views>
+      <e-view option='Day'></e-view>
+      <e-view option='Week'></e-view>
+      <e-view option='WorkWeek'></e-view>
+      <e-view option='Month'></e-view>
+      <e-view option='Agenda'></e-view>
+    </e-views>
+    <e-resources>
+      <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource" textField="OwnerText"
+        idField="Id" colorField="OwnerColor">
+      </e-resource>
+    </e-resources>
+  </ejs-schedule>
+</template>
+```
 
-    ```javascript
-        import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective } from "@syncfusion/ej2-vue-schedule";
-        //Component registeration
-        export default {
-            name: "App",
-            components: {
-            'ejs-schedule' : ScheduleComponent,
-            'e-views' : ViewsDirective,
-            'e-view' : ViewDirective,
-            'e-resources' : ResourcesDirective,
-            'e-resource' : ResourceDirective
-            }
-        }
-    ```
+3.Declare the values for the `selectedDate`, `eventSettings` and `resources` `dataSource` properties in the `script` section.
 
-    In the above code snippet, you have registered Scheduler and its child directives. View directives are used to define the view requirements and Resource directives are used to define the resource definitions for Scheduler. Header row directives are used to customize header rows in Timeline views of scheduler.
-
-3.Add the component definition in template section.
-
-  ```html
-
-      <template>
-        <div id='app'>
-         <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
-            <e-views>
-                 <e-view option='Day'></e-view>
-                <e-view option='Week' startHour='07:00' endHour='15:00'></e-view>
-                <e-view option='WorkWeek' startHour='10:00' endHour='18:00'></e-view>
-                <e-view option='Month' showWeekend=false></e-view>
-                <e-view option='Agenda'></e-view>
-            </e-views>
-            <e-resources>
-                <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource"
-                    textField="OwnerText" idField="Id" colorField="OwnerColor">
-                 </e-resource>
-               </e-resources>
-            </ejs-schedule>
-         </div>
-      </template>
-  ```
-
-4.Declare the bound properties in the `script` section. Declare the collection `data` which is bound for the `dataSource` property.
-
-   ```js
-
-    data() {
-      return {
-         data:  [
-           {
-              Id: 1,
-             Subject: 'Surgery - Andrew',
-             EventType: 'Confirmed',
-             StartTime: new Date(2021, 7, 10, 9, 0),
-             EndTime: new Date(2021, 7, 10, 10, 0),
-             OwnerId: 2
-        }, {
-            Id: 2,
-            Subject: 'Consulting - John',
-            EventType: 'Confirmed',
-            StartTime: new Date(2021, 7, 11, 10, 0),
-            EndTime: new Date(2021, 7, 11, 11, 30),
-            OwnerId: 3
-        }, {
-            Id: 3,
-            Subject: 'Therapy - Robert',
-            EventType: 'Requested',
-            StartTime: new Date(2021, 7, 12, 11, 30),
-            EndTime: new Date(2021, 7, 12, 12, 30),
-            OwnerId: 1
-         },
-         ]
-      };
-     }
-  ```
-
-5.Summarizing the above steps, update the `src/App.vue` file with following code.
-
-   ```html
-
-   <template>
-      <div id='app'>
-          <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
-            <e-views>
-                <e-view option='Day'></e-view>
-                <e-view option='Week' startHour='07:00' endHour='15:00'></e-view>
-                <e-view option='WorkWeek' startHour='10:00' endHour='18:00'></e-view>
-                <e-view option='Month' showWeekend=false></e-view>
-                <e-view option='Agenda'></e-view>
-             </e-views>
-             <e-resources>
-                <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource"
-                    textField="OwnerText" idField="Id" colorField="OwnerColor">
-                </e-resource>
-             </e-resources>
-          </ejs-schedule>
-        </div>
-     </template>
-   <script>
-    import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective } from "@syncfusion/ej2-vue-schedule";
-
-   export default {
-      name: "App",
-      // Declaring component and its directives
-      components: {
-        'ejs-schedule': ScheduleComponent,
-        'e-views': ViewsDirective,
-        'e-view': ViewDirective,
-        'e-resources': ResourcesDirective,
-        'e-resource': ResourceDirective
+```js
+<script setup>
+const selectedDate = new Date(2023, 7, 8);
+const eventSettings = {
+  dataSource: [
+    {
+      Id: 1,
+      Subject: 'Surgery - Andrew',
+      EventType: 'Confirmed',
+      StartTime: new Date(2023, 7, 10, 9, 0),
+      EndTime: new Date(2023, 7, 10, 10, 0),
+      OwnerId: 2
     },
-    // Bound properties declaration
-    data() {
-        return {
-            selectedDate: new Date(2021, 7, 12),
-            allowMultiple: true,
-            ownerDataSource: [
-                { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
-                { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
-                { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }],
-            eventSettings: {
-                dataSource: [
-                    {
-                        Id: 1,
-                        Subject: 'Surgery - Andrew',
-                        EventType: 'Confirmed',
-                        StartTime: new Date(2021, 7, 10, 9, 0),
-                        EndTime: new Date(2021, 7, 10, 10, 0),
-                        OwnerId: 2
-                    },
-                    {
-                        Id: 2,
-                        Subject: 'Consulting - John',
-                        EventType: 'Confirmed',
-                        StartTime: new Date(2021, 7, 11, 10, 0),
-                        EndTime: new Date(2021, 7, 11, 11, 30),
-                        OwnerId: 3
-                    },
-                    {
-                        Id: 3,
-                        Subject: 'Therapy - Robert',
-                        EventType: 'Requested',
-                        StartTime: new Date(2021, 7, 12, 11, 30),
-                        EndTime: new Date(2021, 7, 12, 12, 30),
-                        OwnerId: 1
-                    }
-                ]
-            },
-        };
-     },
-       provide: {
-       schedule: [Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize]
-      }
-    };
-   </script>
+    {
+      Id: 2,
+      Subject: 'Consulting - John',
+      EventType: 'Confirmed',
+      StartTime: new Date(2023, 7, 9, 10, 0),
+      EndTime: new Date(2023, 7, 9, 11, 30),
+      OwnerId: 3
+    },
+    {
+      Id: 3,
+      Subject: 'Therapy - Robert',
+      EventType: 'Requested',
+      StartTime: new Date(2023, 7, 8, 11, 30),
+      EndTime: new Date(2023, 7, 8, 12, 30),
+      OwnerId: 1
+    }
+  ]
+};
+const ownerDataSource = [
+  { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
+  { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
+  { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }
+];
+</script>
+```
 
-   <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
-   </style>
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
-  ```
+```html
+<template>
+  <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+    <e-views>
+      <e-view option='Day'></e-view>
+      <e-view option='Week'></e-view>
+      <e-view option='WorkWeek'></e-view>
+      <e-view option='Month'></e-view>
+      <e-view option='Agenda'></e-view>
+    </e-views>
+    <e-resources>
+      <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource" textField="OwnerText"
+        idField="Id" colorField="OwnerColor">
+      </e-resource>
+    </e-resources>
+  </ejs-schedule>
+</template>
 
-**Note**: If you use the Scheduler component other than `app.vue` also, it is mandatory to inject the schedule module using the `provide` method in `app.vue` file.
+<script setup>
+import { provide } from "vue";
+import {
+  ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView,
+  ResourcesDirective as EResources, ResourceDirective as EResource,
+  Day, Week, WorkWeek, Month, Agenda
+} from "@syncfusion/ej2-vue-schedule";
 
-## Running the application
+provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 
-Run the application using the following command.
+const selectedDate = new Date(2023, 7, 8);
+const eventSettings = {
+  dataSource: [
+    {
+      Id: 1,
+      Subject: 'Surgery - Andrew',
+      EventType: 'Confirmed',
+      StartTime: new Date(2023, 7, 10, 9, 0),
+      EndTime: new Date(2023, 7, 10, 10, 0),
+      OwnerId: 2
+    },
+    {
+      Id: 2,
+      Subject: 'Consulting - John',
+      EventType: 'Confirmed',
+      StartTime: new Date(2023, 7, 9, 10, 0),
+      EndTime: new Date(2023, 7, 9, 11, 30),
+      OwnerId: 3
+    },
+    {
+      Id: 3,
+      Subject: 'Therapy - Robert',
+      EventType: 'Requested',
+      StartTime: new Date(2023, 7, 8, 11, 30),
+      EndTime: new Date(2023, 7, 8, 12, 30),
+      OwnerId: 1
+    }
+  ]
+};
+const ownerDataSource = [
+  { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
+  { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
+  { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }
+];
+</script>
 
-   ```bash
-     npm run serve
-   ```
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+</style>
+```
 
-Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.
+## Run the project
 
-![Output](./images/vue3-scheduler-demo.png)
+To run the project, use the following command:
 
-Refer the sample [Vue 3 scheduler getting started](https://github.com/SyncfusionExamples/vue3-schedule-getting-started)
+```bash
+npm run dev
+```
+
+The output will appear as follows:
+
+![vue3-js-composition](./images/vue3-composition-scheduler.png)
+
+Refer the sample [Vue 3 using Composition API Scheduler getting started](https://github.com/SyncfusionExamples/vue3-schedule-getting-started)
