@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Aggregates in Vue Grid component
 
-Aggregate values are displayed in the footer, group footer and group caption of Grid. It can be configured through `e-aggregates` directive.The [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#field) and [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column.
+Aggregate values are displayed in the footer, group footer and group caption of Grid. It can be configured through `e-aggregates` directive. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#field) and [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column.
 
 To use aggregate feature, you need to inject the `Aggregate` module into the `provide` section.
 

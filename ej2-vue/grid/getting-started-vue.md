@@ -199,6 +199,6 @@ Web server will be initiated. Open the quick start app in the browser at port `l
 
 ![Output](images/Vue3-grid-demo.PNG)
 
-> **Sample**: Refer the following sample, [vue3-grid-getting-started](https://github.com/SyncfusionExamples/EJ2-Vue3-gettingstarted).
+> **Sample**: [vue3-grid-getting-started](https://github.com/SyncfusionExamples/EJ2-Vue3-gettingstarted).
 
 For Migrating from Vue 2 to Vue 3 refer the Migration [`documentation`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3)

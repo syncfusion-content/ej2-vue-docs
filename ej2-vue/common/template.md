@@ -310,3 +310,83 @@ Below is the example code to use `i18n` external module in the Grid component te
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 ```
+
+## Provide/Inject in templates
+
+In Vue, "provide" and "inject" are two features that allow components to communicate with each other, even if they are not directly related in the component hierarchy.
+
+Syncfusion components provides provide and inject support with templates. It allows to pass data from a parent component to its template components without having to pass props down the component tree. Instead, the parent component provides the data, and the child components inject it.
+
+To provide data from a parent component to its template, use the `provide` option. The provide option is an object that contains the data to provide. The keys in the object are the names of the properties, and the values are the data to provide.
+
+In this below example, the parent component provides the content property with the value of `Update` in **App.vue** file.
+
+```html
+
+<template>
+  <div id="grid">
+    <ejs-grid ref="grid" :dataSource="ds">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" width=120 textAlign="Right" />
+        <e-column field="CustomerName" headerText="Customer Name" width=150 />
+        <e-column field="ShipCountry" headerText="Ship Country" width=150 :template="'cTemplate'">
+          <template v-slot:cTemplate={data}>
+            <div>{{data.ShipCountry}} <MyTemplate /></div>
+          </template>
+        </e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script>
+  import Vue from 'vue';
+  import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+  import MyTemplate from "./MyTemplate.vue";
+  Vue.use(GridPlugin);
+
+  var empData = [
+    { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
+    { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
+    { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
+    { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
+  ];
+
+  export default {
+    components: {
+      MyTemplate
+    },
+    data () { 
+      return { 
+        ds: empData 
+      } 
+    },
+    provide: { content: 'Update' }
+  }
+</script>
+
+```
+
+To inject data provided by a parent component, use the `inject` option. The `inject` option is an array or an object that contains the names of the properties to inject.
+
+In this below example, the child template component injects content property using the `inject` option, and displays its value using an interpolation directive ({{ content }}) in **MyTemplate.vue** file.
+
+```html
+
+<template>
+  <ejs-button>{{ content }}</ejs-button>
+</template>
+<script>
+  import Vue from 'vue';
+  import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+  Vue.use(ButtonPlugin);
+
+  export default {
+    name: 'MyTemplate',
+    data () { 
+      return {} 
+    },
+    inject: ['content']
+  }
+</script>
+
+```
