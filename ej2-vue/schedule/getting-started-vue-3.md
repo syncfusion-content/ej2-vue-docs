@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Scheduler Component in Vue 3 using Composition API
+# Getting Started with Syncfusion Vue Scheduler Component in Vue 3 using Composition API
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Scheduler component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
@@ -18,7 +18,7 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Set up the Vite project
+## Setup the Vite project
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use the below command.
 
@@ -63,7 +63,7 @@ Vanilla
 cd my-project
 npm install
 ```
-Now that `my-project` is ready to run with default settings, let's add Syncfusion Scheduler component to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion Vue Scheduler component to the project.
 
 ## Adding Syncfusion Vue Scheduler package in the application
 
@@ -92,7 +92,7 @@ Import the needed css styles for the Scheduler component along with dependency s
 </style>
 ```
 
-> **Note**: Scheduler component use other Syncfusion components too, the dependent component's CSS references need to be added for using all the Scheduler functionalities.
+> **Note**: Syncfusion Vue Scheduler component use other Syncfusion components too, the dependent component's CSS references need to be added for using all the Scheduler functionalities.
 
 ## Adding Syncfusion Vue Scheduler component in the application
 
