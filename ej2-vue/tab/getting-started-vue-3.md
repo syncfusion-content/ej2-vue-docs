@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Tab Component in Vue 3 using Composition API
+# Getting Started with Syncfusion Vue Tab Component in Vue 3 using Composition API
 
 This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Tab component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
@@ -18,7 +18,7 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Set up the Vite project
+## Setup the Vite project
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use the below command.
 
@@ -63,7 +63,7 @@ Vanilla
 cd my-project
 npm install
 ```
-Now that `my-project` is ready to run with default settings, let's add Syncfusion Tab component to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion Vue Tab component to the project.
 
 ## Adding Syncfusion Vue Tab package in the application
 
@@ -207,4 +207,4 @@ The output will appear as follows:
 
 ![vue3-js-composition](./images/vue3-composition-tab.png)
 
-Refer the sample [Vue 3 using Composition API Tab getting started](https://github.com/SyncfusionExamples/vue3-schedule-getting-started)
+Refer the sample [Vue 3 using Composition API Tab getting started](https://github.com/SyncfusionExamples/vue3-tab-getting-started)
