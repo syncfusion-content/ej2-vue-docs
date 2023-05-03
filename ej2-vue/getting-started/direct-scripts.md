@@ -28,7 +28,9 @@ For example, let's create the Vue `Grid` component sample using direct scripting
 
 To use Vue 2 direct script, include the [Vue.js](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) library in the `index.html` HTML file using a script tag, and then create a new Vue instance with the needed options.
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <div id="app">
     <!-- Vue components goes here -->
 </div>
@@ -39,28 +41,40 @@ To use Vue 2 direct script, include the [Vue.js](https://cdn.jsdelivr.net/npm/vu
         el: '#app',
     });
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now that the Vue instance has been set up, start using Syncfusion components in the application. To do this, add the following Syncfusion Vue 2 direct scripts and styles to the head section of the `index.html` file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css">
 <script src="https://cdn.syncfusion.com/ej2/ej2-vue-es5/dist/ej2-vue.min.js"></script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, register the Vue `Grid` component and all its child directives globally using the following code snippet:
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <script>
     Vue.use(ejs.grids.GridPlugin);
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Add the Vue Grid component to the `<body>` section of the `index.html` file. To display the Grid with records, bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property to it. The simple data is mapped to the `data-source` property in this case, and the `Page` module is injected into the Grid component. More information on Grid component functionality can be found in [this document](https://ej2.syncfusion.com/vue/documentation/grid/getting-started/).
 
 > While using Syncfusion Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <body>
     <h2>Syncfusion Vue 2 Grid Component</h2>
     <div id="app">
@@ -99,7 +113,9 @@ Add the Vue Grid component to the `<body>` section of the `index.html` file. To 
     </script>
 
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Finally, run the `~/quickstart/index.html` file in the web browser, and it will render the Syncfusion Vue Grid component. The output will appear as follows:
 
@@ -117,7 +133,9 @@ To use Vue 3 direct script, include the [Vue.js](https://unpkg.com/vue@3/dist/vu
 
 The [Vue class component](https://class-component.vuejs.org) package is required to run the Vue 3 components. So, add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the `index.html` file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <div id="app">
     <!-- Vue components goes here -->
 </div>
@@ -129,18 +147,26 @@ The [Vue class component](https://class-component.vuejs.org) package is required
         el: '#app',
     }).mount('#app');
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now that the Vue instance has been set up, start using Syncfusion components in the application. To do this, add the following Syncfusion Vue 3 direct scripts and styles to the head section of the `index.html` file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css">
 <script src="https://cdn.syncfusion.com/ej2/ej2-vue-es5/dist/ej2-vue3.min.js"></script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, register the Vue `Grid` component and all its child directives globally using the following code snippet:
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <script>
     Vue.createApp({
         el: '#app',
@@ -151,13 +177,17 @@ Now, register the Vue `Grid` component and all its child directives globally usi
         },
     }).mount('#app');
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Add the Vue Grid component to the `<body>` section of the `index.html` file. To display the Grid with records, bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property to it. The simple data is mapped to the `data-source` property in this case, and the `Page` module is injected into the Grid component. More information on Grid component functionality can be found in [this document](https://ej2.syncfusion.com/vue/documentation/grid/getting-started/).
 
 > While using Syncfusion Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
 
-```
+{% tabs %}
+{% highlight html tabtitle="index.html" %}
+
 <body>
     <h2>Syncfusion Vue 3 Grid Component</h2>
     <div id="app">
@@ -200,7 +230,9 @@ Add the Vue Grid component to the `<body>` section of the `index.html` file. To 
     </script>
 
 </body>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Finally, run the `~/quickstart/index.html` file in the web browser, and it will render the Syncfusion Vue Grid component. The output will appear as follows:
 
