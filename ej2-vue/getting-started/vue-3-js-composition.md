@@ -101,7 +101,8 @@ You can import themes for the Syncfusion Vue component in various ways, such as 
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -113,7 +114,10 @@ In this article, `Material` theme is applied using CSS styles, which are availab
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 > The order of importing CSS styles should be in line with its dependency graph.
 
 ## Add Syncfusion Vue component
@@ -122,15 +126,21 @@ Follow the below steps to add the Vue Grid component using `Composition API`:
 
 1.First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Grid component in the `script` section of the **src/App.vue** file.
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <script setup>
   import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
    
 2.In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
   <ejs-grid :dataSource='data'>
     <e-columns>
@@ -142,35 +152,37 @@ Follow the below steps to add the Vue Grid component using `Composition API`:
     </e-columns>
   </ejs-grid>
 </template>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 3.Declare the values for the `dataSource` property in the `script` section.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <script setup>
 const data = [
   {
-    OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
-    ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
-    ShipRegion: 'CJ', ShipPostalCode: '51100', ShipCountry: 'France', Freight: 32.38, Verified: !0
+    OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 
   },
   {
-    OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, OrderDate: new Date(836505e6),
-    ShipName: 'Toms Spezialitäten', ShipCity: 'Münster', ShipAddress: 'Luisenstr. 48',
-    ShipRegion: 'CJ', ShipPostalCode: '44087', ShipCountry: 'Germany', Freight: 11.61, Verified: !1
+    OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 
   },
   {
-    OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, OrderDate: new Date(8367642e5),
-    ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
-    ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
+    OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 
   }
 ];
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
   <ejs-grid :dataSource='data'>
     <e-columns>
@@ -185,22 +197,15 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 <script setup>
 import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
-
 const data = [
   {
-    OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, OrderDate: new Date(8364186e5),
-    ShipName: 'Vins et alcools Chevalier', ShipCity: 'Reims', ShipAddress: '59 rue de l Abbaye',
-    ShipRegion: 'CJ', ShipPostalCode: '51100', ShipCountry: 'France', Freight: 32.38, Verified: !0
+    OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5, ShipCountry: 'France', Freight: 32.38 
   },
   {
-    OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, OrderDate: new Date(836505e6),
-    ShipName: 'Toms Spezialitäten', ShipCity: 'Münster', ShipAddress: 'Luisenstr. 48',
-    ShipRegion: 'CJ', ShipPostalCode: '44087', ShipCountry: 'Germany', Freight: 11.61, Verified: !1
+    OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6, ShipCountry: 'Germany', Freight: 11.61 
   },
   {
-    OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, OrderDate: new Date(8367642e5),
-    ShipName: 'Hanari Carnes', ShipCity: 'Rio de Janeiro', ShipAddress: 'Rua do Paço, 67',
-    ShipRegion: 'RJ', ShipPostalCode: '05454-876', ShipCountry: 'Brazil', Freight: 65.83, Verified: !0
+    OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4, ShipCountry: 'Brazil', Freight: 65.83 
   }
 ];
 </script>
@@ -216,7 +221,9 @@ const data = [
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the project
 

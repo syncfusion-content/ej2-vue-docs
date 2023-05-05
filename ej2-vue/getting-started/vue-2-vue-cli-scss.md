@@ -51,11 +51,15 @@ Import the component plugin from the EJ2 Vue package and register it using Vue.u
 
 Refer to the following code snippet.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
 
 Vue.use(GridPlugin);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Note: By registering the component plugin in Vue, all child directives can also be globally registered.
 
@@ -65,11 +69,15 @@ Import the component and component plugin from EJ2 Vue package and register it u
 
 Refer to the following the code snippet.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { GridComponent, GridPlugin } from "@syncfusion/ej2-vue-grids";
 
 Vue.use(GridPlugin.name, GridComponent);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Note: By using the Vue.component(), only the EJ2 Vue component can be registered. The child directives should be registered separately.
 
@@ -77,7 +85,9 @@ Note: By using the Vue.component(), only the EJ2 Vue component can be registered
 
 Add the EJ2 Vue button in the `<template>` section of the `App.vue` file in src directory using `<ejs-button>`. The content attribute of the button component is provided as name in the data option of the `<script>` section.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
   <div id="app">
     <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings="pageSettings">
@@ -114,25 +124,33 @@ export default {
   }
 };
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding SCSS reference
 
 Add the styles of Grid component to the `<style>` section of the `App.vue` file as follows.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <style lang="scss">
 // syncfusion styles
 @import "../node_modules/@syncfusion/ej2-base/styles/material.scss";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.scss";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding includePaths option
 
 While using scss files for style reference, you need to configure the `includePaths` in sass-loader options in the `webpack.config.js` like below:
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 module: {  
         rules: [  
             ....  
@@ -165,7 +183,9 @@ module: {
             ....  
         ]  
 }  
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Running the application
 

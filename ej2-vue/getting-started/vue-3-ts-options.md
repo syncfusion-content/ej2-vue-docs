@@ -103,7 +103,9 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 To import the necessary CSS styles for the Schedule component, as well as its dependent styles, into the `src/App.vue` file, you can use the provided code snippet within the `<style>` section. Let's import the `Material` theme for the Schedule component.
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -114,7 +116,10 @@ To import the necessary CSS styles for the Schedule component, as well as its de
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 > The order of importing CSS styles should be in line with its dependency graph.
 
 ## Add Syncfusion Vue component
@@ -123,15 +128,21 @@ Follow the below steps to add the Vue Schedule component using `Options API`:
 
 1.First, import the Schedule component in the `script` section of the **src/App.vue** file.
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <script>
   import { ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView, ResourcesDirective as EResources, ResourceDirective as EResource, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 2.The next step is to register the Schedule component and its child directives in Vue.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 //Component registration
 export default {
@@ -145,11 +156,15 @@ export default {
     'e-resource': ResourceDirective
   }
 }
-``` 
+
+{% endhighlight %}
+{% endtabs %}
 
 3.In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
   <div id='app'>
     <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
@@ -168,11 +183,15 @@ export default {
     </ejs-schedule>
   </div>
 </template>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 4.Declare the values for the `dataSource` property in the `script` section.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <script lang="ts">
 export default {
   name: "App",
@@ -213,11 +232,15 @@ export default {
   ...
 };
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 5.To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <script lang="ts">
   export default {
     name: "App",
@@ -227,11 +250,15 @@ export default {
     }
   };
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
-```html
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
   <div id='app'>
     <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
@@ -319,7 +346,9 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the project
 

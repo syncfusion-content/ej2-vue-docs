@@ -20,7 +20,7 @@ This section explains how to use Syncfusion Vue components in Vue 2 application.
 
 The best way to create a Vue 2 application is to use the [vue create](https://cli.vuejs.org/#getting-started) command.
 
-```
+```bash
 npm install -g @vue/cli
 vue create quickstart
 cd quickstart
@@ -49,7 +49,9 @@ Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/t
 
 Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -61,7 +63,9 @@ Here the themes are referred through the installed npm packages which contains t
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Grid components use other Syncfusion components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion Grid component's predefined appearance.
 
@@ -77,11 +81,15 @@ Import the component plugin from the Vue package and register it using `Vue.use(
 
 Refer to the following code snippet.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { GridPlugin } from '@syncfusion/ej2-vue-grids';
 
 Vue.use(GridPlugin);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Using Vue.component()
 
@@ -89,19 +97,25 @@ Import the component and component plugin from the Vue package and register them
 
 Refer to the following the code snippet.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { GridPlugin, GridComponent, ColumnsDirective, ColumnsPlugin, ColumnDirective, ColumnPlugin} from "@syncfusion/ej2-vue-grids";
 
 Vue.component(GridPlugin.name, GridComponent);
 Vue.component(ColumnsPlugin.name, ColumnsDirective);
 Vue.component(ColumnPlugin.name, ColumnDirective);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add Syncfusion Vue component to the application
 
 Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
   <div id="app">
     <ejs-grid :dataSource="data">
@@ -138,7 +152,9 @@ export default {
   }
 }
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 

@@ -20,7 +20,7 @@ This section explains how to use Syncfusion Vue components in Vue 3 application.
 
 The best way to create a Vue 3 application is to use the [vue create](https://cli.vuejs.org/#getting-started) command.
 
-```
+```bash
 npm install -g @vue/cli
 vue create quickstart
 cd quickstart
@@ -49,7 +49,9 @@ Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/t
 
 Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -61,7 +63,9 @@ Here the themes are referred through the installed npm packages which contains t
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Grid components use other Syncfusion components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion Grid component's predefined appearance.
 
@@ -69,7 +73,9 @@ Here the themes are referred through the installed npm packages which contains t
 
 Import the Grid component along with the required child directives from the installed packages into the `<script>` section of the `src/App.vue` file. Register the Grid component along with the required child directives using following code.
 
-```js
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
   import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
   // Component registration
   export default {
@@ -80,7 +86,9 @@ Import the Grid component along with the required child directives from the inst
       'e-column' : ColumnDirective
     }
   }
- ```
+
+{% endhighlight %}
+{% endtabs %}
 
 Now, the Grid and column directives are registered to use it in this application.
 
@@ -88,7 +96,9 @@ Now, the Grid and column directives are registered to use it in this application
 
 Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
   <template>
     <ejs-grid :dataSource="data">
       <e-columns>
@@ -139,7 +149,9 @@ Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` 
     @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
   </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 
@@ -163,16 +175,22 @@ It is required to register the component and any child directives used within th
 
 * Component registration in Vue 2
 
-  ```js
+ {% tabs %}
+ {% highlight js tabtitle="App.vue" %}
+
   import * as Vue from 'vue';
   import { GridPlugin } from '@syncfusion/ej2-vue-grids';
   // Registering component and directives as a single plugin.
   Vue.use(ButtonPlugin);
-  ```
+  
+  {% endhighlight %}
+  {% endtabs %}
 
 * Component registration in Vue 3
 
-    ```js
+  {% tabs %}
+  {% highlight js tabtitle="App.vue" %}
+
     import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
       //Component registration
     export default {
@@ -183,7 +201,9 @@ It is required to register the component and any child directives used within th
         'e-column' : ColumnDirective
       }
     }
-    ```
+  {% endhighlight %}
+  {% endtabs %}
+    
 
 In the above code, `ejs-grid` denotes the Grid component tag.`e-columns` and `e-column` denotes the child column directives tag which is used for Column definition declaration.
 
@@ -208,7 +228,8 @@ Due to changes in the [Vue 3 API](https://vuejs.org/api/application.html#createa
 
 In template declaration, the component name must match the property binding name. In the following example, the Grid column `template` property is assigned with the name `colTemplate`.
 
-    ```
+  {% tabs %}
+  {% highlight js tabtitle="App.vue" %}
     <template>
       <ejs-grid ref='grid' :dataSource="data" height=310 >
         <e-columns>
@@ -260,7 +281,9 @@ In template declaration, the component name must match the property binding name
       @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
       @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
     </style>
-    ```
+  
+  {% endhighlight %}
+  {% endtabs %}
 
 ### Using Syncfusion Vue components inside template properties
 
@@ -268,7 +291,9 @@ To use other Syncfusion Vue components inside the templates, register the compon
 
 The following sample uses the Button component within the grid's template property. To use the Button component within the template, register the Button component in the template declaration.
 
-    ```
+  {% tabs %}
+  {% highlight js tabtitle="App.vue" %}
+
       <template>
         <ejs-grid ref='grid' :dataSource="data">
           <e-columns>
@@ -333,7 +358,9 @@ The following sample uses the Button component within the grid's template proper
         @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
         @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
       </style>
-    ```
+  
+  {% endhighlight %}
+  {% endtabs %}
 
 ## See also
 
