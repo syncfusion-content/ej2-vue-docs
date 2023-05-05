@@ -102,7 +102,7 @@ You can import themes for the Syncfusion Vue component in various ways, such as 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -128,7 +128,7 @@ Follow the below steps to add the Vue Grid component using `Options API`:
 1.First, import the Grid component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
   import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
@@ -140,7 +140,7 @@ Follow the below steps to add the Vue Grid component using `Options API`:
 2.The next step is to register the Grid component and its child directives in Vue.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
 //Component registration
@@ -159,7 +159,7 @@ export default {
 3.In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <ejs-grid :dataSource='data'>
@@ -179,7 +179,7 @@ export default {
 4.Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 data() {
   return {
@@ -203,7 +203,7 @@ data() {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <ejs-grid :dataSource='data'>
@@ -278,7 +278,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-js-options](../appearance/images/vue3-js-options.png)
+![vue-3-js-options](../appearance/images/vue-3-js-options.png)
 
 ## See also
 
