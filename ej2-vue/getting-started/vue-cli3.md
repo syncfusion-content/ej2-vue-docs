@@ -69,11 +69,15 @@ Import the component plugin from the EJ2 Vue package and register it using Vue.u
 
 Refer to the following code snippet.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
 
 Vue.use(CalendarPlugin);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Note : By registering the component plugin in Vue, all child directives can also be globally registered.
 
@@ -83,11 +87,15 @@ Import the component and component plugin from EJ2 Vue package and register it u
 
 Refer to the following the code snippet.
 
-```ts
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 import { CalendarComponent, CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
 
 Vue.component(CalendarComponent, CalendarPlugin);
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Note: By using the Vue.component(), only the EJ2 Vue component can be registered. The child directives should be registered separately.
 
@@ -95,7 +103,9 @@ Note: By using the Vue.component(), only the EJ2 Vue component can be registered
 
 Add the EJ2 Vue calendar to the `<template>` section of the `App.vue` file or inside components in src directory using `<ejs-calendar>`. The content attribute of the calendar component is provided as name in the data option of the `<script>` section.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <template>
     <div id="app">
     <img src="./assets/logo.png">
@@ -118,18 +128,24 @@ export default {
   }
 }
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding CSS reference
 
 Add the styles of calendar component to the `<style>` section of the `App.vue` file as follows.
 
-```
+{% tabs %}
+{% highlight js tabtitle="App.vue" %}
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Running the application
 
