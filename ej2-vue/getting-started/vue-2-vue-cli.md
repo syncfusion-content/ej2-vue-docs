@@ -50,7 +50,7 @@ Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/t
 Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -82,7 +82,7 @@ Import the component plugin from the Vue package and register it using `Vue.use(
 Refer to the following code snippet.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { GridPlugin } from '@syncfusion/ej2-vue-grids';
 
@@ -98,7 +98,7 @@ Import the component and component plugin from the Vue package and register them
 Refer to the following the code snippet.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { GridPlugin, GridComponent, ColumnsDirective, ColumnsPlugin, ColumnDirective, ColumnPlugin} from "@syncfusion/ej2-vue-grids";
 
@@ -114,7 +114,7 @@ Vue.component(ColumnPlugin.name, ColumnDirective);
 Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory. To display the Grid with records, add the Grid component and bind the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) to it. Here, the simple data is mapped to the `dataSource` property.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id="app">
@@ -167,7 +167,7 @@ npm run serve
 The output will appear as follows:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
