@@ -70,7 +70,7 @@ Import the component plugin from the EJ2 Vue package and register it using Vue.u
 Refer to the following code snippet.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
 
@@ -88,7 +88,7 @@ Import the component and component plugin from EJ2 Vue package and register it u
 Refer to the following the code snippet.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { CalendarComponent, CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
 
@@ -104,7 +104,7 @@ Note: By using the Vue.component(), only the EJ2 Vue component can be registered
 Add the EJ2 Vue calendar to the `<template>` section of the `App.vue` file or inside components in src directory using `<ejs-calendar>`. The content attribute of the calendar component is provided as name in the data option of the `<script>` section.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
     <div id="app">
@@ -137,7 +137,7 @@ export default {
 Add the styles of calendar component to the `<style>` section of the `App.vue` file as follows.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -152,7 +152,7 @@ Add the styles of calendar component to the `<style>` section of the `App.vue` f
 Now, run the `npm run serve` command in the console to build your application and open it in the browser.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/cli3-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
