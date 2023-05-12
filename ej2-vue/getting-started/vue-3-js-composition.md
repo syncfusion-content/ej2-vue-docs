@@ -102,7 +102,8 @@ You can import themes for the Syncfusion Vue component in various ways, such as 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -127,7 +128,7 @@ Follow the below steps to add the Vue Grid component using `Composition API`:
 1.First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Grid component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script setup>
   import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
@@ -139,7 +140,7 @@ Follow the below steps to add the Vue Grid component using `Composition API`:
 2.In the `template` section, define the Grid component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid#datasource) property and column definitions.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <ejs-grid :dataSource='data'>
@@ -159,7 +160,7 @@ Follow the below steps to add the Vue Grid component using `Composition API`:
 3.Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script setup>
 const data = [
@@ -181,7 +182,7 @@ const data = [
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <ejs-grid :dataSource='data'>
@@ -241,7 +242,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-js-composition](../appearance/images/vue3-js-composition.png)
+![vue-3-js-composition](../appearance/images/vue-3-js-composition.png)
 
 ## See also
 
