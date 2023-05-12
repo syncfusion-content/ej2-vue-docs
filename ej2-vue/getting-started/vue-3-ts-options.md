@@ -104,7 +104,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 To import the necessary CSS styles for the Schedule component, as well as its dependent styles, into the `src/App.vue` file, you can use the provided code snippet within the `<style>` section. Let's import the `Material` theme for the Schedule component.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -129,7 +129,7 @@ Follow the below steps to add the Vue Schedule component using `Options API`:
 1.First, import the Schedule component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
   import { ScheduleComponent as EjsSchedule, ViewsDirective as EViews, ViewDirective as EView, ResourcesDirective as EResources, ResourceDirective as EResource, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
@@ -141,7 +141,7 @@ Follow the below steps to add the Vue Schedule component using `Options API`:
 2.The next step is to register the Schedule component and its child directives in Vue.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight js tabtitle="~/src/App.vue" %}
 
 import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, EventSettingsModel, Day, Week, WorkWeek, Month, Agenda, DragAndDrop, Resize } from "@syncfusion/ej2-vue-schedule";
 //Component registration
@@ -163,7 +163,7 @@ export default {
 3.In the `template` section, define the Schedule component with appointments. To populate the empty Scheduler with appointments, define either the local JSON data or remote data through the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/schedule/eventSettingsModel/#datasource) property available within the [eventSettings](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventsettings) option. Additionally, it is necessary to include the start and end time fields to define any appointments.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id='app'>
@@ -190,7 +190,7 @@ export default {
 4.Declare the values for the `dataSource` property in the `script` section.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script lang="ts">
 export default {
@@ -239,7 +239,7 @@ export default {
 5.To generate a Schedule with particular views, need to inject the relevant modules into the Schedule. This can be accomplished by utilizing the `provide` method within the `src/App.vue` file.
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script lang="ts">
   export default {
@@ -257,7 +257,7 @@ export default {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight js tabtitle="App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id='app'>
@@ -366,7 +366,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![vue3-ts-Options](../appearance/images/vue3-ts-options.png)
+![vue-3-ts-options](../appearance/images/vue-3-ts-options.png)
 
 ## See also
 

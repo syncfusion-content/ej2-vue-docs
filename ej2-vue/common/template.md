@@ -313,15 +313,16 @@ Below is the example code to use `i18n` external module in the Grid component te
 
 ## Provide/Inject in templates
 
-In Vue, "provide" and "inject" are two features that allow components to communicate with each other, even if they are not directly related in the component hierarchy.
+In Vue, `provide` and `inject` options are used to share data between components that are not directly related through a parent-child relationship.
 
-Syncfusion components provides provide and inject support with templates. It allows to pass data from a parent component to its template components without having to pass props down the component tree. Instead, the parent component provides the data, and the child components inject it.
+Syncfusion components can use these `provide` and `inject` options in templates. It allows to pass data from a parent component to its template components without having to pass props down the component tree. Instead, the parent component provides the data, and the child components inject it.
 
 To provide data from a parent component to its template, use the `provide` option. The provide option is an object that contains the data to provide. The keys in the object are the names of the properties, and the values are the data to provide.
 
 In this below example, the parent component provides the content property with the value of `Update` in **App.vue** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id="grid">
@@ -364,13 +365,15 @@ In this below example, the parent component provides the content property with t
   }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 To inject data provided by a parent component, use the `inject` option. The `inject` option is an array or an object that contains the names of the properties to inject.
 
 In this below example, the child template component injects content property using the `inject` option, and displays its value using an interpolation directive ({{ content }}) in **MyTemplate.vue** file.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="~/src/MyTemplate.vue" %}
 
 <template>
   <ejs-button>{{ content }}</ejs-button>
@@ -389,4 +392,5 @@ In this below example, the child template component injects content property usi
   }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
