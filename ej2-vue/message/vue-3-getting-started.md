@@ -120,7 +120,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 Follow the below steps to add the Vue Message component using `Composition API` or `Options API`:
 
-  1.First, import and register the Message component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1.First, import and register the Message component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
