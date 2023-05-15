@@ -17,10 +17,10 @@ new Vue({
         return {
              ajaxSettings:
             {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileAccess/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileAccess/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileAccess/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileAccess/Download"
+                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/FileOperations",
+                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/GetImage",
+                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Upload",
+                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Download"
             },
         };
     },
