@@ -9,6 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 * [Getting Started](./getting-started)
+* [Getting Started with Vue 3](./getting-started-vue-3)
 * [Circular Gauge Dimension](./gauge-dimensions)
 * [Axes](./gauge-axes)
 * [Ranges](./gauge-ranges)

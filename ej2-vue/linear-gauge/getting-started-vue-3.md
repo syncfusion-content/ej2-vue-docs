@@ -1,187 +1,285 @@
 ---
 layout: post
-title: Getting started vue 3 with Vue Linear gauge component | Syncfusion
-description:  Checkout and learn about Getting started vue 3 with Vue Linear gauge component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue 3 
+title: Vue 3 getting started with the Linear Gauge component | Syncfusion
+description:  Checkout and learn about Vue 3 getting started with the Vue Linear Gauge component of Syncfusion Essential JS 2 and more details.
+control: Vue 3 getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Linear Gauge component in Vue 3
+# Getting Started with the Vue Linear Gauge Component in Vue 3
 
-This section explains how to use Linear Gauge component in Vue 3 application.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Linear Gauge component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Creating Vue application using Vue CLI
+## Set up the Vite project
 
-The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
-
-```bash
-npm uninstall vue-cli -g
-
-```
-
-Use the following commands to install the latest version of Vue CLI.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+npm create vite@latest
 ```
 
-Create a new project using the command below.
+or
 
 ```bash
-vue create quickstart
-
+yarn create vite
 ```
 
-Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-![Vue 3 Terminal](./images/vue3-terminal.png)
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
-## Adding Syncfusion Linear Gauge package in the application
+```bash
+? Project name: » my-project
+```
 
-Syncfusion Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. The Linear Gauge component will be used in this example. To install it in the **quickstart** folder use the following command.
+2.Select `Vue` as the framework. It will create a Vue 3 project.
+
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
+```
+
+3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
+```
+
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+
+```bash
+cd my-project
+npm install
+```
+
+or
+
+```bash
+cd my-project
+yarn install
+```
+
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+
+This article uses the [Vue Linear Gauge component](https://www.syncfusion.com/vue-components/vue-Linear-gauge) as an example. To use the Vue Linear Gauge component in the project, the `@syncfusion/ej2-vue-lineargauge` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-lineargauge --save
 ```
 
-## Adding Syncfusion Linear Gauge component in the application
+or
 
-You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Linear Gauge component using following steps.
-
-**1.** Import the Linear Gauge component in the `<script>` section of the `src/App.vue` file.
-
-        ```
-        <script>
-        import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
-        </script>
-        ```
-
-**2.** Register the Linear Gauge component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Linear Gauge component in the following table.
-  
-| Directive Name     | Tag Name    |
-|--------------------|-------------|
-| `AxesDirective`    | `e-axes`    |
-| `AxisDirective`    | `e-axis`    |
-| `PointersDirective`| `e-pointers`|
-| `PointerDirective` | `e-pointer` |
-| `RangesDirective`  | `e-ranges`  |
-| `RangeDirective`   | `e-range`   |
-
-```js
-import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
-//Component registeration.
-export default {
-    name: "App",
-    components: {
-      'ejs-lineargauge' : LinearGaugeComponent,
-      'e-axes' : AxesDirective,
-      'e-axis' : AxisDirective,
-      'e-pointers': PointersDirective,
-      'e-pointer' : PointerDirective,
-      'e-ranges' : RangesDirective,
-      'e-range' : RangeDirective
-    }
-}
+```bash
+yarn add @syncfusion/ej2-vue-lineargauge
 ```
 
-In the above code snippet, you have registered Linear Gauge and the directives for axis, pointer and range. Axis directives are used to define the axis settings for the Linear Gauge component. Pointer and range directives are used to define the properties of pointer and  range respectively.
-  
-**3.** Add the component definition in template section.
+## Add Syncfusion Vue component
 
-        ```
-        <template>
-            <ejs-lineargauge :title ='title' orientation='Horizontal'>
-                <e-axes>
-                    <e-axis minimum=0 maximum=200>
-                        <e-pointers>
-                            <e-pointer value=140 color='red'></e-pointer>
-                        </e-pointers>
-                        <e-ranges>
-                            <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
-                            <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
-                            <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
-                            <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
-                        </e-ranges>
-                    </e-axis>
-                </e-axes>
-            </ejs-lineargauge>
-        </template>
+Follow the below steps to add the Vue Linear Gauge component using `Composition API` or `Options API`:
 
-        ```
+1.First, import and register the Linear Gauge component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
-Above is the Linear Gauge component definition with `title` and `orientation` properties and definitions for axis, pointer and range.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-**4.** Declare the bound properties in the `script` section.
+<script setup>
+import { LinearGaugeComponent as EjsLineargauge, AxesDirective as EAxes, AxisDirective as EAxis, PointersDirective as EPointers, PointerDirective as EPointer, RangesDirective as ERanges, RangeDirective as ERange } from '@syncfusion/ej2-vue-lineargauge';
+</script>
 
-        ```js
-        data: function () {
-            return {
-                title: 'Linear Gauge',
-            }
-        }
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-        ```
+<script>
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge';
+//Component registration
+export default {
+  name: "App",
+  components: {
+        'ejs-lineargauge' : LinearGaugeComponent,
+        'e-axes' : AxesDirective,
+        'e-axis' : AxisDirective,
+        'e-pointers': PointersDirective,
+        'e-pointer' : PointerDirective,
+        'e-ranges' : RangesDirective,
+        'e-range' : RangeDirective
+  }
+}
+</script>
 
-**5.** Summarizing the above steps, update the `src/App.vue` file with following code.
+{% endhighlight %}
+{% endtabs %}
+   
+2.In the `template` section, define the Linear Gauge component with the axis, pointer and range property definitions.
 
-        ```
-        <template>
-            <ejs-lineargauge :title ='title' orientation='Horizontal'>
-                <e-axes>
-                    <e-axis minimum=0 maximum=200>
-                        <e-pointers>
-                            <e-pointer value=140 color='red'></e-pointer>
-                        </e-pointers>
-                        <e-ranges>
-                            <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
-                            <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
-                            <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
-                            <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
-                        </e-ranges>
-                    </e-axis>
-                </e-axes>
-            </ejs-lineargauge>
-        </template>
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-        <script>
-        import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge'
+<template>
+  <ejs-lineargauge :title ='title' orientation='Horizontal'>
+        <e-axes>
+            <e-axis minimum=0 maximum=200>
+                <e-pointers>
+                    <e-pointer value=140 color='red'></e-pointer>
+                </e-pointers>
+                <e-ranges>
+                    <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
+                    <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
+                    <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
+                    <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
+                </e-ranges>
+            </e-axis>
+        </e-axes>
+    </ejs-lineargauge>
+</template>
 
-        export default {
-        name: 'App',
-        components: {
-            'ejs-lineargauge' : LinearGaugeComponent,
-            'e-axes' : AxesDirective,
-            'e-axis' : AxisDirective,
-            'e-pointers': PointersDirective,
-            'e-pointer' : PointerDirective,
-            'e-ranges' : RangesDirective,
-            'e-range' : RangeDirective
-        },
-        data: function () {
-            return {
-                title: 'Linear Gauge',
-            }
-        }
-        }
-        </script>
+{% endhighlight %}
+{% endtabs %}
 
-        ```
+3.In the `script` section, declare the values for the properties defined in the `template` section.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-**6.** Run the application using the following command.
+<script setup>
+    const title = "Linear Gauge";
+</script>
 
-        ```bash
-        npm run serve
-        ```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-The web server will be initiated and open the **quickstart** app in the browser at port `localhost:8080`.
+<script>
+data() {
+  return {
+    title: 'Linear Gauge'
+  };
+}
+</script>
 
-![Output](./images/vue3-lg-demo.png)
+{% endhighlight %}
+{% endtabs %}
 
-Refer the following sample, [vue3-lineargauge-getting-started](https://github.com/SyncfusionExamples/vue3-lineargauge-getting-started).
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+    <ejs-lineargauge :title ='title' orientation='Horizontal'>
+        <e-axes>
+            <e-axis minimum=0 maximum=200>
+                <e-pointers>
+                    <e-pointer value=140 color='red'></e-pointer>
+                </e-pointers>
+                <e-ranges>
+                    <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
+                    <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
+                    <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
+                    <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
+                </e-ranges>
+            </e-axis>
+        </e-axes>
+    </ejs-lineargauge>
+</template>
+
+<script setup>
+import { LinearGaugeComponent as EjsLineargauge, AxesDirective as EAxes, AxisDirective as EAxis, PointersDirective as EPointers, PointerDirective as EPointer, RangesDirective as ERanges, RangeDirective as ERange } from '@syncfusion/ej2-vue-lineargauge';
+const title = "Linear Gauge";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+    <ejs-lineargauge :title ='title' orientation='Horizontal'>
+        <e-axes>
+            <e-axis minimum=0 maximum=200>
+                <e-pointers>
+                    <e-pointer value=140 color='red'></e-pointer>
+                </e-pointers>
+                <e-ranges>
+                    <e-range start=0 end=80 startWidth=15 endWidth=15></e-range>
+                    <e-range start=80 end=120 startWidth=15 endWidth=15></e-range>
+                    <e-range start=120 end=140 startWidth=15 endWidth=15></e-range>
+                    <e-range start=140 end=200 startWidth=15 endWidth=15></e-range>
+                </e-ranges>
+            </e-axis>
+        </e-axes>
+    </ejs-lineargauge>
+</template>
+
+<script>
+  import { LinearGaugeComponent, AxesDirective, AxisDirective, PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge';
+  // Component registration
+  export default {
+    name: "App",
+    // Declaring component and its directives
+    components: {
+        'ejs-lineargauge' : LinearGaugeComponent,
+        'e-axes' : AxesDirective,
+        'e-axis' : AxisDirective,
+        'e-pointers': PointersDirective,
+        'e-pointer' : PointerDirective,
+        'e-ranges' : RangesDirective,
+        'e-range' : RangeDirective
+    },
+    // Bound properties declarations
+    data() {
+      return {
+        title: 'Linear Gauge'
+      };
+    }
+  };
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn run dev
+```
+
+The output will appear as follows:
+
+![vue-3-js-Linear-gauge](./images/vue3-lg-demo.png)
+
+> **Sample**: [vue3-lineargauge-getting-started](https://github.com/SyncfusionExamples/vue3-lineargauge-getting-started).
+
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+
+## See also
+
+* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
+* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
