@@ -1,1 +1,0 @@
-console.log('External JS file injected into iframe successfully');
