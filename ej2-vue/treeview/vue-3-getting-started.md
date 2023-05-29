@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Treeview Component in Vue 3
+# Getting Started with the Vue TreeView Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Treeview component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
@@ -85,7 +85,7 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue Treeview component](https://www.syncfusion.com/vue-components/vue-treeview) as an example. To use the Vue Treeview component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
+This article uses the [Vue TreeView component](https://www.syncfusion.com/vue-components/vue-treeview) as an example. To use the Vue TreeView component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
@@ -122,7 +122,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 Follow the below steps to add the Vue TreeView component using `Composition API` or `Options API`:
 
-1.First, import and register the TreeView component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1.First, import and register the TreeView component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
