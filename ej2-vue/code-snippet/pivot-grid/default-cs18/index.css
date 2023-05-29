@@ -1,0 +1,18 @@
+
+
+
+/* csslint ignore:start */
+.e-pivotview .e-headercell {
+  background-color: thistle !important;
+}
+.e-pivotview .e-rowsheader {
+  background-color: skyblue !important;
+}
+.e-pivotview .e-valuescontent:not(.e-gtot) {
+  background-color: pink !important;
+}
+.e-pivotview .e-gtot {
+  background-color: greenYellow !important;
+}
+
+/* csslint ignore:end */

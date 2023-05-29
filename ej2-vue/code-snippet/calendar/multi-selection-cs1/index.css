@@ -1,0 +1,25 @@
+
+
+
+
+
+.wrap {
+    margin: 0px auto;
+    max-width: 250px;
+}
+
+#app{
+    max-width: 550px;
+}
+
+#btncontainer{
+    float:right;
+    margin-left:30px;
+    margin-top: 75px;
+    margin-right: 10px;
+}
+
+button#workweek {
+    margin-left: 15px;
+}
+

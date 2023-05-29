@@ -1,0 +1,36 @@
+
+  #element {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+
+#element .e-list-header {
+    background: rgb(2, 120, 215);
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#element.e-listview .e-list-item {
+    padding: 10px 16px;
+    height: 61px;
+
+}
+
+#element .e-list-item-header {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    height: 20px;
+}
+
+#element .e-list-content {
+    line-height: 20px;
+    height: 20px;
+    font-size: 10px;
+    font-style: italic;
+    margin-top: -2px;
+}

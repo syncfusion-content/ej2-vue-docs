@@ -1,0 +1,17 @@
+
+ #container {
+   height: 350px;
+ }
+ .chartSelection1 {
+    fill: red
+}
+
+.chartSelection2 {
+
+    fill: green
+
+}
+
+.chartSelection3 {
+    fill: blue
+}

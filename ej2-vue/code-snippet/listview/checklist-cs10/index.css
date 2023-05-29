@@ -1,0 +1,46 @@
+
+#EventLog b {
+  color: #388e3c;
+}
+
+#listview-def {
+  border: 1px solid #dcdcdc;
+}
+.content-wrapper {
+  padding-left: 40px;
+  padding-top: 36px;
+}
+
+.evtbtn {
+  margin-top: 40px;
+  margin-left: 70px;
+}
+
+/* csslint ignore:start */
+
+hr {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+/* csslint ignore:end */
+
+#evt {
+  border: 1px solid #dcdcdc;
+  padding: 10px;
+  min-width: 10px;
+}
+
+#sample {
+  display: inline-flex;
+}
+
+.eventarea {
+  min-width: 250px;
+}
+
+#list_event {
+  margin-top: -25px;
+  padding-left:40px;
+  min-width: 200px;
+}

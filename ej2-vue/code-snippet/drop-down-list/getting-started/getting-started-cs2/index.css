@@ -1,0 +1,9 @@
+
+
+
+
+
+.e-input-group.e-control-wrapper.e-float-input .e-float-text::after {
+   content: '*';
+   color: red;
+}

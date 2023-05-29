@@ -1,0 +1,11 @@
+
+
+.e-custom-class {
+  color: #008cff;
+  text-decoration: underline;
+}
+
+.e-custom-class:hover {
+  color: red;
+  text-decoration: none;
+}

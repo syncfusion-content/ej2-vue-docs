@@ -1,0 +1,26 @@
+
+
+
+
+  .e-list-icon{
+    line-height: 1.3;
+    padding-right: 10px;
+    text-indent: 5px;
+}
+.sort:before {
+    content: '\e890';
+    font-family: 'e-icons';
+    font-size: 15px;
+
+}
+.filter:before {
+    content: '\e7ee';
+    font-family: 'e-icons';
+    font-size: 15px;
+    opacity: 0.78;
+}
+.clear:before {
+    content: '\e7fc';
+    font-family: 'e-icons';
+    font-size: 15px;
+}

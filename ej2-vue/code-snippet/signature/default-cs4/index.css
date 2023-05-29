@@ -1,0 +1,28 @@
+
+
+
+
+
+#signature {
+  border: 1px solid lightgray;
+  height: 100%;
+  width: 100%;
+}
+
+#signature-control {
+  height: 250px;
+}
+
+#input {
+  margin-bottom: 30px;
+}
+
+#text {
+  height: 30px;
+  width: 300px;
+}
+
+.wrap {
+    height: 300px;
+    width: 550px;
+}

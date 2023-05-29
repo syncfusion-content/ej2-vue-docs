@@ -1,0 +1,15 @@
+
+#app {
+    color: #008cff;
+    height: 40px;
+    left: 30%;
+    position: absolute;
+}
+
+#ui-list {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 3px;
+  cursor: pointer;
+}

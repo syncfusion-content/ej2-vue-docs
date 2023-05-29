@@ -1,0 +1,19 @@
+
+    
+    
+
+    #skeleton-list {
+    padding-left: 12px;
+    padding-top: 7px;
+    line-height: inherit;
+    }
+    #skeleton-list li {
+        list-style: none;
+        display: flow-root;
+        margin-bottom: 9px;
+    }
+    .listProfile {
+        float: left;
+        margin-right: 15px;
+    }
+

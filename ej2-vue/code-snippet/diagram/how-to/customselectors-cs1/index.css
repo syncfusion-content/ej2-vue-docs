@@ -1,0 +1,9 @@
+
+
+    #borderRect, #resizeNorthWest, #resizeNorthEast, #resizeSouthWest, #resizeSouthEast, #resizeNorth, #resizeSouth, #resizeWest, #resizeEast, #connectorSourceThumb, #connectorTargetThumb {
+                    stroke: EE1919;
+                    stroke-width: 5px;
+                    fill: EE1919;
+                    opacity: 1;
+                    }
+

@@ -1,0 +1,16 @@
+
+    .wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    #annotation {
+        color: #DDDDDD;
+        font-size: 12px;
+        font-family: Roboto;
+        background: #3E464C;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 2px;
+        width: 300px;
+        box-shadow: 0px 2px 5px #666;
+    }
