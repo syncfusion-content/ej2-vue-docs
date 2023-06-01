@@ -268,3 +268,10 @@ yarn run dev
 The output will appear as follows:
 
 ![vue-3-js-file-manager](./images/vue3-filemanager-demo.PNG)
+
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+
+## See also
+
+* [Getting Started with Vue UI Components using Composition API and TypeScript](../getting-started/vue-3-ts-composition.md)
+* [Getting Started with Vue UI Components using Options API and TypeScript](../getting-started/vue-3-ts-options.md)
