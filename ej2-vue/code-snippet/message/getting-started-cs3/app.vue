@@ -8,19 +8,6 @@
     </div>
   </div>
 </template>
-<script>
-import Vue from "vue";
-import { MessagePlugin } from "@syncfusion/ej2-vue-notifications";
-
-Vue.use(MessagePlugin);
-export default {
-  name: "app",
-  data() {
-    return {
-    };
-  }
-}
-</script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/message/material.css";

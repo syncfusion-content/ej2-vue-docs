@@ -1,11 +1,8 @@
 
-import Vue from "vue";
-import { MessagePlugin } from "@syncfusion/ej2-vue-notifications";
+import { createApp } from "vue";
+import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
 
-Vue.use(MessagePlugin);
-
-new Vue({
-	el: '#app',
+createApp({
 	template: `
   <div class="msg-variant-section">
     <div class="content-section">
@@ -32,13 +29,8 @@ new Vue({
       <ejs-message id="msg_warning" severity="Warning">There was a problem with your network connection</ejs-message>
       <ejs-message id="msg_error" severity="Error">A problem occurred while submitting your data</ejs-message>
     </div>
-  </div>
-`,
-
-  name: "app",
-  data() {
-    return {
-    };
+  </div>`,
+  components: {
+    "ejs-message": MessageComponent
   }
-
-});
+}).mount('#app');
