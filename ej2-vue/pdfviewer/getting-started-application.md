@@ -336,6 +336,6 @@ The output will appear as follows:
 
 ![Output](./images/Vue3-pdf-viewer-demo.png)
 
-[View sample in GitHub]().
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20Vue-3).
 
 For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
