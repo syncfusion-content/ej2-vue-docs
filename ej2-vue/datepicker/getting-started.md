@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains how to create a simple DatePicker and how to configure the DatePicker component.
+This section explains how to create a simple [Vue DatePicker](https://www.syncfusion.com/vue-ui-components/vue-datepicker) and how to configure the DatePicker component.
 
 ## Prerequisites
 
@@ -161,10 +161,10 @@ The following example demonstrates how to set the value, min and max dates on in
         
 {% previewsample "page.domainurl/code-snippet/datepicker/min-max-cs3" %}
 
-N> You can refer to our [Vue DatePicker](https://www.syncfusion.com/vue-ui-components/vue-datepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Vue DatePicker example](https://ej2.syncfusion.com/vue/demos/#/material/datepicker/default.html) to know how to render and configure the datepicker.
-
 ## See Also
 
 * [Change the format of selected date](./date-format)
 * [Render DatePicker with specific culture](./globalization)
 * [How to achieve validation with DatePicker](./how-to/client-side-validation)
+
+N> You can also explore our [Vue DatePicker example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/datepicker/default.html) that shows you how to render the DatePicker in Vue.

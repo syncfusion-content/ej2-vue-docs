@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # View in Vue Datepicker component
 
-The DatePicker has the following predefined views that provides a flexible way to navigate back and forth to select the date.
+The [Vue DatePicker](https://www.syncfusion.com/vue-ui-components/vue-datepicker) has the following predefined views that provides a flexible way to navigate back and forth to select the date.
 
 | **View** | **Description** |
 | --- | --- |

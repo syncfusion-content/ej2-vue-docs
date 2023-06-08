@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="col-lg-12 control-section msg-custom-section">
     <div class="content-section">
@@ -8,18 +6,9 @@
     </div>
   </div>
 </template>
-<script>
-import Vue from "vue";
-import { MessagePlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notifications";
 
-Vue.use(MessagePlugin);
-export default {
-  name: "app",
-  data() {
-    return {
-    };
-  }
-}
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
