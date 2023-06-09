@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Vue 3 getting started with the Vue Ribbon component | Syncfusion
-description:  Checkout and learn about Vue 3 getting started with Vue Ribbon component of Syncfusion Essential JS 2 and more details.
-control: Getting started vue 3 
+description:  Checkout and learn about Vue 3 getting started with Vue Ribbon component of Syncfusion Essential JS 2 and more.
+control: Ribbon
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -488,7 +488,7 @@ The `orientation` property of ribbon group defines whether the collection of ite
 {% endhighlight %}
 {% endtabs %}
 
-The `type` property to specify the type of control to be rendered, like a button, a drop-down button, a combo box, and more.
+The `type` property to specify the type of component to be rendered, like a button, a drop-down button, a combo box, and more.
 
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
@@ -998,7 +998,7 @@ The output will appear as follows:
 ![Output](./images/ribbon.png)
 
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [migration](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Getting started with Vue Ribbon component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Ribbon component of Syncfusion Essential JS 2 and more details.
-control: Getting started 
+description:  Checkout and learn about Getting started with Syncfusion Vue Ribbon component of Syncfusion Essential JS 2 and more.
+control: Ribbon
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -11,7 +11,7 @@ domainurl: ##DomainURL##
 # Getting Started
 
 This section explains how to create a simple Ribbon, and configure its available
-functionalities in Vue using [`Vue quickstart`](https://github.com/vuejs/vue-cli) seed repository.
+functionalities in Vue using [Vue quickstart](https://github.com/vuejs/vue-cli) seed repository.
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ The following list of dependencies are required to use the Ribbon component in y
 
 ## Installation and configuration
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
+You can use [Vue CLI](https://github.com/vuejs/vue-cli) to setup your vue applications.
 To install Vue CLI use the following command.
 
 ```bash
@@ -149,7 +149,7 @@ To define a ribbon group under each tab, you can use the `e-ribbon-group` direct
 
 ## Adding Ribbon Items
 
-You can use the `e-ribbon-collection` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `e-ribbon-item` directive and the `type` property to specify the type of control to be rendered, like a button, a drop-down button, a combo box, and more.
+You can use the `e-ribbon-collection` directive to define each ribbon collection that contains one or more items. To define each ribbon item, you can use the `e-ribbon-item` directive and the `type` property to specify the type of component to be rendered, like a button, a drop-down button, a combo box, and more.
 
 ```
   <template>
@@ -222,7 +222,7 @@ Import the needed CSS styles for the Ribbon component along with dependency styl
 
 Now run the `npm run dev` command in the console, it will build your application and open in the browser.
 
-The following example illustrates how tabs, groups, collections, and items are used in a ribbon control to form the ribbon layout.
+The following example illustrates how tabs, groups, collections, and items are used in a ribbon component to form the ribbon layout.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
