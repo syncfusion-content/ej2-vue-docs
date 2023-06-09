@@ -133,7 +133,9 @@ Now, run the `npm run dev` command in the console, it will build the application
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
+
 {% include code-snippet/message/getting-started-cs4/app.vue %}
+
 {% endhighlight %}
 {% endtabs %}
         
