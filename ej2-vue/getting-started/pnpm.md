@@ -110,7 +110,7 @@ The dependency packages for Syncfusion in a PNPM vite project are situated withi
 
 ## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue Grid component using the `Composition API`:
+Follow the below steps to add the Vue Grid component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api):
 
 1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Grid component in the `script` section of the **src/App.vue** file.
 
