@@ -979,6 +979,9 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 </style>
 
+{% endhighlight %}
+{% endtabs %}
+
 ## Run the project
 
 To run the project, use the following command:

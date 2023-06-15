@@ -292,7 +292,6 @@ const data = [
 @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
 </style>
 
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
