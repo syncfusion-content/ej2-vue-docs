@@ -17,7 +17,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-grid ref='grid' :dataSource='data' :allowFiltering='true' :filterSettings='filterSettings' height='273px'>
+        <ejs-grid ref='Grid' id="Grid" :dataSource='data' :allowFiltering='true' :filterSettings='filterSettings' height='273px'>
             <e-columns>
                 <e-column field='OrderID' :filter= 'filter' headerText='Order ID' textAlign='Right' width=100></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
