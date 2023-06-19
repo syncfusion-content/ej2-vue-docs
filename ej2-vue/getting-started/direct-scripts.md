@@ -12,24 +12,30 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion Vue UI Components using direct scripts in a quickstart application
 
-Vue has direct script support. It allows users to include the Vue.js library directly in the HTML file, without the need for a build step or a module bundler. This is useful for simple projects or prototypes where users want to quickly get started with Vue.js without setting up a build process.
 
-Syncfusion also provides direct script support for its Vue components. This allows developers to easily include the Syncfusion Vue components in their HTML file and use them in their Vue.js application. Let's see how to use the Syncfusion Vue components with a direct script.
+Vue provides native script support, allowing users to directly include the Vue.js library in an HTML file without the need for a build process or module bundler. This feature is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js without setting up a complex build workflow.
+
+
+Similarly, Syncfusion offers direct script support for its Vue components. Developers can seamlessly include Syncfusion Vue components in their HTML files and leverage them within their Vue.js applications. This allows for straightforward integration of Syncfusion Vue components without the need for additional build processes. Now, let's delve into the process of utilizing Syncfusion Vue components through direct script inclusion.
 
 ## Prerequisites
 
 * Any IDE, such as [Visual Studio Code](https://code.visualstudio.com/)
 
-## Configure Syncfusion Vue components in the application
+## Set up the Vue project
 
-For example, let's create the Vue `Grid` component sample using direct scripting. First, create an application folder `quickstart` and create an HTML file `~/quickstart/index.html`, then open it in Visual Studio Code.
+To demonstrate the usage of the `Grid` component through direct scripting, follow these steps:
 
-### Vue 2 application
+1\. Begin by creating a folder named `quickstart` for the project.
 
-To use Vue 2 direct script, include the [Vue.js](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) library in the `index.html` HTML file using a script tag, and then create a new Vue instance with the needed options.
+2\. Inside the `quickstart` folder, create an HTML file named `index.html`.
+
+Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://unpkg.com/vue@3/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
+
+> The [Vue class component](https://class-component.vuejs.org) package is required before the 2023 Volume 1 (v21.1.35) release. So, add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the **index.html** file for Vue 3 direct script.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight html tabtitle="Vue 2 (~/index.html)" %}
 
 <div id="app">
     <!-- Vue components goes here -->
@@ -43,105 +49,13 @@ To use Vue 2 direct script, include the [Vue.js](https://cdn.jsdelivr.net/npm/vu
 </script>
 
 {% endhighlight %}
-{% endtabs %}
-
-Now that the Vue instance has been set up, start using Syncfusion components in the application. To do this, add the following Syncfusion Vue 2 direct scripts and styles to the head section of the `index.html` file.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
-
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css">
-<script src="https://cdn.syncfusion.com/ej2/ej2-vue-es5/dist/ej2-vue.min.js"></script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Now, register the Vue `Grid` component and all its child directives globally using the following code snippet:
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
-
-<script>
-    Vue.use(ejs.grids.GridPlugin);
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-Add the Vue Grid component to the `<body>` section of the `index.html` file. To display the Grid with records, bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property to it. The simple data is mapped to the `data-source` property in this case, and the `Page` module is injected into the Grid component. More information on Grid component functionality can be found in [this document](https://ej2.syncfusion.com/vue/documentation/grid/getting-started/).
-
-> While using Syncfusion Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
-
-<body>
-    <h2>Syncfusion Vue 2 Grid Component</h2>
-    <div id="app">
-        <ejs-grid :data-source="data" :allow-paging="true" :page-settings='pageSettings'>
-            <e-columns>
-                <e-column field="OrderID" header-text="Order ID" text-align="Right" :is-primary-key="true" width="100"></e-column>
-                <e-column field="CustomerID" header-text="Customer ID"  width="80"></e-column>
-                <e-column field="Freight" header-text="Freight" width="90"></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-    <script>
-        Vue.use(ejs.grids.GridPlugin);
-        new Vue({
-            el: '#app',
-            provide: {
-                grid: [ejs.grids.Page]
-            },
-            data () {
-                return {
-                    data: [
-                            { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-                            { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-                            { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
-                            { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
-                            { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
-                            { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
-                            { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
-                            { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
-                            { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
-                    ],
-                    pageSettings: { pageSize: 5 }
-                }
-            }
-        });
-    </script>
-
-</body>
-
-{% endhighlight %}
-{% endtabs %}
-
-Finally, run the `~/quickstart/index.html` file in the web browser, and it will render the Syncfusion Vue Grid component. The output will appear as follows:
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
-{% include code-snippet/common/getting-started-es5-cs1/index.html%}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/common/getting-started-es5-cs1" %}
-
-### Vue 3 application
-
-To use Vue 3 direct script, include the [Vue.js](https://unpkg.com/vue@3/dist/vue.global.js) library in the `index.html` HTML file using a script tag, and then create a new Vue instance with the needed options.
-
-The [Vue class component](https://class-component.vuejs.org) package is required to run the Vue 3 components. So, add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the `index.html` file.
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight html tabtitle="Vue 3 (~/index.html)" %}
 
 <div id="app">
     <!-- Vue components goes here -->
 </div>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js"></script>
 <script>
     Vue.createApp({
         el: '#app',
@@ -151,21 +65,45 @@ The [Vue class component](https://class-component.vuejs.org) package is required
 {% endhighlight %}
 {% endtabs %}
 
-Now that the Vue instance has been set up, start using Syncfusion components in the application. To do this, add the following Syncfusion Vue 3 direct scripts and styles to the head section of the `index.html` file.
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS from CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, `Material` theme is applied using CSS styles, which are available in CDN. Add the `Material` CSS styles to the head section of the **index.html** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
 
-<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/material.css">
-<script src="https://cdn.syncfusion.com/ej2/ej2-vue-es5/dist/ej2-vue3.min.js"></script>
+<link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/21.2.3/material.css" rel="stylesheet" type="text/css" />
 
 {% endhighlight %}
 {% endtabs %}
 
-Now, register the Vue `Grid` component and all its child directives globally using the following code snippet:
+## Import Syncfusion Vue scripts
+
+To integrate Syncfusion components into your application, add the required Syncfusion Vue direct scripts to the head section of the **index.html** file to set up the Vue instance.
 
 {% tabs %}
 {% highlight html tabtitle="~/index.html" %}
+
+<script src="https://cdn.syncfusion.com/ej2/21.2.3/ej2-vue-es5/dist/ej2-vue.min.js"></script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion Vue component
+
+1\. First, register the Grid component and its child directives in Vue.
+
+{% tabs %}
+{% highlight html tabtitle="Vue 2 (~/index.html)" %}
+
+<script>
+    Vue.use(ejs.grids.GridPlugin);
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Vue 3 (~/index.html)" %}
 
 <script>
     Vue.createApp({
@@ -174,72 +112,32 @@ Now, register the Vue `Grid` component and all its child directives globally usi
             'ejs-grid' : ejs.grids.GridComponent,
             'e-columns' : ejs.grids.ColumnsDirective,
             'e-column' : ejs.grids.ColumnDirective
-        },
+        }
     }).mount('#app');
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-Add the Vue Grid component to the `<body>` section of the `index.html` file. To display the Grid with records, bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property to it. The simple data is mapped to the `data-source` property in this case, and the `Page` module is injected into the Grid component. More information on Grid component functionality can be found in [this document](https://ej2.syncfusion.com/vue/documentation/grid/getting-started/).
+2\. Add the component to the `<body>` section of the **index.html** file. Bind the [data-source](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and inject the `Page` module. Follow the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started/) documentation for further details.
 
 > While using Syncfusion Vue components in a direct script way, camel-cased property (isPrimaryKey) names need to be specified in the kebab-cased (is-primary-key) equivalents.
 
 {% tabs %}
-{% highlight html tabtitle="~/index.html" %}
+{% highlight html tabtitle="Vue 2 (~/index.html)" %}
 
-<body>
-    <h2>Syncfusion Vue 3 Grid Component</h2>
-    <div id="app">
-        <ejs-grid :data-source="data" :allow-paging="true" :page-settings='pageSettings'>
-            <e-columns>
-                <e-column field="OrderID" header-text="Order ID" text-align="Right" :is-primary-key="true" width="100"></e-column>
-                <e-column field="CustomerID" header-text="Customer ID"  width="80"></e-column>
-                <e-column field="Freight" header-text="Freight" width="90"></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-    <script>
-        Vue.createApp({
-            el: '#app',
-            components: {
-                'ejs-grid' : ejs.grids.GridComponent,
-                'e-columns' : ejs.grids.ColumnsDirective,
-                'e-column' : ejs.grids.ColumnDirective
-            },
-            provide: {
-                grid: [ejs.grids.Page]
-            },
-            data () {
-                return {
-                    data: [
-                            { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
-                            { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
-                            { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
-                            { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
-                            { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
-                            { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
-                            { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
-                            { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
-                            { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
-                    ],
-                    pageSettings: { pageSize: 5 }
-                }
-            }
-        }).mount('#app');
-    </script>
-
-</body>
+{% include code-snippet/common/getting-started-es5-cs1/index.html%}
 
 {% endhighlight %}
-{% endtabs %}
+{% highlight html tabtitle="Vue 3 (~/index.html)" %}
 
-Finally, run the `~/quickstart/index.html` file in the web browser, and it will render the Syncfusion Vue Grid component. The output will appear as follows:
-
-{% tabs %}
-{% highlight html tabtitle="~/index.html" %}
 {% include code-snippet/common/getting-started-es5-vue3-cs1/index.html %}
+
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+Run the **index.html** file in the web browser. The output will appear as follows:
         
 {% previewsample "page.domainurl/code-snippet/common/getting-started-es5-vue3-cs1" %}
