@@ -8,65 +8,472 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Gantt Component in Vue 3
 
-This section explains how to use Gantt component in Vue 3 application.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Gantt component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Creating Vue application using Vue CLI
+## Set up the Vite project
 
-The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
-
-```bash
-npm uninstall vue-cli -g
-
-```
-
-Use the following commands to install the latest version of Vue CLI.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+npm create vite@latest
 ```
 
-Create a new project using the command below.
+or
 
 ```bash
-vue create quickstart
-
+yarn create vite
 ```
 
-Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-![Reference](./images/vue3-terminal.png)
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
-## Adding Syncfusion Gantt package in the application
+```bash
+? Project name: » my-project
+```
 
-Syncfusion Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+2.Select `Vue` as the framework. It will create a Vue 3 project.
 
-To install Gantt component, use the following command
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
+```
+
+3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
+```
+
+4.Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+
+```bash
+cd my-project
+npm install
+```
+
+or
+
+```bash
+cd my-project
+yarn install
+```
+
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+
+This article uses the [Vue Gantt component](https://www.syncfusion.com/vue-components/vue-Gantt) as an example. To use the Vue Gantt component in the project, the `@syncfusion/ej2-vue-gantt` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-gantt --save
 ```
 
-> The **--save** will instruct NPM to include the Gantt package inside of the `dependencies` section of the `package.json`.
+or
 
-## Adding CSS reference for Syncfusion Vue Gantt component
+```bash
+yarn add @syncfusion/ej2-vue-gantt
+```
 
-The Gantt has different themes. They are:
-* Material
-* Fabric
-* Bootstrap
-* High Contrast
+## Import Syncfusion CSS styles
 
-The Vue Gantt control can be initialized by using either of the following ways:
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-* Using local style.
-* Using CDN link for style.
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Gantt component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+<!-- Material theme used for this sample -->
+ @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-treegrid/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+> The order of importing CSS styles should be in line with its dependency graph.
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Gantt component using `Composition API` or `Options API`:
+
+    1.First, import and register the Gantt component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+   import { GanttComponent as EjsGantt, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-gantt';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+    import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-gantt';
+//Component registration
+export default {
+  name: "App",
+  components: {
+    'ejs-gantt': GanttComponent,
+    'e-columns': ColumnsDirective,
+    'e-column': ColumnDirective
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+   
+2.In the `template` section, define the Gantt component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property and column definitions.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
+        <e-columns>
+            <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
+            <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
+            <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
+            <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
+       </e-columns>
+    </ejs-gantt>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+3.Declare the values for the `dataSource` property in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+    const data = [{
+         TaskID: 1,
+         TaskName: 'Planning',
+         StartDate: new Date('02/03/2017'),
+         EndDate: new Date('02/07/2017'),
+         Progress: 100,
+         Duration: 5,
+         subtasks: [
+             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
+             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
+             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
+             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
+         ]
+     },
+     {
+         TaskID: 6,
+         TaskName: 'Design',
+         StartDate: new Date('02/10/2017'),
+         EndDate: new Date('02/14/2017'),
+         Duration: 3,
+         Progress: 86,
+         subtasks: [
+             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
+             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
+             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
+             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
+             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
+         ]
+     }],
+     taskFields: {
+             id: 'TaskID',
+             name: 'TaskName',
+             startDate: 'StartDate',
+             endDate: 'EndDate',
+             duration: 'Duration',
+             progress: 'Progress',
+             child: 'subtasks',
+         }
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+data() {
+  return {
+    data:  [{
+         TaskID: 1,
+         TaskName: 'Planning',
+         StartDate: new Date('02/03/2017'),
+         EndDate: new Date('02/07/2017'),
+         Progress: 100,
+         Duration: 5,
+         subtasks: [
+             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
+             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
+             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
+             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
+         ]
+     },
+     {
+         TaskID: 6,
+         TaskName: 'Design',
+         StartDate: new Date('02/10/2017'),
+         EndDate: new Date('02/14/2017'),
+         Duration: 3,
+         Progress: 86,
+         subtasks: [
+             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
+             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
+             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
+             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
+             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
+         ]
+     }],
+     taskFields: {
+             id: 'TaskID',
+             name: 'TaskName',
+             startDate: 'StartDate',
+             endDate: 'EndDate',
+             duration: 'Duration',
+             progress: 'Progress',
+             child: 'subtasks',
+         }
+  };
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
+        <e-columns>
+            <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
+            <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
+            <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
+            <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
+       </e-columns>
+    </ejs-gantt>
+</template>
+
+<script setup>
+    const data = [{
+         TaskID: 1,
+         TaskName: 'Planning',
+         StartDate: new Date('02/03/2017'),
+         EndDate: new Date('02/07/2017'),
+         Progress: 100,
+         Duration: 5,
+         subtasks: [
+             { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
+             { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
+             { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
+             { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
+         ]
+     },
+     {
+         TaskID: 6,
+         TaskName: 'Design',
+         StartDate: new Date('02/10/2017'),
+         EndDate: new Date('02/14/2017'),
+         Duration: 3,
+         Progress: 86,
+         subtasks: [
+             { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
+             { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
+             { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
+             { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
+             { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
+         ]
+     }],
+     taskFields: {
+             id: 'TaskID',
+             name: 'TaskName',
+             startDate: 'StartDate',
+             endDate: 'EndDate',
+             duration: 'Duration',
+             progress: 'Progress',
+             child: 'subtasks',
+         }
+</script>
+
+<style>
+<!-- Material theme used for this sample -->
+ @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-treegrid/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
+</style>
+
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+
+<template>
+     <div>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :toolbar="toolbar" :allowFiltering= "true" :timelineSettings="timelineSettings" :splitterSettings= "splitterSettings" :labelSettings= "labelSettings" :projectStartDate="projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
+    </div>
+</template>
+
+<script>
+import { GanttComponent, Filter, Toolbar } from '@syncfusion/ej2-vue-gantt';
+
+export default {
+  name: "App",
+  components: {
+    'ejs-gantt' : GanttComponent
+  },
+  data: function() {
+      return{
+            data: [
+            {
+                TaskID: 1,
+                TaskName: 'Project Initiation',
+                StartDate: new Date('04/02/2019'),
+                EndDate: new Date('04/21/2019'),
+                subtasks: [
+                    {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
+                    { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
+                    { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
+                ]
+            },
+            {
+                TaskID: 5,
+                TaskName: 'Project Estimation',
+                StartDate: new Date('04/02/2019'),
+                EndDate: new Date('04/21/2019'),
+                subtasks: [
+                    { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
+                    { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
+                    { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
+                ]
+            },
+        ],
+            height: '450px',
+            taskFields: {
+                id: 'TaskID',
+                name: 'TaskName',
+                startDate: 'StartDate',
+                endDate: 'EndDate',
+                duration: 'Duration',
+                dependency: 'Predecessor',
+                child: 'subtasks',
+            },
+            columns: [
+                { field: 'TaskName', headerText: 'Task Name', width: '250' , clipMode: 'EllipsisWithTooltip' },
+                { field: 'StartDate', headerText: 'Start Date' },
+                { field: 'Duration', headerText: 'Duration' },
+                { field: 'EndDate', headerText: 'End Date' },
+                { field: 'Predecessor', headerText: 'Predecessor' }
+            ],
+            toolbar: ['Search'],
+            timelineSettings: {
+                timelineUnitSize: 60,
+                topTier: {
+                format: 'MMM dd, yyyy',
+                unit: 'Week',
+                },
+                bottomTier: {
+                unit: 'Day',
+                },
+            },
+            splitterSettings: {
+                columnIndex: 3
+                },
+            labelSettings: {
+                rightLabel: 'TaskName',
+            },
+            projectStartDate: new Date('04/01/2019 01:00:00 AM'),
+            projectEndDate: new Date('05/10/2019')  
+      };
+  },
+  provide: {
+      gantt: [ Filter, Toolbar ]
+  }
+};
+</script>
+
+<style>
+<!-- Material theme used for this sample -->
+ @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-treegrid/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
+</style>
+
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn run dev
+```
+
+The output will appear as follows:
+
+![vueimage](./images/vue-gantt-image.png)
 
 ### Using local style
 
@@ -123,123 +530,7 @@ Refer to the Gantt's CDN links as follows.
 <link href="http://cdn.syncfusion.com/ej2/ej2-treegrid/styles/material.css" rel="stylesheet" type="text/css"/>
 <!-- Essential JS 2 material theme -->
 <link href="http://cdn.syncfusion.com/ej2/ej2-gantt/styles/material.css" rel="stylesheet" type="text/css"/>
-
-
 ```
-
-## Adding Syncfusion Vue Gantt component in the application
-
-You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Gantt component using following steps.
-
-1. Import the Gantt component in the `<script>` section of the `src/App.vue` file.
-
-   ```
-   <script>
-   import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-gantt';
-   </script>
-  
-   ```
-
-2. Register the Gantt component along with the required child directives which are used in this example. Find the list of child directives and the tag names that can be used in the Gantt component in the following table.
-  
-   | Directive Name   | Tag Name    |
-   |------------------|-------------|
-   | `ColumnsDirective` | `e-columns` |
-   | `ColumnDirective`  | `e-column`  |
-
-   ```js
-
-   import { GanttComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-gantt';
-     //Component registeration
-   export default {
-       name: "App",
-       components: {
-         'ejs-gantt' : GanttComponent,
-         'e-columns' : ColumnsDirective,
-         'e-column' : ColumnDirective
-        }
-   }
-
-   ```
-
-   In the above code snippet, you have registered Gantt and the column directives. Column directives are used to define the column definition for the Gantt component.
-
-3. Add the Vue Gantt by using `<ejs-gantt>` selector in `<template>` section.
-
-   ```
-   <template>
-       <ejs-gantt :dataSource='data' :treeColumnIndex='1' child='subtasks' :taskFields= 'taskFields'>
-           <e-columns>
-               <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-               <e-column field='TaskName' headerText='Task Name' textAlign='Left' width=200></e-column>
-               <e-column field='StartDate' headerText='Start Date' textAlign='Right' format='yMd' width=90></e-column>
-               <e-column field='Duration' headerText='Duration' textAlign='Right' width=80></e-column>
-          </e-columns>
-       </ejs-gantt>
-   </template>
-  
-   ```
-
-   In the above code example for Gantt component definition, with `dataSource` property binding and columns definitions. In the `dataSource` property binding, we represent the hierarchical data binding in which [`child`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#child)  property denotes the hierarchy relationship; whereas in self-referencing data binding and [`parentId`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#parentid) denotes the hierarchy relationship.
-
-4. Declare the bound properties in the `script` section. Declare the collection `data` which is bound for the `dataSource` property.
-
-   ```js
-   data() {
-     return {
-       data:  [{
-            TaskID: 1,
-            TaskName: 'Planning',
-            StartDate: new Date('02/03/2017'),
-            EndDate: new Date('02/07/2017'),
-            Progress: 100,
-            Duration: 5,
-            subtasks: [
-                { TaskID: 2, TaskName: 'Plan timeline', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100,},
-                { TaskID: 3, TaskName: 'Plan budget', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-                { TaskID: 4, TaskName: 'Allocate resources', StartDate: new Date('02/03/2017'), EndDate: new Date('02/07/2017'), Duration: 5, Progress: 100, },
-                { TaskID: 5, TaskName: 'Planning complete', StartDate: new Date('02/07/2017'), EndDate: new Date('02/07/2017'), Duration: 0, Progress: 0, }
-            ]
-        },
-        {
-            TaskID: 6,
-            TaskName: 'Design',
-            StartDate: new Date('02/10/2017'),
-            EndDate: new Date('02/14/2017'),
-            Duration: 3,
-            Progress: 86,
-            subtasks: [
-                { TaskID: 7, TaskName: 'Software Specification', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), Duration: 3, Progress: 60, },
-                { TaskID: 8, TaskName: 'Develop prototype', StartDate: new Date('02/10/2017'), EndDate: new Date('02/12/2017'), duration: 3, Progress: 100,},
-                { TaskID: 9, TaskName: 'Get approval from customer', startDate: new Date('02/13/2017'), EndDate: new Date('02/14/2017'), Duration: 2, Progress: 100, },
-                { TaskID: 10, TaskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, Progress: 100, },
-                { TaskID: 11, TaskName: 'Design complete', StartDate: new Date('02/14/2017'), EndDate: new Date('02/14/2017'), Duration: 0, Progress: 0,  }
-            ]
-        }],
-        taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                endDate: 'EndDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                child: 'subtasks',
-            }
-     };
-   }
-   ```
-
-5. To create Gantt with additional features, inject the required modules. The following modules are used to extend Gantt's basic functionality.
-
-    * [`Edit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editmodule) : Inject this module to use the editing feature.
-    * [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtermodule) : Inject this module to use the filtering feature.
-    * [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#sortmodule) : Inject this module to use the sorting feature.
-    * [`Selection`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#selectionmodule) : Inject this module to use the selection feature.
-    * [`Toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) : Inject this module to use the toolbar items.
-    * [`DayMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#daymarkersmodule) : Inject this module to highlight the days.
-    Register the required array of modules under the key `gantt` in the `provide` section.
-
-  > Additional feature modules are available [here](./module)
 
 ## Binding Gantt with data
 

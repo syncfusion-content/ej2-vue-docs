@@ -57,7 +57,7 @@
 </style>
 <script>
 import Vue from 'vue';
-import { Ajax } from '@syncfusion/ej2-base';
+import { Fetch } from '@syncfusion/ej2-base';
 import { TooltipPlugin } from '@syncfusion/ej2-vue-popups';
 Vue.use(TooltipPlugin);
 
@@ -70,10 +70,9 @@ export default {
         onBeforeRender(args) {
             this.$refs.box.content = 'Loading...';
             this.$refs.box.dataBind();
-            let ajax = new Ajax('./tooltip.json', 'GET', true);
-            ajax.send().then(
+            let fetchApi = new Fetch('./tooltip.json', 'GET');
+            fetchApi.send().then(
                 (result) => {
-                    result = JSON.parse(result);
                     for (let i = 0; i < result.length; i++) {
                         if (result[i].Id == args.target.id) {
                             /* tslint:disable */

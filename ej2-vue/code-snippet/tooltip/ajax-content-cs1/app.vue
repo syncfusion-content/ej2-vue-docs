@@ -61,7 +61,7 @@
 <script>
 import Vue from "vue";
 import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-import { Ajax } from '@syncfusion/ej2-base';
+import { Fetch } from '@syncfusion/ej2-base';
 Vue.use(TooltipPlugin);
 export default {
   data: function() {
@@ -71,9 +71,8 @@ export default {
   },
   methods: {
        onBeforeRender: function(args){
-  let ajax: Ajax = new Ajax('./tooltipdata.json', 'GET', true);
-    ajax.send().then((result)  =>  {
-        result = JSON.parse(result);
+  let fetchApi: Fetch = new Fetch('./tooltipdata.json', 'GET');
+    fetchApi.send().then((result)  =>  {
             for (var i = 0; i < result.length; i++) {
                  if (result[i].Id === args.target.getAttribute('data-content')) {
                     /* tslint:disable */
