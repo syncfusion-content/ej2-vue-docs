@@ -242,6 +242,9 @@ data() {
 
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <ejs-treegrid :dataSource='data' :treeColumnIndex='1' childMapping='subtasks'>
       <e-columns>
@@ -292,6 +295,7 @@ const data = [
 @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
 </style>
 
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>

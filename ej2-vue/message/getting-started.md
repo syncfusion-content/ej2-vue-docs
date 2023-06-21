@@ -8,135 +8,164 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Message Component in Vue 2
 
-The following section explains the required steps to build the Vue Message component with its basic usage in step by step procedure.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Message component.
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Dependencies
+## Set up the Vue 2 project
 
-The following list of dependencies are required to use the Message component in the application.
-
-```js
-|-- @syncfusion/ej2-vue-notifications
-  |-- @syncfusion/ej2-base
-  |-- @syncfusion/ej2-buttons
-  |-- @syncfusion/ej2-popups
-  |-- @syncfusion/ej2-notifications
-  |-- @syncfusion/ej2-vue-base
-```
-
-## Installation and configuration
-
-Use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup vue applications.
-
-To install Vue CLI, use the following command.
+One of the methods for generating a Vue 2 project using Vue-CLI is by utilizing the [vue create](https://cli.vuejs.org/#getting-started) command. To install Vue CLI, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using the following Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion packages
+Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install the Message component, use the following command.
+Now that `quickstart` is ready to run with default settings, let's add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+
+This article uses the [Vue Message component](https://www.syncfusion.com/vue-components/vue-message) as an example. To use the Vue Message component in the project, the `@syncfusion/ej2-vue-notifications` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-notifications --save
 ```
+or
 
-## Registering Message Component
-
-For registering Vue Message component, two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
-
-### Using Vue.use()
-
-Import the Message component plugin from the `ej2-vue-notifications` package and register the same using the Vue.use() with component plugin as its argument.
-
-Refer the following code sample.
-
-```ts
-import { MessagePlugin } from '@syncfusion/ej2-vue-notifications';
-
-Vue.use(MessagePlugin);
+```bash
+yarn add @syncfusion/ej2-vue-notifications
 ```
 
-### Using Vue.component()
+## Import Syncfusion CSS styles
 
-Import the Message component and Message component plugin from the `ej2-vue-notifications` package and register it using the Vue.component() with the name of the Message component plugin and the Vue Message component as its arguments.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Refer the following code sample.
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Message component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-```ts
-import { MessageComponent, MessagePlugin } from '@syncfusion/ej2-vue-notifications';
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Vue.component(MessagePlugin.name, MessageComponent);
-```
-
-## Adding Message Component
-
-Add the EJ2 Vue Message by using the `<ejs-message>` selector to the `<template>` section of the `App.vue` file in the src directory. The content attribute of the Message component is provided as content in the data option of the `<script>` section.
-
-```
-<template>
-  <ejs-message id="msg" :content="content"></ejs-message>
-</template>
-<script>
-import Vue from "vue";
-import { MessagePlugin } from "@syncfusion/ej2-vue-notifications";
-
-Vue.use(MessagePlugin);
-export default {
-  data () {
-    return {
-      content: "Please read the comments carefully"
-    }
-  }
-}
-</script>
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/message/material.css";
-</style>
-```
-
-## Adding CSS Reference
-
-Add the Message component's styles as follows in the `<style>` section of the `App.vue` file.
-
-```
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
 </style>
-```
 
-## Running the Application
+{% endhighlight %}
+{% endtabs %}
 
-Now, run the `npm run dev` command in the console, it will build the application and open in the browser.
+## Register the Syncfusion Vue component
+
+Vue has two ways to register the Vue components in the Vue 2 application. Use one of the following ways to register the Syncfusion Vue components:
+* [Vue.use()](https://v2.vuejs.org/v2/api/#Vue-use) - It registers the Vue component and all its child directives globally.
+* [Vue.component()](https://v2.vuejs.org/v2/guide/components-registration.html) - It registers the Vue component only. It will not register the child directives automatically. The child directives should be registered separately.
+
+### Using Vue.use()
+
+Import the component plugin from the Vue package and register it using `Vue.use()` with the component plugin as its argument.
+
+Refer to the following code snippet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+import { MessagePlugin } from '@syncfusion/ej2-vue-notifications';
+
+Vue.use(MessagePlugin);
+
+{% endhighlight %}
+{% endtabs %}
+
+### Using Vue.component()
+
+Import the component and component plugin from the Vue package and register them using `Vue.component()` with the name of the component from the component plugin and the Vue component as its arguments. 
+
+Refer to the following the code snippet.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+import { MessageComponent, MessagePlugin } from '@syncfusion/ej2-vue-notifications';
+
+Vue.component(MessagePlugin.name, MessageComponent);
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Message component:
+
+1\. In the `template` section, define the Message component with the [content](https://ej2.syncfusion.com/vue/documentation/api/message#content) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <ejs-message id="msg" :content="content"></ejs-message>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. Declare the value for the `content` property in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+data() {
+  return {
+    content: "Please read the comments carefully"
+  };
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 {% include code-snippet/message/getting-started-cs4/app.vue %}
 
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/message/getting-started-cs4" %}

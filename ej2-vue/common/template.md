@@ -26,7 +26,9 @@ The Syncfusion Vue components do support [slots](https://vuejs.org/guide/compone
 
 In the Vue component, the `v-slot` directive is used to define a slot template in the component's template where users can insert custom content. Refer to the following code sample.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <ejs-grid ref="grid" :dataSource="ds">
   <e-columns>
     <e-column field="OrderID" headerText="Order ID" width=120 textAlign="Right" />
@@ -38,13 +40,15 @@ In the Vue component, the `v-slot` directive is used to define a slot template i
     </e-column>
   </e-columns>
 </ejs-grid>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ### Render scope
 
 In a single-page application, there may be a need to access the parent component scope in the template. The slot content has access to the data scope of the parent component. To access the component's data source value inside the template, pass the props ({data}) to the `v-slot` directive. Expressions within the slot can access the component's data source.
 
-```
+```html
 <template v-slot:templateName="{data}">
   <ejs-button :content="data.ShipCountry"></ejs-button>
 </template>
@@ -54,7 +58,7 @@ In a single-page application, there may be a need to access the parent component
 
 The Syncfusion Vue components support multiple templates. Each template is differentiated by its name. To render the slot content to the corresponding slot outlet, the name of each slot must map to the name of the corresponding property. 
 
-```
+```html
 <template v-slot:templateName></template>
 ```
 
@@ -62,7 +66,9 @@ The Syncfusion Vue components support multiple templates. Each template is diffe
 
 An example of a Grid component sample with a named slot (cTemplate) template is shown below.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <ejs-grid ref="grid" :dataSource="ds">
   <e-columns>
     <e-column field="OrderID" headerText="Order ID" width=120 textAlign="Right" />
@@ -73,12 +79,14 @@ An example of a Grid component sample with a named slot (cTemplate) template is 
     <ejs-button :content="data.ShipCountry"></ejs-button>
   </template>
 </ejs-grid>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The slot template can also be used to insert content into `nested tags` within a component. In the below code example, `cTemplate` is rendered in the nested tag `<e-column>`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/slot-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +115,7 @@ cTemplate: function() {
 Now, the template function is assigned to the `template` property of the Grid component. Refer to the below example for the inline template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,8 +126,8 @@ Now, the template function is assigned to the `template` property of the Grid co
 
 The template elements can be defined in an external file (single-file component) and used in Syncfusion Vue components. Refer to the below code snippet to define template elements in `template.vue` file.
 
-```
-// template.vue
+{% tabs %}
+{% highlight html tabtitle="~/src/template.vue" %}
 
 <template>
   <div class="button">
@@ -135,9 +143,11 @@ The template elements can be defined in an external file (single-file component)
     data () { return { data: {} } }
   }
 </script>
-```
 
-Import the `template.vue` file into the corresponding `app.vue` file as specified in the following code snippet.
+{% endhighlight %}
+{% endtabs %}
+
+Import the `template.vue` file into the corresponding `App.vue` file as specified in the following code snippet.
 
 ```js
 import externalTemplate from './template.vue'
@@ -153,8 +163,8 @@ cTemplate: function() {
 
 Now, the template function is assigned to the `template` property of the Grid component. Refer to the below code snippet from `App.vue` file for the external template.
 
-```
-// App.vue
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id="app">
@@ -203,13 +213,17 @@ Now, the template function is assigned to the `template` property of the Grid co
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## External modules in templates
 
 Syncfusion provides the option to use external modules in template content. To use the external modules in the template, add those modules to the `plugins` property of the Vue component. For example, the "i18n" module is added to the `plugins` property of the Grid component. Refer to the below code snippet.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
   <h3>Grid component</h3>
   <ejs-grid height='210px' :plugins="modules"></ejs-grid>
@@ -227,12 +241,15 @@ Syncfusion provides the option to use external modules in template content. To u
     }
   };
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Below is the example code to define `i18n` external module in the Vue 3 application.
 
-```
-// main.js
+{% tabs %}
+{% highlight html tabtitle="~/main.js" %}
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createI18n } from "vue-i18n";
@@ -256,12 +273,16 @@ export const i18n = createI18n({
   messages,
 });
 createApp(App).use(i18n).mount('#app')
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Below is the example code to use `i18n` external module in the Grid component template using `plugins` property.
 
-```
-// App.vue
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
+
 <template>
   <ejs-grid ref="grid" :dataSource="ds" :plugins="modules">
     <e-columns>
@@ -309,7 +330,10 @@ Below is the example code to use `i18n` external module in the Grid component te
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Provide/Inject in templates
 
