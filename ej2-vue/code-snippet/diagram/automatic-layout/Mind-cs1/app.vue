@@ -64,7 +64,8 @@
                 height: "590px",
                 layout: {
                     //Sets layout type
-                    type: 'MindMap'
+                    type: 'MindMap',
+                    orientation: 'Horizontal'
                 }, //Configures data source for Diagram
                 dataSourceSettings: {
                     id: 'id',
