@@ -42,7 +42,8 @@ export default {
      data: function() {
         return {
             toolbarSettings: {
-                items: ['FormatPainter', 'ClearFormat', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']
+                items: ['Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments', 'OrderedList',
+                'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'EmojiPicker', '|', 'Undo', 'Redo']
             },
             emojiPickerSettings: {
                 iconsSet: [{name: 'Smilies & People', code: '1F600', iconCss: 'e-emoji', 

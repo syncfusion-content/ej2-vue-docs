@@ -143,7 +143,27 @@ The following code illustrates how to arrange the nodes in a radial tree structu
 ## Mind Map layout
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout) of layout should be set as `MindMap`.
-The following code example illustrates how to create an organizational chart.
+
+## Tree Orientation in layout
+
+An [`Orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orientation) of a `MindMapTreeLayout` is used to arrange the tree layout according to a specific direction. By default, the orientation is set to Horizontal. The following table outlines the various orientation types available:
+
+<table>
+<tr>
+<td><b>Orientation Type<b></td>
+<td><b>Description<b></td>
+</tr>
+<tr>
+<td>Horizontal</td>
+<td>Aligns the tree layout from left to right</td>
+</tr>
+<tr>
+<td>Vertical</td>
+<td>Aligns the tree layout from top to bottom</td>
+</tr>
+</table>
+
+The following code example illustrates how to create an mindmap layout.
 
 >Note: If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
 
