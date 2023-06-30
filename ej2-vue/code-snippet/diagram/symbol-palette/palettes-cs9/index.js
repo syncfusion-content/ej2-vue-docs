@@ -24,7 +24,12 @@
         shape: {
             type: 'Basic',
             shape: 'Ellipse'
-        }, style: { strokeWidth: 2 }
+        }, style: { strokeWidth: 2 },
+        tooltip:{
+            content: 'Customized Tooltip',
+        },
+        //enable customized tooltip to display on the symbol
+        constraints: NodeConstraints.Default | NodeConstraints.Tooltip
     },
     {
         id: 'Hexagon',

@@ -35,7 +35,7 @@
 
 <script>
   import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+  import { RichTextEditorPlugin, Toolbar, HtmlEditor, Image, QuickToolbar, Link, FormatPainter } from '@syncfusion/ej2-vue-richtexteditor';
 
   Vue.use(RichTextEditorPlugin);
 
@@ -48,7 +48,7 @@
             'LowerCase', 'UpperCase', '|',
             'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
             'Outdent', 'Indent', '|',
-            'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
+            'CreateLink', 'Image', '|', 'FormatPainter', 'ClearFormat', 'Print',
             'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
         }
       }
@@ -65,7 +65,7 @@
       }
     },
     provide: {
-      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
+      richtexteditor: [Toolbar, HtmlEditor, Image, QuickToolbar, Link, FormatPainter ]
     }
   }
 </script>
