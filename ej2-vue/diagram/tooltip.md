@@ -110,6 +110,7 @@ Here, the code provided below demonstrates the port tooltip Interaction.
         
 {% previewsample "page.domainurl/code-snippet/diagram/tooltip/tooltip-cs7" %}
 
+
 ## Tooltip template content
 
 Any text or image can be added to the tooltip, by default. To customize the tooltip layout or to create your own visualized element on the tooltip, template can be used.
