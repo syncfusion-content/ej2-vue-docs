@@ -22,7 +22,19 @@ Pareto charts are used to find the cumulative values of data in different catego
         
 {% previewsample "page.domainurl/code-snippet/chart/series/line-cs10" %}
 
-## See Also
+## Pareto customization
+
+The pareto line series can be customized by using the `marker`, `width`, `dashArray`, and `fill` properties in the `paretoOptions`. The secondary axis for the pareto series can be shown or hidden using the `showAxis` property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/line-cs11/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/line-cs11" %}
+
+## See also
 
 * [Data label](../data-labels.md)
 * [Tooltip](../tool-tip.md)

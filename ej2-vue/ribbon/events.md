@@ -16,7 +16,7 @@ This section describes the ribbon events that will be triggered when appropriate
 
 The [tabSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#tabselected) event is triggered after selecting the tab item.
 
-```
+```html
 <template>
   <ejs-ribbon :tabSelected="tabSelected">
     <e-ribbon-tabs>
@@ -68,14 +68,13 @@ The [tabSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
   @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
 </style>
-
 ```
 
 ## Tab selecting
 
 The [tabSelecting](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#tabselecting) event is triggered before selecting the tab item.
 
-```
+```html
 <template>
   <ejs-ribbon :tabSelecting="tabSelecting">
     <e-ribbon-tabs>
@@ -134,7 +133,7 @@ The [tabSelecting](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
 
 The [ribbonCollapsing](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#ribboncollapsing) event is triggered before collapsing the ribbon.
 
-```
+```html
 <template>
   <ejs-ribbon :ribbonCollapsing="ribbonCollapsing">
     <e-ribbon-tabs>
@@ -193,7 +192,7 @@ The [ribbonCollapsing](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 
 The [ribbonExpanding](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#ribbonexpanding) event is triggered before expanding the ribbon.
 
-```
+```html
 <template>
   <ejs-ribbon :ribbonExpanding="ribbonExpanding">
     <e-ribbon-tabs>
@@ -252,7 +251,7 @@ The [ribbonExpanding](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ri
 
 The [launcherIconClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#launchericonclick) event is triggered when the launcher icon of the group is clicked.
 
-```
+```html
 <template>
   <ejs-ribbon :launcherIconClick="launchIconClick">
     <e-ribbon-tabs>
@@ -313,7 +312,7 @@ The [launcherIconClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 
 The [clicked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettings/#clicked) event is triggered when the button is clicked.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -373,7 +372,7 @@ The [clicked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
 
 The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButtonSettings/#created) event is triggered when the button is created.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -435,7 +434,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
 
 The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettings/#change) event is triggered when the the Checkbox state is changed.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -495,7 +494,7 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheck
 
 The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheckBoxSettings/#created) event is triggered once the Checkbox is created.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -557,7 +556,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonChec
 
 The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#change) event is triggered while changing the colors.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -619,7 +618,7 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColor
 
 The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#created) event is triggered once the Colorpicker is created.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -681,7 +680,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColo
 
 The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#open) event is triggered while opening the Colorpicker popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -743,7 +742,7 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPi
 
 The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#select) event is triggered while selecting the color in picker / palette, when showButtons property is enabled.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -805,7 +804,7 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColor
 
 The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforeclose) event is triggered before closing the Colorpicker popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -867,7 +866,7 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 
 The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettings/#beforeopen) event is triggered before opening the Colorpicker popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -929,7 +928,7 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonC
 
 The [beforeTileRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPickerSettingsModel/#beforetilerender) event is triggered while rendering each palette tile.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -993,7 +992,7 @@ The [beforeTileRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 
 The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#change) event is triggered when an item in a popup is selected or when the model value is changed by user.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1053,7 +1052,7 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCombo
 
 The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#close) event is triggered when the popup is closed.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1113,7 +1112,7 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboB
 
 The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#open) event is triggered when the popup is opened.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1173,7 +1172,7 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBo
 
 The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#created) event is triggered once the Combobox is created.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1233,7 +1232,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComb
 
 The [filtering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#filtering) event triggers on typing a character in the Combobox.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1293,7 +1292,7 @@ The [filtering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCo
 
 The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#select) event is triggered when an item in the popup is selected.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1353,7 +1352,7 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCombo
 
 The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBoxSettings/#beforeOpen) event triggers before opening the popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1415,7 +1414,7 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonC
 
 The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeclose) event is triggered before closing the DropdownButton popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1476,7 +1475,7 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 
 The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeopen) event is triggered before opening the Dropdown button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1537,7 +1536,7 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonD
 
 The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event is triggered while rendering each Popup item of Dropdown button.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1598,7 +1597,7 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 
 The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#open) event is triggered while opening the Dropdown button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1659,7 +1658,7 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDow
 
 The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#close) event is triggered while closing the Dropdown button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1720,7 +1719,7 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDo
 
 The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#created) event is triggered while selecting an action item in Dropdown button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1781,7 +1780,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDrop
 
 The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#select) event is triggered while selecting an action item in Dropdown button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1844,7 +1843,7 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropD
 
 The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeclose) event is triggered before closing the Split button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1905,7 +1904,7 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 
 The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeopen) event is triggered before opening the Split button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -1966,7 +1965,7 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonS
 
 The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#beforeitemrender) event is triggered while rendering each Popup item of Split button.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -2027,7 +2026,7 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 
 The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#open) event is triggered while opening the Split button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -2088,7 +2087,7 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitBu
 
 The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#close) event is triggered while closing the Split button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -2149,7 +2148,7 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
 
 The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#created) event is triggered while selecting an action item in Split button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -2210,7 +2209,7 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSpli
 
 The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#select) event is triggered while selecting an action item in Split button popup.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -2271,7 +2270,7 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplit
 
 The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettings/#click) event is triggered while clicking the primary button in Split button.
 
-```
+```html
 <template>
   <ejs-ribbon>
     <e-ribbon-tabs>
@@ -2334,7 +2333,7 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
 
 The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeclose) event is triggered before closing the file menu popup.
 
-```
+```html
 <template>
   <ejs-ribbon :fileMenu="fileSettings">
     <e-ribbon-tabs>
@@ -2406,7 +2405,7 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMe
 
 The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeopen) event is triggered before opening the file menu popup.
 
-```
+```html
 <template>
   <ejs-ribbon :fileMenu="fileSettings">
     <e-ribbon-tabs>
@@ -2478,7 +2477,7 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMen
 
 The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#beforeitemrender) event is triggered while rendering each ribbon file menu item.
 
-```
+```html
 <template>
   <ejs-ribbon :fileMenu="fileSettings">
     <e-ribbon-tabs>
@@ -2550,7 +2549,7 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/f
 
 The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#open) event is triggered when file menu popup is opened.
 
-```
+```html
 <template>
   <ejs-ribbon :fileMenu="fileSettings">
     <e-ribbon-tabs>
@@ -2622,7 +2621,7 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSetti
 
 The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#close) event is triggered when file menu popup is closed.
 
-```
+```html
 <template>
   <ejs-ribbon :fileMenu="fileSettings">
     <e-ribbon-tabs>
@@ -2694,7 +2693,7 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSett
 
 The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#select) event is triggered while selecting an item in ribbon file menu.
 
-```
+```html
 <template>
   <ejs-ribbon :fileMenu="fileSettings">
     <e-ribbon-tabs>

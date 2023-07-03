@@ -13,6 +13,8 @@ new Vue({
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='Line' xName='x' yName='y' name='December 2007'
                 :marker='marker'> </e-series>
+                <e-series :dataSource='seriesData' type='Line' xName='x' yName='y1' name='December 2008'
+                :marker='marker'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

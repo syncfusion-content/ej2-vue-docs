@@ -62,6 +62,10 @@ export default {
             var index = ganttChart.treeGrid.getRows().indexOf(gridEle);
             ganttChart.selectRow(index);
             }
+            if(chartEle){
+                var index = chartEle.ariaRowIndex;
+                ganttChart.selectRow(Number(index));
+            }
             var record= args.draggedNodeData;
             var selectedData = ganttChart.flatData[ganttChart.selectedRowIndex];
             var selectedDataResource = selectedData.taskData.resources;

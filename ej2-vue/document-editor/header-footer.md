@@ -37,6 +37,32 @@ this.$refs.documenteditor.ej2Instances.selection.goToHeader();
 this.$refs.documenteditor.ej2Instances.selection.goToFooter();
 ```
 
+## Link to previous
+
+Link to previous is enabled by default when document has more than one section. If you're using different headers and footers such as different first page or different odd and even pages, they can't be linked together because they're all separate.
+
+Before setting or getting the link to previous value, use the ['goToHeader'](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection/#gotoheader) or ['goToFooter'](https://ej2.syncfusion.com/vue/documentation/api/document-editor/selection/#gotofooter) API to move the current selection to the header or footer region.
+
+You can get or set the default header footer link to previous value of a section at cursor position by using the following sample code.
+
+```ts
+this.$refs.container.ej2Instances.documentEditor.selection.sectionFormat.oddPageHeader.linkToPrevious = false;
+this.$refs.container.ej2Instances.documentEditor.selection.sectionFormat.oddPageFooter.linkToPrevious = false;
+```
+
+In case the document has different header and footer types, such as different first page, odd, and even pages.
+
+```ts
+// Different first page
+this.$refs.container.ej2Instances.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
+this.$refs.container.ej2Instances.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
+//Even page
+this.$refs.container.ej2Instances.documentEditor.selection.sectionFormat.firstPageHeader.linkToPrevious = false;
+this.$refs.container.ej2Instances.documentEditor.selection.sectionFormat.firstPageFooter.linkToPrevious = false;
+```
+
+>Note: When there is more than one section in the document, the Link to Previous option becomes available. By default, this feature is disabled state in UI and set to return false for the first section.
+
 ## Header and footer distance
 
 You can define the distance of header region content from the top of the page. Refer to the following sample code.

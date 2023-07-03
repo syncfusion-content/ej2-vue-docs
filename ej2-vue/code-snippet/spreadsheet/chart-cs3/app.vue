@@ -1,7 +1,7 @@
 
 
 <template>
-   <ejs-spreadsheet ref="spreadsheet" :created="created" :height=515>
+   <ejs-spreadsheet ref="spreadsheet" :created="created" :actionBegin="actionBegin" :height=515>
         <e-sheets>
             <e-sheet :name="BookSales">
                 <e-rows>
@@ -42,19 +42,19 @@ export default {
     }
   },
   methods: {
-  created: function () {
-      var spreadsheet = this.$refs.spreadsheet;
-      spreadsheet.cellFormat({ backgroundColor: '#357cd2', color: '#fff', fontWeight: 'bold', textAlign: 'center' }, 'A3:F3');
-      spreadsheet.numberFormat(getFormatFromType('Currency'), 'B4:F8');
-      spreadsheet.merge('A1:F1');
-      },
-      actionBegin: function(args) {
-        if (args.action === 'beforeInsertChart' && args.type.includes('Line')) {
-            args.args.eventArgs.markerSettings.shape = 'Triangle';
-            args.args.eventArgs.markerSettings.isFilled = false;
-            args.args.eventArgs.markerSettings.size = 10;
+        created: function () {
+            var spreadsheet = this.$refs.spreadsheet;
+            spreadsheet.cellFormat({ backgroundColor: '#357cd2', color: '#fff', fontWeight: 'bold', textAlign: 'center' }, 'A3:F3');
+            spreadsheet.numberFormat(getFormatFromType('Currency'), 'B4:F8');
+            spreadsheet.merge('A1:F1');
+        },
+        actionBegin: function (args) {
+            if (args.action === 'beforeInsertChart' && args.args.eventArgs.type.includes('Line')) {
+                args.args.eventArgs.markerSettings.shape = 'Triangle';
+                args.args.eventArgs.markerSettings.isFilled = false;
+                args.args.eventArgs.markerSettings.size = 10;
+            }
         }
-      }
     }
 }
 </script>
