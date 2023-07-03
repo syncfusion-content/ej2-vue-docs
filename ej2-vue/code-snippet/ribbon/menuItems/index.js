@@ -43,10 +43,6 @@ data: function () {
         { text: "Rename", iconCss: "e-icons e-rename", id: "rename" },
         { text: "Save as", iconCss: "e-icons e-save", id: "save" }
       ],
-      beforeClose: (args) => {
-        alert('ch')
-        // Your required action here
-      }
     },
     cutButton:  { iconCss: "e-icons e-cut", content: "Cut" },
     copyButton:  { iconCss: "e-icons e-copy", content: "Copy" },

@@ -24,7 +24,7 @@ The following modules are available in Ribbon. If the module injection type is *
 
 These selective modules should be injected into the `provide` section and use `ribbon` as a key of the object.
 
-```
+```html
 <template>
   <ejs-ribbon>
     // Render Tabs here

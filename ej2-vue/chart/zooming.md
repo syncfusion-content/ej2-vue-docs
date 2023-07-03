@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Zooming in Vue Chart component
 
-## Enable Zooming
+## Enable zooming
 
 Chart can be zoomed in three ways.
 
@@ -79,9 +79,9 @@ Using [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomS
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs5" %}
 
-## Eanble Scrollbar
+## Eanble scrollbar
 
-Using [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings/#enablescrollbar) property, you can able to add scrollbar for zoomed chart. Using this scrollbar, you can pan or zoom the chart.
+Using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enablescrollbar) property, you can add a scrollbar to a zoomed chart. This scrollbar allows you to zoom or pan the chart. The appearance of the scrollbar can be customized using properties in `scrollbarSettings`. For example, you can use `trackColor` and `trackRadius` properties to customize the track of the scrollbar, and `scrollbarRadius` and `scrollbarColor` properties to customize the scroller. The ability to zoom through the scrollbar can be enabled or disabled using the `enableZoom` property in `scrollbarSettings`. Additionally, you can change the color of the grip and height of the scrollbar using the `gripColor` and `height` properties.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

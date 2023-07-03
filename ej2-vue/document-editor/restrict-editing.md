@@ -32,6 +32,14 @@ The following code shows how to set userColor.
 this.$refs.doceditcontainer.ej2Instances.documentEditor..userColor = '#fff000';
 ```
 
+You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
+
+The folowing code shows how to toggle the highlight editable region value.
+
+```javascript
+this.$refs.doceditcontainer.ej2Instances.documentEditor.documentEditorSettings.highlightEditableRanges = true; 
+```
+
 # Restrict Editing Pane
 
 Restrict Editing Pane provides the following options to manage the document:
