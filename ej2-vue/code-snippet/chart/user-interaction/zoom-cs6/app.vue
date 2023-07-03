@@ -36,7 +36,17 @@ export default {
       primaryXAxis: {
             valueType: 'DateTime',
             labelFormat: 'yMMM',
-            zoomFactor: 0.2, zoomPosition: 0.6
+            zoomFactor: 0.2, zoomPosition: 0.6,
+            scrollbarSettings: {
+                enable: true,
+                enableZoom: false,
+                height: 14,
+                trackRadius: 8,
+                scrollbarRadius: 8,
+                gripColor: 'transparent',
+                trackColor: 'yellow',
+                scrollbarColor: 'red'
+            }
         },
         zoom:
         {

@@ -10,12 +10,14 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created = "created"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created = "created" :toolbar="toolbar"></ejs-imageeditor>
 </div>
 `,
 
   data: function() {
-      return {};
+      return {
+        toolbar: []
+      };
   },
   methods: {
      created: function() {
