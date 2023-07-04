@@ -8,7 +8,7 @@
         Node,
         Connector,
         SymbolPalette,SymbolPalettePlugin,
-        SymbolInfo,
+        SymbolInfo,NodeConstraints,
         ShapeModel,ExpandMode} from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     Vue.use(SymbolPalettePlugin);
