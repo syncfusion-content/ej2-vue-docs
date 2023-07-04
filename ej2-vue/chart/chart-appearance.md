@@ -146,7 +146,7 @@ Chart can be given a title using [`title`](https://ej2.syncfusion.com/vue/docume
 
 ### Title position
 
-By using the `position` property in [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#titlestyle), you can position the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#title) at left, right, top or bottom of the chart. The title is positioned at the top of the chart, by default.
+By using the [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings/#position) property in [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#titlestyle), you can position the [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#title) at left, right, top or bottom of the chart. The title is positioned at the top of the chart, by default.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -156,7 +156,7 @@ By using the `position` property in [`titleStyle`](https://ej2.syncfusion.com/
         
 {% previewsample "page.domainurl/code-snippet/chart/chart-title-cs8" %}
 
-* The custom option helps you to position the title anywhere in the chart using `x` and `y` coordinates.
+* The custom option helps you to position the title anywhere in the chart using [`x`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings/#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings/#y) coordinates.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -168,7 +168,7 @@ By using the `position` property in [`titleStyle`](https://ej2.syncfusion.com/
 
 ### Title alignment
 
-You can align the title to the near, far, or center of the chart using the `textAlignment` property.
+You can align the title to the near, far, or center of the chart using the [`textAlignment`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettings/#textalignment) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

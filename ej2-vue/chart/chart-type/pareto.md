@@ -24,7 +24,7 @@ Pareto charts are used to find the cumulative values of data in different catego
 
 ## Pareto customization
 
-The pareto line series can be customized by using the `marker`, `width`, `dashArray`, and `fill` properties in the `paretoOptions`. The secondary axis for the pareto series can be shown or hidden using the `showAxis` property.
+The pareto line series can be customized by using the [`marker`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#marker), [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#width), [`dashArray`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#dasharray), and [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#fill) properties in the [`paretoOptions`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/). The secondary axis for the pareto series can be shown or hidden using the [`showAxis`](https://ej2.syncfusion.com/vue/documentation/api/chart/paretoOptions/#showaxis) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
