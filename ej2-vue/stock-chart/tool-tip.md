@@ -45,7 +45,7 @@ value.
 
 ## Position the tooltip
 
-By default, the tooltip is positioned at the left side of the stock chart. You can move the tooltip along with the mouse by setting **Nearest** to the `position` property.
+By default, the tooltip is positioned at the left side of the stock chart. You can move the tooltip along with the mouse by setting **Nearest** to the [`position`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockTooltipSettings/#position) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
