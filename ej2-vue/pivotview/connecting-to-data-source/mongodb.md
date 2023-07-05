@@ -7,7 +7,7 @@ platform: ej2-vue
 documentation: ug
 ---
 
-# MongoDB in EJ2 Vue Pivotview control
+# MongoDB in EJ2 Vue Pivotview Component
 
 This section describes how to consume data from MongoDB database using [MongoDB Driver](https://www.nuget.org/packages/MongoDB.Driver) and [MongoDB Bson](https://www.nuget.org/packages/MongoDB.Bson) libraries and bind it to the Pivot Table via a Web API controller.
 

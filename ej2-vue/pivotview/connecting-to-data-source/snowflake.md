@@ -7,7 +7,7 @@ platform: ej2-vue
 documentation: ug
 ---
 
-# Snowflake in EJ2 Vue Pivotview control
+# Snowflake in EJ2 Vue Pivotview Component
 
 This section describes how to retrieve data from a Snowflake database using [Snowflake Data](https://www.nuget.org/packages/Snowflake.Data/#readme-body-tab) and bind it to the Pivot Table via a Web API controller.
 

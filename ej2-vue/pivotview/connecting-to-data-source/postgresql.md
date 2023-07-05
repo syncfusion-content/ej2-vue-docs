@@ -7,7 +7,7 @@ platform: ej2-vue
 documentation: ug
 ---
 
-# PostgreSQL in EJ2 Vue Pivotview control
+# PostgreSQL in EJ2 Vue Pivotview Component
 
 This section describes how to consume data from PostgreSQL database using [Microsoft Npgsql](https://www.npgsql.org/doc/index.html) and bind it to the Pivot Table via a Web API controller.
 

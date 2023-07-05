@@ -7,7 +7,7 @@ platform: ej2-vue
 documentation: ug
 ---
 
-# Mysql in EJ2 Vue Pivotview control
+# MySQL in EJ2 Vue Pivotview Component
 
 This section describes how to retrieve data from a MySQL database using [MySqlClient](https://mysqlclient.readthedocs.io/) and bind it to the Pivot Table via a Web API controller.
 
