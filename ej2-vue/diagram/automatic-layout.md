@@ -150,8 +150,8 @@ An [`Orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orie
 
 <table>
 <tr>
-<td><b>Orientation Type<b></td>
-<td><b>Description<b></td>
+<td><b>Orientation Type</b></td>
+<td><b>Description</b></td>
 </tr>
 <tr>
 <td>Horizontal</td>
@@ -163,9 +163,9 @@ An [`Orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orie
 </tr>
 </table>
 
-The following code example illustrates how to create an mindmap layout.
+N> If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
 
->Note: If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
+The following code example illustrates how to create an mindmap layout.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
