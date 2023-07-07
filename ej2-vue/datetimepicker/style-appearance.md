@@ -52,3 +52,31 @@ Use the following CSS to customize the time picker popup in the DateTimePicker
 Please check the below section, to customize the style and appearance of the Calendar component in the DateTimePicker
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)
+
+## Full Screen Mode: Enhancing the DateTimePicker Component (Mobile Support Only)
+
+We have introduced the full screen mode functionality in our DateTimePicker component, enabling users to see the DateTimePicker calendar and time popup element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DateTimePicker component, simply set the `fullScreenMode` API value to `true`. This action will extend the calendar and time popup element to occupy the entire screen on mobile devices.
+
+```html
+<template>
+    <div id="app">
+    <ejs-datetimepicker :fullScreenMode="mobileMode" ></ejs-datetimepicker>
+  </div>
+</template>
+<script>
+import Vue from 'vue';
+import { DateTimePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+
+Vue.use(DateTimePickerPlugin);
+export default {
+  name: 'app',
+  data () {
+    return {
+      mobileMode : true
+    }
+  }
+}
+</script>
+```
+
+![DateTimePickerFullScreen](../images/DateTimePickerFullScreen.gif)
