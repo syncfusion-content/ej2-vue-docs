@@ -394,10 +394,11 @@ In this below example, the parent component provides the content property with t
 
 To inject data provided by a parent component, use the `inject` option. The `inject` option is an array or an object that contains the names of the properties to inject.
 
-In this below example, the child template component injects content property using the `inject` option, and displays its value using an interpolation directive ({{ content }}) in **MyTemplate.vue** file.
+In this below example, the child template component injects content property using the `inject` option, and displays its value using an interpolation directive ({% raw %}{{ content }}{% endraw %}) in **MyTemplate.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/MyTemplate.vue" %}
+{% raw %}
 
 <template>
   <ejs-button>{{ content }}</ejs-button>
@@ -416,5 +417,6 @@ In this below example, the child template component injects content property usi
   }
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
