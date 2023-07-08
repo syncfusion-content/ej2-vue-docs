@@ -41,3 +41,30 @@ Use the following CSS to customize the DatePicker icon element
 Please check the below section, to customize the style and appearance of the Calendar component
 
 [Customizing Calendar's style and appearance](../calendar/style-appearance/)
+
+## Full Screen Mode: Enhancing the DatePicker Component (Mobile Support Only)
+
+We have introduced the full screen mode functionality in our DatePicker component, enabling users to see the DatePicker calendar element in full-screen mode for better visibility and an upgraded user experience. It is important to mention that this feature is exclusively available for mobile devices in both landscape and portrait orientations. To activate the full screen mode within the DatePicker component, simply set the `fullScreenMode` API value to `true`. This action will extend the calendar element to occupy the entire screen on mobile devices.
+
+```html
+<template>
+    <div id="app">
+    <ejs-datepicker :fullScreenMode="mobileMode" ></ejs-datepicker>
+  </div>
+</template>
+<script>
+import Vue from 'vue';
+import { DatePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+
+Vue.use(DatePickerPlugin);
+export default {
+   data () {
+    return {
+      mobileMode : true
+    }
+  }
+}
+</script>
+```
+
+![DatePickerFullScreen](../images/DatePickerFullScreen.gif)
