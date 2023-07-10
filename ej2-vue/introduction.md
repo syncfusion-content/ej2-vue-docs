@@ -70,12 +70,15 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treegrid/getting-started/">TreeGrid</a></div>
          <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started/">Spreadsheet</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started">Document Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/image-editor/getting-started">Image Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/">PDF Viewer</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started/">Word Processor</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/dialog/getting-started/">Dialog</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/listview/getting-started/">ListView</a></div>
+         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/predefined-dialogs/getting-started">Predefined Dialogs</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/tooltip/getting-started/">Tooltip</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/splitter/getting-started/">Splitter</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/dashboard-layout/getting-started/">Dashboard</a></div>
@@ -84,10 +87,12 @@ letter-spacing: 0.7px;
     </td>
     <td>
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/accumulation-chart/getting-started">Accumulation Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/chart/getting-started/">Charts</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stock-chart/getting-started/">Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/circular-gauge/getting-started/">Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/linear-gauge/getting-started/">Linear Gauge</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maps/getting-started">Maps</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/diagram/getting-started/">Diagram Component</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/heatmap-chart/getting-started/">HeatMap Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maps/getting-started/">Map</a></div>
@@ -121,6 +126,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/textbox/getting-started/">TextBox</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/getting-started/">Input Mask</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/numerictextbox/getting-started/">Numeric TextBox</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/maskedtextbox/getting-started">Masked TextBox</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started/">RadioButton</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/check-box/getting-started/">CheckBox</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started/">Color Picker</a></div>
@@ -147,6 +153,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/carousel/getting-started/">Carousel</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/context-menu/getting-started/">Context Menu</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/menu/getting-started/">Menu Bar</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/ribbon/getting-started">Ribbon</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/sidebar/getting-started/">Sidebar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/tab/getting-started/">Tabs</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/toolbar/getting-started/">Toolbar</a></div>

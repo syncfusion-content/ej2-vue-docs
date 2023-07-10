@@ -31,7 +31,6 @@ export default {
                 { x: new Date(2010, 0, 1), y: 16, y1: 7, y2: 3.7 }
               ],
         primaryXAxis: {
-            title: 'Years',
             lineStyle: { width: 0 },
             labelFormat: 'y',
             intervalType: 'Years',
