@@ -18,7 +18,7 @@ export default {
 
 }, mounted(){
 
-  new DataManager({ url: 'https://js.syncfusion.com/ejServices/Wcf/Northwind.svc/Employees', adaptor: new ODataAdaptor}).executeQuery(new Query().range(4, 7)).then((e) => {
+  new DataManager({ url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Employees', adaptor: new ODataAdaptor}).executeQuery(new Query().range(4, 7)).then((e) => {
 
         var result = e.result;
         var obj = this.$refs.TabInstance.ej2Instances
