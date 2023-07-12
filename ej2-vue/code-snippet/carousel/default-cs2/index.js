@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div class="control-container">
-    <ejs-carousel :animationEffect="Custom" cssClass="parallax">
+    <ejs-carousel animationEffect="Custom" cssClass="parallax">
       <e-carousel-items>
         <e-carousel-item template="<figure class='img-container'><img src='https://ej2.syncfusion.com/products/images/carousel/cardinal.png' alt='cardinal' style='height:100%;width:100%;' /><figcaption class='img-caption'>Cardinal</figcaption></figure"></e-carousel-item>
         <e-carousel-item template="<figure class='img-container'><img src='https://ej2.syncfusion.com/products/images/carousel/hunei.png' alt='kingfisher' style='height:100%;width:100%;' /><figcaption class='img-caption'>Kingfisher</figcaption></figure>"></e-carousel-item>

@@ -164,8 +164,8 @@ There are four repeat types available namely,
 
  > Refer [iCalendar](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
 
-| Property  | Purpose | Example |
-|-----------|-----------|------------|
+| Property         | Purpose      | Example    |
+|------------------|--------------|------------|
 | FREQ | Maintains the repeat type (Daily, Weekly, Monthly, Yearly) value of the appointment. | FREQ=DAILY;INTERVAL=1|
 | INTERVAL | Maintains the interval value of the appointments. When you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday (Creates an appointment on all days by leaving the interval of one day gap). | FREQ=DAILY;INTERVAL=2|
 | COUNT | It holds the appointment’s count value. When the COUNT value is 10, then 10 instances of appointments are created in the recurrence series. | FREQ=DAILY;INTERVAL=1;COUNT=10|
@@ -239,8 +239,8 @@ The Scheduler dataSource usually holds the event instances, where each of the in
 
 The built-in fields available on Scheduler event object are as follows.
 
-| Field name | Description |
-|------------|---------|
+| Field name        | Description |
+|-------------------|---------|
 | id | The `id` field needs to be defined as mandatory and this field usually assigns a unique ID value to each of the events.|
 | subject | The `subject` field is optional, and usually assigns the summary text to each of the events.|
 | startTime | The `startTime` field defines the start time of an event and it is mandatory to provide it for any of the valid event objects.|
@@ -274,8 +274,8 @@ When the fields of event instances has the default mapping name, it is not manda
 
 Each field of the Scheduler events are provided with additional settings such as options to set default value, to map with appropriate data source fields, to validate every event fields and to provide label values for those fields in the event window.
 
-| Options | Description |
-|---------|-------------|
+| Options      | Description |
+|--------------|-------------|
 | default | Accepts the default value to the applicable fields (Subject, Location and Description), when no values are provided to them from dataSource. |
 | name | Accepts the field name to be mapped from the dataSource fields. |
 | title | Accepts the label values to be displayed for the fields of event editor. |
