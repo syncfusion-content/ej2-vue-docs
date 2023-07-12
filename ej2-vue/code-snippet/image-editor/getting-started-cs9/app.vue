@@ -13,6 +13,7 @@ import { Browser } from "@syncfusion/ej2-base";
 
 Vue.use(ImageEditorPlugin);
 
+
 export default {
   data: function() {
       return {

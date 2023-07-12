@@ -12,7 +12,11 @@ new Vue({
 	template: `
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="rectangleClick">Rectangle</ejs-button>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="ellipseClick">Ellipse</ejs-button>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="lineClick">Line</ejs-button>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="pathClick">Path</ejs-button>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="arrowClick">Arrow</ejs-button>
 </div>
 `,
 
@@ -29,9 +33,25 @@ new Vue({
             this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     },
-    btnClick: function(event) {
+    rectangleClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
       this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x,dimension.y);
+    },
+    ellipseClick: function(event) {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawEllipse(dimension.x,dimension.y);
+    },
+    lineClick: function(event) {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawLine(dimension.x,dimension.y);
+    },
+    pathClick: function(event) {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawPath([{x: dimension.x, y: dimension.y}, {x: dimension.x+50, y: dimension.y+50}, {x: dimension.x+20, y: dimension.y+50}], 8);
+    },
+    arrowClick: function(event) {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawArrow(dimension.x, dimension.y+10, dimension.x+50, dimension.y+10, 10,);
     }
   }
 

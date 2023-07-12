@@ -22,9 +22,9 @@ new Vue({
   methods: {
      created: function() {
         if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('images/flower.png');
+            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
         } else {
-            this.$refs.imageEditorObj.open('images/bridge.png');
+            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     }
   }

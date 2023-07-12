@@ -7,7 +7,6 @@ import { Browser } from "@syncfusion/ej2-base";
 Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
-
 new Vue({
 	el: '#app',
 	template: `
