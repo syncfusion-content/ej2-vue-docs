@@ -83,7 +83,7 @@ To pan an image in the image editor, do the following steps.
 
 ![Panning an image showcase](../code-snippet/image-editor/images/pan.gif)
 
-## Cropping and Image Transformation
+## Cropping and image transformation
 
 To crop an image in the image editor, do the following steps.
 
@@ -101,7 +101,7 @@ To crop an image in the image editor, do the following steps.
 
 ![Cropping and Image Transformation showcase](../code-snippet/image-editor/images/crop-transform.gif)
 
-## Image annotation
+## Annotations
 
 To add annotations to an image in the image editor, do the following steps.
 
@@ -117,13 +117,13 @@ To add annotations to an image in the image editor, do the following steps.
 
 ![Image annotation showcase](../code-snippet/image-editor/images/annotation.gif)
 
-## Filtering and fine tune
+## Filtering and fine-tune
 
-To perform finetuning on an image in the image editor, do the following steps.
+To perform fine-tuning on an image in the image editor, do the following steps.
 
-* Click the finetune button which displays the list of finetuning available in the image editor.
+* Click the fine-tune button which displays the list of fine-tuning available in the image editor.
 
-* Click one of the finetune options from the list of options which shows a slider to adjust the corresponding filter.
+* Click one of the fine-tune options from the list of options which shows a slider to adjust the corresponding filter.
 
 * Click on the canvas or tick icon at the right corner of the toolbar in the image editor to apply the modifications.
 
@@ -139,7 +139,7 @@ To apply filters on an image in the image editor, do the following steps.
 
 Note:
 
-The Filters and Finetunes feature are not accessible within Safari due to compatibility limitations.
+The Filters and Fine-tunes feature are not accessible within Safari due to compatibility limitations.
 
 ## Undo and redo the operations
 
@@ -150,6 +150,8 @@ To undo and redo the actions performed in an image editor, do the following step
 * The redo button will be enabled once the undo action is performed in an image editor.
 
 * Click the undo or redo button at the left side of the toolbar to perform undo and redo operation.
+
+* Ctrl + Z and Ctrl + Y facilitates this process by allowing users to undo and redo actions, respectively.
 
 ![Undo and redo showcase](../code-snippet/image-editor/images/undo-redo.gif)
 
@@ -168,6 +170,8 @@ To revert all the changes done in an image editor, do the following steps.
 To save the modified image in an image editor, do the following steps.
 
 * Click the save button which is located on the right side of the toolbar.
+
+* Ctrl + S facilitates this process by providing users with the ability to save the image.
 
 * Select the type of file to be saved from the popup to save with current modification done in an image.
 

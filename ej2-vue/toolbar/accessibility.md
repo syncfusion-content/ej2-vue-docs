@@ -17,7 +17,7 @@ The [Vue Toolbar](https://www.syncfusion.com/vue-ui-components/vue-toolbar) comp
 The Toolbar element is assigned the role of `toolbar`.
 
 | **Property** | **Functionalities** |
-| --- | --- |
+|--------------|---------------------|
 | role="toolbar" | Attribute is set to the ToolBar element describes the actual role of the element. |
 | aria-orientation |  Attribute is set to the ToolBar element to indicates the ToolBar orientation. Default value is `horizontal`. |
 | aria-label | Attribute is set to ToolBar element describes the purpose of the set of toolbar. |
