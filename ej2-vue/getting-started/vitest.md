@@ -71,7 +71,7 @@ test: {
 }
 
 {% endhighlight %}
-{% tabs %}
+{% endtabs %}
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
