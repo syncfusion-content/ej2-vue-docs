@@ -47,7 +47,7 @@ new Vue({
                 </table>
             </div>
             <div id='container'>
-                <ejs-schedule id='Schedule' ref='ScheduleObj' width='100%' height='550px' :calendarCollections='calendarCollection' :group='group' :selectedDate='selectedDate'
+                <ejs-schedule id='Schedule' ref='ScheduleObj' width='100%' height='550px' :group='group' :selectedDate='selectedDate'
                 :eventSettings='eventSettings'>
                     <e-resources>
                         <e-resource field='CalendarId' title='Calendars' :dataSource='resourceDataSource' :allowMultiple='allowMultiple'
@@ -69,7 +69,6 @@ new Vue({
                 selectedDate: new Date(2018, 3, 1),
                 group: { resources: ['Calendars'] },
                 resourceDataSource: [calendarCollections[0]],
-                calendarCollection: calendarCollections,
                 allowMultiple: true,
                 eventSettings: { dataSource: this.generateCalendarData() }
             }
@@ -88,7 +87,7 @@ new Vue({
             },
             onChange: function (args) {
                 let scheduleObj = this.$refs.ScheduleObj;
-                let value = parseInt((args.event.target).getAttribute('value'), 10);
+                let value = parseInt((args.event.currentTarget).querySelector('input').getAttribute('value'), 10);
                 let resourceData = calendarCollections.filter(function (calendar) { return calendar.CalendarId === value; });
                 if (args.checked) {
                     scheduleObj.addResource(resourceData[0], 'Calendars', value - 1);

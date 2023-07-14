@@ -1,9 +1,7 @@
-
-
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false></ejs-imageeditor>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
 </div>
 </template>
 
@@ -19,20 +17,25 @@ Vue.use(ButtonPlugin);
 export default {
   data: function() {
       return {
-        toolbar: [],
+        toolbar: ['Annotate','Rectangle','Ellipse', 'Line', 'Arrow', 'Path'],
+        id: '',
       };
   },
   methods: {
-     created: function() {
+    created: function() {
         if (Browser.isDevice) {
             this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
         } else {
             this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
         }
     },
+    shapeChanging: function(event) {
+      if(event.action === 'select') {
+        this.id = event.currentShapeSettings.id;
+      }
+    },
     btnClick: function(event) {
-      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawArrow(dimension?.x, dimension?.y+10, dimension?.x+50, dimension?.y+10, 10,);
+      this.$refs.imageEditorObj.ej2Instances.deleteShape(this.id);
     }
   }
 }
@@ -55,5 +58,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

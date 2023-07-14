@@ -59,8 +59,8 @@ To configure Scheduler with simply 2 views, but with different configurations on
 
 There are scenarios where each view may need to have different configurations. For such cases, you can define the applicable scheduler properties within the `views` Property for each view option as depicted in the following examples. The fields available to be used within each view options are as follows.
 
-| Property | Type | Description | Applicable views |
-|----------|------|-------------|------------------|
+| Property       | Type      | Description | Applicable views |
+|----------------|-----------|-------------|------------------|
 | `option` | View | It accepts the Scheduler view name, based on which we can define its related properties. The view names can be `Day`, `Week` and so on. | All views.|
 | `isSelected` | Boolean | It acts similar to the `currentView` property and defines the active view of the Scheduler.| All views. |
 | `dateFormat` | Date | By default, Scheduler follows the date format as per the default culture assigned to it. When it is defined under specific view, only those assigned views follows this date format. | All views. |

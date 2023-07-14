@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 The following table describes the Scheduler actions and also illustrates how those actions are carried out through mouse and touch interactions on Scheduler.
 
-| Actions  | Mouse interaction | Touch interaction |
-|----------|-------------| --------------- |
+|Actions        | Mouse interaction | Touch interaction |
+|---------------|-------------------|-------------------|
 | Single click or tap on cells |  Single click on a cell to select a cell. | Single tapping on cells, will display a `+` icon on the cell. Tapping on it again will open the new event editor window. |
 | Multiple cell selection | Single click on a cell and drag the selection to other cells to enable multiple cell selection. |  No multiple cell selection is allowed using touch gestures. |
 | Event selection | Single click on an event to select it. | Tap holding on events, select an event and opens a small popup at the top holding the options to edit or delete. The popup also displays the selected event's subject. |
