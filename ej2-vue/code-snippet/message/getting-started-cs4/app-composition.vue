@@ -8,20 +8,10 @@
     margin: 100px;
   }
 </style>
-<script>
-import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notifications";
 
-export default {
-  name: "app",
-  components: {
-    'ejs-message': MessageComponent
-  },
-  data() {
-    return {
-      content: "Please read the comments carefully"
-    };
-  }
-}
+const content = 'Please read the comments carefully';
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
