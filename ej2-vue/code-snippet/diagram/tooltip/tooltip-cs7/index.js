@@ -1,15 +1,15 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin,DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,DiagramConstraints,PortVisibility,PointPortModel,PortConstraints } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     let nodes = [{
         id: "node1",
-        height: 60,
-        offsetX: 300,
-        offsetY: 80,
-        annotations: [{
-            content: "start"
-        }],
+        // Position of the node
+        offsetX: 250,
+        offsetY: 250,
+        // Size of the node
+        width: 100,
+        height: 100,
          // Initialize port collection
          ports: [{
             // Sets the position for the port
