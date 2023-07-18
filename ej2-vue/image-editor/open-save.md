@@ -31,6 +31,14 @@ The [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open
 The Image Editor component supports three common image formats: PNG, JPEG, and SVG. These formats allow you to work with a wide range of image files within the Image Editor.
 When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences. 
 
+## Save
+
+The Image Editor control component saves the edited image as Image Data or images like PNG, JPEG, and SVG.
+
+### Save as ImageData
+
+The [`getImageData`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#getimagedata) method is used to get the image as ImageData and this can be loaded to our Image Editor control using the open method.
+
 ### Save as image
 
 The [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method in the Image Editor component enables you to save the modified image as a file on the local device. This method accepts two parameters: the file name and the file type.

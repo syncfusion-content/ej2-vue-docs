@@ -8,13 +8,9 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(TreeViewPlugin);
-export default {
-  data () {
-    var dataSource =  [
+var dataSource =  [
        {
         nodeId: '01', nodeText: 'Music',
         nodeChild: [
@@ -38,7 +34,13 @@ export default {
             { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
         ]
     }
-    ];
+];
+
+export default {
+  components: {
+    'ejs-treeview': TreeViewComponent
+  },
+  data: function() {
     return {
       fields: { dataSource: dataSource, id: 'nodeId', text: 'nodeText', child: 'nodeChild' }
     }
@@ -46,17 +48,10 @@ export default {
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
- .control_wrapper {
-        display: block;
-        max-width: 350px;
-        max-height: 350px;
-        margin: auto;
-        overflow: auto;
-        border: 1px solid #dddddd;
-        border-radius: 3px;
-    }
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 </style>
 
 

@@ -1,8 +1,4 @@
-
-import Vue from 'vue';
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(TreeViewPlugin);
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 
 new Vue({
 	el: '#app',
@@ -13,7 +9,9 @@ new Vue({
     </div>
   </div>
 `,
-
+  components: {
+    'ejs-treeview': TreeViewComponent
+  },
   data () {
     var dataSource =  [
        {
