@@ -265,7 +265,6 @@ function dragEnter(args:IDragEnterEventArgs)
     }
 ```
 
-
 ## Palette Interaction
 
 Palette interaction notifies the element enter, leave, and dragging of the symbols into the diagram.
