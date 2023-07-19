@@ -62,9 +62,9 @@ Here is an example of ratio selection using the [`select`](https://ej2.syncfusio
 
 The selection region can be changed programmatically by using [`selectionChanging`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#selectionchanging) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
 
-The [`selectionChanging`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#selectionchanging) is used in these events to customize the selection and it has the following parameters. 
+The [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/selectionChangeEventArgs/#selectionchangeeventargs) is used in this event to customize the selection and it has the following parameters.
 
-SelectionChangeEventArgs.cction - The type of action such as inserting or resizing 
+SelectionChangeEventArgs.action - The type of action such as inserting or resizing 
 
 SelectionChangeEventArgs.cancel - Specifies to cancel the selection. 
 

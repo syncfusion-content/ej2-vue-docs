@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filter in ##Platform_Name## Image editor control | Syncfusion
+title: Filter in ##Platform_Name## Image Editor component | Syncfusion
 description: Learn here all about Filter in Syncfusion Vue Image editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
 control: Filter 

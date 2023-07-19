@@ -122,7 +122,7 @@ The [`shapeId`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#s
 
 To retrieve the inserted freehand annotations, you can utilize the [`getShapeSetting`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#getshapesetting) method, which provides a collection of annotations represented by [`ShapeSettings`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/shapeSettings/). This method allows you to access and work with the annotations that have been inserted into the image.
 
-Here is an example of deleting a freehand annotation in a button click using (https://ej2.syncfusion.com/vue/documentation/api/image-editor/#deleteshape) method.
+Here is an example of deleting a freehand annotation in a button click using [`deleteShape`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#deleteshape) method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -207,9 +207,9 @@ The [`drawLine`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#
 * strokeColor - Specifies the stroke color of the line. 
 
 
-The ['drawArrow'](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawarrow) method is used to insert a arrow to the Vue Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The [`drawArrow`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawarrow) method is used to insert a arrow to the Vue Image Editor component. Arrow annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The ['drawArrow'](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawarrow) method in the Vue Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
+The [`drawArrow`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawarrow) method in the Vue Image Editor component takes seven parameters to define the properties of the ellipse annotation: 
 
 * startX - Specifies the x-coordinate of the start point. 
 
@@ -227,9 +227,9 @@ The ['drawArrow'](https://ej2.syncfusion.com/vue/documentation/api/image-editor/
 
 * arrowEnd - Specifies the arrowhead as ImageEditorArrowHeadType at the end of the arrow.
 
-The ['drawPath'](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawpath) method is used to insert a path to the Vue Image Editor component. Path annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
+The [`drawPath`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawpath) method is used to insert a path to the Vue Image Editor component. Path annotations are valuable for highlighting, emphasizing, or marking specific areas of an image.
 
-The ['drawPath'](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawpath) method in the Vue Image Editor component takes three parameters to define the properties of the ellipse annotation: 
+The [`drawPath`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawpath) method in the Vue Image Editor component takes three parameters to define the properties of the ellipse annotation: 
 
 * points - Specifies collection of x and y coordinates as ImageEditorPoint to draw a path. 
 

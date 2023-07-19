@@ -1,6 +1,6 @@
 ---
 layout: post
-title: End-user capabilities in ##Platform_Name## Image editor control | Syncfusion
+title: End-user capabilities in ##Platform_Name## Image Editor component | Syncfusion
 description: Learn here all about End User Capabilities in Syncfusion Vue Image editor component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
 control: End-user capabilities 
@@ -9,7 +9,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# End-user capabilities in ##Platform_Name## Image editor control
+# End-user capabilities in the Image Editor component
 
 The following operations are available for end-users and the same is explained briefly in these sections.
 
