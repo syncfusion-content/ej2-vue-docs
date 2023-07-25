@@ -30,7 +30,7 @@ To bind remote data to the Essential JS 2 Vue components, assign service data as
 
 ### OData V4
 
-The OData V4 is an improved version of OData protocols, and the [DataManager](https://ej2.syncfusion.com/vue/documentation/data/getting-started/) can also retrieve and consume OData V4 services. To fetch data from the server by using `DataManager` with the adaptor property configure as [ODataV4Adaptor](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#odatav4-adaptor).
+The OData V4 is an improved version of OData protocols, and the [DataManager] can also retrieve and consume OData V4 services. To fetch data from the server by using `DataManager` with the adaptor property configure as [ODataV4Adaptor].
 
 In the following sample, In-place Editor renders a `DropDownList` component and its `dataSource` property configured for fetching a data from the server by using `ODataV4Adaptor` with `DataManager`.
 
@@ -44,7 +44,7 @@ In the following sample, In-place Editor renders a `DropDownList` component and 
 
 ### Web API
 
-Data can fetch from the server by using [DataManager](https://ej2.syncfusion.com/vue/documentation/data/getting-started/) with the adaptor property configure as [WebApiAdaptor](https://ej2.syncfusion.com/vue/documentation/data/adaptors/#web-api-adaptor).
+Data can fetch from the server by using [DataManager] with the adaptor property configure as [WebApiAdaptor].
 
 In the following sample, In-place Editor render a `DropDownList` component and its `dataSource` property configured for fetching a data from the server by using `WebApiAdaptor` with `DataManager`.
 

@@ -21,7 +21,7 @@ The following table explains Injectable components module name and built-in comp
 | [MultiSelect](../multi-select/)   (`MultiSelect`)        | [DateTimePicker](../datetimepicker/)   (`DateTime`)     |
 | [TimePicker](../timepicker/)   (`Time`)         | [DropDownList](../drop-down-list/)  (`DropDownList`)      |
 | [DateRangePicker](../daterangepicker/)   (`DateRange`)       | [MaskedTextBox](../maskedtextbox/)   (`Mask`)      |
-| [Slider](../slider/)   (`Slider`)             | [NumericTextBox](../numerictextbox/)   (`Numeric`)    |
+| [Slider](../range-slider/)   (`Slider`)             | [NumericTextBox](../numerictextbox/)   (`Numeric`)    |
 | [Rte](../rich-text-editor/)     (`RTE`)              |                     |
 | [ColorPicker](../color-picker/)    (`Color`)       |                     |
 
