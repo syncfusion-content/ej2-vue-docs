@@ -37,7 +37,7 @@ The following example demonstrates default and custom format of TimePicker compo
         
 {% previewsample "page.domainurl/code-snippet/timepicker/mask-module-cs2" %}
 
-# Configure Mask Placeholder
+## Configure Mask Placeholder
 
 You can change mask placeholder value through property `maskPlaceholder`. By default , it takes the full name of  time co-ordinates such as `hour`, `minute` and `second`.
 
