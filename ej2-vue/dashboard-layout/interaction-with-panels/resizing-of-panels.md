@@ -29,7 +29,7 @@ The following sample demonstrates how to enable and disable the resizing of pane
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/resizing-cs1" %}
 
-# Resizing panels programatically
+## Resizing panels programatically
 
 The Dashboard Layout panels can also be resized programatically by using [resizePanel](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizepanel) method. The method is invoked as follows,
 

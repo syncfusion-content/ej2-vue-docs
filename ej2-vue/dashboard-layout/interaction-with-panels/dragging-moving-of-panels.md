@@ -29,7 +29,7 @@ The following sample demonstrates dragging and pushing of panels. For example, w
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/setting-cell-spacing-cs1" %}
 
-# Customizing the dragging handler
+## Customizing the dragging handler
 
 Initially, the complete panel will act as the handler for dragging the panel such that the dragging action occurs on clicking anywhere over a panel. However, this dragging handler for the panels can be customized using the [`draggableHandle`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#draggablehandle) property to restrict the dragging action within a particular element in the panel.
 
