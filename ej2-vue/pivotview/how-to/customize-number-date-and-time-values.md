@@ -37,7 +37,7 @@ For date and time, the formatting settings required to apply through code behind
 * `format`: It allows to set the format of the respective field.
 * `type`: It allows to set the type of format to be used for the respective field.
 
->  Also, you can customize the applied date format by setting [`DateFormatOptions`](https://ej2.syncfusion.com/vue/documentation/common/internationalization#manipulating-datetime) options in `formatSettings` itself.
+> Also, you can customize the applied date format by setting [`DateFormatOptions`](https://ej2.syncfusion.com/vue/documentation/common/internationalization#manipulating-datetime) options in `formatSettings` itself.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

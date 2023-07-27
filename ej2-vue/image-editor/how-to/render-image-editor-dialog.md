@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Render image editor dialog in Vue Image editor component
+# Render image editor dialog in Vue Image Editor component
 
-Image Editor is rendered within a dialog and opens an image by passing its URL path to the [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method of the Image Editor control.
+Image Editor is rendered within a dialog and opens an image by passing its URL path to the [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method of the Image Editor component.
 
 The following operations are supported in the Image Editor:
 

@@ -10,9 +10,11 @@
 <script>
 import Vue from 'vue';
 import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 Vue.use(ImageEditorPlugin);
+Vue.use(ButtonPlugin);
 
 export default {
   data: function() {
@@ -23,9 +25,9 @@ export default {
   methods: {
      created: function() {
         if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         } else {
-            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     },
     btnClick: function(event) {

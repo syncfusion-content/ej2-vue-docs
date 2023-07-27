@@ -40,7 +40,7 @@
   }
 
   .prominent-appbar.e-appbar {
-    background-image: url("https://blazor.syncfusion.com/demos/_content/BlazorServerCommon_NET6/images/appbar/prominent.png");
+    background-image: url("https://ej2.syncfusion.com/demos/src/appbar/images/prominent.png");
     background-size: 100% 350px;
     color: #ffffff;
     background-repeat: no-repeat;

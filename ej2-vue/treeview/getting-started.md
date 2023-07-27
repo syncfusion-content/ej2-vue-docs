@@ -1,146 +1,164 @@
 ---
 layout: post
-title: Getting started with Vue Treeview component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Treeview component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue TreeView component | Syncfusion
+description:  Checkout and learn about Getting started with Vue TreeView component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get Started with Vue CLI
+# Getting Started with the Vue TreeView Component in Vue 2
 
-The following section explains the required steps to build the [Vue TreeView](https://www.syncfusion.com/vue-ui-components/vue-tree-view) component with its basic usage in step by step procedure.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-npm install -g @vue/cli-init
-
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
+
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
 ## Adding syncfusion packages
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-You can choose the component that you want to install.
-
-To install TreeView component, use the following command
+This article uses the [Vue TreeView component](https://www.syncfusion.com/vue-components/vue-treeview) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
 ```
+or
 
-## Registering Vue Component
-
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
-
-### Using Vue.use()
-
-Import the TreeView Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with TreeView Component Plugin as its argument.
-
-Refer the code snippet given below.
-
-```ts
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(TreeViewPlugin);
+```bash
+yarn add @syncfusion/ej2-vue-navigations
 ```
 
-Note : By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the TreeView Component and TreeView Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of TreeView Component from TreeView Component Plugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the TreeView component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/app.vue" %}
 
-```ts
-import { TreeViewComponent, TreeViewPlugin } from '@syncfusion/ej2-vue-navigations';
-
-Vue.component(TreeViewPlugin.name, TreeViewComponent);
-```
-
-Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Adding TreeView component
-
-Add the EJ2 Vue TreeView using `<ejs-treeview>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the TreeView component is provided as name in data option in the `<script>` section.
-
-```
-<template>
-    <div class="control_wrapper">
-        <ejs-treeview id='treeview'></ejs-treeview>
-    </div>
-</template>
-<script>
-import Vue from 'vue';
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(TreeViewPlugin);
-
-export default Vue.extend({
-  data: function() {
-    return {
-
-    };
-  }
-});
-
-</script>
-```
-
-## Adding CSS Reference
-
-Add TreeView and its dependency component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 </style>
-```
 
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+{% endhighlight %}
+{% endtabs %}
 
-## Binding data source
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue TreeView component using `Composition API` or `Options API`:
+
+1\. First, import and register the TreeView component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+  import { TreeViewComponent as EjsTreeview } from "@syncfusion/ej2-vue-navigations";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+
+export default {
+  components: {
+    'ejs-treeview': TreeViewComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+### Binding data source
 
 TreeView can load data either from local data sources or remote data services. This can be done using the `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview#fields) property. The dataSource property supports array of JavaScript objects and `DataManager`. Here, an array of JSON values is passed to the TreeView component.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div class="control_wrapper">
+        <ejs-treeview id='treeview' :fields="fields"></ejs-treeview>
+    </div>
+  </div>
+</template>
+<script setup>
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
+const data =  [
+  {
+      nodeId: '01', nodeText: 'Music',
+      nodeChild: [
+          { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
+      ]
+  },
+  {
+      nodeId: '02', nodeText: 'Videos', expanded: true,
+      nodeChild: [
+          { nodeId: '02-01', nodeText: 'Naturals.mp4' },
+          { nodeId: '02-02', nodeText: 'Wild.mpeg' },
+      ]
+  },
+  {
+      nodeId: '03', nodeText: 'Documents',
+      nodeChild: [
+          { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
+          { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
+          { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
+          { nodeId: '03-04', nodeText: 'Social Network.pdf' },
+          { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
+      ]
+  },
+];
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <template>
     <div class="control_wrapper">
        <ejs-treeview id='treeview' :fields='fields'></ejs-treeview>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(TreeViewPlugin);
-
-var data =  [
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+var dataSource =  [
     {
         nodeId: '01', nodeText: 'Music',
         nodeChild: [
@@ -165,29 +183,46 @@ var data =  [
         ]
     },
 ];
-export default Vue.extend({
+export default {
   data: function() {
     return {
     fields: { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' },
     };
   }
-});
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+{% include code-snippet/treeview/getting-started-cs1/app-composition.vue %}
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~src/App.vue)" %}
+
+{% include code-snippet/treeview/getting-started-cs1/app.vue %}
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Run the application
 
-After completing the configuration required to render a basic TreeView, run the following command to display the output in your default browser.
+To run the application, use the following command:
 
-```
-npm run dev
+```bash
+npm run serve
 ```
 
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/treeview/getting-started-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/treeview/getting-started-cs1" %}
 

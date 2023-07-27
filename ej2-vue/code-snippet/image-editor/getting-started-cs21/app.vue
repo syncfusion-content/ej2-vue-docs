@@ -3,7 +3,8 @@
 <template>
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar" :zoomSettings="zoomSettings"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btn1Click">Click</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btn2Click">Click</ejs-button>
 </div>
 </template>
 
@@ -27,12 +28,12 @@ export default {
   methods: {
      created: function() {
         if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/flower.png');
+            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         } else {
-            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/demos/src/image-editor/images/bridge.png');
+            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
         }
     },
-    btnClick: function(event) {
+    btn1Click: function(event) {
       if (this.zoomLevel < 1) {
         this.zoomLevel += 0.1;
       } else {
@@ -42,6 +43,17 @@ export default {
         this.zoomLevel = this.$refs.imageEditorObj.zoomSettings.maxZoomFactor;
       }
       this.$refs.imageEditorObj.ej2Instances.zoom(this.zoomLevel); // Zoom in
+    },
+    btn2Click: function(event) {
+      if (this.zoomLevel <= 1) {
+        this.zoomLevel -= 0.1;
+      } else {
+        this.zoomLevel -= 1;
+      }
+      if (this.zoomLevel < this.$refs.imageEditorObj.zoomSettings.minZoomFactor) {
+        this.zoomLevel = this.$refs.imageEditorObj.zoomSettings.minZoomFactor;
+      }
+      this.$refs.imageEditorObj.ej2Instances.zoom(this.zoomLevel); // Zoom out
     }
   }
 }

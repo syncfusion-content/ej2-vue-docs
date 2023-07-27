@@ -28,7 +28,7 @@ Refer to the following code example for local data binding.
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/local-data-binding-cs1" %}
 
->The local data source can also be provided as an instance of the [`DataManager`]. By default, [`DataManager`] uses [`JsonAdaptor`] for local data-binding.
+> The local data source can also be provided as an instance of the [`DataManager`]. By default, [`DataManager`] uses [`JsonAdaptor`] for local data-binding.
 
 ## Remote data
 
