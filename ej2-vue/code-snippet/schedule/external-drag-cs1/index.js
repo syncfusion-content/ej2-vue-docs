@@ -110,8 +110,8 @@ new Vue({
               IsAllDay: cellData.isAllDay,
               Description: filteredData[0].Description
             };
-            this.draggedItemId = event.draggedNodeData.id;
             scheduleObj.addEvent(eventData);
+            this.draggedItemId = event.draggedNodeData.id;
           }
         }
       }
