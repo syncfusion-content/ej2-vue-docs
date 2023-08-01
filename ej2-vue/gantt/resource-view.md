@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 The resource breakdown view is used to visualize the tasks assigned to each resource in hierarchy manner. Resources are displayed as parents and all the tasks assigned to each resource are displayed as its child records. It can be initialized by setting the [`viewType`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#viewtype) property to `ResourceView`.
 
+To learn about Gantt Chart Resource view Concepts, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=JkvpRwaabQM" %}
+
 ## Unassigned task
 
 A task not assigned to any one of the resource are termed as unassigned tasks. The unassigned tasks are grouped with a name as `Unassigned Task` and displayed at the bottom of Gantt data collection . It is validated at load time during Gantt record creation by default based on a task `resourceInfo` mapping property in the Gantt chart data source. If the resource is assigned to the unassigned grouped tasks, the task will be moved as child to the respective resource.

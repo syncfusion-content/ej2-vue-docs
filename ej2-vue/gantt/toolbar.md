@@ -14,6 +14,9 @@ The Gantt component provides the toolbar support to handle Gantt actions. The [`
 
 To use toolbar feature, inject the `Toolbar` module in the `provide` section.
 
+To learn about Gantt Chart Toolbar Options, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=LvB4lvlm1J8" %}
+
 ## Built-in toolbar items
 
 Built-in toolbar items execute standard actions of the Gantt component, and these items can be added to toolbar by defining the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar) as a collection of built-in items. It renders the button with icon and text.
