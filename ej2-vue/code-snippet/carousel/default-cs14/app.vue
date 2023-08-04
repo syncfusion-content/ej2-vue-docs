@@ -18,16 +18,12 @@
   import Vue from "vue";
   import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
 
-  Vue.use(ButtonPlugin);
   Vue.use(CarouselPlugin);
 
   var indicatorsVue = Vue.component("indicators", {
     template: `<div class="indicator"  indicator-index="{data.index}">
         <div class="preview-content">{{getContent(data.index)}}</div>
     </div>`,
-    data() {
-      return {};
-    },
     computed: {},
     methods: {
       getContent: function (index) {

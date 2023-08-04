@@ -25,8 +25,8 @@ new Vue({
     </e-ribbon-tabs>
     <template v-slot:undoredo>
       <div class="helpPaneTemplate">
-        <button class="action_btn"> <span id="undo" class="e-icons e-undo">Undo</span> </button>
-        <button class="action_btn"> <span id="redo" class="e-icons e-redo">Redo</span> </button>
+        <button class="action_btn"><label><span id="undo" class="e-icons e-undo"></span> Undo </label></button>
+        <button class="action_btn"><label><span id="redo" class="e-icons e-redo"></span> Redo </label></button>
       </div>
     </template>
   </ejs-ribbon>

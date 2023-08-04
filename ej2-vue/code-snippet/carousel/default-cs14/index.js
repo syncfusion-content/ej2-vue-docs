@@ -1,30 +1,29 @@
 
-  import Vue from "vue";
-  import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
+import Vue from "vue";
+import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
 
-  Vue.use(ButtonPlugin);
-  Vue.use(CarouselPlugin);
+Vue.use(CarouselPlugin);
 
-  var indicatorsVue = Vue.component("indicators", {
-    template: `<div class="indicator"  indicator-index="{data.index}">
+var indicatorsVue = Vue.component("indicators", {
+  template: `<div class="indicator"  indicator-index="{data.index}">
         <div class="preview-content">{{getContent(data.index)}}</div>
     </div>`,
-    data() {
-      return {};
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {
+    getContent: function (index) {
+      var slides = ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"];
+      return slides[index];
     },
-    computed: {},
-    methods: {
-      getContent: function (index) {
-        var slides = ["Slide 1", "Slide 2", "Slide 3", "Slide 4", "Slide 5"];
-        return slides[index];
-      },
-    },
-  });
+  },
+});
 
-  ;
+;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
   <div class="control-container">
     <ejs-carousel :indicatorsTemplate="indicatorsTemplate">
       <e-carousel-items>
@@ -38,14 +37,14 @@ new Vue({
   </div>
 `,
 
-    data: function () {
-      return {
-        indicatorsTemplate: function () {
-          return {
-            template: indicatorsVue,
-          };
-        },
-      };
-    },
-  
+  data: function () {
+    return {
+      indicatorsTemplate: function () {
+        return {
+          template: indicatorsVue,
+        };
+      },
+    };
+  },
+
 });
