@@ -13,10 +13,14 @@
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
-  Vue.use(KanbanPlugin);
-  export default { }
+  import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
+  export default {
+    components: {
+      'ejs-kanban': KanbanComponent,
+      'e-column': ColumnDirective,
+      'e-columns': ColumnsDirective
+    }
+   }
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';

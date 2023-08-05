@@ -25,7 +25,7 @@ import { sampleData } from "./datasource.js";
 
 Vue.use(TreeGridPlugin);
 
-export default {
+export default ({
   data() {
     return {
       data: sampleData,
@@ -42,7 +42,7 @@ export default {
   provide: {
       treegrid: [Page, Edit, Sort, Filter, Toolbar]
   }
-}
+});
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";

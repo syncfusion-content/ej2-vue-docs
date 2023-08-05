@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting Started with the Vue Rich text editor Component in Vue 2
 
-This section explains the steps to create a simple **RichTextEditor** and demonstrates the basic usage of the Rich Text Editor component in a Vue environment.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Rich text editor component
 
 ## Prerequisites
 
@@ -36,57 +36,56 @@ The following list of dependencies are required to use the Rich Text Editor.
 
 ```
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-Install Syncfusion `RichTextEditor` packages using below command. Also need to install dependency packages as mentioned at top of this documentation.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Rich text editor component](https://www.syncfusion.com/vue-components/vue-wysiwyg-rich-text-editor) as an example. Install the `@syncfusion/ej2-vue-richtexteditor` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-richtexteditor --save
 ```
+or
 
-## Registering Rich Text Editor component using `Vue.use()`
-
-Import the Rich Text Editor Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```ts
-import Vue from 'vue';
-import { RichTextEditorPlugin } from '@syncfusion/ej2-vue-richtexteditor';
-
-Vue.use(RichTextEditorPlugin);
-
-export default {}
+```bash
+yarn add @syncfusion/ej2-vue-richtexteditor
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `RichTextEditor`. Refer [here](../base/getting-started/#registering-vue-component) to know more about component registration.
+## Import Syncfusion CSS styles
 
-## Adding CSS Reference
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Add Rich Text Editor component's styles as given below in `<style>` section of the `App.vue` file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Rich text editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
@@ -97,13 +96,37 @@ Add Rich Text Editor component's styles as given below in `<style>` section of t
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-```
 
-## Adding Rich Text Editor component
+{% endhighlight %}
+{% endtabs %}
 
-Initialize the EJ2 Vue Rich Text Editor by adding `<ejs-richtexteditor>` into the `<template>` section of the `App.vue` file.
+## Add Syncfusion Vue component
 
-```
+Follow the below steps to add the Vue Rich text editor component using:
+
+1\. First, import and register the Rich text editor component in the `script` section of the **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { RichTextEditorComponent, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+
+export default {
+    components: {
+        'ejs-richtexteditor': RichTextEditorComponent
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Rich text editor component with the [height](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor#height) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <ejs-richtexteditor ref="defaultRTE" :height="400">
         <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content.Users can format their content using standard toolbar commands.</p>
@@ -123,37 +146,16 @@ Initialize the EJ2 Vue Rich Text Editor by adding `<ejs-richtexteditor>` into th
     </ejs-richtexteditor>
 </template>
 
-<script>
-    import Vue from "vue";
-    import { RichTextEditorPlugin, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+{% endhighlight %}
+{% endtabs %}
 
-    Vue.use(RichTextEditorPlugin);
-
-    export default {
-        provide: {
-            richtexteditor:[Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar]
-        }
-    }
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-</style>
-```
 
 ### Initialize from `<div>` element
 
 Rich Text Editor can be initialized on div element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +169,7 @@ The Rich Text Editor’s content is placed in an iframe and isolated from the re
 Initialize the Rich Text Editor on div element and set the `enable` field of `iframeSettings` property as true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -197,7 +199,7 @@ These modules should be injected into the Rich Text Editor through `provide` opt
 Configure the toolbar with the tools using items field of the [`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property as your application requires.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -215,7 +217,7 @@ The link inject module adds a link icon to the toolbar and the image inject modu
 Specifies the items to be rendered in the quick toolbar based on the target element such image, link and text element. The quick toolbar opens to customize the element by clicking the target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -242,12 +244,22 @@ To fetch the Rich Text Editor's text content, use [`getText`](https://ej2.syncfu
   var rteValue = this.$refs.rteObj.ej2Instances.getText();
 ```
 
-## Run the Application
+## Run the project
 
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -259,7 +271,7 @@ Now run the `npm run dev` command in the console, it will build your application
 Rich Text Editor content can be added using valueTemplate property as given below
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

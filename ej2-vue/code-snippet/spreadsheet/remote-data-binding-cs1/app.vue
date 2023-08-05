@@ -34,8 +34,8 @@ export default {
    data: () => {
     return {
      dataSource: new DataManager({
-                    // Remote service url
-                    url: 'https://js.syncfusion.com/demos/ejServices//wcf/Northwind.svc/Orders',
+                    // Remote service url.
+                    url: "https://services.syncfusion.com/vue/production/api/Orders",
                     crossDomain: true
                 }),
         query: new Query().select(['OrderID', 'CustomerID', 'Freight', 'ShipName', 'ShipCity', 'ShipCountry']).take(200),

@@ -10,7 +10,7 @@ new Vue({
 	el: '#app',
 	template: `
 <div id="app">
-        <ejs-treegrid :dataSource="data" idMapping='TaskID' parentIdMapping='ParentItem' hasChildMapping='isParent' :query='query' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings'>
+        <ejs-treegrid :dataSource="data" idMapping='TaskID' parentIdMapping='ParentItem' :query='query' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings'>
             <e-columns>
                 <e-column field='TaskID' headerText='Task ID' width='90' textAlign='Right'></e-column>
                 <e-column field='TaskName' headerText='Task Name' width='180'></e-column>

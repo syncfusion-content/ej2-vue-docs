@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Tooltip
 
-The Ribbon supports tooltips, which give users more information when they hover over items and improving the user experience.
+The Ribbon component supports tooltip to show additional information in the Ribbon items. The tooltip appears when the user hovers over a Ribbon item.
 
 ## Adding title
 
-The [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#title) property is used to set the tooltip title for each Ribbon item.
+You can use the [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#title) property to set the tooltip title for each Ribbon item.
 
 ```html
 <template>
@@ -90,7 +90,7 @@ The [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonToolti
 
 ## Adding content
 
-The [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#content) property can be used to set the tooltip content for each Ribbon item.
+You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#content) property to set the tooltip content for each Ribbon item.
 
 ```html
 <template>
@@ -166,7 +166,7 @@ The [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTool
 
 ## Adding icon
 
-In addition to the text and content, by using [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#iconcss) property you can define the custom style for the icons.
+You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#iconcss) property to specify the icons to be displayed in the tooltip.
 
 ```html
 <template>
@@ -241,9 +241,9 @@ In addition to the text and content, by using [iconCss](https://ej2.syncfusion.c
 
 {% previewsample "page.domainurl/code-snippet/ribbon/Tooltip" %}
 
-## Tooltip Customization
+## Customization
 
-The [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#cssclass) property can be used to customize the appearance of the tooltip with your own custom styles.
+You can use the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#cssclass) property to customize the appearance of the tooltip with your own custom styles.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -65,17 +65,17 @@ export default {
    data: () => {
     return {
       dataSource: data,
-       openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
-    saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save'
+        openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
+        saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
     }
   },
   methods: {
   created: function () {
       var spreadsheet = this.$refs.spreadsheet;
-      // Applies style formatting to active visible sheet
+      // Applies style formatting to active visible sheet.
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:H1');
         spreadsheet.cellFormat({ textAlign: 'center' }, 'D2:H11');
-        // Applies style formatting to active hidden sheet
+        // Applies style formatting to active hidden sheet.
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Hidden Sheet!A1:H1');
         spreadsheet.cellFormat({ textAlign: 'center' }, 'Hidden Sheet!D2:H11');
       }

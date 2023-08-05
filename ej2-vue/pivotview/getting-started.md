@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Pivotview Component in Vue 2
 
-This section explains you the steps required to create a simple pivot table and demonstrate the basic usage of the [pivot table](https://www.syncfusion.com/vue-ui-components/vue-pivot-table) component in a Vue environment.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Pivotview component
 
 ## Prerequisites
 
@@ -39,54 +39,50 @@ The following list of dependencies are required to use the pivot table component
     |-- @syncfusion/ej2-navigations
 ```
 
-## Setup Vue Environment
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following commands.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Create a Vue Application
-
-Start a new Vue application using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
+yarn run serve
 ```
 
-## Adding Syncfusion pivot table package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install pivot table component, use the following command.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Pivotview component](https://www.syncfusion.com/vue-components/vue-pivot-table) as an example. Install the `@syncfusion/ej2-vue-pivotview` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-pivotview --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-pivotview
+```
 
 > The **--save** will instruct NPM to include the pivot table package inside the `dependencies` section of the `package.json`.
 
-## Registering pivot table Component
-
-You can register the pivot table component in your application by using the `Vue.use()`.
-
-Refer to the code example given below.
-
-```ts
-import { PivotViewPlugin } from '@syncfusion/ej2-vue-pivotview';
-
-Vue.use(PivotViewPlugin);
-```
-
-> Registering `PivotViewPlugin` in vue, will register the pivot table component along with its required child directives globally.
-
-## Adding CSS Reference
+## Import Syncfusion CSS styles
 
 The pivot table has different themes. They are:
 * Material
@@ -96,9 +92,10 @@ The pivot table has different themes. They are:
 
 import pivot table component CSS as given below in `<style>` section of the `App.vue` file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
-<!-- Material theme used for this sample -->
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -110,37 +107,57 @@ import pivot table component CSS as given below in `<style>` section of the `App
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
 </style>
-```
 
-## Browser compatibility
+{% endhighlight %}
+{% endtabs %}
 
-Polyfills are required to use the Pivot Table in Internet Explorer 11 browser. Refer the [documentation](https://ej2.syncfusion.com/vue/documentation/browser/?no-cache=1#browser-support) for more details.
+## Add Syncfusion Vue component
 
-## Adding pivot table component
+Follow the below steps to add the Vue Pivotview component:
 
-Add the EJ2 Vue pivot table using `<ejs-pivotview>` to the `<template>` section of the `App.vue` file in src directory.
-The properties of pivot table can be assigned in `<ejs-pivotview>` tag and that can be bounded under `data` section.
+1\. First, import and register the Pivotview component in the `script` section of the **src/App.vue** file.
 
-## Initializing pivot table component in an application
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Add the EJ2 Vue pivot table using `<ejs-pivotview>` to the `<template>` section of the `App.vue` file in src directory.
-The properties of pivot table can be assigned in `<ejs-pivotview>` tag and that can be bounded under `data` section.
+<script>
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+export default {
+  components: {
+    'ejs-pivotview': PivotViewComponent
+  }
+}
+</script>
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Pivotview component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
         <ejs-pivotview> </ejs-pivotview>
     </div>
 </template>
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+## Browser compatibility
+
+Polyfills are required to use the Pivot Table in Internet Explorer 11 browser. Refer the [documentation](https://ej2.syncfusion.com/vue/documentation/browser/?no-cache=1#browser-support) for more details.
 
 ## Assigning sample data to the pivot table
 
 The Pivot Table component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
         <ejs-pivotview :dataSourceSettings="dataSourceSettings"> </ejs-pivotview>
@@ -148,12 +165,12 @@ The Pivot Table component further needs to be populated with an appropriate data
 </template>
 
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
-
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 
 export default {
+  components: {
+    'ejs-pivotview': PivotViewComponent
+  },
   data () {
     return {
       dataSourceSettings: {
@@ -191,8 +208,9 @@ export default {
 <style>
 @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-```
 
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding fields to row, column, value and filter axes
 
@@ -217,7 +235,7 @@ In-order to define each field in the respective axis, the following basic proper
 In this illustration, "Year" and "Quarter" are added in column, "Country" and "Products" in row, and "Sold" and "Amount" in value section respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs88/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,7 +249,7 @@ Formatting defines a way in which values should be displayed. For example, forma
 > Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs89/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -263,7 +281,7 @@ The field list allows to add or remove fields and also rearrange the fields betw
 > If the `FieldList` module is not injected, the Field List will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs90/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -277,7 +295,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 > If the `GroupingBar` module is not injected, the grouping bar will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs91/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -289,7 +307,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 The filter axis contains collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table. The fields along with filter members could be set to filter axis either through report via code behind or by dragging and dropping fields from other axes to filter axis via grouping bar or field list at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs92/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -303,7 +321,7 @@ The calculated field feature allows user to insert or add a new calculated field
 > If the `CalculatedField` module is not injected, the calculated field popup will not be rendered with the pivot table component. Moreover calculated field is applicable only for value fields.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs93/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -321,7 +339,7 @@ npm run dev
 Output will be displayed as follows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pivot-grid/default-cs94/app.vue %}
 {% endhighlight %}
 {% endtabs %}

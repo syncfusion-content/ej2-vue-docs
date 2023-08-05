@@ -17,8 +17,8 @@
     </e-ribbon-tabs>
     <template v-slot:undoredo>
       <div class="helpPaneTemplate">
-        <button class="action_btn"> <span id="undo" class="e-icons e-undo">Undo</span> </button>
-        <button class="action_btn"> <span id="redo" class="e-icons e-redo">Redo</span> </button>
+        <button class="action_btn"><label><span id="undo" class="e-icons e-undo"></span> Undo </label></button>
+        <button class="action_btn"><label><span id="redo" class="e-icons e-redo"></span> Redo </label></button>
       </div>
     </template>
   </ejs-ribbon>
@@ -48,4 +48,15 @@
   @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+
+  .action_btn {
+    margin: 0px 3px;
+    border: none;
+    color: #ffffff;
+    background-color: #0d6efd;
+  }
+  
+  #undo, #redo{
+    padding: 0px 3px ;
+  }
 </style>
