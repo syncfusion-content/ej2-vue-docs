@@ -5,24 +5,9 @@ import { sampleData } from "./datasource.js";
 
 Vue.use(TreeGridPlugin);
 
-export default ({
-  data() {
-    return {
-      data: sampleData,
-      editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Dialog' },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'],
-      filterSettings: { type: 'Excel' }
-    };
-  },
-  methods: {
-    load: function() {
-        (this.$refs.treegrid as any).$el.ej2_instances[0].grid.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
-    }
-  },
-  provide: {
-      treegrid: [Page, Edit, Sort, Filter, Toolbar]
-  }
-});
+
+  
+
 new Vue({
 	el: '#app',
 	template: `
@@ -44,4 +29,20 @@ new Vue({
     </div>
 `,
 
+data() {
+    return {
+      data: sampleData,
+      editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Dialog' },
+      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'],
+      filterSettings: { type: 'Excel' }
+    };
+  },
+  methods: {
+    load: function() {
+        (this.$refs.treegrid as any).$el.ej2_instances[0].grid.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
+    }
+  },
+  provide: {
+      treegrid: [Page, Edit, Sort, Filter, Toolbar]
+  }
 });
