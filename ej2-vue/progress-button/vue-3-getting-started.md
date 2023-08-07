@@ -147,7 +147,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the ProgressButton component with the [content](https://helpej2.syncfusion.com/vue/documentation/api/progress-button#content) property.
+2.In the `template` section, define the ProgressButton component with the [content](https://helpej2.syncfusion.com/vue/documentation/api/progress-button/#content) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

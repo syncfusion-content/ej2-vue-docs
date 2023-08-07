@@ -143,7 +143,7 @@ In the below sample, the drag and drop of the fields "Year" and "Products" have 
 
 ## Remove specific field(s) from displaying
 
-When a report is bound to the pivot table, fields will be automatically populated within the Grouping Bar. In this case, you can also prevent specific fields from being displayed. To do so, set the appropriate field name(s) in the [`excludeFields`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#excludefields) property of [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
+When a report is bound to the pivot table, fields will be automatically populated within the Grouping Bar. In this case, you can also prevent specific fields from being displayed. To do so, set the appropriate field name(s) in the [`excludeFields`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#excludefields) property of [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 > The `excludeFields` property setting will be reflected in the field list UI as well, and for more information, see this [link](https://ej2.syncfusion.com/vue/documentation/pivotview/field-list/#remove-specific-fields-from-displaying).
 

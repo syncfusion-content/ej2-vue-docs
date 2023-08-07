@@ -31,7 +31,7 @@ The below sample displays the pivot chart component based on the pivot report bo
 
 ## Data binding
 
-End user can bind both local and remote data binding options available in the component to feed the data. The [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property can be assigned either with an instance of `DataManager` or JavaScript object array collection.
+End user can bind both local and remote data binding options available in the component to feed the data. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property can be assigned either with an instance of `DataManager` or JavaScript object array collection.
 For more information [`refer`](./data-binding) here.
 
 ## Chart Types

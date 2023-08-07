@@ -24,7 +24,7 @@ The following are the three different types of filtering:
 
 ## Member filtering
 
-Allows to view the pivot table with selective records based on included and excluded members in each field. By default, member filter option is enabled by the [`allowMemberFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowmemberfilter) boolean property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
+Allows to view the pivot table with selective records based on included and excluded members in each field. By default, member filter option is enabled by the [`allowMemberFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowmemberfilter) boolean property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings). This UI option helps end user to filter members by clicking the filter icon besides any field in the row, column and filter axes available in the field list or grouping bar UI at runtime.
 
 ![output](images/fieldlist_filtericon.png "Member filter icon in field list")
 <br/>
@@ -125,7 +125,7 @@ If the property is set to **false**, all members of all levels will be queried a
 
 > This property is applicable only for OLAP data sources.
 
-Allows user to load the members on the basis of the level number set in the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) property in the [`filterSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). By default, this property is set to **1** and the search will only take place within the members of the first level.
+Allows user to load the members on the basis of the level number set in the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) property in the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). By default, this property is set to **1** and the search will only take place within the members of the first level.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -137,7 +137,7 @@ Allows user to load the members on the basis of the level number set in the [`le
 
 ![output](images/level-count.png)
 
-In the example above, we set [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) as **2** for the "Customer Geography" dimension in [`filterSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). So, the "Customer Geography" dimension is loaded with the "Country" and "State-Province" levels during initial loading itself. The search will therefore be applied only to the members of the "Country" and "State-Province" levels. After that, you can load members to the next level on-demand by expanding the respective "State-Province" node (or) by selecting the "City" level from the drop-down list.
+In the example above, we set [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) as **2** for the "Customer Geography" dimension in [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). So, the "Customer Geography" dimension is loaded with the "Country" and "State-Province" levels during initial loading itself. The search will therefore be applied only to the members of the "Country" and "State-Province" levels. After that, you can load members to the next level on-demand by expanding the respective "State-Province" node (or) by selecting the "City" level from the drop-down list.
 
 ## Label filtering
 
@@ -147,7 +147,7 @@ The label filtering helps to view the pivot table with selective header text in 
 * Filtering number data type
 * Filtering date data type
 
-The label filtering dialog can be enabled by setting the [`allowLabelFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowlabelfilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Label" tab to perform label filtering operations.
+The label filtering dialog can be enabled by setting the [`allowLabelFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowlabelfilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Label" tab to perform label filtering operations.
 
 ### Filtering string data type through code
 
@@ -236,7 +236,7 @@ End user can clear the applied label filter by simply click the "Clear" option a
 
 The value filtering helps to perform filter operation based only on value fields and its resultant aggregated values over other fields defined in row and column axes.
 
-The value filtering dialog can be enabled by setting the [`allowValueFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowvaluefilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
+The value filtering dialog can be enabled by setting the [`allowValueFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowvaluefilter) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **true**. After enabling this API, click the filter icon besides any field in row or column axis available in field list or grouping bar UI. Now a filtering dialog will appear and navigate to "Value" tab to perform value filtering operations.
 
 The value filtering can also be configured using the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/) through code-behind. The properties required for value filter are:
 

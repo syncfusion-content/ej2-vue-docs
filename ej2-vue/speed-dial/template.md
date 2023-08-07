@@ -14,7 +14,7 @@ This section explains available templates in SpeedDial component and its usage.
 
 ## Item template
 
-You can use the [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#itemtemplate) property to set a template content for the SpeedDial items. The template content is defined as a child content of `itemTemplate` tag directive.
+You can use the [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#itemtemplate) property to set a template content for the SpeedDial items. The template content is defined as a child content of `itemTemplate` tag directive.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -26,7 +26,7 @@ You can use the [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/ap
 
 ## Popup template
 
-You can use the [`popupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#popuptemplate) property to set a template content for popup of  SpeedDial component. The template content is defined as a child content of `popupTemplate` tag directive.
+You can use the [`popupTemplate`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#popuptemplate) property to set a template content for popup of  SpeedDial component. The template content is defined as a child content of `popupTemplate` tag directive.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

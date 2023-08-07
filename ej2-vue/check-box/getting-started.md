@@ -124,11 +124,11 @@ The Essential JS 2 CheckBox contains 3 different states visually, they are:
 * Unchecked
 * Indeterminate
 
-The CheckBox [`checked`](https://ej2.syncfusion.com/vue/documentation/api/check-box#checked) property is used to handle the checked and unchecked state. In checked state a tick mark will be added to the visualization of CheckBox.
+The CheckBox [`checked`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#checked) property is used to handle the checked and unchecked state. In checked state a tick mark will be added to the visualization of CheckBox.
 
 ### Indeterminate
 
-The CheckBox indeterminate state can be set through [`indeterminate`](https://ej2.syncfusion.com/vue/documentation/api/check-box#indeterminate) property. CheckBox indeterminate state masks the real value of CheckBox visually. The Checkbox cannot be changed to indeterminate state through the user interface, this state can be achieved only through the property.
+The CheckBox indeterminate state can be set through [`indeterminate`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#indeterminate) property. CheckBox indeterminate state masks the real value of CheckBox visually. The Checkbox cannot be changed to indeterminate state through the user interface, this state can be achieved only through the property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

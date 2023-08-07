@@ -56,7 +56,7 @@ Formatting is a way of representing the value in different format. You can forma
 * [DateTimePicker](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker/#timeformat)
 * [NumericTextBox](https://ej2.syncfusion.com/vue/documentation/numerictextbox/formats/)
 * [Slider](https://ej2.syncfusion.com/vue/documentation/range-slider/format/)
-* [TimePicker](https://ej2.syncfusion.com/vue/documentation/api/timepicker#format)
+* [TimePicker](https://ej2.syncfusion.com/vue/documentation/api/timepicker/#format)
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

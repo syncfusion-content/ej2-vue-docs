@@ -119,7 +119,7 @@ The following example shows a basic Switch.
 
 ## Set text on Switch
 
-Switch component has text support. This can be achieved by setting [`onLabel`](https://ej2.syncfusion.com/vue/documentation/api/switch#onlabel)
-and [`offLabel`](https://ej2.syncfusion.com/vue/documentation/api/switch#offlabel) on Switch.
+Switch component has text support. This can be achieved by setting [`onLabel`](https://ej2.syncfusion.com/vue/documentation/api/switch/#onlabel)
+and [`offLabel`](https://ej2.syncfusion.com/vue/documentation/api/switch/#offlabel) on Switch.
 
 > Switch does not have text support for material themes, and does not support long custom text.

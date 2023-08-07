@@ -34,7 +34,7 @@ PDF export provides an option for exporting multiple pivot tables to same file. 
 
 ## Export table and chart into the same document
 
-When the [`displayOption`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) is set to **Both**, you can export both the table and the chart into the same PDF document. To achieve this, use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method and set the `exportBothTableAndChart` parameter to **true**.
+When the [`displayOption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) is set to **Both**, you can export both the table and the chart into the same PDF document. To achieve this, use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method and set the `exportBothTableAndChart` parameter to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -188,7 +188,7 @@ The PDF export provides an option to change page size of the document before exp
 
 Before exporting, you can change the height and width of the PDF document. To achieve this, use the **height** and **width** properties in the [`beforeExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#beforeexport) event.
 
-> This option is only available if [`enableVirtualization`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -202,7 +202,7 @@ Before exporting, you can change the height and width of the PDF document. To ac
 
 Before exporting, you can split and export the pivot table columns on each page of the PDF document by using the **columnSize** property in the [`beforeExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#beforeexport) event.
 
-> This option is only available if [`enableVirtualization`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

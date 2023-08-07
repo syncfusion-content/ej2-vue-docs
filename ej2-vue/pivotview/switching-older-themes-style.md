@@ -66,7 +66,7 @@ Meanwhile for high contrast theme, we need to set the following CSS.
 
 ## Adjusting Row Height
 
-In current theme, to make the component compact we have reduced the height of each pivot table rows. But user can reset the height of the pivot table using the [`rowHeight`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). In older theme, the property was set to 36 pixels for desktop layout and 48 pixels for mobile layout. So reset the [`rowHeight`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) accordingly to visualize the older theme style.
+In current theme, to make the component compact we have reduced the height of each pivot table rows. But user can reset the height of the pivot table using the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). In older theme, the property was set to 36 pixels for desktop layout and 48 pixels for mobile layout. So reset the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) accordingly to visualize the older theme style.
 
 In the below code sample, we replicate the older theme style.
 

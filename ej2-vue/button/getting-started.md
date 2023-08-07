@@ -120,7 +120,7 @@ The following example shows a basic Button.
 
 ## Change Button type
 
-To change the default Button to flat Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button#cssclass) property to `e-flat` and text content of the Button is set using [`content`](https://ej2.syncfusion.com/vue/documentation/api/button#content) property.
+To change the default Button to flat Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cssclass) property to `e-flat` and text content of the Button is set using [`content`](https://ej2.syncfusion.com/vue/documentation/api/button/#content) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

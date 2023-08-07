@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Change size in Vue Switch component
 
-The different Switch sizes available are default and small. To reduce the size of default Switch to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/switch#cssclass) property to `e-small`.
+The different Switch sizes available are default and small. To reduce the size of default Switch to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/switch/#cssclass) property to `e-small`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

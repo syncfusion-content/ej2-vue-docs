@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create a block button in Vue Button component
 
-You can customize a Button into a Block Button that will span the entire width of its parent element. To create a Block Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button#cssclass) property to `e-block`.
+You can customize a Button into a Block Button that will span the entire width of its parent element. To create a Block Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cssclass) property to `e-block`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

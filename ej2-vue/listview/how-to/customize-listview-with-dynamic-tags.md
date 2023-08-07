@@ -36,7 +36,7 @@ You can customize the ListView items using the [`template`](https://ej2.syncfusi
 
   ```
 
-* Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/vue/documentation/api/dialog#created) event.
+* Render the dialog component with empty content and append the created dynamic ListView object to the dialog on [`created`](https://ej2.syncfusion.com/vue/documentation/api/dialog/#created) event.
 
 * Bind the click event for button icon (+) to update the ListView data source with tags, and open the dialog with this dynamic ListView. Refer to the following code sample.
 

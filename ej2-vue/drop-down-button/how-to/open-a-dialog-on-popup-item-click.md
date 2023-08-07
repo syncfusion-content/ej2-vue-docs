@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open a dialog on popup item click in Vue Drop down button component
 
-This section explains about how to open a dialog on DropdownButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button#select) event of the DropdownButton.
+This section explains about how to open a dialog on DropdownButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#select) event of the DropdownButton.
 
 Install Syncfusion `List` packages using below command.
 

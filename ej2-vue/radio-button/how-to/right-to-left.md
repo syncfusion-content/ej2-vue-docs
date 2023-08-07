@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to left in Vue Radio button component
 
-RadioButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/radio-button#enablertl) as `true`.
+RadioButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#enablertl) as `true`.
 
 The following example illustrates how to enable right-to-left support in RadioButton component.
 

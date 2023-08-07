@@ -1,5 +1,3 @@
-
-
 <template>
     <ejs-spreadsheet ref="spreadsheet">
             <e-sheets>
@@ -21,8 +19,8 @@ export default {
    data: () => {
     return {
      dataSource: new DataManager({
-                    // Remote service url
-                    url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders',
+                    // Remote service url.
+                    url: 'https://services.syncfusion.com/vue/production/api/Orders',
                     adaptor: new WebApiAdaptor(),
                     crossDomain: true
                 }),
@@ -31,7 +29,7 @@ export default {
   },
   methods: {
     created: function () {
-        //Applies cell and number formatting to specified range of the active sheet
+        //Applies cell and number formatting to specified range of the active sheet.
         this.$refs.spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' },'A1:K1');
       }
     }

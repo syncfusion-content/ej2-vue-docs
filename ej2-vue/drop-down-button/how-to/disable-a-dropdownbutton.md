@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disable a dropdownbutton in Vue Drop down button component
 
-DropdownButton component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button#disabled) property. It can be disabled by setting disabled property as `true`.
+DropdownButton component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#disabled) property. It can be disabled by setting disabled property as `true`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

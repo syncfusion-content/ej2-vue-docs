@@ -221,9 +221,9 @@ export default {
 
 ## Integrate DatePicker
 
-You can render [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) by changing the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) property as [`Date`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/)  and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#model) property.
+You can render [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) by changing the [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) property as [`Date`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/)  and also configure its properties and methods using [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) property.
 
-In the below sample, [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) component.
+In the below sample, [`type`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/inputType/) and [`model`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#model) values are configured to render the [DatePicker](https://ej2.syncfusion.com/vue/documentation/api/datepicker) component.
 
 ```
 <template>
@@ -279,7 +279,7 @@ In In-place Editor, two-way binding support is achieved using the `v-model` dire
 
 ## Submitting data to the server (save)
 
-You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#url), [`adaptor`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/adaptorType/), and [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#primarykey) property.
+You can submit editor value to server by configuring the [`url`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#url), [`adaptor`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/adaptorType/), and [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#primarykey) property.
 
 | Property   | Usage                                           |
 |------------|---------------------------------------------------------|
@@ -287,7 +287,7 @@ You can submit editor value to server by configuring the [`url`](https://ej2.syn
 | **`adaptor`**    | Specifies the adaptor type that is used by DataManager to communicate with DataSource.                |
 | **`primaryKey`** | Defines the unique primary key of editable field which can be used for saving data in the data-base.|
 
-> The [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
+> The [`primaryKey`](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#primarykey) property is mandatory. If it's not set, edited data are not sent to the server.
 
 ## Refresh with modified value
 

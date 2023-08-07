@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Member filtering in Vue Pivotview component
 
-Member filtering allows you to view pivot table with particular records based on filter criteria. You can disable the member filter by setting the [`allowMemberFilter`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowmemberfilter) property to **false**. By default, this property is set as **true**.
+Member filtering allows you to view pivot table with particular records based on filter criteria. You can disable the member filter by setting the [`allowMemberFilter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#allowmemberfilter) property to **false**. By default, this property is set as **true**.
 
 ## Filtering through UI
 

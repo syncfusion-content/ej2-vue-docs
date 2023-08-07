@@ -38,7 +38,7 @@ User can design their own tooltip by setting the property [`tooltipTemplate`](ht
 
 `${value}` - Formatted value of the selected value cell.
 
-The tooltip customization is common for both pivot table and pivot chart or it can be done individually as well. To customize the pivot table tooltip, the above procedure needs to be followed. To customize the pivot chart tooltip alone use `template` property of tooltip under [`chartSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
+The tooltip customization is common for both pivot table and pivot chart or it can be done individually as well. To customize the pivot table tooltip, the above procedure needs to be followed. To customize the pivot chart tooltip alone use `template` property of tooltip under [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 In the below sample, the pivot table and pivot chart shows customized tooltip layouts.
 

@@ -145,7 +145,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the RadioButton component with the [label](https://helpej2.syncfusion.com/vue/documentation/api/radio-button#label) property and [name](https://helpej2.syncfusion.com/vue/documentation/api/radio-button#name) property and [checked](https://helpej2.syncfusion.com/vue/documentation/api/radio-button#checked) definitions.
+2.In the `template` section, define the RadioButton component with the [label](https://helpej2.syncfusion.com/vue/documentation/api/radio-button/#label) property and [name](https://helpej2.syncfusion.com/vue/documentation/api/radio-button/#name) property and [checked](https://helpej2.syncfusion.com/vue/documentation/api/radio-button/#checked) definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

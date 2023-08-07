@@ -95,9 +95,9 @@ To display the fields in descending order by default, set the [defaultFieldListO
 
 ## Group fields under desired folder name
 
-In the field list UI, you can display fields by grouping them under the desired folder name. It can only be configured via code-behind by setting the [`groupName`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property in [`fieldMapping`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#fieldmapping).
+In the field list UI, you can display fields by grouping them under the desired folder name. It can only be configured via code-behind by setting the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property in [`fieldMapping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#fieldmapping).
 
-> You can only group fields to one level using the [`groupName`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property.
+> You can only group fields to one level using the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -115,7 +115,7 @@ Using check box besides each field, end user can select or unselect to add or re
 
 ## Remove specific field(s) from displaying
 
-When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
+When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Apply custom style to pivot cells in Vue Pivotview component
 
-The [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings) can be used to apply custom style to row and value cells, and the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) can be used to apply custom styles to column cells.
+The [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings) can be used to apply custom style to row and value cells, and the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) can be used to apply custom styles to column cells.
 
 In the following example, a custom style has been applied to the column header **"Sold Amount"** under **"FY 2016"** via the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event and to the row header **"Germany"** and its aggregated value via the [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event by adding the **"e-custom"** class to the cell element.
 
