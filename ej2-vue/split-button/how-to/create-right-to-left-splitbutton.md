@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create right to left splitbutton in Vue Split button component
 
-SplitButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/split-button#enablertl) as `true`.
+SplitButton component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#enablertl) as `true`.
 
 The following example illustrates how to enable right-to-left support in SplitButton component.
 

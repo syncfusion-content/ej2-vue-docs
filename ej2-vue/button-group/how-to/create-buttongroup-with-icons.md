@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Create buttongroup with icons in Vue Button group component
 
-To create ButtonGroup with icons, [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/button#iconcss) property of Button component can be used.
+To create ButtonGroup with icons, [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/button/#iconcss) property of Button component can be used.
 
 The following example illustrates how to create ButtonGroup with icons,
 

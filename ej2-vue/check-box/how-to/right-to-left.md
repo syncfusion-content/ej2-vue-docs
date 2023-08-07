@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to left in Vue Check box component
 
-CheckBox component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/check-box#enablertl) as `true`.
+CheckBox component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#enablertl) as `true`.
 
 The following example illustrates how to enable right-to-left support in CheckBox component.
 

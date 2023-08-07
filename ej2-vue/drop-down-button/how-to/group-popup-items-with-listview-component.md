@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Group popup items with listview component in Vue Drop down button component
 
-Header in popup items is possible in DropdownButton by templating entire popup with ListView. Create ListView with id `#listview` and provide it as a [`target`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button#target) for DropDownButton.
+Header in popup items is possible in DropdownButton by templating entire popup with ListView. Create ListView with id `#listview` and provide it as a [`target`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#target) for DropDownButton.
 
 Install Syncfusion `List` packages using below command.
 

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Hide spinner in Vue Progress button component
 
-You can hide spinner in the ProgressButton by setting the `e-hide-spinner` property to [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/progress-button#cssClass).
+You can hide spinner in the ProgressButton by setting the `e-hide-spinner` property to [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#cssClass).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

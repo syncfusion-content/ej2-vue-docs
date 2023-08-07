@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Modal in Vue Speed dial component
 
-You can use the [`modal`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#modal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
+You can use the [`modal`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#modal) property to set the Speed Dial as modal which adds an overlay to prevent the background interaction.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

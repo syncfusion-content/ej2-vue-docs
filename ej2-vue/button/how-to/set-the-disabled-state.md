@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set the disabled state in Vue Button component
 
-Vue Button component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/button#disabled) property. To disable Vue Button component, the `disabled` property can be set as `true`.
+Vue Button component can be enabled/disabled by giving [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/button/#disabled) property. To disable Vue Button component, the `disabled` property can be set as `true`.
 
 The following example demonstrates Button in `disabled` state.
 

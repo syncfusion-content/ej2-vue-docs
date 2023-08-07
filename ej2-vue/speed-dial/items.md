@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Items in Vue Speed dial component
 
-The Vue Speed Dial action items can be added by using [`items`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#items) property.
+The Vue Speed Dial action items can be added by using [`items`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#items) property.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -88,4 +88,4 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 ## Template
 
-The Speed Dial supports to customize the action items and entire pop-up container by setting [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#itemtemplate) and [popupTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#popuptemplate) properties. For more details about templates, check out the link [here](https://ej2.syncfusion.com/vue/documentation/speed-dial/template/).
+The Speed Dial supports to customize the action items and entire pop-up container by setting [itemTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#itemtemplate) and [popupTemplate](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#popuptemplate) properties. For more details about templates, check out the link [here](https://ej2.syncfusion.com/vue/documentation/speed-dial/template/).

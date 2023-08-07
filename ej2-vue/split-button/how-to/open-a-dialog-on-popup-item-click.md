@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open a dialog on popup item click in Vue Split button component
 
-This section explains about how to open a dialog on SplitButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/vue/documentation/api/split-button#select) event of the SplitButton.
+This section explains about how to open a dialog on SplitButton popup item click. This can be achieved by handling dialog open in [`select`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#select) event of the SplitButton.
 
 Install Syncfusion `Popup` packages using below command.
 

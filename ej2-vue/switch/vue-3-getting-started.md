@@ -145,7 +145,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the Switch component with the [checked](https://helpej2.syncfusion.com/vue/documentation/api/switch#checked) property.
+2.In the `template` section, define the Switch component with the [checked](https://helpej2.syncfusion.com/vue/documentation/api/switch/#checked) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

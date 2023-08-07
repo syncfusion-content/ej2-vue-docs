@@ -97,7 +97,7 @@ Listview data can be filtered with the help of [`dataManager`](https://ej2.syncf
    listViewInstance.dataSource = filteredData;
   ```
 
-In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/documentation/data/querying/?no-cache=1#filter-operators) of input text to filter data in DataManager.
+In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/documentation/data/querying#filter-operators) of input text to filter data in DataManager.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

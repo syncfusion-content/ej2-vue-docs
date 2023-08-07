@@ -223,3 +223,90 @@ export default {
  @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
 </style>
 ```
+
+## Perform import action for collaborative clients
+
+Using the `action` argument from the [`actionComplete`](../api/spreadsheet/#actioncomplete) event, you can identity whether the import action is performed or not. If the action is `import`, then you need to send the `response data` to the server and also update the same to the collaborative clients.
+
+The following code example shows how to perform the import functionality for collaborative clients.
+
+```
+<template>
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :actionComplete="actionComplete"></ejs-spreadsheet>
+</template>
+
+<script>
+
+import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
+import { isNullOrUndefined } from "@syncfusion/ej2-base";
+import * as signalR from '@microsoft/signalr';
+
+export default {
+  components: {
+  "ejs-spreadsheet": SpreadsheetComponent,
+  },
+  data: () => {
+    return {
+      connection: null,
+      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
+    }
+  },
+
+  mounted: function () {
+    // Fetch the spreadsheet instance.
+    var spreadsheet = this.$refs.spreadsheet;
+    this.connection = new signalR.HubConnectionBuilder().withUrl('https://localhost:44385/hubs/spreadsheethub', {
+      skipNegotiation: true,
+      transport: signalR.HttpTransportType.WebSockets
+    }).build();
+
+    this.connection.start().then(() => {
+      console.log('server connected!!!');
+    }).catch(err => console.log(err));
+
+    this.connection.on('dataReceived', (data) => {
+      const model = JSON.parse(
+        data
+      );
+      // Condition to check whether action performed is import.
+      if (isNullOrUndefined(model['action'])) {
+        // Load the imported excel file data as JSON to the connected clients.
+        const jsonData = { Workbook: model };
+        spreadsheet.openFromJson({ file: jsonData });
+      }
+      else {
+        // Update the action details to the connected clients.
+        spreadsheet.updateAction(model);
+      }
+    });
+  },
+
+  methods: {
+    actionComplete: function (args) {
+      if (args.action === 'import') {
+        // Send the action data to the server in args.response at the time of importing an excel file.
+        this.connection.send("BroadcastData", JSON.stringify(args.response.data));
+      }
+      else {
+        // Send the action data to the server for other than import actions.
+        this.connection.send("BroadcastData", JSON.stringify(args));
+      }
+    }
+  }
+}
+
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+</style>
+```

@@ -15,7 +15,7 @@ domainurl: ##DomainURL##
 
 End user can display string value to the pivot table's value cell by using the [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#aggregatecellinfo) event.
 
-In the following example, each cell value of the **Sold** field's actual value has been assigned from its combination data sets obtained from the [`args.cellSets`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/aggregateEventArgs/#cellsets) in the [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#aggregatecellinfo) event.
+In the following example, each cell value of the **Sold** field's actual value has been assigned from its combination data sets obtained from the [`args.cellSets`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/aggregateEventArgs/#cellsets) in the [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#aggregatecellinfo) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

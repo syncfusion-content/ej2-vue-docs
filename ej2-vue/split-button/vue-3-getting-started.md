@@ -147,7 +147,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the SplitButton component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/split-button#items) property and [content](https://helpej2.syncfusion.com/vue/documentation/api/split-button#content) property.
+2.In the `template` section, define the SplitButton component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/split-button/#items) property and [content](https://helpej2.syncfusion.com/vue/documentation/api/split-button/#content) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

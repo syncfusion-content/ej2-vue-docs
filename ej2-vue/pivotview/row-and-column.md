@@ -33,12 +33,12 @@ Allows end user to set the pivot table's height and width by using [`height`](ht
 
 ## Row Height
 
-Allows end user to set the height of each pivot table rows commonly using the [`rowHeight`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings).
+Allows end user to set the height of each pivot table rows commonly using the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings).
 
-> By default, the [`rowHeight`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **36** pixels for desktop layout and **48** pixels for mobile layout.
+> By default, the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **36** pixels for desktop layout and **48** pixels for mobile layout.
 > The height of the column headers alone may vary when grouping bar feature is enabled.
 
-In the below code sample, the [`rowHeight`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **60** pixels.
+In the below code sample, the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **60** pixels.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -50,11 +50,11 @@ In the below code sample, the [`rowHeight`](https://helpej2.syncfusion.com/vue/d
 
 ## Column Width
 
-Allows end user to set the width of each pivot table columns commonly using the [`columnWidth`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/).
+Allows end user to set the width of each pivot table columns commonly using the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/).
 
-> By default, the [`columnWidth`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **110** pixels to each columns except the first column. For first column, **250** pixels and **200** pixels are set respectively with and without grouping bar.
+> By default, the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **110** pixels to each columns except the first column. For first column, **250** pixels and **200** pixels are set respectively with and without grouping bar.
 
-In the below example, the [`columnWidth`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **200** pixels.
+In the below example, the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **200** pixels.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -66,7 +66,7 @@ In the below example, the [`columnWidth`](https://helpej2.syncfusion.com/vue/doc
 
 ## Reorder
 
-Allows end user to reorder a particular column header from one index to another index within the pivot table through drag-and-drop option. It can be enabled by setting the [`allowReordering`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
+Allows end user to reorder a particular column header from one index to another index within the pivot table through drag-and-drop option. It can be enabled by setting the [`allowReordering`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -78,7 +78,7 @@ Allows end user to reorder a particular column header from one index to another 
 
 ## Column Resizing
 
-Allows end user to resize the columns by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. To enable column resizing option, set the [`allowResizing`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
+Allows end user to resize the columns by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. To enable column resizing option, set the [`allowResizing`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
 
 > By default, the column resizing option is enabled.
 > In RTL mode, user can click and drag the left edge of the header cell to resize the column.
@@ -93,7 +93,7 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 
 ## Text Wrap
 
-Allows end user to wrap the cell content to the next line when it exceeds the boundary of the cell width. To enable text wrap, set the [`allowTextWrap`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
+Allows end user to wrap the cell content to the next line when it exceeds the boundary of the cell width. To enable text wrap, set the [`allowTextWrap`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -105,7 +105,7 @@ Allows end user to wrap the cell content to the next line when it exceeds the bo
 
 ## Text Align
 
-Allows end user to align the content of the pivot table's row and column headers and value cells by using the [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/gridColumn/#textalign) and [`headerTextAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/gridColumn/#headertextalign) properties in the [`columnRender`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) event under [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The following alignments are:
+Allows end user to align the content of the pivot table's row and column headers and value cells by using the [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/gridColumn/#textalign) and [`headerTextAlign`](https://ej2.syncfusion.com/vue/documentation/api/grid/gridColumn/#headertextalign) properties in the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) event under [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The following alignments are:
 
 * `Left` - It allows the content to be positioned on the left.
 * `Right` - It allows the content to be positioned on the right.
@@ -144,7 +144,7 @@ Allows the user to fit the Pivot Table columns as wide as the content of the cel
 
 ### Autofit specific columns
 
-During initial rendering, the parameter `autoFit` in the [`columnRender`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) event under [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) can be set to **true** to auto fit specific columns.
+During initial rendering, the parameter `autoFit` in the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) event under [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) can be set to **true** to auto fit specific columns.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -156,7 +156,7 @@ During initial rendering, the parameter `autoFit` in the [`columnRender`](https:
 
 ## Grid Lines
 
-Allows end user to display cell border for each cells using [`gridLines`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings).
+Allows end user to display cell border for each cells using [`gridLines`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings).
 
 Available mode of grid lines are:
 
@@ -181,9 +181,9 @@ Available mode of grid lines are:
 
 ## Selection
 
-Selection provides an option to highlight a row or a column or a cell. It can be done through simple mouse down or arrow keys. To enable selection in the pivot table, set the [`allowSelection`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
+Selection provides an option to highlight a row or a column or a cell. It can be done through simple mouse down or arrow keys. To enable selection in the pivot table, set the [`allowSelection`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
 
-The pivot table supports two types of selection that can be set using [`type`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`selectionSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The selection types are:
+The pivot table supports two types of selection that can be set using [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The selection types are:
 
 * **Single**: It is set by default, and it only allows selection of a single row or a column or a cell.
 * **Multiple**: Allows you to select multiple rows or columns or cells.
@@ -199,7 +199,7 @@ To perform multi-selection, press and hold "CTRL" key and click the desired rows
 
 ### Selection Mode
 
-The pivot table supports four types of selection mode that can be set using [`mode`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) in [`selectionSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The selection modes are:
+The pivot table supports four types of selection mode that can be set using [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The selection modes are:
 
 * **Row**: It is set by default, and allows user to select only rows.
 * **Column**: Allows user to select only columns.
@@ -216,7 +216,7 @@ The pivot table supports four types of selection mode that can be set using [`mo
 
 ### Cell Selection Mode
 
-The pivot table supports two types of cell selection mode that can be set using [`cellSelectionMode`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) in [`selectionSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The cell selection modes are:
+The pivot table supports two types of cell selection mode that can be set using [`cellSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The cell selection modes are:
 
 * **Flow**: It is set by default. The range of cells are selected between the start index and end index that includes in-between cells of rows.
 * **Box**: Range of cells are selected from the start and end column indexes that includes in-between cells of rows within the range.
@@ -229,7 +229,7 @@ The pivot table supports two types of cell selection mode that can be set using 
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs218" %}
 
-> Cell selection requires [`mode`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`selectionSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to be **Cell** or **Both**, and [`type`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property should be **Multiple**.
+> Cell selection requires [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to be **Cell** or **Both**, and [`type`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property should be **Multiple**.
 
 ### Changing background color of the selected cell
 
@@ -271,13 +271,13 @@ The event `cellSelecting` triggers before cell gets selected gets completed. It 
 
 ## Clip Mode
 
-The clip mode provides options to display its overflow cell content in the pivot table. It can be configured using the [`clipMode`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The pivot table supports three types of clip modes which are:
+The clip mode provides options to display its overflow cell content in the pivot table. It can be configured using the [`clipMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings). The pivot table supports three types of clip modes which are:
 
 * **Clip**: Truncates the cell content when it overflows its area.
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
 
->By default, [`clipMode`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) value is set to **Ellipsis**.
+>By default, [`clipMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) value is set to **Ellipsis**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -340,7 +340,7 @@ It has the following parameters:
 
 ### ColumnRender
 
-The event [`columnRender`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) triggers while framing each columns for rendering in the pivot table. It allows the user to customize the text alignment, column visibility, autofit, re-ordering, minimum and maximum width for a specific column. It has the following parameters:
+The event [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) triggers while framing each columns for rendering in the pivot table. It allows the user to customize the text alignment, column visibility, autofit, re-ordering, minimum and maximum width for a specific column. It has the following parameters:
 
 * `columns` - It holds the leaf level columns (i.e., value headers) information.
 * `dataSourceSettings` - It holds the current data source settings such as input data source, rows, columns, values, filters, format settings and so on.

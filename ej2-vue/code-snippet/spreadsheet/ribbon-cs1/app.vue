@@ -30,8 +30,8 @@ export default {
    data: () => {
     return {
       dataSource: data,
-      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
-    saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save';
+      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
+      saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save'
     }
   },
   methods: {

@@ -14,6 +14,6 @@ The CheckBox is a graphical user interface element that allows you to select one
 
 ## Key Features
 
-* [`Supports different states.`](./getting-started#change-the-checkbox-state)
-* [`Supports label and its position.`](./label-and-size#label)
-* [`Supports small size.`](./label-and-size#size)
+* [`Supports different states.`](./getting-started/#change-the-checkbox-state)
+* [`Supports label and its position.`](./label-and-size/#label)
+* [`Supports small size.`](./label-and-size/#size)

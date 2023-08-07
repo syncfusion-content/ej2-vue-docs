@@ -144,7 +144,7 @@ Follow the below steps to add the Vue Speed Dial component using `Composition AP
 {% endhighlight %}
 {% endtabs %}
 
-2. In the `template` section, define the Speed Dial component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/speed-dial#items) property
+2. In the `template` section, define the Speed Dial component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/speed-dial/#items) property
   
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
