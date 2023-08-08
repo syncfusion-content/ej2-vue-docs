@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 In Gantt, it is possible to drag a record from another component and drop it in Gantt chart with updating the Gantt record. Here, dragging an item from `TreeView` component to Gantt and that item is updated as a resource for the Gantt record, we can achieve this, by using [`nodeDragStop`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodedragstop) event of `TreeView` control.
 
+To learn about Gantt Chart Drag and Drop, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=NeObMFJEhGU" %}
+
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
 {% include code-snippet/gantt/how-to/draganddrop-cs1/app.vue %}

@@ -18,6 +18,9 @@ The following editing options are available to update the tasks in Gantt,
 * Taskbar
 * Connector line
 
+To get start quickly with Gantt Chart Editing Options, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=AmwIxCtejPo" %}
+
 ## Cell editing
 
 By setting the edit mode to auto using the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#mode) property, the tasks can be edited through TreeGrid cells by double-clicking.

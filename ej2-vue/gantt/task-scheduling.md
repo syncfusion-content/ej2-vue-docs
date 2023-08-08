@@ -20,6 +20,9 @@ The Gantt control supports three types of mode. They are:
 
 >Note: The default value of [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskmode) is `Auto`.
 
+To learn about Gantt Chart Scheduling Concepts, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=1QdqXtMEjgU" %}
+
 ## Automatically Scheduled Tasks
 
 When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskmode) property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates are validated based on various factors such as working time, holidays, weekends and predecessors.
