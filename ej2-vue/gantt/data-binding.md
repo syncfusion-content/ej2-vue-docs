@@ -15,6 +15,10 @@ The Gantt uses `DataManager`, which supports both RESTful JSON data services bin
 * Local data
 * Remote data
 
+
+To learn about Gantt Chart data binding quickly, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=yJKMcTMJfLc" %}
+
 ## Local data
 
 To bind local data to Gantt, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) property. The local data source can also be provided as an instance of the `DataManager`.

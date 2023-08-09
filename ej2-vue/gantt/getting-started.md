@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 This section explains the steps required to create a Gantt and demonstrates the basic usage of the Gantt component.
 
+To get start quickly with Vue Gantt Chart, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=S1GbWmVcre0" %}
+
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)

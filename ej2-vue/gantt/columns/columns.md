@@ -16,6 +16,9 @@ The column displays information from a bound data source, and you can edit the v
 
 The [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#treecolumnindex) property is used to define the expander column in the Gantt component to expand and collapse the child rows.
 
+To learn about Gantt Chart Customize Column Data, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=LvB4lvlm1J8" %}
+
 ## Defining columns
 
 Using the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#columns) property, you can define the columns in Gantt. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the [`taskFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskfields) property. Refer to the following code example for defining the columns in Gantt along with their widths.
