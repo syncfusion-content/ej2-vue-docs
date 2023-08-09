@@ -125,7 +125,7 @@ The following example shows a basic ProgressButton component.
 
 ## Enable progress in button
 
-You can enable the background filler UI by setting the [`enableProgress`](https://ej2.syncfusion.com/vue/documentation/api/progress-button#enableProgress) property to `true`.
+You can enable the background filler UI by setting the [`enableProgress`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#enableProgress) property to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

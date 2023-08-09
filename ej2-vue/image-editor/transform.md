@@ -78,7 +78,7 @@ The Image Editor allows to pan an image when the image exceeds the canvas size o
 
 ### Panning event
 
-The [`panning`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor#panning) event is activated when the user begins dragging the image within the canvas. This event provide an opportunity to perform specific actions, like adjusting the position of an image, in response to the gesture of panning. And these event uses [`panEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/panEventArgs/) to handle the panning action when the user starts dragging the image. 
+The [`panning`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/#panning) event is activated when the user begins dragging the image within the canvas. This event provide an opportunity to perform specific actions, like adjusting the position of an image, in response to the gesture of panning. And these event uses [`panEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/panEventArgs/) to handle the panning action when the user starts dragging the image. 
 
 The parameter available in the [`panEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#paneventargs) events are, 
 
@@ -114,7 +114,7 @@ The parameter available in the Zooming event is,
 
 ## Rotating event 
 
-The [`rotating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#rotating) event is triggered when performing rotating the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. And this event uses [`RotateEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/rotateEventArgs/) to handle the rotating action in the image.
+The [`rotating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#rotating) event is triggered when performing rotating the image. This event is passed an object that contains information about the rotating event, such as the amount of rotation performed. And this event uses [`RotateEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/rotateEventArgs/) to handle the rotating action in the image.
 
 The parameter available in the Rotating event is, 
 
@@ -126,7 +126,7 @@ RotateEventArgs.cancel – Specifies a boolean value to cancel the rotating acti
 
 ## Flipping event 
 
-The [`flipping`](https://ej2.syncfusion.com/vue/documentation/api/image-editor#flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. And this event uses [`FlipEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/flipEventArgs/) to handle the flipping action in the image.
+The [`flipping`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. And this event uses [`FlipEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/flipEventArgs/) to handle the flipping action in the image.
 
 The parameter available in the [`flipping`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#flipping) event is, 
 

@@ -27,9 +27,9 @@ new Vue({
   methods: {
      created: function() {
         if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            this.$refs.imageEditorObj.open('flower.png');
         } else {
-            this.$refs.imageEditorObj.open('https://ej2.syncfusion.com/products/images/carousel/bee-eater.png');
+            this.$refs.imageEditorObj.open('bridge.png');
         }
     },
     btn1Click: function(event) {

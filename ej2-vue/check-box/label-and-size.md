@@ -14,7 +14,7 @@ This section explains the different sizes and labels.
 
 ## Label
 
-The CheckBox caption can be defined by using the [`label`](https://ej2.syncfusion.com/vue/documentation/api/check-box#label) property. This reduces the manual addition of label for CheckBox. You can customize the label position before or after the CheckBox through the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/check-box#labelposition)property.
+The CheckBox caption can be defined by using the [`label`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#label) property. This reduces the manual addition of label for CheckBox. You can customize the label position before or after the CheckBox through the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#labelposition)property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -26,7 +26,7 @@ The CheckBox caption can be defined by using the [`label`](https://ej2.syncfusio
 
 ## Size
 
-The different CheckBox sizes available are default and small. To reduce the size of default CheckBox to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/check-box#cssclass) property to `e-small`.
+The different CheckBox sizes available are default and small. To reduce the size of default CheckBox to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#cssclass) property to `e-small`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

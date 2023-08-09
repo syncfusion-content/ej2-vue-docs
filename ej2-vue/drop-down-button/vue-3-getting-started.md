@@ -147,7 +147,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2.In the `template` section, define the DropDownButton component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/drop-down-button#items) property and content property.
+2.In the `template` section, define the DropDownButton component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/drop-down-button/#items) property and content property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

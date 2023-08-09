@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 ## Particular button
 
-To disable a particular button in a ButtonGroup, [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/button#disabled) attribute needs to be added to corresponding button element.
+To disable a particular button in a ButtonGroup, [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/button/#disabled) attribute needs to be added to corresponding button element.
 
 ## Whole ButtonGroup
 
-To disable whole ButtonGroup, [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/button#disabled) attribute needs to be added to all the button elements. 
+To disable whole ButtonGroup, [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/button/#disabled) attribute needs to be added to all the button elements. 
 
 The following example illustrates how to disable the particular and the whole ButtonGroup.
 

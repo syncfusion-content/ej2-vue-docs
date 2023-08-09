@@ -152,7 +152,7 @@ Polyfills are required to use the Pivot Table in Internet Explorer 11 browser. R
 
 ## Assigning sample data to the pivot table
 
-The Pivot Table component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
+The Pivot Table component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#datasource) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 
 {% tabs %}
@@ -216,15 +216,15 @@ export default {
 
 Now that pivot table is initialized and assigned with sample data, will further move to showcase the component by organizing appropriate fields in row, column, value and filter axes.
 
-In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings), four major axes -  [`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) plays a vital role in defining and organizing fields from the bound data source, to render the entire pivot table component in a desired format.
+In [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings), four major axes -  [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns), [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) and [`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) plays a vital role in defining and organizing fields from the bound data source, to render the entire pivot table component in a desired format.
 
-[`rows`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) – Collection of fields that needs to be displayed in row axis of the pivot table.
+[`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) – Collection of fields that needs to be displayed in row axis of the pivot table.
 
-[`columns`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) – Collection of fields that needs to be displayed in column axis of the pivot table.
+[`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) – Collection of fields that needs to be displayed in column axis of the pivot table.
 
-[`values`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) – Collection of fields that needs to be displayed as aggregated numeric values in the pivot table.
+[`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) – Collection of fields that needs to be displayed as aggregated numeric values in the pivot table.
 
-[`filters`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) - Collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table.
+[`filters`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filters) - Collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table.
 
 In-order to define each field in the respective axis, the following basic properties should be set.
 
@@ -244,7 +244,7 @@ In this illustration, "Year" and "Quarter" are added in column, "Country" and "P
 
 ## Applying formatting to a value field
 
-Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [`formatSetting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/) with its [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) and [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#format) properties and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/). In this illustration, the [`name`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/).
+Formatting defines a way in which values should be displayed. For example, format **"C"** denotes the values should be displayed in currency pattern. To do so, define the [`formatSetting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/) with its [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) and [`format`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#format) properties and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/). In this illustration, the [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#name) property is set as **Amount**, a field from value section and its format is set as currency. Likewise, we can set format for other value fields as well and add it to [`formatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/).
 
 > Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 

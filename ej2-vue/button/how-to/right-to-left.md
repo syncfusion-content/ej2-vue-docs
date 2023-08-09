@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Right to left in Vue Button component
 
-Button component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/button#enablertl) as
+Button component has RTL support. This can be achieved by setting [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/button/#enablertl) as
 `true`.
 
 The following example illustrates how to enable right-to-left support in Button component.

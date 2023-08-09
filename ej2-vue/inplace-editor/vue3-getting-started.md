@@ -155,7 +155,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the In-place Editor component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#datasource) property and column definitions.
+2.In the `template` section, define the In-place Editor component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

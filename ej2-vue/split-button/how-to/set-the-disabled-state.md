@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set the disabled state in Vue Split button component
 
-SplitButton component can be enabled or disabled by [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/split-button#disabled) property. To disable SplitButton component, set the disabled property as `true`.
+SplitButton component can be enabled or disabled by [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#disabled) property. To disable SplitButton component, set the disabled property as `true`.
 
 The following example illustrates how to set the disable state in SplitButton component.
 

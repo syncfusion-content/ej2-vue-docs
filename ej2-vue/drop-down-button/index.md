@@ -14,6 +14,6 @@ DropDownButton component is used to toggle contextual overlays for displaying li
 
 ## Key features
 
-* [`Icons`](./icons#icons)
-* [`Popup items`](./popup-items#popup-items)
-* [`Accessibility`](./accessibility#accessibility)
+* [`Icons`](./icons/#icons)
+* [`Popup items`](./popup-items/#popup-items)
+* [`Accessibility`](./accessibility/#accessibility)

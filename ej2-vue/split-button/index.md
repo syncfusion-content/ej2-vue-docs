@@ -14,6 +14,6 @@ Split button triggers default action when primary button is clicked and toggle c
 
 ## Key Features
 
-* [`Icons And Separator`](./icons-and-separator#icons-and-separator)
-* [`Popup Items`](./popup-items#popup-items)
-* [`Accessibility`](./accessibility#accessibility)
+* [`Icons And Separator`](./icons-and-separator/#icons-and-separator)
+* [`Popup Items`](./popup-items/#popup-items)
+* [`Accessibility`](./accessibility/#accessibility)

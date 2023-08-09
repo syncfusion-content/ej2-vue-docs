@@ -52,7 +52,7 @@ export default {
 
 ## created
 
-The Speed Dial component triggers the [`created`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#created) event when SpeedDial component rendering is completed.
+The Speed Dial component triggers the [`created`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#created) event when SpeedDial component rendering is completed.
 
 ```
 <template>
@@ -90,7 +90,7 @@ export default {
 
 ## beforeOpen
 
-The SpeedDial component triggers the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#beforeopen) event with [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialBeforeOpenCloseEventArgs/) argument before the SpeedDial popup is opened.
+The SpeedDial component triggers the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#beforeopen) event with [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialBeforeOpenCloseEventArgs/) argument before the SpeedDial popup is opened.
 
 ```
 <template>
@@ -128,7 +128,7 @@ export default {
 
 ## onOpen
 
-The SpeedDial component triggers the [`onOpen`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#onopen) event with [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialOpenCloseEventArgs/) argument when SpeedDial popup is opened.
+The SpeedDial component triggers the [`onOpen`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#onopen) event with [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialOpenCloseEventArgs/) argument when SpeedDial popup is opened.
 
 ```
 <template>
@@ -166,7 +166,7 @@ export default {
 
 ## beforeClose
 
-The SpeedDial component triggers the [`beforeClose`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#beforeclose) event with [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialBeforeOpenCloseEventArgs/) argument before the SpeedDial popup is closed.
+The SpeedDial component triggers the [`beforeClose`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#beforeclose) event with [`SpeedDialBeforeOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialBeforeOpenCloseEventArgs/) argument before the SpeedDial popup is closed.
 
 ```
 <template>
@@ -204,7 +204,7 @@ export default {
 
 ## onClose
 
-The SpeedDial component triggers the [`onClose`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#onclose) event with [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialOpenCloseEventArgs/) argument when SpeedDial popup is closed.
+The SpeedDial component triggers the [`onClose`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#onclose) event with [`SpeedDialOpenCloseEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialOpenCloseEventArgs/) argument when SpeedDial popup is closed.
 
 ```
 <template>
@@ -242,7 +242,7 @@ export default {
 
 ## beforeItemRender
 
-The SpeedDial component triggers the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#beforeitemrender) event with [`SpeedDialItemEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemEventArgs/) argument for each `SpeedDialItem` once it is rendered.
+The SpeedDial component triggers the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#beforeitemrender) event with [`SpeedDialItemEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemEventArgs/) argument for each `SpeedDialItem` once it is rendered.
 
 ```
 <template>

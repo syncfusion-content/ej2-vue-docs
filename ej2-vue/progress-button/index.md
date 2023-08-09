@@ -14,6 +14,6 @@ The ProgressButton visualizes the progression of an operation to indicate the us
 
 ## Key Features
 
-* [`Spinner and its customization`](spinner-and-progress#spinner)
-* [`Progress and animation`](spinner-and-progress#progress)
+* [`Spinner and its customization`](spinner-and-progress/#spinner)
+* [`Progress and animation`](spinner-and-progress/#progress)
 * [`Customize ProgressButton using cssClass`](how-to/customize-progress-using-cssclass)

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Display modes in Vue Speed dial component
 
-The action items in Vue Speed Dial can be displayed in `Linear` and `Radial` display modes by setting [`mode`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#mode) property.
+The action items in Vue Speed Dial can be displayed in `Linear` and `Radial` display modes by setting [`mode`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#mode) property.
 
 ## Linear display mode
 
@@ -18,7 +18,7 @@ In `Linear` display mode, Speed Dial action items are displayed in a list-like f
 
 ### Direction
 
-You can open the action items on the top, left, up, and down side of the Speed Dial button by setting [`direction`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#direction) property. The default value is `Auto` where the action items are displayed based on the [`position`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#position)of the Speed Dial.
+You can open the action items on the top, left, up, and down side of the Speed Dial button by setting [`direction`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#direction) property. The default value is `Auto` where the action items are displayed based on the [`position`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#position)of the Speed Dial.
 
 The `Linear` directions of Speed Dial are as follows:
 

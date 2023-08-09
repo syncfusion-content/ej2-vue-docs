@@ -34,7 +34,7 @@ This section briefs the Syncfusion assembly [`Syncfusion.EJ2.Pivot`](https://www
 
 **1.** Run the **PivotController** (Server-side) application which will be hosted in IIS shortly.
 
-**2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property of `dataSourceSettings`.
+**2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property of `dataSourceSettings`.
 
 ```javascript
 <script>
