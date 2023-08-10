@@ -18,7 +18,7 @@ Accessibility which is accessible by on-screen readers, and other assistive tech
 The following list of attributes are added in the Tab.
 
 | **Roles and Attributes** | **Functionalities** |
-| --- | --- |
+| ------ | ------- |
 | `tablist` | Attribute is set to the Tab header element that describes actual role of the element.|
 | `tab` | Attribute is set to the Tab items element to  indicates an interactive element inside a `tablist` that, when activated, displays its associated `tabpanel`.|
 | `tabpanel` | Attribute is set to the Tab content that describes the role for viewing the active content.|
