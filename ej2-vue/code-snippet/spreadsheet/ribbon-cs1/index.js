@@ -31,7 +31,7 @@ new Vue({
     return {
       dataSource: data,
       openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
-      saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save'
+      saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
     }
   },
   methods: {
