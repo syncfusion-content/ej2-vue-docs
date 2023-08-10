@@ -68,3 +68,11 @@ The steps below show how to install the Essential Studio JavaScript - EJ2 Mac in
    **Location:** {Documents}\Syncfusion\ {version}\ {platform}
 
    ![Installed Location](images/Mac_Installer9.png)
+
+## License key registration in samples
+
+After the installation, the license key is required to register the demo source that is included in the Mac installer. To learn about the steps for license registration for the JavaScript - EJ2 Mac installer, please refer to this.
+
+* [Register Syncfusion License key in the project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-project)
+* [Register Syncfusion license key in the Nuxt project](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-in-the-nuxt-project)
+* [Register the license key using the npx command](https://ej2.syncfusion.com/vue/documentation/licensing/license-key-registration#register-syncfusion-license-key-using-the-npx-command)
