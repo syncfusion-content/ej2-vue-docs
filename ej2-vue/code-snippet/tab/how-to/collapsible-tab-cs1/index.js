@@ -68,7 +68,7 @@ new Vue({
   tabCreated: function() {
     // After tab created first tab content and active line are hidden by adding custom class to make it collapse state
     this.actLine = document.querySelector('.e-indicator');
-    document.getElementById("e-content_0").classList.add('collapse');
+    document.getElementById("e-content-collapsible_tab_0").classList.add('collapse');
     this.actLine.classList.add('collapse');
   },
   tabSelected: function(e) {
@@ -86,7 +86,7 @@ new Vue({
   },
   updateCollapseClass: function(index) {
     // Custom classes are added/removed from tab content and active line element, when the same tab item again clicked
-    let cntEle = document.getElementById("e-content_" + index);
+    let cntEle = document.getElementById("e-content-collapsible_tab_" + index);
     if (cntEle.classList.contains('collapse')) {
         cntEle.classList.remove('collapse');
         this.actLine.classList.remove('collapse');
