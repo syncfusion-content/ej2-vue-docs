@@ -1,3 +1,5 @@
+
+
 <template>
     <ejs-spreadsheet ref="spreadsheet">
             <e-sheets>
@@ -20,7 +22,7 @@ export default {
     return {
      dataSource: new DataManager({
                     // Remote service url.
-                    url: 'https://services.syncfusion.com/vue/production/api/Orders',
+                    url: "https://services.syncfusion.com/vue/production/api/Orders",
                     adaptor: new ODataAdaptor(),
                     crossDomain: true
                 }),

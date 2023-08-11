@@ -31,7 +31,7 @@ export default {
     return {
       dataSource: data,
       openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
-      saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save'
+      saveUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
     }
   },
   methods: {
@@ -57,7 +57,7 @@ export default {
         spreadsheet.addToolbarItems(
             'Formulas', [{ type: 'Separator' }, {
                 text: 'Custom Formulas', tooltipText: 'Custom Formulas',
-                // You can set click handler for each new custom toolbar item
+                // You can set click handler for each new custom toolbar item.
                 click: function() {
                     // You can add custom formualas here.
                 }
@@ -86,7 +86,7 @@ export default {
 
     fileMenuItemSelect : function (args) {
         var spreadsheet = this.$refs.spreadsheet;
-        // Custom file menu items select handler
+        // Custom file menu items select handler.
         switch (args.item.text) {
             case 'Import': select(`#${spreadsheet.element.id}_fileUpload`, spreadsheet.element).click();
                 break;
