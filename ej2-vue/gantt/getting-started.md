@@ -15,6 +15,9 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 To get start quickly with Vue Gantt Chart, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=S1GbWmVcre0" %}
 
+To get start quickly with Vue Gantt Chart, you can check on this video:
+{% youtube "https://www.youtube.com/watch?v=S1GbWmVcre0" %}
+
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
