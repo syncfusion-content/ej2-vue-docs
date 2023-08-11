@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Daterangepicker Component in Vue 2
 
-This section explains how to create a simple DateRangePicker and how to configure the DateRangePicker component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Daterangepicker component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -33,102 +33,56 @@ The list of dependencies required to use the DateRangePicker component in your a
         |-- @syncfusion/ej2-buttons
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion packages
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use DateRangePicker component.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install DateRangePicker component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Daterangepicker component](https://www.syncfusion.com/vue-components/vue-date-range-picker) as an example. Install the `@syncfusion/ej2-vue-calendars` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-calendars --save
 ```
+or
 
-## Registering Vue Component
-
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
-
-### Using Vue.use()
-
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
-
-Refer the code snippet given below.
-
-```ts
-import { DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
-
-Vue.use(DateRangePickerPlugin);
+```bash
+yarn add @syncfusion/ej2-vue-calendars
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Daterange component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { DateRangePickerComponent, DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
-
-Vue.component(DateRangePickerPlugin.name, DateRangePickerComponent);
-```
-
-> By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Creating Vue Sample
-
-Add the EJ2 Vue DateRangePicker using `<ejs-daterangepicker>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the DateRangePicker component is provided as name in data option in the `<script>` section.
-
-```
-<template>
-    <div id="app">
-    <ejs-daterangepicker :placeholder="waterMark" ></ejs-daterangepicker>
-  </div>
-</template>
-<script>
-import Vue from 'vue';
-import { DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
-
-Vue.use(DateRangePickerPlugin);
-export default {
-  name: 'app',
-  data () {
-    return {
-      waterMark : 'Select a Range'
-    }
-  }
-}
-</script>
-```
-
-## Adding CSS Reference
-
-To render the DateRangePicker component, need to import DateRangePicker and its dependent component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -137,19 +91,103 @@ To render the DateRangePicker component, need to import DateRangePicker and its 
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
-## Running the Application
+## Add Syncfusion Vue component
 
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+Follow the below steps to add the Vue Daterangepicker component using `Composition API` or `Options API`:
+
+1\. First, import and register the Daterangepicker component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script>
+import { DateRangePickerComponent as EjsDaterangepicker } from '@syncfusion/ej2-vue-calendars';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { DateRangePickerComponent } from '@syncfusion/ej2-vue-calendars';
+export default {
+  components: {
+    'ejs-daterangepicker': DateRangePickerComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Daterangepicker component with the [placeholder](https://ej2.syncfusion.com/vue/documentation/api/datepicker#placeholder) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+    <div id="app">
+      <div class='wrapper'>
+          <ejs-daterangepicker :placeholder="waterMark"></ejs-daterangepicker>
+      </div>
+    </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+3\. Declare the value for the `placeholder` property in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+  const waterMark = 'Select a Range';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  data () {
+    return {
+      waterMark : 'Select a Range'
+    }
+  }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue" %}
+{% include code-snippet/daterangepicker/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue" %}
 {% include code-snippet/daterangepicker/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/daterangepicker/getting-started-cs5" %}
 
@@ -158,7 +196,10 @@ Now run the `npm run dev` command in the console, it will build your application
 The start and end date in a range can be defined with the help of startDate and endDate property. The following example demonstrates to set the start and end date on initializing the DateRangePicker. To know more about range restriction in DateRangePicker, please refer this [page](./range-restriction).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/min-max-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/min-max-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

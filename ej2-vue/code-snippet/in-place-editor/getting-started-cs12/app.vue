@@ -30,15 +30,17 @@
                 </ejs-inplaceeditor>
             </tr>
         </table>
+        </div>
       </div>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
 
-Vue.use(InPlaceEditorPlugin);
 export default {
+  components: {
+    'ejs-inplaceeditor': InPlaceEditorComponent
+  },
   name: 'app',
   data () {
     let frameWorkList = ['Android', 'JavaScript', 'jQuery', 'TypeScript',

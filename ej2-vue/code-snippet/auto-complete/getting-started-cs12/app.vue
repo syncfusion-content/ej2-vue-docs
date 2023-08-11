@@ -6,11 +6,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { AutoCompletePlugin } from '@syncfusion/ej2-vue-dropdowns';
+import { AutoCompleteComponent } from '@syncfusion/ej2-vue-dropdowns';
 
-Vue.use(AutoCompletePlugin);
 export default {
+  components: {
+    'ejs-autocomplete': AutoCompleteComponent
+  },
   name: 'app',
    data () {
     return {
@@ -25,9 +26,9 @@ export default {
 }
 </script>
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
   #app {
     color: #008cff;
     height: 40px;

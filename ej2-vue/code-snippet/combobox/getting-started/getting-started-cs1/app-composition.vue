@@ -6,20 +6,12 @@
     </div>
   </div>
 </template>
-<script>
-import { ComboBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-export default {
-  components: {
-    'ejs-combobox': ComboBoxComponent
-  },
-  data () {
-    return {
-      sportsData: ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis']
-    }
-  }
-}
+<script setup>
+import { ComboBoxComponent as EjsCombobox } from "@syncfusion/ej2-vue-dropdowns";
+const  sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";

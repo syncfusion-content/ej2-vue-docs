@@ -12,19 +12,11 @@
     </div>
   </div>
 </template>
-<script>
-import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+<script setup>
+import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
 
-export default {
-  components: {
-    'ejs-maskedtextbox': MaskedTextBoxComponent
-  },
-  data () {
-    return {
-      value : ''
-    }
-  }
-}
+const value = '';
+    
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

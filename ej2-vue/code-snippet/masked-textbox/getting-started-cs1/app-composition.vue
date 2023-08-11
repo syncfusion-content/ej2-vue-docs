@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div class='wrap'>
@@ -7,18 +5,11 @@
     </div>
   </div>
 </template>
-<script>
-import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 
-export default {
-  components: {
-    'ejs-maskedtextbox': MaskedTextBoxComponent
-  },
-  data () {
-    return {}
-  }
-}
+<script setup>
+import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
@@ -27,5 +18,3 @@ export default {
     width: 240px;
 }
 </style>
-
-

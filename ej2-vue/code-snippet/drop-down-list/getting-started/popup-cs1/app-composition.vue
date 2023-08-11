@@ -8,21 +8,13 @@
     </div>
   </div>
 </template>
-<script>
-import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-export default {
-  components: {
-    'ejs-dropdownlist': DropDownListComponent
-  },
-  data (){
-    return {
-      sportsData: ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
-    }
-  }
-}
+<script setup>
+import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
 
+const sportsData = ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";

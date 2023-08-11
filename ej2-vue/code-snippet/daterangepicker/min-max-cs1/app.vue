@@ -8,11 +8,12 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+import { DateRangePickerComponent } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(DateRangePickerPlugin);
 export default {
+   components: {
+    'ejs-daterangepicker': DateRangePickerComponent
+   },
    data () {
         return {
            startVal : new Date("11/12/2019 12:00 PM"),

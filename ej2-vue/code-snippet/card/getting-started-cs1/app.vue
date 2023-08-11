@@ -19,16 +19,10 @@
     </div>
   </div>
 </template>
-<script>
-import Vue from 'vue';
 
-export default {
-  name: 'app',
-}
-</script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 </style>
 
 

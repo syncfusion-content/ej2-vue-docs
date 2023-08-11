@@ -5,24 +5,14 @@
     <ejs-autocomplete :dataSource='sportsData' :placeholder="waterMark"></ejs-autocomplete>
   </div>
 </template>
-<script>
-import { AutoCompleteComponent } from '@syncfusion/ej2-vue-dropdowns';
+<script setup>
+import { AutoCompleteComponent as EjsAutocomplete } from '@syncfusion/ej2-vue-dropdowns';
 
-export default {
-  components: {
-    'ejs-autocomplete': AutoCompleteComponent
-  },
-  name: 'app',
-data () {
-    return {
-      waterMark : 'e.g. Basketball',
-      sportsData: ['American Football', 'Badminton', 'Basketball', 'Cricket',
+const waterMark = 'e.g. Basketball';
+const sportsData = ['American Football', 'Badminton', 'Basketball', 'Cricket',
                 'Football', 'Golf', 'Gymnastics',
                 'Hockey', 'Rugby', 'Snooker', 'Tennis'
-            ]
-    }
-  }
-}
+            ];
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

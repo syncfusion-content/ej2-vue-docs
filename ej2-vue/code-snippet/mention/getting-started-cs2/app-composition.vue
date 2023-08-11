@@ -3,40 +3,30 @@
 <template>
   <div id="app">
     <label id="comment" >Comments</label>
-    <div id="mentionElement" placeholder = "Type @ and tag user"></div>
-    <ejs-mention id='defaultMention' :target='mentionTarget' :dataSource='userData'></ejs-mention>
+    <div id="mentionElement" placeholder = "Type # and tag user"></div>
+    <ejs-mention id='defaultMention' showMentionChar='true' mentionChar='#' :target='mentionTarget' :dataSource='userData'></ejs-mention>
   </div>
 </template>
-<script>
-import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-export default {
-  components: {
-    'ejs-mention': MentionComponent
-  },
-  name: 'app',
-  data: function() {
-    return {
-      mentionTarget: "#mentionElement",
-      userData: ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph']
-    };
-  }
-}
+<script setup>
+import { MentionComponent as EjsMention } from "@syncfusion/ej2-vue-dropdowns";
+const mentionTarget = "#mentionElement";
+const userData = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
 </script>
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
-
   #app {
-      color: #008cff;
-      height: 40px;
-      left: 15%;
-      position: absolute;
-      top: 10%;
-      width: 30%;
+        color: #008cff;
+        height: 40px;
+        left: 15%;
+        position: absolute;
+        top: 10%;
+        width: 30%;
   }
 
   #comment {
@@ -55,7 +45,6 @@ export default {
 
   div#mentionElement[placeholder]:empty:before {
       content: attr(placeholder);
-      color: #555;
   }
 </style>
 

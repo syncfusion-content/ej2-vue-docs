@@ -7,21 +7,12 @@
   </div>
   </div>
 </template>
-<script>
-import { DatePickerComponent } from '@syncfusion/ej2-vue-calendars';
+<script setup>
+import { DatePickerComponent as EjsDatepicker } from '@syncfusion/ej2-vue-calendars';
 
-export default {
-  components: {
-    'ejs-datepicker': DatePickerComponent
-  },
-  data () {
-    return {
-       minDate : new Date("05/09/2017"),
-       maxDate : new Date("05/15/2017"),
-       dateVal : new Date("05/11/2017")
-    }
-  }
-}
+const minDate = new Date("05/09/2017");
+const maxDate = new Date("05/15/2017");
+const dateVal = new Date("05/11/2017");
 </script>
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/material.css';

@@ -7,22 +7,13 @@
     <ejs-mention id='defaultMention' :target='mentionTarget' :dataSource='userData'></ejs-mention>
   </div>
 </template>
-<script>
-import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-export default {
-  components: {
-    'ejs-mention': MentionComponent
-  },
-  name: 'app',
-  data: function() {
-    return {
-      mentionTarget: "#mentionElement",
-      userData: ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph']
-    };
-  }
-}
+<script setup>
+import { MentionComponent as EjsMention } from "@syncfusion/ej2-vue-dropdowns";
+const mentionTarget = "#mentionElement";
+const userData = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
 </script>
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
