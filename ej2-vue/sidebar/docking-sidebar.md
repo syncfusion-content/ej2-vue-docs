@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Docking sidebar in Vue Sidebar component
 
-Dock state of the Sidebar reserves some space on the page that always remains in a visible state when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text. To achieve this , set [`enableDock`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#enabledock) as true along with required [`dockSize`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#docksize).
+Dock state of the Sidebar reserves some space on the page that always remains in a visible state when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text. To achieve this , set [`enableDock`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#enabledock) as true along with required [`dockSize`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#docksize).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -276,7 +276,7 @@ The output will appear as follows:
 
 ## Enable backdrop
 
-Enabling the [showBackdrop](https://ej2.syncfusion.com/vue/documentation/api/sidebar#showbackdrop) in the Sidebar component will prevent the main content from user interactions, when it is in expanded state. Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting `width` property
+Enabling the [showBackdrop](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#showbackdrop) in the Sidebar component will prevent the main content from user interactions, when it is in expanded state. Here, the DOM elements will not get changed. It only closes the main content by covering with a black backdrop overlay and focuses the Sidebar in the screen. Sidebar can be rendered with specific width by setting `width` property
 
 In the following example, the `showBackdrop` and `closeOnDocumentClick` properties are enabled.
 
@@ -375,7 +375,7 @@ export default {
 
 ## Position
 
-Positioning the Sidebar to the right or left of the main content can be achieved by using the [position](https://ej2.syncfusion.com/vue/documentation/api/sidebar#position) property. If the position is not set, the Sidebar will expand from the left to the body element. [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#enablepersistence) will persist the component's state between page reloads. [`change`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#change) event will be triggered when the state(expand/collapse) of the component is changed.
+Positioning the Sidebar to the right or left of the main content can be achieved by using the [position](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#position) property. If the position is not set, the Sidebar will expand from the left to the body element. [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#enablepersistence) will persist the component's state between page reloads. [`change`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#change) event will be triggered when the state(expand/collapse) of the component is changed.
 
 In the following example, the `position` property is set as `Right`.
 
@@ -472,7 +472,7 @@ export default {
 
 ## Animate
 
-Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#animate) property. By default, [`animate`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#animate) property is set to true. [`enableRTL`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#enablertl) will display the sidebar in the right-to-left direction.
+Animation transitions can be set while expanding or collapsing the Sidebar using the [`animate`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#animate) property. By default, [`animate`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#animate) property is set to true. [`enableRTL`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#enablertl) will display the sidebar in the right-to-left direction.
 
 In the following example, the `animate` property is disabled.
 
@@ -663,7 +663,7 @@ export default {
 
 ## Close on document click
 
-Sidebar can be closed on document click by setting [`closeOnDocumentClick`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#closeondocumentclick) to true. If this property is not set, the Sidebar will not close on document click since its default value is false. Sidebar can be kept opened during rendering using [`isOpen`](https://ej2.syncfusion.com/vue/documentation/api/sidebar#isopen) property.
+Sidebar can be closed on document click by setting [`closeOnDocumentClick`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#closeondocumentclick) to true. If this property is not set, the Sidebar will not close on document click since its default value is false. Sidebar can be kept opened during rendering using [`isOpen`](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#isopen) property.
 
 In the following example, the `closeOnDocumentClick` property is enabled..
 

@@ -15,7 +15,6 @@ The Gantt uses `DataManager`, which supports both RESTful JSON data services bin
 * Local data
 * Remote data
 
-
 To learn about Gantt Chart data binding quickly, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=yJKMcTMJfLc" %}
 
