@@ -14,11 +14,12 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(SidebarPlugin);
 export default {
+    components: {
+        'ejs-sidebar': SidebarComponent
+    }
 }
 </script>
 <style>

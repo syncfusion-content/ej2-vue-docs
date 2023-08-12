@@ -19,11 +19,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(ToolbarPlugin);
+import { ToolbarComponent, ItemDirective, ItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
 export default {
+  components: {
+    'ejs-toolbar': ToolbarComponent,
+    'e-item': ItemDirective,
+    'e-items': ItemsDirective
+  },
   name: 'app',
 }
 </script>

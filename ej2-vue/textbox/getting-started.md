@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Textbox Component in Vue 2
 
-This section briefly explains about how to create a simple TextBox through CSS classes using Essential JS 2
-[quickstart](https://github.com/syncfusion/ej2-quickstart.git) seed repository.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Textbox component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -28,63 +27,75 @@ The following list of dependencies are required to use the TextBox component in 
 
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Textbox component.
-
-To install Textbox component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-inputs –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Since the Textbox is a pure CSS component there is no need to refer the scripts
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-* The TextBox CSS files are available in the `ej2-inputs` package folder. This can be referenced in your application using the following code.
+## Add Syncfusion Vue packages
 
-* Add Textbox component's styles as given below in `<style>` section of the `App.vue` file.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
+This article uses the [Vue Textbox component](https://www.syncfusion.com/vue-components/vue-textbox) as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-inputs --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-inputs
+```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Textbox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > The [Custom Resource Generator (CRG)](https://crg.syncfusion.com/) is an online web tool, which can be used to generate the custom script and styles for a set of specific components.
 > This web tool is useful to combine the required component scripts and styles in a single file.
+
 
 ## Adding TextBox to the application
 
 Add the input element with `e-input` class into the `<template>` section of the `App.vue` file in src directory.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id ='wrap'>
         <div id ='input-container'>
@@ -95,14 +106,9 @@ Add the input element with `e-input` class into the `<template>` section of the 
         </div>
     </div>
 </template>
-<script>
-import Vue from 'vue';
-export default {
-  name: 'wrap',
-}
-</script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding icons to the TextBox
 
@@ -123,16 +129,27 @@ You can create a TextBox with icon as a group by creating the parent div element
   
 ```
 
-* Now, run the application in the browser using the following command.
+## Run the project
 
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
-npm run dev
+
+or
+
+```bash
+yarn run serve
 ```
 
 Output will be as follows:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/icon-samples-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/icon-samples-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +161,10 @@ Output will be as follows:
 The floating label TextBox floats the label above the TextBox after focusing, or filled with value in the TextBox. You can create the floating label TextBox by using `floatLabelType` API.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/icon-samples-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/icon-samples-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

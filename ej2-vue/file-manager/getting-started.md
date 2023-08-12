@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue File manager Component in Vue 2
 
-This section briefly explains how to create File Manager component and configure its available functionalities in VueJS, using Essential JS 2 quickstart seed repository.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Filemanager component
 
 ## Prerequisites
 
@@ -40,76 +40,56 @@ The following are the dependencies required to use the File Manager component in
             |-- @syncfusion/ej2-buttons
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion packages
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use FileManager component.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install FileManager component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue File manager component](https://www.syncfusion.com/vue-components/vue-file-manager) as an example. Install the `@syncfusion/ej2-vue-filemanager` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-filemanager --save
 ```
+or
 
-## Registering Vue Component
-
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
-
-### Using Vue.use()
-
-Import the FileManager Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with FileManager Component Plugin as its argument.
-
-Refer the code snippet given below.
-
-```ts
-import { FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
-
-Vue.use(FileManagerPlugin);
+```bash
+yarn add @syncfusion/ej2-vue-filemanager
 ```
 
->Note: By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the FileManager Component and FileManager Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of FileManager Component from FileManager Component Plugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the File manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { FileManagerComponent, FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
-
-Vue.component(FileManagerPlugin.name, FileManagerComponent);
-```
-
->Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Adding Style sheet to the Application
-
-Import the File Manager and its dependent component styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
@@ -122,56 +102,86 @@ Import the File Manager and its dependent component styles as given below in `<s
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Note: If you want to refer the combined component styles, please make use of our [CRG](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
-## Initialize the File Manager
+## Add Syncfusion Vue component
 
-Add the EJ2 Vue FileManager using `<ejs-filemanager>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the FileManager component is provided as name in data option in the `<script>` section.
+Follow the below steps to add the Vue File manager component:
 
->Note: By default, LargeIcons view will be initialized in the File Manager. If Grid view is required then the DetailsView module needs to be injected using `provide`.
+1\. First, import and register the File manager component in the `script` section of the **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+
+export default {
+    components: {
+        'ejs-filemanager': FileManagerComponent
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the File manager component with [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings">
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-            }
-        };
+{% endhighlight %}
+{% endtabs %}
+
+3\. Declare the value for the `ajaxSettings` property in the `script` section.
+
+<script>
+data () {
+    return {
+        ajaxSettings:
+        {
+            url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+        }
     }
 }
 </script>
-```
 
-## Run the application
+{% endhighlight %}
+{% endtabs %}
 
-Now use the `npm run dev` command to run the application in the browser.
-
-```
-npm run dev
-```
-
-The following example shows the basic File Manager component.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/file-manager/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/file-manager/getting-started-cs1" %}
 
@@ -179,14 +189,16 @@ The following example shows the basic File Manager component.
 
 To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager component.
 
-```ts
-<script>
-import Vue from "vue";
-import { FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Vue.use(FileManagerPlugin);
+<script>
+import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
+    components: {
+        'ejs-filemanager': FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:
@@ -198,20 +210,24 @@ export default {
     }
 }
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## File Upload support
 
 To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager Component.
 
-```ts
-<script>
-import Vue from "vue";
-import { FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Vue.use(FileManagerPlugin);
+<script>
+import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
+    components: {
+        'ejs-filemanager': FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:
@@ -223,7 +239,9 @@ export default {
     }
 }
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Image Preview support
 
@@ -302,7 +320,9 @@ The current path of the File Manager can be specified initially or dynamically u
 
 The following code snippet demonstrates specifying the current path in File Manager on rendering.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager" :path="path" :ajaxSettings="ajaxSettings">
@@ -310,11 +330,11 @@ The following code snippet demonstrates specifying the current path in File Mana
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 export default {
+    components: {
+        'ejs-filemanager': FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:
@@ -347,6 +367,8 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 N> You can refer to our [Vue File Manager](https://www.syncfusion.com/vue-ui-components/vue-file-manager) feature tour page for its groundbreaking feature representations. You can also explore our [Vue File Manager example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/file-manager/overview.html) that shows you how to render the File Manager in Vue.

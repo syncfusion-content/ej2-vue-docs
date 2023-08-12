@@ -10,21 +10,20 @@
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
+    import { FabComponent } from "@syncfusion/ej2-vue-buttons";
     import { enableRipple } from '@syncfusion/ej2-base';
 
     enableRipple(true);
-    Vue.use(FabPlugin);
-
     export default {
+        components: {
+          'ejs-fab': FabComponent
+        },
         methods: {
             onClick: function () {
                 alert("Edit is clicked!");
             }
         }
     }
-
 </script>
 
 <style>

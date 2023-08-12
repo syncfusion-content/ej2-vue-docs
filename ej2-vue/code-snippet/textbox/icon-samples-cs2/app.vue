@@ -8,19 +8,20 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(TextBoxPlugin);
+import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
+   components: {
+    'ejs-textbox': TextBoxComponent
+   },
    data: function() {
         return { }
-    };
+    }
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
   .wrap {
     box-sizing: border-box;

@@ -12,13 +12,14 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(TooltipPlugin);
-Vue.use(ButtonPlugin);
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+  components: {
+    'ejs-tooltip': TooltipComponent,
+    'ejs-button': ButtonComponent
+  }
 }
 </script>
 <style>

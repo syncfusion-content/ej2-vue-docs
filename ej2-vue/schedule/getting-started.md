@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Schedule Component in Vue 2
 
-This section briefly explains how to create [**Vue Scheduler**](https://www.syncfusion.com/vue-ui-components/vue-scheduler) component and configure its available functionalities in VueJS Environment.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Schedule component.
 
 Check out this video to see how to develop a Vue Scheduler application:
 
@@ -20,43 +20,59 @@ Check out this video to see how to develop a Vue Scheduler application:
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Create a new Vue project using the following `Vue CLI` command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion Scheduler Package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in `npmjs.com` registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Install the `Scheduler` component by using the below npm command.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Schedule component](https://www.syncfusion.com/vue-components/vue-scheduler) as an example. Install the `@syncfusion/ej2-vue-schedule` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-schedule --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-schedule
+```
 
 > The **--save** will instruct NPM to include the Scheduler package inside of the `dependencies` section of the `package.json`.
 
-## Adding CSS Reference
+## Import Syncfusion CSS styles
 
-Scheduler CSS files are available in the `ej2-vue-schedule` and its sub-component package folder. It should be referenced as given below within the `<style>` section of `App.vue` file.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-```css
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
 @import '/node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '/node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '/node_modules/@syncfusion/ej2-calendars/styles/material.css';
@@ -65,37 +81,40 @@ Scheduler CSS files are available in the `ej2-vue-schedule` and its sub-componen
 @import '/node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '/node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '/node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
-```
+</style>
 
-## Registering Scheduler Component
+{% endhighlight %}
+{% endtabs %}
 
-Import the Scheduler plugin in your application from the `ej2-vue-schedule` package as given below and register the same using `Vue.use()`.
+## Add Syncfusion Vue component
 
-```html
-import { SchedulePlugin } from '@syncfusion/ej2-vue-schedule';
+Follow the below steps to add the Vue Schedule component using:
 
-Vue.use(SchedulePlugin);
-```
+1\. First, import and register the Schedule component in the `script` section of the **src/App.vue** file.
 
-> By Registering Scheduler plugin in Vue, all its child directives are also globally registered.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-## Initialize the Schedule
+<script>
+import { ScheduleComponent } from '@syncfusion/ej2-vue-schedule';
+</script>
 
-Add the EJ2 Vue Scheduler using `<ejs-schedule>` to the `<template>` section of the `App.vue` file in src directory.
+{% endhighlight %}
+{% endtabs %}
 
-```html
+2\. In the `template` section, define the Schedule component property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
   <div id='app'>
     <ejs-schedule ></ejs-schedule>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { SchedulePlugin } from '@syncfusion/ej2-vue-schedule';
-Vue.use(SchedulePlugin);
-export default { }
-</script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Module injection
 
@@ -121,11 +140,12 @@ These modules should be injected into the Schedule using the `provide` method wi
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 
-Vue.use(SchedulePlugin);
 export default {
+  components: {
+    'ejs-schedule': ScheduleComponent
+  },
   provide: {
     schedule: [Day, Week, WorkWeek, Month, Agenda]
   }
@@ -133,12 +153,18 @@ export default {
 </script>
 ```
 
-## Run the Application
+## Run the project
 
-Now, run the `npm run dev` command in the console. It will build your application and open in the browser.
+To run the project, use the following command:
 
+```bash
+npm run serve
 ```
-npm run dev
+
+or
+
+```bash
+yarn run serve
 ```
 
 The output will display the empty Scheduler.
@@ -154,10 +180,11 @@ To populate the empty Scheduler with appointments, define either the local JSON 
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
-  Vue.use(SchedulePlugin);
+  import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
   export default {
+      components: {
+        'ejs-schedule': ScheduleComponent
+      },
       data () {
         return {
           selectedDate: new Date(2018, 1, 15),
@@ -187,10 +214,8 @@ You can also provide different names to these default fields, for which the cust
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+  import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
   
-  Vue.use(SchedulePlugin);
   let data = [{
     Id: 2,
     EventName: 'Meeting',
@@ -200,6 +225,9 @@ You can also provide different names to these default fields, for which the cust
   }];
 
   export default {
+    components: {
+      'ejs-schedule': ScheduleComponent
+    },
     data () {
       return {
         selectedDate: new Date(2018, 1, 15),
@@ -237,11 +265,12 @@ Scheduler usually displays the system date as its current date. To change the cu
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
-  Vue.use(SchedulePlugin);
+  import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 
   export default {
+    components: {
+      'ejs-schedule': ScheduleComponent
+    },
     data (){
       return {
         selectedDate: new Date(2018, 1, 15)
@@ -279,10 +308,11 @@ Scheduler displays `week` view by default. To change the current view, define th
     </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { SchedulePlugin, Day, WorkWeek, Agenda, Month, Week } from '@syncfusion/ej2-vue-schedule';
-  Vue.use(SchedulePlugin);
+  import { ScheduleComponent, Day, WorkWeek, Agenda, Month, Week } from '@syncfusion/ej2-vue-schedule';
   export default {
+    components: {
+      'ejs-schedule': ScheduleComponent
+    },
     data () {
       return {
         selectedDate: new Date(2018, 1, 15),
@@ -304,7 +334,7 @@ This can be achieved by defining views property to accept the array of object ty
 The output will display the Scheduler with the specified view configuration.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/schedule/view-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

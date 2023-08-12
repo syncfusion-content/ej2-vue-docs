@@ -33,14 +33,15 @@
 <!--end of main content declaration -->
 </template>
 <script>
-import Vue from 'vue';
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
-import { ButtonPlugin ,RadioButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use(SidebarPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(RadioButtonPlugin);
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+import { ButtonComponent ,RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
 export default {
+    components: {
+      'ejs-sidebar': SidebarComponent,
+      'ejs-button': ButtonComponent,
+      'ejs-radiobutton': RadioButtonComponent
+    },
     data () {
         return {
          type :'Push',
@@ -74,7 +75,7 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 .rows{
     margin:auto;
     text-align:center;

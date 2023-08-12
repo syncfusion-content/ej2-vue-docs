@@ -7,13 +7,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(RatingPlugin);
 
-export default {}
+export default {
+  components: {
+    'ejs-rating': RatingComponent
+  }
+}
 </script>
 
 <style>

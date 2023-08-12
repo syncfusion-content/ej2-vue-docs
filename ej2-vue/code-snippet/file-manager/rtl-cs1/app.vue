@@ -7,11 +7,12 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
 export default {
+    components: {
+        'ejs-filemanager': FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:

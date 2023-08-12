@@ -8,11 +8,12 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 
-Vue.use(NumericTextBoxPlugin);
 export default {
+  components: {
+    'ejs-numerictextbox': NumericTextBoxComponent
+  },
   data () {
     return {
         min: 1,
@@ -24,8 +25,8 @@ export default {
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
  .wrap {
     margin: 0 auto;
     width: 240px;

@@ -12,12 +12,15 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { AccordionPlugin } from '@syncfusion/ej2-vue-navigations';
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(AccordionPlugin);
 export default {
   name: 'app',
+  components: {
+    'ejs-accordion': AccordionComponent,
+    'e-accordionitem': AccordionItemDirective,
+    'e-accordionitems': AccordionItemsDirective
+  },
 }
 </script>
 <style>

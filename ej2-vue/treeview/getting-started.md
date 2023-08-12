@@ -121,7 +121,6 @@ TreeView can load data either from local data sources or remote data services. T
 </template>
 <script setup>
 import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
-const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
 const data =  [
   {
       nodeId: '01', nodeText: 'Music',
@@ -147,6 +146,8 @@ const data =  [
       ]
   },
 ];
+const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
+</script>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}

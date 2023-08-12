@@ -12,12 +12,14 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { SplitterPlugin } from '@syncfusion/ej2-vue-layouts';
-
-Vue.use(SplitterPlugin);
+import { SplitterComponent, PanesDirective, PaneDirective } from '@syncfusion/ej2-vue-layouts';
 
 export default {
+  components: {
+    'ejs-splitter': SplitterComponent,
+    'e-pane': PaneDirective,
+    'e-panes': PanesDirective
+  },
   name: 'app',
     data () {
     return { }
@@ -26,8 +28,8 @@ export default {
 </script>
 
 <style>
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css';
 
 #app {
     margin: 60px auto;

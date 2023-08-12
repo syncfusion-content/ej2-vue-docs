@@ -1,12 +1,9 @@
-
-
 <template>
     <div id='element'>
         <h1>Badge Component <span class="e-badge e-badge-primary">New</span></h1>
     </div>
 </template>
 <script>
-import Vue from "vue";
 
 export default {
   data() {

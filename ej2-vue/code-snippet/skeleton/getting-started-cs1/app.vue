@@ -7,12 +7,12 @@
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
-
-    Vue.use(SkeletonPlugin);
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
     export default {
+        components: {
+            'ejs-skeleton': SkeletonComponent
+        },
         data: function () {
             return {};
         }

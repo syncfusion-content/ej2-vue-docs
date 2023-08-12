@@ -68,13 +68,13 @@
 </template>
 
 <script>
-import Vue from "vue";
 // Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
-
-Vue.use(DashboardLayoutPlugin);
+import { DashboardLayoutComponent } from "@syncfusion/ej2-vue-layouts";
 
 export default {
+    components: {
+        'ejs-dashboardlayout': DashboardLayoutComponent
+    },
     data: function() {
         return {
             count: 8,

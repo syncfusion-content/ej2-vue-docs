@@ -21,13 +21,15 @@
 </template>
 
 <script>
-import Vue from "vue";
 // Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
-
-Vue.use(DashboardLayoutPlugin);
+import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
 
 export default {
+    components: {
+        'ejs-dashboardlayout': DashboardLayoutComponent,
+        'e-panel': PanelDirective,
+        'e-panels': PanelsDirective
+    },
     data: function() {
         return {
             spacing: [10,10]

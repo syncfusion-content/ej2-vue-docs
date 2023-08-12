@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Tab Component in Vue 2
 
-This section briefly explains about how to create a simple **Tab** using VueJS and configure the Tab header content using Essential JS 2.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Tab component
 
 ## Prerequisites
 
@@ -30,78 +30,94 @@ The following is the list of dependencies required to use the Tab component in y
 
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-You can choose the component that you want to install. For this application, we are going to use Tab component.
-
-To install Tab component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-navigations –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project
 
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+## Add Syncfusion Vue packages
 
-Refer the code snippet given below.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-```ts
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
+This article uses the [Vue Tab component](https://www.syncfusion.com/vue-components/vue-tabs) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
-Vue.use(TabPlugin);
+```bash
+npm install @syncfusion/ej2-vue-navigations --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-navigations
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the Component and Component Plugin from EJ2 Vue Package,
-register the same using the Vue.component() with name of Component from ComponentPlugin
-and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Tab component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { TabComponent, TabPlugin } from '@syncfusion/ej2-vue-navigations';
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+</style>
 
-Vue.component(TabPlugin.name, TabComponent);
-```
+{% endhighlight %}
+{% endtabs %}
 
-Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
+## Add Syncfusion Vue component
 
-## Creating Vue Sample
+Follow the below steps to add the Vue Tab component:
 
-Add the EJ2 Vue Tab using `<ejs-tab>` to the `<template>` section of the `App.vue` file in src directory,
-the content attribute of the Tab component is provided as name in data option in the `<script>` section.
+1\. First, import and register the Tab component in the `script` section of the **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-vue-navigations';
+export default {
+  components: {
+    'ejs-tab': TabComponent,
+    'e-tabitem': TabItemDirective,
+    'e-tabitems': TabItemsDirective
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Tab component with [content](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItem/#content) and [header](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItem/#header) properties
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
     <ejs-tab id='element'>
@@ -113,14 +129,17 @@ the content attribute of the Tab component is provided as name in data option in
     </ejs-tab>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TabPlugin);
-export default {
-  name: 'app',
-   data: function(){
+{% endhighlight %}
+{% endtabs %}
+
+3\. Declare the value for the `content` and `header` properties in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+data: function(){
         return {
 
           headerText0: { text: 'ASP.NET' },
@@ -146,32 +165,32 @@ export default {
 
         }
    }
-}
 </script>
-```
 
-## Adding CSS Reference
+{% endhighlight %}
+{% endtabs %}
 
-Add Tab component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-</style>
-```
-
-## Running the Application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/tab/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/tab/getting-started-cs1" %}
 
@@ -197,7 +216,7 @@ You need to follow the below structure of HTML elements to render the Tab,
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/tab/tab-container-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -8,129 +8,146 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Numerictextbox Component in Vue 2
 
-The following section explains the required steps to build the NumericTextBox component with its basic usage in step by step procedure.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Numerictextbox component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) public registry. You can choose the component that you want to install.
-
-To install NumericTextBox component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-inputs –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-Import the NumericTextBox Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with NumericTextBox Component Plugin as its argument.
 
-Refer the code snippet given below.
 
-```ts
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+## Add Syncfusion Vue packages
 
-Vue.use(NumericTextBoxPlugin);
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Numerictextbox component](https://www.syncfusion.com/vue-components/vue-numeric-textbox) as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-inputs --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-inputs
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the NumericTextBox Component and NumericTextBox Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of NumericTextBox Component from NumericTextBox Component Plugin
-and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Numerictextbox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { NumericTextBoxComponent, NumericTextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
-
-Vue.component(NumericTextBoxPlugin.name, NumericTextBoxComponent);
-```
-
-> By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Adding NumericTextBox component
-
-Add the EJ2 Vue NumericTextBox using `<ejs-numerictextbox>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the NumericTextBox component is provided as name in data option in the `<script>` section.
-
-```
-<template>
-    <div class="control_wrapper">
-        <div class="control-label">Numeric TextBox
-        </div>
-        <ejs-numerictextbox value="10"></ejs-numerictextbox>
-    </div>
-</template>
-<script>
-import Vue from "vue";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
-
-Vue.use(NumericTextBoxPlugin);
-export default Vue.extend ({});
-
-</script>
-```
-
-## Adding CSS Reference
-
-Add Button component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
 
-## Run the application
+## Add Syncfusion Vue component
 
-Now use the `npm run dev` command to run the application in the browser.
+Follow the below steps to add the Vue Numerictextbox component using `Composition API` or `Options API`:
 
-```
-npm run dev
-```
-
-The below example shows the NumericTextBox.
+1\. First, import and register the Numerictextbox component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+export default {
+  components: {
+    'ejs-numerictextbox': NumericTextBoxComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Numerictextbox component with the [value](https://ej2.syncfusion.com/staging/vue/documentation/api/numerictextbox#value) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+    <div class='wrap'>
+        <ejs-numerictextbox value="10"></ejs-numerictextbox>
+    </div>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/getting-started/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/getting-started/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
+      
 {% previewsample "page.domainurl/code-snippet/numeric-textbox/getting-started/getting-started-cs2" %}
 
 ## Range validation
@@ -140,7 +157,10 @@ You can set the minimum and maximum range of values in the NumericTextBox using 
 The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#strictmode) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/getting-started/range-validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/getting-started/range-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +175,10 @@ property. The value will be displayed in the specified format, when the componen
 The below example demonstrates format the value by using currency format value `c2`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/getting-started/formating-value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/getting-started/formating-value-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -172,7 +195,10 @@ So, you can't enter the number whose precision is greater than the mentioned dec
 Else, number of decimals will be restricted while typing in the NumericTextBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/getting-started/precision-numbers-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/getting-started/precision-numbers-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +211,10 @@ In NumericTextBox, the `value` property supports model binding functionality.
 The below example demonstrates model binding functionality with the NumericTextBox and HTML input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/getting-started/model-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/getting-started/model-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

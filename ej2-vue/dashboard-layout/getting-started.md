@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Dashboard layout Component in Vue 2
 
-The following section explains the required steps to build the simple `DashboardLayout` component with its basic usage in step-by-step procedure.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Dashboard layout component
 
 ## Prerequisites
 
@@ -28,85 +28,94 @@ The following list of dependencies is required to use the DashboardLayout compon
 
 ```
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-* You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
-
-    ```bash
-    npm install -g @vue/cli
-    npm install -g @vue/cli-init
-    ```
-
-* Start a new project using the below Vue CLI command.
-
-    ```bash
-    vue init webpack-simple quickstart
-
-    cd quickstart
-
-    npm install
-
-    ```
-
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-You can choose the component that you want to install. For this application, we are going to use the DashboardLayout component.
-
-To install `DashboardLayout` component, use the following command
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
-npm install @syncfusion/ej2-vue-layouts -–save
+npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Registering Vue component
+or
 
-Two ways are available for registering the Vue Component. They are as follows.
-
-* Vue.use()
-
-* Vue.component()
-
-### Using Vue.use()
-
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
-
-Refer the code snippet given below.
-
-```ts
-import { DashboardLayoutPlugin } from '@syncfusion/ej2-vue-layouts';
-
-Vue.use(DashboardLayoutPlugin);
+```bash
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-### Using Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Import the `DashboardLayout` Component from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-Refer the code snippet given below.
+## Add Syncfusion Vue packages
 
-```ts
-import { DashboardLayoutComponent, DashboardLayoutPlugin } from '@syncfusion/ej2-vue-layouts';
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-Vue.component(DashboardLayoutPlugin.name, DashboardLayoutComponent);
+This article uses the [Vue Layouts component](https://www.syncfusion.com/vue-components/vue-dashboard-layout) as an example. Install the `@syncfusion/ej2-vue-layouts` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-layouts --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-layouts
 ```
 
->> **Note**: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
+## Import Syncfusion CSS styles
 
-## Add DashboardLayout to the application
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-You can render the `DashboardLayout` component in the following two ways.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Dashboard layout component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-* Defined the panels property as the attribute in the HTML div element directly into the `<template>`.
-* Using the `panels` property in `<e-panels>`.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-### Setting the `panels` property using HTML attributes
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+</style>
 
-Add the HTML div element into the `<template>` section of the `App.vue` file in src directory, the content attribute of the Splitter component is provided as name in data option in the `<script>` section.
+{% endhighlight %}
+{% endtabs %}
 
-```
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Dashboard layout component:
+
+1\. First, import and register the Dashboard layout component in the `script` section of the **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+// Import syncfusion dashboardlayout component from layouts package
+import { DashboardLayoutComponent } from "@syncfusion/ej2-vue-layouts";
+
+export default {
+    components: {
+        'ejs-dashboardlayout': DashboardLayoutComponent
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Dashboard layout component with [cellSpacing](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#cellspacing) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div>
         <div class="control-section">
@@ -174,46 +183,47 @@ Add the HTML div element into the `<template>` section of the `App.vue` file in 
     </div>
 </template>
 
-<script>
-import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
+{% endhighlight %}
+{% endtabs %}
 
-Vue.use(DashboardLayoutPlugin);
-
-export default {
-    data: function() {
-        return {
-          count: 8,
-          spacing: [10,10]
-        };
-    }
-}
-</script>
-```
-
-## Adding style sheet to the application
-
-To render the DashboardLayout component, need to import Layouts and its dependent component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
-</style>
-```
-
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+3\. Declare the value for the `cellSpacing` property in the `script` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+data: function() {
+    return {
+        count: 8,
+        spacing: [10,10]
+    };
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/dashboard-layout/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-cs1" %}
 
@@ -222,7 +232,7 @@ Now run the `npm run dev` command in the console, it will build your application
 You can render the DashboardLayout component by using the **panels** property through `<e-panels>`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/dashboard-layout/getting-started-panel-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
