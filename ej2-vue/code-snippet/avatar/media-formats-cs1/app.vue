@@ -9,7 +9,7 @@
                     <div class="e-card-content">
                         <!-- XLarge Circle Avatar Component -->
                         <div class="e-avatar e-avatar-xlarge e-avatar-circle">
-                          <img class="image" src="./pic01.png" alt="image"/>
+                          <img class="image" src="https://ej2.syncfusion.com/demos/src/grid/images/2.png" alt="image"/>
                         </div>
                     </div>
                     <div class="e-card-content">
