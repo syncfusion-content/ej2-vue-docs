@@ -54,7 +54,7 @@ import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
 Vue.use(TooltipPlugin);
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Tooltip`. Refer [here](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-cli/#registering-vue-component) to know more about component registration.
+> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Tooltip`. Refer [here](https://ej2.syncfusion.com/vue/documentation/getting-started/vue-3-vue-cli#register-the-syncfusion-vue-component) to know more about component registration.
 
 ## Initialize Tooltip
 
