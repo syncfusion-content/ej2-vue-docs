@@ -89,17 +89,17 @@
     /* Avatar images using 'background-image' property */
 
     .pic01 {
-        background-image: url(./pic01.png);
+        background-image: url('https://ej2.syncfusion.com/demos/src/grid/images/2.png');
     }
 
     .pic02 {
-        background-image: url(./pic02.png);
+        background-image: url('https://ej2.syncfusion.com/demos/src/grid/images/5.png');
     }
 
     .pic03 {
-        background-image: url(./pic03.png);
+        background-image: url('https://ej2.syncfusion.com/demos/src/grid/images/6.png');
     }
 
     .pic04 {
-        background-image: url(./pic04.png);
+        background-image: url('https://ej2.syncfusion.com/demos/src/grid/images/7.png');
     }

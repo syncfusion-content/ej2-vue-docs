@@ -24,19 +24,19 @@ export default {
 
 <style>
 #chip .andrew {
-  background-image: url('./andrew.png')
+  background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/andrew.png')
 }
 
 #chip .margaret {
-  background-image: url('./margaret.png')
+  background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/margaret.png')
 }
 
 #chip .laura {
-  background-image: url('./laura.png')
+  background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/laura.png')
 }
 
 #chip .janet {
-  background-image: url('./janet.png')
+  background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/janet.png')
 }
 </style>
 
