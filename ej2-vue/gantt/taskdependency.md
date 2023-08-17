@@ -140,3 +140,15 @@ The following code example shows how to enable the predecessor validation dialog
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/taskdependency-cs4" %}
+
+## Dynamically show/hide the dependency line
+
+By default, mapping the dependency field in taskFields displays dependency lines in the Gantt chart. To hide the dependency line upon button click, set `visibility` style to hidden for the CSS class name `.e-gantt-dependency-view-container`.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/taskdependency-cs6/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/taskdependency-cs6" %}

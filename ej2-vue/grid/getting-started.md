@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Grid Component in Vue 2
 
-This section explains you the steps required to create a simple Grid and demonstrate the basic usage of the Grid component in a Vue environment.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Grid component
 
 To get start quickly with Vue Grid, you can check on this video:
 
@@ -20,9 +20,9 @@ To get start quickly with Vue Grid, you can check on this video:
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Create a Vue Application
+## Setting up the Vue 2 project
 
-The best way to create a Vue application is to use the [vue create](https://cli.vuejs.org/#getting-started) command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -31,13 +31,20 @@ cd quickstart
 npm run serve
 ```
 
-Initiating a new project prompts us to choose the type of project to be used for the current application.
+or
 
-### Vue 2 Application
+```bash
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
+```
 
-Select the option `Default ([Vue 2] babel, eslint)` from the menu.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](images/vue2-terminal.png)
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
 ### Vue 3 Application
 
@@ -45,75 +52,88 @@ Select the option `Default ([Vue 3] babel, eslint)` from the menu.
 
 ![Vue 3 project](images/vue3-terminal.png)
 
-## Add Syncfusion packages
+## Add Syncfusion Vue packages
 
-Once the Vue application is created, install the required Syncfusion Vue component package in the application. All the available Syncfusion Vue packages are published in the [npmjs.com](https://www.npmjs.com/search?q=ej2-vue) registry. Choose the component to be installed. In this article, the Grid component is used as an example.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-Check out the [installation and upgrade](https://ej2.syncfusion.com/vue/documentation/installation-and-upgrade/installation/) section to learn about the different ways of installing the packages. Here, the Grid component package is installed using the following `npm` command.
+This article uses the [Vue Grid component](https://www.syncfusion.com/vue-components/vue-grid) as an example. Install the `@syncfusion/ej2-vue-grids` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-grids --save
 ```
+or
 
-## Import the Syncfusion CSS styles
-
-After installing the Syncfusion component packages in the application, add the required theme based on the components used.
-
-Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) section to know more about built-in themes and different ways (npm packages, CDN and CRG) to refer the themes in the Vue application.
-
-Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
-
+```bash
+yarn add @syncfusion/ej2-vue-grids
 ```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Grid components use other Syncfusion components as well, so CSS references for the dependent component must be added in order to use all grid functionalities. Use this same order to display the Syncfusion Grid component's predefined appearance.
+
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Grid component:
+
+1\. First, import and register the Grid component in the `script` section of the **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { GridComponent } from "@syncfusion/ej2-vue-grids";
+
+export default {
+  components: {
+    'ejs-grid': GridComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Grid component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+      <ejs-grid> </ejs-grid>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtasb %}
+
 
 ## Register the Syncfusion Vue component
 
 A Syncfusion Vue component needs to be registered so that Vue knows where to locate its implementation when it is encountered in a template.
-
-### Vue 2 Application
-
-Vue has two ways to register the Vue components in the Vue 2 application. Use one of the following ways to register the Syncfusion Vue components:
-* [Vue.use()](https://v2.vuejs.org/v2/api/#Vue-use) - It registers the Vue component and all its child directives globally.
-* [Vue.component()](https://v2.vuejs.org/v2/guide/components-registration.html) - It registers the Vue component only. It will not register the child directives automatically. The child directives should be registered separately.
-
-#### Using Vue.use()
-
-Import the component plugin from the Vue package and register it using `Vue.use()` with the component plugin as its argument.
-
-Refer to the following code snippet.
-
-```ts
-import { GridPlugin } from '@syncfusion/ej2-vue-grids';
-
-Vue.use(GridPlugin);
-```
-
-#### Using Vue.component()
-
-Import the component and component plugin from the Vue package and register them using `Vue.component()` with the name of the component from the component plugin and the Vue component as its arguments.
-
-Refer to the following the code snippet.
-
-```ts
-import { GridPlugin, GridComponent, ColumnsDirective, ColumnsPlugin, ColumnDirective, ColumnPlugin} from "@syncfusion/ej2-vue-grids";
-
-Vue.component(GridPlugin.name, GridComponent);
-Vue.component(ColumnsPlugin.name, ColumnsDirective);
-Vue.component(ColumnPlugin.name, ColumnDirective);
-```
 
 ## Vue 3 Application
 
@@ -134,36 +154,6 @@ Import the Grid component along with the required child directives from the inst
 
 Now, the Grid and column directives are registered to use it in this application.
 
-## Add Syncfusion Vue component to the application
-
-Let's add the Syncfusion Vue component to the Vue application. Here, the example is showcased with the Vue 2 application.
-
-Add the Vue Grid to the `<template>` section of the `App.vue` file in the `src` directory.
-
-
-
-```
-<template>
-  <div id="app">
-      <ejs-grid> </ejs-grid>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { GridPlugin } from '@syncfusion/ej2-vue-grids';
-
-Vue.use(GridPlugin);
-export default {
-  data () {
-    return {
-    }
-  }
-}
-</script>
-```
-
-
 ## Defining Row Data
 
 Data for the Grid component is bind by using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property and value is defined in the vue component. It accepts either array of JavaScript object or **DataManager** instance.
@@ -176,12 +166,12 @@ Data for the Grid component is bind by using [`dataSource`](https://ej2.syncfusi
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-
-Vue.use(GridPlugin);
+import { GridComponent } from "@syncfusion/ej2-vue-grids";
 
 export default {
+  components: {
+    'ejs-grid': GridComponent
+  },
   data () {
     return {
       data: [
@@ -201,7 +191,7 @@ export default {
 </script>
 
 <style>
-  @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 ```
 
@@ -247,7 +237,7 @@ It can be enabled by setting [`allowPaging`](https://ej2.syncfusion.com/vue/docu
 If we didn't inject the **Page** module, then the pager will not be rendered in Grid. The pager can be customized using [`pageSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#pagesettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -259,7 +249,7 @@ If we didn't inject the **Page** module, then the pager will not be rendered in 
 The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow. If we didn't inject the **Sort** module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -271,7 +261,7 @@ The sorting feature enables the user to order the records. It can be enabled by 
 The filtering feature enables the user to view the reduced amount of records based on filter criteria. It can be enabled by setting [`allowFiltering`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) property as true. Also, need to inject the **Filter** module in the **provide** section as follow. If we didn't inject the **Filter** module, then filter bar will not be rendered in Grid. Filtering feature can be customized using [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#filtersettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -283,7 +273,7 @@ The filtering feature enables the user to view the reduced amount of records bas
 The grouping feature enables users to view the Grid record in a grouped view. It can be enabled by setting [`allowGrouping`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowgrouping) property to true.Also, need to inject the **Group** module in the **provide** section as follow. If we didn't inject the **Group** module, then the group drop area will not be rendered in Grid. Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -295,23 +285,29 @@ The grouping feature enables users to view the Grid record in a grouped view. It
 The Aggregate feature enables users to view the aggregates of Grid records. It can be enabled by configured through **e-aggregates** directive. The **field** and **type** are the minimum properties required to represent an aggregate column.Also, need to inject the **Aggregate** module in the **provide** section as follow. If we didn't inject the **Aggregate** module, then the footer table will not be rendered in Grid. Check [`aggregate`](./aggregates) to know more about its configuration.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/getting-started/default-cs5" %}
 
-## Run the application
+## Run the project
 
-The Vue Grid application is configured to compile and run the application in a browser. Use the following command to run the application.
+To run the project, use the following command:
 
 ```bash
-npm run dev
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
