@@ -6,11 +6,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { BulletChartPlugin } from '@syncfusion/ej2-vue-charts';
-Vue.use(BulletChartPlugin);
+import { BulletChartComponent } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  components: {
+    'ejs-bulletchart': BulletChartComponent
+  },
   data () {
     return {
     }

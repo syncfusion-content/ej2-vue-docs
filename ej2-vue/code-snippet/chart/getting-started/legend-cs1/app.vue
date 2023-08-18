@@ -10,12 +10,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, LineSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, LineSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [

@@ -6,11 +6,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ChartPlugin } from '@syncfusion/ej2-vue-charts';
+import { ChartComponent } from '@syncfusion/ej2-vue-charts';
 
-Vue.use(ChartPlugin);
 export default {
+  components: {
+    'ejs-chart': ChartComponent
+  },
   data () {
     return {
     }

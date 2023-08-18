@@ -11,11 +11,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { SmithchartPlugin } from "@syncfusion/ej2-vue-charts";
-Vue.use(SmithchartPlugin);
+import { SmithchartComponent, SeriesDirective, SeriesCollectionDirective } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  components: {
+    'ejs-smithchart': SmithchartComponent,
+    'e-series': SeriesDirective,
+    'e-seriesCollection': SeriesCollectionDirective
+  },
   data: function() {
     return {
       title: { text: 'Transmission lines applied for both impedance and admittance'},

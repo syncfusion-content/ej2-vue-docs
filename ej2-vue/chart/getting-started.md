@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Chart Component in Vue 2
 
-This section explains you the steps required to create a simple chart and demonstrate the basic usage of the chart control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Chart component
 
 ## Prerequisites
 
@@ -32,73 +32,108 @@ Below is the list of minimum dependencies required to use the chart component.
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-## Setup Vue Environment
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following commands.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Create a Vue Application
-
-Start a new Vue application using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
+yarn run serve
 ```
 
-## Adding Syncfusion Chart package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install chart component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Charts component](https://www.syncfusion.com/vue-components/vue-charts) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-charts
+```
 
 > The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
 
-## Registering Chart Component
+## Add Syncfusion Vue component
 
-You can register the chart component in your application by using the `Vue.use()`.
+Follow the below steps to add the Vue Chart component:
 
-Refer to the code example given below.
+1\. First, import and register the Chart component in the `script` section of the **src/App.vue** file.
 
-```ts
-import { ChartPlugin } from '@syncfusion/ej2-vue-charts';
+{% tabs %}
+{% endtabs %}
 
-Vue.use(ChartPlugin);
+<script>
+import { ChartComponent } from '@syncfusion/ej2-vue-charts';
+
+export default {
+  components: {
+    'ejs-chart': ChartComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Chart component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+      <ejs-chart id="container"> </ejs-chart>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/chart/getting-started/initialize-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
 
-> Registering `ChartPlugin` in vue, will register the chart component along with its required child directives globally.
+or
 
-## Adding Chart Component
-
-* Add the Vue Chart by using `<ejs-chart>` selector in `<template>` section of the `App.vue` file.
-The below example shows a basic Charts,
-
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/chart/getting-started/initialize-cs1/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
-            
-    {% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
-
-* Now run the application in the browser using the below command.
-
-    ```
-    npm run dev
-    ```
+```bash
+yarn run serve
+```
+        
+{% previewsample "page.domainurl/code-snippet/chart/getting-started/initialize-cs1" %}
 
 ## Module Injection
 
@@ -118,12 +153,12 @@ feature service name and description as follows.
 These modules should be injected to the provide section as follows,
 
  ```javascript
-import Vue from "vue";
-import { ChartPlugin, LineSeries } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(ChartPlugin);
+import { ChartComponent, LineSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  components: {
+    'ejs-chart': ChartComponent
+  },
   provide: {
     chart: [LineSeries]
   }
@@ -158,7 +193,7 @@ export default {
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/valueType/#valuetype)for horizontal axis to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/chart/getting-started/datasource-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,7 +208,7 @@ You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation
 quick information to the user about the data plotted in the chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/chart/getting-started/tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +220,7 @@ quick information to the user about the data plotted in the chart.
 You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/) object and by injecting the `LegendService` into the `@NgModule.providers`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/chart/getting-started/legend-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -198,7 +233,7 @@ You can add data labels to improve the readability of the chart.
 This can be achieved by setting the visible property to true in the `dataLabel` object  and by injecting `DataLabel` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/chart/getting-started/datalabel-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -211,7 +246,7 @@ The tooltip is useful when you cannot display information by using the data labe
 due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/) object and by injecting `TooltipService` into the `@NgModule.providers`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/chart/getting-started/tooltip-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -20,11 +20,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { BulletChartPlugin } from '@syncfusion/ej2-vue-charts';
-Vue.use(BulletChartPlugin);
+import { BulletChartComponent, BulletRangeCollectionDirective, BulletRangeDirective } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  components: {
+    'ejs-bulletchart': BulletChartComponent,
+    'e-bullet-range-collection': BulletRangeCollectionDirective,
+    'e-bullet-range': BulletRangeDirective
+  },
   data () {
     return {
       data: [{ value: 270, target: 250 }],

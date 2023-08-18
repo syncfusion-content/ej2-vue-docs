@@ -15,11 +15,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { BulletChartPlugin, BulletTooltip } from '@syncfusion/ej2-vue-charts';
-Vue.use(BulletChartPlugin);
+import { BulletChartComponent, BulletTooltip } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  components: {
+    'ejs-bulletchart': BulletChartComponent
+  },
   data () {
     return {
       data: [{ value: 270, target: 250 }],

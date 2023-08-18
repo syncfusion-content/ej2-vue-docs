@@ -11,15 +11,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
 import { chartData } from "./datasource.js";
 import {
-  StockChartPlugin, DateTime, CandleSeries, RangeTooltip, LineSeries,SplineSeries,Crosshair,
+  StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, DateTime, CandleSeries, RangeTooltip, LineSeries,SplineSeries,Crosshair,
   HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, EmaIndicator, RsiIndicator,BollingerBands,  TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
 } from "@syncfusion/ej2-vue-charts";
-Vue.use(StockChartPlugin);
 
 export default {
+  components: {
+    'ejs-stockchart': StockChartComponent,
+    'e-stockchart-series-collection': StockChartSeriesCollectionDirective,
+    'e-stockchart-series': StockChartSeriesDirective
+  },
   data() {
     return {
      title: 'Sales Analysis',

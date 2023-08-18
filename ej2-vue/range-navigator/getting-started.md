@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Range navigator Component in Vue 2
 
-This section explains you the steps required to create a simple range navigator and demonstrate the basic usage of the range navigator control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Range navigator component
 
 ## Prerequisites
 
@@ -33,78 +33,108 @@ Below is the list of minimum dependencies required to use the range navigator co
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-## Setup Vue Environment
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following commands.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Create a Vue Application
-
-Start a new Vue application using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
+yarn run serve
 ```
 
-## Adding Syncfusion range navigator package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install range navigator component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Range navigator component](https://www.syncfusion.com/vue-components/vue-range-selector) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-charts
+```
 
 > The **--save** will instruct NPM to include the range navigator package inside of the `dependencies` section of the `package.json`.
 
-## Registering Range Navigator Component
+## Add Syncfusion Vue component
 
-You can register the range navigator component in your application by using the `Vue.use()`.
+Follow the below steps to add the Vue Message component:
 
-Refer to the code example given below.
+1\. First, import and register the Message component in the `script` section of the **src/App.vue** file.
 
-```ts
-import { RangeNavigatorPlugin } from '@syncfusion/ej2-vue-charts';
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Vue.use(RangeNavigatorPlugin);
+<script>
+import { RangeNavigatorComponent } from '@syncfusion/ej2-vue-charts';
+
+export default {
+  components: {
+    'ejs-rangenavigator': RangeNavigatorComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define Range navigator component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+      <ejs-rangenavigator></ejs-rangenavigator>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rangenavigator/getting-started-cs9/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
 
-> Registering `RangeNavigatorPlugin` in vue, will register the range navigator component along with its required child directives globally.
+or
 
-## Adding Range Navigator to the Project
+```bash
+yarn run serve
+```
 
-* Add the Vue Range Navigator by using `<ejs-rangenavigator>` selector in `<template>` section of the `App.vue` file.
-The below example shows a basic range navigator,
-
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/rangenavigator/getting-started-cs9/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
-            
-    {% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs9" %}
-
-## Run the application
-
-The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
-
-* Now run the application in the browser using the below command.
-
-    ```
-    npm run dev
-    ```
+{% previewsample "page.domainurl/code-snippet/rangenavigator/getting-started-cs9" %}
 
 ## Module Injection
 
@@ -117,12 +147,12 @@ To create range navigator with additional features, inject the required modules.
 These modules should be injected to the provide section as follows,
 
  ```javascript
-import Vue from "vue";
-import { RangeNavigatorPlugin, AreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(RangeNavigatorPlugin);
+import { RangeNavigatorComponent, AreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  components: {
+    'ejs-rangenavigator': RangeNavigatorComponent
+  },
   provide: {
     rangeNavigator: [AreaSeries, DateTime, RangeTooltip]
   }
@@ -135,7 +165,7 @@ export default {
 Now, we are going to provide data to the range navigator. Add a series object to the range navigator by using [`series`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries/) property. Now map the field names x and y in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorSeries/#yname) properties of the series, then set the JSON data to dataSource property. Since the JSON contains Datetime data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorModel/#valuetype) range Navigator to `Category`. By default, the axis valueType is `Numeric`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rangenavigator/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -147,7 +177,7 @@ Now, we are going to provide data to the range navigator. Add a series object to
 The tooltip is useful to show the selected data. You can enable tooltip by setting the `enable` property as true in tooltip object and by injecting `RangeTooltip` module using `provide` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rangenavigator/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
