@@ -8,257 +8,354 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Kanban Component in Vue 3
 
-This section explains how to use Syncfusion Vue Kanban component in Vue 3 application.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Kanban component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Creating Vue application using Vue CLI
+## Set up the Vite project
 
-The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
-
-```bash
-npm uninstall vue-cli -g
-```
-
-Use the following commands to install the latest version of Vue CLI.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+npm create vite@latest
 ```
 
-Create a new project using the command below.
+or
 
 ```bash
-vue create quickstart
-cd quickstart
+yarn create vite
 ```
 
-Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-![Reference](./images/vue3-terminal.png)
+1. Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
-## Adding Syncfusion Kanban package in the application
+```bash
+? Project name: » my-project
+```
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+2. Select `Vue` as the framework. It will create a Vue 3 project.
 
-Install the `Kanban` component by using the below npm command.
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
+```
+
+3. Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
+```
+
+4. Upon completing the aforementioned steps to create the `my-project`, run the following command to install its dependencies:
+
+```bash
+cd my-project
+npm install
+```
+
+or
+
+```bash
+cd my-project
+yarn install
+```
+
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+
+This article uses the [Vue Kanban component](https://www.syncfusion.com/vue-components/vue-kanban) as an example. To use the Vue Kanban component in the project, the `@syncfusion/ej2-vue-kanban` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-kanban --save
 ```
 
-## Adding CSS reference for Syncfusion Vue Kanban component
-
-Import the needed Css styles for the Kanban component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
-
-```
-<style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
-</style>
-```
-
-## Adding Syncfusion Vue Kanban component in the application
-
-You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Kanban component using following steps.
-
-* Import the Kanban component in the `<script>` section of the `src/App.vue` file.
-
-    ```
-    <script>
-      import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
-    </script>
-    ```
-
-* Register the Kanban component.
-
-    ```javascript
-    import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
-    //Component registration
-    export default {
-      name: "App",
-      components: {
-        'ejs-kanban': KanbanComponent,
-        'e-columns': ColumnsDirective,
-        'e-column': ColumnDirective
-      },
-    }
-    ```
-
-* Add the component definition in template section.
-
-    ```
-    <template>
-      <ejs-kanban id="kanban" keyField="Status">
-        <e-columns>
-          <e-column headerText="To Do" keyField="Open"></e-column>
-          <e-column headerText="In Progress" keyField="InProgress"></e-column>
-          <e-column headerText="Done" keyField="Close"></e-column>
-        </e-columns>
-      </ejs-kanban>
-    </template>
-    ```
-
-* Summarizing the above steps, update the `src/App.vue` file with following code.
-
-    ```
-    <template>
-      <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData" :cardSettings="cardSettings">
-        <e-columns>
-          <e-column headerText="To Do" keyField="Open"></e-column>
-          <e-column headerText="In Progress" keyField="InProgress"></e-column>
-          <e-column headerText="Done" keyField="Close"></e-column>
-        </e-columns>
-      </ejs-kanban>
-    </template>
-
-    <script>
-    import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
-
-    export default {
-      name: "App",
-      components: {
-        'ejs-kanban': KanbanComponent,
-        'e-columns': ColumnsDirective,
-        'e-column': ColumnDirective
-      },
-      data() {
-        return {
-          kanbanData: [
-            {
-                Id: 1,
-                Status: 'Open',
-                Summary: 'Analyze the new requirements gathered from the customer.',
-                Assignee: 'Andrew Fuller'
-            },
-            {
-                Id: 2,
-                Status: 'InProgress',
-                Summary: 'Improve application performance',
-                Assignee: 'Andrew Fuller'
-            },
-            {
-                Id: 3,
-                Status: 'Close',
-                Summary: 'Arrange a web meeting with the customer to get new requirements.',
-                Assignee: 'Janet Leverling'
-            }
-          ],
-          cardSettings: {
-            contentField: "Summary",
-            headerField: "Id"
-          }
-        };
-      },
-    };
-    </script>
-
-    <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
-    </style>
-
-    ```
-
-## Running the application
-
-Run the application using the following command.
+or
 
 ```bash
-npm run serve
+yarn add @syncfusion/ej2-vue-kanban
 ```
 
-Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.
+## Import Syncfusion CSS styles
 
-![Output](./images/kanban.png)
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-## Enable swimlane
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Kanban component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-`Swimlane` can be enabled by mapping the fields `swimlaneSettings.keyField` to appropriate column name in dataSource. This enables the grouping of the cards based on the mapped column values.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+> The order of importing CSS styles should be in line with its dependency graph.
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Kanban component using `Composition API` or `Options API`:
+
+1. First, import and register the Kanban component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+  import {KanbanComponent as EjsKanban,ColumnsDirective as EColumns,ColumnDirective as EColumn} from '@syncfusion/ej2-vue-kanban';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
+  //Component registration
+  components: {
+      "ejs-kanban": KanbanComponent,
+      "e-columns": ColumnsDirective,
+      "e-column": ColumnDirective,
+  }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+   
+2. In the `template` section, define the Kanban component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/Kanban#datasource) property and column definitions.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
-  <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData" :cardSettings="cardSettings" :swimlaneSettings="swimlaneSettings">
-    <e-columns>
-      <e-column headerText="To Do" keyField="Open"></e-column>
-      <e-column headerText="In Progress" keyField="InProgress"></e-column>
-      <e-column headerText="Done" keyField="Close"></e-column>
-    </e-columns>
-  </ejs-kanban>
+      <ejs-kanban :dataSource='data'>
+          <e-columns>
+            <e-column headerText="To Do" keyField="Open"></e-column>
+            <e-column headerText="In Progress" keyField="InProgress"></e-column>
+            <e-column headerText="Testing" keyField="Testing"></e-column>
+            <e-column headerText="Done" keyField="Close"></e-column>
+          </e-columns>
+      </ejs-kanban>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+3. Declare the values for the `dataSource` property in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const data = [
+  {
+    Id: 1,
+    Status: 'Open',
+    Summary: 'Analyze the new requirements gathered from the customer.',
+    Assignee: 'Andrew Fuller'
+  },
+  {
+    Id: 2,
+    Status: 'InProgress',
+    Summary: 'Improve application performance',
+    Assignee: 'Andrew Fuller'
+  },
+  {
+    Id: 3,
+    Status: 'Close',
+    Summary: 'Arrange a web meeting with the customer to get new requirements.',
+    Assignee: 'Janet Leverling'
+  }]
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+data: function() {
+  return {
+    data: [
+    {
+      Id: 1,
+      Status: 'Open',
+      Summary: 'Analyze the new requirements gathered from the customer.',
+      Assignee: 'Andrew Fuller'
+    },
+  {
+      Id: 2,
+      Status: 'InProgress',
+      Summary: 'Improve application performance',
+      Assignee: 'Andrew Fuller'
+    },
+    {
+      Id: 3,
+      Status: 'Close',
+      Summary: 'Arrange a web meeting with the customer to get new requirements.',
+      Assignee: 'Janet Leverling'
+    }]
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+      <ejs-kanban id="kanban" keyField="Status" :dataSource="data" :cardSettings="cardSettings">
+        <e-columns>
+          <e-column headerText="To Do" keyField="Open" ></e-column>
+          <e-column headerText="In Progress" keyField="InProgress" ></e-column>
+          <e-column headerText="Testing" keyField="Testing" ></e-column>
+          <e-column headerText="Done" keyField="Close" ></e-column>
+        </e-columns>
+      </ejs-kanban>
+</template>
+
+<script setup>
+  import { KanbanComponent as EjsKanban , ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-kanban';
+    const data = [
+        {
+            Id: 1,
+            Status: 'Open',
+            Summary: 'Analyze the new requirements gathered from the customer.',
+            Assignee: 'Andrew Fuller'
+        },
+        {
+            Id: 2,
+            Status: 'InProgress',
+            Summary: 'Improve application performance',
+            Assignee: 'Andrew Fuller'
+        },
+        {
+            Id: 3,
+            Status: 'Close',
+            Summary: 'Arrange a web meeting with the customer to get new requirements.',
+            Assignee: 'Janet Leverling'
+        }
+        ];
+    let cardSettings = {
+        contentField: "Summary",
+        headerField: "Id",
+    }
+  </script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+      <ejs-kanban id="kanban" keyField="Status" :dataSource="data" :cardSettings="cardSettings">
+        <e-columns>
+          <e-column headerText="To Do" keyField="Open" ></e-column>
+          <e-column headerText="In Progress" keyField="InProgress" ></e-column>
+          <e-column headerText="Testing" keyField="Testing" ></e-column>
+          <e-column headerText="Done" keyField="Close" ></e-column>
+        </e-columns>
+      </ejs-kanban>
 </template>
 
 <script>
-import { KanbanComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-kanban";
-
-export default {
-  name: "App",
-  components: {
-    'ejs-kanban': KanbanComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  },
-  data() {
-    return {
-      kanbanData: [
-        {
-          Id: 1,
-          Status: 'Open',
-          Summary: 'Analyze the new requirements gathered from the customer.',
-          Assignee: 'Andrew Fuller'
-        },
-        {
-          Id: 2,
-          Status: 'InProgress',
-          Summary: 'Improve application performance',
-          Assignee: 'Andrew Fuller'
-        },
-        {
-          Id: 3,
-          Status: 'Close',
-          Summary: 'Arrange a web meeting with the customer to get new requirements.',
-          Assignee: 'Janet Leverling'
-        }
-      ],
+data: function() {
+  return {
+    data: [
+      {
+        Id: 1,
+        Status: 'Open',
+        Summary: 'Analyze the new requirements gathered from the customer.',
+        Assignee: 'Andrew Fuller'
+      },
+      {
+        Id: 2,
+        Status: 'InProgress',
+        Summary: 'Improve application performance',
+        Assignee: 'Andrew Fuller'
+      },
+      {
+        Id: 3,
+        Status: 'Close',
+        Summary: 'Arrange a web meeting with the customer to get new requirements.',
+        Assignee: 'Janet Leverling'
+      }],
       cardSettings: {
         contentField: "Summary",
-        headerField: "Id"
-      },
-      swimlaneSettings: {
-        keyField: "Assignee"
-      },
-    };
-  },
-};
+        headerField: "Id",
+      }
+  }
+}
 </script>
 
 <style>
-@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
 </style>
 
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run dev
 ```
 
-![Output](./images/swimlane.png)
+or
+
+```bash
+yarn run dev
+```
+
+The output will appear as follows:
+
+
+![Output](./images/kanban-vue3.png)
