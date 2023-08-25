@@ -3,24 +3,20 @@
 
 
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" 
-        :height="height" :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" 
-        :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" 
-        :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar" 
-        :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport" 
-        :removeReport="removeReport" :newReport="newReport" :displayOption="displayOption" :dataBound="ondataBound" > 
-        </ejs-pivotview>
-    </div>
-</template>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height"
+    :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport"
+    :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList"
+    :toolbar="toolbar" :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport" :removeReport="removeReport" 
+    :newReport="newReport" :displayOption="displayOption" :dataBound="ondataBound"> </ejs-pivotview>
+</div>
+</template >
 
 <script>
 import Vue from "vue";
 import {
   PivotViewPlugin,
-  GroupingBar,
   FieldList,
-  IDataSet,
   CalculatedField,
   Toolbar,
   PDFExport,
@@ -33,20 +29,21 @@ import { pivotData } from './pivotData.js';
 Vue.use(PivotViewPlugin);
 
 function loadReport(args) {
-  var reportCollection = [];
-  if (localStorage.pivotviewReports && localStorage.pivotviewReports !== "") {
-      reportCollection = JSON.parse(localStorage.pivotviewReports);
-  }
-  reportCollection.map(function (item) {
-      if (args.reportName === item.reportName) {
-          args.report = item.report;
-      }
-  });
-  if (args.report) {
-      let pivotObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotObj.dataSourceSettings = JSON.parse(args.report).dataSourceSettings;
-  }
+    var reportCollection = [];
+    if (localStorage.pivotviewReports && localStorage.pivotviewReports !== "") {
+        reportCollection = JSON.parse(localStorage.pivotviewReports);
+    }
+    reportCollection.map(function (item) {
+        if (args.reportName === item.reportName) {
+            args.report = item.report;
+        }
+    });
+    if (args.report) {
+        let pivotObj = document.getElementById('pivotview').ej2_instances[0];
+        pivotObj.dataSourceSettings = JSON.parse(args.report).dataSourceSettings;
+    }
 }
+
 var isInitial = true;
 
 export default {
@@ -90,7 +87,7 @@ export default {
     };
   },
   methods: {
-    saveReport: function(args: any) {
+    saveReport: function(args) {
       let reports = [];
       let isSaved = false;
       if (
@@ -100,7 +97,7 @@ export default {
         reports = JSON.parse(localStorage.pivotviewReports);
       }
       if (args.report && args.reportName && args.reportName !== "") {
-        reports.map(function(item: any) {
+        reports.map(function(item) {
           if (args.reportName === item.reportName) {
             item.report = args.report;
             isSaved = true;
@@ -112,21 +109,21 @@ export default {
         localStorage.pivotviewReports = JSON.stringify(reports);
       }
     },
-    fetchReport: function(args: any) {
+    fetchReport: function(args) {
       let reportCollection = [];
-      let reeportList: any = [];
+      let reeportList = [];
       if (
         localStorage.pivotviewReports &&
         localStorage.pivotviewReports !== ""
       ) {
         reportCollection = JSON.parse(localStorage.pivotviewReports);
       }
-      reportCollection.map(function(item: any) {
+      reportCollection.map(function(item) {
         reeportList.push(item.reportName);
       });
       args.reportName = reeportList;
     },
-    removeReport: function(args: any) {
+    removeReport: function(args) {
       let reportCollection = [];
       if (
         localStorage.pivotviewReports &&
@@ -146,7 +143,7 @@ export default {
         localStorage.pivotviewReports = JSON.stringify(reportCollection);
       }
     },
-    renameReport: function(args: any) {
+    renameReport: function(args) {
       let reportCollection = [];
       if (
         localStorage.pivotviewReports &&
@@ -154,7 +151,7 @@ export default {
       ) {
         reportCollection = JSON.parse(localStorage.pivotviewReports);
       }
-      reportCollection.map(function(item: any) {
+      reportCollection.map(function(item) {
         if (args.reportName === item.reportName) {
           item.reportName = args.rename;
         }

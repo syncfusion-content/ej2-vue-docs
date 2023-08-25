@@ -32,11 +32,10 @@ export default {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
       },
       height: 350,
       showFieldList: true
@@ -46,12 +45,12 @@ export default {
     aggregateCell:function(args) {
       if (args.fieldName === 'Sold') {
           args.value = secondsToHms(args.value);
-     }
+    }
   }
   },
   provide: {
-        pivotview: [FieldList]
-    }
+    pivotview: [FieldList]
+  }
 }
 </script>
 <style>
