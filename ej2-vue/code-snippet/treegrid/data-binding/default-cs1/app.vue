@@ -18,7 +18,7 @@
 import Vue from "vue";
 import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { Ajax } from '@syncfusion/ej2-base';
+import { Fetch } from '@syncfusion/ej2-base';
 
 Vue.use(TreeGridPlugin);
 Vue.use(ButtonPlugin);
@@ -36,11 +36,11 @@ export default {
    methods:{
          btnClick: function (args){
         let treegrid = document.getElementsByClassName("e-treegrid")[0].ej2_instances[0]; // TreeGrid instance
-        let ajax = new Ajax ("https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData", "GET");treegrid.showSpinner();
-        ajax.send();
-        ajax.onSuccess = function (result) {
+        let fetch = new Fetch ("https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData", "GET");treegrid.showSpinner();
+        fetch.send();
+        fetch.onSuccess = function (result) {
         treegrid.hideSpinner();
-        treegrid.dataSource = JSON.parse(result);
+        treegrid.dataSource = result;
         };
       }
   }

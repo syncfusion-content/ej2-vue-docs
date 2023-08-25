@@ -20,7 +20,7 @@ To learn about tree grid data binding quickly, you can check on this video:
 
 ## Binding with ajax
 
-You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property to bind the data source to TreeGrid from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property by using `onSuccess` event of the Ajax.
+You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property to bind the data source to TreeGrid from external Fetch request. In the below code we have fetched the data source from the server with the help of Fetch request and provided that to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property by using `onSuccess` event of the Fetch.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
