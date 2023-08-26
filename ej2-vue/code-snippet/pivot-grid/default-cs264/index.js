@@ -1,44 +1,41 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, FieldList, LoadEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :showFieldList="showFieldList" :load="load"> </ejs-pivotview>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
+        :gridSettings="gridSettings" ></ejs-pivotview>
     </div>
 `,
 
-  data () {
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
-        allowLabelFilter: true,
-        allowValueFilter: true,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
       },
       height: 350,
-      showGroupingBar: true,
-      showFieldList: true
+      gridSettings: {
+        columnRender: function (args) {
+          for (var i = 1; i < args.columns.length; i++) {
+            if (args.stackedColumns[i].customAttributes &&
+              args.stackedColumns[i].customAttributes.cell.valueSort.levelName === 'FY 2016.Units Sold') {
+              args.stackedColumns[i].visible = false;
+            }
+          }
+        }
+      },
     }
   },
-  methods: {
-    load: function (args: LoadEventArgs) {
-      args.defaultFieldListOrder = 'Descending';
-    }
-  },
-  provide: {
-        pivotview: [GroupingBar, FieldList]
-    }
-
 });

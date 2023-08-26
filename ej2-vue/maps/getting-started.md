@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Maps Component in Vue 2
 
-This section explains you the steps required to create a map and demonstrate the basic usage of the maps component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Maps component
 
 You can explore some useful features in the Maps component using the following video.
 
@@ -36,109 +36,122 @@ Below is the list of minimum dependencies required to use the Maps.
     |-- @syncfusion/ej2-maps
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications.
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-
-You can choose the component that you want to install. For this application, we are going to use Maps component.
-
-To install Maps component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-maps –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+## Add Syncfusion Vue packages
 
-Refer the code snippet given below.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-```ts
-import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
+This article uses the [Vue Maps component](https://www.syncfusion.com/vue-components/vue-maps-library) as an example. Install the `@syncfusion/ej2-vue-maps` package by running the following command:
 
-Vue.use(MapsPlugin);
+```bash
+npm install @syncfusion/ej2-vue-maps --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-maps
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Adding Syncfusion Vue Maps component
 
-### Using Vue.component()
+Follow the below steps to add the Vue Maps component:
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+1\. First, import and register the Maps component in the `script` section of the **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { MapsComponent, MapsPlugin } from '@syncfusion/ej2-vue-maps';
+<script>
+import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
+import { world_map } from './world-map.js';
 
-Vue.component(MapsPlugin.name, MapsComponent);
-```
+export default {
+components: {
+    'ejs-maps' : MapsComponent,
+    'e-layers' : LayersDirective,
+    'e-layer' : LayerDirective
+},
+data () {
+        return {
+            shapeData: world_map
+        }
+   }
+}
+</script>
 
-Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
+{% endhighlight %}
+{% endtabs %}
 
-## Add Map to the Project
+2\. In the `template` section, define the Maps component.
 
-Add the EJ2 Vue Maps using `<ejs-maps>` to the `<template>` section of the `App.vue` file in src directory,
-the content attribute of the Maps component is provided as name in data option in the `<script>` section.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```
 <template>
     <div class="wrapper">
-        <ejs-maps id='maps'></ejs-maps>
+        <ejs-maps id='maps'>
+            <e-layers>
+                <e-layer :shapeData='shapeData'></e-layer>
+            </e-layers>
+        </ejs-maps>
     </div>
 </template>
-<script>
-import Vue from 'vue';
-import { MapsPlugin } from "@syncfusion/ej2-vue-maps";
-Vue.use(MapsPlugin);
 
-export default Vue.extend({
-  data: function() {
-    return {
+{% endhighlight %}
+{% endtabs %}
 
-    };
-  }
-});
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
-</script>
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/maps/getting-started-cs105/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
 
-Now use the `npm run dev` command to run the application in the browser.
+or
 
+```bash
+yarn run serve
 ```
-npm run dev
-```
+{% previewsample "page.domainurl/code-snippet/maps/getting-started-cs105" %}
 
 ## Module Injection
 
 Maps component are segregated into individual feature-wise modules. In order to use a particular feature,
-you need to inject its feature module using `provide` option.  Find the modules available in maps and its description as follows.
+you need to inject its feature module using `provide` option.  Find the modules available in Maps and its description as follows.
 
 * Annotations - Inject this provider to use annotations feature.
 * Bubble - Inject this provider to use bubble feature.
@@ -151,9 +164,9 @@ you need to inject its feature module using `provide` option.  Find the modules 
 * Selection - Inject this provider to use selection feature.
 * Zoom - Inject this provider to use zooming and panning feature.
 
-In the current application, we are going to modify the above basic maps to visualize 2016 USA president election results.
+In the current application, we are going to modify the above basic Maps to visualize 2016 USA president election results.
 
-For this application we are going to use tooltip, data label and legend features of the maps. Now import the MapsTooltip, DataLabel and Legend modules from maps package and inject it into the Maps component using `provide` option.
+For this application we are going to use tooltip, data label and legend features of the Maps. Now import the MapsTooltip, DataLabel and Legend modules from Maps package and inject it into the Maps component using `provide` option.
 
 ```
 <template>
@@ -162,16 +175,19 @@ For this application we are going to use tooltip, data label and legend features
     </div>
 </template>
 <script>
-import { MapsPlugin, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
-Vue.use(MapsPlugin);
-export default Vue.extend({
+import { MapsComponent, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
+
+export default {
+components: {
+    'ejs-maps': MapsComponent
+}
 data:function(){
     return{ };
 },
 provide: {
     maps: [Legend, DataLabel, MapsTooltip]
 }
-});
+}
 </script>
 ```
 
@@ -194,10 +210,10 @@ let usMap: Object =
 
 ```
 
-Elements in the maps will get rendered in the layers. So add a layer collection to the maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps/#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapedata) property.
+Elements in the Maps will get rendered in the layers. So add a layer collection to the Maps by using [`layers`](https://ej2.syncfusion.com/vue/documentation/api/maps/#layers) property. Now bind the GeoJSON data to the [`shapeData`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#shapedata) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -221,7 +237,7 @@ The [`shapeDataPath`](https://ej2.syncfusion.com/vue/documentation/api/maps/laye
 The JSON object "permanent and non-permanent countries in the UN security council" is used as data source below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -237,7 +253,7 @@ The Color Mapping feature supports customization of shape colors based on the un
 Specify color and value in [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property. Here '#D84444' is specified for 'Permanent' and '#316DB5' is specified for 'Non-Permanent'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -250,7 +266,7 @@ You can add a title using [`titleSettings`](https://ej2.syncfusion.com/vue/docum
 information to the user about the shapes rendered in the map.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -259,11 +275,11 @@ information to the user about the shapes rendered in the map.
 
 ## Enable Legend
 
-You can show legend for the maps by setting true to the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/) object and by injecting the `Legend`
+You can show legend for the Maps by setting true to the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/) object and by injecting the `Legend`
 module using `provide` option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -275,7 +291,7 @@ module using `provide` option.
 You can add data labels to show additional information of the shapes in map. This can be achieved by setting [`visible`](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#visible) property to true in the [`dataLabelSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/) object and by injecting `DataLabel` module using `provide` option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs39/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -290,7 +306,7 @@ in [`tooltipSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/too
 `provide` option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/maps/getting-started-cs40/app.vue %}
 {% endhighlight %}
 {% endtabs %}

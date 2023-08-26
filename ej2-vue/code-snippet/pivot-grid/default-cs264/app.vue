@@ -11,7 +11,7 @@
 
 <script>
 import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
@@ -37,12 +37,9 @@ export default {
                 }
             }
           }
-       },
+      },
     }
   },
-  provide: {
-        pivotview: [FieldList]
-    }
 }
 </script>
 <style>

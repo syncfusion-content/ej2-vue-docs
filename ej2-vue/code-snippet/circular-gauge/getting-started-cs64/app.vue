@@ -1,5 +1,4 @@
 
-
 <template>
     <div id="app">
       <div class='wrapper'>
@@ -8,11 +7,13 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin } from '@syncfusion/ej2-vue-circulargauge';
+import { CircularGaugeComponent } from '@syncfusion/ej2-vue-circulargauge';
 
-Vue.use(CircularGaugePlugin);
-export default {}
+export default {
+  components: {
+    'ejs-circulargauge': CircularGaugeComponent
+  },
+}
 </script>
 <style>
   .wrapper {

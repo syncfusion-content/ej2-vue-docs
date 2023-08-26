@@ -13,7 +13,7 @@
 
 <script>
 import Vue from "vue";
-import { PivotViewPlugin, Toolbar, FieldList, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, Toolbar, FieldList, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
@@ -24,13 +24,12 @@ export default {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
       },
-      height:'350px',
+      height: 350,
       displayOption: { view:'Both' },
       toolbar: ['Grid', 'Chart', 'Export', 'FieldList'],
       showFieldList: true,

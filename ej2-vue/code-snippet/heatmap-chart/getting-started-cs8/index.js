@@ -1,21 +1,18 @@
 
+import Vue from 'vue';
+import { HeatMapPlugin } from '@syncfusion/ej2-vue-heatmap';
+Vue.use(HeatMapPlugin);
 
 
-<template>
-    <div id="app">
-        <ejs-heatmap id="heatmap" :dataSource='dataSource'></ejs-heatmap>
-    </div>
-</template>
-<script>
-import { HeatMapComponent } from '@syncfusion/ej2-vue-heatmap';
+new Vue({
+	el: '#app',
+	template: `
+    <ejs-heatmap id="heatmap" :dataSource='dataSource'></ejs-heatmap>
+`,
 
-export default {
-  components: {
-    'ejs-heatmap': HeatMapComponent
-  },
   data: function() {
     return {
-     dataSource: [
+        dataSource: [
             [73, 39, 26, 39, 94, 0],
             [93, 58, 53, 38, 26, 68],
             [99, 28, 22, 4, 66, 90],
@@ -31,8 +28,4 @@ export default {
         ]
     }
   }
-}
-</script>
-
-
-
+});

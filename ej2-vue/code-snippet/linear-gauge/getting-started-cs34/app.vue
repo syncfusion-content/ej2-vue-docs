@@ -10,11 +10,13 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin } from '@syncfusion/ej2-vue-lineargauge';
+import { LinearGaugeComponent } from '@syncfusion/ej2-vue-lineargauge';
 
-Vue.use(LinearGaugePlugin);
-export default { }
+export default {
+    components: {
+        'ejs-lineargauge': LinearGaugeComponent
+    }
+}
 </script>
 <style>
 #content-wrapper {

@@ -18,11 +18,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin } from "@syncfusion/ej2-vue-lineargauge";
+import { LinearGaugeComponent, AxesDirective, AxisDirective } from "@syncfusion/ej2-vue-lineargauge";
 
-Vue.use(LinearGaugePlugin);
 export default {
+    components: {
+        'ejs-lineargauge': LinearGaugeComponent,
+        'e-axes': AxesDirective,
+        'e-axis': AxisDirective
+    },
     data: function () {
         return {
             labelStyle: {
