@@ -4,14 +4,14 @@
 
 <template>
   <div id="app">
-    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
-        :gridSettings="gridSettings" > </ejs-pivotview>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings" > 
+    </ejs-pivotview>
 </div>
 </template >
 
 <script>
 import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
@@ -24,8 +24,8 @@ export default {
         expandAll: false,
         rows: [{ name: 'Country' }, { name: 'Products' }],
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-        values: [{name:'Amount', caption:'Sold Amount'}, {name:'Sold', caption:'Units Sold'}],
-        formatSettings: [{name:'Amount', format:'C0'}],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
+        formatSettings: [{ name: 'Amount', format: 'C0' }],
       },
       height: 350,
       gridSettings: {
@@ -50,10 +50,7 @@ export default {
         }
        },
     }
-  },
-  provide: {
-        pivotview: [FieldList]
-    }
+  }
 }
 </script>
 <style>

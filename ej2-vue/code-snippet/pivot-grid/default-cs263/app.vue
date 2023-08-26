@@ -4,7 +4,7 @@
 
 <template>
   <div id="app">
-    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList"
         :dataBound="dataBound" > </ejs-pivotview>
 </div>
 </template >
@@ -69,6 +69,7 @@ export default {
         formatSettings: [{name:'Amount', format:'C0'}],
       },
       height: 350,
+      showFieldList: true
     }
   },
   methods: {
@@ -83,7 +84,7 @@ export default {
     },
   }
   provide: {
-        pivotview: [FieldList]
+    pivotview: [FieldList]
     }
 }
 </script>

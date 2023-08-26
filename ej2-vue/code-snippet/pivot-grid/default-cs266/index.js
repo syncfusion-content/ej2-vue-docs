@@ -1,44 +1,76 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, FieldList, LoadEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { L10n } from '@syncfusion/ej2-base';
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
 
-
+L10n.load({
+  'en-US': {
+    pivotview: {
+      CustomAggregateType1: 'Custom Aggregate Type 1',
+      CustomAggregateType2: 'Custom Aggregate Type 2',
+    },
+    pivotfieldlist: {
+      CustomAggregateType1: 'Custom Aggregate Type 1',
+      CustomAggregateType2: 'Custom Aggregate Type 2',
+    }
+  }
+});
+let SummaryType = [
+  'Sum',
+  'Count',
+  'DistinctCount',
+  'Avg',
+  'CustomAggregateType1',
+  'CustomAggregateType2'
+];
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :showFieldList="showFieldList" :load="load"> </ejs-pivotview>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :dataBound="ondataBound"
+        :aggregateCellInfo="aggregateCell" :showFieldList="showFieldList"> </ejs-pivotview>    
     </div>
 `,
 
-  data () {
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
-        allowLabelFilter: true,
-        allowValueFilter: true,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
       },
       height: 350,
-      showGroupingBar: true,
       showFieldList: true
     }
   },
   methods: {
-    load: function (args: LoadEventArgs) {
-      args.defaultFieldListOrder = 'Descending';
+    ondataBound: function () {
+      let pivotObj = document.getElementById('pivotview').ej2_instances[0];
+      pivotObj.getAllSummaryType = function () {
+        return SummaryType;
+      };
+      pivotObj.pivotFieldListModule.aggregateTypes = SummaryType;
+      pivotObj.pivotFieldListModule.getAllSummaryType = function () {
+        return SummaryType;
+      };
+    },
+    aggregateCell: function (args) {
+      if (args.aggregateType === 'CustomAggregateType1') {
+        args.value = args.value * 100;
+      }
+      if (args.aggregateType === 'CustomAggregateType2') {
+        args.value = args.value / 100;
+      }
     }
   },
   provide: {
-        pivotview: [GroupingBar, FieldList]
-    }
+    pivotview: [FieldList]
+  }
 
 });

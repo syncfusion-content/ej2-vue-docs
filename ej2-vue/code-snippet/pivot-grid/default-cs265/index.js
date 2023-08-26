@@ -1,44 +1,52 @@
 
 import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, FieldList, LoadEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, Toolbar, FieldList, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :showFieldList="showFieldList" :load="load"> </ejs-pivotview>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
+    :showToolbar="showToolbar" :allowPdfExport="allowPdfExport" :displayOption="displayOption"
+    :showFieldList="showFieldList" :toolbar="toolbar" :actionBegin="actionBegin" 
+    :enableVirtualization="enableVirtualization"> </ejs-pivotview>
     </div>
 `,
 
-  data () {
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
-        allowLabelFilter: true,
-        allowValueFilter: true,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
       },
       height: 350,
-      showGroupingBar: true,
-      showFieldList: true
+      displayOption: { view:'Both' },
+      toolbar: ['Grid', 'Chart', 'Export', 'FieldList'],
+      showFieldList: true,
+      showToolbar: true,
+      allowPdfExport: true,
+      enableVirtualization: true
     }
   },
   methods: {
-    load: function (args: LoadEventArgs) {
-      args.defaultFieldListOrder = 'Descending';
+    actionBegin: function (args) {
+      let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
+      if (args.actionName == 'PDF export') {
+          args.cancel = true;
+          pivotGridObj.pdfExport({}, false, null, false, true);
+      }
     }
   },
   provide: {
-        pivotview: [GroupingBar, FieldList]
-    }
+    pivotview: [Toolbar, FieldList, PDFExport]
+  }
 
 });

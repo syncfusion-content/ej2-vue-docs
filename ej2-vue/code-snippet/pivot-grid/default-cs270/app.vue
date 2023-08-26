@@ -4,15 +4,15 @@
 
 <template>
     <div id="app">
-        <ejs-button id="refresh-btn" :isPrimary="isPrimary" v-on:click.native="btnClick" >Print</ejs-button>
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList" >
+        <ejs-button id="print-btn" :isPrimary="isPrimary" v-on:click.native="btnClick" >Print</ejs-button>
+        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" >
         </ejs-pivotview>
 </div>
 </template>
 
 <script>
 import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
@@ -25,16 +25,12 @@ export default {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
-        allowLabelFilter: true,
-        allowValueFilter: true,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
+        rows: [{ name: 'Country' }, { name: 'Products' }],
+        columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
+        values: [{ name: 'Amount', caption: 'Sold Amount' }, { name: 'Sold', caption: 'Units Sold' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
       },
       height: 350,
-      showFieldList: true
     }
   },
   methods: {
@@ -42,10 +38,7 @@ export default {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.grid.print();
     }
-  },
-  provide: {
-        pivotview: [FieldList]
-    }
+  }
 }
 </script>
 <style>
