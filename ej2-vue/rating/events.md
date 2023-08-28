@@ -14,7 +14,7 @@ This section describes the rating events that will be triggered when appropriate
 
 ## beforeItemRender
 
-The rating component triggers the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/rating#beforeitemrender) event before rendering each rating item. The [`RatingItemEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/rating/ratingItemEventArgs/) passed as an event argument provides the details of the item to be rendered.
+The rating component triggers the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/rating/#beforeitemrender) event before rendering each rating item. The [`RatingItemEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/rating/ratingItemEventArgs/) passed as an event argument provides the details of the item to be rendered.
 
 ```
 <template>
@@ -54,7 +54,7 @@ export default {
 
 ## created
 
-The rating component triggers the [`created`](https://ej2.syncfusion.com/vue/documentation/api/rating#created) event when the rendering of the rating component is completed.
+The rating component triggers the [`created`](https://ej2.syncfusion.com/vue/documentation/api/rating/#created) event when the rendering of the rating component is completed.
 
 ```
 <template>
@@ -94,7 +94,7 @@ export default {
 
 ## onItemHover
 
-The rating component triggers the [`onItemHover`](https://ej2.syncfusion.com/vue/documentation/api/rating#onitemhover) event when the rating item is hovered. The [`RatingHoverEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/rating/ratingHoverEventArgs/) passed as an event argument provides the details of the hovered item.
+The rating component triggers the [`onItemHover`](https://ej2.syncfusion.com/vue/documentation/api/rating/#onitemhover) event when the rating item is hovered. The [`RatingHoverEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/rating/ratingHoverEventArgs/) passed as an event argument provides the details of the hovered item.
 
 ```
 <template>

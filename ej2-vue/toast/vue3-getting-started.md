@@ -146,7 +146,7 @@ import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the Toast component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/toast#datasource) property and column definitions.
+2.In the `template` section, define the Toast component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/toast/#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
