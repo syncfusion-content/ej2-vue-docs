@@ -104,7 +104,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Message component with the [content](https://ej2.syncfusion.com/vue/documentation/api/message#content) property.
+2\. In the `template` section, define the Message component with the [content](https://ej2.syncfusion.com/vue/documentation/api/message/#content) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

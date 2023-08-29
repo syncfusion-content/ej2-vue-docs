@@ -209,7 +209,7 @@ import { SkeletonComponent as EjsSkeleton } from "@syncfusion/ej2-vue-notificati
 
 ## Skeleton Shapes
 
-The [`shape`](https://ej2.syncfusion.com/vue/documentation/api/skeleton#shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
+The [`shape`](https://ej2.syncfusion.com/vue/documentation/api/skeleton/#shape) property can be used to display skeleton in different shapes like circle, square, rectangle and text.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

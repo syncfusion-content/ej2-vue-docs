@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 You can search records in a Grid, by using the [`search`](https://ej2.syncfusion.com/vue/documentation/api/grid/#search) method with search key as a parameter.This also provides an option to integrate search text box in grid's toolbar by adding **Search** item to the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar).
 
-To use searching, you need to inject [`Search`](https://ej2.syncfusion.com/vue/documentation/api/grid/search) module in the **provide** section.
+To use searching, you need to inject [`Search`](https://ej2.syncfusion.com/vue/documentation/api/grid/search/) module in the **provide** section.
 
 > The clear icon is shown in the Data Grid search text box when it is focused on search text or after typing the single character in the search text box. A single click of the clear icon clears the text in the search box as well as the search results in the Data Grid.
 

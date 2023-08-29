@@ -146,7 +146,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
    
-2.In the `template` section, define the MaskedTextBox component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox#datasource) property and column definitions.
+2.In the `template` section, define the MaskedTextBox component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox/#datasource) property and column definitions.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -229,7 +229,7 @@ yarn run dev
 ## Set the mask
 
 You can set the mask to the MaskedTextBox to validate the user input by using the
-[mask](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox#mask) property. To know more about
+[mask](https://ej2.syncfusion.com/vue/documentation/api/maskedtextbox/#mask) property. To know more about
 the usage of mask and configuration, refer to this [link](./mask-configuration/).
 
 The following example demonstrates the usage of mask element 0 that allows any single digit from 0 to 9.

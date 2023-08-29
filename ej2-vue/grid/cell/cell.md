@@ -25,7 +25,7 @@ The [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#que
 
 ## Custom attributes
 
-You can customize the grid cells by adding a CSS class to the [`customAttribute`](https://ej2.syncfusion.com/vue/documentation/api/grid/column#customattributes) property of the column.
+You can customize the grid cells by adding a CSS class to the [`customAttribute`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property of the column.
 
 ```css
 .e-attr {

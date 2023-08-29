@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Precision modes in Vue Rating component
 
-You can use the [`precision`](https://ej2.syncfusion.com/vue/documentation/api/rating#precision) property of the rating component to provide ratings with varying levels of precision.
+You can use the [`precision`](https://ej2.syncfusion.com/vue/documentation/api/rating/#precision) property of the rating component to provide ratings with varying levels of precision.
 
 The precision types of Rating are as follows:
 

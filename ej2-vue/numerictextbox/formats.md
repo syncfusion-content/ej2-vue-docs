@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Formats in Vue Numerictextbox component
 
-You can format the value of NumericTextBox using [`format`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#format) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the [standard numeric format](../common/internationalization#supported-format-string/) and [custom numeric format](../common/internationalization#custom-number-formatting-and-parsing/).
+You can format the value of NumericTextBox using [`format`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#format) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the [standard numeric format](../common/internationalization#supported-format-string/) and [custom numeric format](../common/internationalization#custom-number-formatting-and-parsing/).
 
 ## Standard formats
 
