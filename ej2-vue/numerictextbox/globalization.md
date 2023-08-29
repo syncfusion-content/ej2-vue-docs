@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-[`Localization`](../common/localization/) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#locale) property. In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
+[`Localization`](../common/localization/) library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#locale) property. In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
 
 | Locale key | en-US (default)  |
 |------|------|
@@ -60,7 +60,7 @@ npm install systemjs-plugin-json --save-dev
 
 * Now import the required culture from the installed location to `app.vue` file as like the below code snippets.
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#locale) property.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#locale) property.
 
 The below example demonstrates the NumericTextBox in `German` culture with the `EUR` currency format.
 
@@ -74,8 +74,8 @@ The below example demonstrates the NumericTextBox in `German` culture with the `
 
 ## Right to Left(RTL)
 
-`Localization` library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#locale) property. In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
-RTL provides an option to switch the text direction and layout of the NumericTextBox component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL NumericTextBox, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox#enablertl) to true.
+`Localization` library allows users to localize the default text contents of the NumericTextBox to different cultures using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#locale) property. In NumericTextBox, spin buttons title for the tooltip will be localized based on the culture.
+RTL provides an option to switch the text direction and layout of the NumericTextBox component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL NumericTextBox, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#enablertl) to true.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

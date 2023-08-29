@@ -84,7 +84,7 @@ This is demonstrated in the following sample:
 
 ## How to get the row information when hovering over the cell
 
-It is possible to get the row information when hovering over the specific cell. This can be achieved by using the [rowDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid#rowdatabound) event and [getRowInfo](https://ej2.syncfusion.com/vue/documentation/api/grid#getrowinfo) method of the Grid.
+It is possible to get the row information when hovering over the specific cell. This can be achieved by using the [rowDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowdatabound) event and [getRowInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#getrowinfo) method of the Grid.
 
 In the following sample, the `mouseover` event is bound to a grid row in the `rowDataBound` event, and when hovering over the specific cell, using the `getRowInfo` method, row information will be retrieved and displayed in the console.
 

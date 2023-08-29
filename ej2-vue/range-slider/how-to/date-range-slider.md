@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Date range slider in Vue Range slider component
 
-The date formatting can be achieved in [ticks](https://ej2.syncfusion.com/vue/documentation/api/slider#ticks) and [tooltip](https://ej2.syncfusion.com/vue/documentation/api/slider#tooltip) using [`renderingTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/vue/documentation/api/slider#tooltipchange) events, respectively. The process of formatting is explained in the following sample.
+The date formatting can be achieved in [ticks](https://ej2.syncfusion.com/vue/documentation/api/slider/#ticks) and [tooltip](https://ej2.syncfusion.com/vue/documentation/api/slider/#tooltip) using [`renderingTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider/#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/vue/documentation/api/slider/#tooltipchange) events, respectively. The process of formatting is explained in the following sample.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

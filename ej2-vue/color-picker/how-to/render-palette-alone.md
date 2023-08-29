@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Render palette alone in Vue Color picker component
 
-To render the `Palette` alone in ColorPicker, specify the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#mode) property as `Palette`, and set the [`modeSwitcher`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#modeswitcher) property to `false`.
+To render the `Palette` alone in ColorPicker, specify the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#mode) property as `Palette`, and set the [`modeSwitcher`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#modeswitcher) property to `false`.
 
-In the following sample, the [`showButtons`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#showbuttons) property is disabled to hide the control buttons and it renders only the `Palette` area.
+In the following sample, the [`showButtons`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#showbuttons) property is disabled to hide the control buttons and it renders only the `Palette` area.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -22,4 +22,4 @@ In the following sample, the [`showButtons`](https://ej2.syncfusion.com/vue/docu
         
 {% previewsample "page.domainurl/code-snippet/color-picker/default-cs15" %}
 
->> To render `Picker` alone specify the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/color-picker#mode) property as 'Picker'.
+>> To render `Picker` alone specify the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#mode) property as 'Picker'.

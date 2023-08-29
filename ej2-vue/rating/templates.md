@@ -14,8 +14,8 @@ The rating component allows you to customize the appearance of the rating items 
 
 The rating component supports below templates for item customization.
 
-* [`emptyTemplate`](https://ej2.syncfusion.com/vue/documentation/api/rating#emptytemplate)
-* [`fullTemplate`](https://ej2.syncfusion.com/vue/documentation/api/rating#fulltemplate)
+* [`emptyTemplate`](https://ej2.syncfusion.com/vue/documentation/api/rating/#emptytemplate)
+* [`fullTemplate`](https://ej2.syncfusion.com/vue/documentation/api/rating/#fulltemplate)
 
 ## Empty (unrated) symbol template
 

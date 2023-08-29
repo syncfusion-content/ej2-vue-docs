@@ -156,7 +156,7 @@ yarn run serve
 
 ## Value
 
-You can set the rating value by using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/rating#value) property.
+You can set the rating value by using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/rating/#value) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

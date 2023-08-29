@@ -4,17 +4,11 @@
 <ejs-button cssClass='e-flat'>Button</ejs-button>
 </template>
 
-<script>
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+<script setup>
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-
-export default {
-  components: {
-    'ejs-button': ButtonComponent
-  }
-}
 </script>
 
 <style>

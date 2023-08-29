@@ -22,7 +22,7 @@ The rating component allows users to rate something using a visual scale, and th
 
 ## Min value
 
-You can use the [`min`](https://ej2.syncfusion.com/vue/documentation/api/rating#min) property of the rating component to set the minimum possible rating value the user can select. If you set the `min` property to 2, then you will not be able to select a rating lower than 2.
+You can use the [`min`](https://ej2.syncfusion.com/vue/documentation/api/rating/#min) property of the rating component to set the minimum possible rating value the user can select. If you set the `min` property to 2, then you will not be able to select a rating lower than 2.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -34,7 +34,7 @@ You can use the [`min`](https://ej2.syncfusion.com/vue/documentation/api/rating#
 
 ## Single selection
 
-You can use the [`enableSingleSelection`](https://ej2.syncfusion.com/vue/documentation/api/rating#enablesingleselection) property of the rating component to select only one item at a time. When the `enableSingleSelection` property is set to `true`, only the selected item will be considered to be in the selected state, while all other items will be unselected.
+You can use the [`enableSingleSelection`](https://ej2.syncfusion.com/vue/documentation/api/rating/#enablesingleselection) property of the rating component to select only one item at a time. When the `enableSingleSelection` property is set to `true`, only the selected item will be considered to be in the selected state, while all other items will be unselected.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -46,7 +46,7 @@ You can use the [`enableSingleSelection`](https://ej2.syncfusion.com/vue/documen
 
 ## Show or hide reset button
 
-You can reset the rating value to its default by using the [`allowReset`](https://ej2.syncfusion.com/vue/documentation/api/rating#allowreset) property of the rating component. When the `allowReset` property is set to `true`, a reset button will be shown that allows the user to reset the rating value to its default.
+You can reset the rating value to its default by using the [`allowReset`](https://ej2.syncfusion.com/vue/documentation/api/rating/#allowreset) property of the rating component. When the `allowReset` property is set to `true`, a reset button will be shown that allows the user to reset the rating value to its default.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
