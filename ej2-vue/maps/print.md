@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Print
 
-The rendered Maps can be printed directly from the browser by calling the [`print`](https://ej2.syncfusion.com/vue/documentation/api/maps#print) method. To use the print functionality, **Print** module must be injected into the Maps using **provide** section and set the [`allowPrint`](https://ej2.syncfusion.com/vue/documentation/api/maps/mapsModel/#allowprint) property to **true**. The following code snippet demonstrates injecting the Print module into the Maps component.
+The rendered Maps can be printed directly from the browser by calling the [`print`](https://ej2.syncfusion.com/vue/documentation/api/maps/#print) method. To use the print functionality, **Print** module must be injected into the Maps using **provide** section and set the [`allowPrint`](https://ej2.syncfusion.com/vue/documentation/api/maps/mapsModel/#allowprint) property to **true**. The following code snippet demonstrates injecting the Print module into the Maps component.
 
 ```
 <template>

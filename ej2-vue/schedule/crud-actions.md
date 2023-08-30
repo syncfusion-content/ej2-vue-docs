@@ -83,7 +83,7 @@ Additionally, the regex condition has been added to the Location field, so that 
         
 {% previewsample "page.domainurl/code-snippet/schedule/default-cs1" %}
 
-You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`actionBegin`](../api/schedule#actionbegin) event.
+You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`actionBegin`](../api/schedule/#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -355,7 +355,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ### Restricting edit action based on specific criteria
 
-You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`actionBegin`](../api/schedule#actionbegin) event.
+You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`actionBegin`](../api/schedule/#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -580,4 +580,4 @@ When you resize a normal event on the Scheduler, the event editing action takes 
         
 {% previewsample "page.domainurl/code-snippet/schedule/event-cs39" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-ui-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
