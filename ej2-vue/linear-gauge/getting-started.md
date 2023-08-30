@@ -153,7 +153,7 @@ provide: {
 
 ## Adding the Linear Gauge Title
 
-The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel#title-string) property in the Linear Gauge.
+The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel/#title-string) property in the Linear Gauge.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -165,7 +165,7 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 
 ## Axis Range
 
-The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#maximum-number) properties in the Linear Gauge.
+The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -177,7 +177,7 @@ The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.co
 
 ### Customizing the axis labels
 
-To denote the axis labels with temperature units, add the °C as suffix to each label. This can be achieved by setting the **{value}°C** to the [`format`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#format-string) property in the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis#labelstyle-labelmodel) object of the axis. Here, **{value}** acts as a placeholder for each axis label.
+To denote the axis labels with temperature units, add the °C as suffix to each label. This can be achieved by setting the **{value}°C** to the [`format`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#format-string) property in the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#labelstyle-labelmodel) object of the axis. Here, **{value}** acts as a placeholder for each axis label.
 
 To change the pointer value from the default value of the gauge, set the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/) object of the axis.
 

@@ -16,7 +16,7 @@ Follow the given steps to change the header text dynamically:
 
 **Step 1**:
 
-Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#getcolumnbyfield) method.
+Get the column object corresponding to the field name by using the [`getColumnByField`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#getcolumnbyfield) method.
 Then change the header Text value.
 
 ```ts
@@ -30,7 +30,7 @@ Then change the header Text value.
 
 **Step 2**:
 
-To reflect the changes in the Tree Grid header, invoke the [`refreshColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#refreshcolumns) method.
+To reflect the changes in the Tree Grid header, invoke the [`refreshColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#refreshcolumns) method.
 
 ```ts
 

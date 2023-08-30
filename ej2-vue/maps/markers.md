@@ -128,7 +128,7 @@ The latitude and longitude values are used to determine the location of each mar
 
 ## Repositioning the marker using drag and drop
 
-The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [enableDrag](https://helpej2.syncfusion.com/vue/documentation/api/maps/markerSettingsModel/#enabledrag) property to **true** in the [markerSettings](https://helpej2.syncfusion.com/vue/documentation/api/maps/markerSettingsModel) property.
+The markers on the map can be dragged and dropped to change their position. To enable marker drag and drop, set the [enableDrag](https://ej2.syncfusion.com/vue/documentation/api/maps/markerSettingsModel/#enabledrag) property to **true** in the [markerSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/markerSettingsModel) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -138,7 +138,7 @@ The markers on the map can be dragged and dropped to change their position. To e
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs100" %}
 
-The data of the drag and dropped marker in the marker data source can be customized using the [markerDragStart](https://helpej2.syncfusion.com/vue/documentation/api/maps#markerdragstart) and [markerDragEnd](https://helpej2.syncfusion.com/vue/documentation/api/maps#markerdragend) events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
+The data of the drag and dropped marker in the marker data source can be customized using the [markerDragStart](https://ej2.syncfusion.com/vue/documentation/api/maps#markerdragstart) and [markerDragEnd](https://ej2.syncfusion.com/vue/documentation/api/maps#markerdragend) events. When you change the appropriate marker data, the tooltip and legend item text of that marker are automatically updated. The following properties are available in the event argument of the marker drag events.
 
 |   Argument Name      |   Description                               |
 |----------------------| --------------------------------------------|
