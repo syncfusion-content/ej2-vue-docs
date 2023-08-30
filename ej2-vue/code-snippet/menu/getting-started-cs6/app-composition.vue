@@ -6,20 +6,14 @@
 </div>
 </template>
 
-<script>
-import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
+<script setup>
+import { MenuComponent as EjsMenu } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-export default {
-   components: {
-    'ejs-menu': MenuComponent
-   },
-   data: function() {
-        return {
-            //Menu items definition
-           menuItems:  [
+//Menu items definition
+const menuItems = [
         {
         text: 'File',
         items: [
@@ -53,10 +47,8 @@ export default {
     },
     { text: 'Go' },
     { text: 'Help' }
-    ]
-    };
-    }
-}
+    ];
+    
 </script>
 
 <style>

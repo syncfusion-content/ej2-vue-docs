@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started
 
-This section explains how to create and configure a simple [Vue Query Builder component](https://www.syncfusion.com/vue-ui-components/vue-query-builder).
+This section explains how to create and configure a simple [Vue Query Builder component](https://www.syncfusion.com/vue-components/vue-query-builder).
 
 ## Prerequisites
 

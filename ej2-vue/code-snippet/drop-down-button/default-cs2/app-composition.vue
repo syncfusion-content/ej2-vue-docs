@@ -4,19 +4,12 @@
 <ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
 </template>
 
-<script>
-import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
+<script setup>
+import { DropDownButtonComponent as EjsDropdownbutton } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-
-export default {
-    components: {
-        'ejs-dropdownbutton': DropDownButtonComponent
-    },
-    data () {
-        return {
-            items:[
+const items = [
             {
                 text: 'Cut'
             },
@@ -25,10 +18,8 @@ export default {
             },
             {
                 text: 'Paste'
-            }]
-        };
-    }
-}
+            }];
+       
 </script>
 
 <style>

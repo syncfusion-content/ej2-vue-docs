@@ -4,17 +4,10 @@
 <ejs-checkbox label='Default'></ejs-checkbox>
 </template>
 
-<script>
-import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+import { CheckBoxComponent as EjsCheckbox } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-
-export default {
-  components: {
-    'ejs-checkbox': CheckBoxComponent
-  }
-}
 </script>
 
 <style>

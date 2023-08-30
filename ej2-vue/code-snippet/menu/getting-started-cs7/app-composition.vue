@@ -6,25 +6,18 @@
 </div>
 </template>
 
-<script>
-import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
+<script setup>
+import { MenuComponent as EjsMenu } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-
-export default {
-   components: {
-    'ejs-menu': MenuComponent
-   },
-   data: function() {
-        return {
-            //Menu items definition
-           menuItems:  [
+const menuItems =  [
         {
         text: 'File',
         items: [
             { text: 'Open' },
             { text: 'Save' },
+            { separator: true },
             { text: 'Exit' }
         ]
     },
@@ -40,12 +33,13 @@ export default {
         text: 'View',
         items: [
             { text: 'Toolbar' },
-            { text: 'Sidebar' }
+            { text: 'Sidebar' },
+            { text: 'Full Screen' }
         ]
     },
     {
         text: 'Tools',
-        items: [
+         items: [
             { text: 'Spelling & Grammar' },
             { text: 'Customize' },
             { text: 'Options' }
@@ -53,10 +47,7 @@ export default {
     },
     { text: 'Go' },
     { text: 'Help' }
-    ]
-    };
-    }
-}
+];
 </script>
 
 <style>
@@ -68,6 +59,7 @@ body {
     margin-top: 100px;
     text-align: center;
 }
+
 </style>
 
 
