@@ -22,24 +22,15 @@
             padding-top: 9%;
         }
 </style>
-<script>
-import { BarcodeGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
+<script setup>
+import { BarcodeGeneratorComponent as EjsBarcodegenerator } from '@syncfusion/ej2-vue-barcode-generator';
 
-export default {
-    components: {
-        'ejs-barcodegenerator': BarcodeGeneratorComponent
-    },
-    name: 'app',
-    data () {
-        return {
-            width: "200px",
-            height: "150px",
-            type: "Codabar",
-            value: "123456789",
-            mode: "SVG",
-        }
-    }
-}
+const width = "200px";
+const height = "150px";
+const type = "Codabar";
+const value = "123456789";
+const mode = "SVG";
+       
 </script>
 
 
