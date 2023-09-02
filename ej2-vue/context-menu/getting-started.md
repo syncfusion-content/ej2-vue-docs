@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Context menu Component in Vue 2
 
-This section explains how to create a simple ContextMenu, and configure its available
-functionalities in Vue using Vue quickstart seed repository.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Context menu component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -33,57 +32,100 @@ The following list of dependencies are required to use the ContextMenu component
             |-- @syncfusion/ej2-buttons
 ```
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-Install Syncfusion `ContextMenu` packages using below command.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Context menu component](https://www.syncfusion.com/vue-components/vue-context-menu) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
 ```
+or
 
-## Registering ContextMenu component using `Vue.use()`
-
-Import the ContextMenu Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```javascript
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(ContextMenuPlugin);
-
-export default {}
+```bash
+yarn add @syncfusion/ej2-vue-navigations
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `ContextMenu`. Refer [here](https://ej2.syncfusion.com/vue/documentation/base/getting-started/#registering-vue-component) to know more about component registration.
+## Import Syncfusion CSS styles
 
-## Initialize ContextMenu
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Add the EJ2 Vue ContextMenu using `<ejs-contextmenu>` to the `<template>` section of the `App.vue` file in `src` directory.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Context menu component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Context menu component using `Composition API` or `Options API`:
+
+1\. First, import and register the Context menu component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+  import { ContextMenuComponent as EjsContextmenu } from "@syncfusion/ej2-vue-navigations";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
+  export default {
+  components: {
+    'ejs-contextmenu': ContextMenuComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Context menu component with the [items](https://helpej2.syncfusion.com/vue/documentation/api/context-menu#items) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
 <div>
 <div id="target">Right click / Touch hold to open the ContextMenu</div>
@@ -91,68 +133,75 @@ Add the EJ2 Vue ContextMenu using `<ejs-contextmenu>` to the `<template>` sectio
 </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
+{% endhighlight %}
+{% endtabs %}
 
-Vue.use(ContextMenuPlugin);
-
-export default {
-    data () {
-        return {
-            menuItems:[
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            }]
-        };
-    }
-}
-</script>
-```
-
-## Adding CSS Reference
-
-Add ContextMenu component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-
-/* Context Menu target */
-#target {
-    border: 1px dashed;
-    height: 150px;
-    padding: 10px;
-    position: relative;
-    text-align: justify;
-    color: gray;
-    user-select: none;
-}
-</style>
-```
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
-
-The following example shows a basic ContextMenu component.
+3\. Declare the value for the `itemd` property in the `script` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const menuItems = [
+    {
+        text: 'Cut'
+    },
+    {
+        text: 'Copy'
+    },
+    {
+        text: 'Paste'
+    }];
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+data () {
+    return {
+        menuItems:[
+        {
+            text: 'Cut'
+        },
+        {
+            text: 'Copy'
+        },
+        {
+            text: 'Paste'
+        }]
+    };
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
+
 {% previewsample "page.domainurl/code-snippet/context-menu/default-cs2" %}
 
 ## Rendering items with Separator
@@ -160,7 +209,10 @@ The following example shows a basic ContextMenu component.
 The Separators are the horizontal lines that are used to separate the menu items. You cannot select the separators. You can enable separators to group the menu items using the [`separator`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuItemModel/#separator) property. Cut, Copy, and Paste menu items are grouped using the `separator` property in the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

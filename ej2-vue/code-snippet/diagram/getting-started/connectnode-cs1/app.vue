@@ -6,9 +6,7 @@
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
+    import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
     let nodes = [
         {
             id: "node1",
@@ -33,6 +31,9 @@
         },
     ]
     export default {
+    components: {
+        'ejs-diagram': DiagramComponent
+    },
     name: 'app'
         data () {
             return {
@@ -45,7 +46,7 @@
     }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
 

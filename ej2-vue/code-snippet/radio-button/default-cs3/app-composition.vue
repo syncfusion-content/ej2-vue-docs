@@ -7,17 +7,10 @@
 </ul>
 </template>
 
-<script>
-import { RadioButtonComponent } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+import { RadioButtonComponent as EjsRadiobutton } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-
-export default {
-    components: {
-        'ejs-radiobutton': RadioButtonComponent
-    }
-}
 </script>
 
 <style>

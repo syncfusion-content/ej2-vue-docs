@@ -6,10 +6,8 @@
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramComponent, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
     import { DataManager } from "@syncfusion/ej2-data";
-    Vue.use(DiagramPlugin);
 
     export let localdata = [
             {
@@ -48,6 +46,9 @@
             }
         ];
     export default {
+        components: {
+            'ejs-diagram': DiagramComponent
+        },
         name: 'app',
         data () {
             return {
@@ -81,7 +82,7 @@
     }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
 

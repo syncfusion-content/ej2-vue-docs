@@ -5,19 +5,13 @@
 </div>
 </template>
 
-<script>
-import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
+<script setup>
+import { ContextMenuComponent as EjsContextmenu } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-export default {
-    components: {
-        'ejs-contextmenu': ContextMenuComponent
-    },
-    data () {
-        return {
-            menuItems:[
+const menuItems = [
             {
                 text: 'Cut'
             },
@@ -26,10 +20,16 @@ export default {
             },
             {
                 text: 'Paste'
-            }]
-        };
-    }
-}
+            },
+            {
+                separator: true
+            },
+            {
+                text: 'Font'
+            },
+            {
+                text: 'Paragraph'
+            }];
 </script>
 
 <style>
@@ -40,14 +40,12 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 #target {
-    border: 1px dashed;
-    height: 150px;
-    padding: 10px;
-    position: relative;
-    text-align: justify;
-    color: gray;
-    user-select: none;
+  border: 1px dashed;
+  height: 150px;
+  padding: 10px;
+  position: relative;
+  text-align: justify;
+  color: gray;
+  user-select: none;
 }
 </style>
-
-

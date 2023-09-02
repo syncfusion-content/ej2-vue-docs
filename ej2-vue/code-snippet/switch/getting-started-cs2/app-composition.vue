@@ -1,20 +1,11 @@
-
-
 <template>
   <ejs-switch checked=true></ejs-switch>
 </template>
 
-<script>
-import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-
-export default {
-  components: {
-    'ejs-switch': SwitchComponent
-  }
-}
 </script>
 
 <style>
@@ -25,5 +16,3 @@ export default {
   margin: 18px;
 }
 </style>
-
-

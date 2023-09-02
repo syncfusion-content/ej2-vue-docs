@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:10px auto 0; width:250px;">
@@ -8,16 +5,10 @@
     </div>
   </div>
 </template>
-<script>
-import { ListBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
+<script setup>
+import { ListBoxComponent as EjsListbox } from "@syncfusion/ej2-vue-dropdowns";
 
-export default {
-  components: {
-    'ejs-listbox': ListBoxComponent
-  },
-  data (){
-    return {
-       data: [
+const data = [
     { text: 'Hennessey Venom', id: 'list-01' },
     { text: 'Bugatti Chiron', id: 'list-02' },
     { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
@@ -28,16 +19,11 @@ export default {
     { text: 'Jaguar XJ220', id: 'list-08' },
     { text: 'McLaren P1', id: 'list-09' },
     { text: 'Ferrari LaFerrari', id: 'list-10' },
-]
-    }
-  }
-}
+];
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
-
-
-

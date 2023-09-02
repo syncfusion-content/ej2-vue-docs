@@ -5,17 +5,11 @@
   </div>
 </template>
 
-<script>
-import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
+<script setup>
+import { ColorPickerComponent as EjsColorpicker } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-
-export default {
-  components: {
-    'ejs-colorpicker': ColorPickerComponent
-  }
-}
 </script>
 
 <style>

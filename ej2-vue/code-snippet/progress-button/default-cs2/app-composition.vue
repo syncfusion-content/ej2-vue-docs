@@ -1,21 +1,13 @@
 
 
 <template>
- <ejs-progressbutton content="Spin Left"  :enableProgress="true"></ejs-progressbutton>
+ <ejs-progressbutton content="Spin Left"></ejs-progressbutton>
 </template>
 
-<script>
-import { ProgressButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
+<script setup>
+import { ProgressButtonComponent as EjsProgressbutton } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-
-export default {
-  components: {
-    'ejs-progressbutton': ProgressButtonComponent
-  }
-}
-
 </script>
 
 <style>

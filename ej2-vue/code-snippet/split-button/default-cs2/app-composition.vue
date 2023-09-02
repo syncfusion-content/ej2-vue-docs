@@ -1,34 +1,22 @@
-
-
 <template>
 <ejs-splitbutton :items='items' content='Paste'></ejs-splitbutton>
 </template>
 
-<script>
-import { SplitButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
+<script setup>
+import { SplitButtonComponent as EjsSplitbutton } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-
-export default {
-    components: {
-        'ejs-splitbutton': SplitButtonComponent
-    },
-    data () {
-        return {
-            items:[
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            }]
-        };
-    }
-}
+const items = [
+{
+    text: 'Cut'
+},
+{
+    text: 'Copy'
+},
+{
+    text: 'Paste'
+}];
 </script>
 
 <style>
@@ -37,5 +25,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

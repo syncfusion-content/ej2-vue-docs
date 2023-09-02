@@ -5,19 +5,13 @@
 </div>
 </template>
 
-<script>
-import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
+<script setup>
+import { ContextMenuComponent as EjsContextmenu } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-export default {
-    components: {
-        'ejs-contextmenu': ContextMenuComponent
-    },
-    data () {
-        return {
-            menuItems:[
+const menuItems = [
             {
                 text: 'Cut'
             },
@@ -26,10 +20,7 @@ export default {
             },
             {
                 text: 'Paste'
-            }]
-        };
-    }
-}
+            }];
 </script>
 
 <style>

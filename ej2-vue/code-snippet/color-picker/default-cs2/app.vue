@@ -8,14 +8,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ColorPickerPlugin);
 
-export default {}
+export default {
+  components: {
+    'ejs-colorpicker': ColorPickerComponent
+  },
+}
 </script>
 
 <style>

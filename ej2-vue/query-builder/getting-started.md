@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Query builder Component in Vue 2
 
-This section explains how to create and configure a simple [Vue Query Builder component](https://www.syncfusion.com/vue-components/vue-query-builder).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Query builder component.
 
 ## Prerequisites
 
@@ -31,57 +31,102 @@ The list of dependencies required to use the Query Builder component in your app
     |-- @syncfusion/ej2-inputs
 ```
 
-## Installation and   configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-Install Syncfusion `Query Builder` packages using below command.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Query builder component](https://www.syncfusion.com/vue-components/vue-query-builder) as an example. Install the `@syncfusion/ej2-vue-querybuilder` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-querybuilder --save
 ```
+or
 
-## Registering Query Builder component using `Vue.use()`
-
-Import the Query Builder Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```javascript
-import Vue from 'vue';
-import { QueryBuilderPlugin } from '@syncfusion/ej2-vue-querybuilder';
-
-Vue.use(QueryBuilderPlugin);
-
-export default {}
+```bash
+yarn add @syncfusion/ej2-vue-querybuilder
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Query Builder`. Refer [here](https://ej2.syncfusion.com/vue/documentation/base/getting-started/#registering-vue-component) to know more about component registration.
+## Import Syncfusion CSS styles
 
-## Initialize Query Builder
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Add the EJ2 Vue Query Builder using `<ejs-querybuilder>` to the `<template>` section of the `App.vue` file in `src` directory.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Query builder component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-querybuilder/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+>Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Query builder component:
+
+1\. First, import and register the Query builder component in the `script` section of the **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+
+export default {
+    components: {
+        'ejs-querybuilder': QueryBuilderComponent,
+        'e-column': ColumnDirective,
+        'e-columns': ColumnsDirective
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Query builder component with the `values` property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -100,59 +145,47 @@ Add the EJ2 Vue Query Builder using `<ejs-querybuilder>` to the `<template>` sec
     </div>
 </template>
 
-<style>
-    .e-query-builder {
-        margin: 0 auto;
-    }
-</style>
+{% endhighlight %}
+{% endtabs %}
 
-<script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-
-Vue.use(QueryBuilderPlugin);
-
-export default {
-  data: function() {
-    return {
-      values: ['Mr.', 'Mrs.']
-    };
-  }
-}
-</script>
-```
-
-## Adding CSS Reference
-
-To render the QueryBuilder component, need to import Querybuilder and its dependent component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-querybuilder/styles/material.css";
-</style>
-```
-
->Note: If you want to refer the combined component styles, please make use of our [`CRG`](https://crg.syncfusion.com/) (Custom Resource Generator) in your application.
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
-
-The following example shows a basic Query builder.
+3\. Declare the value for the `values` property in the `script` section. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+data: function() {
+    return {
+        values: ['Mr.', 'Mrs.']
+    };
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/query-builder/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/query-builder/default-cs10" %}
 
@@ -160,7 +193,9 @@ The following example shows a basic Query builder.
 
 Add the EJ2 Vue Query Builder using `<ejs-querybuilder>` to the `<template>` section of the `App.vue` file in `src` directory.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -186,12 +221,14 @@ Add the EJ2 Vue Query Builder using `<ejs-querybuilder>` to the `<template>` sec
 </style>
 
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-
-Vue.use(QueryBuilderPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 
 export default {
+  components: {
+    'ejs-querybuilder': QueryBuilderComponent,
+    'e-column': ColumnDirective,
+    'e-columns': ColumnsDirective
+  },
   data: function() {
     return {
       dataSource: employeeData,
@@ -244,12 +281,14 @@ var employeeData = [{
       'Country': 'USA'
     }];
 </script>
-```
+
+{% endhihghlight %}
+{% endtabs %}
 
 The following example shows a basic Query builder.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/query-builder/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

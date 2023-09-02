@@ -8,136 +8,134 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue List box Component in Vue 2
 
-This section briefly explains how to create a simple **ListBox** component and configure its available functionalities in Vue.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue List box component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use ListBox component.
-
-To install ListBox component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-dropdowns –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+## Add Syncfusion Vue packages
 
-Refer the code snippet given below.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-```ts
-import { ListBoxPlugin } from '@syncfusion/ej2-vue-dropdowns';
+This article uses the [Vue List box component](https://www.syncfusion.com/vue-components/vue-listbox) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
 
-Vue.use(ListBoxPlugin);
+```bash
+npm install @syncfusion/ej2-vue-dropdowns --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-dropdowns
 ```
 
-Note : By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the List box component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { ListBoxComponent, ListBoxPlugin } from '@syncfusion/ej2-vue-dropdowns';
-
-Vue.component(ListBoxPlugin.name, ListBoxComponent);
-```
-
-Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Creating Vue Sample
-
-Add the EJ2 Vue ListBox using `<ejs-listbox>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the ListBox component is provided as name in data option in the `<script>` section.
-
-```
-<template>
-    <div class="control_wrapper">
-        <ejs-listbox id='listbox'></ejs-listbox>
-    </div>
-</template>
-<script>
-import Vue from 'vue';
-import { ListBoxPlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(ListBoxPlugin);
-
-export default Vue.extend({
-  data: function() {
-    return {
-
-    };
-  }
-});
-
-</script>
-```
-
-## Adding CSS Reference
-
-Add ComboBox component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue List box component using `Composition API` or `Options API`:
+
+1\. First, import and register the List box component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { ListBoxComponent as EjsListbox } from "@syncfusion/ej2-vue-dropdowns";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { ListBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
+export default {
+  components: {
+    'ejs-listbox': ListBoxComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the List box component with the [dataSource](https://ej2.syncfusion.com/staging/vue/documentation/api/list-box#datasource) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+    <div id='container' style="margin:10px auto 0; width:250px;">
+        <ejs-listbox :dataSource='data' ></ejs-listbox>
+    </div>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Binding data source
 
 After initialization, populate the ListBox with data using the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/list-box/#datasource) property. Here, an array of object is passed to the ListBox component.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div class="control_wrapper">
-        <ejs-listbox :dataSource='data'></ejs-listbox>
+  <div id="app">
+    <div id='container' style="margin:10px auto 0; width:250px;">
+        <ejs-listbox :dataSource='data' ></ejs-listbox>
     </div>
+  </div>
 </template>
-<script>
-import Vue from 'vue';
-import { ListBoxPlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(ListBoxPlugin);
-
-export default Vue.extend({
-  data: function() {
-    return {
-       data: { [key: string]: Object }[] = [
+<script setup>
+import { ListBoxComponent as EjsListbox } from "@syncfusion/ej2-vue-dropdowns";
+const data = [
     { text: 'Hennessey Venom', id: 'list-01' },
     { text: 'Bugatti Chiron', id: 'list-02' },
     { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
@@ -149,25 +147,69 @@ export default Vue.extend({
     { text: 'McLaren P1', id: 'list-09' },
     { text: 'Ferrari LaFerrari', id: 'list-10' },
 ];
-    };
-  }
-});
-
 </script>
-```
 
-## Run the application
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-After completing the configuration required to render a basic ListBox, run the following command to display the output in your default browser.
+<template>
+  <div id="app">
+    <div id='container' style="margin:10px auto 0; width:250px;">
+        <ejs-listbox :dataSource='data' ></ejs-listbox>
+    </div>
+  </div>
+</template>
+<script>
+import { ListBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
+export default {
+  components: {
+    'ejs-listbox': ListBoxComponent
+  },
+  data (){
+    return {
+       data: [
+    { text: 'Hennessey Venom', id: 'list-01' },
+    { text: 'Bugatti Chiron', id: 'list-02' },
+    { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
+    { text: 'SSC Ultimate Aero', id: 'list-04' },
+    { text: 'Koenigsegg CCR', id: 'list-05' },
+    { text: 'McLaren F1', id: 'list-06' },
+    { text: 'Aston Martin One- 77', id: 'list-07' },
+    { text: 'Jaguar XJ220', id: 'list-08' },
+    { text: 'McLaren P1', id: 'list-09' },
+    { text: 'Ferrari LaFerrari', id: 'list-10' },
+]
+    }
+  }
+}
+</script>
 
-```
-npm run dev
-```
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/list-box/getting-started/getting-started-cs9" %}

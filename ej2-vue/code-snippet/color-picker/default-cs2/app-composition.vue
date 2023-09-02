@@ -1,21 +1,15 @@
 <template>
-  <div class='wrap'>
+<div class='wrap'>
     <h4>Choose Color</h4>
-    <ejs-colorpicker :inline="true" :showButtons="false"></ejs-colorpicker>
-  </div>
+    <ejs-colorpicker></ejs-colorpicker>
+</div>
 </template>
 
-<script>
-import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
+<script setup>
+import { ColorPickerComponent as EjsColorpicker } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-
-export default {
-  components: {
-    'ejs-colorpicker': ColorPickerComponent
-  }
-}
 </script>
 
 <style>

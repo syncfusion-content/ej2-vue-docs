@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <div id="target">Right click / Touch hold to open the ContextMenu</div>
@@ -8,14 +6,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
+import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ContextMenuPlugin);
 
 export default {
+    components: {
+        'ejs-contextmenu': ContextMenuComponent
+    },
     data () {
         return {
             menuItems:[
@@ -43,7 +42,7 @@ export default {
 </script>
 
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
