@@ -99,7 +99,7 @@
                 for (let item of args.items) {
                     if (item.text === 'delete') {
                         if (!diagram.selectedItems.nodes.length && !diagram.selectedItems.connectors.length) {
-                            args.hiddenItems.push(item.text);
+                            args.hiddenItems.push(item.id);
                         }
                     }
                 }
