@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Treegrid component
 
-The TreeGrid uses `DataManager`, which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#dataSource) property can be assigned either with the instance of `DataManager` or JavaScript object array collection.
+The TreeGrid uses `DataManager`, which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#dataSource) property can be assigned either with the instance of `DataManager` or JavaScript object array collection.
 It supports two kinds of data binding method:
 * Local data
 * Remote data

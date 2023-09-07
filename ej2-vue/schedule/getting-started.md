@@ -250,11 +250,11 @@ You can also provide different names to these default fields, for which the cust
 </script>
 ```
 
-The other fields available in Scheduler can be referred from [here](./appointments#event-fields).
+The other fields available in Scheduler can be referred from [here](./appointments/#event-fields).
 
 ## Setting date
 
-Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the [`selectedDate](../api/schedule#selecteddate) property.
+Scheduler usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the [`selectedDate](../api/schedule/#selecteddate) property.
 
 `[src/app/app.vue]`
 
@@ -285,7 +285,7 @@ Scheduler usually displays the system date as its current date. To change the cu
 
 ## Setting view
 
-Scheduler displays `week` view by default. To change the current view, define the applicable view name to the [`currentView`](../api/schedule#currentview) property. The applicable view names are,
+Scheduler displays `week` view by default. To change the current view, define the applicable view name to the [`currentView`](../api/schedule/#currentview) property. The applicable view names are,
 
 * Day
 * Week
