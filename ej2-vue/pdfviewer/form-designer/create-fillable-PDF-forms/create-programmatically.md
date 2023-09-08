@@ -65,17 +65,14 @@ When the download icon is selected on the toolbar, the Form Fields will be saved
 
 You can invoke download action using following code snippet.
 
-```
-
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
     <div id="app">
-        <ejs-button ref="downloadBtn" v-on:click.native="downloadClicked"
-            >Download</ejs-button
-        >
+      <button v-on:click="downloadClicked">Download</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :documentLoad="documentLoad">
         </ejs-pdfviewer>
@@ -87,8 +84,6 @@ import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
          Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
 var viewer;
 
@@ -96,14 +91,12 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
 
   methods: {
     downloadClicked: function (args) {
@@ -116,21 +109,12 @@ export default {
 }
 </script>
 
-```
-
-## Printing the form fields
-
-When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
-
-![Alt text](../../../pdfviewer/images/printformfield.gif)
-
-You can invoke print action using the following code snippet.,
-
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 
 <template>
     <div id="app">
-        <ejs-button ref="printBtn" v-on:click.native="printClicked">Print</ejs-button>
+      <button v-on:click="downloadClicked">Download</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -146,8 +130,6 @@ import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
          Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
 var viewer;
 
@@ -155,18 +137,17 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner,FormFields ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
 
   methods: {
-    printClicked: function (args) {
-      viewer.print();
+    downloadClicked: function (args) {
+       viewer.download();
     },
     documentLoad: function (args) {
       viewer = this.$refs.pdfviewer.ej2Instances;
@@ -175,7 +156,109 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
+
+## Printing the form fields
+
+When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
+
+![Alt text](../../../pdfviewer/images/printformfield.gif)
+
+You can invoke print action using the following code snippet.,
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+    <div id="app">
+      <button v-on:click="printClicked">Print</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
+
+  methods: {
+    printClicked: function (args) {
+      viewer.print.print();
+    },
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+    },
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="printClicked">Print</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
+
+  methods: {
+    printClicked: function (args) {
+      viewer.print.print();
+    },
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
 
 ## Open the existing PDF document
 
@@ -189,8 +272,67 @@ The form fields in the PDF Document will be validated when the `enableFormFields
 
 Add the following code snippet to validate the form fields,
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+    <div id="app">
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad"
+            :enableFormFieldsValidation="true"
+            :validateFormFields="validateFormFields">
+        </ejs-pdfviewer>
+    </div>
+</template>
 
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 70, Y: 229, Width: 150, Height: 24 } });
+    },
+    validateFormFields: function(args){
+      var nonfilledFormFields = args.nonFillableFields
+    }
+  }
+}
+</script>
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+  #pdfViewer {
+    height: 640px;
+  }
+</style>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 <template>
     <div id="app">
         <ejs-pdfviewer
@@ -218,10 +360,9 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"FormDesigner.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
-
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
                  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
@@ -229,8 +370,8 @@ export default {
   methods: {
     documentLoad: function (args) {
       viewer = this.$refs.pdfviewer.ej2Instances;
-      viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 146, Y: 229, Width: 150, Height: 24 } });
-    }
+      viewer.formDesignerModule.addFormField("Textbox", { name: "Textbox", bounds: { X: 70, Y: 229, Width: 150, Height: 24 } });
+    },
     validateFormFields: function(args){
       var nonfilledFormFields = args.nonFillableFields
     }
@@ -251,8 +392,8 @@ export default {
     height: 640px;
   }
 </style>
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Export and import form fields
 
@@ -261,6 +402,7 @@ The PDF Viewer control provides the support to export and import the form field 
 * FDF
 * XFDF
 * JSON
+* XML
 
 ### Export and import as FDF
 
@@ -271,12 +413,12 @@ Using the `exportFormFields` method, the form field data can be exported in the 
 
 The following code explains how to export and import the form field data as FDF.
 
-```
+```ts
 
 <template>
     <div id="app">
-        <ejs-button ref="exportFdf" v-on:click.native="exportFdf">Export FDF</ejs-button>
-        <ejs-button ref="importFdf" v-on:click.native="importFdf">Import FDF</ejs-button>
+        <button v-on:click="exportFdf">Export FDF</button>
+        <button v-on:click="imporFdf">Import FDF</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -288,39 +430,41 @@ The following code explains how to export and import the form field data as FDF.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
-         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields, FormFieldDataFormat } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
 
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
   methods: {
     // Event triggers on the Export FDF button click.
-    exportFdf: function (args) {
+    exportFdf: function () {
       // Data must be the desired path for the exported document.
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       viewer.exportFormFields('Data', FormFieldDataFormat.Fdf);
     },
+
     // Event triggers on the Import FDF button click.
-    importFdf: function (args) {
+    importFdf: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       // The file for importing the form fields should be placed in the desired location and the path should be provided correctly
-      viewer.importFormFields('File', FormFieldDataFormat.Fdf);
-     },
+      viewer.importFormFields('File',FormFieldDataFormat.Fdf);
+    },
   }
 }
+
 </script>
 
 ```
@@ -329,12 +473,11 @@ export default {
 
 The following code explains how to export and import the form field data as XFDF.
 
-```
-
+```ts
 <template>
     <div id="app">
-        <ejs-button ref="exportXfdf" v-on:click.native="exportXfdf" >Export XFDF</ejs-button>
-        <ejs-button ref="importXfdf" v-on:click.native="importXfdf">Import XFDF</ejs-button>
+        <button v-on:click="exportXfdf">Export XFDF</button>
+        <button v-on:click="importXfdf">Import XFDF</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -346,55 +489,52 @@ The following code explains how to export and import the form field data as XFDF
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
-         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields, FormFieldDataFormat } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
 
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
 
   methods: {
     // Event triggers on the Export XFDF button click.
-    exportXfdf: function (args) {
+    exportXfdf: function () {
       // Data must be the desired path for the exported document.
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       viewer.exportFormFields('Data', FormFieldDataFormat.Xfdf);
     },
 
     // Event triggers on the Import XFDF button click.
-    importXfdf: function (args) {
+    importXfdf: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       // The file for importing the form fields should be placed in the desired location and the path should be provided correctly
-      viewer.importFormFields('File', FormFieldDataFormat.Xfdf);
+      viewer.importFormFields('File',FormFieldDataFormat.Xfdf);
     },
   }
 }
 </script>
-
 ```
 
 ### Export and import as JSON
 
 The following code explains how to export and import the form field data as JSON.
 
-```
-
+```ts
 <template>
     <div id="app">
-        <ejs-button ref="exportJson" v-on:click.native="exportJson">Export JSON</ejs-button>
-        <ejs-button ref="importJson" v-on:click.native="importJson">Import JSON</ejs-button>
+        <button v-on:click="exportJson">Export JSON</button>
+        <button v-on:click="importJson">Import JSON</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -404,60 +544,55 @@ The following code explains how to export and import the form field data as JSON
     </div>
 </template>
 
-
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
-         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields, FormFieldDataFormat } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
 
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
 
   methods: {
     // Event triggers on the Export JSON button click.
-    exportJson: function (args) {
+    exportJson: function () {
       // Data must be the desired path for the exported document.
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       viewer.exportFormFields('Data', FormFieldDataFormat.Json);
     },
 
     // Event triggers on the Import JSON button click.
-    importJson: function (args) {
+    importJson: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       // The file for importing the form fields should be placed in the desired location and the path should be provided correctly
-      viewer.importFormFields('File', FormFieldDataFormat.Json);
+      viewer.importFormFields('File',FormFieldDataFormat.Json);
     },
   }
 }
-</script>
 
 ```
-
 ### Export and import as Object
 
 The PDF Viewer control supports exporting the form field data as an object, and the exported data will be imported into the current PDF document from the object.
 
 The following code shows how to export the form field data as an object and import the form field data from that object into the current PDF document via a button click.
 
-```
-
+ ```ts
 <template>
     <div id="app">
-        <ejs-button ref="exportData" v-on:click.native="exportDataAsObject">Export Object</ejs-button>
-        <ejs-button ref="importData" v-on:click.native="importData">Import Data</ejs-button>
+        <button v-on:click="exportDataAsObject">Export Object</button>
+        <button v-on:click="importData">Import Data</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -469,13 +604,10 @@ The following code shows how to export the form field data as an object and impo
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
-         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields, FormFieldDataFormat } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 var exportedData;
 
 export default {
@@ -483,14 +615,14 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
-  
+
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]},
- 
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
   methods: {
     // Event triggers on the Export Object button click.
     exportDataAsObject: function (args) {
@@ -511,10 +643,65 @@ export default {
       //// Import the form fields data from the JSON object into the current PDF document.
       //viewer.importFormFields(exportedData, FormFieldDataFormat.Json);
     },
+
   }
 }
-</script>
+```
 
+### Export and import as XML
+
+The following code explains how to export and import the form field data as XML.
+
+```ts
+<template>
+    <div id="app">
+      <button v-on:click="exportXml">Export XML</button>
+      <button v-on:click="importXml">Import XML</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath">
+      </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields, FormFieldDataFormat } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+    };
+  },
+
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Export XML button click.
+    exportXml: function () {
+      // Data must be the desired path for the exported document.
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      viewer.exportFormFields('Data', FormFieldDataFormat.Xml);
+    },
+
+    // Event triggers on the Import XML button click.
+    importXml: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      // The file for importing the form fields should be placed in the desired location and the path should be provided correctly
+      viewer.importFormFields('File',FormFieldDataFormat.Xml);
+    },
+  }
+}
 ```
 
 ## Signature and initial fields settings
@@ -523,11 +710,62 @@ Using the `updateFormField` method, the form fields can be updated programmatica
 
 The following code example explains how to update the signature field properties on a button click.
 
-```
-
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
     <div id="app">
-        <ejs-button ref="updateProperties" v-on:click.native="updateProperties">Update Properties</ejs-button>
+      <button v-on:click="updateProperties">Update Properties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'Signature',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'Signature',
+        thickness: 4
+     });
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">Update Properties</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -539,47 +777,45 @@ The following code example explains how to update the signature field properties
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
-         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 var viewer;
-var exportedData;
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
 
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
 
   methods: {
     // Event triggers on the Update Properties button click.
     updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
       var formField = viewer.retrieveFormFields();
       viewer.formDesignerModule.updateFormField(formField[0], {
-        name: 'Initial',
+        name: 'Signature',
         isReadOnly: true,
         visibility: 'visible',
         isRequired: false,
         isPrint: true,
-        tooltip: 'Initial',
+        tooltip: 'Signature',
         thickness: 4
      });
     },
   }
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 The following code example explains how to update the properties of the signature field added to the document from the form designer toolbar.
 

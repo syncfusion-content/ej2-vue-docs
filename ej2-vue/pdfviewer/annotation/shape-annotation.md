@@ -35,41 +35,84 @@ In the pan mode, if the shape annotation mode is entered, the PDF Viewer control
 
 Refer to the following code sample to switch to the circle annotation mode.
 
-```
 
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
-    <div id="app">
-        <button id="set">Circle</button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+     <button id="set">Circle</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-
 var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+   methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Circle');
+      });
+    }
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+     <button id="set">Circle</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -81,8 +124,8 @@ export default {
   }
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing the properties of the shape annotation
 
@@ -124,8 +167,51 @@ Refer to the following code sample to set the default annotation settings.
 
 The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+    <div id="app">
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :lineSettings="lineSettings"
+            :arrowSettings="arrowSettings"
+            :rectangleSettings="rectangleSettings"
+            :circleSettings="circleSettings"
+            :polygonSettings="polygonSettings">
+        </ejs-pdfviewer>
+    </div>
+</template>
 
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      lineSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
+      arrowSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
+      rectangleSettings: {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
+      circleSettings: {fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'},
+      polygonSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 <template>
     <div id="app">
         <ejs-pdfviewer
@@ -145,17 +231,17 @@ The properties of the shape annotations can be set before creating the control u
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView,ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       lineSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
       arrowSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
       rectangleSettings: {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
@@ -163,12 +249,11 @@ export default {
       polygonSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
     };
   },
-
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}
