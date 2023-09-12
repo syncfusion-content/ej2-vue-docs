@@ -163,7 +163,7 @@ Find the relevant feature modules and descriptions as follows:
 Now, import the above-mentioned modules from the Gantt package and inject them using `provide`like following code:
 
 {% tabs %}
-{% highlight html tabtitle=~/src/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
 import { GanttComponent , Edit, Filter, Sort } from "@syncfusion/ej2-vue-gantt";
