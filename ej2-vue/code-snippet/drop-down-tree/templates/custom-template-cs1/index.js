@@ -14,18 +14,7 @@ var data = [
   { "id": 11, "pid": 6, "name": "Mary", "job": "Developer " },
   { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
 ];
-export default Vue.extend({
-  data: function() {
-    var temp = this;
-      return {
-        fields: { dataSource: data, value: 'id', text: 'name', parentValue: 'pid', hasChildren: 'hasChild' },
-        height: '200px',
-        waterMark: 'Select an employee',
-        treeSettings: { autoCheck: true },
-        customTemplate: 'Selected item(s) count: ${value.length}'
-      };
-  }
-});
+
 new Vue({
 	el: '#app',
 	template: `
@@ -36,4 +25,13 @@ new Vue({
   </div>
 `,
 
+  data() {
+    return {
+      fields: { dataSource: data, value: 'id', text: 'name', parentValue: 'pid', hasChildren: 'hasChild' },
+      height: '200px',
+      waterMark: 'Select an employee',
+      treeSettings: { autoCheck: true },
+      customTemplate: 'Selected item(s) count: ${value.length}'
+    };
+  }
 });

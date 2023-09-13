@@ -26,9 +26,10 @@ new Vue({
       data: employeeData,
       cTemplate: function () {
           return { template : Vue.component('columnTemplate',{
-             template: `<div class="image">
-                    <img :src="image" :alt="altImage"/>
-                </div>`,
+             template: `
+             <div class="image">
+                <img :src="image" :alt="altImage"/>
+            </div>`,
                 data: function() {
                     return {
                         data: {}
@@ -36,7 +37,7 @@ new Vue({
                 },
                 computed: {
                     image: function() {
-                        return './' + this.data.EmployeeID + '.png';
+                        return './images/' + this.data.EmployeeID + '.png';
                     },
                     altImage: function() {
                         return this.data.EmployeeID;

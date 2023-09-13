@@ -75,7 +75,7 @@ new Vue({
           },
           computed: {
             image: function() {
-              return './' + this.data.EmployeeID + '.png';
+              return './images/' + this.data.EmployeeID + '.png';
             },
             altImage: function() {
               return this.data.EmployeeID;

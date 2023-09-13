@@ -10789,30 +10789,7 @@ var stringData = JSON.stringify([
      ShipCountry: "USA"
    }
  ]);
- 
- var orderData = JSON.parse(stringData, function (field, value) {
-   var dupValue = value;
-   if (
-     typeof value === "string" &&
-     /^(\d{4}\-\d\d\-\d\d([tT][\d:\.]*){1})([zZ]|([+\-])(\d\d):?(\d\d))?$/.test(
-       value
-     )
-   ) {
-     var arr = dupValue.split(/[^0-9]/);
-     var arg = parseInt(arr[4], 10);
-     var arg1 = parseInt(arr[5], 10);
-     value = new Date(
-       parseInt(arr[0], 10),
-       parseInt(arr[1], 10) - 1,
-       parseInt(arr[2], 10),
-       parseInt(arr[3], 10),
-       arg,
-       arg1
-     );
-   }
-   return value;
- });
- 
+  
  export var customerData = [
    {
      CustomerID: "ALFKI",
@@ -11542,12 +11519,37 @@ var stringData = JSON.stringify([
      Country: "Poland"
    }
  ];
- 
- exports.data = orderData.map(function (item) {
-   var name = customerData.filter(function (cItem) {
-     return cItem.CustomerID === item.CustomerID;
-   })[0];
-   item.CustomerName = (name || {}).ContactName;
-   return item;
- });
+
+ var orderData = JSON.parse(stringData, function (field, value) {
+  var dupValue = value;
+  if (
+    typeof value === "string" &&
+    /^(\d{4}\-\d\d\-\d\d([tT][\d:\.]*){1})([zZ]|([+\-])(\d\d):?(\d\d))?$/.test(
+      value
+    )
+  ) {
+    var arr = dupValue.split(/[^0-9]/);
+    var arg = parseInt(arr[4], 10);
+    var arg1 = parseInt(arr[5], 10);
+    value = new Date(
+      parseInt(arr[0], 10),
+      parseInt(arr[1], 10) - 1,
+      parseInt(arr[2], 10),
+      parseInt(arr[3], 10),
+      arg,
+      arg1
+    );
+  }
+  return value;
+});
+
+const data = orderData.map(function (item) {
+  var name = customerData.filter(function (cItem) {
+    return cItem.CustomerID === item.CustomerID;
+  })[0];
+  item.CustomerName = (name || {}).ContactName;
+  return item;
+});
+
+export { data };
  

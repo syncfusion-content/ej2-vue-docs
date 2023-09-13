@@ -2,12 +2,12 @@
 
 <template>
     <div class="control-section e-img-editor-canvas">
-        <div class='e-profile'>
+        <div class='e-profile e-hide'>
             <div class="e-custom-wrapper">
                 <canvas id='img-canvas'></canvas>
                 <img alt="img" id="custom-img"  v-on:load="imageLoad" crossorigin="anonymous" src="images/profile.png"
                 style="display: none;"/>
-                <input type="file" id="img-upload" style="display:none" v-on:change="fileChanged"/>
+                <input type="file" id="img-upload" style="display:none" v-on:change="fileChanged" accept="image/*"/>
                 <span id="custom-edit" class="e-custom-edit" v-on:click="editClicked">
                     <span class="e-custom-icon sb-icons"></span>
                 </span>
@@ -36,7 +36,9 @@ export default Vue.extend({
     return {
         target: '.sb-desktop-wrapper',
         header: 'Profile',
+	    imgSrc: '',
         position: {X: 'center', Y: 100},
+	    imgSrc: '',
         dlgButtons: [
             { click: this.dlgOpenBtnClick, buttonModel: { content: 'Open', cssClass: 'e-custom-img-btn e-img-custom-open' } },
             { click: this.dlgResetBtnClick, buttonModel: { content: 'Reset', cssClass: 'e-custom-img-btn e-img-custom-reset' } },
@@ -55,7 +57,9 @@ export default Vue.extend({
                             imgEditor.select('circle');
                         },
                         created: function() {
-                            this.themeValue = window.location.href.split('#')[1].split('/')[1];
+                            if (this.themeValue && window.location.href.split('#')[1]) {
+                                this.themeValue = window.location.href.split('#')[1].split('/')[1];
+                            } 
                         }
                     },
                     computed: {
@@ -70,22 +74,25 @@ export default Vue.extend({
                     }
                 })
             }
-        }
+        }		
     };
   },
    methods: {
         imageLoad: function() {
-            let canvas = document.querySelector('#img-canvas');
-            let image = document.querySelector('#custom-img');
-            let ctx = canvas.getContext('2d');
-            canvas.width = image.width < image.height ? image.width : image.height;
-            canvas.height = canvas.width;
-            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+	    if (this.imgSrc === '') {
+		    let canvas = document.querySelector('#img-canvas');
+		    let image = document.querySelector('#custom-img');
+		    let ctx = canvas.getContext('2d');
+		    canvas.width = image.width < image.height ? image.width : image.height; 
+		    canvas.height = canvas.width;
+		    ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+		    document.querySelector('.e-profile').classList.remove('e-hide');
+	     }
         },
         dlgOpened: function() {
-            let canvas = document.querySelector('#img-canvas');
+            let image = document.querySelector('#custom-img');
             let imgEditor = getComponent(document.getElementById('image-editor'), 'image-editor');
-            imgEditor.open(canvas.toDataURL());
+            imgEditor.open(image.src);
         },
         editClicked: function() {
             this.$refs.dialogObj.show();
@@ -117,12 +124,17 @@ export default Vue.extend({
             tempCanvas.remove();
             parentDiv.style.borderRadius = '100%'; canvas.style.backgroundColor = '#fff';
             this.$refs.dialogObj.hide();
+            if (this.imgSrc !== '') {
+            const img = document.querySelector('#custom-img');
+            img.src = this.imgSrc;
+            }
         },
         fileChanged: function(args) {
             const URL = window.URL; const url = URL.createObjectURL((args.target).files[0]);
             const imageEditor = getComponent(document.getElementById('image-editor'), 'image-editor');
             imageEditor.open(url.toString());
             document.getElementById('img-upload').value = null;
+	        this.imgSrc = url.toString();
         }
     }
 });
