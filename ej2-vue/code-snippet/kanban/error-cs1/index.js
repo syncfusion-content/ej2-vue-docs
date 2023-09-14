@@ -1,7 +1,7 @@
 
 import Vue from "vue";
 import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
-import { DataManager } from "@syncfusion/ej2-data";
+import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
 
 Vue.use(KanbanPlugin);
 
@@ -10,7 +10,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div id="app">
-       <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData"
+       <ejs-kanban id="kanban" ref="kanbanObj" keyField="Status" :dataSource="kanbanData"
         :cardSettings="cardSettings" :actionFailure='actionFailure'>
           <e-columns>
             <e-column headerText="To Do" keyField="Open"></e-column>
@@ -27,7 +27,7 @@ new Vue({
         kanbanData: new DataManager({
             url: 'http://some.com/invalidUrl',
             adaptor: new ODataAdaptor()
-        });
+        }),
         cardSettings: {
             contentField: "Summary",
             headerField: "Id"
@@ -36,8 +36,8 @@ new Vue({
   },
   methods: {
     actionFailure: function() {
-       let span: HTMLElement = document.createElement('span');
-       kanbanObj.element.parentNode.insertBefore(span, kanbanObj.element);
+       let span = document.createElement('span');
+       this.$refs.kanbanObj.ej2Instance.element.parentNode.insertBefore(span,this.$refs.kanbanObj.ej2Instance.element);
        span.style.color = '#FF0000'
        span.innerHTML = 'Server exception: 404 Not found';
     }

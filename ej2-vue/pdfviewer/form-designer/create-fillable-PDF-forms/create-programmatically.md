@@ -31,7 +31,14 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endhighlight %}
 {% endtabs %}
         
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1-standalone" %}
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Edit or update form field programmatically
 
@@ -45,6 +52,15 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
         
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
 
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1-standalone" %}
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Delete form field programmatically
 
 Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
@@ -55,7 +71,16 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% endhighlight %}
 {% endtabs %}
         
+
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1-standalone" %}
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
+{% endhighlight %}
+{% endtabs %}
 
 ## Saving the form fields
 
@@ -704,7 +729,20 @@ export default {
 }
 ```
 
-## Signature and initial fields settings
+## Form field properties
+
+Form field properties in Syncfusion PDF Viewer allow you to customize and interact with form fields embedded within PDF documents. This documentation provides an overview of the form field properties supported by the Syncfusion PDF Viewer and explains how to use them effectively.
+
+    * Textbox
+    * Password
+    * CheckBox
+    * RadioButton
+    * ListBox
+    * DropDown
+    * SignatureField
+    * InitialField
+
+### Signature and initial fields settings
 
 Using the `updateFormField` method, the form fields can be updated programmatically.
 
@@ -894,3 +932,1745 @@ The following code example explains how to update the properties of the initial 
 ```
 
 ![Initial Field Settings](../../images/InitialField.png)
+
+### Textbox field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the Textbox field properties on a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+          id="pdfViewer"
+          ref="pdfviewer"
+          :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'Textbox',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'Textbox',
+        thickness: 4,
+        value:'Textbox',
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        maxLength: 0,
+        isMultiline: false,
+        bounds: { X: 146, Y: 229, Width: 150, Height: 24 }
+     });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+          id="pdfViewer"
+          ref="pdfviewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'Textbox',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'Textbox',
+        thickness: 4,
+        value:'Textbox',
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        maxLength: 0,
+        isMultiline: false,
+        bounds: { X: 146, Y: 229, Width: 150, Height: 24 }
+     });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code example explains how to update the properties of the textbox field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+        viewer.textFieldSettings = {
+        // Set the name of the form field element.
+        name: 'Textbox',
+        // Specify whether the Textbox field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the Textbox field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'Textbox',
+        // Set the thickness of the Textbox field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'Textbox',
+        // Set the font family of the textbox field.
+        fontFamily: 'Courier',
+        // Set the font size of the textbox field.
+        fontSize: 10,
+        // Specify the font style
+      fontStyle: 'None',
+      // Set the font color of the textbox field.
+      color: 'black',
+      // Set the border color of the textbox field.
+      borderColor: 'black',
+      // Set the background color of the textbox field.
+      backgroundColor: '#daeaf7ff',
+      // Set the alignment of the text.
+      alignment: 'Left',
+      // Set the maximum character length.
+      maxLength: 0,
+      // Allows multiline input in the text field. FALSE, by default.
+      isMultiline: false
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+        viewer.textFieldSettings = {
+        // Set the name of the form field element.
+        name: 'Textbox',
+        // Specify whether the Textbox field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the Textbox field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'Textbox',
+        // Set the thickness of the Textbox field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'Textbox',
+        // Set the font family of the textbox field.
+        fontFamily: 'Courier',
+        // Set the font size of the textbox field.
+        fontSize: 10,
+        // Specify the font style
+      fontStyle: 'None',
+      // Set the font color of the textbox field.
+      color: 'black',
+      // Set the border color of the textbox field.
+      borderColor: 'black',
+      // Set the background color of the textbox field.
+      backgroundColor: '#daeaf7ff',
+      // Set the alignment of the text.
+      alignment: 'Left',
+      // Set the maximum character length.
+      maxLength: 0,
+      // Allows multiline input in the text field. FALSE, by default.
+      isMultiline: false
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+![Textbox Field Settings](../../images/textbox.png)
+
+### Password field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the Password field properties on a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+         <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'Password',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'Password',
+        thickness: 4,
+        value:'Password',
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        maxLength: 0,
+        bounds: { X: 148, Y: 229, Width: 150, Height: 24 }
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+         <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'Password',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'Password',
+        thickness: 4,
+        value:'Password',
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        maxLength: 0,
+        bounds: { X: 148, Y: 229, Width: 150, Height: 24 }
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+
+The following code example explains how to update the properties of the password field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.passwordFieldSettings = {
+        // Set the name of the form field element.
+        name: 'Password',
+        // Specify whether the Password field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the Password field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'Password',
+        // Set the thickness of the Password field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'Password',
+        // Set the font family of the Password field.
+        fontFamily: 'Courier',
+        // Set the font size of the Password field.
+        fontSize: 10,
+        // Specify the font style
+        fontStyle: 'None',
+        // Set the font color of the Password field.
+        color: 'black',
+        // Set the border color of the Password field.
+        borderColor: 'black',
+        // Set the background color of the Password field.
+        backgroundColor: '#daeaf7ff',
+        // Set the alignment of the text.
+        alignment: 'Left',
+        // Set the maximum character length.
+        maxLength: 0,
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.passwordFieldSettings = {
+        // Set the name of the form field element.
+        name: 'Password',
+        // Specify whether the Password field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the Password field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'Password',
+        // Set the thickness of the Password field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'Password',
+        // Set the font family of the Password field.
+        fontFamily: 'Courier',
+        // Set the font size of the Password field.
+        fontSize: 10,
+        // Specify the font style
+        fontStyle: 'None',
+        // Set the font color of the Password field.
+        color: 'black',
+        // Set the border color of the Password field.
+        borderColor: 'black',
+        // Set the background color of the Password field.
+        backgroundColor: '#daeaf7ff',
+        // Set the alignment of the text.
+        alignment: 'Left',
+        // Set the maximum character length.
+        maxLength: 0,
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+![Password Field Settings](../../images/password.png)
+
+### CheckBox field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the CheckBox field properties on a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+        <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'CheckBox',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'CheckBox',
+        thickness: 4,
+        isChecked: true,
+        backgroundColor: '#daeaf7ff',
+        borderColor: 'black',
+        value: 'CheckBox'
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+    <div id="app">
+        <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'CheckBox',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'CheckBox',
+        thickness: 4,
+        isChecked: true,
+        backgroundColor: '#daeaf7ff',
+        borderColor: 'black',
+        value: 'CheckBox'
+      });
+    }
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+
+The following code example explains how to update the properties of the checkbox field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.checkBoxFieldSettings = {
+        // Set the name of the form field element.
+        name: 'CheckBox',
+        // Specify whether the CheckBox field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the CheckBox field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'CheckBox',
+        // Set the thickness of the CheckBox field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Specifies whether the CheckBox is in checked state or not.
+        isSelected: true,
+        // Set the background color of the CheckBox  in hexadecimal string format.
+        backgroundColor: '#daeaf7ff',
+        // Set the border color of the CheckBox  field.
+        borderColor: 'black',
+        // Set the value of the form field element.
+        value: 'CheckBox'
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.checkBoxFieldSettings = {
+      // Set the name of the form field element.
+        name: 'CheckBox',
+        // Specify whether the CheckBox field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the CheckBox field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'CheckBox',
+        // Set the thickness of the CheckBox field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Specifies whether the CheckBox is in checked state or not.
+        isSelected: true,
+        // Set the background color of the CheckBox  in hexadecimal string format.
+        backgroundColor: '#daeaf7ff',
+        // Set the border color of the CheckBox  field.
+        borderColor: 'black',
+        // Set the value of the form field element.
+        value: 'CheckBox'
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+![CheckBox Field Settings](../../images/checkbox.png)
+
+### RadioButton field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the RadioButton field properties on a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+        <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'RadioButton',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'RadioButton',
+        thickness: 4,
+        isSelected: true,
+        backgroundColor: '#daeaf7ff',
+        borderColor: 'black',
+        value: 'RadioButton'
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+        <button v-on:click="updateProperties">updateProperties</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      var formField = viewer.retrieveFormFields();
+      viewer.formDesignerModule.updateFormField(formField[0], {
+        name: 'RadioButton',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'RadioButton',
+        thickness: 4,
+        isSelected: true,
+        backgroundColor: '#daeaf7ff',
+        borderColor: 'black',
+        value: 'RadioButton'
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code example explains how to update the properties of the radiobutton field added to the document from the form designer toolbar.
+
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+     viewer.radioButtonFieldSettings = {
+        // Set the name of the form field element.
+        name: 'RadioButton',
+        // Specify whether the RadioButton field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the RadioButton field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'RadioButton',
+        // Set the thickness of the RadioButton field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Specifies whether the radio button is in checked state or not.
+        isSelected: true,
+        // Set the background color of the radio button in hexadecimal string format.
+        backgroundColor: '#daeaf7ff',
+        // Set the border color of the radio button field.
+        borderColor: 'black',
+        // Set the value of the form field element.
+        value: 'RadioButton'
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.checkBoxFieldSettings = {
+      viewer.radioButtonFieldSettings = {
+        // Set the name of the form field element.
+        name: 'RadioButton',
+        // Specify whether the RadioButton field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the RadioButton field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'RadioButton',
+        // Set the thickness of the RadioButton field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Specifies whether the radio button is in checked state or not.
+        isSelected: true,
+        // Set the background color of the radio button in hexadecimal string format.
+        backgroundColor: '#daeaf7ff',
+        // Set the border color of the radio button field.
+        borderColor: 'black',
+        // Set the value of the form field element.
+        value: 'RadioButton'
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+
+![RadioButton Field Settings](../../images/radiobutton.png)
+
+### ListBox field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the ListBox field properties on a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">updateProperties</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath">
+      </ejs-pdfviewer>
+   </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const formFields = viewer.retrieveFormFields();
+      const customOptions = [
+        { itemName: 'item1', itemValue: 'item1' },
+        { itemName: 'item2', itemValue: 'item2' },
+        { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.formDesignerModule.updateFormField(formFields[0], {
+        name: 'ListBox',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'ListBox',
+        thickness: 4,
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        options: customOptions
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">updateProperties</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath">
+      </ejs-pdfviewer>
+   </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const formFields = viewer.retrieveFormFields();
+      const customOptions = [
+        { itemName: 'item1', itemValue: 'item1' },
+        { itemName: 'item2', itemValue: 'item2' },
+        { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.formDesignerModule.updateFormField(formFields[0], {
+        name: 'ListBox',
+        isReadOnly: true,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'ListBox',
+        thickness: 4,
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor: '#daeaf7ff',
+        alignment: 'Left',
+        options: customOptions
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+The following code example explains how to update the properties of the listbox field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const customOptions = [
+          { itemName: 'item1', itemValue: 'item1' },
+          { itemName: 'item2', itemValue: 'item2' },
+          { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.listBoxFieldSettings = {
+        // Set the name of the form field element.
+        name: 'listbox',
+        // Specify whether the listbox field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the listbox field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'listbox',
+        // Set the thickness of the listbox field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'listbox',
+        // Set the font family of the listbox field.
+        fontFamily: 'Courier',
+        // Set the font size of the listbox field.
+        fontSize: 10,
+        // Specify the font style
+        fontStyle: 'None',
+        // Set the  font color of the listbox field.
+        color: 'black',
+        // Set the border color of the listbox field.
+        borderColor: 'black',
+        // Set the background color of the listbox field.
+        backgroundColor: '#daeaf7ff',
+        // Set the alignment of the text.
+        alignment: 'Left',
+        // Set the listbox items.
+        options: customOptions
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const customOptions = [
+          { itemName: 'item1', itemValue: 'item1' },
+          { itemName: 'item2', itemValue: 'item2' },
+          { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.listBoxFieldSettings = {
+        // Set the name of the form field element.
+        name: 'listbox',
+        // Specify whether the listbox field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the listbox field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'listbox',
+        // Set the thickness of the listbox field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'listbox',
+        // Set the font family of the listbox field.
+        fontFamily: 'Courier',
+        // Set the font size of the listbox field.
+        fontSize: 10,
+        // Specify the font style
+        fontStyle: 'None',
+        // Set the  font color of the listbox field.
+        color: 'black',
+        // Set the border color of the listbox field.
+        borderColor: 'black',
+        // Set the background color of the listbox field.
+        backgroundColor: '#daeaf7ff',
+        // Set the alignment of the text.
+        alignment: 'Left',
+        // Set the listbox items.
+        options: customOptions
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+![ListBox Field Settings](../../images/listbox.png)
+
+### DropDown field settings
+
+Using the `updateFormField` method, the form fields can be updated programmatically.
+
+The following code example explains how to update the DropDown field properties on a button click.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">updateProperties</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath">
+      </ejs-pdfviewer>
+   </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const formFields = viewer.retrieveFormFields();
+      const customOptions = [
+        { itemName: 'item1', itemValue: 'item1' },
+        { itemName: 'item2', itemValue: 'item2' },
+        { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.formDesignerModule.updateFormField(formFields[0], {
+        name: 'DropDown',
+        isReadOnly: false,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'DropDown',
+        thickness: 4,
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor:'#daeaf7ff',
+        alignment: 'Left',
+        options: customOptions,
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button v-on:click="updateProperties">updateProperties</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath">
+      </ejs-pdfviewer>
+   </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Annotation, 
+         Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+
+  provide: {
+     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,  
+                  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    // Event triggers on the Update Properties button click.
+    updateProperties() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const formFields = viewer.retrieveFormFields();
+      const customOptions = [
+        { itemName: 'item1', itemValue: 'item1' },
+        { itemName: 'item2', itemValue: 'item2' },
+        { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.formDesignerModule.updateFormField(formFields[0], {
+        name: 'DropDown',
+        isReadOnly: false,
+        visibility: 'visible',
+        isRequired: false,
+        isPrint: true,
+        tooltip: 'DropDown',
+        thickness: 4,
+        fontFamily: 'Courier',
+        fontSize: 10,
+        fontStyle: 'None',
+        color: 'black',
+        borderColor: 'black',
+        backgroundColor:'#daeaf7ff',
+        alignment: 'Left',
+        options: customOptions,
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+
+The following code example explains how to update the properties of the dropdown field added to the document from the form designer toolbar.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const customOptions = [
+            { itemName: 'item1', itemValue: 'item1' },
+            { itemName: 'item2', itemValue: 'item2' },
+            { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.DropdownFieldSettings = {
+        // Set the name of the form field element.
+        name: 'DropDown',
+        // Specify whether the DropDown field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the DropDown field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'DropDown',
+        // Set the thickness of the DropDown field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'DropDown',
+        // Set the font family of the DropDown field.
+        fontFamily: 'Courier',
+        // Set the font size of the DropDown field.
+        fontSize: 10,
+        // Specify the font style
+        fontStyle: 'None',
+        // Set the  font color of the DropDown field.
+        color: 'black',
+        // Set the border color of the DropDown field.
+        borderColor: 'black',
+        // Set the background color of the DropDown field.
+        backgroundColor: '#daeaf7ff',
+        // Set the alignment of the text.
+        alignment: 'Left',
+        // Set the DropDown items.
+        options: customOptions
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :serviceUrl="serviceUrl"
+        :documentPath="documentPath"
+        :documentLoad="documentLoad">
+      </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad: function (args) {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      const customOptions = [
+            { itemName: 'item1', itemValue: 'item1' },
+            { itemName: 'item2', itemValue: 'item2' },
+            { itemName: 'item3', itemValue: 'item3' }
+      ];
+      viewer.DropdownFieldSettings = {
+        // Set the name of the form field element.
+        name: 'DropDown',
+        // Specify whether the DropDown field is in read-only or read-write mode.
+        isReadOnly: false,
+        // Set the visibility of the form field.
+        visibility: 'visible',
+        // Specify whether the field is mandatory or not.
+        isRequired: false,
+        // Specify whether to print the DropDown field.
+        isPrint: true,
+        // Set the text to be displayed as a tooltip.
+        tooltip: 'DropDown',
+        // Set the thickness of the DropDown field. To hide the borders, set the value to 0 (zero).
+        thickness: 4,
+        // Set the value of the form field element.
+        value:'DropDown',
+        // Set the font family of the DropDown field.
+        fontFamily: 'Courier',
+        // Set the font size of the DropDown field.
+        fontSize: 10,
+        // Specify the font style
+        fontStyle: 'None',
+        // Set the  font color of the DropDown field.
+        color: 'black',
+        // Set the border color of the DropDown field.
+        borderColor: 'black',
+        // Set the background color of the DropDown field.
+        backgroundColor: '#daeaf7ff',
+        // Set the alignment of the text.
+        alignment: 'Left',
+        // Set the DropDown items.
+        options: customOptions
+      }
+    },
+  }
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+![DropDown Field Settings](../../images/dropdown.png)

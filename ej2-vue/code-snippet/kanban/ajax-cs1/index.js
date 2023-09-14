@@ -12,7 +12,7 @@ new Vue({
 	template: `
   <div id="app">
     <ejs-button v-on:click.native="btnClick">Load Data</ejs-button>
-       <ejs-kanban ref="kanbanObj" id="kanban" keyField="ShipCountry" :dataSource="kanbanData"
+       <ejs-kanban ref="kanbanObj" id="kanban" keyField="ShipCountry" 
         :cardSettings="cardSettings">
           <e-columns>
             <e-column headerText="Denmark" keyField="Denmark"></e-column>
@@ -34,11 +34,11 @@ new Vue({
   },
   methods: {
     btnClick: function (args){
-        this.kanbanObj = this.$refs.kanbanObj.ej2Instances;
+        var kanbanData = this.$refs.kanbanObj.ej2Instances;
         var ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
         ajax.send();
         ajax.onSuccess = function (result) {
-            this.kanbanObj.dataSource = JSON.parse(result);
+          kanbanData.dataSource = JSON.parse(result);
         };
       }
   }

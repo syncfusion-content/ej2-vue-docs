@@ -6,11 +6,6 @@
 
 <script>
   import Vue from "vue";
-  import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.js";
-  import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/css/css.js";
-  import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.js";
-  import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/htmlmixed/htmlmixed.js";
-  import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/javascript/javascript.js";
   import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
   import { RichTextEditorPlugin, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 
@@ -65,9 +60,9 @@
     methods: {
       mirrorConversion: function(e) {
         var textArea = this.$refs.rteObj.ej2Instances.contentModule.getEditPanel();
-        var id = this.$refs.rteObj.getID() +  'mirror-view';
-        var mirrorView = this.$refs.rteObj.$el.querySelector('#' + id);
-        var charCount = this.$refs.rteObj.$el.querySelector('.e-rte-character-count');
+        var id = this.$refs.rteObj.ej2Instances.getID() +  'mirror-view';
+        var mirrorView = this.$refs.rteObj.ej2Instance.inputElement.parentElement.querySelector('#' + id);
+        var charCount =this.$refs.rteObj.ej2Instance.element.querySelector('.e-rte-character-count');
         if (e.targetItem === 'Preview') {
           textArea.style.display = 'block';
           mirrorView.style.display = 'none';
@@ -115,7 +110,8 @@
 </script>
 
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
+
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
@@ -123,7 +119,6 @@
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-@import "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css";
 
   .e-code-mirror::before {
     content: '\e345';
