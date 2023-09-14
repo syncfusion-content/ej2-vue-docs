@@ -48,14 +48,15 @@ export default {
   },
   methods: {
     created(args) {
-        this.$refs.grid.element.addEventListener('keyup', function (e) { // Bind the keyup event for the grid.
+        this.$refs.grid.ej2Instances.element.addEventListener('keyup', function (e) { // Bind the keyup event for the grid.
             if (e.target.classList.contains('custemp')) { // Based on this condition, you can find whether the target is an input element or not.
                 var row = parentsUntil(e.target, 'e-row');
                 var rowIndex = row.rowIndex; // Get the row index.
                 var uid = row.getAttribute('data-uid');
-                var rowData = this.$refs.grid.getRowObjectFromUID(uid).data; // Get the row data.
+                var grid = document.getElementsByClassName('e-grid')[0].ej2_instances[0];
+                var rowData = grid.getRowObjectFromUID(uid).data; // Get the row data.
                 rowData.Freight = e.target.value; // Update the new value for the corresponding column.
-                this.$refs.grid.updateRow(rowIndex, rowData); // Update the modified value in the row data.
+                grid.updateRow(rowIndex, rowData); // Update the modified value in the row data.
             }
         });
     }

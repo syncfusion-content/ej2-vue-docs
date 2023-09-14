@@ -16,19 +16,7 @@ var failureVue = Vue.component("failureTemplate", {
     };
   }
 });
-export default Vue.extend({
-    data: function() {
-        return {
-          actionFailureTemplate : function(e) {
-            return {
-              template: failureVue
-            }
-          },
-          fields: { dataSource: remoteData, value: 'id', text: 'name', parentValue:"pid", hasChildren: 'hasChild' },
-            height: '200px'
-        };
-    },
-});
+
 new Vue({
 	el: '#app',
 	template: `
@@ -40,4 +28,15 @@ new Vue({
   </div>
 `,
 
+  data() {
+    return {
+      actionFailureTemplate: function (e) {
+        return {
+          template: failureVue
+        }
+      },
+      fields: { dataSource: remoteData, value: 'id', text: 'name', parentValue:"pid", hasChildren: 'hasChild' },
+      height: '200px'
+    }
+  }
 });

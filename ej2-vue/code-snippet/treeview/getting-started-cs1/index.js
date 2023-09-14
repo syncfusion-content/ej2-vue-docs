@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 
 new Vue({
