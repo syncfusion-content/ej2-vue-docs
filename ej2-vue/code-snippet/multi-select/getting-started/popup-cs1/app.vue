@@ -9,11 +9,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { MultiSelectPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-Vue.use(MultiSelectPlugin);
 export default {
+  components: {
+    'ejs-multiselect': MultiSelectComponent
+  },
   data (){
     return {
       sportsData: ['Badminton', 'Basketball', 'Cricket', 'Football', 'Golf', 'Gymnastics', 'Hockey', 'Rugby','Snooker', 'Tennis']
@@ -23,10 +24,10 @@ export default {
 
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 </style>
 
 

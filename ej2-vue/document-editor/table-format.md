@@ -143,6 +143,22 @@ This property is valid if a table row does not fit in the current page during ta
 this.$refs.documenteditor.ej2Instances.selection.rowFormat.allowRowBreakAcrossPages=false;
 ```
 
+### Title
+
+Document Editor expose API to get or set the table title of the selected table. Refer to the following sample code to set title.
+
+```ts
+this.$refs.documenteditor.ej2Instances.selection.tableFormat.title = 'Shipping Details';
+```
+
+### Description
+
+Document Editor expose API to get or set the table description of the selected image. Refer to the following sample code to set description.
+
+```ts
+this.$refs.documenteditor.ej2Instances.selection.tableFormat.description = 'Freight cost and shipping details';
+```
+
 ## See Also
 
 * [Table properties dialog](../document-editor/dialog#table-properties-dialog)

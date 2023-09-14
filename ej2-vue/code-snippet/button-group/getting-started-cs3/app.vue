@@ -11,12 +11,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(ButtonPlugin);
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
+  components: {
+    'ejs-button': ButtonComponent
+  },
   name: 'app'
 }
 </script>

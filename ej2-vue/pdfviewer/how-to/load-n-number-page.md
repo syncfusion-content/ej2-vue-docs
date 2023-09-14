@@ -16,6 +16,79 @@ To utilize this capability in Syncfusion PDF Viewer, use the `initialRenderPages
 
 Using the `initialRenderPages` property judiciously is advisable, especially when dealing with larger documents. It is more suitable for scenarios where a smaller range of pages, such as 10-20, can be loaded to provide a quick initial view of the document.
 
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :initialRenderPages="initialRenderPages"  >
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      initialRenderPages : 10
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl"
+        :initialRenderPages="initialRenderPages"  >
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      initialRenderPages : 10
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 ```
 
 <template>

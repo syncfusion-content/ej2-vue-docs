@@ -8,11 +8,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DatePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+import { DatePickerComponent } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(DatePickerPlugin);
 export default {
+components: {
+  'ejs-datepicker': DatePickerComponent
+},
 data () {
     return {
       waterMark : 'Select a date'

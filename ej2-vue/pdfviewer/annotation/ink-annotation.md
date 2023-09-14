@@ -26,8 +26,54 @@ The ink annotations can be added to the PDF document using the annotation toolba
 
 Refer to the following code sample to switch to the ink annotation mode.
 
-```
 
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+    <div id="app">
+        <button id="set">Draw Ink</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Ink');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 <template>
     <div id="app">
         <button id="set">Draw Ink</button>
@@ -45,7 +91,7 @@ Refer to the following code sample to switch to the ink annotation mode.
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
          LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var viewer;
@@ -54,13 +100,13 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -73,7 +119,8 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing the properties of the ink annotation
 
@@ -103,42 +150,75 @@ The properties of the ink annotation can be set before creating the control usin
 
 After editing the default values, they will be changed to the selected values. Refer to the following code sample to set the default ink annotation settings.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :inkAnnotationSettings="inkAnnotationSettings">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :inkAnnotationSettings="inkAnnotationSettings">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView,ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
-var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      inkAnnotationSettings: {author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6}
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl"
+        :inkAnnotationSettings="inkAnnotationSettings">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       inkAnnotationSettings: {author: 'Syncfusion', strokeColor: 'green', thickness: 3, opacity: 0.6}
-    };
+      };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}

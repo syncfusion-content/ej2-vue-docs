@@ -7,11 +7,12 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
 export default {
+    components: {
+        'ejs-filemanager': FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:
@@ -30,7 +31,7 @@ export default {
     },
     methods: {
         // File Manager's created event function
-        onCreate(args){
+        onCreate(){
             console.log("File Manager has been created successfully");
         }
     }

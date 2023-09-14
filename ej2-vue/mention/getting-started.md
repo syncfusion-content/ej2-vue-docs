@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Mention Component in Vue 2
 
-This section explains how to create a simple Mention, and configure its available functionalities in Vue using Vue quickstart seed repository.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Mention component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -31,92 +31,101 @@ The following list of dependencies are required to use the Mention component in 
             |-- @syncfusion/ej2-buttons
 ```
 
-## Setup your development environment
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion packages
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Mention component.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install Mention component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Mention component](https://www.syncfusion.com/vue-components/vue-mention) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-dropdowns --save
 ```
+or
 
-## Adding CSS Reference
-
-Add Mention component's styles as given below in `<style>` section of the `App.vue` file.
-
+```bash
+yarn add @syncfusion/ej2-vue-dropdowns
 ```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Mention component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-list/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
 </style>
-```
 
-## Registering Vue Component
+{% endhighlight %}
+{% endtabs %}
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+## Add Syncfusion Vue component
 
-### Using Vue.use()
+Follow the below steps to add the Vue Mention component using `Composition API` or `Options API`:
 
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+1\. First, import and register the Mention component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-```ts
-import { MentionPlugin } from '@syncfusion/ej2-vue-dropdowns';
+<script setup>
+import { MentionComponent as EjsMention } from "@syncfusion/ej2-vue-dropdowns";
+</script>
 
-Vue.use(MentionPlugin);
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+<script>
+import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
+export default {
+  components: {
+    'ejs-mention': MentionComponent
+  }
+}
+</script>
 
-### Using Vue.component()
-
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
-
-Refer the code snippet given below.
-
-```ts
-import { MentionComponent, MentionPlugin } from '@syncfusion/ej2-vue-dropdowns';
-
-Vue.component(MentionPlugin.name, MentionComponent);
-```
-
-> By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding Mention component
 
 Add the EJ2 Vue Mention using `<ejs-mention>` to the `<template>` section of the `App.vue` file in `src` directory. To use the Mention component properly, the [`target`](https://ej2.syncfusion.com/vue/documentation/api/mention/#target) property should be configured so that it renders the Mention component in the configured element.
 
-```
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <label id="comment" >Comments</label>
@@ -125,27 +134,16 @@ Add the EJ2 Vue Mention using `<ejs-mention>` to the `<template>` section of the
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { MentionPlugin } from "@syncfusion/ej2-vue-dropdowns";
-
-Vue.use(MentionPlugin);
-
-export default {
-  name: 'app',
-  data: function() {
-      return {
-        target: "#mentionElement",
-      };
-  }
-}
+<script setup>
+import { MentionComponent as EjsMention } from "@syncfusion/ej2-vue-dropdowns";
+const mentionTarget = "#mentionElement";
 </script>
 
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-list/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
   
     #app {
@@ -176,13 +174,129 @@ export default {
         color: #555;
     }
 </style>
-```
+
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <label id="comment" >Comments</label>
+    <div id="mentionElement" placeholder = "Type @ and tag user"></div>
+    <ejs-mention id='defaultMention' :target='mentionTarget'></ejs-mention>
+  </div>
+</template>
+
+<script>
+import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
+
+export default {
+  components: {
+    'ejs-mention': MentionComponent
+  },
+  name: 'app',
+  data: function() {
+      return {
+        mentionTarget: "#mentionElement",
+      };
+  }
+}
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
+  
+    #app {
+        color: #008cff;
+        height: 40px;
+        left: 15%;
+        position: absolute;
+        top: 10%;
+        width: 30%;
+    }
+
+    #comment {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #mentionElement {
+        min-height: 100px;
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        width: 600px;
+    }
+
+    div#mentionElement[placeholder]:empty:before {
+        content: attr(placeholder);
+        color: #555;
+    }
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Binding data source
 
 After initialization, populate the Mention with data using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/mention/#datasource) property. Here, an array of string values is passed to the Mention component.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <label id="comment" >Comments</label>
+    <div id="mentionElement" placeholder = "Type @ and tag user"></div>
+    <ejs-mention id='defaultMention' :target='mentionTarget' :dataSource='userData'></ejs-mention>
+  </div>
+</template>
+<script setup>
+import { MentionComponent as EjsMention } from "@syncfusion/ej2-vue-dropdowns";
+const mentionTarget = "#mentionElement";
+const userData = ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph'];
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
+  #app {
+    color: #008cff;
+    height: 40px;
+    left: 15%;
+    position: absolute;
+    top: 10%;
+    width: 30%;
+  }
+  #comment {
+      font-size: 15px;
+      font-weight: 600;
+  }
+  #mentionElement {
+      min-height: 100px;
+      border: 1px solid #D7D7D7;
+      border-radius: 4px;
+      padding: 8px;
+      font-size: 14px;
+      width: 600px;
+  }
+  div#mentionElement[placeholder]:empty:before {
+      content: attr(placeholder);
+      color: #555;
+  }
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <label id="comment" >Comments</label>
@@ -191,15 +305,15 @@ After initialization, populate the Mention with data using the [`dataSource`](ht
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { MentionPlugin } from "@syncfusion/ej2-vue-dropdowns";
-
-Vue.use(MentionPlugin);
+import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
 export default {
+  components: {
+    'ejs-mention': MentionComponent
+  },
   name: 'app',
   data: function() {
     return {
-      target: "#mentionElement",
+      mentionTarget: "#mentionElement",
       userData: ['Selma Rose', 'Garth', 'Robert', 'William', 'Joseph']
     };
   }
@@ -209,9 +323,8 @@ export default {
   @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-list/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
-
   #app {
     color: #008cff;
     height: 40px;
@@ -220,12 +333,10 @@ export default {
     top: 10%;
     width: 30%;
   }
-
   #comment {
       font-size: 15px;
       font-weight: 600;
   }
-
   #mentionElement {
       min-height: 100px;
       border: 1px solid #D7D7D7;
@@ -234,24 +345,37 @@ export default {
       font-size: 14px;
       width: 600px;
   }
-
   div#mentionElement[placeholder]:empty:before {
       content: attr(placeholder);
       color: #555;
   }
 </style>
-```
 
-## Running the Application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
+      
 {% previewsample "page.domainurl/code-snippet/mention/getting-started-cs1" %}
 
 ## Display Mention character
@@ -263,7 +387,10 @@ By using the [showMentionChar](https://ej2.syncfusion.com/vue/documentation/api/
 The following example displays the text content along with the mention character configured as `#`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

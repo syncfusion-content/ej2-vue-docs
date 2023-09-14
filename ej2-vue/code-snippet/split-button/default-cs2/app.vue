@@ -5,14 +5,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SplitButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+import { SplitButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(SplitButtonPlugin);
 
 export default {
+    components: {
+        'ejs-splitbutton': SplitButtonComponent
+    },
     data () {
         return {
             items:[

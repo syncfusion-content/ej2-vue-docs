@@ -23,11 +23,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
+import { TabComponent } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TabPlugin);
 export default {
+  components: {
+        'ejs-tab': TabComponent
+  },
   name: 'app',
    data: function(){
         return {

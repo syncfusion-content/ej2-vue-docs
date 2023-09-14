@@ -8,11 +8,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { MentionPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-Vue.use(MentionPlugin);
 export default {
+  components: {
+    'ejs-mention': MentionComponent
+  },
   name: 'app',
   data: function() {
     return {
@@ -26,7 +27,7 @@ export default {
   @import "../node_modules/@syncfusion/ej2-base/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/bootstrap5.css";
-  @import "../node_modules/@syncfusion/ej2-list/styles/bootstrap5.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/bootstrap5.css";
   @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/bootstrap5.css";
 
   #app {

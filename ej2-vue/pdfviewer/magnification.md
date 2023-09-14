@@ -15,22 +15,23 @@ default toolbar. The PDF Viewer also has an option to show or hide the magnifica
 
 The following code snippet describes how to enable the magnification in PDF Viewer.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableMagnification="true">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableMagnification="true">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
@@ -38,17 +39,54 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]}
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :serviceUrl="serviceUrl"
+          :enableMagnification="true">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 The following magnification options are available in the default toolbar of PDF Viewer,
 

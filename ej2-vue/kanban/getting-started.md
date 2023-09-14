@@ -8,51 +8,67 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Kanban Component in Vue 2
 
-This section briefly explains how to create **Kanban** component and configure its available functionalities in VueJS Environment.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Kanban component
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Create a new Vue project using the following `Vue CLI` command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion Kanban Package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in `npmjs.com` registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-Install the `Kanban` component by using the below npm command.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Kanban component](https://www.syncfusion.com/vue-components/vue-kanban-board) as an example. Install the `@syncfusion/ej2-vue-kanban` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-kanban --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-kanban
+```
 
 > The **--save** will instruct NPM to include the Kanban package inside of the `dependencies` section of the `package.json`.
 
-## Adding CSS Reference
+## Import Syncfusion CSS styles
 
-Kanban CSS files are available in the `ej2-vue-kanban` and its sub-component package folder. It should be referenced as given below within the `<style>` section of `App.vue` file.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-```
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Kanban component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
@@ -61,26 +77,61 @@ Kanban CSS files are available in the `ej2-vue-kanban` and its sub-component pac
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
-```
+</style>
 
-## Registering Kanban Component
+{% endhighlight %}
+{% endtabs %}
 
-Import the Kanban plugin in your application from the `ej2-vue-kanban` package as given below and register the same using `Vue.use()`.
+## Add Syncfusion Vue component
 
-```
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+Follow the below steps to add the Vue Kanban component using `Composition API` or `Options API`:
 
-Vue.use(KanbanPlugin);
-```
+1\. First, import and register the Kanban component in the `script` section of the **src/App.vue** file.
 
-> By Registering Kanban plugin in Vue, all its child directives are also globally registered.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+  import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
+  export default {
+    components: {
+      'ejs-kanban': KanbanComponent,
+      'e-column': ColumnDirective,
+      'e-columns': ColumnsDirective
+    }
+   }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Kanban component with [keyField](https://ej2.syncfusion.com/vue/documentation/api/kanban#keyfield) property. 
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id='app'>
+      <ejs-kanban id="kanban" keyField="Status">
+          <e-columns>
+            <e-column headerText="To Do" keyField="Open"></e-column>
+            <e-column headerText="In Progress" keyField="InProgress"></e-column>
+            <e-column headerText="Testing" keyField="Testing"></e-column>
+            <e-column headerText="Done" keyField="Close"></e-column>
+          </e-columns>
+      </ejs-kanban>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Initialize the Kanban
 
 Add the EJ2 Vue Kanban using `<ejs-kanban>` to the `<template>` section of the `App.vue` file in src directory.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-empty-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +145,7 @@ The output will display the kanban header.
 To populate the empty Kanban with cards, define the local JSON data or remote data using the `dataSource` property. To define `dataSource`, the mandatory fields in JSON object should be relevant to `keyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-key-field-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +157,7 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 `Swimlane` can be enabled by mapping the fields `swimlaneSettings.keyField` to appropriate column name in dataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

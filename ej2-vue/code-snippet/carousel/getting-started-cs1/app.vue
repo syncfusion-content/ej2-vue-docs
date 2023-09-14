@@ -50,12 +50,18 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
+  import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(CarouselPlugin);
-
-export default {};
+  export default {
+    components: {
+      'ejs-carousel': CarouselComponent,
+      'e-carousel-item': CarouselItemDirective,
+      'e-carousel-items': CarouselItemsDirective
+    },
+    data: function () {
+      return {};
+    },
+  };
 </script>
 
 <style>

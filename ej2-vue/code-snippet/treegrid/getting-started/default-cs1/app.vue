@@ -16,10 +16,7 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
-
-Vue.use(TreeGridPlugin);
+import { TreeGridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-treegrid";
 
 let dataSource = [{
             taskID: 1,
@@ -92,6 +89,11 @@ let dataSource = [{
         }];
 
 export default {
+  components: {
+    'ejs-treegrid': TreeGridComponent,
+    'e-column': ColumnDirective,
+    'e-columns': ColumnsDirective
+  },
   data() {
     return {
       data: dataSource,
@@ -104,8 +106,18 @@ export default {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-treegrid/styles/material.css";
 </style>
+
 
 
 

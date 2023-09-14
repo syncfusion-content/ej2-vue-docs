@@ -3,15 +3,16 @@
 <template>
     <div id="app">
     <div class='wrapper'>
-    <ejs-timepicker :step="timeStep" :format="timeFormat" :value="timeVal"></ejs-timepicker>
+    <ejs-timepicker :step="timeStep" :format="timeFormat" :value="timeVal"></ejs-timepicker></div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TimePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+import { TimePickerComponent } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(TimePickerPlugin);
 export default {
+  components: {
+    'ejs-timepicker': TimePickerComponent
+  },
   data () {
         return {
            timeStep : 60,

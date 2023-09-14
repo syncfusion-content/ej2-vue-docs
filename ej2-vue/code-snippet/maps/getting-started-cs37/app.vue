@@ -12,11 +12,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
+import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
 export default {
+components: {
+    'ejs-maps': MapsComponent,
+    'e-layer': LayerDirective,
+    'e-layers': LayersDirective
+},
 data (){
     return{
         titleSettings: {

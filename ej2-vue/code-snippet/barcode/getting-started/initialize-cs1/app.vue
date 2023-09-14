@@ -23,12 +23,13 @@
         }
 </style>
 <script>
-import Vue from 'vue';
-import { BarcodeGeneratorPlugin } from '@syncfusion/ej2-vue-barcode-generator';
+import { BarcodeGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
 
-Vue.use(BarcodeGeneratorPlugin);
 export default {
-    name: 'app'
+    components: {
+        'ejs-barcodegenerator': BarcodeGeneratorComponent
+    },
+    name: 'app',
     data () {
         return {
             width: "200px",

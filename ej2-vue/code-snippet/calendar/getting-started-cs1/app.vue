@@ -8,11 +8,13 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
+import { CalendarComponent } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(CalendarPlugin);
-export default {}
+export default {
+  components: {
+    'ejs-calendar': CalendarComponent
+  }
+}
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

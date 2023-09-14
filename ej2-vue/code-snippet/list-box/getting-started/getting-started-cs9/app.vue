@@ -9,11 +9,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ListBoxPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { ListBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-Vue.use(ListBoxPlugin);
 export default {
+  components: {
+    'ejs-listbox': ListBoxComponent
+  },
   data (){
     return {
        data: [
@@ -27,16 +28,15 @@ export default {
     { text: 'Jaguar XJ220', id: 'list-08' },
     { text: 'McLaren P1', id: 'list-09' },
     { text: 'Ferrari LaFerrari', id: 'list-10' },
-];
+]
     }
   }
 }
-
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
 
 

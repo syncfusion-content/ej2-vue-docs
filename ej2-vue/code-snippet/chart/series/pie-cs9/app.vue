@@ -10,11 +10,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, PieSeries } from "@syncfusion/ej2-vue-charts";
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries } from "@syncfusion/ej2-vue-charts";
 import { data } from "data.ts";
-Vue.use(AccumulationChartPlugin);
+
 export default {
+  components: {
+    'ejs-accumulationchart': AccumulationChartComponent,
+    'e-accumulation-series-collection': AccumulationSeriesCollectionDirective,
+    'e-accumulation-series': AccumulationSeriesDirective
+  },
   data() {
     return {
       seriesData: data

@@ -7,11 +7,12 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(SliderPlugin);
+import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
 
 export default {
+  components: {
+    'ejs-slider': SliderComponent
+  },
   data() {
     return {
         // vertical orientation

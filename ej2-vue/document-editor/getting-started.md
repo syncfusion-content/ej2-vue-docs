@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue DcoumentEditor Component in Vue 2
 
-This section explains the steps to create a Word document editor within your application and demonstrates the basic usage of the Document Editor component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Document Editor component
 
 ## Prerequisites
 
@@ -52,39 +52,52 @@ The Document Editor component requires server-side interactions for the followin
 
 To know about server-side dependencies, please refer this [page](../document-editor/web-services).
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli/) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg/) registry.
-You can choose the component that you want to install. For this application, we are going to use Document Editor component.
-
-To install Document Editor component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-documenteditor
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Adding CSS Reference
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-Add Document editor component’s styles as given below in `<style>` section of the `App.vue` file.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Document editor component](https://www.syncfusion.com/vue-components/vue-wysiwyg-document-editor) as an example. Install the `@syncfusion/ej2-vue-documentEditor` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-documentEditor --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-documentEditor
+```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Document Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 ```
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -100,7 +113,7 @@ Add Document editor component’s styles as given below in `<style>` section of 
 
 > Document editor has different themes, please refer to [Supported themes](../appearance/theme) section.
 
-## Adding Component
+## Add Syncfusion Vue component
 
 You can add `DocumentEditorContainer` component with predefined toolbar and properties pane options or `DocumentEditor` component with customize options.
 

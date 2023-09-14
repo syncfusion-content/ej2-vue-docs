@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Stock chart Component in Vue 2
 
-Getting started file explains how to create a simple Stock Chart and demonstrate the basic usage of the Stock Chart control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Stock chart component
 
 ## Prerequisites
 
@@ -37,90 +37,97 @@ The list of minimum dependencies required to use stock chart are follows:
     |-- @syncfusion/ej2-splitbuttons
 ```
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-## Setup Vue Environment
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following commands.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Create a Vue Application
-
-Start a new Vue application using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
+yarn run serve
 ```
 
-## Adding Syncfusion Chart package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install chart component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Stock chart component](https://www.syncfusion.com/vue-components/vue-stock-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-charts
+```
 
 > The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
 
-## Registering Stock Chart Component
+## Add Syncfusion Vue component
 
-You can register the Stock chart component in your application by using the `Vue.use()`.
+Follow the below steps to add the Vue Stock chart component:
 
-Refer to the code example given below.
+1\. First, import and register the Stock chart component in the `script` section of the **src/App.vue** file.
 
-```ts
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
 import { StockChartPlugin } from '@syncfusion/ej2-vue-charts';
+export default {
+  components: {
+    'ejs-stockchart': StockChartComponent
+  }
+}
+</script>
 
-Vue.use(StockChartPlugin);
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Stock chart component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+      <ejs-stockchart></ejs-stockchart>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
 
-> Registering `StockChartPlugin` in vue, will register the stock chart component along with its required child directives globally.
+or
 
-## Adding Stock chart to the Project
-
-* Add the Vue Stock Chart by using `<ejs-stockchart>` selector in `<template>` section of the `App.vue` file.
-The below example shows a basic stock chart,
-
-    ```
-    <template>
-      <div id="app">
-          <ejs-stockchart></ejs-stockchart>
-      </div>
-    </template>
-    <script>
-    import Vue from 'vue';
-    import { StockChartPlugin } from '@syncfusion/ej2-vue-charts';
-
-    Vue.use(StockChartPlugin);
-    export default {
-      data () {
-        return {
-        }
-      }
-    }
-    </script>
-    ```
-
-## Run the application
-
-The quickstart project is configured to compile and run the application in the browser. Use the following command to run the application.
-
-* Now run the application in the browser using the below command.
-
-    ```
-    npm run dev
-    ```
+```bash
+yarn run serve
+```
 
 ## Module Injection
 
@@ -133,12 +140,13 @@ To create stock chart with additional features, inject the required modules. The
 These modules should be injected to the provide section as follows,
 
  ```javascript
-import Vue from "vue";
-import { StockChartPlugin, CandleSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(StockChartPlugin);
+<script>
+import { StockChartComponent, CandleSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  components: {
+    'ejs-stockchart': StockChartComponent
+  },
   provide: {
     stockChart: [CandleSeries, DateTime, RangeTooltip]
   }
@@ -204,7 +212,7 @@ export default {
 Since the JSON contains category data, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxis/#valuetype) for horizontal axis to Category. By default, the axis valueType is Numeric.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/stockchart/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -216,7 +224,7 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
  You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartModel/#title-string) property to the Stock Chart to provide quick information to the user about the data plotted in the Chart.
 
  {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/stockchart/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -230,7 +238,7 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 Crosshair lines can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property in the `crosshair`. Likewise tooltip label for an axis can be enabled by using [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of `crosshairTooltip` in the corresponding axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/stockchart/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -245,7 +253,7 @@ closest point and trackball tooltip displays the information about the point. To
 Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairTooltip/#enable) property of the crosshair to true and [`shared`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings.html#shared-boolean) property in `tooltip` to true in chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/stockchart/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

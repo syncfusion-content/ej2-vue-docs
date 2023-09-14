@@ -8,85 +8,111 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Avatar Component in Vue 2
 
-The following section explains the required steps to build the simple Avatar component with its basic usage in step-by-step procedure.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Avatar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-* You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
-    ```bash
-    npm install -g @vue/cli
-    npm install -g @vue/cli-init
-    ```
+```bash
+npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
+```
 
-* To setup basic  sample use the following Vue CLI commands.
+or
 
-    ```bash
-    vue init webpack-simple quickstart
+```bash
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
+```
 
-    cd quickstart
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-    npm install
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-    ```
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-* Install Syncfusion `Avatar` packages using below command.
+## Add Syncfusion Vue packages
 
-    ```bash
-    npm install @syncfusion/ej2-layouts --save
-    ```
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Avatar component](https://www.syncfusion.com/vue-components/vue-avatar) as an example. Install the `@syncfusion/ej2-layouts` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-layouts --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-layouts
+```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Avatar component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+> We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
 
 ## Using Avatar in Vue Application
 
 Add an HTML span element with `e-avatar` class into the `<template>` section of the `App.vue` file in `src` directory.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
         <span class="e-avatar">GR</span>
     </div>
 </template>
-<script>
-import Vue from "vue";
 
-export default {
-  data() {
-    return {};
-  }
-}
-</script>
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Adding CSS Reference
-
-Add Avatar component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-</style>
-```
-
-> We can also use [CRG](https://crg.syncfusion.com/) to generate combined component styles.
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
-
-The following example shows a basic Avatar.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/avatar/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/avatar/getting-started-cs1" %}
 

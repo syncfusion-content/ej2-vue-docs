@@ -8,97 +8,164 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Range slider Component in Vue 2
 
-The following section explains the required steps to build the simple Slider component with its basic usage in step-by-step procedure.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Range slider component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-* You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications. To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
-    ```bash
-    npm install -g @vue/cli
-    ```
-
-* To setup basic  sample use the following Vue CLI commands.
-
-    ```bash
-    vue create quickstart
-    ```
-
-* Install Syncfusion `Slider` packages using below command.
-
-    ```bash
-    npm install @syncfusion/ej2-vue-inputs --save
-    ```
-
-## Registering Slider component using `Vue.use()`
-
-Import the Slider Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```ts
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-
-Vue.use(SliderPlugin);
+```bash
+npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Slider`. Refer [here](https://helpstaging.syncfusion.com:14038/ej2-vue/licensing/license-key-registration) to know more about component registration.
+or
 
-## Initialize Slider
-
-Add the EJ2 Vue Slider using `<ejs-slider>` to the `<template>` section of the `App.vue` file in `src` directory.
-
+```bash
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
+
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Range slider component](https://www.syncfusion.com/vue-components/vue-slider as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-inputs --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-inputs
+```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Range slider component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue Range slider component using `Composition API` or `Options API`:
+
+1\. First, import and register the Range slider component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { SliderComponent as EjsSlider } from "@syncfusion/ej2-vue-inputs";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
+
+export default {
+  components: {
+    'ejs-slider': SliderComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Range slider component with the [value](https://ej2.syncfusion.com/vue/documentation/api/slider#value) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
     <ejs-slider id='default' :value='value'></ejs-slider>
   </div>
 </template>
-<script>
-import Vue from "vue";
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(SliderPlugin);
 
-export default {
-  data() {
+{% endhighlight %}
+{% endtabs %}
+
+3\. Declare the value for the `value` property in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+const value = 30;
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+data() {
     return {
       value: 30
     };
-  }
 }
 </script>
-```
 
-## Adding CSS Reference
+{% endhighlight %}
+{% endtabs %}
 
-Add Slider component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-</style>
-```
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
-
-The following example shows a basic Slider.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/range-slider/getting-started-cs1" %}
 
@@ -115,7 +182,10 @@ The types of Slider are as follows:
 >Both the Default Slider and Min-Range Slider have same behavior that is used to select a single value. In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +199,10 @@ The types of Slider are as follows:
 The Slider can be displayed, either in horizontal or vertical orientation. By default, the Slider renders in horizontal orientation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +214,10 @@ The Slider can be displayed, either in horizontal or vertical orientation. By de
 The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag the Slider handle. The Tooltip position can be customized by using the `placement` property. Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle. Tooltip always remains/displays on the page.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +231,10 @@ The Slider value can be changed by using the Increase and Decrease buttons. In R
 > After enabling the slider buttons if the 'Tab' key is pressed, the focus goes to the handle and not to the button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

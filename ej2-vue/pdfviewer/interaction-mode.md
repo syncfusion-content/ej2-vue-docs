@@ -16,22 +16,23 @@ The PDF Viewer provides interaction mode for easy interaction with the loaded PD
 
 In this mode, the text selection can be performed in the PDF document loaded in PDF Viewer. The panning and scrolling of the pages by touch cannot be performed in this mode. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content. You can enable/disable the text selection using the following code snippet.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableTextSelection="true">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableTextSelection="true">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
@@ -39,17 +40,54 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableTextSelection="true">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/selection.png)
 
@@ -61,23 +99,24 @@ In this mode, the panning and scrolling of the pages by touch can be performed i
 
 You can switch the interaction mode of PDF Viewer by using the following code snippet.,
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableTextSelection="false"
-            :interactionMode="interactionMode">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableTextSelection="false"
+          :interactionMode="interactionMode">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
@@ -85,18 +124,57 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       interactionMode:"InteractionMode.Pan"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableTextSelection="false"
+          :interactionMode="interactionMode">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      interactionMode:"InteractionMode.Pan"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

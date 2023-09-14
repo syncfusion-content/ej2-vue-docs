@@ -7,7 +7,6 @@
 </template>
 <script setup>
 import { TreeViewComponent as EjsTreeview } from "@syncfusion/ej2-vue-navigations";
-const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
 const data =  [
   {
       nodeId: '01', nodeText: 'Music',
@@ -33,6 +32,7 @@ const data =  [
       ]
   },
 ];
+const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

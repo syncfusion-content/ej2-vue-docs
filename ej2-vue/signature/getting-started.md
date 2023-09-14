@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Signature Component in Vue 2
 
-This section explains how to create a default Signature and to configure the Signature component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Signature component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 To get start quickly with Vue Signature, you can check on this video:
 
@@ -31,80 +31,110 @@ The list of dependencies required to use the Signature component in your applica
     |-- @syncfusion/ej2-inputs
 ```
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-Install Syncfusion `Signature` packages using below command.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Signature component](https://www.syncfusion.com/vue-components/vue-signature) as an example. Install the `@syncfusion/ej2-vue-inputs` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-inputs --save
 ```
+or
 
-## Registering Signature component using `Vue.use()`
-
-Import the Signature Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```javascript
-import Vue from 'vue';
-import { SignaturePlugin } from '@syncfusion/ej2-vue-inputs';
-
-Vue.use(SignaturePlugin);
-
-export default {}
+```bash
+yarn add @syncfusion/ej2-vue-inputs
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Signature`. Refer [here](https://ej2.syncfusion.com/vue/documentation/base/getting-started/#registering-vue-component) to know more about component registration.
+## Add Syncfusion Vue component
 
-## Initialize Signature
+Follow the below steps to add the Vue Signature component using `Composition API` or `Options API`:
 
-Add the EJ2 Vue Signature using `<ejs-signature>` to the `<template>` section of the `App.vue` file in `src` directory.
+1\. First, import and register the Signature component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { SignatureComponent as EjsSignature } from '@syncfusion/ej2-vue-inputs';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { SignatureComponent } from '@syncfusion/ej2-vue-inputs';
+export default {
+    components: {
+        'ejs-signature': SignatureComponent
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section define the Signature component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
 <ejs-signature></ejs-signature>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SignaturePlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(SignaturePlugin);
+{% enhighlight %}
+{% endtabs %}
 
-export default {}
-</script>
-```
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
-
-The following example shows a default Signature.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/signature/default-cs7" %}

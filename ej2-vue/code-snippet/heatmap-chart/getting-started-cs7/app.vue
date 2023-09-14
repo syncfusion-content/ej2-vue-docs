@@ -5,11 +5,12 @@
     <ejs-heatmap id="heatmap" :dataSource='dataSource' :xAxis='xAxis' :yAxis='yAxis' :titleSettings='titleSettings' :legendSettings='legendSettings' :cellSettings='cellSettings'  :showTooltip='showTooltip'></ejs-heatmap>
 </template>
 <script>
-import Vue from 'vue';
-import { HeatMapPlugin, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
-Vue.use(HeatMapPlugin);
+import { HeatMapComponent, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
 
 export default {
+  components: {
+    'ejs-heatmap': HeatMapComponent
+  },
   data: function() {
     return {
         xAxis: {
@@ -59,10 +60,6 @@ export default {
 },
 }
 </script>
-
-<style>
-@import '../node_modules/@syncfusion/ej2-vue-heatmap/styles/material.css';
-</style>
 
 
 

@@ -135,11 +135,20 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonFileMenu, RibbonItemSize, RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
-
+  import { RibbonFileMenu, RibbonItemSize, RibbonComponent, RibbonTabDirective, RibbonTabsDirective, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionDirective, RibbonCollectionsDirective, RibbonItemDirective, RibbonItemsDirective, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
   export default {
+    components: {
+      'ejs-ribbon': RibbonComponent,
+      'e-ribbon-tab': RibbonTabDirective,
+      'e-ribbon-tabs': RibbonTabsDirective,
+      'e-ribbon-group': RibbonGroupDirective,
+      'e-ribbon-groups': RibbonGroupsDirective,
+      'e-ribbon-collection': RibbonCollectionDirective,
+      'e-ribbon-collections': RibbonCollectionsDirective,
+      'e-ribbon-item': RibbonItemDirective,
+      'e-ribbon-items': RibbonItemsDirective
+    },
     provide: {
       ribbon: [RibbonFileMenu, RibbonColorPicker]
     },

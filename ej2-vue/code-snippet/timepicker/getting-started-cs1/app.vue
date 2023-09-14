@@ -8,11 +8,12 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TimePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+import { TimePickerComponent } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(TimePickerPlugin);
 export default {
+  components: {
+    'ejs-timepicker': TimePickerComponent
+  },
   data () {
     return {
       waterMark : 'Select a time'

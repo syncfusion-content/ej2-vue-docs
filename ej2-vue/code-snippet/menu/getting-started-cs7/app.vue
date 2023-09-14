@@ -7,14 +7,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MenuPlugin } from "@syncfusion/ej2-vue-navigations";
+import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(MenuPlugin);
 
 export default {
+   components: {
+    'ejs-menu': MenuComponent
+   },
    data: function() {
         return {
            menuItems:  [
@@ -61,7 +62,7 @@ export default {
 </script>
 
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 

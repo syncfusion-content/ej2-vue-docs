@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with Vue Linear gauge component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Linear gauge component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Linear Gauge component | Syncfusion
+description:  Checkout and learn about Getting started with Vue Linear Gauge component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Linear Gauge
+# Getting Started with the Vue Linear Gauge Component in Vue 2
 
-This section explains you the steps required to create a simple Linear Gauge and demonstrate the basic usage of the Linear Gauge control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Linear Gauge component
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This section explains you the steps required to create a simple Linear Gauge and
 
 ## Dependencies
 
-The list of dependencies required to use the linear gauge component in your application is given below:
+The list of dependencies required to use the Linear Gauge component in your application is given below:
 
 ```javascript
 |-- @syncfusion/ej2-vue-lineargauge
@@ -28,110 +28,105 @@ The list of dependencies required to use the linear gauge component in your appl
     |-- @syncfusion/ej2-lineargauge
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-[`Vue CLI`](https://github.com/vuejs/vue-cli) can be used to setup the Vue applications. To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-
-To install Linear Gauge component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-lineargauge –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-Import the Linear Gauge Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+## Add Syncfusion Vue packages
 
-Refer the code snippet given below.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-```ts
-import { LinearGaugePlugin } from '@syncfusion/ej2-vue-lineargauge';
+This article uses the [Vue Linear Gauge component](https://www.syncfusion.com/vue-components/vue-linear-gauge) as an example. Install the `@syncfusion/ej2-vue-lineargauge` package by running the following command:
 
-Vue.use(LinearGaugePlugin);
+```bash
+npm install @syncfusion/ej2-vue-lineargauge --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-lineargauge
 ```
 
->Note: By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Adding Syncfusion Vue Linear Gauge component
 
-### Using Vue.component()
+Follow the below steps to add the Vue Linear Gauge component:
 
-Import the Linear Gauge Component and Plugin from EJ2 Vue Package, register the same using the Vue.component() with Linear Gauge component from LinearGaugePlugin and the EJ2 Vue Component as its arguments.
-
-Refer the code snippet given below.
-
-```ts
-import { LinearGaugeComponent, LinearGaugePlugin } from '@syncfusion/ej2-vue-lineargauge';
-
-Vue.component(LinearGaugePlugin.name, LinearGaugerComponent);
-```
-
->Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
-
-## Creating Vue Sample
-
-Add the EJ2 Vue Linear Gauge to the **template** section of the **App.vue** file in src directory using **ejs-lineargauge** tag. The content attribute of the Linear Gauge component is provided as name in the data option of the **script** section.
-
-```
-<template>
-    <div>
-        <div class="col-md-8 control-section">
-            <div class="content-wrapper">
-                <div align='center'>
-                    <ejs-lineargauge ></ejs-lineargauge>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-<script>
-import Vue from 'vue';
-import { LinearGaugePlugin } from '@syncfusion/ej2-vue-lineargauge';
-
-Vue.use(LinearGaugePlugin);
-export default { }
-</script>
-```
-
-## Running the Application
-
-Now run the `npm run dev` command in the console to build the application and open the same in the browser.
-
-```
-npm run dev
-```
-
-The below example shows a basic Linear Gauge component.
+1\. First, import and register the Linear Gauge component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { LinearGaugeComponent } from '@syncfusion/ej2-vue-lineargauge';
+
+export default {
+    components: {
+        'ejs-lineargauge': LinearGaugeComponent
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Linear Gauge component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+    <div id="app">
+    <ejs-lineargauge></ejs-lineargauge>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
+
 {% previewsample "page.domainurl/code-snippet/linear-gauge/getting-started-cs34" %}
 
 ## Module Injection
@@ -144,7 +139,7 @@ LinearGauge component is segregated into the individual feature-wise modules. In
 Now import the above mentioned modules from linear gauge package and inject it into the LinearGauge component using `provide: {}` .
 
 ```ts
-import { LinearGaugePlugin, Annotations, GaugeTooltip } from "@syncfusion/ej2-vue-lineargauge";
+import { LinearGaugeComponent, Annotations, GaugeTooltip } from "@syncfusion/ej2-vue-lineargauge";
 provide: {
     lineargauge: [Annotations, GaugeTooltip]
 },
@@ -156,7 +151,7 @@ provide: {
 The title can be added to the Linear Gauge component using the [`title`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel/#title-string) property in the Linear Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -168,7 +163,7 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -182,7 +177,7 @@ To denote the axis labels with temperature units, add the °C as suffix to each 
 To change the pointer value from the default value of the gauge, set the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/) object of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -194,7 +189,7 @@ To change the pointer value from the default value of the gauge, set the [`value
 The pointer value is changed in the below sample using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer) object of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Accumulation chart Component in Vue 2
 
-In EJ2, Accumulation chart is implemented as a separate control to avoid axis related logics. Dependencies
-for accumulation chart is same as chart control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Accumulation chart component
 
 ## Prerequisites
 
@@ -33,54 +32,105 @@ The list of minimum dependencies required to use an accumulation chart are follo
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-## Setup Vue Environment
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following commands.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Create a Vue Application
-
-Start a new Vue application using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
+yarn run serve
 ```
 
-## Adding Syncfusion Chart package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install chart component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the `Vue Accumulation chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-charts
+```
 
 > The **--save** will instruct NPM to include the chart package inside of the `dependencies` section of the `package.json`.
 
-## Registering Chart Component
+## Add Syncfusion Vue component
 
-You can register the chart component in your application by using the `Vue.use()`.
+Follow the below steps to add the Vue Accumulation chart component using `Composition API` or `Options API`:
 
-Refer to the code example given below.
+1\. First, import and register the Accumulation chart component in the `script` section of the **src/App.vue** file.
 
-```ts
-import { AccumulationChartPlugin } from '@syncfusion/ej2-vue-charts';
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Vue.use(AccumulationChartPlugin);
-```
+<script>
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries } from "@syncfusion/ej2-vue-charts";
+export default {
+  components: {
+    'ejs-accumulationchart': AccumulationChartComponent,
+    'e-accumulation-series-collection': AccumulationSeriesCollectionDirective,
+    'e-accumulation-series': AccumulationSeriesDirective
+  }
+}
+</script>
 
-> Registering `ChartPlugin` in vue, will register the chart component along with its required child directives globally.
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Accumulation chart component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#datasource) property.
+
+{% tabs %}
+{% highlight html tabtitle="~src/App.vue" %}
+
+<template>
+    <div id="app">
+         <ejs-accumulationchart id="container">
+            <e-accumulation-series-collection>
+                <e-accumulation-series :dataSource='seriesData' xName='x' yName='y'> </e-accumulation-series>
+            </e-accumulation-series-collection>
+        </ejs-accumulationchart>
+    </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+3\. Declare the value for the `dataSource` property in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+data() {
+  return {
+    seriesData: data
+  };
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding Chart Component
 
@@ -93,15 +143,23 @@ The below example shows a basic Charts,
 By default pie series will be rendered on assigning JSON data to the series by using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#datasource) property. Map the field names in the JSON data to the [`xName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeries/#yname) properties of the series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/chart/series/pie-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs9" %}
 
-* Now run the application in the browser using the below command.
+## Run the project
 
-    ```
-    npm run dev
-    ```
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```

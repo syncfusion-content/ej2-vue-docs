@@ -12,7 +12,6 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
 
 export default {
    data: function() {
@@ -58,12 +57,12 @@ export default {
                 }, 500);
             });
         }
-    });
+    }
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
   .wrap {
     box-sizing: border-box;

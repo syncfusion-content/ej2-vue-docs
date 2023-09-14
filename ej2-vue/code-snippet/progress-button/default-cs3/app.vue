@@ -5,14 +5,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ProgressButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+import { ProgressButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ProgressButtonPlugin);
 
-export default {}
+export default {
+  components: {
+    'ejs-progressbutton': ProgressButtonComponent
+  }
+}
 
 </script>
 

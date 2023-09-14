@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Toolbar Component in Vue 2
 
-This section explains briefly about how to create a simple Toolbar using Vue and, configuring the Toolbar items like button, separator and
-input components.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Toolbar component
 
 ## Prerequisites
 
@@ -31,74 +30,95 @@ Install the below required dependency package in order to use the Toolbar compon
 
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
-
+yarn run serve
 ```
 
-## Adding Syncfusion packages
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Toolbar component.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install Toolbar component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Toolbar component](https://www.syncfusion.com/vue-components/vue-toolbar) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
 ```
+or
 
-## Registering Vue Component
-
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
-
-### Using Vue.use()
-
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
-
-Refer the code snippet given below.
-
-```ts
-import { ToolbarPlugin } from '@syncfusion/ej2-vue-navigations';
-
-Vue.use(ToolbarPlugin);
+```bash
+yarn add @syncfusion/ej2-vue-navigations
 ```
 
-> By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Toolbar component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { ToolbarComponent, ToolbarPlugin } from '@syncfusion/ej2-vue-navigations';
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+</style>
 
-Vue.component(ToolbarPlugin.name, ToolbarComponent);
-```
+{% endhighlight %}
+{% endtabs %}
 
-Note: By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
+## Add Syncfusion Vue component
 
-## Creating Vue Sample
+Follow the below steps to add the Vue Toolbar component:
 
-Add the EJ2 Vue Toolbar using `<ejs-toolbar>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the Toolbar component is provided as name in data option in the `<script>` section.
+1\. First, import and register the Toolbar component in the `script` section of the **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { ToolbarComponent, ItemDirective, ItemsDirective } from "@syncfusion/ej2-vue-navigations";
+
+export default {
+  components: {
+    'ejs-toolbar': ToolbarComponent,
+    'e-item': ItemDirective,
+    'e-items': ItemsDirective
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Toolbar component with [text](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#text) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
     <ejs-toolbar >
@@ -114,39 +134,31 @@ Add the EJ2 Vue Toolbar using `<ejs-toolbar>` to the `<template>` section of the
     </ejs-toolbar>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { ToolbarPlugin } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(ToolbarPlugin);
-export default {
-  name: 'app',
-}
-</script>
-```
+{% endhighlight %}
+{% endtabs %}
 
-## Adding CSS Reference
-
-Add Toolbar component's styles as given below in `<style>` section of the `App.vue` file.
-
-```
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-</style>
-```
-
-## Running the Application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/toolbar/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/toolbar/getting-started-cs1" %}
 
@@ -164,7 +176,7 @@ The Toolbar component can be rendered based on the given HTML element using `<ej
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/toolbar/toolbar-container-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

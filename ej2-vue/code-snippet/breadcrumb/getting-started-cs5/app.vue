@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { BreadcrumbPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(BreadcrumbPlugin);
+import { BreadcrumbComponent } from "@syncfusion/ej2-vue-navigations";
 
 export default {
+   components:{
+    'ejs-breadcrumb': BreadcrumbComponent
+   },
    data: function() {
        return {};
    }

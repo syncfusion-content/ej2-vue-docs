@@ -28,11 +28,12 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin, MultiSelect, ActionEventArgs } from '@syncfusion/ej2-vue-inplace-editor';
+import { InPlaceEditorComponent, MultiSelect } from '@syncfusion/ej2-vue-inplace-editor';
 
-Vue.use(InPlaceEditorPlugin);
 export default {
+  components: {
+    'ejs-inplaceeditor': InPlaceEditorComponent
+  },
   name: 'app',
   data () {
     return {

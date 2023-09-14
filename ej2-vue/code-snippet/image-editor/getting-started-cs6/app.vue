@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-
-Vue.use(ImageEditorPlugin);
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 
 export default {
+  components: {
+    'ejs-imageeditor': ImageEditorComponent
+  },
   data: function() {
       return {};
   }

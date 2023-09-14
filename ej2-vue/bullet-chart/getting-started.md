@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Bullet chart Component in Vue 2
 
-This section explains you the steps required to create a simple Bullet Chart and demonstrate the basic usage of the Bullet Chart control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Bullet chart component
 
 ## Prerequisites
 
@@ -32,73 +32,108 @@ Below is the list of minimum dependencies required to use the Bullet Chart compo
     |-- @syncfusion/ej2-svg-base
 ```
 
-## Installation and Configuration
+## Setting up the Vue 2 project
 
-## Setup Vue Environment
-
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following commands.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-## Create a Vue Application
-
-Start a new Vue application using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-npm install
+yarn run serve
 ```
 
-## Adding Syncfusion Bullet Chart package
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-All the available Essential JS 2 packages are published in [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-To install Bullet Chart component, use the following command
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Bullet chart component](https://www.syncfusion.com/vue-components/vue-bullet-chart) as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
 ```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-charts
+```
 
 > The **--save** will instruct NPM to include the Bullet Chart package inside of the `dependencies` section of the `package.json`.
 
-## Registering Bullet Chart Component
+## Add Syncfusion Vue component
 
-You can register the Bullet Chart component in your application by using the `Vue.use()`.
+Follow the below steps to add the Vue Bullet chart component using:
 
-Refer to the code example given below.
+1\. First, import and register the Bullet chart component in the `script` section of the **src/App.vue** file.
 
-```ts
-import { BulletChartPlugin } from '@syncfusion/ej2-vue-charts';
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-Vue.use(BulletChartPlugin);
+<script>
+import { BulletChartComponent } from '@syncfusion/ej2-vue-charts';
+
+export default {
+  components: {
+    'ejs-bulletchart': BulletChartComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Bullet chart component.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div>
+      <ejs-bulletchart id="bulletChart"> </ejs-bulletchart>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/bullet-chart/getting-started/initialize-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
 
-> Registering `BulletChartPlugin` in vue, will register the Bullet Chart component along with its required child directives globally.
+or
 
-## Adding Bullet Chart Component
-
-* Add the Vue Bullet Chart by using `<ejs-bulletchart>` selector in `<template>` section of the `App.vue` file.
-
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/bullet-chart/getting-started/initialize-cs1/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
-            
-    {% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
-
-* Now run the application in the browser using the below command.
-
-    ```
-    npm run dev
-    ```
+```bash
+yarn run serve
+```
+        
+{% previewsample "page.domainurl/code-snippet/bullet-chart/getting-started/initialize-cs1" %}
 
 ## Module Injection
 
@@ -109,12 +144,12 @@ Bullet Chart component are segregated into individual feature-wise modules. In o
 These modules should be injected to the provide method as follows,
 
  ```ts
-import Vue from "vue";
-import { BulletChartPlugin, BulletTooltip } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(BulletChartPlugin);
+import { BulletChartComponent, BulletTooltip } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  components: {
+    'ejs-bulletchart': BulletChartComponent
+  },
   provide: {
     bulletChart: [BulletTooltip]
   }
@@ -138,7 +173,7 @@ let data: any[] = [
 Now assign the local data to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#datasource) property. **value** and **target** values should be mapped with [`valueField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#valuefield) and  [`targetField`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#targetfield) respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/bullet-chart/getting-started/datasource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +186,7 @@ You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation
 information to the user about the data plotted in the Bullet Chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/bullet-chart/getting-started/title-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -163,7 +198,7 @@ information to the user about the data plotted in the Bullet Chart.
 You can add a range using `e-bullet-range` of the `e-bullet-range-collection`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/bullet-chart/getting-started/ranges-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -175,7 +210,7 @@ You can add a range using `e-bullet-range` of the `e-bullet-range-collection`.
 You can use tooltip for the Bullet Chart by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/bulletTooltipSettingsModel/#enable) property to true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#tooltip) object and by injecting the `BulletTooltip` module using `provide` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/bullet-chart/getting-started/tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -24,12 +24,13 @@
         }
 </style>
 <script>
-import Vue from 'vue';
-import { DataMatrixGeneratorPlugin } from '@syncfusion/ej2-vue-barcode-generator';
+import { DataMatrixGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
 
-Vue.use(DataMatrixGeneratorPlugin);
 export default {
-    name: 'app'
+    components: {
+        'ejs-datamatrixgenerator': DataMatrixGeneratorComponent
+    },
+    name: 'app',
     data () {
         return {
              width: "200px",

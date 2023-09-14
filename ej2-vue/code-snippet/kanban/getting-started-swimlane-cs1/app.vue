@@ -15,12 +15,16 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend } from '@syncfusion/ej2-base';
 import { kanbanData } from './datasource.js';
-Vue.use(KanbanPlugin);
+
 export default {
+  components: {
+    'ejs-kanban': KanbanComponent,
+    'e-column': ColumnDirective,
+    'e-columns': ColumnsDirective
+  },
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),

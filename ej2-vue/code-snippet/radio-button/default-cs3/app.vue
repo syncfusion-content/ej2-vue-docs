@@ -8,14 +8,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { RadioButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+import { RadioButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(RadioButtonPlugin);
 
-export default {}
+export default {
+    components: {
+        'ejs-radiobutton': RadioButtonComponent
+    }
+}
 </script>
 
 <style>

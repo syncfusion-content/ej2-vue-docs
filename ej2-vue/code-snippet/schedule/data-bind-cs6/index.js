@@ -5,8 +5,8 @@ import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/
 
 Vue.use(SchedulePlugin);
 
-var calendarId = '5105trob9dasha31vuqek6qgp0@group.calendar.google.com';
-var publicKey = 'AIzaSyD76zjMDsL_jkenM5AAnNsORypS1Icuqxg';
+var calendarId = 'en.usa%23holiday@group.v.calendar.google.com';
+var publicKey = 'AIzaSyBgbX_tgmVanBP4yafDPPXxWr70sjbKAXM';
 var dataManager = new DataManager({
     url: 'https://www.googleapis.com/calendar/v3/calendars/' + calendarId + '/events?key=' + publicKey,
     adaptor: new WebApiAdaptor,
@@ -20,7 +20,7 @@ new Vue({
 	template: `
   <div id='app'>
     <div id='container'>
-        <ejs-schedule :height='height' :selectedDate='selectedData' :readonly='readonly' :eventSettings='eventSettings' :dataBinding='onDataBinding'></ejs-schedule>
+        <ejs-schedule :height='height' :currentView='currentView' :readonly='readonly' :eventSettings='eventSettings' :dataBinding='onDataBinding'></ejs-schedule>
     </div>
   </div>
 `,
@@ -31,8 +31,8 @@ new Vue({
       eventSettings: {
           dataSource: dataManager
       },
-      selectedData: new Date(2018, 10, 14),
       readonly: true,
+      currentView: 'Month'
     }
   },
   methods: {

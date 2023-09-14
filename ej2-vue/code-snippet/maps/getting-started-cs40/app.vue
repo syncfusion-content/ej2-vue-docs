@@ -13,12 +13,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
+import { MapsComponent, LayerDirective, LayersDirective, Legend, DataLabel, MapsTooltip } from '@syncfusion/ej2-vue-maps';
 import { usMap } from './usa.js';
 import { electionData } from './election-data.js';
-Vue.use(MapsPlugin);
 export default {
+components: {
+    'ejs-maps': MapsComponent,
+    'e-layer': LayerDirective,
+    'e-layers': LayersDirective
+},
 data () {
     return{
         titleSettings: {

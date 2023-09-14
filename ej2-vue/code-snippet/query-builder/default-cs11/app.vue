@@ -18,11 +18,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-Vue.use(QueryBuilderPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 
 export default {
+    components: {
+        'ejs-querybuilder': QueryBuilderComponent,
+        'e-column': ColumnDirective,
+        'e-columns': ColumnsDirective
+    },
     data: function() {
         return {
             dataSource: employeeData,

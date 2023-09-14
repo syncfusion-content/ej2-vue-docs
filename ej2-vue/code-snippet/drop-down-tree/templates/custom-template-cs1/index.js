@@ -26,12 +26,12 @@ new Vue({
 `,
 
   data() {
-    return {
-      fields: { dataSource: data, value: 'id', text: 'name', parentValue: 'pid', hasChildren: 'hasChild' },
-      height: '200px',
-      waterMark: 'Select an employee',
-      treeSettings: { autoCheck: true },
-      customTemplate: 'Selected item(s) count: ${value.length}'
-    };
+      return {
+        fields: { dataSource: data, value: 'id', text: 'name', parentValue: 'pid', hasChildren: 'hasChild' },
+        height: '200px',
+        waterMark: 'Select an employee',
+        treeSettings: { autoCheck: true },
+        customTemplate: 'Selected item(s) count: ${value.length}'
+      };
   }
 });

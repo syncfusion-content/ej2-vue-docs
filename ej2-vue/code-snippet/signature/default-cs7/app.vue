@@ -8,14 +8,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SignaturePlugin } from '@syncfusion/ej2-vue-inputs';
+import { SignatureComponent } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(SignaturePlugin);
 
-export default {}
+export default {
+    components: {
+        'ejs-signature': SignatureComponent
+    }
+}
 </script>
 
 <style>

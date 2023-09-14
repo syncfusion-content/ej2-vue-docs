@@ -24,45 +24,85 @@ The default toolbar of PDF Viewer contains the following navigation options
 
 You can enable/disable page navigation option in PDF Viewer using the `EnableNavigation` property and use the following code snippet,
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
   <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath"
-      :enableNavigation="true">
-    </ejs-pdfviewer>
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableNavigation="true">
+      </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-         Annotation, ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]}
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableNavigation="true">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/navigation.png)
 
 Also, you can programmatically perform page navigation options as follows.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
     <div>
         <button v-on:click="goToFirstPage">Go To First Page</button>
@@ -72,7 +112,6 @@ Also, you can programmatically perform page navigation options as follows.
         <button v-on:click="goToPreviousPage">Go To Previous Page</button>
         <ejs-pdfviewer
             id="pdfViewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath">
         </ejs-pdfviewer>
     </div>
@@ -88,8 +127,7 @@ Vue.use(PdfViewerPlugin);
 export default {
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
@@ -125,7 +163,75 @@ export default {
   }
 }
 </script>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div>
+        <button v-on:click="goToFirstPage">Go To First Page</button>
+        <button v-on:click="goToLastPage">Go To last Page</button>
+        <button v-on:click="goToNextPage">Go To Next Page</button>
+        <button v-on:click="goToPage">Go To Page</button>
+        <button v-on:click="goToPreviousPage">Go To Previous Page</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,ThumbnailView,
+                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
+
+  methods: {
+    //Go To First Page
+    goToFirstPage: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      viewer.navigation.goToFirstPage();
+    },
+    //Go To Last Page
+    goToLastPage: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      viewer.navigation.goToLastPage();
+    },
+    //Go To Next Page
+    goToNextPage: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      viewer.navigation.goToNextPage();
+    },
+    //Go To Page
+    goToPage: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      viewer.navigation.goToPage(4);
+    },
+    //Go To Previous Page
+    goToPreviousPage: function () {
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      viewer.navigation.goToPreviousPage();
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 Find the [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/quickstart970554908.zip) to perform the page navigation options programmatically.
 
@@ -133,39 +239,79 @@ Find the [here](https://www.syncfusion.com/downloads/support/directtrac/general/
 
 The Bookmarks saved in PDF files are loaded and made ready for easy navigation. You can enable/disable bookmark navigation by using the following code snippet.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableBookmark="true">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+            :enableBookmark="false">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]}
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+            :enableBookmark="false">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/bookmark.png)
 
@@ -173,39 +319,152 @@ export default {
 
 Thumbnails is the miniature representation of actual pages in PDF files. This feature displays thumbnails of the pages and allows navigation. You can enable/disable thumbnail navigation by using the following code snippet.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableThumbnail="true">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableTextSearch="true">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]}
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableTextSearch="true">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
+
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableThumbnail="true">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :serviceUrl="serviceUrl"
+          :enableThumbnail="true">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ![Alt text](./images/thumbnail.png)
 
@@ -221,22 +480,24 @@ Table of contents navigation allows users to navigate to different parts of a PD
 
 You can enable/disable link navigation by using the following code snippet.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableHyperlink="true">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableHyperlink="true">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
@@ -244,38 +505,34 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, 
-                 BookmarkView, ThumbnailView, Print, TextSelection, TextSearch ]}
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
 
-You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet.
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 
-```
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableHyperlink="true"
-            :hyperlinkOpenState="hyperlinkOpenState">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :serviceUrl="serviceUrl"
+          :enableHyperlink="true">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
@@ -283,18 +540,96 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf",
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+You can change the open state of the hyperlink in the PDF Viewer by using the following code snippet.
+
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableHyperlink="true"
+          :hyperlinkOpenState="hyperlinkOpenState">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       hyperlinkOpenState:"NewTab"
     };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]}
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
 
 }
 </script>
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableHyperlink="true"
+          :hyperlinkOpenState="hyperlinkOpenState">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      hyperlinkOpenState:"NewTab"
+    };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+
+}
+</script>
+{% endhighlight %}
+{% endtabs %}
+
 
 ![Alt text](./images/toc.png)
 

@@ -35,8 +35,52 @@ In the pan mode, if the measurement annotation mode is entered, the PDF Viewer c
 
 Refer to the following code snippet to switch to distance annotation mode.
 
-```
 
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+    <div id="app">
+        <button id="set">Distance</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+          viewer.annotation.setAnnotationMode('Distance');
+      });
+    }
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 <template>
     <div id="app">
         <button id="set">Distance</button>
@@ -54,7 +98,7 @@ Refer to the following code snippet to switch to distance annotation mode.
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
          LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var viewer;
@@ -63,13 +107,13 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
   methods: {
     documentLoad() {
       viewer = this.$refs.pdfviewer.ej2Instances;
@@ -81,7 +125,8 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing the properties of measurement annotation
 
@@ -121,8 +166,51 @@ The properties of the line shapes such as distance and perimeter annotations can
 
 The properties of the shape annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings and volumeSettings. Refer to the following code snippet to set the default annotation settings.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+<template>
+    <div id="app">
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :distanceSettings="distanceSettings"
+            :perimeterSettings="perimeterSettings"
+            :areaSettings="areaSettings"
+            :radiusSettings="radiusSettings"
+            :volumeSettings="volumeSettings">
+        </ejs-pdfviewer>
+    </div>
+</template>
 
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      distanceSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
+      perimeterSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
+      areaSettings: {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
+      radiusSettings: {fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'},
+      volumeSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 <template>
     <div id="app">
         <ejs-pdfviewer
@@ -142,8 +230,8 @@ The properties of the shape annotations can be set before creating the control u
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView,ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var viewer;
@@ -152,23 +240,22 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       distanceSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
       perimeterSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
       areaSettings: {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
       radiusSettings: {fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'},
       volumeSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
     };
-  }, 
-
+  },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Editing scale ratio and unit of the measurement annotation
 
@@ -191,14 +278,14 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 
 The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
 
-```
 
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
     <div id="app">
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :measurementSettings="measurementSettings">
         </ejs-pdfviewer>
@@ -208,8 +295,52 @@ The properties of scale ratio for measurement annotation can be set before creat
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView,ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print ,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      measurementSettings: {scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+          viewer.annotation.setAnnotationMode('Distance');
+      });
+    }
+  }
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+    <div id="app">
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :serviceUrl="serviceUrl"
+            :measurementSettings="measurementSettings">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print ,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var viewer;
@@ -218,16 +349,23 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       measurementSettings: {scaleRatio: 2, conversionUnit: 'cm', displayUnit: 'cm'}
     };
   },
   
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+          viewer.annotation.setAnnotationMode('Distance');
+      });
+    }
+  }
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}

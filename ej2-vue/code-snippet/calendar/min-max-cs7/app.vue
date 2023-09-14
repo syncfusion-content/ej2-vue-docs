@@ -8,11 +8,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
+import { CalendarComponent } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(CalendarPlugin);
 export default {
+  components: {
+    'ejs-calendar': CalendarComponent
+  },
   data () {
     return {
        minDate : new Date("05/09/2017"),

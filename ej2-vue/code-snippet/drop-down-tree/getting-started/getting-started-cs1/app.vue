@@ -11,9 +11,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownTreePlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(DropDownTreePlugin);
+import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
 
 var data =  [
     {
@@ -41,6 +39,9 @@ var data =  [
     }];
 
 export default {
+  components: {
+    'ejs-dropdowntree': DropDownTreeComponent
+  },
   data (){
     return {
       fields: { dataSource: data, value: 'nodeId', text: 'nodeText', child: 'nodeChild' }
@@ -51,12 +52,12 @@ export default {
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
 
 

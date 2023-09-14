@@ -6,11 +6,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { RangeNavigatorPlugin } from '@syncfusion/ej2-vue-charts';
+import { RangeNavigatorComponent } from '@syncfusion/ej2-vue-charts';
 
-Vue.use(RangeNavigatorPlugin);
 export default {
+  components: {
+    'ejs-rangenavigator': RangeNavigatorComponent
+  },
   data () {
     return {
     }

@@ -5,14 +5,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ButtonPlugin);
 
-export default {}
+export default {
+  components: {
+    'ejs-button': ButtonComponent
+  }
+}
 </script>
 
 <style>

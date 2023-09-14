@@ -97,7 +97,7 @@ yarn add @syncfusion/ej2-vue-grids
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -246,6 +246,6 @@ The output will appear as follows:
 
 ## See also
 
-* [Getting Started with Vue UI Components using Composition API and TypeScript](./vue3-ts-composition.md)
-* [Getting Started with Vue UI Components using Options API and JavaScript](./vite-vue.md)
-* [Getting Started with Vue UI Components using Options API and TypeScript](./vue3-ts-options.md)
+* [Getting Started with Vue UI Components using Composition API and TypeScript](./vue3-ts-composition)
+* [Getting Started with Vue UI Components using Options API and JavaScript](./vite-vue)
+* [Getting Started with Vue UI Components using Options API and TypeScript](./vue3-ts-options)

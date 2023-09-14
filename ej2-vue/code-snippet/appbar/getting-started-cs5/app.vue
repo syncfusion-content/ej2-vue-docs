@@ -10,14 +10,14 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { AppBarPlugin  } from "@syncfusion/ej2-vue-navigations";
-  import { ButtonPlugin  } from "@syncfusion/ej2-vue-buttons";
-
-  Vue.use(AppBarPlugin);
-  Vue.use(ButtonPlugin);
+  import { AppBarComponent  } from "@syncfusion/ej2-vue-navigations";
+  import { ButtonComponent  } from "@syncfusion/ej2-vue-buttons";
 
   export default {
+    components: {
+      'ejs-appbar': AppBarComponent,
+      'ejs-button': ButtonComponent
+    },
     data: function () {
       return {};
     },

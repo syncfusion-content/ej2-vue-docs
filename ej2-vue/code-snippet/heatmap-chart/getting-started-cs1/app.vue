@@ -7,11 +7,12 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { HeatMapPlugin } from '@syncfusion/ej2-vue-heatmap';
-Vue.use(HeatMapPlugin);
+import { HeatMapComponent } from '@syncfusion/ej2-vue-heatmap';
 
 export default {
+  components: {
+    'ejs-heatmap': HeatMapComponent
+  },
   data: function() {
     return {
      dataSource: [

@@ -60,6 +60,9 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 {% highlight html tabtitle="app.vue" %}
 {% include code-snippet/rich-text-editor/code-mirror-cs1/app.vue %}
 {% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/code-mirror-cs1/index.html %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs1" %}

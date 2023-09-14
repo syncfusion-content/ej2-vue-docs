@@ -5,11 +5,13 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
-Vue.use(SpreadsheetPlugin);
-export default { }
+export default {
+   components: {
+      'ejs-spreadsheet': SpreadsheetComponent
+   }
+}
 </script>
 
 <style>

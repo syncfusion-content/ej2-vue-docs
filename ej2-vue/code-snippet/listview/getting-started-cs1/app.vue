@@ -6,11 +6,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ListViewPlugin } from '@syncfusion/ej2-vue-lists';
+import { ListViewComponent } from '@syncfusion/ej2-vue-lists';
 
-Vue.use(ListViewPlugin);
 export default {
+  components: {
+    'ejs-listview': ListViewComponent
+  },
   name: 'app',
    data () {
     return {

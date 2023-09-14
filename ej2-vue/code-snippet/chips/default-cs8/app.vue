@@ -5,12 +5,13 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ChipListPlugin } from '@syncfusion/ej2-vue-buttons';
+import { ChipListComponent } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(ChipListPlugin);
-
-export default {}
+export default {
+    components: {
+        'ejs-chiplist': ChipListComponent
+    }
+}
 </script>
 
 <style>

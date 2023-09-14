@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Carousel Component in Vue 2
 
-This section explains how to create a simple [Vue Carousel](https://www.syncfusion.com/vue-ui-components/vue-carousel), and configure its available functionalities in Vue using Vue quickstart seed repository.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion [Vue Carousel](https://www.syncfusion.com/vue-ui-components/vue-carousel) component.
 
 ## Prerequisites
 
@@ -28,59 +28,77 @@ The following list of dependencies are required to use the Carousel component in
         |-- @syncfusion/ej2-buttons
 ```
 
-## Installation and configuration
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-Install Syncfusion `Carousel` packages using below command.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Carousel component](https://www.syncfusion.com/vue-components/vue-carousel) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
 ```
+or
 
-## Registering Carousel component using `Vue.use()`
-
-Import the Carousel Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```javascript
-import Vue from "vue";
-import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(CarouselPlugin);
-
-export default {};
+```bash
+yarn add @syncfusion/ej2-vue-navigations
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered.
-> We can also use `Vue.Component()` to register `Carousel`.
-> Refer [here](https://ej2.syncfusion.com/vue/documentation/base/getting-started/#registering-vue-component) to know more about component registration.
+## Add Syncfusion Vue component
 
-## Initialize Carousel
+Follow the below steps to add the Vue Carousel component:
 
-Add the EJ2 Vue Carousel using `<ejs-carousel>` to the `<template>` section of the `App.vue` file in `src` directory.
+1\. First, import and register the Carousel component in the `script` section of the **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
+
+export default {
+  components: {
+    'ejs-carousel': CarouselComponent,
+    'e-carousel-item': CarouselItemDirective,
+    'e-carousel-items': CarouselItemsDirective
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Carousel component.
+
+{% tabs %}
+{$ highlight html tabtitle="~/src/App.vue" %}
+
 <template>
   <div class="control-container">
     <ejs-carousel>
@@ -95,57 +113,30 @@ Add the EJ2 Vue Carousel using `<ejs-carousel>` to the `<template>` section of t
   </div>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
+{% endhighlight %}
+{% endtabs %}
 
-  Vue.use(CarouselPlugin);
-
-  export default {
-    data: function () {
-      return {};
-    },
-  };
-</script>
-
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-
-  .control-container {
-    height: 360px;
-    margin: 0 auto;
-    width: 600px;
-  }
-
-  .img-container {
-    height: 100%;
-    margin: 0;
-  }
-
-  .img-caption {
-    color: #fff;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 3rem;
-    width: 100%;
-    text-align: center;
-  }
-</style>
-```
-
-## Run the application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
-
-The following example shows a basic Carousel component.
+Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/carousel/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
         
 {% previewsample "page.domainurl/code-snippet/carousel/getting-started-cs1" %}
 

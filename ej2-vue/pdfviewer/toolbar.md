@@ -40,7 +40,16 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
     {% endhighlight %}
     {% endtabs %}
             
+ 
+
+    {% tabs %}
+    {% highlight html tabtitle="Standalone" %}
+    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-hide-cs1-standalone" %}
+    {% endhighlight %}
+    {% highlight html tabtitle="Server-Backed" %}
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
+    {% endhighlight %}
+    {% endtabs %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -50,7 +59,16 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
     {% endhighlight %}
     {% endtabs %}
             
+    
+
+    {% tabs %}
+    {% highlight html tabtitle="Standalone" %}
+    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-method-cs1-standalone" %}
+    {% endhighlight %}
+    {% highlight html tabtitle="Server-Backed" %}
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
+    {% endhighlight %}
+    {% endtabs %}
 
 ## Show/Hide the default toolbaritem
 
@@ -64,7 +82,15 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
     {% endhighlight %}
     {% endtabs %}
             
+   
+    {% tabs %}
+    {% highlight html tabtitle="Standalone" %}
+    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-items-standalone" %}
+    {% endhighlight %}
+    {% highlight html tabtitle="Server-Backed" %}
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
+    {% endhighlight %}
+    {% endtabs %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -74,7 +100,15 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
     {% endhighlight %}
     {% endtabs %}
             
+    
+    {% tabs %}
+    {% highlight html tabtitle="Standalone" %}
+    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-items-method-cs1-standalone" %}
+    {% endhighlight %}
+    {% highlight html tabtitle="Server-Backed" %}
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
+    {% endhighlight %}
+    {% endtabs %}
 
 ## See also
 

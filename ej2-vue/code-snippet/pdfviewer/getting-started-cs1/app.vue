@@ -11,17 +11,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
          Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
 export default {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
 

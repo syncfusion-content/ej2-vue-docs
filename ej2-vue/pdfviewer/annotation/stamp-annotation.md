@@ -38,11 +38,59 @@ In the pan mode, if the stamp annotation mode is entered, the PDF Viewer control
 
 Refer to the following code sample to switch to the stamp annotation mode.
 
-```
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
     <div id="app">
-        <button id="set">Stamp</button>
+    <button id="set">Stamp</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print, SignStampItem,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Stamp', null, SignStampItem.Witness);
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+    <button id="set">Stamp</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -56,22 +104,23 @@ Refer to the following code sample to switch to the stamp annotation mode.
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView,ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print, SignStampItem,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -84,7 +133,8 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Adding custom stamp to the PDF document
 
@@ -106,43 +156,79 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 Refer to the following code sample to set the default sticky note annotation settings.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :stampSettings="stampSettings">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          ref="pdfviewer"
+          :documentPath="documentPath"
+          :stampSettings="stampSettings">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView,ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, SignStampItem } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      stampSettings: {opacity: 0.3, author: 'Guest User'}
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          ref="pdfviewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :stampSettings="stampSettings">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
 
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       stampSettings: {opacity: 0.3, author: 'Guest User'}
     };
   },
-
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}

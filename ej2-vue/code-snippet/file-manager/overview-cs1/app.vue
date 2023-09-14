@@ -6,14 +6,15 @@
      <ejs-filemanager id="overview_filemanager" :ajaxSettings="ajaxSettings" :view="view">
      </ejs-filemanager>
     </div>
+</div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
+     components: {
+        'ejs-filemanager': FileManagerComponent
+     },
      data () {
         return {
            ajaxSettings:
@@ -34,7 +35,7 @@ export default {
 }
 </script>
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";

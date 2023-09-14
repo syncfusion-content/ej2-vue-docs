@@ -47,10 +47,10 @@ let priority = ['Ultra-Critical', 'Critical', 'High', 'Normal', 'Low'];
 let types = ['Epic', 'Bug', 'Story'];
 let tagsField = ['Feature', 'Bug', 'Enhancement', 'Documentation', 'Automation', 'Mobile', 'Web', 'iOS', 'Safari', 'Chrome', 'Firefox', 'Manual Testing'];
 let storyPoints = ['1', '2', '3', '3.5', '4', '4.5', '5', '6', '7.5', '8'];
-let count = 600000;
+let count = 60000;
 let generateKanbanDataVirtualScrollData = () => {
   let kanbanVirtualData = [];
-  for (let a = 500000, id = 500000; a < count; a++) {
+  for (let a = 50000, id = 50000; a < count; a++) {
       let typeValue = types[Math.floor(Math.random() * types.length)];
       let summary = typeValue === 'Bug' ? BUG_TASKS[Math.floor(Math.random() * BUG_TASKS.length)] :
           typeValue === 'Story' ? FEATURE_TASKS[Math.floor(Math.random() * FEATURE_TASKS.length)] :

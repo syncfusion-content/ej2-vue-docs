@@ -11,13 +11,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { RangeNavigatorPlugin, AreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
+import { RangeNavigatorComponent, RangenavigatorSeriesDirective,RangenavigatorSeriesCollectionDirective, AreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
 import { bitCoinData } from "./default_data.js";
 
-Vue.use(RangeNavigatorPlugin);
-
 export default {
+  components: {
+    'ejs-rangenavigator': RangeNavigatorComponent,
+    'e-rangenavigator-series': RangenavigatorSeriesDirective,
+    'e-rangenavigator-series-collection': RangenavigatorSeriesCollectionDirective
+  },
   data() {
     return {
      valueType: 'DateTime',

@@ -13,12 +13,16 @@
   </div>
 </template>
 <script>
-  import Vue from 'vue';
   import { scheduleData } from './datasource.js';
   import { extend } from '@syncfusion/ej2-base';
-  import { SchedulePlugin,  WorkWeek, Month, Week } from '@syncfusion/ej2-vue-schedule';
-  Vue.use(SchedulePlugin);
+  import { ScheduleComponent, ViewsDirective, ViewDirective,  WorkWeek, Month, Week } from '@syncfusion/ej2-vue-schedule';
+
   export default {
+    components: {
+      'ejs-schedule': ScheduleComponent,
+      'e-view': ViewDirective,
+      'e-views': ViewsDirective
+    },
     data () {
       return {
         eventSettings: { dataSource: extend([], scheduleData, null, true) },

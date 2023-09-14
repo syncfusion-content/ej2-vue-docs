@@ -37,11 +37,58 @@ In the pan mode, if the highlight mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to highlight mode.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
     <div id="app">
-        <button id="set">Highlight</button>
+      <button id="set">Highlight</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Highlight');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button id="set">Highlight</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -55,23 +102,23 @@ Refer to the following code snippet to switch to highlight mode.
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
-
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -84,20 +131,21 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Refer to the following code snippet to switch back to normal mode from highlight mode.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
     <div id="app">
-        <button id="set">Highlight</button>
-        <button id="setNone">Normal Mode</button>
+      <button id="set">Highlight</button>
+      <button id="setNone">Normal Mode</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :documentLoad="documentLoad">
         </ejs-pdfviewer>
@@ -106,23 +154,23 @@ Refer to the following code snippet to switch back to normal mode from highlight
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
-
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -138,7 +186,60 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button id="set">Highlight</button>
+      <button id="setNone">Normal Mode</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Highlight');
+      });
+      document.getElementById('setNone').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('None');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Underline a text
 
@@ -163,15 +264,15 @@ In the pan mode, if the underline mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to underline mode.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
     <div id="app">
-        <button id="set">Underline</button>
+      <button id="set">Underline</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :documentLoad="documentLoad">
         </ejs-pdfviewer>
@@ -182,21 +283,21 @@ Refer to the following code snippet to switch to underline mode.
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
          LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -209,16 +310,12 @@ export default {
 }
 </script>
 
-```
-
-Refer to the following code snippet to switch back to normal mode from underline mode.
-
-```ts
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 
 <template>
     <div id="app">
-        <button id="set">Underline</button>
-        <button id="setNone">Normal Mode</button>
+      <button id="set">Underline</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -232,8 +329,8 @@ Refer to the following code snippet to switch back to normal mode from underline
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 var viewer;
@@ -242,12 +339,66 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Underline');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+
+Refer to the following code snippet to switch back to normal mode from underline mode.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+      <button id="set">Underline</button>
+      <button id="setNone">Normal Mode</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -263,7 +414,60 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button id="set">Underline</button>
+      <button id="setNone">Normal Mode</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Underline');
+      });
+      document.getElementById('setNone').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('None');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Strikethrough a text
 
@@ -288,15 +492,15 @@ In the pan mode, if the strikethrough mode is entered, the PDF Viewer control wi
 
 Refer to the following code snippet to switch to strikethrough mode.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
     <div id="app">
-        <button id="set">Strikethrough</button>
+      <button id="set">Strikethrough</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :documentLoad="documentLoad">
         </ejs-pdfviewer>
@@ -306,22 +510,22 @@ Refer to the following code snippet to switch to strikethrough mode.
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -334,16 +538,12 @@ export default {
 }
 </script>
 
-```
-
-Refer to the following code snippet to switch back to normal mode from underline mode.
-
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
 
 <template>
     <div id="app">
-        <button id="set">Strikethrough</button>
-        <button id="setNone">Normal Mode</button>
+     <button id="set">Strikethrough</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
@@ -357,22 +557,75 @@ Refer to the following code snippet to switch back to normal mode from underline
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Strikethrough');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Refer to the following code snippet to switch back to normal mode from strikethrough mode.
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+    <div id="app">
+      <button id="set">Strikethrough</button>
+      <button id="setNone">Normal Mode</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -388,7 +641,60 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button id="set">Strikethrough</button>
+      <button id="setNone">Normal Mode</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('Strikethrough');
+      });
+      document.getElementById('setNone').addEventListener('click', ()=> {
+        viewer.annotation.setAnnotationMode('None');
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Deleting a text markup annotation
 
@@ -428,15 +734,53 @@ The properties of the text markup annotation can be set before creating the cont
 
 Refer to the following code snippet to set the default annotation settings.
 
-```
-
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 <template>
     <div id="app">
         <ejs-pdfviewer
             id="pdfViewer"
+            ref="pdfviewer"
+            :documentPath="documentPath"
+            :highlightSettings="highlightSettings"
+            :underlineSettings="underlineSettings"
+            :strikethroughSettings="strikethroughSettings">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''},
+      underlineSettings: {author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: ''},
+      strikethroughSettings: {author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+}
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+    <div id="app">
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
             :serviceUrl="serviceUrl"
             :documentPath="documentPath"
-            :enableTextMarkupAnnotation="false"
             :highlightSettings="highlightSettings"
             :underlineSettings="underlineSettings"
             :strikethroughSettings="strikethroughSettings">
@@ -448,7 +792,7 @@ Refer to the following code snippet to set the default annotation settings.
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
          LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -456,7 +800,7 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       highlightSettings: {author: 'Guest User', subject: 'Important', color: '#ffff00', opacity: 0.9, modifiedDate: ''},
       underlineSettings: {author: 'Guest User', subject: 'Points to be remembered', color: '#00ffff', opacity: 0.9, modifiedDate: ''},
       strikethroughSettings: {author: 'Guest User', subject: 'Not Important', color: '#ff00ff', opacity: 0.9, modifiedDate: ''}
@@ -464,13 +808,12 @@ export default {
   },
   
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Performing undo and redo
 
@@ -489,16 +832,16 @@ Undo and redo actions can be done by the following ways:
 
 Refer to the following code snippet for calling undo and redo actions from the client-side.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
     <div id="app">
-        <button id="undo">Undo</button>
-        <button id="redo">Redo</button>
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :documentLoad="documentLoad">
         </ejs-pdfviewer>
@@ -508,23 +851,22 @@ Refer to the following code snippet for calling undo and redo actions from the c
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print, 
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
-var viewer;
 
+var viewer;
 export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
-
+  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]},
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
 
   methods: {
     documentLoad() {
@@ -540,7 +882,60 @@ export default {
 }
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+    <div id="app">
+      <button id="undo">Undo</button>
+      <button id="redo">Redo</button>
+        <ejs-pdfviewer
+            id="pdfViewer"
+            ref="pdfviewer"
+            :serviceUrl="serviceUrl"
+            :documentPath="documentPath"
+            :documentLoad="documentLoad">
+        </ejs-pdfviewer>
+    </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, ThumbnailView, Print,   
+         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+var viewer;
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+    };
+  },
+  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+
+  methods: {
+    documentLoad() {
+      viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('undo').addEventListener('click', ()=> {
+        viewer.undo();
+      });
+      document.getElementById('redo').addEventListener('click', ()=> {
+        viewer.redo();
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Saving the text markup annotation
 
@@ -554,24 +949,59 @@ When the print tool is selected in the toolbar, the PDF document will be printed
 
 The PDF Viewer control provides an option to disable the text markup annotation feature. The code snippet for disabling the feature is as follows.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
 
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableTextMarkupAnnotation="false">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :enableTextMarkupAnnotation="false">
+      </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation } from '@syncfusion/ej2-vue-pdfviewer';
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl"
+        :enableTextMarkupAnnotation="false">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
+         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -579,18 +1009,16 @@ export default {
   data () {
     return {
       serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, Annotation ]}
-
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
 }
 </script>
-
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See also
 

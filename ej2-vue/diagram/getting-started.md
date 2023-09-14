@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started
+# Getting Started with the Vue Diagram Component in Vue 2
 
-This section explains the steps required to create a simple diagram and demonstrates the basic usage of the diagram control.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Diagram component
 
 ## Prerequisites
 
@@ -34,109 +34,128 @@ The following list of dependencies are required to use the `Diagram` component i
     |-- @syncfusion/ej2-vue-base
 ```
 
-## Get Started with Vue CLI
+## Setting up the Vue 2 project
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following command.
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-npm install -g @vue/cli-init
-```
-
-Start a new project using below Vue CLI command.
-
-```bash
-vue init webpack-simple quickstart
-
+vue create quickstart
 cd quickstart
-npm install
-
+npm run serve
 ```
 
-## Adding Syncfusion packages
-
-All the available Essential JS 2 packages are published in [`Node Package Manager`](https://www.npmjs.com/~syncfusionorg) registry. You can choose the component that you want to install. For this application, we are going to use Diagram component.
-
-To install Diagram component, use the following command
+or
 
 ```bash
-npm install @syncfusion/ej2-vue-diagrams –save
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
 ```
 
-## Registering Vue Component
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-For Registering Vue Component two ways are available. They are as follows.
-* Vue.use()
-* Vue.component()
+![Vue 2 project](../appearance/images/vue2-terminal.png)
 
-### Using Vue.use()
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-Import the Component Plugin from the EJ2 Vue Package and register the same using Vue.use() with Component Plugin as its argument.
+## Add Syncfusion Vue packages
 
-Refer the code snippet given below.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-```ts
-import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+This article uses the [Vue Diagram component](https://www.syncfusion.com/vue-components/vue-diagram) as an example. Install the `@syncfusion/ej2-vue-diagrams` package by running the following command:
 
-Vue.use(DiagramPlugin);
+```bash
+npm install @syncfusion/ej2-vue-diagrams --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-diagrams
 ```
 
-Note : By Registering Component Plugin in Vue, all child directives are also globally registered.
+## Import Syncfusion CSS styles
 
-### Using Vue.component()
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Import the Component and Component Plugin from EJ2 Vue Package, register the same using the Vue.component() with name of Component from ComponentPlugin and the EJ2 Vue Component as its arguments.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Diagram component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-Refer the code snippet given below.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-```ts
-import { DiagramComponent, DiagramPlugin } from '@syncfusion/ej2-vue-calendars';
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+</style>
 
-Vue.component(DiagramPlugin.name, DiagramComponent);
-```
+{% endhighlight %}
+{% endtabs %}
 
-> By using Vue.component(), only the EJ2 Vue Component is registered. Child directives needs to be registered separately.
+## Add Syncfusion Vue component
 
-## Creating Vue Sample
+Follow the below steps to add the Vue Diagram component:
 
-Add the EJ2 Vue Diagram using `<ejs-diagrams>` to the `<template>` section of the `App.vue` file in src directory, the content attribute of the Diagram component is provided as name in data option in the `<script>` section.
+1\. First, import and register the Diagram component in the `script` section of the **src/App.vue** file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<script>
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+export default {
+    components: {
+        'ejs-diagram': DiagramComponent
+    }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Diagram component with [height](https://ej2.syncfusion.com/vue/documentation/api/diagram#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/diagram#width) property. 
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
     <div id="app">
         <ejs-diagram id="diagram"  :width='width' :height='height' ></ejs-diagram>
     </div>
 </template>
+
+{% endhighlight %}
+{% endtabs %}
+
+3\. Declare the value for the `height` and `width` properties in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    export default {
-        name: 'app'
-        data () {
-            return {
-                width: "100%",
-                height: "350px"
-            }
-        }
+data () {
+    return {
+        width: "100%",
+        height: "350px"
     }
+}
 </script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
 ```
 
-## Adding CSS Reference
+or
 
-Add Diagram component's styles as given below in `<style>` section of the `App.vue` file.
-
+```bash
+yarn run serve
 ```
-<style>
-    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-```
-
-## Running the Application
-
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -174,10 +193,11 @@ These modules should be imported and injected into the Diagram component using `
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DiagramPlugin, HierarchicalTree, MindMap, RadialTree, ComplexHierarchicalTree, DataBinding, Snapping, PrintAndExport, BpmnDiagrams, SymmetricLayout, ConnectorBridging, UndoRedo, LayoutAnimation, DiagramContextMenu, ConnectorEditing } from '@syncfusion/ej2-vue-diagrams';
-Vue.use(DiagramPlugin);
+import { DiagramComponent, HierarchicalTree, MindMap, RadialTree, ComplexHierarchicalTree, DataBinding, Snapping, PrintAndExport, BpmnDiagrams, SymmetricLayout, ConnectorBridging, UndoRedo, LayoutAnimation, DiagramContextMenu, ConnectorEditing } from '@syncfusion/ej2-vue-diagrams';
 export default {
+    components: {
+        'ejs-diagram': DiagramComponent
+    },
     name: 'app'
     data () {
             return {
@@ -292,10 +312,8 @@ You can configure the above "Employee Information" with diagram, so that the nod
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramComponent, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
     import { DataManager } from "@syncfusion/ej2-data";
-    Vue.use(DiagramPlugin);
 
     export let localdata = [
         {
@@ -334,6 +352,9 @@ You can configure the above "Employee Information" with diagram, so that the nod
         }
     ];
     export default {
+        components: {
+            'ejs-diagram': DiagramComponent
+        },
         name: 'app',
         data () {
             return {

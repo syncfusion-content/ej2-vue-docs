@@ -9,11 +9,12 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-Vue.use(DropDownListPlugin);
 export default {
+  components: {
+    'ejs-dropdownlist': DropDownListComponent
+  },
   data (){
     return {
       sportsData: ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'];
@@ -23,9 +24,9 @@ export default {
 
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
 
 

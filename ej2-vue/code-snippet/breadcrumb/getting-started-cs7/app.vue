@@ -29,12 +29,14 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { BreadcrumbPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(BreadcrumbPlugin);
+import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
 export default {
+  components: {
+    'ejs-breadcrumb': BreadcrumbComponent,
+    'e-breadcrumb-item': BreadcrumbItemDirective,
+    'e-breadcrumb-items': BreadcrumbItemsDirective
+  },
   data: function() {
         return {};
   }

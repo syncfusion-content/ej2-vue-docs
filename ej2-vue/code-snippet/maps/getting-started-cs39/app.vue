@@ -5,7 +5,7 @@
         <div class='wrapper'>
             <ejs-maps :legendSettings='legendSettings' >
                 <e-layers>
-                    <e-layer :shapeData='shapeData':shapeSettings='shapeSettings' :dataLabelSettings='dataLabelSettings'></e-layer>
+                    <e-layer :shapeData='shapeData' :shapeSettings='shapeSettings' :dataLabelSettings='dataLabelSettings'></e-layer>
                 </e-layers>
             </ejs-maps>
         </div>
@@ -13,11 +13,14 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Legend, DataLabel } from '@syncfusion/ej2-vue-maps';
+import { MapsComponent, LayerDirective, LayersDirective, Legend, DataLabel } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
 export default {
+components: {
+    'ejs-maps': MapsComponent,
+    'e-layer': LayerDirective,
+    'e-layers': LayersDirective
+},
 data () {
     return{
         shapeData: world_map,

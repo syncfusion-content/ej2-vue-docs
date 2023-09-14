@@ -18,11 +18,17 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin } from "@syncfusion/ej2-vue-lineargauge";
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective } from "@syncfusion/ej2-vue-lineargauge";
 
-Vue.use(LinearGaugePlugin);
-export default { };
+export default {
+    components: {
+        'ejs-lineargauge': LinearGaugeComponent,
+        'e-axes': AxesDirective,
+        'e-axis': AxisDirective,
+        'e-pointer': PointerDirective,
+        'e-pointers': PointersDirective
+    }
+};
 </script>
 <style>
 #content-wrapper {

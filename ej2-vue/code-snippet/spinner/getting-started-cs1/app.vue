@@ -7,8 +7,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
+import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-vue-popups';
 
 export default {
   name: 'app',
@@ -32,7 +31,7 @@ export default {
 </script>
 
 <style>
- @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 </style>
 
 

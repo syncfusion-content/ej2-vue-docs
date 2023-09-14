@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Getting started with Vue Image editor component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Image editor component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Image Editor component | Syncfusion
+description:  Checkout and learn about Getting started with Vue Image Editor component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with the Vue Image Editor Component in Vue 2
 
-This section explains how to create a simple Image Editor, and configure its available
-functionalities in Vue using Vue quickstart seed repository.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Image editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Dependencies
 
@@ -30,74 +29,59 @@ The following list of dependencies are required to use the Image Editor componen
     |-- @syncfusion/ej2-dropdowns
 ```
 
-## Installation and configuration
+## Prerequisites
 
-You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your vue applications.
-To install Vue CLI use the following command.
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+
+## Setting up the Vue 2 project
+
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
-
-npm install -g @vue/cli-init
+vue create quickstart
+cd quickstart
+npm run serve
 ```
 
-Start a new project using below Vue CLI command.
+or
 
 ```bash
-vue init webpack-simple quickstart
-
+yarn global add @vue/cli
+vue create quickstart
 cd quickstart
-
-npm install
-
+yarn run serve
 ```
 
-Install Syncfusion `Image Editor` packages using below command.
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+![Vue 2 project](../appearance/images/vue2-terminal.png)
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the [Vue Image Editor component](https://www.syncfusion.com/vue-components/vue-image-editor) as an example. Install the `@syncfusion/ej2-vue-image-editor` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-image-editor --save
 ```
+or
 
-## Registering Image Editor component using `Vue.use()`
-
-Import the Image Editor Plugin from the Essential JS 2 Vue package and register the same using `Vue.use()` with Component Plugin as its argument.
-
-Refer to the code snippet given below.
-
-```javascript
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-
-Vue.use(ImageEditorPlugin);
-
-export default {}
+```bash
+yarn add @syncfusion/ej2-vue-image-editor
 ```
 
-> By registering component plugin in Vue, all child directives are also globally registered. We can also use `Vue.Component()` to register `Image Editor`. Refer [here](https://ej2.syncfusion.com/vue/documentation/base/getting-started/#registering-vue-component) to know more about component registration.
+## Import Syncfusion CSS styles
 
-## Initialize Image Editor
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-Add the EJ2 Vue Image Editor using `<ejs-imageeditor>` to the `<template>` section of the `App.vue` file in `src` directory.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Image Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
-```
-<template>
-<div>
-<ejs-imageeditor id="image-editor"></ejs-imageeditor>
-</div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-
-Vue.use(ImageEditorPlugin);
-
-export default {
-  data: function() {
-      return {};
-  }
-}
-</script>
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -109,25 +93,76 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
-
-#image-editor {
-    width: 550px;
-    height: 350px;
-}
 </style>
-```
 
-## Run the application
+{% endhighlight %}
+{% endtabs %}
 
-Now run the `npm run dev` command in the console, it will build your application and open in the browser.
+## Add Syncfusion Vue component
 
-The following example shows a basic Image Editor component.
+Follow the below steps to add the Vue Image Editor component using `Composition API` or `Options API`:
+
+1\. First, import and register the Image Editor component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+
+export default {
+  components: {
+    'ejs-imageeditor': ImageEditorComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the Image Editor component with the [height](https://ej2.syncfusion.com/vue/documentation/api/image-editor#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/image-editor#width) property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+    <div>
+    <ejs-imageeditor id="image-editor" height="350px" width="550px"></ejs-imageeditor>
+    </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs6" %}

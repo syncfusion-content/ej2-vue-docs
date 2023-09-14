@@ -46,6 +46,7 @@
           items: ['FontName', 'FontSize']
         },
         fontFamily: {
+          default: 'Segoe UI',
           width: '60px',
           items: [
             { text: 'Segoe UI', value: 'Segoe UI' },
@@ -57,6 +58,7 @@
           ]
         },
         fontSize: {
+          default: '10 pt',
           width: '40px',
           items: [
             { text: '8 pt', value: '8pt' },

@@ -8,12 +8,13 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+import { SpeedDialComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(SpeedDialPlugin);
 export default {
+    components: {
+        'ejs-speeddial': SpeedDialComponent
+    },
     data() {
         return {
             items: [
