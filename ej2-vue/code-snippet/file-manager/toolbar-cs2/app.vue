@@ -2,15 +2,37 @@
 
 <template>
     <div id="app">
-        <ejs-filemanager id="file-manager"  ref="file_instance" :toolbarSettings="toolbarSettings" :ajaxSettings="ajaxSettings" :toolbarClick="toolbarClick" :toolbarCreate="toolbarCreate">
+        <ejs-filemanager id="file-manager"  ref="fileManagerInstance" :ajaxSettings="ajaxSettings" >
+        <e-toolbaritems>
+                    <e-toolbaritem name="NewFolder"></e-toolbaritem>
+                    <e-toolbaritem name="Upload"></e-toolbaritem>
+                    <e-toolbaritem name="SortBy"></e-toolbaritem>
+                    <e-toolbaritem name="Refresh"></e-toolbaritem>
+                    <e-toolbaritem name="Cut"></e-toolbaritem>
+                    <e-toolbaritem name="Copy"></e-toolbaritem>
+                    <e-toolbaritem name="Paste"></e-toolbaritem>
+                    <e-toolbaritem name="Delete"></e-toolbaritem>
+                    <e-toolbaritem name="Download"></e-toolbaritem>
+                    <e-toolbaritem name="Rename"></e-toolbaritem>
+                    <e-toolbaritem name="Select" :template="'checkboxTemplate'">
+                        <template v-slot:checkboxTemplate>
+                            <div><ejs-checkbox ref="checkBoxInstance" :label='Select All' :checked=false :change="onChange"></ejs-checkbox></div>
+                        </template>
+                    </e-toolbaritem>
+                    <e-toolbaritem name="Selection"></e-toolbaritem>
+                    <e-toolbaritem name="View"></e-toolbaritem>
+                    <e-toolbaritem name="Details"></e-toolbaritem>
+                </e-toolbaritems>
         </ejs-filemanager>
     </div>
 </template>
 <script>
 import Vue from "vue";
 import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
 
 Vue.use(FileManagerPlugin);
+Vue.use(CheckBoxPlugin);
 export default {
     data () {
         return {
@@ -20,26 +42,21 @@ export default {
                 getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            //Custom item added along with default items
-            toolbarSettings: {items: ["NewFolder", "Custom", "Upload", "Delete", "Download", "Rename", "SortBy", "Refresh", "Selection", "View", "Details"]}
+            }
         };
     },
     provide: {
             filemanager: [DetailsView, NavigationPane, Toolbar]
     },
     methods: {
-        // Alert displayed for custom toolbar item in toolbarClick event
-        toolbarClick: function(args){
-            if (args.item.text === "Custom") {
-                alert("You have clicked custom toolbar item")
+        onChange: function(args){
+            if (args.checked) {
+                this.$refs.fileManagerInstance.selectAll(); 
+                this.$refs.checkBoxInstance.label = 'Unselect All';
             }
-        },
-        toolbarCreate: function(args) {
-             for(let i: number = 0; i<args.items.length; i++) {
-                if(args.items[i].id === this.$refs.file_instance.$el.id +"_tb_custom") {
-                    args.items[i].prefixIcon= "e-icons e-fe-tick";
-                }
+            else {
+                this.$refs.fileManagerInstance.clearSelection();
+                this.$refs.checkBoxInstance.label = 'Select All';
             }
         }
     }

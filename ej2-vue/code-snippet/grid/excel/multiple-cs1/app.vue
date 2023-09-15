@@ -3,7 +3,7 @@
 <template>
     <div id="app">
         <p><b>First Grid:</b></p>
-        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions' :allowExcelExport='true' :toolbarClick='toolbarClick'>
+        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions' :allowExcelExport='true' :exportGrids='exportGrids' :toolbarClick='toolbarClick'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
@@ -34,7 +34,8 @@ export default {
     return {
       fData: data.slice(0, 5),
       sData: employeeData.slice(0, 5),
-      toolbarOptions: ['ExcelExport']
+      toolbarOptions: ['ExcelExport'],
+      exportGrids: ['FirstGrid', 'SecondGrid'],
     };
   },
   methods: {
@@ -43,11 +44,7 @@ export default {
             let appendExcelExportProperties = {
                 multipleExport: { type: 'AppendToSheet', blankRows: 2 }
             };
-
-            let firstGridExport = this.$refs.grid1.excelExport(appendExcelExportProperties, true);
-            firstGridExport.then((fData) => {
-                this.$refs.grid2.excelExport(appendExcelExportProperties, false, fData);
-            });
+            this.$refs.grid1.excelExport(appendExcelExportProperties, true);
         }
       }
   },

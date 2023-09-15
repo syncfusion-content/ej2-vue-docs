@@ -86,7 +86,7 @@ lessthanorequal |Checks whether the value is less than or equal to the specifie
 
 ### Change default filter operator
 
-You can change the default filter operator by extending `filterModule.filterOperators`property in [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#databound) event. In the following sample, we have changed the default operator for string typed columns as `contains` from `startsWith`.
+You can change the default filter operator by extending `filterModule.filterOperators`property in [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#databound) event. In the following sample, we have changed the default operator for string typed columns as `contains` from `startsWith`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
