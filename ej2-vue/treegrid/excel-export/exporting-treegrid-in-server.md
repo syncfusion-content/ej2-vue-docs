@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Exporting Tree Grid in Server in Syncfusion ##Platform_Name## Tree Grid Component
+title: Exporting Tree Grid in Server in Vue Tree Grid component | Syncfusion
 description: Learn here all about Exporting Tree Grid in Server in Syncfusion ##Platform_Name## Tree Grid Component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
 control: Exporting TreeGrid in Server
