@@ -22,7 +22,7 @@ You can enable Excel like filter by defining. [`filterSettings.type`](https://ej
 
 ## Change default excel filter operator
 
-You can change the default excel-filter operator by changing the column operator as `contains` from `startsWith` in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionbegin) event.
+You can change the default excel-filter operator by changing the column operator as `contains` from `startsWith` in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionbegin) event.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

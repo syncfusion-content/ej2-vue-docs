@@ -5,7 +5,7 @@
     DocumentEditorContainerComponent,
     Toolbar,
   } from '@syncfusion/ej2-vue-documenteditor';
-  import { showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
+  import { showSpinner, hideSpinner, createSpinner } from '@syncfusion/ej2-popups';
 
   Vue.use(DocumentEditorContainerPlugin);
 

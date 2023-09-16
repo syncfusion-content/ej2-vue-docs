@@ -82,7 +82,7 @@ Follow the below steps to add the Vue Chart component:
 1\. First, import and register the Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% endtabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
 import { ChartComponent } from '@syncfusion/ej2-vue-charts';

@@ -26,7 +26,7 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/vue/documen
 
 ## Reorder multiple columns
 
-Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#reordercolumns) method.
+Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#reordercolumns) method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

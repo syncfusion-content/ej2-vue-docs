@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click on multiple icon of the column. To enable column menu, you need to define the [`showColumnMenu`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#showcolumnmenu) property as true.
 
-By default, column menu is enabled for all columns and you can disable column menu for a particular column by defining the [`showColumnMenu`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#showcolumnmenu) as false in [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#column) property.
+By default, column menu is enabled for all columns and you can disable column menu for a particular column by defining the [`showColumnMenu`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#showcolumnmenu) as false in [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#column) property.
 
 To use the column menu, inject the `ColumnMenu` module in the treegrid.
 
@@ -52,7 +52,7 @@ In the below example, clear sorting action was performed through `columnMenuItem
 
 ## Customize menu items for particular columns
 
-It is possible to customize specific items from the column menu for particular [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#column) using [`columnMenuOpen`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#columnmenuopen) event. `columnMenuOpen` event can be utilized to determine which items to customize in column menu.
+It is possible to customize specific items from the column menu for particular [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#column) using [`columnMenuOpen`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#columnmenuopen) event. `columnMenuOpen` event can be utilized to determine which items to customize in column menu.
 
 The following example shows how to hide the built-in **Filter** menu item when the column menu is opened for the **taskName** column, while allowing it to remain visible for all other columns.
 

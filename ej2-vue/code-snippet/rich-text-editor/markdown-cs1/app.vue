@@ -72,7 +72,7 @@
     },
     methods: {
       created: function() {
-        this.textArea = this.$refs.rteInstance.$el.querySelector('.e-content');
+        this.textArea = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('.e-content');
         this.textArea.onkeyup = (Event) => {
           this.markDownConversion();
         };
@@ -94,16 +94,16 @@
         };
       },
       markDownConversion: function() {
-        if (document.getElementById('MD_Preview').classList.contains('e-active')) {
-          var id = this.$refs.rteInstance.getID() + 'html-view';
-          var htmlPreview = this.$refs.rteInstance.$el.querySelector('#' + id);
-          htmlPreview.innerHTML = marked(this.textArea.value);
+        if (document.getElementById('preview-code').classList.contains('e-active')) {
+          var id =  this.$refs.rteInstance.ej2Instance.getID() + 'html-view';
+          var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id); 
+          htmlPreview.innerHTML = marked.parse(this.textArea.value);
         }
       },
       fullPreview: function(event){
         var mdSource = document.getElementById('preview-code');
-        var id = this.$refs.rteInstance.getID() + 'html-view';
-        var htmlPreview = this.$refs.rteInstance.$el.querySelector('#' + id);
+        var id = this.$refs.rteInstance.ej2Instance.getID() + 'html-view';
+        var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id);
         if ((mdSource.classList.contains('e-active')) && event.mode) {
           mdSource.classList.remove('e-active');
           this.textArea.style.display = 'block';
@@ -125,7 +125,7 @@
             this.textArea.style.width = '50%';
           }
           htmlPreview.style.display = 'block';
-          htmlPreview.innerHTML = marked(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
+          htmlPreview.innerHTML = marked.parse(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
           mdSource.parentElement.title = 'Code View';
         }
       }
