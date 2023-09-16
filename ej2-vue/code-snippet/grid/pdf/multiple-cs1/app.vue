@@ -3,7 +3,7 @@
 <template>
     <div id="app">
         <p><b>First Grid:</b></p>
-        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions'           :allowPdfExport='true' :toolbarClick='toolbarClick'>
+        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions' :exportGrids='exportGrids' :allowPdfExport='true' :toolbarClick='toolbarClick'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
@@ -34,17 +34,18 @@ export default {
     return {
       fData: data.slice(0, 5),
       sData: employeeData.slice(0 ,5),
-      toolbarOptions: ['PdfExport']
+      toolbarOptions: ['PdfExport'],
+      exportGrids: ['FirstGrid', 'SecondGrid'],
     };
   },
   methods: {
-      toolbarClick(args) {
-        if (args.item.id === 'FirstGrid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
-            let firstGridPdfExport = this.$refs.grid1.pdfExport({}, true);
-            firstGridPdfExport.then((pdfData) => {
-                this.$refs.grid2.pdfExport({}, false, pdfData);
-            });
-        }
+    toolbarClick(args) {
+      if (args.item.id === 'FirstGrid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+        let appendPdfExportProperties = {
+          multipleExport: { type: "AppendToPage", blankSpace: 10 }
+        };
+        this.$refs.grid1.pdfExport(appendPdfExportProperties, true);
+      }
     }
   },
   provide: {

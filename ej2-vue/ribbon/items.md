@@ -26,6 +26,7 @@ The following table explains the built-in items and their actions.
 | SplitButton | Renders splitbutton as ribbon item.|
 | ComboBox | Renders combobox as ribbon item.|
 | ColorPicker | Renders color picker as ribbon item.|
+| GroupButton | Renders groupbutton as ribbon item.|
 
 ### Button items
 
@@ -495,6 +496,137 @@ You can use the [value](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
 </style>
 
 ```
+
+### Groupbutton items
+
+You can render the built-in groupbutton Ribbon item by setting the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `GroupButton`. You can also customize the groupbutton item using the `RibbonGroupButtonSettingsModel`, which provides options such as `selection` and `items`.
+
+#### Items
+
+You can render the groupbutton items by using [items](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/) property. You can also customize the groupbutton items through [RibbonGroupButtonItemModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/), which provides options such as [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#content), [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#iconcss), [selected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#selected) and more.
+
+#### Item content
+
+You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#content) property to define the text content for the groupbutton.
+
+```html
+
+<template>
+    <ejs-ribbon>
+    <e-ribbon-tabs>
+      <e-ribbon-tab header="Home">
+        <e-ribbon-groups>
+          <e-ribbon-group header="Paragraph">
+            <e-ribbon-collections>
+              <e-ribbon-collection>
+                <e-ribbon-items>
+                  <e-ribbon-item type="GroupButton" :allowedSizes="size" :groupButtonSettings="groupButtonItem"></e-ribbon-item>
+                </e-ribbon-items>
+              </e-ribbon-collection>
+            </e-ribbon-collections>
+          </e-ribbon-group>
+        </e-ribbon-groups>
+      </e-ribbon-tab>
+    </e-ribbon-tabs>
+  </ejs-ribbon>
+</template>
+
+<script>
+  import Vue from "vue";
+  import { RibbonItemSize, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
+  Vue.use(RibbonPlugin);
+
+  export default {
+    data: function () {
+      return {
+        size: RibbonItemSize.Medium,
+          groupButtonItem: { 
+          items: [
+            {iconCss: 'e-icons e-align-left', content: 'Align Left'},
+            {iconCss: 'e-icons e-align-center',content: 'Align Center'}, 
+            {iconCss: 'e-icons e-align-right',content: 'Align Right'}, 
+            {iconCss: 'e-icons e-justify',content: 'Justify'}
+          ]
+        },
+      };
+    }
+};
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+</style>
+
+```
+
+#### Icon only
+
+You can use the  [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#iconcss) property to customize the groupbutton icon. If the `iconCss` property is not defined, the groupbutton will not be rendered.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/groupButtonIcon/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/groupButtonIcon" %}
+
+#### Selection
+
+You can use the [selected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#selected) property to select the groupbutton item initally. When set to `true`, the button will be selected. By default the `selected` property is false.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/groupButtonSelected/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/groupButtonSelected" %}
+
+#### Single selection
+
+You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection/) property value as `RibbonGroupButtonSelection.Single` to make one selection at a time. It automatically deselects the previous choice when a different item is clicked.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/singleSelection/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/singleSelection" %}
+
+#### Multiple selection
+
+You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection/) property value as `RibbonGroupButtonSelection.Multiple` to select more than one button at a time. Users can select a button one by one to select multiple buttons.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/multipleSelection/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/multipleSelection" %}
+
+
+#### Groupbutton in simplified mode layout
+
+In simplified mode, the groupbutton will be rendered as a dropdownbutton. The dropdownbutton icon will be updated based on the button item selected. The initial button icon will be the set, if none of the buttons are selected.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/simplifiedModeGroupButton/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/simplifiedModeGroupButton" %}
 
 ## Custom items
 
