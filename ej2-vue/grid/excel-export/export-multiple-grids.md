@@ -37,3 +37,7 @@ Excel export functionality enables the exporting of multiple grids onto separate
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/excel/multiple-cs2" %}
+
+## Limitations
+
+Multiple grids exporting feature is not supported with server side exporting.
