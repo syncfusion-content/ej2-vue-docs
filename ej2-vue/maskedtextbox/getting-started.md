@@ -90,6 +90,7 @@ Follow the below steps to add the Vue Maskedtextbox component using `Composition
 import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>

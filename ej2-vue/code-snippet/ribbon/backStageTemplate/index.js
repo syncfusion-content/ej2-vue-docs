@@ -8,8 +8,7 @@ new Vue({
   el: '#app',
   template: `
   <template>
-  <div id="ribbon">
-    <ejs-ribbon ref="backstageRibbon" :backStageMenu="backstageSettings">
+    <ejs-ribbon id="ribbon" ref="backstageRibbon" :backStageMenu="backstageSettings">
       <e-ribbon-tabs>
         <e-ribbon-tab header="Home">
           <e-ribbon-groups>
@@ -31,7 +30,6 @@ new Vue({
         </e-ribbon-tab>
       </e-ribbon-tabs>
     </ejs-ribbon>
-  </div>
 </template>
 `,
 provide: {
