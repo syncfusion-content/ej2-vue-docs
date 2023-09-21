@@ -113,7 +113,7 @@ export default {
 2\. In the `template` section, define the HeatMap component.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
     <div id="app">

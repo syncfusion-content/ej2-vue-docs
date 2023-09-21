@@ -97,7 +97,7 @@ export default {
 2\. In the `template` section, define the Carousel component.
 
 {% tabs %}
-{$ highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div class="control-container">
