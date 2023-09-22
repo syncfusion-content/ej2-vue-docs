@@ -147,7 +147,7 @@ const dataSource = [
 </script>
 
 {% endhighlight %}
-{% highight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
     <div id="app">
