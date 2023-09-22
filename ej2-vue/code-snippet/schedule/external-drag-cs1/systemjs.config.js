@@ -29,10 +29,12 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-excel-export": "syncfusion:ej2-excel-export/dist/ej2-excel-export.umd.min.js",
         "@syncfusion/ej2-schedule": "syncfusion:ej2-schedule/dist/ej2-schedule.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
 
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-schedule": "syncfusion:ej2-vue-schedule/dist/ej2-vue-schedule.umd.min.js",
         "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js",
+        "@syncfusion/ej2-vue-notifications": "syncfusion:ej2-vue-notifications/dist/ej2-vue-notifications.umd.min.js"
     }
 });
 

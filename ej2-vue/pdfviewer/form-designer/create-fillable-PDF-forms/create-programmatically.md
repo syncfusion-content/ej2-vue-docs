@@ -30,15 +30,12 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% include code-snippet/pdfviewer/addformfield-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% tabs %}
-{% highlight html tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1-standalone" %}
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
+
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## Edit or update form field programmatically
 
@@ -49,17 +46,12 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% include code-snippet/pdfviewer/updateformfield-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
 
-{% tabs %}
-{% highlight html tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1-standalone" %}
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.  
+
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## Delete form field programmatically
 
@@ -70,17 +62,12 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% include code-snippet/pdfviewer/deleteformfield-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
 
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.      
 
-{% tabs %}
-{% highlight html tabtitle="Standalone" %}
-{% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1-standalone" %}
-{% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
 {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
-{% endhighlight %}
-{% endtabs %}
 
 ## Saving the form fields
 
