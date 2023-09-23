@@ -21,7 +21,7 @@ new Vue({
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
       documentPath:"PDF_Succinctly.pdf"
     };
   },

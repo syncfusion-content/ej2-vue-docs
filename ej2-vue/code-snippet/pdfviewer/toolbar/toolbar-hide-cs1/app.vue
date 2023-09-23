@@ -5,7 +5,6 @@
     <div id="app">
         <ejs-pdfviewer
             id="pdfViewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :enableToolbar="false">
         </ejs-pdfviewer>
@@ -23,7 +22,6 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },

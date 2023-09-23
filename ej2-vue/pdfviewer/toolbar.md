@@ -39,17 +39,12 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
     {% include code-snippet/pdfviewer/toolbar/toolbar-hide-cs1/app.vue %}
     {% endhighlight %}
     {% endtabs %}
-            
- 
 
-    {% tabs %}
-    {% highlight html tabtitle="Standalone" %}
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-hide-cs1-standalone" %}
-    {% endhighlight %}
-    {% highlight html tabtitle="Server-Backed" %}
+    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+    **serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
+
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
-    {% endhighlight %}
-    {% endtabs %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
@@ -58,17 +53,12 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
     {% include code-snippet/pdfviewer/toolbar/toolbar-method-cs1/app.vue %}
     {% endhighlight %}
     {% endtabs %}
-            
-    
 
-    {% tabs %}
-    {% highlight html tabtitle="Standalone" %}
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-method-cs1-standalone" %}
-    {% endhighlight %}
-    {% highlight html tabtitle="Server-Backed" %}
+    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+    **serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.    
+
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
-    {% endhighlight %}
-    {% endtabs %}
 
 ## Show/Hide the default toolbaritem
 
@@ -81,16 +71,12 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
     {% include code-snippet/pdfviewer/toolbar/toolbar-items-cs1/app.vue %}
     {% endhighlight %}
     {% endtabs %}
-            
-   
-    {% tabs %}
-    {% highlight html tabtitle="Standalone" %}
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-items-standalone" %}
-    {% endhighlight %}
-    {% highlight html tabtitle="Server-Backed" %}
+
+    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+    **serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
+
     {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
-    {% endhighlight %}
-    {% endtabs %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
@@ -99,17 +85,13 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
     {% include code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1/app.vue %}
     {% endhighlight %}
     {% endtabs %}
-            
-    
-    {% tabs %}
-    {% highlight html tabtitle="Standalone" %}
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar-standalone/toolbar-items-method-cs1-standalone" %}
-    {% endhighlight %}
-    {% highlight html tabtitle="Server-Backed" %}
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
-    {% endhighlight %}
-    {% endtabs %}
 
+    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+    **serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.      
+
+    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
+    
 ## See also
 
 * [Toolbar customization](./how-to/toolbar-customization)
