@@ -4,7 +4,6 @@
   <div id="app">
     <ejs-pdfviewer 
       id="pdfViewer" 
-      :serviceUrl="serviceUrl" 
       :documentPath="documentPath"> 
     </ejs-pdfviewer>
   </div>
