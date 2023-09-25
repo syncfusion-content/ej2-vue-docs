@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Appearance in Vue Heatmap chart component | Syncfusion
-description: Learn here all about Appearance in Syncfusion Vue Heatmap chart component of Syncfusion Essential JS 2 and more.
+title: Appearance in Vue HeatMap chart component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Vue HeatMap chart component of Syncfusion Essential JS 2 and more.
 control: Appearance 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearance in Vue Heatmap chart component
+# Appearance in Vue HeatMap chart component
 
 ## Cell customization
 
@@ -74,7 +74,7 @@ The background color of the HeatMap can be customized using the [backgroundColor
 
 ## Margin
 
-Set the margin for the heatmap from its container by using the [margin](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#margin) property.
+Set the margin for the HeatMap from its container by using the [margin](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#margin) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -143,6 +143,68 @@ The format of the data label, such as currency, decimal, percent etc. can be cha
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/heatmap-chart/appearance-cs10" %}
+
+### Template
+
+Any HTML elements can be added as a template in the data labels by using the [labelTemplate](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#labeltemplate) property of [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings) in the HeatMap.
+
+The following examples show various data binding methods in the HeatMap using the `labelTemplate` property.
+
+#### Array binding
+
+By including `${value}` in the template content, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content. Additionally, the x-axis and y-axis label values can be displayed by including `${xLabel}` and `${yLabel}` in the template content.
+
+**Table**
+
+The following example demonstrates how to add a data label template for array table binding.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/heatmap-chart/appearance-cs11/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/heatmap-chart/appearance-cs11" %}
+
+**Cell**
+
+The following example demonstrates how to add a data label template for array cell binding.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/heatmap-chart/appearance-cs12/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/heatmap-chart/appearance-cs12" %}
+
+#### JSON binding
+
+By including the desired field name in the template content, such as **${value}**, the value from the data source for the corresponding cell can be displayed in the HeatMap cell as data label template content.
+
+**Table**
+
+The following example demonstrates how to add a data label template for JSON table binding.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/heatmap-chart/appearance-cs13/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/heatmap-chart/appearance-cs13" %}
+
+**Cell**
+
+The following example demonstrates how to add a data label template for JSON cell binding.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/heatmap-chart/appearance-cs14/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/heatmap-chart/appearance-cs14" %}
 
 ## See Also
 
