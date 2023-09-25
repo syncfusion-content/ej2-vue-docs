@@ -24,8 +24,12 @@ The rendered chart can be printed directly from the browser by calling the publi
 
 ## Export
 
-The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the export method in chart. The input parameters for this method are `Export Type` for format and `fileName` for result.
+The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, `PDF`, `XLSX`, or `CSV` format using the export method in chart. The input parameters for this method are `type` for format and `fileName` for result.
 
+The optional parameters for this method are,
+* `orientation` - either portrait or landscape mode during PDF export,
+* `controls` - pass collections of controls for multiple export,
+* `width` - width of chart export, and
 * `height` - height of chart export.
 
 {% tabs %}
@@ -36,18 +40,38 @@ The rendered chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format usin
         
 {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs2" %}
 
-## Multiple Chart Export
+### Adding header and footer in PDF export
 
-You can export the multiple charts in single page by passing the multiple chart objects in the export
-method of chart.
+In the export method, specify the following parameters to add a header and footer text to the exported PDF document:
 
-To export multiple charts in a single page, follow the given steps:
+* `header` - Specify the text that should appear at the top of the exported PDF document.
+* `footer` - Specify the text that should appear at the bottom of the exported PDF document.
 
-**Step 1**:
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/polar-cs14/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs14" %}
 
-Initially, render more than one chart to export, and then add button to export the multiple charts. In
-button click, call the export private method in charts, and then pass the multiple chart objects in the
-export method.
+### Exporting charts into separate page during the PDF export
+
+During PDF export, set the `exportToMultiplePage` parameter to **true** to export each chart as a separate page.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/polar-cs15/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs15" %}
+
+## Multiple chart export
+
+You can export the multiple charts in single page by passing the multiple chart objects in the export method of chart. To export multiple charts in a single page, follow the given steps:
+
+Initially, render more than one chart to export, and then add button to export the multiple charts. In button click, call the export method in charts, and then pass the multiple chart objects in the export method.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

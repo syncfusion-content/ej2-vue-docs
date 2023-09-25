@@ -33,6 +33,7 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-file-utils": "syncfusion:ej2-file-utils/dist/ej2-file-utils.umd.min.js",
         "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
         "@syncfusion/ej2-pivotview": "syncfusion:ej2-pivotview/dist/ej2-pivotview.umd.min.js",
+        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-pivotview": "syncfusion:ej2-vue-pivotview/dist/ej2-vue-pivotview.umd.min.js",

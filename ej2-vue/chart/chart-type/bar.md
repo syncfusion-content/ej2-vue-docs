@@ -2,7 +2,7 @@
 layout: post
 title: Bar in Vue Chart component | Syncfusion
 description: Learn here all about Bar Chart in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Bar Chart
+control: Bar chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -34,7 +34,7 @@ The [`columnSpacing`](https://ej2.syncfusion.com/vue/documentation/api/chart/ser
         
 {% previewsample "page.domainurl/code-snippet/chart/series/bar-cs" %}
 
-## Grouped Bar
+## Grouped bar
 
 You can use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#groupname) property to group the data points in the bar type charts. Data points with same group name are grouped together.
 
@@ -45,6 +45,18 @@ You can use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/c
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/group-bar-cs1" %}
+
+## Cylindrical bar chart
+
+To render a cylindrical bar chart, set the `columnFacet` property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/bar-cs6/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/bar-cs6" %}
 
 ## Series customization
 
@@ -63,7 +75,7 @@ The following properties can be used to customize the `bar` series.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/bar-cs5" %}
 
-## See Also
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)

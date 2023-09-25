@@ -2,7 +2,7 @@
 layout: post
 title: Column in Vue Chart component | Syncfusion
 description: Learn here all about Column in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
-control: Column Chart
+control: Column chart
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -46,6 +46,18 @@ You can use the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/c
         
 {% previewsample "page.domainurl/code-snippet/chart/series/group-column-cs1" %}
 
+## Cylindrical column chart
+
+To render a cylindrical column chart, set the `columnFacet` property to `Cylinder` in the chart series.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/column-cs24/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs24" %}
+
 ## Series customization
 
 The following properties can be used to customize the `column` series.
@@ -63,7 +75,7 @@ The following properties can be used to customize the `column` series.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs18" %}
 
-## See Also
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)

@@ -146,3 +146,7 @@ private void PdfHeaderQueryCellInfo(object pdf)
 }
 
 ```
+
+## Limitations
+
+* The export feature for detail and caption templates is not supported in server-side exporting.
