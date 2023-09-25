@@ -30,7 +30,7 @@ The Document Editor component is used to create, edit, view, and print Word docu
 * Provides intuitive UI options like context menu, [dialogs](../document-editor/dialog), and [navigation pane](../document-editor/find-and-replace#options-pane).
 * [Localizes](../document-editor/global-local) all the static text to any desired language.
 * Allows to create a lightweight Word viewer using module injection to view and [prints](../document-editor/print) Word documents.
-* Provides a [server-side helper library](../document-editor/web-services) to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
+* Provides a [server-side helper library](../document-editor/web-services-overview) to open the Word documents like DOCX, DOC, WordML, RTF, and Text, by converting it to SFDT file format.
 
 ## Supported Web platforms
 
@@ -51,7 +51,7 @@ You can deploy web APIs for server-side dependencies of Document Editor componen
 * [ASP.NET MVC](../document-editor/web-services/mvc)
 * [Java](../document-editor/web-services/java)
 
-To know more about server-side dependencies, refer this [page](../document-editor/web-services).
+To know more about server-side dependencies, refer this [page](../document-editor/web-services-overview).
 
 #### Which operations require server-side interaction
 
