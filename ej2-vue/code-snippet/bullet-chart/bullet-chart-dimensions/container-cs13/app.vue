@@ -3,7 +3,7 @@
 <template>
   <div>
       <ejs-bulletchart id="bulletChart"
-        :dataSource="localData"
+        :dataSource="data"
         valueField="value"
         targetField="comparativeMeasureValue"
         :minimum="minimum"
@@ -37,7 +37,7 @@ export default {
                { value: 12, comparativeMeasureValue: 5, category: '2005' },
                { value: 8, comparativeMeasureValue: 6, category: '2006' }
             ],
-        minimum: 0, maximum: 20, interval: 5, dataLabel: { enable: true}
+        minimum: 0, maximum: 20, interval: 5, dataLabel: { visible: true}
     }
   }
 }

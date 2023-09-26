@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
     <div id="wrapper1">
@@ -8,11 +6,7 @@
 </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns';
-import { DropDownList, VirtulScroll } from '@syncfusion/ej2-dropdowns';
-DropDownList.Inject(VirtulScroll);
-Vue.use(DropDownListPlugin);
+import { DropDownListComponent, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
 let records = [];
 function dataSource() {
     for (let i = 1; i <= 150; i++) {
@@ -25,14 +19,22 @@ function dataSource() {
 }
 dataSource();
 
+//Component registeration
 export default {
-  name: 'app',
-   data () {
-    return {
-      itemData: records,
-      fields: { value: 'id', text: 'text' }
+    name: 'App',
+    components: {
+        "ejs-dropdownlist": DropDownListComponent
+    },
+    data (){
+        return {
+            itemData: records,
+            fields: { value: 'id', text: 'text' },
+            allowFiltering: true,
+        }
+    },
+    provide: {
+        dropdownlist: [VirtualScroll]
     }
-  }
 }
 </script>
 <style>
@@ -43,7 +45,7 @@ export default {
 #wrapper1{
   min-width: 250px;
     float: left;
-    margin-left: 100px;
+    margin-left: 350px;
 }
 #wrapper2{
   min-width: 250px;

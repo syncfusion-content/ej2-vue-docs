@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :pointRender='pointRender'>
+         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='Line' xName='x' yName='y' name='December 2007'
                 :marker='marker'> </e-series>

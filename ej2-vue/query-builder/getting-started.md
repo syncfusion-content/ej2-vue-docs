@@ -282,7 +282,7 @@ var employeeData = [{
     }];
 </script>
 
-{% endhihghlight %}
+{% endhighlight %}
 {% endtabs %}
 
 The following example shows a basic Query builder.

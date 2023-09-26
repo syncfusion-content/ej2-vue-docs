@@ -147,6 +147,7 @@ const items = [
 ];
 </script>
 
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>

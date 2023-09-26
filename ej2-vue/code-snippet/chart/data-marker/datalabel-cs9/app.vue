@@ -71,7 +71,7 @@ Vue.use(ChartPlugin);
 
 let total = [];
 
-export default Vue.extend({
+export default {
   data: function () {
     return {
       seriesData: [
@@ -140,7 +140,7 @@ export default Vue.extend({
       args.text = percentage + "%";
     },
   },
-});
+};
 </script>
 
 

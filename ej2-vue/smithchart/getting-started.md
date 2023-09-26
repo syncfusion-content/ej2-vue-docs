@@ -80,7 +80,7 @@ Follow the below steps to add the Vue Smithchart component:
 1\. First, import and register the Smithchart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight htm tabtitle="~src/App.vue" %}
+{% highlight html tabtitle="~src/App.vue" %}
 
 <script>
 import { SmithchartComponent } from "@syncfusion/ej2-vue-charts";
