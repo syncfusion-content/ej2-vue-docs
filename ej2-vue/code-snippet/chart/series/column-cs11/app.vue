@@ -93,7 +93,7 @@ export default {
   },
   provide: {
     chart: [ColumnSeries, Legend, DataLabel, Category, Tooltip]
-  }
+  },
   methods: {
      loaded: function(args) {
       this.$refs.chart.ej2Instances.loaded = null;

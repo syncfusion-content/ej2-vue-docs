@@ -107,7 +107,7 @@ export default {
 2\. In the `template` section, define the Tooltip component with the [content](https://ej2.syncfusion.com/vue/documentation/api/tooltip#content) property
 
 {% tabs %}
-{% highlight html tabtitle=~/src/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
     <div id="app">

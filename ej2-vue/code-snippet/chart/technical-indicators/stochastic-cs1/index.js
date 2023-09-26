@@ -4,7 +4,7 @@ import { ChartPlugin, Category, CandleSeries, Tooltip, DateTime, Zoom, Crosshair
 
 Vue.use(ChartPlugin);
 
-let series1: Object[] = [
+let series1= [
     {x: new Date('2012-10-15'), open: 90.3357, high: 93.2557, low: 87.0885,close: 87.12,volume: 646996264},
     {x: new Date('2012-10-22'), open: 87.4885, high: 90.7685, low: 84.4285,close: 86.2857,volume: 866040680 },
     {x: new Date('2012-10-29'), open: 84.9828, high: 86.1428, low: 82.1071,close: 82.4,volume: 367371310},
@@ -113,7 +113,7 @@ new Vue({
             majorTickLines: { width: 0 }, title: 'Stochastic', stripLines: [
                 {
                     start: 0, end: 120, text: '', color: 'black', visible: true,
-                    opacity: 0https://ej2.syncfusion.com/vue/documentation03, zIndex: 'Behind'
+                    zIndex: 'Behind'
                 }]
         }],
 

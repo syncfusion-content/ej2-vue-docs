@@ -11,8 +11,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :tooltip='tooltip'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Spline' xName='x' yName='y' name='Max Temp' :marker='marker' tooltipFormat='${point.x}'> </e-series>
-                <e-series :dataSource='seriesData2' type='Spline' xName='x' yName='y' name='Avg Temp' :marker='marker' tooltipFormat='${point.y}'> </e-series>
+                <e-series :dataSource='seriesData1' type='Spline' xName='x' yName='y' name='Max Temp' :marker='marker' :tooltipFormat='point'> </e-series>
+                <e-series :dataSource='seriesData2' type='Spline' xName='x' yName='y' name='Avg Temp' :marker='marker' :tooltipFormat='point1'> </e-series>
                 <e-series :dataSource='seriesData3' type='Spline' xName='x' yName='y' name='Min Temp' :marker='marker'> </e-series>
             </e-series-collection>
         </ejs-chart>
@@ -49,7 +49,9 @@ new Vue({
           visible: true, width: 10, height: 10
         },
       tooltip: { enable: true, header: 'Unemployment', format: '<b>${point.x} : ${point.y}</b>'},
-      title: "NC Weather Report - 2016"
+      title: "NC Weather Report - 2016",
+      point : '${point.x}',
+      point1 : '${point.y}'
     };
   },
   provide: {

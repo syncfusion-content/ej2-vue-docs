@@ -12,53 +12,6 @@ import {
 
 Vue.use(ChartPlugin);
 
-export default Vue.extend({
-  data: function () {
-    return {
-      seriesData: [
-        { x: "USA", y: 46 },
-        { x: "GBR", y: 27 },
-        { x: "CHN", y: 26 },
-      ],
-
-      seriesData1: [
-        { x: "USA", y: 37 },
-        { x: "GBR", y: 23 },
-        { x: "CHN", y: 18 },
-      ],
-
-      seriesData2: [
-        { x: "USA", y: 38 },
-        { x: "GBR", y: 17 },
-        { x: "CHN", y: 26 },
-      ],
-
-      //Initializing Primary X Axis
-      primaryXAxis: {
-        valueType: "Category",
-        interval: 1,
-        majorGridLines: { width: 0 },
-      },
-      chartArea: { border: { width: 0 } },
-
-      //Initializing Primary Y Axis
-      primaryYAxis: {
-        majorGridLines: { width: 0 },
-        majorTickLines: { width: 0 },
-        lineStyle: { width: 0 },
-        labelStyle: { color: "transparent" },
-      },
-      tooltip: {
-        enable: true,
-      },
-      title: "Olympic Medal Counts - RIO",
-      legendSettings: { visible: true, reverse: true },
-    };
-  },
-  provide: {
-    chart: [ColumnSeries, Legend, DataLabel, Category, Tooltip],
-  },
-});
 new Vue({
 	el: '#app',
 	template: `
@@ -105,5 +58,50 @@ new Vue({
     </e-series-collection>
   </ejs-chart>
 `,
+data: function () {
+  return {
+    seriesData: [
+      { x: "USA", y: 46 },
+      { x: "GBR", y: 27 },
+      { x: "CHN", y: 26 },
+    ],
 
+    seriesData1: [
+      { x: "USA", y: 37 },
+      { x: "GBR", y: 23 },
+      { x: "CHN", y: 18 },
+    ],
+
+    seriesData2: [
+      { x: "USA", y: 38 },
+      { x: "GBR", y: 17 },
+      { x: "CHN", y: 26 },
+    ],
+
+    //Initializing Primary X Axis
+    primaryXAxis: {
+      valueType: "Category",
+      interval: 1,
+      majorGridLines: { width: 0 },
+    },
+    chartArea: { border: { width: 0 } },
+
+    //Initializing Primary Y Axis
+    primaryYAxis: {
+      majorGridLines: { width: 0 },
+      majorTickLines: { width: 0 },
+      lineStyle: { width: 0 },
+      labelStyle: { color: "transparent" },
+    },
+    tooltip: {
+      enable: true,
+    },
+    theme: 'Material',
+    title: "Olympic Medal Counts - RIO",
+    legendSettings: { visible: true, reverse: true },
+  };
+},
+provide: {
+  chart: [ColumnSeries, Legend, DataLabel, Category, Tooltip],
+},
 });

@@ -45,7 +45,7 @@ export default {
   },
   provide: {
     chart: [ColumnSeries, Category, Legend ]
-  }
+  },
   methods: {
     onChartLoaded: function(args) {
         let chart = document.querySelector('.e-chart');;
@@ -55,7 +55,7 @@ export default {
             legendTextCol[i].setAttribute('fill', colors[i]);
         }
   }
-};
+}};
 </script>
 
 

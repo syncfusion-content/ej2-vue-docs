@@ -9,7 +9,7 @@ new Vue({
 	template: `
   <div>
       <ejs-bulletchart id="bulletChart"
-        :dataSource="localData"
+        :dataSource="data"
         valueField="value"
         targetField="comparativeMeasureValue"
         :minimum="minimum"

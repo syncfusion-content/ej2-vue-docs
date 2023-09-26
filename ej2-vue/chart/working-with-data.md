@@ -24,17 +24,6 @@ You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.sy
         
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs19" %}
 
-### Common Datasource
-
-You can also bind a JSON data common to all series using
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/chart/series/column-cs20/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart/series/column-cs20" %}
 
 ## Common Datasource
 

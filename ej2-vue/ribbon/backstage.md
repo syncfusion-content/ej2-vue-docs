@@ -80,11 +80,11 @@ You can use the [template](https://ej2.syncfusion.com/vue/documentation/api/ribb
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/ribbon/backstageTarget/app.vue %}
+{% include code-snippet/ribbon/backStageTemplate/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/ribbon/backstageTarget" %}
+{% previewsample "page.domainurl/code-snippet/ribbon/backStageTemplate" %}
 
 ## Setting width and height
 
@@ -92,10 +92,10 @@ You can customize the height and width of the backstage view using the [height](
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/ribbon/simplifiedModeGroupButton/app.vue %}
+{% include code-snippet/ribbon/backstageCustomization/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/ribbon/simplifiedModeGroupButton" %}
+{% previewsample "page.domainurl/code-snippet/ribbon/backstageCustomization" %}
 
 > [Adding Backstage events](./events#backStageItemClick)
