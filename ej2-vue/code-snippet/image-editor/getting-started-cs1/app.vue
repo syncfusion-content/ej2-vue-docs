@@ -25,9 +25,9 @@ export default {
   methods: {
      created: function() {
         if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
+            this.$refs.imageEditorObj.open('flower.jpeg');
         } else {
-            this.$refs.imageEditorObj.open('bridge.png');
+            this.$refs.imageEditorObj.open('bridge.jpeg');
         }
     },
     btnClick: function(event) {

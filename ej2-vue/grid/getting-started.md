@@ -128,7 +128,7 @@ export default {
 </template>
 
 {% endhighlight %}
-{% endtasb %}
+{% endtabs %}
 
 
 ## Register the Syncfusion Vue component

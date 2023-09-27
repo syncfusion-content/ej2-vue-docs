@@ -109,7 +109,7 @@ export default {
 <ejs-signature></ejs-signature>
 </template>
 
-{% enhighlight %}
+{% endhighlight %}
 {% endtabs %}
 
 Here is the summarized code for the above steps in the **src/App.vue** file:

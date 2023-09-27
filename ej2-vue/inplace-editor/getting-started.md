@@ -129,7 +129,7 @@ export default {
 2\. In the `template` section, define the Inplace editor component with the [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor#model) property.
 
 {% tabs %}
-{$ highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
   <div id="app">

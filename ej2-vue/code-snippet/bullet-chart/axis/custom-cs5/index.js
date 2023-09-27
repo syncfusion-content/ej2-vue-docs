@@ -16,7 +16,7 @@ new Vue({
         :maximum="maximum"
         :interval="interval"
         title="Revenue"
-        labelFormat="${value}K"
+        :labelFormat="label"
       >
       <e-bullet-range-collection>
           <e-bullet-range end="100" color="red"></e-bullet-range>
@@ -29,7 +29,7 @@ new Vue({
 
   data () {
     return {
-      data: [{ value: 270, target: 250 }],
+      data: [{ value: 270, target: 250 }],label: '${value}K',
       minimum: 0, maximum: 300, interval: 50
     }
   }

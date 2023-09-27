@@ -16,7 +16,7 @@ new Vue({
         :maximum="maximum"
         :interval="interval"
         title="Sales Rate in dollars"
-        labelFormat="${value}"
+        :labelFormat="label"
         subtitle="(in dollars $)"
       >
       <e-bullet-range-collection>
@@ -30,7 +30,7 @@ new Vue({
 
   data () {
     return {
-      data: [{ value: 55, target: 45 }],
+      data: [{ value: 55, target: 45 }], label: '${value}',
       minimum: 0, maximum: 100, interval: 20
     }
   }

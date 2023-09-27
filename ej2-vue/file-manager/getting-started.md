@@ -147,6 +147,9 @@ export default {
 
 3\. Declare the value for the `ajaxSettings` property in the `script` section.
 
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <script>
 data () {
     return {

@@ -16,7 +16,7 @@ new Vue({
         :maximum="maximum"
         :interval="interval"
         title="Sales Rate in dollars"
-        labelFormat="${value}"
+        :labelFormat="label"
         subtitle="(in dollars $)"
         orientation="vertical"
         width="20%"
@@ -32,7 +32,7 @@ new Vue({
 
   data () {
     return {
-      data: [{ value: 55, target: 45 }],
+      data: [{ value: 55, target: 45 }], label: '${value}',
       minimum: 0, maximum: 100, interval: 20
     }
   }
