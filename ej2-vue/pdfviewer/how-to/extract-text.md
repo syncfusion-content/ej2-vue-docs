@@ -40,7 +40,7 @@ Vue.use(PdfViewerPlugin);
 export default {
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"PDF_Succinctly.pdf",
       extractTextCompleted: function (args) {
       // Extract the Complete text of load document
