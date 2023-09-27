@@ -212,6 +212,34 @@ Before exporting, you can split and export the pivot table columns on each page 
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs168" %}
 
+### Changing the table's column width and row height while exporting
+
+You can change the column width and row height in the PDF document during the pivot table export by using the [`onPdfCellRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#onpdfcellrender) event. Within this event, the `args.column.width` property allows you to change the width of specific columns.
+
+As shown in the code example below, the **"Unit Sold"** column under **"FY 2015"** is changed to a width of **60** pixels.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/pivot-grid/default-cs272/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs272" %}
+
+Similarly, you can change the height of specific rows in the PDF document by using the `args.cell.height` property in the [`onPdfCellRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#onpdfcellrender) event. 
+
+As shown in the code example below, the **"Mountain Bikes"** row under **"France"** is changed to a height of **30** pixels.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/pivot-grid/default-cs273/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/pivot-grid/default-cs273" %}
+
+> This option is only available if [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablevirtualization) is set to **true**. In addition, the `VirtualScroll` and `PDFExport` modules must be injected into the pivot table.
+
 ## Changing the pivot table style while exporting
 
 The PDF export provides an option to change colors for headers, caption and records in pivot table before exporting. In-order to apply colors, define **theme** settings in **pdfExportProperties** object and pass it as a parameter to the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method.
