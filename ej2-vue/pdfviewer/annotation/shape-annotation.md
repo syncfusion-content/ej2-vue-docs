@@ -106,7 +106,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -240,7 +240,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       lineSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
       arrowSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},

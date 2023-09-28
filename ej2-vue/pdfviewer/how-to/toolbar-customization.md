@@ -139,7 +139,7 @@ export default Vue.extend({
 export default Vue.extend({
     data: function () {
         return {
-            serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+            serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
             documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
             enableToolbar: false,
             pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
@@ -507,7 +507,7 @@ export default Vue.extend({
     export default Vue.extend({
         data: function () {
             return {
-                serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+                serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
                 documentPath: "https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf",
                 enableToolbar: false,
                 pageNoTemplate: '<div class=""><input type="text" class="e-input-group e-pv-current-page-number" id="currentPage" /></div>',
