@@ -32,7 +32,7 @@ Using addFormField method, the form fields can be added to the PDF document prog
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/addformfield-cs1" %}
@@ -48,7 +48,7 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.  
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/updateformfield-cs1" %}
@@ -64,7 +64,7 @@ Using deleteFormField method, the form field can be deleted programmatically. We
 {% endtabs %}
 
 N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-**serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"**
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
 Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.      
 
 {% previewsample "page.domainurl/code-snippet/pdfviewer/deleteformfield-cs1" %}
@@ -149,7 +149,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -251,7 +251,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -371,7 +371,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -451,7 +451,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -510,7 +510,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -567,7 +567,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -626,7 +626,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -689,7 +689,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
     };
   },
@@ -812,7 +812,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -1017,7 +1017,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -1165,7 +1165,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
   provide: {
@@ -1316,7 +1316,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -1462,7 +1462,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
   provide: {
@@ -1604,7 +1604,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -1733,7 +1733,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
   provide: {
@@ -1866,7 +1866,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -1996,7 +1996,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
   provide: {
@@ -2140,7 +2140,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -2293,7 +2293,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
   provide: {
@@ -2450,7 +2450,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
@@ -2604,7 +2604,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
   provide: {

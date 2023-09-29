@@ -14,7 +14,7 @@ System.config({
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
-vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
+        vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
@@ -39,7 +39,8 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-pdfviewer": "syncfusion:ej2-pdfviewer/dist/ej2-pdfviewer.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",                        
         "@syncfusion/ej2-vue-pdfviewer": "syncfusion:ej2-vue-pdfviewer/dist/ej2-vue-pdfviewer.umd.min.js",
-        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js"
+        "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
+        "@syncfusion/ej2-pdf": "syncfusion:ej2-pdf/dist/ej2-pdf.umd.min.js"
     }
 });
 

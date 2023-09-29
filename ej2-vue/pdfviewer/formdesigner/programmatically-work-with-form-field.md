@@ -94,7 +94,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
       documentPath:"PDF_Succinctly.pdf"
     };
   },
@@ -153,7 +153,7 @@ export default {
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer"
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
       documentPath:"PDF_Succinctly.pdf"
     };
   },

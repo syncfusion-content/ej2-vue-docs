@@ -11,7 +11,7 @@
     import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
     Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
-let nodes: NodeModel[] = [{
+let nodes = [{
     id: 'Start',
     offsetX: 250,
     offsetY: 150,
@@ -37,7 +37,7 @@ let nodes: NodeModel[] = [{
         style: { strokeColor: '#366F8C', fill: '#366F8C' }
     }]
 }];
-let connectors: ConnectorModel[] = [{
+let connectors = [{
     id: "connector1",
     style: {
         strokeColor: '#6BA5D7',
@@ -50,10 +50,10 @@ let connectors: ConnectorModel[] = [{
     targetID: "End",
     type: 'Bezier',
     // Configuring settings for bezier interactions
-    bezierSettings = { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
+    bezierSettings : { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
 }];
 export default {
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",
@@ -71,6 +71,7 @@ export default {
             getConnectorDefaults: (connector)=> {
             connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
         }
+    }
     }
 }
 </script>

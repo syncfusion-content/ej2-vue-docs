@@ -37,10 +37,10 @@
             y: 200
         },
         maxSegmentThumb: 3,
-        constraints:ConnectorConstraints.Default & ~ConnectorConstraints.DragSegmentThumb;
+        constraints:ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb
     }]
     export default {
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",

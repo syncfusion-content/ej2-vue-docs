@@ -22,7 +22,7 @@
         ports: [{
             // Sets the position for the port
             offset: {
-                x: 1,
+                x: 0.5,
                 y: 0.5
             },
             visibility: PortVisibility.Visible,
@@ -32,7 +32,7 @@
         }]
     }]
     export default {
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",
