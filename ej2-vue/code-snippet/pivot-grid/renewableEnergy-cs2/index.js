@@ -56,18 +56,18 @@ new Vue({
   },
   methods: {
     trend: function() {
-      let pivotGridObj = (<any>this.$refs.pivotview).ej2Instances;
-      var cTable = document.getElementsByClassName("e-table");
+        let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
+        var cTable = document.getElementsByClassName("e-table");
         var colLen = pivotGridObj.pivotValues[3].length;
-        var cLen = cTable[3].children[0].children.length;
-        var rLen = cTable[3].children[1].children.length;
+        let cLen = cTable[1].children[0].children.length - 1;
+        let rLen = cTable[1].children[1].children.length;
         for (let k = 0; k < rLen; k++) {
             if (pivotGridObj.pivotValues[k] && pivotGridObj.pivotValues[k][0] !== undefined) {
                 rowIndx = (pivotGridObj.pivotValues[k][0]).rowIndex;
                 break;
             }
         }
-        var rowHeaders = [].slice.call(cTable[2].children[1].querySelectorAll('td'));
+        var rowHeaders = [].slice.call(cTable[1].children[1].querySelectorAll('.e-rowsheader'));
         var rows = pivotGridObj.dataSourceSettings.rows;
         if (rowHeaders.length > 1) {
             for (var i = 0, Cnt = rows; i < Cnt.length; i++) {
@@ -86,9 +86,12 @@ new Vue({
                             if (rnt !== 0) {
                                 var row = fields[fieldHeaders[rnt]];
                                 var prevRow = fields[fieldHeaders[rnt - 1]];
-                                for (var j = 0, ci = 1; j < cLen && ci < colLen; j++, ci++) {
-                                    var node = cTable[3].children[1].children[row].childNodes[j];
-                                    var prevNode = cTable[3].children[1].children[prevRow].childNodes[j];
+                                for (var j = 1, ci = 1; j < cLen && ci < colLen; j++, ci++) {
+                                    if (!cTable[1].children[1].children[row]) {
+                                        break;
+                                    }
+                                    var node = cTable[1].children[1].children[row].childNodes[j]
+                                    var prevNode = cTable[1].children[1].children[prevRow].childNodes[j]
                                     var ri = node.getAttribute('index');
                                     var prevRi = prevNode.getAttribute('index');
                                     if (ri < pivotGridObj.pivotValues.length) {
@@ -101,8 +104,8 @@ new Vue({
                                         }
                                     }
                                 }
-                            }
                         }
+                    }
                 }
             }
         }

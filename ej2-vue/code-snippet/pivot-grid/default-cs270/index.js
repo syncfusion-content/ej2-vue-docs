@@ -28,6 +28,7 @@ new Vue({
         formatSettings: [{ name: 'Amount', format: 'C0' }],
       },
       height: 350,
+      isPrimary: true
     }
   },
   methods: {
