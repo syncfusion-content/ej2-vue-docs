@@ -12,10 +12,11 @@
 <script>
 import Vue from "vue";
 import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
-import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
 
+var parentProp = {};
+var dataSource;
 function complexToFlatJson(data) {
     var flatArray = [];
     var flatObject = {};
@@ -153,13 +154,14 @@ export default {
   data () {
     return {
       dataSourceSettings: {
+        expandAll: true,
+        enableSorting: true,
         dataSource: pivotData(),
-        expandAll: false,
-        columns: [{ name: 'Year', caption: 'Production Year' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }],
-        rows: [{ name: 'Country' }],
-        formatSettings: [{ name: 'Amount', format: 'C0' }],
-        filters: [],
+        columns: [{ name: 'OrderDetails' }],
+        values: [{ name: 'Freight', caption: 'Units Sold' }],
+        rows: [{ name: 'ShipDetails' }],
+        valueSortSettings: { headerDelimiter: ' - ' },
+        formatSettings: [{ name: 'Amount', format: 'C0' }]
       },
       height: 350,
       showFieldList: true
