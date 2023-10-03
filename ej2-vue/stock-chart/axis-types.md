@@ -26,7 +26,7 @@ DateTime axis uses date time scale and displays the date time values as axis lab
 
 ## DateTimeCategory axis
 
-DateTimeCategory axis in the stock chart is used to display only business days. To use DateTimeCategory axis, set the [`valueType`](../api/stock-chart/stockChartAxisModel/#valuetype) of axis to `DateTimeCategory`.
+DateTimeCategory axis in the stock chart is used to display only business days. To use DateTimeCategory axis, set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartAxisModel/#valuetype) of axis to `DateTimeCategory`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

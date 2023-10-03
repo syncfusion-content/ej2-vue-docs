@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis''>
+         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='Bar' columnFacet='Cylinder' xName='x' yName='y' name='India'> </e-series>
             </e-series-collection>
@@ -28,8 +28,8 @@ export default {
         ],
         title: "Unemployment rate in percentage",
         primaryXAxis: {
-          minimum: 2006, 
-          maximum: 2011, 
+          minimum: 2005, 
+          maximum: 2012, 
           interval: 1,
           title: 'Year'
         },

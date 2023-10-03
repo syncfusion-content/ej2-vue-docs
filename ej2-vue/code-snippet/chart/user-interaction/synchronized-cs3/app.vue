@@ -27,7 +27,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, LineSeries, SplineAreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, LineSeries, SplineAreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
 import { synchronizedData } from 'dataSource.ts';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
