@@ -13,8 +13,7 @@ new Vue({
   template: `
     <div id="app">
     <ejs-button id="print-btn" :isPrimary="isPrimary" v-on:click.native="btnClick" >Print</ejs-button>
-    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
-    :showFieldList="showFieldList" :displayOption="displayOption" >
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :displayOption="displayOption" >
     </ejs-pivotview>    </div>
 `,
 
@@ -29,6 +28,7 @@ new Vue({
       },
       height: 350,
       displayOption: { view: 'Chart' },
+      isPrimary: true,
     }
   },
   methods: {

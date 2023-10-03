@@ -10,7 +10,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :onFieldDropped="onFieldDropped"> </ejs-pivotview>
+      <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :memberFiltering="memberFiltering"> </ejs-pivotview>
     </div>
 `,
 

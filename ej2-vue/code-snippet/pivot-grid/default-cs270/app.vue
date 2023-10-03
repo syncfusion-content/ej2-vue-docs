@@ -31,6 +31,7 @@ export default {
         formatSettings: [{ name: 'Amount', format: 'C0' }],
       },
       height: 350,
+      isPrimary: true
     }
   },
   methods: {

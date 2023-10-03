@@ -4,7 +4,7 @@
 
 <template>
     <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :width="width" :height="height" :load="load" :dataBound="dataBound" :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar" :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport" :removeReport="removeReport" :newReport="newReport" :displayOption="displayOption"> </ejs-pivotview>
+        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height" :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar" :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport" :removeReport="removeReport" :newReport="newReport" :displayOption="displayOption"> </ejs-pivotview>
     </div>
 </template>
 
@@ -104,7 +104,7 @@ export default {
       args.reportName = reeportList;
     },
     loadReport: function(args: any) {
-      let pivotGridObj = (<any>this.$refs.pivotview).ej2Instances;
+      let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       let reportCollection = [];
       if (
         localStorage.pivotviewReports &&
@@ -162,7 +162,7 @@ export default {
       }
     },
     newReport: function() {
-      let pivotGridObj = (<any>this.$refs.pivotview).ej2Instances;
+      let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.setProperties(
         {
           dataSourceSettings: {

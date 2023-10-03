@@ -28,7 +28,8 @@ export default {
         filters: []
       },
       height: 350,
-      showGroupingBar: true
+      showGroupingBar: true,
+      showFieldList: true
     }
   },
   methods: {

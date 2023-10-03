@@ -11,7 +11,7 @@
 
 <script>
 import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewPlugin, VirtualScroll} from "@syncfusion/ej2-vue-pivotview";
 import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 

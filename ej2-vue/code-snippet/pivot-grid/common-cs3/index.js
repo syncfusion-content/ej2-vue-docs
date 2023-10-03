@@ -10,7 +10,6 @@ let remoteData: DataManager = new DataManager({
   adaptor: new WebApiAdaptor(),
   crossDomain: true
 }).executeQuery(new Query().take(8)).then((e: ReturnOption) => {
-  );
 new Vue({
 	el: '#app',
 	template: `
@@ -21,8 +20,7 @@ new Vue({
 
     data () {
       return {
-          let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-          pivotGridObj.dataSourceSettings = {
+          dataSourceSettings:  {
                 dataSource: remoteData as DataManager,
                 expandAll: true,
                 filters: [],
@@ -33,6 +31,5 @@ new Vue({
           height: 350
         }
       }
-    }
-  
+    })
 });
