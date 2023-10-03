@@ -26,12 +26,18 @@ new Vue({
         },
         ddbOpen: function(args) {
           args.element.querySelector('.e-cancel').addEventListener('click', this.closePopup);
+          this.tooltip();
         },
         beforeDdbClose: function(args) {
           args.element.querySelector('.e-cancel').removeEventListener('click', this.closePopup);
         },
         closePopup: function() {
           this.$refs.ddb.ej2Instances.toggle()
+        },
+        tooltip: function() {
+          var zindex = (document.getElementsByClassName('e-color-picker-tooltip')[0]).style.zIndex;
+          var zindexIntValue = parseInt(zindex) + 2;
+          (document.getElementsByClassName('e-color-picker-tooltip')[0]).style.zIndex = zindexIntValue.toString();
         }
   }
 

@@ -26,7 +26,7 @@ new Vue({
       </ejs-chart>
       <ejs-accumulationchart id="container2" :title='title2' enableSmartLabels='enableSmartLabels' :legendSettings='legendSettings'>
         <e-accumulation-series-collection>
-          <e-accumulation-series :dataSource='seriesData3' xName='x' yName='y' :dataLabel='datalabel'> </e-accumulation-series>
+          <e-accumulation-series :dataSource='seriesData3' xName='x' yName='y' :dataLabel='datalabel' radius='70%' :startAngle='startAngle' :endAngle='endAngle'> </e-accumulation-series>
         </e-accumulation-series-collection>
       </ejs-accumulationchart>
     </div>
@@ -52,6 +52,12 @@ new Vue({
         { x: new Date(2007, 0, 1), y: 48 }, { x: new Date(2008, 0, 1), y: 50 },
         { x: new Date(2009, 0, 1), y: 66 }, { x: new Date(2010, 0, 1), y: 78 },
         { x: new Date(2011, 0, 1), y: 84 }
+      ],
+      seriesData3: [
+        { x: 'Labour', y: 18, text: '18%' }, { x: 'Legal', y: 8, text: '8%' },
+        { x: 'Production', y: 15, text: '15%' }, { x: 'License', y: 11, text: '11%' },
+        { x: 'Facilities', y: 18, text: '18%' }, { x: 'Taxes', y: 14, text: '14%' },
+        { x: 'Insurance', y: 16, text: '16%' }
       ],
       primaryXAxis: {
         title: 'Manager',
@@ -90,10 +96,12 @@ new Vue({
       title1: "Medal Count",
       title2: "Project Cost Breakdown",
       enableSmartLabels: true,
-      datalabel: { visible: true, name: 'text' },
+      datalabel: { visible: true, name: 'text', position: 'Inside', font: { fontWeight: 600, color: '#ffffff' } },
       legendSettings: {
         visible: true
-      }
+      },
+      startAngle: '0',
+      endAngle: '360'
     };
   },
   provide: {

@@ -14,7 +14,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { ChartPlugin, StackingColumnSeries, Category, DateTime } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingColumnSeries, DateTime } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -34,6 +34,7 @@ export default {
           title: 'Years',
           interval: 1,
           valueType: 'DateTime',
+          labelPlacement: 'BetweenTicks',
           labelFormat: 'y'
         },
         primaryYAxis: {
@@ -45,7 +46,7 @@ export default {
     };
   },
   provide: {
-    chart: [StackingColumnSeries, Category, DateTime]
+    chart: [StackingColumnSeries, DateTime]
   },
 };
 </script>

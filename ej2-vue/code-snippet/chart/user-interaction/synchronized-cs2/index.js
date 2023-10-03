@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, SplineSeries, DateTime, Tooltip } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, AreaSeries, SplineSeries, DateTime, Tooltip } from "@syncfusion/ej2-vue-charts";
 import { synchronizedData } from 'dataSource.js';
 import { Browser } from '@syncfusion/ej2-base';
 

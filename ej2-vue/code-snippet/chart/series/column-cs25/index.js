@@ -9,7 +9,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+         <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='StackingColumn' columnFacet='Cylinder' xName='x' yName='y' name='UK'> </e-series>
                 <e-series :dataSource='seriesData' type='StackingColumn' columnFacet='Cylinder' xName='x' yName='y1' name='Germany'> </e-series>
@@ -43,7 +43,6 @@ new Vue({
         interval: 100,
         labelFormat: '{value}B'
       },
-      title: "Mobile Game Market by Country"
     };
   },
   provide: {
