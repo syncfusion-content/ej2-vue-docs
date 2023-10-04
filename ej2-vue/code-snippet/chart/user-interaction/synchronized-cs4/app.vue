@@ -6,7 +6,7 @@
                     :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis1'
                     :zoomSettings='zoomSettings' :titleStyle='titleStyle' :zoomComplete='zoomComplete' :selectionComplete='selectionComplete' ref="chart1">
                     <e-series-collection>
-                        <e-series :dataSource='seriesData' type='Line' xName='USD' yName='EUR' width = 2
+                        <e-series :dataSource='seriesData' type='Line' xName='USD' yName='EUR' width=2
                             :emptyPointSetting='emptyPointSettings'> </e-series>
                     </e-series-collection>
                 </ejs-chart>
@@ -16,7 +16,7 @@
                     :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis2'
                     :zoomSettings='zoomSettings' :titleStyle='titleStyle' :zoomComplete='zoomComplete' :selectionComplete='selectionComplete' ref="chart2">
                     <e-series-collection>
-                        <e-series :dataSource='seriesData' type='Spline' xName='USD' yName='INR' opacity=0.6
+                        <e-series :dataSource='seriesData' type='Spline' xName='USD' yName='INR' width=2
                             :border='border'>
                         </e-series>
                     </e-series-collection>
@@ -27,7 +27,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, SplineSeries, LineSeries, DateTime, Zoom, Selection } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, SplineSeries, LineSeries, DateTime, Zoom, Selection } from "@syncfusion/ej2-vue-charts";
 import { synchronizedData } from 'dataSource.ts';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);

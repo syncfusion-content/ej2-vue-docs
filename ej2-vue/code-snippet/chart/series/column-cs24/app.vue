@@ -4,7 +4,7 @@
     <div id="app">
           <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :tooltip='tooltip'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' columnFacet='Cylinder' xName='country' yName='gold'> </e-series>
+                <e-series :dataSource='seriesData' type='Column' columnFacet='Cylinder' xName='country' yName='gold' tooltipMappingName='tooltipMappingName'> </e-series>
             </e-series-collection>
           </ejs-chart>
     </div>
@@ -19,12 +19,12 @@ export default {
   data: function() {
     return {
         seriesData: [
-          { country: "USA",       gold: 50 },
-          { country: "Japan",     gold: 70 },
-          { country: "Australia", gold: 60 },
-          { country: "France",    gold: 50 },
-          { country: "Italy",     gold: 40 },
-          { country: "Sweden",    gold: 55 }
+          { country: "USA",       gold: 50, tooltipMappingName: 'USA' },
+          { country: "Japan",     gold: 70, tooltipMappingName: 'Japan' },
+          { country: "Australia", gold: 60, tooltipMappingName: 'Australia' },
+          { country: "France",    gold: 50, tooltipMappingName: 'France' },
+          { country: "Italy",     gold: 40, tooltipMappingName: 'Italy' },
+          { country: "Sweden",    gold: 55, tooltipMappingName: 'Sweden' }
         ],
         primaryXAxis: {
           valueType: 'Category',

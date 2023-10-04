@@ -27,7 +27,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, SplineSeries, DateTime, Tooltip } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, AreaSeries, SplineSeries, DateTime, Tooltip } from "@syncfusion/ej2-vue-charts";
 import { synchronizedData } from 'dataSource.ts';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
@@ -45,7 +45,8 @@ export default {
           majorGridLines: { width: 0 },
           interval: Browser.isDevice ? 2 : 1,
           edgeLabelPlacement: Browser.isDevice ? 'None' : 'Shift',
-          labelRotation: Browser.isDevice ? -45 : 0
+          labelRotation: Browser.isDevice ? -45 : 0,
+          crosshairTooltip: { enable: true }
         },
         primaryYAxis1: {
           labelFormat: 'n2',
