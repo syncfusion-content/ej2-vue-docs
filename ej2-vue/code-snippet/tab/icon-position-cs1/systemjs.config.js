@@ -24,10 +24,10 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
         "@syncfusion/ej2-dropdowns": "syncfusion:ej2-dropdowns/dist/ej2-dropdowns.umd.min.js",
         "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js",
-         "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js",
-        
+        "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js"        
     }
 });
 
