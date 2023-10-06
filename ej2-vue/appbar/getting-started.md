@@ -132,7 +132,7 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
   </ejs-appbar>
 </template>
 
-{% endhiglight %}
+{% endhighlight %}
 {% endtabs %}
 
 Here is the summarized code for the above steps in the **src/App.vue** file:
