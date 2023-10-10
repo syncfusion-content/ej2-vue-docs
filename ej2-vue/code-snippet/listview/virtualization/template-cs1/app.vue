@@ -1,9 +1,20 @@
 
 
 <template>
-  <div class="control-section">
-     <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi' :showHeader='header' :fields='fields' :headerTitle='title' :template='gTemplate' :height='height' >
-    </ejs-listview>
+  <div class="control-section">     
+    <ejs-listview id='ui-list' ref="list" :dataSource='listData' :showHeader='header' :fields='fields' :headerTitle='title'
+        :height='height' :cssClass='cssClass' :enableVirtualization='enableUi' :actionComplete='onActionComplete'
+        :actionBegin='onActionBegin' :template="'gTemplate'">
+            <template v-slot:gTemplate="{ data }">
+                <div class="e-list-wrapper e-list-avatar" >
+                    <span :class="['e-avatar e-avatar-circle ' + data.icon + ' showUI']" v-if="data.imgUrl == undefined">{{ data.icon }}</span>
+                    <span :class="['e-avatar e-avatar-circle ' + data.icon + ' hideUI']" v-if="data.imgUrl !== undefined">{{ data.icon }}</span> 
+                    <img :class="['e-avatar e-avatar-circle showUI']" :src="data.imgUrl" v-if="data.imgUrl !== undefined" />
+                    <img :class="['e-avatar e-avatar-circle hideUI']" :src="data.imgUrl" v-if="data.imgUrl == undefined" />
+                    <span class="e-list-content">{{ data.name }}</span>
+                </div>
+            </template>
+        </ejs-listview>
   </div>
 </template>
 <style>
@@ -131,12 +142,7 @@ for (let i = 10; i <= 1000; i++) {
 },
   data: function() {
     return {
-      listData: listData,
-      gTemplate:
-        '<div class="list-container"><div id="icon" class="${$imgUrl ? \'img\' : $icon }">' +
-        "<span class=\"${$imgUrl ? 'hideUI' : 'showUI' }\">" +
-        "${icon}</span> <img class=\"${$imgUrl ? 'showUI' : 'hideUI' }\" width = 45 height = 45 src=\"${$imgUrl ?  $imgUrl : ' ' }\" />" +
-        '</div><div class="name">${name}</div></div>',
+      listData: listData,     
       header: true,
       title: "Contacts",
       fields: { text: "name" },
