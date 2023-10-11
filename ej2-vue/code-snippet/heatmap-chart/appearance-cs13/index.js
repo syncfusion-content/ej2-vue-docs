@@ -18,7 +18,7 @@ new Vue({
                 {
                     Year: '2017',
                     image:
-                        'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/golfball.png',
+                        'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/golf-ball.png',
                     'Jan-Feb': [4, 39],
                     'Mar-Apr': [3, 8],
                     'May-Jun': [1, 3],
