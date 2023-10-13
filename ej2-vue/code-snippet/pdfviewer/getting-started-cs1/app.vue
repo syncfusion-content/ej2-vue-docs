@@ -22,7 +22,7 @@ export default {
   data () {
     return {
       serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
 

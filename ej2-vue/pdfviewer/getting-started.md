@@ -22,8 +22,8 @@ You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue appl
 To install Vue CLI, use the following commands.
 
 ```bash
-  npm install -g @vue/cli
-  npm install -g @vue/cli-init
+npm install -g @vue/cli
+npm install -g @vue/cli-init
 ```
 
 ## Create a Vue application
@@ -31,10 +31,9 @@ To install Vue CLI, use the following commands.
 Start a new Vue application using the following Vue CLI command.
 
 ```bash
-  vue init webpack-simple quickstart
-
-  cd quickstart
-  npm install
+vue init webpack-simple quickstart
+cd quickstart
+npm install
 ```
 
 ## Adding Syncfusion PDF Viewer package
@@ -44,7 +43,7 @@ All the available Essential JS 2 packages are published in [`npmjs.com`](https:/
 * To install PDF Viewer component, use the following command.
 
 ```bash
-  npm install @syncfusion/ej2-vue-pdfviewer --save
+npm install @syncfusion/ej2-vue-pdfviewer --save
 ```
 
 >   The **--save** will instruct NPM to include the PDF Viewer package inside the `dependencies` section of the `package.json`.
@@ -104,7 +103,8 @@ Add the Vue PDF Viewer by using the `<ejs-pdfviewer>` selector in `<template>` s
     <ejs-pdfviewer 
       id="pdfViewer" 
       :serviceUrl="serviceUrl" 
-      :documentPath="documentPath"> 
+      :documentPath="documentPath"
+      :resourceUrl="resourceUrl"> 
     </ejs-pdfviewer>
   </div>
 </template>
@@ -120,7 +120,8 @@ export default {
   name: 'app',
   data () {
     return {
-      documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf'
+      documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
@@ -136,7 +137,7 @@ export default {
 The Vue PDF Viewer application is configured to compile and run the application in a browser. Use the following command to run the application.
 
 ```bash
-  npm run dev
+npm run dev
 ```
 
 Output will be displayed as follows.

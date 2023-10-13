@@ -6,7 +6,8 @@
         <ejs-pdfviewer
             id="pdfViewer"
             :documentPath="documentPath"
-            :enableToolbar="false">
+            :enableToolbar="false"
+            :resourceUrl="resourceUrl">
         </ejs-pdfviewer>
     </div>
 </template>
@@ -22,7 +23,8 @@ export default {
   name: 'app',
   data () {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
     };
   },
 
