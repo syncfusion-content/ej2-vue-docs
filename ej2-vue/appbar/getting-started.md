@@ -101,7 +101,7 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitl="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
   import { AppBarComponent  } from "@syncfusion/ej2-vue-navigations";
