@@ -88,9 +88,9 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue TreeView component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Appbar component using `Composition API` or `Options API`:
 
-1\. First, import and register the TreeView component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the Appbar component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -138,7 +138,7 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue") %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs5/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
