@@ -5,7 +5,8 @@
             id="pdfViewer"
             ref="pdfviewer"
             :documentPath="documentPath"
-            :documentLoad="documentLoad">
+            :documentLoad="documentLoad"
+            :resourceUrl="resourceUrl">
         </ejs-pdfviewer>
     </div>
 </template>
@@ -21,7 +22,8 @@ export default {
   name: 'app',
   data () {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
     };
   },
 
