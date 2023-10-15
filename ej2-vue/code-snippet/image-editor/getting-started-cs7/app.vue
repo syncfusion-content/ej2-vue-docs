@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section e-img-editor-canvas">
         <div class='e-profile e-hide'>
