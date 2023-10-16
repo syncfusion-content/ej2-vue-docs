@@ -2,7 +2,7 @@
 
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar" allowUndoRedo></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="brightnessClick">Brightness</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="contrastClick">Contrast</ejs-button>
 </div>

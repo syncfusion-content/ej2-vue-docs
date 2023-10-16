@@ -2,7 +2,7 @@
 
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbarUpdating="toolbarUpdating"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarUpdating="toolbarUpdating"></ejs-imageeditor>
 </div>
 </template>
 
@@ -26,10 +26,10 @@ export default {
         }
     },
     toolbarUpdating: function(args) {
-		  if (args.toolbarType === 'text') {
-        args.toolbarItems.push({text: 'custom'})
-      }
-		 }
+		if (args.toolbarType === 'text') {
+            args.toolbarItems.push({text: 'custom'})
+        }
+    }
   }
 }
 </script>

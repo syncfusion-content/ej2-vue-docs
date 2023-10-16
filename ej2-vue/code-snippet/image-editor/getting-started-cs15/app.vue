@@ -2,8 +2,8 @@
 
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created = "created" :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Circle crop</ejs-button>
 </div>
 </template>
 
@@ -32,7 +32,7 @@ export default {
     },
     btnClick: function(event) {
       this.$refs.imageEditorObj.ej2Instances.select("Circle");
-      this.$refs.imageEditorObj.ej2Instances.crop("");
+      this.$refs.imageEditorObj.ej2Instances.crop();
     }
   }
 }

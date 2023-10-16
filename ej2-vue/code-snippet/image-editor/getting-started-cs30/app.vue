@@ -2,8 +2,8 @@
 
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar" allowUndoRedo></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Draw</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Text</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="undoClick">Undo</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="redoClick">Redo</ejs-button>
 </div>
