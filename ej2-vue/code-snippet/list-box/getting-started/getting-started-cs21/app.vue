@@ -4,7 +4,7 @@
 <template>
   <div id="app">
     <div id='container' style="margin:10px auto 0; width:250px;">
-        <ejs-listbox :dataSource='data' :cssClass='e-horizontal-listbox' ></ejs-listbox>
+        <ejs-listbox :dataSource='data' cssClass='e-horizontal-listbox' ></ejs-listbox>
     </div>
   </div>
 </template>
