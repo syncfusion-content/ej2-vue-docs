@@ -12,13 +12,12 @@ new Vue({
 	template: `
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created = "created" :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
 </div>
 `,
 
   data: function() {
       return {
-        toolbar: []
+        toolbar: ['Zoom',  'Annotate' , 'Finetune' , 'Filter' , 'Confirm' , 'Reset' , {Save:false}]
       };
   },
   methods: {
@@ -28,10 +27,6 @@ new Vue({
         } else {
             this.$refs.imageEditorObj.open('bridge.png');
         }
-    },
-    btnClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.select("Circle");
-      this.$refs.imageEditorObj.ej2Instances.crop("");
     }
   }
 

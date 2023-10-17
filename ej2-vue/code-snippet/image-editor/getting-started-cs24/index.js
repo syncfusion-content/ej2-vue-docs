@@ -11,8 +11,8 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false></ejs-imageeditor>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Delete Shape</ejs-button>
 </div>
 `,
 

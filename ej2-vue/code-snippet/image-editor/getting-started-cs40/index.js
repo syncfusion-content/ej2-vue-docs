@@ -15,14 +15,22 @@ new Vue({
 `,
 
   data: function() {
-      return {};
+      return {
+        toolbar: [{text: 'Custom'}]
+      };
   },
   methods: {
-     toolbarUpdating: function(args: ToolbarEventArgs) {
-        if (args.toolbarType === 'shapes') {
-            args.toolbarItems = ['strokeColor'];
-        }
+    created: function() {
+      if (Browser.isDevice) {
+          this.$refs.imageEditorObj.open('flower.png');
+      } else {
+          this.$refs.imageEditorObj.open('bridge.png');
+      }
+    },
+    toolbarItemClicked: function(args) {
+      if(args.item.text === 'Custom') {
+        this.$refs.imageEditorObj.rotate(90);
+      }
     }
   }
-
 });
