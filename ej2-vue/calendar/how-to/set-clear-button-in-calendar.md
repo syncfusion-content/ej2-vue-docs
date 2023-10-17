@@ -25,5 +25,5 @@ To configure `clear` button in Calendar UI, do the following:
 {% include code-snippet/calendar/min-max-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+     
 {% previewsample "page.domainurl/code-snippet/calendar/min-max-cs9" %}
