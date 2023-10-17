@@ -12,7 +12,7 @@ new Vue({
 	template: `
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Click</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Text</ejs-button>
 </div>
 `,
 
@@ -24,9 +24,9 @@ new Vue({
   methods: {
      created: function() {
         if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
+            this.$refs.imageEditorObj.open('flower.jpeg');
         } else {
-            this.$refs.imageEditorObj.open('bridge.png');
+            this.$refs.imageEditorObj.open('bridge.jpeg');
         }
     },
     btnClick: function(event) {

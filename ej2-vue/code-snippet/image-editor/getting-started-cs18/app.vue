@@ -26,10 +26,10 @@ export default {
         }
     },
     toolbarUpdating: function(args) {
-		  if (args.toolbarType === 'shapes') {
-		      args.toolbarItems = ['strokeColor'];
-		  }
-		 }
+        if (args.toolbarType === 'shapes') {
+            args.toolbarItems = ['strokeColor'];
+        }
+	}
   }
 }
 </script>
