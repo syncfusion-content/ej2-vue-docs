@@ -22,4 +22,4 @@ The following sample demonstrates how to enable or disable the floating of panel
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/floating-cs1" %}
 
-> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
+> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/dashboard-layout/default.html) to knows how to present and manipulate data.

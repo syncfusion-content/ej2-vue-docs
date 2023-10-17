@@ -130,7 +130,7 @@ You can customize the appearance of drop area by overriding the default drop are
         
 {% previewsample "page.domainurl/code-snippet/uploader/custom-drop-area-cs1" %}
 
->You can also explore [Vue File Upload](https://www.syncfusion.com/vue-ui-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
+>You can also explore [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/uploader/default.html) to understand how to browse the files which you want to upload to the server.
 
 ## See Also
 
