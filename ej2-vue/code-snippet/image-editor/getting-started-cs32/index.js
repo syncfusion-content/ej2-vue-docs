@@ -11,7 +11,7 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :quickAccessToolbarOpen="quickAccessToolbarOpen"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :quickAccessToolbarOpen="quickAccessToolbarOpen"></ejs-imageeditor>
 </div>
 `,
 

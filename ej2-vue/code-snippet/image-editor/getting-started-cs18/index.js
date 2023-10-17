@@ -18,7 +18,7 @@ new Vue({
       return {};
   },
   methods: {
-     toolbarUpdating: function(args: ToolbarEventArgs) {
+     toolbarUpdating: function(args) {
         if (args.toolbarType === 'shapes') {
             args.toolbarItems = ['strokeColor'];
         }
