@@ -84,53 +84,53 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 **Step 1:** Import the Document Editor component in the `<script>` section of the `src/App.vue` file.
 
-  ```
-  <script>
-        import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
-  </script>
-  ```
+```
+<script>
+  import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+</script>
+```
 
 **Step 2:** Register the Document Editor Container component in your application.
 
 ```js
-  import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
-    //Component registeration
-  export default {
-      name: "App",
-      components: {
-        'ejs-documenteditor' : DocumentEditorComponent
-      }
-  }
+import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
+//Component registeration
+export default {
+    name: "App",
+    components: {
+      'ejs-documenteditor' : DocumentEditorComponent
+    }
+}
 ```
 
-  In the above code snippet, you have registered DocumentEditorContainer.
+In the above code snippet, you have registered DocumentEditorContainer.
 
 **Step 3:** Add the component definition in template section.
 
 ```
 <template>
-    <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
+  <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
 </template>
 ```
 
 **Step 4:** Declare the bound properties `serviceUrl` in the `script` section.
 
 ```js
-  data () {
-    return {
-      serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-    }
-  },
-  provide: {
-      DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
+data () {
+  return {
+    serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
   }
+},
+provide: {
+  DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
+}
 ```
 
 **Step 5:** Summarizing the above steps, update the `src/App.vue` file with following code.
 
 ```
 <template>
-    <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
+  <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
 </template>
 
 <script>
@@ -188,22 +188,22 @@ You have completed all the necessary configurations needed  for rendering the Sy
 **Step 1:** Import the DocumentEditorContainer component in the `<script>` section of the `src/App.vue` file.
 
 ```
-  <script>
-        import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
-  </script>
- ```
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+</script>
+```
 
 **Step 2:** Register the DocumentEditorContainer component in your application.
 
 ```js
-  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
-    //Component registeration
-  export default {
-      name: "App",
-      components: {
-        'ejs-documenteditorcontainer' : DocumentEditorContainerComponent
-      }
-  }
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+//Component registeration
+export default {
+    name: "App",
+    components: {
+      'ejs-documenteditorcontainer' : DocumentEditorContainerComponent
+    }
+}
 ```
 
   In the above code snippet, you have registered DocumentEditorContainer.
@@ -212,28 +212,28 @@ You have completed all the necessary configurations needed  for rendering the Sy
 
 ```
 <template>
-    <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
+  <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
 </template>
 ```
 
 **Step 4:** Declare the bound properties `serviceUrl` in the `script` section.
 
 ```js
-  data () {
-    return {
-      serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-    };
-  },
-  provide: {
-    DocumentEditorContainer: [Toolbar]
-  }
+data () {
+  return {
+    serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+  };
+},
+provide: {
+  DocumentEditorContainer: [Toolbar]
+}
 ```
 
 **Step 5:** Summarizing the above steps, update the `src/App.vue` file with following code.
 
 ```
 <template>
-      <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
+  <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
 </template>
 
 <script>

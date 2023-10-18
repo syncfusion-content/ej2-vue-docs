@@ -11,7 +11,7 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar" :zoomSettings="zoomSettings"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :zoomSettings="zoomSettings"></ejs-imageeditor>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btn1Click">Zoom IN</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btn2Click">Zoom Out</ejs-button>
 </div>
