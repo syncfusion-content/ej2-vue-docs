@@ -5,7 +5,8 @@
     <ejs-pdfviewer 
       id="pdfViewer" 
       :documentPath="documentPath"
-      :resourceUrl="resourceUrl"> 
+      :resourceUrl="resourceUrl"
+      :serviceUrl="serviceUrl"> 
     </ejs-pdfviewer>
   </div>
 </template>
@@ -21,7 +22,8 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
     };
   },
 
