@@ -37,7 +37,7 @@ import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
 Vue.use(ListViewPlugin);
 
 var listVue = Vue.component("demo", {
-  template: `<img id="listImage" src="https://helpej2.syncfusion.com/documentation/code-snippet/listview/grid-layout-cs1/apple.png" alt="apple" />`,
+  template: `<img id="listImage" src="https://ej2.syncfusion.com/documentation/code-snippet/listview/grid-layout-cs1/apple.png" alt="apple" />`,
   data() {
     return {
       data: {}
