@@ -4,7 +4,7 @@
 
 <template>
     <div id="app">
-        <ejs-pivotview id="pivotview-template" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :enablePaging="enablePaging" :pageSettings="pageSettings" :pagerSettings="pagerSettings" :gridSettings="gridSettings"> </ejs-pivotview>
+        <ejs-pivotview id="pivotview-template" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :enablePaging="enablePaging" :pageSettings="pageSettings" :pagerSettings="pagerSettings" :gridSettings="gridSettings" :dataBound="onDataBound"> </ejs-pivotview>
     </div>
 </template>
 
@@ -13,6 +13,7 @@ import Vue from "vue";
 import { PivotViewPlugin, Pager } from "@syncfusion/ej2-vue-pivotview";
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { Pager as GridPager } from '@syncfusion/ej2-grids';
+import { isNullOrUndefined } from "@syncfusion/ej2-base";
 
 Vue.use(PivotViewPlugin);
 
@@ -52,6 +53,9 @@ export default {
     }
   },
   methods: {
+    onDataBound: function() {
+      this.updateTemplate()
+    },
     updateTemplate() {
         let pivotObj = document.getElementById('pivotview-template').ej2_instances[0];;
         if (!isNullOrUndefined(rowPager)) {
