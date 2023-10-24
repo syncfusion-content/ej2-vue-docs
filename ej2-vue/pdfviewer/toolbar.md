@@ -34,31 +34,31 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 
 * **Show/Hide toolbar using enableToolbar API as in the following code snippet**
 
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/pdfviewer/toolbar/toolbar-hide-cs1/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/pdfviewer/toolbar/toolbar-hide-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-    **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
-    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-hide-cs1" %}
 
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/pdfviewer/toolbar/toolbar-method-cs1/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/pdfviewer/toolbar/toolbar-method-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-    **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
-    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.    
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.    
 
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-method-cs1" %}
 
 ## Show/Hide the default toolbaritem
 
@@ -66,31 +66,31 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 
 * **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
 
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/pdfviewer/toolbar/toolbar-items-cs1/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/pdfviewer/toolbar/toolbar-items-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-    **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
-    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.
 
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
+{% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-cs1" %}
 
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
-    {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
-    {% include code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1/app.vue %}
-    {% endhighlight %}
-    {% endtabs %}
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
 
-    N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
-    **serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
-    Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.      
+N> To set up the **server-backed PDF Viewer** in the app.vue file, include the following `serviceUrl`:
+**serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"**
+Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element.      
 
-    {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
+  {% previewsample "page.domainurl/code-snippet/pdfviewer/toolbar/toolbar-items-method-cs1" %}
     
 ## See also
 
