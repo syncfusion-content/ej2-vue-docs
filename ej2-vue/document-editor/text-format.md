@@ -164,7 +164,6 @@ The highlight color of the selected text can be get or set using the following s
 let highlightColor : HighlightColor = this.$refs.documenteditor.ej2instances.selection.characterFormat.highlightColor;
 //Sets highlightColor formatting for selected text.
 this.$refs.documenteditor.ej2Instances.selection.characterFormat.highlightColor= 'Pink';
-this.$refs.documenteditor.ej2Instances.selection.characterFormat.highlightColor= '#FFC0CB';
 ```
 
 ## Toolbar with options for text formatting

@@ -28,7 +28,7 @@
 <script>
 import Vue from "vue";
 import { ChartPlugin, SplineSeries, LineSeries, DateTime, Zoom, Selection } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from 'dataSource.ts';
+import { synchronizedData } from './dataSource';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
 let zoomFactor = 0;

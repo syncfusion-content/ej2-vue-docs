@@ -6,7 +6,6 @@
       <ejs-stockchart
         id="stockchartcontainer"
         :primaryXAxis="primaryXAxis"
-        :title="title"
         :crosshair="crosshair"
         :tooltip="tooltip">
         <e-stockchart-series-collection>
