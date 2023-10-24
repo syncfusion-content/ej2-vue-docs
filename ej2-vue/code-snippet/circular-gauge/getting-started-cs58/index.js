@@ -91,37 +91,37 @@ new Vue({
             linearGradient : rangeLinearGradient
           }],
         type1: 'Marker', value1: 12, markerShape1: 'Image',
-        imageUrl1: 'templates/circular-gauge/images/football.png',
+        imageUrl1: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/foot-ball.png',
         pointerRadius1: '108%', markerWidth1: 28, markerHeight1: 28,
         animation1: { duration: 1500 },
 
         type2: 'Marker', value2: 11, markerShape2: 'Image',
-        imageUrl2: 'templates/circular-gauge/images/basketball.png',
+        imageUrl2: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/basket-ball.png',
         pointerRadius2: '78%', markerWidth2: 28, markerHeight2: 28,
         animation2: { duration: 1200 },
 
         type3: 'Marker', value3: 10, markerShape3: 'Image',
-        imageUrl3: 'templates/circular-gauge/images/golfball.png',
+        imageUrl3: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/golf-ball.png',
         pointerRadius3: '48%', markerWidth3: 28, markerHeight3: 28,
         animation3: { duration: 900 },
 
         type4: 'Marker', value4: 12, markerShape4: 'Image',
-        imageUrl4: 'templates/circular-gauge/images/athletics.png',
+        imageUrl4: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/athletics.png',
         pointerRadius4: '0%', markerWidth4: 90, markerHeight4: 90,
         animation4: { duration: 0 },
 
         type5: 'Marker', value5: 0.1, markerShape5: 'Image',
-        imageUrl5: 'templates/circular-gauge/images/girl1.png',
+        imageUrl5: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/girl.png',
         pointerRadius5: '108%', markerWidth5: 28, markerHeight5: 28,
         animation5: { duration: 1500 },
 
         type6: 'Marker', value6: 0.1, markerShape6: 'Image',
-        imageUrl6: 'templates/circular-gauge/images/man1.png',
+        imageUrl6: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/man-one.png',
         pointerRadius6: '78%', markerWidth6: 28, markerHeight6: 28,
         animation6: { duration: 1500 },
 
         type7: 'Marker', value7: 0.1, markerShape7: 'Image',
-        imageUrl7: 'templates/circular-gauge/images/man2.png',
+        imageUrl7: 'https://ej2.syncfusion.com/vue/demos/src/circular-gauge/images/man-two.png',
         pointerRadius7: '48%', markerWidth7: 28, markerHeight7: 28,
         animation7: { duration: 1500 }
       }

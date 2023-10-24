@@ -2,23 +2,21 @@
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Annotation, Navigation, LinkAnnotation, BookmarkView,
          ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
 Vue.use(PdfViewerPlugin);
-
 var viewer;
 
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-button ref="showtoolbarItemBtn" v-on:click.native="showToolbarClicked">ShowToolbarItem</ejs-button>
+      <button v-on:click="showToolbarClicked">ShowToolbar</button>
         <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad">
+          id="pdfViewer"
+          ref="pdfviewer"
+          :documentPath="documentPath"
+          :documentLoad="documentLoad"
+          :resourceUrl="resourceUrl"
+          :serviceUrl="serviceUrl">
         </ejs-pdfviewer>
     </div>
 `,
@@ -26,8 +24,9 @@ new Vue({
   name: 'app',
   data () {
     return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib",
       serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
     };
   },
   provide: {

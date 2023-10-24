@@ -1,7 +1,7 @@
 
 import Vue from "vue";
-import { ChartPlugin, AreaSeries, SplineSeries, DateTime, Tooltip } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from 'dataSource.js';
+import { ChartPlugin, AreaSeries, SplineSeries, DateTime, Crosshair } from "@syncfusion/ej2-vue-charts";
+import { synchronizedData } from './dataSource';
 import { Browser } from '@syncfusion/ej2-base';
 
 Vue.use(ChartPlugin);
@@ -76,7 +76,7 @@ new Vue({
     };
   },
   provide: {
-    chart: [AreaSeries, SplineSeries, DateTime, Tooltip]
+    chart: [AreaSeries, SplineSeries, DateTime, Crosshair]
   },
   methods: {
     chartMouseLeave1: function (args) {
