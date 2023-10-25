@@ -1,7 +1,7 @@
 
 import Vue from "vue";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { ChartPlugin, ColumnSeries, LineSeries, Category, Export } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, ColumnSeries, LineSeries, Category, DateTime, Export } from "@syncfusion/ej2-vue-charts";
 import { AccumulationChartPlugin, PieSeries, AccumulationDataLabel, AccumulationLegend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
@@ -19,7 +19,7 @@ new Vue({
           <e-series :dataSource='seriesData2' type='Line' xName='x' yName='y' width=2 name='England' :marker='marker'> </e-series>
         </e-series-collection>
       </ejs-chart>
-      <ejs-chart ref="chart" id="container1" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+      <ejs-chart ref="chart1" id="container1" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
         <e-series-collection>
           <e-series :dataSource='seriesData' type='Column' xName='x' yName='y' width=2> </e-series>
         </e-series-collection>
@@ -105,7 +105,7 @@ new Vue({
     };
   },
   provide: {
-    chart: [ColumnSeries, Category, Export, LineSeries],
+    chart: [ColumnSeries, Category, DateTime, Export, LineSeries],
     accumulationchart: [PieSeries, AccumulationDataLabel, AccumulationLegend]
   },
   methods: {

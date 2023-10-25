@@ -1,7 +1,7 @@
 
 import Vue from "vue";
 import { ChartPlugin, SplineSeries, LineSeries, DateTime, Zoom, Selection } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from 'dataSource.js';
+import { synchronizedData } from './dataSource';
 import { Browser } from '@syncfusion/ej2-base';
 
 Vue.use(ChartPlugin);
