@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started vue3 with Vue Datetimepicker component | Syncfusion
-description:  Checkout and learn about Getting started vue3 with Vue Datetimepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting started vue3 with Vue Datetimepicker Component | Syncfusion
+description:  Checkout and learn about getting started vue3 with Syncfusion Essential Vue Datetimepicker component of JS 2 and more details.
 control: Getting started vue3 
 platform: ej2-vue
 documentation: ug
@@ -239,7 +239,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![DateTimePicker initial rendering](./images/datetime.png)
+![DateTimePicker initial rendering](./images/vue-datetimepicker-datetime.png)
 
 ## Setting the value,min and max
 
@@ -321,7 +321,7 @@ export default {
 
 The output will appear as follows:
 
-![DateTimePicker with min and max dates](./images/range.png)
+![DateTimePicker with min and max dates](./images/vue-datetimepicker-range.png)
 
 > If the value of `min` or `max` properties changed through code behind, then you have to update the `value` property to set within the range.
 
