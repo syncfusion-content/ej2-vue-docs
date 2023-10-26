@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Drop down list component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Drop down list component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Dropdown List Component | Syncfusion
+description: Checkout and learn here all about Getting Started with Syncfusion Essential Vue Dropdown List component, it's element and more.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Drop down list Component in Vue 2
+# Getting Started with Vue Dropdown List Component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Drop down list component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -18,7 +18,7 @@ To get start quickly with DropDownList Component using Vue CLI, you can check on
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setting up the Vue 2 project
 
@@ -52,7 +52,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Drop down list component](https://www.syncfusion.com/vue-components/vue-dropdown-list) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
+This article uses the [Vue Dropdown List component](https://www.syncfusion.com/vue-components/vue-dropdown-list) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-dropdowns --save
@@ -65,7 +65,7 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Drop down list component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -201,7 +201,7 @@ or
 ```bash
 yarn run serve
 ```
-        
+
 {% previewsample "page.domainurl/code-snippet/drop-down-list/getting-started/getting-started-cs1" %}
 
 ## Configure the Popup List
@@ -218,11 +218,11 @@ The height and width of the popup list can also be customized using the [popupHe
 {% include code-snippet/drop-down-list/getting-started/popup-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/drop-down-list/getting-started/popup-cs1" %}
 
-> You can refer to our [Vue Dropdown List](https://www.syncfusion.com/vue-ui-components/vue-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown list example]( https://ej2.syncfusion.com/vue/demos/#/material/drop-down-list/default.html) that shows how to render the Dropdown List in Vue.
+> You can refer to our [Vue Dropdown List](https://www.syncfusion.com/vue-components/vue-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown list example](https://ej2.syncfusion.com/vue/demos/#/material/drop-down-list/default.html) that shows how to render the Dropdown List in Vue.
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)
