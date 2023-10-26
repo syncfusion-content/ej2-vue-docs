@@ -10,10 +10,11 @@ new Vue({
 	template: `
     <div id="app">
         <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :enableToolbar="false">
+          id="pdfViewer"
+          :documentPath="documentPath"
+          :enableToolbar="false"
+          :resourceUrl="resourceUrl"
+          :serviceUrl="serviceUrl"> 
         </ejs-pdfviewer>
     </div>
 `,
@@ -21,8 +22,9 @@ new Vue({
   name: 'app',
   data () {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
     };
   },
   provide: {
