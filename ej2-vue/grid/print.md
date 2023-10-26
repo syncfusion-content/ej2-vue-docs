@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in Vue Grid component | Syncfusion
-description: Learn here all about Print in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Print in Vue Grid Component | Syncfusion
+description: Learn here all about print in Syncfusion Essential Vue Grid component, it's elements and more details.
 control: Print 
 platform: ej2-vue
 documentation: ug
@@ -26,8 +26,8 @@ Some of the print options cannot be configured through JavaScript code. So, you 
 
 * [`Chrome`](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [`Firefox`](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
-* [`Safari`](http://www.mintprintables.com/print-tips/adjust-margins-osx/)
-* [`IE`](http://www.helpteaching.com/help/print/index.htm)
+* [`Safari`](https://www.mintprintables.com/print-tips/adjust-margins-osx/)
+* [`IE`](https://www.helpteaching.com/help/print/index.htm)
 
 ## Print by external button
 
@@ -91,11 +91,11 @@ By default, the browser uses A4 as page size option to print pages and to adapt 
 
 To show large number of columns when printing, adjust the scale option from print option panel based on your content size.
 
-![Scale Option Setting](./images/print-preview.png)
+![Scale Option Setting in Vue Grid Print](./images/vue-grid-print-preview.png)
 
 ## Show or Hide columns while Printing
 
-You can show a hidden column or hide a visible column while printing the grid using [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/grid#toolbarclick) and [`printComplete`](https://ej2.syncfusion.com/vue/documentation/api/grid#printcomplete) events.
+You can show a hidden column or hide a visible column while printing the grid using [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) and [`printComplete`](https://ej2.syncfusion.com/vue/documentation/api/grid/#printcomplete) events.
 
 In the `toolbarClick` event, based on `args.item.id` as `grid_print`. We can show or hide columns by setting `column.visible` property to `true` or `false` respectively.
 
