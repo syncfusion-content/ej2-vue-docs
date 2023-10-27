@@ -15,7 +15,7 @@
 
 <script>
 import Vue from 'vue';
-import { MapsPlugin, MapsComponent } from '@syncfusion/ej2-vue-maps';
+import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
 import { africa } from './africa.js';
 Vue.use(MapsPlugin);
 export default {
@@ -28,9 +28,6 @@ data () {
            fill: 'blue'
        }
     }
-},
-provide: {
-    maps: [ NavigationLine, Marker, Zoom ]
 }
 }
 </script>
