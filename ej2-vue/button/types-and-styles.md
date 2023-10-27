@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Types and styles in Vue Button component | Syncfusion
-description: Learn here all about Types and styles in Syncfusion Vue Button component of Syncfusion Essential JS 2 and more.
+title: Types and styles in Vue Button Component | Syncfusion
+description: Learn here all about types and styles in Syncfusion Essential Vue Button component, its elements and more.
 control: Types and styles 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Types and styles in Vue Button component
+# Types and styles in Vue Button Component
 
 This section explains the different styles and types of Buttons.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Auto complete component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Auto complete component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue AutoComplete Component | Syncfusion
+description: Learn here all about filtering in Syncfusion Essential Vue Auto complete component, its elements and more.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Auto complete component
+# Filtering in Vue AutoComplete Component
 
 The AutoComplete has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the component.
 
@@ -94,6 +94,6 @@ In the following sample,data with diacritics are bound as dataSource for AutoCom
 
 ## See Also
 
-* [How to achieve autofill while filtering](./how-to/autofill/)
-* [How to group the data using header](./grouping/)
-* [How to highlight the search data](./how-to/custom-search/)
+* [How to achieve autofill while filtering](./how-to/autofill)
+* [How to group the data using header](./grouping)
+* [How to highlight the search data](./how-to/custom-search)

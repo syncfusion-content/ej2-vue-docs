@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting started with Vue Dialog component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Dialog component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Dialog Component | Syncfusion
+description:  Checkout and learn about getting started with Vue Dialog component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started
+# Getting Started with Vue Dialog Component
 
 This section explains how to create a simple Dialog and how to configure the Dialog component.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -239,4 +239,4 @@ The below example demonstrates the different Dialog positions.
 * [How to position the dialog on center of the page on scrolling](./how-to/position-the-dialog-on-center-of-the-page-on-scrolling)
 * [Prevent closing of modal dialog](./how-to/prevent-closing-of-modal-dialog)
 * [Close dialog while click on outside of dialog](./how-to/close-dialog-while-click-on-outside-of-dialog)
-* [How to make a reusable alert and confirm dialog](./dialog-utlility/)
+* [How to make a reusable alert and confirm dialog](./dialog-utlility)
