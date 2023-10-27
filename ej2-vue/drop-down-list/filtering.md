@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Drop down list component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue DropDown List Component | Syncfusion
+description: Learn here all about filtering support in Syncfusion Essential Vue DropDown List component, it's elements and more.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Drop down list component
+# Filtering in Vue DropDown List Component
 
 The DropDownList has built-in support to filter data items when `allowFiltering` is enabled. The filter operation starts as soon as you start typing characters in the search box.
 
@@ -86,6 +86,6 @@ In the following sample,data with diacritics are bound as dataSource for DropDow
 
 ## See Also
 
-* [How to limit the search result while filtering](./how-to/search-on-filtering/)
-* [How to highlight the matched characters in filtering](./how-to/highlight-filtering/)
-* [How to modify the result data using remote data source](./how-to/modify-data/)
+* [How to limit the search result while filtering](./how-to/search-on-filtering)
+* [How to highlight the matched characters in filtering](./how-to/highlight-filtering)
+* [How to modify the result data using remote data source](./how-to/modify-data)
