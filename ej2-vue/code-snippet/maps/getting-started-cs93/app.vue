@@ -33,7 +33,8 @@ data () {
             selectionSettings: {
                 enable: true,
                 fill: 'blue',
-                border: { color: 'white', width: 2}
+                opacity: 1,
+                border: { color: 'white', width: 2, opacity: 1}
             },
             dataSource: [
                 { latitude: 49.95121990866204, longitude: 18.468749999999998, name:'Europe' },

@@ -39,7 +39,7 @@ new Vue({
         </div>
     </div>
         <div id="compass-maps" style="display: none;">
-          <img src="templates/maps/getting-started/compass.png" height="75px" width="75px">
+          <img src="https://ej2.syncfusion.com/vue/demos/src/maps/images/compass.svg" height="75px" width="75px">
         </div>
     </div>
     </div>
