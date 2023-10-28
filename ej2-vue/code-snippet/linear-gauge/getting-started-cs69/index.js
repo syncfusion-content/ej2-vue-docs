@@ -1,6 +1,6 @@
 
 import Vue from 'vue';
-import { LinearGaugePlugin } from "@syncfusion/ej2-vue-lineargauge";
+import { LinearGaugePlugin, Gradient } from "@syncfusion/ej2-vue-lineargauge";
 Vue.use(LinearGaugePlugin);
 ;
 new Vue({
