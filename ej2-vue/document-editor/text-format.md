@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Text format in Vue Document editor component | Syncfusion
-description: Learn here all about Text format in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Text format in Vue Document Editor Component | Syncfusion
+description: Learn here all about text format support in Syncfusion Essential Vue Document Editor component, it's elements and more.
 control: Text format 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Text format in Vue Document editor component
+# Text format in Vue Document Editor Component
 
 Document Editor supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 
@@ -283,6 +283,6 @@ Refer to the following example.
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [Font dialog](../document-editor/dialog#font-dialog)
-* [Keyboard shortcuts](../document-editor/keyboard-shortcut#text-formatting/)
+* [Keyboard shortcuts](../document-editor/keyboard-shortcut#text-formatting)

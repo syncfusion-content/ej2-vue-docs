@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Checkbox in Vue Multi select component | Syncfusion
-description: Learn here all about Checkbox in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Checkbox in Vue MultiSelect component | Syncfusion
+description: Learn here all about checkbox support in Syncfusion Essential Vue Multiselect component, it's elements and more.
 control: Checkbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Checkbox in Vue Multi select component
+# Checkbox in Vue MultiSelect Component
 
 The MultiSelect has built-in support to select multiple values through checkbox, when [`mode`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#mode) property set as `CheckBox`.
 
@@ -65,7 +65,7 @@ Using [`enableSelectionOrder`](https://ej2.syncfusion.com/vue/documentation/api/
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
-* [How to filter the bound data](./filtering/)
-* [How to add custom value to the MultiSelect](./custom-value/)
-* [How to render grouping with checkbox](./grouping/#grouping-with-checkbox).
+* [How to bind the data](./data-binding)
+* [How to filter the bound data](./filtering)
+* [How to add custom value to the MultiSelect](./custom-value)
+* [How to render grouping with checkbox](./grouping#grouping-with-checkbox).
