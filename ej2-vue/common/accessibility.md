@@ -28,7 +28,7 @@ The accessibility of the components consists of the following standards and aspe
 
 * [WAI-ARIA](https://www.w3.org/WAI/ARIA/) - WAI-ARIA stands for "Web Accessibility Initiative - Accessible Rich Internet Applications." It is a set of technical specifications and guidelines developed by the World Wide Web Consortium (W3C) as part of the Web Accessibility Initiative (WAI). WAI-ARIA is designed to enhance the accessibility of dynamic web content, particularly web applications and rich internet applications (RIAs), for people with disabilities. WAI-ARIA provides a set of roles, states, and properties that can be added to HTML elements to provide additional context and information about the purpose and behavior of those elements. This can help assistive technologies better understand and interpret web content and interact with web applications.
 
-* [Keyboard navigation](https://www.w3.org/TR/WCAG21/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
+* [Keyboard navigation](https://www.w3.org/TR/WCAG22/#keyboard-accessible) - It refers to the ability to use a keyboard to interact with and navigate through a user interface. It is an important aspect of web accessibility, as it allows people who cannot use a mouse or other pointing device to access and use web content and applications.
 
 Syncfusion Vue components adhere to these established standards.
 
@@ -42,7 +42,7 @@ There are several methodologies of accessibility validation that can be performe
 
 * Each Vue component is subjected to manual testing with a screen reader and also automated test cases to ensure the component's required attributes.
 
-* Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WAI-ARIA 2.1](https://www.w3.org/TR/WCAG21/) specification.
+* Attributes are allocated and updated correctly during interaction as well. Each component has been assigned a distinct `Role` attribute and its own set of ARIA attributes defined by the [WAI-ARIA 2.2](https://www.w3.org/TR/WCAG22/) specification.
 
 In addition to the methodologies mentioned above, Syncfusion Vue components are constructed to support the following accessibility aspects.
 
