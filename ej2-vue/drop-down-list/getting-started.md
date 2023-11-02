@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Vue Dropdown List Component | Syncfusion
-description: Checkout and learn here all about Getting Started with Syncfusion Essential Vue Dropdown List component, it's element and more.
+description: Checkout and learn here all about Getting Started with Syncfusion Essential Vue Dropdown List component, it's elements and more.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
