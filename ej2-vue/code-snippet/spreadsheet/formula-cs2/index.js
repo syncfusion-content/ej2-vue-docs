@@ -1,6 +1,12 @@
 
+import Vue from "vue";
+import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { data } from './data.js';
+Vue.use(SpreadsheetPlugin);
 
-<template>
+new Vue({
+	el: '#app',
+	template: `
   <ejs-spreadsheet
     ref="spreadsheet"
     :created="created"
@@ -14,7 +20,6 @@
         </e-ranges>
         <e-columns>
           <e-column :width="150"></e-column>
-          <e-column :width="120"></e-column>
           <e-column :width="120"></e-column>
           <e-column :width="120"></e-column>
           <e-column :width="120"></e-column>
@@ -72,28 +77,17 @@
       </e-sheet>
     </e-sheets>
   </ejs-spreadsheet>
-</template>
+`,
 
-<script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
-import { data } from './data.js';
-Vue.use(SpreadsheetPlugin);
-export default {
-  data: () => {
+   data: () => {
     return {
       dataSource: data,
-    };
+    }
   },
   methods: {
     // Custom function to calculate percentage between two cell values.
     calculatePercentage(firstCell, secondCell) {
       return Number(firstCell) / Number(secondCell);
-    },
-    // Custom function to calculate round down for values.
-    roundDownHandler(value, digit) {
-      let multiplier = Math.pow(10, digit);
-      return Math.floor(value * multiplier) / multiplier;
     },
 
     created: function () {
@@ -106,27 +100,29 @@ export default {
       spreadsheet.numberFormat("0%", "E3:E12");
       // Adding custom function for calculating the percentage between two cells.
       spreadsheet.addCustomFunction(this.calculatePercentage, "PERCENTAGE");
-      // Adding custom function for calculating round down for the value.
-      spreadsheet.addCustomFunction(this.roundDownHandler, "ROUNDDOWN");
-      // Calculate percentage using custom added formula in E12 cell.
-      spreadsheet.updateCell({ formula: "=PERCENTAGE(C12,D12)" }, "E12");
-      // Calculate round down for average values using custom added formula in F12 cell.
-      spreadsheet.updateCell({ formula: "=ROUNDDOWN(F11,1)" }, "F12");
+
+      // Calculate percentage using custom added formula in E11 cell.
+      spreadsheet.updateCell({ formula: "=PERCENTAGE(C11,D11)" }, "E11");
+      // Calculate expressions using computeExpression in E10 cell.
+      spreadsheet.updateCell(
+        { value: spreadsheet.computeExpression("C10/D10") },
+        "E10"
+      );
+      // Calculate custom formula values using computeExpression in E12 cell.
+      spreadsheet.updateCell(
+        {
+          value: spreadsheet.computeExpression("=PERCENTAGE(C12,D12)"),
+        },
+        "E12"
+      );
+      // Calculate SUM (built-in) formula values using computeExpression in D12 cell.
+      spreadsheet.updateCell(
+        {
+          value: spreadsheet.computeExpression("=SUM(D3:D11)"),
+        },
+        "D12"
+      );
     },
   },
-};
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
-</style>
 
-
+});

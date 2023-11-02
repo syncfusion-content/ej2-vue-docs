@@ -220,7 +220,7 @@ Import and export are processed in `server-side` using Spreadsheet server librar
         [HttpPost]
         [EnableCors("AllowAllOrigins")]
         [Route("Save")]
-        public IActionResult Save(SaveSettings saveSettings)
+        public IActionResult Save([FromForm]SaveSettings saveSettings)
         {
             return Workbook.Save(saveSettings);
         }
