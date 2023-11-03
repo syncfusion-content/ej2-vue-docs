@@ -7,68 +7,66 @@
 </template>
 <script>
     import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
-    let nodes = [
+    let nodes = [{
+    id: "node1",
+    offsetY: 50,
+    shape: { type: "Flow", shape: "Terminator" },
+    annotations: [
         {
-            id: "node1",
-            offsetY: 50,
-            shape: { type: "Flow", shape: "Terminator" },
-            annotations: [
-            {
-                content: "Start"
-            }
-            ]
-        },
-        {
-            id: "node2",
-            offsetY: 140,
-            shape: { type: "Flow", shape: "Process" },
-            annotations: [
-            {
-                content: "var i = 0;"
-            }
-            ]
-        },
-        {
-            id: "node3",
-            offsetY: 230,
-            shape: { type: "Flow", shape: "Decision" },
-            annotations: [
-            {
-                content: "i < 10?"
-            }
-            ]
-        },
-        {
-            id: "node4",
-            offsetY: 320,
-            shape: { type: "Flow", shape: "PreDefinedProcess" },
-            annotations: [
-            {
-                content: 'print("Hello!!");',
-                style: { fill: "white" }
-            }
-            ]
-        },
-        {
-            id: "node5",
-            offsetY: 410,
-            shape: { type: "Flow", shape: "Process" },
-            annotations: [
-            {
-                content: "i++;"
-            }
-            ]
-        },
-        {
-            id: "node6",
-            offsetY: 500,
-            shape: { type: "Flow", shape: "Terminator" },
-            annotations: [
-            {
-                content: "End"
-            }
-            ]
+            content: "Start"
         }
+    ]
+    },
+    {
+    id: "node2",
+    offsetY: 140,
+    shape: { type: "Flow", shape: "Process" },
+    annotations: [
+        {
+            content: "var i = 0;"
+        }
+    ]
+    },
+    {
+    id: "node3",
+    offsetY: 230,
+    shape: { type: "Flow", shape: "Decision" },
+    annotations: [
+        {
+            content: "i < 10?"
+        }
+    ]
+    },
+    {
+    id: "node4",
+    offsetY: 320,
+    shape: { type: "Flow", shape: "PreDefinedProcess" },
+    annotations: [
+        {
+            content: 'print("Hello!!");'
+        }
+    ]
+    },
+    {
+    id: "node5",
+    offsetY: 410,
+    shape: { type: "Flow", shape: "Process" },
+    annotations: [
+        {
+            content: "i++;"
+        }
+    ]
+    },
+    {
+    id: "node6",
+    offsetY: 500,
+    shape: { type: "Flow", shape: "Terminator" },
+    annotations: [
+        {
+            content: "End"
+        }
+    ]
+    }
     ];
     let connectors = [
         {
@@ -85,16 +83,17 @@
             id: "connector3",
             sourceID: "node3",
             targetID: "node4",
-            annotations: [{ text: "Yes" }]
+            annotations: [{ content: "Yes" }]
         },
         {
             id: "connector4",
             sourceID: "node3",
             targetID: "node6",
-            labels: [{ text: "No" }],
+            annotations: [{ content: "No" }],
+            type: 'Orthogonal',
             segments: [
-            { length: 30, direction: "Right" },
-            { length: 300, direction: "Bottom" }
+                { type: 'Orthogonal', length: 50, direction: "Right" },
+                { type: 'Orthogonal', length: 300, direction: "Bottom" }
             ]
         },
         {
@@ -106,9 +105,10 @@
             id: "connector6",
             sourceID: "node5",
             targetID: "node3",
+            type: 'Orthogonal',
             segments: [
-            { length: 30, direction: "Left" },
-            { length: 200, direction: "Top" }
+                { length: 50, type: 'Orthogonal', direction: "Left" },
+                { length: 200, type: 'Orthogonal', direction: "Top" }
             ]
         }
     ];
@@ -131,6 +131,7 @@
                 },
                 getConnectorDefaults: (obj) => {
                     obj.type = 'Orthogonal';
+                    obj.targetDecorator = { shape: 'Arrow', width: 10, height: 10 };
                     return obj;
                 },
             }
