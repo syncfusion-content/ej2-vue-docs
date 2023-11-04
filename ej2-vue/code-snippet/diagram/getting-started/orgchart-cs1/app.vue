@@ -55,12 +55,22 @@
                 width: "100%",
                 height: "350px",
                 getNodeDefaults: (node) => {
-                    node.height = 60;
-                    node.width = 100;
-                    return node;
+                let codes = {
+                    Director: "rgb(0, 139,139)",
+                    Manager: "rgb(30, 30,113)",
+                    Lead: "rgb(0, 100,0)"
+                };
+                node.width = 70;
+                node.height = 30;
+                node.annotations = [
+                    { content: node.data.Name, style: { color: "white" } }
+                ];
+                node.style.fill = codes[node.data.Role];
+                return node;
                 },
                 getConnectorDefaults: (obj) => {
                     obj.type = 'Orthogonal';
+                    obj.cornerRadius = 7;
                     return obj;
                 },
                 layout: {
