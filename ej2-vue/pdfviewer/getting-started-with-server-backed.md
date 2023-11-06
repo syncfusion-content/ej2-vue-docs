@@ -24,7 +24,6 @@ To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuej
 npm install -g @vue/cli
 vue create quickstart
 cd quickstart
-npm run serve
 ```
 
 or
@@ -33,7 +32,6 @@ or
 yarn global add @vue/cli
 vue create quickstart
 cd quickstart
-yarn run serve
 ```
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
@@ -197,6 +195,6 @@ yarn run serve
 
 N> When configuring the server-backed PDF viewer, it's essential to understand that there is no need to include the pdfium.js and pdfium.wasm files. Unlike the standalone PDF viewer, which relies on these files for local rendering, the server-backed PDF viewer fetches and renders PDFs directly from the server. Consequently, you can exclude the copy command for deployment process, as they are not required to load and display PDFs in this context.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started).
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20server-back).
 
 > You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
