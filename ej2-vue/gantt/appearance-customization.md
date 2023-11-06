@@ -41,7 +41,7 @@ You can design your own taskbars to view the tasks in Gantt using the [`taskbarT
 
 ### Conditional formatting
 
-The default taskbar UI can be replaced with custom templates by using the [`queryTaskbarInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/iQueryTaskbarInfoEventArgs) event. The following code example shows customizing the taskbar UI based on task progress values in Gantt component.
+The default taskbar UI can be replaced with custom templates by using the [`queryTaskbarInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/iQueryTaskbarInfoEventArgs/) event. The following code example shows customizing the taskbar UI based on task progress values in Gantt component.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
