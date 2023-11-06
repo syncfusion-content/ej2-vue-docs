@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation rules in Vue Form validator component | Syncfusion
-description: Learn here all about Validation rules in Syncfusion Vue Form validator component of Syncfusion Essential JS 2 and more.
+title: Validation rules in Vue Form Validator Component | Syncfusion
+description: Learn here all about validation rules support in Syncfusion Essential Vue Form Validator component, it's elements and more.
 control: Validation rules 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation rules in Vue Form validator component
+# Validation rules in Vue Form Validator Component
 
 ## Default Rules
 
