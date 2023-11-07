@@ -61,11 +61,13 @@ This article uses the [Vue Appbar component](https://www.syncfusion.com/vue-comp
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
+npm install @syncfusion/ej2-vue-buttons --save
 ```
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-navigations
+yarn add @syncfusion/ej2-vue-buttons
 ```
 
 ## Import Syncfusion CSS styles
