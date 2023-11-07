@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Resize images before uploading it to the server in Vue Uploader component | Syncfusion
-description: Learn here all about Resize images before uploading it to the server in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Resize images before uploading to server in Vue Uploader | Syncfusion
+description: Learn here all about resize images before uploading to server in Syncfusion Essential Vue Uploader component, it's elements and more.
 control: Resize images before uploading it to the server 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize images before uploading it to the server in Vue Uploader component
+# Resize images before uploading to server in Vue Uploader Component
 
 You can customize the dimension of the images before uploading it to the server. By using selected event, you can get the selected file information as type of an object. From the obtained image file information, create a new canvas and render an image with the custom dimensions. Refer the corresponding code snippet as follows.
 
@@ -385,4 +385,4 @@ export default Vue.extend({
 
 ```
 
->You can also explore [Vue File Upload](https://www.syncfusion.com/vue-ui-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
+>You can also explore [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/uploader/default.html) to understand how to browse the files which you want to upload to the server.
