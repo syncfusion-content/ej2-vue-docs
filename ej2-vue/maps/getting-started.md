@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Vue Maps component | Syncfusion
+title: Getting Started with Vue Maps Component | Syncfusion
 description:  Checkout and learn about Getting started with Vue Maps component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Maps Component in Vue 2
+# Getting Started with Vue Maps Component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Maps component
 
@@ -18,7 +18,7 @@ You can explore some useful features in the Maps component using the following v
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
