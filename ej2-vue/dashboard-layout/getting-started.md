@@ -10,7 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Dashboard layout Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Dashboard layout component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Dashboard layout component.
+
+To get start quickly with Vue Dashboard layout, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=2vjc_E8f9nI" %}
 
 ## Prerequisites
 
