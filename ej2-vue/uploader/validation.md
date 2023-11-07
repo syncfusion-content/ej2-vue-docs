@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validation in Vue Uploader component | Syncfusion
-description: Learn here all about Validation in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Validation in Vue Uploader Component | Syncfusion
+description: Learn here all about validation in Syncfusion Essential Vue Uploader component, it's elements and more.
 control: Validation 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validation in Vue Uploader component
+# Validation in Vue Uploader Component
 
 The uploader component validate the selected files extension and size using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/#allowedextensions),
 [minFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#minfilesize) and [maxFileSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#maxfilesize) properties. The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes to the original input element. The validation process occurs on drag-and-drop the files also.
@@ -61,7 +61,7 @@ You can validate the duplicate files before uploading to server using the select
         
 {% previewsample "page.domainurl/code-snippet/uploader/validation-cs1" %}
 
->You can also explore [Vue File Upload](https://www.syncfusion.com/vue-ui-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
+>You can also explore [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
 
 ## See Also
 
