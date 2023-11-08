@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize images before uploading to server in Vue Uploader | Syncfusion
-description: Learn here all about resize images before uploading to server in Syncfusion Essential Vue Uploader component, it's elements and more.
+description: Learn here all about resize images before uploading to server support in Syncfusion Essential Vue Uploader component, it's elements and more.
 control: Resize images before uploading it to the server 
 platform: ej2-vue
 documentation: ug
