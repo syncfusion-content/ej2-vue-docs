@@ -105,7 +105,7 @@ The Editing functionalities can be performed based upon the primary key value of
 
 Make the Grid column always editable using the column template feature of the Grid.
 
-In the following example, the textbox is rendered in the Freight column using a column template. The keyup event for the Grid is bound using the [created](https://ej2.syncfusion.com/vue/documentation/api/grid#created) event of the Grid, and the edited changes are saved in the data source using the [updateRow](https://ej2.syncfusion.com/vue/documentation/api/grid#updaterow) method of the Grid.
+In the following example, the textbox is rendered in the Freight column using a column template. The keyup event for the Grid is bound using the [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event of the Grid, and the edited changes are saved in the data source using the [updateRow](https://ej2.syncfusion.com/vue/documentation/api/grid/#updaterow) method of the Grid.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
