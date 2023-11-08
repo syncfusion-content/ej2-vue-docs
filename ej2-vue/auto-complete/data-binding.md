@@ -77,5 +77,5 @@ The AutoComplete supports retrieval of data from remote data services with the h
 ## See Also
 
 * [How to load data using template](./templates#item-template)
-* [How to group the data using header](./grouping/)
-* [How to filter the bound data](./filtering/)
+* [How to group the data using header](./grouping)
+* [How to filter the bound data](./filtering)
