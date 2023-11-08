@@ -29,7 +29,7 @@ To bind local JSON data to the Scheduler, you can simply assign a JavaScript obj
 
 > By default, `DataManager` uses `JsonAdaptor` for binding local data.
 
-You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments/#event-fields).
+You can also bind different field names to the default event fields as well as include additional custom fields to the event object collection which can be referred [here](./appointments#event-fields).
 
 ## Binding remote data
 
@@ -79,7 +79,7 @@ It is possible to create your own custom adaptor by extending the built-in avail
 
 ## Loading data via AJAX post
 
-You can bind the event data through external ajax request and assign it to the [`dataSource`](../api/schedule/eventSettings#datasource)property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
+You can bind the event data through external ajax request and assign it to the [`dataSource`](../api/schedule/eventSettings/#datasource)property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
 
 `[src/app/App.vue]`
 
@@ -309,4 +309,4 @@ We have assigned our custom created Google Calendar url to the DataManager and a
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs6" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
+> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/schedule/default.html) to knows how to present and manipulate data.

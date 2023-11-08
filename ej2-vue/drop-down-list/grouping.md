@@ -33,4 +33,4 @@ The grouping header is also provided with customization option. This allows cust
 ## See Also
 
 * [Group Template support to DropDownList](./templates#group-template).
-* [How to disable the fixed group header](./how-to/group-header/)
+* [How to disable the fixed group header](./how-to/group-header)
