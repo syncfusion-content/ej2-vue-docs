@@ -36,7 +36,8 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-charts": "syncfusion:ej2-charts/dist/ej2-charts.umd.min.js",
         "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
-        "@syncfusion/ej2-vue-spreadsheet": "syncfusion:ej2-vue-spreadsheet/dist/ej2-vue-spreadsheet.umd.min.js"
+        "@syncfusion/ej2-vue-spreadsheet": "syncfusion:ej2-vue-spreadsheet/dist/ej2-vue-spreadsheet.umd.min.js",
+        "@syncfusion/ej2-vue-inputs": "syncfusion:ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js"
     }
 });
 
