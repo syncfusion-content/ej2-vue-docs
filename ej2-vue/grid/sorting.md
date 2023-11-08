@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue Grid component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Sorting in Vue Grid Component | Syncfusion
+description: Learn here all about sorting in Syncfusion Essential Vue Grid component, it's elements and more details.
 control: Sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue Grid component
+# Sorting in Vue Grid Component
 
 The Grid component has support to sort data bound columns in **ascending** or **descending** order. This can be achieved by setting [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property as true.
 
