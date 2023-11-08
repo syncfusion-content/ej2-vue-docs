@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Grid component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue Grid Component | Syncfusion
+description: Learn here all about filtering support in Syncfusion Essential Vue Grid component, it's elements and more.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Grid component
+# Filtering in Vue Grid Component
 
 Filtering allows you to view particular records based on filter criteria. To enable filtering in the Grid, set the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowfiltering) to true. Filtering options can be configured through [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/). To use filter, inject `Filter` module in the `provide` section.
 
@@ -90,7 +90,7 @@ a* |Everything that starts with "a".
 *a* |Everything that has an "a" in it.
 *a*b* |Everything that has an "a" in it, followed by anything, followed by a "b", followed by anything.
 
-![WildcardFilter](../images/wildcard_search.gif)
+![Wildcard filter in Vue Grid](../images/vue-grid-wildcard-search.gif)
 
 ### LIKE filtering
 
@@ -108,7 +108,7 @@ Operator |Description
 ab% |Returns all the value that are ends with "ab" character.
 %ab |Returns all the value that are starts with "ab" character.
 
-![LIKEFilter](../images/like_filter.gif)
+![LIKE filter in Vue Grid](../images/vue-grid-like-filter.gif)
 
 > By default, the [`filterSettings.columns.operator`](https://ej2.syncfusion.com/vue/documentation/api/grid/predicateModel/#operator) value is **equal**.
 

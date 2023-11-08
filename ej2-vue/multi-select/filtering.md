@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filtering in Vue Multi select component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Vue Multi select component of Syncfusion Essential JS 2 and more.
+title: Filtering in Vue MultiSelect Component | Syncfusion
+description: Learn here all about filtering support in Syncfusion Essential Vue MultiSelect component, it's elements and more.
 control: Filtering 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filtering in Vue Multi select component
+# Filtering in Vue MultiSelect Component
 
 The MultiSelect has built-in support to filter data items when [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#allowfiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
 
@@ -86,6 +86,6 @@ In the following sample,data with diacritics are bound as dataSource for MultiSe
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
-* [How to group the data using header](./grouping/)
-* [How to add custom value to the MultiSelect](./custom-value/)
+* [How to bind the data](./data-binding)
+* [How to group the data using header](./grouping)
+* [How to add custom value to the MultiSelect](./custom-value)
