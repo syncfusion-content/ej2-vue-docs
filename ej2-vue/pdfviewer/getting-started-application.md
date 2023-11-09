@@ -160,7 +160,8 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
     <ejs-pdfviewer 
       id="pdfViewer" 
       :serviceUrl="serviceUrl" 
-      :documentPath="documentPath"> 
+      :documentPath="documentPath"
+          :style="{ height: '800px', width: '1200px' }"> 
     </ejs-pdfviewer>
   </div>
 </template>
@@ -180,7 +181,7 @@ import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
          ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
 const serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
-const documentPath = 'PDF_Succinctly.pdf';
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 const pdfViewer = null;
 
 provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
@@ -207,7 +208,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
     data () {
       return {
         serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath:"PDF_Succinctly.pdf"
+        documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
 
@@ -230,7 +231,8 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   <ejs-pdfviewer
     ref="pdfViewer"
     :serviceUrl="serviceUrl"
-    :documentPath="documentPath">
+    :documentPath="documentPath"
+    :style="{ height: '800px', width: '1200px' }">
   </ejs-pdfviewer>
 </template>
 
@@ -241,7 +243,7 @@ import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
   ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
 
 const serviceUrl = 'https://services.syncfusion.com/vue/production/api/pdfviewer';
-const documentPath = 'PDF_Succinctly.pdf';
+const documentPath = 'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf';
 const pdfViewer = null;
 
 provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
@@ -259,9 +261,6 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
-  #pdfViewer {
-    height: 640px;
-  } 
 
 </style>
 
@@ -272,7 +271,8 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
   <ejs-pdfviewer 
     id="pdfViewer" 
     :serviceUrl="serviceUrl" 
-    :documentPath="documentPath"> 
+    :documentPath="documentPath"
+    :style="{ height: '800px', width: '1200px' }">
   </ejs-pdfviewer>
 </template>
 
@@ -290,7 +290,7 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
     data() {
       return {
         serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath: "PDF_Succinctly.pdf"
+        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
     provide: {
@@ -310,9 +310,6 @@ provide('PdfViewer', [ Toolbar, Magnification, Navigation, LinkAnnotation, Bookm
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
-  #pdfViewer {
-    height: 640px;
-  }
 </style>
 
 {% endhighlight %}
