@@ -74,7 +74,7 @@ export default Vue.extend({
   data() {
     return {
       data: new DataManager({
-        url: 'api/Orders',
+        url: 'https://services.syncfusion.com/vue/production/api/Orders',
         adaptor: new WebApiAdaptor(),
         crossDomain: true
       })
