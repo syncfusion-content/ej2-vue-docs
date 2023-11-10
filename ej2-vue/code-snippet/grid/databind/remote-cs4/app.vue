@@ -22,7 +22,7 @@ Vue.use(GridPlugin);
 export default {
   data() {
     let SERVICE_URI =
-      "https://services.odata.org/V4/Northwind/Northwind.svc/Orders/?$top=7";
+      "https://services.odata.org/V4/Northwind/Northwind.svc/Orders/";
     return {
       data: new DataManager({
         url: SERVICE_URI,
