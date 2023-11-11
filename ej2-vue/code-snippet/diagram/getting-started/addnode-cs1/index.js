@@ -4,15 +4,12 @@
     Vue.use(DiagramPlugin);
     let nodes = [
         {
-            id: "node1",
-            height: 60,
-            offsetX: 300,
-            offsetY: 80,
-            annotations: [
-                {
-                    content: "start"
-                }
-            ]
+            id: 'Start', width: 140, height: 50, offsetX: 300, offsetY: 100,
+            annotations: [{
+                id: 'label1',
+                content: 'Start'
+            }],
+            shape: { type: 'Flow', shape: 'Terminator' }
         }
     ]
     
@@ -24,7 +21,7 @@ new Vue({
     </div>
 `,
 
-        name: 'app'
+        name: 'app',
         data () {
             return {
                 width: "100%",
