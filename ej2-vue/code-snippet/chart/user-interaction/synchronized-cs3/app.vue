@@ -1,6 +1,6 @@
 <template>
     <div class="control-section">
-        <div class="chart-row">
+        <div class="row">
             <div class="col" id="container1">
                 <ejs-chart style='display:block' align='center' id='chartcontainer1' :title='title1'
                     :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis1'
@@ -28,7 +28,7 @@
 <script>
 import Vue from "vue";
 import { ChartPlugin, LineSeries, SplineAreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from './dataSource';
+import { synchronizedData } from './dataSource.js';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
 let zoomFactor = 0;
@@ -77,7 +77,6 @@ export default {
         },
         emptyPointSettings: { mode: 'Drop' },       
         titleStyle: { textAlignment: 'Near' },
-        border: { width: 2 },
         title1: "US to EURO",
         title2: "US to INR",
         charts: []
