@@ -1,6 +1,6 @@
 <template>
     <div class="control-section">
-        <div class="chart-row">
+        <div class="row">
             <div class="col" id="container1">
                 <ejs-chart style='display:block' align='center' id='chartcontainer1' :title='title1'
                     :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis1'
@@ -28,7 +28,7 @@
 <script>
 import Vue from "vue";
 import { ChartPlugin, SplineSeries, LineSeries, DateTime, Zoom, Selection } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from './dataSource';
+import { synchronizedData } from './dataSource.js';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
 let zoomFactor = 0;
@@ -74,7 +74,6 @@ export default {
         selectionPattern: 'Box',
         titleStyle: { textAlignment: 'Near' },
         selectionMode: 'Point',
-        border: { width: 2 },
         title1: "US to EURO",
         title2: "US to INR",
         charts: []
@@ -102,9 +101,6 @@ export default {
             }
         },
         selectionComplete: function (args) {
-          selectionCompleteFunction(args);
-        },   
-        selectionCompleteFunction: function (args) {
           if (count == 0) {
             for (var j = 0; j < args.selectedDataValues.length; j++) {
               args.selectedDataValues[j].point = args.selectedDataValues[j].pointIndex;
@@ -119,7 +115,7 @@ export default {
             }
             count = 0;
           }
-        },
+        },   
     },
   mounted() {
         this.charts = [this.$refs.chart1.ej2Instances, this.$refs.chart2.ej2Instances];
