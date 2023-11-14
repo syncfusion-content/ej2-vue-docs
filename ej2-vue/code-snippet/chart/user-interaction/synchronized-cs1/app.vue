@@ -1,6 +1,6 @@
 <template>
     <div class="control-section">
-        <div class="chart-row">
+        <div class="row">
             <div class="col" id="container1">
                 <ejs-chart style='display:block' align='center' id='chartcontainer1' :title='title1'
                     :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis1' :tooltip='tooltip1' :titleStyle='titleStyle' 
@@ -28,7 +28,7 @@
 <script>
 import Vue from "vue";
 import { ChartPlugin, AreaSeries, LineSeries, DateTime, Tooltip } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from './dataSource';
+import { synchronizedData } from './dataSource.js';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
 
@@ -82,7 +82,6 @@ export default {
         },
         emptyPointSettings: { mode: 'Drop' },
         titleStyle: { textAlignment: 'Near' },
-        border: { width: 2 },
         title1: "US to EURO",
         title2: "US to INR"
     };
@@ -91,10 +90,10 @@ export default {
     chart: [AreaSeries, LineSeries, DateTime, Tooltip]
   },
   methods: {
-    chartMouseLeave1: function (args) {
+    chartMouseLeave1: function () {
       this.$refs.chart2.ej2Instances.hideTooltip();
     },
-    chartMouseUp1: function (args) {
+    chartMouseUp1: function () {
       if (Browser.isDevice || this.$refs.chart1.ej2Instances.startMove) {
         this.$refs.chart2.ej2Instances.hideTooltip();
       }
@@ -111,10 +110,10 @@ export default {
         this.$refs.chart1.ej2Instances.showTooltip(args.x, args.y);
       }
     },
-    chartMouseLeave2: function (args) {
+    chartMouseLeave2: function () {
       this.$refs.chart1.ej2Instances.hideTooltip();
     },
-    chartMouseUp2: function (args) {
+    chartMouseUp2: function () {
       if (Browser.isDevice || this.$refs.chart2.ej2Instances.startMove) {
         this.$refs.chart1.ej2Instances.hideTooltip();
       }

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data" :allowPaging="true" :allowSorting='true' :allowFiltering='true' :allowGrouping='true' :pageSettings='pageSettings' >
@@ -20,13 +18,15 @@
 </template>
 <script>
 import Vue from 'vue';
-import { GridComponent, ColumnDirective, ColumnsDirective, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 
 export default {
   components: {
     'ejs-grid': GridComponent,
     'e-column': ColumnDirective,
-    'e-columns': ColumnsDirective
+    'e-columns': ColumnsDirective,
+    'e-aggregates': AggregatesDirective,
+    'e-aggregate': AggregateDirective,
   },
   data() {
     return {
@@ -67,6 +67,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

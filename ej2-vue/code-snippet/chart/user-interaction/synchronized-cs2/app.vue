@@ -1,6 +1,6 @@
 <template>
     <div class="control-section">
-        <div class="chart-row">
+        <div class="row">
             <div class="col" id="container1">
                 <ejs-chart style='display:block' align='center' id='chartcontainer1' :title='title1'
                     :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis1' :crosshair='crosshair' :titleStyle='titleStyle' 
@@ -28,7 +28,7 @@
 <script>
 import Vue from "vue";
 import { ChartPlugin, AreaSeries, SplineSeries, DateTime, Crosshair } from "@syncfusion/ej2-vue-charts";
-import { synchronizedData } from './dataSource';
+import { synchronizedData } from './dataSource.js';
 import { Browser } from '@syncfusion/ej2-base';
 Vue.use(ChartPlugin);
 
@@ -68,7 +68,6 @@ export default {
         crosshair: { enable: true, lineType: 'Vertical', dashArray: '2,2' },
         emptyPointSettings: { mode: 'Drop' },
         titleStyle: { textAlignment: 'Near' },
-        border: { width: 2 },
         title1: "US to EURO",
         title2: "US to INR"
     };
@@ -77,10 +76,10 @@ export default {
     chart: [AreaSeries, SplineSeries, DateTime, Crosshair]
   },
   methods: {
-    chartMouseLeave1: function (args) {
+    chartMouseLeave1: function () {
       this.$refs.chart2.ej2Instances.hideCrosshair();
     },
-    chartMouseUp1: function (args) {
+    chartMouseUp1: function () {
       if (Browser.isDevice || this.$refs.chart1.ej2Instances.startMove) {
         this.$refs.chart2.ej2Instances.hideCrosshair();
       }
@@ -97,10 +96,10 @@ export default {
         this.$refs.chart1.ej2Instances.showCrosshair(args.x, args.y);
       }
     },
-    chartMouseLeave2: function (args) {
+    chartMouseLeave2: function () {
       this.$refs.chart1.ej2Instances.hideCrosshair();
     },
-    chartMouseUp2: function (args) {
+    chartMouseUp2: function () {
       if (Browser.isDevice || this.$refs.chart2.ej2Instances.startMove) {
         this.$refs.chart1.ej2Instances.hideCrosshair();
       }

@@ -1,4 +1,4 @@
-var synchronizedData = [
+exports.synchronizedData = [
     {
         USD: new Date('2023-02-18'),
         EUR: 0.93316,
