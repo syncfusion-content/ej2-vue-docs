@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started vue3 with Vue Datetimepicker Component | Syncfusion
-description:  Checkout and learn about getting started vue3 with Syncfusion Essential Vue Datetimepicker component of JS 2 and more details.
+title: Getting started vue3 with Vue DateTimePicker Component | Syncfusion
+description:  Checkout and learn about getting started vue3 with Syncfusion Essential Vue DateTimePicker component, its elements and more details.
 control: Getting started vue3 
 platform: ej2-vue
 documentation: ug
@@ -18,7 +18,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-vue-calendars
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the DateTimePicker component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
