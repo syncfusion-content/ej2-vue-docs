@@ -114,4 +114,4 @@ With the above code, the user can switch between the Toolbar items using the Tab
 
 ## See Also
 
-* [How to set item wise custom template](./how-to/set-item-wise-custom-template/)
+* [How to set item wise custom template](./how-to/set-item-wise-custom-template)
