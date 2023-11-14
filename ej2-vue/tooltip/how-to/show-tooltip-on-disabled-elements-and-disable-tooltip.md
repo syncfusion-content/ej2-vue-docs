@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show tooltip on disabled elements in Vue Tooltip Component | Syncfusion
-description: Learn here all about show tooltip on disabled elements and disable tooltip in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
+title: Show tooltip on disabled elements in Vue Component | Syncfusion
+description: Learn here all about show tooltip on disabled elements and disable tooltip in Syncfusion Essential Vue Tooltip component, its elements and more.
 control: Show tooltip on disabled elements and disable tooltip 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show tooltip on disabled elements in Vue Tooltip Component
+# Show tooltip on disabled elements in Vue Component
 
 By default, tooltips will not be displayed on disabled elements. However, you can enable this behavior by using the following steps:
 1. Add a disabled element like the `button` element into a div whose display style is set to `inline-block`.

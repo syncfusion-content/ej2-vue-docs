@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Date format in Vue Datepicker Component | Syncfusion
-description: Learn here all about Date format in Syncfusion Essential Vue Datepicker component, its elements and more.
+title: Date format in Vue DatePicker Component | Syncfusion
+description: Learn here all about date format in Syncfusion Essential Vue DatePicker component, its elements and more.
 control: Date format 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Date format in Vue Datepicker Component
+# Date format in Vue DatePicker Component
 
 Date format is a way of representing the date value in different string format in the textbox.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create nested dialog in Vue Dialog Component | Syncfusion
-description: Learn here all about create nested dialog in Syncfusion Essential Vue Dialog component, its elements and more.
+title: Create nested Dialog in Vue Component | Syncfusion
+description: Learn here all about create nested Dialog in Syncfusion Essential Vue component, its elements and more.
 control: Create nested dialog 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create nested dialog in Vue Dialog Component
+# Create nested Dialog in Vue Component
 
 A Dialog can be nested within another Dialog. The below sample contains parent and child Dialog (inner Dialog).
 

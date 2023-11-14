@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with Vue Dialog Component | Syncfusion
-description:  Checkout and learn about getting started with Vue Dialog component of Syncfusion Essential JS 2 and more details.
+description:  Checkout and learn about getting started with Syncfusion Essential Vue Dialog component, its elements and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Vue Dialog Component
+# Getting started with Vue Dialog Component
 
 This section explains how to create a simple Dialog and how to configure the Dialog component.
 
