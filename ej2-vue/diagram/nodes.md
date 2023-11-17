@@ -160,7 +160,7 @@ There are two types of gradients as follows:
 
 ## Linear gradient
 
-* [`LinearGradient`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#linearGradient-lineargradientmodel) defines a smooth transition between a set of colors (so-called stops) on a line.
+* [`LinearGradient`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#linearGradient-lineargradientmodel) defines a smooth transition between a set of colors (so-called stops) on a line.
 
 * A linear gradient’s x1, y1, x2, y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 

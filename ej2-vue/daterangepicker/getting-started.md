@@ -206,7 +206,7 @@ The start and end date in a range can be defined with the help of startDate and 
         
 {% previewsample "page.domainurl/code-snippet/daterangepicker/min-max-cs1" %}
 
-> You can refer to our [Vue DateRangePicker](https://www.syncfusion.com/vue-components/vue-date-range-picker) feature tour page for its groundbreaking feature representations. You can also explore our [Vue DateRangePicker example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/daterangepicker/default.html) that shows how to render the DateRangePicker in Vue.
+> You can refer to our [Vue DateRangePicker](https://www.syncfusion.com/vue-components/vue-date-range-picker) feature tour page for its groundbreaking feature representations. You can also explore our [Vue DateRangePicker example](https://ej2.syncfusion.com/vue/demos/#/material/daterangepicker/default.html) that shows how to render the DateRangePicker in Vue.
 
 ## See Also
 

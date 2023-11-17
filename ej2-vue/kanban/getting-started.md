@@ -105,7 +105,7 @@ Follow the below steps to add the Vue Kanban component using `Composition API` o
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Kanban component with [keyField](https://helpej2.syncfusion.com/vue/documentation/api/kanban/#keyfield) property. 
+2\. In the `template` section, define the Kanban component with [keyField](https://ej2.syncfusion.com/vue/documentation/api/kanban/#keyfield) property. 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

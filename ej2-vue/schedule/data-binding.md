@@ -309,4 +309,4 @@ We have assigned our custom created Google Calendar url to the DataManager and a
         
 {% previewsample "page.domainurl/code-snippet/schedule/data-bind-cs6" %}
 
-> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/schedule/default.html) to knows how to present and manipulate data.
+> You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.
