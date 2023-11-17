@@ -102,7 +102,6 @@ Add the Vue PDF Viewer by using the `<ejs-pdfviewer>` selector in `<template>` s
   <div id="app">
     <ejs-pdfviewer 
       id="pdfViewer" 
-      :serviceUrl="serviceUrl" 
       :documentPath="documentPath"
       :resourceUrl="resourceUrl"> 
     </ejs-pdfviewer>
@@ -121,7 +120,7 @@ export default {
   data () {
     return {
       documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib"
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
