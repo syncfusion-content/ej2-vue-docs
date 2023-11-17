@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting started with Vue Checkbox component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Checkbox component of Syncfusion Essential JS 2 and more details.
+description: Learn here all about Getting started with Vue Checkbox component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -49,7 +49,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project.](../appearance/images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
