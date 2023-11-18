@@ -9,31 +9,32 @@
     import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
     let nodes = [
         {
-            id: 'Start', width: 140, height: 50, offsetX: 300, offsetY: 50,
-            annotations: [{
-                id: 'label1',
-                content: 'Start'
-            }],
-            shape: { type: 'Flow', shape: 'Terminator'}
+            id: "node1",
+            height: 100,
+            width: 100,
+            offsetX: 200,
+            offsetY: 100,
         },
         {
-            id: 'Init', width: 140, height: 50, offsetX: 300, offsetY: 140,
-            shape: { type: 'Flow', shape: 'Process' },
-            annotations: [{ content: 'var i = 0;' }]
+            id: "node2",
+            height: 100,
+            width: 100,
+            offsetX: 200,
+            offsetY: 300,
         }
     ];
     let connectors = [
         {
             id: "connector1",
-            sourceID: "Start",
-            targetID: "Init"
-        }
-    ];
+            sourceID: "node1",
+            targetID: "node2"
+        },
+    ]
     export default {
     components: {
         'ejs-diagram': DiagramComponent
     },
-    name: 'app',
+    name: 'app'
         data () {
             return {
                 width: "100%",
@@ -47,5 +48,4 @@
 <style>
     @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
 

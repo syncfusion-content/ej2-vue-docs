@@ -9,19 +9,22 @@
     import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
     let nodes = [
         {
-        id: 'Start', width: 140, height: 50, offsetX: 300, offsetY: 100,
-        annotations: [{
-            id: 'label1',
-            content: 'Start'
-        }],
-        shape: { type: 'Flow', shape: 'Terminator' }
-    }
+            id: "node1",
+            height: 60,
+            offsetX: 300,
+            offsetY: 80,
+            annotations: [
+                {
+                    content: "start"
+                }
+            ]
+        }
     ]
     export default {
         components: {
             'ejs-diagram': DiagramComponent
         },
-        name: 'app',
+        name: 'app'
         data () {
             return {
                 width: "100%",
@@ -34,5 +37,4 @@
 <style>
     @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
 

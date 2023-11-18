@@ -462,7 +462,7 @@ export default {
 To run the project, use the following command:
 
 ```bash
-npm run dev
+npm run serve
 ```
 
 or
