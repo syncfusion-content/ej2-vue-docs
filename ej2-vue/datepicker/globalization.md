@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Globalization in Vue Datepicker component
 
-Globalization is the combination of  adapting the component to various languages by means of parsing and formatting the date or number [`Internationalization`](../common/internationalization/) and also by adding cultural specific customizations and translating the text [`localization`](../common/localization/)
+Globalization is the combination of  adapting the component to various languages by means of parsing and formatting the date or number [`Internationalization`](../common/internationalization) and also by adding cultural specific customizations and translating the text [`localization`](../common/localization)
 
-By default, DatePicker date format, week and month names are specific to English culture. It utilizes the [`Essential JavaScript 2 Internationalization`](../common/internationalization/) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data and it allows to load the culture specific CLDR JSON data by using `loadCldr` method
+By default, DatePicker date format, week and month names are specific to English culture. It utilizes the [`Essential JavaScript 2 Internationalization`](../common/internationalization) package to parse and format the date object based on the culture by using the official [`UNICODE CLDR`](https://cldr.unicode.org/) JSON data and it allows to load the culture specific CLDR JSON data by using `loadCldr` method
 
 The DatePicker component supports only the Gregorian type of calendar. All the Essential JS 2 component are specific to English cultur ('en-US'). If you want to go with the different culture other than English, follow the below steps.
 
@@ -44,12 +44,12 @@ import * as weekData from 'cldr-data/supplemental/weekdata.json';// To load the 
 loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, weekData);
 ```
 
-> The `Localization` library allows you to localize default text content of the DatePicker. The DatePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#locale) value and translation object.
+> The `Localization` library allows you to localize default text content of the DatePicker. The DatePicker component has static text for  **today** feature that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#locale) value and translation object.
 
 Locale keywords |Text----- | -----today | Name of the button to choose Today date. placeholder | Hint to describe expected value in input element.
 
 * Before changing the culture other than `English`, ensure that locale text for the concerned culture is loaded through `load` method of
-[L10n](https://ej2.syncfusion.com/documentation/api/base/l10n#load) class.
+[L10n](https://ej2.syncfusion.com/documentation/api/base/l10n/#load) class.
 
 ```ts
 
@@ -64,7 +64,7 @@ L10n.load({
 });
 ```
 
-* Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#locale) property. The following example demonstrates the DatePicker in `German` culture.
+* Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#locale) property. The following example demonstrates the DatePicker in `German` culture.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -77,7 +77,7 @@ L10n.load({
 ## Right-To-Left
 
 The DatePicker supports right-to-left functionality for languages like Arabic, Hebrew to displays the text in the right-to-left direction. Use
-[`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#enablertl) property to set the RTL direction.
+[`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#enablertl) property to set the RTL direction.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
