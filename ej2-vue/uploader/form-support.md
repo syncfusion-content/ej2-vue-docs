@@ -27,4 +27,4 @@ The selected or dropped files are received as a collection in form action when t
         
 {% previewsample "page.domainurl/code-snippet/uploader/formsupport-cs1" %}
 
->You can also explore [Vue File Upload](https://www.syncfusion.com/vue-ui-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
+>You can also explore [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
