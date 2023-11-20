@@ -48,4 +48,4 @@ Likewise, add the external script file to the `<iframe>` element using the [scri
 
 ## See Also
 
-* [How to change the editor mode](./editor-modes/#markdown-editor)
+* [How to change the editor mode](./editor-modes#markdown-editor)
