@@ -119,7 +119,7 @@ You can parse the `recurrenceRule` of an event to generate the date instances on
 
 It is also possible to generate recurrence date instances from server-side by manually referring the `RecurrenceHelper` class, which is specifically written and referred from application end to handle this date generation process.
 
-> Refer [here](https://support.syncfusion.com/kb/article/8683/how-to-parse-the-recurrence-rule-at-server-side?isInternalRefresh=False) for the step by step procedure to achieve date generation in server-side.
+> Refer [here](https://support.syncfusion.com/kb/article/8683/how-to-parse-the-recurrence-rule-at-server-side) for the step by step procedure to achieve date generation in server-side.
 
 ## Restrict date generation with specific count
 
