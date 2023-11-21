@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Checkbox component | Syncfusion
-description: Learn here all about Getting started with Vue Checkbox component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Check box component | Syncfusion
+description: Learn here all about Getting started with Vue Check box component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Checkbox Component in Vue 2
+# Getting Started with the Vue Check box Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Checkbox component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
