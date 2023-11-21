@@ -57,16 +57,25 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar) as an example. Install the `@syncfusion/ej2-vue-notifications` package by running the following command:
+This article uses the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar) as an example. Install the `@syncfusion/ej2-vue-navigations` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
-npm install @syncfusion/ej2-vue-buttons --save
 ```
 or
 
 ```bash
 yarn add @syncfusion/ej2-vue-navigations
+```
+
+This example uses the [Vue Button component](https://www.syncfusion.com/vue-components/vue-button) inside the the [Vue Appbar component](https://www.syncfusion.com/vue-components/vue-appbar). Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-buttons --save
+```
+or
+
+```bash
 yarn add @syncfusion/ej2-vue-buttons
 ```
 

@@ -21,7 +21,10 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 The list of dependencies required to use the Button component in your application is given below:
 
 ```js
-|-- @syncfusion/ej2-splitbuttons
+|-- @syncfusion/ej2-vue-splitbuttons
+    |-- @syncfusion/ej2-base
+    |-- @syncfusion/ej2-buttons
+    |-- @syncfusion/ej2-vue-base
 ```
 
 ## Setting up the Vue 2 project
@@ -57,12 +60,12 @@ Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=
 This article uses the [Vue Button group component](https://www.syncfusion.com/vue-components/vue-button-group) as an example. Install the `@syncfusion/ej2-splitbuttons` package by running the following command:
 
 ```bash
-npm install @syncfusion/ej2-splitbuttons --save
+npm install @syncfusion/ej2-vue-splitbuttons --save
 ```
 or
 
 ```bash
-yarn add @syncfusion/ej2-splitbuttons
+yarn add @syncfusion/ej2-vue-splitbuttons
 ```
 
 ## Import Syncfusion CSS styles
