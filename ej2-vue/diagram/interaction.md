@@ -45,7 +45,7 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 The client-side methods [`select`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#select) and [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#clearselection) help to select or clear the selection of the elements at runtime. The following code example illustrates how to select or clear the selection of an item using program.
 
-Get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#nodes-nodemodel%5B%5D) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#connectors-connectormodel%5B%5D) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property of the diagram model.
+Get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel/#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property of the diagram model.
 
 ## Select entire elements in diagram programmatically
 
@@ -137,7 +137,7 @@ Diagram provides support to drop a node/connector over another node/connector. T
 
 ## User handles
 
-* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel%5B%5D) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property.
+* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property.
 * The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
 
 ## Alignment
@@ -146,19 +146,19 @@ User handles can be aligned relative to the node boundaries. It has [`margin`](h
 
 ## Offset
 
-The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel/#userHandles-userhandlemodel%5B%5D) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel/#userHandles-userhandlemodel[]) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 ## Side
 
-The [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#side-side) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel%5B%5D) is used to align the user handle by using the [`Top`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#top), [`Bottom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#bottom), [`Left`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#left), and [`Right`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#right) options.
+The [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#side-side) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) is used to align the user handle by using the [`Top`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#top), [`Bottom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#bottom), [`Left`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#left), and [`Right`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#right) options.
 
 ## Horizontal and vertical alignments
 
-The [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#horizontalalignment-horizontalalignment) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel%5B%5D) is used to set how the user handle is horizontally aligned at the position based on the [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number). The [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#verticalalignment-verticalalignment) property is used to set how user handle is vertically aligned at the position.
+The [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#horizontalalignment-horizontalalignment) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) is used to set how the user handle is horizontally aligned at the position based on the [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number). The [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#verticalalignment-verticalalignment) property is used to set how user handle is vertically aligned at the position.
 
 ## Margin
 
-Margin is an absolute value used to add some blank space in any one of its four sides. The [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel%5B%5D) can be displaced with the [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#margin-marginmodel) property.
+Margin is an absolute value used to add some blank space in any one of its four sides. The [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) can be displaced with the [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#margin-marginmodel) property.
 
 ## Notification for the mouse button clicked
 
@@ -214,7 +214,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 
 ## Appearance
 
-The appearance of the user handle can be customized by using the [`size`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#size-number), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#bordercolor-string), [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#backgroundcolor-string), [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#visible-boolean), [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#pathdata-string), and [`pathColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#pathcolor-string) properties of the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel%5B%5D).
+The appearance of the user handle can be customized by using the [`size`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#size-number), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#bordercolor-string), [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#backgroundcolor-string), [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#visible-boolean), [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#pathdata-string), and [`pathColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#pathcolor-string) properties of the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
