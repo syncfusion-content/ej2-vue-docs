@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Daterangepicker component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Daterangepicker component of Syncfusion Essential JS 2 and more details.
+title: Getting Started with Vue Date Range Picker Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential Vue Date Range Picker component, it's elements and more.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Daterangepicker Component in Vue 2
+# Getting Started with the Vue Date Range Picker Component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Daterangepicker component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
