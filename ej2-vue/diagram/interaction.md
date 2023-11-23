@@ -150,7 +150,7 @@ The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHand
 
 ## Side
 
-The [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#side-side) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) is used to align the user handle by using the [`Top`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#top), [`Bottom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#bottom), [`Left`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#left), and [`Right`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#right) options.
+The [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#side-side) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) is used to align the user handle by using the [`Top`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#top), [`Bottom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#bottom), [`Left`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#left), and [`Right`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#right) options.
 
 ## Horizontal and vertical alignments
 
