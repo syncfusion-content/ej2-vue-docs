@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Vue Date Range Picker Component | Syncfusion
-description: Learn here all about getting started with Syncfusion Essential Vue Date Range Picker component, it's elements and more.
+description: Checkout and learn about getting started with Vue Date Range Picker component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
