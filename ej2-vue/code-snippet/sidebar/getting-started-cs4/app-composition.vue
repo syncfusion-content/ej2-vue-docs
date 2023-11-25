@@ -1,13 +1,13 @@
 
 
 <template>
-<div id="app">
-    <div class="wrapper">
-        <ejs-sidebar id="default-sidebar">
-           <div class="title"> Sidebar content</div>
-        </ejs-sidebar>
-        <div>
-           <div class="title">Main content</div>
+    <div id="app">
+        <div class="wrapper">
+            <ejs-sidebar id="default-sidebar">
+                <div class="title"> Sidebar content</div>
+            </ejs-sidebar>
+            <div>
+                <div class="title">Main content</div>
                 <div class="sub-title">Content goes here.</div>
             </div>
         </div>
@@ -34,7 +34,8 @@ import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations'
     font-size: 16px;
     padding: 10px;
 }
-  #default-sidebar {
+
+#default-sidebar {
     background-color: rgb(25, 118, 210);
     color: #ffffff;
 }
