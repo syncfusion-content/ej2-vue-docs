@@ -1,9 +1,10 @@
 
 
 <template>
-<div id="app">
-<div id="wrapper">
-    <ejs-sidebar  id="dockSidebar" :enableDock='enableDock' :width='width' :dockSize='dockSize' ref="dockSidebar" :position = "position">
+    <div id="app">
+        <div id="wrapper">
+            <ejs-sidebar id="dockSidebar" :enableDock='enableDock' :width='width' :dockSize='dockSize' ref="dockSidebar"
+                :position="position">
                 <div class="dock">
                     <ul>
                         <li class="sidebar-item" id="toggle" v-on:click="toggleClick">
@@ -33,9 +34,9 @@
                 <div class="title">Main content</div>
                 <div class="sub-title"> Click the expand icon to open and collapse icons to close the Sidebar</div>
             </div>
-      </div>
-</div>
-<!--end of main content declaration -->
+        </div>
+    </div>
+    <!--end of main content declaration -->
 </template>
 <script>
 import Vue from "vue";
@@ -44,17 +45,17 @@ import { enableRipple } from '@syncfusion/ej2-base';
 Vue.use(SidebarPlugin);
 
 export default {
-    data () {
+    data() {
         return {
-            enableDock:  true,
-            dockSize : '72px',
-            width : '220px',
-            position :'Left'
+            enableDock: true,
+            dockSize: '72px',
+            width: '220px',
+            position: 'Left'
         }
     },
-     methods: {
-        toggleClick: function() {
-           this.$refs.dockSidebar.toggle();
+    methods: {
+        toggleClick: function () {
+            this.$refs.dockSidebar.toggle();
         }
     }
 }
@@ -63,6 +64,7 @@ export default {
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+
 .title {
     text-align: center;
     font-size: 20px;
@@ -91,6 +93,7 @@ export default {
 .sb-content-tab .center {
     display: block;
 }
+
 /* end of content area styles */
 /* Sidebar styles */
 
@@ -102,33 +105,35 @@ export default {
 #dockSidebar .e-icons::before {
     font-size: 25px;
 }
+
 /* dockbar icon Style */
 
- #dockSidebar .home::before {
-     content: '\e102';
- }
+#dockSidebar .home::before {
+    content: '\e102';
+}
 
- #dockSidebar .profile::before {
-     content: '\e10c'
- }
+#dockSidebar .profile::before {
+    content: '\e10c'
+}
 
- #dockSidebar .info::before {
-     content: '\e11b';
- }
+#dockSidebar .info::before {
+    content: '\e11b';
+}
 
- #dockSidebar .settings::before {
-     content: '\e10b';
- }
+#dockSidebar .settings::before {
+    content: '\e10b';
+}
 
- .e-sidebar .expand::before {
-     content: '\e10f';
- }
+.e-sidebar .expand::before {
+    content: '\e10f';
+}
 
- .e-sidebar.e-open .expand::before {
-     /* csslint allow: adjoining-classes*/
-     content: '\e10e';
- }
- /* end of dockbar icon Style */
+.e-sidebar.e-open .expand::before {
+    /* csslint allow: adjoining-classes*/
+    content: '\e10e';
+}
+
+/* end of dockbar icon Style */
 
 #dockSidebar.e-close .sidebar-item {
     padding: 5px 20px;
@@ -204,7 +209,6 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
-
 </style>
 
 
