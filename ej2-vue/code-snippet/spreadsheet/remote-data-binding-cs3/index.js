@@ -22,7 +22,7 @@ new Vue({
     return {
      dataSource: new DataManager({
                     // Remote service url
-                    url: 'https://ej2services.syncfusion.com/production/web-services/api/Orders',
+                    url: 'https://services.syncfusion.com/vue/production/api/Orders',
                     adaptor: new WebApiAdaptor(),
                     crossDomain: true
                 }),

@@ -186,7 +186,7 @@ export class OrderService {
         onFailure: (e: Error) => { return false; }
     });
 
-    private BASE_URL: string = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+    private BASE_URL: string = 'https://services.syncfusion.com/js/production/api/Orders';
 
     public execute(state: DataStateChangeEventArgs): Promise<DataResult> {
         return this.getData(state);
@@ -267,7 +267,7 @@ export class OrderService {
         type: 'GET', mode: true,
         onFailure: (e: Error) => { return false; }
     });
-    private BASE_URL: string = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders';
+    private BASE_URL: string = 'https://services.syncfusion.com/js/production/api/Orders';
     public execute(state: DataStateChangeEventArgs): Promise<DataResult> {
         return this.getData(state);
     }

@@ -34,7 +34,7 @@ new Vue({
 
   data() {
     let SERVICE_URI =
-      "https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders?$top=7";
+      "https://services.syncfusion.com/js/production/api/Orders";
     return {
       data: new DataManager({
         url: SERVICE_URI,
