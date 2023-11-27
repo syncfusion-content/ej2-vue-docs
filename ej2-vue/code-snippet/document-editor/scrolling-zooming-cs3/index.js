@@ -69,7 +69,7 @@ new Vue({
             onSelectionChange : function(args) {
                 //Get current page number.
                 this.currentPage =  this.$refs.documenteditor.ej2Instances.selection.startPage;
-            }
+            },
             onDocumentChange: function() {
                 //Update page count.
                 this.pageCount =  this.$refs.documenteditor.ej2Instances.pageCount;
