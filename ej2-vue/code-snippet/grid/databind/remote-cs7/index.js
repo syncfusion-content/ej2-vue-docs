@@ -22,7 +22,7 @@ new Vue({
   data() {
     return {
       data: new DataManager({
-        url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/',
+        url: 'https://services.syncfusion.com/js/production/api/Orders/',
         adaptor: new ODataAdaptor()
       }),
       pageSettings: { pageCount: 3 },
