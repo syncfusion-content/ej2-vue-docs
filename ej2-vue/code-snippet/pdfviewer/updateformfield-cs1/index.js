@@ -12,7 +12,6 @@ new Vue({
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
-            :serviceUrl="serviceUrl"
             :documentPath="documentPath"
             :documentLoad="documentLoad"
             :resourceUrl="resourceUrl">
@@ -24,8 +23,7 @@ new Vue({
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib",
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
