@@ -16,26 +16,6 @@ new Vue({
         <e-column field='Duration' :headerTemplate='durationTemplate' width=150></e-column>
         <e-column field='Progress' :headerTemplate='progressTemplate' width=150></e-column>
       </e-columns>
-      <template v-slot:projectName="{data}">
-        <div>
-          <img src="taskname.png" width="20" height="20" class="e-image" />Task Name
-        </div>
-      </template>
-      <template v-slot:dateTemplate="{data}">
-        <div>
-          <img src="startdate.png" width="20" height="20" class="e-image" />Start Date
-        </div>
-      </template>
-      <template v-slot:durationTemplate="{data}">
-        <div>
-          <img src="duration.png" width="20" height="20" class="e-image" />Duration
-        </div>
-      </template>
-      <template v-slot:progressTemplate="{data}">
-        <div>
-          <img src="progress.png" width="20" height="20" class="e-image" /> Progress
-        </div>
-      </template>
     </ejs-gantt>
   </div>
 `,
@@ -43,6 +23,74 @@ new Vue({
   data: function() {
       return{
          data: editingData,
+         projectName: function () {
+          return { template : Vue.component('columnTemplate',{
+             template: `<div class="image">
+                    <img :src="image" width=20 height=20 class="e-image"/> Task Name
+                </div>`,
+                data: function() {
+                    return {
+                        data: {}
+                    }
+                },
+                computed: {
+                    image: function() {
+                        return "Taskname.png";
+                    }
+                }
+          })}
+      },
+     dateTemplate: function () {
+          return { template : Vue.component('columnTemplate',{
+             template: `<div class="image">
+                    <img :src="image" width=20 height=20 class="e-image"/> Start Date
+                </div>`,
+                data: function() {
+                    return {
+                        data: {}
+                    }
+                },
+                computed: {
+                    image: function() {
+                        return "Startdate.png";
+                    }
+                }
+          })}
+      },
+      durationTemplate: function () {
+          return { template : Vue.component('columnTemplate',{
+             template: `<div class="image">
+                    <img :src="image" width=20 height=20 class="e-image"/> Duration
+                </div>`,
+                data: function() {
+                    return {
+                        data: {}
+                    }
+                },
+                computed: {
+                    image: function() {
+                        return "Duration.png";
+                    }
+                }
+          })}
+      },
+      progressTemplate: function () {
+          return { template : Vue.component('columnTemplate',{
+             template: `<div class="image">
+                    <img :src="image" width=20 height=20 class="e-image"/> Progress
+                </div>`,
+                data: function() {
+                    return {
+                        data: {}
+                    }
+                },
+                computed: {
+                    image: function() {
+                        return "progress.png" ;
+                    }
+                }
+          })}
+      },
       taskFields: {
             id: 'TaskID',
             name: 'TaskName',

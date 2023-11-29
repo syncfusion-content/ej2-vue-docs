@@ -60,7 +60,7 @@ new Vue({
   },
     computed: {
     image: function() {
-      return '../../../../../treegrid/images/' + this.data.FullName + '.png';
+      return '../../../../treegrid/images/' + this.data.FullName + '.png';
     }
   }
   })}
