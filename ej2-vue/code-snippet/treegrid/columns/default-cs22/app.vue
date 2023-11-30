@@ -52,7 +52,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "Startname.png";
+                        return "Startdate.png";
                     }
                 }
           })}
