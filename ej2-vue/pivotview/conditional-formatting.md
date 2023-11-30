@@ -61,7 +61,7 @@ Allows end user to apply conditional formatting commonly for all value fields ju
 
 ## Conditional formatting for specific value field
 
-Allows end user to apply conditional formatting to a specific value field by setting the [`Measure`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting~Measure.html) property with specific value field name in [`PivotViewConditionalFormatSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting_properties.html) class.
+Allows end user to apply conditional formatting to a specific value field by setting the [`Measure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html#Syncfusion_Blazor_PivotView_ConditionalFormatSettings_Measure) property with specific value field name in [`PivotViewConditionalFormatSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ConditionalFormatSettings.html) class.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

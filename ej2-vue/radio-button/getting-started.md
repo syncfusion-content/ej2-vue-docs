@@ -114,7 +114,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Radio button component with the [label](https://ej2.syncfusion.com/vue/documentation/api/radio-button#label) property.
+2\. In the `template` section, define the Radio button component with the [label](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#label) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
