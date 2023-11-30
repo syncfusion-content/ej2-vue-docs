@@ -10,18 +10,18 @@ domainurl: ##DomainURL##
 
 # Columns in Vue Treegrid component
 
-The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format.
-The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#field) property of the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#column)
+The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#dataSource) schema in the TreeGrid. This plays a vital role in rendering column values in the required format.
+The treegrid operations such as sorting, filtering and searching etc. are performed based on column definitions. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#field) property of the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#column)
 is necessary to map the data source values in TreeGrid columns.
 
-> 1. If the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#field) is not specified in the dataSource, the column values will be empty.
-> 2. If the [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#field) name contains “dot” operator, it is considered as complex binding.
+> 1. If the column [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#field) is not specified in the dataSource, the column values will be empty.
+> 2. If the [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#field) name contains “dot” operator, it is considered as complex binding.
 
-[`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#treecolumnindex) property denotes the column that is used to expand and collapse child rows.
+[`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#treecolumnindex) property denotes the column that is used to expand and collapse child rows.
 
 ## Format
 
-To format cell values based on specific culture, use the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#format) property. The TreeGrid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#manipulating-datetime)
+To format cell values based on specific culture, use the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format) property. The TreeGrid uses [Internalization](../../common/internationalization/) library to format [`number`](../../common/internationalization#number-formatting) and [`date`](../../common/internationalization#manipulating-datetime)
 values.
 
 {% tabs %}
@@ -32,7 +32,7 @@ values.
         
 {% previewsample "page.domainurl/code-snippet/treegrid/columns/default-cs10" %}
 
-> By default, the [`number`](../../common/internationalization/#number-formatting) and [`date`](../../common/internationalization/#manipulating-datetime) values are formatted in `en-US` locale.
+> By default, the [`number`](../../common/internationalization#number-formatting) and [`date`](../../common/internationalization#manipulating-datetime) values are formatted in `en-US` locale.
 
 ### Number formatting
 
@@ -44,13 +44,13 @@ N | Denotes numeric type. | The numeric format is followed by integer value as N
 C | Denotes currency type. | The currency format is followed by integer value as C2, C3. etc which denotes the number of precision to be allowed.
 P | Denotes percentage type | The percentage format expects the input value to be in the range of 0 to 100. For example the cell value `0.2` is formatted as `20%`. The percentage format is followed by integer value as P2, P3. etc which denotes the number of precision to be allowed.
 
-Please refer to the link to know more about [`Number formatting`](../../common/internationalization/#number-formatting).
+Please refer to the link to know more about [`Number formatting`](../../common/internationalization#number-formatting).
 
 ### Date formatting
 
 You can format date values either using built-in date format string or custom format string.
 
-For built-in date format you can specify [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#format) property as string   (Example: `yMd`). Please refer to the link to know more about [`Date formatting`](../../common/internationalization/#manipulating-datetime).
+For built-in date format you can specify [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format) property as string   (Example: `yMd`). Please refer to the link to know more about [`Date formatting`](../../common/internationalization#manipulating-datetime).
 
 You can also use custom format string to format the date values. Some of the custom formats and the formatted date values are given in the below table.
 
@@ -98,8 +98,8 @@ The following screenshot represents the column resizing in touch device.
 
 Column type can be specified using the [`columns.type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#type) property. It specifies the type of data the column binds.
 
-If the [`format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#type) to select the appropriate format option ([number](../../common/internationalization/#number-formatting)
- or [date](../../common/internationalization/#manipulating-datetime)).
+If the [`format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format)  is defined for a column, the column uses [`type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#type) to select the appropriate format option ([number](../../common/internationalization#number-formatting)
+ or [date](../../common/internationalization#manipulating-datetime)).
 
 TreeGrid column supports the following types:
 * string

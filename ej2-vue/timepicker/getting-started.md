@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -76,7 +76,7 @@ yarn add @syncfusion/ej2-vue-calendars
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Timepicker component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -125,7 +125,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Timepicker component with the [placeholder](https://ej2.syncfusion.com/vue/documentation/api/timepicker#placeholder) property.
+2\. In the `template` section, define the Timepicker component with the [placeholder](https://ej2.syncfusion.com/vue/documentation/api/timepicker/#placeholder) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -208,9 +208,9 @@ The following example demonstrates how to set the value, min, and max time on in
 
 ## Setting the time format
 
-Time formats is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker's format is based on the culture. You can also customize the format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#format) property. To know more about the time format standards, refer to the [Date and Time Format](../common/internationalization#custom-formats) section.
+Time formats is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker's format is based on the culture. You can also customize the format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/timepicker/#format) property. To know more about the time format standards, refer to the [Date and Time Format](../common/internationalization#custom-formats) section.
 
-The following example demonstrates the TimePicker component in 24 hours format with 60 minutes interval. The time interval is set to 60 minutes by using the [`step`](https://ej2.syncfusion.com/vue/documentation/api/timepicker#step-number) property.
+The following example demonstrates the TimePicker component in 24 hours format with 60 minutes interval. The time interval is set to 60 minutes by using the [`step`](https://ej2.syncfusion.com/vue/documentation/api/timepicker/#step-number) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
