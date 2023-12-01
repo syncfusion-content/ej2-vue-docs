@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Dependencies
 
@@ -77,7 +77,7 @@ yarn add @syncfusion/ej2-vue-navigations
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Sidebar component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -245,6 +245,6 @@ Expand or collapse the Sidebar while swiping in touch devices using `enableGestu
 
 ## See Also
 
-* [Sidebar with navigation menu](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/sidebar/sidebar-menu.html)
-* [Sidebar responsive panel](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/sidebar/responsive-panel.html)
+* [Sidebar with navigation menu](https://ej2.syncfusion.com/vue/demos/#/material/sidebar/sidebar-menu.html)
+* [Sidebar responsive panel](https://ej2.syncfusion.com/vue/demos/#/material/sidebar/responsive-panel.html)
 * [Sidebar with listView](./how-to/sidebar-with-listview)

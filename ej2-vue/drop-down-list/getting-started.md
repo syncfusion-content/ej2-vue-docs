@@ -18,7 +18,7 @@ To get start quickly with DropDownList Component using Vue CLI, you can check on
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Setting up the Vue 2 project
 
@@ -65,7 +65,7 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Drop down list component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -110,7 +110,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Drop down list component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#datasource) and [placeholder] (https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#placeholder) property.
+2\. In the `template` section, define the Drop down list component with the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#datasource) and [placeholder] (https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#placeholder) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -221,8 +221,8 @@ The height and width of the popup list can also be customized using the [popupHe
         
 {% previewsample "page.domainurl/code-snippet/drop-down-list/getting-started/popup-cs1" %}
 
-> You can refer to our [Vue Dropdown List](https://www.syncfusion.com/vue-components/vue-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown list example]( https://ej2.syncfusion.com/vue/demos/#/material/drop-down-list/default.html) that shows how to render the Dropdown List in Vue.
+> You can refer to our [Vue Dropdown List](https://www.syncfusion.com/vue-ui-components/vue-dropdown-list) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dropdown list example]( https://ej2.syncfusion.com/vue/demos/#/material/drop-down-list/default.html) that shows how to render the Dropdown List in Vue.
 
 ## See Also
 
-* [How to bind the data](./data-binding)
+* [How to bind the data](./data-binding/)
