@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Disable the datetimepicker component in Vue Datetimepicker component
 
-To disable the DateTimePicker, use its [`enable`](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker/#enabled) property to `false`.
+To disable the DateTimePicker, use its [`enable`](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker#enabled) property to `false`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
