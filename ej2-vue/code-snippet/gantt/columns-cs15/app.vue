@@ -35,7 +35,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "Taskname.png";
+                        return "taskname.png";
                     }
                 }
           })}
@@ -52,7 +52,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "Startdate.png";
+                        return "startdate.png";
                     }
                 }
           })}
@@ -69,7 +69,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "Duration.png";
+                        return "duration.png";
                     }
                 }
           })}
