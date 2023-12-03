@@ -112,7 +112,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Diagram component with [height](https://ej2.syncfusion.com/vue/documentation/api/diagram#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/diagram#width) property. 
+2\. In the `template` section, define the Diagram component with [height](https://ej2.syncfusion.com/vue/documentation/api/diagram/#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/diagram/#width) property. 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -388,4 +388,4 @@ The following code examples indicate how to define the default appearance of nod
         
 {% previewsample "page.domainurl/code-snippet/diagram/getting-started/orgchart-cs1" %}
 
-> You can refer to our [Vue Diagram](https://www.syncfusion.com/vue-ui-components/vue-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Diagram example](https://ej2.syncfusion.com/vue/demos/#/material/diagram/default-functionality.html) that shows how to render the Diagram in Vue.
+> You can refer to our [Vue Diagram](https://www.syncfusion.com/vue-components/vue-diagram) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Diagram example](https://ej2.syncfusion.com/vue/demos/#/material/diagram/default-functionality.html) that shows how to render the Diagram in Vue.

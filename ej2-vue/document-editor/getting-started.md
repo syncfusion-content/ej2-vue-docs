@@ -172,7 +172,7 @@ Add the Vue Document Editor by using `<ejs-documenteditor>` selector in `<templa
 > * Restrict editing
 > * Spell check
 >
-> Refer to this [link](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/document-editor#serviceurl).
+> Refer to this [link](https://github.com/SyncfusionExamples/EJ2-DocumentEditor-WebServices) to configure the web service and set the [serviceUrl](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#serviceurl).
 
 #### Run the DocumentEditor application
 
