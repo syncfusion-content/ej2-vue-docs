@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 To configure `clear` button in Calendar UI, do the following:
 
-1. To the [`created`](https://ej2.syncfusion.com/vue/documentation/api/calendar/#created) event of the Calendar, add the required elements to make the clear button visible. In the following example, div with Essential JS 2 button component is used.
+1. To the [`created`](https://ej2.syncfusion.com/vue/documentation/api/calendar#created) event of the Calendar, add the required elements to make the clear button visible. In the following example, div with Essential JS 2 button component is used.
 
 2. When the `e-footer` class is used, the div tag acts as the footer.
 

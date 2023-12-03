@@ -14,11 +14,11 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 ## Create Connector
 
-Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`connector`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/), refer to [`Connector Properties`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/).
+Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`connector`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector), refer to [`Connector Properties`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector).
 
 ## Add connectors through connectors collection
 
-* The [`sourcePoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourcepoint-PointModel) and [`targetPoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetpoint-PointModel) properties of connector allow you to define the end points of a connector.
+* The [`sourcePoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourcepoint-PointModel) and [`targetPoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetpoint-PointModel) properties of connector allow you to define the end points of a connector.
 
 The following code example illustrates how to add a connector through connector collection.
 
@@ -52,7 +52,7 @@ For more information about adding connectors from symbol palette, refer to [`Sym
 
 ## Draw connectors
 
-Connectors can be interactively drawn by clicking and dragging on the Diagram surface by using [`drawingObject`]. For more information about drawing connectors, refer to [`Draw Connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#drawingObject-ConnectorModel).
+Connectors can be interactively drawn by clicking and dragging on the Diagram surface by using [`drawingObject`]. For more information about drawing connectors, refer to [`Draw Connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram#drawingObject-ConnectorModel).
 
 ## Update Connector at runtime
 
@@ -70,8 +70,8 @@ Various Connector properties such as `sourcePoint`,`targetPoint`,`style`,`source
 
 ## Connect nodes
 
-* The [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourceid-string) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetid-string) properties allow to define the nodes to be connected.
-* The [`connectorSpacing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#connectorSpacing-number) property allows you to define the distance between the source node and the connector. It is the minimum distance the connector will re-rout or the new segment will create.
+* The [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourceid-string) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetid-string) properties allow to define the nodes to be connected.
+* The [`connectorSpacing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#connectorSpacing-number) property allows you to define the distance between the source node and the connector. It is the minimum distance the connector will re-rout or the new segment will create.
 
 * The following code example illustrates how to connect two nodes.
 
@@ -108,7 +108,7 @@ diagram.appendTo('#diagram');
 
 ## Connections with ports
 
-The [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourceportid-string) and [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetportid-string) properties allow to create connections between some specific points of source/target nodes.
+The [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourceportid-string) and [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetportid-string) properties allow to create connections between some specific points of source/target nodes.
 
 The following code example illustrates how to create port to port connections.
 
@@ -120,7 +120,7 @@ The following code example illustrates how to create port to port connections.
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/Connectorsportupdate-cs1" %}
 
-similarly we can change the [`sourcePortID`] or [`targetPortID`]  at the run time by the changing the port [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourceportid-string) or [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetportid-string)
+similarly we can change the [`sourcePortID`] or [`targetPortID`]  at the run time by the changing the port [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourceportid-string) or [`targetPortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetportid-string)
 
 The following code example illustrates how to create port to port connections.
 
@@ -161,7 +161,7 @@ The path of the connector is defined with a collection of segments. There are th
 
 ## Straight
 
-To create a straight line, you should specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments/) of the segment as “straight” and add a straight segment to [`segments`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#segments) collection and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#type-Segments) for the connector. The following code example illustrates how to create a default straight segment.
+To create a straight line, you should specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) of the segment as “straight” and add a straight segment to [`segments`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#segments) collection and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type-Segments) for the connector. The following code example illustrates how to create a default straight segment.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -171,7 +171,7 @@ To create a straight line, you should specify the [`type`](https://ej2.syncfusio
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsSegmentsPoints-cs1" %}
 
-The [`point`](https://ej2.syncfusion.com/vue/documentation/api/diagram/straightSegment/#point-PointModel) property of straight segment allows you to define the end point of it. The following code example illustrates how to define the end point of a straight segment.
+The [`point`](https://ej2.syncfusion.com/vue/documentation/api/diagram/straightSegment#point-PointModel) property of straight segment allows you to define the end point of it. The following code example illustrates how to define the end point of a straight segment.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -185,9 +185,9 @@ The [`point`](https://ej2.syncfusion.com/vue/documentation/api/diagram/straightS
 
 Orthogonal segments are used to create segments that are perpendicular to each other.
 
-Set the segment [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments/) as “orthogonal” to create a default orthogonal segment and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#type-Segments). The following code example illustrates how to create a default orthogonal segment.
-* Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [`connector.segments`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#segments) collection. The Following code example illustrates how to create a connector with multiple segments.
-* The property [`maxSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#maxSegmentThumb) is used to limit the segment thumb in the connector.
+Set the segment [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) as “orthogonal” to create a default orthogonal segment and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type-Segments). The following code example illustrates how to create a default orthogonal segment.
+* Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [`connector.segments`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#segments) collection. The Following code example illustrates how to create a connector with multiple segments.
+* The property [`maxSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#maxSegmentThumb) is used to limit the segment thumb in the connector.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -197,7 +197,7 @@ Set the segment [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagra
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsOverlapping-cs1" %}
 
-The [`length`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogonalSegment/) and [`direction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogonalSegment/) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
+The [`length`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogonalSegment) and [`direction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogonalSegment) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -223,7 +223,7 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
 
 ## How to customize Orthogonal Segment Thumb Shape
 
-The orthogonal connector has a number of segments in between the source and the target point. The segments are rendered with the default shape rhombus. Now, the option has been provided to change the segment thumb shape using the [`segmentThumbShape`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#segmentThumbShape-SegmentThumbShapes) property. The predefined shapes provided are as follows:
+The orthogonal connector has a number of segments in between the source and the target point. The segments are rendered with the default shape rhombus. Now, the option has been provided to change the segment thumb shape using the [`segmentThumbShape`](https://ej2.syncfusion.com/vue/documentation/api/diagram#segmentThumbShape-SegmentThumbShapes) property. The predefined shapes provided are as follows:
 * Rhombus
 * Square
 * Rectangle
@@ -266,7 +266,7 @@ Use the following CSS to customize the segment thumb shape.
 
 Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors.
 
-To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments/) is set as `bezier` and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#type-Segments) for the connector. The following code example illustrates how to create a default Bezier segment.
+To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) is set as `bezier` and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type-Segments) for the connector. The following code example illustrates how to create a default Bezier segment.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -276,7 +276,7 @@ To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsBezier-cs2" %}
 
-The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#point1-PointModel) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#point2-PointModel) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the Bezier segments with control points.
+The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#point1-PointModel) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#point2-PointModel) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the Bezier segments with control points.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -286,7 +286,7 @@ The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSe
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsBezierPoints-cs2" %}
 
-The [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#vector1-VectorModel) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment/#vector2-VectorModel) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
+The [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#vector1-VectorModel) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#vector2-VectorModel) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -473,11 +473,11 @@ Also, the visibility of control points can be controlled using the bezierSetting
 
 ## Decorator
 
-* Start and end points of a connector can be decorated with some customizable shapes like arrows, circles, diamond or path. You can decorate the connection end points with the [`sourceDecorator`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourcedecorator-DecoratorModel) and [`targetDecorator`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetdecorator-DecoratorModel)properties of connector.
+* Start and end points of a connector can be decorated with some customizable shapes like arrows, circles, diamond or path. You can decorate the connection end points with the [`sourceDecorator`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourcedecorator-DecoratorModel) and [`targetDecorator`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetdecorator-DecoratorModel)properties of connector.
 
-* The [`shape`](https://ej2.syncfusion.com/vue/documentation/api/diagram/decoratorShapes/) property of `sourceDecorator` allows to define the shape of the decorators. Similarly, the [shape](https://ej2.syncfusion.com/vue/documentation/api/diagram/decoratorShapes/) property of `targetDecorator` allows to define the shape of the decorators.
+* The [`shape`](https://ej2.syncfusion.com/vue/documentation/api/diagram/decoratorShapes) property of `sourceDecorator` allows to define the shape of the decorators. Similarly, the [shape](https://ej2.syncfusion.com/vue/documentation/api/diagram/decoratorShapes) property of `targetDecorator` allows to define the shape of the decorators.
 
-* To create custom shape for source decorator, use [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/decorator/#pathdata-string) property. similarly, to create custom shape for target decorator, use [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/decorator/#pathData-string) property.
+* To create custom shape for source decorator, use [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/decorator#pathdata-string) property. similarly, to create custom shape for target decorator, use [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/decorator#pathData-string) property.
 
 * The following code example illustrates how to create decorators of various shapes.
 
@@ -493,9 +493,9 @@ Also, the visibility of control points can be controlled using the bezierSetting
 
 Padding is used to leave the space between the Connector's end point and the object to where it is connected.
 
-* The [`sourcePadding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#sourcepadding) property of connector defines space between the source point and the source node of the connector.
+* The [`sourcePadding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourcepadding) property of connector defines space between the source point and the source node of the connector.
 
-* The [`targetPadding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#targetpadding) property of connector defines space between the end point and the target node of the connector.
+* The [`targetPadding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetpadding) property of connector defines space between the end point and the target node of the connector.
 
 * The following code example illustrates how to leave space between the connection end points and source and target nodes.
 
@@ -509,18 +509,18 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 ## Flip
 
-The diagram Provides support to flip the connector. The [`flip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#flip) is performed to give the mirrored image of the original element.
+The diagram Provides support to flip the connector. The [`flip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#flip) is performed to give the mirrored image of the original element.
 
 The flip types are as follows:
 
 * HorizontalFlip
- [`Horizontal`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection/) is used to interchange the connector source and target x points.
+ [`Horizontal`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection) is used to interchange the connector source and target x points.
 
 * VerticalFlip
-[`Vertical`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection/) is used to interchange the connector source and target y points.
+[`Vertical`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection) is used to interchange the connector source and target y points.
 
 * Both
-[`Both`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection/) is used to interchange the source point as target point and target point as source point
+[`Both`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection) is used to interchange the source point as target point and target point as source point
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -534,7 +534,7 @@ The flip types are as follows:
 
 ## Bridging
 
-Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. By default [`bridgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#bridgeDirection-BridgeDirection) is set to top. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [`connector.constraints`] or [`diagram.constraints`]. The following code example illustrates how to enable line bridging.
+Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. By default [`bridgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bridgeDirection-BridgeDirection) is set to top. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [`connector.constraints`] or [`diagram.constraints`]. The following code example illustrates how to enable line bridging.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -546,13 +546,13 @@ Line Bridging creates a bridge for lines to smartly cross over other lines, at p
 
 >Note: We Need to inject Connector bridging module into the diagram.
 
-You can use [`bridgeSpace`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#bridgespace-number) property of connectors to define the width for line bridging.
+You can use [`bridgeSpace`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#bridgespace-number) property of connectors to define the width for line bridging.
 
 Limitation: Bezier segments do not support bridging.
 
 ## Corner radius
 
-Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#cornerradius-number) property.
+Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#cornerradius-number) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -564,9 +564,9 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 ## Appearance
 
-* The Connector’s [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokewidth-number), [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokecolor-string), [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokedasharray-string) and [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#opacity-number) properties are used to customize the appearance of the connector segments.
+* The Connector’s [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokewidth-number), [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokecolor-string), [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokedasharray-string) and [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#opacity-number) properties are used to customize the appearance of the connector segments.
 
-* The [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#visible-boolean) property of the connector enables or disables the visibility of connector.
+* The [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#visible-boolean) property of the connector enables or disables the visibility of connector.
 
 * Default values for all the  `connectors` can be set using the `getConnectorDefaults` properties. For example, if all connectors have the same type or having the same property then such properties can be moved into `getConnectorDefaults`.
 
@@ -584,9 +584,9 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 ## Decorator Appearance
 
-* The source decorator’s [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokecolor-string), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokewidth-number) and [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokedasharray-string) properties are used to customize the color and width and appearance of the decorator.
+* The source decorator’s [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokecolor-string), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokewidth-number) and [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokedasharray-string) properties are used to customize the color and width and appearance of the decorator.
 
-* To set the border stroke color, stroke width and stroke dash array for the target decorator, use [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokecolor-string), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokewidth-number) and [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle/#strokedasharray-string).
+* To set the border stroke color, stroke width and stroke dash array for the target decorator, use [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokecolor-string), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokewidth-number) and [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/strokeStyle#strokedasharray-string).
 
 * To set the size for source decorator, use width and height property. Similarly, to set the size for target decorator, use width and height.
 
@@ -602,7 +602,7 @@ The following code example illustrates how to customize the appearance of the de
 
 ## Interaction
 
-* Diagram allows to edit the connectors at runtime. To edit the connector segments at runtime, refer to [`Connection Editing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing/).
+* Diagram allows to edit the connectors at runtime. To edit the connector segments at runtime, refer to [`Connection Editing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing).
 
 ## Automatic line routing
 
@@ -653,7 +653,7 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
                 
         {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRouting-cs1" %}
 
-* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#constraints-ConnectorConstraints) property of the connector like the following code snippet.
+* In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
 
         {% tabs %}
         {% highlight html tabtitle="app.vue" %}
@@ -665,9 +665,9 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 
 ## Constraints
 
-* The [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#constraints-ConnectorConstraints) property of connector allows to enable/disable certain features of connectors.
+* The [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of connector allows to enable/disable certain features of connectors.
 
-* To enable or disable the constraints refer  [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorConstraints/)
+* To enable or disable the constraints refer  [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorConstraints)
 
 The following code illustrates how to disable selection.
 
@@ -681,7 +681,7 @@ The following code illustrates how to disable selection.
 
 ## Custom Properties
 
-* The [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#addinfo-Object) property of connectors allows to maintain additional information to connectors.
+* The [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#addinfo-Object) property of connectors allows to maintain additional information to connectors.
 
     ```javascript
 
@@ -698,7 +698,7 @@ The following code illustrates how to disable selection.
 
 ## Stack Order
 
-* The connectors [`zIndex`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector/#zindex-number) property specifies the stack order of an connector. A connector with greater stack order is always in front of an connector with a lower stack order.
+* The connectors [`zIndex`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#zindex-number) property specifies the stack order of an connector. A connector with greater stack order is always in front of an connector with a lower stack order.
 
 The following code illustrates how to render connector based on the stack order.
 
@@ -712,7 +712,7 @@ The following code illustrates how to render connector based on the stack order.
 
 ## Enable Connector Splitting
 
-The connectors are used to create a link between two points, ports, or nodes to represent the relationship between them. Split the connector between two nodes when dropping a new node onto an existing connector and create a connection between the new node and existing nodes by setting the [`enableConnectorSplit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#enableconnectorsplit) as true. The default value of the [`enableConnectorSplit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/enableConnectorSplit/) is false.
+The connectors are used to create a link between two points, ports, or nodes to represent the relationship between them. Split the connector between two nodes when dropping a new node onto an existing connector and create a connection between the new node and existing nodes by setting the [`enableConnectorSplit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#enableconnectorsplit) as true. The default value of the [`enableConnectorSplit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/enableConnectorSplit) is false.
 
 The following code illustrates how to split the connector and create a connection with new node.
 

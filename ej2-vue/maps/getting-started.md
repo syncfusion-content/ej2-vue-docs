@@ -18,7 +18,7 @@ You can explore some useful features in the Maps component using the following v
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Dependencies
 

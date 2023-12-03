@@ -45,11 +45,11 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 The client-side methods [`select`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#select) and [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#clearselection) help to select or clear the selection of the elements at runtime. The following code example illustrates how to select or clear the selection of an item using program.
 
-Get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel/#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property of the diagram model.
+Get the current selected items from the [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#nodes-nodemodel[]) and [`connectors`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#connectors-connectormodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property of the diagram model.
 
 ## Select entire elements in diagram programmatically
 
-The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram/#selectAll) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectall) method on the diagram.
+The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagram#selectAll) used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [`selectAll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectall) method on the diagram.
 
 ## Drag
 
@@ -94,7 +94,7 @@ You can change the size of the node resize thumb and the connector end point han
 
 * Each segment of a selected connector is editable with some specific handles/thumbs.
 
->Note: For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing/) module.
+>Note: For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing) module.
 
 ## End point handles
 
@@ -137,28 +137,28 @@ Diagram provides support to drop a node/connector over another node/connector. T
 
 ## User handles
 
-* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property.
+* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property.
 * The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
 
 ## Alignment
 
-User handles can be aligned relative to the node boundaries. It has [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#margin-marginmodel), [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number), [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#side-side), [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#horizontalalignment-horizontalalignment), and [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#verticalalignment-verticalalignment) settings. It is quite tricky when all four alignments are used together but gives more control over alignment.
+User handles can be aligned relative to the node boundaries. It has [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#margin-marginmodel), [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#offset-number), [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#side-side), [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#horizontalalignment-horizontalalignment), and [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#verticalalignment-verticalalignment) settings. It is quite tricky when all four alignments are used together but gives more control over alignment.
 
 ## Offset
 
-The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectormodel/#userHandles-userhandlemodel[]) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#offset-number) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) is used to align the user handle based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 ## Side
 
-The [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#side-side) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) is used to align the user handle by using the [`Top`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#top), [`Bottom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#bottom), [`Left`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#left), and [`Right`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side/#right) options.
+The [`side`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#side-side) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) is used to align the user handle by using the [`Top`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#top), [`Bottom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#bottom), [`Left`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#left), and [`Right`](https://ej2.syncfusion.com/vue/documentation/api/diagram/side#right) options.
 
 ## Horizontal and vertical alignments
 
-The [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#horizontalalignment-horizontalalignment) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) is used to set how the user handle is horizontally aligned at the position based on the [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#offset-number). The [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#verticalalignment-verticalalignment) property is used to set how user handle is vertically aligned at the position.
+The [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#horizontalalignment-horizontalalignment) property of [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) is used to set how the user handle is horizontally aligned at the position based on the [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#offset-number). The [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#verticalalignment-verticalalignment) property is used to set how user handle is vertically aligned at the position.
 
 ## Margin
 
-Margin is an absolute value used to add some blank space in any one of its four sides. The [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]) can be displaced with the [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#margin-marginmodel) property.
+Margin is an absolute value used to add some blank space in any one of its four sides. The [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) can be displaced with the [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#margin-marginmodel) property.
 
 ## Notification for the mouse button clicked
 
@@ -214,7 +214,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 
 ## Appearance
 
-The appearance of the user handle can be customized by using the [`size`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#size-number), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#bordercolor-string), [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#backgroundcolor-string), [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#visible-boolean), [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#pathdata-string), and [`pathColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle/#pathcolor-string) properties of the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userHandles-userhandlemodel[]).
+The appearance of the user handle can be customized by using the [`size`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#size-number), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#bordercolor-string), [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#backgroundcolor-string), [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#visible-boolean), [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#pathdata-string), and [`pathColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#pathcolor-string) properties of the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -228,13 +228,13 @@ The appearance of the user handle can be customized by using the [`size`](https:
 
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
-* When the diagram is zoomed or panned, the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#scrollChange--emittypeiscrollchangeeventargs) event gets triggered.
+* When the diagram is zoomed or panned, the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram#scrollChange--emittypeiscrollchangeeventargs) event gets triggered.
 
 ![Zoom Pan](images/Zoom-pan.gif)
 
 ## Zoom pan status
 
-Diagram provides the support to notify the pan status of the zoom pan tool. When ever the diagram is panning the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#scrollChange--emittypeiscrollchangeeventargs) event is triggered and hence the pan status can be obtained. The pan status is notified with Start, Progress, and Completed.
+Diagram provides the support to notify the pan status of the zoom pan tool. When ever the diagram is panning the [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram#scrollChange--emittypeiscrollchangeeventargs) event is triggered and hence the pan status can be obtained. The pan status is notified with Start, Progress, and Completed.
 
 |  Pan Status  | Description|
 |--------------|---------|
