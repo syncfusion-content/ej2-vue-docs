@@ -1,6 +1,9 @@
 
 import Vue from "vue";
 import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { data } from './data.js';
+import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+Vue.use(ButtonPlugin);
 Vue.use(SpreadsheetPlugin);
 
 var base64String;
@@ -8,8 +11,8 @@ var base64String;
 new Vue({
   el: '#app',
   template: `<div>
-  <button class="e-btn" v-on:click.native="importBtn">Import Base64</button>
-  <button class="e-btn" v-on:click.native="exportBtn">Export as Base64</button>
+  <ejs-button class="e-btn custom-btn" v-on:click.native="importBtn">Import Base64</ejs-button>
+  <ejs-button class="e-btn custom-btn" v-on:click.native="exportBtn">Export as Base64</ejs-button>
     <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :beforeSave="beforeSave" :saveComplete="saveComplete">
       <e-sheets>
         <e-sheet name="Car Sales Report">
