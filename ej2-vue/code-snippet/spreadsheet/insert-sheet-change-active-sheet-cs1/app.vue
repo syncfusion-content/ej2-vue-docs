@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="e-btn" v-on:click.native="insertSheet">Insert Sheet</button>
+    <ejs-button class="e-btn custom-btn" v-on:click.native="insertSheet">Insert Sheet</ejs-button>
     <ejs-spreadsheet ref="spreadsheet">
       <e-sheets>
         <e-sheet name="Car Sales Report">
@@ -25,6 +25,8 @@
 import Vue from "vue";
 import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
 import { data, employeeData } from './data.js';
+import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+Vue.use(ButtonPlugin);
 Vue.use(SpreadsheetPlugin);
 export default {
   data: () => {
@@ -69,6 +71,9 @@ export default {
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+.custom-btn {
+  margin-bottom: 10px;
+}
 </style>
 
 
