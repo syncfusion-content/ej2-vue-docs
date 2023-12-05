@@ -36,7 +36,8 @@ System.config({
         "@syncfusion/ej2-charts": "syncfusion:ej2-charts/dist/ej2-charts.umd.min.js",
         "@syncfusion/ej2-svg-base": "syncfusion:ej2-svg-base/dist/ej2-svg-base.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
-        "@syncfusion/ej2-vue-spreadsheet": "syncfusion:ej2-vue-spreadsheet/dist/ej2-vue-spreadsheet.umd.min.js"
+        "@syncfusion/ej2-vue-spreadsheet": "syncfusion:ej2-vue-spreadsheet/dist/ej2-vue-spreadsheet.umd.min.js",
+        "@syncfusion/ej2-vue-buttons": "syncfusion:ej2-vue-buttons/dist/ej2-vue-buttons.umd.min.js"
     }
 });
 
