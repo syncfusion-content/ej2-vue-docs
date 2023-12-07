@@ -11,7 +11,7 @@
 <script>
 import Vue from 'vue';
 import { AccordionPlugin } from '@syncfusion/ej2-vue-navigations';
-import { DataManager, Query, ODataAdaptor, ReturnOption } from '@syncfusion/ej2-data';
+import { DataManager, Query, ODataV4Adaptor, ReturnOption } from '@syncfusion/ej2-data';
 Vue.use(AccordionPlugin);
 export default {
   name: 'app',
@@ -19,7 +19,7 @@ export default {
 
   }, mounted() {
 
-    new DataManager({ url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Employees', adaptor: new ODataAdaptor })
+    new DataManager({ url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Employees', adaptor: new ODataV4Adaptor })
       .executeQuery(new Query().range(4, 7)).then((e) => {
 
         var result = e.result;

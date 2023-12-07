@@ -18,7 +18,6 @@
              <e-item text='Z-A Sort' prefixIcon = 'e-descending-icon tb-icons' overflow ='Show'></e-item>
             </e-items>
         </ejs-toolbar>
-        <link href="https://ej2.syncfusion.com/angular/demos/src/toolbar/toolbar.component.css" rel="stylesheet" />
     </div>
   </div>
 </template>
