@@ -19,7 +19,6 @@
              <e-item text='Clear' prefixIcon = 'e-clear-icon tb-icons'></e-item>
             </e-items>
         </ejs-toolbar>
-        <link href="https://ej2.syncfusion.com/angular/demos/src/toolbar/toolbar.component.css" rel="stylesheet" />
     </div>
   </div>
 </template>

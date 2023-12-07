@@ -5,7 +5,7 @@
     Vue.use(SchedulePlugin);
 
     let dataManager = new DataManager({
-        url: 'https://ej2services.syncfusion.com/production/web-services/api/Schedule',
+        url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Orders/',
         adaptor: new ODataV4Adaptor(),
         crossDomain: true
     });
@@ -23,9 +23,19 @@ new Vue({
 
         data() {
             return {
-                selectedDate: new Date(2020, 9, 20),
+                selectedDate: new Date(1996, 6, 9),
                 readOnly: true,
-                eventSettings: { dataSource: dataManager }
+                eventSettings: { dataSource: dataManager,
+                    fields: {
+                        id: 'Id',
+                        subject: { name: 'ShipName' },
+                        location: { name: 'ShipCountry' },
+                        description: { name: 'ShipAddress' },
+                        startTime: { name: 'OrderDate' },
+                        endTime: { name: 'RequiredDate' },
+                        recurrenceRule: { name: 'ShipRegion' }
+                    } 
+                }
             };
         },
         provide: {
