@@ -25,7 +25,7 @@
 
 <script>
 import Vue from "vue";
-import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
+import { RibbonPlugin, RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
 Vue.use(RibbonPlugin);
 
 export default {
