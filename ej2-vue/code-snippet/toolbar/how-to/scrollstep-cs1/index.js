@@ -42,7 +42,6 @@ new Vue({
                 <e-item prefixIcon='e-export-icon tb-icons' tooltipText='Export'></e-item>
             </e-items>
         </ejs-toolbar>
-        <link href="https://ej2.syncfusion.com/angular/demos/src/toolbar/toolbar.component.css" rel="stylesheet" />
     <br/>
     </div>
 `,
