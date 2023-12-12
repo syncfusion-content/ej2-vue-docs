@@ -34,13 +34,10 @@ export default {
         primaryYAxis:{
             labelFormat: '${value}K'
         },
-        legendSettings: {
-            visible: true
-        },
         marker: {
-        dataLabel:{
+          dataLabel:{
                 visible: true
-            }
+          }
         },
         tooltip:{ enable: true },
       title: "Sales Analysis"
