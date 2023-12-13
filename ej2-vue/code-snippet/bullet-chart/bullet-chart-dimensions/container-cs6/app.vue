@@ -11,6 +11,7 @@
         :interval="interval"
         title="Sales Rate"
         :targetTypes="targetTypes"
+        :animation="animation"
       >
       <e-bullet-range-collection>
           <e-bullet-range end="35" color="red"></e-bullet-range>
@@ -29,7 +30,7 @@ export default {
   data () {
     return {
       data: [{ value: 55, target: 75 }],
-      minimum: 0, maximum: 100, interval: 20, targetTypes: ["Circle"]
+      minimum: 0, maximum: 100, interval: 20, targetTypes: ["Circle"], animation: { enable: false }
     }
   }
 }

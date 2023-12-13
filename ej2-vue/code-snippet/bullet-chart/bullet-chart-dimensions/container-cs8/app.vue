@@ -13,6 +13,7 @@
         labelFormat="${value}"
         subtitle="(in dollars $)"
         orientation="vertical"
+        :animation="animation"
         width="20%"
       >
       <e-bullet-range-collection>
@@ -31,8 +32,8 @@ Vue.use(BulletChartPlugin);
 export default {
   data () {
     return {
-      data: [{ value: 55, target: 45 }],
-      minimum: 0, maximum: 100, interval: 20
+      data: [{ value: 55, target: 45 }], label: '${value}',
+      minimum: 0, maximum: 100, interval: 20, animation: { enable: false }
     }
   }
 }
