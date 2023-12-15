@@ -9,7 +9,7 @@ domainurl: ##DomainURL##
 ---
 
 <!-- markdownlint-disable MD002 MD022 -->
-## Spinner and progress in Vue Progress button component
+# Spinner and progress in Vue Progress button component
 
 ### Change spinner position
 
