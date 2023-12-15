@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show dialog with full screen in Vue Dialog component | Syncfusion
-description: Learn here all about Show dialog with full screen in Syncfusion Vue Dialog component of Syncfusion Essential JS 2 and more.
+title: Show dialog with full screen in Vue Dialog Component | Syncfusion
+description: Learn here all about show dialog with full screen support in Syncfusion Essential Vue Dialog component, it's elements and more.
 control: Show dialog with full screen 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show dialog with full screen in Vue Dialog component
+# Show dialog with full screen in Vue Dialog Component
 
 You can show the dialog in fullscreen by passing `true` as argument to the dialog [show](https://ej2.syncfusion.com/vue/documentation/api/dialog/#show) method.
 
