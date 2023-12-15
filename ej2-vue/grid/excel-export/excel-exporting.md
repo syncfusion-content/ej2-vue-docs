@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Excel exporting in Vue Grid component | Syncfusion
-description: Learn here all about Excel exporting in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+title: Excel exporting in Vue Grid Component | Syncfusion
+description: Learn here all about excel exporting in Syncfusion Essential Vue Grid component, its elements and more.
 control: Excel exporting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Excel exporting in Vue Grid component
+# Excel exporting in Vue Grid Component
 
 The excel export allows exporting Grid data to Excel document. You need to use the
  [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/grid/#excelexport) method for exporting. To enable Excel export in the grid, set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowexcelexport) as true.
@@ -43,7 +43,7 @@ In the below demo, we have rendered the default spinner component when exporting
 
 ## Custom data source
 
-The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the **dataSource** in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
+The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the **dataSource** in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
