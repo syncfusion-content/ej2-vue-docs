@@ -90,6 +90,22 @@ Gantt also supports dragging multiple rows at a time and drop them on any rows a
         
 {% previewsample "page.domainurl/code-snippet/gantt/rows-cs6" %}
 
+### Taskbar drag and drop between rows
+
+The Gantt feature empowers users to efficiently reorganize records by seamlessly moving taskbar and rearranging their positions through a simple drag-and-drop action. Using this feature, rows can be dropped at above and below as a sibling or child to the existing rows.
+
+This mode can be enable by setting the [allowTaskbarDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowtaskbardraganddrop) property to `true`.
+
+To use row drag and drop feature, inject the `RowDD` and `Edit` module in Gantt.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/rows-cs14/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/rows-cs14" %}
+
 ### Drag and drop events
 
 We provide various events to customize the row drag and drop action, the following table explains about the available events and its details.
