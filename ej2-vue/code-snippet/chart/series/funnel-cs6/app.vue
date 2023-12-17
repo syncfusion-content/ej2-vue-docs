@@ -12,8 +12,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { AccumulationChartPlugin, AccumulationLegend, FunnelSeries, AccumulationTooltip, AccumulationDataLabel,
-IAccLoadedEventArgs, IAccResizeEventArgs } from "@syncfusion/ej2-vue-charts";
+import { AccumulationChartPlugin, AccumulationLegend, FunnelSeries, AccumulationTooltip, AccumulationDataLabel } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(AccumulationChartPlugin);
 
@@ -51,14 +50,16 @@ export default {
      accumulationchart: [FunnelSeries, AccumulationTooltip, AccumulationDataLabel, AccumulationLegend]
   },
   methods: {
-    load: function(args) {
-            if (args.accumulation.availableSize.width < args.accumulation.availableSize.height) {
-                args.accumulation.series[0].width = '80%';
-                args.accumulation.series[0].height = '70%';
+        load: function(args) {
+            if (args.accumulation.availableSize) {
+                if (args.accumulation.availableSize.width < args.accumulation.availableSize.height) {
+                    args.accumulation.series[0].width = '80%';
+                    args.accumulation.series[0].height = '70%';
+                }
             }
         },
         resized: function(args) {
-            let bounds: ClientRect = document.getElementById('container').getBoundingClientRect();
+            let bounds = document.getElementById('container').getBoundingClientRect();
             if (bounds.width < bounds.height) {
                 args.accumulation.series[0].width = '80%';
                 args.accumulation.series[0].height = '70%';
@@ -67,7 +68,7 @@ export default {
                 args.accumulation.series[0].height = '80%';
             }
         },
-  }
+    }
 };
 </script>
 <style>

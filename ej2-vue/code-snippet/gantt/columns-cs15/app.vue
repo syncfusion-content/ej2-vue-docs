@@ -23,7 +23,7 @@ export default {
   data: function() {
       return{
          data: editingData,
-        projectName: function () {
+         projectName: function () {
           return { template : Vue.component('columnTemplate',{
              template: `<div class="image">
                     <img :src="image" width=20 height=20 class="e-image"/> Task Name
@@ -35,7 +35,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "taskname.png";
+                        return "Taskname.png";
                     }
                 }
           })}
@@ -52,7 +52,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "startdate.png";
+                        return "Startdate.png";
                     }
                 }
           })}
@@ -69,7 +69,7 @@ export default {
                 },
                 computed: {
                     image: function() {
-                        return "duration.png";
+                        return "Duration.png";
                     }
                 }
           })}

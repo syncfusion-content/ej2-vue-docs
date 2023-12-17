@@ -22,14 +22,14 @@
         },
         // Text(label) added to the node
     }]
-    let selectedItems: { handleSize : 40 },
     export default {
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",
                 height: "350px",
                 nodes: nodes,
+                selectedItems: { handleSize : 40 }
             }
         }
     }

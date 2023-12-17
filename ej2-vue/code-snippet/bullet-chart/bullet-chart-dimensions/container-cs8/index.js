@@ -19,6 +19,7 @@ new Vue({
         :labelFormat="label"
         subtitle="(in dollars $)"
         orientation="vertical"
+        :animation="animation"
         width="20%"
       >
       <e-bullet-range-collection>
@@ -33,7 +34,7 @@ new Vue({
   data () {
     return {
       data: [{ value: 55, target: 45 }], label: '${value}',
-      minimum: 0, maximum: 100, interval: 20
+      minimum: 0, maximum: 100, interval: 20, animation: { enable: false },
     }
   }
 

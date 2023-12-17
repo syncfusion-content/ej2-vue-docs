@@ -174,7 +174,7 @@ data() {
         { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
         { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
         { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-    ],
+    ]
   };
 }
 </script>

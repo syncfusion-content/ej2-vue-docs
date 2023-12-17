@@ -21,7 +21,7 @@ new Vue({
 	template: `
 <div id="app">
     <div id="wrapper1">
-      <ejs-dropdownlist id='dropdownlist' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields' :enableVirtualization='true' :allowFiltering='true' popupHeight="200px"></ejs-dropdownlist>
+      <ejs-dropdownlist id='dropdownlist' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields' :enableVirtualization='true' :allowFiltering='false' popupHeight="200px"></ejs-dropdownlist>
     </div>
 </div>
 `,

@@ -1,5 +1,4 @@
 
-
 <template>
     <div>
         <div className="col-lg-8 control-section" id="control_dash">

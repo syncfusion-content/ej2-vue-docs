@@ -14,12 +14,12 @@
     Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
     let connectors = [{
-    id = 'connector',
+    id : 'connector',
     // Define the type of the segment
-    type = 'Orthogonal';
-    sourcePoint = { x: 250, y: 250 };
-    targetPoint = { x: 350, y: 350 };
-    segments = [
+    type : 'Orthogonal',
+    sourcePoint : { x: 250, y: 250 },
+    targetPoint : { x: 350, y: 350 },
+    segments : [
     {
         type: 'Orthogonal',
         // Defines the direction for the segment lines
@@ -31,15 +31,15 @@
         type: 'Orthogonal',
         direction: "Bottom",
         length: 20
-        }];
+        }],
     }]
     export default {
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "900px",
                 height: "500px",
-                connectors: [connector2],
+                connectors: [connectors],
                 getConnectorDefaults:(connector)=>{
                 connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
                 }

@@ -22,7 +22,7 @@ new Vue({
       <template v-slot:cTemplate="{data}">
         <div class="columnTemplate" v-if="data.ganttProperties.resourceNames">
           <img
-            :src="data.TaskID + '.png'"
+            :src="'https://ej2.syncfusion.com/vue/demos/source/gantt/images/' + data.TaskID + '.png'"
             height="40px" />
           <div style="display:inline-block;width:100%;position:relative;left:30px">
             {{data.ganttProperties.resourceNames}}</div>

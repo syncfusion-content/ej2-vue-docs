@@ -30,7 +30,7 @@ export default {
     data (){
         return {
             itemData: records,
-            fields: { value: 'text', text: 'text' }
+            fields: { value: 'text' }
         }
     },
     provide: {

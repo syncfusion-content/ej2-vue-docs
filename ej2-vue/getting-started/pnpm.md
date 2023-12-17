@@ -100,7 +100,7 @@ The dependency packages for Syncfusion in a PNPM vite project are situated withi
   @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-navigations/styles/material.css";
   @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-popups/styles/material.css";
   @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-grids/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -196,7 +196,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-navigations/styles/material.css";
   @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-popups/styles/material.css";
   @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/.pnpm/node_modules/@syncfusion/ej2-grids/styles/material.css";
 </style>
 
 {% endhighlight %}

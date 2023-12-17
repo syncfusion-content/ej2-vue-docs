@@ -17,7 +17,7 @@ new Vue({
     <div class="sample-container">
         <div class="default-section" id="rteSection" style="min-height: 360px;">
         <ejs-richtexteditor ref="customObj" :toolbarSettings="toolbarSettings" :created="onCreate"><p style="margin-right:10px">The custom command "insert special character" is configured as the last item of the toolbar. Click on the command and choose the special character you want to include from the popup.</p></ejs-richtexteditor>
-        <ejs-dialog id='rteDialog' :buttons='dlgButtons' :width='width' :height="height" :header='header' ref="dialogObj" :overlayClick='dialogOverlay' :visible='visible' :showCloseIcon='showCloseIcon' :isModal='modal'  target='#rteSection' :created="dialogCreate">
+        <ejs-dialog id='rteDialog' :buttons='dlgButtons' :width='width' :height="height" :header='header' ref="dialogObj" :overlayClick='dialogOverlay' :visible='visible' :showCloseIcon='showCloseIcon' :isModal='modal' :cssClass='e-rte-elements'  target='#rteSection' :created="dialogCreate">
         </ejs-dialog>
         <div id="customTbarDialog" style="display: none">
                 <div id="rteSpecial_char">

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Chart Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Chart component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Chart component.
 
 ## Prerequisites
 
@@ -181,7 +181,7 @@ export default {
             { month: 'Jul', sales: 35 }, { month: 'Aug', sales: 55 },
             { month: 'Sep', sales: 38 }, { month: 'Oct', sales: 30 },
             { month: 'Nov', sales: 25 }, { month: 'Dec', sales: 32 }
-              ]
+      ]
     };
   }
 };
@@ -200,12 +200,11 @@ Since the JSON contains category data, set the [`valueType`](https://ej2.syncfus
         
 {% previewsample "page.domainurl/code-snippet/chart/getting-started/datasource-cs4" %}
 
-* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and `K` as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](../api/chart/axis/#labelformat) property of axis. Here, `{value}` act as a placeholderfor each axis label.
+* The sales data are in thousands, so format the vertical axis label by adding <b>$</b> as a prefix and <b>K</b> as a suffix to each label. This can be achieved by setting the ${value}K to the [`labelFormat`](../api/chart/axis/#labelformat) property of axis. Here, `{value}` act as a placeholder for each axis label.
 
 ## Add Chart Title
 
-You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#title) property to the chart to provide
-quick information to the user about the data plotted in the chart.
+You can add a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#title) property to the chart to provide quick information to the user about the data plotted in the chart.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -217,7 +216,7 @@ quick information to the user about the data plotted in the chart.
 
 ## Enable Legend
 
-You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/) object and by injecting the `LegendService` into the `@NgModule.providers`.
+You can use legend for the chart by setting the `visible` property to true in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/) object and by injecting the `Legend` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -229,8 +228,7 @@ You can use legend for the chart by setting the `visible` property to true in [`
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the chart.
-This can be achieved by setting the visible property to true in the `dataLabel` object  and by injecting `DataLabel` into the `provide`.
+You can add data labels to improve the readability of the chart. This can be achieved by setting the visible property to true in the `dataLabel` object and by injecting `DataLabel` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -242,8 +240,7 @@ This can be achieved by setting the visible property to true in the `dataLabel` 
 
 ## Enable Tooltip
 
-The tooltip is useful when you cannot display information by using the data labels
-due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/) object and by injecting `TooltipService` into the `@NgModule.providers`.
+The tooltip is useful when you cannot display information by using the data labels due to space constraints. You can enable tooltip by setting the enable property as true in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/) object and by injecting `Tooltip` into the `provide`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

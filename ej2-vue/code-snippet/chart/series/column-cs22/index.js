@@ -6,7 +6,7 @@ import { DataManager, Query } from '@syncfusion/ej2-data';
 Vue.use(ChartPlugin);
 
 let dataManager = new DataManager({
-    url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/Tasks/'
+    url: 'https://services.syncfusion.com/vue/production/api/orders'
 });
 let query = new Query().take(5).where('Estimate', 'lessThan', 3, false);
 
@@ -15,9 +15,9 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+         <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :title='title'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='Assignee' yName='Estimate' :query='queries' name='Story Point'> </e-series>
+                <e-series :dataSource='seriesData' type='Column' xName='CustomerID' yName='Freight' :query='queries'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -28,16 +28,12 @@ new Vue({
       seriesData: dataManager,
       queries: query,
         primaryXAxis: {
-           rangePadding: 'Additional',
-           valueType: 'Category',
-           title: 'Assignee'
+          valueType: 'Category'
         },
         primaryYAxis: {
-           title: 'Estimate',
-            minimum: 0,
-            maximum: 3,
-            interval: 1
-        }
+          title: 'Freight rate in U.S. dollars'
+        },
+        title: 'Container freight rate'
     };
   },
   provide: {

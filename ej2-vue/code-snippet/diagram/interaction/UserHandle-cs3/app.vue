@@ -9,7 +9,7 @@
     import Vue from 'vue';
     import { DiagramPlugin,NodeModel ,MoveTool,BasicShapeModel,UserHandleModel,randomId,NodeConstraints, DiagramConstraints,SelectorConstraints,cloneObject} from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
-    let diagramInstance: Diagram;
+    let diagramInstance;
     let nodes = [{
         id: 'node',
     // Position of the node
@@ -30,7 +30,7 @@
         tooltip: { content: 'handle1', position: 'BottomRight', relativeMode: 'Object' }
     }];
     export default {
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",
@@ -38,12 +38,12 @@
                 nodes: nodes,
                 constraints: DiagramConstraints.Default | DiagramConstraints.Tooltip,
                 selectedItems: {
-                    constraints: SelectorConstraints.All,userHandles: handle
+                    constraints: SelectorConstraints.All,userHandles: handles
                 }
             }
-        }
+        },
         mounted: function() {
-            let obj: any = document.getElementById("diagram");
+            let obj = document.getElementById("diagram");
             diagramInstance = obj.ej2_instances[0];
         }
     }

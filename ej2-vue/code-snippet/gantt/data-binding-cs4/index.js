@@ -29,7 +29,7 @@ new Vue({
             },
        
         actionFailure: function(args){
-	    let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0]; // Gantt instance
+            let gantt = document.getElementsByClassName("e-gantt")[0].ej2_instances[0]; // Gantt instance
             let span = document.createElement('span');
             this.element.parentNode.insertBefore(span,gantt.element);
             span.style.color = '#FF0000'

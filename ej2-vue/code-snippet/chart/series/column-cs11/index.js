@@ -37,7 +37,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :tooltip='tooltip' :chartArea='chartArea'
+         <ejs-chart id="container" ref="chart" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :tooltip='tooltip' :chartArea='chartArea'
          :legendSettings='legendSettings' :loaded='loaded'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' :marker='marker' type='Column' xName='x' yName='y' name='Tiger' width='1' :cornerRadius="cornerRadius"> </e-series>

@@ -23,7 +23,7 @@ new Vue({
   data: function() {
       return{
          data: editingData,
-	      projectName: function () {
+         projectName: function () {
           return { template : Vue.component('columnTemplate',{
              template: `<div class="image">
                     <img :src="image" width=20 height=20 class="e-image"/> Task Name
@@ -35,7 +35,7 @@ new Vue({
                 },
                 computed: {
                     image: function() {
-                        return "taskname.png";
+                        return "Taskname.png";
                     }
                 }
           })}
@@ -52,7 +52,7 @@ new Vue({
                 },
                 computed: {
                     image: function() {
-                        return "startdate.png";
+                        return "Startdate.png";
                     }
                 }
           })}
@@ -69,7 +69,7 @@ new Vue({
                 },
                 computed: {
                     image: function() {
-                        return "duration.png";
+                        return "Duration.png";
                     }
                 }
           })}
@@ -91,7 +91,6 @@ new Vue({
                 }
           })}
       },
-
       taskFields: {
             id: 'TaskID',
             name: 'TaskName',

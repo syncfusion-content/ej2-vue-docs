@@ -48,4 +48,3 @@
     @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
-

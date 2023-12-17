@@ -15,8 +15,7 @@ new Vue({
           ref="pdfviewer"
           :documentPath="documentPath"
           :documentLoad="documentLoad"
-          :resourceUrl="resourceUrl"
-          :serviceUrl="serviceUrl">
+          :resourceUrl="resourceUrl">
         </ejs-pdfviewer>
     </div>
 `,
@@ -25,8 +24,7 @@ new Vue({
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.40/dist/ej2-pdfviewer-lib",
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
+      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {

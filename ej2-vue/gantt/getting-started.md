@@ -409,7 +409,7 @@ To highlight the days, inject the `DayMarkers` module in the `provide` section.
 
 ## Run the application
 
-Now run the `npm run dev` command in the console, it will build your application and open in the web browser.
+Now run the `npm run serve` command in the console, it will build your application and open in the web browser.
 
 The following example shows a basic Gantt:
 

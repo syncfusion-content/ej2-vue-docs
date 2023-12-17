@@ -687,6 +687,23 @@ We can show more indicator if more than one appointment is available in a same c
         
 {% previewsample "page.domainurl/code-snippet/schedule/event-cs36" %}
 
+## How to limit maximum number of events to display
+
+In the Scheduler, the default behavior is to display concurrent events based on cell height, with each new event represented as 
+`+n more` characters. However, you may want to improve the quality of the presentation by limiting the number of concurrent events. This can be accomplished by using the [maxEventsPerRow](https://ej2.syncfusion.com/vue/documentation/api/schedule/views/#maxeventsperrow) property, which is defaulted to the [views](https://ej2.syncfusion.com/vue/documentation/api/schedule/views/) property.
+
+The [maxEventsPerRow](https://ej2.syncfusion.com/vue/documentation/api/schedule/views/#maxeventsperrow) property is specific to the month, timeline month, and timeline year views, allowing you to view events visually in these rows. Below is a code example that demonstrates how to use this constraint and the events displayed in a cell have been created:
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/schedule/max-events-per-row-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/max-events-per-row-cs1" %}
+
+> The property [maxEventsPerRow](https://ej2.syncfusion.com/vue/documentation/api/schedule/views/#maxeventsperrow) will be applicable only when [rowAutoHeight](https://ej2.syncfusion.com/vue/documentation/api/schedule/#rowautoheight) feature is disabled in the Scheduler.
+
 ## Display tooltip for appointments
 
 The tooltip shows the Scheduler appointment's information in a formatted style by making use of the tooltip related options.

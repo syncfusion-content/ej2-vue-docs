@@ -30,12 +30,12 @@ export default {
   data: function() {
     return {
       data: new DataManager({
-        url: '//js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/',
+        url: 'https://services.syncfusion.com/js/production/api/',
         crossDomain: true
       }),
-      query: new Query().from('Products').select('ProductID,ProductName').take(6),
-      fields:  { id: 'ProductID', text: 'ProductName' },
-      headerTitle: 'Products',
+      query: new Query().from("ListView").select("EmployeeID,FirstName").take(10),
+      fields:  { id: "EmployeeID", text: "FirstName" },
+      headerTitle: 'Employees',
     };
   }
 }
