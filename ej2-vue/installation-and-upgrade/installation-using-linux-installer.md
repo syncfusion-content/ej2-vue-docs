@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Installing Syncfusion Essential Studio Linux installer - Syncfusion
-description: Learn here about how to install Syncfusion Essential Studio Linux installer after downloading from our Syncfusion website.
-platform: common
-control: Essential Studio
+title: Installation using linux installer in Vue Installation and upgrade component | Syncfusion
+description: Learn here all about Installation using linux installer in Syncfusion Vue Installation and upgrade component of Syncfusion Essential JS 2 and more.
+control: Installation using linux installer 
+platform: ej2-vue
 documentation: ug
+domainurl: ##DomainURL##
 ---
 
-# Installing Syncfusion Essential Studio Linux installer
+# Installing Syncfusion JavaScript Linux installer
 
 ## Overview
 
@@ -26,9 +27,9 @@ Syncfusion provides the Linux installer for the following Essential Studio produ
 
 ## Step-by-Step Installation
 
-The steps below show how to install Essential Studio Linux installer.
+The steps below show how to install JavaScript Linux installer.
 
-1. Extract the Syncfusion Essential Studio Linux installer(.zip) file. The files are extracted in your machine.
+1. Extract the Syncfusion JavaScript Linux installer(.zip) file. The files are extracted in your machine.
 
    ![Welcome wizard](images/Linux_Installer1.png)
    
@@ -37,10 +38,12 @@ The steps below show how to install Essential Studio Linux installer.
 
    ![License Agreement](images/Linux_Installer2.png)   
    
-   N> The Unlock key is not required to install the Linux installer. The Syncfusion Linux installer can be used for development purposes without registering the Unlock key.
+   N> The Unlock key is not required to install the Linux installer.
 
 
 4. You can launch the demo source and use the NuGet packages included in the Linux installer.
+
+
 
 ## License key registration in samples
 

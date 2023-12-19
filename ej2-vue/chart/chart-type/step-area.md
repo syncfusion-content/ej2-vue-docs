@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step Area in Vue Chart Component
+# Step area in Vue Chart component
 
-## Step Area
+## Step area
 
 To render a step area series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `StepArea` and inject `StepAreaSeries`  into the `provide`.
 
@@ -30,6 +30,7 @@ The following properties can be used to customize the `step area` series.
 * [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill).
 * [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes for series.
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
+* [step](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -39,7 +40,7 @@ The following properties can be used to customize the `step area` series.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/steparea-cs" %}
 
-## See Also
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)

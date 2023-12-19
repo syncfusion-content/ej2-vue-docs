@@ -16,7 +16,7 @@ new Vue({
         :maximum="maximum"
         :interval="interval"
         title="Sales Rate"
-        targetColor="red"
+        targetColor="color"
         targetWidth=15
       >
       <e-bullet-range-collection>
@@ -30,7 +30,7 @@ new Vue({
 
   data () {
     return {
-      data: [{ value: 55, target: 75 }],
+      data: [{ value: 55, target: 75, color: 'red' }],
       minimum: 0, maximum: 100, interval: 20
     }
   }

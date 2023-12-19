@@ -80,3 +80,15 @@ Initially, render more than one chart to export, and then add button to export t
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs12" %}
+
+## Exporting chart using base64 string
+
+The chart can be exported as an image in the form of a basering by utilizing HTML canvas. This process involves rendering the chart onto a canvas element and then converting the canvas content to a base64 string.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/export-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/export-cs1" %}

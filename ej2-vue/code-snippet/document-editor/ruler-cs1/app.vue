@@ -3,13 +3,13 @@
 <template>
     <div id="app">
       <button id='container_ruler_button' v-on:click="onClick">Show/Hide Ruler</button>
-      <ejs-documenteditor ref="documenteditor" :height="height" :serviceUrl='serviceUrl'></ejs-documenteditor>
+     <ejs-documenteditor id="container" height="370px"  style="width: 100%"  ref="container" :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'></ejs-documenteditor>
     </div>
 </template>
 
 <script>
     import Vue from 'vue';
-    import { DocumentEditorPlugin, DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
+    import { DocumentEditorPlugin, DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
 
     Vue.use(DocumentEditorPlugin);
     export default {
@@ -21,16 +21,17 @@
               documentEditorSettings: {showRuler: true}
           }
         },
-        provide: {
-          DocumentEditor: []
-        },
+      provide: {
+        //Inject require modules.
+        DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog] 
+      },
         methods: {
           onClick:function() {
             this.$refs.container.ej2Instances.documentEditorSettings.showRuler = !this.$refs.container.ej2Instances.documentEditorSettings.showRuler
           }
         },
-        mounted: function() {
-          this.$refs.container.ej2Instances.enableAllModules();
+        mounted: function() {    
+            this.$refs.container.ej2Instances.documentEditorSettings.showRuler = true;     
         }
       }
 </script>

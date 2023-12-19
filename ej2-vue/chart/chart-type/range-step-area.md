@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Range Step Area in Vue Chart Component
+# Range step area in Vue Chart component
 
-## Range Step Area
+## Range step area
 
 To render a range step area series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `RangeStepArea` and inject `RangeStepAreaSeries`  into the `provide`.
 
@@ -30,6 +30,7 @@ The following properties can be used to customize the `range step area` series.
 * [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill).
 * [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes for series.
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
+* [step](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -39,7 +40,7 @@ The following properties can be used to customize the `range step area` series.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/area-cs12" %}
 
-## See Also
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)
