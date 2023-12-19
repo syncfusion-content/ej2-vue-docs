@@ -11,7 +11,7 @@
         :interval="interval"
         title="Sales Rate"
         categoryField="category"
-        valueFill="blue"
+        valueFill="color"
         valueHeight=15
       >
       <e-bullet-range-collection>
@@ -30,7 +30,7 @@ Vue.use(BulletChartPlugin);
 export default {
   data () {
     return {
-      data: [{ value: 55, target: 75, category: "Year 1" }],
+      data: [{ value: 55, target: 75, category: "Year 1", color: "blue" }],
       minimum: 0, maximum: 100, interval: 20
     }
   }

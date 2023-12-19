@@ -3,7 +3,7 @@
 <template>
     <div id="app">
       <button id='container_ruler_button' v-on:click="onClick">Show/Hide Ruler</button>
-      <ejs-documenteditorcontainer ref="container" :serviceUrl='serviceUrl' :height='height' :enableToolbar='true'"> </ejs-documenteditorcontainer>
+      <ejs-documenteditorcontainer ref="container" :serviceUrl='serviceUrl' :height='height' :enableToolbar='true'> </ejs-documenteditorcontainer>
     </div>
 </template>
 

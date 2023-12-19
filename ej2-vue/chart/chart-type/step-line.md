@@ -8,9 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Step Line in Vue Chart Component
+# Step line in Vue Chart component
 
-## Step Line
+## Step line
 
 To render a step line series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `StepLine` and inject `StepLineSeries` into
 the `provide`.
@@ -31,6 +31,7 @@ The following properties can be used to customize the `step line` series.
 * [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill).
 * [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#dasharray) – Specifies the dashes for series.
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
+* [step](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -40,7 +41,7 @@ The following properties can be used to customize the `step line` series.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/stepline-cs" %}
 
-## See Also
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)

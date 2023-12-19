@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Tool tip in Vue Accumulation chart component | Syncfusion
-description: Learn here all about Tool tip in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
-control: Tool tip 
+title: Tooltip in Vue Accumulation chart component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Vue Accumulation chart component of Syncfusion Essential JS 2 and more.
+control: Tooltip 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Tool tip in Vue Accumulation chart component
+# Tooltip in Vue Accumulation chart component
 
-Tooltip for the accumulation chart can be enabled by using the `enable` property.
+Tooltip for the accumulation chart can be enabled by using the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/tooltipSettingsModel/#enable) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -24,7 +24,7 @@ Tooltip for the accumulation chart can be enabled by using the `enable` proper
 
 ## Header
 
-We can specify header for the tooltip using `header` property.
+We can specify header for the tooltip using [`header`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/tooltipSettingsModel/#header) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -46,9 +46,9 @@ By default, tooltip shows information of x and y value in points. In addition to
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs29" %}
 
-## Tooltip Template
+## Tooltip template
 
-Any HTML element can be displayed in the tooltip by using the `template` property.
+Any HTML element can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/tooltipSettingsModel/#template) property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -58,10 +58,21 @@ Any HTML element can be displayed in the tooltip by using the `template` propert
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs30" %}
 
+## Fixed tooltip
+
+By default, tooltip track the mouse movement, but you can set a fixed position for the tooltip by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/tooltipSettingsModel/#location) property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/chart/series/pie-cs37/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs37" %}
+
 ## Customization
 
-The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#border) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#textstyle)
-property in the tooltip is used to customize the font of the tooltip text. The [`highlightColor`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#highlightcolor) property can be used to change the color of the data point when hovering.
+The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#border) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#textstyle) property in the tooltip is used to customize the font of the tooltip text. The [`highlightColor`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#highlightcolor) property can be used to change the color of the data point when hovering.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -73,7 +84,7 @@ property in the tooltip is used to customize the font of the tooltip text. The [
 
 ## To customize individual tooltip
 
-Using `tooltipRender` event, you can customize a tooltip for particular point. event, you can customize a tooltip for particular point.
+Using [`tooltipRender`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/iAccTooltipRenderEventArgs/) event, you can customize a tooltip for particular point.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -83,9 +94,9 @@ Using `tooltipRender` event, you can customize a tooltip for particular point.�
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs32" %}
 
-## Tooltip Mapping Name
+## Tooltip mapping name
 
-By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the `tooltipMappingName` property of the tooltip. You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
+By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the [`tooltipMappingName`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeriesModel/#tooltipmappingname) property of the tooltip. You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
