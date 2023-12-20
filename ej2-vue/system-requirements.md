@@ -27,7 +27,7 @@ node --version
 
 ## Browser support
 
-The Syncfusion Vue UI components are supported only in modern browsers. For more information, refer to the [browser compatibility](./browser/) section.
+The Syncfusion Vue UI components are supported only in modern browsers. For more information, refer to the [browser compatibility](./browser) section.
 
 ## Vue supported versions
 
