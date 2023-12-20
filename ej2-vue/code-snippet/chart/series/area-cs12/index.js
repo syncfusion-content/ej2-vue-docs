@@ -11,8 +11,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='RangeStepArea' xName='x' high='high' low='low' name='England' :border="border" dashArray='5.5'> </e-series>
-                <e-series :dataSource='seriesData1' type='RangeStepArea' xName='x' high='high' low='low' name='India' :border="border" dashArray='5.5'> </e-series>
+                <e-series :dataSource='seriesData' type='RangeStepArea' xName='x' high='high' low='low' name='England' :border="border" fill="red" opacity=0.4 width=2 dashArray='5.5' step="Center"> </e-series>
+                <e-series :dataSource='seriesData1' type='RangeStepArea' xName='x' high='high' low='low' name='India' :border="border" fill="blue" opacity=0.4 width=2 dashArray='5.5' step="Center"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -70,5 +70,4 @@ new Vue({
   provide: {
     chart: [RangeStepAreaSeries, Category]
   },
-
 });

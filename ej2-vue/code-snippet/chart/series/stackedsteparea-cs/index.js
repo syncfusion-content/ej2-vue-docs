@@ -11,10 +11,10 @@ new Vue({
     <div id="app">
          <ejs-chart :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y' name='Organic' fill="red" :border="border" dashArray="5.5" opacity='0.6'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y1' name='Fair-trade' fill="yellow" :border="border" dashArray="5.5" opacity='0.6'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y2' name='Veg Alternatives' fill="green" :border="border" dashArray="5.5" opacity='0.6'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y3' name='Others' fill="blue" :border="border" dashArray="5.5"> </e-series opacity='0.6'>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y' name='Organic' fill="red" :border="border" dashArray="5.5" opacity=0.6 width=2 step="Center"> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y1' name='Fair-trade' fill="yellow" :border="border" dashArray="5.5" opacity=0.6 width=2 step="Center"> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y2' name='Veg Alternatives' fill="green" :border="border" dashArray="5.5" opacity=0.6 width=2 step="Center"> </e-series>
+                <e-series :dataSource='seriesData' type='StackingStepArea' xName='x' yName='y3' name='Others' fill="blue" :border="border" dashArray="5.5"> </e-series opacity=0.6 width=2 step="Center"> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

@@ -20,7 +20,7 @@ The line marker that runs perpendicular to the orientation of the graph is known
         
 {% previewsample "page.domainurl/code-snippet/bullet-chart/bullet-chart-dimensions/container-cs5" %}
 
-## Types of Target Bar
+## Types of target bar
 
 The shape of the target bar can be customized using the [`targetTypes`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#targettypes) property and it supports **Circle**, **Cross**, and **Rect** shapes. The default type of the target bar is **Rect**.
 
@@ -32,12 +32,12 @@ The shape of the target bar can be customized using the [`targetTypes`](https://
         
 {% previewsample "page.domainurl/code-snippet/bullet-chart/bullet-chart-dimensions/container-cs6" %}
 
-## Target Bar Customization
+## Target bar customization
 
-The following properties can be used to customize the Target Bar.
+The following properties can be used to customize the target bar. Also, you can bind the color for the target bar from [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#datasource) for the bullet chart.
 
-* [`targetColor`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#targetcolor) - Specifies the fill color of Target Bar.
-* [`targetWidth`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#targetwidth) - Specifies the width of Target Bar.
+* [`targetColor`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#targetcolor) - Specifies the fill color of target bar.
+* [`targetWidth`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#targetwidth) - Specifies the width of target bar.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
