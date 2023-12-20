@@ -14,7 +14,7 @@
         </div>
     </div>
     <div style="Margin: 5px 0;width:300px">
-      <ejs-dropdownlist id='title_position' :dataSource='dropData' placeholder="Select Position" :change="changed"></ejs-combobox>
+      <ejs-dropdownlist id='title_position' :dataSource='dropData' placeholder="Select Position" :change="changed"></ejs-dropdownlist>
     </div>
   </div>
 </template>
