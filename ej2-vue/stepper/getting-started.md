@@ -90,12 +90,19 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Adding Syncfusion Vue component
 
-Follow the below steps to add the Vue Stepper component using:
+Follow the below steps to add the Vue Stepper component using `Composition API` or `Options API`:
 
-1\. First, import and register the Stepper component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the Stepper component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+    import { StepperComponent as EjsStepper } from "@syncfusion/ej2-vue-navigations";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { StepperComponent } from "@syncfusion/ej2-vue-navigations";
@@ -126,7 +133,26 @@ export default {
 You can use the `<e-step>` directive within the `<e-steps>` directive to define each step.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <ejs-stepper id="stepper">
+      <e-steps>
+        <e-step></e-step>
+        <e-step></e-step>
+        <e-step></e-step>
+        <e-step></e-step>
+        <e-step></e-step>
+      </e-steps>
+  </ejs-stepper>
+</template>
+
+<script setup>
+  import { StepperComponent as EjsStepper, StepsDirective as ESteps, StepDirective as EStep  } from "@syncfusion/ej2-vue-navigations";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
   <ejs-stepper id="stepper">
@@ -157,7 +183,10 @@ export default {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +212,10 @@ yarn run serve
 You can define the step icon and label by setting the `iconCss` and `label` properties using `<e-step>` directive.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/iconWithLabel/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/iconWithLabel/app.vue %}
 {% endhighlight %}
 {% endtabs %}

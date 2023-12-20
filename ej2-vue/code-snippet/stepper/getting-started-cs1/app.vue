@@ -26,5 +26,4 @@ export default {
   @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
-
 </style>
