@@ -43,8 +43,10 @@ export default {
         }
        },
        onCreated: function() {
+        if (this.toastInstance != null){
             this.toastInstance.show(this.toasts[this.toastFlag]);
             ++this.toastFlag;
+        }
         },
         onClose: function(e) {
             for (let i: number = 0; i < this.toasts.length; i++) {
