@@ -2,6 +2,8 @@
 
 <template>
     <div id="app">
+        <button @click="addChild">addChild</button>
+        <button @click="removeChild">removeChild</button>
         <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -26,23 +28,23 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "450px",
             nodes: [node,node2,node3,group],
         }
     },
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        //To Add child to specifc group at Runtime
-        diagramInstance.addChildToGroup(group, 'node3');
-        //To remove the specific children from group at runtime
-        diagramInstance.removeChildFromGroup(group, 'node3');
-    }
+    methods: {
+        addChild: function () {
+            let diagram = this.$refs.diagramObj.ej2Instances;
+            diagram.addChildToGroup(group, 'node3');
+        },
+        removeChild: function () {
+            let diagram = this.$refs.diagramObj.ej2Instances;
+            diagram.removeChildFromGroup(group, 'node3');
+        },
+
+    },
 }
 </script>
 <style>
     @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

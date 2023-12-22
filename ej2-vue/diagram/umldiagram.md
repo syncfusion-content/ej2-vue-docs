@@ -208,27 +208,52 @@ The following code illustrates how to add methods to UML nodes in diagram.
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let methods = { name: 'getHistory', style: { color: "red", }, parameters: [{ name: 'Date', style: {} }], type: 'History' };
-diagram.addChildToUmlNode(node, methods, 'Methods');
+diagram.addChildToUmlNode(node, methods, 'Method');
 
 ```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlMethod-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/UmlMethod-cs1" %}
 
 The following code illustrates how to add attributes to UML nodes in diagram.
 
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let attributes = { name: 'accepted', type: 'Date', style: { color: "red", } };
-diagram.addChildToUmlNode(node, attributes, "Attributes");
+diagram.addChildToUmlNode(node, attributes, "Attribute");
 
 ```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlAttribute-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/UmlAttribute-cs1" %}
 
 The following code illustrates how to add members to UML nodes in diagram.
 
 ```ts
 let node = diagram.selectedItems.nodes[0];
 let members = { name: 'Checking new', style: { color: "red", }, isSeparator: true };
-diagram.addChildToUmlNode(node, members, "Members");
+diagram.addChildToUmlNode(node, members, "Member");
 
 ```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlMember-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/UmlMember-cs1" %}
+
 
 ### Adding UML child through user interaction
 
@@ -256,7 +281,7 @@ You can edit the name, attributes, and methods of the class diagram shapes just 
 
 The following image illustrates how the text editor looks in an edit mode.
 
-![Editing Class Diagram](images/ClassEdit.png)
+![Editing Class Diagram](images/Editing.gif)
 
 ## UML Activity diagram
 
