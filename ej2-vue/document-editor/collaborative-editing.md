@@ -1,7 +1,11 @@
 ---
-title: "Collaborative Editing (preview)"
-component: "DocumentEditor"
-description: "Learn how to enable collaborative editing in Vue document editor"
+layout: post
+title: Collaborative Editing (preview) in Vue Document editor control | Syncfusion
+description: Learn how to enable collaborative editing in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
+control: Collaborative Editing (preview)
+platform: ej2-vue
+documentation: ug
+domainurl: ##DomainURL##
 ---
 
 # Collaborative Editing (preview)
@@ -12,7 +16,7 @@ Allows multiple users to work on the same document simultaneously. This can be d
 
 ## Prerequisites
 
-Following things are needed to enable collaborative editing in Document Editor
+The following are needed to enable collaborative editing in Document Editor.
 
 * SignalR
 * Microsoft SQL Server
@@ -67,7 +71,7 @@ export default {
 
 ```
 
-## Step 2: Configure SignalR to send and receive changes
+### Step 2: Configure SignalR to send and receive changes
 
 To broadcast the changes made and receive changes from remote users, configure SignalR like below.
 
@@ -149,7 +153,7 @@ methods: {
 }
 ```
 
-### Step 5: Broadcast current editing changes to remote users
+### Step 4: Broadcast current editing changes to remote users
 
 Changes made on the client-side need to be sent to the server-side to broadcast them to other connected users. To send the changes made to the server, use the method shown below from the document editor using the `contentChange` event.
 

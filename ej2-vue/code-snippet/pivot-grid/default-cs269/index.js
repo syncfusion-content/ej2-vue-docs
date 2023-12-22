@@ -10,6 +10,8 @@ import {
   ConditionalFormatting,
   NumberFormatting
 } from "@syncfusion/ej2-vue-pivotview";
+import{ getInstance, select} from '@syncfusion/ej2-base';
+import {DropDownList} from '@syncfusion/ej2-dropdowns';
 import { pivotData } from './pivotData.js';
 
 Vue.use(PivotViewPlugin);
@@ -40,7 +42,7 @@ new Vue({
     :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport" 
     :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" 
     :toolbar="toolbar" :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport" :removeReport="removeReport" 
-    :newReport="newReport" :displayOption="displayOption" :dataBound="ondataBound"> </ejs-pivotview>
+    :newReport="newReport" :displayOption="displayOption" :dataBound="ondataBound" :load="load"> </ejs-pivotview>
   </div>
 `,
 
@@ -180,10 +182,33 @@ new Vue({
         if (pivotObj && isInitial) {
             isInitial = false;
             pivotObj.toolbarModule.action = 'Load';
-            pivotObj.toolbarModule.reportList.value = 'Default report';
+            let reportList = getInstance(select('#' + pivotObj.element.id + '_reportlist', pivotObj.element), DropDownList);
+            reportList.value = 'Default report';
             loadReport({ reportName: 'Default report' });
         }
-    }
+    },
+    load: function () {
+      var dataSourceSettings = {
+        dataSource: pivotData,
+        columns: [{ name: 'Year' }],
+        enableSorting: true,
+        allowLabelFilter: true,
+        values: [{ name: 'Sold', caption: 'Units Sold' }],
+        allowValueFilter: true,
+        formatSettings: [{ name: 'Sold', format: 'C0' }],
+        rows: [{ name: 'Country' }],
+      };
+      var displayOption = { view: 'Both' };
+      var gridSettings = {columnWidth: 100};
+      var report = { dataSourceSettings: dataSourceSettings, displayOption: displayOption, gridSettings: gridSettings };
+      var reports = [
+        {
+          report: JSON.stringify(report),
+          reportName: 'Default report',
+        },
+      ];
+      localStorage.pivotviewReports = JSON.stringify(reports);
+    },
   },
   provide: {
     pivotview: [
