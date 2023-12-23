@@ -14,6 +14,6 @@ Intellisense of the Vue component provides code suggestions, error checking, pro
 
 Install the [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) extension for Visual Studio Code to use Intellisense in the Syncfusion Vue component. After installing the addon, typing in your Vue files will generate Intellisense suggestions.
 
-![volar-intellisense](../appearance/images/intellisense.gif)
+![volar-intellisense](./images/intellisense.gif)
 
 > It's significant to note that the Vue component properties and events are listed as **kebab-casing** rather than **camel-casing**. Vue versions 2.7 and above will support Intellisense.
