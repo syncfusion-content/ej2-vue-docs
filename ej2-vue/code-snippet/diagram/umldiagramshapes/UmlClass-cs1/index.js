@@ -1,112 +1,144 @@
 
-    import Vue from 'vue';
-    import {  DiagramPlugin,
-        Diagram,
-        NodeModel,
-        UndoRedo,
-        ConnectorModel,
-        Node,
-        Connector,
-        SymbolPalette,SymbolPalettePlugin,
-        SymbolInfo,NodeConstraints,
-        ShapeModel,ExpandMode} from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    Vue.use(SymbolPalettePlugin);
-    let basicShapes = [{
-        id: 'Rectangle',
+import Vue from 'vue';
+import {  DiagramPlugin,
+    Diagram,
+    SymbolPalette,SymbolPalettePlugin,
+    SymbolInfo,} from '@syncfusion/ej2-vue-diagrams';
+Vue.use(DiagramPlugin);
+Vue.use(SymbolPalettePlugin);
+
+let umlShapes = [
+    {
+        id: 'class',
+        style: {
+        fill: '#26A0DA',
+        },
+        borderColor: 'white',
         shape: {
-            type: 'Basic',
-            shape: 'Rectangle'
-        }, style: { strokeWidth: 2 }
+        type: 'UmlClassifier',
+        classShape: {
+            attributes: [
+            {
+                name: 'accepted',
+                type: 'Date',
+                style: {
+                color: 'red',
+                fontFamily: 'Arial',
+                textDecoration: 'Underline',
+                italic: true,
+                },
+                isSeparator: true,
+            },
+            ],
+            methods: [
+            {
+                name: 'getHistory',
+                style: {},
+                parameters: [{ name: 'Date', style: {} }],
+                type: 'History',
+            },
+            ],
+            name: 'Patient',
+        },
+        classifier: 'Class',
+        },
     },
     {
-        id: 'Ellipse',
-        shape: {
-            type: 'Basic',
-            shape: 'Ellipse'
-        }, style: { strokeWidth: 2 },
-        tooltip:{
-            content: 'Customized Tooltip',
+        id: 'Interface',
+        style: {
+        fill: '#26A0DA',
         },
-        //enable customized tooltip to display on the symbol
-        constraints: NodeConstraints.Default | NodeConstraints.Tooltip
+        borderColor: 'white',
+        shape: {
+        type: 'UmlClassifier',
+        interfaceShape: {
+            name: 'Bank Account',
+        },
+        classifier: 'Interface',
+        },
     },
     {
-        id: 'Hexagon',
-        shape: {
-            type: 'Basic',
-            shape: 'Hexagon'
-        }, style: { strokeWidth: 2 }
-    }
-];
-    let swimlaneShapes = [        {
-            id: 'swimlaneShapes', expanded: true,
-            title: 'Swimlane Shapes',
-            symbols: [
-                {
-                    id: 'stackCanvas1',
-                    shape: {
-                        type: 'SwimLane',lanes: [
-                            {
-                                id: 'lane1',
-                                style: { fill: '#f5f5f5'},height: 60, width: 150,
-                                header:{ width: 50, height: 50, style: {fill:'#C7D4DF'} },
-                            }
-                        ],
-                        orientation: 'Horizontal', isLane: true
-                    },
-                    height: 60,
-                    width: 140,
-                    style: { fill: '#f5f5f5'},
-                    offsetX: 70,
-                    offsetY: 30,
-                }
-            ]
+        id: 'Enumeration',
+        style: {
+        fill: '#26A0DA',
         },
-]
-    let palette;
-    let size;
-    let expand;
-    
+        borderColor: 'white',
+        shape: {
+        type: 'UmlClassifier',
+        enumerationShape: {
+            name: 'AccountType',
+            members: [
+            {
+                name: 'Checking Account',
+                style: {},
+            },
+            ],
+        },
+        classifier: 'Enumeration',
+        },
+    },
+    ];
 new Vue({
-	el: '#app',
-	template: `
-    <div id="app">
-        <ejs-symbolpalette id="symbolpalette" :expandMode='expandMode' :palettes='palettes' :width='palettewidth' :height='paletteheight'
-        :symbolHeight='symbolHeight' :symbolWidth='symbolWidth' :getSymbolInfo='getSymbolInfo'
-        ></ejs-symbolpalette>
+el: '#app',
+template: `
+<div style="width: 100%">
+    <div id="palette-space" class="sb-mobile-palette">
+    <ejs-symbolpalette
+        id="symbolpalette"
+        :palettes="palettes"
+        :width="palettewidth"
+        :height="paletteheight"
+        :getNodeDefaults="palettegetNodeDefaults"
+        :getSymbolInfo="getSymbolInfo"
+        :symbolMargin="symbolMargin"
+        :symbolHeight="symbolHeight"
+        :symbolWidth="symbolWidth"
+    ></ejs-symbolpalette>
     </div>
+    <div id="diagram-space" class="sb-mobile-diagram">
+    <ejs-diagram
+        style="display: block"
+        ref="diagramObject"
+        id="diagram"
+        :width="width"
+        :height="height"
+    ></ejs-diagram>
+    </div>
+</div>
 `,
 
-        name: 'app',
-        data() {
-            return {
-                //Defines how many palettes can be at expanded mode at a time
-                expandMode: "Multiple",
-                //Defines the palette collection
-                palettes: [{
-                    id: 'basic',
-                    expanded: true,
-                    symbols: basicShapes,
-                    title: 'Basic Shapes',
-                    iconCss: 'e-ddb-icons e-basic'
-                },
+    name: 'app',
+    data() {
+        return {
+            width: '100%',
+            height: '700px',
+            palettes: [
                 {
-                    id: 'swimlane',
+                    id: 'uml',
                     expanded: true,
-                    symbols: swimlaneShapes,
-                    title: 'Swimlane Shapes',
-                    iconCss: 'e-ddb-icons e-basic'
-                }, ],
-                palettewidth: "100%",
-                paletteheight: "700px",
-                symbolHeight: 80,
-                symbolWidth: 80,
-                getSymbolInfo: (symbol) => {
-                    //Sets the description for symbols
-                    return { width: 75, height: 40, description: { text: symbol.shape['shape'], color : 'red', bold: true, fontSize: 15, fontFamily : 'Arial', italic : true, textDecoration : 'Underline', margin : {top : 30, left : 0, right : 0, bottom :30}} };
-                }
-            };
-        }
-    
+                    symbols: umlShapes,
+                    title: 'UML Shapes',
+                },
+            ],
+            palettewidth: '100%',
+            paletteheight: '700px',
+            symbolHeight: 80,
+            symbolWidth: 80,
+            symbolMargin: {
+                left: 12,
+                right: 12,
+                top: 12,
+                bottom: 12,
+            },
+            palettegetNodeDefaults: (symbol) => {
+                symbol.width = 100;
+                symbol.height = 100;
+            },
+            symbolMargin: { left: 15, right: 15, top: 15, bottom: 15 },
+            getSymbolInfo: (symbol) => {
+                return { fit: true, description: { text: symbol.id } };
+            },
+        };
+    }
+
 });

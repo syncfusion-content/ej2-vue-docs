@@ -189,3 +189,17 @@ In the following example, we have used Algeria font to export the grid.
 {% previewsample "page.domainurl/code-snippet/grid/pdf/default-cs13" %}
 
 > **PdfTrueTypeFont** accepts base 64 format of the Custom Font.
+
+## Export grid as blob
+
+The Grid offers an option to export the data as a `Blob` instead of downloading it as a file in the browser. To export the grid as a Blob, set the `isBlob` parameter to **true** in the [pdfExport](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexport) method. The grid returns the promise of a blob in the [pdfExportComplete](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexportcomplete) event.
+
+The following example demonstrates how to obtain the blob data of the exported grid by executing the promise in the `pdfExportComplete` event.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/grid/pdf/export-grid-as-blob-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/pdf/export-grid-as-blob-cs1" %}

@@ -1,62 +1,48 @@
 
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: "rectangle1",
-        offsetX: 100,
-        offsetY: 100,
-        width: 100,
-        height: 100,
-        annotations: [{
-            content: 'rectangle1'
-        }]
-    }, {
-        id: "rectangle2",
-        offsetX: 200,
-        offsetY: 200,
-        width: 100,
-        height: 100,
-        annotations: [{
-            content: 'rectangle2'
-        }]
-    },
-    {
-        id: 'group',
-        children: ['rectangle1', 'rectangle2']
-    },
-]
+import Vue from 'vue';
+import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+Vue.use(DiagramPlugin);
+let node = {
+    id: 'node1', width: 150, height: 100, offsetX: 100, offsetY: 100, annotations: [{ content: 'Node1' }]
+};
+let node2 = {
+    id: 'node2', width: 80, height: 130, offsetX: 200, offsetY: 200, annotations: [{ content: 'Node2' }]
+};
+let group = {
+    id: 'group1', children: ['node1', 'node2']
+};
+let node3 = {
+    id: 'node3', width: 100, height: 100, offsetX: 300, offsetY: 300, annotations: [{ content: 'Node3' }]
+};
 
 new Vue({
-	el: '#app',
-	template: `
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
-    </div>
+el: '#app',
+template: `
+<div id="app">
+    <button @click="addChild">addChild</button>
+    <button @click="removeChild">removeChild</button>
+    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
+</div>
 `,
 
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            nodes: nodes,
-            getNodeDefaults: (node) => {
-                node.height = 100;
-                node.width = 100;
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
-            },
-        }
+name: 'app',
+data() {
+    return {
+        width: "100%",
+        height: "450px",
+        nodes: [node,node2,node3,group],
     }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        diagramInstance.selectAll();
-        // Ungroup the selected group into nodes
-        diagramInstance.unGroup();
-    }
+},
+methods: {
+    addChild: function () {
+        let diagram = this.$refs.diagramObj.ej2Instances;
+        diagram.addChildToGroup(group, 'node3');
+    },
+    removeChild: function () {
+        let diagram = this.$refs.diagramObj.ej2Instances;
+        diagram.removeChildFromGroup(group, 'node3');
+    },
+
+},
 
 });
