@@ -8,29 +8,31 @@ new Vue({
   el: '#app',
   template: `
 <template>
-  <ejs-ribbon ref="backstageRibbon"  :backStageMenu="backstageSettings">
-    <e-ribbon-tabs>
-      <e-ribbon-tab header="Home">
-        <e-ribbon-groups>
-          <e-ribbon-group header="Clipboard">
-            <e-ribbon-collections>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item type="Button" :buttonSettings="cutButton">
-                  </e-ribbon-item>
-                  <e-ribbon-item type="Button" :buttonSettings="copyButton">
-                  </e-ribbon-item>
-                  <e-ribbon-item type="Button" :buttonSettings="pasteButton">
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-            </e-ribbon-collections>
-          </e-ribbon-group>
-        </e-ribbon-groups>
-      </e-ribbon-tab>
-    </e-ribbon-tabs>
-  </ejs-ribbon>
-  <div id="targetElement"></div>
+  <div id="ribbon-backstage-section">
+    <ejs-ribbon ref="backstageRibbon"  :backStageMenu="backstageSettings">
+      <e-ribbon-tabs>
+        <e-ribbon-tab header="Home">
+          <e-ribbon-groups>
+            <e-ribbon-group header="Clipboard">
+              <e-ribbon-collections>
+                <e-ribbon-collection>
+                  <e-ribbon-items>
+                    <e-ribbon-item type="Button" :buttonSettings="cutButton">
+                    </e-ribbon-item>
+                    <e-ribbon-item type="Button" :buttonSettings="copyButton">
+                    </e-ribbon-item>
+                    <e-ribbon-item type="Button" :buttonSettings="pasteButton">
+                    </e-ribbon-item>
+                  </e-ribbon-items>
+                </e-ribbon-collection>
+              </e-ribbon-collections>
+            </e-ribbon-group>
+          </e-ribbon-groups>
+        </e-ribbon-tab>
+      </e-ribbon-tabs>
+    </ejs-ribbon>
+    <div id="targetElement"></div>
+  </div>
 </template>
 `,
 provide: {
