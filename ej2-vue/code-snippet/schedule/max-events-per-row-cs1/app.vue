@@ -3,7 +3,7 @@
 <template>
   <div id='app'>
     <div id='container'>
-        <ejs-schedule :height='height' :selectedDate='selectedDate' :views='views' :eventSettings='eventSettings'></ejs-schedule>
+        <ejs-schedule :height='height' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
           <e-views>
             <e-view option="Month" :maxEventsPerRow='maxEventsPerRow'></e-view>
             <e-view option="TimelineMonth" :maxEventsPerRow='maxEventsPerRow'></e-view>
