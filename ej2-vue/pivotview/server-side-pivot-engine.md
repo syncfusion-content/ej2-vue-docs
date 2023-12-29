@@ -47,7 +47,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
       },
       height: 350
@@ -74,7 +74,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         rows: [{
             name: 'ProductID', caption: 'Product ID'
@@ -195,7 +195,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         rows: [{
             name: 'ProductID', caption: 'Product ID'
@@ -290,7 +290,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         type: 'JSON',
         rows: [{
@@ -425,7 +425,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         type: 'CSV',
         rows: [{
@@ -544,7 +544,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         rows: [{
             name: 'ProductID', caption: 'Product ID'
@@ -643,7 +643,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         rows: [{
             name: 'CustomerID', caption: 'Customer ID'
@@ -753,7 +753,7 @@ export default {
   data () {
     return {
       dataSourceSettings: {
-        url: 'http://localhost:61379/api/pivot/post',
+        url: 'https://localhost:44350/api/pivot/post',
         mode: 'Server',
         rows: [{
             name: 'CustomerID', caption: 'Customer ID'
