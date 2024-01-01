@@ -1,8 +1,8 @@
 
 import Vue from "vue";
-import { ChartPlugin, ColumnSeries3D, Category3D, DataLabel3D, Tooltip3D } from "@syncfusion/ej2-vue-charts";
+import { Chart3DPlugin, ColumnSeries3D, Category3D, DataLabel3D, Tooltip3D } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+Vue.use(Chart3DPlugin);
 
 ;
 new Vue({

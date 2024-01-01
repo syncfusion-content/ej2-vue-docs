@@ -18,7 +18,6 @@ new Vue({
         title="Sales Rate"
         categoryField="category"
         valueFill="color"
-        valueHeight=15
       >
       <e-bullet-range-collection>
           <e-bullet-range end="35" color="red"></e-bullet-range>
