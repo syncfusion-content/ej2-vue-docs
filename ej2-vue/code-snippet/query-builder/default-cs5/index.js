@@ -29,7 +29,7 @@ new Vue({
         return {
             values: ['Mr.', 'Mrs.'],
             data: new DataManager({
-            url: "https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders/";
+            url: "https://services.odata.org/V4/Northwind/Northwind.svc/Orders/";
             adaptor: new ODataAdaptor(),
           }),
           importRules: {

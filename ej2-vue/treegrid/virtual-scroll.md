@@ -61,3 +61,4 @@ To setup the column virtualization, set the [`enableVirtualization`](https://ej2
 ```
 
 * Programmatic selection using the **selectRows** method is not supported in virtual scrolling.
+* When virtualization is active in a tree grid, the editCell method is unusable for records outside the currently visible viewport.
