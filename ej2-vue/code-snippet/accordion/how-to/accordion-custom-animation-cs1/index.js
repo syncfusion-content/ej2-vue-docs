@@ -23,7 +23,7 @@ new Vue({
     <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
     <label> Collapse Animation </label></div>
     <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-    <div class='custom_drop'><ejs-dropdownlist ref="expandInstance" :change= 'collapseAnimationChange' index='1' :dataSource='expandAni' placeholder='Collapse Animation'></ejs-dropdownlist></div>
+    <div class='custom_drop'><ejs-dropdownlist ref="collapseInstance" :change= 'collapseAnimationChange' index='1' :dataSource='expandAni' placeholder='Collapse Animation'></ejs-dropdownlist></div>
     </div></div>
     <div style='padding-top: 25px'>
     <ejs-accordion ref="acrdnInstance">

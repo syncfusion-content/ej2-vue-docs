@@ -1,8 +1,8 @@
 
 import Vue from 'vue';
-import { ChartPlugin } from '@syncfusion/ej2-vue-charts';
+import { Chart3DPlugin } from '@syncfusion/ej2-vue-charts';
 
-Vue.use(ChartPlugin);
+Vue.use(Chart3DPlugin);
 
 new Vue({
 	el: '#app',
