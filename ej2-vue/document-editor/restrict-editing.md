@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict editing in Vue Document editor component
+# Restrict editing in Vue Document Editor Component
 
 Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
