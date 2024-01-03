@@ -7,7 +7,7 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 Vue.use(MenuPlugin);
 
-var SERVICE_URI = 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/';
+var SERVICE_URI = 'https://services.odata.org/V4/Northwind/Northwind.svc/';
 var result;
 
 
