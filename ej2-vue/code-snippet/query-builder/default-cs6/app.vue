@@ -28,7 +28,7 @@ export default {
         return {
             values: ['Mr.', 'Mrs.'],
             data: new DataManager({
-            url: "https://services.syncfusion.com/js/production/api/orders/";
+            url: "https://services.odata.org/V4/Northwind/Northwind.svc/Orders/";
             adaptor: new ODataAdaptor(),
             crossDomain: true
           }),
