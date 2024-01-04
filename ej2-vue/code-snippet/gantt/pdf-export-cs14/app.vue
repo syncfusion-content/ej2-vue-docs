@@ -29,7 +29,7 @@ export default {
         toolbar: ['PdfExport'],
         toolbarClick: (args) => {
                if (args.item.id === 'GanttContainer_pdfexport') {
-                    var ganttChart = document.getElementById('app').ej2_instances[0];
+                    var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttChart.pdfExport();
                 }
             },
