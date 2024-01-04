@@ -78,3 +78,11 @@ During the sort action, the Gantt component triggers two events. The [`actionBeg
 {% previewsample "page.domainurl/code-snippet/gantt/sorting-cs5" %}
 
 > The `args.requestType` is the current action name. For example, for sorting the `args.requestType`, value is sorting.
+
+## Touch interaction
+
+To perform `tap` action on a column header, trigger [`sorting`](sorting/#sorting) operation to the selected column. A popup is displayed for multi-column sorting. To sort multiple columns, tap the popup, and then tap the desired column headers.
+
+The following screenshot shows Gantt touch sorting,
+
+![Multiple Sorting](images/multiple-sorting.png)
