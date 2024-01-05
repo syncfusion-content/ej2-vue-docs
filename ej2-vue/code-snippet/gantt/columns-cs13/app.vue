@@ -17,7 +17,7 @@
       <template v-slot:cTemplate="{data}">
         <div class="columnTemplate" v-if="data.ganttProperties.resourceNames">
           <img
-            :src="'https://ej2.syncfusion.com/vue/demos/source/gantt/images/' + data.TaskID + '.png'"
+            :src="'https://ej2.syncfusion.com/vue/demos/source/gantt/images/' + data.ganttProperties.resourceNames + '.png'"
             height="40px" />
           <div style="display:inline-block;width:100%;position:relative;left:30px">
             {{data.ganttProperties.resourceNames}}</div>
@@ -47,10 +47,10 @@ export default {
             },
             {
                 TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Predecessor: '2',
-                resources: [2, 3, 5], info: 'Obtain an engineered soil test of lot where construction is planned.' +
+                resources: [2], info: 'Obtain an engineered soil test of lot where construction is planned.' +
                     'From an engineer or company specializing in soil testing'
             },
-            { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 30, resources: [9, 11], },
+            { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 30, resources: [3] },
         ]
     },
     {
@@ -66,7 +66,7 @@ export default {
             },
             {
                 TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'),
-                Duration: 3, Predecessor: '6', resources: [4, 8], info: ''
+                Duration: 3, Predecessor: '6', resources: [8], info: ''
             },
             {
                 TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'),

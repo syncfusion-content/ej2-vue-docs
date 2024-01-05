@@ -30,7 +30,7 @@ import App from './App.vue'
 import { registerLicense } from '@syncfusion/ej2-base';
 
 // Registering Syncfusion license key
-registerLicense('License Key');
+registerLicense('Replace your generated license key here');
 createApp(App).mount('#app')
 ```
 
@@ -45,7 +45,7 @@ import Vue from 'vue'
 import { registerLicense } from '@syncfusion/ej2-base';
 
 // Registering Syncfusion license key.
-registerLicense('License Key');
+registerLicense('Replace your generated license key here');
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 ```
