@@ -1,10 +1,7 @@
-
-
 <template>
   <div class="control-section">     
     <ejs-listview id='ui-list' ref="list" :dataSource='listData' :showHeader='header' :fields='fields' :headerTitle='title'
-        :height='height' :cssClass='cssClass' :enableVirtualization='enableUi' :actionComplete='onActionComplete'
-        :actionBegin='onActionBegin' :template="'gTemplate'">
+        :height='height' :cssClass='cssClass' :enableVirtualization='enableUi' :template="'gTemplate'">
             <template v-slot:gTemplate="{ data }">
                 <div class="e-list-wrapper e-list-avatar" >
                     <span :class="['e-avatar e-avatar-circle ' + data.icon + ' showUI']" v-if="data.imgUrl == undefined">{{ data.icon }}</span>
@@ -18,6 +15,9 @@
   </div>
 </template>
 <style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
 #app {
     color: #008cff;
     height: 40px;
@@ -25,94 +25,62 @@
     position: absolute;
 }
 
-#ui-list {
-    display: block;
-    max-width: 400px;
-    margin: auto;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    cursor: pointer;
-}
+#ui-list.e-listview {
+        margin: auto;
+        max-width: 325px;
+        line-height: initial;
+        border: 1px solid lightgray;
+    }
 
-button {
-    float: right
-}
+    /* ListView header alignment */
 
-#icon {
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    line-height: 45px;
-    border-radius: 50%;
-    font-size: 20px;
-    font-weight: 500;
-    float: left;
-    margin-top: 17px;
-    margin-right: 35px;
-}
+    #ui-list.e-listview .e-list-header {
+        height: 50px
+    }
 
-img {
-    border-radius: 50%;
-    border: #ddd;
-    border: 1px solid rgba(40, 40, 40, 0.12);
-}
+    #ui-list.e-listview .e-list-header .e-text {
+        line-height: 18px
+    }
 
-.R {
-    background: purple;
-}
+    /* ListView template customization */
 
-.M {
-    background: pink;
-}
+    #ui-list.e-listview .showUI {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+    #ui-list.e-listview .hideUI {
+        display: none;
+    }
 
-.A {
-    background: green;
-}
+    #ui-list.e-listview .e-list-item {
+        padding: 3px 0;
+    }
 
-.S {
-    background: lightskyblue;
-}
+    #ui-list.e-listview .R {
+        background: lightgrey;
+    }
 
-.J {
-    background: orange;
-}
+    #ui-list.e-listview .M {
+        background: pink;
+    }
 
-.N {
-    background: blue;
-}
+    #ui-list.e-listview .A {
+        background: lightgreen;
+    }
 
-#ui-list .e-list-item {
-    height: 80px;
-    border: #ddd;
-    border: 1px solid rgba(184, 184, 184, 0.12);
-}
+    #ui-list.e-listview .S {
+        background: lightskyblue;
+    }
 
-.list-container {
-    width: inherit;
-    height: 100%;
+    #ui-list.e-listview .J {
+        background: orange;
+    }
 
-}
-
-.showUI {
-    display: inline;
-}
-
-.hideUI {
-    display: none;
-}
-
-.content {
-    height: 100%;
-    float: left;
-}
-
-.name {
-    height: 100%;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 78px;
-}
-
+    #ui-list.e-listview .N {
+        background: lightblue;
+    }
 </style>
 <script>
 import Vue from "vue";
@@ -147,6 +115,7 @@ for (let i = 10; i <= 1000; i++) {
       title: "Contacts",
       fields: { text: "name" },
       height: 500,
+      cssClass:'e-list-template',
       enableUi: true,
     };
   },
@@ -155,5 +124,3 @@ for (let i = 10; i <= 1000; i++) {
   }
 }
 </script>
-
-

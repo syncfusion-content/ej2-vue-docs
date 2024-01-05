@@ -12,8 +12,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-button @click.native="show"> Show </ejs-button>
-        <ejs-button @click.native="hide"> Hide </ejs-button>
+    <ejs-button @click.native="updateColumns"> Update Columns </ejs-button>
         <ejs-grid ref='grid' :dataSource='data' :height='280'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -31,13 +30,15 @@ new Vue({
     };
   },
   methods: {
-    show: function() {
-        this.$refs.grid.showColumns(['Customer ID', 'Ship Name']); // show by HeaderText
+    updateColumns: function() {
+      let grid =this.$refs.grid.$el.ej2_instances[0];
+      grid.columns[0].textAlign = 'Center';
+      grid.columns[0].width = '100';
+      grid.columns[2].visible = false;
+      grid.columns[1].customAttributes = { class: 'customcss' };
+      // Applying changes to the grid
+      grid.refreshColumns();
     },
-    hide: function() {
-        this.$refs.grid.hideColumns(['Customer ID', 'Ship Name']); // hide by HeaderText
-    }
-
   }
 
 });

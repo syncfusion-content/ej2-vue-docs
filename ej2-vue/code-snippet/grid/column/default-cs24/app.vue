@@ -8,7 +8,7 @@
             <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
             <e-column field='ShipCity' width=90 :lockColumn='true' :customAttributes="customAttributes"></e-column>
             <e-column field='ShipName' width=120></e-column>
-            <e-column field='ShipPostalCode' width=120></e-column>
+            <e-column field='ShipCountry' width=120></e-column>
             <e-column field='ShipRegion' width=120></e-column>
           </e-columns>
         </ejs-grid>
