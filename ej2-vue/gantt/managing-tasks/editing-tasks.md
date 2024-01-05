@@ -78,3 +78,53 @@ In the Gantt dialog, you can make only specific data source fields visible for e
 {% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs9" %}
 
 `Note:` You can also define the custom fields in the add/edit dialog General tab using the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/#fields)property.
+
+## Task dependencies
+
+In the Gantt component, you can update the dependencies between the tasks and link the tasks interactively. The task dependencies can be mapped from the data source using the [`dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property.
+
+You can update the task dependencies using the following ways:
+
+* Mouse interactions: Using connector points in the taskbar, you can perform drag and drop action to create task dependency links.
+* Edit dialog: Create or remove the task dependencies using the `Dependency` tab in the edit dialog.
+* Cell editing: Create or remove the task links using cell editing.
+
+The following code example demonstrates how to enable task dependency editing in the Gantt chart using the [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/) property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/managing-tasks-cs17/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs17" %}
+
+![Alt text](../images/user-interaction.png)
+
+Updating with mouse interaction action
+
+![Alt text](../images/cell-edit.png)
+
+Updating with cell Edit
+
+![Alt text](../images/dialog.png)
+
+Updating with Dialog
+
+`Note:` When the edit mode is set to `Auto`, on performing double-click action on TreeGrid side, the cells will be changed to editable mode and on performing double-click action on chart side, the edit dialog will appear for editing the task details.
+
+## Update task values using method
+
+The tasks value can be dynamically updated by using the [`updateRecordById`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#updaterecordbyid) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/managing-tasks-cs18/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs18" %}
+
+>NOTE: Using the [`updateRecordById`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#updaterecordbyid) method, you cannot update the task ID value.
+
+

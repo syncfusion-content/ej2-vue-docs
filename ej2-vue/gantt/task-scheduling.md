@@ -23,7 +23,7 @@ The Gantt control supports three types of mode. They are:
 To learn about Gantt Chart Scheduling Concepts, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=1QdqXtMEjgU" %}
 
-## Automatically Scheduled Tasks
+## Automatically scheduled tasks
 
 When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskmode) property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates are validated based on various factors such as working time, holidays, weekends and predecessors.
 
@@ -35,7 +35,7 @@ When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#ta
         
 {% previewsample "page.domainurl/code-snippet/gantt/task-scheduling-cs1" %}
 
-## Manually Scheduled Tasks
+## Manually scheduled tasks
 
 When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskmode) property is set as `Manual`, the start date and end date of all the tasks in the project will be same as given in the data source. That is, dates are not validated based on various factors such as dependencies between tasks, holidays, weekends, working time.
 
@@ -61,7 +61,7 @@ When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#ta
         
 {% previewsample "page.domainurl/code-snippet/gantt/task-scheduling-cs3" %}
 
-## Unscheduled Tasks
+## Unscheduled tasks
 
 Unscheduled tasks are planned for a project without any definite schedule dates. The Gantt control supports rendering the unscheduled tasks. You can create or update the tasks with anyone of start date, end date, and duration values or none. You can enable or disable the unscheduled tasks by using the [`allowUnscheduledTasks`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowunscheduledtasks) property. The following images represent the various types of unscheduled tasks in Gantt.
 
@@ -89,7 +89,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 > NOTE
 > If the [`allowUnscheduledTasks`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowunscheduledtasks) property is set to false, then the Gantt control automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
-## Working Time Range
+## Working time range
 
 In the Gantt control, working hours in a day for a project can be defined by using the [`dayWorkingTime`](https://ej2.syncfusion.com/vue/documentation/api/gantt/dayWorkingTime/) property. Based on the working hours, automatic date scheduling and duration validations for a task are performed.
 
@@ -121,3 +121,46 @@ Non-working days/weekend are used to represent the non-productive days in a proj
 
 > By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 > In the Gantt control, you can make weekend as working day by setting the [`includeWeekend`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#includeweekend) property to `true`.
+
+## Duration units
+
+In Gantt, the task's duration value can be measured by the following duration units,
+
+* Day
+* Hour
+* Minute
+
+In Gantt, we can define duration unit for whole project by using [`durationUnit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#durationunit) property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
+
+* Using [`taskFields.durationUnit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#durationunit) property, to map the duration unit data source field.
+* Defining the duration unit value along with the duration field in the data source.
+
+### Mapping the duration unit field
+
+The below code snippet explains the mapping of duration unit data source field to the Gantt control using the [`taskFields.durationUnit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#durationunit) property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/scheduling-tasks-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/scheduling-tasks-cs1" %}
+
+> NOTE
+The default value of the [`durationUnit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#durationunit) property is `day`.
+
+### Defining duration unit along with duration field
+
+A duration unit for a task can be defined along with duration value, the following code snippet explains the duration unit for a task along with duration value.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/scheduling-tasks-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/scheduling-tasks-cs2" %}
+
+>NOTE:
+The edit type of the duration column in Gantt is string to edit the duration field along with duration units.

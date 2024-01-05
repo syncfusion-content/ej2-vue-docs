@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Eventmarkers in Vue Gantt component
+# Event markers in Vue Gantt component
 
 The event markers in the Gantt component is used to highlight the important events in a project. Event markers can be initialized by using the [`eventMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#eventmarkers) property, and you can define date and label for the event markers using the [`day`](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker/#day) and [`label`](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker/#label) properties. You can also customize it using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/gantt/eventMarker/#cssclass) properties. The following code example shows how to add event markers in the Gantt component.
 
