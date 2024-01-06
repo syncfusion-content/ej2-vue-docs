@@ -1,0 +1,58 @@
+
+  #element {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+
+#element .e-list-header {
+    background: rgb(2, 120, 215);
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+#element.e-listview .e-list-item {
+    padding: 10px 16px;
+    height: 61px;
+
+}
+
+#element .e-list-item-header {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    height: 20px;
+}
+
+#element .e-list-content {
+    line-height: 20px;
+    height: 20px;
+    font-size: 10px;
+    font-style: italic;
+    margin-top: -2px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+  }
+  
+  h3 {
+    margin: 0;
+  }
+  
+  /* Optional: Add styling to headings and divs */
+  .grid-container > div {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+  }
+
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
