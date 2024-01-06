@@ -2,10 +2,10 @@
   <div class="stepper-customize">
     <ejs-stepper id="iconStepper">
       <e-steps>
-        <e-step iconCss='sf-icon-cart'></e-step>
-        <e-step iconCss='sf-icon-transport'></e-step>
-        <e-step iconCss='sf-icon-payment' cssClass="custom-step" optional=true></e-step>
-        <e-step iconCss='sf-icon-success'></e-step>
+        <e-step iconCss='sf-icon-cart' label='Cart'></e-step>
+        <e-step iconCss='sf-icon-transport' label='Delivery Address'></e-step>
+        <e-step iconCss='sf-icon-payment' label='Payment' cssClass="custom-step" optional=true></e-step>
+        <e-step iconCss='sf-icon-success' label='Confirmation'></e-step>
       </e-steps>
     </ejs-stepper>
   </div>

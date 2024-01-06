@@ -3,9 +3,9 @@
 
 <template>
      <div>
-        <ejs-gantt id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :splitterSettings="splitterSettings"><ejs-gantt>
-        <br><br><br>
         <ejs-button id="scrolldate" cssClass="e-info" v-on:click.native="changep">Scroll To Date</ejs-button>
+        <ejs-gantt id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :splitterSettings="splitterSettings"></ejs-gantt>
+        <br><br><br>
     </div>
 </template>
 <script>

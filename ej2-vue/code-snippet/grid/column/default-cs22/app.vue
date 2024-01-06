@@ -9,7 +9,6 @@
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
                 <e-column field='Freight' headerText='Freight' textAlign= 'Right' width=120 format= 'C2'></e-column>
                 <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
-                <e-column field='ShippedDate' headerText='Shipped Date' width=150></e-column>
                 <e-column field='Verified' headerText='Verified' displayAsCheckBox='true' width=150></e-column>
             </e-columns>
         </ejs-grid>
