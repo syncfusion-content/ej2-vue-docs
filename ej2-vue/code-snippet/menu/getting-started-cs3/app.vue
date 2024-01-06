@@ -9,7 +9,7 @@
 <script>
 import Vue from 'vue';
 import { MenuPlugin } from "@syncfusion/ej2-vue-navigations";
-import { ODataAdaptor, DataManager, Query } from "@syncfusion/ej2-data";
+import { ODataV4Adaptor, DataManager, Query } from "@syncfusion/ej2-data";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
@@ -30,7 +30,7 @@ export default {
    },
    methods: {
     menuItems() {
-        new DataManager({ url: SERVICE_URI, adaptor: new ODataAdaptor, crossDomain: true })
+        new DataManager({ url: SERVICE_URI, adaptor: new ODataV4Adaptor(), crossDomain: true })
         .executeQuery(
         new Query().from('Employees').take(5).hierarchy(
             new Query()
