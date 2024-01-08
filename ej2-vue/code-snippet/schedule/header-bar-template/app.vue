@@ -46,7 +46,7 @@ export default {
     return {
       height: '550px',
       width: '100%',
-      eventSettings: { dataSource: scheduleData },
+      eventSettings: { dataSource: scheduleData, query: new Query().where('OwnerId', 'equal', 1) },
       selectedData: new Date(2023, 10, 15),
       views: ['Month'],
       currentView: 'Month',
@@ -68,18 +68,11 @@ export default {
     onResourceChange(args) {
       let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
       let resourcePredicate;
-      let value = args.value
-        if (resourcePredicate) {
-          resourcePredicate = resourcePredicate.or(
-            new Predicate('OwnerId', 'equal', value)
-          );
-        } else {
-          resourcePredicate = new Predicate('OwnerId', 'equal', value);
-        }
-      
-      scheduleObj.resources[0].query = resourcePredicate
-        ? new Query().where(resourcePredicate)
-        : new Query().where('OwnerId', 'equal', 1);
+      let value = args.value;
+      resourcePredicate = new Predicate('OwnerId', 'equal', value)
+      scheduleObj.resources[0].query = resourcePredicate ? new Query().where(resourcePredicate) :
+        new Query().where('OwnerId', 'equal', 1);
+      scheduleObj.eventSettings.query = new Query().where('OwnerId', 'equal', value);
     },
   },
 }
