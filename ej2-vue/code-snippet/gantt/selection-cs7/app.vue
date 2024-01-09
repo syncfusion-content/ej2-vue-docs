@@ -4,9 +4,10 @@
 <template>
      <div>
         <ejs-button id="selectRow" cssClass="e-info" v-on:click.native="select">Select Row</ejs-button>
+        <ejs-button id="selectRows" cssClass="e-info" v-on:click.native="Multiselect">Select Multiple Rows</ejs-button>
         <br>
         <br>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" ></ejs-gantt>
     </div>
 </template>
 <script>
@@ -52,6 +53,10 @@ export default {
                 progress: 'Progress',
                 dependency: 'Predecessor',
                 child: 'subtasks'
+            },
+            selectionSettings: {
+                mode: 'Row',
+                type: 'Multiple'
             }
       };
   },
@@ -62,6 +67,10 @@ export default {
       select: function(e){
           var ganttObj = document.getElementById('GanttContainer').ej2_instances[0];
           ganttObj.selectionModule.selectRow(2); // passing the record index to select the row
+      },
+      Multiselect: function(e){
+          var ganttObj = document.getElementById('GanttContainer').ej2_instances[0];
+           ganttObj.selectionModule.selectRows([1, 2, 3]); // passing the record index to select the rows
       },
   }
 };

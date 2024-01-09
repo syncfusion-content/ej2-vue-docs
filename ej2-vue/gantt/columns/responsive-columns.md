@@ -20,26 +20,3 @@ You can toggle the column visibility based on media queries, which are defined i
         
 {% previewsample "page.domainurl/code-snippet/gantt/columns-cs18" %}
 
-## Change tree/expander column
-
-The tree/expander column is a column in the Gantt component, that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt component by using the [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#treecolumnindex) property and the default value of this property is `0`. The following code example shows how to use this property.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/gantt/columns-cs19/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/columns-cs19" %}
-
-## Show or Hide columns dynamically
-
-You can show or hide gantt columns dynamically using external buttons by invoking the [`showColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#showcolumn) or [`hideColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#hidecolumn) method.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/gantt/columns-cs20/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/columns-cs20" %}

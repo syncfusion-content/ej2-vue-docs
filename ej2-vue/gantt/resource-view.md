@@ -15,10 +15,6 @@ The resource breakdown view is used to visualize the tasks assigned to each reso
 To learn about Gantt Chart Resource view Concepts, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=JkvpRwaabQM" %}
 
-## Unassigned task
-
-A task not assigned to any one of the resource are termed as unassigned tasks. The unassigned tasks are grouped with a name as `Unassigned Task` and displayed at the bottom of Gantt data collection . It is validated at load time during Gantt record creation by default based on a task `resourceInfo` mapping property in the Gantt chart data source. If the resource is assigned to the unassigned grouped tasks, the task will be moved as child to the respective resource.
-
 ## Resource task
 
 A task assigned to one or more resources are termed as resource task and it is added as child task to the respective resource. Already assigned task can also be shared or moved with other resources by adding a resource name to the task or removing resource name from the task by cell or dialog editing.
@@ -33,7 +29,7 @@ A task assigned to one or more resources are termed as resource task and it is a
         
 {% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs1" %}
 
-## Resource OverAllocation
+## Resource overallocation
 
 When a resource is assigned too much of work to complete within a day of resource’s available time then it is called as overallocation.
 
@@ -51,25 +47,11 @@ The range of overallocation dates can be highlighted by a square bracket. It can
         
 {% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs2" %}
 
-## Resource Multi Taskbar
+## Unassigned task
 
-To visualize multiple tasks assigned to each resource in a row when the records are in the collapsed state. It can be enabled by settings the `enableMultiTaskbar` property value as `true`.
+A task not assigned to any one of the resource are termed as unassigned tasks. The unassigned tasks are grouped with a name as `Unassigned Task` and displayed at the bottom of Gantt data collection . It is validated at load time during Gantt record creation by default based on a task `resourceInfo` mapping property in the Gantt chart data source. If the resource is assigned to the unassigned grouped tasks, the task will be moved as child to the respective resource.
 
-The collapse or expand action of a resource record can be achieved only by using the tree grid side arrow icon. Because it will be disabled on chart side action for this support.
-
-When a resource has multiple tasks scheduled on the same date, then the tasks will be overlapped one another. Taskbar editing is also possible to change the task scheduling on the collapsed state.
-
->Note: By default, the `enableMultiTaskbar` property value is `false`.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/gantt/resource-view-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs3" %}
-
-### Enable taskbar drag and drop
+## Enable taskbar drag and drop
 
 In Gantt, you can enable taskbar drag and drop between resources by using the [`allowTaskbarDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowtaskbardraganddrop) property. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
 
@@ -80,19 +62,3 @@ In Gantt, you can enable taskbar drag and drop between resources by using the [`
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs4" %}
-
-### Disable taskbar overlap
-
-In Gantt, you can disable taskbar overlap between resource tasks using the [`allowTaskbarOverlap`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowtaskbaroverlap) property. This prevents the taskbars for different tasks from overlapping on the same row, making it easier to distinguish between the different tasks and manage resources effectively.
-
-When `allowTaskbarOverlap` is set to false, the resources are displayed in a single row and the row height will be extended to occupy the tasks of the resource when it is in a collapsed state. This view allows you to easily identify any overallocation of tasks for a resource in a project.
-
-It's important to note that when `allowTaskbarOverlap` is disabled, task dependencies or relationships cannot be established between tasks that are rendered in multiple lines for the same resource. If you need to establish dependencies between tasks for the same resource, you may want to consider enabling taskbar overlap.
-
-{% tabs %}
-{% highlight html tabtitle="app.vue" %}
-{% include code-snippet/gantt/resource-view-cs5/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/gantt/resource-view-cs5" %}

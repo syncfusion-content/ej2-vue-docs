@@ -107,3 +107,15 @@ In the Gantt component, the schedule timeline will be automatically updated when
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/timeline-cs7" %}s
+
+## Timeline cells tooltip
+
+In the Gantt component, you can enable or disable the mouse hover tooltip of timeline cells using the [`timelineSettings.showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings/#showtooltip) property. The default value of this property is `true`. The following code example shows how to enable the timeline cells tooltip in Gantt.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/tooltip-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs2" %}
