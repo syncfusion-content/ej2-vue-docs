@@ -40,7 +40,6 @@ new Vue({
                 format: 'C1',
                 textAlign: 'Right',
                 minWidth: 10,
-                allowResizing: false
             }
         ],
         shipColumns: [
@@ -48,7 +47,8 @@ new Vue({
                 field: 'ShipCity',
                 headerText: 'Ship City',
                 width: 100,
-                minWidth: 10
+                minWidth: 10,
+                allowResizing: false
             },
             {
                 field: 'ShipCountry',

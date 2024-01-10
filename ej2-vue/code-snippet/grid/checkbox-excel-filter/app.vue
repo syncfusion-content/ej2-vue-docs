@@ -16,7 +16,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, Filter } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Filter, Page, Sort  } from "@syncfusion/ej2-vue-grids";
 import { DataManager, Query, UrlAdaptor } from "@syncfusion/ej2-data";
 Vue.use(GridPlugin);
 
