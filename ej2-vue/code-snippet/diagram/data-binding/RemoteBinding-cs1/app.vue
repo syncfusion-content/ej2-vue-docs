@@ -49,28 +49,29 @@
                 connector.targetDecorator.shape = 'None';
             },
             dataSourceSettings: {
-                id: 'EmployeeID', parentId: 'ReportsTo',
-                dataManager: new DataManager(
-                    { url: 'https://mvc.syncfusion.com/Services/Northwnd.svc/', crossDomain: true },
-                    new Query().from('Employees').select('EmployeeID,ReportsTo,FirstName').take(9),
-                ),
+                id: "Id",
+                parentId: "ParentId",
+                dataSource: new DataManager({
+                    url: "https://services.syncfusion.com/react/production/api/RemoteData",
+                    crossDomain: true
+                }),
                 //binds the external data with node
                 doBinding: (nodeModel: NodeModel, data: DataInfo, diagram: Diagram) => {
                     nodeModel.annotations = [{
-                        /* tslint:disable:no-string-literal */
-                        content: data['FirstName'],
-                        style: { color: 'white' }
+                    /* tslint:disable:no-string-literal */
+                    content: data["Label"],
+                    style: { color: "white" }
                     }];
                 }
             },
             //Disables all interactions except zoom/pan
             tool: DiagramTools.ZoomPan,
             snapSettings: { constraints: 0 }
-            provide: {
-                diagram: [DataBinding, HierarchicalTree]
-            },
         }
-    }
+    },
+    provide: {
+        diagram: [DataBinding, HierarchicalTree]
+    },
 }
 </script>
 <style>

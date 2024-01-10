@@ -53,7 +53,7 @@ new Vue({
                 },
                 computed: {
                     image: function() {
-                        return "Startname.png";
+                        return "Startdate.png";
                     }
                 }
           })}
