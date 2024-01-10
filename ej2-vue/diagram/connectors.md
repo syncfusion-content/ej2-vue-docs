@@ -507,6 +507,20 @@ Padding is used to leave the space between the Connector's end point and the obj
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectNode-cs2" %}
 
+## Hit padding
+
+* The [`hitPadding`](../api/diagram/connector#hitpadding) property enables you to define the clickable area around the connector path.The default value for hitPadding is 10.
+
+* The following code example illustrates how to specify hit padding for connector.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/diagram/connectors/ConnectorHitPadding-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorHitPadding-cs1" %}
+
 ## Flip
 
 The diagram Provides support to flip the connector. The [`flip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#flip) is performed to give the mirrored image of the original element.
