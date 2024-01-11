@@ -233,7 +233,13 @@ The pivot table component's accessibility levels are ensured through an [accessi
 
 The accessibility compliance of the pivot table component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/pivot-view.html) in a new window to evaluate the accessibility of the pivot table component with accessibility tools.
 
-{% previewsample "https://ej2.syncfusion.com/accessibility/pivot-view.html" %}
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/pivot-grid/accessibility/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/pivot-grid/accessibility" %}
 
 ## See also
 
