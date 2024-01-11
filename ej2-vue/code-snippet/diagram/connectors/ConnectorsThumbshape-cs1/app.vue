@@ -4,13 +4,15 @@
     <div id="app">
         <ejs-diagram id="diagram"  :width='width' :height='height'
         :connectors='connectors'
-        :getConnectorDefaults='getConnectorDefaults' >
+        :getConnectorDefaults='getConnectorDefaults'
+        :segmentThumbShape="segmentThumbShape"
+        >
         </ejs-diagram>
     </div>
 </template>
 <script>
     import Vue from 'vue';
-    import { DiagramPlugin,ConnectorConstraints,ConnectorEditing } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,ConnectorConstraints,ConnectorEditing, Diagram } from '@syncfusion/ej2-vue-diagrams';
     Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
     let connectors = [{
@@ -39,7 +41,8 @@
             return {
                 width: "900px",
                 height: "500px",
-                connectors: [connectors],
+                connectors: connectors,
+                segmentThumbShape: 'Square',
                 getConnectorDefaults:(connector)=>{
                 connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
                 }

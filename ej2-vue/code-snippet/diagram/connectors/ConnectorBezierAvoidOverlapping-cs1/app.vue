@@ -8,7 +8,7 @@
 </template>
 <script>
     import Vue from 'vue';
-    import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints, PortVisibility,ControlPointsVisibility  } from '@syncfusion/ej2-vue-diagrams';
     Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
 let nodes = [{
