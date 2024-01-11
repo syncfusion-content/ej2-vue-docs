@@ -39,13 +39,12 @@ new Vue({
                 nodes: nodes,
                 constraints: DiagramConstraints.Default | DiagramConstraints.Tooltip,
                 selectedItems: {
-                    constraints: SelectorConstraints.All,userHandles: handle
+                    constraints: SelectorConstraints.All,userHandles: handles
                 }
             }
-        }
+        },
         mounted: function() {
-            let obj: any = document.getElementById("diagram");
-            diagramInstance = obj.ej2_instances[0];
+            let diagram = this.$refs.diagram.ej2Instances;
         }
     
 });
