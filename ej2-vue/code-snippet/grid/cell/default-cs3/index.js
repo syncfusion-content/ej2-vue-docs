@@ -9,11 +9,11 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-grid :dataSource="data" height='315'>
+        <ejs-grid :dataSource="data" height='315' :selectionSettings='selectionOptions'>
           <e-columns>
-            <e-column field='OrderID' headerText='Order ID' :customAttributes= "{class: 'custom-css'}" width=90></e-column>
+            <e-column field='OrderID' headerText='Order ID' width=90></e-column>
             <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
-            <e-column field='ShipCity' headerText='Ship City' :customAttributes= "{class: 'custom-css'}" width=90></e-column>
+            <e-column field='ShipCity' headerText='Ship City' width=90></e-column>
             <e-column field='ShipName' headerText='Ship Name' textAlign='Right' width=120 > </e-column>
           </e-columns>
         </ejs-grid>
@@ -22,7 +22,8 @@ new Vue({
 
   data() {
     return {
-      data: data
+      data: data,
+      selectionOptions: { cellSelectionMode: 'Box', type: 'Multiple', mode: 'Cell' }
     };
   }
 

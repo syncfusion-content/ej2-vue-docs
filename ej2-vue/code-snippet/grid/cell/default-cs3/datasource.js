@@ -190,5 +190,5 @@ define(["require", "exports"], function (require, exports) {
           "ShipCountry":"USA",
           "Verified": true
        },
-      ]
-   })
+   ]
+})

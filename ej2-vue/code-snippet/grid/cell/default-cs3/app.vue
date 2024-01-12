@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-        <ejs-grid :dataSource="data" height='315'>
+        <ejs-grid :dataSource="data" height='315' :selectionSettings='selectionOptions'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' :customAttributes= "{class: 'custom-css'}" width=90></e-column>
             <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
@@ -20,7 +20,8 @@ Vue.use(GridPlugin);
 export default {
   data() {
     return {
-      data: data
+      data: data,
+      selectionOptions: { type: 'Multiple', mode: 'Cell' }
     };
   }
 }

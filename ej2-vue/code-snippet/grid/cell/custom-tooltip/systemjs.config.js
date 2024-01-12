@@ -33,8 +33,10 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
         
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
-        "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js",
         "@syncfusion/ej2-vue-grids": "syncfusion:ej2-vue-grids/dist/ej2-vue-grids.umd.min.js",
+        "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js",
+        "@syncfusion/ej2-vue-buttons": "syncfusion:ej2-vue-buttons/dist/ej2-vue-buttons.umd.min.js",
+        "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js"
     }
 });
 
