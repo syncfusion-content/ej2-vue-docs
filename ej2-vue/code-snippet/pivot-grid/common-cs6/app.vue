@@ -1,10 +1,7 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"></ejs-pivotview>
+  </div>
 </template>
 
 <script>
@@ -15,22 +12,23 @@ import { DataManager, WebApiAdaptor, ODataAdaptor, Query, ReturnOption } from '@
 Vue.use(PivotViewPlugin);
 
 let remoteData: DataManager = new DataManager({
-  url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders',
-  adaptor: new ODataAdaptor(),
+  url: "https://bi.syncfusion.com/northwindservice/api/orders",
+  adaptor: new WebApiAdaptor(),
   crossDomain: true
 });
-
 remoteData.defaultQuery = new Query().take(2);
 
 export default {
-  data () {
+  data() {
     return {
       dataSourceSettings: {
         dataSource: remoteData as DataManager,
-        expandAll: false,
-        columns: [{ name: 'CustomerID', caption: 'Customer ID' }],
+        expandAll: true,
+        filters: [],
+        columns: [{ name: 'ProductName', caption: 'Product Name' }],
         rows: [{ name: 'ShipCountry', caption: 'Ship Country' }, { name: 'ShipCity', caption: 'Ship City' }],
-        values: [{ name: 'Freight' }]
+        formatSettings: [{ name: 'UnitPrice', format: 'C0' }],
+        values: [{ name: 'Quantity' }, { name: 'UnitPrice', caption: 'Unit Price' }]
       },
       height: 350
     }
@@ -40,6 +38,3 @@ export default {
 <style>
 @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

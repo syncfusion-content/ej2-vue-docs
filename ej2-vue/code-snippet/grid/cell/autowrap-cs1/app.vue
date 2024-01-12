@@ -2,7 +2,13 @@
 
 <template>
     <div id="app">
-        <ejs-grid :dataSource='data' :allowPaging='true' :allowTextWrap='true' :textWrapSettings='wrapSettings' height='310'>
+        <div style="display: flex">
+          <label style="padding:  10px 10px 12px 0"> Auto wrap mode: </label> 
+          <ejs-dropdownlist ref='dropdown' id='dropdownlist' style="margin-top:5px" index="0"
+          width="150" :dataSource="ddlData" :fields='fields' :change="change" 
+          ></ejs-dropdownlist>
+        </div>
+        <ejs-grid ref='grid' id="grid" style="padding: 5px 5px" :dataSource='data' :allowPaging='true' :allowTextWrap='true' :textWrapSettings='wrapSettings' height='310'>
             <e-columns>
                 <e-column field='Inventor' headerText='Inventor Name' width='180' textAlign="Right"></e-column>
                 <e-column field='NumberofPatentFamilies' headerText="Number of Patent Families" width='180' textAlign="Right"></e-column>
@@ -16,19 +22,33 @@
 <script>
 import Vue from "vue";
 import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+import { DropDownListPlugin  } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from './datasource.js';
 Vue.use(GridPlugin);
+Vue.use(DropDownListPlugin);
 
 export default {
   data() {
     return {
       data: data,
-      wrapSettings: { wrapMode: 'Content' }
+      wrapSettings: { wrapMode: 'Content' },
+      fields: { text: 'text', value: 'value' },
+      ddlData : [
+        { text: 'Content', value: 'Content' },
+        { text: 'Both', value: 'Both' },
+      ],
     };
-  }
+  },
+  methods: {
+    change: function(args) {
+      let grid = this.$refs.grid.$el.ej2_instances[0];
+      grid.textWrapSettings.wrapMode = args.value;
+    }
+  },
 }
 </script>
 <style>
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 

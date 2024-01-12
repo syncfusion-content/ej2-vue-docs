@@ -13,8 +13,8 @@ new Vue({
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
             <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
-            <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' type='date' width=120 > </e-column>
+            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=80></e-column>
+            <e-column field='ShipCity' headerText='Ship City' width=120></e-column>
           </e-columns>
         </ejs-grid>
     </div>
@@ -28,9 +28,9 @@ new Vue({
   methods: {
     customiseCell: function(args) {
         if (args.column.field === 'Freight') {
-            if (args.data['Freight'] < 30) {
+            if (args.data['Freight'] <= 30) {
                 args.cell.classList.add('below-30');
-            } else if (args.data['Freight'] < 80) {
+            } else if ( args.data['Freight'] > 30 & args.data['Freight'] < 80) {
                 args.cell.classList.add('below-80');
             } else {
                 args.cell.classList.add('above-80');
