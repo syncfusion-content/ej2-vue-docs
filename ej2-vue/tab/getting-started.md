@@ -223,6 +223,18 @@ You need to follow the below structure of HTML elements to render the Tab,
         
 {% previewsample "page.domainurl/code-snippet/tab/tab-container-cs1" %}
 
+## Initialize the Tab using V-slot Template
+
+In the Vue Tab component, the v-slot directive is used to define a [slot template](https://ej2.syncfusion.com/vue/documentation/common/template#slot-template) in the component’s template where users can insert custom content. Refer to the following code sample.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/tab/tab-v-slot-template/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/tab/tab-v-slot-template" %}
+
 ## See Also
 
 * [How to load tab with DataSource](./how-to/load-tab-with-data-source/)
