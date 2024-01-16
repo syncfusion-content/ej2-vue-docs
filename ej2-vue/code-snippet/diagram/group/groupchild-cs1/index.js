@@ -21,7 +21,7 @@ template: `
 <div id="app">
     <button @click="addChild">addChild</button>
     <button @click="removeChild">removeChild</button>
-    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
+    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
 </div>
 `,
 
@@ -35,11 +35,11 @@ data() {
 },
 methods: {
     addChild: function () {
-        let diagram = this.$refs.diagramObj.ej2Instances;
+        let diagram = this.$refs.diagram.ej2Instances;
         diagram.addChildToGroup(group, 'node3');
     },
     removeChild: function () {
-        let diagram = this.$refs.diagramObj.ej2Instances;
+        let diagram = this.$refs.diagram.ej2Instances;
         diagram.removeChildFromGroup(group, 'node3');
     },
 

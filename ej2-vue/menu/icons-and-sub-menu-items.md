@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Icons
 
-The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel#iconcss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the `iconCss` property.
+The menu item contains an icon/image in it to provide a visual representation of an action. To place the icon on a menu item, set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel/#iconcss) property with the required icon CSS. By default, the icon is positioned at the left of the menu item. In the following sample, the icons of `File` and `Edit` menu items and `Open`, `Save`, `Cut`, `Copy`,and `Paste` sub menu items are added using the `iconCss` property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -36,7 +36,7 @@ Navigation in Menu is used to navigate to the other web page when a menu item is
 
 ## Multilevel nesting
 
-The Menu supports multiple level nesting, and it can be achieved by mapping the [`items`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel#items) property inside the parent [`menuItems`](https://ej2.syncfusion.com/vue/documentation/api/menu#items). In the following sample, three-level nesting of menu has been provided.
+The Menu supports multiple level nesting, and it can be achieved by mapping the [`items`](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel/#items) property inside the parent [`menuItems`](https://ej2.syncfusion.com/vue/documentation/api/menu/#items). In the following sample, three-level nesting of menu has been provided.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
