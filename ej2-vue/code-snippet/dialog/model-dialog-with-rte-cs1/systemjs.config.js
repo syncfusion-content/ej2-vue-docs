@@ -21,7 +21,8 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js",
-        "@syncfusion/ej2-vue-buttons": "syncfusion:ej2-vue-buttons/dist/ej2-vue-buttons.umd.min.js"       
+        "@syncfusion/ej2-vue-buttons": "syncfusion:ej2-vue-buttons/dist/ej2-vue-buttons.umd.min.js",
+        "@syncfusion/ej2-richtexteditor": "syncfusion:ej2-richtexteditor/dist/ej2-richtexteditor.umd.min.js"  
     }
 });
 

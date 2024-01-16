@@ -1,6 +1,6 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin, ConnectorConstraints ,ConnectorEditing} from '@syncfusion/ej2-vue-diagrams';
+    import { Diagram,DiagramPlugin, ConnectorConstraints ,ConnectorEditing} from '@syncfusion/ej2-vue-diagrams';
     Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
     let connectors = [{

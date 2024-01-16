@@ -30,6 +30,7 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-compression":"syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
         "@syncfusion/ej2-calendars": "syncfusion:ej2-calendars/dist/ej2-calendars.umd.min.js",
         "@syncfusion/ej2-splitbuttons": "syncfusion:ej2-splitbuttons/dist/ej2-splitbuttons.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js",

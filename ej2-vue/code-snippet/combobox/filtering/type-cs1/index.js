@@ -18,28 +18,32 @@ new Vue({
 
   data (){
     return {
-            searchData : new DataManager({
-                url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Suppliers',
-                crossDomain: true
-            }),
-            fields : { text: "ContactName", key: "SupplierID" },
-            query : new Query().select(["SupplierID", "ContactName"]).take(6),
-            allowFiltering : true
-        }
+      searchData : new DataManager({
+        url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+        adaptor: new ODataV4Adaptor,
+        crossDomain: true
+    }),
+    fields : { text: 'ContactName', value: 'CustomerID' },
+    query : new Query().select(['ContactName', 'CustomerID']).take(6),
+    allowFiltering : true
+    }
+        
   },
    methods: {
         filtering: function(e) {
-           var searchData = new DataManager({
-                url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Suppliers',
-                crossDomain: true
-            });
-             if (e.text == '') e.updateData(searchData);
-            else {
-                var query = new Query().select(["SupplierID", "ContactName"]);
-                query = (e.text !== '') ? query.where('ContactName', 'endswith', e.text, true) : query;
-                e.updateData(searchData, query);
-            }
-        }
+          var searchData = new DataManager({
+              url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+              adaptor: new ODataV4Adaptor,
+              crossDomain: true
+          });
+          // load overall data when search key empty.
+          if (e.text == '') e.updateData(searchData);
+          else {
+              var query = new Query().select(['ContactName', 'CustomerID']);
+              query = (e.text !== '') ? query.where('ContactName', 'startswith', e.text, true) : query;
+              e.updateData(searchData, query);
+          }
+      }
     }
 
 });

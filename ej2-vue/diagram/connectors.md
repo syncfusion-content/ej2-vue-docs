@@ -659,23 +659,23 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 
 * The following code block shows how to create the diagram with specifying nodes, connectors, constraints, and necessary modules for line routing.
 
-        {% tabs %}
-        {% highlight html tabtitle="app.vue" %}
-        {% include code-snippet/diagram/connectors/ConnectorsLineRouting-cs1/app.vue %}
-        {% endhighlight %}
-        {% endtabs %}
-                
-        {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRouting-cs1" %}
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/diagram/connectors/ConnectorsLineRouting-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRouting-cs1" %}
 
 * In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
 
-        {% tabs %}
-        {% highlight html tabtitle="app.vue" %}
-        {% include code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1/app.vue %}
-        {% endhighlight %}
-        {% endtabs %}
-                
-        {% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1" %}
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1" %}
 
 ## Constraints
 

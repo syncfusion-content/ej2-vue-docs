@@ -18,6 +18,7 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-buttons.umd.min.js",
         "@syncfusion/ej2-popups": "syncfusion:ej2-popups/dist/ej2-popups.umd.min.js",
+        "@syncfusion/ej2-notifications": "syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js",
         
