@@ -43,8 +43,4 @@ new Vue({
                 }
             }
         },
-        mounted: function() {
-            let diagram = this.$refs.diagram.ej2Instances;
-        }
-    
 });

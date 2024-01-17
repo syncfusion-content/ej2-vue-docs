@@ -1,24 +1,14 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,Diagram, ConnectorConstraints,ConnectorEditing } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 100,
-    },
-    {
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 300,
-        offsetY: 100,
-    }
-];
+    Diagram.Inject(ConnectorEditing);
 let connectors = [{
+    // Name of the connector
     id: "connector1",
+    type:"Orthogonal",
+    //set hit padding
+    hitPadding:50,
     style: {
         strokeColor: '#6BA5D7',
         fill: '#6BA5D7',
@@ -30,35 +20,28 @@ let connectors = [{
             strokeColor: '#6BA5D7'
         }
     },
-    sourceID: "node",
-    targetID: "node1",
-    // Set Source Padding value
-    sourcePadding:20,
-    // Set Target Padding value
-    targetPadding:20
+    sourcePoint: { x: 100, y: 100 },
+    targetPoint: { x: 300, y: 300 }
 }, ]
 
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
+        <ejs-diagram id="diagram"  :width='width' :height='height' :connectors='connectors' :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",
             height: "350px",
             nodes: nodes,
             connectors: connectors,
-            getNodeDefaults: (node) => {
-                node.height = 100;
-                node.width = 100;
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
+            getConnectorDefaults: (connector) => {
+                connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+                return connector;
             },
         }
     }

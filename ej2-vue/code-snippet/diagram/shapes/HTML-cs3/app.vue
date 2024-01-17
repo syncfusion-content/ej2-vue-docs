@@ -8,13 +8,9 @@
       :width='width'
       :height='height'
       :nodes = "nodes"
-      :nodeTemplate="'Template'"
+      :nodeTemplate="nodeTemplate"
     >
-    <template v-slot:Template="{data}">
-       <div style="background-color:red">
-           <button v-on:click="ZoomIn">{{data.id}}</button>
-         </div>
-      </template>
+    
     </ejs-diagram>
   </div>
 </template>
@@ -23,6 +19,13 @@
 import Vue from "vue";
 import { DiagramPlugin, AnnotationConstraints } from "@syncfusion/ej2-vue-diagrams";
 Vue.use(DiagramPlugin);
+
+let itemVue  = Vue.component("nodeTemplate", {
+  template: `<div style="background:#6BA5D7;height:100%;width:100%;"><button type="button" style="width:100px"> Button</button></div> `,
+  data() {
+    return {};
+  }
+});
 let nodes = [
   {
     //Id of the node
@@ -47,6 +50,9 @@ export default {
       width: "100%",
       height: "350px",
       nodes: nodes,
+      nodeTemplate: function () {
+       return { template: itemVue };
+      },
     };
   },
   methods: {
