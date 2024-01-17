@@ -16,11 +16,11 @@ To render a stacked column series, use series [`type`](https://ej2.syncfusion.co
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/chart3d/types/staccolumn1/app.vue %}
+{% include code-snippet/chart3d/types/stackcolumn1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart3d/types/staccolumn1" %}
+{% previewsample "page.domainurl/code-snippet/chart3d/types/stackcolumn1" %}
 
 ## Stacking group
 
@@ -28,11 +28,11 @@ To group the stacked columns, the [`stackingGroup`](https://ej2.syncfusion.com/v
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/chart3d/types/staccolumn2/app.vue %}
+{% include code-snippet/chart3d/types/stackcolumn2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart3d/types/staccolumn2" %}
+{% previewsample "page.domainurl/code-snippet/chart3d/types/stackcolumn2" %}
 
 ## Cylindrical stacked column chart
 
@@ -40,11 +40,11 @@ To render a cylindrical stacked column chart, set the [`columnFacet`](https://ej
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/chart3d/types/staccolumn3/app.vue %}
+{% include code-snippet/chart3d/types/stackcolumn3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart3d/types/staccolumn3" %}
+{% previewsample "page.domainurl/code-snippet/chart3d/types/stackcolumn3" %}
 
 ## Series customization
 
@@ -55,8 +55,8 @@ The following properties can be used to customize the `stacked column` series.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/chart3d/types/staccolumn4/app.vue %}
+{% include code-snippet/chart3d/types/stackcolumn4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart3d/types/staccolumn4" %}
+{% previewsample "page.domainurl/code-snippet/chart3d/types/stackcolumn4" %}

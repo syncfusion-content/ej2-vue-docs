@@ -43,11 +43,14 @@ new Vue({
         }
        },
        onCreated: function() {
-            this.toastInstance.show(this.toasts[this.toastFlag]);
-            ++this.toastFlag;
+            if (!isNullOrUndefined(this.toastInstance))
+            {
+                this.toastInstance.show(this.toasts[this.toastFlag]);
+                ++this.toastFlag;
+            }            
         },
         onClose: function(e) {
-            for (let i: number = 0; i < this.toasts.length; i++) {
+            for (let i:number = 0; i < this.toasts.length; i++) {
                 if (this.toasts[i].title === e.options.title) {
                     this.toasts[i].isOpen = false;
                 }

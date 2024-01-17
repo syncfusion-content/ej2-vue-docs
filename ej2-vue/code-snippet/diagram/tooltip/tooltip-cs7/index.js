@@ -29,7 +29,7 @@ new Vue({
 	template: `
     <div id="app">
         <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes'
-        :tooltip='tooltip'  :constraints='constraints'></ejs-diagram>
+       ></ejs-diagram>
     </div>
 `,
 

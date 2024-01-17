@@ -51,17 +51,21 @@
             dataSourceSettings: {
                 id: "Id",
                 parentId: "ParentId",
-                dataSource: new DataManager({
-                    url: "https://services.syncfusion.com/react/production/api/RemoteData",
+                dataSource: new DataManager(
+                {
+                    url: "https://services.syncfusion.com/vue/production/api/RemoteData",
                     crossDomain: true
-                }),
+                },
+                ),
                 //binds the external data with node
-                doBinding: (nodeModel: NodeModel, data: DataInfo, diagram: Diagram) => {
-                    nodeModel.annotations = [{
+                doBinding: (nodeModel, data, diagram) => {
+                nodeModel.annotations = [
+                    {
                     /* tslint:disable:no-string-literal */
                     content: data["Label"],
                     style: { color: "white" }
-                    }];
+                    }
+                ];
                 }
             },
             //Disables all interactions except zoom/pan

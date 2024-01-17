@@ -43,7 +43,7 @@ export default {
         }
        },
        onCreated: function() {
-        if (this.toastInstance != null){
+        if (!isNullOrUndefined(this.toastInstance)){
             this.toastInstance.show(this.toasts[this.toastFlag]);
             ++this.toastFlag;
         }
