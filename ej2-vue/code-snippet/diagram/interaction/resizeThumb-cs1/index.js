@@ -15,7 +15,6 @@
         },
         // Text(label) added to the node
     }]
-    let selectedItems: { handleSize : 40 },
     
 new Vue({
 	el: '#app',
@@ -31,6 +30,7 @@ new Vue({
                 width: "100%",
                 height: "350px",
                 nodes: nodes,
+                selectedItems: { handleSize : 40 }
             }
         }
     

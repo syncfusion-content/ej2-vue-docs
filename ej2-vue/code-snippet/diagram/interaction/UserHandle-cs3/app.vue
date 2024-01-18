@@ -42,10 +42,6 @@
                 }
             }
         },
-        mounted: function() {
-            let obj = document.getElementById("diagram");
-            diagramInstance = obj.ej2_instances[0];
-        }
     }
 </script>
 <style>
