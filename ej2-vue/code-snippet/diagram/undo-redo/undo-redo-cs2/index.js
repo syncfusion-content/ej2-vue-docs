@@ -42,13 +42,13 @@ new Vue({
                     return node;
                 },
             }
-        }
+        },
         mounted: function() {
             let diagramInstance: Diagram;
             let diagramObj: any = document.getElementById("diagram");
             diagramInstance = diagramObj.ej2_instances[0];
             // canLog decide whether the entry add or not in history List
-            diagramInstance.historyList.canLog = function(entry: HistoryEntry) {
+            diagramInstance.historyManager.canLog = function(entry: HistoryEntry) {
                 entry.cancel = true;
                 return entry;
             }
