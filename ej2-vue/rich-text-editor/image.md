@@ -101,7 +101,7 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 ## Image with link
 
-The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open link will be added to the quick toolbar of image. For further details about link, see the [`link documentation`](./link/) documentation.
+The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open link will be added to the quick toolbar of image. For further details about link, see the [`link documentation`](./link) documentation.
 
 ![image-link](./images/image-link.png)
 
@@ -153,5 +153,5 @@ You can prevent drag-and-drop action by setting the actionBegin argument cancel 
 
 ## See Also
 
-* [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)
-* [How to use link editing option in the toolbar items](./link/)
+* [How to edit the quick toolbar settings](./toolbar#quick-inline-toolbar)
+* [How to use link editing option in the toolbar items](./link)

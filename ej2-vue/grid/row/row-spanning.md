@@ -25,3 +25,11 @@ Also Grid supports the spanning of rows and columns for same cells. `Lunch Break
 {% previewsample "page.domainurl/code-snippet/grid/column/spanning-cs2" %}
 
 > To disable the spanning for particular grid page, we need to use `requestType` from [`QueryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/queryCellInfoEventArgs/) event argument.
+
+## Limitations
+
+* Row spanning is not compatible with the following features:
+    1. Virtual scrolling
+    2. Infinite scrolling
+    3. Lazy load grouping
+    4. Row drag and drop
