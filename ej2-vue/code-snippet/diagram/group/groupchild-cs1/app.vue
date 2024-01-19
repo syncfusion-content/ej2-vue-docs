@@ -11,6 +11,7 @@
     import Vue from 'vue';
     import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
+    let diagramInstance;
     let node = {
         id: 'node1', width: 150, height: 100, offsetX: 100, offsetY: 100, annotations: [{ content: 'Node1' }]
     };
@@ -31,15 +32,17 @@ export default {
             height: "450px",
             nodes: [node,node2,node3,group],
         }
+    },   
+    mounted: function() {
+        let diagramObj = document.getElementById("diagram");
+        diagramInstance = diagramObj.ej2_instances[0];
     },
     methods: {
         addChild: function () {
-            let diagram = this.$refs.diagram.ej2Instances;
-            diagram.addChildToGroup(group, 'node3');
+            diagramInstance.addChildToGroup(group, 'node3');
         },
         removeChild: function () {
-            let diagram = this.$refs.diagram.ej2Instances;
-            diagram.removeChildFromGroup(group, 'node3');
+            diagramInstance.removeChildFromGroup(group, 'node3');
         },
 
     },

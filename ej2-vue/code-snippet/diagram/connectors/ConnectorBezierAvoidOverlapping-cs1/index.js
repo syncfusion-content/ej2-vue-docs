@@ -42,7 +42,7 @@ let connectors: ConnectorModel[] = [{
     targetID: "End",
     type: 'Bezier',
     // Configuring settings for bezier interactions
-    bezierSettings = { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
+    bezierSettings : { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
 }];
 
 new Vue({
@@ -73,5 +73,6 @@ new Vue({
             connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
         }
     }
+  }
 
 });
