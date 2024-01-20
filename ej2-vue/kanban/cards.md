@@ -40,6 +40,10 @@ The card's content is fetched from data source using the `contentField` property
 
 ## Template
 
+To learn about Kanban customize card using templates, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=gjWe5NO_DfM" %}
+
 You can customize the default card layout using template as per your application needs. This can be achieved by template of the `cardSettings` property.
 
 {% tabs %}
