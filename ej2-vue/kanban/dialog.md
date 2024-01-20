@@ -91,6 +91,10 @@ The dialog fields can be validated while click on the `Save` button. This can be
 
 ## Dialog Template
 
+To get start quickly with Dialog template edit Option, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=c30icqRKBmw" %}
+
 Using the dialog template, you can render your own dialog by defining the `template` property. Initialize the template as SCRIPT element Id or HTML string which holds the template and map it to the template property.
 
 {% tabs %}

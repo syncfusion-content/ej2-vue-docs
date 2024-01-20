@@ -22,4 +22,4 @@ You can include action buttons to the toast component by adding the [`buttons`](
 
 ## See Also
 
-* [Configuring options](./config/)
+* [Configuring options](./config)

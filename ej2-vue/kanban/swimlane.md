@@ -41,6 +41,10 @@ Customize the swimlane row header text by using the `textField` property mapped 
 
 ## Template
 
+To learn about Kanban customize swimlane using templates, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=gjWe5NO_DfM" %}
+
 You can customize the Kanban swimlane row by using the `template` property, which is specified within the `swimlaneSettings` property. In this demo, the swimlane header is customized with HTML element.
 
 {% tabs %}

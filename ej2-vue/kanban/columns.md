@@ -44,6 +44,10 @@ You can provide the column header text of Kanban columns using the `headerText` 
 
 ## Header template
 
+To learn about Kanban customize column header using templates, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=gjWe5NO_DfM" %}
+
 You can customize the column header with any HTML or CSS element using the `template` property as shown in the following code.
 
 {% tabs %}
