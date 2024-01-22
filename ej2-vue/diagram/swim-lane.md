@@ -14,7 +14,7 @@ Swimlane is a type of diagram nodes,which is typically used to visualize the rel
 
 ## Create a swimlane
 
-To create a swimlane,the type of shape should be set as [`swimlane`](https://ej2.syncfusion.com/vue/documentation/api/diagram/swimLaneModel).By Default swimlane's are arranged vertically.
+To create a swimlane,the type of shape should be set as [`swimlane`](https://ej2.syncfusion.com/vue/documentation/api/diagram/swimLaneModel/).By Default swimlane's are arranged vertically.
 
 The following code example illustrates how to define a swimlane object.
 
@@ -28,7 +28,7 @@ The following code example illustrates how to define a swimlane object.
 
 ### Headers
 
-Header was the primary element for swimlanes. The [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel) property of swimlane allows you to define its textual description and to customize its appearance.
+Header was the primary element for swimlanes. The [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/) property of swimlane allows you to define its textual description and to customize its appearance.
 
 >Note: By using this header,the swimlane interaction will be performed,like selection, dragging,etc.
 
@@ -44,7 +44,7 @@ The following code example illustrates how to define a swimlane header.
 
 ### Customization of headers
 
-The height and width of swimlane header can be customized with [`weight`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel#height) properties of swimlane header. set fill color of header by using the [`style`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel#style) property. The orientation of swimlane can be customized with the [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/swimLaneModel#orientation) property of the header.
+The height and width of swimlane header can be customized with [`weight`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#height) properties of swimlane header. set fill color of header by using the [`style`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#style) property. The orientation of swimlane can be customized with the [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/swimLaneModel/#orientation) property of the header.
 
 >Note: By default the swimlane orientation has Horizontal.
 
@@ -80,13 +80,13 @@ The following image illustrates how to edit the swimlane header. ![Header Editin
 
 Lane is a functional unit or a responsible department of a business process that helps to map a  process within the functional unit or in between other functional units.
 
-The number of [`lanes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/laneModel) can be added to swimlane. The lanes are automatically stacked inside  swimlane based on the order they are added.
+The number of [`lanes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/laneModel/) can be added to swimlane. The lanes are automatically stacked inside  swimlane based on the order they are added.
 
 ### Create an empty lane
 
 * The lanes `id` is used to define the name of the lane and its further used to find the lane at runtime and do any customization.
 
-* We can provide additional information to the lane by using the [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/laneModel#addInfo) property of the lane.
+* We can provide additional information to the lane by using the [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/laneModel/#addInfo) property of the lane.
 
 The following code example illustrates how to define a swimlane with lane.
 
@@ -100,7 +100,7 @@ The following code example illustrates how to define a swimlane with lane.
 
 ### Create lane header
 
-* The [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel) property of lane allows you to textually describe the lane and to customize the appearance of the description.
+* The [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/) property of lane allows you to textually describe the lane and to customize the appearance of the description.
 
 The following code example illustrates how to define a lane header.
 
@@ -114,8 +114,8 @@ The following code example illustrates how to define a lane header.
 
 ### Customizing lane header
 
-* The size of lane can be controlled by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel#height) properties of the lane.
-* The appearance of the lane can be set by using the [`style`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel#style) properties.
+* The size of lane can be controlled by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#height) properties of the lane.
+* The appearance of the lane can be set by using the [`style`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#style) properties.
 
 The following code example illustrates how to customize the lane header.
 
@@ -153,7 +153,7 @@ The following code example illustrates how to customize the lane header.
 
 ### Add children to lane
 
- To add nodes to lane,you should add [`children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/laneModel#children) collection of the lane.
+ To add nodes to lane,you should add [`children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/laneModel/#children) collection of the lane.
 
 The following code example illustrates how to add nodes to lane.
 
@@ -222,7 +222,7 @@ The following image illustrates how to edit the lane header.
 
 ## Phase
 
- Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of [`Phase`](https://ej2.syncfusion.com/vue/documentation/api/diagram/phaseModel) can be added to swimlane.
+ Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of [`Phase`](https://ej2.syncfusion.com/vue/documentation/api/diagram/phaseModel/) can be added to swimlane.
 The following code example illustrates how to add phase at swimlane.
 
 {% tabs %}
@@ -247,10 +247,10 @@ The following code example illustrates how to add phase at swimlane.
 
 ### Customizing phase
 
-* The length of region can be set by using the  [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/phaseModel#offset) property of the phase.
-* Every phase region can be textually described with the [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel) property of the phase
+* The length of region can be set by using the  [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/phaseModel/#offset) property of the phase.
+* Every phase region can be textually described with the [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/) property of the phase
 * You can increase the width of phase by using [`phaseSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/swimLaneModel/#header) property of swimlane.
-* We can provide additional information to the phase by using the [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/phaseModel#addInfo) property of the phase.
+* We can provide additional information to the phase by using the [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/phaseModel/#addInfo) property of the phase.
 
 The following code example illustrates how to customize the phase in swimlane.
 
