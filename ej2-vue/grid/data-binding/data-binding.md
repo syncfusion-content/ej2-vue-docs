@@ -428,4 +428,4 @@ export default Vue.extend({
 
 ## See Also
 
-* [How to bind SQL Server data in Vue DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11454/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
+* [How to bind SQL Server data in Vue DataGrid using SqlClient data provider](https://support.syncfusion.com/kb/article/11781/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
