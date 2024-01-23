@@ -33,3 +33,4 @@ Also Grid supports the spanning of rows and columns for same cells. `Lunch Break
     2. Infinite scrolling
     3. Lazy load grouping
     4. Row drag and drop
+    5. Grouping
