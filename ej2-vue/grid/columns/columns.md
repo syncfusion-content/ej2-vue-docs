@@ -462,7 +462,7 @@ let fieldNames = grid.getColumnFieldNames()
 
 ### Updating column definitions
 
-You can update the column definitions in the Grid using the [columns](https://ej2.syncfusion.com/vue/documentation/api/grid/column) property. You can modify the properties of the column objects in the columns array to update the columns dynamically. For example, you can change the headerText, width, visible, and other properties of a column to update its appearance and behavior in the grid and then call the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method to apply the changes to the grid.
+You can update the column definitions in the Grid using the [columns](https://ej2.syncfusion.com/vue/documentation/api/grid/column/) property. You can modify the properties of the column objects in the columns array to update the columns dynamically. For example, you can change the headerText, width, visible, and other properties of a column to update its appearance and behavior in the grid and then call the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method to apply the changes to the grid.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -512,7 +512,7 @@ In this example, we have a Grid that displays data with three columns: **Order I
 
 ## See also
 
-* [Group Column by Format](../grouping/#group-by-format)
+* [Group Column by Format](../grouping/group-by-format)
 * [How to set complex column as Foreignkey column](../how-to/complex-column-as-foreign-key-column)
 * [Complex Data Binding with list of Array Of Objects](../how-to/list-of-array-of-objects)
 * [Custom tooltip for the header in Vue Grid](https://www.syncfusion.com/forums/144654/custom-tooltip-for-the-header-in-vue-grid)

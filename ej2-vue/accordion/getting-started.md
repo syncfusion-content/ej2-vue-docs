@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -183,4 +183,4 @@ The Accordion component can be rendered based on the given HTML element using `<
         
 {% previewsample "page.domainurl/code-snippet/accordion/accordion-container-cs1" %}
 
-N> You can refer to our [Vue Accordion](https://www.syncfusion.com/vue-ui-components/vue-accordion) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Accordion Component example](https://ej2.syncfusion.com/vue/demos/#/material/accordion/default.html) that shows how to render the Accordion in Vue.
+N> You can refer to our [Vue Accordion](https://www.syncfusion.com/vue-components/vue-accordion) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Accordion Component example](https://ej2.syncfusion.com/vue/demos/#/material/accordion/default.html) that shows how to render the Accordion in Vue.

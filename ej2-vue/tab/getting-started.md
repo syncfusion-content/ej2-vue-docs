@@ -237,6 +237,6 @@ In the Vue Tab component, the v-slot directive is used to define a [slot templat
 
 ## See Also
 
-* [How to load tab with DataSource](./how-to/load-tab-with-data-source/)
+* [How to load tab with DataSource](./how-to/load-tab-with-data-source)
 
 N> You can refer to our [Vue Tab](https://www.syncfusion.com/vue-components/vue-tabs) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Tab Component example](https://ej2.syncfusion.com/vue/demos/#/material/tab/default.html) that shows how to render the Tab in Vue.
