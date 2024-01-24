@@ -5,26 +5,21 @@ import { eventsData } from './datasource.js';
 
 Vue.use(SchedulePlugin);
 
-var eventTooltipTemplateVue = Vue.component('eventTooltipTemplate', {
-  template:`<div class='tooltip-wrap'>
-        <div class='content-area'><div class='name'>{{data.Subject}}</></div>
-        <div v-if='data.City!== null && data.City!==undefined' class='city'>{{data.City}}</div>
-        <div class='time'>From : {{data.StartTime.toLocaleString()}} </div>
-        <div class='time'>To   : {{data.EndTime.toLocaleString()}} </div></div></div>`,
-  data() {
-    return {
-      data: {}
-    };
-  }
-});
-
-
 new Vue({
 	el: '#app',
 	template: `
   <div id='app'>
     <div id='container'>
-        <ejs-schedule ref='scheduleObj' :height='height' :width='width' :selectedDate='selectedDate' :views='views' :eventSettings='eventSettings'></ejs-schedule>
+        <ejs-schedule ref='scheduleObj' :height='height' :width='width' :selectedDate='selectedDate' :views='views' :eventSettings='eventSettings'>
+          <template v-slot:tooltipTemplate="{ data }">
+            <div class='tooltip-wrap'>
+              <div class='content-area'><div class='name'>{{data.Subject}}></div>
+              <div v-if='data.City!== null && data.City!==undefined' class='city'>{{data.City}}</div>
+              <div class='time'>From : {{data.StartTime.toLocaleString()}} </div>
+              <div class='time'>To   : {{data.EndTime.toLocaleString()}} </div>
+            </div>
+          </template>
+        </ejs-schedule>
     </div>
   </div>
 `,
@@ -37,11 +32,7 @@ new Vue({
       eventSettings: {
         dataSource: eventsData,
         enableTooltip: true,
-        tooltipTemplate: function (e) {
-          return {
-            template: eventTooltipTemplateVue
-          };
-        }
+        tooltipTemplate: "tooltipTemplate"
       },
       selectedDate: new Date(2018, 1, 15),
     }

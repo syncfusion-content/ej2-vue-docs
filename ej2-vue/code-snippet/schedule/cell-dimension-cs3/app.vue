@@ -3,7 +3,17 @@
 <template>
     <div id='app'>
         <div id='container'>
-            <ejs-schedule ref='scheduleObj' width='100%' height='550px' :selectedDate='selectedDate' :cellTemplate='cellTemplate' cssClass='schedule-cell-template'>
+            <ejs-schedule ref='scheduleObj' width='100%' height='550px' :selectedDate='selectedDate' :cellTemplate="'cellTemplate'" cssClass='schedule-cell-template'>
+                <template v-slot:cellTemplate="{ data }">
+                    <div class="templatewrap">
+                        <div v-if="data.type==='workCells'">
+                            <div v-html=getWorkCellText(data.date)></div>
+                        </div>
+                        <div v-else-if="data.type==='monthCells'">
+                            <div v-html=getMonthCellText(data.date)></div>
+                        </div>
+                    </div>
+                </template>
                 <e-views>
                     <e-view option='Day'></e-view>
                     <e-view option='Week'></e-view>
@@ -19,12 +29,11 @@
     import { SchedulePlugin, Day, Week, TimelineViews, Month, View } from '@syncfusion/ej2-vue-schedule';
     Vue.use(SchedulePlugin);
 
-    var cellTemplateVue = Vue.component("cellTemplate", {
-        template: `<div class="templatewrap"><div v-if="data.type==='workCells'"><div v-html=getWorkCellText(data.date)></div></div><div v-else-if="data.type==='monthCells'"><div v-html=getMonthCellText(data.date)></div></div></div>`,
-        data() {
+    export default {
+        data () {
             return {
-                data: {}
-            };
+                selectedDate: new Date(2017, 11, 16)
+            }
         },
         methods: {
             getWorkCellText: function(date) {
@@ -53,19 +62,6 @@
                     return '<img src= "https://ej2.syncfusion.com/demos/src/schedule/images/birthday.svg" />';
                 }
                 return '';
-            }
-        }
-    });
-
-    export default {
-        data () {
-            return {
-                selectedDate: new Date(2017, 11, 16),
-                cellTemplate: function (e) {
-                    return {
-                        template: cellTemplateVue
-                    };
-                },
             }
         },
         provide: {

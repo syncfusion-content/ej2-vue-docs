@@ -4,7 +4,14 @@
   <div id='app'>
     <div id='container'>
         <ejs-schedule :height='height' :width='width' :selectedDate='selectedDate'
-        readonly='true' :eventSettings='eventSettings'></ejs-schedule>
+        readonly='true' :eventSettings='eventSettings'>
+          <template v-slot:eventTemplate="{ data }">
+            <div class='template-wrap' :style='{background: data.SecondaryColor}'>
+              <div class='subject' :style='{background:data.PrimaryColor}'>{{data.Subject}}</div>
+              <div class="time" :style="{background: data.PrimaryColor}">Time: {{getTimeString(data)}}</div>
+            </div>
+          </template>
+        </ejs-schedule>
     </div>
   </div>
 </template>
@@ -17,21 +24,6 @@ import { webinarData } from './datasource.js';
 
 Vue.use(SchedulePlugin);
 var instance = new Internationalization();
-var eventTemplateVue = Vue.component('eventTemplate', {
-  template:`<div class='template-wrap' :style='{background: data.SecondaryColor}'>
-        <div class='subject' :style='{background:data.PrimaryColor}'>{{data.Subject}}</div>
-        <div class='time' :style='{background:data.PrimaryColor}'>Time: {{getTimeString(data.StartTime)}} - {{getTimeString(data.EndTime)}}</div></div>`,
-  data() {
-    return {
-      data: {}
-    };
-  },
-  methods: {
-    getTimeString: function (value) {
-      return instance.formatDate(value, { skeleton: 'hm' });
-    }
-  }
-});
 
 export default {
   data (){
@@ -39,14 +31,15 @@ export default {
       height: '550px',
       width: '100%',
       eventSettings: {
-        dataSource: webinarData,
-        template: function (e) {
-          return {
-            template: eventTemplateVue
-          };
-        }
+        template: "eventTemplate",
+        dataSource: webinarData
       },
       selectedDate: new Date(2018, 1, 15),
+    }
+  },
+  methods: {
+    getTimeString: function (data) {
+      return instance.formatDate(data.StartTime, { skeleton: 'hm' }) + " - " + instance.formatDate(data.EndTime, { skeleton: 'hm' });
     }
   },
   provide: {

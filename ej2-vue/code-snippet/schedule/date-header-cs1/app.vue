@@ -3,7 +3,7 @@
 <template>
   <div id='app'>
     <div id='container'>
-        <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings' :dateHeaderTemplate='dateHeaderTemplate' :cssClass='cssClass'>
+        <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings' :dateHeaderTemplate="'dateHeaderTemplate'" :cssClass='cssClass'>
             <e-views>
                 <e-view option='Day'></e-view>
                 <e-view option='Week'></e-view>
@@ -11,6 +11,12 @@
                 <e-view option='TimelineWorkWeek'></e-view>
                 <e-view option='TimelineMonth'></e-view>
             </e-views>
+            <template v-slot:dateHeaderTemplate="{ data }">
+                <div>
+                    <div class="date-text">{{getDateHeaderText(data.date)}}</div>
+                    <div v-html=getWeather(data.date)></div>
+                </div>
+            </template>
         </ejs-schedule>
     </div>
   </div>
@@ -23,17 +29,21 @@
     Vue.use(SchedulePlugin);
 
     var instance = new Internationalization();
-    var dateHeaderTemplateVue = Vue.component('demo', {
-        template: '<div class="date-text" v-html="getDateHeaderText(data.date)"></div>'+
-        '<div v-html="getWeather(data.date)"></div>',
-        data() {
+    
+    export default {
+        data () {
             return {
-                data: {}
-            };
+                eventSettings: { dataSource: scheduleData },
+                cssClass: 'schedule-date-header-template',
+                selectedDate: new Date(2018, 1, 15)
+            }
         },
+        provide: {
+            schedule: [Day, Week, Agenda, TimelineViews, TimelineMonth]
+        }
         methods: {
-            getDateHeaderText: function (Date) {
-                return instance.formatDate(Date, { skeleton: 'Ed' });
+            getDateHeaderText: function (value) {
+                return instance.formatDate(value, { skeleton: 'Ed' });
             },
             getWeather: function (Date) {
                 switch (Date.getDay()) {
@@ -55,22 +65,7 @@
                         return null;
                 }
             }
-        }
-    });
-    export default {
-        data () {
-            return {
-                eventSettings: { dataSource: scheduleData },
-                cssClass: 'schedule-date-header-template',
-                selectedDate: new Date(2018, 1, 15),
-                dateHeaderTemplate: function (e) {
-                    return { template: dateHeaderTemplateVue }
-                }
-            }
-        },
-        provide: {
-            schedule: [Day, Week, Agenda, TimelineViews, TimelineMonth]
-        }
+        } 
     }
 </script>
 <style>

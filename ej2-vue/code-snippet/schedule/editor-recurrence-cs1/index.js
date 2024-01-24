@@ -8,9 +8,15 @@ import { eventData } from './datasource.js';
 
 Vue.use(SchedulePlugin);
 
-var editorTemplateVue = Vue.component('editorTemplate', {
-  template: `<table class="custom-event-editor" width="100%" cellpadding="5">
-        <tbody>
+new Vue({
+	el: '#app',
+	template: `
+  <div id='app'>
+    <div id='container'>
+      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :views='views' :selectedDate='selectedDate' :eventSettings='eventSettings' :editorTemplate="'editorTemplate'" :popupOpen='onPopupOpen'>
+      <template v-slot:editorTemplate>
+        <table class="custom-event-editor" width="100%" cellpadding="5">
+          <tbody>
             <tr>
                 <td class="e-textlabel">Summary</td>
                 <td colspan="4">
@@ -40,22 +46,9 @@ var editorTemplateVue = Vue.component('editorTemplate', {
                     <textarea id="Description" class="e-field e-input" name="Description" rows="3" cols="50" style="width: 100%; height: 60px !important; resize: vertical"></textarea>
                 </td>
             </tr>
-        </tbody>
-    </table>`,
-  data() {
-    return {
-      data: {}
-    };
-  }
-});
-
-
-new Vue({
-	el: '#app',
-	template: `
-  <div id='app'>
-    <div id='container'>
-      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :views='views' :selectedDate='selectedDate' :eventSettings='eventSettings' :editorTemplate='editorTemplate' :popupOpen='onPopupOpen'>
+          </tbody>
+        </table>
+      </template>
       </ejs-schedule>
     </div>
   </div>
@@ -69,12 +62,7 @@ new Vue({
       eventSettings: {
         dataSource: eventData
       },
-      selectedDate: new Date(2018, 1, 15),
-      editorTemplate: function(e) {
-        return {
-          template: editorTemplateVue
-        };
-      }
+      selectedDate: new Date(2018, 1, 15)
     };
   },
   methods: {
@@ -102,5 +90,4 @@ new Vue({
   provide: {
     schedule: [Day, Week, WorkWeek, Month]
   }
-
 });
