@@ -18,7 +18,7 @@ To get start quickly with Vue Dashboard layout, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -75,7 +75,7 @@ yarn add @syncfusion/ej2-vue-layouts
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Dashboard layout component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -115,7 +115,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Dashboard layout component with [cellSpacing](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout#cellspacing) property.
+2\. In the `template` section, define the Dashboard layout component with [cellSpacing](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellspacing) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -243,4 +243,4 @@ You can render the DashboardLayout component by using the **panels** property th
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-panel-cs1" %}
 
-> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
+> You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
