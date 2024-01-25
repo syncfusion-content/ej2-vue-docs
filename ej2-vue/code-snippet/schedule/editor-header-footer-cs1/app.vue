@@ -6,10 +6,23 @@
         :width="width"
         ref='schedule_instance'
         :eventSettings="eventSettings"
-        :editorHeaderTemplate="editorHeaderTemplate"
-        :editorFooterTemplate="editorFooterTemplate"
+        :editorHeaderTemplate="'editorHeaderTemplate'"
+        :editorFooterTemplate="'editorFooterTemplate'"
         :popupOpen="onPopupOpen"
       >
+        <template v-slot:editorHeaderTemplate="{ data }">
+            <div class="event-header">{{getName(data)}}</div>
+          </template>
+          <template v-slot:editorFooterTemplate="{ data }">
+            <div id="event-footer"><div id="verify">
+              <input type="checkbox" id="check-box" value="unchecked" />
+              <label htmlFor="check-box" id="text">Verified</label>
+            </div>
+            <div id="right-button">
+              <button id="Save" className="e-control e-btn e-primary" disabled data-ripple="true"> Save</button>
+              <button id="Cancel" className="e-control e-btn e-primary" data-ripple="true"> Cancel </button>
+            </div>
+        </template>
       </ejs-schedule>
     </div>
   </div>
@@ -59,43 +72,12 @@ var data = [
   },
 ];
 
-var editorHeaderTemplateVue = Vue.component("editorHeaderTemplate", {
-  template: `<div class="event-header">{{getName(data)}}</div></div>`,
-  data: () => ({}),
-  methods: {
-    getName: function(value) {
-      return value.Subject ? value.Subject : 'Create New Event';
-    }
-  }
-});
-
-var editorFooterTemplateVue = Vue.component("editorFooterTemplate", {
-  template: `<div id="event-footer"><div id="verify"><input type="checkbox" id="check-box" value="unchecked" />
-  <label htmlFor="check-box" id="text">Verified</label></div><div id="right-button">
-  <button id="Save" className="e-control e-btn e-primary" disabled data-ripple="true"> Save</button>
-  <button id="Cancel" className="e-control e-btn e-primary" data-ripple="true"> Cancel </button></div></div>`,
-  data() {
-    return {
-      data: {},
-    };
-  },
-});
 export default {
   data() {
     return {
       height: "550px",
       width: "100%",
-      eventSettings: {dataSource: data},
-      editorHeaderTemplate: function () {
-        return {
-          template: editorHeaderTemplateVue,
-        };
-      },
-      editorFooterTemplate: function () {
-        return {
-          template: editorFooterTemplateVue,
-        };
-      },
+      eventSettings: {dataSource: data}
     };
   },
   methods: {
@@ -133,6 +115,9 @@ export default {
         };
       }
     },
+    getName: function (value) {
+      return value.Subject ? value.Subject : 'Create New Event';
+    }
   },
   provide: {
     schedule: [Day, Week, WorkWeek, Month],

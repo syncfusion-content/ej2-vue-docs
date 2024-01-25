@@ -8,55 +8,27 @@ Vue.use(SchedulePlugin);
 
 var instance = new Internationalization();
 
-var yearHeaderVue = Vue.component('year-header', {
-    template: '<span class="year">{{getYearDetails(data)}}</span>',
-    data() {
-        return {
-            data: {}
-        };
-    },
-    methods: {
-        getYearDetails: function (value) {
-            return 'Year: ' + instance.formatDate(value.date, { skeleton: 'y' });
-        }
-    }
-});
-var monthHeaderVue = Vue.component('month-header', {
-    template: '<span class="month">{{getMonthDetails(data)}}</span>',
-    data() {
-        return {
-            data: {}
-        };
-    },
-    methods: {
-        getMonthDetails: function (value) {
-            return 'Month ' + instance.formatDate(value.date, { skeleton: 'M' });
-        }
-    }
-});
-
-var weekHeaderVue = Vue.component('week-header', {
-    template: '<span class="week">{{getWeekDetails(data)}}</span>',
-    data() {
-        return {
-            data: {}
-        };
-    },
-    methods: {
-        getWeekDetails: function (value) {
-            return 'Week: ' + getWeekNumber(value.date);
-        }
-    }
-});
-
-
-
 new Vue({
 	el: '#app',
 	template: `
   <div id='app'>
     <div id='container'>
-        <ejs-schedule :height='height' :width='width' :selectedDate='selectedDate' :eventSettings='eventSettings' :views='views' :headerRows='headerRows'></ejs-schedule>
+        <ejs-schedule :height='height' :width='width' :selectedDate='selectedDate' :eventSettings='eventSettings' :views='views'>
+            <e-header-rows>
+                <e-header-row option="Month" :template="'monthHeaderTemplate'"></e-header-row>
+                    <template v-slot:monthHeaderTemplate="{data}">
+                        <span class="month">{{getMonthDetails(data)}}</span>
+                    </template>
+                <e-header-row option="Week" :template="'weekHeaderTemplate'"></e-header-row>
+                    <template v-slot:weekHeaderTemplate="{data}">
+                        <span class="week">{{getWeekDetails(data)}}</span>
+                    </template>
+                <e-header-row option="Week" :template="'yearHeaderTemplate'"></e-header-row>
+                    <template v-slot:yearHeaderTemplate="{data}">
+                        <span class="year">{{getYearDetails(data)}}</span>
+                    </template>
+            </e-header-rows>
+        </ejs-schedule>
     </div>
   </div>
 `,
@@ -66,39 +38,21 @@ new Vue({
       width: '100%',
       height: '550px',
       selectedDate: new Date(2018, 0, 1),
-      headerRows: [
-        {
-            option: 'Year',
-            template: function (e) {
-                return {
-                    template: yearHeaderVue
-                };
-            }
-        },
-        {
-            option: 'Month',
-            template: function (e) {
-                return {
-                    template: monthHeaderVue
-                };
-            },
-        },
-        {
-            option: 'Week',
-            template: function (e) {
-                return {
-                    template: weekHeaderVue
-                };
-            }
-        },
-        { option: 'Date' }
-      ],
       views: [{ option: 'TimelineMonth' }],
       eventSettings: { dataSource: eventData }
     }
   },
   provide: {
     schedule: [TimelineMonth]
-  }
-
+  },
+  methods: {
+    getWeekDetails: function (value) {
+        return 'Week: ' + getWeekNumber(value.date);
+    },
+    getMonthDetails: function (value) {
+        return 'Month ' + instance.formatDate(value.date, { skeleton: 'M' });
+    },
+    getYearDetails: function (value) {
+        return 'Year: ' + instance.formatDate(value.date, { skeleton: 'y' });
+    }}
 });
