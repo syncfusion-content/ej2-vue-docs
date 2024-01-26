@@ -13,7 +13,7 @@ new Vue({
         <div style='padding-bottom:15px;'>
             <label>Rule Output</label>
                 <div class='rule-output-container'>
-                    <div id='rule-output'></div>
+                  <div id='rule-output'>{{ selectRule }}</div>
                 </div>
             </div>
         <ejs-recurrenceeditor id='editor' ref='EditorObj' :selectedType='selectedType' :change='onChange'></ejs-recurrenceeditor>
@@ -23,7 +23,8 @@ new Vue({
 
     data () {
       return {
-        selectedType: 1  
+        selectedType: 1,
+        selectRule: ''  
       }
     },
     mounted: function () {
@@ -31,10 +32,12 @@ new Vue({
         recObject.setRecurrenceRule('FREQ=DAILY;INTERVAL=2;COUNT=8');
     },
     methods: {
-        onChange: function(args) {
-            let outputElement = document.querySelector('#rule-output');
-            outputElement.innerText = args.value;
+      onChange: function(args) {
+        if(args.value == "") {
+            this.selectRule = 'Select Rule';
+        } else {
+            this.selectRule = args.value;
         }
+      }
     }
-  
 });

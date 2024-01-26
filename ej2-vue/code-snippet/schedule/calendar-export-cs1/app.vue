@@ -5,7 +5,7 @@
         <div id='app'>
             <div id='container'>
                 <ejs-button id='ics-export' v-on:click.native="onClick">Export</ejs-button>
-                <ejs-schedule id="Schedule" ref="ScheduleObj" height="520px" :selectedDate='selectedDate'
+                <ejs-schedule ref='scheduleObj' ref="ScheduleObj" height="520px" :selectedDate='selectedDate'
                     :eventSettings='eventSettings' :currentView='currentView'>
                     <e-views>
                         <e-view option="Day"></e-view>
@@ -48,7 +48,7 @@
         },
         methods: {
             onClick: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 scheduleObj.exportToICalendar();
             }
         }

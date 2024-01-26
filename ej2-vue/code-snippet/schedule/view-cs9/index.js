@@ -12,7 +12,7 @@ new Vue({
 	template: `
     <div id='app'>
         <div id='container'>
-            <ejs-schedule id='Schedule' height='350px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+            <ejs-schedule height='350px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
                 <e-views>
                     <e-view option='Agenda' :eventTemplate="'eventTemplate'" allowVirtualScrolling=true>
                         <template v-slot:eventTemplate="{ data }">

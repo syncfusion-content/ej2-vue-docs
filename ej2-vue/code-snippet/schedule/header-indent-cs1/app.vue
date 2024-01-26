@@ -3,7 +3,7 @@
 <template>
   <div id='app'>
     <div id='container'>
-      <ejs-schedule id='Schedule' width='100%' height='550px' :headerIndentTemplate="'headerIndentTemplate'"
+      <ejs-schedule width='100%' height='550px' :headerIndentTemplate="'headerIndentTemplate'"
         :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group'>
         <e-views>
           <e-view option='Day'></e-view>

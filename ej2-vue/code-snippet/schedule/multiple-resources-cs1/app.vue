@@ -4,7 +4,7 @@
     <div>
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView'>
+                <ejs-schedule width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView'>
                     <e-views>
                         <e-view option='Week'></e-view>
                         <e-view option='Month'></e-view>

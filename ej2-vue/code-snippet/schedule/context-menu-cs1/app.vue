@@ -80,12 +80,12 @@
         },
         methods: {
             onContextMenuBeforeOpen: function(args) {
-                let newEventElement = document.querySelector('.e-new-event');
+                let scheduleObj = this.$refs.scheduleObj;
+                let newEventElement = scheduleObj.querySelector('.e-new-event');
                 if (newEventElement) {
                     remove(newEventElement);
-                    removeClass([document.querySelector('.e-selected-cell')], 'e-selected-cell');
+                    removeClass([scheduleObj.querySelector('.e-selected-cell')], 'e-selected-cell');
                 }
-                let scheduleObj = this.$refs.scheduleObj;
                 scheduleObj.closeQuickInfoPopup();
                 let targetElement = args.event.target;
                 if (closest(targetElement, '.e-contextmenu')) {

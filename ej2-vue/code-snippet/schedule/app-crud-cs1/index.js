@@ -29,7 +29,7 @@ new Vue({
                         </div>
                     </td>
                 </tr><br>
-                <ejs-schedule id='Schedule' width='100%' height='485px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
+                <ejs-schedule ref='scheduleObj' width='100%' height='485px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
                     <e-views>
                         <e-view option='Day'></e-view>
                         <e-view option='Week'></e-view>
@@ -67,7 +67,7 @@ new Vue({
         },
         methods: {
             onSave: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 let eventData = {
                     Id: 3,
                     Subject: 'Testing-edited',
@@ -78,7 +78,7 @@ new Vue({
                 scheduleObj.saveEvent(eventData);
             },
             onAdd: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 let Data = [{
                     Id: 1,
                     Subject: 'Conference',
@@ -95,7 +95,7 @@ new Vue({
                 scheduleObj.addEvent(Data);
             },
             onDelete: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 scheduleObj.deleteEvent(4);
             }
         }
