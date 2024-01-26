@@ -1,34 +1,27 @@
 
-    import Vue from 'vue';
-    import { roomData} from './datasource.js';
-    import { SchedulePlugin, TimelineViews, TimelineMonth} from '@syncfusion/ej2-vue-schedule';
+import Vue from 'vue';
+import { roomData} from './datasource.js';
+import { SchedulePlugin, TimelineViews, TimelineMonth} from '@syncfusion/ej2-vue-schedule';
 
-    Vue.use(SchedulePlugin);
-
-    var resourceHeaderTemplateVue = Vue.component('headerTemplate', {
-        template: `<div class='template-wrap'>
-                <div class="room-name">{{data.resourceData.text}}</div>
-                <div class="room-type">{{data.resourceData.type}}</div>
-                <div class="room-capacity">{{data.resourceData.capacity}}</div>
-                </div>`,
-        data() {
-            return {
-                data: {}
-            };
-        }
-    });
-
-    
+Vue.use(SchedulePlugin);
+   
 new Vue({
 	el: '#app',
 	template: `
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group' :resourceHeaderTemplate='resourceHeaderTemplate' :renderCell='onRenderCell'>
+                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group' :resourceHeaderTemplate="'resourceHeaderTemplate'" :renderCell='onRenderCell'>
                     <e-views>
                         <e-view option='TimelineWeek'></e-view>
                         <e-view option='TimelineMonth'></e-view>
                     </e-views>
+                    <template v-slot:resourceHeaderTemplate="{data}">
+                        <div class='template-wrap'>
+                            <div class="room-name">{{data.resourceData.text}}</div>
+                            <div class="room-type">{{data.resourceData.type}}</div>
+                            <div class="room-capacity">{{data.resourceData.capacity}}</div>
+                        </div>
+                    </template>
                     <e-resources>
                         <e-resource field='RoomId' title='RoomType' name='MeetingRoom'  :dataSource='ownerDataSource'
                         textField='text' idField='id' colorField='color'>
@@ -57,11 +50,6 @@ new Vue({
                     { text: 'Swarm', id: 9, color: '#df5286', capacity: 30, type: 'Conference' },
                     { text: 'Photogenic', id: 10, color: '#710193', capacity: 25, type: 'Conference' }  
                 ],
-                resourceHeaderTemplate: function(e){
-                     return {
-                        template: resourceHeaderTemplateVue
-                    };
-                },
                 eventSettings: { dataSource: roomData },
             }
         },

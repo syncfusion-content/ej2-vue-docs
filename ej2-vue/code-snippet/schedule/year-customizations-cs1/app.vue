@@ -12,9 +12,19 @@
           :firstMonthOfYear="firstMonthOfYear"
           :monthsCount="monthsCount"
           :group="group"
-          :monthHeaderTemplate="monthHeaderTemplate"
-          :resourceHeaderTemplate="resourceHeaderTemplate"
+          :monthHeaderTemplate="'monthHeaderTemplate'"
+          :resourceHeaderTemplate="'resourceHeaderTemplate'"
         >
+          <template v-slot:resourceHeaderTemplate="{data}">
+            <div class='template-wrap'>
+              <div class="resource-details">
+                <div class="resource-name">{{data.resourceData.OwnerText}}</div>
+              </div>
+            </div>                            
+          </template>
+          <template v-slot:monthHeaderTemplate="{ data }">
+            <div>{{monthHeaderTemplate(data.date)}}</div>
+          </template>
           <e-views>
             <e-view option="Year"></e-view>
             <e-view
@@ -58,29 +68,6 @@ import {
 
 Vue.use(SchedulePlugin);
 
-var monthHeaderTemplate = Vue.component("demo", {
-  template: "<div>{{monthHeaderTemplate(data.date)}}</div>",
-  data() {
-    return {
-      data: {},
-      monthHeaderTemplate: function(date) {
-        return (
-          date.toLocaleString("en-us", { month: "long" }) +
-          " " +
-          date.getFullYear()
-        );
-      }
-    };
-  }
-});
-var resourceHeaderTemplateVue = Vue.component("headerTemplate", {
-  template: `<div class='template-wrap'><div class="resource-details"><div class="resource-name">{{data.resourceData.OwnerText}}</div></div></div>`,
-  data() {
-    return {
-      data: {}
-    };
-  }
-});
 export default {
   data() {
     return {
@@ -93,9 +80,6 @@ export default {
       group: {
         resources: ["Owners"]
       },
-      monthHeaderTemplate: function(e) {
-        return { template: monthHeaderTemplate };
-      },
       allowMultiple: true,
       ownerDataSource: [
         { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
@@ -104,16 +88,20 @@ export default {
         { OwnerText: "Smith", Id: 4, OwnerColor: "#5978ee" },
         { OwnerText: "Micheal", Id: 5, OwnerColor: "#df5286" }
       ],
-      resourceHeaderTemplate: function(e) {
-        return {
-          template: resourceHeaderTemplateVue
-        };
-      },
       eventSettings: { dataSource: resourceData }
     };
   },
   provide: {
     schedule: [Year, TimelineYear, Resize, DragAndDrop]
+  },
+  methods: {
+    monthHeaderTemplate: function(date) {
+      return (
+        date.toLocaleString("en-us", { month: "long" }) +
+        " " +
+        date.getFullYear()
+      );
+    }
   }
 };
 </script>

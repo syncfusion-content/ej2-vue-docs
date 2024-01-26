@@ -4,46 +4,26 @@ import { SchedulePlugin, Day, Week, WorkWeek, View, TimeScaleModel } from '@sync
 import { scheduleData } from './datasource.js';
 import { Internationalization, extend } from '@syncfusion/ej2-base';
 Vue.use(SchedulePlugin);
-  let instance = new Internationalization();
-  var majorTemplateVue = Vue.component('demo', {
-        template: '<div>{{majorSlotTemplate(data.date)}}</div>',
-        data() {
-            return {
-                data: {}
-            };
-        },
-        methods: {
-            majorSlotTemplate: function (date) {
-                return instance.formatDate(date, { skeleton: 'hm' });
-            }
-        }
-    });
-   var minorTemplateVue = Vue.component('demo', {
-        template: '<div style="text-align: right; margin-right: 15px">{{minorSlotTemplate(data.date)}}</div>',
-        data() {
-            return {
-                data: {},
-                minorSlotTemplate: function (date) {
-                return instance.formatDate(date, { skeleton: 'ms' }).replace(':00', '');
-            }
-        };
-      }
-    });
-
-
-
+let instance = new Internationalization();
+  
 new Vue({
 	el: '#app',
 	template: `
   <div id='app'>
     <div id='container'>
         <ejs-schedule id='Schedule' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings'
-        :timeScale='timeScale'>
+        :timeScale="timeScale">
         <e-views>
           <e-view option='Day'></e-view>
           <e-view option='Week'></e-view>
           <e-view option='WorkWeek'></e-view>
         </e-views>
+        <template v-slot:majorSlotTemplate="{ data }">
+          <div>{{majorSlotTemplate(data.date)}}</div>
+        </template>
+        <template v-slot:minorSlotTemplate="{ data }">
+          <div style="text-align: right; margin-right: 15px">{{minorSlotTemplate(data.date)}}</div>
+        </template>
         </ejs-schedule>
     </div>
   </div>
@@ -54,27 +34,24 @@ new Vue({
       height: '550px',
       eventSettings: { dataSource: extend([], scheduleData, null, true)  },
       selectedData: new Date(2018, 1, 15),
-      majorSlotTemplate: function (e) {
-          return { template: majorTemplateVue }
-      },
-      minorSlotTemplate: function (e) {
-         return { template: minorTemplateVue }
-      },
       timeScale: {
         enable: true,
         interval: 60,
-        slotCount: 6
+        slotCount: 6,
+        majorSlotTemplate: "majorSlotTemplate",
+        minorSlotTemplate: "minorSlotTemplate",
       },
     }
   },
   provide: {
     schedule: [Day, Week, WorkWeek]
   },
-  mounted: function () {
-    let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
-    scheduleObj.timeScale.majorSlotTemplate = this.majorSlotTemplate;
-    scheduleObj.timeScale.minorSlotTemplate = this.minorSlotTemplate;
-    scheduleObj.dataBind();
+  methods: {
+    majorSlotTemplate: function (date) {
+      return instance.formatDate(date, { skeleton: 'hm' });
+    },
+    minorSlotTemplate: function (date) {
+      return instance.formatDate(date, { skeleton: 'ms' }).replace(':00', '');
+    }
   }
-
 });

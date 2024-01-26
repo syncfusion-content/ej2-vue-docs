@@ -3,7 +3,10 @@
 <template>
     <div id='app'>
         <div id='container'>
-            <ejs-schedule ref='scheduleObj' width='100%' height='550px' :cellHeaderTemplate='cellHeaderTemplate' cssClass='schedule-cell-header-template'>
+            <ejs-schedule ref='scheduleObj' width='100%' height='550px' :cellHeaderTemplate="'cellHeaderTemplate'" cssClass='schedule-cell-header-template'>
+                <template v-slot:cellHeaderTemplate="{ data }">
+                    <div v-html=getDateHeaderText(data.date)></div>
+                </template>    
                 <e-views>
                     <e-view option='Month'></e-view>
                 </e-views>
@@ -18,34 +21,20 @@
     Vue.use(SchedulePlugin);
 
     var instance = new Internationalization();
-    var cellHeaderTemplateVue = Vue.component("cellHeaderTemplate", {
-        template: `<div v-html=getDateHeaderText(data.date)></div>`,
-        data() {
-            return {
-                data: {}
-            };
-        },
-        methods: {
-            getDateHeaderText: function(date) {
-                return instance.formatDate(date, { skeleton: "Ed" });
-            }
-        }
-    });
 
     export default {
         data () {
-            return {
-                cellHeaderTemplate: function (e) {
-                    return {
-                        template: cellHeaderTemplateVue
-                    };
-                },
-            }
+            return {}
         },
         provide: {
             schedule: [Month]
+        },
+        methods: {
+        getDateHeaderText: function(date) {
+            return instance.formatDate(date, { skeleton: "Ed" });
         }
-    }
+    }  
+}
 </script>
 
 

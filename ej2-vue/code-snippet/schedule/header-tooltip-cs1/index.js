@@ -1,20 +1,10 @@
 
-    import Vue from 'vue';
-    import { SchedulePlugin, Week, Month, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
-    import { resourceData } from './datasource.js';
+import Vue from 'vue';
+import { SchedulePlugin, Week, Month, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+import { resourceData } from './datasource.js';
 
-    Vue.use(SchedulePlugin);
+Vue.use(SchedulePlugin);
 
-    var headerTooltipTemplateVue = Vue.component('headerTooltipTemplate', {
-        template: `<div class='template-wrap'><div class="resource-text">Name:{{data.resourceData.OwnerText}}</div></div>`,
-        data() {
-            return {
-                data: {}
-            };
-        }
-    });
-
-    
 new Vue({
 	el: '#app',
 	template: `
@@ -30,6 +20,11 @@ new Vue({
                         textField='OwnerText' idField='Id' groupIDField='OwnerGroupId' colorField='OwnerColor'>
                         </e-resource>
                     </e-resources>
+                    <template v-slot:headerTooltipTemplate="{ data }">
+                        <div class='template-wrap'>
+                            <div class="resource-text">Name:{{data.resourceData.OwnerText}}</div>
+                        </div>
+                    </template>
                 </ejs-schedule>
             </div>
         </div>
@@ -40,11 +35,7 @@ new Vue({
                 selectedDate: new Date(2018, 3, 4),
                 group: {
                   resources: ['Rooms', 'Owners'],
-                  headerTooltipTemplate: function(e){
-                      return {
-                          template: headerTooltipTemplateVue
-                      };
-                  }
+                  headerTooltipTemplate: "headerTooltipTemplate",
                 },
                 allowMultiple: true,
                 ownerDataSource: [

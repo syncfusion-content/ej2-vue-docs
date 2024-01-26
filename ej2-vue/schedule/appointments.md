@@ -63,7 +63,7 @@ You can make use of the CSS customization to prevent the display of all-day row 
 
 ## Expand all day appointments view on initial load
 
-When you have larger number of appointments in all-day view, you can show all all-day events using [`dataBound`](../api/schedule#databound) event on at initial load. So, user don't have to click the toggle to expand all-day events.
+When you have larger number of appointments in all-day view, you can show all all-day events using [`dataBound`](../api/schedule/#databound) event on at initial load. So, user don't have to click the toggle to expand all-day events.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -231,7 +231,7 @@ The built-in validation support has been added by default for recurring appointm
 
 ## Event fields
 
-The Scheduler dataSource usually holds the event instances, where each of the instance includes a collection of appropriate [fields](https://ej2.syncfusion.com/vue/documentation/api/schedule/field). It is mandatory to map these fields with the equivalent fields of database, when remote data is bound to it. When the local JSON data is bound, then the field names defined within the instances needs to be mapped with the scheduler event fields correctly.
+The Scheduler dataSource usually holds the event instances, where each of the instance includes a collection of appropriate [fields](https://ej2.syncfusion.com/vue/documentation/api/schedule/field/). It is mandatory to map these fields with the equivalent fields of database, when remote data is bound to it. When the local JSON data is bound, then the field names defined within the instances needs to be mapped with the scheduler event fields correctly.
 
 > To create an event on Scheduler, it is enough to define the `startTime` and `endTime`. Also `id` field becomes mandatory to process CRUD actions on appropriate events.
 
