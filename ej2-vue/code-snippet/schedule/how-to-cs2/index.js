@@ -11,7 +11,7 @@ new Vue({
     <div>
         <div class='col-md-9 control-section'>
             <div class='content-wrapper'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
+                <ejs-schedule width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
                     <e-views>
                         <e-view option='Day'></e-view>
                         <e-view option='Week'></e-view>

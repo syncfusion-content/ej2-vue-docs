@@ -12,7 +12,7 @@ new Vue({
   <div>
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id="Schedule" ref="ScheduleObj" height="520px" :selectedDate='selectedDate'
+                <ejs-schedule ref="ScheduleObj" height="520px" :selectedDate='selectedDate'
                     :eventSettings='eventSettings' :actionBegin="onActionBegin">
                 </ejs-schedule>
             </div>

@@ -10,7 +10,7 @@ new Vue({
 	template: `
     <div id='app'>
         <div id='container'>
-            <ejs-schedule id='Schedule' height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+            <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
                 <e-views>
                     <e-view option='Day' interval=2 displayName='2 Days' startHour='09:30'
                     endHour='18:00' timeScale='timeScale'></e-view>

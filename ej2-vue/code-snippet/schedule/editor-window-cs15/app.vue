@@ -17,7 +17,7 @@
           </td>
         </tr>
         <br /><br />
-        <ejs-schedule id="Schedule" width="100%" height="500px" :eventSettings="eventSettings" :selectedDate="selectedDate">
+        <ejs-schedule ref='scheduleObj' width="100%" height="500px" :eventSettings="eventSettings" :selectedDate="selectedDate">
           <e-views>
             <e-view option="Day"></e-view>
             <e-view option="Week"></e-view>
@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     onEventClick: function () {
-      let scheduleObj = document.getElementById("Schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       let eventData = {
         Id: 1,
         Subject: "Review Meeting",
@@ -74,7 +74,7 @@ export default {
       scheduleObj.openQuickInfoPopup(eventData, "Save");
     },
     onCellClick: function () {
-      let scheduleObj = document.getElementById("Schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       let cellData = {
         Subject: "Review Meeting",
         StartTime: new Date(2023, 2, 5, 20, 0, 0),

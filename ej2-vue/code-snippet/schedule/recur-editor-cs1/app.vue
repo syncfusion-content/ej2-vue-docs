@@ -6,7 +6,7 @@
         <div style='padding-bottom:15px;'>
             <label>Rule Output</label>
                 <div class='rule-output-container'>
-                    <div id='rule-output'></div>
+                    <div id='rule-output'>{{ selectRule }}</div>
                 </div>
             </div>
         <ejs-recurrenceeditor :selectedType='selectedType' :change='onChange'></ejs-recurrenceeditor>
@@ -22,20 +22,16 @@
   export default {
     data () {
       return {
-        selectedType: 1  
+        selectedType: 1,
+        selectRule: 'Select Rule'  
       }
-    },
-    mounted: function () {
-        let outputElement = document.querySelector('#rule-output');
-        outputElement.innerText = 'Select Rule';
     },
     methods: {
         onChange: function(args) {
-            let outputElement = document.querySelector('#rule-output');
             if(args.value == "") {
-                outputElement.innerText = 'Select Rule';
+                this.selectRule = 'Select Rule';
             } else {
-                outputElement.innerText = args.value;
+                this.selectRule = args.value;
             }
         }
     }

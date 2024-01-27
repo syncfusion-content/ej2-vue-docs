@@ -26,6 +26,10 @@ The following sample demonstrates how to add content for each panel using the he
 
 In a dashboard, components like the chart, grids, maps, gauge, and more etc. can be used to present a complex data. Such components can be placed as the panel content by assigning the corresponding component element as the `content` of the panel.
 
+To design a Vue Dashboard Layout with UI components, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=X7NMBiIGkyA" %}
+
 The following sample demonstrates how to add EJ2 Chart components as the `content` for each panel in the dashboard layout component.
 
 {% tabs %}

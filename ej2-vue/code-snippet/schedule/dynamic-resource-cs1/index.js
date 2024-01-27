@@ -47,7 +47,7 @@ new Vue({
                 </table>
             </div>
             <div id='container'>
-                <ejs-schedule id='Schedule' ref='ScheduleObj' width='100%' height='550px' :group='group' :selectedDate='selectedDate'
+                <ejs-schedule ref='ScheduleObj' width='100%' height='550px' :group='group' :selectedDate='selectedDate'
                 :eventSettings='eventSettings'>
                     <e-resources>
                         <e-resource field='CalendarId' title='Calendars' :dataSource='resourceDataSource' :allowMultiple='allowMultiple'

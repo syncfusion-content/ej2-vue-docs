@@ -11,7 +11,7 @@ new Vue({
     <div>
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :renderCell='onRenderCell'>
+                <ejs-schedule width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :renderCell='onRenderCell'>
                     <e-views>
                         <e-view option='Day'></e-view>
                         <e-view option='Week'></e-view>

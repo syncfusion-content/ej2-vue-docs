@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="container">
-      <ejs-recurrenceeditor id="editor" ref="EditorObj"></ejs-recurrenceeditor>
+      <ejs-recurrenceeditor ref="EditorObj"></ejs-recurrenceeditor>
     </div>
   </div>
 </template>

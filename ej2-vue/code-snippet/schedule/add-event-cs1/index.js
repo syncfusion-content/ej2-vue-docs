@@ -31,7 +31,7 @@ new Vue({
                     </div>
                 </td>
             </tr>
-            <ejs-schedule ref='scheduleObj' id='Schedule' width="100%" height="520px" :eventSettings='eventSettings' :selectedDate='selectedDate'>
+            <ejs-schedule ref='scheduleObj' width="100%" height="520px" :eventSettings='eventSettings' :selectedDate='selectedDate'>
                 <e-views>
                     <e-view option="Day"></e-view>
                     <e-view option="Week"></e-view>

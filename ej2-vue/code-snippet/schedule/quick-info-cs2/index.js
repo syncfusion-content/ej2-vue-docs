@@ -30,7 +30,7 @@ new Vue({
 	template: `
   <div id='app'>
     <div id='container'>
-      <ejs-schedule :height='height' :width='width' :views='views'
+      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :views='views'
         :selectedDate='selectedDate' :eventSettings='eventSettings'
         :quickInfoTemplates='quickInfoTemplates'>
         <e-resources>
@@ -82,6 +82,7 @@ new Vue({
         dataSource: quickInfoData
       },
       selectedDate: new Date(2020, 0, 9),
+      fields: { text: "Name", value: "Id" },
       views: ['Day', 'Week', 'WorkWeek'],
       roomData: extend([], resourceData, undefined, true),
       quickInfoTemplates: {
@@ -95,17 +96,8 @@ new Vue({
     schedule: [Day, Week, WorkWeek, Month, Agenda]
   },
   methods: {
-    onPopupOpen: function(args) {
-      if ((args.type == 'QuickInfo' || args.type == 'ViewEventInfo') && !args.element.classList.contains('e-template')) {
-        args.element.classList.add('e-template');
-      }
-      if (args.type == 'QuickInfo' && args.target && !args.target.classList.contains('e-appointment')) {
-        const titleObj = document.querySelector("#title").ej2_instances[0];
-        titleObj.focusIn();
-      }
-    },
     getHeaderStyles: function(data) {
-      const scheduleObj = document.querySelector(".e-schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       const resources = scheduleObj.getResourceCollections().slice(-1)[0];
       const resourceData = resources.dataSource.filter(resource => resource.Id === data.RoomId)[0];
       return resourceData.Color;
@@ -121,13 +113,13 @@ new Vue({
       );
     },
     getEventType: function(data) {
-      const scheduleObj = document.querySelector(".e-schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       const resources = scheduleObj.getResourceCollections().slice(-1)[0];
       const resourceData = resources.dataSource.filter(resource => resource.Id === data.RoomId)[0];
       return resourceData.Name;
     },
     buttonClickActions: function(e) {
-      const scheduleObj = document.querySelector(".e-schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       const quickPopup = scheduleObj.element.querySelector(".e-quick-popup-wrapper");
       const getSlotData = function() {
         const titleObj = quickPopup.querySelector("#title").ej2_instances[0];
