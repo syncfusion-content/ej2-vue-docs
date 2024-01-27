@@ -3,7 +3,7 @@
 <template>
     <div id='app'>
         <div id='container'>
-            <ejs-schedule id='Schedule' height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+            <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
                 <e-views>
                     <e-view option='TimelineWorkWeek' interval=3 :workDays='workDays' dateFormat='dd-MMM-yyyy'></e-view>
                 </e-views>

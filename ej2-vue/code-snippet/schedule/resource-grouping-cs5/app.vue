@@ -3,7 +3,7 @@
 <template>
     <div>
         <div id='container'>
-            <ejs-schedule ref='scheduleObj' id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+            <ejs-schedule ref='scheduleObj' width='100%' height='550px' :eventSettings='eventSettings'
             :selectedDate='selectedDate' :currentView='currentView' :group='group' :renderCell='onRenderCell'>
                 <e-views>
                     <e-view option='TimelineDay'></e-view>

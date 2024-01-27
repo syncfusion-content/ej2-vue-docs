@@ -3,7 +3,7 @@
 <template>
     <div id='app'>
         <div id='container'>
-            <ejs-schedule id='Schedule' height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings' :currentView='currentView'>
+            <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings' :currentView='currentView'>
                 <e-views>
                     <e-view option='Day' startHour='09:30' endHour='18:00' :timeScale='timeScale'></e-view>
                 </e-views>

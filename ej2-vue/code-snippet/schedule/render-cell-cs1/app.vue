@@ -3,7 +3,7 @@
 <template>
   <div id='app'>
     <div id='container'>
-        <ejs-schedule id='Schedule' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings' :views='views' :renderCell='onRenderCell'>
+        <ejs-schedule :height='height' :selectedDate='selectedData' :eventSettings='eventSettings' :views='views' :renderCell='onRenderCell'>
         </ejs-schedule>
     </div>
   </div>

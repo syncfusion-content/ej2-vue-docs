@@ -11,7 +11,7 @@ new Vue({
 	template: `
     <div id='app'>
         <div id='container'>
-            <ejs-schedule id='Schedule' height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+            <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
                 <e-views>
                     <e-view option='TimelineYear' displayName='Horizontal Timeline Year'></e-view>
                 </e-views>

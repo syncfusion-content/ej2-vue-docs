@@ -17,7 +17,7 @@ new Vue({
                 <ejs-uploader id='ics-import' :cssClass='cssClass' name="ics-import" :buttons="buttons"
                 :showFileList='showFileList' :multiple='multiple' :allowedExtensions='extensions'
                 :selected='onSelect'/>
-                <ejs-schedule id="Schedule" ref="ScheduleObj" height="520px" :selectedDate='selectedDate'
+                <ejs-schedule ref="scheduleObj" height="520px" :selectedDate='selectedDate'
                     :eventSettings='eventSettings' :currentView='currentView'>
                     <e-views>
                         <e-view option="Day"></e-view>
@@ -51,7 +51,7 @@ new Vue({
         },
         methods: {
             onSelect: function (args) {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 scheduleObj.importICalendar(args.event.target.files[0]);
             }
         }

@@ -66,7 +66,7 @@ new Vue({
     onItemDrag: function(event) {
       let scheduleObj = this.$refs.ScheduleObj.ej2Instances;
       if (scheduleObj.isAdaptive) {
-        let classElement = document.querySelector('.e-device-hover');
+        let classElement = scheduleObj.element.querySelector('.e-device-hover');
         if (classElement) {
           classElement.classList.remove('e-device-hover');
         }
@@ -89,7 +89,7 @@ new Vue({
     },
     onTreeDragStop: function(event) {
       let treeElement = closest(event.target, '.e-treeview');
-      let classElement = document.querySelector('.e-device-hover');
+      let classElement = scheduleObj.element.querySelector('.e-device-hover');
       if (classElement) {
         classElement.classList.remove('e-device-hover');
       }

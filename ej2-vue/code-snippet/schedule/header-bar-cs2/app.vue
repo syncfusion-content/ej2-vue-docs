@@ -3,7 +3,7 @@
 <template>
   <div id='app'>
     <div id='container'>
-        <ejs-schedule id='Schedule' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings' :views='views' :actionBegin='onActionBegin' :actionComplete='onActionComplete'>
+        <ejs-schedule ref='scheduleObj' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings' :views='views' :actionBegin='onActionBegin' :actionComplete='onActionComplete'>
         </ejs-schedule>
     </div>
   </div>
@@ -39,7 +39,7 @@ export default {
         }
       },
       onActionComplete: function(args) {
-        let scheduleElement = document.getElementById('Schedule');
+        let scheduleElement = this.$refs.scheduleObj;
         if (args.requestType === 'toolBarItemRendered') {
             let userIconEle = scheduleElement.querySelector('.e-schedule-user-icon');
             userIconEle.onclick = () => {
