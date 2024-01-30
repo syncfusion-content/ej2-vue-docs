@@ -91,8 +91,8 @@ export default {
       debugger;
       if (initialLoad) {
         setTimeout(() => {
-          console.log(document.querySelector('.e-all-day-appointment-section'));
-          document.querySelector('.e-all-day-appointment-section').click();
+          console.log(scheduleObj.element.querySelector.querySelector('.e-all-day-appointment-section'));
+          scheduleObj.element.querySelector.querySelector('.e-all-day-appointment-section').click();
         }, 0)
         initialLoad = false;
       }

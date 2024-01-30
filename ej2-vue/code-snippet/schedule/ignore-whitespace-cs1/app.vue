@@ -4,7 +4,7 @@
     <div>
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView' :group='group' :rowAutoHeight='rowAutoHeight'>
+                <ejs-schedule width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView' :group='group' :rowAutoHeight='rowAutoHeight'>
                     <e-views>
                         <e-view option='TimelineWeek'></e-view>
                         <e-view option='TimelineMonth'></e-view>

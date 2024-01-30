@@ -5,29 +5,24 @@ import { resourceData } from './datasource.js';
 
 Vue.use(SchedulePlugin);
 
-var headerIndentTemplate = Vue.component('headerTemplate', {
-        template: `<div class='e-resource-text'>
-          <div class="text">Resources</div>`,
-        data() {
-            return {
-                data: {}
-            };
-        }
-});
-
-
 new Vue({
 	el: '#app',
 	template: `
   <div id='app'>
     <div id='container'>
-      <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group'>
+      <ejs-schedule width='100%' height='550px' :headerIndentTemplate="'headerIndentTemplate'"
+        :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group'>
         <e-views>
           <e-view option='Day'></e-view>
           <e-view option='Week'></e-view>
           <e-view option='TimelineWeek'></e-view>
           <e-view option='TimelineMonth'></e-view>
         </e-views>
+        <template v-slot:headerIndentTemplate="{ data }">
+          <div class='e-resource-text'>
+            <div class="text">Resources</div>
+          </div>
+        </template>
         <e-resources>
           <e-resource field='OwnerId' title='Owner' name='Owners' :allowMultiple='allowMultiple' :dataSource='ownerDataSource'
             textField='OwnerText' idField='Id' colorField='OwnerColor'>
@@ -48,11 +43,6 @@ new Vue({
                     resources: ['Owners']
                 },
                 allowMultiple: true,
-                headerIndentTemplate: function(e){
-                    return {
-                        template: headerIndentTemplate
-                    };
-                },
                 ownerDataSource: [
                     { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
                     { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },

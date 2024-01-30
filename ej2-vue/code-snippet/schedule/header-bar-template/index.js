@@ -11,7 +11,7 @@ new Vue({
   template: `
   <div id='app'>
     <div id='container'>
-    <ejs-schedule id='Schedule' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings'
+    <ejs-schedule ref='scheduleObj' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings'
     :views='views'>
       <e-resources>
         <e-resource field="OwnerId" title="Owners" :dataSource="resourceDataSource" :query='resourceQuery' :allowMultiple="allowMultiple" name="Owners"
@@ -67,7 +67,7 @@ new Vue({
   },
   methods: {
     onResourceChange(args) {
-      let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       let resourcePredicate;
       let value = args.value;
       resourcePredicate = new Predicate('OwnerId', 'equal', value)

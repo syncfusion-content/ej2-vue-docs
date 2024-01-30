@@ -17,7 +17,7 @@ import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 export default {
   data (){
     return {
-            searchData : new DataManager({
+        searchData : new DataManager({
             url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
             adaptor: new ODataV4Adaptor,
             crossDomain: true
@@ -34,7 +34,8 @@ export default {
                 adaptor: new ODataV4Adaptor,
                 crossDomain: true
             });
-             if (e.text == '') e.updateData(searchData);
+           // load overall data when search key empty.
+            if (e.text == '') e.updateData(searchData);
             else {
                 var query = new Query().select(['ContactName', 'CustomerID']);
                 query = (e.text !== '') ? query.where('ContactName', 'startswith', e.text, true) : query;

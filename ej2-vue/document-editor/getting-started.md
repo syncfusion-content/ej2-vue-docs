@@ -108,7 +108,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-documenteditor/styles/material.css";
 ```
 
 > Document editor has different themes, please refer to [Supported themes](../appearance/theme) section.

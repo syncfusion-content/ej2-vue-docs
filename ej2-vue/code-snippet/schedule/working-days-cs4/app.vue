@@ -4,7 +4,7 @@
     <div>
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id='schedule' height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings' :enablePersistence='enablePersistence'>
+                <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings' :enablePersistence='enablePersistence'>
                 </ejs-schedule>
             </div>
         </div>

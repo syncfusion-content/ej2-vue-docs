@@ -17,7 +17,7 @@
                     </td>
                 </tr>
                 <br><br>
-                <ejs-schedule id='Schedule' width='100%' height='500px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
+                <ejs-schedule ref='scheduleObj' width='100%' height='500px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
                     <e-views>
                         <e-view option='Day'></e-view>
                         <e-view option='Week'></e-view>
@@ -50,7 +50,7 @@
         },
         methods: {
             onEventSubmit: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 let eventData ={
                     Id: 4,
                     Subject: 'Meteor Showers in 2018',
@@ -60,7 +60,7 @@
                 scheduleObj.openEditor(eventData,'Save');
             },
             onSubmit: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 let cellData ={
                       startTime: new Date(2018, 1, 15, 10, 0),
                       endTime: new Date(2018, 1, 15, 11, 0),

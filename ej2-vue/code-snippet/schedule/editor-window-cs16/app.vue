@@ -12,7 +12,7 @@
                     </td>
                   </tr>
                 <br><br>
-                <ejs-schedule id='Schedule' width='100%' height='500px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
+                <ejs-schedule ref='scheduleObj' width='100%' height='500px' :eventSettings='eventSettings' :selectedDate='selectedDate'>
                     <e-views>
                         <e-view option='Day'></e-view>
                         <e-view option='Week'></e-view>
@@ -44,7 +44,7 @@
         },
         methods: {
             closeQuickInfo: function () {
-                let scheduleObj = document.getElementById('Schedule').ej2_instances[0];
+                let scheduleObj = this.$refs.scheduleObj.ej2Instances;
                 scheduleObj.closeQuickInfoPopup();
             },
           }

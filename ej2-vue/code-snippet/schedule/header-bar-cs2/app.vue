@@ -3,7 +3,8 @@
 <template>
   <div id='app'>
     <div id='container'>
-        <ejs-schedule id='Schedule' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings' :views='views' :actionBegin='onActionBegin' :actionComplete='onActionComplete'></ejs-schedule>
+        <ejs-schedule ref='scheduleObj' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings' :views='views' :actionBegin='onActionBegin' :actionComplete='onActionComplete'>
+        </ejs-schedule>
     </div>
   </div>
 </template>
@@ -17,16 +18,6 @@ import { scheduleData } from './datasource.js';
 
 Vue.use(SchedulePlugin);
 
-var headerTemplateVue = Vue.component('header-template', {
-    template: `<div class="profile-container"><div class="profile-image"></div><div class="content-wrap">
-        '<div class="name">Nancy</div><div class="destination">Product Manager</div><div class="status"><div class="status-icon"></div>Online</div></div></div>`,
-    data() {
-        return {
-            data: {}
-        };
-    }
-});
-
 export default {
   data (){
     return {
@@ -35,10 +26,7 @@ export default {
       eventSettings: { dataSource: scheduleData  },
       selectedData: new Date(2018, 1, 15),
       views: ['Month'],
-      currentView: 'Month',
-      headerTemplate: function () {
-        return { template: headerTemplateVue }
-      },
+      currentView: 'Month'
     }
   },
   methods: {
@@ -51,7 +39,7 @@ export default {
         }
       },
       onActionComplete: function(args) {
-        let scheduleElement = document.getElementById('Schedule');
+        let scheduleElement = this.$refs.scheduleObj;
         if (args.requestType === 'toolBarItemRendered') {
             let userIconEle = scheduleElement.querySelector('.e-schedule-user-icon');
             userIconEle.onclick = () => {
@@ -69,10 +57,12 @@ export default {
         });
         scheduleElement.parentElement.appendChild(userContentEle);
         let userIconEle = scheduleElement.querySelector('.e-schedule-user-icon');
-        let getDOMString = compile(this.headerTemplate);
-        let output = getDOMString({});
+        let templateContent = createElement('div', {
+          className: 'profile-container', innerHTML: `<div class="profile-image"></div><div class="content-wrap">
+                        <div class="name">Nancy</div><div class="destination">Product Manager</div><div class="status">
+                        <div class="status-icon"></div>Online</div></div>` });
         this.profilePopup = new Popup(userContentEle, {
-            content: output[0],
+            content: templateContent,
             relateTo: userIconEle,
             position: { X: 'left', Y: 'bottom' },
             collision: { X: 'flip', Y: 'flip' },

@@ -7,25 +7,39 @@ import { eventData } from './datasource.js';
 
 Vue.use(SchedulePlugin);
 
-var editorTemplateVue = Vue.component('editorTemplate', {
-  template: `<table class="custom-event-editor" width="100%" cellpadding="5"><tbody><tr>
-  <td class="e-textlabel">Summary</td><td colspan="4"><input id="Subject" class="e-input" type="text" name="Subject" style="width: 100%" /></td></tr><tr><td class="e-textlabel">Status</td><td colspan="4"><input type="text" id="EventType" name="EventType" style="width: 100%" /></td></tr><tr><td class="e-textlabel">From</td><td colspan="4"><input id="StartTime" type="text" name="StartTime" /></td></tr><tr>
-  <td class="e-textlabel">To</td><td colspan="4"><input id="EndTime" type="text" name="EndTime" /></td></tr><tr><td class="e-textlabel">Reason</td><td colspan="4">
-  <textarea id="Description" class="e-input" name="Description" rows="3" cols="50" style="width: 100%; height: 60px !important; resize: vertical"></textarea></td></tr></tbody></table>`,
-  data() {
-    return {
-      data: {}
-    };
-  }
-});
-
 new Vue({
 	el: '#app',
 	template: `
   <div id='app'>
     <div id='container'>
       <ejs-schedule :height='height' :width='width' :views='views' :selectedDate='selectedDate'
-        :eventSettings='eventSettings' :editorTemplate='editorTemplate' :popupOpen='onPopupOpen' :popupClose='onPopupClose' >
+        :eventSettings='eventSettings' :editorTemplate="'editorTemplate'" :popupOpen='onPopupOpen' :popupClose='onPopupClose' >
+          <template v-slot:editorTemplate>
+            <table class="custom-event-editor" width="100%" cellpadding="5">
+              <tbody>
+                <tr>
+                  <td class="e-textlabel">Summary</td>
+                  <td colspan="4"><input id="Subject" class="e-input" type="text" name="Subject" style="width: 100%" /></td>
+                </tr>
+                <tr>
+                  <td class="e-textlabel">Status</td>
+                  <td colspan="4"><input type="text" id="EventType" name="EventType" style="width: 100%" /></td>
+                </tr>
+                <tr> 
+                  <td class="e-textlabel">From</td>
+                  <td colspan="4"><input id="StartTime" type="text" name="StartTime" /></td>
+                </tr>
+                <tr>
+                  <td class="e-textlabel">To</td>
+                  <td colspan="4"><input id="EndTime" type="text" name="EndTime" /></td>
+                </tr>
+                <tr>
+                  <td class="e-textlabel">Reason</td>
+                  <td colspan="4"><textarea id="Description" class="e-input" name="Description" rows="3" cols="50" style="width: 100%; height: 60px !important; resize: vertical"></textarea></td>
+                </tr>
+              </tbody>
+            </table>
+          </template>
       </ejs-schedule>
     </div>
   </div>
@@ -40,12 +54,7 @@ new Vue({
         dataSource: eventData
       },
       selectedDate: new Date(2018, 1, 15),
-      showQuickInfo: false,
-      editorTemplate: function(e) {
-        return {
-          template: editorTemplateVue
-        };
-      }
+      showQuickInfo: false
     };
   },
   methods: {

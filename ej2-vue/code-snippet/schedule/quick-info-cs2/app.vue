@@ -3,12 +3,44 @@
 <template>
   <div id='app'>
     <div id='container'>
-      <ejs-schedule :height='height' :width='width' :views='views'
+      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :views='views'
         :selectedDate='selectedDate' :eventSettings='eventSettings'
         :quickInfoTemplates='quickInfoTemplates'>
         <e-resources>
           <e-resource field="RoomId" title="Room Type" name="MeetingRoom" textField="Name" idField="Id" colorField="Color" :dataSource="roomData"></e-resource>
         </e-resources>
+        <template v-slot:headerTemplate="{ data }">
+          <div class="quick-info-header">
+            <div class="quick-info-header-content" v-if="data.elementType == 'cell'" :style="{'align-items':'center','color':'#919191'}">
+            <div class="quick-info-title">{{getHeaderTitle(data)}}</div>
+            <div class="duration-text">{{getHeaderDetails(data)}}</div>
+          </div>
+          <div class="quick-info-header-content" v-else :style="{'background': getHeaderStyles(data),'color':'#FFFFFF'}">
+            <div class="quick-info-title">{{getHeaderTitle(data)}}</div>
+            <div class="duration-text">{{getHeaderDetails(data)}}</div>
+          </div>
+        </template>
+        <template v-slot:contentTemplate="{ data }">
+          <div class="quick-info-content">
+            <div class="e-cell-content" v-if="data.elementType === 'cell'">
+            <div class="content-area"><ejs-textbox ref="titleObj" id="title" placeholder="Title"></ejs-textbox></div>
+            <div class="content-area"><ejs-dropdownlist ref="eventTypeObj" id="eventType" :dataSource="roomData" :index="0" :fields="fields"
+              popupHeight="200px" placeholder="Choose Type"></ejs-dropdownlist></div>
+            <div class="content-area"><ejs-textbox ref="notesObj" id="notes" placeholder="Notes"></ejs-textbox></div></div>
+            <div class="event-content" v-else><div class="meeting-type-wrap"><label>Subject</label>:<span>{{data.Subject}}</span></div>
+            <div class="meeting-subject-wrap"><label>Type</label>:<span>{{getEventType(data)}}</span></div>
+          <div class="notes-wrap"><label>Notes</label>:<span>{{data.Description}}</span></div></div></div>
+        </template>
+        <template v-slot:footerTemplate="{ data }">
+          <div class="quick-info-footer"><div class="cell-footer" v-if="data.elementType === 'cell'">
+            <ejs-button id="more-details" cssClass="e-flat" content="More Details" v-on:click.native="buttonClickActions"></ejs-button>
+            <ejs-button id="add" cssClass="e-flat" content="Add" :isPrimary="true" v-on:click.native="buttonClickActions"></ejs-button>
+          </div>
+          <div class="event-footer" v-else>
+            <ejs-button id="delete" cssClass="e-flat" content="Delete" v-on:click.native="buttonClickActions"></ejs-button>
+            <ejs-button id="more-details" cssClass="e-flat" content="More Details" :isPrimary="true" v-on:click.native="buttonClickActions"></ejs-button>
+          </div>
+        </template>
       </ejs-schedule>
     </div>
   </div>
@@ -40,26 +72,32 @@ var resourceData = [
   { Name: "Photogenic", Id: 10, Capacity: 25, Color: "#710193", Type: "Conference" }
 ];
 
-var headerTemplateVue = Vue.component('headerTemplate', {
-  template: `<div class="quick-info-header">
-    <div class="quick-info-header-content" v-if="data.elementType == 'cell'" :style="{'align-items':'center','color':'#919191'}">
-      <div class="quick-info-title">{{getHeaderTitle(data)}}</div>
-      <div class="duration-text">{{getHeaderDetails(data)}}</div>
-    </div>
-    <div class="quick-info-header-content" v-else :style="{'background': getHeaderStyles(data),'color':'#FFFFFF'}">
-      <div class="quick-info-title">{{getHeaderTitle(data)}}</div>
-      <div class="duration-text">{{getHeaderDetails(data)}}</div>
-    </div>
-  </div>`,
+export default {
   data() {
     return {
-        intl: new Internationalization(),
-      data: {}
+      intl: new Internationalization(),
+      height: '650px',
+      width: '100%',
+      eventSettings: {
+        dataSource: quickInfoData
+      },
+      selectedDate: new Date(2020, 0, 9),
+      fields: { text: "Name", value: "Id" },
+      views: ['Day', 'Week', 'WorkWeek'],
+      roomData: extend([], resourceData, undefined, true),
+      quickInfoTemplates: {
+        header: "headerTemplate",
+        content: "contentTemplate",
+        footer: "footerTemplate"
+      }
     };
+  },
+  provide: {
+    schedule: [Day, Week, WorkWeek, Month, Agenda]
   },
   methods: {
     getHeaderStyles: function(data) {
-      const scheduleObj = document.querySelector(".e-schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       const resources = scheduleObj.getResourceCollections().slice(-1)[0];
       const resourceData = resources.dataSource.filter(resource => resource.Id === data.RoomId)[0];
       return resourceData.Color;
@@ -73,52 +111,15 @@ var headerTemplateVue = Vue.component('headerTemplate', {
         this.intl.formatDate(data.StartTime, { skeleton: 'hm' }) + " - " +
         this.intl.formatDate(data.EndTime, { skeleton: 'hm' }) + ")"
       );
-    }
-  }
-});
-
-var contentTemplateVue = Vue.component('contentTemplate', {
-  template: `<div class="quick-info-content"><div class="e-cell-content" v-if="data.elementType === 'cell'">
-    <div class="content-area"><ejs-textbox ref="titleObj" id="title" placeholder="Title"></ejs-textbox></div>
-    <div class="content-area"><ejs-dropdownlist ref="eventTypeObj" id="eventType" :dataSource="roomData" :index="0" :fields="fields"
-    popupHeight="200px" placeholder="Choose Type"></ejs-dropdownlist></div>
-    <div class="content-area"><ejs-textbox ref="notesObj" id="notes" placeholder="Notes"></ejs-textbox></div></div>
-    <div class="event-content" v-else><div class="meeting-type-wrap"><label>Subject</label>:<span>{{data.Subject}}</span></div>
-    <div class="meeting-subject-wrap"><label>Type</label>:<span>{{getEventType(data)}}</span></div>
-    <div class="notes-wrap"><label>Notes</label>:<span>{{data.Description}}</span></div></div></div>`,
-  data() {
-    return {
-        fields: { text: "Name", value: "Id" },
-      roomData: extend([], resourceData, undefined, true),
-      data: {}
-    };
-  },
-  methods: {
+    },
     getEventType: function(data) {
-      const scheduleObj = document.querySelector(".e-schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       const resources = scheduleObj.getResourceCollections().slice(-1)[0];
       const resourceData = resources.dataSource.filter(resource => resource.Id === data.RoomId)[0];
       return resourceData.Name;
-    }
-  }
-});
-
-var footerTemplateVue = Vue.component('footerTemplate', {
-  template: `<div class="quick-info-footer"><div class="cell-footer" v-if="data.elementType === 'cell'">
-    <ejs-button id="more-details" cssClass="e-flat" content="More Details" v-on:click.native="buttonClickActions"></ejs-button>
-    <ejs-button id="add" cssClass="e-flat" content="Add" :isPrimary="true" v-on:click.native="buttonClickActions"></ejs-button>
-    </div><div class="event-footer" v-else>
-    <ejs-button id="delete" cssClass="e-flat" content="Delete" v-on:click.native="buttonClickActions"></ejs-button>
-    <ejs-button id="more-details" cssClass="e-flat" content="More Details" :isPrimary="true" v-on:click.native="buttonClickActions"></ejs-button>
-    </div></div>`,
-  data() {
-    return {
-      data: {}
-    };
-  },
-    methods: {
+    },
     buttonClickActions: function(e) {
-      const scheduleObj = document.querySelector(".e-schedule").ej2_instances[0];
+      let scheduleObj = this.$refs.scheduleObj.ej2Instances;
       const quickPopup = scheduleObj.element.querySelector(".e-quick-popup-wrapper");
       const getSlotData = function() {
         const titleObj = quickPopup.querySelector("#title").ej2_instances[0];
@@ -155,41 +156,6 @@ var footerTemplateVue = Vue.component('footerTemplate', {
       }
       scheduleObj.closeQuickInfoPopup();
     }
-  }
-});
-
-export default {
-  data() {
-    return {
-      height: '650px',
-      width: '100%',
-      eventSettings: {
-        dataSource: quickInfoData
-      },
-      selectedDate: new Date(2020, 0, 9),
-      views: ['Day', 'Week', 'WorkWeek'],
-      roomData: extend([], resourceData, undefined, true),
-      quickInfoTemplates: {
-        header: function(e) {
-          return {
-            template: headerTemplateVue
-          };
-        },
-        content: function(e) {
-          return {
-            template: contentTemplateVue
-          };
-        },
-        footer: function(e) {
-          return {
-            template: footerTemplateVue
-          };
-        }
-      }
-    };
-  },
-  provide: {
-    schedule: [Day, Week, WorkWeek, Month, Agenda]
   }
 }
 </script>

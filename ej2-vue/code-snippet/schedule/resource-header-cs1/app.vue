@@ -3,7 +3,7 @@
 <template>
         <div id='app'>
             <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group' :resourceHeaderTemplate='resourceHeaderTemplate'>
+                <ejs-schedule width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :group='group' :resourceHeaderTemplate="'resourceHeaderTemplate'">
                     <e-views>
                         <e-view option='Week'></e-view>
                         <e-view option='Month'></e-view>
@@ -11,6 +11,14 @@
                         <e-view option='TimelineMonth'></e-view>
                         <e-view option='Agenda'></e-view>
                     </e-views>
+                    <template v-slot:resourceHeaderTemplate="{data}">
+                        <div class='template-wrap'>
+                            <div class="resource-details">
+                                <div class="resource-name">{{data.resourceData.text}}</div>
+                                <div class="resource-designation">{{data.resourceData.designation}}</div>
+                            </div>
+                        </div>
+                    </template>
                     <e-resources>
                         <e-resource field='DoctorId' title='Doctor Name' name='Doctors' :dataSource='ownerDataSource'
                         textField='text' idField='id' colorField='color'>
@@ -28,15 +36,6 @@
 
     Vue.use(SchedulePlugin);
 
-    var resourceHeaderTemplateVue = Vue.component('headerTemplate', {
-        template: `<div class='template-wrap'><div class="resource-details"><div class="resource-name">{{data.resourceData.text}}</div><div class="resource-designation">{{data.resourceData.designation}}</div></div></div>`,
-        data() {
-            return {
-                data: {}
-            };
-        }
-    });
-
     export default {
         data () {
             return {
@@ -49,11 +48,6 @@
                     { text: 'Alice', id: 2, color: '#7fa900', designation: 'Neurologist' },
                     { text: 'Robson', id: 3, color: '#7fa900', designation: 'Orthopedic Surgeon'  }
                 ],
-                resourceHeaderTemplate: function(e){
-                    return {
-                        template: resourceHeaderTemplateVue
-                    };
-                },
                 eventSettings: { dataSource: doctorData },
             }
         },

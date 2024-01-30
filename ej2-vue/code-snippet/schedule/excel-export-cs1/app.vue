@@ -3,7 +3,7 @@
 <template>
   <div id='app'>
             <div id='container'>
-                <ejs-schedule id='Schedule' ref="ScheduleObj" :cssClass="cssClass" height="550px" :selectedDate='selectedDate' :eventSettings='eventSettings'
+                <ejs-schedule ref="ScheduleObj" :cssClass="cssClass" height="550px" :selectedDate='selectedDate' :eventSettings='eventSettings'
                     :currentView="currentView" :actionBegin="onActionBegin">
                     <e-views>
                         <e-view option="Week"></e-view>

@@ -22,7 +22,7 @@ Vue.use(GridPlugin);
 export default {
   data() {
     let SERVICE_URI =
-      "https://services.syncfusion.com/js/production/api/Orders";
+      "https://services.odata.org/V3/Northwind/Northwind.svc/Orders/";
     return {
       data: new DataManager({
         url: SERVICE_URI,

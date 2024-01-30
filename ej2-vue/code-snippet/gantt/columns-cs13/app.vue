@@ -50,7 +50,7 @@ export default {
                 resources: [2], info: 'Obtain an engineered soil test of lot where construction is planned.' +
                     'From an engineer or company specializing in soil testing'
             },
-            { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 30, resources: [3], },
+            { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 0, Predecessor: '3', Progress: 30, resources: [3] },
         ]
     },
     {

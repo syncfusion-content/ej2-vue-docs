@@ -31,11 +31,11 @@ export default {
   data (){
         return {
             dropdownModel: {  
-                dataSource: dm,
-                placeholder:"Select a customer",
-                fields : { text: 'ContactName', value: 'CustomerID' },
-                query : new Query().select(['ContactName', 'CustomerID']).take(6),
-            }
+                    dataSource: dm,
+                    placeholder:"Select a customer",
+                    fields : { text: 'ContactName', value: 'CustomerID' },
+                    query : new Query().select(['ContactName', 'CustomerID']).take(6),
+                }
         }
     },
     mounted: function() {
@@ -67,4 +67,5 @@ tr td:first-child {
     padding-right: 20px;
 }
 </style>
+
 

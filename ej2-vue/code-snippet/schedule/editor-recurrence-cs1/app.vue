@@ -4,25 +4,10 @@
 <template>
   <div id='app'>
     <div id='container'>
-      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :views='views' :selectedDate='selectedDate' :eventSettings='eventSettings' :editorTemplate='editorTemplate' :popupOpen='onPopupOpen'>
-      </ejs-schedule>
-    </div>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import {
-    SchedulePlugin, Day, Week, WorkWeek, Month, RecurrenceEditor
-} from '@syncfusion/ej2-vue-schedule';
-import { DateTimePicker } from '@syncfusion/ej2-calendars';
-import { eventData } from './datasource.js';
-
-Vue.use(SchedulePlugin);
-
-var editorTemplateVue = Vue.component('editorTemplate', {
-  template: `<table class="custom-event-editor" width="100%" cellpadding="5">
-        <tbody>
+      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :views='views' :selectedDate='selectedDate' :eventSettings='eventSettings' :editorTemplate="'editorTemplate'" :popupOpen='onPopupOpen'>
+      <template v-slot:editorTemplate>
+        <table class="custom-event-editor" width="100%" cellpadding="5">
+          <tbody>
             <tr>
                 <td class="e-textlabel">Summary</td>
                 <td colspan="4">
@@ -52,14 +37,23 @@ var editorTemplateVue = Vue.component('editorTemplate', {
                     <textarea id="Description" class="e-field e-input" name="Description" rows="3" cols="50" style="width: 100%; height: 60px !important; resize: vertical"></textarea>
                 </td>
             </tr>
-        </tbody>
-    </table>`,
-  data() {
-    return {
-      data: {}
-    };
-  }
-});
+          </tbody>
+        </table>
+      </template>
+      </ejs-schedule>
+    </div>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {
+    SchedulePlugin, Day, Week, WorkWeek, Month, RecurrenceEditor
+} from '@syncfusion/ej2-vue-schedule';
+import { DateTimePicker } from '@syncfusion/ej2-calendars';
+import { eventData } from './datasource.js';
+
+Vue.use(SchedulePlugin);
 
 export default {
   data() {
@@ -70,12 +64,7 @@ export default {
       eventSettings: {
         dataSource: eventData
       },
-      selectedDate: new Date(2018, 1, 15),
-      editorTemplate: function(e) {
-        return {
-          template: editorTemplateVue
-        };
-      }
+      selectedDate: new Date(2018, 1, 15)
     };
   },
   methods: {
@@ -117,11 +106,9 @@ export default {
 
   .custom-event-editor .e-textlabel {
     padding-right: 15px;
-    text-align: right;
   }
   .custom-event-editor td {
     padding: 7px;
-    padding-right: 16px;
   }  
 </style>
 
