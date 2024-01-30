@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion Vue UI Components in Vue 3
 
-This section explains how to use Syncfusion Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/) section.
+This section explains how to use Syncfusion Vue components in Vue 3 application. To get started with Vue 2 application, refer to the [getting started with Vue 2](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial) section.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ npm install @syncfusion/ej2-vue-grids --save
 
 After installing the Syncfusion component packages in the application, add the required theme based on the components used.
 
-Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) section to know more about built-in themes and different ways (npm packages, CDN and CRG) to refer the themes in the Vue application.
+Check out the [themes](https://ej2.syncfusion.com/vue/documentation/appearance/theme) section to know more about built-in themes and different ways (npm packages, CDN and CRG) to refer the themes in the Vue application.
 
 Here the themes are referred through the installed npm packages which contains the built-in themes of Syncfusion Vue component. Let’s import the `Material` theme for the Grid component and its dependencies to the `<style>` section of the `App.vue` file as follows.
 
@@ -364,5 +364,5 @@ The following sample uses the Button component within the grid's template proper
 
 ## See also
 
-* [Getting started with Vue 2 application](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/)
-* [Getting started with Vue component using direct script](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts/)
+* [Getting started with Vue 2 application](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial)
+* [Getting started with Vue component using direct script](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts)
