@@ -230,4 +230,4 @@ N> You can refer to our [Vue AutoComplete](https://www.syncfusion.com/vue-ui-com
 
 ## See Also
 
-* [How to bind the data](./data-binding/)
+* [How to bind the data](./data-binding)

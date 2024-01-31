@@ -69,11 +69,11 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 ## Add or remove pane
 
-You can add or remove panes programmatically to the splitter, by using [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter#addpane) and [removePane](https://ej2.syncfusion.com/vue/documentation/api/splitter#removepane) methods.
+You can add or remove panes programmatically to the splitter, by using [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#addpane) and [removePane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#removepane) methods.
 
 ### Add pane
 
-You can add the panes dynamically in the splitter by passing [`paneProperties`](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel) along with index to the [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#addpane) method
+You can add the panes dynamically in the splitter by passing [`paneProperties`](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel/) along with index to the [addPane](https://ej2.syncfusion.com/vue/documentation/api/splitter/#addpane) method
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -97,7 +97,7 @@ You can remove the split panes dynamically by passing the pane index to [removeP
 
 ## See Also
 
-* [Resizable split panes](./resizing/)
-* [Collapsible panes](./expand-collapse/)
-* [Define size to a panes](./pane-sizing/)
-* [Specify content to a panes](./pane-content/)
+* [Resizable split panes](./resizing)
+* [Collapsible panes](./expand-collapse)
+* [Define size to a panes](./pane-sizing)
+* [Specify content to a panes](./pane-content)

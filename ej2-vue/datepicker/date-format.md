@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Date format is a way of representing the date value in different string format in the textbox.
 
-By default, the DatePicker's format is based on the culture. You can also set the own custom format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#format) property.
+By default, the DatePicker's format is based on the culture. You can also set the own custom format by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#format) property.
 
 > Once the date format property has been defined it will be common to all the cultures.
 
