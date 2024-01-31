@@ -71,6 +71,7 @@ letter-spacing: 0.7px;
          <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/spreadsheet/getting-started/">Spreadsheet</a></div>
         <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started">Document Editor</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started/">In-place Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/image-editor/getting-started">Image Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rich-text-editor/getting-started/">RichTextEditor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/">PDF Viewer</a></div>
@@ -89,6 +90,7 @@ letter-spacing: 0.7px;
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/accumulation-chart/getting-started">Accumulation Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/chart/getting-started/">Charts</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/3d-chart/getting-started">3D Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stock-chart/getting-started/">Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/circular-gauge/getting-started/">Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/linear-gauge/getting-started/">Linear Gauge</a></div>
@@ -136,7 +138,6 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/signature/getting-started/">Signature</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/rating/getting-started/">Rating</a></div>
         <div><p class="controlcategory">FORMS</p></div>
-        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/inplace-editor/getting-started/">In-place Editor</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/query-builder/getting-started/">Query Builder</a></div>
     </td>
     <td>
@@ -159,6 +160,7 @@ letter-spacing: 0.7px;
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/toolbar/getting-started/">Toolbar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/treeview/getting-started/">TreeView</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/file-manager/getting-started/">File Manager</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/stepper/getting-started">Stepper</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/breadcrumb/getting-started/">Breadcrumb</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pager/getting-started/">Pager</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/appbar/getting-started/">AppBar</a></div>

@@ -54,7 +54,7 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart3d/axis/numeric/none/bar1" %}
+{% previewsample "page.domainurl/code-snippet/chart3d/axis/numeric/none" %}
 
 **Numeric - Round**
 

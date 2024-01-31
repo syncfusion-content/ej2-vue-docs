@@ -51,4 +51,4 @@ The following code shows how the diagram ruler can be customized.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/ruler/ruler-cs2" %}
->Note : The MarkerColor property can be customized using the [`marker`](./style/#customizing-the-ruler) CSS style.
+>Note : The MarkerColor property can be customized using the [`marker`](./style#customizing-the-ruler) CSS style.

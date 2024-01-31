@@ -14,7 +14,7 @@ The DateRangePicker is available for UI customization that can be achieved by us
 
 ## Day cell format
 
-The DateRangePicker is available for UI customization based on your application requirements. It can be achieved by using [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/renderDayCellEventArgs#renderdaycelleventargs) event that provides an option to customize each day cell on rendering.
+The DateRangePicker is available for UI customization based on your application requirements. It can be achieved by using [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/renderDayCellEventArgs/#renderdaycelleventargs) event that provides an option to customize each day cell on rendering.
 
 The following example disables the weekends of every month by using `renderDayCell` event.
 
@@ -28,7 +28,7 @@ The following example disables the weekends of every month by using `renderDayCe
 
 ## Preset Ranges
 
-DateRangePicker provides an option to set the predefined ranges via [`presets`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker#presets) property with the corresponding label. This property will accept the values in the order of label, start date (date object), end date (date object), and append these ranges in the component for quick selection. In the following sample, you can easily choose the frequently used range options from the list of ranges.
+DateRangePicker provides an option to set the predefined ranges via [`presets`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/#presets) property with the corresponding label. This property will accept the values in the order of label, start date (date object), end date (date object), and append these ranges in the component for quick selection. In the following sample, you can easily choose the frequently used range options from the list of ranges.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -40,7 +40,7 @@ DateRangePicker provides an option to set the predefined ranges via [`presets`](
 
 ## First day of week
 
-Start day in a week will differ based on the culture, but you can also customize this based on the application needs. For this, you have to make use of [`firstDayOfWeek`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker#firstdayofweek) property. By default, first day of a week in en-US is Sunday. In the following example it is customized to Monday with the help of this property.
+Start day in a week will differ based on the culture, but you can also customize this based on the application needs. For this, you have to make use of [`firstDayOfWeek`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/#firstdayofweek) property. By default, first day of a week in en-US is Sunday. In the following example it is customized to Monday with the help of this property.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
