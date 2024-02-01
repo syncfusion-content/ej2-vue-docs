@@ -21,17 +21,15 @@ import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 
 Vue.use(InPlaceEditorPlugin);
 
-var dm= new DataManager({
-                    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
-                    adaptor: new ODataV4Adaptor,
-                    crossDomain: true
-                });
-
 export default {
   data (){
         return {
             dropdownModel: {  
-                    dataSource: dm,
+                    dataSource: new DataManager({
+                    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+                    adaptor: new ODataV4Adaptor,
+                    crossDomain: true
+                }),
                     placeholder:"Select a customer",
                     fields : { text: 'ContactName', value: 'CustomerID' },
                     query : new Query().select(['ContactName', 'CustomerID']).take(6),
