@@ -66,7 +66,7 @@ You can disable resizing for a particular column by setting the [allowResizing](
 
 ## Resizing modes
 
-The Syncfusion Grid component provides a [ResizeSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeSettingsModel/#resizesettingsmodel) interface for configuring the resizing behavior of grid columns. The interface includes a property named [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeSettings/#mode) which is of the type [ResizeMode](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeMode). The `ResizeMode` is an enum that determines the available resizing modes for the grid columns. There are two resizing modes available for grid columns in Grid:
+The Syncfusion Grid component provides a [ResizeSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeSettingsModel/#resizesettingsmodel) interface for configuring the resizing behavior of grid columns. The interface includes a property named [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeSettings/#mode) which is of the type [ResizeMode](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeMode/). The `ResizeMode` is an enum that determines the available resizing modes for the grid columns. There are two resizing modes available for grid columns in Grid:
 
 1. `Normal Mode`: This mode does not adjust the columns to fit the remaining space. When the sum of column width is less than the grid's width, empty space will be present to the right of the last column. When the sum of column width is greater than the grid's width, columns will overflow, and a horizontal scrollbar will appear.
 
@@ -118,9 +118,9 @@ The following screenshot represents the column resizing on the touch device.
 
 ## Resizing column externally
 
-Grid provides the ability to resize columns using an external button click. This can be achieved by changing the [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) property of the column and refreshing the grid using the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshcolumns) method in the external button click function.
+Grid provides the ability to resize columns using an external button click. This can be achieved by changing the [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) property of the column and refreshing the grid using the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method in the external button click function.
 
-The following example demonstrates how to resize the columns in a grid. This is done by using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component by change the [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) property of the selected column. This is accomplished using the  [getColumnByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnbyfield) on external button click. Then, the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshcolumns) method is called on the grid component to update the displayed columns based on interaction.
+The following example demonstrates how to resize the columns in a grid. This is done by using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component by change the [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) property of the selected column. This is accomplished using the  [getColumnByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnbyfield) on external button click. Then, the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is called on the grid component to update the displayed columns based on interaction.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -130,7 +130,7 @@ The following example demonstrates how to resize the columns in a grid. This is 
         
 {% previewsample "page.domainurl/code-snippet/grid/column/resize-externally" %}
 
->  The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid#refreshcolumns) method is used to refresh the grid after the column widths are updated. Column resizing externally is useful when you want to provide a custom interface to the user for resizing columns.
+>  The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is used to refresh the grid after the column widths are updated. Column resizing externally is useful when you want to provide a custom interface to the user for resizing columns.
 
 ## Resizing events
 
