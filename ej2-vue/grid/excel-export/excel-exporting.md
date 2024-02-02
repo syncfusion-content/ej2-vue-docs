@@ -43,7 +43,7 @@ In the below demo, we have rendered the default spinner component when exporting
 
 ## Custom data source
 
-The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the **dataSource** in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
+The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the **dataSource** in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

@@ -11,13 +11,13 @@ domainurl: ##DomainURL##
 # Data binding in Vue Treeview component
 
 The TreeView component provides the option to load data either from local data sources or from remote data services. This can be done
-through `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview#fields) property. The `dataSource` property supports array of JavaScript objects and **DataManager**. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+through `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The `dataSource` property supports array of JavaScript objects and **DataManager**. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded,  loads the child nodes based on the `parentID/child` member.
 
 By default, the `loadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself.
 
-You can use the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/treeview#databound) event to perform actions. This event will be triggered once the data source is populated in the TreeView.
+You can use the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#databound) event to perform actions. This event will be triggered once the data source is populated in the TreeView.
 
 ## Local data
 
@@ -29,7 +29,7 @@ To bind local data to the TreeView, you can assign a JavaScript object array to 
 
 ### Hierarchical data
 
-TreeView can be populated with hierarchical data source that contains nested array of JSON objects. You can directly assign hierarchical data to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel#datasource) property, and map all the field members with corresponding keys from the hierarchical data to `fields` property.
+TreeView can be populated with hierarchical data source that contains nested array of JSON objects. You can directly assign hierarchical data to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property, and map all the field members with corresponding keys from the hierarchical data to `fields` property.
 
 In the following example, **code**, **name**, and **countries** columns from hierarchical data have been mapped to **id**, **child**,
 and **text** fields, respectively.
