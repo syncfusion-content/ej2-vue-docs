@@ -241,7 +241,7 @@ The data source fields that are required to render the tasks are mapped to the G
         
 {% previewsample "page.domainurl/code-snippet/gantt/getting-started-cs1" %}
 
-Note : While creating a Syncfusion Vue components using [`Direct Scripts`](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts/), `camelCased` property (dataSource) names need to specify in the `kebab-cased` (data-source) equivalents.
+Note : While creating a Syncfusion Vue components using [`Direct Scripts`](https://ej2.syncfusion.com/vue/documentation/getting-started/direct-scripts), `camelCased` property (dataSource) names need to specify in the `kebab-cased` (data-source) equivalents.
 
 ## Defining timeline
 

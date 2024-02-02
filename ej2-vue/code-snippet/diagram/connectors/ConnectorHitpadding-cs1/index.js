@@ -37,7 +37,6 @@ new Vue({
         return {
             width: "100%",
             height: "350px",
-            nodes: nodes,
             connectors: connectors,
             getConnectorDefaults: (connector) => {
                 connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load tab items dynamically in Vue Tab component
 
-Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/vue/documentation/api/tab#addtab) method.
+Tabs can be added dynamically by passing array of items and index value to the [`addTab`](https://ej2.syncfusion.com/vue/documentation/api/tab/#addtab) method.
 
 ```ts
     // New tab title and content inputs are fetched and stored in local variable

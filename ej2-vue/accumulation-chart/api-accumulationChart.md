@@ -298,11 +298,11 @@ Triggers before accumulation chart load.
 
 Triggers after accumulation chart loaded.
 
-### pointClick  `EmitType<IPointEventArgs>`
+### pointClick  [`EmitType<IPointEventArgs>`]((https://ej2.syncfusion.com/vue/documentation/api-iPointEventArgs.html))
 
 Triggers on point click.
 
-### pointMove  `EmitType<IPointEventArgs>`
+### pointMove  [`EmitType<IPointEventArgs>`]((https://ej2.syncfusion.com/vue/documentation/api-iPointEventArgs.html))
 
 Triggers on point move.
 
