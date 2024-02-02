@@ -189,8 +189,8 @@ If you are still not able to find the information that you are looking for at th
 
 ## See also
 
-* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
+* [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/estudio)
 
-* [Getting Started with Syncfusion Vue UI Components](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/)
+* [Getting Started with Syncfusion Vue UI Components](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial)
 
-* [Getting Started with Syncfusion Vue UI Components in Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/)
+* [Getting Started with Syncfusion Vue UI Components in Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial)
