@@ -124,7 +124,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Datepicker component with the [placeholder](https://ej2.syncfusion.com/vue/documentation/api/datepicker#placeholder) property.
+2\. In the `template` section, define the Datepicker component with the [placeholder](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#placeholder) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
