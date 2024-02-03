@@ -14,7 +14,7 @@ This section explains the steps to create a simple Standalone Vue PDF Viewer and
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setup Vue environment
 
@@ -181,7 +181,7 @@ export default {
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20Standalone)
 
-> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-ui-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
+> You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
 
 ## Limitation over Server-Backed PDF Viewer to Standalone PDF Viewer control
 

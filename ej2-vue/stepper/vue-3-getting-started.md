@@ -109,10 +109,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-
 </style>
 
 {% endhighlight %}
@@ -167,8 +164,6 @@ Add the component definition in `template` section.
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 {% endhighlight %}
@@ -189,8 +184,6 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 
@@ -221,8 +214,6 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 {% endhighlight %}
@@ -253,8 +244,6 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
 
@@ -287,8 +276,6 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
       @font-face {
@@ -347,8 +334,6 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
     @font-face {

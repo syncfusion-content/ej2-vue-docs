@@ -15,7 +15,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -58,7 +58,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Switch component]https://www.syncfusion.com/vue-components/vue-toggle-switch-button) as an example. Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
+This article uses the [Vue Switch component](https://www.syncfusion.com/vue-components/vue-toggle-switch-button) as an example. Install the `@syncfusion/ej2-vue-buttons` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-buttons --save
@@ -71,7 +71,7 @@ yarn add @syncfusion/ej2-vue-buttons
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Switch component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -114,7 +114,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Switch component with the [checked](https://ej2.syncfusion.com/vue/documentation/api/switch#checked) property.
+2\. In the `template` section, define the Switch component with the [checked](https://ej2.syncfusion.com/vue/documentation/api/switch/#checked) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
