@@ -19,9 +19,13 @@ new Vue({
   },
   methods: {
      toolbarUpdating: function(args) {
-        if (args.toolbarType === 'shapes') {
-            args.toolbarItems = ['strokeColor'];
-        }
+      if (args.toolbarType === 'pen') {
+        args.toolbarItems.forEach(item => {
+            if (item.align === 'Center' && (item.tooltipText === 'Stroke Width' || item.tooltipText === 'Remove' || item.type === 'Separator')) {
+                item.visible = false;
+            }
+        });
+      }      
     }
   }
 
