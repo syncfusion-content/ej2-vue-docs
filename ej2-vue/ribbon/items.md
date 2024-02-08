@@ -224,6 +224,20 @@ The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropD
         
 {% previewsample "page.domainurl/code-snippet/ribbon/dropdown-target" %}
 
+#### Customize Dropdown button item
+
+You can customize the dropdown button item by specifying a custom cssClass using the [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#beforeitemrender) event.
+
+The following sample showcases how to customize a specific dropdown item.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/dropDownCustomItem/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/dropdown-target" %}
+
 ### Split button items
 
 You can render the built-in splitButton Ribbon item by setting the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `SplitButton`. You can also customize the splitButton item through [RibbonSplitButtonSettingsModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettingsModel/), which provides options such as `iconCss`, `items`, `target` and more.
