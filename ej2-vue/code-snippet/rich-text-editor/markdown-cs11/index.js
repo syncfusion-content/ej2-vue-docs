@@ -65,7 +65,7 @@ new Vue({
     methods: {
       mirrorConversion: function(e) {
         var textArea = this.$refs.rteObj.ej2Instances.contentModule.getEditPanel();
-        var id = this.$refs.rteObj.getID() +  'mirror-view';
+        var id = this.$refs.rteObj.ej2Instances.getID() +  'mirror-view';
         var mirrorView = this.$refs.rteObj.$el.parentNode.querySelector('#' + id);
         var charCount = this.$refs.rteObj.$el.parentNode.querySelectorAll('.e-rte-character-count');
         if (e.targetItem === 'Preview') {
