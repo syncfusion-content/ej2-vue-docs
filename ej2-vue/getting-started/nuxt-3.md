@@ -42,6 +42,22 @@ This article uses the [Vue Grid component](https://www.syncfusion.com/vue-compon
 npm install @syncfusion/ej2-vue-grids --save
 ```
 
+## Configure transpilation for Syncfusion packages
+
+Syncfusion packages utilize the ESM syntax, while Nuxt apps operate with the common JS syntax. To enable transpilation of Syncfusion packages, include the following configuration in the **nuxt.config.ts** file:
+
+{% tabs %}
+{% highlight html tabtitle="~/nuxt.config.ts" %}
+
+export default defineNuxtConfig({
+  build: {
+    transpile: ['@syncfusion']
+  }
+})
+
+{% endhighlight %}
+{% endtabs %}
+
 ## Import Syncfusion CSS styles
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
