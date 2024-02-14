@@ -10,7 +10,7 @@ new Vue({
     <div>
         <div id='app'>
             <div id='container'>
-                <ejs-schedules width='100%' height='550px' :selectedDate='selectedDate' :group='group'>
+                <ejs-schedule width='100%' height='550px' :selectedDate='selectedDate' :group='group'>
                     <e-views>
                         <e-view option='Week'></e-view>
                         <e-view option='Month'></e-view>
