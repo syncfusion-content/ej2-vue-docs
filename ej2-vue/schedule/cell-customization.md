@@ -108,6 +108,46 @@ Providing the [`minDate`](../api/schedule/#mindate) and  [`maxDate`](../api/sche
 
 >By default, the [`minDate`](../api/schedule/#mindate) property value is set to new Date(1900, 0, 1) and [`maxDate`](../api/schedule/#maxdate) property value is set to new Date(2099, 11, 31). The user can also set the customized `minDate` and `maxDate` property values.
 
+## Customizing the weekend cells background color
+
+You can customize the background color of weekend cells by utilizing the [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#rendercell) event and checking the [`elementType`](https://ej2.syncfusion.com/vue/documentation/api/schedule/renderCellEventArgs/#elementtype) option within the event.
+
+```ts
+
+onRenderCell: function (args) {
+    if (args.elementType == "workCells") {
+        // To change the color of weekend columns in week view
+        if (args.date) {
+            if (args.date.getDay() === 6) {
+                (args.element).style.background = '#ffdea2';
+            }
+            if (args.date.getDay() === 0) {
+                (args.element).style.background = '#ffdea2';
+            }
+        }
+    }
+}
+
+```
+
+And, the background color for weekend cells in the Month view through the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#cssclass) property, which overrides the default CSS applied on cells.
+
+```css
+
+.schedule-cell-customization.e-schedule .e-month-view .e-work-cells:not(.e-work-days) {
+    background-color: #f08080;
+}
+
+```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/schedule/weekend-cell-color/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/weekend-cell-color" %}
+
 ## How to disable multiple cell and row selection in Schedule
 
 By default, the [`allowMultiCellSelection`](../api/schedule/#allowmulticellselection) and [`allowMultiRowSelection`](../api/schedule/#allowmultirowselection) properties of the Schedule are set to `true`. So, the Schedule allows user to select multiple cells and rows. If the user want to disable this multiple cell and row selection. The user can disable this feature by setting up `false` to these properties.
