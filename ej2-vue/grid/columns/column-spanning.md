@@ -27,4 +27,5 @@ In the following demo, Employee `Davolio` doing analysis from 9.00 AM to 10.00 A
 * Column spanning is not compatible with the following features:
     1. Virtual scrolling
     2. Infinite scrolling
-    3. Lazy load grouping
+    3. Grouping
+    4. Autofill

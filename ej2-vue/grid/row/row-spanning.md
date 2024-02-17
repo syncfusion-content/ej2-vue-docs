@@ -31,6 +31,9 @@ Also Grid supports the spanning of rows and columns for same cells. `Lunch Break
 * Row spanning is not compatible with the following features:
     1. Virtual scrolling
     2. Infinite scrolling
-    3. Lazy load grouping
+    3. Grouping
     4. Row drag and drop
-    5. Grouping
+    5. Autofill
+    6. Inline editing
+    7. Batch editing
+    8. CRUD
