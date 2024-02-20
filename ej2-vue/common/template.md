@@ -95,20 +95,25 @@ The slot template can also be used to insert content into `nested tags` within a
 
 ## Inline template
 
-The user can use the `Vue.component` method to add custom content to the template that can be used in the Syncfusion Vue components. The template elements can be added to `template` attribute of the `Vue.component` method. Refer to the below code snippet to create the template element using `Vue.component` method.
+The user can use the `app.component` method to add custom content to the template that can be used in the Syncfusion Vue components. The template elements can be added to `template` attribute of the `app.component` method. Refer to the below code snippet to create the template element using `app.component` method.
 
 ```js
-var inlineTemplate = Vue.component("inlineTemplate", {
-  template: '<ejs-button :content="`${data.ShipCountry}`"></ejs-button>',
-  data() { return { data: {} }; }
+import { createApp  } from "vue/dist/vue.esm-bundler.js";
+const app = createApp();
+const inlineTemplate = app.component('inlineTemplate', {
+  components: {
+    'ejs-button': ButtonComponent
+  },
+  data: () => ({}),
+  template: '<ejs-button :content="`${data.ShipCountry}`"></ejs-button>'
 });
 ```
 
 Create a template function that returns an object `{ key: 'template', value: 'importedTemplate' }` to map this template to the Grid component.
 
 ```js
-cTemplate: function() {
-   return { template: inlineTemplate };
+const cTemplate = () => {
+  return { template: inlineTemplate };
 }
 ```
 
@@ -135,13 +140,11 @@ The template elements can be defined in an external file (single-file component)
   </div>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-  Vue.use(ButtonPlugin);
-  export default {
-    data () { return { data: {} } }
-  }
+<script setup>
+import { defineProps } from 'vue';
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
+
+const data = defineProps(['ShipCountry']);
 </script>
 
 {% endhighlight %}
@@ -150,14 +153,16 @@ The template elements can be defined in an external file (single-file component)
 Import the `template.vue` file into the corresponding `App.vue` file as specified in the following code snippet.
 
 ```js
-import externalTemplate from './template.vue'
+import template from './template.vue';
 ```
 
 Create a template function that returns an object `{ key: 'template', value: 'importedTemplate' }` to map this template to the Grid component.
 
 ```js
-cTemplate: function() {
-   return { template: externalTemplate };
+const app = createApp();
+const externalTemplate = app.component('externalTemplate', template);
+const cTemplate = () => {
+  return { template: externalTemplate };
 }
 ```
 
@@ -168,50 +173,49 @@ Now, the template function is assigned to the `template` property of the Grid co
 
 <template>
   <div id="app">
-      <ejs-grid ref="grid" :dataSource="ds">
-        <e-columns>
-            <e-column headerText='Ship Country' width='150' textAlign='Center' :template='cTemplate' />
-            <e-column field="OrderID" headerText="Order ID" width=120 textAlign="Right" />
-            <e-column field="CustomerName" headerText="Customer Name" width=150 />
-        </e-columns>
-      </ejs-grid>
+    <ejs-grid ref="grid" :dataSource="ds">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" width=120 textAlign="Right" />
+        <e-column field="CustomerName" headerText="Customer Name" width=150 />
+        <e-column field="ShipCountry" headerText="Ship Country" width=150 :template='cTemplate'/>
+      </e-columns>
+    </ejs-grid>
   </div>
 </template>
-<script>
-  import Vue from "vue";
-  import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-  import externalTemplate from "./template.vue";
-  Vue.use(GridPlugin);
 
-  var empData = [
-    { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
-    { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
-    { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
-    { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
-  ];
+<script setup>
+import { createApp } from "vue";
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import template from "./template.vue";
 
-  export default {
-    name: 'App',
-    data() {
-      return {
-        ds: empData,
-        cTemplate: function() {
-          return { template: externalTemplate };
-        }
-      };
-    }
-  };
+const app = createApp();
+
+const externalTemplate = app.component('externalTemplate', template);
+
+const cTemplate = () => {
+  return { template: externalTemplate };
+}
+
+const ds = [
+  { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
+  { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
+  { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
+  { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
+];
+
 </script>
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -229,17 +233,11 @@ Syncfusion provides the option to use external modules in template content. To u
   <ejs-grid height='210px' :plugins="modules"></ejs-grid>
 </template>
 
-<script>
-  import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { i18n } from "./main";
+import { GridComponent as EjsGrid } from '@syncfusion/ej2-vue-grids';
 
-  export default {
-    components: {
-      "ejs-grid": GridComponent,
-    },
-    data() {
-      return { modules: [i18n] };
-    }
-  };
+const  modules= [i18n]
 </script>
 
 {% endhighlight %}
@@ -284,7 +282,7 @@ Below is the example code to use `i18n` external module in the Grid component te
 {% raw %}
 
 <template>
-  <ejs-grid ref="grid" :dataSource="ds" :plugins="modules">
+  <ejs-grid :dataSource="empData" :plugins="modules">
     <e-columns>
       <e-column field="OrderID" headerText="Order ID" width=120 textAlign="Right" />
       <e-column headerText='Customer Name' width=150 :template="'cTemplate'">
@@ -295,40 +293,30 @@ Below is the example code to use `i18n` external module in the Grid component te
     </e-columns>
   </ejs-grid>
 </template>
-<script>
-  import { i18n } from "./main";
-  import { GridComponent, ColumnsDirective, ColumnDirective} from "@syncfusion/ej2-vue-grids";
-  var empData = [
-    { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
-    { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
-    { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
-    { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
-  ];
-  export default {
-    name: "App",
-    components: {
-      "ejs-grid": GridComponent,
-      "e-columns": ColumnsDirective,
-      "e-column": ColumnDirective,
-    },
-    data() {
-      return {
-        modules: [i18n],
-        ds: empData,
-      };
-    },
-  };
+
+<script setup>
+import { i18n } from "./main";
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
+
+const empData = [
+  { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
+  { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
+  { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
+  { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
+];
+const  modules= [i18n];
 </script>
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
 
 {% endraw %}
@@ -363,30 +351,19 @@ In this below example, the parent component provides the content property with t
     </ejs-grid>
   </div>
 </template>
-<script>
-  import Vue from 'vue';
-  import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-  import MyTemplate from "./MyTemplate.vue";
-  Vue.use(GridPlugin);
+<script setup>
+import { provide } from 'vue';
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
+import MyTemplate from "./MyTemplate.vue";
 
-  var empData = [
-    { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
-    { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
-    { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
-    { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
-  ];
+var empData = [
+  { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
+  { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
+  { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
+  { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
+];
 
-  export default {
-    components: {
-      MyTemplate
-    },
-    data () { 
-      return { 
-        ds: empData 
-      } 
-    },
-    provide: { content: 'Update' }
-  }
+provide('content', 'Update');
 </script>
 
 {% endhighlight %}
@@ -404,17 +381,10 @@ In this below example, the child template component injects content property usi
   <ejs-button>{{ content }}</ejs-button>
 </template>
 <script>
-  import Vue from 'vue';
-  import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-  Vue.use(ButtonPlugin);
+import { inject } from 'vue';
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 
-  export default {
-    name: 'MyTemplate',
-    data () { 
-      return {} 
-    },
-    inject: ['content']
-  }
+const content = inject('content');
 </script>
 
 {% endraw %}

@@ -1,26 +1,22 @@
 
-  import Vue from 'vue';
-  import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-  import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-  Vue.use(GridPlugin);
-  Vue.use(ButtonPlugin);
+import { createApp } from 'vue';
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { GridPlugin } from "@syncfusion/ej2-vue-grids";
 
-  var inlineTemplate = Vue.component("inlineTemplate", {
-    template: '<ejs-button :content="`${data.ShipCountry}`"></ejs-button>',
-    data() { return { data: {} }; }
-  });
+var inlineTemplate = createApp().component("inlineTemplate", {
+  template: '<ejs-button :content="`${data.ShipCountry}`"></ejs-button>',
+  data() { return { data: {} }; }
+});
 
-  var empData = [
-    { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
-    { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
-    { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
-    { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
-  ];
+var empData = [
+  { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
+  { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },
+  { OrderID: 10250, ShipCountry: "Brazil", CustomerName: "Mario Pontes" },
+  { OrderID: 10251, ShipCountry: "France", CustomerName: "Mary Saveley" }
+];
 
-  
-new Vue({
-	el: '#app',
-	template: `
+createApp({
+  template: `
   <div id="grid">
     <ejs-grid ref="grid" :dataSource="ds">
       <e-columns>
@@ -32,13 +28,13 @@ new Vue({
   </div>
 `,
 
-    data () {
-      return {
-        ds: empData,
-        cTemplate: function () {
-          return { template: inlineTemplate };
-        }
+  data() {
+    return {
+      ds: empData,
+      cTemplate: function () {
+        return { template: inlineTemplate };
       }
     }
-  
-});
+  }
+
+}).use(GridPlugin).use(ButtonPlugin).mount('#app');

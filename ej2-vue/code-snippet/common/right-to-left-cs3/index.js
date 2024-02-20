@@ -1,13 +1,9 @@
 
-import Vue from "vue";
+import { createApp } from "vue";
 import { GridPlugin, Sort, Page, Filter } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
+import data from './datasource.js';
 
-Vue.use(GridPlugin);
-
-
-new Vue({
-	el: '#app',
+createApp({
 	template: `
     <div id="app">
         <ejs-grid :dataSource='data' :allowSorting='true' :enablePersistence='true' :allowPaging='true' :allowFiltering='true' height='210px'>
@@ -30,4 +26,4 @@ new Vue({
     grid: [Sort, Page, Filter]
   }
 
-});
+}).use(GridPlugin).mount('#app');

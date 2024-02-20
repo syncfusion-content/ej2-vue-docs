@@ -12,11 +12,12 @@
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
+<script setup>
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, Page, Group } from '@syncfusion/ej2-vue-grids';
 import { L10n, setCulture } from '@syncfusion/ej2-base';
-import { GridPlugin, Page, Group } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
+import { provide } from "vue";
+import data from './datasource.js';
+provide('grid', [Page, Group]);
 
 setCulture('de-DE');
 
@@ -30,7 +31,7 @@ L10n.load({
             'Item': 'Artikel',
             'Items': 'Artikel'
         },
-        'pager':{
+        'pager': {
             'currentPageInfo': '{0} von {1} Seiten',
             'totalItemsInfo': '({0} Beiträge)',
             'firstPageTooltip': 'Zur ersten Seite',
@@ -43,23 +44,16 @@ L10n.load({
     }
 });
 
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: data,
-      pageOptions: { pageSize: 7 }
-    };
-  },
-  provide: {
-    grid: [Page, Group]
-  }
-}
+const pageOptions = { pageSize: 7 };
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

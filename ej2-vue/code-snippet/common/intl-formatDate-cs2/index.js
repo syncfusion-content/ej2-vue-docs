@@ -1,20 +1,19 @@
 
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { Internationalization } from '@syncfusion/ej2-base';
 
-new Vue({
-	el: '#app',
+createApp({
 	template: `
-  <div class="result"></div>
+  <div ref="result"></div>
 `,
 
   mounted:function(){
 var intl  = new Internationalization();
 var date  = new Date();
 var formattedString  =  intl.formatDate(new Date('1/12/2014 10:20:33'), { skeleton: 'GyMMM' });
-document.querySelector('.result').innerHTML = formattedString;
+this.$refs.result.innerHTML = formattedString;
 
   }
 
 
-});
+}).mount('#app');
