@@ -1,0 +1,8 @@
+.e-grid .e-icon-ascending::before {
+  content: '\e822';
+}
+      
+.e-grid .e-icon-descending::before {
+  content: '\e7fe';
+}
+ 

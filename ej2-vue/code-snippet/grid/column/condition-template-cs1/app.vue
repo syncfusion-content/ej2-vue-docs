@@ -4,11 +4,19 @@
     <div id="app">
          <ejs-grid :dataSource="data" height=310>
             <e-columns>
-                <e-column headerText='Discontinued' width='150' textAlign='Center' :template='cTemplate'></e-column>
-                <e-column field='ProductID' headerText='Product ID' width='125'></e-column>
-                <e-column field='ProductName' headerText='Name' width='120'></e-column>
-                <e-column field='SupplierID' headerText='Supplier ID' width='170'></e-column>
+                <e-column headerText='Discontinued' width='150' textAlign='Center' :template="'columnTemplate'"></e-column>
+                <e-column field='ProductID' headerText='Product ID' width=150></e-column>
+                <e-column field='CategoryName' headerText='Category Name' width=150></e-column>
+                <e-column field='ProductName' headerText='Product Name' width=150></e-column>
             </e-columns>
+             <template v-slot:columnTemplate="{data}">
+                <div v-if=data.Discontinued class="template_checkbox">
+                    <input type="checkbox" checked />
+                </div>
+                <div v-else class="template_checkbox">
+                    <input type="checkbox" />
+                </div>
+            </template>
         </ejs-grid>
     </div>
 </template>
@@ -23,32 +31,20 @@ export default {
   data: () => {
     return {
       data: productData,
-      cTemplate: function () {
-          return { template : Vue.component('columnTemplate',{
-             template: `<div v-if=cData class="template_checkbox">
-                    <input type="checkbox" checked />
-                </div>
-                <div v-else class="template_checkbox">
-                    <input type="checkbox" />
-                </div>`,
-                data: function() {
-                    return {
-                        data: {}
-                    }
-                },
-                computed: {
-                    cData: function() {
-                        return this.data.Discontinued;
-                    }
-                }
-          })}
-      }
     };
   }
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

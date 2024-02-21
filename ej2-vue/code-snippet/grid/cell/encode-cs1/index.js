@@ -10,8 +10,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-      <div>
-        <label style="padding: 10px 10px">
+      <div style="display: flex;">
+        <label style="margin-right:5px">
         Enable or disable HTML Encode
         </label>
         <ejs-switch id="switch" :change="change"></ejs-switch>

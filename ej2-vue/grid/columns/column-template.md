@@ -10,11 +10,15 @@ domainurl: ##DomainURL##
 
 # Column template in Vue Grid component
 
+Grid component provides a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) option that allows you to display custom elements in a column instead of the field value. This can be useful when you need to display images, buttons, or other custom content within a column.
+
+> When using template columns, they are primarily meant for rendering custom content and may not provide built-in support for grid actions like sorting, filtering, editing. It is must to define the `field` property of the column to perform any grid actions.
+
 ## Render image in a column
 
-The column [`template`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) has options to display custom element instead of a field value in the column.
+To render an image in a grid column, you need to define a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) for the column using the template property. The `template` property expects the HTML element or a function that returns the HTML element.
 
-The `template` property should be a function which returns an object. The object should contain a Vue component which should be assigned to the `template` property. The grid will look for the template property and render it as new Vue instance.
+The following example demonstrates how to define a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) for the **Employee Image** field that displays an image element. The `template` property is set to the HTML element that contains an image tag. You have utilized the `src` and `alt` attributes to an image tag. 
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -24,23 +28,112 @@ The `template` property should be a function which returns an object. The obje
         
 {% previewsample "page.domainurl/code-snippet/grid/column/template-cs1" %}
 
-## Render other components in a column
+## Render hyperlink in a column
 
-You can render any component in a grid column using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
+The Grid component provides support for rendering hyperlink columns and performing routing on click using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. This feature is useful when displaying data that requires a link to another page or website.
+
+The following example demonstrates, how to render hyperlink column in the Grid using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property of the `e-column` tag. To define a `template` for the column,  you can use the `template` with the `a` tag to create the hyperlink. The onClick function is triggered when the hyperlink is clicked.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/grid/how-to/dropdown-cs1/app.vue %}
+{% include code-snippet/grid/column/template-hyperlink/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/how-to/dropdown-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/column/template-hyperlink" %}
+
+>The window.open() method is a built-in JavaScript function that opens a new browser window or tab with the specified URL.
+
+## Render other components in a column
+
+The column template has options to render a custom component in a grid column instead of a field value.
+
+### Render LineChart component in a column
+
+The [LineChart](https://ej2.syncfusion.com/vue/documentation/sparkline/getting-started) component of Syncfusion provides an elegant way to represent and compare data over time. It displays data points connected by straight line segments to visualize trends in data.
+
+In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/grid/column/template-linechart/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/template-linechart" %}
+
+### Render ColorPicker component in a column
+
+The [ColorPicker](https://ej2.syncfusion.com/vue/documentation/color-picker/getting-started) component of Syncfusion provides a user-friendly way to select colors from a pre-defined color palette or custom colors. It can be used in a variety of scenarios such as picking a theme color or changing the color of an element on a page.
+
+In the following code, we rendered the ColorPicker component in the Grid column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
+
+```
+<div>
+    <ejs-colorpicker mode="Palette" :change="change"></ejs-colorpicker>
+</div>
+```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/grid/column/template-colorpicker/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/template-colorpicker" %}
+
+### Render DropDownList component in a column
+
+To render a custom component in a grid column, you need to define a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) for the column using the `template` property. In the following code, we rendered the [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) component in the **Order Status** column by defining the `template` property.
+
+```
+<div>
+    <ejs-dropdownlist id='dropdownlist' :dataSource='dropData' :value='data.OrderStatus' :popupHeight='250' :popupWidth='150' width="100"> </ejs-dropdownlist>
+</div>
+```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/grid/column/template-dropdown/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/template-dropdown" %}
+
+### Render Chip component in a column
+
+The Grid component provides support for rendering [Chips](https://ej2.syncfusion.com/vue/documentation/chips/getting-started) component in a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. This feature is useful when displaying data that requires a chip component to be rendered in a column.
+
+In the following code, we rendered the Chips component in the Grid **First Name** column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
+
+```
+<div>
+    <ejs-chiplist id="chip" text="data.FirstName"></ejs-chiplist>
+</div>
+```
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/grid/column/template-chip/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/template-chip" %}
 
 ## Using condition template
 
-You can render the template elements based on condition.
+The conditional column [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) allows you to display template elements based on specific conditions.
 
-In the following code, checkbox is rendered based on `Discontinued` field value.
+The following example demonstrates how to use the `template` property add `v-if` directive to render the checkbox based on the value of the **Discontinued** field. The **Discontinued** field will render a checkbox in each row for which the value of the **Discontinued** field is **true**. 
+
+```
+<div v-if=cData class="template_checkbox">
+    <input type="checkbox" checked />
+</div>
+<div v-else class="template_checkbox">
+    <input type="checkbox" />
+</div>
+```
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -50,11 +143,13 @@ In the following code, checkbox is rendered based on `Discontinued` field value.
         
 {% previewsample "page.domainurl/code-snippet/grid/column/condition-template-cs1" %}
 
+>You can use any template element or custom component instead of the checkbox in the conditional template based on your requirement.
+
 ## How to get the row object by clicking on the template element
 
-You can get the row object without selecting the row and achieve it using the column template feature and the `getRowObjectFromUID` method of the Grid.
+The Grid component allows you to retrieve the row object of the selected record when clicking on a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) element. This feature can be useful when you need to perform custom actions based on the selected record.
 
-In the following sample, the button element is rendered in the Employee Data column. By clicking the button, you can get the row object using the `getRowObjectFromUID` method of the Grid and display it in the console.
+In the following code, the button element is rendered in the **Employee Data** column and `click` event binding is used to call the showDetails method when the template element is clicked. The showDetails method is passed the data object as an argument, which allows you to access the selected row object and display it in the dialog popup.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -63,3 +158,68 @@ In the following sample, the button element is rendered in the Employee Data col
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/column/template-cs2" %}
+
+## Use custom helper inside the template
+
+The Syncfusion Grid allows you to use custom helpers inside the column template. This feature allows you to create complex templates that can incorporate additional helper functions that are not available through the default [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) syntax.
+
+To use the custom helper function inside a column template, you must first add the function to the template's context. This can be done by using the let keyword to create a new variable that references the function.
+
+The following example demonstrates how to use a custom helper function inside the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property for the Freight column.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% raw %}
+<template>
+    <div id="app">
+         <ejs-grid ref="grid" :dataSource="data" height=315>
+            <e-columns>
+              <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+              <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+              <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90 :template="'columnTemplate'"></e-column>
+              <e-column field='OrderDate' headerText='Order Date' textAlign='Right' type='date' format='yMd' width=120></e-column>    
+            </e-columns>
+             <template v-slot:columnTemplate="{data}">
+                <div>
+                  {{ formatCurrency(data.Freight) }}
+                </div>
+            </template>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+import Vue from "vue";
+import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+import { data } from "./datasource.js";
+
+Vue.use(GridPlugin);
+
+export default {
+  data: () => {
+    return {
+      data: data,
+    }
+  },
+  methods: {
+    formatCurrency(value) {
+      return '₹ ' + value.toFixed(3);
+    },
+  },
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/custom-helper-template" %}
