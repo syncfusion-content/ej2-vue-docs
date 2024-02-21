@@ -24,30 +24,27 @@ Refer the below code snippet for Binding of Custom Events.
 
 <template>
   <div id="calendar">
-    <ejs-calendar v-on:created="display" />
+    <ejs-calendar @created="display" />
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
-Vue.use(CalendarPlugin);
+<script setup>
+import { CalendarComponent as EjsCalendar } from '@syncfusion/ej2-vue-calendars';
 
-export default {
-  methods: {
-    display: function() {
-      window.alert('Calendar Created');
-    }
-  }
+const display = () => {
+  alert('Calendar Created');
 }
 </script>
-<style>
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
 
-  #calendar {
-    max-width: 250px;
-    margin: 0 auto;
-  }
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+
+#calendar {
+  max-width: 250px;
+  margin: 0 auto;
+}
 </style>
 
 ```
@@ -64,30 +61,22 @@ Refer the below code snippet for Binding Native Events.
 
 <template>
   <div id="button">
-    <ejs-button :content="name" v-on:click.native="clicked"></ejs-button>
+    <ejs-button :content="name" @click="clicked"></ejs-button>
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ButtonPlugin);
+<script setup>
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
-export default {
-  data () {
-    return {
-      name: "Button"
-    };
-  },
-  methods: {
-    clicked: function() {
-      window.alert('Button Clicked');
-    }
-  }
+const name = "Button";
+const clicked = () => {
+  alert('Button Clicked');
 }
 </script>
+
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
 </style>
 
 ```

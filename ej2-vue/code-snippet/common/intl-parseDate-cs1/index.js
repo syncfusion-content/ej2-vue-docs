@@ -1,18 +1,17 @@
 
-import Vue from 'vue';
+import { createApp } from 'vue';
 import {Internationalization} from '@syncfusion/ej2-base';
 
-new Vue({
-	el: '#app',
+createApp({
 	template: `
-  <div class="result"> </div>
+  <div ref="result"> </div>
 `,
 
   mounted:function(){
 var intl  = new Internationalization();
 var dParser  = intl.getDateParser({skeleton: 'full', type: 'dateTime'});
 var val = dParser('Friday, November 4, 2016 at 1:03:04 PM GMT+05:30');
-document.querySelector('.result').innerHTML = val.toString();
+this.$refs.result.innerHTML = val.toString();
 }
 
-});
+}).mount('#app');

@@ -98,6 +98,20 @@ Here is an example of changing the text’s color and its font family using the 
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs29" %}
 
+### Add Additional font family
+
+The [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#fontfamily) property in the Image Editor control provides the flexibility to incorporate supplementary font families, expanding your options for text styling and ensuring a broader range of fonts can be utilized within your design or content. The font value will be determined by the 'id' property.
+
+By leveraging the [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#fontfamily) property, you can elevate the scope of customization for text annotations, enriching the user experience within the Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/image-editor/getting-started-cs44/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs44" %}
+
 ## Freehand drawing
 
 The Freehand Draw annotation tool in the Vue Image Editor component is a versatile feature that allows users to draw and sketch directly on the image using mouse or touch input. This tool provides a flexible and creative way to add freehand drawings or annotations to the image.

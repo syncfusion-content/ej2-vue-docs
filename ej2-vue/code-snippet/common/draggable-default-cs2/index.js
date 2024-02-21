@@ -1,12 +1,11 @@
 
     import { Draggable } from '@syncfusion/ej2-base';
-    import Vue from "vue";
+    import { createApp } from "vue";
     
-new Vue({
-	el: '#app',
+createApp({
 	template: `
     <div id='container'>
-        <div id='element1'>
+        <div id='element1' ref='dragElement'>
             <p>Draggable Element </p>
         </div>
     </div>
@@ -14,8 +13,7 @@ new Vue({
 
         mounted: function () {
 
-            var dragElement = document.getElementById('element1');
-            var draggable = new Draggable(dragElement, { clone: true });
+            new Draggable(this.$refs.dragElement, { clone: true });
         }
     
-});
+}).mount('#app');

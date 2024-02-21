@@ -1,5 +1,5 @@
 
-import Vue from "vue";
+import { createApp } from "vue";
 import { L10n, setCulture } from '@syncfusion/ej2-base';
 import { GridPlugin, Page, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
@@ -29,11 +29,7 @@ L10n.load({
     }
 });
 
-Vue.use(GridPlugin);
-
-
-new Vue({
-	el: '#app',
+createApp({
 	template: `
     <div id="app">
         <ejs-grid :dataSource='data' locale='de-DE' :allowGrouping='true' :allowPaging='true' :pageSettings='pageOptions' height='220px'>
@@ -57,4 +53,4 @@ new Vue({
     grid: [Page, Group]
   }
 
-});
+}).use(GridPlugin).mount('#app');
