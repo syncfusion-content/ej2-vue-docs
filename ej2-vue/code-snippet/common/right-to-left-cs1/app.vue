@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-        <ejs-grid :dataSource='data'  locale='ar-AE' :allowPaging='true' :pageSettings='pageOptions'>
+        <ejs-grid :dataSource='data' locale='ar-AE' :allowPaging='true' :pageSettings='pageOptions'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
@@ -12,11 +12,12 @@
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
+<script setup>
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, Page } from '@syncfusion/ej2-vue-grids';
 import { L10n, setCulture, enableRtl } from '@syncfusion/ej2-base';
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
+import { provide } from "vue";
+import data from './datasource.js';
+provide('grid', [Page]);
 
 // Enables Right to left alignment for all components
 enableRtl(true);
@@ -28,7 +29,7 @@ L10n.load({
             'EmptyRecord': 'لا سجلات لعرضها',
             'EmptyDataSourceError': 'يجب أن يكون مصدر البيانات فارغة في التحميل الأولي منذ يتم إنشاء الأعمدة من مصدر البيانات في أوتوجينيراتد عمود الشبكة'
         },
-        'pager':{
+        'pager': {
             'currentPageInfo': '{0} من {1} صفحة',
             'totalItemsInfo': '({0} العناصر)',
             'firstPageTooltip': 'انتقل إلى الصفحة الأولى',
@@ -40,24 +41,16 @@ L10n.load({
         }
     }
 });
-
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: data,
-      pageOptions: { pageSize: 7 }
-    };
-  },
-  provide: {
-    grid: [Page]
-  }
-}
+const pageOptions = { pageSize: 7 };
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

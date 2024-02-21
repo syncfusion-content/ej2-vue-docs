@@ -1,21 +1,19 @@
-
-
 <template>
-  <div class="result"> </div>
+  <div class="result" ref="result"></div>
 </template>
-<script>
-import Vue from 'vue';
+  
+<script setup>
 import { Internationalization } from '@syncfusion/ej2-base';
-export default {
-  mounted: function(){
-var  intl = new Internationalization();
-var formattedString  = intl.formatNumber(12345.65, { format:'C5' , useGrouping: false,
-minimumSignificantDigits:1, maximumSignificantDigits:3 });
-document.querySelector('.result').innerHTML = formattedString;
-  }
-}
+import { onMounted, ref } from 'vue';
+
+const result = ref(null);
+
+onMounted(() => {
+  var intl = new Internationalization();
+  var formattedString = intl.formatNumber(12345.65, {
+    format: 'C5', useGrouping: false,
+    minimumSignificantDigits: 1, maximumSignificantDigits: 3
+  });
+  result.value.innerHTML = formattedString;
+})
 </script>
-<style>
-</style>
-
-

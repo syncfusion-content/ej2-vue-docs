@@ -1,18 +1,17 @@
 
-import Vue from 'vue';
+import { createApp } from 'vue';
 import { Internationalization } from '@syncfusion/ej2-base';
 
-new Vue({
-	el: '#app',
+createApp({
 	template: `
-  <div class="result"> </div>
+  <div ref="result"> </div>
 `,
 
   mounted: function(){
 var  intl = new Internationalization();
 var formattedString  = intl.formatNumber(12345.65, { format:'C5' , useGrouping: false,
 minimumSignificantDigits:1, maximumSignificantDigits:3 });
-document.querySelector('.result').innerHTML = formattedString;
+this.$refs.result.innerHTML = formattedString;
   }
 
-});
+}).mount('#app');

@@ -1,9 +1,8 @@
 
-    import { Draggable, Droppable } from '@syncfusion/ej2-base';
-    import Vue from "vue";
-    
-new Vue({
-	el: '#app',
+import { Draggable } from '@syncfusion/ej2-base';
+import { createApp } from "vue";
+
+createApp({
 	template: `
     <div id='container'>
         <div id='droppable'>
@@ -17,9 +16,9 @@ new Vue({
 `,
 
         mounted: function () {
-            var draggable = new Draggable(document.getElementById('element1'), {
+            new Draggable(document.getElementById('element1'), {
                 clone: false, dragArea: "#droppable"
             });
         }
     
-});
+}).mount('#app');

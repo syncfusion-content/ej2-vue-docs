@@ -1,9 +1,7 @@
-
-    import { Animation } from '@syncfusion/ej2-base';
-    import Vue from "vue";
+import { Animation } from '@syncfusion/ej2-base';
+import { createApp } from "vue";
     
-new Vue({
-	el: '#app',
+createApp({
 	template: `
      <div id='container'>
         <div id='element1'></div>
@@ -17,4 +15,4 @@ new Vue({
             animation.animate('#element2', { name: 'ZoomOut' });
         }
     
-});
+}).mount('#app');
