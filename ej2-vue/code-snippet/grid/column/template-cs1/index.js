@@ -12,11 +12,16 @@ new Vue({
     <div id="app">
          <ejs-grid :dataSource="data" height=310>
             <e-columns>
-                <e-column headerText='Employee Image' width='150' textAlign='Center' :template='cTemplate'></e-column>
+                <e-column headerText='Employee Image' width='150' textAlign='Center' :template="'columnTemplate'"></e-column>
                 <e-column field='EmployeeID' headerText='Employee ID' width='125' textAlign='Right'></e-column>
                 <e-column field='FirstName' headerText='Name' width='120'></e-column>
                 <e-column field='Title' headerText='Title' width='170'></e-column>
             </e-columns>
+            <template v-slot:columnTemplate="{data}">
+                <div class="image">
+                    <img :src="'./images/' + data.EmployeeID + '.png'" :alt="data.EmployeeID"/>
+                </div>
+            </template>
         </ejs-grid>
     </div>
 `,
@@ -24,27 +29,6 @@ new Vue({
   data: () => {
     return {
       data: employeeData,
-      cTemplate: function () {
-          return { template : Vue.component('columnTemplate',{
-             template: `
-             <div class="image">
-                <img :src="image" :alt="altImage"/>
-            </div>`,
-                data: function() {
-                    return {
-                        data: {}
-                    }
-                },
-                computed: {
-                    image: function() {
-                        return './images/' + this.data.EmployeeID + '.png';
-                    },
-                    altImage: function() {
-                        return this.data.EmployeeID;
-                    }
-                }
-          })}
-      }
     };
   }
 

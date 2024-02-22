@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 To modify the Carousel appearance, you need to override the default CSS of Carousel component. Please find the list of CSS classes and its corresponding section in Carousel component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 
+To customize Vue Carousel component appearance, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=VgKlmmJqNGg" %}
+
 # CSS Structure in Vue Carousel Control
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
