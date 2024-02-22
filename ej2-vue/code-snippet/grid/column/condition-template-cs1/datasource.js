@@ -2,6 +2,7 @@ define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     exports.productData = [ {
+        "CategoryName": "Beverages",
         'ProductID': 1,
         'ProductName': 'Chai',
         'SupplierID': 1,
@@ -12,6 +13,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 2,
         'ProductName': 'Chang',
         'SupplierID': 1,
@@ -22,6 +24,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 3,
         'ProductName': 'Aniseed Syrup',
         'SupplierID': 1,
@@ -32,6 +35,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 4,
         'ProductName': 'Chef Anton\'s Cajun Seasoning',
         'SupplierID': 2,
@@ -42,6 +46,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 5,
         'ProductName': 'Chef Anton\'s Gumbo Mix',
         'SupplierID': 2,
@@ -52,6 +57,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 6,
         'ProductName': 'Grandma\'s Boysenberry Spread',
         'SupplierID': 3,
@@ -62,6 +68,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 7,
         'ProductName': 'Uncle Bob\'s Organic Dried Pears',
         'SupplierID': 3,
@@ -72,6 +79,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 8,
         'ProductName': 'Northwoods Cranberry Sauce',
         'SupplierID': 3,
@@ -82,6 +90,7 @@ define(["require", "exports"], function (require, exports) {
     },
 
     {
+        "CategoryName": "Beverages",
         'ProductID': 9,
         'ProductName': 'Mishi Kobe Niku',
         'SupplierID': 4,

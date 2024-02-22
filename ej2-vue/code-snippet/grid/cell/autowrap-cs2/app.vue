@@ -2,10 +2,10 @@
 
 <template>
     <div id="app">
-        <div style="display: flex">
+        <div style="display: inline-block;">
           <label style="padding:  10px 10px 15px 0"> Change the grid lines: </label> 
-          <ejs-dropdownlist ref='dropdown' id='dropdownlist' style="margin-top:5px" index="0"
-          width="100" :dataSource="ddlData" :change="change" 
+          <ejs-dropdownlist ref='dropdown' id='dropdownlist' index="0"
+          width="130" :dataSource="ddlData" :change="change" 
           ></ejs-dropdownlist>
         </div>
         <ejs-grid ref='grid' style="padding: 5px 5px" :dataSource='data' height='315' gridLines='Default'>
@@ -48,7 +48,15 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

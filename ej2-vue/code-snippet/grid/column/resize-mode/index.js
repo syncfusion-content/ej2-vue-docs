@@ -11,9 +11,9 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <div style="display: flex">
+        <div style="display: inline-block;">
           <label style="padding:  10px 10px 15px 0"> Change the resize mode: </label> 
-          <ejs-dropdownlist ref='dropdown' id='dropdownlist' style="margin-top:3px" index="0"
+          <ejs-dropdownlist ref='dropdown' id='dropdownlist' index="0"
           width="100" :dataSource="ddlData" :change="change"></ejs-dropdownlist>
         </div>
         <ejs-grid ref='grid' style="padding: 5px 5px" :dataSource='data' height='315' :allowResizing='true'>

@@ -2,10 +2,10 @@
 
 <template>
   <div id="app">
-      <div style="display: flex">
+      <div style="display: inline-block;">
         <label style='padding:  10px 10px 15px 0'> Change the field:  </label> 
-        <ejs-dropdownlist ref='dropdown' id='dropdownlist' style="margin-top:3px" index="0"
-        width="100" :dataSource="ddlData"></ejs-dropdownlist>
+        <ejs-dropdownlist ref='dropdown' id='dropdownlist' index="0"
+        width="130" :dataSource="ddlData"></ejs-dropdownlist>
       </div>
       <div>
       <label style="padding: 30px 17px 0 0">Enter the width: </label>
@@ -58,7 +58,15 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 
