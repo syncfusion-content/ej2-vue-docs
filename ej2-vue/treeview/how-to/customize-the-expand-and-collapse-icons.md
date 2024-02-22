@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Customize the expand and collapse icons in Vue Treeview component
 
+To customize Vue TreeView component appearance, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=04dMG7EbVKU" %}
+
 You can customize TreeView expand and collapse icons by using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/treeview#cssclass)&nbsp;property of TreeView.
 Refer to the sample to customize expand/collapse icons.
 
