@@ -38,16 +38,15 @@ createApp(App).mount('#app')
 
 ## Register Syncfusion license key in the Nuxt project
 
-Register the license key in the `index.js` file of the Nuxt project.
+Register the license key in the `app.vue` file of the Nuxt project.
 
 ```ts
-import Vue from 'vue'
+<script>
 import { registerLicense } from '@syncfusion/ej2-base';
 
 // Registering Syncfusion license key.
 registerLicense('Replace your generated license key here');
-// Component: <ClientOnly>
-Vue.component(ClientOnly.name, ClientOnly)
+</script>
 ```
 
 ## Register Syncfusion license key using the npx command
