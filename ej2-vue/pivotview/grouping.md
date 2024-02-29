@@ -24,6 +24,10 @@ To use calculated field option, you need to inject the `Grouping` module in pivo
 * Date Grouping
 * Custom Grouping
 
+To quickly learn how to group row and column field items in the Vue Pivot Table, watch this video.
+
+{% youtube "https://www.youtube.com/watch?v=delA1hfIvPw" %}
+
 > Similar to Excel, only one type of grouping can be applied for a field.
 
 {% tabs %}

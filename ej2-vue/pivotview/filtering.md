@@ -20,6 +20,10 @@ The following are the three different types of filtering:
 * Label filtering
 * Value filtering
 
+To have a quick glance about **Filtering** in the Vue Pivot Table, watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=TIXRaEdmAks" %}
+
 > When all the above filtering options are disabled via code-behind, then the filter icon would be disabled in the field list or grouping bar UI.
 
 ## Member filtering

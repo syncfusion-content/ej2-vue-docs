@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Grouping bar in Vue Pivotview component
 
+To learn about the **Grouping Bar** feature in the Vue Pivot Table component, you can watch this video.
+
+{% youtube "https://www.youtube.com/watch?v=RuG1DqScgMA" %}
+
 The Grouping Bar option in pivot table automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and create pivot table at runtime. It can be enabled by setting the [`showGroupingBar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showgroupingbar) property in pivot table to **true**.
 
 Similar to Field List, Grouping Bar UI also comes with basic interactions like,

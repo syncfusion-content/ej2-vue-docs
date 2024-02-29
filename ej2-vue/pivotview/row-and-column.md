@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 # Row and column in Vue Pivotview component
 
+To learn about how to use the row and column options effectively in the Vue Pivot Table, watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=19VTDjTjYOs" %}
+
 ## Width and Height
 
 Allows end user to set the pivot table's height and width by using [`height`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#height) and [`width`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#width) properties in pivot table respectively. The supported formats to set [`height`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#height) and [`width`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#width) properties are,
@@ -290,6 +294,10 @@ The clip mode provides options to display its overflow cell content in the pivot
 ## Cell Template
 
 User can customize the pivot table cell element by using the `cellTemplate` property in pivot table The `cellTemplate` property accepts either an HTML string or the element's ID, which can be used to append additional HTML elements to showcase each cell with custom format.
+
+To learn about the **Cell Template** in the Vue Pivot Table component, you can watch this video.
+
+{% youtube "https://www.youtube.com/watch?v=6XeuaF6Ev4s&t=227s" %}
 
 In this demo, the revenue cost for each year is represented with trend icons.
 
