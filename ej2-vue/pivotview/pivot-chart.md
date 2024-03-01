@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 In pivot table component, pivot chart would act as an additional visualization component with its basic and important characteristic like drill down and drill up, 15+ chart types, series customization, axis customization, legend customization, export, print and tooltip. Its main purpose is to show the pivot data in graphical format.
 
+To have a quick glance about Pivot Chart in the Vue Pivot Table, watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=luB63DCvjbQ" %}
+
 If user prefers, the pivot chart component can also be displayed individually with pivot values and can change the report dynamically with the help of field list and grouping bar. Using the [`displayOption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) property in pivot table, user can set the visibility of grid and chart in pivot table component. It holds below properties,
 
 * [`view`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption): Specifies the pivot table component to display grid alone or chart alone or both.

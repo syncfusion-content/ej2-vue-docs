@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Sorting in Vue Pivotview component
 
+To quickly learn how to sort data in the Vue Pivot Table, watch this video:
+
+{% youtube "https://www.youtube.com/watch?v=TIXRaEdmAks" %}
+
 ## Member Sorting
 
 Allows to order field members in rows and columns either in ascending or descending order. By default, field members in rows and columns are in ascending order.
