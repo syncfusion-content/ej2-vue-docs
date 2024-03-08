@@ -14,6 +14,10 @@ Allows end user to change the appearance of the pivot table value cells with its
 
 The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set [`allowConditionalFormatting`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowconditionalformatting) and [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showtoolbar) properties in pivot table to **true**. Also, include the item **ConditionalFormatting** within the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#toolbar) property in pivot table. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
 
+To learn about the **Conditional Formatting** feature in the Vue Pivot Table component, you can watch this video.
+
+{% youtube "https://www.youtube.com/watch?v=6XeuaF6Ev4s&t=227s" %}
+
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
 {% include code-snippet/pivot-grid/pivot_data-cs1/app.vue %}

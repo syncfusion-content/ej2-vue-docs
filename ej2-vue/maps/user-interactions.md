@@ -102,8 +102,10 @@ data () {
     return{
         zoomSettings: {
             enable: true,
-            buttonSettings: {
-                toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+            toolbarSettings: {
+               buttonSettings: {
+                 toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset'],
+               }
             }
         },
         shapeData: world_map,
