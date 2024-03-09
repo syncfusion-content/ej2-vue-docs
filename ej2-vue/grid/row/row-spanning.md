@@ -19,18 +19,12 @@ The `queryCellInfo` event is triggered for each cell in the grid, and allows you
 In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column.Also Grid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to two rows and three columns in the **1:00** column.
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
-{% include code-snippet/grid/spanning-cs2/src/app.component.ts %}
-{% endhighlight %}
-{% highlight ts tabtitle="app.module.ts" %}
-{% include code-snippet/grid/spanning-cs2/src/app.module.ts %}
-{% endhighlight %}
-{% highlight ts tabtitle="main.ts" %}
-{% include code-snippet/grid/spanning-cs2/src/main.ts %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/grid/row/row-spanning/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/samples/grid/spanning-cs2" %}
+{% previewsample "page.domainurl/code-snippet/grid/row/row-spanning" %}
 
 > To disable the spanning for particular grid page, you need to use **requestType** from `queryCellInfo` event argument.
 > The `rowSpan` and `colSpan` attributes can be used together to merge cells both vertically and horizontally.
