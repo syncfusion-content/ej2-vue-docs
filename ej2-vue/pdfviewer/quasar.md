@@ -42,7 +42,7 @@ cd quasar-project
 
 Now that `quasar-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-## Add Syncfusion Vue packages
+## Add the Syncfusion Vue packages
 
 Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
@@ -78,7 +78,7 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 
 > The order of importing CSS styles should be in line with their dependency graph.
 
-## Add the Syncfusion Vue PDF Viewer component
+## Add the Syncfusion Vue component
 
 Follow the below steps to add the Vue PDF Viewer component:
 
