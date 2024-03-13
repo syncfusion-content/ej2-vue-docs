@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting Started with Quasar Framework and Vue TreeView Component | Syncfusion
-description: Check out and learn about getting started with the Quasar Framework and Vue Navigation Component of Syncfusion Essential JS 2 and more details.
+title: Quasar Getting Started with Vue TreeView Component | Syncfusion
+description: Check out and learn about getting started with the Quasar Framework and Vue TreeView Component of Syncfusion Essential JS 2 and more details.
 control: Quasar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue TreeView Component in the Quasar Framework
+# Getting Started with the TreeView Component in the Quasar Framework
 
 This article provides a step-by-step guide for setting up a [Quasar](https://quasar.dev/) project and integrating the Syncfusion Vue TreeView component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api).
 
@@ -46,7 +46,7 @@ Now that `quasar-project` is ready to run with default settings, let's add Syncf
 
 Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue TreeView component](https://www.syncfusion.com/vue-components/vue-treeview) as an example. To use the Vue Schedule component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
+This article uses the [Vue TreeView component](https://www.syncfusion.com/vue-components/vue-treeview) as an example. To use the Vue TreeView component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-navigations --save
@@ -56,7 +56,7 @@ npm install @syncfusion/ej2-vue-navigations --save
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, CRG and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the Schedule component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
+In this article, the `Material 3` theme is applied using CSS styles, which are available in installed packages. The necessary `Material 3` CSS styles for the TreeView component and its dependents were imported into the `<style>` section of the **src/app.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
