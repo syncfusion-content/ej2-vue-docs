@@ -22,25 +22,24 @@ new Vue({
   </div>
 `,
 
- dm= new DataManager({
-    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
-    adaptor: new ODataV4Adaptor,
-    crossDomain: true
-}),
 
+  data (){
+        return {
+            dropdownModel: {  
+                dataSource: new DataManager({
+                    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+                    adaptor: new ODataV4Adaptor,
+                    crossDomain: true
+            }),
+                placeholder:"Select a customer",
+                query: new Query().select(['ContactName', 'CustomerID']).take(6),
+                fields: { text: 'ContactName', value: 'CustomerID' }
+            }
+        }
+    },
+    mounted: function() {
+        this.dropObj = this.$refs.dropObj.ej2Instances;
+    }
 
-data (){
-return {
-dropdownModel: {  
-    dataSource: dm,
-    placeholder:"Select a customer",
-    fields : { text: 'ContactName', value: 'CustomerID' },
-    query : new Query().select(['ContactName', 'CustomerID']).take(6),
-}
-}
-},
-mounted: function() {
-this.dropObj = this.$refs.dropObj.ej2Instances;
-}
 });
 

@@ -2,6 +2,8 @@
 import Vue from "vue";
 import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
 import { data } from './data.js';
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons/src/drop-down-button/drop-down-button';
+import { createElement } from '@syncfusion/ej2-base';
 Vue.use(SpreadsheetPlugin);
 
 new Vue({
@@ -72,6 +74,8 @@ new Vue({
                     { text: 'XLS', iconCss: 'e-xls e-icons' }, { text: 'CSV', iconCss: 'e-csv e-icons' }]
             }],
             'Save As', false);
+        // Adding the new `custom dropdown button` in the ribbon toolbar item under the `Data` tab for adding a custom dropdown button using the addToolbarItems method in the spreadsheet ribbon.
+        spreadsheet.addToolbarItems('Data', [{ type: 'Separator' }, { id: 'custombtn', tooltipText: 'Custom Btn', template: this.appendDropdownBtn('custombtn') }], 7);
       },
        fileMenuBeforeOpen: function () {
            var spreadsheet = this.$refs.spreadsheet;
@@ -97,7 +101,28 @@ new Vue({
             case 'CSV': spreadsheet.save({ saveType: 'Csv' });
                 break;
       }
+    },
+
+    appendDropdownBtn: function (id) {
+      let ddlItems = [
+        {
+          text: 'Download Excel',
+        },
+        {
+          text: 'Download CSV',
+        },
+      ];
+      let btnObj = new DropDownButton({
+        items: ddlItems,
+        content: 'Download',
+        iconCss: 'e-icons e-download',
+        select: function (args) {
+          alert(args.item.text + ' clicked');
+        },
+      });
+      btnObj.appendTo(createElement('button', { id: id }));
+      return btnObj.element;
     }
-    }
+  }
 
 });

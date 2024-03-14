@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Chart component.
 
+To get start quickly with Vue Charts, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=RplZL-3B1G4&t=3s" %}
+
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
