@@ -160,6 +160,20 @@ In the `template` section, define the TextArea component.
 {% endhighlight %}
 {% endtabs %}
 
+## Run the project
+
+To run the project, use the following command:
+
+```bash
+npm run dev
+```
+
+or
+
+```bash
+yarn run dev
+```
+
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
@@ -226,20 +240,9 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+The output will appear as follows:
 
-## Run the project
-
-To run the project, use the following command:
-
-```bash
-npm run dev
-```
-
-or
-
-```bash
-yarn run dev
-```
+![Output](./images/textarea-control.png)
 
 ## Getting and setting values
 

@@ -133,17 +133,6 @@ In the `template` section define the TextArea component.
 {% endhighlight %}
 {% endtabs %}
 
-Here is the summarized code for the above steps in the **src/App.vue** file:
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/textarea/default-textarea-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/textarea/default-textarea-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-
 ## Run the project
 
 To run the project, use the following command:
@@ -157,6 +146,20 @@ or
 ```bash
 yarn run serve
 ```
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/default-textarea-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/textarea/default-textarea-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/textarea/default-textarea-cs1" %}
+
 
 ## Getting and setting values
 

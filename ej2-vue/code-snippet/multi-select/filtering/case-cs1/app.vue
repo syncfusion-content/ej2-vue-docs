@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
