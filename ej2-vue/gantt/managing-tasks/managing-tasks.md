@@ -127,6 +127,52 @@ You can set default values when new task dialog opens using [actionBegin](https:
         
 {% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs13" %}
 
+## Customize control in add/edit dialog
+
+In Gantt Chart, the controls such as form elements, grid and RTE in add and edit dialog can be customized by using [additionalParams](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) property.
+
+### Customize general tab of dialog 
+
+In the general tab of add/edit dialog, the custom input [fields](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/#fields) can be included into fields by defining the field names either from the data source or template in [addDialogFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/editDialogFieldSettings/) respectively.
+
+In the below sample, added field from the template to general tab.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/managing-tasks-cs25/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs25" %}
+
+### Customize dependency, segments and resources tab of dialog 
+
+[Grid](https://ej2.syncfusion.com/vue/documentation/api/grid/) component in the dependency, segment and resource tab of add/edit dialog can be customized, by defining grid module properties in the [additionalParams](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) property of [addDialogFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/editDialogFieldSettings/).
+
+In the below code show cases, how to add additional features to dependency, segments and resources tab.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/managing-tasks-cs26/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs26" %}
+
+### Customize note dialog tab
+
+ [RTE](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/) component in notes tab of add and edit dialog can be customized, by defining RTE module properties in the [additionalParams](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettingsModel/#additionalParams) property of [addDialogFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/) and [editDialogFields](https://ej2.syncfusion.com/vue/documentation/api/gantt/editDialogFieldSettings/).
+
+ The below code shows how to enable inline mode to RTE in notes tab.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/gantt/managing-tasks-cs27/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs27" %}
+
 ## Touch interaction
 
 The Gantt control editing actions can be achieved using the double tap and tap and drag actions on a element.
