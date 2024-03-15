@@ -383,7 +383,7 @@ Previous changes can be cleared by using the "Clear" option while performing ope
 
 ![output](images/clear-edit-olap.png "Editing the calculated field")
 
-#### Virtual Scrolling
+### Virtual Scrolling
 
 Allows large amounts of data to be loaded without any performance degradation by rendering rows and columns in relation to the current viewport. Rest of the data will be brought into the viewport dynamically based on vertical or horizontal scroll position. This feature can be enabled by setting the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#enablevirtualization) property to **true**.
 
@@ -397,11 +397,12 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
         
 {% previewsample "page.domainurl/code-snippet/pivot-grid/common-cs19" %}
 
-##### Limitations for virtual scrolling
+#### Limitations for virtual scrolling
 
 * The [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) should be in pixels. The percentage value is not accepted.
 * Resizing columns and setting the width of individual columns will affect scrolling and is therefore not recommended.
-* The grand totals option is not supported by virtual scrolling.
+* Even if virtual scrolling is enabled, not only is the current view port data retrieved, but also the data for the immediate previous page and the immediate next page. As a result, when the end user scrolls slightly ahead or behind, the next or previous page data is displayed immediately without requiring a refresh. **Note:** If the pivot table's width and height are large, the loading data count in the current, previous, and next view ports (pages) will also increase, affecting performance.
+* Even the pivot table's width and height are large, the loading data count in the current, previous, and next view ports (pages) will also increase, affecting performance.
 
 ## Run the application
 

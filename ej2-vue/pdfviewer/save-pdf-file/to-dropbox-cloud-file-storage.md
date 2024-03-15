@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Save PDF files to  Dropbox cloud file storage in Vue Pdfviewer component | Syncfusion
+title: Save PDF files to Dropbox in Vue PDF Viewer component | Syncfusion
 description: Learn here how to Save PDF files to  Dropbox cloud file storage in Syncfusion Vue Pdfviewer component of Syncfusion Essential JS 2 and more.
 control: Save PDF files to  Dropbox cloud file storage
 platform: ej2-vue
