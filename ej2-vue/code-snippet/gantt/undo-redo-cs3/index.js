@@ -13,7 +13,7 @@ new Vue({
      <ejs-button id="undo" cssClass="e-info" v-on:click.native="undo">Undo</ejs-button>
      <ejs-button id="redo" cssClass="e-info" v-on:click.native="redo">Redo</ejs-button>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"
-            :allowSorting="true" :allowResizing="true" :allowReordering="true" :showColumnMenu="true" :enableUndoRed="true" :allowFiltering="true" 
+            :allowSorting="true" :allowResizing="true" :allowReordering="true" :showColumnMenu="true" :enableUndoRedo="true" :allowFiltering="true" 
             :undoRedoActions="undoRedoActions" :allowRowDragAndDrop="true"></ejs-gantt>
     </div>
 `,

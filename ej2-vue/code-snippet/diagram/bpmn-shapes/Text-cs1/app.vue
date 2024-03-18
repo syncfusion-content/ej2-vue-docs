@@ -12,38 +12,39 @@
 
     Vue.use(DiagramPlugin);
 
-    let nodes = [{
-    // Position of the node
-    offsetX: 100,
-    offsetY: 100,
-    // Size of the node
-    width: 100,
-    height: 100,
-    //Sets type as Bpmn and shape as DataObject
-    shape: {
-        type: 'Bpmn',
-        shape: 'DataObject',
-        //Sets collection as true and type as Input
-        dataObject: {
-            collection: true,
-            type: 'Input'
-        },
-        //Sets the id, angle, length and text for the annotation
-        annotations: [{
-            id: 'left',
-            angle: 45,
-            length: 150,
-            text: 'Left',
-        }]
-    }
-    as BpmnShapeModel,
-}]
+    let nodes = [ {
+    id: 'event1', style: { strokeWidth: 2 },
+    height:70,width:70,offsetX:400,offsetY:200,
+    shape: { type: 'Bpmn', shape: 'Event',
+        event: { event: 'Start', trigger: 'None' },
+     } as BpmnShapeModel
+},
+//node with target
+{
+    id: 'textNode1', width: 70, height: 70,
+    offsetX:400,offsetY:400,
+    annotations:[{content:'textNode1'}],
+        shape: {
+            type: 'Bpmn', shape: 'TextAnnotation',
+            textAnnotation:{ textAnnotationDirection:'Auto',textAnnotationTarget:'event1'}
+        } as BpmnShapeModel
+},
+//Node without target
+{
+    id: 'textNode2', width: 70, height: 70,
+    offsetX:600,offsetY:400,
+    annotations:[{content:'textNode1'}],
+        shape: {
+            type: 'Bpmn', shape: 'TextAnnotation',
+            textAnnotation:{ textAnnotationDirection:'Auto',textAnnotationTarget:''}
+        } as BpmnShapeModel
+},]
 export default {
     name: 'app'
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "600px",
             nodes: nodes,
         }
     }

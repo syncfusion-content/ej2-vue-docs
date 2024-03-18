@@ -92,8 +92,6 @@ You can achieve the desired dot variant by customizing the border, outline and b
 
 By adding the `e-outline` class to the Timeline `cssClass` property it enables the dots to have an outline state.
 
-{% if page.publishingplatform == "aspnet-core" %}
-
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
 {% include code-snippet/timeline/dot-outline/app.vue %}

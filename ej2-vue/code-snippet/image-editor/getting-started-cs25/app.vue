@@ -2,7 +2,7 @@
 
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="hueClick">Hue</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="exposureClick">Exposure</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="opacityClick">Opacity</ejs-button>

@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false :toolbar="toolbar"></ejs-imageeditor>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Delete shape</ejs-button>
 </div>
 </template>
