@@ -1,11 +1,8 @@
-
-
-
 <template>
      <div>
         <ejs-button id="clearundocollection" cssClass="e-info" v-on:click.native="clearundocollection">ClearUndoCollection</ejs-button>
         <ejs-button id="clearredocollection" cssClass="e-info" v-on:click.native="clearredocollection">ClearRedoCollection</ejs-button>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :allowSorting='true' :allowFiltering='true' :enableUndoRedo='true' :allowRowDragAndDrop='true' :undoRedoActions="undoRedoActions" :allowReordering='true' :showColumnMenu='true' :allowResizing='true' :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
     </div>
 </template>
 <script>
@@ -20,13 +17,6 @@ export default {
       return{
             data: projectNewData,
             height: '450px',
-            allowSorting: true,
-            allowFiltering: true,
-            enableUndoRedo: true,
-            showColumnMenu: true,
-            allowResizing: true,
-            allowReordering: true,
-            allowRowDragAndDrop: true,
             taskFields: {
                 id: 'TaskID',
                 name: 'TaskName',

@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with Vue Circular Chart 3D | Syncfusion
-description:  Checkout and learn about Getting started with Vue Circular Chart 3D component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue 3D Circular Chart | Syncfusion
+description:  Checkout and learn about Getting started with Vue 3D Circular Chart component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting started with the Vue Circular Chart 3D component in Vue 2
+# Getting started with the Vue 3D Circular Chart component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Circular Chart 3D component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue 3D Circular Chart component.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Dependencies
 
-Below is the list of minimum dependencies required to use the Circular Chart 3D component.
+Below is the list of minimum dependencies required to use the 3D Circular Chart component.
 
 ```javascript
 |-- @syncfusion/ej2-vue-charts
@@ -62,7 +62,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue Circular Chart 3D component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
+This article uses the `Vue 3D Circular Chart component` as an example. Install the `@syncfusion/ej2-vue-charts` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-charts --save
@@ -77,9 +77,9 @@ yarn add @syncfusion/ej2-vue-charts
 
 ## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue Circular Chart 3D component:
+Follow the below steps to add the Vue 3D Circular Chart component:
 
-1\. First, import and register the Circular Chart 3D component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the 3D Circular Chart component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -99,7 +99,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Circular Chart 3D component with the `dataSource` property.
+2\. In the `template` section, define the 3D Circular Chart component with the `dataSource` property.
 
 {% tabs %}
 {% highlight html tabtitle="~src/App.vue" %}
@@ -133,11 +133,11 @@ data() {
 {% endhighlight %}
 {% endtabs %}
 
-## Adding Circular Chart 3D Component
+## Adding 3D Circular Chart Component
 
-* Add the Vue Circular Chart 3D by using `<ejs-circularchart3d>` selector in `<template>` section of the `App.vue` file.
+* Add the Vue 3D Circular Chart by using `<ejs-circularchart3d>` selector in `<template>` section of the `App.vue` file.
 
-The below example shows a basic Circular Chart 3D,
+The below example shows a basic 3D Circular Chart,
 
 * Pie Series
 
@@ -165,4 +165,4 @@ or
 yarn run serve
 ```
 
-> You can refer to our `Vue Circular Chart 3D` feature tour page for its groundbreaking feature representations. You can also explore our `Vue Circular Chart 3D example` that shows various Circular Chart 3D types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our `Vue 3D Circular Chart` feature tour page for its groundbreaking feature representations. You can also explore our `Vue 3D Circular Chart example` that shows various 3D Circular Chart types and how to represent time-dependent data, showing trends in data at equal intervals.

@@ -1,0 +1,18 @@
+.wrap {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 340px;
+}
+
+.e-input-group-icon:before {
+font-family: e-icons;
+}
+
+#input-container .e-input-group { /* csslint allow: adjoining-classes */
+margin: 30px 0;
+}
+
+#input-container .e-float-input { /* csslint allow: adjoining-classes */
+margin: 30px 0;
+}

@@ -3,7 +3,7 @@
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder width="70%" :dataSource="dataSource" :rule="importRules" :showButtons="{ lockGroup: true, lockRule: true }">
+            <ejs-querybuilder id="querybuilder" ref="querybuilder" width="70%" :dataSource="dataSource" :rule="importRules" :showButtons="{ lockGroup: false, lockRule: false }">
                 <e-columns>
                     <e-column field='EmployeeID' label='Employee ID' type='number' />
                     <e-column field='FirstName' label='First Name' type='string' />
@@ -20,14 +20,13 @@
     </div>
 </template>
 <script>
-import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import Vue from 'vue';
+import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+Vue.use(QueryBuilderPlugin);
+Vue.use(ButtonPlugin);
 
 export default {
-    components: {
-        'ejs-querybuilder': QueryBuilderComponent,
-        'e-column': ColumnDirective,
-        'e-columns': ColumnsDirective
-    },
     data: function() {
         return {
             dataSource: employeeData,
@@ -47,15 +46,25 @@ export default {
                     'type': 'string',
                     'operator': 'equal',
                     'value': 'Sales Manager'
-                }]
+                },
+                {
+                    condition: "or", rules: [
+                    { 'label': 'Title',
+                        'field': 'Title',
+                        'type': 'string',
+                        'operator': 'equal',
+                        'value': 'Engineer' }
+                    ]
+                }
+                ]
             }
         };
     },
     methods: {
-        lockGroupClick: function(event) {
+        lockGroupClick: function() {
             this.$refs.querybuilder.ej2Instances.lockGroup("querybuilder_group0");
         },
-        lockRuleClick: function(event) {
+        lockRuleClick: function() {
             this.$refs.querybuilder.ej2Instances.lockRule("querybuilder_group0_rule0");
         }
     }

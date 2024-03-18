@@ -9,7 +9,7 @@ new Vue({
 	template: `
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"
-            :allowSorting="true" :allowResizing="true" :allowReordering="true" :showColumnMenu="true" :enableUndoRed="true" :allowFiltering="true" 
+            :allowSorting="true" :allowResizing="true" :allowReordering="true" :showColumnMenu="true" :enableUndoRedo="true" :allowFiltering="true" 
             :undoRedoActions="undoRedoActions" :allowRowDragAndDrop="true"></ejs-gantt>
     </div>
 `,
@@ -28,8 +28,7 @@ new Vue({
                 dependency: 'Predecessor',
                 child: 'subtasks'
             },
-            undoRedoActions: ['Add', 'Edit', 'Delete', 'Search','Sorting','Filtering', 'ZoomIn', 'ZoomOut', 'ZoomToFit','Indent','Outdent', 
-    'PreviousTimeSpan', 'NextTimeSpan','ColumnState'],
+            undoRedoActions: ['Edit', 'Delete'],
             toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Search', 'ZoomIn', 'ZoomOut', 'ZoomToFit','Indent','Outdent', 
             'PrevTimeSpan', 'NextTimeSpan','Undo','Redo'],
              editSettings: {

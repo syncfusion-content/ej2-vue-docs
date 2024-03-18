@@ -13,7 +13,7 @@ new Vue({
      <ejs-button id="clearundocollection" cssClass="e-info" v-on:click.native="clearundocollection">ClearUndoCollection</ejs-button>
      <ejs-button id="clearredocollection" cssClass="e-info" v-on:click.native="clearredocollection">ClearRedoCollection</ejs-button>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"
-            :allowSorting="true" :allowResizing="true" :allowReordering="true" :showColumnMenu="true" :enableUndoRed="true" :allowFiltering="true" 
+            :allowSorting="true" :allowResizing="true" :allowReordering="true" :showColumnMenu="true" :enableUndoRedo="true" :allowFiltering="true" 
             :undoRedoActions="undoRedoActions" :allowRowDragAndDrop="true"></ejs-gantt>
     </div>
 `,

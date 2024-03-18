@@ -1,9 +1,6 @@
-
-
-
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :allowSorting='true' :allowFiltering='true' :enableUndoRedo='true' :allowRowDragAndDrop='true' :undoRedoActions="undoRedoActions" :allowReordering='true' :showColumnMenu='true' :undoRedoStepsCount="undoRedoStepsCount" :allowResizing='true' :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
     </div>
 </template>
 <script>
@@ -16,14 +13,7 @@ export default {
       return{
             data: projectNewData,
             height: '450px',
-            allowSorting: true,
-            allowFiltering: true,
-            enableUndoRedo: true,
-            showColumnMenu: true,
-            allowResizing: true,
-            allowReordering: true,
-	        undoRedoStepsCount: 5,
-           allowRowDragAndDrop: true,
+	    undoRedoStepsCount: 5,
             taskFields: {
                 id: 'TaskID',
                 name: 'TaskName',
