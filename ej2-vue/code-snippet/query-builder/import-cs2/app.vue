@@ -3,7 +3,7 @@
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder width="70%" :dataSource="dataSource">
+            <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource">
                 <e-columns>
                   <e-column field="TaskID" label="Task ID" type="number"></e-column>
                   <e-column field="Name" label="Name" type="string"></e-column>
@@ -19,9 +19,11 @@
 </template>
 <script>
 import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+import { QueryBuilderPlugin, QueryLibrary, QueryBuilder } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 QueryBuilder.Inject(QueryLibrary);
 Vue.use(QueryBuilderPlugin);
+Vue.use(ButtonPlugin);
 
 export default {
     data: function() {
@@ -30,7 +32,7 @@ export default {
         };
     },
     methods: {
-        importSqlClick: function(event) {
+        importSqlClick: function() {
             this.$refs.querybuilder.ej2Instances.setParameterizedNamedSql({ sql: '(Category IN (:Category_1,:Category_2) OR TaskID IN (:TaskID_1,:TaskID_2))', params: {"Category_1": "Laptop", "Category_2": "Others", "TaskID_1": 1, "TaskID_2": 2} });
         }
     }

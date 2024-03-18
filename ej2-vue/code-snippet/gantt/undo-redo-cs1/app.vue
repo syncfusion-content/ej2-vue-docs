@@ -1,9 +1,6 @@
-
-
-
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :allowSorting='true' :allowFiltering='true' :enableUndoRedo='true' :allowRowDragAndDrop='true' :allowReordering='true' :showColumnMenu='true' :allowResizing='true' :taskFields = "taskFields" :height = "height" :undoRedoActions="undoRedoActions" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
     </div>
 </template>
 <script>
@@ -16,12 +13,6 @@ export default {
       return{
             data: projectNewData,
             height: '450px',
-            allowSorting: true,
-            allowFiltering: true,
-            enableUndoRedo: true,
-            showColumnMenu: true,
-            allowResizing: true,
-            allowReordering: true,
             allowRowDragAndDrop: true,
             taskFields: {
                 id: 'TaskID',
@@ -35,8 +26,7 @@ export default {
             },
             toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Search', 'ZoomIn', 'ZoomOut', 'ZoomToFit','Indent','Outdent', 
             'PrevTimeSpan', 'NextTimeSpan','Undo','Redo'],
-            undoRedoActions: ['Add', 'Edit', 'Delete', 'Search','Sorting','Filtering', 'ZoomIn', 'ZoomOut', 'ZoomToFit','Indent','Outdent', 
-    'PreviousTimeSpan', 'NextTimeSpan','ColumnState'],
+            undoRedoActions: ['Edit', 'Delete'],
              editSettings: {
                 allowAdding: true,
                 allowEditing: true,

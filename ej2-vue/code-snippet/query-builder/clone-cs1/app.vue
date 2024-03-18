@@ -3,7 +3,7 @@
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder width="70%" :dataSource="dataSource" :rule="importRules" :showButtons="{ cloneGroup: true, cloneRule: true }">
+            <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource" :rule="importRules" :showButtons="{ cloneGroup: false, cloneRule: false }">
                 <e-columns>
                     <e-column field='EmployeeID' label='Employee ID' type='number' />
                     <e-column field='FirstName' label='First Name' type='string' />
@@ -20,14 +20,13 @@
     </div>
 </template>
 <script>
-import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import Vue from 'vue';
+import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+Vue.use(QueryBuilderPlugin);
+Vue.use(ButtonPlugin);
 
 export default {
-    components: {
-        'ejs-querybuilder': QueryBuilderComponent,
-        'e-column': ColumnDirective,
-        'e-columns': ColumnsDirective
-    },
     data: function() {
         return {
             dataSource: employeeData,
@@ -62,10 +61,10 @@ export default {
         };
     },
     methods: {
-        cloneGroupClick: function(event) {
+        cloneGroupClick: function() {
             this.$refs.querybuilder.ej2Instances.cloneGroup("querybuilder_group0", "querybuilder_group1", 1);
         },
-        cloneRuleClick: function(event) {
+        cloneRuleClick: function() {
             this.$refs.querybuilder.ej2Instances.cloneRule("querybuilder_group0_rule0", "querybuilder_group0", 1);
         }
     }

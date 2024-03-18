@@ -2,7 +2,7 @@
 
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="drawClick">Draw</ejs-button>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Delete</ejs-button>
 </div>
