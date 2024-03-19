@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarItemClicked="toolbarItemClicked"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarItemClicked="toolbarItemClicked" :toolbar="toolbar"></ejs-imageeditor>
 
 </div>
 `,

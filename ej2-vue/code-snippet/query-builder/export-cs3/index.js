@@ -1,15 +1,18 @@
-
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+import Vue from 'vue';
+import { QueryBuilderPlugin, QueryLibrary, QueryBuilder } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
+Vue.use(DialogPlugin);
 Vue.use(QueryBuilderPlugin);
+Vue.use(ButtonPlugin);
+QueryBuilder.Inject(QueryLibrary);
 
-];
 new Vue({
 	el: '#app',
 	template: `
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder width="70%" :dataSource="dataSource" :rule="importRules" sortDirection="Ascending">
+            <ejs-querybuilder ref="querybuilder" width="100%" :dataSource="dataSource" :rule="importRules">
                 <e-columns>
                   <e-column field="TaskID" label="Task ID" type="number"></e-column>
                   <e-column field="Name" label="Name" type="string"></e-column>
@@ -19,65 +22,84 @@ new Vue({
                   <e-column field="Status" label="Status" type="string"></e-column>
                 </e-columns>
             </ejs-querybuilder>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getMongoClick">Get MongoDB</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getRuleClick">Get Rule</ejs-button>
         </div>
+        <ejs-dialog id="dialog" ref="Dialog" :header="header" :width="width" :visible="visible" :content="Content" :beforeOpen="beforeOpen" :animationSettings="animateSettings" :showCloseIcon="showCloseIcon"></ejs-dialog>
     </div>
 `,
 
     data: function() {
         return {
+            animateSettings: { effect: 'Zoom' },
+            width:'50%',
+            showCloseIcon: true,
+            visible: false,
+            header: 'Query builder',
+            content: '',
             dataSource: hardwareData,
             importRules: {
-        'condition': 'or',
-        'rules': [{
-            'label': 'Category',
-            'field': 'Category',
-            'type': 'string',
-            'operator': 'equal',
-            'value': 'Laptop'
-        },
-        {
-        'condition': 'and',
-            'rules': [{
-                'label': 'Status',
-                'field': 'Status',
-                'type': 'string',
-                'operator': 'notequal',
-                'value': 'Pending'
-            },
-            {
-                'label': 'Task ID',
-                'field': 'TaskID',
-                'type': 'number',
-                'operator': 'equal',
-                'value': 5675
-            }]
-        }]
-    }
+                'condition': 'or',
+                'rules': [{
+                    'label': 'Category',
+                    'field': 'Category',
+                    'type': 'string',
+                    'operator': 'equal',
+                    'value': 'Laptop'
+                },
+                {
+                    'condition': 'and',
+                    'rules': [{
+                        'label': 'Status',
+                        'field': 'Status',
+                        'type': 'string',
+                        'operator': 'notequal',
+                        'value': 'Pending'
+                    },
+                    {
+                    'label': 'Task ID',
+                    'field': 'TaskID',
+                    'type': 'number',
+                    'operator': 'equal',
+                    'value': 5675
+                    }]
+                }]
+            }
         };
+    },
+    methods: {
+    getMongoClick: function(event) {
+        this.$refs.Dialog.content = this.$refs.querybuilder.ej2Instances.getMongoQuery(this.$refs.querybuilder.ej2Instances.getRules());
+        this.$refs.Dialog.show();
+    },
+    getRuleClick: function(event) {
+        var validRule = this.$refs.querybuilder.ej2Instances.getValidRules(this.$refs.querybuilder.ej2Instances.rule);
+        this.$refs.Dialog.content = JSON.stringify(validRule, null, 4);
+        this.$refs.Dialog.show();
     }
-}
-var hardwareData = [{
-      'TaskID': 1,
-      'Name': 'Lenovo Yoga',
-      'Category': 'Laptop',
-      'SerialNo': 'CB27932009',
-      'InvoiceNo': 'INV-2878',
-      'Status': 'Assigned'
-  },
-  {
-      'TaskID': 2,
-      'Name': 'Acer Aspire',
-      'Category': 'Others',
-      'SerialNo': 'CB35728290',
-      'InvoiceNo': 'INV-3456',
-      'Status': 'In-repair'
-  },
-  {
-      'TaskID': 3,
-      'Name': 'Apple MacBook',
-      'Category': 'Laptop',
-      'SerialNo': 'CB35628728',
-      'InvoiceNo': 'INV-2763',
-      'Status': 'In-repair'
-  
+   }
 });
+var hardwareData = [{
+    'TaskID': 1,
+    'Name': 'Lenovo Yoga',
+    'Category': 'Laptop',
+    'SerialNo': 'CB27932009',
+    'InvoiceNo': 'INV-2878',
+    'Status': 'Assigned'
+},
+{
+    'TaskID': 2,
+    'Name': 'Acer Aspire',
+    'Category': 'Others',
+    'SerialNo': 'CB35728290',
+    'InvoiceNo': 'INV-3456',
+    'Status': 'In-repair'
+},
+{
+    'TaskID': 3,
+    'Name': 'Apple MacBook',
+    'Category': 'Laptop',
+    'SerialNo': 'CB35628728',
+    'InvoiceNo': 'INV-2763',
+    'Status': 'In-repair'
+}];

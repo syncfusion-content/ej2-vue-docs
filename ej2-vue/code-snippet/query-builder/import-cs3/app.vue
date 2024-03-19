@@ -1,7 +1,7 @@
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource">
+            <ejs-querybuilder ref="querybuilder" width="100%%" :dataSource="dataSource">
                 <e-columns>
                   <e-column field="TaskID" label="Task ID" type="number"></e-column>
                   <e-column field="Name" label="Name" type="string"></e-column>
@@ -31,7 +31,7 @@ export default {
     },
     methods: {
         getMongoClick: function() {
-             this.$refs.querybuilder.ej2Instances.setMongoQuery('{"$and":[{"TaskID":1001},{ "$or":[{"Category":{"$regex":"Order"}}]}]}');
+            this.$refs.querybuilder.ej2Instances.setMongoQuery('{"$and":[{"TaskID":1001},{ "$or":[{"Category":{"$regex":"Order"}}]}]}');
         }
     }
 }

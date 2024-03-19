@@ -16,6 +16,6 @@ new Vue({
 
    data: function() {
         return { }
-    };
+    }
 
 });
