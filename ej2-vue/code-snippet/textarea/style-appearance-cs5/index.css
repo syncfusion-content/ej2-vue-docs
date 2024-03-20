@@ -1,0 +1,20 @@
+.wrap {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 20px 10px;
+  width: 340px;
+}
+
+/* To change the background-color and text-color for textarea */ 
+.e-input-group,
+.e-float-input,
+.e-float-input.e-input-group { /* csslint allow: adjoining-classes */
+    background : lightgray;
+    color: green;
+}
+
+/* To change the border-color of the textarea */ 
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.e-input-group:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left) { /* csslint allow: adjoining-classes */
+    border-color: #0800ff;
+}

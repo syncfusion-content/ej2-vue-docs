@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Olap in Vue Pivotview component | Syncfusion
-description: Learn here all about Olap in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Olap in Vue Pivot Table component | Syncfusion
+description: Learn here all about Olap in Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Olap 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Olap in Vue Pivotview component
+# Olap in Vue Pivot Table component
 
 ## Getting Started
 
@@ -399,10 +399,10 @@ To use the virtual scrolling feature, inject the `VirtualScroll` module into the
 
 #### Limitations for virtual scrolling
 
-* The [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview#gridsettings) should be in pixels. The percentage value is not accepted.
-* Resizing columns and setting the width of individual columns will affect scrolling and is therefore not recommended.
-* Even if virtual scrolling is enabled, not only is the current view port data retrieved, but also the data for the immediate previous page and the immediate next page. As a result, when the end user scrolls slightly ahead or behind, the next or previous page data is displayed immediately without requiring a refresh. **Note:** If the pivot table's width and height are large, the loading data count in the current, previous, and next view ports (pages) will also increase, affecting performance.
-* Even the pivot table's width and height are large, the loading data count in the current, previous, and next view ports (pages) will also increase, affecting performance.
+* In virtual scrolling, the [columnWidth](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/#columnwidth) property in [gridSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/gridSettings/) should be in pixels, and percentage values are not accepted.
+* Resizing columns or setting width to individual columns affects the calculation used to pick the correct page on scrolling.
+* When using OLAP data, subtotals and grand totals are only displayed when measures are bound at the last position in the [rows](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#rows) or [columns](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#columns) axis. Otherwise, the data from the pivot table will be shown without summary totals.
+* When the pivot table's width and height are large, the loading data count in the current, previous, and next viewports (pages) will also increase, affecting performance.
 
 ## Run the application
 

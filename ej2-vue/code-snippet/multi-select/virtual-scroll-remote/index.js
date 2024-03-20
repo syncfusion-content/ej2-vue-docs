@@ -7,7 +7,7 @@ DropDownList.Inject(VirtulScroll);
 Vue.use(DropDownListPlugin);
 
 var remoteData = new DataManager({
-  url: 'https://services.syncfusion.com/js/production/api/orders',
+  url: 'https://services.syncfusion.com/vue/production/api/Orders',
   adaptor: new WebApiAdaptor,
   crossDomain: true
 });

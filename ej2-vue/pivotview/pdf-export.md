@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Pdf export in Vue Pivotview component | Syncfusion
-description: Learn here all about Pdf export in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Pdf export in Vue PivotView component | Syncfusion
+description: Learn here all about Pdf export in Syncfusion Vue PivotView component of Syncfusion Essential JS 2 and more.
 control: Pdf export 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Pdf export in Vue Pivotview component
+# Pdf export in Vue PivotView component
 
 PDF export allows exporting pivot table data as PDF document. To enable PDF export in the pivot table, set the [`allowPdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowpdfexport) as **true**. You need to use the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method for PDF exporting.
 

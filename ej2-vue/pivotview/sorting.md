@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Sorting in Vue Pivotview component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Sorting in Vue PivotView component | Syncfusion
+description: Learn here all about Sorting in Syncfusion Vue PivotView component of Syncfusion Essential JS 2 and more.
 control: Sorting 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Sorting in Vue Pivotview component
+# Sorting in Vue PivotView component
 
 To quickly learn how to sort data in the Vue Pivot Table, watch this video:
 
