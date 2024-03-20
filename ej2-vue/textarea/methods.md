@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Vue TextArea control | Syncfusion
-description: Handling methods in the Vue TextArea control of Syncfusion Essential JS 2 and more.
+description: Checkout and learn about Handling methods in the Vue TextArea control of Syncfusion Essential JS 2 and more.
 control: Methods 
 platform: ej2-vue
 documentation: ug
@@ -19,9 +19,6 @@ The [focusIn](https://ej2.syncfusion.com/vue/documentation/api/textarea/#focusIn
 By calling the `focusIn` method, you can programmatically set focus to the TextArea control, allowing users to interact with it via keyboard input or other means.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/textarea/methods-cs1/app-composition.vue %}
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/methods-cs1/app.vue %}
 {% endhighlight %}
@@ -35,9 +32,6 @@ The [focusOut](https://ej2.syncfusion.com/vue/documentation/api/textarea/#focusO
 This method is beneficial for scenarios where user need to programmatically remove focus from the TextArea control, such as after completing a specific task or when navigating to another element in the application.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/textarea/methods-cs2/app-composition.vue %}
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/methods-cs2/app.vue %}
 {% endhighlight %}
@@ -51,9 +45,6 @@ The [getPersistData](https://ej2.syncfusion.com/vue/documentation/api/textarea/#
 This method returns an object containing the properties to be persisted, which can include various configuration options and state information of the TextArea control. 
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/textarea/methods-cs3/app-composition.vue %}
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/methods-cs3/app.vue %}
 {% endhighlight %}

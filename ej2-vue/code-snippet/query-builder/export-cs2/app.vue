@@ -3,7 +3,7 @@
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource" :rule="importRules">
+            <ejs-querybuilder ref="querybuilder" width="100%" :dataSource="dataSource" :rule="importRules">
                 <e-columns>
                   <e-column field="TaskID" label="Task ID" type="number"></e-column>
                   <e-column field="Name" label="Name" type="string"></e-column>

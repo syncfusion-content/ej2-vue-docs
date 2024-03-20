@@ -15,9 +15,6 @@ The TextArea control seamlessly integrates with HTML forms, enabling efficient s
 This integration enhances the usability of forms, allowing users to provide detailed feedback, enter lengthy descriptions, or input other multiline text data seamlessly.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/textarea/form-support-cs1/app-composition.vue %}
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/form-support-cs1/app.vue %}
 {% endhighlight %}
@@ -25,16 +22,13 @@ This integration enhances the usability of forms, allowing users to provide deta
 
 {% previewsample "page.domainurl/code-snippet/textarea/form-support-cs1" %}
 
-# Integration of Vue TextArea control with FormValidator component
+## Integration of Vue TextArea control with FormValidator component
 
 TextArea control seamlessly integrates with the `FormValidator` component, allowing users to incorporate textarea inputs into form validation processes efficiently.
 
 By integrating TextArea controls with the `FormValidator` component, users can enforce validation rules specific to text inputs, such as required fields, minimum and maximum length constraints, pattern matching, and more. This ensures that user-submitted text data meets specified criteria and maintains data integrity.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/textarea/form-support-cs2/app-composition.vue %}
-{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/form-support-cs2/app.vue %}
 {% endhighlight %}

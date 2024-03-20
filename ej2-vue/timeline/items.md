@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Items in Vue Timeline component
 
-The Timeline items can be added by using the `items` property. Each item can be configured with options such as `content`, `oppositeContent`, `dotCss`, `disabled` and `cssClass`.
+The Timeline items can be added by using the [items](https://ej2.syncfusion.com/vue/documentation/api/timeline#items) property. Each item can be configured with options such as `content`, `oppositeContent`, `dotCss`, `disabled` and `cssClass`.
 
 ## Adding content
 
-You can define the item content using the `content` property.
+You can define the item content using the [content](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#content) property.
 
 ### String content
 
@@ -30,7 +30,7 @@ You can define string content for the Timeline items.
 
 ## Adding opposite content
 
-You can add additional information to each Timeline item, by using the `oppositeContent` property which is positioned opposite to the item content. Similar to the `content` property you can define `string` or `function` as contents to the oppositeContent.
+You can add additional information to each Timeline item, by using the [oppositeContent](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#oppositecontent) property which is positioned opposite to the item content. Similar to the `content` property you can define `string` or `function` as contents to the oppositeContent.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -42,11 +42,11 @@ You can add additional information to each Timeline item, by using the `opposite
 
 ## Dot item
 
-You can define CSS class to set icons, background colors, or images to personalize the appearance of dots associated with each Timeline item by using the `dotCss` property.
+You can define CSS class to set icons, background colors, or images to personalize the appearance of dots associated with each Timeline item by using the [dotCss](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#dotcss) property.
 
 ### Adding icons
 
-You can define the CSS class to show the icon for each item using the `dotCss` property.
+You can define the CSS class to show the icon for each item using the [dotCss](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#dotcss) property.
 
 ### Adding images
 
@@ -66,7 +66,7 @@ You can display text for the Timeline items using the `dotCss` property, by addi
 
 ## Disabling items
 
-You can use the `disabled` property to disable an item when set to `true`. By default, the value is `false`.
+You can use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#disabled) property to disable an item when set to `true`. By default, the value is `false`.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -78,4 +78,4 @@ You can use the `disabled` property to disable an item when set to `true`. By de
 
 ## CSS class
 
-The `cssClass` property allows you to define a custom class to modify the appearance of the Timeline item.
+The [cssClass](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#cssclass) property allows you to define a custom class to modify the appearance of the Timeline item.

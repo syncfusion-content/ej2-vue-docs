@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { CircularChart3DPlugin, PieSeries3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
+import { CircularChart3DPlugin, PieSeries3D, CircularChartLegend3D, CircularChartExport3D } from "@syncfusion/ej2-vue-charts";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
 Vue.use(CircularChart3DPlugin);
@@ -12,7 +12,7 @@ new Vue({
   template: `
     <div id="app">
         <ejs-button  id='togglebtn' @click.native='exportIcon'>Export</ejs-button>
-        <ejs-circularchart3d id="container" ref="circularchart" :tilt='tilt' :legendSettings='legendSettings'>
+        <ejs-circularchart3d id="container" ref="circularchart" :tilt='tilt' :legendSettings='legendSettings' enableExport='true'>
             <e-circularchart3d-series-collection>
                 <e-circularchart3d-series :dataSource='seriesData' xName='x' yName='y' radius='100%'></e-circularchart3d-series>
             </e-circularchart3d-series-collection>
@@ -36,11 +36,11 @@ new Vue({
     };
   },
   provide: {
-    circularchart3d: [PieSeries3D, CircularChartLegend3D]
+    circularchart3d: [PieSeries3D, CircularChartLegend3D, CircularChartExport3D]
   },
   methods: {
     exportIcon: function() {
-      this.$refs.circularchart.export('PNG', 'export');
+      this.$refs.circularchart.circularChartExport3DModule.export('PNG', 'result');
     }
   }
 });

@@ -9,7 +9,7 @@
                 <div className="form-group">
                     <div className="e-float-input">
                         <label>Email</label>
-                        <input type="email" id="email" name="Email" data-email-message="Please enter valid email address."
+                        <input type="email" id="email" name="email" data-email-message="Please enter valid email address."
                         data-required-message="Required field" required data-msg-containerid="emailError"/>
                         <span className="e-float-line"></span>
                     </div>
@@ -18,7 +18,7 @@
                 <div className="form-group">
                     <div>
                         <label>Comments</label>
-                        <ejs-textarea id='default' name="myTextarea" data-msg-containerid="commentError" placeholder='Enter your comments' floatLabelType='Auto' required =""></ejs-textarea>
+                        <ejs-textarea id='default' name="comments" data-msg-containerid="commentError" placeholder='Enter your comments' floatLabelType='Auto' required =""></ejs-textarea>
                     </div>
                     <div id="commentError"></div>
                 </div>
