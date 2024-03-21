@@ -2976,3 +2976,79 @@ The [backStageItemClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon
 </style>
 
 ```
+
+## Gallery events
+
+### popupOpen
+
+The [popupOpen][popupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#popupopen) event is triggered when the gallery popup opens.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-items/popupOpen/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/popupOpen" %}
+
+### popupClose
+
+The [popupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#popupclose) event is triggered when the gallery popup closes.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-items/popupClose/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/popupClose" %}
+
+### itemHover
+
+The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hover over the gallery item.
+
+{% if page.publishingplatform == "typescript" %}
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-items/itemHover/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/itemHover" %}
+
+### beforeItemRender
+
+The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered while rendering each gallery item.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-items/beforeItemRender/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/beforeItemRender" %}
+
+### beforeSelect
+
+The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before selecting an item in the Ribbon gallery.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-items/beforeSelect/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/beforeSelect" %}
+
+### select
+
+The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered while selecting an item in the Ribbon gallery.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-items/select/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/select" %}

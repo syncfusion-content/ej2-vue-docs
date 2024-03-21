@@ -18,7 +18,7 @@ You can utilize the [visible](https://ej2.syncfusion.com/vue/documentation/api/r
 
 ## Adding contextual tabs
 
-You can utilize the [contextualTabs](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#contextualtabs) property to add contextual tabs in the Ribbon. This property accepts an array of Ribbon tabs, where you can add multiple tabs based on your needs.
+You can utilize the `e-ribbon-contextual-tabs` tag directive to add contextual tabs in the Ribbon where you can add multiple tabs based on your needs.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
