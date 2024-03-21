@@ -1,0 +1,50 @@
+<template>
+    <div id="app">
+        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" :sortComparer="sortComparer" :detailsViewSettings="detailsViewSettings">
+        </ejs-filemanager>
+    </div>
+</template>
+
+<script>
+import Vue from "vue";
+import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar, sortComparer } from "@syncfusion/ej2-vue-filemanager";
+
+Vue.use(FileManagerPlugin);
+export default {
+    data () {
+        return {
+           ajaxSettings:
+            {
+                url: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/FileOperations",
+                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/GetImage",
+                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/Upload",
+                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/NaturalSorting/Download"
+            },
+            sortComparer: sortComparer,
+            detailsViewSettings: {
+                columns: [
+                    {field: 'name', headerText: 'File Name', minWidth: 120, width: 'auto', customAttributes: { class: 'e-fe-grid-name' },template: '${name}', sortComparer: sortComparer},
+                    {field: 'size', headerText: 'File Size',minWidth: 50, width: '110', template: '${size}'},
+                    { field: '_fm_modified', headerText: 'Date Modified',minWidth: 50, width: '190'}
+                ]
+            }
+        };
+    },
+    provide: {
+            filemanager: [DetailsView, NavigationPane, Toolbar]
+    }
+}
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
+</style>
