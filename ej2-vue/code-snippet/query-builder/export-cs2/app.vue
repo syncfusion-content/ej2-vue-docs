@@ -16,7 +16,7 @@
             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getSqlClick">Get Parameter Named sql</ejs-button>
             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getRuleClick">Get Rule</ejs-button>
         </div>
-        <ejs-dialog id="dialog" ref="Dialog" :header="header" :width="width" :visible="visible" :content="Content" :beforeOpen="beforeOpen" :animationSettings="animateSettings" :showCloseIcon="showCloseIcon"></ejs-dialog>
+        <ejs-dialog id="dialog" ref="Dialog" :header="header" :width="width" :visible="visible" :animationSettings="animateSettings" :showCloseIcon="showCloseIcon"></ejs-dialog>
     </div>
 </template>
 <script>
@@ -37,7 +37,6 @@ export default {
             showCloseIcon: true,
             visible: false,
             header: 'Query builder',
-            content: '',
             dataSource: hardwareData,
             importRules: {
                 'condition': 'or',
