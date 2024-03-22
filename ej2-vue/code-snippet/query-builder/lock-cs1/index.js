@@ -10,7 +10,7 @@ new Vue({
 	template: `
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder ref="querybuilder" width="100%" :dataSource="dataSource" :rule="importRules" :showButtons="{ cloneGroup: false, cloneRule: false }">
+            <ejs-querybuilder id="querybuilder" ref="querybuilder" width="100%" :dataSource="dataSource" :rule="importRules" :showButtons="{ cloneGroup: false, cloneRule: false }">
                 <e-columns>
                     <e-column field='EmployeeID' label='Employee ID' type='number' />
                     <e-column field='FirstName' label='First Name' type='string' />

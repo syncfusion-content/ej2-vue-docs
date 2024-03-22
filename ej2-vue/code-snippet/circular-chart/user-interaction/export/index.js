@@ -40,7 +40,7 @@ new Vue({
   },
   methods: {
     exportIcon: function() {
-      this.$refs.circularchart.circularChartExport3DModule.export('PNG', 'result');
+      this.$refs.circularchart.ej2Instances.circularChartExport3DModule.export('PNG', 'result');
     }
   }
 });

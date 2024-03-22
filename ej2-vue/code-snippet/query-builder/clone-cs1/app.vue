@@ -62,10 +62,10 @@ export default {
     },
     methods: {
         cloneGroupClick: function() {
-            this.$refs.querybuilder.ej2Instances.cloneGroup("querybuilder_group0", "querybuilder_group1", 1);
+            this.$refs.querybuilder.ej2Instances.cloneGroup("group0", "group1", 1);
         },
         cloneRuleClick: function() {
-            this.$refs.querybuilder.ej2Instances.cloneRule("querybuilder_group0_rule0", "querybuilder_group0", 1);
+            this.$refs.querybuilder.ej2Instances.cloneRule("group0_rule0", "group0", 1);
         }
     }
 

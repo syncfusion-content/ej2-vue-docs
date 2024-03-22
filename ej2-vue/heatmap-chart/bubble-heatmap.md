@@ -10,6 +10,10 @@ domainurl: ##DomainURL##
 
 # Bubble heatmap in Vue Heatmap chart component
 
+This section shows how to customize the appearance of the HeatMap cells as bubbles. The below video demonstrates the same.
+
+{% youtube "https://www.youtube.com/watch?v=WDDGHQSfq_g&t=3s" %}
+
 Data points represent the data source values with **gradient** or **fixed** colors in the HeatMap. You can customize the appearance of these data points by changing the `color` and `size` attributes.
 
 The data points can be represented in color fill or bubble shape by defining the [tileType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#tiletype) property. By default, the data points are color filled with gradient or fixed colors and this depiction of data points is defined as `Rect` in the `tileType` property.
