@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <ejs-pivotview :dataSourceSettings="dataSourceSettings" :width="width" :height="height"
-      [virtualScrollSettings]='virtualScrollSettings' :enableVirtualization="enableVirtualization">
+      :virtualScrollSettings="virtualScrollSettings" :enableVirtualization="enableVirtualization">
     </ejs-pivotview>
   </div>
 </template>

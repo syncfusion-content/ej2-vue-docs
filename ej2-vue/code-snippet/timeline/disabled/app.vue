@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="height:250px">
+  <div class="container" style="height: 330px;margin-top: 30px;">
     <ejs-timeline id="timeline">
       <e-items>
         <e-item content='Eat' />

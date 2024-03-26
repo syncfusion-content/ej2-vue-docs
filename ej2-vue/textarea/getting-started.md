@@ -57,7 +57,7 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
-## Add Syncfusion Vue packages
+## Add syncfusion vue packages
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
@@ -72,7 +72,7 @@ or
 yarn add @syncfusion/ej2-vue-inputs
 ```
 
-## Import Syncfusion CSS styles
+## Import syncfusion css styles
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" style="height: 330px;margin-top: 30px;">
     <ejs-timeline id="timeline" orientation="Vertical">
       <e-items>
         <e-item content='Day 1, 4:00 PM' oppositeContent='Check-in and campsite visit' />

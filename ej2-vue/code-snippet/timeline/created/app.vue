@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="height:250px">
+  <div class="container" style="height:250px;margin-top: 30px;">
     <ejs-timeline id="timeline" :created="created">
       <e-items>
         <e-item content='Planning' />
