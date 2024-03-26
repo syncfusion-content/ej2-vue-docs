@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="height: 150px; width: 600px;">
+  <div class="container" style="height: 150px; margin-top: 50px; width: 600px;">
     <ejs-timeline id="timeline" orientation="Horizontal" css-class="custom-timeline" template="timelineTemplate">
       <e-items>
         <e-item content='Kickoff meeting' />

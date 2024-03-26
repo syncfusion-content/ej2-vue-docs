@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Items in Vue Timeline component
 
-The Timeline items can be added by using the [items](https://ej2.syncfusion.com/vue/documentation/api/timeline#items) property. Each item can be configured with options such as `content`, `oppositeContent`, `dotCss`, `disabled` and `cssClass`.
+The Timeline items can be added by using the `<e-item>` tag directive. Each item can be configured with options such as `content`, `oppositeContent`, `dotCss`, `disabled` and `cssClass`.
 
 ## Adding content
 

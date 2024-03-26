@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Resize in Vue TextArea component | Syncfusion
-description: Checkout and learn about Resize in Vue Textarea control of Syncfusion Essential JS 2 and more details.
+description: Checkout and learn about Resize in Vue TextArea component of Syncfusion Essential JS 2 and more details.
 control: Resize
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Resize in Vue TextArea control
+# Resize in Vue TextArea Component
 
 The TextArea allows users to input and edit large amounts of text. Resizing this control effectively can enhance the user experience and accommodate varying content needs. This resizing behavior can be enabled and configured using the [resizeMode](https://ej2.syncfusion.com/vue/documentation/api/textarea/#resizeMode) API, which offers several options for resizing the TextArea:
 
@@ -27,7 +27,7 @@ The TextArea allows users to input and edit large amounts of text. Resizing this
 
 {% previewsample "page.domainurl/code-snippet/textarea/resize-cs1" %}
 
-## Width of Vue TextArea control
+## Width of vue TextArea component
 
 You can easily customize the width of the TextArea using the [width](https://ej2.syncfusion.com/vue/documentation/api/textarea/#width) property. This property allows precise adjustment of the TextArea's width according to the specific layout requirements of the application.
 
