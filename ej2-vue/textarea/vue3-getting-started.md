@@ -20,7 +20,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
-## Set up the Vite project
+## Set up the vite project
 
 A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
@@ -81,7 +81,7 @@ yarn install
 
 Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
 
-## Add Syncfusion Vue packages
+## Add syncfusion vue packages
 
 Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
@@ -97,7 +97,7 @@ or
 yarn add @syncfusion/ej2-vue-inputs
 ```
 
-## Import Syncfusion CSS styles
+## Import syncfusion css styles
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
@@ -116,7 +116,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add Syncfusion Vue component
+## Add syncfusion vue component
 
 Follow the below steps to add the Vue TextArea component using `Composition API` or `Options API`:
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Maximum Length in Vue Textarea control | Syncfusion
-description: Limiting the maximum number of characters in the Vue Textarea control of Syncfusion Essential JS 2 and more details.
+title: Maximum Length in Vue TextArea component | Syncfusion
+description: Limiting the maximum number of characters in the Vue TextArea component of Syncfusion Essential JS 2 and more details.
 control: Maximum Length
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Maximum Length in Vue TextArea control
+# Maximum Length in Vue TextArea Component
 
 You can enforce a maximum length limit for the text input in the TextArea using the [maxLength](https://ej2.syncfusion.com/vue/documentation/api/textarea/#maxLength) property. This property allows to define the maximum number of characters that users can input into the TextArea.
 

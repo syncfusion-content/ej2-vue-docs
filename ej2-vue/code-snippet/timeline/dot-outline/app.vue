@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="height:250px">
+  <div class="container" style="height:250px;margin-top: 50px;">
     <ejs-timeline id="timeline" css-class="e-outline">
       <e-items>
         <e-item content='Shipped' />

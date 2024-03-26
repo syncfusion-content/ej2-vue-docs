@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="height:350px">
+  <div class="container" style="height: 330px;margin-top: 30px;">
     <ejs-timeline id="timeline" align="Before">
       <e-items>
         <e-item content='ReactJs' opposite-content='Owned by Facebook' />
