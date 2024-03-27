@@ -1,6 +1,7 @@
 
 import Vue from 'vue';
 import { TextAreaPlugin } from '@syncfusion/ej2-vue-inputs';
+import { L10n } from '@syncfusion/ej2-base';
 Vue.use(TextAreaPlugin);
 
 // Load culture for textarea

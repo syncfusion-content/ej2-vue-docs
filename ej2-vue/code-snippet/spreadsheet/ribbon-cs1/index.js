@@ -2,7 +2,7 @@
 import Vue from "vue";
 import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
 import { data } from './data.js';
-import { DropDownButton } from '@syncfusion/ej2-splitbuttons/src/drop-down-button/drop-down-button';
+import { DropDownButton } from '@syncfusion/ej2-splitbuttons';
 import { createElement } from '@syncfusion/ej2-base';
 Vue.use(SpreadsheetPlugin);
 
