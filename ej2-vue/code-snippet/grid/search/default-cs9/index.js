@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { GridPlugin, Toolbar, Search} from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 import { Predicate, Query } from "@syncfusion/ej2-data";
 
@@ -8,15 +8,17 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :searchSettings="searchOptions" :toolbar="toolbarOptions" height='273px' :actionBegin = 'actionBegin' :actionComplete = 'actionComplete'>
             <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' width=100></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-                <e-column field='Freight' headerText='Freight' textAlign= 'Right' editType= 'numericedit' width=120 format= 'C2'></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' editType= 'dropdownedit' width=150></e-column>
+              <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+              <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+              <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=80></e-column>
+              <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+              <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
+              <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
             </e-columns>
         </ejs-grid>
     </div>
@@ -32,14 +34,21 @@ new Vue({
       data: data,
       toolbarOptions: ["Search"],
       searchOptions: {
-        fields: ["OrderID", "CustomerID", "ShipCity", "ShipName"],
-        key: "",
+        fields: ['OrderID',
+                'CustomerID',
+                'EmployeeID',
+                'ShipCity',
+                'ShipCountry',
+                'ShipName'],
+        operator: 'contains',
+        key: '',
+        ignoreCase: true,
       },
     };
   },
   methods: {
     actionBegin(args) {
-        if (args.requestType === "searching") {
+      if (args.requestType === "searching") {
         const keys = args.searchString.split(",");
         var flag = true;
         var predicate;
@@ -68,7 +77,7 @@ new Vue({
       }
     },
     actionComplete(args) {
-        if (args.requestType === "refresh" && this.valueAssign) {
+      if (args.requestType === "refresh" && this.valueAssign) {
         document.getElementById(
           this.$refs.grid.ej2Instances.element.id + "_searchbar"
         ).value = this.values;

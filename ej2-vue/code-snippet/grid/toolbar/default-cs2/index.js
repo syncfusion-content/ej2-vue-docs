@@ -12,10 +12,10 @@ new Vue({
     <div id="app">
         <ejs-grid :dataSource='data' :editSettings='editSettings' height='270px' :toolbar='toolbar'>
             <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120 isPrimaryKey="true"></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90 :isPrimaryKey='true' :validationRules='orderIDRules'></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+                <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+                <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
             </e-columns>
         </ejs-grid>
     </div>
@@ -24,6 +24,7 @@ new Vue({
   data() {
     return {
       data: data,
+      orderIDRules: { required: true },
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel']
     };

@@ -13,8 +13,8 @@ new Vue({
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
+                <e-column field='Freight' headerText='Freight' textAlign='Right' format='C' width=80></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
             </e-columns>
         </ejs-grid>
     </div>

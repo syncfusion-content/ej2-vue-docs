@@ -3,7 +3,7 @@
 <template>
     <div id="app">
         <ejs-button id='clear' @click.native='clear'>Clear Search</ejs-button>
-        <ejs-grid ref='grid' :dataSource='data' :searchSettings='searchOptions' :toolbar='toolbarOptions' height='262px'>
+        <ejs-grid ref='grid' style="margin-top:5px" :dataSource='data' :searchSettings='searchOptions' :toolbar='toolbarOptions' height='262px'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
@@ -41,7 +41,15 @@ export default {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

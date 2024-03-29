@@ -2,7 +2,7 @@
 import { createApp } from "vue";
 import { L10n, setCulture  } from '@syncfusion/ej2-base';
 import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
+import data from './datasource.js';
 
 setCulture('ar-AE');
 // Enables Right to left alignment for all components

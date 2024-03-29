@@ -4,10 +4,12 @@
     <div id="app">
         <ejs-grid ref='grid' id='grid' :dataSource='data' :toolbar='toolbarOptions' height='262px' :created='created'>
             <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
+              <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
+              <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+              <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=80></e-column>
+              <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+              <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
+              <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
             </e-columns>
         </ejs-grid>
     </div>
@@ -29,7 +31,7 @@ export default {
   methods: {
     created: function() {
         document.getElementById(this.$refs.grid.$el.id + "_searchbar").addEventListener('keyup', () => {
-          this.$refs.grid.search((event.target as HTMLInputElement).value)
+          this.$refs.grid.search(event.target.value)
         });
     }
   },
@@ -39,7 +41,15 @@ export default {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 
