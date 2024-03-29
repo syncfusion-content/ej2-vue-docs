@@ -6,8 +6,8 @@
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+                <e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' width=80></e-column>
                 <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
             </e-columns>
         </ejs-grid>
     </div>
@@ -23,7 +23,7 @@ export default {
     return {
       data: data,
       toolbarOptions: ['Search'],
-      searchOptions: {fields: ['CustomerID', 'ShipCity']}
+      searchOptions: {fields: ['CustomerID', 'Freight', 'ShipCity']}
     };
   },
   provide: {
@@ -32,7 +32,15 @@ export default {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

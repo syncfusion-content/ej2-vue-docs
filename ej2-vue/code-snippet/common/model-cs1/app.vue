@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-checkbox v-model="checked" label="EJ2 Vue Checkbox" :checked="checked" />
@@ -8,19 +6,10 @@
     </p>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { CheckBoxPlugin } from '@syncfusion/ej2-vue-buttons';
+<script setup>
+import { CheckBoxPlugin as EjsCheckbox } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(CheckBoxPlugin);
-
-export default {
-  data () {
-    return {
-      checked: true
-    }
-  }
-}
+const checked = true;
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
@@ -33,5 +22,3 @@ export default {
     width: 30%;
   }
 </style>
-
-

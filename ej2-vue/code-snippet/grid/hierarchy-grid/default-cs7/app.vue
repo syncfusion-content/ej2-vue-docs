@@ -1,16 +1,16 @@
 
 
 <template>
-    <div id="app">
-        <ejs-grid ref='grid' :dataSource='parentData' height='265px' :childGrid='childGrid'>
-                <e-columns>
-                    <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120></e-column>
-                    <e-column field='FirstName' headerText='FirstName' width=150></e-column>
-                    <e-column field='LastName' headerText='Last Name' width=150></e-column>
-                    <e-column field='City' headerText='City' width=150></e-column>
-                </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+    <ejs-grid ref='grid' :dataSource='parentData' height='265px' :childGrid='childGrid'>
+      <e-columns>
+        <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=80></e-column>
+        <e-column field='FirstName' headerText='FirstName' width=100></e-column>
+        <e-column field='LastName' headerText='Last Name' width=100></e-column>
+        <e-column field='City' headerText='City' width=100></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
 <script>
 import Vue from "vue";
@@ -29,10 +29,10 @@ export default {
         toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
         editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
         columns: [
-            { field: 'OrderID', headerText: 'Order ID', isPrimaryKey:true, textAlign: 'Right', width: 120 },
-            { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing:false, width: 120 },
-            { field: 'ShipCity', headerText: 'Ship City', width: 150 },
-            { field: 'ShipName', headerText: 'Ship Name', width: 150 }
+          { field: 'OrderID', headerText: 'Order ID', isPrimaryKey:true, textAlign: 'Right', width: 90 },
+          { field: 'EmployeeID', headerText: 'Employee ID', textAlign: 'Right', allowEditing:false, width: 80 },
+          { field: 'ShipCity', headerText: 'Ship City', width: 100 },
+          { field: 'ShipName', headerText: 'Ship Name', width: 120 }
         ],
         actionBegin: function(args) {
         if (args.requestType === "add") {
@@ -49,7 +49,15 @@ export default {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

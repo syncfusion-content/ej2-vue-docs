@@ -1,0 +1,10 @@
+
+
+.button {
+  margin: 0px 10px 3px;
+}
+  
+#addImage,#deleteImage {
+    height: 30px;
+    width: 30px;
+}

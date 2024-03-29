@@ -10,22 +10,22 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-grid :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
+      <ejs-grid :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+          <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+          <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
+        </e-columns>
+      </ejs-grid>
     </div>
 `,
 
   data() {
     return {
       data: data,
-      groupOptions: { showDropArea: false, columns: ['CustomerID', 'ShipCity'],
-        captionTemplate: '<span class="groupItems" style="color:blue"> ${count} Items</span>' }
+      groupOptions: { columns: ['CustomerID', 'ShipCity'],
+        captionTemplate: '<span class="groupItems"> ${headerText} - ${key } : ${count} Items </span>' }
     };
   },
   provide: {

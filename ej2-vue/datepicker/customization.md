@@ -10,8 +10,8 @@ domainurl: ##DomainURL##
 
 # Customization in Vue Datepicker component
 
-You can customize the  entire appearance of the input element and Calendar by using custom [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#cssclass) property.
-and also you can use the calendar's [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/renderDayCellEventArgs#renderdaycelleventargs) event to customize the appearance of the each day cell.
+You can customize the  entire appearance of the input element and Calendar by using custom [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#cssclass) property.
+and also you can use the calendar's [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/renderDayCellEventArgs/#renderdaycelleventargs) event to customize the appearance of the each day cell.
 
 Below is the list of classes that provides flexible way to customize the DatePicker component.
 
