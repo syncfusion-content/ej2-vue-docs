@@ -1,58 +1,56 @@
 
 
 <template>
-    <div id="app">
-        <ejs-grid ref='grid' :dataSource='data' :toolbar='toolbarOptions' :allowPaging='true' :allowFiltering='true' :allowPdfExport='true' :allowExcelExport='true' :pageSettings='pageSettings' :toolbarClick='toolbarClick' :selectionSettings='selectionOption'>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+    <ejs-grid ref='grid' id="Grid" :dataSource='data' :toolbar='toolbarOptions' :allowPdfExport='true' :toolbarClick='toolbarClick' :selectionSettings='selectionOption'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport, Filter, Page, ExcelExport  } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Toolbar, PdfExport  } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-import { DataManager } from "@syncfusion/ej2-data";
 
 Vue.use(GridPlugin);
 export default {
       data: () => {
         return {
           data: data,
-          toolbarOptions: ['PdfExport', 'ExcelExport'],
-          pageSettings: { pageSize: 5, pageCount:5 },
-          selectionOption: {type: 'Multiple'}
-
+          toolbarOptions: ['PdfExport'],
+          selectionOption: {type: 'Multiple', enableSimpleMultiRowSelection: true}
         };
       },
       methods: {
-          toolbarClick(args: ClickEventArgs) {
-              if (args['item'].id.indexOf("pdfexport") != -1) {
-                  let selectedRecords = this.$refs.grid.getSelectedRecords();
-                  let exportProperties = {
-                      dataSource: selectedRecords
-                    };
-                      this.$refs.grid.pdfExport(exportProperties);
-                }
-              else if (args['item'].id.indexOf("excelexport") != -1) {
-                  let selectedRecords = this.$refs.grid.getSelectedRecords();
-                  let exportProperties = {
-                      dataSource: selectedRecords
-                      };
-                        this.$refs.grid.excelExport(exportProperties);
-                        }
-                    },
-                },
+        toolbarClick(args: ClickEventArgs) {
+          if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+            let selectedRecords = this.$refs.grid.getSelectedRecords();
+            let pdfExportProperties = {
+              dataSource: selectedRecords
+            };
+            this.$refs.grid.pdfExport(pdfExportProperties);
+          }
+        },
+      }
       provide: {
-        grid: [Toolbar, PdfExport, Filter, Page, ExcelExport]
+        grid: [Toolbar, PdfExport]
       },
     }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

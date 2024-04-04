@@ -1,30 +1,13 @@
 <template>
-  <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="detailTemplate" :toolbar="toolbar"
+  <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="'detailTemplate'" :toolbar="toolbar"
   :toolbarClick="toolbarClick" :exportDetailTemplate="exportDetailTemplate" height=315 :allowPdfExport="true">
     <e-columns>
       <e-column field="Category" headerText="Category" width="140" textAlign="Right"></e-column>
       <e-column field="ProductID" headerText="Product ID" width="120"></e-column>
       <e-column field="Status" headerText="Status" width="120"></e-column>
     </e-columns>
-  </ejs-grid>
-</template>
-
-<script>
-import Vue from 'vue';
-import { GridPlugin, DetailRow, PdfExport, Toolbar } from '@syncfusion/ej2-vue-grids';
-import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-export default {
-  data: () => {
-    return {
-      data: employeeData,
-      toolbar: ['PdfExport'],
-      detailTemplate: function () {
-        return {
-          template: Vue.component('detailTemplate', {
-            template: `<table class="detailtable" width="100%">
+    <template v-slot:detailTemplate="{ data }">
+        <table class="detailtable" width="100%">
             <colgroup>
                 <col width="40%" />
                 <col width="60%" />
@@ -87,15 +70,23 @@ export default {
                     </td>
                 </tr>
             </tbody>
-        </table>`,
-            data: function () {
-              return {
-                data: {},
-              }
-            },
-          }),
-        }
-      },
+        </table>
+    </template>
+  </ejs-grid>
+</template>
+
+<script>
+import Vue from 'vue';
+import { GridPlugin, DetailRow, PdfExport, Toolbar } from '@syncfusion/ej2-vue-grids';
+import { employeeData } from './datasource.js';
+
+Vue.use(GridPlugin);
+
+export default {
+  data: () => {
+    return {
+      data: employeeData,
+      toolbar: ['PdfExport'],
     };
   },
   methods: {
@@ -195,7 +186,15 @@ export default {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
  .detailtable td {
         font-size: 13px;
         padding: 4px;

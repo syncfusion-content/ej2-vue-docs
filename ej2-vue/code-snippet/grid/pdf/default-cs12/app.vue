@@ -2,50 +2,68 @@
 
 <template>
     <div id="app">
-        <ejs-grid ref='grid' id='Grid' :dataSource='data' :allowPaging='true' :allowPdfExport='true' :toolbar='toolbarOptions' :toolbarClick='toolbarClick' height='258px'>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' type='number' width=120></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' type='string' width=140>
-                </e-column>
-                <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=120>
-                </e-column>
-                <e-column field='OrderDate' headerText='Order Date' textAlign='Right' type='date' format='yMd' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
+      <div>
+        <label style="padding: 30px 17px 0 0">Enter the width: </label>
+        <ejs-textbox ref='textbox' type="textbox" placeholder="Enter file name" width="120"></ejs-textbox>
+      </div> 
+      <ejs-grid ref='grid' id='Grid' style="margin-top: 5px" :dataSource='data' :allowPdfExport='true' :toolbar='toolbarOptions' :toolbarClick='toolbarClick' height='258px'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' type='string' width=100></e-column>
+          <e-column field='ShipCity' headerText='Ship City' width=100></e-column>  
+          <e-column field='ShipName' headerText='Ship Name' width=120></e-column>            
+        </e-columns>
+      </ejs-grid>
     </div>
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, Toolbar, Page, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { TextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
+Vue.use(TextBoxPlugin);
 
 export default {
   data() {
     return {
       data: data,
-      toolbarOptions: ["PdfExport"],
-      pageSettings: { pageSize: 7 }
+      toolbarOptions: ["PdfExport"]
     };
   },
   methods: {
     toolbarClick(args) {
-      if (args["item"].id === "Grid_pdfexport") {
-        let exportProperties = {
-          fileName: "new.pdf"
-        };
-        this.$refs.grid.pdfExport(exportProperties);
+      if (args.item.id === "Grid_pdfexport") {
+        if (this.$refs.textbox.$el.value) {
+          const pdfExportProperties = {
+            fileName: this.$refs.textbox.$el.value + '.pdf',
+          };
+          this.$refs.grid.pdfExport(pdfExportProperties);
+        } else {
+          const pdfExportProperties = {
+            fileName: 'new.pdf',
+          };
+          this.$refs.grid.pdfExport(pdfExportProperties);
+        }
       }
     }
   },
   provide: {
-    grid: [Toolbar, Page, PdfExport]
+    grid: [Toolbar, PdfExport]
   }
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

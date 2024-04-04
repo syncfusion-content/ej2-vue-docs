@@ -32,7 +32,6 @@ new Vue({
   methods: {
     toolbarClick(args) {
         if (args.item.id === 'Grid_pdfexport') {
-            debugger
             this.queryClone = this.$refs.grid.query;
             this.$refs.grid.query = new Query().addParams("recordcount", "12")
             this.$refs.grid.pdfExport();
@@ -42,10 +41,10 @@ new Vue({
             this.$refs.grid.query = new Query().addParams("recordcount", "12")
             this.$refs.grid.excelExport();
         }
-    }
+    },
     pdfExportComplete(args) {
         this.$refs.grid.query = this.queryClone();
-    }
+    },
     excelExportComplete(args) {
         this.$refs.grid.query = this.queryClone();
     }

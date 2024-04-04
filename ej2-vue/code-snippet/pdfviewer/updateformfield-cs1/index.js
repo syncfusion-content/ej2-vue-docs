@@ -1,7 +1,7 @@
 
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 var viewer;
 
@@ -23,12 +23,12 @@ new Vue({
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+      resourceUrl:"https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]},
+                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]},
 
 methods: {
     documentLoad: function (args) {
