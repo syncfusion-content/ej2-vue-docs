@@ -37,10 +37,10 @@ new Vue({
             this.$refs.grid.showSpinner();
             this.$refs.grid.excelExport();
         }
-    }
+    },
     pdfExportComplete(args) {
         this.$refs.grid.hideSpinner();
-    }
+    },
     excelExportComplete(args) {
         this.$refs.grid.hideSpinner();
     }

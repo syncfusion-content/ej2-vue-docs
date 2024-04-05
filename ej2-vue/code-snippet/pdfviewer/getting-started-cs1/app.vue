@@ -13,7 +13,7 @@
 <script>
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+         Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 export default {
   components: {
     'ejs-pdfviewer': PdfViewerComponent
@@ -28,7 +28,7 @@ export default {
 
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]
   }
 }
 </script>

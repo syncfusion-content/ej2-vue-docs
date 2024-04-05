@@ -10,96 +10,86 @@ new Vue({
     el: '#app',
     template: `
     <div id="app">
-        <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="detailTemplate" :toolbar="toolbar"
+        <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="'detailTemplate'" :toolbar="toolbar"
         :toolbarClick="toolbarClick" :exportDetailTemplate="exportDetailTemplate" height=315 :allowPdfExport="true">
             <e-columns>
                 <e-column field="Category" headerText="Category" width="140" textAlign="Right"></e-column>
                 <e-column field="ProductID" headerText="Product ID" width="120"></e-column>
                 <e-column field="Status" headerText="Status" width="120"></e-column>
             </e-columns>
+            <template v-slot:detailTemplate="{ data }">
+                <table class="detailtable" width="100%">
+                    <colgroup>
+                        <col width="40%" />
+                        <col width="60%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="font-weight: 500;text-align: center;background-color: #ADD8E6;">
+                                Product Details
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="text-align: center;">
+                                <img class='photo' :src="'data:image/jpeg;base64,'+data.ProductImg" alt="data.EmployeeID" />
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;color: #0a76ff;">Offers: {{data.Offers}} </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Available: {{data.Available}} </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="link">
+                                    Contact: <a :href="'mailto:'+data.Contact">{{data.Contact}}</a>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span style="font-weight: 500;color: #0a76ff;"> Ratings: {{data.Ratings}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <span> {{data.productDesc}}</span>
+                            </td>
+                            <td>
+                                <span>{{data.ReturnPolicy}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <span style="font-weight: 500;" > {{data.Cost}}</span>
+                            </td>
+                            <td>
+                                <span>{{data.Cancellation}}</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <span :class="data.Status" style="font-weight: 500;" > {{data.Status}}</span>
+                            </td>
+                            <td>
+                                <span style="font-weight: 500;color: #0a76ff;">{{data.Delivery}}</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </template>
         </ejs-grid>
-    </div>
-`,
+    </div>`,
 
     data: () => {
         return {
             data: employeeData,
-            toolbar: ['PdfExport'],
-            detailTemplate: function () {
-                return {
-                    template: Vue.component('detailTemplate', {
-                        template: `<table class="detailtable" width="100%">
-              <colgroup>
-                  <col width="40%" />
-                  <col width="60%" />
-              </colgroup>
-              <thead>
-                  <tr>
-                      <th colspan="2" style="font-weight: 500;text-align: center;background-color: #ADD8E6;">
-                          Product Details
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td rowspan="4" style="text-align: center;">
-                          <img class='photo' :src="'data:image/jpeg;base64,'+data.ProductImg" alt="data.EmployeeID" />
-                      </td>
-                      <td>
-                          <span style="font-weight: 500;color: #0a76ff;">Offers: {{data.Offers}} </span>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <span>Available: {{data.Available}} </span>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <span class="link">
-                              Contact: <a :href="'mailto:'+data.Contact">{{data.Contact}}</a>
-                          </span>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          <span style="font-weight: 500;color: #0a76ff;"> Ratings: {{data.Ratings}}</span>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="text-align: center;">
-                          <span> {{data.productDesc}}</span>
-                      </td>
-                      <td>
-                          <span>{{data.ReturnPolicy}}</span>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="text-align: center;">
-                          <span style="font-weight: 500;" > {{data.Cost}}</span>
-                      </td>
-                      <td>
-                          <span>{{data.Cancellation}}</span>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td style="text-align: center;">
-                          <span :class="data.Status" style="font-weight: 500;" > {{data.Status}}</span>
-                      </td>
-                      <td>
-                          <span style="font-weight: 500;color: #0a76ff;">{{data.Delivery}}</span>
-                      </td>
-                  </tr>
-              </tbody>
-          </table>`,
-                        data: function () {
-                            return {
-                                data: {},
-                            }
-                        },
-                    }),
-                }
-            },
+            toolbar: ['PdfExport']
         };
     },
     methods: {
@@ -108,7 +98,7 @@ new Vue({
                 this.$refs.grid.pdfExport({ hierarchyExportMode: "Expanded" });
             }
         },
-        exportDetailTemplate: function(args) {
+        exportDetailTemplate: function (args) {
             args.value = {
                 columnCount: 2,
                 columnHeader: [
@@ -196,5 +186,4 @@ new Vue({
     provide: {
         grid: [DetailRow, PdfExport, Toolbar]
     }
-
 });

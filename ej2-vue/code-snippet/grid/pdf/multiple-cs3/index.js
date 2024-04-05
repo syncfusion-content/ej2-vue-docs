@@ -7,45 +7,46 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-        <p><b>First Grid:</b></p>
-        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions'           :allowPdfExport='true' :toolbarClick='toolbarClick'>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
-        <p><b>Second Grid:</b></p>
-        <ejs-grid ref='grid2' id='SecondGrid' :dataSource='sData' :allowPdfExport='true'>
-            <e-columns>
-                <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120></e-column>
-                <e-column field='FirstName' headerText='FirstName' width=150></e-column>
-                <e-column field='LastName' headerText='Last Name' width=150></e-column>
-                <e-column field='City' headerText='City' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
+      <p><b>First Grid:</b></p>
+      <ejs-grid ref='firstGrid' id='FirstGrid' :dataSource='firstData' :toolbar='toolbarOptions' :allowPdfExport='true' :exportGrids='exportGrids' :toolbarClick='toolbarClick'>
+          <e-columns>
+              <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+              <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+              <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+              <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
+          </e-columns>
+      </ejs-grid>
+      <p><b>Second Grid:</b></p>
+      <ejs-grid ref='secondGrid' id='SecondGrid' :dataSource='secondData' :allowPdfExport='true'>
+          <e-columns>
+              <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=80></e-column>
+              <e-column field='FirstName' headerText='FirstName' width=100></e-column>
+              <e-column field='LastName' headerText='Last Name' width=100></e-column>
+              <e-column field='City' headerText='City' width=100></e-column>
+          </e-columns>
+      </ejs-grid>
     </div>
 `,
 
   data() {
     return {
-      fData: data.slice(0, 5),
-      sData: employeeData.slice(0 ,5),
-      toolbarOptions: ['PdfExport']
+      firstData: data,
+      secondData: employeeData,
+      toolbarOptions: ['PdfExport'],
+      exportGrids: ['FirstGrid', 'SecondGrid'],
     };
   },
   methods: {
-      toolbarClick(args) {
-        if (args.item.id === 'FirstGrid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
-            let firstGridPdfExport = this.$refs.grid1.pdfExport({}, true);
-            firstGridPdfExport.then((pdfData) => {
-                this.$refs.grid2.pdfExport({}, false, pdfData);
-            });
-        }
+    toolbarClick(args) {
+      if (args.item.id === 'FirstGrid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+        let appendPdfExportProperties = {
+          multipleExport: { type: 'NewPage' }
+        };
+        this.$refs.firstGrid.pdfExport(appendPdfExportProperties, true);
+      }
     }
   },
   provide: {
