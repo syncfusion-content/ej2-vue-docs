@@ -5,7 +5,6 @@ import { employeeData } from './datasource.js';
 
 Vue.use(GridPlugin);
 
-
 new Vue({
   el: '#app',
   template: `
@@ -17,8 +16,7 @@ new Vue({
               <e-column field="City" headerText="City"></e-column>
               <e-column field="Title" headerText="Title" width="170"></e-column>
           </e-columns>
-      </ejs-grid>
-`,
+      </ejs-grid>`,
 
   data() {
     return {

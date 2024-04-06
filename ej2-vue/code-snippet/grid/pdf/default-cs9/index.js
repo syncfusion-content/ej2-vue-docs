@@ -13,10 +13,10 @@ new Vue({
         <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowPdfExport='true' :pdfExportComplete='pdfExportComplete'
         :toolbarClick='toolbarClick'>
             <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' :visible='false' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+              <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+              <e-column field='CustomerID' headerText='Customer ID' :visible='false' width=100></e-column>
+              <e-column field='ShipCity' headerText='Ship City' width=120></e-column>
+              <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
             </e-columns>
         </ejs-grid>
     </div>
