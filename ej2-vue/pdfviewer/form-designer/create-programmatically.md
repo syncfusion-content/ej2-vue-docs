@@ -253,7 +253,7 @@ Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serv
 
 When the download icon is selected on the toolbar, the Form Fields will be saved in the PDF document and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/saveformfield.gif)
+![Alt text](../../pdfviewer/images/saveformfield.gif)
 
 You can invoke download action using following code snippet.
 
@@ -355,7 +355,7 @@ export default {
 
 When the print icon is selected on the toolbar, the PDF document will be printed along with the Form Fields added to the pages and this action will not affect the original document. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/printformfield.gif)
+![Alt text](../../pdfviewer/images/printformfield.gif)
 
 You can invoke print action using the following code snippet.,
 
@@ -456,7 +456,7 @@ export default {
 
 We can open the already saved PDF document contains Form Fields in it by clicking the open icon in the toolbar. Refer the below GIF for further reference.
 
-![Alt text](../../../pdfviewer/images/openexistingpdf.gif)
+![Alt text](../../pdfviewer/images/openexistingpdf.gif)
 
 ## Validate form fields
 
@@ -1059,7 +1059,7 @@ The following code example explains how to update the properties of the signatur
 
 ```
 
-![Signature Field Settings](../../images/SignatureField.png)
+![Signature Field Settings](../../pdfviewer/images/SignatureField.png)
 
 The following code example explains how to update the properties of the initial field added to the document from the form designer toolbar.
 
@@ -1098,7 +1098,7 @@ The following code example explains how to update the properties of the initial 
 
 ```
 
-![Initial Field Settings](../../images/InitialField.png)
+![Initial Field Settings](../../pdfviewer/images/InitialField.png)
 
 ### Textbox field settings
 
@@ -1398,7 +1398,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![Textbox Field Settings](../../images/textbox.png)
+![Textbox Field Settings](../../pdfviewer/images/textbox.png)
 
 ### Password field settings
 
@@ -1693,7 +1693,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![Password Field Settings](../../images/password.png)
+![Password Field Settings](../../pdfviewer/images/password.png)
 
 ### CheckBox field settings
 
@@ -1954,7 +1954,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![CheckBox Field Settings](../../images/checkbox.png)
+![CheckBox Field Settings](../../pdfviewer/images/checkbox.png)
 
 ### RadioButton field settings
 
@@ -2081,7 +2081,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-The following code example explains how to update the properties of the radiobutton field added to the document from the form designer toolbar.
+The following code example explains how to update the properties of the radio button field added to the document from the form designer toolbar.
 
 
 {% tabs %}
@@ -2219,7 +2219,7 @@ export default {
 {% endtabs %}
 
 
-![RadioButton Field Settings](../../images/radiobutton.png)
+![RadioButton Field Settings](../../pdfviewer/images/radiobutton.png)
 
 ### ListBox field settings
 
@@ -2529,7 +2529,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![ListBox Field Settings](../../images/listbox.png)
+![ListBox Field Settings](../../pdfviewer/images/listbox.png)
 
 ### DropDown field settings
 
@@ -2840,4 +2840,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-![DropDown Field Settings](../../images/dropdown.png)
+![DropDown Field Settings](../../pdfviewer/images/dropdown.png)
