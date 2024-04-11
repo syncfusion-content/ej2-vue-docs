@@ -94,6 +94,10 @@ Stacked headers are the additional headers to column header that will group the 
 
 Define the grouping of columns **key** value to the `keyFields` property and provide the custom header text name to grouped columns using the `text` property, which is placed inside the `stackedHeaders` property.
 
+To learn about Kanban stacked headers, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=mDKxfY5WFzE" %}
+
 In the following code, the kanban columns 'InProgress, Review' are grouped under 'Development Phase' category.
 
 {% tabs %}
