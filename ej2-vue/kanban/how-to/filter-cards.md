@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 You can filter the collection of cards from the dataSource and display it on the Kanban board by using the [`query`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#query) property.
 
+To learn about Kanban filtering cards, you can check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=e_8lVApB19s" %}
+
 In the below sample, you can filter the cards based on the ‘where’ query and display the filtered data to the Kanban board.
 
 {% tabs %}
