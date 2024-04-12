@@ -32,16 +32,5 @@ export default {
   .custom-connector .e-timeline-item.e-connector::after {
     border-color: #f7c867;
     border-width: 1.4px;
-    animation: progress 2s;
-  }
-
-  @keyframes progress {
-    from {
-      height: 0%;
-    }
-
-    to {
-      height: 100%;
-    }
   }
 </style>
