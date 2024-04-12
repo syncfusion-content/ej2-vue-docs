@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events
+# Events in Vue Ribbon component
 
 This section describes the ribbon events that will be triggered when appropriate actions are performed. The following events are available in the ribbon component.
 
