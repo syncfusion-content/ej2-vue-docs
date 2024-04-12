@@ -3016,6 +3016,7 @@ The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/itemHover" %}
+{% endif %}
 
 ### beforeItemRender
 
