@@ -22,3 +22,17 @@
 .ribbonTemplate.Small .text {
     display:none;
 }
+
+.custom-template input {
+    margin-left: 10px;
+    width: 100px;
+  }
+  
+  .custom-template.Medium {
+    display: flex;
+    align-items: center;
+  }
+  .custom-template.Medium input {
+    height: 14px;
+    margin-right: 10px;
+  }

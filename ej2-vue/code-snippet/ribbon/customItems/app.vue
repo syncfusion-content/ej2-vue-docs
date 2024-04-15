@@ -3,7 +3,20 @@
     <e-ribbon-tabs>
       <e-ribbon-tab header="Home">
         <e-ribbon-groups>
-          <e-ribbon-group header="Font">
+          <e-ribbon-group header="Templates">
+            <e-ribbon-collections>
+              <e-ribbon-collection>
+                <e-ribbon-items>
+                  <e-ribbon-item type="Template" :itemTemplate="'customItem'">
+                    <template v-slot:customItem = "{data}">
+                      <div v-bind:class="'custom-template ' + data.activeSize"><label for="fname">First name:</label><input type="text" id="fname" name="fname"/><br/><br/><label for="lname">Last name:</label><input type="text" id="lname" name="lname"/></div>
+                    </template>
+                </e-ribbon-item>
+                </e-ribbon-items>
+              </e-ribbon-collection>
+            </e-ribbon-collections>
+          </e-ribbon-group>
+          <e-ribbon-group header="Multimedia">
             <e-ribbon-collections>
               <e-ribbon-collection>
                 <e-ribbon-items>
@@ -63,5 +76,19 @@
   .ribbonTemplate.Small .text {
     display:none;
   }
+
+  .custom-template input {
+  margin-left: 10px;
+  width: 100px;
+}
+
+.custom-template.Medium {
+  display: flex;
+  align-items: center;
+}
+.custom-template.Medium input {
+  height: 14px;
+  margin-right: 10px;
+}
 
 </style>
