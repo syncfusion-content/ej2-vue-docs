@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events
+# Events in Vue Ribbon component
 
 This section describes the ribbon events that will be triggered when appropriate actions are performed. The following events are available in the ribbon component.
 
@@ -2331,7 +2331,7 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
 
 ### beforeClick
 
-The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the groupbutton items.
+The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/#beforeclick) event is triggered before selecting a button from the group button items.
 
 ```html
 
@@ -2404,7 +2404,7 @@ The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
 
 ### click
 
-The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the groupbutton items.
+The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItem/#click) event is triggered when selecting a button from the group button items.
 
 ```html
 
@@ -3016,6 +3016,7 @@ The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/itemHover" %}
+{% endif %}
 
 ### beforeItemRender
 
