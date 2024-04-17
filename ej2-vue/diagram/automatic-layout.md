@@ -55,6 +55,10 @@ To arrange nodes in a radial tree structure, set the [`type`](https://ej2.syncfu
 
 An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout/#type) of layout should be set as an `OrganizationalChart`.
 
+To create and position an organization chart using the Syncfusion Vue Diagram component, refer to the below video link.
+
+{% youtube "youtube:https://www.youtube.com/watch?v=8_Hjqho3dXw" %}
+
 The following code example illustrates how to create an organizational chart.
 
 {% tabs %}
@@ -165,7 +169,7 @@ An [`Orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orie
 
 N> If you want to use mind map layout in diagram, you need to inject MindMap in the diagram.
 
-The following code example illustrates how to create an mindmap layout.
+The following code example illustrates how to create an mind map layout.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
