@@ -300,9 +300,9 @@ By default, the uploader component process multiple files to upload simultaneous
         
 {% previewsample "page.domainurl/code-snippet/uploader/sequential-upload-cs1" %}
 
-## Preload Files
+## Preloaded Files
 
-The uploader component allows you to preload the list of files that are uploaded in the server. The preloaded files are useful to view and remove the files from server that can be achieved by the [files](https://ej2.syncfusion.com/vue/documentation/api/uploader/#files) property. By default, the files are configured with uploaded successfully state on rendering file list. By default, the files are configured with uploaded successfully state on rendering file list. The following properties are mandatory to configure the preloaded files:
+The uploader component allows you to preloaded the list of files that are uploaded in the server. The preloaded files are useful to view and remove the files from server that can be achieved by the [files](https://ej2.syncfusion.com/vue/documentation/api/uploader/#files) property. By default, the files are configured with uploaded successfully state on rendering file list. By default, the files are configured with uploaded successfully state on rendering file list. The following properties are mandatory to configure the preloaded files:
 
     *   Name
     *   Size
