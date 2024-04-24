@@ -1,15 +1,15 @@
 
 import Vue from "vue";
-import { GridPlugin, Aggregate ,ForeignKey, Filter } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Aggregate, ForeignKey, Filter } from "@syncfusion/ej2-vue-grids";
 import { getValue } from "@syncfusion/ej2-base";
 import { getForeignData } from "@syncfusion/ej2-grids";
-import { data,fEmployeeData } from './datasource.js';
+import { data, employeeData } from './datasource.js';
 
 Vue.use(GridPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowFiltering='true'  height='260px' >
             <e-columns>
@@ -29,30 +29,30 @@ new Vue({
     </div>
 `,
 
-      data: () => {
+  data: () => {
+    return {
+      data: data,
+      employeeData: employeeData,
+      footerTemplate: function () {
         return {
-          data: data,
-          employeeData: fEmployeeData,
-          footerTemplate: function () {
-            return {
-              template: Vue.component('customTemplate', {
-                template: `<span>Count of Margaret:  {{data.Custom}}</span>`,
-                data() { return { data: { data: {} } }; }
-              })
-            }
-          },
-
-        };
-      },
-      methods: {
-        customAggregateFn: function (data, column) {
-          return data.result.filter((dObj) => {
-            return getValue('FirstName', getForeignData(this.$refs.grid.getColumnByField(column.field), dObj)[0]) === 'Margaret';
-          }).length;
+          template: Vue.component('customTemplate', {
+            template: `<span>Count of Margaret:  {{data.Custom}}</span>`,
+            data() { return { data: { data: {} } }; }
+          })
         }
       },
-      provide: {
-        grid: [Aggregate, ForeignKey, Filter],
-      },
-    
+
+    };
+  },
+  methods: {
+    customAggregateFn: function (data, column) {
+      return data.result.filter((dObj) => {
+        return getValue('FirstName', getForeignData(this.$refs.grid.getColumnByField(column.field), dObj)[0]) === 'Margaret';
+      }).length;
+    }
+  },
+  provide: {
+    grid: [Aggregate, ForeignKey, Filter],
+  },
+
 });

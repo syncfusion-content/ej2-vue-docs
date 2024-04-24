@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource="data" id="gridcomp" :allowPaging='true' :allowSorting='true' :showColumnMenu='true' :filterSettings='filterSettings' :columnMenuOpen='columnMenuOpen' :allowFiltering='true' :allowGrouping='true'>
@@ -44,7 +42,13 @@ export default {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>s
-
-
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

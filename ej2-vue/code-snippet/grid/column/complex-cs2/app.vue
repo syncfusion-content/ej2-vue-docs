@@ -22,13 +22,13 @@ Vue.use(GridPlugin);
 export default {
   data() {
     return {
-      data: data.slice(0, 5)
+      data: data
     };
   }
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

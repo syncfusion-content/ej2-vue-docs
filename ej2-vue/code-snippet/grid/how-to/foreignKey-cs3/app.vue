@@ -23,41 +23,45 @@ import Vue from "vue";
 import { GridPlugin, Aggregate ,ForeignKey, Filter } from "@syncfusion/ej2-vue-grids";
 import { getValue } from "@syncfusion/ej2-base";
 import { getForeignData } from "@syncfusion/ej2-grids";
-import { data,fEmployeeData } from './datasource.js';
+import { data, employeeData } from './datasource.js';
 
 Vue.use(GridPlugin);
-export default {
-      data: () => {
-        return {
-          data: data,
-          employeeData: fEmployeeData,
-          footerTemplate: function () {
-            return {
-              template: Vue.component('customTemplate', {
-                template: `<span>Count of Margaret:  {{data.Custom}}</span>`,
-                data() { return { data: { data: {} } }; }
-              })
-            }
-          },
 
-        };
-      },
-      methods: {
-        customAggregateFn: function (data, column) {
-          return data.result.filter((dObj) => {
-            return getValue('FirstName', getForeignData(this.$refs.grid.getColumnByField(column.field), dObj)[0]) === 'Margaret';
-          }).length;
+export default {
+  data: () => {
+    return {
+      data: data,
+      employeeData: employeeData,
+      footerTemplate: function () {
+        return {
+          template: Vue.component('customTemplate', {
+            template: `<span>Count of Margaret:  {{data.Custom}}</span>`,
+            data() { return { data: { data: {} } }; }
+          })
         }
       },
+    };
+  },
+    methods: {
+    customAggregateFn: function (data, column) {
+      return data.result.filter((obj) => {
+        return getValue('FirstName', getForeignData(this.$refs.grid.getColumnByField(column.field), obj)[0]) === 'Margaret';
+      }).length;
+    }
+  },
       provide: {
         grid: [Aggregate, ForeignKey, Filter],
       },
     }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-
-

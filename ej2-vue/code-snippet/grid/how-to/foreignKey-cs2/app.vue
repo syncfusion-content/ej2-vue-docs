@@ -18,7 +18,7 @@ import { createElement } from '@syncfusion/ej2-base';
 import { GridPlugin, Edit, Toolbar, ForeignKey, Filter  } from "@syncfusion/ej2-vue-grids";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { DataManager } from '@syncfusion/ej2-data';
-import { data,fEmployeeData } from './datasource.js';
+import { data,employeeData } from './datasource.js';
 
 let dropInstance;
 
@@ -27,7 +27,7 @@ export default {
       data: () => {
         return {
           data: data,
-          employeeData: fEmployeeData,
+          employeeData: employeeData,
           filteroption: { type: 'Menu' },
           filter: {
             ui: {
@@ -35,7 +35,7 @@ export default {
                 let flValInput = createElement('input', { className: 'flm-input' });
                 args.target.appendChild(flValInput);
                 dropInstance = new DropDownList({
-                  dataSource: new DataManager(fEmployeeData),
+                  dataSource: new DataManager(employeeData),
                   fields: { text: 'FirstName', value: 'EmployeeID' },
                   placeholder: 'Select a value',
                   popupHeight: '200px'
@@ -58,7 +58,13 @@ export default {
     }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

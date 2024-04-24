@@ -12,7 +12,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-button id='reorderSingleCol' @click.native='reorder'>Reorder Ship City to Last</ejs-button>
+        <ejs-button id='reordersingle' cssClass='e-info' @click.native='reorderSingleColumnByTargetIndex'>Reorder single column</ejs-button>
+        <ejs-button id='reordermultipe' cssClass='e-info' @click.native='reorderMultipleColumnByTargetIndex'>Reorder mutiple columns</ejs-button>
         <ejs-grid ref='grid' :dataSource="data" :allowReordering='true' height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -34,9 +35,12 @@ new Vue({
       grid: [Reorder]
   },
   methods: {
-      reorder: function() {
-          this.$refs.grid.reorderColumns('ShipCity','ShipName');
-      }
+    reorderSingleColumnByTargetIndex: function () {
+      this.$refs.grid.reorderColumnByTargetIndex("OrderID", 3); // move column with field name "OrderID" to index 3
+    },
+    reorderMultipleColumnByTargetIndex: function () {
+      this.$refs.grid.reorderColumnByTargetIndex(['OrderID', 'CustomerID'], 3); // move columns with field name "OrderID" and "CustomerID" to index 3
+    }
   }
 
 });

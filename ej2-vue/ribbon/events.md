@@ -2981,7 +2981,7 @@ The [backStageItemClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon
 
 ### popupOpen
 
-The [popupOpen][popupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#popupopen) event is triggered when the gallery popup opens.
+The [popupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#popupopen) event is triggered when the gallery popup opens.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -3007,8 +3007,6 @@ The [popupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonG
 
 The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hover over the gallery item.
 
-{% if page.publishingplatform == "typescript" %}
-
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
 {% include code-snippet/ribbon/gallery-items/itemHover/app.vue %}
@@ -3016,7 +3014,6 @@ The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/itemHover" %}
-{% endif %}
 
 ### beforeItemRender
 

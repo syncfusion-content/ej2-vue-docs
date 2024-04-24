@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-        <ejs-grid ref='grid' :dataSource='data':showColumnMenu='true' height='315px' >
+        <ejs-grid ref='grid' :dataSource='data' :showColumnMenu='true' height='315px' >
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' width=90></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
@@ -14,7 +14,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, ColumnMenu } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, ColumnMenu, Resize } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
@@ -26,15 +26,21 @@ Vue.use(GridPlugin);
       };
     },
   provide: {
-    grid: [ColumnMenu]
+    grid: [ColumnMenu, Resize]
     }
   }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
   .e-grid .e-columnheader .e-icons.e-columnmenu::before {
-              content: "\e941";
+              content: "\e725";
       }
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

@@ -22,8 +22,8 @@ Vue.use(GridPlugin);
 export default {
   data() {
     return {
-      data: data.slice(0, 5),
-      employeeData: employeeData.slice(0, 5)
+      data: data,
+      employeeData: employeeData
     };
   },
   provide: {
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

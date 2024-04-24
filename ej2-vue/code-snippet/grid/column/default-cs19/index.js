@@ -7,8 +7,8 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
         <ejs-grid :dataSource='data' height='315'>
             <e-columns>
@@ -27,11 +27,11 @@ new Vue({
     };
   },
   methods: {
-    currencyFormatter: function(field, data, column) {
-        return '€' + data['Freight'];
+    currencyFormatter: function (field, data, column) {
+      return '€' + data['Freight'];
     },
     valueAccess: function (field, data, column) {
-        return data[field] + '-' + data['ShipRegion'];
+      return data[field] + '-' + data['ShipRegion'];
     }
   }
 
