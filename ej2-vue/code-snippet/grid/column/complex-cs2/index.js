@@ -23,7 +23,7 @@ new Vue({
 
   data() {
     return {
-      data: data.slice(0, 5)
+      data: data
     };
   }
 

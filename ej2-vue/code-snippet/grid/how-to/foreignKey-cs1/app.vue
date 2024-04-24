@@ -1,8 +1,6 @@
-
-
 <template>
     <div id="app">
-        <ejs-grid ref='grid' :dataSource='data' :editSettings='editoption' :Toolbar='toolbar' height='270px' >
+        <ejs-grid ref='grid' :dataSource='data' :editSettings='editoption' :toolbar='toolbar' height='270px' >
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
                 <e-column field='EmployeeID' headerText='Employee Name' :dataSource='employeeData' foreignKeyValue='FirstName' :edit='edit' width=120></e-column>
@@ -18,14 +16,15 @@ import { createElement } from '@syncfusion/ej2-base';
 import { GridPlugin, Edit, Toolbar,ForeignKey  } from "@syncfusion/ej2-vue-grids";
 import { AutoComplete } from "@syncfusion/ej2-dropdowns";
 import { DataManager,Query } from '@syncfusion/ej2-data';
-import { data,fEmployeeData } from './datasource.js';
+import { data,employeeData } from './datasource.js';
 
 Vue.use(GridPlugin);
+var autoComplete;
 export default {
       data: () => {
         return {
           data: data,
-          employeeData: fEmployeeData,
+          employeeData: employeeData,
           toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
           editoption: { allowEditing: true },
           edit: {
@@ -33,32 +32,36 @@ export default {
               return createElement('input');
             },
             read: () => { // return edited value to update data source
-              let value = new DataManager(fEmployeeData).executeLocal(new Query().where('FirstName', 'equal', this.autoComplete.value));
+              let value = new DataManager(employeeData).executeLocal(new Query().where('FirstName', 'equal', autoComplete.value));
               return value.length && value[0]['EmployeeID']; // to convert foreign key value to local value.
             },
             destroy: () => { // to destroy the custom component.
-              this.autoComplete.destroy();
+              autoComplete.destroy();
             },
             write: (args) => { // to show the value for date picker
-              this.autoComplete = new AutoComplete({
-                dataSource: fEmployeeData,
+              autoComplete = new AutoComplete({
+                dataSource: employeeData,
                 fields: { value: args.column.foreignKeyValue },
                 value: args.foreignKeyData[0][args.column.foreignKeyValue]
               });
-              this.autoComplete.appendTo(args.element);
+              autoComplete.appendTo(args.element);
             }
           },
         };
       },
       provide: {
-        grid: [Edit, ForeignKey]
+        grid: [Edit, ForeignKey, Toolbar]
       },
     }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-
-

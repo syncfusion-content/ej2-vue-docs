@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { GridPlugin, Group, Sort, Resize, ColumnMenu, Page } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Group, Sort, Resize, ColumnMenu, Page, Filter } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
@@ -31,7 +31,7 @@ new Vue({
     };
   },
   provide: {
-      grid: [Group, Sort, Resize, ColumnMenu, Page]
+      grid: [Group, Sort, Resize, ColumnMenu, Page, Filter]
   }
 
 });

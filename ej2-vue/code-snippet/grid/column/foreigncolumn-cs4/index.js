@@ -7,8 +7,8 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
         <ejs-grid :dataSource='data' height='315'>
             <e-columns>
@@ -23,12 +23,12 @@ new Vue({
 
   data() {
     return {
-      data: data.slice(0, 5),
-      employeeData: employeeData.slice(0, 5)
+      data: data,
+      employeeData: employeeData
     };
   },
   provide: {
-      grid: [ForeignKey]
+    grid: [ForeignKey]
   }
 
 });

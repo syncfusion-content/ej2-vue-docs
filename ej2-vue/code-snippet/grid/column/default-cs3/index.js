@@ -1,32 +1,30 @@
 
 import Vue from 'vue';
-import { GridPlugin, Edit } from '@syncfusion/ej2-vue-grids';
+import { GridPlugin, Edit, Page } from '@syncfusion/ej2-vue-grids';
+import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
   <div id="app">
-      <ejs-grid ref='grid' :dataSource="data" :editSettings='editSettings' :dataBound='dataBound'> </ejs-grid>
+      <ejs-grid ref='grid' :dataSource="data" allowPaging=true :editSettings='editSettings' :dataBound='dataBound'> </ejs-grid>
   </div>
 `,
 
-  data () {
+  data() {
     return {
-      data: [
-      { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5 },
-      { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6 },
-      { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4 }],
+      data: data,
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
     }
   },
   provide: {
-    grid: [Edit]
+    grid: [Edit, Page]
   },
   methods: {
-    dataBound: function() {
-        this.$refs.grid.ej2Instances.columns[0].isPrimaryKey = true;
+    dataBound: function () {
+      this.$refs.grid.ej2Instances.columns[0].isPrimaryKey = true;
     }
   }
 

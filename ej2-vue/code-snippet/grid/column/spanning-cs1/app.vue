@@ -104,12 +104,6 @@ export default {
                     args.colSpan = 2;
                 }
                 break;
-            default:
-                this.extendQueryCellEvent(args, data.EmployeeID);
-        }
-    },
-    extendQueryCellEvent: function(args, value) {
-        switch (value) {
             case 10009:
                 if (args.column.field === '9:00' || args.column.field === '11:30') {
                     args.colSpan = 3;
@@ -126,12 +120,18 @@ export default {
                 }
                 break;
         }
+    },
     }
-    }
-  });
+  };
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

@@ -7,9 +7,10 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+    el: '#app',
+    template: `
     <div id="app">
+    <p style="color: red; text-align: center;" id="message">{{ message }}</p>
         <ejs-grid :dataSource="data" id="gridcomp" :allowPaging='true' :allowGrouping='true' :allowSorting='true' :showColumnMenu='true'
         :groupSettings='groupOptions' :allowFiltering='true' :filterSettings='filterSettings'
         :columnMenuClick='columnMenuClick' :columnMenuOpen='columnMenuOpen'>
@@ -24,23 +25,24 @@ new Vue({
     </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      groupOptions: { showGroupedColumn: true },
-      filterSettings: { type: "CheckBox" }
-    };
-  },
-  provide: {
-      grid: [Group, Sort, Resize, ColumnMenu, Page]
-  },
-  methods: {
-      columnMenuOpen: function(){
-          alert('columnMenuOpen event is Triggered');
-      },
-      columnMenuClick: function(){
-          alert('columnMenuClick event is Triggered');
-      }
-  }
+    data() {
+        return {
+            data: data,
+            groupOptions: { showGroupedColumn: true },
+            filterSettings: { type: "CheckBox" },
+            message: ''
+        };
+    },
+    provide: {
+        grid: [Group, Sort, Resize, ColumnMenu, Page]
+    },
+    methods: {
+        columnMenuOpen: function () {
+            this.message = 'columnMenuOpen event is Triggered';
+        },
+        columnMenuClick: function () {
+            this.message = 'columnMenuClick event is Triggered';
+        }
+    }
 
 });
