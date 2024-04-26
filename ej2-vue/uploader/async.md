@@ -135,9 +135,9 @@ public void Save()
 
 ```
 
-### Server-side configure save action to returned response
+### Server-side configuration for saving and returning responses
 
-The following example demonstrates how the server-side action for saving the file in server to returned response in JSON, String and File type data's.
+The following example demonstrates the server-side action for saving files on the server and returning responses in JSON, String, and File formats.
 
 ```c#
 [AcceptVerbs("Post")]
