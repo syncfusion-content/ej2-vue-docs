@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data" id="gridcomp" :allowPaging='true' :allowGrouping='true' :allowSorting='true' :showColumnMenu='true'
@@ -16,7 +14,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, Group, Sort, Resize, ColumnMenu, Page } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Group, Sort, Resize, ColumnMenu, Page, Filter } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
@@ -30,12 +28,18 @@ export default {
     };
   },
   provide: {
-      grid: [Group, Sort, Resize, ColumnMenu, Page]
+      grid: [Group, Sort, Resize, ColumnMenu, Page, Filter]
   }
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

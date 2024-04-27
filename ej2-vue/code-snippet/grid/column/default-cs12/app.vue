@@ -2,7 +2,8 @@
 
 <template>
     <div id="app">
-        <ejs-button id='reorderSingleCol' @click.native='reorder'>Reorder Ship City to Last</ejs-button>
+        <ejs-button id='reordersingle' cssClass='e-info' @click.native='reorderSingleColumnByTargetIndex'>Reorder single column</ejs-button>
+        <ejs-button id='reordermultipe' cssClass='e-info' @click.native='reorderMultipleColumnByTargetIndex'>Reorder mutiple columns</ejs-button>
         <ejs-grid ref='grid' :dataSource="data" :allowReordering='true' height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -33,18 +34,28 @@ export default {
       grid: [Reorder]
   },
   methods: {
-      reorder: function() {
-          this.$refs.grid.reorderColumns('ShipCity','ShipName');
-      }
+    reorderSingleColumnByTargetIndex: function() {
+      this.$refs.grid.reorderColumnByTargetIndex("OrderID", 3); // move column with field name "OrderID" to index 3
+    },
+    reorderMultipleColumnByTargetIndex: function() {
+      this.$refs.grid.reorderColumnByTargetIndex(['OrderID', 'CustomerID'], 3); // move columns with field name "OrderID" and "CustomerID" to index 3
+    }
   }
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-
- #reorderSingleCol {
-     text-transform: none;
- }
+.e-btn.e-info, .e-css.e-btn.e-info {
+    margin-right: 4px;
+    margin-bottom: 3px;
+}
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
 </style>
-
-

@@ -245,7 +245,7 @@ define(["require", "exports"], function (require, exports) {
            "ShipRegion":null,
            "ShipCountry":"France"
         }],
-exports.fEmployeeData = [{
+exports.employeeData = [{
             'EmployeeID': 1,
             'LastName': 'Davolio',
             'FirstName': 'Nancy',

@@ -5,7 +5,6 @@ import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
 
-
 new Vue({
 	el: '#app',
 	template: `

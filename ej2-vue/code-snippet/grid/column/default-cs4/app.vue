@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
       <ejs-grid ref='grid' :dataSource="data" :dataBound='dataBound'> </ejs-grid>
@@ -8,15 +6,13 @@
 <script>
 import Vue from 'vue';
 import { GridPlugin } from '@syncfusion/ej2-vue-grids';
+import { data } from 'datasource';
 
 Vue.use(GridPlugin);
 export default {
   data () {
     return {
-      data: [
-    { OrderID: 10248, CustomerID: 'VINET', Freight: 32.3800, OrderDate: "1996-07-02T00:00:00.000Z" },
-    { OrderID: 10249, CustomerID: 'TOMSP', Freight: 32.3800, OrderDate: "1996-07-19T00:00:00.000Z" },
-    { OrderID: 10250, CustomerID: 'HANAR', Freight: 32.3800, OrderDate: "1996-07-22T00:00:00.000Z" }]
+      data: data
     }
   },
   methods: {
@@ -29,7 +25,7 @@ export default {
             if (this.$refs.grid.ej2Instances.columns[i].type === "date") {
                 this.$refs.grid.ej2Instances.columns[i].format = { type: "date", format: "dd/MM/yyyy" };
             }
-            this.$refs.grid.ej2Instances.columns[2].format = "P2";
+            this.$refs.grid.ej2Instances.columns[5].format = "P2";
         }
         this.$refs.grid.ej2Instances.refreshColumns();
     }
@@ -37,7 +33,7 @@ export default {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

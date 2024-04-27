@@ -20,6 +20,40 @@ The following example demonstrates how to enable track changes.
 <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableTrackChanges='true'></ejs-documenteditorcontainer>
 ```
 
+## Show/Hide Revisions Pane
+ 
+The Show/Hide Revisions Pane feature in the Document Editor allows users to toggle the visibility of the revisions pane, providing flexibility in managing tracked changes within the document.
+ 
+The following example code illustrates how to show/hide the revisions pane.
+
+```ts
+<template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true' :enableTrackChanges='true'></ejs-documenteditorcontainer>
+    </div>
+</template>
+<script>
+  import Vue from 'vue';
+  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+
+  Vue.use(DocumentEditorContainerPlugin);
+
+  export default {
+    data() {
+      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'};
+    },
+    provide: {
+      //Inject require modules.
+      DocumentEditorContainer: [Toolbar]
+    },
+    mounted(){
+    this.$refs.container.documentEditor.showRevisions = true; // To show revisions pane
+    this.$refs.container.documentEditor.showRevisions = false; // To hide revisions pane
+    }
+  }
+</script>
+```
+
 ## Get all tracked revisions
 
 The following example demonstrate how to get all tracked revision from current document.

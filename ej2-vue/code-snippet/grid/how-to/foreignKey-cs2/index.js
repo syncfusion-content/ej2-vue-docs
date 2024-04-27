@@ -4,7 +4,7 @@ import { createElement } from '@syncfusion/ej2-base';
 import { GridPlugin, Edit, Toolbar, ForeignKey, Filter  } from "@syncfusion/ej2-vue-grids";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { DataManager } from '@syncfusion/ej2-data';
-import { data,fEmployeeData } from './datasource.js';
+import { data,employeeData } from './datasource.js';
 
 let dropInstance;
 
@@ -28,7 +28,7 @@ new Vue({
       data: () => {
         return {
           data: data,
-          employeeData: fEmployeeData,
+          employeeData: employeeData,
           filteroption: { type: 'Menu' },
           filter: {
             ui: {
@@ -36,7 +36,7 @@ new Vue({
                 let flValInput = createElement('input', { className: 'flm-input' });
                 args.target.appendChild(flValInput);
                 dropInstance = new DropDownList({
-                  dataSource: new DataManager(fEmployeeData),
+                  dataSource: new DataManager(employeeData),
                   fields: { text: 'FirstName', value: 'EmployeeID' },
                   placeholder: 'Select a value',
                   popupHeight: '200px'
