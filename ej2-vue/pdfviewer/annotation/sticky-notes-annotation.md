@@ -33,6 +33,215 @@ Annotation comments can be added to the PDF document using the comment panel.
 
 ![StickyNotesComment](../../pdfviewer/images/stickynotes_comment.png)
 
+## Adding a sticky note annotation to the PDF document Programmatically
+
+With the PDF Viewer library, you can add a sticky note annotation to the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+
+Here's a example of how you can utilize the **addAnnotation()** method to include a sticky note annotation programmatically:
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :resourceUrl="resourceUrl">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    addAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.annotation.addAnnotation("StickyNotes", {
+          offset: { x: 100, y: 200 },
+          pageNumber: 1,
+          isLock: false
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    addAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.annotation.addAnnotation("StickyNotes", {
+          offset: { x: 100, y: 200 },
+          pageNumber: 1,
+          isLock: false
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Edit the existing sticky note annotation programmatically
+
+To modify existing sticky note annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+
+Here is an example of how you can use the **editAnnotation()** method:
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :resourceUrl="resourceUrl">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    editAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+    for (let i = 0; i < viewer.annotationCollection.length; i++) 
+      {
+        if (viewer.annotationCollection[i].shapeAnnotationType === "sticky") {
+          var width = viewer.annotationCollection[i].bounds.width;
+          var height = viewer.annotationCollection[i].bounds.height;
+          viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height }; 
+          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+        }
+      }
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    editAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+    for (let i = 0; i < viewer.annotationCollection.length; i++) 
+      {
+        if (viewer.annotationCollection[i].shapeAnnotationType === "sticky") {
+          var width = viewer.annotationCollection[i].bounds.width;
+          var height = viewer.annotationCollection[i].bounds.height;
+          viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height }; 
+          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+        }
+      }
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 ## Editing the properties of the sticky note annotation
 
 ### Editing opacity
@@ -69,6 +278,7 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
           id="pdfViewer"
           ref="pdfviewer"
           :documentPath="documentPath"
+          :resourceUrl="resourceUrl"
           :stickyNotesSettings="stickyNotesSettings">
       </ejs-pdfviewer>
   </div>
@@ -76,9 +286,9 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -86,13 +296,14 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
       stickyNotesSettings: {author: 'Syncfusion'}
     };
   },
   
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
 
 }
 </script>
@@ -113,9 +324,9 @@ export default {
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -130,7 +341,7 @@ export default {
   
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
 
 }
 </script>
@@ -150,6 +361,7 @@ The PDF Viewer control provides an option to disable the sticky note annotations
           id="pdfViewer"
           ref="pdfviewer"
           :documentPath="documentPath"
+          :resourceUrl="resourceUrl"
           :enableStickyNotesAnnotation="enableStickyNotesAnnotation">
       </ejs-pdfviewer>
   </div>
@@ -157,9 +369,9 @@ The PDF Viewer control provides an option to disable the sticky note annotations
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -167,13 +379,14 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
       enableStickyNotesAnnotation: false
     };
   },
   
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
 
 }
 </script>
@@ -194,9 +407,9 @@ export default {
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, ThumbnailView, Print,
-         TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -211,7 +424,7 @@ export default {
   
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]},
+                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
 
 }
 </script>
