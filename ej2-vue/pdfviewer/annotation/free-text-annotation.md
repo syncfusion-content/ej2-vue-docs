@@ -36,6 +36,7 @@ Refer to the following code sample to switch to the Free Text annotation mode.
         id="pdfViewer"
         ref="pdfviewer"
         :documentPath="documentPath"
+        :resourceUrl="resourceUrl"
         :documentLoad="documentLoad">
       </ejs-pdfviewer>
   </div>
@@ -43,9 +44,9 @@ Refer to the following code sample to switch to the Free Text annotation mode.
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 var viewer;
 
@@ -53,12 +54,13 @@ export default {
   name: 'app',
   data () {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
 
   methods: {
    documentLoad() {
@@ -87,9 +89,9 @@ export default {
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 var viewer;
 
@@ -103,7 +105,7 @@ export default {
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]},
 
   methods: {
    documentLoad() {
@@ -115,6 +117,242 @@ export default {
   }
 }
 </script>
+{% endhighlight %}
+{% endtabs %}
+
+## Adding a free text annotation programmatically to the PDF document
+
+The PDF Viewer library allows you to add the free text annotation in the PDF Viewer control programmatically using the [**addAnnotation()**](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/annotation/#addannotation) method.
+
+Here is an example of how you can use the **addAnnotation()** method to move the free text annotation programmatically:
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :resourceUrl="resourceUrl"
+        :addAnnotation="addAnnotation">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    addAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+    viewer.annotation.addAnnotation("FreeText", {
+        offset: { x: 100, y: 150 },
+        fontSize: 16,
+        fontFamily: "Helvetica",
+        pageNumber: 1,
+        width: 200,
+        height: 40,
+        isLock: false,
+        textAlignment : 'Center',
+        borderStyle : 'solid',
+        borderWidth : 2,
+        borderColor : 'red',
+        fillColor : 'blue',
+        fontColor: 'white',
+        defaultText: "Syncfusion"
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addAnnotation">Add Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl"
+        :addAnnotation="addAnnotation">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    addAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+    viewer.annotation.addAnnotation("FreeText", {
+        offset: { x: 100, y: 150 },
+        fontSize: 16,
+        fontFamily: "Helvetica",
+        pageNumber: 1,
+        width: 200,
+        height: 40,
+        isLock: false,
+        textAlignment : 'Center',
+        borderStyle : 'solid',
+        borderWidth : 2,
+        borderColor : 'red',
+        fillColor : 'blue',
+        fontColor: 'white',
+        defaultText: "Syncfusion"
+      });
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Change the content of an existing Free text annotation programmatically
+
+To change the content of an existing free text annotation in the Syncfusion PDF viewer programmatically, you can use the **editAnnotation()** method.
+
+Here is an example of how you can use the **editAnnotation()** method to change the content of a free text annotation:
+
+{% tabs %}
+{% highlight html tabtitle="Standalone" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :resourceUrl="resourceUrl">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    editAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+      for (let i = 0; i < viewer.annotationCollection.length; i++) 
+      {
+        if (viewer.annotationCollection[i].subject === "Text Box") {
+          var width = viewer.annotationCollection[i].bounds.width;
+          var height = viewer.annotationCollection[i].bounds.height;
+          viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height }; 
+          viewer.annotationCollection[i].dynamicText = 'syncfusion';
+          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+        }
+      }
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="editAnnotation">Edit Annotation programatically</button>
+      <ejs-pdfviewer
+        id="pdfViewer"
+        ref="pdfviewer"
+        :documentPath="documentPath"
+        :serviceUrl="serviceUrl">
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      };
+  },
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    methods: {
+    editAnnotation: function () {
+    var viewer = this.$refs.pdfviewer.ej2Instances;
+      for (let i = 0; i < viewer.annotationCollection.length; i++) 
+      {
+        if (viewer.annotationCollection[i].subject === "Text Box") {
+          var width = viewer.annotationCollection[i].bounds.width;
+          var height = viewer.annotationCollection[i].bounds.height;
+          viewer.annotationCollection[i].bounds = {x : 100, y: 100, width: width, height: height }; 
+          viewer.annotationCollection[i].dynamicText = 'syncfusion';
+          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+        }
+      }
+    }
+  }
+}
+</script>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -191,6 +429,7 @@ After editing the default values, they will be changed to the selected values. R
         id="pdfViewer"
         ref="pdfviewer"
         :documentPath="documentPath"
+        :resourceUrl="resourceUrl"
         :freeTextSettings="freetextSettings">
       </ejs-pdfviewer>
   </div>
@@ -198,9 +437,9 @@ After editing the default values, they will be changed to the selected values. R
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -208,12 +447,13 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
       freetextSettings: {fillColor: 'green', borderColor: 'blue', fontColor: 'yellow'}
       };
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
 }
 </script>
 
@@ -233,9 +473,9 @@ export default {
 
 <script>
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 Vue.use(PdfViewerPlugin);
 
 export default {
@@ -249,7 +489,7 @@ export default {
   },
   provide: {
     PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
 }
 </script>
 {% endhighlight %}
