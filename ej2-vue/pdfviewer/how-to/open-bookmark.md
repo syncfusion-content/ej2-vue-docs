@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open and Close Bookmark pane programmatically in Vue PDF Viewer component
+# Open and Close Bookmark pane programmatically
 
 The PDF Viewer library allows you to open the Bookmark pane programmatically using the **openBookmarkPane()** method.
 
@@ -53,6 +53,7 @@ export default {
 
   methods: {
     openBookmark: function () {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.bookmarkViewModule.openBookmarkPane();
     }
   }
@@ -93,6 +94,7 @@ export default {
 
   methods: {
     openBookmark: function () {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.bookmarkViewModule.openBookmarkPane();
     }
   }
@@ -138,6 +140,7 @@ export default {
 
   methods: {
     closeBookmark: function () {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.bookmarkViewModule.closeBookmarkPane();
     }
   }
@@ -178,6 +181,7 @@ export default {
 
   methods: {
     closeBookmark: function () {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.bookmarkViewModule.closeBookmarkPane();
     }
   }
@@ -186,4 +190,4 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Open%20and%20close%20bookmark)

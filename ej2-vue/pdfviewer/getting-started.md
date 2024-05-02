@@ -18,7 +18,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Setting up the Vue 2 project
 
-To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+To generate a Vue 2 project using Vue-CLI, use the [Vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
 
 ```bash
 npm install -g @vue/cli
@@ -88,7 +88,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 Follow the below steps to add the Vue PDF Viewer component:
 
-1\. First, import and register the Pdfviewer component in the `script` section of the **src/App.vue** file
+1\. First, import and register the PDF Viewer component in the `script` section of the **src/App.vue** file
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -104,7 +104,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Pdfviewer component with [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [resourceUrl](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#resourceurl) property.
+2\. In the `template` section, define the PDF Viewer component with [documentPath](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer#documentpath) and [resourceUrl](https://helpej2.syncfusion.com/vue/documentation/api/pdfviewer/#resourceurl) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -266,17 +266,13 @@ export default {
         
 {% previewsample "page.domainurl/code-snippet/pdfviewer/getting-started-cs2" %}
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Getting%20Started%20-%20Standalone)
 
 > You can refer to our [Vue PDF Viewer](https://www.syncfusion.com/vue-components/vue-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Vue PDF Viewer example](https://ej2.syncfusion.com/vue/demos/#/material/pdfviewer/default.html) to understand how to explains core features of PDF Viewer.
 
 ## Limitation over Server-Backed PDF Viewer to Standalone PDF Viewer control
 
-When comparing a Standalone PDF Viewer to a Server-Backed PDF Viewer control, it's crucial to understand the limitations that the Standalone PDF Viewer may have in comparison. These limitations are important to consider
-
-### PNG Image Support
-
-The Standalone PDF Viewer does not have the capability to utilize PNG format for adding images to handwritten annotations ,custom stamp ,signature and initial form fields. It's important to be aware that only certain image formats, such as JPEG, are compatible for these purposes.
+When comparing a Standalone PDF Viewer to a Server-Backed PDF Viewer control, it's crucial to understand the limitations that the Standalone PDF Viewer may have in comparison. These limitations are important to consider.
 
 ### Local File Access
 

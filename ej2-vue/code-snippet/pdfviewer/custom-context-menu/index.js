@@ -1,59 +1,195 @@
-
 import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-         ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+import {
+  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { CheckBoxPlugin } from '@syncfusion/ej2-vue-buttons';
+
 Vue.use(PdfViewerPlugin);
+Vue.use(CheckBoxPlugin);
 var viewer;
 
 new Vue({
-	el: '#app',
-	template: `
-    <div id="app">
+  el: '#app',
+  template: `
+    <div id="app">  
+    <ul>
+      <ejs-checkbox label='Hide Default Context Menu' id="enable" @change="contextmenuHelper" ></ejs-checkbox>
+      <ejs-checkbox label='Add Custom option at bottom' id="position" @change="contextmenuHelper"></ejs-checkbox>
+    </ul>
         <ejs-pdfviewer
             id="pdfViewer"
             ref="pdfviewer"
             :documentPath="documentPath"
             :documentLoad="documentLoad"
-            :resourceUrl="resourceUrl">
+            :resourceUrl="resourceUrl"
+            :customContextMenuBeforeOpen="customContextMenuBeforeOpen"
+            :customContextMenuSelect="customContextMenuSelect" >
         </ejs-pdfviewer>
     </div>
 `,
 
   name: 'app',
-  data () {
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/form-designer.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      menuItems: [{
+        text: 'Search In Google',
+        id: 'search_in_google',
+        iconCss: 'e-icons e-search'
+      },
+      {
+        text: 'Lock Annotation',
+        iconCss: 'e-icons e-lock',
+        id: 'lock_annotation'
+      },
+      {
+        text: 'Unlock Annotation',
+        iconCss: 'e-icons e-unlock',
+        id: 'unlock_annotation'
+      },
+      {
+        text: 'Lock Form Fields',
+        iconCss: 'e-icons e-lock',
+        id: 'read_only_true'
+      },
+      {
+        text: 'Unlock Form Fields',
+        iconCss: 'e-icons e-unlock',
+        id: 'read_only_false'
+      },
+      ]
     };
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
-                ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]},
+      ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]
+  },
 
-methods: {
+  methods: {
     documentLoad: function (args) {
       viewer = this.$refs.pdfviewer.ej2Instances;
-      viewer.formDesignerModule.addFormField("Textbox", { name: "First Name", bounds: { X: 146, Y: 229, Width: 150, Height: 24 }});
-      viewer.formDesignerModule.addFormField("Textbox", { name: "Middle Name", bounds: { X: 338, Y: 229, Width: 150, Height: 24 }});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'Last Name',bounds: { X: 530, Y: 229, Width: 150, Height: 24 },});
-      viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 148, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
-      viewer.formDesignerModule.addFormField('RadioButton', {bounds: { X: 292, Y: 289, Width: 18, Height: 18 },name: 'Gender',isSelected: false,});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Month',bounds: { X: 146, Y: 320, Width: 35, Height: 24 },});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Date',bounds: { X: 193, Y: 320, Width: 35, Height: 24 },});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'DOB Year',bounds: { X: 242, Y: 320, Width: 35, Height: 24 },});
-      viewer.formDesignerModule.addFormField('InitialField', {name: 'Agree',bounds: { X: 148, Y: 408, Width: 200, Height: 43 },});
-      viewer.formDesignerModule.addFormField('InitialField', {name: 'Do Not Agree',bounds: { X: 148, Y: 466, Width: 200, Height: 43 },});
-      viewer.formDesignerModule.addFormField('CheckBox', {name: 'Text Message',bounds: { X: 56, Y: 664, Width: 20, Height: 20 },isChecked: false,});
-      viewer.formDesignerModule.addFormField('CheckBox', {name: 'Email',bounds: { X: 242, Y: 664, Width: 20, Height: 20 },isChecked: false,});
-      viewer.formDesignerModule.addFormField('CheckBox', {name: 'Appointment Reminder',bounds: { X: 56, Y: 740, Width: 20, Height: 20 },isChecked: false,});
-      viewer.formDesignerModule.addFormField('CheckBox', {name: 'Request for Customerservice',bounds: { X: 56, Y: 778, Width: 20, Height: 20 },isChecked: false,});
-      viewer.formDesignerModule.addFormField('CheckBox', {name: 'Information Billing',bounds: { X: 290, Y: 740, Width: 20, Height: 20 },isChecked: false,});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'My Email',bounds: { X: 146, Y: 850, Width: 200, Height: 24 },});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'My Phone',bounds: { X: 482, Y: 850, Width: 200, Height: 24 },});
-      viewer.formDesignerModule.addFormField('SignatureField', {name: 'Sign',bounds: { X: 57, Y: 923, Width: 200, Height: 43 },});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Month',bounds: { X: 386, Y: 923, Width: 35, Height: 24 },});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Date',bounds: { X: 434, Y: 923, Width: 35, Height: 24 },});
-      viewer.formDesignerModule.addFormField('Textbox', {name: 'DOS Year',bounds: { X: 482, Y: 923, Width: 35, Height: 24 },});
-    }
+      viewer.addCustomMenu(this.menuItems, false, false);
+    },
+    customContextMenuSelect: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      switch (args.id) {
+        case 'search_in_google':
+          for (var i = 0; i < viewer.textSelectionModule.selectionRangeArray.length; i++) {
+            var content = viewer.textSelectionModule.selectionRangeArray[i].textContent;
+            if ((viewer.textSelectionModule.isTextSelection) && (/\S/.test(content))) {
+              window.open('http://google.com/search?q=' + content);
+            }
+          }
+          break;
+        case 'lock_annotation':
+          this.lockAnnotations(args);
+          break;
+        case 'unlock_annotation':
+          this.unlockAnnotations(args);
+          break;
+        case 'read_only_true':
+          this.setReadOnlyTrue(args);
+          break;
+        case 'read_only_false':
+          this.setReadOnlyFalse(args);
+          break;
+        default:
+          break;
+      }
+    },
+
+    customContextMenuBeforeOpen: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      for (var i = 0; i < args.ids.length; i++) {
+        var search = document.getElementById(args.ids[i]);
+        if (search) {
+          search.style.display = 'none';
+          if (args.ids[i] === 'search_in_google' && (viewer.textSelectionModule) && viewer.textSelectionModule.isTextSelection) {
+            search.style.display = 'block';
+          } else if (args.ids[i] === "lock_annotation" || args.ids[i] === "unlock_annotation") {
+            var isLockOption = args.ids[i] === "lock_annotation";
+            for (var j = 0; j < viewer.selectedItems.annotations.length; j++) {
+              var selectedAnnotation = viewer.selectedItems.annotations[j];
+              if (selectedAnnotation && selectedAnnotation.annotationSettings) {
+                var shouldDisplay = (isLockOption && !selectedAnnotation.annotationSettings.isLock) ||
+                  (!isLockOption && selectedAnnotation.annotationSettings.isLock);
+                search.style.display = shouldDisplay ? 'block' : 'none';
+              }
+            }
+          } else if ((args.ids[i] === "read_only_true" || args.ids[i] === "read_only_false") && viewer.selectedItems.formFields.length !== 0) {
+            var isReadOnlyOption = args.ids[i] === "read_only_true";
+            for (var j = 0; j < viewer.selectedItems.formFields.length; j++) {
+              var selectedFormFields = viewer.selectedItems.formFields[j];
+              if (selectedFormFields) {
+                var selectedFormField = viewer.selectedItems.formFields[j].isReadonly;
+                var displayMenu = (isReadOnlyOption && !selectedFormField) || (!isReadOnlyOption && selectedFormField);
+                search.style.display = displayMenu ? 'block' : 'none';
+              }
+            }
+          } else if (args.ids[i] === 'formfield properties' && viewer.selectedItems.formFields.length !== 0) {
+            search.style.display = 'block';
+          }
+        }
+      }
+    },
+
+    lockAnnotations: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      for (var i = 0; i < viewer.annotationCollection.length; i++) {
+        if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
+          viewer.annotationCollection[i].annotationSettings.isLock = true;
+          viewer.annotationCollection[i].isCommentLock = true;
+          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+        }
+        args.cancel = false;
+      }
+    },
+
+    unlockAnnotations: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      for (var i = 0; i < viewer.annotationCollection.length; i++) {
+        if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
+          viewer.annotationCollection[i].annotationSettings.isLock = false;
+          viewer.annotationCollection[i].isCommentLock = false;
+          viewer.annotation.editAnnotation(viewer.annotationCollection[i]);
+        }
+        args.cancel = false;
+      }
+    },
+
+    setReadOnlyTrue: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var selectedFormFields = viewer.selectedItems.formFields;
+      for (var i = 0; i < selectedFormFields.length; i++) {
+        var selectedFormField = selectedFormFields[i];
+        if (selectedFormField) {
+          viewer.formDesignerModule.updateFormField(selectedFormField, {
+            isReadOnly: true,
+          });
+        }
+        args.cancel = false;
+      }
+    },
+
+    setReadOnlyFalse: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var selectedFormFields = viewer.selectedItems.formFields;
+      for (var i = 0; i < selectedFormFields.length; i++) {
+        var selectedFormField = selectedFormFields[i];
+        if (selectedFormField) {
+          viewer.formDesignerModule.updateFormField(selectedFormField, {
+            isReadOnly: false,
+          });
+        }
+        args.cancel = false;
+      }
+    },
+
+    contextmenuHelper: function (args) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.addCustomMenu(this.menuItems, enable.checked, position.checked);
+    },
   }
 });

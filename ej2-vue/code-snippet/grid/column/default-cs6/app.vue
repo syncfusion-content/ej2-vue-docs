@@ -2,7 +2,7 @@
 
 <template>
     <div id="app">
-        <ejs-button @click.native="show">open Column Chooser </ejs-button>
+        <ejs-button class='e-primary' @click.native='show' style='margin-bottom:4px;'>open Column Chooser </ejs-button>
         <ejs-grid ref='grid' :dataSource="data" :showColumnChooser='true' height='272px'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' width='120' textAlign="Right"></e-column>
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     show: function() {
-        this.$refs.grid.ej2Instances.columnChooserModule.openColumnChooser(200, 50); // give X and Y axis
+        this.$refs.grid.ej2Instances.columnChooserModule.openColumnChooser(100, 40); // give X and Y axis
     }
   },
   provide: {

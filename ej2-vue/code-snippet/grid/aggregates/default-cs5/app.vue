@@ -16,11 +16,6 @@
                         <e-column type="Sum" field="Freight" format="C2" :groupFooterTemplate ='footerSum'></e-column>
                     </e-columns>
                 </e-aggregate>
-                <e-aggregate>
-                    <e-columns>
-                        <e-column type="Average" field="Freight" format="C2" :groupCaptionTemplate ='footerAvg'></e-column>
-                    </e-columns>
-                </e-aggregate>
           </e-aggregates>
         </ejs-grid>
     </div>
@@ -43,13 +38,6 @@ export default {
             data () {return { data: {}};}
             })
           }
-      },
-      footerAvg: function () {
-        return  { template : Vue.component('maxTemplate', {
-            template: `<span>Average: {{data.Average}}</span>`,
-            data () {return { data: {}};}
-            })
-          }
       }
     };
   },
@@ -59,7 +47,14 @@ export default {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
 </style>
-
-
