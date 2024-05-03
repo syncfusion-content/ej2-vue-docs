@@ -10,22 +10,22 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-grid ref='grid' :dataSource='data' height='210px' :dataBound="dataBound">
+        <ejs-grid ref='grid' :dataSource='data' height='210px' :dataBound='dataBound'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='Freight' width=150></e-column>
+                <e-column field='Freight' headerText='Freight' format='C2' width=150></e-column>
                 <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
             </e-columns>
             <e-aggregates>
                 <e-aggregate>
                     <e-columns>
-                        <e-column type="Sum" field="Freight" :footerTemplate='footerSum'></e-column>
+                        <e-column type='Sum' field='Freight' format='C2' :footerTemplate='footerSum'></e-column>
                     </e-columns>
                 </e-aggregate>
                 <e-aggregate>
                     <e-columns>
-                        <e-column type="Max" field="Freight" :footerTemplate='footerMax'></e-column>
+                        <e-column type='Max' field='Freight'  format='C2':footerTemplate='footerMax'></e-column>
                     </e-columns>
                 </e-aggregate>
           </e-aggregates>

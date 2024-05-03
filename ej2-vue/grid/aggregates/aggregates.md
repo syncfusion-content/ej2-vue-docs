@@ -10,28 +10,273 @@ domainurl: ##DomainURL##
 
 # Aggregates in Vue Grid component
 
-Aggregate values are displayed in the footer, group footer and group caption of Grid. It can be configured through `e-aggregates` directive. The [`field`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#field) and [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#type) are the minimum properties required to represent an aggregate column.
+The Aggregates feature in the Syncfusion Vue Grid component allows you to display aggregate values in the footer, group footer, and group caption of the grid. With this feature, you can easily perform calculations on specific columns and show summary information. This feature can be configured using the **e-aggregates** directive. To represent an aggregate column, you need to specify the minimum required properties, such as [field](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#field) and [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#type).
 
-To use aggregate feature, you need to inject the `Aggregate` module into the `provide` section.
+To use aggregate feature, you need to inject the **Aggregate** module into the **provide** section.
 
-By default, the aggregate value can be displayed in footer, group and caption cells, to show the aggregate value in any of these cells, use the [`footerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#footertemplate),[`groupFooterTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#groupfootertemplate) and [`groupCaptionTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#groupcaptiontemplate) properties.
+**Displaying aggregate values**
 
-To get start quickly with Aggregate Options, you can check on this video:
+By default, the aggregate values are displayed in the footer, group, and caption cells of the grid. However, you can choose to display the aggregate value in any of these cells by using the following properties:
+
+* **[footerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#footertemplate):** Use this property to display the aggregate value in the footer cell. You can define a custom template to format the aggregate value as per your requirements.
+
+* **[groupFooterTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#groupfootertemplate):** Use this property to display the aggregate value in the group footer cell. Similar to the footerTemplate, you can provide a custom template to format the aggregate value.
+
+* **[groupCaptionTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#groupcaptiontemplate):** Use this property to display the aggregate value in the group caption cell. You can define a custom template to format the aggregate value.
+
+For a quick start with Aggregate options, you can refer to this video:
 
 {% youtube "https://www.youtube.com/watch?v=SGpR92dMHnw" %}
 
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='290px' :allowPaging="true" :allowGrouping="true" :groupSettings="groupOptions">
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' format='yMd' width=120 type='date'></e-column>
+                <e-column field='Freight' format='C2' width=150></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
+            </e-columns>
+            <e-aggregates>
+                <e-aggregate>
+                    <e-columns>
+                        <e-column type="Sum" field="Freight" format="C2" :groupFooterTemplate ='footerSum'></e-column>
+                    </e-columns>
+                </e-aggregate>
+                <e-aggregate>
+                    <e-columns>
+                        <e-column type="Average" field="Freight" format="C2" :groupCaptionTemplate ='footerAvg'></e-column>
+                    </e-columns>
+                </e-aggregate>
+          </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+import Vue from "vue";
+import { GridPlugin, Group, Aggregate, Page } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+
+Vue.use(GridPlugin);
+
+export default {
+  data() {
+    return {
+      data: data,
+      groupOptions: {showDropArea: false, columns: ['ShipCountry'] },
+      footerSum: function () {
+        return  { template : Vue.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      },
+      footerAvg: function () {
+        return  { template : Vue.component('maxTemplate', {
+            template: `<span>Average: {{data.Average}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+    };
+  },
+  provide : {
+      grid: [Group, Aggregate, Page]
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/aggregates/default-cs8" %}
+
+> * When using local data, the total summary is calculated based on the entire dataset available in the grid. The aggregate values will reflect calculations across all the rows in the grid.
+
+> * When working with remote data, the total summary is calculated based on the current page records. This means that if you have enabled pagination and are displaying data in pages, the aggregate values in the footer will represent calculations only for the visible page.
+
 ## Built-in aggregate types
 
-Aggregate type must be specified in [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#type) property to configure an aggregate column.
+The Syncfusion Vue Grid component provides several built-in aggregate types that can be specified in the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#type) property to configure an aggregate column.
 
-The built-in aggregates are,
-* Sum
-* Average
-* Min
-* Max
-* Count
-* TrueCount
-* FalseCount
+The available built-in aggregate types are:
 
-> * Multiple aggregates can be used for an aggregate column by setting the [`type`](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumn/#type) property with an array of aggregate type.
-> * Multiple types for a column is supported only when one of the aggregate templates is used.
+* **Sum:** Calculates the sum of the values in the column.
+* **Average:** Calculates the average of the values in the column.
+* **Min:** Finds the minimum value in the column.
+* **Max:** Finds the maximum value in the column.
+* **Count:** Counts the number of values in the column.
+* **TrueCount:** Counts the number of true values in the column.
+* **FalseCount:** Counts the number of false values in the column.
+
+Here is an example that demonstrates how to use built-in aggregates types in the Syncfusion Grid:
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='290px' :allowPaging="true" :aggregates='aggregates'>
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' format='yMd' width=120 type='date'></e-column>
+                <e-column field='ShippedDate' headerText='Shipped Date' format='yMd' width=120 type='date'></e-column>
+                <e-column field='Freight' headerText='Freight' format='C2' width=150></e-column>
+                <e-column field='Verified' format='C2' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+import Vue from "vue";
+import { GridPlugin, Aggregate, Page } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+
+Vue.use(GridPlugin);
+
+export default {
+  data() {
+    return {
+      data: data,
+      aggregates: [
+        {
+          columns: [
+            {
+              type: 'Average',
+              field: 'Freight',
+              footerTemplate: 'Average: ${Average}',
+              format: 'C2',
+            },
+            {
+              type: 'Max',
+              field: 'ShippedDate',
+              footerTemplate: 'Max: ${new Date(Max).toLocaleDateString()}',
+            },
+            {
+              type: 'Min',
+              field: 'OrderDate',
+              footerTemplate: 'Min: ${new Date(Min).toLocaleDateString()}',
+            },
+            {
+              type: 'TrueCount',
+              field: 'Verified',
+              footerTemplate: 'True Count: ${TrueCount}',
+            },
+          ],
+        },
+      ],
+    };
+  },
+  provide : {
+      grid: [Aggregate, Page]
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/aggregates/default-cs9" %}
+
+## Multiple aggregates for a column
+
+Multiple aggregates for a column allows you to calculate and display different summary values simultaneously for a single column in a grid. Normally, a column is associated with a single aggregate function, such as sum, average, count and etc., which provides a single summary value for the entire column.
+
+However, in scenarios where you need to display multiple summary values for the same column, multiple aggregates come into play. This feature enables you to calculate and display various aggregate values, such as sum, average, minimum, maximum, or custom calculations, concurrently for a specific column.
+
+You can use multiple aggregates for a single column in the Syncfusion Vue Grid by specifying the aggregate [type](https://ej2.syncfusion.com/vue/documentation/api/grid/aggregateColumnDirective/#type) as an array.
+
+Here's an example of how to use multiple aggregates in the Syncfusion Vue Grid:
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='290px' :allowPaging="true" :aggregates='aggregates'>
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='Freight' headerText='Freight' format='C2' width=80></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+import Vue from "vue";
+import { GridPlugin, Aggregate, Page } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+
+Vue.use(GridPlugin);
+
+export default {
+  data() {
+    return {
+      data: data,
+      aggregates: [
+      {
+        columns: [
+          {
+            type: ['Sum', 'Max', 'Min'],
+            field: 'Freight',
+            columnName: 'Freight',
+            format: 'C2',
+            footerTemplate: 'Sum: ${Sum}, Min:${Min}, Max:${Max}',
+          },
+        ],
+      },
+    ],
+    };
+  },
+  provide : {
+      grid: [Aggregate, Page]
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/aggregates/default-cs10" %}

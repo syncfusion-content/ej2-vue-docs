@@ -20,12 +20,12 @@ new Vue({
             <e-aggregates>
                 <e-aggregate>
                     <e-columns>
-                        <e-column type="Sum" field="Freight" format="C2" :footerTemplate='footerSum'></e-column>
+                        <e-column type="Sum" field="Freight" format="N0" :footerTemplate='footerSum'></e-column>
                     </e-columns>
                 </e-aggregate>
                 <e-aggregate>
                     <e-columns>
-                        <e-column type="Max" field="Freight" format="C2" :footerTemplate='footerMax'></e-column>
+                        <e-column type="Max" field="Freight" format="N0" :footerTemplate='footerMax'></e-column>
                     </e-columns>
                 </e-aggregate>
           </e-aggregates>

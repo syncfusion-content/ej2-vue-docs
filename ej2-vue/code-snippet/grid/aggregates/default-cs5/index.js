@@ -24,11 +24,6 @@ new Vue({
                         <e-column type="Sum" field="Freight" format="C2" :groupFooterTemplate ='footerSum'></e-column>
                     </e-columns>
                 </e-aggregate>
-                <e-aggregate>
-                    <e-columns>
-                        <e-column type="Average" field="Freight" format="C2" :groupCaptionTemplate ='footerAvg'></e-column>
-                    </e-columns>
-                </e-aggregate>
           </e-aggregates>
         </ejs-grid>
     </div>
@@ -41,13 +36,6 @@ new Vue({
       footerSum: function () {
         return  { template : Vue.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
-            data () {return { data: {}};}
-            })
-          }
-      },
-      footerAvg: function () {
-        return  { template : Vue.component('maxTemplate', {
-            template: `<span>Average: {{data.Average}}</span>`,
             data () {return { data: {}};}
             })
           }

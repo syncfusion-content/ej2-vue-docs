@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-#  Organize Pages Feature in Vue Pdfviewer component
+#  Organize Pages Feature in Vue PDF Viewer component
  
 ## Introduction
 
@@ -49,3 +49,5 @@ To access the Organize Pages feature, simply open the PDF document in the JS2 PD
 #### Conclusion
 
 With the Organize Pages feature in JS2 PDF Viewer, managing your PDF documents has never been easier. Whether you're adding new content, adjusting page orientation, or removing unnecessary pages, this feature provides the tools you need to streamline your document management workflow. Explore these capabilities today and take control of your PDF documents with ease!
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Organize%20pdf)
