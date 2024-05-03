@@ -57,11 +57,13 @@ export default {
   methods: {
     pageRenderInitiate : function (args) {
       // This method is called when the page rendering starts
-      console.log('Rendering of page ' + args.pageNumber + ' started.');
+      console.log('Rendering of pages started');
+      console.log(args);
     },
     pageRenderComplete: function (args) {
       // This method is called when the page rendering completes
-      console.log('Rendering of page ' + args.pageNumber + ' completed.');
+      console.log('Rendering of pages completed');
+      console.log(args);
     }
   }
 }
@@ -103,11 +105,13 @@ export default {
   methods: {
     pageRenderInitiate : function (args) {
       // This method is called when the page rendering starts
-      console.log('Rendering of pages started' + args);
+      console.log('Rendering of pages started');
+      console.log(args);
     },
     pageRenderComplete: function (args) {
       // This method is called when the page rendering completes
-      console.log('Rendering of pages completed' + args);
+      console.log('Rendering of pages completed');
+      console.log(args);
     }
   }
 }
@@ -117,4 +121,4 @@ export default {
 
 The provided code demonstrates how to subscribe to the `pageRenderInitiate` and `pageRenderComplete` events in the Syncfusion PDF Viewer component. 
 
-[View sample in GitHub]()
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/PageRenderStarted%20and%20PageRenderCompleted%20event)
