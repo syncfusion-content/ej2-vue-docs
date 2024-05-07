@@ -1,18 +1,16 @@
 ---
 layout: post
-title: Collaborative Editing (preview) in Vue Document editor control | Syncfusion
+title: Collaborative Editing in Vue Document editor control | Syncfusion
 description: Learn how to enable collaborative editing in Syncfusion Vue Document editor control of Syncfusion Essential JS 2 and more.
-control: Collaborative Editing (preview)
+control: Collaborative Editing
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Collaborative Editing (preview)
+# Collaborative Editing
 
 Allows multiple users to work on the same document simultaneously. This can be done in real-time, so that collaborators can see the changes as they are made. Collaborative editing can be a great way to improve efficiency, as it allows team members to work together on a document without having to wait for others to finish their changes.
-
-> Note: Collaborative editing support is currently in preview mode only and is not yet ready for production environments.
 
 ## Prerequisites
 
@@ -356,7 +354,7 @@ private ActionInfo AddOperationsToTable(ActionInfo action)
 
 #### Add Web API to get previous operation as a backup to get lost operations
 
-On the client side, messages broadcasted using SignalR may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the database.
+On the client side, messages broadcast using SignalR may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the database.
 Using the following method, we can retrieve all operations after the last successful client-synced version and return all missing operations to the requesting client.
 
 ```csharp
@@ -402,4 +400,4 @@ private ActionInfo AddOperationsToTable(ActionInfo action)
 
 Full version of the code discussed about can be found in below GitHub location.
 
-Github Example: [`Collaborative editing examples`](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing)
+GitHub Example: [`Collaborative editing examples`](https://github.com/SyncfusionExamples/EJ2-Document-Editor-Collaborative-Editing)

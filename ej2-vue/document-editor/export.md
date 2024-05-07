@@ -14,10 +14,10 @@ Document Editor exports the document into various known file formats in client-s
 
 We are providing two types of save APIs  as mentioned below.
 
-|API name|Purpose|
-|--------|---------|
-|save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|
-|saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|
+|API name|Purpose|Code Snippet for Document Editor|Code Snippet for Document Editor Container|
+|--------|---------|--------|---------|
+|save(filename,FormatType):void<br>FormatType: Sfdt or Docx or Txt|Creates the document with specified file name and format type. Then, the created file is downloaded in the client browser by default.|this.$refs.documenteditor.save('sample', 'Sfdt')|this.$refs.documentEditorContainer.ej2Instances.documentEditor.save('sample', 'Sfdt')|
+|saveAsBlob(FormatType):Blob|Creates the document in specified format type and returns the created document as Blob.<br>This blob can be uploaded to your required server, database, or file path.|this.$refs.documenteditor.saveAsBlob('Docx')|this.$refs.documentEditorContainer.ej2Instances.documentEditor.saveAsBlob('Docx')|
 
 ## SFDT export
 
@@ -30,6 +30,14 @@ The following example shows how to export documents in Document Editor as Syncfu
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs1" %}
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/document-editor/export-container-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs1" %}
 
 ## Word export
 
@@ -45,6 +53,14 @@ The following example shows how to export the document as Word document (.docx).
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs2" %}
 
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/document-editor/export-container-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs2" %}
+
 ## Template export
 
 The following example shows how to export the document as Word Template (.dotx).
@@ -56,8 +72,16 @@ The following example shows how to export the document as Word Template (.dotx).
 {% include code-snippet/document-editor/export-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs9" %}
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/document-editor/export-container-cs4/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs4" %}
 
 ## Text export
 
@@ -70,6 +94,14 @@ The following example shows how to export document as text document (.txt).
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/document-editor/export-cs3" %}
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/document-editor/export-container-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/document-editor/export-container-cs3" %}
 
 ## Export as blob
 

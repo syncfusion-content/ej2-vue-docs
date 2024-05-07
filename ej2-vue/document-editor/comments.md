@@ -107,7 +107,6 @@ The following example illustrates how to enable mention support in the Document 
 <script>
   import Vue from 'vue';
   import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
-
   Vue.use(DocumentEditorContainerPlugin);
   let mentionData =  [
                 { "Name": "Selma Rose", "Eimg": "3", "EmailId": "selma@mycompany.com" },
