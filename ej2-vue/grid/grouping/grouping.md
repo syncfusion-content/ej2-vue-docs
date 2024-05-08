@@ -406,7 +406,7 @@ export default {
         
 {% previewsample "page.domainurl/code-snippet/grid/group/default-cs6" %}
 
-> The [args.requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/sortEventArgs/#requesttype) property represents the name of the current action being performed. For instance, during grouping, the `args.requestType` value will be **grouping**.
+> The [args.requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/groupEventArgs/#requesttype) property represents the name of the current action being performed. For instance, during grouping, the `args.requestType` value will be **grouping**.
 
 ## Limitations
 
