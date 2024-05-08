@@ -26,7 +26,7 @@ new Vue({
     return {
       data: data,
       text:'one',
-      groupOptions: { captionTemplate: '<div class="groupChip">${key}</div>' },
+      groupOptions: { columns: ['CustomerID'], captionTemplate: '<div class="groupChip">${key}</div>' },
     };
   },
   methods: {
