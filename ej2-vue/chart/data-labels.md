@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data labels in Vue Chart component | Syncfusion
-description: Learn here all about Data labels in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about data labels in Syncfusion Vue Chart control its elements, features and more.
 control: Data labels 
 platform: ej2-vue
 documentation: ug
