@@ -11,15 +11,12 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Flip</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging"></ejs-imageeditor>
 </div>
 `,
 
   data: function() {
-      return {
-        toolbar: []
-      };
+      return {};
   },
   methods: {
      created: function() {
@@ -29,8 +26,11 @@ new Vue({
             this.$refs.imageEditorObj.open('bridge.png');
         }
     },
-    btnClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.flip("Horizontal"); // Horizontal flip
+    shapeChanging: function(args) {
+      if (args.currentShapeSettings.type === 'pen') {
+        args.currentShapeSettings.strokeColor =  'red',
+        args.currentShapeSettings.strokeWidth = 10
+      }
     }
   }
 
