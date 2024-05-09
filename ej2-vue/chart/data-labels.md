@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data labels in Vue Chart component | Syncfusion
-description: Learn here all about Data labels in Syncfusion Vue Chart component of Syncfusion Essential JS 2 and more.
+description: Learn here all about data labels support in Syncfusion Essential Vue Chart control its elements, features and more.
 control: Data labels 
 platform: ej2-vue
 documentation: ug
@@ -21,7 +21,7 @@ option in the dataLabel. By default, the labels will arrange smartly without o
         
 {% previewsample "page.domainurl/code-snippet/chart/data-marker/datalabel-cs1" %}
 
->Note: To use datalabel feature, we need to inject `DataLabel` into the `provide`.
+>Note: To use data label feature, we need to inject `DataLabel` into the `provide`.
 
 ## Position
 
