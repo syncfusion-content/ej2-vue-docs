@@ -1,26 +1,22 @@
 
 
 <template>
-    <div id="app">
-        <ejs-grid ref='grid' :dataSource='data' :allowPaging='true'
-        height='265px'
-        :contextMenuItems='contextMenuItems'
-        :editSettings  ='editOptions'
-        :created = 'created' v-on:click.native="clicked">
-            <e-columns>
-                <e-column field='EmployeeID' :isPrimaryKey='true' headerText='Employee ID'
-                textAlign='Right' width=120></e-column>
-                <e-column field='FirstName' headerText='FirstName' width=150></e-column>
-                <e-column field='LastName' headerText='Last Name' width=150></e-column>
-                <e-column field='City' headerText='City' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+    <ejs-grid ref='grid' :dataSource='data' :allowPaging='true' :allowSorting='true' height='265px' :contextMenuItems='contextMenuItems' 
+    :pageSettings='pageSettings' :allowExcelExport='true' :allowPdfExport='true' :created = 'created' v-on:click.native="clicked">
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' width='90' textAlign="Right" isPrimaryKey='true'></e-column>
+        <e-column field='CustomerID' headerText='Customer Name' width='100'></e-column>
+        <e-column field='ShipCountry' headerText='Ship Country' width='100'></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width='100'></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
 <script>
 import Vue from "vue";
-import { GridPlugin, ContextMenu, Page, Edit } from "@syncfusion/ej2-vue-grids";
-import { employeeData } from './datasource.js';
+import { GridPlugin, ContextMenu, Page, ExcelExport, PdfExport, Sort, } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
 
@@ -28,8 +24,17 @@ export default {
   data() {
     return {
       values: "",
-      data: employeeData,
-      contextMenuItems: ['Copy', 'Edit', 'Delete', 'Save', 'Cancel'],
+      data: data,
+      contextMenuItems: [
+        'SortAscending',
+        'SortDescending',
+        'FirstPage',
+        'PrevPage',
+        'LastPage',
+        'NextPage',
+        'PdfExport',
+        'ExcelExport',
+      ],
       editOptions: {
         allowDeleting: true,
         allowEditing: true,
@@ -58,12 +63,20 @@ export default {
     }
   },
   provide: {
-    grid: [ContextMenu, Page, Edit]
+    grid: [ContextMenu, Page, ExcelExport, PdfExport, Sort]
   }
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

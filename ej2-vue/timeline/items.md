@@ -46,7 +46,7 @@ You can define CSS class to set icons, background colors, or images to personali
 
 ### Adding icons
 
-You can define the CSS class to show the icon for each item using the `dotCss` property.
+You can define the CSS class to show the icon for each item using the [dotCss](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#dotcss) property.
 
 ### Adding images
 

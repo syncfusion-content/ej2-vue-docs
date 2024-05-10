@@ -1,0 +1,12 @@
+.e-grid .rating .star:before {
+    content: '★';
+  }
+  
+  .e-grid .rating .star {
+    font-size: 132%;
+    color: lightgrey;
+  }
+  
+  .e-grid .rating .star.checked {
+    color: #ffa600;
+  }

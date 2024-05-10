@@ -1,18 +1,19 @@
 
 
 <template>
-    <div id="app">
-        <ejs-grid :dataSource='data' id="gridcomp" :allowPaging='true' :allowExcelExport='true' :allowPdfExport='true' height='215px' :allowSorting='true'
-        :contextMenuItems="contextMenuItems" :editSettings='editing' :allowGrouping='true'>
-        <e-columns>
-            <e-column field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey='true'></e-column>
-            <e-column field='CustomerID' headerText='Customer Name'></e-column>
-            <e-column field='Freight' headerText='Freight' format='C2' textAlign="Right" editType='numericedit'></e-column>
-            <e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
-        </e-columns>
+  <div id="app">
+    <ejs-grid :dataSource='data' id="gridcomp" :allowPaging='true' :allowExcelExport='true' :allowPdfExport='true' height='215px' :allowSorting='true'
+    :contextMenuItems="contextMenuItems" :editSettings='editing' :allowGrouping='true'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' width='90' textAlign="Right" isPrimaryKey='true'></e-column>
+        <e-column field='CustomerID' headerText='Customer Name' width='100'></e-column>
+        <e-column field='Freight' headerText='Freight' format='C2' textAlign="Right" editType='numericedit' width='80'></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width='100'></e-column>
+      </e-columns>
     </ejs-grid>
-    </div>
+  </div>
 </template>
+
 <script>
 import Vue from "vue";
 import { GridPlugin, ContextMenu, Page, Resize, Sort, Group, Edit, PdfExport, ExcelExport  } from "@syncfusion/ej2-vue-grids";
@@ -24,10 +25,26 @@ export default {
   data() {
     return {
       data: data,
-      contextMenuItems: ['AutoFit', 'AutoFitAll', 'SortAscending', 'SortDescending',
-                'Copy', 'Edit', 'Delete', 'Save', 'Cancel',
-                'PdfExport', 'ExcelExport', 'CsvExport', 'FirstPage', 'PrevPage',
-                'LastPage', 'NextPage', 'Group', 'Ungroup'],
+      contextMenuItems: [
+        'AutoFit', 
+        'AutoFitAll', 
+        'SortAscending', 
+        'SortDescending',
+        'Copy', 
+        'Edit', 
+        'Delete', 
+        'Save', 
+        'Cancel',
+        'PdfExport', 
+        'ExcelExport', 
+        'CsvExport', 
+        'FirstPage', 
+        'PrevPage',
+        'LastPage', 
+        'NextPage', 
+        'Group', 
+        'Ungroup'
+      ],
       editing: {allowEditing: true, allowDeleting: true}
     };
   },
@@ -37,7 +54,15 @@ export default {
 }
 </script>
 <style>
- @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

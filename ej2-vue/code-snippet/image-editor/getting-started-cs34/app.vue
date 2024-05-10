@@ -30,7 +30,7 @@ export default {
     },
     shapeChanging: function(args) {
       if (args.currentShapeSettings.type === 'pen') {
-        args.currentShapeSettings.color =  'red',
+        args.currentShapeSettings.strokeColor =  'red',
         args.currentShapeSettings.strokeWidth = 10
       }
     }
