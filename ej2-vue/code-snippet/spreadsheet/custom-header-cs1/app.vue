@@ -23,7 +23,8 @@ export default {
   methods: {
     beforeOpen: function (args) {
       args.requestData["headers"] = {
-        Authorization: "YOUR TEXT",
+        ...args.requestData,
+        headers: { Authorization: "YOUR TEXT" },
       };
     },
   },

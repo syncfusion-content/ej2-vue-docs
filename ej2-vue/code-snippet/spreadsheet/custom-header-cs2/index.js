@@ -54,6 +54,7 @@ new Vue({
           );
           formData.append("fileName", "Sample");
           formData.append("saveType", "Xlsx");
+          formData.append("pdfLayoutSettings", JSON.stringify({ fitSheetOnOnePage: false, orientation: "Portrait" }));
           fetch(
             "https://services.syncfusion.com/vue/production/api/spreadsheet/save",
             {

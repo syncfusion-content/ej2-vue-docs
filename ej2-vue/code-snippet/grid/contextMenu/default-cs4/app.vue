@@ -1,24 +1,31 @@
-
-
 <template>
-    <div id="app">
-        <ejs-grid  ref='grid' :dataSource='data' id="gridcomp" :allowPaging='true' height='215px'
-        :contextMenuItems="contextMenuItems" :editSettings='editSettings' :rowSelected='rowSelected'>
-        <e-columns>
-            <e-column field='OrderID' headerText='Order ID' width='120' textAlign="Right" isPrimaryKey='true'></e-column>
-            <e-column field='CustomerID' headerText='Customer Name'></e-column>
-            <e-column field='Freight' headerText='Freight' format='C2' textAlign="Right" editType='numericedit'></e-column>
-            <e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
-        </e-columns>
-    </ejs-grid>
+  <div id="app">
+    <div style="display: flex;">
+      <label style="margin-right:5px">
+      Enable or disable context menu items
+      </label>
+      <ejs-switch id="switch" :change="switchChange"></ejs-switch>
     </div>
+    <ejs-grid style="padding: 10px 10px" ref='grid' :dataSource='data' :allowPaging='true' height='215px'
+    :contextMenuItems="contextMenuItems" :editSettings='editSettings' >
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' width='90' textAlign="Right" isPrimaryKey='true'></e-column>
+        <e-column field='CustomerID' headerText='Customer Name'width='100'></e-column>
+        <e-column field='Freight' headerText='Freight' format='C2' textAlign="Right" editType='numericedit' width='90'></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
+
 <script>
 import Vue from "vue";
 import { GridPlugin, ContextMenu, Page, Edit } from "@syncfusion/ej2-vue-grids";
+import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
 
 Vue.use(GridPlugin);
+Vue.use(SwitchPlugin);
 
 export default {
   data() {
@@ -29,21 +36,32 @@ export default {
     };
   },
   methods: {
-     rowSelected: function (args) {
-      if (args.data.OrderID % 2 === 0) {
-           this.$refs.grid.ej2Instances.contextMenuModule.contextMenu.enableItems(['Copy'], false);
-       } else {
-           this.$refs.grid.ej2Instances.contextMenuModule.contextMenu.enableItems(['Copy'], true);
+    switchChange: function(args) {
+      const grid=this.$refs.grid.$el.ej2_instances[0];
+      if(args.checked){
+        grid.contextMenuModule.contextMenu.enableItems(['Copy'], false);
       }
-     }
+      else{
+        grid.contextMenuModule.contextMenu.enableItems(['Copy'], true);
+      }
+    },
   },
   provide : {
-      grid: [ContextMenu, Page, Edit]
+    grid: [ContextMenu, Page, Edit]
   }
 }
 </script>
+
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 

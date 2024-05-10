@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon Layouts
+# Layouts in Vue Ribbon component
 
 The Ribbon allows to customize the layout by using the [activeLayout](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#activelayout) property. The Ribbon component supports the following layouts:
 
@@ -26,7 +26,7 @@ In classic layout, the Ribbon component organizes the items and groups in a trad
 
 ### Defining items size
 
-You can use the [allowedSizes](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#allowedsizes) property to set the allowed size for an item. The Ribbon items can be appeared in three different sizes: Large(large icon with text), Medium(small icon with text) and Small(small icon only). On resizing, the items size can be changed based on the available width of the tab content from the order of Large-> Medium-> Small and viceversa.
+You can use the [allowedSizes](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#allowedsizes) property to set the allowed size for an item. The Ribbon items can be appeared in three different sizes: Large(large icon with text), Medium(small icon with text) and Small(small icon only). On resizing, the items size can be changed based on the available width of the tab content from the order of Large-> Medium-> Small and vice versa.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
@@ -159,3 +159,15 @@ You can use the [isMinimized](https://ej2.syncfusion.com/vue/documentation/api/r
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/ribbon/isMinimized" %}
+
+## Show or hide the layout switcher
+
+You can use the [hideLayoutSwitcher](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#hidelayoutswitcher) property to show/hide the Ribbon layout switcher button. By default, the value is `false`.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/hideLayoutSwitcher/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/hideLayoutSwitcher" %}

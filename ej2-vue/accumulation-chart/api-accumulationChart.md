@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api accumulationChart in Vue Accumulation chart component
+# API accumulationChart in Vue Accumulation chart component
 
 Represents the AccumulationChart control.
 ```
@@ -298,11 +298,11 @@ Triggers before accumulation chart load.
 
 Triggers after accumulation chart loaded.
 
-### pointClick  [`EmitType<IPointEventArgs>`]((https://ej2.syncfusion.com/vue/documentation/api-iPointEventArgs.html))
+### pointClick  [`EmitType<IPointEventArgs>`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointEventArgs/)
 
 Triggers on point click.
 
-### pointMove  [`EmitType<IPointEventArgs>`]((https://ej2.syncfusion.com/vue/documentation/api-iPointEventArgs.html))
+### pointMove  [`EmitType<IPointEventArgs>`](https://ej2.syncfusion.com/vue/documentation/api/chart/iPointEventArgs/)
 
 Triggers on point move.
 

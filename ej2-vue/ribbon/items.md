@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Ribbon Items
+# Items in Vue Ribbon component
 
 Ribbon renders various built-in items based on the item [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItemType/) property. By default, the type property is set as `Button` which renders the Button.
 
@@ -236,7 +236,19 @@ The following sample showcases how to customize a specific dropdown item.
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/ribbon/dropdown-target" %}
+{% previewsample "page.domainurl/code-snippet/ribbon/dropDownCustomItem" %}
+
+#### Create dropdown popup on demand
+
+You can handle the creation of popups, by using the [createPopupOnClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#createpopuponclick) property. If set to `true`, the popup will only be created upon opening. By default the value is `false`.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/dropdownPopup/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/ribbon/dropdownPopup" %}
 
 ### Split button items
 
