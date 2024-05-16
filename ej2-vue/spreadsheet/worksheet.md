@@ -23,7 +23,10 @@ You can dynamically add or insert a sheet by one of the following ways,
 The following code example shows the insert sheet operation in spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/insert-sheet-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/insert-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +63,10 @@ Gridlines act as a border like appearance of cells. They are used to distinguish
 The following code example shows the headers and gridlines operation in spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/header-gridlines-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/header-gridlines-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +88,10 @@ There are three visibility state as like Microsoft Excel,
 The following code example shows the three types of sheet visibility state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/sheet-visiblity-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/sheet-visiblity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

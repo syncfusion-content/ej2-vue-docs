@@ -64,7 +64,10 @@ Go to feature is used to navigate to a specific cell address in the sheet or wor
 * You can have more options to find values by selecting the more options in the search toolbar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/searching-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/searching-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

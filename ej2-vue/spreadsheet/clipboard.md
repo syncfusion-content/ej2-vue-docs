@@ -61,7 +61,10 @@ Paste can be done in one of the following ways.
 > If you use the Keyboard shortcut key for cut (`Ctrl + X`) | copy (`Ctrl + C`) from other sources, you should use `Ctrl + V` shortcut while pasting into the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/clipboard-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/clipboard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +76,10 @@ Paste can be done in one of the following ways.
 The following example shows, how to prevent the paste action in spreadsheet. In [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#actionbegin) event, you can set `cancel` argument as false in paste request type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/clipboard-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/clipboard-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

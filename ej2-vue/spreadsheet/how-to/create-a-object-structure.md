@@ -150,33 +150,25 @@ The following table defines each property of the `DefinedName`.
 
 In the following code, the JSON structure is passed to the `openFromJson` method to render the spreadsheet in the `created` event.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
    <ejs-spreadsheet ref="spreadsheet" :created="created"></ejs-spreadsheet>
 </template>
 
-<script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+<script setup>
+import { ref } from "vue";
+import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
 import { jsonData }  from './data.json';
-Vue.use(SpreadsheetPlugin);
-export default {
-   data: () => {
-    return {
 
-    }
-  },
-  methods: {
-    created: function () {
-        var spreadsheet = this.$refs.spreadsheet;
-        spreadsheet.openFromJson({ file: jsonData });
-    }
-  }
+const spreadsheet = ref(null);
+const created = function () {
+  spreadsheet.value.openFromJson({ file: jsonData });
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
- @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
@@ -184,8 +176,45 @@ export default {
  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
  @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
- @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
+
+<template>
+   <ejs-spreadsheet ref="spreadsheet" :created="created"></ejs-spreadsheet>
+</template>
+
+<script>
+import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
+import { jsonData }  from './data.json';
+
+export default {
+  components: {
+    'ejs-spreadsheet': SpreadsheetComponent
+  },
+  methods: {
+    created: function () {
+        let spreadsheet = this.$refs.spreadsheet;
+        spreadsheet.openFromJson({ file: jsonData });
+    }
+  }
+}
+</script>
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+ @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 Sample link : [`create-a-object-structure`](https://codesandbox.io/s/vue-template-forked-rzkpc)

@@ -37,7 +37,10 @@ The [`applyFilter()`](../api/spreadsheet/#applyfilter) method will apply the fil
 The following code example shows `filter` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/filter-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/filter-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

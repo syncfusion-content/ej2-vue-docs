@@ -383,7 +383,10 @@ To load translation object in an application, use [`load`](../common/internation
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/local-data-binding-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/local-data-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -396,27 +399,30 @@ The Internationalization library is used to globalize number, date, and time val
 
 The following example demonstrates the Spreadsheet in French [ `fr-CH`] culture. In the below sample we have globalized the Date(Date column), Time(Time column), and Currency(Amount column) formats.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-   <ejs-spreadsheet ref="spreadsheet" locale="fr-CH" :created="created">
-   <e-sheets>
-          <e-sheet>
-            <e-ranges>
-              <e-range :dataSource="dataSource"></e-range>
-            </e-ranges>
-          </e-sheet>
-        </e-sheets></ejs-spreadsheet>
+  <ejs-spreadsheet ref="spreadsheet" locale="fr-CH" :created="created">
+    <e-sheets>
+      <e-sheet>
+        <e-ranges>
+          <e-range :dataSource="dataSource"></e-range>
+        </e-ranges>
+      </e-sheet>
+    </e-sheets>
+  </ejs-spreadsheet>
 </template>
 
-<script>
-import Vue from "vue";
+<script setup>
+import { ref } from "vue";
 import {
   L10n,
   setCulture,
   setCurrencyCode,
   loadCldr,
 } from "@syncfusion/ej2-base";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent as EjsSpreadsheet, RangesDirective as ERanges, RangeDirective as ERange, SheetsDirective as ESheets, SheetDirective as ESheet } from "@syncfusion/ej2-vue-spreadsheet";
 import { defaultData } from './data.js';
 
 L10n.load({
@@ -460,16 +466,110 @@ L10n.load({
         }
     }
 });
-
-Vue.use(SpreadsheetPlugin);
-
 import * as numberingSystems from "./numberingSystems.json";
 import * as gregorian from "./ca-gregorian.json";
 import * as numbers from "./numbers.json";
 import * as timeZoneNames from "./timeZoneNames.json";
 import * as currencies from "./currencies.json";
-loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, currencies);
 
+loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, currencies);
+setCulture("fr-CH");
+setCurrencyCode("EUR");
+
+const spreadsheet = ref(null);
+const dataSource = defaultData;
+const created = function () {
+  //Applies cell and number formatting to specified range of the active sheet
+  spreadsheet.value.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+  spreadsheet.value.numberFormat('$#,##0.00', 'F2:F11');
+}
+</script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+ @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+ @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+ @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
+
+<template>
+  <ejs-spreadsheet ref="spreadsheet" locale="fr-CH" :created="created">
+    <e-sheets>
+      <e-sheet>
+        <e-ranges>
+          <e-range :dataSource="dataSource"></e-range>
+        </e-ranges>
+      </e-sheet>
+    </e-sheets>
+  </ejs-spreadsheet>
+</template>
+
+<script>
+import {
+  L10n,
+  setCulture,
+  setCurrencyCode,
+  loadCldr,
+} from "@syncfusion/ej2-base";
+import { SpreadsheetComponent, RangesDirective, RangeDirective, SheetsDirective, SheetDirective } from "@syncfusion/ej2-vue-spreadsheet";
+import { defaultData } from './data.js';
+
+L10n.load({
+    'fr-CH': {
+        'spreadsheet': {
+            'File': 'Fichier',
+            'Home': 'Accueil',
+            'Insert': 'Insérer',
+            'Formulas': 'Formules',
+            'Data': 'Les données',
+            'View': 'Vue',
+            'Cut': 'Coupe',
+            'Copy': 'Copie',
+            'Paste': 'Pâte',
+            'PasteSpecial': 'Pâte spéciale',
+            'All': 'Tous les',
+            'Values': 'Valeurs',
+            'Formats': 'Les formats',
+            'Font': 'fonte',
+            'FontSize': 'Taille de police',
+            'Bold': 'Audacieux',
+            'Italic': 'Italique',
+            'Underline': 'Souligner',
+            'Strikethrough': 'Barré',
+            'TextColor': 'Couleur du texte',
+            'FillColor': 'La couleur de remplissage',
+            'HorizontalAlignment': 'Alignement horizontal',
+            'AlignLeft': 'Alignez à gauche',
+            'AlignCenter': 'centre',
+            'AlignRight': 'Aligner à droite',
+            'VerticalAlignment': 'Alignement vertical',
+            'AlignTop': 'Aligner en haut',
+            'AlignMiddle': 'Aligner le milieu',
+            'AlignBottom': 'Aligner le bas',
+            'InsertFunction': 'Insérer une fonction',
+            'Delete': 'Effacer',
+            'Rename': 'Rebaptiser',
+            'Hide': 'Cacher',
+            'Unhide': 'Démasquer',
+            'NumberFormat': 'Nombre Format',
+        }
+    }
+});
+import * as numberingSystems from "./numberingSystems.json";
+import * as gregorian from "./ca-gregorian.json";
+import * as numbers from "./numbers.json";
+import * as timeZoneNames from "./timeZoneNames.json";
+import * as currencies from "./currencies.json";
+
+loadCldr(numberingSystems, gregorian, numbers, timeZoneNames, currencies);
 setCulture("fr-CH");
 setCurrencyCode("EUR");
 
@@ -481,17 +581,16 @@ export default {
   },
   methods: {
   created: function () {
-      var spreadsheet = this.$refs.spreadsheet;
-      //Applies cell and number formatting to specified range of the active sheet
-      spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
-      spreadsheet.numberFormat('$#,##0.00', 'F2:F11');
-      }
+    let spreadsheet = this.$refs.spreadsheet;
+    //Applies cell and number formatting to specified range of the active sheet
+    spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
+    spreadsheet.numberFormat('$#,##0.00', 'F2:F11');
     }
+  }
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
- @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
@@ -499,9 +598,11 @@ export default {
  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
  @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
- @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+ @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Internalization [`sample link`](https://codesandbox.io/s/vue-template-forked-cthq7?file=/src/App.vue)
 
@@ -510,7 +611,10 @@ Internalization [`sample link`](https://codesandbox.io/s/vue-template-forked-cth
 RTL provides an option to switch the text direction and layout of the Spreadsheet component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Spreadsheet, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#enablertl) to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/local-data-binding-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/local-data-binding-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

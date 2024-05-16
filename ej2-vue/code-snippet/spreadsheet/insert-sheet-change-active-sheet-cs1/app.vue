@@ -22,21 +22,30 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent, ColumnsDirective, ColumnDirective, RangesDirective, RangeDirective, SheetsDirective, SheetDirective } from "@syncfusion/ej2-vue-spreadsheet";
 import { data, employeeData } from './data.js';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(SpreadsheetPlugin);
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
 export default {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-spreadsheet": SpreadsheetComponent,
+    "e-sheets": SheetsDirective,
+    "e-sheet": SheetDirective,
+    "e-ranges": RangesDirective,
+    "e-range": RangeDirective,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
   data: () => {
     return {
-      dataSource: data,
+      dataSource: data
     }
   },
   methods: {
     insertSheet: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.insertSheet(
         [
           {
@@ -61,7 +70,6 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -70,10 +78,9 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+
 .custom-btn {
   margin-bottom: 10px;
 }
 </style>
-
-

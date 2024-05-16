@@ -3,10 +3,14 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
-Vue.use(SpreadsheetPlugin);
+
+import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
+
 export default {
+  name: "App",
+  components: {
+    "ejs-spreadsheet": SpreadsheetComponent
+  },
   methods: {
     beforeCellRender: function (args) {
       // Condition to check whether the rendered element is header cell.
@@ -15,7 +19,7 @@ export default {
         args.colIndex <= 10 &&
         args.element.classList.contains('e-header-cell')
       ) {
-        var text = 'custom header ' + args.colIndex.toString();
+        let text = 'custom header ' + args.colIndex.toString();
         // Add the custom text to the innerText of the element.
         args.element.innerText = text;
       }
@@ -35,5 +39,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
 </style>
-
-

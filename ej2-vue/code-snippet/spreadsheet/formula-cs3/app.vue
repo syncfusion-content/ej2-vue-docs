@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <ejs-spreadsheet ref="spreadsheet" locale="de" listSeparator=";" :showRibbon="false" :showSheetTabs="false" :created="created">
+    <ejs-spreadsheet ref="spreadsheet" locale="de" listSeparator=";" :showRibbon="false" :showSheetTabs="false"
+      :created="created">
       <e-sheets>
         <e-sheet selectedRange="E14">
           <e-ranges>
@@ -39,18 +40,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin, getFormatFromType } from "@syncfusion/ej2-vue-spreadsheet";
+
+import { SpreadsheetComponent, ColumnsDirective, ColumnDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, RangesDirective, RangeDirective, SheetsDirective, SheetDirective, getFormatFromType } from "@syncfusion/ej2-vue-spreadsheet";
 import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 import * as deLocalization from './locale.json';
 import * as currencies from "./currencies.json";
 import * as cagregorian from "./ca-gregorian.json";
 import * as numbers from "./numbers.json";
 import * as timeZoneNames from "./timeZoneNames.json";
-import * as numberingSystems from'./numberingSystems.json';
+import * as numberingSystems from './numberingSystems.json';
 import { data } from './datasource.js';
-
-Vue.use(SpreadsheetPlugin);
 
 L10n.load(deLocalization);
 loadCldr(cagregorian, currencies, numbers, timeZoneNames, numberingSystems);
@@ -58,6 +57,21 @@ setCulture('de');
 setCurrencyCode('EUR');
 
 export default {
+  name: "App",
+  components: {
+    "ejs-spreadsheet": SpreadsheetComponent,
+    "e-sheets": SheetsDirective,
+    "e-sheet": SheetDirective,
+    "e-ranges": RangesDirective,
+    "e-range": RangeDirective,
+    "e-rows": RowsDirective,
+    "e-row": RowDirective,
+    "e-cells": CellsDirective,
+    "e-cell": CellDirective,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
+
   data: () => {
     return {
       dataSource: data,
@@ -65,7 +79,7 @@ export default {
   },
   methods: {
     created: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.cellFormat({ textAlign: 'center', fontWeight: 'bold' }, 'A1:E1');
       spreadsheet.numberFormat(getFormatFromType('Currency'), 'D2:E12');
       spreadsheet.numberFormat(getFormatFromType('Currency'), 'E13:E15');
@@ -74,14 +88,13 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 </style>

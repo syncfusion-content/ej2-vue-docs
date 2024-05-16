@@ -48,7 +48,10 @@ You can perform row selection in any of the following ways,
 The following sample shows the row selection in the spreadsheet, here selecting the 5th row using the `selectRange` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +74,10 @@ You can perform column selection in any of the following ways,
 The following sample shows the column selection in the spreadsheet, here selecting the 3rd column using  the `selectRange` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/selection-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/selection-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +89,10 @@ The following sample shows the column selection in the spreadsheet, here selecti
 The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/selection-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/selection-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

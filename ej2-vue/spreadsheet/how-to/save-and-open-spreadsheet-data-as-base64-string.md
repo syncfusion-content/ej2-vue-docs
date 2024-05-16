@@ -17,7 +17,10 @@ In the Spreadsheet component, there is currently no direct option to save and op
 The following code example shows how to save and open the spreadsheet data as base64 string.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/base-64-string/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/base-64-string/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ A sheet is a collection of cells organized in the form of rows and columns that 
 The following code example shows how to insert a sheet programmatically and make it the active sheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/insert-sheet-change-active-sheet-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/insert-sheet-change-active-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

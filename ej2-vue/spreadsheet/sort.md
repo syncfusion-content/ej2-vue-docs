@@ -37,7 +37,10 @@ The `sort()` method with empty arguments will sort the selected range by active 
 The following code example shows `Sort` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/sort-by-cell-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/sort-by-cell-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +110,10 @@ The multi-column sorting can also be performed manually by passing sort options 
 > * When a `sortDescriptor` is specified without field, the field of the first `sortDescriptor` from the collection will be assigned from active cell’s column name and others will be ignored. Hence, it will act as single column sorting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/passing-sort-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/spreadsheet/passing-sort-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
