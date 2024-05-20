@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue Grid component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Grid component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Grid Component | Syncfusion
+description: Learn here all about getting started with Syncfusion Essential Vue Grid component, it's elements and more.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Grid Component in Vue 2
+# Getting started with Vue Grid Component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Grid component
 
@@ -18,7 +18,7 @@ To get start quickly with Vue Grid, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setting up the Vue 2 project
 
@@ -400,7 +400,7 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/grid/getting-started/default-cs6" %}
 
-> You can refer to our [Vue Grid]( https://www.syncfusion.com/vue-ui-components/vue-grid) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Grid example]( https://ej2.syncfusion.com/vue/demos/#/material/grid/grid-overview.html) that shows how to render the Grid in Vue.
+> You can refer to our [Vue Grid]( https://www.syncfusion.com/vue-components/vue-grid) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Grid example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/grid-overview.html) that shows how to render the Grid in Vue.
 
 ## See Also
 

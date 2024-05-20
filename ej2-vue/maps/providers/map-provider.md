@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Map provider in Vue Maps component | Syncfusion
-description: Learn here all about Map provider in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
+title: Map provider in Vue Maps Component | Syncfusion
+description: Learn here all about map provider support in Syncfusion Essential Vue Maps component, it's elements and more.
 control: Map provider 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Map provider in Vue Maps component
+# Map provider in Vue Maps Component
 
 The OpenStreetMap (OSM) is the online Maps provider built by a community of developers; it is free to use under an open license. It allows to view geographical data in a collaborative way from anywhere on the earth. The OSM Maps provides small tile images based on our requests and combines those images into a single image to display the Maps area in the Maps component.
 
@@ -66,7 +66,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the OSM Maps layer for
 
 ## Enabling legend
 
-The legend can be added to the tile Maps by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property of [legendSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel) to **true**.
+The legend can be added to the tile Maps by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/#visible) property of [legendSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/legendSettingsModel/) to **true**.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}

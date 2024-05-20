@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Chunk upload in Vue Uploader component | Syncfusion
-description: Learn here all about Chunk upload in Syncfusion Vue Uploader component of Syncfusion Essential JS 2 and more.
+title: Chunk upload in Vue Uploader Component | Syncfusion
+description: Learn here all about chunk upload support in Syncfusion Essential Vue Uploader component, it's elements and more.
 control: Chunk upload 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Chunk upload in Vue Uploader component
+# Chunk upload in Vue Uploader Component
 
 The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
 
@@ -213,4 +213,4 @@ public void MergeChunkFile(string fullPath, Stream chunkContent)
 }
 ```
 
->You can also explore [Vue File Upload](https://www.syncfusion.com/vue-ui-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/material/uploader/default.html) to understand how to browse the files which you want to upload to the server.
+>You can also explore [Vue File Upload](https://www.syncfusion.com/vue-components/vue-file-upload) feature tour page for its groundbreaking features. You can also explore our [Vue File Upload example](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/uploader/default.html) to understand how to browse the files which you want to upload to the server.
