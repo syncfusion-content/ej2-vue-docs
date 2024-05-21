@@ -24,7 +24,7 @@ Refer to the following code example for local data binding.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +43,7 @@ Refer to the following code example for remote data binding.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/remote-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/remote-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +60,7 @@ Refer to the following code example for remote data binding.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/remote-data-binding-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/remote-data-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +75,7 @@ You can use WebApiAdaptor to bind spreadsheet with Web API created using OData e
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/remote-data-binding-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/remote-data-binding-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +93,7 @@ Refer to the following code example for cell data binding.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/cell-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/cell-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +122,7 @@ The following table defines the arguments of the `dataSourceChanged` event.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/dynamic-data-binding-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/dynamic-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

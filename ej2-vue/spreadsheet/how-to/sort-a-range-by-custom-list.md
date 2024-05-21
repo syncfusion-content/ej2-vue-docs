@@ -18,7 +18,7 @@ In the following demo, the `Trustworthiness` column is sorted based on the custo
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-sort-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-sort-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -28,7 +28,7 @@ The following code example shows the wrap text functionality in spreadsheet.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/wrap-text-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/wrap-text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +67,7 @@ The following code example shows the merge cells operation in spreadsheet.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/merge-cells-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/merge-cells-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +127,7 @@ You can clear the highlighted invalid data by using the following ways,
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/number-format-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/number-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,7 +171,7 @@ Clear the cell contents and formats in the Spreadsheet document by using the [cl
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/clear-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/clear-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

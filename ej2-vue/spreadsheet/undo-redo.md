@@ -42,7 +42,7 @@ The following code example shows `How to update and customize your own actions f
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/undo-redo-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/undo-redo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

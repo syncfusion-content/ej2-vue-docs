@@ -35,7 +35,7 @@ In the example below, the Spreadsheet component is rendered with the `German cul
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +54,7 @@ The following code example shows an unsupported formula in the spreadsheet.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +69,7 @@ The following code example shows how to use `computeExpression` method in the sp
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +95,7 @@ The following code example shows the usage of named ranges support.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/defined-name-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/defined-name-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

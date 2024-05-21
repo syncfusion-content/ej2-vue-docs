@@ -40,7 +40,7 @@ The following code example shows `Sort` functionality in the Spreadsheet control
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/sort-by-cell-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/sort-by-cell-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +113,7 @@ The multi-column sorting can also be performed manually by passing sort options 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/passing-sort-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/passing-sort-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

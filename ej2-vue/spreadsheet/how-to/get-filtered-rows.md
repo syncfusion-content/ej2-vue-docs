@@ -18,7 +18,7 @@ The following code example shows how to get the filtered rows.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/filter-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/filter-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

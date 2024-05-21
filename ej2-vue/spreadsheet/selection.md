@@ -51,7 +51,7 @@ The following sample shows the row selection in the spreadsheet, here selecting 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/selection-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +77,7 @@ The following sample shows the column selection in the spreadsheet, here selecti
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/selection-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/selection-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +92,7 @@ The following sample shows, how to remove the selection in the spreadsheet. Here
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/selection-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/selection-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -73,7 +73,7 @@ In this demo, Custom Item is added after the Paste item in the context menu.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +90,7 @@ In this demo, Insert Column item has been removed from the row/column header con
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +107,7 @@ In this demo, Rename item is disabled in the pager context menu.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -26,7 +26,7 @@ The following code example shows the insert sheet operation in spreadsheet.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/insert-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/insert-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +66,7 @@ The following code example shows the headers and gridlines operation in spreadsh
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/header-gridlines-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/header-gridlines-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +91,7 @@ The following code example shows the three types of sheet visibility state.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/sheet-visiblity-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/sheet-visiblity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

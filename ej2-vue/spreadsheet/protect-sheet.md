@@ -49,7 +49,7 @@ The following example shows `Protect Sheet` functionality in the Spreadsheet con
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/protect-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/protect-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +76,7 @@ In protected spreadsheet, to make some particular cell or range of cells are edi
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/lock-cells-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/lock-cells-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +105,7 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +118,7 @@ The following example shows `Protect Workbook` by using the [`password`](https:/
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

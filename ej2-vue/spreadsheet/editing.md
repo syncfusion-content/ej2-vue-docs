@@ -43,7 +43,7 @@ The following sample shows how to prevent the editing and cell save. Here `E` co
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/editing-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/editing-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

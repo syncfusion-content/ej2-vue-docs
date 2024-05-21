@@ -20,7 +20,7 @@ The following code example shows how to save and open the spreadsheet data as ba
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/base-64-string/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/base-64-string/app.vue %}
 {% endhighlight %}
 {% endtabs %}

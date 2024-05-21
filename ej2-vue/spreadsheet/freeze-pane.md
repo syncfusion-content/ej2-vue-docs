@@ -49,7 +49,7 @@ In this demo, the frozenColumns is set as ‘2’, and the frozenRows is set as 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/freezepane-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/freezepane-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -16,7 +16,7 @@ You can use the `print` method by importing from ej2-base package. Here, the `Se
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/print-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/print-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

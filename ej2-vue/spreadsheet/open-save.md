@@ -26,7 +26,7 @@ The following sample shows the `Open` option by using the [`openUrl`](https://ej
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +52,7 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +67,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-header-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +82,7 @@ You can open excel file into a read-only mode by using the [`openComplete`](../a
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-readonly-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-readonly-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +131,7 @@ The following sample shows the `Save` option by using the [`saveUrl`](https://ej
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -162,7 +162,7 @@ Passing the custom parameters from client to server by using [`beforeSave`](http
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +188,7 @@ You can add your own custom header to the save action in the Spreadsheet. For pr
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-header-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-header-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -208,7 +208,7 @@ The possible values are:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -232,7 +232,7 @@ To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/save-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

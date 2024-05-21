@@ -18,7 +18,7 @@ The following code example shows how to set the active sheet when importing an E
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/change-active-sheet-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/change-active-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

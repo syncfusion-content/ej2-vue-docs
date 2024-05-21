@@ -64,7 +64,7 @@ Paste can be done in one of the following ways.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/clipboard-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/clipboard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +79,7 @@ The following example shows, how to prevent the paste action in spreadsheet. In 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/clipboard-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/clipboard-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

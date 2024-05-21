@@ -58,7 +58,7 @@ There is an event named `beforeHyperlinkClick` which triggers only on clicking h
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/link-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/link-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

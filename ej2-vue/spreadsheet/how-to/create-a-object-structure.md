@@ -180,7 +180,7 @@ const created = function () {
 </style>
 
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
    <ejs-spreadsheet ref="spreadsheet" :created="created"></ejs-spreadsheet>

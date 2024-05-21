@@ -73,7 +73,7 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/link-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -130,7 +130,7 @@ The available arguments in the `ChartModel` are:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -160,7 +160,7 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -175,7 +175,7 @@ Using the [`actionBegin`](../api/spreadsheet/#actionbegin) event, you can change
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
