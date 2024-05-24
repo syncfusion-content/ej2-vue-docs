@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access grid instance in Vue Grid component | Syncfusion
-description: Learn here all about access grid instance in Syncfusion Essentials Vue Grid control, its elements and more.
+description: Learn here all about access grid instance in Syncfusion Essentials Vue Grid component, its elements,and more.
 control: Access grid instance 
 platform: ej2-vue
 documentation: ug
