@@ -15,7 +15,10 @@ The items visible in the ContextMenu can be changed dynamically based on the tar
 In the following example, the datasource for Clipboard div is `Cut`, `Copy`, `Paste` and for the Editor div is `Add`, `Edit`, `Delete` is changed on [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#beforeopen) event using [`hideItems`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#hideitems) and [`showItems`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#showitems) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

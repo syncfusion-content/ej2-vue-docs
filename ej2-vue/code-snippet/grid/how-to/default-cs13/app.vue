@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :queryCellInfo='queryCellInfoEvent' height='315px' >
@@ -13,14 +11,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective } from "@syncfusion/ej2-vue-grids";
 import{ Tooltip } from "@syncfusion/ej2-popups";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-  export default {
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
       return {
         data: data
@@ -38,5 +39,3 @@ Vue.use(GridPlugin);
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

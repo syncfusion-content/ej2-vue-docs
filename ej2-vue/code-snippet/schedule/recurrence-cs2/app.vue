@@ -6,12 +6,12 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { RecurrenceEditorPlugin } from "@syncfusion/ej2-vue-schedule";
-Vue.use(RecurrenceEditorPlugin);
+import { RecurrenceEditorComponent } from "@syncfusion/ej2-vue-schedule";
+
 export default {
-  data() {
-    return {};
+  name: "App",
+  components: {
+    "ejs-recurrenceeditor": RecurrenceEditorComponent
   },
   mounted: function () {
     let recObject = this.$refs.EditorObj;
@@ -20,12 +20,12 @@ export default {
 };
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>

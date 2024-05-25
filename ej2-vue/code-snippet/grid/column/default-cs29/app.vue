@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref="grid" :dataSource="data" :allowPaging="true" height="273px">
@@ -14,9 +12,8 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
 import {
-  GridPlugin,
+  GridComponent, ColumnsDirective, ColumnDirective,
   Page,
   Filter,
   Sort,
@@ -24,16 +21,21 @@ import {
   Edit,
 } from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
       dateTemplate: function () {
         return {
-          template: Vue.component("columnTemplate", {
+          template: app.component("columnTemplate", {
             template: ` <div><span class="e-icon-calender e-icons headericon"></span> Order Date</div>`,
             data: function () {
               return {
@@ -46,7 +48,7 @@ export default {
       },
       orderTemplate: function () {
         return {
-          template: Vue.component("columnTemplate", {
+          template: app.component("columnTemplate", {
             template: `<div><span class="e-icon-userlogin e-icons employee"></span> Customer ID</div>`,
             data: function () {
               return {
@@ -70,5 +72,3 @@ export default {
 @import "https://cdn.syncfusion.com/ej2/material.css";
 @import "./style.css";
 </style>
-
-

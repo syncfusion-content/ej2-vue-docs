@@ -1,12 +1,10 @@
-
-
 <template>
     <div>
         <div class="control-section">
             <div id='container' class="fileupload">
                 <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles">
                 </ejs-uploader>
-                <ejs-button id="openBtn" v-on:click.native="btnClick">Browse...</ejs-button>
+                <ejs-button id="openBtn" v-on:click="btnClick">Browse...</ejs-button>
             </div>
             <div id='target' class="control-section">
                 <ejs-dialog ref="uploadDialog" id="dialog" v-bind:visible="false" :header='dialogHeader' :animationSettings='animationSettings' :showCloseIcon='showCloseIcon' :open="dialogOpen" :close="dialogClose" :target='target'
@@ -19,20 +17,22 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { FileManagerPlugin, NavigationPane, Toolbar, DetailsView, FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
-Vue.use(DialogPlugin);
-Vue.use(UploaderPlugin);
-Vue.use(ButtonPlugin);
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { FileManagerComponent, NavigationPane, Toolbar, DetailsView, FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
 let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
 
 export default {
+name: "App",
+components: {
+    "ejs-uploader":UploaderComponent,
+    "ejs-button":ButtonComponent,
+    "ejs-dialog":DialogComponent,
+    "ejs-filemanager":FileManagerComponent,
+    },
     data () {
         return {
             dialogHeader: 'Open',
@@ -52,7 +52,7 @@ export default {
             filemanager: [DetailsView, NavigationPane, Toolbar]
     },
     methods:{
-        btnClick: function(event) {
+        btnClick: function() {
             this.$refs.uploadDialog.show();
         },
         // Uploader will be hidden, if Dialog is opened
@@ -109,5 +109,3 @@ export default {
         left: 30px !important;
     }
 </style>
-
-

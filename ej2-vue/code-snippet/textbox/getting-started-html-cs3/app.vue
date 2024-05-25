@@ -1,12 +1,10 @@
-
-
 <template>
-    <div class ='wrap'>
-        <div id ='input-container'>
-            <input class="e-input" type="text" placeholder="Enter Name" value="John" readonly/>
+    <div class='wrap'>
+        <div id='input-container'>
+            <input class="e-input" type="text" placeholder="Enter Name" value="John" readonly />
 
             <div class="e-float-input">
-                <input type='text' required readonly value="John"/>
+                <input type='text' required readonly value="John" />
                 <span class="e-float-line"></span>
                 <label class="e-float-text e-label-top">Enter Name</label>
             </div>
@@ -14,13 +12,12 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
 
 export default {
-   data: function() {
-        return { }
+    data: function () {
+        return {}
     },
-    mounted: function() {
+    mounted: function () {
         // To get the all input fields and its container.
 
         let inputElement = document.querySelectorAll('.e-input-group .e-input,.e-float-input.e-input-group input');
@@ -45,23 +42,24 @@ export default {
                 }
             });
         }
-    });
+    }
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
-  .wrap {
+.wrap {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 20px 10px;
     width: 340px;
-  }
+}
 
-  #input-container .e-float-input { /* csslint allow: adjoining-classes */
+#input-container .e-float-input {
+    /* csslint allow: adjoining-classes */
     margin: 30px 0;
-  }
+}
 </style>
 
 

@@ -66,10 +66,12 @@ The following options are available in Gantt component for rendering grid lines,
 The following code example shows how to change the gridlines rendering mode in the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/appearance-customization-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/appearance-customization-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/appearance-customization-cs7" %}
-

@@ -19,7 +19,10 @@ The keytips will be shown when the `Alt + Windows/Command` keys are pressed.
 You can add keytips to all the ribbon items by using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#keytip) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/keytips/item-keytip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/keytips/item-keytip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can add keytips to all the ribbon items by using the [keyTip](https://ej2.sy
 You can add keytips to the file menu by using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettings/#keytip) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/keytips/filemenu-keytip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/keytips/filemenu-keytip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ You can add keytips to the file menu by using the [keyTip](https://ej2.syncfusio
 You can add keytips to backstage menu items by using the [keyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItem/#keytip) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/keytips/backstagemenu-keytip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/keytips/backstagemenu-keytip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ You can add keytips to backstage menu items by using the [keyTip](https://ej2.sy
 You can add keytip to the layout switcher by using the [layoutSwitcherKeyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonModel/#layoutswitcherkeytip) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/keytips/layout-keytip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/keytips/layout-keytip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +79,10 @@ You can add keytip to the layout switcher by using the [layoutSwitcherKeyTip](ht
 You can add keytip to the launcher icon by using the [launcherIconKeyTip](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroup/#launchericonkeytip) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/keytips/launcher-keytip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/keytips/launcher-keytip/app.vue %}
 {% endhighlight %}
 {% endtabs %}

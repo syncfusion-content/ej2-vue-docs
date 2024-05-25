@@ -39,7 +39,10 @@ horizontal scrolling enabled when commands overflow to available space.
 ![Long press scroll](images/scrolling_long_press.gif)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/responsive-mode/toolbar-scrollable-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/responsive-mode/toolbar-scrollable-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +77,10 @@ secondary priority commands.
 > You can maintain toolbar item on popup always by using the [showAlwaysInPopup](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#showalwaysinpopup) property, and this behavior is not applicable for toolbar items with [overflow](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#overflow) property as 'show'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/responsive-mode/priority-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/responsive-mode/priority-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +105,10 @@ Possible values are,
 In the following code sample, text is only visible in the popup container and not in the Toolbar container.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/responsive-mode/textmode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/responsive-mode/textmode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

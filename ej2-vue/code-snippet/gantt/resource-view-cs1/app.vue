@@ -1,16 +1,17 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :viewType= "viewType" :taskFields= "taskFields" :resourceFields= "resourceFields" :treeColumnIndex= "1" :columns= "columns" :splitterSettings= "splitterSettings" :resources= "resourceCollection" :toolbar= "toolbar" :allowResizing= "true" :allowSelection= "true" :highlightWeekends= "true" :projectStartDate= "projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -115,6 +116,3 @@ resourceFields: {
   }
 };
 </script>
-
-
-

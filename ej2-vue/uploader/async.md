@@ -28,7 +28,10 @@ The following example explains about [multiple](https://ej2.syncfusion.com/vue/d
 In the following example, explains about multiple file upload settings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/asynchronous-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +45,10 @@ You can select and upload a single file by disabling the multiple file selection
 The following example explains about single file upload settings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/asynchronous-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,10 +71,10 @@ You can cancel the upload process by setting the upload event argument **eventar
     <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "path" ></ejs-uploader>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(UploaderPlugin);
+<script setup>
+
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
+
 
 export default {
     data: function() {
@@ -219,10 +225,10 @@ You can remove the files which is not uploaded locally by clicking the remove ic
     <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "path" ></ejs-uploader>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(UploaderPlugin);
+<script setup>
+
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
+
 
 export default {
     data: function() {
@@ -281,7 +287,10 @@ public void Remove()
 By default, the uploader processes the files to upload once the files are selected and added in upload queue. To upload manually, disable the [autoUpload](https://ej2.syncfusion.com/vue/documentation/api/uploader/#autoupload) &nbsp;property. When you disable this property, you can use the action buttons to call upload all or clear all actions manually. You can change those buttons text using the [buttons](https://ej2.syncfusion.com/vue/documentation/api/uploader/#buttons) &nbsp;property in the Uploader component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/asynchronous-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -293,7 +302,10 @@ By default, the uploader processes the files to upload once the files are select
 By default, the uploader component process multiple files to upload simultaneously. When you enable the [sequentialUpload](https://ej2.syncfusion.com/vue/documentation/api/uploader/#sequentialupload) property, the selected files will process sequentially (one after the other) to the server. If the file uploaded successfully or failed, the next file will upload automatically in this sequential upload. This feature helps to reduce the upload traffic and reduce the failure of file upload.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/sequential-upload-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/sequential-upload-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -309,7 +321,10 @@ The uploader component allows you to preloaded the list of files that are upload
     *   Type
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/asynchronous-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -329,10 +344,10 @@ The following code block shows how to add the additional headers with save and r
   :uploading= "addHeaders" :removing= "addHeaders" ></ejs-uploader>
   </div>
 </template>
-<script>  
-import Vue from 'vue';
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(UploaderPlugin);
+<script setup>  
+
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
+
 
 export default {
     data: function() {

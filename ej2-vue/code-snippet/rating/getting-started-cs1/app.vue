@@ -1,20 +1,20 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating"></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating"></ejs-rating>
+  </div>
 </template>
 
 <script>
 import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
+
 enableRipple(true);
 
 export default {
+  name: "App",
   components: {
-    'ejs-rating': RatingComponent
-  }
+    "ejs-rating": RatingComponent
+  },
 }
 </script>
 
@@ -27,7 +27,4 @@ export default {
   margin: 50px auto;
   text-align: center;
 }
-
 </style>
-
-

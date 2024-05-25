@@ -17,7 +17,10 @@ To enable this feature, you have to set the [`enableImmutableMode`](https://ej2.
 > This feature uses the primary key value for data comparison. So, you need to provide the [`isPrimaryKey`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/immutable-mode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/immutable-mode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

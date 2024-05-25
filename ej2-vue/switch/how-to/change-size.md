@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The different Switch sizes available are default and small. To reduce the size of default Switch to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/switch/#cssclass) property to `e-small`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/switch/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/switch/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

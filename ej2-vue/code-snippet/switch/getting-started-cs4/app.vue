@@ -1,20 +1,20 @@
-
-
 <template>
   <ejs-switch ref="toggleSwitch" checked=true :created="created"></ejs-switch>
 </template>
 
 <script>
-import Vue from 'vue';
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(SwitchPlugin);
-
 export default {
+  name: "App",
+  components: {
+    "ejs-switch": SwitchComponent
+  },
   methods: {
-    created: function(args) {
+    created: function (args) {
       this.$refs.toggleSwitch.toggle();
     }
   }
@@ -29,5 +29,3 @@ export default {
   margin: 18px;
 }
 </style>
-
-

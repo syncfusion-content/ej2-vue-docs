@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div style="display: flex">
-      <ejs-button id="small" v-on:click.native="changeHeaderHeight">Change height 20px</ejs-button>
-      <ejs-button id="medium"  v-on:click.native="changeHeaderHeight">Default height 42px</ejs-button>
-      <ejs-button id="big" v-on:click.native="changeHeaderHeight">Change height 60px</ejs-button>
+      <ejs-button id="small" v-on:click="changeHeaderHeight">Change height 20px</ejs-button>
+      <ejs-button id="medium"  v-on:click="changeHeaderHeight">Default height 42px</ejs-button>
+      <ejs-button id="big" v-on:click="changeHeaderHeight">Change height 60px</ejs-button>
     </div>
     <div style="padding-top: 20px">
       <ejs-grid ref="grid" :dataSource="data">
@@ -20,15 +20,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

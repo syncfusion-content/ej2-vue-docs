@@ -23,7 +23,10 @@ The time slots are usually the time cells that are displayed on the Day, Week an
 The `interval` and `slotCount` properties can be used together on the Scheduler to set different time slot duration which is depicted in the following code example. Here, six time slots together represents an hour.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/timescale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/timescale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ The [`timeScale`](../api/schedule/timeScale/) property also provides template op
 * `minorSlotTemplate` - The template option to be applied for minor time slots. Here, the template accepts either the string or HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/timescale-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/timescale-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +56,10 @@ The [`timeScale`](../api/schedule/timeScale/) property also provides template op
 The grid lines which indicates the exact time duration can be enabled or disabled on the Scheduler, by setting `true` or `false` to the `enable` option within the [`timeScale`](../api/schedule/timeScale/) property. It's default value is `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/timescale-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/timescale-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +71,10 @@ The grid lines which indicates the exact time duration can be enabled or disable
 By default, Scheduler indicates current date with a highlighted date header on all views, as well as marks accurately the system's current time on specific views such as Day, Week, Work Week, Timeline Day, Timeline Week and Timeline Work Week views. To stop highlighting the current time indicator on Scheduler views, set `false` to the [`showTimeIndicator`](../api/schedule/#showtimeindicator) property which defaults to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/timescale-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/timescale-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

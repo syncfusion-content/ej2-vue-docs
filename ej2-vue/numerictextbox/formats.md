@@ -19,7 +19,10 @@ From the [standard numeric formats](../common/internationalization#supported-for
 The below example demonstrates percentage and currency formats.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/number-formats/standard-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/number-formats/standard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ From the [custom numeric format](../common/internationalization#custom-number-fo
 The below examples demonstrate format the value by using currency format string `#` and `0`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/number-formats/custom-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/number-formats/custom-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

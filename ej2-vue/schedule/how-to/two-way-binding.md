@@ -22,7 +22,10 @@ In the following example, when you change the `selectedDate` value in the Vue Sc
 The following example demonstrates how to set the two-way-binding with the [`selectedDate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#selecteddate) property in the Vue Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/two-way-binding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/two-way-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ In the following example, when you change the `currentDate` value in the Vue Sch
 The following example demonstrates how to set the two-way-binding with the [`currentView`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#currentview) property in the Vue Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/two-way-binding-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/two-way-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

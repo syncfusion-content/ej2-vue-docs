@@ -49,13 +49,28 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
-  Vue.use(RibbonPlugin );
-  Vue.use(CheckBoxPlugin);
+  
+  import { RibbonItemSize } from "@syncfusion/ej2-vue-ribbon";
+  import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
+  import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
+  
 
   export default {
+name: "App",
+components: {
+    "ejs-checkbox":CheckBoxComponent,
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective
+},
+
     methods: {
       onChange: function (args) {
         var ribbon = document.getElementById('ribbonlayout').ej2_instances[0];

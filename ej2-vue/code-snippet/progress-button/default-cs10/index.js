@@ -10,7 +10,7 @@ var vue =
 new Vue({
 	el: '#app',
 	template: `
-<ejs-progressbutton  ref="progressBtn" :content="content" :iconCss="iconCss" :enableProgress="true" :cssClass="cssClass" v-on:click.native="clickHanlder" :end="end"></ejs-progressbutton>
+<ejs-progressbutton  ref="progressBtn" :content="content" :iconCss="iconCss" :enableProgress="true" :cssClass="cssClass" v-on:click="clickHanlder" :end="end"></ejs-progressbutton>
 `,
 
  methods: {

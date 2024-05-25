@@ -132,7 +132,7 @@ import {
 import {
   TabComponent,
   TabItemDirective,
-  TabItemsDirective,
+  TabItemsDirective
 } from "@syncfusion/ej2-vue-navigations";
 
 export default {
@@ -140,7 +140,7 @@ export default {
   components: {
     "ejs-tab": TabComponent,
     "e-tabitem": TabItemDirective,
-    "e-tabitems": TabItemsDirective,
+    "e-tabitems": TabItemsDirective
   }
 }
 </script>
@@ -290,7 +290,7 @@ export default {
   components: {
     "ejs-tab": TabComponent,
     "e-tabitem": TabItemDirective,
-    "e-tabitems": TabItemsDirective,
+    "e-tabitems": TabItemsDirective
   },
   data: function () {
     return {

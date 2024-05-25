@@ -1,17 +1,18 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :splitterSettings = "splitterSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 import { editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: editingData,
@@ -32,6 +33,3 @@ export default {
   },
 };
 </script>
-
-
-

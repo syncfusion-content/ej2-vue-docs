@@ -18,7 +18,7 @@ new Vue({
             <ejs-numerictextbox ref='widthTextbox' :min="400" :max="650" :step='5' :placeholder="400" format="n"  width='120px'></ejs-numerictextbox>
             <label> Enter the height </label> 
             <ejs-numerictextbox ref='heightTextbox' :min="200" :max="600" :step='5' :placeholder="200" format="n"  width='120px'></ejs-numerictextbox>
-            <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExternalResize">Update</ejs-button>
+            <ejs-button ref='button' cssClass='e-outline' v-on:click="onExternalResize">Update</ejs-button>
         </div>
         <div id="parent">
             <ejs-grid ref='grid' style="padding: 5px 5px"  :dataSource='data'  height='100%'>

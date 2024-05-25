@@ -209,7 +209,7 @@ import {
 import {
   AccordionComponent,
   AccordionItemsDirective,
-  AccordionItemDirective,
+  AccordionItemDirective
 } from "@syncfusion/ej2-vue-navigations";
 
 export default {
@@ -217,7 +217,7 @@ export default {
   components: {
     "ejs-accordion": AccordionComponent,
     "e-accordionitems": AccordionItemsDirective,
-    "e-accordionitem": AccordionItemDirective,
+    "e-accordionitem": AccordionItemDirective
   }
 }
 </script>

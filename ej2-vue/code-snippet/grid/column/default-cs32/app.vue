@@ -1,9 +1,7 @@
-
-
 <template>
     <div id="app">
-    <ejs-button id='show' cssClass="e-info" v-on:click.native='show'> Show </ejs-button>
-    <ejs-button id='hide' cssClass="e-info" v-on:click.native='hide'> Hide </ejs-button>
+    <ejs-button id='show' cssClass="e-info" v-on:click='show'> Show </ejs-button>
+    <ejs-button id='hide' cssClass="e-info" v-on:click='hide'> Hide </ejs-button>
         <ejs-grid ref='grid' id='grid' :dataSource="data"  height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -16,20 +14,23 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data
     };
-  }
+  },
   methods: {
     show: function () {
       let grid = this.$refs.grid.$el.ej2_instances[0];
@@ -45,5 +46,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

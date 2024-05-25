@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
     <ejs-dropdownbutton target= '#listview' iconCss= 'e-icons e-down' cssClass= 'e-caret-hide'></ejs-dropdownbutton>
@@ -9,16 +7,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
-import { ListViewPlugin } from '@syncfusion/ej2-vue-lists';
+
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
+import { ListViewComponent } from '@syncfusion/ej2-vue-lists';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
-Vue.use(ListViewPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent,
+"ejs-listview":ListViewComponent
+},
     data () {
         return {
             dataSource :[
@@ -43,5 +43,3 @@ export default {
     content: '\e969';
   }
 </style>
-
-

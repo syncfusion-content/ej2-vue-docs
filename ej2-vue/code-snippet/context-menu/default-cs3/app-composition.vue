@@ -1,35 +1,35 @@
 <template>
-<div>
-<div id="target">Right click / Touch hold to open the ContextMenu</div>
-<ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
-</div>
+    <div>
+        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
+    </div>
 </template>
 
 <script setup>
-import { ContextMenuComponent as EjsContextmenu } from "@syncfusion/ej2-vue-navigations";
-import { enableRipple } from '@syncfusion/ej2-base';
 
+import { enableRipple } from '@syncfusion/ej2-base';
+import { ContextMenuComponent as EjsContextmenu } from "@syncfusion/ej2-vue-navigations";
 enableRipple(true);
 
 const menuItems = [
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            },
-            {
-                separator: true
-            },
-            {
-                text: 'Font'
-            },
-            {
-                text: 'Paragraph'
-            }];
+    {
+        text: 'Cut'
+    },
+    {
+        text: 'Copy'
+    },
+    {
+        text: 'Paste'
+    },
+    {
+        separator: true
+    },
+    {
+        text: 'Font'
+    },
+    {
+        text: 'Paragraph'
+    }];
 </script>
 
 <style>
@@ -40,12 +40,12 @@ const menuItems = [
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 #target {
-  border: 1px dashed;
-  height: 150px;
-  padding: 10px;
-  position: relative;
-  text-align: justify;
-  color: gray;
-  user-select: none;
+    border: 1px dashed;
+    height: 150px;
+    padding: 10px;
+    position: relative;
+    text-align: justify;
+    color: gray;
+    user-select: none;
 }
 </style>

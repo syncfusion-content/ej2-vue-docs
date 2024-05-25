@@ -1,22 +1,22 @@
-
-
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Ratio selection</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Ratio selection</ejs-button>
 </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
-Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent,
+"ejs-button":ButtonComponent
+},
   data: function() {
       return {
         toolbar: []
@@ -30,7 +30,7 @@ export default {
             this.$refs.imageEditorObj.open('bridge.png');
         }
     },
-    btnClick: function(event) {
+    btnClick: function() {
       this.$refs.imageEditorObj.ej2Instances.select("16:9");
     }
   }
@@ -54,5 +54,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

@@ -17,7 +17,10 @@ This section describes the Stepper events that will be triggered when an appropr
 The Stepper component triggers the [created](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#created) event when the control rendering is completed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/step-created/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/step-created/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ The Stepper component triggers the [created](https://ej2.syncfusion.com/vue/docu
 The Stepper component triggers the [stepChanged](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#stepchanged) event after the active step is changed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/step-changed/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/step-changed/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ The Stepper component triggers the [stepChanged](https://ej2.syncfusion.com/vue/
 The Stepper component triggers the [stepChanging](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#stepchanging) event before the active step change.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/step-changing/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/step-changing/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +62,10 @@ The Stepper component triggers the [stepChanging](https://ej2.syncfusion.com/vue
 The Stepper component triggers the [stepClick](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#stepclick) event when the step is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/step-click/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/step-click/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +75,10 @@ The Stepper component triggers the [stepClick](https://ej2.syncfusion.com/vue/do
 The Stepper component triggers the [beforeStepRender](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#beforesteprender) event before rendering each step.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/beforesteprender/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/beforesteprender/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -23,7 +23,10 @@ To enable single cell selection, set the [selectionSettings.mode](https://ej2.sy
 In the following example demonstrates how to enable single cell selection using property:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-single/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-single/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ To enable multiple cell selection, set the [selectionSettings.mode](https://ej2.
 In the following example demonstrates how to enable multiple cell selection using property:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-multiple/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-multiple/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +67,10 @@ The grid supports three types of cell selection mode which can be set by using [
 In the following example demonstrates how to dynamically enable and change the `cellSelectionMode` using the `DropDownList` component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-mode/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-mode/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +90,10 @@ To achieve single cell selection, you can use the [selectCell](https://ej2.syncf
 The following example demonstrates how to select a single cell within the Grid by obtaining the selected row index and cell index through a textbox component and passing these row and cell indexes as arguments to the `selectCell` method. When the button event is triggered by clicking the **Select cell** button, a single cell is selected within the Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-single-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-single-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +109,10 @@ To achieve multiple cell selection, you can use the [selectCells](https://ej2.sy
 In the following example, it demonstrates how to select multiple cells in the Grid by calling the `selectCells` method within the button click event and passing an collection of row and column indexes as arguments.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-multiple-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-multiple-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +133,10 @@ To achieve range of cell selection, you can use the [selectCellsByRange](https:/
 The following example demonstrates how to select a range of cells within the Grid by obtaining the selected cells start index and end index through textbox components. Then, pass these row and cell indexes as arguments to the `selectCellsByRange` method. When you trigger the button event by clicking the **Select Cells** button, a range of cells is selected within the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-range/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-range/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +150,10 @@ You can retrieve the collection of selected row and cell indexes of the currentl
 The following example demonstrates how to obtain the selected row cell indexes using the `getSelectedRowCellIndexes` method and display them in a dialog when a button is clicked:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-indexes/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-indexes/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +169,10 @@ Clearing cell selection programmatically in the Grid component is a useful featu
 The following example demonstrates how to clear cell selection by calling the `clearCellSelection` method in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-clear/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-clear/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,7 +194,10 @@ The Grid provides several events related to cell selection, allowing you to resp
 In the following example, cell selection is canceled when the value of **ShipCountry** is equal to **France** within the `cellSelecting` event. The background color changes to green when the `cellSelected` event is triggered, and it changes to red when the `cellDeselecting` event is triggered. Furthermore, the text color switches to white when the `cellDeselected` event is triggered. A notification message is displayed to indicate which event was triggered whenever a cell is selected.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-cell-events/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-cell-events/app.vue %}
 {% endhighlight %}
 {% endtabs %}

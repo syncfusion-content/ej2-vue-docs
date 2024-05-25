@@ -1,17 +1,18 @@
-
-
-
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :resources= "resourceCollection" :resourceFields= "resourceFields":taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"  :editDialogFields="editDialogFields" :addDialogFields= "addDialogFields"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :resources= "resourceCollection" :resourceFields= "resourceFields" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"  :editDialogFields="editDialogFields" :addDialogFields= "addDialogFields"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
 import {projectData ,editingResources} from "./data-source"
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data: projectData,
@@ -69,6 +70,3 @@ export default {
 
 };
 </script>
-
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -9,19 +7,26 @@
                 </e-layers>
             </ejs-maps>
         </div>
-        <ejs-button id='selection' @click.native='select'>selection</ejs-button>
-        <ejs-button id='unselection' @click.native='unselect'>unselection</ejs-button>
+        <ejs-button id='selection' v-on:click='select'>selection</ejs-button>
+        <ejs-button id='unselection' v-on:click='unselect'>unselection</ejs-button>
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Selection } from '@syncfusion/ej2-vue-maps';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { MapsComponent as EjsMaps, Selection, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
-Vue.use(ButtonPlugin);
+
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective,
+"ejs-button":ButtonComponent
+},
 data () {
     return{
         shapeData: world_map,
@@ -52,5 +57,3 @@ methods:{
     margin: 0 auto;
   }
 </style>
-
-

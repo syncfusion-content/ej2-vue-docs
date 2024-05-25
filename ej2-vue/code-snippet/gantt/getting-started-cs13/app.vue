@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-gantt id="gantt" :dataSource="data" :taskFields = "taskFields" :height="height"></ejs-gantt>
@@ -10,6 +8,7 @@
 import { GanttComponent } from '@syncfusion/ej2-vue-gantt';
 
 export default {
+name: "App",
   components: {
     'ejs-gantt': GanttComponent
   },
@@ -70,5 +69,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
-
-

@@ -36,7 +36,10 @@ Diagram can be populated based on the user defined JSON data (Local Data) by map
 To map the user defined JSON data with diagram, configure the fields of [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel). The following code example illustrates how to bind local data with the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/data-binding/LocalBinding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/data-binding/LocalBinding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +57,10 @@ To learn more about data manager, refer to [`Data Manager`](https://ej2.syncfusi
 To bind remote data to the diagram,configure the fields of [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel). The following code illustrates how to bind remote data to the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/data-binding/RemoteBinding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/data-binding/RemoteBinding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

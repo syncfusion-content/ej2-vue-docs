@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div class="col-lg-12 control-section">
@@ -15,30 +13,78 @@
         </div>
         <div class="slider_container">
           <div class="slider-labeltext slider_userselect">Dynamic thumb and selection bar color</div>
-          <ejs-slider
-            id="dynamic_color_slider"
-            min="0"
-            max="100"
-            value="30"
-            type="MinRange"
-            v-on:created="onCreated"
-            v-on:change="onChange"
-          ></ejs-slider>
+          <ejs-slider id="dynamic_color_slider" min="0" max="100" value="30" type="MinRange" v-on:created="onCreated"
+            v-on:change="onChange"></ejs-slider>
         </div>
       </div>
     </div>
   </div>
 </template>
+<script>
+import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
+import { enableRipple } from "@syncfusion/ej2-base";
+
+enableRipple(true);
+
+export default {
+  name: "App",
+  components: {
+    "ejs-slider": SliderComponent
+  },
+  data: function () {
+    return {};
+  },
+  methods: {
+    onCreated(args) {
+      let sliderTrack = document
+        .getElementById("dynamic_color_slider")
+        .querySelector(".e-range");
+      let sliderHandle = document
+        .getElementById("dynamic_color_slider")
+        .querySelector(".e-handle");
+      sliderHandle.style.backgroundColor = "green";
+      sliderTrack.style.backgroundColor = "green";
+    },
+    onChange(args) {
+      let sliderTrack = document
+        .getElementById("dynamic_color_slider")
+        .querySelector(".e-range");
+      let sliderHandle = document
+        .getElementById("dynamic_color_slider")
+        .querySelector(".e-handle");
+      if (args.value > 0 && args.value <= 25) {
+        // Change handle and range bar color to green when
+        sliderHandle.style.backgroundColor = "green";
+        sliderTrack.style.backgroundColor = "green";
+      } else if (args.value > 25 && args.value <= 50) {
+        // Change handle and range bar color to royal blue
+        sliderHandle.style.backgroundColor = "royalblue";
+        sliderTrack.style.backgroundColor = "royalblue";
+      } else if (args.value > 50 && args.value <= 75) {
+        // Change handle and range bar color to dark orange
+        sliderHandle.style.backgroundColor = "darkorange";
+        sliderTrack.style.backgroundColor = "darkorange";
+      } else if (args.value > 75 && args.value <= 100) {
+        // Change handle and range bar color to red
+        sliderHandle.style.backgroundColor = "red";
+        sliderTrack.style.backgroundColor = "red";
+      }
+    }
+  }
+};
+</script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
 #app {
   height: 40px;
   position: absolute;
   width: 98%;
 }
+
 .slider-content-wrapper {
   width: 40%;
   margin: 0 auto;
@@ -89,43 +135,35 @@
   height: 6px;
   top: calc(50% - 3px);
   border-radius: 5px;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #1e5799),
-    color-stop(100%, #7db9e8)
-  );
-  background: -webkit-linear-gradient(
-    left,
-    #e1451d 0,
-    #fdff47 17%,
-    #86f9fe 50%,
-    #2900f8 65%,
-    #6e00f8 74%,
-    #e33df9 83%,
-    #e14423 100%
-  );
-  background: linear-gradient(
-    left,
-    #e1451d 0,
-    #fdff47 17%,
-    #86f9fe 50%,
-    #2900f8 65%,
-    #6e00f8 74%,
-    #e33df9 83%,
-    #e14423 100%
-  );
-  background: -moz-linear-gradient(
-    left,
-    #e1451d 0,
-    #fdff47 17%,
-    #86f9fe 50%,
-    #2900f8 65%,
-    #6e00f8 74%,
-    #e33df9 83%,
-    #e14423 100%
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      color-stop(0%, #1e5799),
+      color-stop(100%, #7db9e8));
+  background: -webkit-linear-gradient(left,
+      #e1451d 0,
+      #fdff47 17%,
+      #86f9fe 50%,
+      #2900f8 65%,
+      #6e00f8 74%,
+      #e33df9 83%,
+      #e14423 100%);
+  background: linear-gradient(left,
+      #e1451d 0,
+      #fdff47 17%,
+      #86f9fe 50%,
+      #2900f8 65%,
+      #6e00f8 74%,
+      #e33df9 83%,
+      #e14423 100%);
+  background: -moz-linear-gradient(left,
+      #e1451d 0,
+      #fdff47 17%,
+      #86f9fe 50%,
+      #2900f8 65%,
+      #6e00f8 74%,
+      #e33df9 83%,
+      #e14423 100%);
 }
 
 #gradient_slider .e-slider-track {
@@ -134,55 +172,3 @@
   border-radius: 5px;
 }
 </style>
-<script>
-import Vue from "vue";
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(SliderPlugin);
-import { enableRipple } from "@syncfusion/ej2-base";
-enableRipple(true);
-export default {
-  data: function() {
-    return {};
-  },
-  methods: {
-    onCreated(args) {
-      let sliderTrack = document
-        .getElementById("dynamic_color_slider")
-        .querySelector(".e-range");
-      let sliderHandle = document
-        .getElementById("dynamic_color_slider")
-        .querySelector(".e-handle");
-      sliderHandle.style.backgroundColor = "green";
-      sliderTrack.style.backgroundColor = "green";
-    },
-    onChange(args) {
-      let sliderTrack = document
-        .getElementById("dynamic_color_slider")
-        .querySelector(".e-range");
-      let sliderHandle = document
-        .getElementById("dynamic_color_slider")
-        .querySelector(".e-handle");
-      if (args.value > 0 && args.value <= 25) {
-        // Change handle and range bar color to green when
-        sliderHandle.style.backgroundColor = "green";
-        sliderTrack.style.backgroundColor = "green";
-      } else if (args.value > 25 && args.value <= 50) {
-        // Change handle and range bar color to royal blue
-        sliderHandle.style.backgroundColor = "royalblue";
-        sliderTrack.style.backgroundColor = "royalblue";
-      } else if (args.value > 50 && args.value <= 75) {
-        // Change handle and range bar color to dark orange
-        sliderHandle.style.backgroundColor = "darkorange";
-        sliderTrack.style.backgroundColor = "darkorange";
-      } else if (args.value > 75 && args.value <= 100) {
-        // Change handle and range bar color to red
-        sliderHandle.style.backgroundColor = "red";
-        sliderTrack.style.backgroundColor = "red";
-      }
-    }
-  }
-};
-</script>
-
-
-

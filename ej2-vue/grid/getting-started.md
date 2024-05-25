@@ -101,12 +101,19 @@ Follow the below steps to add the Vue Grid component:
 1\. First, import and register the Grid component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { GridComponent as EjsGrid} from "@syncfusion/ej2-vue-grids";
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { GridComponent } from "@syncfusion/ej2-vue-grids";
-
 export default {
+name: "App",
   components: {
     'ejs-grid': GridComponent
   }
@@ -165,16 +172,10 @@ Data for the Grid component is bind by using [`dataSource`](https://ej2.syncfusi
     </div>
 </template>
 
-<script>
-import { GridComponent } from "@syncfusion/ej2-vue-grids";
-
+<script setup>
+import { GridComponent as EjsGrid } from "@syncfusion/ej2-vue-grids";
 export default {
-  components: {
-    'ejs-grid': GridComponent
-  },
-  data () {
-    return {
-      data: [
+      const data = [
           { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
           { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
           { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
@@ -184,10 +185,8 @@ export default {
           { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
           { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
           { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
-      ]
+      ];
     }
-  }
-}
 </script>
 
 <style>
@@ -238,6 +237,9 @@ If we didn't inject the **Page** module, then the pager will not be rendered in 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/grid/getting-started/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -249,6 +251,9 @@ If we didn't inject the **Page** module, then the pager will not be rendered in 
 The sorting feature enables the user to order the records. It can be enabled by setting [`allowSorting`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowsorting) property as true. Also, need to inject the **Sort** module in the **provide** section as follow. If we didn't inject the **Sort** module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortsettings) property.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/grid/getting-started/default-cs2/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs2/app.vue %}
 {% endhighlight %}
@@ -262,6 +267,9 @@ The filtering feature enables the user to view the reduced amount of records bas
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/grid/getting-started/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -273,6 +281,9 @@ The filtering feature enables the user to view the reduced amount of records bas
 The grouping feature enables users to view the Grid record in a grouped view. It can be enabled by setting [`allowGrouping`](	https://ej2.syncfusion.com/vue/documentation/api/grid/#allowgrouping) property to true.Also, need to inject the **Group** module in the **provide** section as follow. If we didn't inject the **Group** module, then the group drop area will not be rendered in Grid. Grouping feature can be customized using [`groupSettings`](https://ej2.syncfusion.com/vue/documentation/api/grid/#groupsettings) property.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/grid/getting-started/default-cs4/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/grid/getting-started/default-cs4/app.vue %}
 {% endhighlight %}
@@ -301,7 +312,64 @@ module.exports = defineConfig({
 ```
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource="data" :allowPaging="true" :allowSorting='true' :allowFiltering='true' :allowGrouping='true' :pageSettings='pageSettings' >
+          <e-columns>
+            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+          </e-columns>
+          <e-aggregates>
+            <e-aggregate>
+                <e-columns>
+                    <e-column type="Sum" field="Freight" format="C2" :footerTemplate='footerSum'></e-column>
+                </e-columns>
+            </e-aggregate>
+          </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+      const data = [
+          { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
+          { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
+          { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
+          { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
+          { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
+          { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
+          { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
+          { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
+          { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
+      ];
+      const pageSettings = { pageSize: 5 };
+      const footerSum = function () {
+        return  { template : Vue.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {data: {}}};}
+            })
+          }
+      }
+  provide('grid',  [Page, Sort, Filter, Group, Aggregate]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -322,10 +390,9 @@ module.exports = defineConfig({
     </div>
 </template>
 <script>
-import Vue from 'vue';
 import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
-
 export default {
+name: "App",
   components: {
     'ejs-grid': GridComponent,
     'e-column': ColumnDirective,
@@ -393,7 +460,65 @@ yarn run serve
 ```
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource="data" :allowPaging="true" :allowSorting='true' :allowFiltering='true' :allowGrouping='true' :pageSettings='pageSettings' >
+          <e-columns>
+            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+          </e-columns>
+          <e-aggregates>
+            <e-aggregate>
+                <e-columns>
+                    <e-column type="Sum" field="Freight" format="C2" :footerTemplate='footerSum'></e-column>
+                </e-columns>
+            </e-aggregate>
+          </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide, createApp } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+const app = createApp();
+      const data = [
+          { OrderID: 10248, CustomerID: 'VINET', Freight: 32.38 },
+          { OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61 },
+          { OrderID: 10250, CustomerID: 'HANAR', Freight: 65.83 },
+          { OrderID: 10251, CustomerID: 'VICTE', Freight: 41.34 },
+          { OrderID: 10252, CustomerID: 'SUPRD', Freight: 51.3 },
+          { OrderID: 10253, CustomerID: 'HANAR', Freight: 58.17 },
+          { OrderID: 10254, CustomerID: 'CHOPS', Freight: 22.98 },
+          { OrderID: 10255, CustomerID: 'RICSU', Freight: 148.33 },
+          { OrderID: 10256, CustomerID: 'WELLI', Freight: 13.97 }
+      ];
+      const pageSettings = { pageSize: 5 };
+      const footerSum = function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {data: {}}};}
+            })
+          }
+      }
+  provide('grid',  [Page, Sort, Filter, Group, Aggregate]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -414,7 +539,6 @@ yarn run serve
     </div>
 </template>
 <script>
-import Vue from 'vue';
 import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 export default {
   components: {

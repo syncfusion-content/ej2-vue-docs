@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <ejs-grid ref="grid" :dataSource='data' height='315px' :created = 'created'>
@@ -14,18 +11,23 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, parentsUntil } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, parentsUntil } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
       cTemplate: function () {
-          return { template : Vue.component('columnTemplate',{
+          return { template : app.component('columnTemplate',{
              template: `<div class="image">
                      <input :id='id' :value='value' class='custemp' type='text' style='width: 100%'/>
                 </div>`,
@@ -66,6 +68,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

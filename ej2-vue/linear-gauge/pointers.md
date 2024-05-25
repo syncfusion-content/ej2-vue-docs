@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Pointers are used to indicate values on an axis. The value of the pointer can be modified using the  [value](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/#value) property in [e-pointer](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs55/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs55/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ By default, the marker shape for the pointer is **InvertedTriangle**. To change 
 * Text
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs56/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs56/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ By default, the marker shape for the pointer is **InvertedTriangle**. To change 
 Image can be rendered instead of rendering a shape as a pointer. It can be achieved by setting the [markerType](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/#markertype) property to **Image** and setting the source URL of image to [imageUrl](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/#imageurl) property in [e-pointer](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs77/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs77/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +83,10 @@ The following properties in the [textStyle](https://ej2.syncfusion.com/vue/docum
 * [size](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/textStyleModel/#size) - It is used to set the font size for the text pointer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs78/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs78/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +108,10 @@ The marker pointer can be customized using the following properties.
 * [border](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/#border) - To set the color and width for the border of the pointer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs57/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs57/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +123,10 @@ The marker pointer can be customized using the following properties.
 The bar pointer is used to track the axis value. The bar pointer starts from the beginning of the gauge and ends at the pointer value. To enable bar pointer, set the [type](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/#type) property in [e-pointer](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/) as **Bar**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs58/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs58/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +149,10 @@ The bar pointer can be customized using the following properties.
 >The placement property is not applicable for the bar pointer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs59/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs59/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +164,10 @@ The bar pointer can be customized using the following properties.
 Multiple pointers can be added to the Linear Gauge by adding multiple [e-pointer](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/) in the [e-pointers](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/#pointers) and customization for the pointers can be done with [e-pointer](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs60/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs60/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +179,10 @@ Multiple pointers can be added to the Linear Gauge by adding multiple [e-pointer
 Pointer is animated on loading the gauge. This can be handled using the [animationDuration](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/#animationduration) property. The duration of the animation can be specified in milliseconds.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs61/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs61/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -174,7 +201,10 @@ Gradient support allows the addition of multiple colors in the pointers of the L
 Using linear gradient, colors will be applied in a linear progression. The start value of the linear gradient can be set using the [startValue](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGradient/#startvalue) property. The end value of the linear gradient will be set using the [endValue](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGradient/#endvalue) property. The color stop values such as [color](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/colorStopModel/#color), [opacity](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/colorStopModel/#opacity), and [offset](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/colorStopModel/#offset) are set using [colorStop](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGradient/#colorstop) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs62/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs62/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -186,7 +216,10 @@ Using linear gradient, colors will be applied in a linear progression. The start
 Using radial gradient, colors will be applied in circular progression. The inner circle position of the radial gradient will be set using the [innerPosition](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/radialGradient/#innerposition) property. The outer circle position of the radial gradient can be set using the [outerPosition](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/radialGradient/#outerposition) property. The color stop values such as [color](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/colorStopModel/#color), [opacity](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/colorStopModel/#opacity), and [offset](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/colorStopModel/#offset) are set using [colorStop](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/radialGradient/#colorstop) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs63/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs63/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="map">
         <div class='wrapper'>
@@ -15,10 +13,11 @@
 import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
 export default {
+name: "App",
 components: {
-    'ejs-maps': MapsComponent,
-    'e-layer': LayerDirective,
-    'e-layers': LayersDirective
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
 },
 data (){
     return{
@@ -41,5 +40,3 @@ data (){
     margin: 0 auto;
   }
 </style>
-
-

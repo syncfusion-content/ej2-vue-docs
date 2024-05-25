@@ -125,11 +125,13 @@ Follow the below steps to add the Vue Uploader component using `Composition API`
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
   import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -137,10 +139,10 @@ Follow the below steps to add the Vue Uploader component using `Composition API`
 import { UploaderComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-uploader' : UploaderComponent,
-    }
+name: "App",
+components: {
+"ejs-uploader'":UploaderComponent
+}
 }
 </script>
 
@@ -167,6 +169,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div>
@@ -175,10 +178,12 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     </div>
   </div>
 </template>
+
 <script setup>
 import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
   const data = [];
 </script>
+
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -197,6 +202,7 @@ import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -211,13 +217,13 @@ import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
 import { UploaderComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-uploader': UploaderComponent,
-    },
-    data: function() {
-        return {  }
-    }
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
+data: function() {
+    return {  }
+}
 }
 </script>
 <style>
@@ -267,11 +273,12 @@ In the following sample, drop target is configured.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div>
     <div id='droparea'>Drop files here to upload</div>
-    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles"  :dropArea = "data[0].dropElement"></ejs-uploader>
+    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles"  :dropArea = "dropElement"></ejs-uploader>
   </div>
 </template>
 <script setup>
@@ -323,6 +330,7 @@ import { UploaderComponent  as EjsUploader } from "@syncfusion/ej2-vue-inputs";
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -336,15 +344,15 @@ import { UploaderComponent  as EjsUploader } from "@syncfusion/ej2-vue-inputs";
 import { UploaderComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-uploader' : UploaderComponent,
-    },
-    data: function() {
-        return {
-            dropElement: '#droparea'
-        }
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
+data: function() {
+    return {
+        dropElement: '#droparea'
     }
+}
 }
 </script>
 <style>
@@ -405,10 +413,11 @@ The uploader component process the files to upload in Asynchronous mode by defau
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div>
-    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "data[0].path" ></ejs-uploader>
+    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "path" ></ejs-uploader>
   </div>
 </template>
 <script setup>
@@ -422,6 +431,7 @@ import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -434,18 +444,18 @@ import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
 import { UploaderComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-uploader': UploaderComponent,
-    },
-    data: function() {
-        return {
-            path: {
-                saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-                removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
-            }
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
+data: function() {
+    return {
+        path: {
+            saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
+            removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
         }
     }
+}
 }
 </script>
 <style>
@@ -467,10 +477,11 @@ You can handle the success and failure actions using the [success](https://ej2.s
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
   <div>
-    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "data[0].path" :success= "onUploadSuccess" :failure= "onUploadFailed" ></ejs-uploader>
+    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "path" :success= "onUploadSuccess" :failure= "onUploadFailed" ></ejs-uploader>
   </div>
 </template>
 <script setup>
@@ -490,6 +501,7 @@ import { UploaderComponent as EjsUploader} from "@syncfusion/ej2-vue-inputs";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -502,26 +514,26 @@ import { UploaderComponent as EjsUploader} from "@syncfusion/ej2-vue-inputs";
 import { UploaderComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-uploader' : UploaderComponent,
-    },
-    data: function() {
-        return {
-            path:  {
-                saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-                removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
-            }
-        }
-    },
-    methods: {
-        onUploadSuccess: function () {
-            console.log('Uploaded successfully');
-        },
-        onUploadFailed: function () {
-            console.log('Upload fails');
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
+data: function() {
+    return {
+        path:  {
+            saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
+            removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
         }
     }
+},
+methods: {
+    onUploadSuccess: function () {
+        console.log('Uploaded successfully');
+    },
+    onUploadFailed: function () {
+        console.log('Upload fails');
+    }
+}
 }
 </script>
 <style>

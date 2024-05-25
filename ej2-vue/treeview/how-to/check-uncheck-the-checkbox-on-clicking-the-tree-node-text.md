@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can check and uncheck the checkboxes of tree view by clicking the tree node using the `nodeClicked` event of TreeView.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/how-to/checkbox-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/how-to/checkbox-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

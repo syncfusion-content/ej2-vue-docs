@@ -1,20 +1,18 @@
-
-
 <template>
-<div>
-<ejs-menu :items='menuItems'></ejs-menu>
-</div>
+    <div>
+        <ejs-menu :items='menuItems'></ejs-menu>
+    </div>
 </template>
 
 <script setup>
+
 import { MenuComponent as EjsMenu } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 
-//Menu items definition
 const menuItems = [
-        {
+    {
         text: 'File',
         items: [
             { text: 'Open' },
@@ -47,8 +45,7 @@ const menuItems = [
     },
     { text: 'Go' },
     { text: 'Help' }
-    ];
-    
+];
 </script>
 
 <style>
@@ -61,5 +58,3 @@ body {
     text-align: center;
 }
 </style>
-
-

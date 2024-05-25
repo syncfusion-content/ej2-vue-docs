@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
        <button id="add"  @click="clickAdd">Add Columns</button>
@@ -15,13 +13,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data
@@ -30,7 +31,7 @@ export default {
   methods: {
      clickAdd: function () {
         let obj = { field: "Freight", headerText: 'Freight', width: 120 }
-        this.$refs.grid.ej2Instances.columns.push(obj as any); //you can add the columns by using the Grid columns method
+        this.$refs.grid.ej2Instances.columns.push(obj); //you can add the columns by using the Grid columns method
         this.$refs.grid.ej2Instances.refreshColumns();
     }
   },
@@ -42,5 +43,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="e-tab-section">
         <div class="col-lg-8 content-wrapper control-section">
@@ -15,14 +13,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-import { TabPlugin } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(TabPlugin);
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+import { TabComponent, TabItemsDirective, TabItemDirective } from "@syncfusion/ej2-vue-navigations";
+import {createApp} from 'vue';
 
-var Template1 = Vue.component("demo", {
+const app = createApp({});
+
+var Template1 = app.component("demoTemplate1", {
   template: ` <div><div class="cnt-text">Overview</div><div>The file manager component contains a context menu for performing file operations, large-icons view for displaying the files and folders, and a breadcrumb for navigation. However, these basic functionalities can be extended by using the additional feature modules like toolbar, navigation pane, and details view to simplify the navigation and file operations within the file system</div></div>`,
   data() {
     return {
@@ -31,7 +29,10 @@ var Template1 = Vue.component("demo", {
   }
 });
 
-var Template2 = Vue.component("demo", {
+var Template2 = app.component("demoTemplate2", {
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+    },
    template: ` <div><div class="content-title">
                    <div class="cnt-text">File manager with default functionalities</div>
               </div>
@@ -55,6 +56,12 @@ var Template2 = Vue.component("demo", {
 });
 
 export default {
+    name: "App",
+    components: {
+        "ejs-tab":TabComponent,
+        "e-tabitems":TabItemsDirective,
+        "e-tabitem":TabItemDirective
+    },
     data () {
         return {
             headerText0: { text: 'Overview' },
@@ -70,9 +77,6 @@ export default {
               }
             },
         };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
     }
 }
 </script>
@@ -101,5 +105,3 @@ export default {
 }
 
 </style>
-
-

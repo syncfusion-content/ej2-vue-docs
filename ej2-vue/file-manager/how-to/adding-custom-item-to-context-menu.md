@@ -17,7 +17,10 @@ The following example shows adding a custom item in the context menu.
 The [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings) is used to add new menu item. The [menuOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#menuopen) event is used to add the icon to the new menu item. The [menuClick](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#menuclick) event is used to add an event handler to the new menu item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/contextmenu-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/contextmenu-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

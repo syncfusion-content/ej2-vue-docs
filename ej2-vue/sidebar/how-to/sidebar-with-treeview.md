@@ -15,7 +15,10 @@ The following example demonstrates how to render TreeView component inside the S
 On collapse, the LI elements of TreeView show icons only to represent the short sign of the hidden text content. On expand, hidden text content will be set to be visible.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/treeview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/treeview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

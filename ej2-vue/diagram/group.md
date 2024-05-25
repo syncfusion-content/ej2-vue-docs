@@ -29,7 +29,10 @@ A group can be added to the diagram model through [`nodes`](https://ej2.syncfusi
 * A group can be added into a child of another group.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/group/group-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/group/group-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ A group can be added to the diagram model through [`nodes`](https://ej2.syncfusi
 The following code illustrates how a ungroup  at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/group/ungroup-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/group/ungroup-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ A group node can be added at runtime by using the client-side method `diagram.ad
 The following code illustrates how a group node is added at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/group/groupadd-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/group/groupadd-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +97,10 @@ diagramInstance.removeChildFromGroup (groupNode, childNode);
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/group/groupchild-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/group/groupchild-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +134,10 @@ Containers are used to automatically measure and arrange the size and position o
 The following code illustrates how to add a stack panel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/group/canvas-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/group/canvas-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

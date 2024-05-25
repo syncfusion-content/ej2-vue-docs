@@ -19,7 +19,10 @@ To group the Vue AutoComplete items, you can check on this video:
 In the following sample, vegetables are grouped according on its category using groupBy field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

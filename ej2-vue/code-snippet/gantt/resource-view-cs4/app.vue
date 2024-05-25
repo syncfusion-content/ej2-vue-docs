@@ -7,10 +7,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -115,7 +119,7 @@ resourceFields: {
         { field: 'StartDate' },
         { field: 'Duration' }
     ],
-    toolbar: ['ExpandAll', 'CollapseAll'];
+    toolbar: ['ExpandAll', 'CollapseAll'],
     labelSettings: {
         rightLabel: 'resources',
         taskLabel: 'TaskName'

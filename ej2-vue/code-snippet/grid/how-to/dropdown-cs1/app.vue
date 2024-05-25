@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height='315px' >
@@ -14,21 +12,30 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from './datasource.js';
 
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
+
+
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-dropdownlist":DropdownlistComponent,
+
+},
+
   data() {
     return {
       data: data,
       dropdownTemplate: function () {
         return {
-          template: Vue.component('bindDropdown', {
+          template: app.component('bindDropdown', {
             template: `<ejs-dropdownlist id='dropdownlist' :dataSource='dropData'> </ejs-dropdownlist>`,
             data() {
               return {
@@ -45,5 +52,3 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

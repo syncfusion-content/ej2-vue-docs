@@ -15,7 +15,10 @@ The [`name`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#name) a
 In the following code snippet, Cricket and Hockey are in the [`checked`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#checked) state, Tennis is in [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/check-box/#disabled) state and Basketball is in unchecked state. Now, the value that is in checked state only be sent on form submit.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/check-box/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/check-box/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="content-wrapper">
     <div align='center'>
@@ -10,17 +8,21 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin, ImageExport } from "@syncfusion/ej2-vue-lineargauge";
-Vue.use(LinearGaugePlugin);
+
+import { LinearGaugeComponent, ImageExport } from "@syncfusion/ej2-vue-lineargauge";
+
 export default {
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent
+},
   data () {
     return {
       allowImageExport: true
     }
   },
   methods: {
-    clickExport: function (event) {
+    clickExport: function () {
       this.$refs.gauge.ej2Instances.export("PNG", "Gauge");
     }
   },
@@ -34,5 +36,3 @@ export default {
     padding: 0px !important;
 }
 </style>
-
-

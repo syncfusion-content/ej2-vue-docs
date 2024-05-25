@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div>
     <p><b>Gantt</b></p>
@@ -11,14 +8,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { GanttComponent, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 import { editingData, editingResources } from './data-source.js';
 import { closest,addClass } from '@syncfusion/ej2-base';
-Vue.use(GanttPlugin);
-Vue.use(TreeViewPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"ejs-treeview":TreeViewComponent,
+},
   data: function() {
       return{
             data: editingData,
@@ -91,6 +91,3 @@ export default {
     }
 };
 </script>
-
-
-

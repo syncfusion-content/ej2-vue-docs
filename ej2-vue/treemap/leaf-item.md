@@ -17,7 +17,10 @@ A leaf item defines a visualized data element and does not contain child nodes b
 Label is represented by item name or value. Label will be appeared by specifying the [`labelPath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#labelpath) property and customize the label style using the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#labelstyle) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Label is represented by item name or value. Label will be appeared by specifying
 Positioning the leaf item label using the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#labelposition) property and the text format can be customized by specifying data source properties name in the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#labelformat) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ Positioning the leaf item label using the [`labelPosition`](https://ej2.syncfusi
 Specifies the template of leaf item label and position of the template to be customized using [`labelTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#labeltemplate) and [`templatePosition`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#templateposition) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ Specifies the template of leaf item label and position of the template to be cus
 The [`gap`](https://ej2.syncfusion.com/vue/documentation/api/treemap/leafItemSettingsModel/#gap) property is used to separate an item from another item. Each item rectangle is split into equal space with specified gap.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}

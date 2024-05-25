@@ -112,12 +112,31 @@ import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-imag
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+
+export default {
+  components: {
+    'ejs-imageeditor': ImageEditorComponent
+  }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 
 export default {
+name: "App",
+components: {
+"ejs-imageeditor':":Imageeditor':Component
+
+},
+
   components: {
     'ejs-imageeditor': ImageEditorComponent
   }

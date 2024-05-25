@@ -11,7 +11,7 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 import cagregorian from './ca-gregorian.json';
 import currencies from './currencies.json';
@@ -19,7 +19,7 @@ import numbers from './numbers.json';
 import timeZoneNames from './timeZoneNames.json';
 import numberingSystems from './numberingSystems.json'
 import deDELocalization from './locale.json'
-import { GridPlugin, Page, Group } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 setCulture('de-DE');
@@ -32,10 +32,13 @@ loadCldr(
     timeZoneNames,
     numberingSystems
 );
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -58,6 +61,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

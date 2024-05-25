@@ -19,7 +19,10 @@ To enable this feature, need to set the [groupSettings.enableLazyLoading](https:
 The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings.enableLazyLoading` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/lazy-load-group-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/lazy-load-group-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +108,10 @@ To enable this feature, you need to set the [groupSettings.enableLazyLoading](ht
 The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings.enableLazyLoading` and `enableInfiniteScrolling` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/lazy-load-group-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/lazy-load-group-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +138,10 @@ To enable this feature, you need to set the [groupSettings.enableLazyLoading](ht
 The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `groupSettings.enableLazyLoading` and `enableVirtualization` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/lazy-load-group-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/lazy-load-group-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

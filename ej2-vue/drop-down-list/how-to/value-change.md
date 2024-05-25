@@ -15,7 +15,10 @@ You can check about whether value change happened by manual or programmatic by u
 The following example demonstrate, how to check whether value change happened by manual or programmatic.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/change-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/change-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

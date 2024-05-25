@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can enable Excel like filter by defining [`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtersettings) as `Excel`. The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel :previousButtonTemplate="'previousTemplate'" :nextButtonTemplate="'nextTemplate'">
@@ -56,14 +54,19 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(ButtonPlugin);
-Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
-export default {};
+export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "ejs-button": ButtonComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  }
+};
 </script>
 
 <style>
@@ -91,5 +94,3 @@ export default {};
   text-align: center;
 }
 </style>
-
-

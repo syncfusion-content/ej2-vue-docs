@@ -33,7 +33,10 @@ The UML class diagram shapes are explained as follows.
 * The following code example illustrates how to create a class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/class-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/class-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +58,10 @@ The UML class diagram shapes are explained as follows.
 * The following code example illustrates how to create an interface.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/interface-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/interface-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +77,10 @@ The UML class diagram shapes are explained as follows.
 * The following code example illustrates how to create an enumeration.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/enumeration-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/enumeration-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +109,10 @@ Association is basically a set of links that connects elements of an UML model. 
 The association property allows you to define the type of association. The default value of association is “Directional”. The following code example illustrates how to create an association.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/association-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/association-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -115,7 +127,10 @@ Aggregation is decorated with a hollow diamond. To create an aggregation shape, 
 The following code example illustrates how to create an aggregation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/aggregation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/aggregation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +144,10 @@ Composition is a “strong” form of “aggregation”. Composition is decorate
 The following code example illustrates how to create a composition.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/composition-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/composition-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +161,10 @@ Dependency is a directed relationship, which is used to show that some UML eleme
 The following code example illustrates how to create an dependency.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/dependency-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/dependency-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +180,10 @@ To create an inheritance, define the relationship as “inheritance”.
 The following code example illustrates how to create an inheritance.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/inheritance-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/inheritance-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +212,10 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
 * The following code example illustrates how to customize the multiplicity.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/multiplicity-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/multiplicity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -213,7 +240,10 @@ diagram.addChildToUmlNode(node, methods, 'Method');
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlMethod-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/UmlMethod-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -230,7 +260,10 @@ diagram.addChildToUmlNode(node, attributes, "Attribute");
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlAttribute-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/UmlAttribute-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -247,7 +280,10 @@ diagram.addChildToUmlNode(node, members, "Member");
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlMember-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/UmlMember-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -268,7 +304,10 @@ UML built-in shapes are efficiently rendered in a symbol palette. The `symbols` 
 The following code example showcases the rendering of UML built-in shapes in a symbol palette.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/Umlclass-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/Umlclass-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -318,7 +357,10 @@ To create a UmlActivity, define type as "UmlActivity" and the list of built-in s
 The following code illustrates how to create a UmlActivity shapes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlActivity-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/UmlActivity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -332,7 +374,10 @@ To create an UmlActivity connector, define the type as "UmlActivity" and flow as
 The following code illustrates how to create a UmlActivity connector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/umldiagramshapes/UmlActivityConnector-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/umldiagramshapes/UmlActivityConnector-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height='210px'>
@@ -25,25 +23,33 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Aggregate } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
 
-Vue.use(GridPlugin);
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { createApp } from "vue";
+var app = createApp();
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       footerMax: function () {
-        return  { template : Vue.component('maxTemplate', {
+        return  { template : app.component('maxTemplate', {
             template: `<span>Max: {{data.Max}}</span>`,
             data () {return { data: {}};}
             })
@@ -59,5 +65,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

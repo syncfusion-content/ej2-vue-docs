@@ -21,7 +21,10 @@ By default, on focusing the MaskedTextBox the entire mask gets selected. You can
 Following is an example that demonstrates the above cases to set cursor position in the MaskedTextBox using focus event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/how-to/cursor-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/masked-textbox/how-to/cursor-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

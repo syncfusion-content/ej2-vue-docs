@@ -235,7 +235,10 @@ This feature allows you to specify translation objects for specific cultures, su
 The following example demonstrates how to load a translation object for **Deutsch (de)** culture, by using the **load** function of **L10n** class from the **ej2-base** module and by defining the [locale](https://ej2.syncfusion.com/vue/documentation/api/grid/#locale) to **de-DE**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/globalization/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/globalization/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -249,7 +252,10 @@ The Loading translations feature allows you to specify translation objects for d
 The following example demonstrates how to load a translation object for **French (fr)** culture, by defining the [locale](https://ej2.syncfusion.com/vue/documentation/api/grid/#locale) to **fr-FR** and by using the **load** function of **L10n** class from the **ej2-base** module.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/globalization/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/globalization/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -279,7 +285,10 @@ loadCldr(
 To switch to the **French** culture and set the currency code as **EUR**, you can use the `setCulture` method and the `setCurrencyCode` method of the Grid on external button click. This is demonstrated below: 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/globalization/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/globalization/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -295,7 +304,10 @@ The Internationalization library in the Syncfusion Vue Grid provides a localized
 You need to load the culture format files corresponding to the desired locale. This ensures that the Grid component uses the correct format strings for number, date, and time values based on the selected culture. This can be demonstrated in the below example,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/globalization/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/globalization/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -314,7 +326,10 @@ To enable RTL in the Grid, you need to set the [enableRtl](https://ej2.syncfusio
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to enable or diable the Right to Left (RTL) feature for the **Arabic (ar-AE)** locale. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered and the `enableRtl` property of the grid is updated accordingly. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/globalization/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/globalization/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

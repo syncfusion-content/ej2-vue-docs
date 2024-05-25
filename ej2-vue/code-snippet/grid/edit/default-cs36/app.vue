@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref="grid" :dataSource="data" :editSettings="editSettings" :toolbar="toolbar" :load="load">
@@ -16,12 +14,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { employeeDetails } from './datasource.js';
 import { Query } from '@syncfusion/ej2-data';
-
-Vue.use(GridPlugin);
 window.role = "";
 
 let jobRole = [
@@ -42,6 +37,12 @@ let salaryDetails = [
 ];
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
         return {
             data: employeeDetails,
@@ -133,6 +134,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

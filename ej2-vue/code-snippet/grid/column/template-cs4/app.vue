@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data" :detailTemplate ='detailTemplate' >
@@ -14,21 +12,25 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, DetailRow } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
 import { Internationalization } from '@syncfusion/ej2-base';
-
+import { createApp } from "vue";
+const app = createApp();
 let instance = new Internationalization();
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: employeeData,
       detailTemplate: function () {
-        return { template : Vue.component('detailTemplate',{
+        return { template : app.component('detailTemplate',{
         template: `
        <table class="detailtable" width="100%">
         <colgroup>
@@ -126,6 +128,3 @@ export default {
         }
     }
 </style>
-
-
-

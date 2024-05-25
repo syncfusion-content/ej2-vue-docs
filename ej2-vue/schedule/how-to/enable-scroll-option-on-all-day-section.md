@@ -15,7 +15,10 @@ When you have larger number of appointments in all-day row, it is difficult to v
 >Note: This property is not applicable for Scheduler with height `auto`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/virtual-scrolling-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/virtual-scrolling-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

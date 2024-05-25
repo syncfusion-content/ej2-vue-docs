@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
@@ -13,12 +11,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Marker, Legend } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Marker, Legend, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
 import { markerDataSource } from './marker-data.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return {
         legendSettings: {
@@ -43,7 +47,7 @@ data () {
                 colorValuePath: 'color',
                 shapeValuePath:'shape',
                 legendText: 'country',
-                visible: true
+                visible: true,
                 dataSource: markerDataSource
             }
         ]
@@ -60,5 +64,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

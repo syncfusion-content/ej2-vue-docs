@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can enable Excel like filter by defining. [filterSettings.type](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings#type) as `Excel`.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +67,10 @@ grid.filterSettings = { enableInfiniteScrolling = true, loadingIndicator = 'Spin
 In the provided example, On-Demand Excel filter has been enabled for the Vue Grid
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/checkbox-excel-filter/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/checkbox-excel-filter/app.vue %}
 {% endhighlight %}
 {% endtabs %}

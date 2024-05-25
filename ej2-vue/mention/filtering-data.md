@@ -19,7 +19,10 @@ You can control the minimum length of user input to initiate the search action u
 The remote request does not fetch the search data until the search key contains three characters as shown in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/filtering-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/filtering-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ While filtering, you can change the filter type to `Contains`, `StartsWith`, or 
 * EndsWith - Filter the items that end with the specified text value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/filtering-data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/filtering-data-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ While filtering, you can allow the space in the middle of the mention the data i
 > By default, the `allowSpaces` property is disabled, and the space ends the mention component search.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/filtering-data-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/filtering-data-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ While filtering, you can allow the space in the middle of the mention the data i
 While filtering, you can customize the number of list items to be displayed in the suggestion list by using the [suggestionCount](https://ej2.syncfusion.com/vue/documentation/api/mention/#suggestioncount) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/filtering-data-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/filtering-data-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

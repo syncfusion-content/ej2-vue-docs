@@ -15,7 +15,10 @@ You can modify the items displayed in the toolbar by utilizing the [toolbarItems
 For instance, here's an example of how to add a custom checkbox to the toolbar using the **template** property. Here we have modified the default `New Folder` item and added a custom toolbar item for selection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/toolbar-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/toolbar-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -23,7 +23,10 @@ Now, let's see how it works on those applicable views with examples.
 By default, the rows of the calendar Month view can hold only the limited appointments count based on its row height, and the rest of the overlapping appointments are indicated with a `+n more` text indicator. The following example shows how the month view row auto-adjusts based on the number of appointments count, when this `RowAutoHeight` feature is enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/working-days-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/working-days-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ By default, the rows of the calendar Month view can hold only the limited appoin
 When the feature `RowAutoHeight` is enabled in Timeline views, the row height gets auto-adjusted based on the number of overlapping events occupied on the same time range, which is demonstrated in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/working-days-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/working-days-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ When the feature `RowAutoHeight` is enabled in Timeline views, the row height ge
 The following example shows how the auto row adjustment feature works on timeline views with multiple resources.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/working-days-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/working-days-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ The following example shows how the auto row adjustment feature works on timelin
 By default, with the feature [`rowAutoHeight`](../api/schedule/#rowautoheight), there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property [`ignoreWhitespace`](../api/schedule/eventSettings/#ignorewhitespace) with in [`eventSettings`](../api/schedule/eventSettings/) whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/ignore-whitespace-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/ignore-whitespace-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

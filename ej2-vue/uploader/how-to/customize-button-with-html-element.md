@@ -15,7 +15,10 @@ The uploader component allows you to customize the action buttons by using [butt
 In the following example explains about how to customize the action buttons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -18,7 +18,10 @@ The Uploader sends the large file split into small chunks and transmits to the s
 To enable the chunk upload, set the size to [chunkSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/asyncSettingsModel/#chunksize) option of the upload and it receives the value in `bytes`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/chunk-upload-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/chunk-upload-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +45,10 @@ To modify the chunk upload, the following options can be used.
 The following sample specifies the chunk upload delay with 3000 milliseconds and the retry count is 5. The failure event is triggered as the wrong saveUrl is used.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/chunk-upload-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/chunk-upload-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ Allows you to resume an upload operation after a network failure or manually int
 > This pause and resume features available only when the chunk upload is enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/chunk-upload-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/chunk-upload-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ When the request fails, the pause icon is changed to retry icon. By clicking the
 The following example explains about chunk upload with cancel support.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/chunk-upload-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/chunk-upload-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

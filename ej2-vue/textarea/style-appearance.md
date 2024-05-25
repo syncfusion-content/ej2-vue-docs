@@ -20,6 +20,9 @@ you can adjust the size of the TextArea by applying specific classes:
 By applying these classes, users can easily customize the appearance of the TextArea to better fit their application's design requirements.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs1/app.vue %}
 {% endhighlight %}
@@ -33,6 +36,9 @@ The Filled and Outline modes can be enabled in the TextArea component by adding 
 By adding these classes, users can choose between a filled or outline appearance for the TextArea component, aligning with the design aesthetics of their application.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs2/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs2/app.vue %}
 {% endhighlight %}
@@ -49,6 +55,9 @@ The `cssClass` Api provides a powerful way to apply custom styling to the TextAr
 By utilizing the `cssClass` API, users can apply custom CSS classes to the TextArea component's container, enabling control over its styling properties such as color, padding, margins, borders, and more.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs3/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs3/app.vue %}
 {% endhighlight %}
@@ -68,7 +77,7 @@ To disable the TextArea, you can utilize the [enabled](https://ej2.syncfusion.co
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { TextAreaComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -106,7 +115,7 @@ To make the TextArea read-only , you can use the [readonly](https://ej2.syncfusi
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { TextAreaComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -152,6 +161,9 @@ Render the TextArea with `rounded corner` by adding the `e-corner` class to the 
 To display a static clear button in the TextArea component, you can add the `e-static-clear` class to the `cssClass` property. This class ensures that the clear button remains visible at all times, providing users with the ability to easily clear the TextArea content without needing to focus on the control.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs4/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs4/app.vue %}
 {% endhighlight %}
@@ -164,6 +176,9 @@ To display a static clear button in the TextArea component, you can add the `e-s
 You can customize the TextArea styles such as background-color, text-color and border-color by overriding its default styles to achieve the desired appearance for the TextArea.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs5/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs5/app.vue %}
 {% endhighlight %}
@@ -194,6 +209,9 @@ You can change the floating label color of the TextArea for both `success` and `
 ```
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs6/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs6/app.vue %}
 {% endhighlight %}
@@ -216,6 +234,9 @@ To add a mandatory asterisk (*) to the placeholder in the TextArea component, yo
 ```
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/style-appearance-cs7/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/style-appearance-cs7/app.vue %}
 {% endhighlight %}

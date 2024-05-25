@@ -21,7 +21,10 @@ In the following sample, the Dropdown Tree list items are customized with employ
 The template expression should be provided inside the {% raw %}`{{...}}`{% endraw %} interpolation syntax.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/item-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/item-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ The header element is shown statically at the top of the popup list items within
 In the following sample, the header is customized with the custom element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/header-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/header-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ The Dropdown Tree has options to show a footer element at the bottom of the list
 In the following sample, the footer element displays the total number of employees present in the Dropdown Tree.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/footer-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/footer-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ The Dropdown Tree is supports to display custom design in the popup list content
 In the following sample, popup list content displays the notification of no data available.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/noRecords-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/noRecords-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +89,10 @@ The Dropdown Tree provides an option to custom design the popup list content usi
 In the following sample, when the data fetch request fails, the Dropdown Tree displays the notification.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/actionFailure-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/actionFailure-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +108,10 @@ When the **mode** property is set as **Custom**, the Dropdown Tree displays the 
 In the following sample, the Dropdown Tree is rendered with default value of the **customTemplate** property like “**1 item(s) selected or 2 item(s) selected**”.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/custom-template-mode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/custom-template-mode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +121,10 @@ In the following sample, the Dropdown Tree is rendered with default value of the
 In the following sample, the Dropdown Tree is rendered with custom value of the **customTemplate** property like **Selected items count: 2**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/custom-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/templates/custom-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

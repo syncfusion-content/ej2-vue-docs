@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
@@ -10,17 +8,23 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(TooltipPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DropDownListPlugin);
+
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
+
+
 
 import { Tooltip } from '@syncfusion/ej2-popups';
 
-export default { data () {
+export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropdownlistComponent,
+
+},
+ data () {
     return {
       countryData: [
         { id: '1', text: 'Australia', content: 'National sports is Cricket' },
@@ -72,5 +76,3 @@ export default { data () {
 @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
-
-

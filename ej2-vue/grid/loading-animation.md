@@ -15,7 +15,10 @@ The grid has an option to show a loading indicator in-between the time of fetchi
 In the following sample, the Shimmer indicator is displayed while the grid is loading and refreshing when using the remote data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/remote-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/databind/remote-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

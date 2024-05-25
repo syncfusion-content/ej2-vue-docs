@@ -32,7 +32,10 @@ Local data can be represented in two ways as described below.
 The DropDownList has support to load array of primitive data such as strings and numbers. Here, both value and text field act the same.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/data-binding/simple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/data-binding/simple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ The DropDownList can generate its list items through an array of complex data. F
 In the following example, `Id` column and `Game` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/data-binding/json-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/data-binding/json-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ The DropDownList can generate its list items through an array of complex data. F
 In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/data-binding/complex-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/data-binding/complex-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +83,10 @@ The DropDownList supports retrieval of data from remote data services with the h
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/data-binding/remote-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/data-binding/remote-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

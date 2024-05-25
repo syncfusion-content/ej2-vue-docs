@@ -101,11 +101,18 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <script>
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 export default {
+name: "App",
   components: {
     'ejs-button': ButtonComponent
   }

@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div>
     <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryCellInfo="pdfQueryCellInfo" :height="height"
@@ -26,12 +23,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, PdfExport, Selection ,PdfQueryCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport, Selection ,PdfQueryCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
 import { editingData , editingResources } from './data-source.js';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
       return{
             data: editingData,
@@ -47,23 +48,23 @@ export default {
             toolbar: ['PdfExport'],
         toolbarClick: (args) => {
                 if (args.item.id === 'GanttContainer_pdfexport') {
-                    var exportProperties: PdfExportProperties = {
+                    var exportProperties = {
                       fileName:"new.pdf"
                     };
                     var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttChart.pdfExport(exportProperties);
                 }
             },
-      pdfQueryCellInfo: (args: PdfQueryCellInfoEventArgs) => {
+      pdfQueryCellInfo: (args) => {
         if (args.column.headerText === 'Resources') {
           {
-            args.image = { height: 40, width: 40, base64: (args as any).data.taskData.resourcesImage };
+            args.image = { height: 40, width: 40, base64: (args).data.taskData.resourcesImage };
           }
         }
         if (args.column.headerText === 'Email ID') {
           args.hyperLink = {
-            target: 'mailto:' + (args as any).data.taskData.EmailId,
-            displayText: (args as any).data.taskData.EmailId
+            target: 'mailto:' + (args).data.taskData.EmailId,
+            displayText: (args).data.taskData.EmailId
           };
         }
       },
@@ -84,6 +85,3 @@ export default {
   }
 };
 </script>
-
-
-

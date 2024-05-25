@@ -17,7 +17,10 @@ To use the searching feature, you need to inject **Search** module in the provid
 To further enhance the search functionality, you can integrate a search text box directly into the grid's toolbar. This allows users to enter search criteria conveniently within the grid interface. To add the search item to the grid's toolbar, use the [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property and add **Search** item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ The following example demonstrates how to set an initial search in the grid usin
 5. `ignoreAccent`: **true** will ignores diacritic characters or accents during the search operation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +85,10 @@ These operators provide flexibility in defining the search behavior and allow yo
 The following example demonstrates how to set the `searchSettings.operator` property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/search-operator/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/search-operator/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +107,10 @@ The `search` method allows you to perform a search operation based on a search k
 4. Invoke the `search` method of the grid by passing the search key as a parameter.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -112,7 +124,10 @@ By default, the [search](https://ej2.syncfusion.com/vue/documentation/api/grid/#
 The following example demonstrates how to search specific columns such as **CustomerID**, **Freight**, and **ShipCity** by using the `searchSettings.fields` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -128,7 +143,10 @@ To achieve this, you need to bind the `keyup` event to the search input element 
 In the following example, the `created` event is bound to the grid component, and inside the event handler, the `keyup` event is bound to the [search](https://ej2.syncfusion.com/vue/documentation/api/grid/#search) input element. Whenever the `keyup` event is triggered, the current `search` string is obtained from the `search` input element, and the `search` method is invoked on the grid instance with the current search string as a parameter. This allows the search results to be displayed in real-time as you type in the search box.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -142,7 +160,10 @@ By default, the search operation considers the underlying raw data of each cell 
 The following example demonstrates how to implement searching based on column formatting in the Grid. In the `actionBegin` event, retrieve the search value from the [getColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumns) method. Iterate through the columns and check whether the column has a format specified. If the column has a format specified, use the `grid.valueFormatterService.fromView` method to get the formatted value of the cell. If the formatted value matches the search value, set the **OR** predicate that includes the current column filter and the new filter based on the formatted value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/search-on-format/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/search-on-format/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +179,10 @@ The following example demonstrates, how to perform a search with multiple keywor
 On the other hand, the [actionComplete](https://ej2.syncfusion.com/vue/documentation/api/grid/#actioncomplete) event is used to manage the completion of the `search` operation. It ensures that the search input value is updated if necessary and clears the `query` when the search input is empty.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -174,7 +198,10 @@ By default, the searching operation in the Grid component does not ignore diacri
 The following example demonstrates how to define the `ignoreAccent` property within the [searchSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/#searchsettings) property of the grid. Additionally, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is included to modify the value of the `searchSettings.ignoreAccent` property. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered, and the `searchSettings.ignoreAccent` property is updated accordingly. This functionality helps to visualize the impact of the `searchSettings.ignoreAccent` setting when performing search operations.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/ignore-accent-search/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/ignore-accent-search/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -194,7 +221,10 @@ To achieve search text highlighting in the Grid, you can utilize the [queryCellI
 The following example demonstrates how to highlight search text in grid using the `queryCellInfo` event. The `queryCellInfo` event checks if the current cell is in the desired search column, retrieves the cell value, search keyword and uses the `includes` method to check if the cell value contains the search keyword. If it does, the matched text is replaced with the same text wrapped in a `span` tag with a `customcss` class. You can then use CSS to define the `customcss` class and style to easily identify where the search keywords are present in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/search-highlight/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/search-highlight/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -210,7 +240,10 @@ To clear the searched grid records from an external button, you can set the [sea
 The following example demonstrates how to clear the searched records using an external button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

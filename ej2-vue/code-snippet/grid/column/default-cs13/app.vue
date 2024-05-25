@@ -1,9 +1,7 @@
-
-
 <template>
     <div id="app">
-        <ejs-button id='reordersingle' cssClass='e-info' @click.native='reorderSingleColumnByFieldNames'>Reorder single column</ejs-button>
-        <ejs-button id='reordermultipe' cssClass='e-info' @click.native='reorderMultipleColumnByFieldNames'>Reorder mutiple columns</ejs-button>
+        <ejs-button id='reordersingle' cssClass='e-info' @click='reorderSingleColumnByFieldNames'>Reorder single column</ejs-button>
+        <ejs-button id='reordermultipe' cssClass='e-info' @click='reorderMultipleColumnByFieldNames'>Reorder mutiple columns</ejs-button>
         <ejs-grid ref='grid' :dataSource="data" :allowReordering='true' height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -16,15 +14,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Reorder } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Reorder } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data

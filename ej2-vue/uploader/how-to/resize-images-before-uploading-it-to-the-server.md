@@ -28,14 +28,14 @@ You can customize the dimension of the images before uploading it to the server.
 ```
 
 ```ts
-<script>
-import Vue from "vue";
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
+<script setup>
+
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 import { FileInfo } from '@syncfusion/ej2-vue-inputs/uploader';
 import { createSpinner, showSpinner, hideSpinner } from '@syncfusion/ej2-popups';
 import { createElement, isNullOrUndefined, detach, EventHandler } from '@syncfusion/ej2-base';
 
-Vue.use(UploaderPlugin);
+
 
 export default Vue.extend({
     data: function() {

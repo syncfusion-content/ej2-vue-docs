@@ -29,7 +29,10 @@ Each task in the project can be defined with different duration units and the du
 The following code snippet explains mapping the data source field of the duration unit to the Gantt component using the [`taskFields.durationUnit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#durationunit) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ The default value of the [`durationUnit`](https://ej2.syncfusion.com/vue/documen
 A duration unit for a task can be defined along with duration value, the following code snippet explains the duration unit for a task along with duration value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +91,10 @@ A milestone is a task that has no start and end dates, but it has a duration val
 You can define the various types of unscheduled tasks in the data source as follows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +111,10 @@ In the Gantt component, working hours in a day for a project can be defined by u
 The following code snippet explains how to define the working time range for the project in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +130,10 @@ The following code snippet explains how to define the working time range for the
 Non-working days/weekend are used to represent the non-productive days in a project. You can define the non-working days in a week using the [`workWeek`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#workweek) property in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height='268px'>
@@ -20,18 +18,27 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Aggregate } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
 
-Vue.use(GridPlugin);
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { createApp } from "vue";
+
+var app = createApp();
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       footerTemp: function () {
-        return  { template : Vue.component('footerTemplate', {
+        return  { template : app.component('footerTemplate', {
             template: `<span>Brazil Count: {{data.Custom}}</span>`,
             data () {return { data: {}};}
             })
@@ -61,6 +68,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
 </style>
-
-
-

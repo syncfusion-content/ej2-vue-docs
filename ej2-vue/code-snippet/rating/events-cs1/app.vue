@@ -1,24 +1,26 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating" :valueChanged="valueChanged"></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating" :valueChanged="valueChanged"></ejs-rating>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin, RatingChangedEventArgs  } from "@syncfusion/ej2-vue-inputs";
+
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
+
 enableRipple(true);
-Vue.use(RatingPlugin);
 
 export default {
-    methods : {
-        valueChanged: function(args: RatingChangedEventArgs) {
-          alert("Previous Value:"+args.previousValue+"\nValue:"+args.value);
-        }
+  name: "App",
+  components: {
+    "ejs-rating": RatingComponent
+  },
+  methods: {
+    valueChanged: function (args) {
+      alert("Previous Value:" + args.previousValue + "\nValue:" + args.value);
     }
+  }
 }
 </script>
 
@@ -31,7 +33,4 @@ export default {
   margin: 50px auto;
   text-align: center;
 }
-
 </style>
-
-

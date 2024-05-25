@@ -1,12 +1,14 @@
 <template>
-<div id="app">
-    <div id="wrapper1">
-          <ejs-multiselect id='multiselect' :dataSource='itemData' :value='value' placeholder='e.g Item 1' :allowFiltering='false' popupHeight="200px"></ejs-multiselect>
+    <div id="app">
+        <div id="wrapper1">
+            <ejs-multiselect id='multiselect' :dataSource='itemData' :value='value' placeholder='e.g Item 1'
+                :allowFiltering='false' popupHeight="200px"></ejs-multiselect>
+        </div>
     </div>
-</div>
 </template>
 <script>
 import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
+
 let records = [];
 function dataSource() {
     records = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15"];
@@ -15,36 +17,36 @@ dataSource();
 
 //Component registeration
 export default {
-    name: 'App',
+    name: "App",
     components: {
         "ejs-multiselect": MultiSelectComponent
     },
-    data (){
+    data() {
         return {
             itemData: records,
             fields: { value: 'id', text: 'text' },
             allowFiltering: true,
             allowObjectBinding: true,
-            value : ["Item 5", "Item 7", "Item 12"],
+            value: ["Item 5", "Item 7", "Item 12"],
         }
     },
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-#wrapper1{
-  min-width: 250px;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+
+#wrapper1 {
+    min-width: 250px;
     float: left;
     margin-left: 350px;
 }
-#wrapper2{
-  min-width: 250px;
+
+#wrapper2 {
+    min-width: 250px;
     float: right;
-     margin-right: 100px;
+    margin-right: 100px;
 }
 </style>
-
-

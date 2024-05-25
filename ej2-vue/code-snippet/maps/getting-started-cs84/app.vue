@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -22,10 +20,22 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, MapsComponent, NavigationLine, Marker, Zoom } from '@syncfusion/ej2-vue-maps';
-Vue.use(MapsPlugin);
+
+import { MapsComponent, NavigationLine, Marker, Zoom, LayerDirective, LayersDirective,
+    MarkerSettingsDirective, MarkerSettingDirective, NavigationLineSettingsDirective, NavigationLineSettingDirective
+ } from '@syncfusion/ej2-vue-maps';
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective,
+"e-markerSettings":MarkerSettingsDirective,
+"e-markerSetting":MarkerSettingDirective,
+"e-navigationLineSettings":NavigationLineSettingsDirective,
+"e-navigationLineSetting":NavigationLineSettingDirective
+},
 data () {
     return{
        zoomSettings: {
@@ -66,5 +76,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

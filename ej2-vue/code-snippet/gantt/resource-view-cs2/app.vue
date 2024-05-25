@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :viewType= "viewType" :taskFields= "taskFields" :resourceFields= "resourceFields"
@@ -10,10 +7,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -116,14 +117,14 @@ resourceFields: {
         { field: 'StartDate' },
         { field: 'Duration' }
     ],
-    toolbarClick: (args: ClickEventArgs) => {
+    toolbarClick: (args) => {
                 if (args.item.id === 'showhidebar') {
                     var ganttObj = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttObj.showOverAllocation = ganttObj.showOverAllocation ? false : true;
                 }
             },
     toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll',
-            { text: 'Show/Hide Overallocation', tooltipText: 'Show/Hide Overallocation', id: 'showhidebar' }];
+            { text: 'Show/Hide Overallocation', tooltipText: 'Show/Hide Overallocation', id: 'showhidebar' }],
     labelSettings: {
         rightLabel: 'resources',
         taskLabel: 'Progress'
@@ -137,6 +138,3 @@ resourceFields: {
   }
 };
 </script>
-
-
-

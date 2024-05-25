@@ -1,23 +1,23 @@
-
-
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="drawClick">Draw</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Delete</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="drawClick">Draw</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Delete</ejs-button>
 </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
-Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent,
+"ejs-button":ButtonComponent
+},
   data: function() {
       return {
         toolbar: []
@@ -31,10 +31,10 @@ export default {
             this.$refs.imageEditorObj.open('bridge.png');
         }
     },
-    drawClick: function(event) {
+    drawClick: function() {
       this.$refs.imageEditorObj.ej2Instances.freeHandDraw(true);
     },
-    btnClick: function(event) {
+    btnClick: function() {
       this.$refs.imageEditorObj.ej2Instances.deleteShape('pen_1');
     }
   }
@@ -58,5 +58,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

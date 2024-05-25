@@ -15,7 +15,10 @@ The Stepper component allows you to customize the default appearance and content
 The step model and current step index are passed as `step` and `currentStep` properties in the template context for customization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/template/app.vue %}
 {% endhighlight %}
 {% endtabs %}

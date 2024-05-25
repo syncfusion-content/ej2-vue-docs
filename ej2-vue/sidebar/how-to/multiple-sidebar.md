@@ -15,7 +15,10 @@ Two Sidebars can be initialized in a web page with same main content. Sidebars c
 >The HTML element with class name `e-main-content` will be considered as the main content and both the Sidebars will behave as side content to this main content area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/howto-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/howto-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

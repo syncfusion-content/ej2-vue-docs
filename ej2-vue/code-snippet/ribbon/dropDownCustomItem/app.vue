@@ -20,13 +20,26 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-import { ListViewPlugin } from '@syncfusion/ej2-vue-lists';
-Vue.use(RibbonPlugin);
-Vue.use(ListViewPlugin );
+
+import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
+
+
 
 export default {
+name: "App",
+components: {
+  "ejs-ribbon": RibbonComponent,
+  "e-ribbon-tabs": RibbonTabsDirective,
+  "e-ribbon-tab": RibbonTabDirective,
+  "e-ribbon-groups": RibbonGroupsDirective,
+  "e-ribbon-group": RibbonGroupDirective,
+  "e-ribbon-collections": RibbonCollectionsDirective,
+  "e-ribbon-collection": RibbonCollectionDirective,
+  "e-ribbon-items": RibbonItemsDirective,
+  "e-ribbon-item": RibbonItemDirective
+},
+
   data: function () {
     return {
       tableSettings: {

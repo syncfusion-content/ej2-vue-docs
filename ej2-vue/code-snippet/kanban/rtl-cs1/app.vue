@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData"
@@ -14,11 +12,11 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend, L10n } from '@syncfusion/ej2-base';
 import { kanbanData } from './datasource.js';
-Vue.use(KanbanPlugin);
+
 L10n.load({
     'ar': {
         'kanban': {
@@ -42,6 +40,12 @@ L10n.load({
     }
 });
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -66,6 +70,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
 </style>
-
-
-

@@ -13,15 +13,11 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { purchaseData } from './datasource.js';
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { RichTextEditor, Toolbar as RTEToolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-richtexteditor';
-
 RichTextEditor.Inject(RTEToolbar, Link, Image, HtmlEditor, QuickToolbar);
-
-Vue.use(GridPlugin);
-
 let rteElem;
 let richTextEditor;
 
@@ -41,8 +37,13 @@ function writeShipAddressFn(args) {
   });
   richTextEditor.appendTo(rteElem);
 }
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: purchaseData,
@@ -81,5 +82,3 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

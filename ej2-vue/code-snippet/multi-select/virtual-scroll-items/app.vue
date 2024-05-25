@@ -1,12 +1,15 @@
 <template>
-<div id="app">
-    <div id="wrapper1">
-          <ejs-multiselect id='multiselect' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields' :enableVirtualization='true' :query='query' :allowFiltering='false' :actionBegin='actionBegin' popupHeight="200px"></ejs-multiselect>
+    <div id="app">
+        <div id="wrapper1">
+            <ejs-multiselect id='multiselect' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields'
+                :enableVirtualization='true' :query='query' :allowFiltering='false' :actionBegin='actionBegin'
+                popupHeight="200px"></ejs-multiselect>
+        </div>
     </div>
-</div>
 </template>
 <script>
 import { MultiSelectComponent, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
+
 let records = [];
 function dataSource() {
     for (let i = 1; i <= 150; i++) {
@@ -21,43 +24,43 @@ dataSource();
 
 //Component registeration
 export default {
-    name: 'App',
+    name: "App",
     components: {
         "ejs-multiselect": MultiSelectComponent
     },
-    data (){
+    data() {
         return {
             itemData: records,
             fields: { value: 'id', text: 'text' },
             allowFiltering: true,
-            query : new Query().take(20),
+            query: new Query().take(20),
         }
     },
     provide: {
         multiselect: [VirtualScroll]
     },
     methods: {
-        actionBegin: function(e) {
-           e.query = new Query().take(25);
+        actionBegin: function (e) {
+            e.query = new Query().take(25);
         }
     }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-#wrapper1{
-  min-width: 250px;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+
+#wrapper1 {
+    min-width: 250px;
     float: left;
     margin-left: 350px;
 }
-#wrapper2{
-  min-width: 250px;
+
+#wrapper2 {
+    min-width: 250px;
     float: right;
-     margin-right: 100px;
+    margin-right: 100px;
 }
 </style>
-
-

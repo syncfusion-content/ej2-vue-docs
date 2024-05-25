@@ -30,7 +30,10 @@ By setting the edit mode to auto using the [`mode`](https://ej2.syncfusion.com/v
 The following code example demonstrates how to enable cell editing in the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ The following code example demonstrates how to enable cell editing in the Gantt 
 Modify the task details through the edit dialog by setting the edit [`mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#mode) property as `Dialog`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ Modify the task details through the edit dialog by setting the edit [`mode`](htt
 In the Gantt dialog, you can define the required tabs or editing sections using the [`addDialogFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#adddialogfields) and [`editDialogFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editdialogfields) properties. Every tab is defined using the [`type`](https://ej2.syncfusion.com/vue/documentation/api/gantt/dialogFieldType/) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +79,10 @@ In the Gantt dialog, you can define the required tabs or editing sections using 
 In the Gantt dialog, you can make only specific data source fields visible for editing by using the [`addDialogFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#adddialogfields) and [`editDialogFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editdialogfields) properties. The data fields are defined with [`type`](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/#type) and [`fields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/addDialogFieldSettings/#fields) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +104,10 @@ You can update the task dependencies using the following ways:
 The following code example demonstrates how to enable task dependency editing in the Gantt chart using the [`editSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +133,10 @@ Updating with Dialog
 The tasks value can be dynamically updated by using the [`updateRecordById`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#updaterecordbyid) method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,5 +144,3 @@ The tasks value can be dynamically updated by using the [`updateRecordById`](htt
 {% previewsample "page.domainurl/code-snippet/gantt/managing-tasks-cs18" %}
 
 >NOTE: Using the [`updateRecordById`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#updaterecordbyid) method, you cannot update the task ID value.
-
-

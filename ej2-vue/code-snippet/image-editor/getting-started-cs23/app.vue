@@ -1,22 +1,22 @@
-
-
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Zoom & Pan</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Zoom & Pan</ejs-button>
 </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
-Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent,
+"ejs-button":ButtonComponent
+},
   data: function() {
       return {
         toolbar: [],
@@ -31,7 +31,7 @@ export default {
             this.$refs.imageEditorObj.open('bridge.png');
         }
     },
-    btnClick: function(event) {
+    btnClick: function() {
       this.$refs.imageEditorObj.ej2Instances.zoom(this.zoomLevel); // Zoom in
       this.$refs.imageEditorObj.ej2Instances.pan(true);
     }
@@ -56,5 +56,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

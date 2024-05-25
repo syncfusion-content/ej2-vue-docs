@@ -1,18 +1,20 @@
-
-
 <template>
     <ejs-splitbutton :items='items' iconCss='e-sb-icons e-paste'>Paste</ejs-splitbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { SplitButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { SplitButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(SplitButtonPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-splitbutton":SplitButtonComponent
+},
     data () {
         return {
             items:[
@@ -94,5 +96,3 @@ export default {
         content: '\e703';
     }
 </style>
-
-

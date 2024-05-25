@@ -1,5 +1,3 @@
-
-
 <template>
 <form>
 <ul>
@@ -13,15 +11,21 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { CheckBoxPlugin, ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { CheckBoxComponent, ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(CheckBoxPlugin);
-Vue.use(ButtonPlugin);
 
-export default {}
+
+
+export default {
+name: "App",
+components: {
+"ejs-checkbox":CheckBoxComponent,
+"ejs-button":ButtonComponent,
+},
+}
 </script>
 
 <style>
@@ -40,5 +44,3 @@ li {
   list-style: none;
 }
 </style>
-
-

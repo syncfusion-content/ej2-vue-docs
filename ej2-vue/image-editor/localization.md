@@ -59,7 +59,10 @@ The following list of properties and its values are used in the Image  Editor.
 | ABC | ABC |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

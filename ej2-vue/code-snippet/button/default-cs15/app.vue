@@ -1,18 +1,16 @@
-
-
 <template>
-    <ejs-button ref="toggleBtn" cssClass='e-flat' iconCss='e-btn-sb-icon e-play-icon' isToggle=true v-on:click.native='btnClick'>Play</ejs-button>
+    <ejs-button ref="toggleBtn" cssClass='e-flat' iconCss='e-btn-sb-icon e-play-icon' isToggle=true v-on:click='btnClick'>Play</ejs-button>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
   methods : {
     btnClick: function(event) {
       if (this.$refs.toggleBtn.$el.classList.contains('e-active')) {
@@ -66,5 +64,3 @@ button {
     content: '\e701';
 }
 </style>
-
-

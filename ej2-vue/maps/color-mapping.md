@@ -55,7 +55,10 @@ export let population_density = [
 Bind the **population_density** data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#datasource) property of [`layerSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/) and set the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property of [`shapeSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/) as **density**. The range values can be set using the [`from`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#from) and [`to`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#to) properties of [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +92,10 @@ export let unCountries: object[] = [
 Bind the **unCountries** data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#datasource) property of [`layerSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/) and set the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property of [`shapeSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/) as **Membership**. Set the [`value`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#value) property in the [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/) to **Permanent** and **Non-Permanent** in the different set of color mapping properties. If the corresponding value of the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property matches with the corresponding field name in the data source, then the given color will be applied.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +111,10 @@ Desaturation color mapping applies the color to the shapes of the Maps, similar 
 Bind the **population_density** data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#datasource) property of [`layerSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/) and set the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property of [`shapeSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/) as **density**. The range values can be set using the [`from`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#from) and [`to`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#to) properties of [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +130,10 @@ Multiple colors can be added to the color mapping which can be used as gradient 
 Bind the **population_density** data to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/#datasource) property of [`layerSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/layerSettingsModel/) and set the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/#colorvaluepath) property of [`shapeSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/shapeSettingsModel/) as **density**. The range values can be set using the [`from`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#from) and [`to`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#to) properties of [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +149,10 @@ Color mapping can be applied to the shapes in the Maps which does not match colo
 In the following example, color mapping is added for the ranges from 0 to 200. If there are any records in the data source that are outside of this range, the color mapping will not be applied. To apply the color for these excluded items, set the [`color`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/#color) property alone in the [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -149,7 +164,10 @@ In the following example, color mapping is added for the ranges from 0 to 200. I
 The color mapping types such as range color mapping, equal color mapping and desaturation color mapping are applicable for bubbles in the Maps. To add color mapping for bubbles of the Maps, bind the data source to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/maps/bubbleSettingsModel/#datasource) property of [`bubbleSettings`](https://ej2.syncfusion.com/vue/documentation/api/maps/bubbleSettingsModel/) and set the field name which contains the color value in the data source to the [`colorValuePath`](https://ej2.syncfusion.com/vue/documentation/api/maps/bubbleSettingsModel/#colorvaluepath) property. Multiple colors for a single set of bubbles and color for excluded items from [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/maps/colorMappingSettingsModel/) are also applicable for bubbles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

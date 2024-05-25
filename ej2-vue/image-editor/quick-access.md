@@ -19,7 +19,10 @@ The quick access toolbar that appears when inserting annotations in the Image Ed
 Here is an example of adding the custom toolbar item to the quick access toolbar. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}

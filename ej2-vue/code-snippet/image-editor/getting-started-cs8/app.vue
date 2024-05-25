@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-imageeditor id="image-editor" height="350px" width="550px" locale="de-DE"></ejs-imageeditor>
@@ -7,11 +5,9 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { L10n, setCulture } from '@syncfusion/ej2-base';
 
-Vue.use(ImageEditorPlugin);
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { L10n, setCulture } from '@syncfusion/ej2-base';
 
 setCulture('de-DE');
 
@@ -58,6 +54,10 @@ L10n.load({
 });
 
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent
+},
   data: function() {
       return {};
   }
@@ -81,5 +81,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

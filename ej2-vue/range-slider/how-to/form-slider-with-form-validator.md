@@ -93,7 +93,10 @@ The `FormValidator` has following default validation rules, which are used to va
 | `range` | Slider component must have value between `range` number | if `range: [4,5]`, **4** is valid and **6** is invalid |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/thumb-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/thumb-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

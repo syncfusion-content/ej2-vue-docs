@@ -25,7 +25,10 @@ A node can be created and added to the diagram, either programmatically or inter
 To create a node, define the [`node`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node) object and add that to nodes collection of the diagram model. The following code example illustrates how to add a node to the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/Node-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/Node-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +45,10 @@ remove. On adding node at runtime, the nodes collection is changed and the [`col
 The following code illustrates how to add a node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/run-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/run-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +98,10 @@ The following table illustrates how pivot relates offset values with node bounda
 The following code illustrates how to change the `pivot` value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +127,10 @@ The flip types are as follows:
 The following code illustrates how to provide the mirror image of the original element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/position-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/position-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +149,10 @@ The following code illustrates how to provide the mirror image of the original e
 The following code illustrates how to customize the appearance of the shape.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/Appear-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/Appear-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -181,7 +196,10 @@ There are two types of gradients as follows:
 * A linear gradient’s x1, y1, x2, y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/Gradient-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/Gradient-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -195,7 +213,10 @@ There are two types of gradients as follows:
 * A radial gradient’s cx, cy, fx, fy properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/Gradient-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/Gradient-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -207,7 +228,10 @@ There are two types of gradients as follows:
 Diagram provides support to add [`shadow`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shadow-shadowmodel) effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. The following code illustrates how to drop shadow.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/shadow-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/shadow-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -219,7 +243,10 @@ Diagram provides support to add [`shadow`](https://ej2.syncfusion.com/vue/docume
 The angle, distance, and opacity of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/shadow2-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/shadow2-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -239,7 +266,10 @@ Diagram provides support to describe the state of the node. i.e., the node is ex
 The following code example illustrates how to create an icon of various shapes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/Icon-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/nodes/Icon-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -288,109 +318,211 @@ The nodes z-order property specifies the stack order of the node. A node with gr
 
 Node has the InEdges and OutEdges read-only property. In this property, you can find what are all the connectors that are connected to the node, and then you can find these connectors by using the [`getObject`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#getobject) method in the diagram.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' ></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'>
+    </ejs-diagram>
+  </div>
+</template>
+<script setup>
+import { ref, onMounted } from "vue";
+import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+
+const diagram = ref(null);
+const nodes = [{
+  id: 'node1',
+  // Position of the node
+  offsetX: 450,
+  offsetY: 100,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+},
+{
+  id: 'node2',
+  // Position of the node
+  offsetX: 350,
+  offsetY: 200,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+},
+{
+  id: 'node3',
+  // Position of the node
+  offsetX: 450,
+  offsetY: 200,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+},
+{
+  id: 'node4',
+  // Position of the node
+  offsetX: 550,
+  offsetY: 200,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+}];
+
+const connectors = [{
+  id: 'connector1',
+  sourceID: 'node1',
+  targetID: 'node2',
+  type: 'Orthogonal'
+},
+{
+  id: 'connector2',
+  sourceID: 'node1',
+  targetID: 'node3',
+  type: 'Orthogonal'
+},
+{
+  id: 'connector3',
+  sourceID: 'node1',
+  targetID: 'node4',
+  type: 'Orthogonal'
+}];
+
+const width = "100%";
+const height = "350px";
+onMounted(function () {
+  const diagramInstance = diagram.value.ej2Instances;
+  diagramInstance.getObject('connector1');
+});
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
+  </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node1',
-        // Position of the node
-        offsetX: 450,
-        offsetY: 100,
-        // Size of the node
-        width: 80,
-        height: 50,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-    },
-    {
-        id: 'node2',
-        // Position of the node
-        offsetX: 350,
-        offsetY: 200,
-        // Size of the node
-        width: 80,
-        height: 50,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-    },
-    {
-        id: 'node3',
-        // Position of the node
-        offsetX: 450,
-        offsetY: 200,
-        // Size of the node
-        width: 80,
-        height: 50,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-    },
-    {
-        id: 'node4',
-        // Position of the node
-        offsetX: 550,
-        offsetY: 200,
-        // Size of the node
-        width: 80,
-        height: 50,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-    }
-];
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  id: 'node1',
+  // Position of the node
+  offsetX: 450,
+  offsetY: 100,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+},
+{
+  id: 'node2',
+  // Position of the node
+  offsetX: 350,
+  offsetY: 200,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+},
+{
+  id: 'node3',
+  // Position of the node
+  offsetX: 450,
+  offsetY: 200,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+},
+{
+  id: 'node4',
+  // Position of the node
+  offsetX: 550,
+  offsetY: 200,
+  // Size of the node
+  width: 80,
+  height: 50,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+}];
+
 let connectors = [{
-    id: 'connector1',
-    sourceID: 'node1',
-    targetID: 'node2',
-    type: 'Orthogonal'
-    },
-    {
-        id: 'connector2',
-        sourceID: 'node1',
-        targetID: 'node3',
-        type: 'Orthogonal'
-    },
-    {
-        id: 'connector3',
-        sourceID: 'node1',
-        targetID: 'node4',
-        type: 'Orthogonal'
-    }]
+  id: 'connector1',
+  sourceID: 'node1',
+  targetID: 'node2',
+  type: 'Orthogonal'
+},
+{
+  id: 'connector2',
+  sourceID: 'node1',
+  targetID: 'node3',
+  type: 'Orthogonal'
+},
+{
+  id: 'connector3',
+  sourceID: 'node1',
+  targetID: 'node4',
+  type: 'Orthogonal'
+}];
+
 export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            nodes: nodes,
-            connectors: connectors
-        }
+  name: 'App',
+  components: {
+    'ejs-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "350px",
+      nodes: nodes,
+      connectors: connectors
     }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        diagramInstance.getObject('connector1');
-    }
+  },
+  mounted: function () {
+    const diagramInstance = this.$refs.diagram.ej2Instances;
+    diagramInstance.getObject('connector1');
+  }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 

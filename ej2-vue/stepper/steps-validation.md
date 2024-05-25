@@ -15,7 +15,10 @@ The Stepper component allows you to set the validation state for each step, disp
 > Based on the `stepType`, the validation state icon will be displayed either as an indicator or as part of the step label/text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/validation/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/validation/app.vue %}
 {% endhighlight %}
 {% endtabs %}

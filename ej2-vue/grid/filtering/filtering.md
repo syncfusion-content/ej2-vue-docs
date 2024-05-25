@@ -22,7 +22,10 @@ To get start quickly with Filtering Options, you can check on this video:
 * Checkbox -->
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ To get start quickly with Filtering Options, you can check on this video:
 To apply the filter at initial rendering, set the filter [`predicate`](https://ej2.syncfusion.com/vue/documentation/api/grid/predicate/) object in [`filterSettings.columns`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettingsModel/#columns).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +125,10 @@ By default, grid ignores diacritic characters while filtering. To include diacri
 In the following sample, type **mun** in **Ship City** column to filter diacritic characters.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

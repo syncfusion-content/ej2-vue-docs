@@ -21,27 +21,16 @@ The SpeedDial component triggers the [`clicked`](https://ej2.syncfusion.com/vue/
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :clicked="clicked"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
-
-Vue.use(SpeedDialPlugin);
-export default {
-    data () {
-        return {
-            items: [
+<script setup>
+import { SpeedDialComponent as EjsSpeeddial } from "@syncfusion/ej2-vue-buttons";
+            const items = [
                 { text: 'Cut' },
                 { text: 'Copy' },
                 { text: 'Paste' }
-            ]
-        };
-    },
-    methods: {
-      clicked: function(args) {
+            ];
+      const clicked = function(args) {
           //Your required action here
       }
-    }
-}
 </script>
 
 <style>
@@ -59,11 +48,11 @@ The Speed Dial component triggers the [`created`](https://ej2.syncfusion.com/vue
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :created="created"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
 
-Vue.use(SpeedDialPlugin);
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
     data () {
         return {
@@ -97,11 +86,11 @@ The SpeedDial component triggers the [`beforeOpen`](https://ej2.syncfusion.com/v
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :beforeOpen="beforeOpen"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
 
-Vue.use(SpeedDialPlugin);
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
     data () {
         return {
@@ -135,11 +124,11 @@ The SpeedDial component triggers the [`onOpen`](https://ej2.syncfusion.com/vue/d
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :onOpen="onOpen"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
 
-Vue.use(SpeedDialPlugin);
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
     data () {
         return {
@@ -173,11 +162,11 @@ The SpeedDial component triggers the [`beforeClose`](https://ej2.syncfusion.com/
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :beforeClose="beforeClose"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
 
-Vue.use(SpeedDialPlugin);
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
     data () {
         return {
@@ -211,11 +200,11 @@ The SpeedDial component triggers the [`onClose`](https://ej2.syncfusion.com/vue/
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :onClose="onClose"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
 
-Vue.use(SpeedDialPlugin);
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
     data () {
         return {
@@ -249,11 +238,11 @@ The SpeedDial component triggers the [`beforeItemRender`](https://ej2.syncfusion
     <ejs-speeddial id='speeddial' content='Edit'  target='#targetElement' :items='items' :beforeItemRender="beforeItemRender"></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
 
-Vue.use(SpeedDialPlugin);
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
     data () {
         return {
@@ -281,7 +270,10 @@ export default {
 Below example demonstrates the clicked event of the Speed Dial component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/action-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/speed-dial/action-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

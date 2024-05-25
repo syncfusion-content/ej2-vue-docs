@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div class="wrapper">
@@ -17,6 +15,7 @@
 import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 
 export default {
+    name: "App",
     components: {
         'ejs-sidebar': SidebarComponent
     }
@@ -44,5 +43,3 @@ export default {
     color: #ffffff;
 }
 </style>
-
-

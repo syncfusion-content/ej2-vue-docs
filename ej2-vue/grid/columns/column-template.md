@@ -21,7 +21,10 @@ To render an image in a grid column, you need to define a [template](https://ej2
 The following example demonstrates how to define a [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) for the **Employee Image** field that displays an image element. The `template` property is set to the HTML element that contains an image tag. You have utilized the `src` and `alt` attributes to an image tag. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ The Grid component provides support for rendering hyperlink columns and performi
 The following example demonstrates, how to render hyperlink column in the Grid using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property of the `e-column` tag. To define a `template` for the column,  you can use the `template` with the `a` tag to create the hyperlink. The onClick function is triggered when the hyperlink is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-hyperlink/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-hyperlink/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ The [LineChart](https://ej2.syncfusion.com/vue/documentation/sparkline/getting-s
 In the following example, we rendered the Sparkline Chart component in the Grid column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-linechart/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-linechart/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +84,10 @@ In the following code, we rendered the ColorPicker component in the Grid column 
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-colorpicker/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-colorpicker/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +105,10 @@ To render a custom component in a grid column, you need to define a [template](h
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-dropdown/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-dropdown/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +128,10 @@ In the following code, we rendered the Chips component in the Grid **First Name*
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-chip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-chip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +154,10 @@ The following example demonstrates how to use the `template` property add `v-if`
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/condition-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/condition-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -152,7 +173,10 @@ The Grid component allows you to retrieve the row object of the selected record 
 In the following code, the button element is rendered in the **Employee Data** column and `click` event binding is used to call the showDetails method when the template element is clicked. The showDetails method is passed the data object as an argument, which allows you to access the selected row object and display it in the dialog popup.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -168,7 +192,46 @@ To use the custom helper function inside a column template, you must first add t
 The following example demonstrates how to use a custom helper function inside the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property for the Freight column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+         <ejs-grid ref="grid" :dataSource="data" height=315>
+            <e-columns>
+              <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+              <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+              <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90 :template="'columnTemplate'"></e-column>
+              <e-column field='OrderDate' headerText='Order Date' textAlign='Right' type='date' format='yMd' width=120></e-column>    
+            </e-columns>
+             <template v-slot:columnTemplate="{data}">
+                <div>
+                  {{ formatCurrency(data.Freight) }}
+                </div>
+            </template>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+import { data } from "./datasource.js";
+    const formatCurrency= (value) => {
+      return '₹ ' + value.toFixed(3);
+    }
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -188,13 +251,15 @@ The following example demonstrates how to use a custom helper function inside th
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: data,

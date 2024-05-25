@@ -40,7 +40,10 @@ To load translation object in an application, use `load` function of `L10n` clas
 The following example demonstrates the Kanban in `Deutsch` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +55,10 @@ The following example demonstrates the Kanban in `Deutsch` culture.
 The Kanban provides an option to switch its text direction and layout from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable right-to-left mode in Kanban, set the `enableRtl` to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

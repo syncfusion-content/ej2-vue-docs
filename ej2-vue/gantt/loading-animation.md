@@ -15,7 +15,10 @@ The loading indicator is used to display a visual indicator while the Gantt is f
 In the following sample, the Shimmer indicator is displayed while the gantt is scrolled when using the virtual data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/loading-animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/loading-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

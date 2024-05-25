@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 In the following example, `Bugatti Chiron` is selected using [`selectItems`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#selectitems) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

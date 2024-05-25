@@ -15,7 +15,10 @@ The cascading ComboBox is a series of ComboBox, where the value of one ComboBox 
 The following example, shows the cascade behavior of country, state, and city ComboBox. Here, the [`dataBind`](https://ej2.syncfusion.com/vue/documentation/api/combo-box/#databind) method is used to reflect the property changes immediately to the ComboBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/cascade-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/cascade-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

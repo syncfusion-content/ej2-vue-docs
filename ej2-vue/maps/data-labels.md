@@ -21,7 +21,10 @@ To display the data labels in the Maps, set the field name containing the text t
 In the following example, the value of `labelPath` property is set from the field name in the shape data of the Maps layer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ In the following example, the value of `labelPath` property is set from the fiel
 In the following example, the value of `labelPath` property is set from the field name in the data source of the layer settings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ The following properties are available in the `dataLabelSettings` to customize t
 * [textStyle](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#textstyle) - To customize the text style of the data labels in Maps.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +69,10 @@ The following properties are available in the `dataLabelSettings` to customize t
 The data labels can be animated during the initial rendering of the Maps. This can be enabled by setting the [animationDuration](https://ej2.syncfusion.com/vue/documentation/api/maps/dataLabelSettingsModel/#animationduration) property in the `dataLabelSettings` of the Maps. The duration of the animation is specified in milliseconds.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs106/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs106/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +88,10 @@ The Maps component provides an option to handle the labels when they intersect w
 * **Trim** -  It specifies to trim the labels, when it exceeds the shape's region.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +107,10 @@ The Maps component provides an option to handle the labels when a label intersec
 * **Trim** -  It specifies to trim the labels when they intersect.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +124,10 @@ The custom elements can be added as a template in the data labels by using the [
 >The properties of data label such as, `smartLabelMode` , `intersectionAction`, `animationDuration`, `border`, `fill`, `opacity` and `textStyle` properties are not applicable to `template` property. The styles can be applied to the label template using the CSS styles of the HTML element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}

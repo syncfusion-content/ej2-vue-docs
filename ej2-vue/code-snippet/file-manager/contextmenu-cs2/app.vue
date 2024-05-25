@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager" ref="file_instance" :contextMenuSettings="contextMenuSettings" :ajaxSettings="ajaxSettings" :menuOpen="menuOpen" :menuClick="menuClick">
@@ -7,11 +5,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+    },
     data () {
         return {
            ajaxSettings:
@@ -36,7 +37,7 @@ export default {
     methods: {
         // Icon added to custom menu item in menuOpen event
         menuOpen: function(args){
-            for(let i: number = 0; i<args.items.length; i++) {
+            for(let i = 0; i<args.items.length; i++) {
                 if(args.items[i].id === this.$refs.file_instance.$el.id +"_cm_custom") {
                     args.items[i].iconCss= "e-icons e-fe-tick";
                 }
@@ -63,5 +64,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-
-

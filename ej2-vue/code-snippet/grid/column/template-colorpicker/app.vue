@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' id='grid' :dataSource='data' height='315px' >
@@ -7,7 +5,7 @@
         <e-column field='FirstName' headerText='FirstName' width=100></e-column>
         <e-column field='LastName' headerText='Last Name' width=100></e-column>
         <e-column field='City' headerText='City' width=100></e-column>
-        <e-column headerText='Change the color of row' width='120' :template="'colorPickerTemplate'" textAlign='Center'>
+        <e-column headerText='Change the color of row' width='120' :template="'colorPickerTemplate'" textAlign='Center'></e-column>
       </e-columns>
         <template v-slot:colorPickerTemplate="{data}">
         <div><ejs-colorpicker mode="Palette" :change="change"></ejs-colorpicker></div>
@@ -16,15 +14,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ColorPickerPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-colorpicker":ColorPickerComponent
+},
   data() {
     return {
       data: employeeData,
@@ -53,5 +54,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

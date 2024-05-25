@@ -1,17 +1,16 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height" :eventMarkers="eventMarkers" :renderBaseline="renderBaseline" :treeColumnIndex='1' :baselineColor="baselineColor" :tooltipSettings="tooltipSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Selection, DayMarkers } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent, Selection, DayMarkers } from "@syncfusion/ej2-vue-gantt";
 import { baselineData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
            data: [
@@ -59,7 +58,7 @@ export default {
             baselineColor:'red',
             tooltipSettings:{
                 showTooltip:true
-                }
+                },
                 height: '450px',
         };
   },
@@ -68,6 +67,3 @@ export default {
   }
 };
 </script>
-
-
-

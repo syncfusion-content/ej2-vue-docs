@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
        <button id="restore"  @click="clickRestore">Restore</button>
@@ -14,7 +12,7 @@
     </div>
 </template>
  <script id="template" type="text/x-template">
-        <a rel='nofollow' href=https://en.wikipedia.org/wiki/${ShipName}><span class="e-icons e-column"></span></a>
+        <a rel='nofollow' href="https://en.wikipedia.org/wiki/${ShipName}"><span class="e-icons e-column"></span></a>
     </script>
   
     <script id="customertemplate" type="text/x-template">
@@ -22,13 +20,11 @@
         Customer ID
     </script>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-var headTemplate = Vue.component("header", {
+import { createApp } from "vue";
+const app = createApp();
+var headTemplate = app.component("header", {
     template: '<span class="e-icons e-header">CustomerID</span>',
     data() {
     return {
@@ -36,8 +32,7 @@ var headTemplate = Vue.component("header", {
     };
     }
 });
-
-var columnTemplate = Vue.component("column", {
+var columnTemplate = app.component("column", {
      template: '<a rel="nofollow" href="https://en.wikipedia.org/wiki/${ShipName}"><span class="e-icons e-column"></span></a>',
      data() {
      return {
@@ -45,8 +40,13 @@ var columnTemplate = Vue.component("column", {
      };
      }
 });
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -99,5 +99,3 @@ export default {
     }
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

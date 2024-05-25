@@ -17,7 +17,10 @@ By default, the behavior is working with select a file using browse button. But,
 In the following example, validated image files using images/*. You are able to drag and drop the image files with extension of png, jpg, bpg, gif and tiff to upload it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

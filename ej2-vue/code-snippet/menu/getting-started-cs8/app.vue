@@ -1,58 +1,59 @@
-
-
 <template>
-<div>
-<ejs-menu :items='menuItems' orientation='Vertical'></ejs-menu>
-</div>
+    <div>
+        <ejs-menu :items='menuItems' orientation='Vertical'></ejs-menu>
+    </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { MenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(MenuPlugin);
 
 export default {
-   data: function() {
+    name: "App",
+    components: {
+        "ejs-menu": MenuComponent
+    },
+    data: function () {
         return {
-           menuItems:  [
-        {
-        text: 'File',
-        items: [
-            { text: 'Open' },
-            { text: 'Save' },
-            { text: 'Exit' }
-        ]
-    },
-    {
-        text: 'Edit',
-        items: [
-            { text: 'Cut' },
-            { text: 'Copy' },
-            { text: 'Paste' }
-        ]
-    },
-    {
-        text: 'View',
-        items: [
-            { text: 'Toolbar' },
-            { text: 'Sidebar' },
-            { text: 'Full Screen' }
-        ]
-    },
-    {
-        text: 'Tools',
-        items: [
-            { text: 'Spelling & Grammar' },
-            { text: 'Customize' },
-            { text: 'Options' }
-        ]
-    },
-    { text: 'Help' }
-    ]
-    };
+            menuItems: [
+                {
+                    text: 'File',
+                    items: [
+                        { text: 'Open' },
+                        { text: 'Save' },
+                        { text: 'Exit' }
+                    ]
+                },
+                {
+                    text: 'Edit',
+                    items: [
+                        { text: 'Cut' },
+                        { text: 'Copy' },
+                        { text: 'Paste' }
+                    ]
+                },
+                {
+                    text: 'View',
+                    items: [
+                        { text: 'Toolbar' },
+                        { text: 'Sidebar' },
+                        { text: 'Full Screen' }
+                    ]
+                },
+                {
+                    text: 'Tools',
+                    items: [
+                        { text: 'Spelling & Grammar' },
+                        { text: 'Customize' },
+                        { text: 'Options' }
+                    ]
+                },
+                { text: 'Help' }
+            ]
+        };
 
     }
 }
@@ -67,7 +68,4 @@ body {
     margin-top: 100px;
     text-align: center;
 }
-
 </style>
-
-

@@ -15,7 +15,10 @@ Ripple can be enabled by importing `rippleEffect` method from `ej2-base` and ini
 The following example illustrates how to enable ripple for ButtonGroup,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/button-group/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

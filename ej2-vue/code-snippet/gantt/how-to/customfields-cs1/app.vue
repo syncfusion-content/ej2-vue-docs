@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id="app">
     <ejs-gantt ref="gantt" :dataSource="data" id="GanttContainer" :taskFields="taskFields" :height="height" :editSettings="editSettings"
@@ -19,15 +16,14 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit, Toolbar, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, Selection } from "@syncfusion/ej2-vue-gantt";
 import { CheckBox } from "@syncfusion/ej2-buttons";
 import { TextBox, NumericTextBox, MaskedTextBox } from "@syncfusion/ej2-inputs";
 import { DatePicker, DateTimePicker } from "@syncfusion/ej2-calendars";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { editingData } from './data-source.js';
 
-Vue.use(GanttPlugin);
 var divElement;
 var inputs = {
   booleanedit: CheckBox,
@@ -39,6 +35,12 @@ var inputs = {
   stringedit: TextBox
 };
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
       data: editingData,
@@ -113,6 +115,3 @@ export default {
   methods: {}
 };
 </script>
-
-
-

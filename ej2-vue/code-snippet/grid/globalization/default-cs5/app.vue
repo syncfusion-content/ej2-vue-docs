@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div>
@@ -20,20 +18,23 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { L10n, setCulture } from '@syncfusion/ej2-base';
-import { GridPlugin, Page, Group, Edit, Toolbar, Sort, Reorder, ColumnMenu, ColumnChooser } from "@syncfusion/ej2-vue-grids";
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Group, Edit, Toolbar, Sort, Reorder, ColumnMenu, ColumnChooser } from "@syncfusion/ej2-vue-grids";
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
 import arAELocalization from './locale.json';
 
 L10n.load(arAELocalization);
 setCulture('ar-AE');
-
-Vue.use(GridPlugin);
-Vue.use(SwitchPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-switch":SwitchComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -68,6 +69,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

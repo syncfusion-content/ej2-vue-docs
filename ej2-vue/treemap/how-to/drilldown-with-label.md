@@ -29,15 +29,11 @@ Create a treemap control and enable the drill-down option.
       </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { TreeMapPlugin } from '@syncfusion/ej2-vue-treemap';
+<script setup>
 
-Vue.use(TreeMapPlugin);
-export default {
-   data () {
-    return {
-       dataSource:  [
+import { TreeMapComponent as EjsTreemap} from '@syncfusion/ej2-vue-treemap';
+
+const dataSource =  [
             { Continent: "China", Company: "Volkswagen", Sales: 3005994 },
             { Continent: "China", Company: "General Motors", Sales: 1230044 },
             { Continent: "China", Company: "Honda", Sales: 1197023 },
@@ -53,24 +49,25 @@ export default {
             { Continent: "United Kingdom", Company: "Ford ", Sales: 319442 },
             { Continent: "United Kingdom", Company: "Vauxhall", Sales: 251146 },
             { Continent: "United Kingdom", Company: "Volkswagen", Sales: 206994 }
-        ],
-        palette: ['white'],
-        levels: [
-            {
-                groupPath: 'Continent', border: { color: 'black', width: 0.5 },
-            },
-            {
-              groupPath: 'Company', border: { color: 'black', width: 0.5 },
-            }
-        ],
-        leafItemSettings: {
-          showLabels: false,
-          labelTemplate: '<div style="background-color: red">${Company}</div>',
-          templatePosition: 'Center'
-        }
-     }
-  }
-}
+        ];
+
+const palette = ['white'];
+
+const levels = [
+   {
+      groupPath: 'Continent', border: { color: 'black', width: 0.5 },
+   },
+   {
+      groupPath: 'Company', border: { color: 'black', width: 0.5 },
+   }
+];
+
+const leafItemSettings = {
+   showLabels: false,
+   labelTemplate: '<div style="background-color: red">${Company}</div>',
+   templatePosition: 'Center'
+};
+
 </script>
 ```
 
@@ -79,7 +76,10 @@ export default {
 Add the label template in the `leafItemSettings` options, and then set the `showLabels` property to **false** to hide another labels and show only label template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

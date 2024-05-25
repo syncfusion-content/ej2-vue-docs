@@ -27,7 +27,10 @@ Diagram provides support to add different kind of nodes. They are as follows:
 Texts can be added to the diagram as [`text`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape-shapemodel) nodes. The shape property of the node allows you to set the type of node and for text nodes, it should be set as **text**. In addition, define the content object that is used to define the text to be added and style is used to customize the appearance of that text. The following code illustrates how to create a text node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Text-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ Diagram allows to add images as [`image`](https://ej2.syncfusion.com/vue/documen
 The following code illustrates how an image node is created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Image-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Image-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ The following code illustrates how an image node is created.
 The following code illustrates how add Base64 image into image node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Image-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Image-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +83,10 @@ The scale property of the node allows to stretch the image as you desired (eithe
 The following code illustrates how to scale or stretch the content of the image node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/HTML-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/HTML-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +107,10 @@ The following table illustrates all the possible scale options for the image nod
 Html elements can be embedded in the diagram through [`Html`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape-shapemodel) type node. The shape property of node allows you to set the type of node and to create a HTML node it should be set as `HTML`. The following code illustrates how an Html node is created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/HTML-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/HTML-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -109,7 +124,10 @@ Html elements can be embedded in the diagram through [`Html`](https://ej2.syncfu
 Html elements can be embedded in the diagram through [`Html`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape-shapemodel) type node. The shape property of node allows you to set the type of node. The following code illustrates how an Html node is created with template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/HTML-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/HTML-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +139,10 @@ Html elements can be embedded in the diagram through [`Html`](https://ej2.syncfu
 Diagram provides support to embed SVG element into a node. The shape property of node allows you to set the type of node. To create a [`native`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape-shapemodel) node, it should be set as **native**. The following code illustrates how a native node is created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Native-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Native-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +176,10 @@ The following tables illustrates all the possible scale options for the node.
 The following code example illustrates how to create a basic shape.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Basic-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Basic-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -177,7 +201,10 @@ The list of basic shapes are as follows.
 The [`Path`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape-shapemodel) node is a commonly used basic shape that allows visually to represent the geometrical information. To create a path node, specify the shape as **path**. The path property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Path-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Path-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -189,7 +216,10 @@ The [`Path`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape
 The [`flow`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#shape-shapemodel) shapes are used to represent the process flow. It is used for analyzing, designing, and managing for documentation process. To create a flow shape, specify the shape type as **flow**. Flow shapes and by default, it is considered as **process**. The following code example illustrates how to create a flow shape.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/shapes/Flow-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/shapes/Flow-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

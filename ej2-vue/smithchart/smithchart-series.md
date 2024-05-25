@@ -17,7 +17,10 @@ You can add any number of series to the smithchart as per your requirement. You 
 For adding values in the smithchart, you can use either points or datasource in the series. Points and datasource both should be array of object which should contain the field names resistance and rectangle.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ Using following options in series settings, you can customize each series in smi
 * [`width`] - Used to customize the width of the series line.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}

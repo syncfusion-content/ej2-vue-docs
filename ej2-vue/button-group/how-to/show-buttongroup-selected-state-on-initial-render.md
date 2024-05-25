@@ -15,7 +15,10 @@ To show selected state on initial render, `checked` property should to added to 
 The following example illustrates how to show selected state on initial render.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/button-group/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

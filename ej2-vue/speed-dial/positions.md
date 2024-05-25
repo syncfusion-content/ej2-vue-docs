@@ -24,7 +24,10 @@ The position values of Speed Dial are as follows:
 * BottomRight
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/speed-dial/position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,23 +43,13 @@ You can open the Speed Dial action items on mouse hover by setting the [`opensOn
     <ejs-speeddial id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' target='#targetElement' opensOnHover= true :items='items'></ejs-speeddial>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SpeedDialPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(SpeedDialPlugin);
-
-    export default {
-        data() {
-            return {
-                items: [
+<script setup>
+    import { SpeedDialComponent as EjsSpeeddial } from "@syncfusion/ej2-vue-buttons";
+                const items = [
                     { iconCss: 'e-icons e-cut' },
                     { iconCss: 'e-icons e-copy' },
                     { iconCss: 'e-icons e-paste' }
                 ]
-            };
-        }
-    }
 </script>
 
 <style>
@@ -72,7 +65,10 @@ You can open/close the Speed Dial action items programmatically using [`show`](h
 Below example demonstrates open/close action items on button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/position-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/speed-dial/position-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +80,10 @@ Below example demonstrates open/close action items on button click.
 You can refresh the position of the Speed Dial using [`refreshPosition`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#refreshposition) method when the `target`position is changed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/position-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/speed-dial/position-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

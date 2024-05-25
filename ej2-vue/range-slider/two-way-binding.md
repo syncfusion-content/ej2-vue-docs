@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 It can be achieved by using the `v-model` directive in vue. In the following sample, when you change a value in one slider will automatically change the value in the other slider. It updates the other slider using `value` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/two-way-binding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/two-way-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

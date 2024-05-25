@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' id='Grid' :dataSource='parentData' :childGrid='childGrid' :toolbar='["ExcelExport"]' :toolbarClick='toolbarClick' :beforeExcelExport='beforeExcelExport' :allowExcelExport='true'>
@@ -13,14 +11,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, DetailRow, Toolbar, ExcelExport, ExcelExportProperties } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow, Toolbar, ExcelExport, ExcelExportProperties } from "@syncfusion/ej2-vue-grids";
 import { data, employeeData } from './datasource.js';
 import { extend } from '@syncfusion/ej2-base';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       parentData: employeeData,
@@ -57,5 +57,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

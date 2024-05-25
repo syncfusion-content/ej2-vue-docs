@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowFiltering='true' :filterSettings='filteroption' height='270px' >
@@ -13,17 +11,20 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { createElement } from '@syncfusion/ej2-base';
-import { GridPlugin, Edit, Toolbar, ForeignKey, Filter  } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar, ForeignKey, Filter  } from "@syncfusion/ej2-vue-grids";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { DataManager } from '@syncfusion/ej2-data';
 import { data,employeeData } from './datasource.js';
-
 let dropInstance;
-
-Vue.use(GridPlugin);
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
       data: () => {
         return {
           data: data,

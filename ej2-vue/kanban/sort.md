@@ -25,7 +25,10 @@ SortBy `Index` property can be used with or without [`field`](https://ej2.syncfu
 By default, SortBy `Index` property support without any [`field`](https://ej2.syncfusion.com/vue/documentation/api/kanban/sortSettingsModel/#field) mapping. In this behavior, cards are loaded based on the JSON data order and cards are dropped based on the dropped clone.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/index-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/index-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +64,10 @@ Consider, Column A has Card A with priority value `1`, Card B with priority valu
 and Column B has Card D with priority value `5`, then the Dropped Card D will be placed between Card A and Card B. Now, the Cards D, B, and C will be dynamically changed to the priority values as `2, 3, and 5` respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/index-field-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/index-field-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ and Column B has Card D with priority value `5`, then the Dropped Card D will be
 The SortBy `DataSourceOrder` property does not require any [`field`](https://ej2.syncfusion.com/vue/documentation/api/kanban/sortSettingsModel/#field) mapping. In this behavior, cards are loaded based on the JSON data order, and also cards are dropped based on the JSON data order.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/data-source-order-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/data-source-order-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +96,10 @@ The SortBy `DataSourceOrder` property does not require any [`field`](https://ej2
 The SortBy `Custom` property must require datasource [`field`](https://ej2.syncfusion.com/vue/documentation/api/kanban/sortSettingsModel/#field) mapping. In this behavior, cards are loaded based on the [`field`](https://ej2.syncfusion.com/vue/documentation/api/kanban/sortSettingsModel/#field) mapping value and also cards are dropped based on the [`field`](https://ej2.syncfusion.com/vue/documentation/api/kanban/sortSettingsModel/#field) mapping value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/custom-mapping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/custom-mapping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +115,10 @@ Kanban board also provides support for aligning the cards in the columns using t
 In the following sample, cards are aligned in `Descending` order.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/sort-direction-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/sort-direction-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

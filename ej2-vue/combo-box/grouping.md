@@ -19,7 +19,10 @@ To group the Vue ComboBox items, you can check on this video:
 In the following sample, the vegetables are grouped according on its category using `groupBy` field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/grouping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/grouping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

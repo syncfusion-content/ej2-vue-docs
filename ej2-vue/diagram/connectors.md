@@ -23,7 +23,10 @@ Connector can be created by defining the source and target point of the connecto
 The following code example illustrates how to add a connector through connector collection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/Connectors-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/Connectors-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The following code example illustrates how to add a connector through connector 
 The following code example illustrates how to add connector at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/Connectorsatruntime-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/Connectorsatruntime-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +67,10 @@ Various Connector properties such as `sourcePoint`,`targetPoint`,`style`,`source
 * The following code example illustrates how to update a connector's source point,target point,styles properties  at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/Connectorsupdate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/Connectorsupdate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +85,10 @@ Various Connector properties such as `sourcePoint`,`targetPoint`,`style`,`source
 * The following code example illustrates how to connect two nodes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectNode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectNode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +125,10 @@ The [`sourcePortID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/co
 The following code example illustrates how to create port to port connections.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/Connectorsportupdate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/Connectorsportupdate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -125,7 +140,10 @@ similarly we can change the [`sourcePortID`] or [`targetPortID`]  at the run tim
 The following code example illustrates how to create port to port connections.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsSegments-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsSegments-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +182,10 @@ The path of the connector is defined with a collection of segments. There are th
 To create a straight line, you should specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) of the segment as “straight” and add a straight segment to [`segments`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#segments) collection and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type-Segments) for the connector. The following code example illustrates how to create a default straight segment.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsSegmentsPoints-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsSegmentsPoints-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -174,7 +195,10 @@ To create a straight line, you should specify the [`type`](https://ej2.syncfusio
 The [`point`](https://ej2.syncfusion.com/vue/documentation/api/diagram/straightSegment#point-PointModel) property of straight segment allows you to define the end point of it. The following code example illustrates how to define the end point of a straight segment.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsOrthoSegments-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsOrthoSegments-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -190,7 +214,10 @@ Set the segment [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagra
 * The property [`maxSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#maxSegmentThumb) is used to limit the segment thumb in the connector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsOverlapping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsOverlapping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -200,7 +227,10 @@ Set the segment [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagra
 The [`length`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogonalSegment) and [`direction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogonalSegment) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsBezier-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsBezier-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -214,7 +244,10 @@ The [`length`](https://ej2.syncfusion.com/vue/documentation/api/diagram/orthogon
 Orthogonal segments are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following preview illustrate how orthogonal segments are re-routed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsBezierPoints-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsBezierPoints-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -241,7 +274,10 @@ The orthogonal connector has a number of segments in between the source and the 
  You can customize the style of the thumb shape by overriding the class e-orthogonal-thumb.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsThumbshape-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsThumbshape-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -269,7 +305,10 @@ Bezier segments are used to create curve segments and the curves are configurabl
 To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/segments) is set as `bezier` and need to specify [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#type-Segments) for the connector. The following code example illustrates how to create a default Bezier segment.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsBezier-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsBezier-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -279,7 +318,10 @@ To create a bezier segment, the [`segment.type`](https://ej2.syncfusion.com/vue/
 The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#point1-PointModel) and [`point2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#point2-PointModel) properties of bezier segment enable you to set the control points. The following code example illustrates how to configure the Bezier segments with control points.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsBezierPoints-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsBezierPoints-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -289,7 +331,10 @@ The [`point1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSe
 The [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#vector1-VectorModel) and [`vector2`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierSegment#vector2-VectorModel) properties of bezier segment enable you to define the vectors. The following code illustrates how to configure a bezier curve with vectors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsBezierVector-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsBezierVector-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -300,71 +345,141 @@ The [`vector1`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bezierS
 
 By default, when there are no segments defined for a bezier connector, the bezier segments will be created automatically and routed in such a way that avoids overlapping with the source and target nodes.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults'
-        :getConnectorDefaults='getConnectorDefaults' ></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+      :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'>
+    </ejs-diagram>
+  </div>
 </template>
-<script>
-    import Vue from 'vue';
-    import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(ConnectorEditing);
-    Vue.use(DiagramPlugin);
-    let nodes: NodeModel[] = [{
-        id: 'Start',
-        offsetX: 250,
-        offsetY: 150,
-        annotations: [{ content: 'Start' }]
-    },
-    {
-        id: 'End',
-        offsetX: 450,
-        offsetY: 200,
-        annotations: [{ content: 'End' }]
-    }];
-    let connectors: ConnectorModel[] = [{
-        id: "connector1",
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: { shape: 'None' },
-        // ID of the source and target nodes
-        sourceID: "Start",
-        targetID: "End",
-        type: 'Bezier'
-    }];
-    export default {
-        name: 'app'
-        data() {
-            return {
-                width: "100%",
-                height: "600px",
-                nodes:nodes,
-                connectors:connectors,
-                getNodeDefaults: (node)=>{
-                node.height = 100;
-                node.width = 100;
-                node.shape = { type: 'Basic', shape: 'Rectangle' }
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
-                },
-                getConnectorDefaults: (connector)=> {
-                connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
-                }
-            }
-        }
-    }
+<script setup>
+import { provide } from "vue";
+import { DiagramComponent as EjsDiagram, ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
+
+const nodes = [{
+  id: 'Start',
+  offsetX: 250,
+  offsetY: 150,
+  annotations: [{ content: 'Start' }]
+},
+{
+  id: 'End',
+  offsetX: 450,
+  offsetY: 200,
+  annotations: [{ content: 'End' }]
+}];
+
+const connectors = [{
+  id: "connector1",
+  style: {
+    strokeColor: '#6BA5D7',
+    fill: '#6BA5D7',
+    strokeWidth: 2
+  },
+  targetDecorator: { shape: 'None' },
+  // ID of the source and target nodes
+  sourceID: "Start",
+  targetID: "End",
+  type: 'Bezier'
+}];
+
+const width = "100%";
+const height = "600px";
+const getNodeDefaults = (node) => {
+  node.height = 100;
+  node.width = 100;
+  node.shape = { type: 'Basic', shape: 'Rectangle' }
+  node.style.fill = '#6BA5D7';
+  node.style.strokeColor = 'white';
+  return node;
+}
+const getConnectorDefaults = (connector) => {
+  connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+}
+
+provide('diagram', [ConnectorEditing]);
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+      :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+  </div>
+</template>
+<script>
+import { DiagramComponent, ConnectorEditing, ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  id: 'Start',
+  offsetX: 250,
+  offsetY: 150,
+  annotations: [{ content: 'Start' }]
+},
+{
+  id: 'End',
+  offsetX: 450,
+  offsetY: 200,
+  annotations: [{ content: 'End' }]
+}];
+
+let connectors = [{
+  id: "connector1",
+  style: {
+    strokeColor: '#6BA5D7',
+    fill: '#6BA5D7',
+    strokeWidth: 2
+  },
+  targetDecorator: { shape: 'None' },
+  // ID of the source and target nodes
+  sourceID: "Start",
+  targetID: "End",
+  type: 'Bezier'
+}];
+
+export default {
+  name: 'App',
+  components: {
+    'ej2-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "600px",
+      nodes: nodes,
+      connectors: connectors,
+      getNodeDefaults: (node) => {
+        node.height = 100;
+        node.width = 100;
+        node.shape = { type: 'Basic', shape: 'Rectangle' }
+        node.style.fill = '#6BA5D7';
+        node.style.strokeColor = 'white';
+        return node;
+      },
+      getConnectorDefaults: (connector) => {
+        connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+      }
+    }
+  },
+  provide: {
+    diagram: [ConnectorEditing]
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 Also, the intermediate point of two adjacent bezier segments can be edited interactively based on the bezierSettings.segmentEditOrientation property of the connector class.
 
@@ -372,99 +487,185 @@ Also, the intermediate point of two adjacent bezier segments can be edited inter
 
 While interacting with multiple bezier segments, maintain their control points at the same distance and angle by using the bezierSettings.smoothness property of the connector class.
 
-| BezierSmoothness value | Description |
-|-------- | -------- |
-| SymmetricDistance| Both control points of adjacent segments will be at the same distance when any one of them is editing. |
-| SymmetricAngle | Both control points of adjacent segments will be at the same angle when any one of them is editing. |
-| Default | Both control points of adjacent segments will be at the same angle and same distance when any one of them is editing. |
-| None | Segment’s control points are interacted independently from each other. |
+| BezierSmoothness value | Description                                                                                                           |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| SymmetricDistance      | Both control points of adjacent segments will be at the same distance when any one of them is editing.                |
+| SymmetricAngle         | Both control points of adjacent segments will be at the same angle when any one of them is editing.                   |
+| Default                | Both control points of adjacent segments will be at the same angle and same distance when any one of them is editing. |
+| None                   | Segment’s control points are interacted independently from each other.                                                |
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults'
-        :getConnectorDefaults='getConnectorDefaults' ></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+      :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'>
+    </ejs-diagram>
+  </div>
 </template>
-<script>
-    import Vue from 'vue';
-    import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(ConnectorEditing);
-    Vue.use(DiagramPlugin);
-    let nodes: NodeModel[] = [{
-        id: 'Start',
-        offsetX: 250,
-        offsetY: 150,
-        annotations: [{ content: 'Start' }],
-        ports: [{
-            id: 'StartPort',
-            visibility: PortVisibility.Visible,
-            shape: 'Circle',
-            offset: { x: 1, y: 0.5 },
-            style: { strokeColor: '#366F8C', fill: '#366F8C' }
-        }]
-    },
-    {
-        id: 'End',
-        offsetX: 450,
-        offsetY: 200,
-        annotations: [{ content: 'End' }],
-        ports: [{
-            id: 'EndPort',
-            visibility: PortVisibility.Visible,
-            shape: 'Circle',
-            offset: { x: 0, y: 0.5 },
-            style: { strokeColor: '#366F8C', fill: '#366F8C' }
-        }]
-    }];
-    let connectors: ConnectorModel[] = [{
-        id: "connector1",
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: { shape: 'None' },
-        // ID of the source and target nodes
-        sourceID: "Start",
-        targetID: "End",
-        type: 'Bezier',
-        // Configuring settings for bezier interactions
-        bezierSettings = { smoothness: BezierSmoothness.SymmetricAngle }
-    }];
-    export default {
-        name: 'app'
-        data() {
-            return {
-                width: "100%",
-                height: "600px",
-                nodes:nodes,
-                connectors:connectors,
-                getNodeDefaults: (node)=>{
-                node.height = 100;
-                node.width = 100;
-                node.shape = { type: 'Basic', shape: 'Rectangle' }
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
-                },
-                getConnectorDefaults: (connector)=> {
-                connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
-                }
-            }
-        }
-    }
+<script setup>
+import { provide } from "vue";
+import { DiagramComponent as EjsDiagram, ConnectorEditing, ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  id: 'Start',
+  offsetX: 250,
+  offsetY: 150,
+  annotations: [{ content: 'Start' }],
+  ports: [{
+    id: 'StartPort',
+    visibility: PortVisibility.Visible,
+    shape: 'Circle',
+    offset: { x: 1, y: 0.5 },
+    style: { strokeColor: '#366F8C', fill: '#366F8C' }
+  }]
+},
+{
+  id: 'End',
+  offsetX: 450,
+  offsetY: 200,
+  annotations: [{ content: 'End' }],
+  ports: [{
+    id: 'EndPort',
+    visibility: PortVisibility.Visible,
+    shape: 'Circle',
+    offset: { x: 0, y: 0.5 },
+    style: { strokeColor: '#366F8C', fill: '#366F8C' }
+  }]
+}];
+
+let connectors = [{
+  id: "connector1",
+  style: {
+    strokeColor: '#6BA5D7',
+    fill: '#6BA5D7',
+    strokeWidth: 2
+  },
+  targetDecorator: { shape: 'None' },
+  // ID of the source and target nodes
+  sourceID: "Start",
+  targetID: "End",
+  type: 'Bezier',
+  // Configuring settings for bezier interactions
+  bezierSettings: { smoothness: BezierSmoothness.SymmetricAngle }
+}];
+
+const width = "100%";
+const height = "600px";
+const getNodeDefaults = (node) => {
+  node.height = 100;
+  node.width = 100;
+  node.shape = { type: 'Basic', shape: 'Rectangle' }
+  node.style.fill = '#6BA5D7';
+  node.style.strokeColor = 'white';
+  return node;
+}
+const getConnectorDefaults = (connector) => {
+  connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+}
+provide('diagram', [ConnectorEditing]);
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+      :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+  </div>
+</template>
+<script>
+
+import { DiagramComponent, Diagram, NodeModel, ConnectorModel, ConnectorEditing, ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(ConnectorEditing);
+
+let nodes = [{
+  id: 'Start',
+  offsetX: 250,
+  offsetY: 150,
+  annotations: [{ content: 'Start' }],
+  ports: [{
+    id: 'StartPort',
+    visibility: PortVisibility.Visible,
+    shape: 'Circle',
+    offset: { x: 1, y: 0.5 },
+    style: { strokeColor: '#366F8C', fill: '#366F8C' }
+  }]
+},
+{
+  id: 'End',
+  offsetX: 450,
+  offsetY: 200,
+  annotations: [{ content: 'End' }],
+  ports: [{
+    id: 'EndPort',
+    visibility: PortVisibility.Visible,
+    shape: 'Circle',
+    offset: { x: 0, y: 0.5 },
+    style: { strokeColor: '#366F8C', fill: '#366F8C' }
+  }]
+}];
+let connectors = [{
+  id: "connector1",
+  style: {
+    strokeColor: '#6BA5D7',
+    fill: '#6BA5D7',
+    strokeWidth: 2
+  },
+  targetDecorator: { shape: 'None' },
+  // ID of the source and target nodes
+  sourceID: "Start",
+  targetID: "End",
+  type: 'Bezier',
+  // Configuring settings for bezier interactions
+  bezierSettings: { smoothness: BezierSmoothness.SymmetricAngle }
+}];
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "600px",
+      nodes: nodes,
+      connectors: connectors,
+      getNodeDefaults: (node) => {
+        node.height = 100;
+        node.width = 100;
+        node.shape = { type: 'Basic', shape: 'Rectangle' }
+        node.style.fill = '#6BA5D7';
+        node.style.strokeColor = 'white';
+        return node;
+      },
+      getConnectorDefaults: (connector) => {
+        connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+      }
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 Also, the visibility of control points can be controlled using the bezierSettings.controlPointsVisibility property of the connector class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorBezierAvoidOverlapping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorBezierAvoidOverlapping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -482,7 +683,10 @@ Also, the visibility of control points can be controlled using the bezierSetting
 * The following code example illustrates how to create decorators of various shapes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsDecorator-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsDecorator-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -500,7 +704,10 @@ Padding is used to leave the space between the Connector's end point and the obj
 * The following code example illustrates how to leave space between the connection end points and source and target nodes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectNode-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectNode-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -514,7 +721,10 @@ Padding is used to leave the space between the Connector's end point and the obj
 * The following code example illustrates how to specify hit padding for connector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorHitPadding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorHitPadding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -537,7 +747,10 @@ The flip types are as follows:
 [`Both`](https://ej2.syncfusion.com/vue/documentation/api/diagram/flipDirection) is used to interchange the source point as target point and target point as source point
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsDecorator-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsDecorator-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -551,7 +764,10 @@ The flip types are as follows:
 Line Bridging creates a bridge for lines to smartly cross over other lines, at points of intersection. By default [`bridgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bridgeDirection-BridgeDirection) is set to top. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [`connector.constraints`] or [`diagram.constraints`]. The following code example illustrates how to enable line bridging.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsBridging-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsBridging-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -569,7 +785,10 @@ Limitation: Bezier segments do not support bridging.
 Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with [`cornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#cornerradius-number) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsCornerRadius-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsCornerRadius-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -589,7 +808,10 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 * The following code example illustrates how to customize the segment appearance.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsAppearance-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsAppearance-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -607,7 +829,10 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 The following code example illustrates how to customize the appearance of the decorator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsDecAppearance-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsDecAppearance-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -624,43 +849,63 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 
 * Dependency LineRouting module should be injected to the application as the following code snippet.
 
-        ```
+        {% tabs %}
+        {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-        <script>
-        import {DiagramPlugin,LineRouting,Diagram,DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
-        Diagram.Inject(LineRouting);
-        Vue.use(DiagramPlugin);
+        <script setup>
+        import { provide } from "vue";
+        import { DiagramComponent, LineRouting, DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
+
+        provide('diagram', [ConnectorEditing]);
         </script>
 
-        ```
+        {% endhighlight %}
+        {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+        <script>
+        import { DiagramComponent, LineRouting, DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
+        
+        export default {
+            provide: {
+                diagram: [LineRouting]
+            }
+        }
+        </script>
+
+        {% endhighlight %}
+        {% endtabs %}
 
 * Now, the line routing constraints must be included to the default diagram constraints to enable automatic line routing support like below.
 
-        ```
+        {% tabs %}
+        {% highlight html tabtitle="~/src/App.vue" %}
 
         /**
         *  Initialize the Diagram
+        *  <ejs-diagram #diagram [constraints]='constraints'>
         */
-        <ejs-diagram #diagram [constraints]='constraints'>
 
         <template>
         <div id="app">
-                <ejs-diagram   :constraints='constraints' ></ejs-diagram>
+                <ejs-diagram :constraints='constraints' ></ejs-diagram>
             </div>
         </template>
 
-        <script>
+        <script setup>
         // Enable line routing constraints.
-        let  constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting;
-
+        let constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting;
         </script>
 
-        ```
+        {% endhighlight %}
+        {% endtabs %}
 
 * The following code block shows how to create the diagram with specifying nodes, connectors, constraints, and necessary modules for line routing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsLineRouting-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsLineRouting-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -670,7 +915,10 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 * In some situations, automatic line routing enabled diagram needs to ignore a specific connector from automatic line routing. So, in this case, auto routing feature can be disabled to the specific connector using the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#constraints-ConnectorConstraints) property of the connector like the following code snippet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsLineRoutingDisabled-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -686,7 +934,10 @@ Diagram provides additional flexibility to re-route the diagram connectors. A co
 The following code illustrates how to disable selection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorsConstraints-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorsConstraints-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -697,7 +948,8 @@ The following code illustrates how to disable selection.
 
 * The [`addInfo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#addinfo-Object) property of connectors allows to maintain additional information to connectors.
 
-    ```javascript
+    {% tabs %}
+    {% highlight html tabtitle="~/src/App.vue" %}
 
     let connectors: ConnectorModel = {
         id: 'connector1',
@@ -708,7 +960,8 @@ The following code illustrates how to disable selection.
         targetID: 'Verification'
     };
 
-    ```
+    {% endhighlight %}
+    {% endtabs %}
 
 ## Stack Order
 
@@ -717,7 +970,10 @@ The following code illustrates how to disable selection.
 The following code illustrates how to render connector based on the stack order.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/zindex-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/zindex-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -731,7 +987,10 @@ The connectors are used to create a link between two points, ports, or nodes to 
 The following code illustrates how to split the connector and create a connection with new node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/ConnectorSplit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/connectors/ConnectorSplit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

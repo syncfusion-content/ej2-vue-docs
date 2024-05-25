@@ -1,22 +1,18 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults'
-        :getConnectorDefaults='getConnectorDefaults' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+            :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints, PortVisibility,ControlPointsVisibility  } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(ConnectorEditing);
-    Vue.use(DiagramPlugin);
+import { DiagramComponent, ConnectorEditing, ConnectorConstraints, PortVisibility, ControlPointsVisibility } from '@syncfusion/ej2-vue-diagrams';
+
 let nodes = [{
     id: 'Start',
     offsetX: 250,
     offsetY: 150,
     annotations: [{ content: 'Start' }],
-        ports: [{
+    ports: [{
         id: 'StartPort',
         visibility: PortVisibility.Visible,
         shape: 'Circle',
@@ -50,34 +46,40 @@ let connectors = [{
     targetID: "End",
     type: 'Bezier',
     // Configuring settings for bezier interactions
-    bezierSettings : { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
+    bezierSettings: { controlPointsVisibility: ControlPointsVisibility.Source | ControlPointsVisibility.Target }
 }];
 export default {
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent,
+
+    },
+
     name: 'app',
     data() {
         return {
             width: "100%",
             height: "600px",
-            nodes:nodes,
-            connectors:connectors,
-            getNodeDefaults: (node)=>{
-            node.height = 100;
-            node.width = 100;
-            node.shape = { type: 'Basic', shape: 'Rectangle' }
-            node.style.fill = '#6BA5D7';
-            node.style.strokeColor = 'white';
-            return node;
-    },
-            getConnectorDefaults: (connector)=> {
-            connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+            nodes: nodes,
+            connectors: connectors,
+            getNodeDefaults: (node) => {
+                node.height = 100;
+                node.width = 100;
+                node.shape = { type: 'Basic', shape: 'Rectangle' }
+                node.style.fill = '#6BA5D7';
+                node.style.strokeColor = 'white';
+                return node;
+            },
+            getConnectorDefaults: (connector) => {
+                connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
+            }
         }
-    }
+    },
+    provide: {
+        diagram: [ConnectorEditing]
     }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-
-

@@ -15,7 +15,10 @@ To create ButtonGroup with icons, [`iconCss`](https://ej2.syncfusion.com/vue/doc
 The following example illustrates how to create ButtonGroup with icons,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/button-group/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To print the Grid, use the [`Print`](https://ej2.syncfusion.com/vue/documentation/api/grid/print/#print) method from grid instance. The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) by adding the `Print` toolbar item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/print/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ Some of the print options cannot be configured through JavaScript code. So, you 
 To print the grid from an external button, invoke the [`print`](https://ej2.syncfusion.com/vue/documentation/api/grid/print/#print) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/print/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +52,10 @@ To print the grid from an external button, invoke the [`print`](https://ej2.sync
 By default, the grid prints all the pages. To print the current page alone, set the [`printMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/#printmode) to `CurrentPage`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/print/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +73,10 @@ By default, the grid will be print the master and expanded child grids alone. yo
 | None     | Prints the master grid alone. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +90,10 @@ The Grid has the option to visualize details of a record in another Grid in a ma
 In the following sample, the detail grid is added to the `element` argument of the `beforePrint` event, resulting in both the master and detail grids being printed on the page.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/mastergrid-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/print/mastergrid-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +119,10 @@ In the printComplete event, We have reversed the state back to the previous stat
 In the below example, we have `CustomerID` as a hidden column in the grid. While printing, we have changed `CustomerID` to visible column and `ShipCity` as hidden column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/print/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

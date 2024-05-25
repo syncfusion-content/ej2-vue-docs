@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <p><b>First Grid:</b></p>
@@ -23,13 +21,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
 import { data, employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       fData: data.slice(0, 5),
@@ -56,6 +57,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

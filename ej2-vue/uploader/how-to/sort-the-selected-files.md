@@ -16,7 +16,10 @@ you can achieve this behavior in uploader component.
 In the following example, explains about how to sort the file list in uploader component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

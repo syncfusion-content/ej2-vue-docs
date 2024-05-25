@@ -23,7 +23,10 @@ To load translation object in an application use `load` function of `L10n` class
 In the below sample, `French` culture is set to Tab and change the close button's tooltip text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -14,7 +14,7 @@ new Vue({
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;"></div>
         <!-- To render Floating Action Button -->
-        <ejs-fab id='fab' iconCss='e-icons e-edit' content='Edit' v-on:click.native="onClick" target='#targetElement'>
+        <ejs-fab id='fab' iconCss='e-icons e-edit' content='Edit' v-on:click="onClick" target='#targetElement'>
         </ejs-fab>
     </div>
 `,

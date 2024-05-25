@@ -24,7 +24,10 @@ dataBound: function (args) {
 In the following sample, the filter operation is performed by getting the instance of the Vue Grid component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/dropdown-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/dropdown-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

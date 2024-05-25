@@ -25,7 +25,10 @@ The Chip control has the following predefined styles that can be defined using t
 | e-danger | Represents a negative chip. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/chips/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The Chip control has the following predefined styles that can be defined using t
 You can add and customize the leading icon of chip using the `leadingIconCss` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/chips/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ You can add and customize the leading icon of chip using the `leadingIconCss` pr
 You can add and customize the avatar of chip using the `avatarIconCss` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/chips/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ You can add and customize the avatar of chip using the `avatarIconCss` property.
 You can add and customize the avatar content of chip using the `avatarText` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/chips/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +85,10 @@ You can add and customize the avatar content of chip using the `avatarText` prop
 You can add and customize the trailing icon of chip using the `trailingIconCss` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/chips/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +100,10 @@ You can add and customize the trailing icon of chip using the `trailingIconCss` 
 Outline chip has the border with the background transparent. It can be set using the `cssClass` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/chips/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

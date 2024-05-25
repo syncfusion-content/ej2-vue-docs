@@ -19,7 +19,10 @@ The deletion of appointments can be done by using the `deleteEvent` public metho
 > You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/context-menu-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/context-menu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

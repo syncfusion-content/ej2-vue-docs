@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid :frozenColumns="2" :dataSource="data" :editSettings="editSettings" :toolbar="toolbar"
@@ -16,9 +14,8 @@
 </template>
 
 <script>
-import Vue from "vue";
 import {
-  GridPlugin,
+  GridComponent, ColumnsDirective, ColumnDirective,
   Page,
   Freeze,
   Toolbar,
@@ -26,13 +23,15 @@ import {
 } from "@syncfusion/ej2-vue-grids";
 import { DatePicker } from "@syncfusion/ej2-calendars";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-
 let elem;
 let datePickerObj;
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -71,5 +70,3 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

@@ -16,7 +16,10 @@ property. This property accepts either `template string` or HTML element ID.
 In the following sample, employee information such as employee photo, name, and designation have been included using the `nodeTemplate` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

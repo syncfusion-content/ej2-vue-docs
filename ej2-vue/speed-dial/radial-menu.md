@@ -21,26 +21,16 @@ You can open the action items in either clockwise or anticlockwise by setting [`
     <ejs-speeddial id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' target='#targetElement' mode= 'Radial' :items='items' :radialSettings='radialSettings'></ejs-speeddial>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SpeedDialPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(SpeedDialPlugin);
-
-    export default {
-        data() {
-            return {
-                items: [
+<script setup>
+    import { SpeedDialComponent } from "@syncfusion/ej2-vue-buttons";
+                const items = [
                     { iconCss: 'e-icons e-cut' },
                     { iconCss: 'e-icons e-copy' },
                     { iconCss: 'e-icons e-paste' },
                     { iconCss: 'e-icons e-edit' },
                     { iconCss: 'e-icons e-save' }
-                ],
-                radialSettings: { direction: 'AntiClockwise' }
-            };
-        }
-    }
+                ];
+                const radialSettings = { direction: 'AntiClockwise' };
 </script>
 
 <style>
@@ -58,26 +48,16 @@ You can modify the start and end angle of action items by setting [`startAngle`]
     <ejs-speeddial id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' target='#targetElement' mode= 'Radial' position='MiddleCenter' :items='items' :radialSettings='radialSettings'></ejs-speeddial>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SpeedDialPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(SpeedDialPlugin);
-
-    export default {
-        data() {
-            return {
-                items: [
+<script setup>
+    import { SpeedDialComponent } from "@syncfusion/ej2-vue-buttons";
+                const items = [
                     { iconCss: 'e-icons e-cut' },
                     { iconCss: 'e-icons e-copy' },
                     { iconCss: 'e-icons e-paste' },
                     { iconCss: 'e-icons e-edit' },
                     { iconCss: 'e-icons e-save' }
-                ],
-                radialSettings: { direction: 'AntiClockwise', startAngle: 180, endAngle: 360 }
-            };
-        }
-    }
+                ];
+                const radialSettings = { direction: 'AntiClockwise', startAngle: 180, endAngle: 360 };
 </script>
 
 <style>
@@ -95,26 +75,16 @@ You can modify the offset distance between action items and Speed Dial button us
     <ejs-speeddial id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' target='#targetElement' mode= 'Radial' :items='items' :radialSettings='radialSettings'></ejs-speeddial>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SpeedDialPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(SpeedDialPlugin);
-
-    export default {
-        data() {
-            return {
-                items: [
+<script setup>
+    import { SpeedDialComponent } from "@syncfusion/ej2-vue-buttons";
+                const items = [
                     { iconCss: 'e-icons e-cut' },
                     { iconCss: 'e-icons e-copy' },
                     { iconCss: 'e-icons e-paste' },
                     { iconCss: 'e-icons e-edit' },
                     { iconCss: 'e-icons e-save' }
-                ],
-                radialSettings: { offset: '80px' }
-            };
-        }
-    }
+                ];
+                const radialSettings = { offset: '80px' };
 </script>
 
 <style>
@@ -126,7 +96,10 @@ You can modify the offset distance between action items and Speed Dial button us
 Below example demonstrates the radial menu settings of the Speed Dial.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/radial-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/speed-dial/radial-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

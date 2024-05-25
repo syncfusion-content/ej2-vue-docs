@@ -40,7 +40,10 @@ To perform the directory(folder) upload in File Manager, set [directoryUpload](h
 In the following example, directory upload is enabled/disabled on DropDownButton selection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/directory-upload-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/directory-upload-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

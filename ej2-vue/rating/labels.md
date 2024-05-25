@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can use the [`showLabel`](https://ej2.syncfusion.com/vue/documentation/api/rating/#showlabel) property to display a label that shows the current value of the rating. When the `showLabel` property is set to `true`, a label will be displayed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/labels/showlabel-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/labels/showlabel-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ The following label positions are supported:
 * Right: The label is placed on the right side of the rating.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/labels/label-positions-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/labels/label-positions-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +50,10 @@ The following label positions are supported:
 You can use the [`labelTemplate`](https://ej2.syncfusion.com/vue/documentation/api/rating/#labeltemplate) tag directive to specify a custom template for the `Label` of the rating. The current value of the rating will be passed as the `value` property in the template context when building the content of the label. This allows you to include dynamic information about the rating in the template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/labels/label-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/labels/label-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

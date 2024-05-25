@@ -131,7 +131,7 @@ import {
 import {
   CarouselComponent,
   CarouselItemDirective,
-  CarouselItemsDirective,
+  CarouselItemsDirective
 } from "@syncfusion/ej2-vue-navigations";
 </script>
 {% endhighlight %}
@@ -240,7 +240,7 @@ import {
 import {
   CarouselComponent,
   CarouselItemDirective,
-  CarouselItemsDirective,
+  CarouselItemsDirective
 } from "@syncfusion/ej2-vue-navigations";
 
 export default {

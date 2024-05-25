@@ -26,7 +26,10 @@ To load translation object in your application use `load` function of `L10n` cla
 The below example demonstrates the NumericTextBox in `German` culture with the spin buttons tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +68,10 @@ npm install systemjs-plugin-json --save-dev
 The below example demonstrates the NumericTextBox in `German` culture with the `EUR` currency format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/internationalization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/internationalization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +84,10 @@ The below example demonstrates the NumericTextBox in `German` culture with the `
 RTL provides an option to switch the text direction and layout of the NumericTextBox component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL NumericTextBox, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#enablertl) to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ You can bind any data object to Accordion items, by mapping it to [`header`](htt
 In the below demo, Data is fetched from an `OData` service using `DataManager`. The result data is formatted as a JSON object with `header` and `content` fields, which is set to items property of Accordion.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/how-to/accordion-datasource-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/how-to/accordion-datasource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

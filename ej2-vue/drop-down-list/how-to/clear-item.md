@@ -19,7 +19,10 @@ Through **programmatic** you can set `null` value to anyone of the index, text o
 The following example demonstrate about how to clear the selected item in DropDownList.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/value-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

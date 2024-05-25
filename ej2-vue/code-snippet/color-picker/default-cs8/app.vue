@@ -1,29 +1,30 @@
-
-
 <template>
-<div class='wrap'>
+  <div class='wrap'>
     <h4>Choose Color</h4>
     <ejs-colorpicker id="element" :change="onChange"></ejs-colorpicker>
-</div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ColorPickerPlugin);
 
 export default {
+  name: "App",
+  components: {
+    "ejs-colorpicker": ColorPickerComponent
+  },
   methods: {
-    onChange: function(args) {
+    onChange: function (args) {
       document.querySelector('.e-colorpicker-wrapper .e-selected-color').style.borderBottomColor = args.currentValue.rgba;
     }
   },
-  mounted: function() {
-      var previewIcon = document.querySelector('.e-colorpicker-wrapper .e-selected-color');
-      previewIcon.classList.add("e-icons");
+  mounted: function () {
+    var previewIcon = document.querySelector('.e-colorpicker-wrapper .e-selected-color');
+    previewIcon.classList.add("e-icons");
   }
 };
 </script>
@@ -50,6 +51,7 @@ export default {
   margin: 0px 2px;
   border-bottom-color: #008000;
 }
+
 .e-colorpicker-wrapper #element+.e-split-btn-wrapper .e-split-btn .e-selected-color .e-split-preview {
   display: none;
 }
@@ -58,5 +60,3 @@ export default {
   content: '\e35c';
 }
 </style>
-
-

@@ -52,11 +52,27 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonPlugin, RibbonContextualTab } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+  
+  import { RibbonContextualTab,RibbonItemSize, RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective, RibbonContextualTabsDirective, RibbonContextualTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
+
 
   export default {
+name: "App",
+components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective,
+    "e-ribbon-contextual-tabs":RibbonContextualTabsDirective,
+    "e-ribbon-contextual-tab":RibbonContextualTabDirective
+},
+
     provide: {
       ribbon: [RibbonContextualTab]
     },

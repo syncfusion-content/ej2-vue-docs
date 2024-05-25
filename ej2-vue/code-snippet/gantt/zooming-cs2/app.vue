@@ -1,14 +1,10 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :dataBound="dataBound" :taskFields = "taskFields" :height = "height" :toolbar="toolbar"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent, Toolbar } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
 let customZoomingLevels =  [{
                 topTier: { unit: 'Month', format: 'MMM, yy', count: 1 },
@@ -46,8 +42,11 @@ let customZoomingLevels =  [{
                 timelineViewMode: 'Day', weekStartDay: 0, updateTimescaleView: true, weekendBackground: null, showTooltip: true
             },
 ];
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: projectNewData,
@@ -73,6 +72,3 @@ export default {
   }
 };
 </script>
-
-
-

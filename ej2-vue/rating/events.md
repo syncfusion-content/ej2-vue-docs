@@ -23,12 +23,12 @@ The rating component triggers the [`beforeItemRender`](https://ej2.syncfusion.co
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
+<script setup>
+
+import { RatingComponent  } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(RatingPlugin);
+
 
 export default {
     methods : {
@@ -63,12 +63,12 @@ The rating component triggers the [`created`](https://ej2.syncfusion.com/vue/doc
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
+<script setup>
+
+import { RatingComponent  } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(RatingPlugin);
+
 
 export default {
     methods : {
@@ -103,12 +103,12 @@ The rating component triggers the [`onItemHover`](https://ej2.syncfusion.com/vue
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
+<script setup>
+
+import { RatingComponent  } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(RatingPlugin);
+
 
 export default {
     methods : {
@@ -143,12 +143,12 @@ The rating component triggers the [`valueChanged`](https://ej2.syncfusion.com/vu
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
+<script setup>
+
+import { RatingComponent  } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(RatingPlugin);
+
 
 export default {
     methods : {
@@ -175,7 +175,10 @@ export default {
 Below example demonstrates the valueChanged event of the Rating component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/events-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/events-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowPdfExport='true' :allowExcelExport='true' :excelExportComplete='excelExportComplete' :pdfExportComplete='pdfExportComplete' :toolbarClick='toolbarClick'>
@@ -13,13 +11,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport, ExcelExport } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport, ExcelExport } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -36,10 +37,10 @@ export default {
             this.$refs.grid.showSpinner();
             this.$refs.grid.excelExport();
         }
-    }
+    },
     pdfExportComplete(args) {
         this.$refs.grid.hideSpinner();
-    }
+    },
     excelExportComplete(args) {
         this.$refs.grid.hideSpinner();
     }
@@ -52,6 +53,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

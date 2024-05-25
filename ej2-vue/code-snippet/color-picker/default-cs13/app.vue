@@ -1,42 +1,44 @@
-
-
 <template>
-<div class='wrap'>
+  <div class='wrap'>
     <ul id="target" tabindex="0">
-          <li class="e-item e-palette-item">
-            <ejs-colorpicker id="element" ref="colorPicker" value="#f44336" mode="Palette" :inline="true" :columns="4" :showButtons="false" :modeSwitcher="false" :presetColors="presets" :beforeTileRender="beforeTileRender" :change="onChange"></ejs-colorpicker>
-          </li>
-          <li class="e-item" id="no-color" tabindex="-1">
-            <span class="e-menu-icon e-nocolor"></span>
-            No color
-          </li>
-      </ul>
+      <li class="e-item e-palette-item">
+        <ejs-colorpicker id="element" ref="colorPicker" value="#f44336" mode="Palette" :inline="true" :columns="4"
+          :showButtons="false" :modeSwitcher="false" :presetColors="presets" :beforeTileRender="beforeTileRender"
+          :change="onChange"></ejs-colorpicker>
+      </li>
+      <li class="e-item" id="no-color" tabindex="-1">
+        <span class="e-menu-icon e-nocolor"></span>
+        No color
+      </li>
+    </ul>
     <div>
       <div id='preview'></div>
       <h4>Select Color</h4>
       <ejs-splitbutton id="splitbtn" ref="splitBtn" iconCss="e-cp-icons e-picker-icon" target="#target"></ejs-splitbutton>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
-import { SplitButtonPlugin } from '@syncfusion/ej2-vue-splitbuttons';
 
-Vue.use(ColorPickerPlugin);
-Vue.use(SplitButtonPlugin);
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
+import { SplitButtonComponent } from '@syncfusion/ej2-vue-splitbuttons';
 
 export default {
+  name: "App",
+  components: {
+    "ejs-colorpicker": ColorPickerComponent,
+    "ejs-splitbutton": SplitButtonComponent
+  },
   data() {
     return {
       presets: {
-        'custom': ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#2196f3', '#03a9f4', '#00bcd4', '#009688',             '#8bc34a', '#cddc39', '#ffeb3b', '#ffc107']
+        'custom': ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#2196f3', '#03a9f4', '#00bcd4', '#009688', '#8bc34a', '#cddc39', '#ffeb3b', '#ffc107']
       }
     };
   },
   methods: {
-    onChange: function(args) {
+    onChange: function (args) {
       document.querySelector(".e-split-btn .e-picker-icon").style.borderBottomColor = args.currentValue.hex;
       var preview = document.getElementById('preview');
       var splitBtnObj = this.$refs.splitBtn.ej2Instances;
@@ -47,21 +49,21 @@ export default {
         splitBtnObj.element.focus();
       }
     },
-    beforeTileRender: function(args) {
+    beforeTileRender: function (args) {
       args.element.classList.add('e-custom-tile');
     }
   },
-  mounted: function() {
-      var preview = document.getElementById('preview');
-      preview.style.backgroundColor = '#ba68c8';
-      preview.textContent = '#ba68c8';
-      document.getElementById('no-color').onclick = function() {
-          //sets color picker value property to null
-          this.$refs.colorPicker.ej2Instances.setProperties({ 'value': '' }, true);
-          document.querySelector('.e-split-btn .e-picker-icon').style.borderBottomColor = 'transparent';
-          preview.textContent = 'No color';
-          preview.style.backgroundColor = 'transparent';
-        }
+  mounted: function () {
+    var preview = document.getElementById('preview');
+    preview.style.backgroundColor = '#ba68c8';
+    preview.textContent = '#ba68c8';
+    document.getElementById('no-color').onclick = function () {
+      //sets color picker value property to null
+      this.$refs.colorPicker.ej2Instances.setProperties({ 'value': '' }, true);
+      document.querySelector('.e-split-btn .e-picker-icon').style.borderBottomColor = 'transparent';
+      preview.textContent = 'No color';
+      preview.style.backgroundColor = 'transparent';
+    }
   }
 };
 </script>
@@ -81,15 +83,15 @@ export default {
   width: 100%;
 }
 
-  @font-face {
+@font-face {
   font-family: 'paint';
   src:
-  url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj0gSRIAAAEoAAAAVmNtYXDnEOdVAAABiAAAADZnbHlmIZD+uwAAAcgAAADMaGVhZBKhhHQAAADQAAAANmhoZWEHjANrAAAArAAAACRobXR4B+j/8wAAAYAAAAAIbG9jYQBmAAAAAAHAAAAABm1heHABDgBKAAABCAAAACBuYW1ln6hzswAAApQAAAINcG9zdEkLMmUAAASkAAAANgABAAADUv9qAFoEAP/z//4D6gABAAAAAAAAAAAAAAAAAAAAAgABAAAAAQAAAZfc6F8PPPUACwPoAAAAANfSn9kAAAAA19Kf2f/z//wD6gPhAAAACAACAAAAAAAAAAEAAAACAD4AAgAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQP0AZAABQAAAnoCvAAAAIwCegK8AAAB4AAxAQIAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAANS/2oAWgPhAJYAAAABAAAAAAAABAAAAAPo//MAAAACAAAAAwAAABQAAwABAAAAFAAEACIAAAAEAAQAAQAA5wD//wAA5wD//wAAAAEABAAAAAEAAAAAAAAAZgAAAAL/8//8A+oD4QAKAD0AAAEWBgceATc1JiQHJTMmNjceARcVJx4BBx4BFQ4BIiYnNDY3PgEvAS4BIw4BBwEGHgI3AT4BLwE1LgEnDgEDeiRlCgulCxP+8RT+GyYDQFxOZQwTBQEDDxEBJzonAREOCQkPJQ4cDBcdAf6oG1a3nx8BWQ4RHKADeG1oWwHTLHVwYVmL6Kx1BHEqfwYFqWUHEx4tDAocEx0nJx0RHgoVUDQpDgsBFAH+px2guFUaAVkNOiCgCXnhCAWOAAAAAAAAEgDeAAEAAAAAAAAAAQAAAAEAAAAAAAEABQABAAEAAAAAAAIABwAGAAEAAAAAAAMABQANAAEAAAAAAAQABQASAAEAAAAAAAUACwAXAAEAAAAAAAYABQAiAAEAAAAAAAoALAAnAAEAAAAAAAsAEgBTAAMAAQQJAAAAAgBlAAMAAQQJAAEACgBnAAMAAQQJAAIADgBxAAMAAQQJAAMACgB/AAMAAQQJAAQACgCJAAMAAQQJAAUAFgCTAAMAAQQJAAYACgCpAAMAAQQJAAoAWACzAAMAAQQJAAsAJAELIHBhaW50UmVndWxhcnBhaW50cGFpbnRWZXJzaW9uIDEuMHBhaW50Rm9udCBnZW5lcmF0ZWQgdXNpbmcgU3luY2Z1c2lvbiBNZXRybyBTdHVkaW93d3cuc3luY2Z1c2lvbi5jb20AIABwAGEAaQBuAHQAUgBlAGcAdQBsAGEAcgBwAGEAaQBuAHQAcABhAGkAbgB0AFYAZQByAHMAaQBvAG4AIAAxAC4AMABwAGEAaQBuAHQARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAdQBzAGkAbgBnACAAUwB5AG4AYwBmAHUAcwBpAG8AbgAgAE0AZQB0AHIAbwAgAFMAdAB1AGQAaQBvAHcAdwB3AC4AcwB5AG4AYwBmAHUAcwBpAG8AbgAuAGMAbwBtAAAAAAIAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgECAQMADHBhaW50LWJ1Y2tldAAAAAA=) format('truetype');
+    url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAAKAIAAAwAgT1MvMj0gSRIAAAEoAAAAVmNtYXDnEOdVAAABiAAAADZnbHlmIZD+uwAAAcgAAADMaGVhZBKhhHQAAADQAAAANmhoZWEHjANrAAAArAAAACRobXR4B+j/8wAAAYAAAAAIbG9jYQBmAAAAAAHAAAAABm1heHABDgBKAAABCAAAACBuYW1ln6hzswAAApQAAAINcG9zdEkLMmUAAASkAAAANgABAAADUv9qAFoEAP/z//4D6gABAAAAAAAAAAAAAAAAAAAAAgABAAAAAQAAAZfc6F8PPPUACwPoAAAAANfSn9kAAAAA19Kf2f/z//wD6gPhAAAACAACAAAAAAAAAAEAAAACAD4AAgAAAAAAAgAAAAoACgAAAP8AAAAAAAAAAQP0AZAABQAAAnoCvAAAAIwCegK8AAAB4AAxAQIAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA5wDnAANS/2oAWgPhAJYAAAABAAAAAAAABAAAAAPo//MAAAACAAAAAwAAABQAAwABAAAAFAAEACIAAAAEAAQAAQAA5wD//wAA5wD//wAAAAEABAAAAAEAAAAAAAAAZgAAAAL/8//8A+oD4QAKAD0AAAEWBgceATc1JiQHJTMmNjceARcVJx4BBx4BFQ4BIiYnNDY3PgEvAS4BIw4BBwEGHgI3AT4BLwE1LgEnDgEDeiRlCgulCxP+8RT+GyYDQFxOZQwTBQEDDxEBJzonAREOCQkPJQ4cDBcdAf6oG1a3nx8BWQ4RHKADeG1oWwHTLHVwYVmL6Kx1BHEqfwYFqWUHEx4tDAocEx0nJx0RHgoVUDQpDgsBFAH+px2guFUaAVkNOiCgCXnhCAWOAAAAAAAAEgDeAAEAAAAAAAAAAQAAAAEAAAAAAAEABQABAAEAAAAAAAIABwAGAAEAAAAAAAMABQANAAEAAAAAAAQABQASAAEAAAAAAAUACwAXAAEAAAAAAAYABQAiAAEAAAAAAAoALAAnAAEAAAAAAAsAEgBTAAMAAQQJAAAAAgBlAAMAAQQJAAEACgBnAAMAAQQJAAIADgBxAAMAAQQJAAMACgB/AAMAAQQJAAQACgCJAAMAAQQJAAUAFgCTAAMAAQQJAAYACgCpAAMAAQQJAAoAWACzAAMAAQQJAAsAJAELIHBhaW50UmVndWxhcnBhaW50cGFpbnRWZXJzaW9uIDEuMHBhaW50Rm9udCBnZW5lcmF0ZWQgdXNpbmcgU3luY2Z1c2lvbiBNZXRybyBTdHVkaW93d3cuc3luY2Z1c2lvbi5jb20AIABwAGEAaQBuAHQAUgBlAGcAdQBsAGEAcgBwAGEAaQBuAHQAcABhAGkAbgB0AFYAZQByAHMAaQBvAG4AIAAxAC4AMABwAGEAaQBuAHQARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAdQBzAGkAbgBnACAAUwB5AG4AYwBmAHUAcwBpAG8AbgAgAE0AZQB0AHIAbwAgAFMAdAB1AGQAaQBvAHcAdwB3AC4AcwB5AG4AYwBmAHUAcwBpAG8AbgAuAGMAbwBtAAAAAAIAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgECAQMADHBhaW50LWJ1Y2tldAAAAAA=) format('truetype');
   font-weight: normal;
   font-style: normal;
-  }
+}
 
-  .e-cp-icons {
+.e-cp-icons {
   font-family: 'paint' !important;
   speak: none;
   font-size: 55px;
@@ -100,7 +102,7 @@ export default {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  }
+}
 
 .wrap {
   margin: 0 auto;
@@ -143,10 +145,8 @@ export default {
   margin: 4px;
 }
 
-h4, #preview {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-    font-size: 14px;
-}
-</style>
-
-
+h4,
+#preview {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+  font-size: 14px;
+}</style>

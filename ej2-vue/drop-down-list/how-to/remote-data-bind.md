@@ -17,7 +17,10 @@ After rendering this component, you can get the total items count by using [`get
 The following example demonstrate how to get the total items count.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/getItems-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/getItems-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id="app">
     <ejs-toolbar>
@@ -17,13 +14,18 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ToolbarPlugin } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(ToolbarPlugin);
+import { ToolbarComponent, ItemDirective, ItemsDirective } from '@syncfusion/ej2-vue-navigations';
+
 export default {
-  name: 'app',
+  name: "App",
+  components: {
+    "ejs-toolbar": ToolbarComponent,
+    "e-items": ItemsDirective,
+    "e-item": ItemDirective
+  }
 }
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -31,6 +33,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
-
-
-

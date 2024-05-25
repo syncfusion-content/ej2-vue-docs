@@ -24,7 +24,10 @@ To learn about Grid data binding quickly, you can check on this video:
 To add a custom parameter to the data request, use the `addParams` method of `Query` class. Assign the `Query` object with additional parameters to the grid [`query`](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/remote-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/databind/remote-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,28 +55,16 @@ The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/docu
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
 import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: new DataManager({
-        url: 'http://some.com/invalidUrl',
-        adaptor: new ODataAdaptor()
-      })
-    };
-  },
-  methods: {
-    actionFailure: function() {
-       alert('Server exception: 404 Not found');
-    }
+const data = new DataManager({
+  url: 'http://some.com/invalidUrl',    
+  adaptor: new ODataAdaptor()
+  });
+  const actionFailure = function() {
+     alert('Server exception: 404 Not found');
   }
-});
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -100,32 +91,18 @@ You can use Grid [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { ref } from "vue";
 import { Ajax } from '@syncfusion/ej2-base';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: {}
-    };
-  },
-  methods:{
-   btnClick: function (args){
-        var grid = document.getElementsByClassName("e-grid")[0].ej2_instances[0]; // Grid instance
+   const btnClick = function (args){
         var ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
         ajax.send();
         ajax.onSuccess = function (result) {
-        grid.dataSource = JSON.parse(result);
+        grid.value.ej2Instances.dataSource = JSON.parse(result);
         };
       }
-  }
-});
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -151,41 +128,25 @@ It is possible to handle data processing externally and bind the result to the g
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide, onmounted } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult } from "@syncfusion/ej2-vue-grids";
 import { Ajax } from '@syncfusion/ej2-base';
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: {},
-      pageOptions: { pageSize: 10, pageCount: 4 },
-      orderService: new OrderService()
-    };
-  },
-  mounted() {
+      const pageOptions = { pageSize: 10, pageCount: 4 };
+      const orderService = new OrderService();
+  onmounted() {
     let state = { skip: 0, take: 10 };
-    this.dataStateChange(state);
+    dataStateChange(state);
   },
-  methods:{
-    dataStateChange: function (state) {
-        this.orderService.execute(state).then(( gridData ) => this.data = gridData );
+    const dataStateChange = function (state) {
+        orderService.execute(state).then(( gridData ) => this.data = gridData );
     }
-  },
-  provide: {
-      grid: [Sort, Group, Page]
-  }
-});
+  provide('grid',  [Sort, Group, Page]);
 export class OrderService {
-
     public ajax: Ajax = new Ajax({
         type: 'GET', mode: true,
         onFailure: (e: Error) => { return false; }
     });
-
     private BASE_URL: string = 'https://services.syncfusion.com/js/production/api/Orders';
 
     public execute(state: DataStateChangeEventArgs): Promise<DataResult> {
@@ -233,36 +194,21 @@ For grid actions such as `paging`, `grouping`, `sorting` etc, the `dataStateChan
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide, onmounted } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult } from "@syncfusion/ej2-vue-grids";
 import { Ajax } from '@syncfusion/ej2-base';
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: {},
-      pageOptions: { pageSize: 10, pageCount: 4 },
-      orderService: new OrderService()
-    };
-  },
-  mounted() {
+      const pageOptions = { pageSize: 10, pageCount: 4 };
+      const orderService = new OrderService();
+  onmounted() {
     let state = { skip: 0, take: 10 };
-    this.dataStateChange(state);
+    dataStateChange(state);
   },
-  methods:{
-    dataStateChange: function (state) {
-        this.orderService.execute(state).then(( gridData ) => this.data = gridData );
+    const dataStateChange = function (state) {
+        orderService.execute(state).then(( gridData ) => data = gridData );
     }
-  },
-  provide: {
-      grid: [Sort, Group, Page]
-  }
-});
+  provide('grid',  [Sort, Group, Page]);
 export class OrderService {
-
     public ajax: Ajax = new Ajax({
         type: 'GET', mode: true,
         onFailure: (e: Error) => { return false; }
@@ -309,45 +255,31 @@ The `dataSourceChanged` event will be triggered for updating the grid data. You 
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { OrderService } from "./order-service";
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: {},
-      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-      pageOptions: { pageSize: 10, pageCount: 4 },
-      orderService: new OrderService()
-    };
-  },
-  mounted() {
+      const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
+      const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+      const pageOptions = { pageSize: 10, pageCount: 4 };
+      const orderService = new OrderService();
+  onmounted() {
     let state = { skip: 0, take: 10 };
-    this.dataStateChange(state);
-  },
-  methods:{
-    dataStateChange: function (state) {
-        this.orderService.execute(state).then(( gridData ) => this.data = gridData );
-    },
-    dataSourceChanged: function (state) {
+    dataStateChange(state);
+  }
+    comst dataStateChange = function (state) {
+        orderService.execute(state).then(( gridData ) => data = gridData );
+    }
+    const dataSourceChanged = function (state) {
     if (state.action === 'add') {
-      this.orderService.addRecord(state).subscribe(() => state.endEdit());
+      orderService.addRecord(state).subscribe(() => state.endEdit());
     } else if (state.action === 'edit') {
-      this.orderService.updateRecord(state).subscribe(() => state.endEdit());
+      orderService.updateRecord(state).subscribe(() => state.endEdit());
     } else if (state.requestType === 'delete') {
-      this.orderService.deleteRecord(state).subscribe(() => state.endEdit());
+      orderService.deleteRecord(state).subscribe(() => state.endEdit());
     }
   }
-  },
-  provide: {
-      grid: [Sort, Group, Page, Edit, Toolbar]
-  }
-});
+  provide('grid',  [Sort, Group, Page, Edit, Toolbar]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -385,39 +317,25 @@ The `dataStateChange` event will be triggered with appropriate arguments when th
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult, Filter } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult, Filter } from "@syncfusion/ej2-vue-grids";
 import { Ajax } from '@syncfusion/ej2-base';
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: {},
-      filterOptions: { type: 'Excel' },
-      pageOptions: { pageSize: 10, pageCount: 4 },
-      orderService: new OrderService()
-    };
-  },
-  mounted() {
+      const filterOptions = { type: 'Excel' };
+      const pageOptions = { pageSize: 10, pageCount: 4 };
+      const orderService = new OrderService();
+  onmounted() {
     let state = { skip: 0, take: 10 };
-    this.dataStateChange(state);
-  },
-  methods:{
-    dataStateChange: function (state) {
-        if (state.action.requestType === "filterchoicerequest" || state.action.requestType ==="filtersearchbegin") {
-      this.orderService.execute(state).then((e) => state.dataSource(e));
-    } else {
-      this.orderService.execute(state).then(( gridData ) => {this.grid.dataSource = gridData} );
-    }
-    }
-  },
-  provide: {
-      grid: [Sort, Group, Page, Filter]
+    dataStateChange(state);
   }
-});
+    const dataStateChange = function (state) {
+        if (state.action.requestType === "filterchoicerequest" || state.action.requestType ==="filtersearchbegin") {
+      orderService.execute(state).then((e) => state.dataSource(e));
+    } else {
+      orderService.execute(state).then(( gridData ) => {grid.dataSource = gridData} );
+    }
+    }
+  provide('grid',  [Sort, Group, Page, Filter]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";

@@ -1,15 +1,12 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,NodeConstraints } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
+import { DiagramComponent, NodeConstraints } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
     // Position of the node
     offsetX: 250,
     offsetY: 250,
@@ -22,9 +19,13 @@
     },
     constraints: NodeConstraints.Default | NodeConstraints.Shadow,
     // Text(label) added to the node
-}]
+}];
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -35,7 +36,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

@@ -17,7 +17,10 @@ The popup action item have an icon or image to provide visual representation of 
 In the following sample, the icons for edit, delete, mark as read  and like message menu items are added using the iconCss property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Actions in DropDownButton can be used to navigate to the other web page when act
 In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal action items are added using the `url` property:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ Popup items can be customized using the [`beforeItemRender`](https://ej2.syncfus
 The following popup template is customized using `beforeItemRender` event by appending `span` and `div` element on each `li` rendering:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ The whole popup can be customized as per the requirement and it can be customize
 In the following sample, the whole popup item is customized as table template by giving `div` as target and it can be achieved using `target` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +87,10 @@ The Separators are the horizontal lines that are used to separate the popup item
 In the following sample, cut, copy, and paste popup items are grouped using the separator property:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}

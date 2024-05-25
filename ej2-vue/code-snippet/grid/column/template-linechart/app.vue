@@ -1,12 +1,10 @@
-
-
 <template>
     <div id="app">
          <ejs-grid ref="grid" :dataSource="data" height=315 :created="renderGridSparkline">
             <e-columns>
                 <e-column field='EmployeeID' headerText='Employee ID' width='130' textAlign='Right'></e-column>
                 <e-column field='FirstName' headerText='First Name' width=150></e-column>
-                <e-column headerText='Employee Performance Rating' width='280' :template="'lineChartTemplate'">
+                <e-column headerText='Employee Performance Rating' width='280' :template="'lineChartTemplate'"></e-column>
             </e-columns>
             <template v-slot:lineChartTemplate="{data}">
               <div><ejs-sparkline :dataSource="getSparkData('line', data.EmployeeID + 1)" height="50px" :width="'90%'" :lineWidth="2" valueType="Numeric" :fill="'#3C78EF'"></ejs-sparkline></div>
@@ -15,15 +13,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
-import { SparklinePlugin } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(GridPlugin);
-Vue.use(SparklinePlugin);
-
+import { SparklineComponent } from "@syncfusion/ej2-vue-charts";
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-sparkline":SparklineComponent
+},
   data: () => {
     return {
       data: employeeData,
@@ -61,5 +62,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

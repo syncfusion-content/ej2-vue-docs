@@ -2,7 +2,7 @@
   <div id="app">
     <div>
       <ejs-textbox ref="textbox" placeholder="Enter the row Index" width="250px" floatLabelType="Auto"></ejs-textbox>
-      <ejs-button style="margin: 20px 0px 0 10px" v-on:click.native="clickHandler">Expand</ejs-button>
+      <ejs-button style="margin: 20px 0px 0 10px" v-on:click="clickHandler">Expand</ejs-button>
     </div>
     <div style="padding: 20px 0px 0px 0px">
       <ejs-grid ref="grid" :dataSource="data" height="315" width="auto" :detailTemplate="'detailTemplate'" >
@@ -79,16 +79,20 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, DetailRow } from "@syncfusion/ej2-vue-grids";
-import { TextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
-import { employeeData } from "./datasource.js";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GridPlugin);
-Vue.use(TextBoxPlugin);
-Vue.use(ButtonPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
+import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+import { employeeData } from "./datasource.js";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-textbox":TextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: employeeData,

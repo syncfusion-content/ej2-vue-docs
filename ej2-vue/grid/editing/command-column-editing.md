@@ -24,7 +24,10 @@ The available built-in command buttons are:
 | Cancel | Cancel the edited state. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ The available built-in command buttons are:
 The custom command buttons can be added in a column by using the [`column.commands`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#commands) property and the action for the custom buttons can be defined using [`commandClick`](https://ej2.syncfusion.com/vue/documentation/api/grid/#commandClick) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

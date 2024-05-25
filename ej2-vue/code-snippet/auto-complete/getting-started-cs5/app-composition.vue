@@ -1,0 +1,37 @@
+<template>
+  <div id="app">
+    <ejs-autocomplete :dataSource='data' :fields='fields' sortOrder='sortOrder' :query='query' :placeholder="waterMark">
+    </ejs-autocomplete>
+  </div>
+</template>
+<script setup>
+import { AutoCompleteComponent as EjsAutocomplete } from '@syncfusion/ej2-vue-dropdowns';
+import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const remoteData = new DataManager({
+  url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+  adaptor: new ODataV4Adaptor,
+  crossDomain: true
+});
+
+const waterMark = 'Find a customer';
+const data = remoteData;
+const fields = { value: 'ContactName' };
+const query = new Query().select(['ContactName', 'CustomerID']);
+const sortOrder = 'Ascending';
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+
+#app {
+  color: #008cff;
+  height: 40px;
+  left: 35%;
+  position: absolute;
+  top: 12%;
+  width: 30%;
+}
+</style>

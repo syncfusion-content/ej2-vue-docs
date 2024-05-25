@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :resources="resources" :resourceFields="resourceFields" :taskFields = "taskFields" :height = "height" :editSettings= "editSettings">
@@ -18,15 +15,19 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, ContextMenu, Edit, Selection, Toolbar} from "@syncfusion/ej2-vue-gantt";
-import { DropDownListPlugin,DropDownList } from '@syncfusion/ej2-dropdowns';
+import { GanttComponent, ColumnsDirective, ColumnDirective, ContextMenu, Edit, Selection, Toolbar} from "@syncfusion/ej2-vue-gantt";
+import { DropDownListComponent,DropDownList } from '@syncfusion/ej2-dropdowns';
 import { editingData, editingResources} from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(DropDownListPlugin);
 let elem;
 let dropdownlistObj;
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-column":ColumnDirective
+},
   data: function () {
     return {
       data: editingData,
@@ -78,6 +79,3 @@ export default {
   }
 };
 </script>
-
-
-

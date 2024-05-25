@@ -1,18 +1,18 @@
-
-
 <template>
 <ejs-checkbox label='Default' enableRtl=true></ejs-checkbox>
 </template>
 
 <script>
-import Vue from 'vue';
-import { CheckBoxPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { CheckBoxComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(CheckBoxPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-checkbox":CheckBoxComponent,
+},
+}
 </script>
 
 <style>
@@ -23,5 +23,3 @@ export default {}
   margin-top: 18px;
 }
 </style>
-
-

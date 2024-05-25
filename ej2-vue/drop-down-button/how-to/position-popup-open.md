@@ -15,7 +15,10 @@ Popup open position can be changed according to the requirement. Popup open posi
 In the following example, the `top` position of the popup element is changed in `open` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

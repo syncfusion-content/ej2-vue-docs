@@ -19,7 +19,10 @@ To create a swimlane,the type of shape should be set as [`swimlane`](https://ej2
 The following code example illustrates how to define a swimlane object.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/swimlaneheader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/swimlaneheader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ Header was the primary element for swimlanes. The [`header`](https://ej2.syncfus
 The following code example illustrates how to define a swimlane header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/swimlaneheader-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/swimlaneheader-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ The height and width of swimlane header can be customized with [`weight`](https:
 The following code example illustrates how to customize the swimlane header..
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/headercustomize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/headercustomize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ The following code example illustrates how to customize the swimlane header..
  You can customize the swimlane header style and text properties dynamically. The following code illustrates how to dynamically customize the lane header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/dynamicheader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/dynamicheader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +103,10 @@ The number of [`lanes`](https://ej2.syncfusion.com/vue/documentation/api/diagram
 The following code example illustrates how to define a swimlane with lane.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/emptylane-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/emptylane-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +120,10 @@ The following code example illustrates how to define a swimlane with lane.
 The following code example illustrates how to define a lane header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/laneheader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/laneheader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +138,10 @@ The following code example illustrates how to define a lane header.
 The following code example illustrates how to customize the lane header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/laneheadercustomize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/laneheadercustomize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +153,10 @@ The following code example illustrates how to customize the lane header.
  You can customize the lane header style and text properties dynamically. The following code illustrates how to dynamically customize the lane header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/dynamiclaneheader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/dynamiclaneheader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +168,10 @@ The following code example illustrates how to customize the lane header.
  You can add the a lane at runtime by using the client side API method called `addLanes`.The following code illustrates how to dynamically add lane to swimlane.
 
  {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/addlanes-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/addlanes-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +185,10 @@ The following code example illustrates how to customize the lane header.
 The following code example illustrates how to add nodes to lane.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/lanechildern-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/lanechildern-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -189,7 +219,10 @@ You can disable swimlane lane swapping by using the property called `canMove`.
 The following code illustrates how to disable swimlane lane swapping.
 
  {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/addlanes-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/addlanes-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +259,10 @@ The following image illustrates how to edit the lane header.
 The following code example illustrates how to add phase at swimlane.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/phase-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/phase-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -238,7 +274,10 @@ The following code example illustrates how to add phase at swimlane.
  You can add the a phase at runtime by using client side API method called `addPhases`. The following code example illustrates how to add phase at run time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/addphases-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/addphases-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -255,7 +294,10 @@ The following code example illustrates how to add phase at swimlane.
 The following code example illustrates how to customize the phase in swimlane.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/phasecustomize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/phasecustomize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -288,7 +330,10 @@ Diagram provides support to add swimlane and phases to symbol palette. The follo
 The following code example illustrates how to customize the phase in swimlane.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/swimlane/palette-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/swimlane/palette-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

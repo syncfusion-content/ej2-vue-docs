@@ -17,7 +17,10 @@ The Stepper component supports the display of steps in both horizontal and verti
 In horizontal orientation, the steps are displayed in a side-by-side manner by setting the [orientation](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#orientation) property to `Horizontal`. By default, the steps are displayed in the horizontal orientation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/horizontal/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/horizontal/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ In horizontal orientation, the steps are displayed in a side-by-side manner by s
 You can display the steps one below the other vertically by setting the [orientation](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#orientation) property to `Vertical`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/vertical/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/vertical/app.vue %}
 {% endhighlight %}
 {% endtabs %}

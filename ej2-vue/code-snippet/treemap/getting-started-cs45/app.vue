@@ -5,11 +5,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent,
+},
   data: function () {
     return {
       dataSource: [{ fruit: 'Apple', count: 5000 },
@@ -19,8 +22,6 @@ export default {
       { fruit: 'Grape', count: 4300 },
       { fruit: 'Papaya', count: 1200 }
       ],
-      width: '700px',
-      height: '500px',
       weightValuePath: 'count',
       palette: ['#71B081', '#5A9A77', '#498770', '#39776C', '#266665', '#124F5E'],
       legendSettings: {

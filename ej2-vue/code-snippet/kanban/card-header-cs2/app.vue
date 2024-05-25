@@ -1,14 +1,12 @@
-
-
 <template>
   <div id="app">
     <ejs-button
       id="particular_column"
       class="e-btn"
-      v-on:click.native="particularColumnClick"
+      v-on:click="particularColumnClick"
       >Enable Allow Toggle</ejs-button
     >
-    <ejs-button id="column" class="e-btn" v-on:click.native="columnClick"
+    <ejs-button id="column" class="e-btn" v-on:click="columnClick"
       >Change Columns</ejs-button
     >
     <ejs-kanban
@@ -29,20 +27,27 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from "@syncfusion/ej2-vue-kanban";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-kanban";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { extend } from "@syncfusion/ej2-base";
 import { kanbanData } from "./datasource.js";
-Vue.use(KanbanPlugin);
-Vue.use(ButtonPlugin);
+
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function () {
     return {
       kanbanData: extend([], kanbanData, null, true),
       cardSettings: {
         contentField: "Summary",
-        headerField: "Id",
+        headerField: "Id"
       },
     };
   },
@@ -72,6 +77,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css";
 </style>
-
-
-

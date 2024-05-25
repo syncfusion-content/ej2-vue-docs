@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div class="control_wrapper">
@@ -8,6 +6,7 @@
   </div>
 </template>
 <script>
+
 import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 
 var dataSource = [
@@ -37,6 +36,7 @@ var dataSource = [
 ];
 
 export default {
+  name: "App",
   components: {
     'ejs-treeview': TreeViewComponent
   },
@@ -53,5 +53,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 </style>
-
-

@@ -12,7 +12,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-button id='collapse' cssClass='e-flat' @click.native='collapse'>Collapse</ejs-button>
+        <ejs-button id='collapse' cssClass='e-flat' @click='collapse'>Collapse</ejs-button>
         <ejs-grid ref='grid' :dataSource='data' :allowGrouping='true' :groupSettings='groupSettings' height='240px'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>

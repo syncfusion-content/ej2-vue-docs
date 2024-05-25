@@ -19,7 +19,10 @@ The following properties are available in the [`ejs-lineargauge`](https://ej2.sy
 * [`margin`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#margin) - To customize the margins of the Linear Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs40/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ The title for the Linear Gauge can be set using [`title`](https://ej2.syncfusion
 * [`size`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/fontModel/#size) - Specifies the font size of the title.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs41/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs41/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +72,10 @@ The type of the container can be modified by using the [`type`](https://ej2.sync
 The **Normal** type will render the container as a rectangle and this is the default container type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs42/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs42/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +87,10 @@ The **Normal** type will render the container as a rectangle and this is the def
 The **RoundedRectangle** type will render the container as a rectangle with rounded corner radius. The rounded corner radius of the container can be customized using the [`roundedCornerRadius`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/containerModel/#roundedcornerradius) property in [`container`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#container).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs43/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs43/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +102,10 @@ The **RoundedRectangle** type will render the container as a rectangle with roun
 The **Thermometer** type will render the container similar to the appearance of thermometer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs44/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs44/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +117,10 @@ The **Thermometer** type will render the container similar to the appearance of 
 The Linear Gauge component is rendered with margin by default. To remove the margin around the Linear Gauge, the [`allowMargin`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#allowmargin) property in the [`ejs-lineargauge`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/) is set as **false**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs45/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs45/app.vue %}
 {% endhighlight %}
 {% endtabs %}

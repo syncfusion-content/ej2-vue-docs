@@ -1,17 +1,19 @@
-
-
 <template>
   <div id="app">
       <ejs-grid ref='grid' :dataSource="data" allowPaging=true :editSettings='editSettings' :dataBound='dataBound'> </ejs-grid>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { GridPlugin, Edit, Page } from '@syncfusion/ej2-vue-grids';
-import { data } from './datasource';
 
-Vue.use(GridPlugin);
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Page } from '@syncfusion/ej2-vue-grids';
+import { data } from './datasource';
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data () {
     return {
       data: data,
@@ -31,5 +33,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

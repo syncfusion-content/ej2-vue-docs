@@ -22,7 +22,10 @@ Toolbar supports to add a toggle Button by using the template property. Refer be
 toggle Button, change the required icon and content based on current active state.
 
    {% tabs %}
-   {% highlight html tabtitle="app.vue" %}
+   {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+   {% include code-snippet/toolbar/how-to/toggle-button-cs1/app-composition.vue %}
+   {% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
    {% include code-snippet/toolbar/how-to/toggle-button-cs1/app.vue %}
    {% endhighlight %}
    {% endtabs %}

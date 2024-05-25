@@ -1,19 +1,18 @@
-
-
 <template>
 <ejs-dropdownbutton id="ddBtn" :items='items' cssClass= 'e-caret-up' :open='onOpen'>Clipboard</ejs-dropdownbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { OpenCloseMenuEventArgs } from '@syncfusion/ej2-splitbuttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent
+},
     data () {
         return {
             items:[
@@ -45,5 +44,3 @@ export default {
       margin: 25% 5px 25px 30%;
   }
 </style>
-
-

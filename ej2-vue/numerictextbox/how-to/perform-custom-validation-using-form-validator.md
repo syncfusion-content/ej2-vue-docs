@@ -14,7 +14,10 @@ This section explains how to perform custom validation on the NumericTextBox usi
 Validation can be performed by adding custom validation in the rules collection of the FormValidator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/how-to/validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/how-to/validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

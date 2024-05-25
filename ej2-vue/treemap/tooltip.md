@@ -17,7 +17,10 @@ Tooltip is used to display details about the items in the TreeMap. When space co
 The tooltip is not visible by default, to make it visible, set the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/treemap/tooltipSettingsModel/#visible) property in the [`tooltipSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#tooltipsettings) to **true** and injecting the `TreeMapTooltip`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs57/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs57/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ The tooltip is not visible by default, to make it visible, set the [`visible`](h
 The tooltip content is displayed by default based on the [`weightValuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#weightvaluepath). In addition, to show more information in the tooltip, use the [`format`](https://ej2.syncfusion.com/vue/documentation/api/treemap/tooltipSettingsModel/#format) property and define field from the data source as `${datafield}`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs58/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs58/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ The tooltip content is displayed by default based on the [`weightValuePath`](htt
 Tooltip can be rendered as a custom component using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/treemap/tooltipSettingsModel/#template) property in the [`tooltipSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#tooltipsettings) which accepts one or more UI elements as an input, that can be rendered as a part of the tooltip rendering. You can use `${datafield}` as placeholder in HTML element to display the values from data source.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs59/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs59/app.vue %}
 {% endhighlight %}
 {% endtabs %}

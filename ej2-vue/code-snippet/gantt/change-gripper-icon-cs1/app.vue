@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-gantt id="gantt" :dataSource="data" :taskFields = "taskFields" :editSettings = "editSettings" :height="height"></ejs-gantt>
@@ -7,12 +5,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { GanttPlugin, Edit  } from "@syncfusion/ej2-vue-gantt";
-
-Vue.use(GanttPlugin);
-
+import { GanttComponent, Edit  } from "@syncfusion/ej2-vue-gantt";
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -73,6 +71,3 @@ export default {
   transform: rotate(90deg);
 }
 </style>
-
-
-

@@ -22,7 +22,10 @@ To change the pointer value dynamically, use the [`setPointerValue`](https://ej2
 |     pointerValue     |    Specifies the value of the pointer to be updated.           |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs52/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs52/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ To change the annotation content dynamically, use the [`setAnnotationValue`](htt
 |     axisValue        |    Specifies the value of the axis where the annotation is to be placed.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs53/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs53/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ To change the annotation content dynamically, use the [`setAnnotationValue`](htt
 The [`refresh`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#refresh) method can be used to change the state of the component and render it again.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs54/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs54/app.vue %}
 {% endhighlight %}
 {% endtabs %}

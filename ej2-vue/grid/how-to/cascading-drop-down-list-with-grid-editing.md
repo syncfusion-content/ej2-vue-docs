@@ -15,7 +15,10 @@ You can achieve the Cascading DropDownList with grid Editing by using the Cell E
 In the below demo, Cascading DropDownList rendered for `ShipCountry` and `ShipState` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}

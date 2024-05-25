@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="content-wrapper">
     <div align='center'>
@@ -16,15 +14,22 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin } from "@syncfusion/ej2-vue-lineargauge";
-Vue.use(LinearGaugePlugin);
-export default { };
+
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective } from "@syncfusion/ej2-vue-lineargauge";
+
+export default {
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent,
+"e-axes":AxesDirective,
+"e-axis":AxisDirective,
+"e-pointers":PointersDirective,
+"e-pointer":PointerDirective
+},
+ };
 </script>
 <style>
 #content-wrapper {
     padding: 0px !important;
 }
 </style>
-
-

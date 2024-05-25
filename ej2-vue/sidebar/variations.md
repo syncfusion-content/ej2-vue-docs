@@ -28,7 +28,10 @@ The Sidebar can be set to initialize based on four different types that are cons
 In the following sample, the types of Sidebar are demonstrated.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/position-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/position-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

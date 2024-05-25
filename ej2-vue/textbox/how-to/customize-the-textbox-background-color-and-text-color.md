@@ -15,7 +15,10 @@ You can customize the textbox styles such as background-color, text-color and bo
 > To change the styles of the `floating label`, you must override the style to the input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/textbox-customize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/textbox-customize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

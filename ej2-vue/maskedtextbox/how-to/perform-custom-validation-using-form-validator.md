@@ -15,7 +15,10 @@ To perform custom validation on the MaskedTextBox use the FormValidator along wi
 In the following example, the MaskedTextBox is validated for invalid mobile number by adding custom validation in the rules collection of the FormValidator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/how-to/validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)"" %}
 {% include code-snippet/masked-textbox/how-to/validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-grid :dataSource="data" height=310>
@@ -13,21 +11,26 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 Vue.prototype.$eventHub = new Vue();
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: employeeData,
       cTemplate: function () {
         return {
-          template: Vue.component('columnTemplate', {
+          template: app.component('columnTemplate', {
             template: `<button v-on:click="click(event)">buttton</button>`,
             data: function () {
               return {
@@ -54,5 +57,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

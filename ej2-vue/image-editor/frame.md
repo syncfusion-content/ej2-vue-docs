@@ -42,7 +42,10 @@ The [`drawFrame`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/
 In the following example, you can use the drawFrame method in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs41/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs41/app.vue %}
 {% endhighlight %}
 {% endtabs %}

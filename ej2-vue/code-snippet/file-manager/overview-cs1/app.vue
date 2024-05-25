@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
     <div class="wrapper">
@@ -12,9 +10,10 @@
 import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
-     components: {
-        'ejs-filemanager': FileManagerComponent
-     },
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+    },
      data () {
         return {
            ajaxSettings:
@@ -46,5 +45,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <table class='switch-control'>
         <tr>
@@ -12,16 +10,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 import { rippleMouseHandler } from '@syncfusion/ej2-buttons';
 
 enableRipple(true);
-Vue.use(SwitchPlugin);
-
 export default {
-    mounted: function(){
+    name: "App",
+    components: {
+        "ejs-switch": SwitchComponent
+    },
+    mounted: function () {
         var elemArray = document.querySelectorAll('.switch-control label');
         for (var i = 0, len = elemArray.length; i < len; i++) {
             elemArray[i].addEventListener('mouseup', rippleHandler);
@@ -41,15 +41,13 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/fabric.css";
 
 .switch-control tr td {
-  padding: 10px;
+    padding: 10px;
 }
 
 .switch-control .lSize {
-  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-  font-size: 13px;
-  cursor: pointer;
-  user-select: none;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
 }
 </style>
-
-

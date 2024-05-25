@@ -12,20 +12,24 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
         return {
             data: data,
             columnTemplate: function () {
                 return {
-                    template: Vue.component('columnTemplate', {
+                    template: app.component('columnTemplate', {
                         template: `<div> {{formatDate(data.OrderDate)}} </div>`,
                         methods: {
                             formatDate(date) {
@@ -42,6 +46,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

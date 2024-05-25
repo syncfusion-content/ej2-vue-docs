@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
      <ejs-contextmenu id='cmenu' :items='menuItems' :select="select"></ejs-contextmenu>
@@ -8,17 +5,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import {
-  GanttPlugin,
+  GanttComponent,
   Edit,
   Toolbar,
   Selection,
 } from "@syncfusion/ej2-vue-gantt";
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(GanttPlugin);
-Vue.use(ContextMenuPlugin);
+import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
 export default {
+name: "App",
+components: {
+"ejs-contextmenu":ContextMenuComponent,
+"ejs-gantt":GanttComponent
+},
+
   data: function () {
     return {
       menuItems: [
@@ -162,6 +163,3 @@ export default {
   },
 };
 </script>
-
-
-

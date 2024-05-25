@@ -25,7 +25,10 @@ Page settings enable to customize the appearance, width, and height of the diagr
 * To explore those properties, refer to [`Page Settings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/pageSettings).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/page-settings/pagesettings-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/page-settings/pagesettings-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ Stretch and align the background image anywhere over the diagram area. The [`sou
 The following code illustrates how to stretch and align the background image.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/page-settings/BGImage-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/page-settings/BGImage-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ The [`multiplePage`](https://ej2.syncfusion.com/vue/documentation/api/diagram/pa
 The following code illustrates how to enable multiple page and page break lines.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/page-settings/multiplepage-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/page-settings/multiplepage-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ The diagram provides support to restrict/customize the interactive region, out o
 The following code example illustrates how to define boundary constraints with respect to the page.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/page-settings/boundaryconstraints-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/page-settings/boundaryconstraints-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

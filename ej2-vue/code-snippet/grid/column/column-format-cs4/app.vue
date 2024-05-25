@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' locale='de-DE' height='315px'>
@@ -14,14 +12,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 import * as currencies from './currencies.json';
 import * as cagregorian from './ca-gregorian.json';
 import * as numbers from './numbers.json';
 import * as timeZoneNames from './timeZoneNames.json';
 import * as numberingSystems from './numberingSystems.json';
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 setCulture('de-DE');
@@ -49,10 +47,13 @@ L10n.load({
         }
     }
 });
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -64,6 +65,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

@@ -124,11 +124,13 @@ Follow the below steps to add the Vue NumericTextBox component using `Compositio
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
-  import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -136,10 +138,10 @@ Follow the below steps to add the Vue NumericTextBox component using `Compositio
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-numerictextbox' : NumericTextBoxComponent,
-    }
+name: "App",
+components: {
+"ejs-numerictextbox'":NumericTextBoxComponent
+},
 }
 </script>
 
@@ -164,7 +166,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% raw %}
 <template>
     <div class="control_wrapper">
         <ejs-numerictextbox value="10"></ejs-numerictextbox>
@@ -183,6 +185,7 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -195,10 +198,10 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-numerictextbox": NumericTextBoxComponent
-    }
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent
+}
 }
 </script>
 <style>
@@ -239,15 +242,16 @@ The validation behavior depends on the [`strictMode`](https://ej2.syncfusion.com
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% raw %}
 <template>
     <div id="app">
         <div class='wrap'>
-            <ejs-numerictextbox id="numeric" ref="numeric_instance" :value="data[0].value" :step="data[0].step" :min="data[0].min" :max="data[0].max"></ejs-numerictextbox>
+            <ejs-numerictextbox id="numeric" ref="numeric_instance" :value="value" :step="step" :min="min" :max="max"></ejs-numerictextbox>
         </div>
     </div>
 </template>
 <script setup>
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
   const data = [{ min: 1, 
                   max: 100, 
@@ -262,7 +266,7 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
         width: 240px;
     }
 </style>
-
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -277,18 +281,18 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-numerictextbox": NumericTextBoxComponent
-    },
-    data () {
-        return {
-            min: 1,
-            max: 100,
-            value: 30,
-            step: 2
-        }
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent
+},
+data () {
+    return {
+        min: 1,
+        max: 100,
+        value: 30,
+        step: 2
     }
+}
 }
 </script>
 <style>
@@ -316,11 +320,12 @@ The below example demonstrates format the value by using currency format value `
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
     <div id="app">
         <div class='wrap'>
-            <ejs-numerictextbox id="numeric" ref="numeric_instance" :format="data[0].format" :value="data[0].value"></ejs-numerictextbox>
+            <ejs-numerictextbox id="numeric" ref="numeric_instance" :format="format" :value="value"></ejs-numerictextbox>
         </div>
     </div>
 </template>
@@ -339,6 +344,7 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -353,17 +359,17 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-numerictextbox": NumericTextBoxComponent
-    },
-    data () {
-        return {
-            format: 'c2',
-            // sets value to the NumericTextBox
-            value: 10
-        }
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent
+},
+data () {
+    return {
+        format: 'c2',
+        // sets value to the NumericTextBox
+        value: 10
     }
+}
 }
 </script>
 <style>
@@ -391,14 +397,15 @@ So, you can't enter the number whose precision is greater than the mentioned dec
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
     <div id="app">
         <div class='wrap'>
-            <ejs-numerictextbox id="strict" :validateDecimalOnType='true' placeholder="ValidateDecimalOnType enabled" floatLabelType="Auto" format='n3' :value="data[0].value" :decimals="data[0].decimals"></ejs-numerictextbox>
+            <ejs-numerictextbox id="strict" :validateDecimalOnType='true' placeholder="ValidateDecimalOnType enabled" floatLabelType="Auto" format='n3' :value="value" :decimals="decimals"></ejs-numerictextbox>
         </div>
         <div class='wrap'>
-            <ejs-numerictextbox id="allow" placeholder="ValidateDecimalOnType disabled" floatLabelType="Auto" format='n3' :value="data[0].value" :decimals="data[0].decimals"></ejs-numerictextbox>
+            <ejs-numerictextbox id="allow" placeholder="ValidateDecimalOnType disabled" floatLabelType="Auto" format='n3' :value="value" :decimals="decimals"></ejs-numerictextbox>
         </div>
     </div>
 </template>
@@ -416,6 +423,7 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -433,17 +441,17 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-numerictextbox": NumericTextBoxComponent
-    },
-    data () {
-        return {
-            // sets number of decimal places to be allowed by the NumericTextBox
-            decimals: 3,
-            value: 10,
-        }
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent
+},
+data () {
+    return {
+        // sets number of decimal places to be allowed by the NumericTextBox
+        decimals: 3,
+        value: 10,
     }
+}
 }
 </script>
 <style>
@@ -468,6 +476,7 @@ In NumericTextBox, the `value` property supports model binding functionality. Th
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
     <div id="app">
@@ -479,11 +488,13 @@ In NumericTextBox, the `value` property supports model binding functionality. Th
         </div>
     </div>
 </template>
+
 <script setup>
 import { ref } from 'vue'
 import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
   const value = ref(10);
 </script>
+
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
@@ -493,6 +504,7 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -506,21 +518,23 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
         </div>
     </div>
 </template>
+
 <script>
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-    "ejs-numerictextbox": NumericTextBoxComponent
-    },
-    data () {
-        return {
-            value : 10
-        }
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent
+},
+data () {
+    return {
+        value : 10
     }
 }
+}
 </script>
+
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";

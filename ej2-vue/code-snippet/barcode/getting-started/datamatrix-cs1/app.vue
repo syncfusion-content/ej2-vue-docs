@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app" class="barcodeStyle">
         <ejs-datamatrixgenerator
@@ -10,9 +8,6 @@
               :value="value"
               :mode="mode"
             ></ejs-datamatrixgenerator>
-
-
-
     </div>
 </template>
 <style>
@@ -27,10 +22,10 @@
 import { DataMatrixGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
 
 export default {
+    name: "App",
     components: {
-        'ejs-datamatrixgenerator': DataMatrixGeneratorComponent
+        "ejs-datamatrixgenerator":DataMatrixGeneratorComponent
     },
-    name: 'app',
     data () {
         return {
              width: "200px",
@@ -41,5 +36,3 @@ export default {
     }
 }
 </script>
-
-

@@ -1,9 +1,7 @@
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
-        <div style="border: 3px solid darkgray; width: 200; display; 'block'; margin: auto;">
+        <div style="border: 3px solid darkgray; width: 200; display: 'block'; margin: auto;">
             <ejs-maps :height='height'>
                 <e-layers>
                     <e-layer :shapeData='shapeData' :geometryType='geometryType'>
@@ -16,11 +14,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, MapsComponent } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { seat } from './seat.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return {
       geometryType: 'Normal',
@@ -36,5 +40,3 @@ data () {
     margin: 0 auto;
   }
 </style>
-
-

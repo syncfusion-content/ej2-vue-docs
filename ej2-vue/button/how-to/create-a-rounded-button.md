@@ -15,7 +15,10 @@ Button with rounded corner can be achieved by adding `border-radius` property.
 In the following example, `e-round-corner` class is added with `border-radius` as `5px`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/button/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

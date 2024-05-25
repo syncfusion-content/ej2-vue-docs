@@ -93,20 +93,23 @@ Follow the below steps to add the Vue Rating component using `Composition API` o
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
 import { RatingComponent as EjsRating } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
-  components: {
-    'ejs-rating': RatingComponent
-  }
+name: "App",
+components: {
+"ejs-rating':":RatingComponent
+}
 }
 </script>
 

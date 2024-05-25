@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' :allowPaging='true' :pageSettings='pageOptions' height='273px'>
@@ -14,11 +12,9 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Page, Data } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js'
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Group, Page, Data } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js'
 let oldGenerateQuery = Data.prototype.generateQuery;
     Data.prototype.generateQuery = function() {
      const query = oldGenerateQuery.call(this, true);
@@ -29,8 +25,13 @@ let oldGenerateQuery = Data.prototype.generateQuery;
     }
   return query;
 };
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -54,5 +55,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

@@ -15,7 +15,10 @@ You can achieve floating label for read-only textboxes by adding/removing `e-lab
 In this sample, click the update value button to fill the read-only textbox with value and float a label.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/read-only-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/read-only-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

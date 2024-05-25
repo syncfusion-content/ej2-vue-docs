@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -14,11 +12,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { africa } from './africa.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
        urlTemplate: 'https://tile.openstreetmap.org/level/tileX/tileY.png',
@@ -37,5 +41,3 @@ data () {
     margin: 0 auto;
   }
 </style>
-
-

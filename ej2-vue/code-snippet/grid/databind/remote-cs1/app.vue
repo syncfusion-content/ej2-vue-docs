@@ -11,13 +11,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
 import { DataManager, ODataAdaptor, Query } from "@syncfusion/ej2-data";
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     let SERVICE_URI =
       "https://services.syncfusion.com/js/production/api/Orders";
@@ -27,7 +29,7 @@ export default {
         adaptor: new ODataAdaptor()
       }),
       pageSettings: {pageSize: 7},
-      query: new Query().addParams('ej2grid', 'true');
+      query: new Query().addParams('ej2grid', 'true')
     };
   },
   provide: {
@@ -38,5 +40,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

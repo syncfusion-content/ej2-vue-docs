@@ -15,7 +15,10 @@ To achieve disabled state in ColorPicker, set the [`disabled`](https://ej2.syncf
 The following example shows the `disabled` state of ColorPicker component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

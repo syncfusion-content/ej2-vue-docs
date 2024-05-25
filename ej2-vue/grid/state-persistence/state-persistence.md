@@ -19,7 +19,10 @@ When the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/
 You can achieve this by destroying the grid after disabling the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablepersistence) property and clearing the local storage data, as shown in the sample below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can achieve this by destroying the grid after disabling the [`enablePersiste
 Grid does not maintain the query params after page load event when [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablepersistence) is set to true. This is because the Grid refreshes its query params for every page load. You can maintain the custom query params by resetting the `addParams`method in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ Grid does not maintain the query params after page load event when [`enablePersi
 The Grid columns can be persisted when the [enablePersistence](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablepersistence) property is set to true. If you want to add the new columns with the existing persist state, you can use the Grid inbuilt method such as `column.push` and call the [refreshColumns()](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method for UI changes. Please refer to the following sample for more information.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

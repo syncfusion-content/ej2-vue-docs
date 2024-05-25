@@ -1,17 +1,17 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings = "splitterSettings" :filterSettings="filterSettings" :allowFiltering= "true"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Filter } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Filter } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -67,6 +67,3 @@ export default {
   }
 };
 </script>
-
-
-

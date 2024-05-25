@@ -1,7 +1,4 @@
-
-
-
-<template>
+  <template>
   <div id='app'>
     <div class='e-btn-group'>
         <input type="checkbox" id="checkbold" name="font" value="bold"/>
@@ -15,7 +12,6 @@
 </template>
 <script>
 import Vue from 'vue';
-
 export default {
   name: 'app'
 }

@@ -12,16 +12,19 @@
 </template>
 
 <script>
-import Vue from "vue";
+
 import { L10n } from '@syncfusion/ej2-base';
-import { GridPlugin, Page, Group } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Group } from "@syncfusion/ej2-vue-grids";
 import deDELocalization from './locale.json';
 import { data } from './datasource.js';
-
 L10n.load(deDELocalization);
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -44,6 +47,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

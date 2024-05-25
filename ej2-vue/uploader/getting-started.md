@@ -99,11 +99,13 @@ Follow the below steps to add the Vue Uploader component using `Composition API`
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
 import { UploaderComponent as EjsUploader } from '@syncfusion/ej2-vue-inputs';
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~src/App.vue)" %}
 
@@ -111,9 +113,10 @@ import { UploaderComponent as EjsUploader } from '@syncfusion/ej2-vue-inputs';
 import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
-    components: {
-        'ejs-uploader': UploaderComponent
-    }
+name: "App",
+components: {
+"ejs-uploader':":UploaderComponent
+}
 }
 </script>
 

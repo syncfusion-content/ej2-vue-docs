@@ -25,7 +25,10 @@ It is also adaptable to the available space when the tab items exceed the view s
 * Popup
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/orientation-tab-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/orientation-tab-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

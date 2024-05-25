@@ -19,7 +19,10 @@ How to group and filter the DropDownList Items, you can check on this video:
 In the following sample, vegetables are grouped according on its category using `groupBy` field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/grouping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/grouping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

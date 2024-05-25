@@ -76,15 +76,25 @@ Follow the below steps to add the Vue Linear Gauge component:
 1\. First, import and register the Linear Gauge component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { LinearGaugeComponent as EjsLineargauge } from '@syncfusion/ej2-vue-lineargauge';
+
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { LinearGaugeComponent } from '@syncfusion/ej2-vue-lineargauge';
 
 export default {
-    components: {
-        'ejs-lineargauge': LinearGaugeComponent
-    }
+name: "App",
+components: {
+"ejs-lineargauge":LineargaugeComponent
+},
+
 }
 </script>
 
@@ -108,6 +118,9 @@ export default {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/linear-gauge/getting-started-cs34/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs34/app.vue %}
 {% endhighlight %}
@@ -152,6 +165,9 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/linear-gauge/getting-started-cs35/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -163,6 +179,9 @@ The title can be added to the Linear Gauge component using the [`title`](https:/
 The range of the axis can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#minimum-number) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#maximum-number) properties in the Linear Gauge.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/linear-gauge/getting-started-cs36/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs36/app.vue %}
 {% endhighlight %}
@@ -178,6 +197,9 @@ To change the pointer value from the default value of the gauge, set the [`value
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/linear-gauge/getting-started-cs37/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -189,6 +211,9 @@ To change the pointer value from the default value of the gauge, set the [`value
 The pointer value is changed in the below sample using the [`value`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#value-number) property in [`pointers`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer) object of the axis.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/linear-gauge/getting-started-cs38/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/linear-gauge/getting-started-cs38/app.vue %}
 {% endhighlight %}

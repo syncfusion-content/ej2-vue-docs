@@ -31,6 +31,9 @@ The floating label functionality in the TextArea component allows the placeholde
 Localization library allows to localize the placeholder text of the TextArea to different cultures using the `locale` property.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/localization-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/localization-cs1/app.vue %}
 {% endhighlight %}
@@ -42,6 +45,9 @@ To load translation object in an application use `load` function of `L10n` class
 In the below sample, `German` culture is loaded to the TextArea placeholder text.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/localization-cs2/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/localization-cs2/app.vue %}
 {% endhighlight %}

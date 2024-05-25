@@ -16,7 +16,21 @@
     </e-ribbon-tabs>
   </ejs-ribbon>
 </template>
+<script>
+  import {  RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
 
+export default {
+name: "App",
+components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective
+  }
+}
+
+</script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  

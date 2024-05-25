@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div style='padding-top: 25px'>
@@ -37,34 +35,37 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { AccordionPlugin } from '@syncfusion/ej2-vue-navigations';
-import { Accordion, AccordionEffect } from '@syncfusion/ej2-navigations';
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
 
-Vue.use(AccordionPlugin);
-Vue.use(DropDownListPlugin);
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from "@syncfusion/ej2-vue-navigations";
+import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
+
 export default {
-  name: 'app',
+  name: "App",
+  components: {
+    "ejs-dropdownlist": DropDownListComponent,
+    "ejs-accordion": AccordionComponent,
+    "e-accordionitems": AccordionItemsDirective,
+    "e-accordionitem": AccordionItemDirective
+  },
   data: function () {
     return {
       expandAni: ['SlideDown', 'SlideUp', 'FadeIn', 'FadeOut', 'FadeZoomIn', 'FadeZoomOut', 'ZoomIn', 'ZoomOut', 'None']
     };
   },
   methods: {
-    expandAnimationChange: function (e) {
+    expandAnimationChange: function () {
       var obj = this.$refs.acrdnInstance.ej2Instances;
       var ddlobj = this.$refs.expandInstance.ej2Instances;
       obj.animation.expand.effect = ddlobj.value;
     },
-    collapseAnimationChange: function (e) {
+    collapseAnimationChange: function () {
       var obj = this.$refs.acrdnInstance.ej2Instances;
       var ddlobj = this.$refs.collapseInstance.ej2Instances;
       obj.animation.collapse.effect = ddlobj.value;
     }
   }
 }
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

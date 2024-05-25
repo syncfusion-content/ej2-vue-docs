@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event, you can get the file size before upload it to server. File object contains the file size in bytes only. You can convert the size to standard formats (`KB` or `MB`) using [bytesToSize](https://ej2.syncfusion.com/vue/documentation/api/uploader/#bytestosize) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

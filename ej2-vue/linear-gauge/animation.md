@@ -19,7 +19,10 @@ All of the elements in the Linear Gauge, such as the axis lines, ticks, labels, 
 The animation of the Linear Gauge is demonstrated in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs76/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs76/app.vue %}
 {% endhighlight %}
 {% endtabs %}

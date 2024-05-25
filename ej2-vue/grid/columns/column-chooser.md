@@ -15,7 +15,10 @@ The column chooser feature in the Syncfusion Vue Grid component allows you to dy
 To use the column chooser, you need to inject the **ColumnChooser** in the **provide** section
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can hide the column names in column chooser by defining the [columns.showInC
 In this example, the `columns.showInColumnChooser` property is set to false for the **Order ID** column. As a result, the **Order ID** column will not be displayed in the column chooser dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs36/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ The Syncfusion Vue Grid provides the flexibility to open the column chooser dial
 Here's an example of how to open the column chooser in the Grid using an external button:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +80,10 @@ To customize the column chooser dialog size, you can use the following CSS style
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs37/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +99,10 @@ To change the default search operator of the column chooser in Syncfusion Grid, 
 Here's an example of how to change the default search operator of the column chooser to **contains** in the Vue Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs38/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +116,10 @@ By default, the grid ignores diacritic characters when performing a search in th
 Here is an example that demonstrates the usage of the `ignoreAccent` property to include diacritic characters for searching in the column chooser:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs39/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs39/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div style="padding: 10px 0px 20px 0px">
-      <ejs-button class="btn" @click.native="onClick">Get selected row indexes</ejs-button >
+      <ejs-button class="btn" @click="onClick">Get selected row indexes</ejs-button >
     </div>
     <p  id="message">{{showMessage}}</p>
     <ejs-grid ref="grid" :dataSource="data" height="315px" :selectionSettings="selectionOptions">
@@ -19,15 +19,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -62,5 +65,3 @@ export default {
   padding: 0px 0px 10px 0px;
 }
 </style>
-
-

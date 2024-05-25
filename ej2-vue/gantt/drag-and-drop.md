@@ -17,7 +17,10 @@ You can dynamically rearrange the rows in the Gantt control by using the `allowR
 To use row drag and drop feature, inject the `RowDD` and `Edit` modules in the `provide` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ To use row drag and drop feature, inject the `RowDD` and `Edit` modules in the `
 Gantt also supports dragging multiple rows at a time and drop them on any rows above, below, or at child positions. In Gantt, you can enable the multiple drag and drop by setting the `selectionSettings.type` to `Multiple` and you should enable the `allowRowDragAndDrop` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ This mode can be enable by setting the [allowTaskbarDragAndDrop](https://ej2.syn
 To use row drag and drop feature, inject the `RowDD` and `Edit` module in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ In Gantt, the `rowDragStartHelper` and `rowDrop` events are triggered on row dra
 You can prevent drag action of the particular record by setting the `cancel` property to `true`, which is available in the `rowDragStartHelper` event argument based on our requirement. In the following sample, drag action was restricted for first parent record and its child records.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +98,10 @@ You can prevent drop action based on the drop position and target record, by thi
 In the following sample, we have prevented the drop action based on the position. In this sample, you cannot drop row as child in any of the available rows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +115,10 @@ You can prevent the default behavior of dropping rows as children to the target 
 In the below example drop action is cancelled and dropped above to target row.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +138,10 @@ The following arguments are used to specify the positions to drag and drop a row
 The following code example shows how to drag and drop a row on button click action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

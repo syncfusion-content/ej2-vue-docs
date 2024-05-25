@@ -21,7 +21,10 @@ How to group and filter the DropDownList Items, you can check on this video:
 The following sample illustrates how to query the data source and pass the data to the DropDownList through the `updateData` method in `filtering` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/filtering/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ When filtering the list items, you can set the limit for character count to rais
 In the following example, the remote request does not fetch the search data until the search key contains three characters
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/min-filter-char-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/filtering/min-filter-char-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ While filtering, you can change the filter type to `contains`, `startsWith`, or 
 In the following examples, data filtering is done with `endsWith` type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/filter-type-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/filtering/filter-type-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ Data items can be filtered either with or without case sensitivity using the Dat
 The following example shows how to perform case-sensitive filter
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/case-sensitive-filter-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/filtering/case-sensitive-filter-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +89,10 @@ The DropDownList supports diacritics filtering which will ignore the [diacritics
 In the following sample,data with diacritics are bound as dataSource for DropDownList.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/filtering/diacritics-filter-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/filtering/diacritics-filter-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -18,7 +18,10 @@ in sub menu item.
 This can be achieved by appending table layout while `li` rendering by using [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/#beforeitemrender) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ UI components can also be placed inside the each `li` element of ContextMenu.
 In the following example, CheckBox component is placed inside each `li` element and this can be achieved by creating CheckBox component in [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/#beforeitemrender) event and appending it into the `li` element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/context-menu/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

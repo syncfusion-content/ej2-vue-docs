@@ -27,7 +27,10 @@ If you need to prevent the node check action for a particular node, the [`nodeCh
 In the following example, the `showCheckBox` property is enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/checkbox/checkbox-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/checkbox/checkbox-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +45,10 @@ property. It returns the checked nodes' ID as an array.
 In the following example, the **New South Wales** and **Western Australia** nodes are checked at initial rendering. If any more nodes are checked, the checked nodes' IDs will be displayed in alert.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/checkbox/checked-nodes-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/checkbox/checked-nodes-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

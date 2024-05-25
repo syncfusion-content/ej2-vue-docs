@@ -1,15 +1,12 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :connectors='connectors' ></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let connectors = [{
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let connectors = [{
     // Name of the connector
     id: "connector1",
     // Sets source and target points
@@ -22,19 +19,21 @@
         y: 200
     }
 }]
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
             height: "350px",
             connectors: connectors
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
+    },
+    mounted: function () {
+        const diagramInstance = this.$refs.diagram.ej2Instances;
         diagramInstance.connectors[0].style.strokeColor = '#6BA5D7';
         diagramInstance.connectors[0].style.fill = '#6BA5D7';
         diagramInstance.connectors[0].style.strokeWidth = 2;
@@ -47,7 +46,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

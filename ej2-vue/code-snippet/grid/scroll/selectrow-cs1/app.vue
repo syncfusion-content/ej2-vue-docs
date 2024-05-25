@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <ejs-numerictextbox ref='numeric' format='N' min='0' placeholder='Enter index to select a row' width=200 :showSpinButton='false' :change='onchange'></ejs-numerictextbox>
@@ -15,15 +13,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(NumericTextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data
@@ -32,7 +33,7 @@ export default {
   methods: {
     onchange: function(){
       this.$refs.grid.selectRow(parseInt(this.$refs.numeric.getText(), 10));
-    }
+    },
     rowSelected: function (args) {
         let rowHeight = this.$refs.grid.getRows()[this.$refs.grid.getSelectedRowIndexes()[0]].scrollHeight;
         this.$refs.grid.getContent().children[0].scrollTop = rowHeight * this.$refs.grid.getSelectedRowIndexes()[0];
@@ -43,5 +44,3 @@ export default {
 <style>
   @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

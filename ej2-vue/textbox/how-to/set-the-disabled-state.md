@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Disable the TextBox by adding the `e-disabled` to the input parent element and set `disabled` attribute to the input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/getting-started-html-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/getting-started-html-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid :dataSource="data" :selectedRowIndex="1" :toolbar="toolbar" :rowSelected="rowSelected" :beforePrint="beforePrint">
@@ -23,14 +21,15 @@
   </div>
 </template>
 <script>
-
-import Vue from "vue";
-import { GridPlugin, Toolbar, Print } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Print } from "@syncfusion/ej2-vue-grids";
 import { customerData, data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
         var names = ["AROUT", "BERGS", "BLONP", "CHOPS", "ERNSH"];
         return {
@@ -63,5 +62,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

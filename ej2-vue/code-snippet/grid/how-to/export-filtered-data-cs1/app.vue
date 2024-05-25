@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :toolbar='toolbarOptions' :allowPaging='true' :allowFiltering='true' :allowPdfExport='true' :allowExcelExport='true' :pageSettings='pageSettings' :toolbarClick='toolbarClick' :selectionSettings='selectionOption'>
@@ -12,24 +10,29 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport, Filter, Page, ExcelExport  } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport, Filter, Page, ExcelExport  } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 import { DataManager } from "@syncfusion/ej2-data";
 
-Vue.use(GridPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
       data: () => {
         return {
           data: data,
           toolbarOptions: ['PdfExport', 'ExcelExport'],
           pageSettings: { pageSize: 5, pageCount:5 },
           selectionOption: {type: 'Multiple'}
-
         };
       },
       methods: {
-          toolbarClick(args: ClickEventArgs) {
+          toolbarClick(args) {
               if (args['item'].id.indexOf("pdfexport") != -1) {
                   let selectedRecords = this.$refs.grid.getSelectedRecords();
                   let exportProperties = {
@@ -54,5 +57,3 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

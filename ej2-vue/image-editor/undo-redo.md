@@ -25,7 +25,10 @@ The Redo action in an image editor allows users to reapply previously undone act
 In the following example, the [`undo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open)  and [`redo`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method is used in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}

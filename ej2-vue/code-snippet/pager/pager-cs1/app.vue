@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
       <ejs-pager :pageSize='1' :totalRecordsCount='20'> </ejs-pager>
@@ -7,11 +5,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { PagerPlugin } from '@syncfusion/ej2-vue-grids';
-
-Vue.use(PagerPlugin);
+import { PagerComponent } from '@syncfusion/ej2-vue-grids';
 export default {
+name: "App",
+components: {
+"ejs-pager":PagerComponent
+},
   data () {
     return {
     }
@@ -22,6 +21,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

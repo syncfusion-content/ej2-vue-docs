@@ -59,10 +59,10 @@ The [isToggle](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonBut
     </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
   data: function () {
@@ -118,10 +118,10 @@ You can use the [checked](https://ej2.syncfusion.com/vue/documentation/api/ribbo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -176,10 +176,10 @@ You can use the [label](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -217,7 +217,10 @@ You can render the built-in dropDown Ribbon item by setting the [type](https://e
 The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettingsModel/#target) property specifies the element selector to be displayed in the DropDownButton popup.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/dropdown-target/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/dropdown-target/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,7 +234,10 @@ You can customize the dropdown button item by specifying a custom cssClass using
 The following sample showcases how to customize a specific dropdown item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/dropDownCustomItem/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/dropDownCustomItem/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -243,7 +249,10 @@ The following sample showcases how to customize a specific dropdown item.
 You can handle the creation of popups, by using the [createPopupOnClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDownSettings/#createpopuponclick) property. If set to `true`, the popup will only be created upon opening. By default the value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/dropdownPopup/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/dropdownPopup/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -259,7 +268,10 @@ You can render the built-in splitButton Ribbon item by setting the [type](https:
 The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitButtonSettingsModel/#target) property specifies the element selector to be displayed in the SplitButton popup.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/splitbutton-target/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/splitbutton-target/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -297,10 +309,10 @@ You can use the [allowFiltering](https://ej2.syncfusion.com/vue/documentation/ap
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -355,10 +367,10 @@ You can use the [index](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -428,10 +440,10 @@ You can use the [sortOrder](https://ej2.syncfusion.com/vue/documentation/api/rib
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -490,15 +502,14 @@ You can use the [value](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
         return {
             colorPicker: {
@@ -557,10 +568,10 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonItemSize, RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -598,7 +609,10 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 You can use the  [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#iconcss) property to customize the groupbutton icon. If the `iconCss` property is not defined, the groupbutton will not be rendered.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/groupButtonIcon/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/groupButtonIcon/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -610,7 +624,10 @@ You can use the  [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribb
 You can use the [selected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonItemModel/#selected) property to select the groupbutton item initally. When set to `true`, the button will be selected. By default the `selected` property is false.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/groupButtonSelected/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/groupButtonSelected/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -622,7 +639,10 @@ You can use the [selected](https://ej2.syncfusion.com/vue/documentation/api/ribb
 You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection/) property value as `RibbonGroupButtonSelection.Single` to make one selection at a time. It automatically deselects the previous choice when a different item is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/singleSelection/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/singleSelection/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -634,7 +654,10 @@ You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/rib
 You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupButtonSelection/) property value as `RibbonGroupButtonSelection.Multiple` to select more than one button at a time. Users can select a button one by one to select multiple buttons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/multipleSelection/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/multipleSelection/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -647,7 +670,10 @@ You can set the [selection](https://ej2.syncfusion.com/vue/documentation/api/rib
 In simplified mode, the groupbutton will be rendered as a dropdownbutton. The dropdownbutton icon will be updated based on the button item selected. The initial button icon will be the set, if none of the buttons are selected.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/simplifiedModeGroupButton/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/simplifiedModeGroupButton/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -659,7 +685,10 @@ In simplified mode, the groupbutton will be rendered as a dropdownbutton. The dr
 You can customize the ribbon items with non-built-in items or HTML content by setting the [type](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonItem/#type) property to `Template`. This provides an option to customize the ribbon items with greater flexibility.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/customItems/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/customItems/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -715,10 +744,10 @@ To diplay the items only in the classic layout group, set the mode as `DisplayMo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin,DisplayMode } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent,DisplayMode } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -770,10 +799,10 @@ To diplay the items only in the simplified layout group, set the mode as `Displa
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin,DisplayMode } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent,DisplayMode } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -825,10 +854,10 @@ To diplay the items only in the overflow, set the mode as `DisplayMode.Overflow`
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin,DisplayMode } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent,DisplayMode } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -883,10 +912,10 @@ You can use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/ribb
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By using [uploading](https://ej2.syncfusion.com/vue/documentation/api/uploader/#uploading) event, you can get the file MIME type before uploading it to server. In the below sample, file MIME type is shown in the alert box before file start to upload.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

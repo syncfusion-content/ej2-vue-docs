@@ -1,5 +1,3 @@
-
-
 <template>
     <form>
         <table class='size'>
@@ -31,15 +29,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SwitchPlugin, ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { SwitchComponent, ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(SwitchPlugin);
-Vue.use(ButtonPlugin);
-
-export default {}
+export default {
+    name: "App",
+    components: {
+        "ejs-switch": SwitchComponent,
+        "ejs-button": ButtonComponent
+    }
+}
 </script>
 
 <style>
@@ -47,15 +47,13 @@ export default {}
 @import "../node_modules/@syncfusion/ej2-buttons/styles/fabric.css";
 
 .size tr td {
-  padding: 10px;
+    padding: 10px;
 }
 
 .size .lSize {
-  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
-  font-size: 13px;
-  cursor: pointer;
-  user-select: none;
+    font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif";
+    font-size: 13px;
+    cursor: pointer;
+    user-select: none;
 }
 </style>
-
-

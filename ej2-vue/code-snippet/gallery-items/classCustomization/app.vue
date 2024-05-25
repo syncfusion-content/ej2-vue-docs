@@ -40,11 +40,22 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { RibbonPlugin, RibbonGallery } from "@syncfusion/ej2-vue-ribbon";
-Vue.use(RibbonPlugin);
+
+import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective, RibbonGallery } from "@syncfusion/ej2-vue-ribbon";
 
 export default {
+  name: "App",
+  components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective
+  },
   provide: {
     ribbon: [RibbonGallery]
   },
@@ -92,25 +103,26 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
 
 .e-ribbon-gallery-item {
-    margin: 5px;
+  margin: 5px;
 }
-.e-ribbon-gallery-item.normal{
-    background: #f0f0f0;
-    color: #333;
+
+.e-ribbon-gallery-item.normal {
+  background: #f0f0f0;
+  color: #333;
 }
 
 .e-ribbon-gallery-item.bad {
-    background: #ffb6b6;
-    color: #800000;
+  background: #ffb6b6;
+  color: #800000;
 }
 
 .e-ribbon-gallery-item.good {
-    background: #c7ebc9;
-    color: #004d00;
+  background: #c7ebc9;
+  color: #004d00;
 }
 
 .e-ribbon-gallery-item.neutral {
-    background: #eedd9d;
-    color: #6c5429;
+  background: #eedd9d;
+  color: #6c5429;
 }
 </style>

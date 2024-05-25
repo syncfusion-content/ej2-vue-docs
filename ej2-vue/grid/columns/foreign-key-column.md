@@ -50,7 +50,10 @@ The Syncfusion Grid component provides a convenient way to bind local data to a 
 In this example, **data** is the local data source for the Grid, and **employeeData** is the local data source for the foreign key column. The `field` property of the e-column component is set to **EmployeeID** which represents the foreign key value in the **data**. The `foreignKeyValue` property is set to **FirstName** which represents the field name in the **employeeData** that you want to display in the foreign key column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +67,10 @@ The Foreign key column in Syncfusion Grid allows you to bind remote data for a f
 This example demonstrates how to use the foreign key column with remote data binding using the [WebApiAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/data-binding/remote-data#web-api-adaptor) in the grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +87,10 @@ The Syncfusion Grid provides support for using an edit template in a foreign key
 In this example, an [AutoComplete](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/auto-complete/default) component is rendered as the edit template for the **"EmployeeID"** foreign key column. The [dataSource](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#datasource) property of the AutoComplete component is set to the employees data, and the fields property is configured to display the **"FirstName"** field as the value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +104,10 @@ The Syncfusion Grid allows you to customize the filtering user interface (UI) fo
 In this example, a [DropDownList](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/drop-down-list/default) component is rendered as the filter UI for the **"EmployeeID"** foreign key column. The [dataSource](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#datasource) property of the DropDownList component is set to the employees data, and the fields property is configured to display the **FirstName** field as the [text](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#text) and **EmployeeID** field as the [value](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#value). The `value` property is set to the current filter value of the column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -109,7 +121,10 @@ You can use the filter bar template in a foreign key column in Grid by defining 
 In this example, the **"EmployeeID"** column is a foreign key column, and the **filter** function is used as the filter bar template for this column. The `filter` function can be defined in your component code and should return the desired component or HTML template for the filter bar. The column header shows the custom filter bar template and you can select filter value by using the drop down options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +146,10 @@ Here's an example that demonstrates how to perform aggregation in a foreign key 
 In the provided example, the `customAggregateFn` function is used to filter the data based on the **FirstName** field of the foreign key column, using the `getForeignData` internal function. The function then counts the occurrences of **Margaret**. The result is displayed in the grid's footer template using the ng-template with the `#footerTemplate` reference.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -145,7 +163,10 @@ The Syncfusion Grid component supports the feature of enabling multiple foreign 
 In the following example, **Customer Name** and **Ship City** are foreign key columns that display the **ContactName** and **City** columns from foreign data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

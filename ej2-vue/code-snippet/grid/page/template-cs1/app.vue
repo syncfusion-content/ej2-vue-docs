@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref="grid" :dataSource="data" :allowPaging="true" :pageSettings='pageSettings' :pagerTemplate='pagerTemp'>
@@ -13,22 +11,27 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(NumericTextBoxPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-numerictextbox":NumericTextBoxComponent
+},
   data() {
     return {
       data: data,
       pageSettings: { pageSize: 5 },
       pagerTemp: function() {
         return {
-          template: Vue.component("pagerTemplate", {
+          template: app.component("pagerTemplate", {
             template: `<div class="e-pagertemplate">
                         <div class="col-lg-12 control-section">
                             <div class="content-wrapper">
@@ -48,7 +51,7 @@ export default {
             },
             methods: {
               change: function(args) {
-                let grid: any = this.$el.closest(".e-grid").ej2_instances[0];
+                let grid = this.$el.closest(".e-grid").ej2_instances[0];
                 grid.goToPage(args.value);
               }
             }
@@ -91,6 +94,5 @@ export default {
   .e-pager .content-wrapper {
       display: inline-block
 }
+}
 </style>
-
-

@@ -48,10 +48,10 @@ You can use the [title](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -124,10 +124,10 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -200,10 +200,10 @@ You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -246,7 +246,10 @@ You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 You can use the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonTooltip/#cssclass) property to customize the appearance of the tooltip with your own custom styles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/TooltipCustomization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/TooltipCustomization/app.vue %}
 {% endhighlight %}
 {% endtabs %}

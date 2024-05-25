@@ -98,11 +98,29 @@ Follow the below steps to add the Vue Diagram component:
 1\. First, import and register the Diagram component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+export default {
+    components: {
+        'ejs-diagram': DiagramComponent
+    }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 export default {
+name: "App",
+components: {
+"ejs-diagram':":Diagram':Component
+
+},
+
     components: {
         'ejs-diagram': DiagramComponent
     }
@@ -129,6 +147,18 @@ export default {
 3\. Declare the value for the `height` and `width` properties in the `script` section.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+data () {
+    return {
+        width: "100%",
+        height: "350px"
+    }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
@@ -158,7 +188,10 @@ yarn run serve
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/initialize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/getting-started/initialize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -192,7 +225,7 @@ These modules should be imported and injected into the Diagram component using `
         <ejs-diagram id="diagram"  :width='width' :height='height' ></ejs-diagram>
     </div>
 </template>
-<script>
+<script setup>
 import { DiagramComponent, HierarchicalTree, MindMap, RadialTree, ComplexHierarchicalTree, DataBinding, Snapping, PrintAndExport, BpmnDiagrams, SymmetricLayout, ConnectorBridging, UndoRedo, LayoutAnimation, DiagramContextMenu, ConnectorEditing } from '@syncfusion/ej2-vue-diagrams';
 export default {
     components: {
@@ -219,7 +252,10 @@ export default {
 Create and add a `node` (JSON data) with specific position, size, label, and shape.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/addnode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/getting-started/addnode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,7 +267,10 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 Add two node to the diagram as shown in the previous example. Connect these nodes by adding a connector using the `connector` property and refer the source and target end by using the `sourceNode` and `targetNode` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/connectnode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/getting-started/connectnode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -245,7 +284,10 @@ Default values for all `nodes` and `connectors` can be set using the `getNodeDef
 Similarly, the required nodes and connectors can be added to form a complete flow diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/flowdiagram-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/getting-started/flowdiagram-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -311,7 +353,7 @@ You can configure the above "Employee Information" with diagram, so that the nod
         <ejs-diagram id="diagram" :width='width' :height='height' :dataSourceSettings='dataSourceSettings' ></ejs-diagram>
     </div>
 </template>
-<script>
+<script setup>
     import { DiagramComponent, HierarchicalTree, DataBinding } from '@syncfusion/ej2-vue-diagrams';
     import { DataManager } from "@syncfusion/ej2-data";
 
@@ -381,7 +423,10 @@ You can configure the above "Employee Information" with diagram, so that the nod
 The following code examples indicate how to define the default appearance of nodes and connectors. The `setNodeTemplate` is used to update each node based on employee data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/getting-started/orgchart-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/getting-started/orgchart-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

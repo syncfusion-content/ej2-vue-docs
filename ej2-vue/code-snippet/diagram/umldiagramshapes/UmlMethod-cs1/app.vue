@@ -1,37 +1,37 @@
-
-
-
 <template>
     <div id="app">
         <button @click="addMethod">addMethod</button>
-        <ejs-diagram id="diagram" ref="diagramObj" :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagramObj" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,UmlClassifierShapeModel } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node1',
-        offsetX: 150,
-        offsetY: 150, 
-        style: {
-            fill: '#26A0DA',
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+    id: 'node1',
+    offsetX: 150,
+    offsetY: 150,
+    style: {
+        fill: '#26A0DA',
+    },
+    shape: {
+        type: 'UmlClassifier',
+        classShape: {
+            attributes: [
+                { name: 'accepted', type: 'Date', },
+            ],
+            methods: [{ name: 'getHistory', style: {}, parameters: [{ name: 'Date', style: {} }], type: 'History' }],
+            name: 'Patient'
         },
-        shape: {
-            type: 'UmlClassifier',
-            classShape: {
-                attributes: [
-                    { name: 'accepted', type: 'Date', },
-                ],
-                methods: [{ name: 'getHistory', style: {}, parameters: [{ name: 'Date', style: {} }], type: 'History' }],
-                name: 'Patient'
-            },
-            classifier: 'Class'
-        },
-    }]
+        classifier: 'Class'
+    },
+}]
+
 export default {
-    name: 'app',
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -55,7 +55,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

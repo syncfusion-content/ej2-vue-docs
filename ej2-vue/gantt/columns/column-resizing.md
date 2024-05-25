@@ -15,7 +15,10 @@ The column width can be resized by clicking and dragging the right edge of the c
 To resize the column, inject the `Resize` module in the `provide` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The column resizing can be restricted between minimum and maximum widths by defi
 In the following example, the minimum and maximum widths are defined for the `Duration`, and `Task Name` columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

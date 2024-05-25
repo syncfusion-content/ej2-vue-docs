@@ -1,17 +1,17 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :renderBaseline="true" baselineColor='red' :taskFields="taskFields" :columns="columns" :treeColumnIndex="1" :allowSelection="true" :includeWeekend="true" :timelineSettings="timelineSettings" :height="height" :dayWorkingTime="dayWorkingTime" :projectStartDate="projectStartDate" :projectEndDate="projectEndDate"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Selection } from "@syncfusion/ej2-vue-gantt";
 import { baselineData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: baselineData,
@@ -53,6 +53,3 @@ export default {
   }
 };
 </script>
-
-
-

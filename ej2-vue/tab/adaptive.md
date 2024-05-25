@@ -34,7 +34,10 @@ items of the Tab header.
 ![Touch scroll](images/touchscroll.gif)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/adaptive/scrollable-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/adaptive/scrollable-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +56,10 @@ The rest of the overflowing items for which there is no space to fit within the 
 ![Tab with popup](images/popup.gif)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/adaptive/popup-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/adaptive/popup-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

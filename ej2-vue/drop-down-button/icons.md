@@ -17,7 +17,10 @@ DropdownButton can have an icon to provide the visual representation of the acti
 In the following example, the DropdownButton with default iconPosition and iconPosition as `Top` is showcased:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ In the following example, the DropdownButton with default iconPosition and iconP
 Icon only DropDownButton can be achieved by using [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#iconcss) property and to hide drop down arrow `e-caret-hide` class is added using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#cssclass) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ Sprite images can be loaded in DropDownButton instead of font icons using [`icon
 In this following example, `e-image` class is added with background url of the sprite image along with X and Y positions. The `width` and `height` of the element set as `32px`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ Vertical button in DropDownButton can be achieved by adding `e-vertical` class u
 The following example illustrates how to provide vertical support in DropDownButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/drop-down-button/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

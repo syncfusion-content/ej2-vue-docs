@@ -19,7 +19,10 @@ The content of each list item within the AutoComplete can be customized with the
 In the following sample, each list item is split into two columns to display relevant data's.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The group header title under which appropriate sub-items are categorized can als
 In the following sample, employees are grouped according to their city.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ The header element is shown statically at the top of the suggestion list items w
 In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ The AutoComplete has options to show a footer element at the bottom of the list 
 In the following sample, footer element displays the total number of list items present in the AutoComplete.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +87,10 @@ The AutoComplete is provided with support to custom design the popup list conten
 In the following sample, popup list content displays the notification of no data available.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +104,10 @@ There is also an option to custom design the popup list content when the data fe
 In the following sample, when the data fetch request fails, the AutoComplete displays the notification.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}

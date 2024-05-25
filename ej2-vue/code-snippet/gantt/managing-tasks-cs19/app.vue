@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :editSettings= "editSettings">
@@ -15,10 +12,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, ColumnsDirective, ColumnDirective, Edit } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
       return{
             data: [
@@ -69,6 +72,3 @@ export default {
   }
 };
 </script>
-
-
-

@@ -23,7 +23,10 @@ You can customize header styles by adding predefined classes in the Tab root ele
 > If the above custom style classes are not included in the root element, the default style is applied to the Tab items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ You can customize the position of the Tab header icons using the [`iconPosition`
 * **Bottom**: Icon is placed on the bottom of the Tab header item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/icon-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/icon-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

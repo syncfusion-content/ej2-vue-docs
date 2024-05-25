@@ -16,7 +16,10 @@ The excel export allows exporting Grid data to Excel document. You need to use t
 To use excel export, inject **ExcelExport** module in the **provide** section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ In the `pdfExportComplete` or `excelExportComplete` event, We can call the `hide
 In the below demo, we have rendered the default spinner component when exporting the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +52,10 @@ In the below demo, we have rendered the default spinner component when exporting
 The excel export provides an option to define datasource dynamically before exporting. To export data dynamically, define the **dataSource** in [`excelExportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +69,10 @@ You can pass the additional parameter in the `query` property by invoking `addPa
 In the below example, we have passed `recordcount` as `12` using `addParams` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

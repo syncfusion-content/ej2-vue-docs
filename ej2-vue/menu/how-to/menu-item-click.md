@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can open menu items and sub menu on menu item click by setting [`showItemOnClick`](https://ej2.syncfusion.com/vue/documentation/api/menu/#showitemonclick) property of the Menu. To open sub menu items only on item click, should be set as `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

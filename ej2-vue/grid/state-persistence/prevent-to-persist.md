@@ -19,7 +19,10 @@ The following example demonstrates how to prevent Grid columns from persisting. 
 >**Note:** When the [enablePersistence](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablepersistence) property is set to true, the Grid properties such as column template, column formatter, header text, and value accessor will not persist.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

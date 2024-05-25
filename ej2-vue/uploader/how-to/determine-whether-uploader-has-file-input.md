@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By setting **required** attribute to uploader input element, you can validate the file input has any value in it. In the below sample, set required attribute to the uploader input element and showcase the validation failure message using `data-required-message` attribute.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

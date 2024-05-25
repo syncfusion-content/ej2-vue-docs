@@ -28,7 +28,10 @@ The default column menu items are displayed in following table.
 | **Filter**         | Show the filter option as given in [filterSettings.type](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#type) |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ The custom column menu item feature allows you to add additional menu items to t
 Consider the following example, which demonstrates how to add a custom column menu item to clear the sorting of the Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ Sometimes, you have a scenario that to hide an item from column menu for particu
 The following sample, **Filter** item was hidden in column menu when opens for the **OrderID** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +85,10 @@ To enable the nested column menu feature, you need to define the [columnMenuItem
 Here is an example of how to configure the `columnMenuItems` property to include a nested menu:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs35/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +113,10 @@ Here is an example that demonstrates how to customize the column menu icon in th
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +132,10 @@ The column menu in Syncfusion vue Grid provides a set of events that allow custo
 2.The [columnMenuClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#columnmenuclick) event triggers when the user clicks the column menu of the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -19,7 +19,10 @@ be renamed in the server end. You can generate a random name for the file name u
 Refer to the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/asynchronous-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +60,10 @@ The uploader component allows you to upload all files in the folders to server b
 > The directory upload is available only in browsers that supports **HTML5 directory**. The uploader will process directory upload by dragging and dropping in the Edge browser. Refer to the following example to upload files to the server.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/asynchronous-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +117,10 @@ The uploader component allows you to drag and drop the files to upload. You can 
 The uploader component allows you to set external target element as drop area using the [dropArea](https://ej2.syncfusion.com/vue/documentation/api/uploader/#droparea) property. The element can be represented as HTML element or element’s id.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/draganddrop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/draganddrop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +132,10 @@ The uploader component allows you to set external target element as drop area us
 You can customize the appearance of drop area by overriding the default drop area styles. The class “” and “” is available to handle this customization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/custom-drop-area-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/custom-drop-area-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

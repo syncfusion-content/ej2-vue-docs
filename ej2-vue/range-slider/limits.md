@@ -37,7 +37,10 @@ There is only one handle in the Default and MinRange Slider, so ``minStart``, ``
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/default-limit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/default-limit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +61,10 @@ In the range slider, both handles can be restricted and locked from the limit's 
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/range-limit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/range-limit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +87,10 @@ In this sample, the movement of both slider handles has been locked.
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/handle-lock-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/handle-lock-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

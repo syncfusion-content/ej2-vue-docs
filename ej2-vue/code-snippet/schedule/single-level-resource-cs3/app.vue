@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div id='app'>
@@ -23,11 +21,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SchedulePlugin, Week, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewDirective, ViewsDirective, ResourcesDirective, ResourceDirective, Week, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 
-Vue.use(SchedulePlugin);
 export default {
+    name: "App",
+    components: {
+        "ejs-schedule": ScheduleComponent,
+        "e-views": ViewsDirective,
+        "e-view": ViewDirective,
+        "e-resources": ResourcesDirective,
+        "e-resource": ResourceDirective
+    },
     data() {
         return {
             width: '100%',
@@ -51,14 +55,12 @@ export default {
 }
 </script>
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>
-
-

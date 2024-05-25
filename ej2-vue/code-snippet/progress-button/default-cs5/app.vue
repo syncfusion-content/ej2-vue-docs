@@ -1,39 +1,40 @@
-
-
 <template>
- <div id='container'>
-        <div class="control-section">
-            <div class="progress-btn-section">
-                <ejs-progressbutton content='Progress' :enableProgress="true" :begin="begin" :end="end" :progress="progress" :fail="fail"></ejs-progressbutton>
-            </div>
-            <div class="property-section">
-                <table id="propertyTable" title="Event trace">
-                    <tbody>
-                        <th>Event trace:-</th>
-                        <tr>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <button id='clear' class='e-btn' @click='onClick'>Clear</button>
+    <div id="container">
+      <div class="control-section">
+        <div class="progress-btn-section">
+          <ejs-progressbutton content="Progress" :enableProgress="true" @begin="begin" @end="end" @progress="progress"
+            @fail="fail"></ejs-progressbutton>
         </div>
+        <div class="property-section">
+          <table id="propertyTable" title="Event trace">
+            <tbody>
+              <tr>
+                <th>Event trace:-</th>
+              </tr>
+              <tr>
+                <td v-html="eventLog"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <button id="clear" class="e-btn" @click="onClick">Clear</button>
+      </div>
     </div>
-</template>
+  </template>
 
 <script>
-import Vue from 'vue';
-import { ProgressButtonPlugin} from "@syncfusion/ej2-vue-splitbuttons";
+import { ProgressButtonComponent} from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(ProgressButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-progressbutton":ProgressButtonComponent
+},
     methods: {
         updateEventLog: function(args) {
             var propertyElem = document.getElementById('propertyTable');
-            propertyElem.getElementsByTagName('td')[0].insertAdjacentHTML('beforeend', args.name + ' Event triggered. <br/>';
+            propertyElem.getElementsByTagName('td')[0].insertAdjacentHTML('beforeend', args.name + ' Event triggered. <br/>');
         },
         begin: function(args) {
             this.updateEventLog(args);
@@ -56,10 +57,10 @@ export default {
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+    @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
+    @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 
     .progress-btn-section {
         text-align: center;
@@ -83,5 +84,3 @@ export default {
         clear: both;
     }
 </style>
-
-

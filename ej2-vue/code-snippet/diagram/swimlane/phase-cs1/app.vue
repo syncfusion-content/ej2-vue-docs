@@ -1,76 +1,77 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-       shape: {
-            type: 'SwimLane',
-            orientation: 'Horizontal',
-             //Intialize header to swimlane
-             header: {
-                 annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: '#111111' } },
-                 height: 50, style: { fontSize: 11 },
-             },
-             lanes: [
-                 {
-                     id: 'stackCanvas1',
-                     height: 100,
-                     header: {
-                         annotation: { content: 'CUSTOMER' }, width: 50,
-                         style: { fontSize: 11 }
-                     },
-                       children: [
-                         {
-                         id: 'node1',
-                         annotations: [
-                             {
-                                 content: 'Consumer learns \n of product',
-                                 style: { fontSize: 11 }
-                             }
-                         ],
-                         margin: { left: 60, top: 30 },
-                         height: 40, width: 100,
-                     }, {
-                         id: 'node2',
-                         shape: { type: 'Flow', shape: 'Decision' },
-                         annotations: [
-                           {
-                             content: 'Does \n Consumer want \nthe product',
-                             style: { fontSize: 11 }
-                           }
-                         ],
-                         margin: { left: 200, top: 20 },
-                         height: 60, width: 120,
-                       },
-                     ],
-                 },
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 
-             ],
-             // Set phase to swimlane
-             phases: [
-                 {
-                     id: 'phase1', offset: 120,
-                     header: { annotation: { content: 'Phase' } }
-                 },{
-                    id: 'phase2', offset: 200,
-                    header: { annotation: { content: 'Phase' } }
+let nodes = [{
+    shape: {
+        type: 'SwimLane',
+        orientation: 'Horizontal',
+        //Intialize header to swimlane
+        header: {
+            annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: '#111111' } },
+            height: 50, style: { fontSize: 11 },
+        },
+        lanes: [
+            {
+                id: 'stackCanvas1',
+                height: 100,
+                header: {
+                    annotation: { content: 'CUSTOMER' }, width: 50,
+                    style: { fontSize: 11 }
                 },
-                 ],
-             phaseSize: 20,
-         },
-          offsetX: 300, offsetY: 200,
-         height: 200,
-         width: 350
-}]
+                children: [
+                    {
+                        id: 'node1',
+                        annotations: [
+                            {
+                                content: 'Consumer learns \n of product',
+                                style: { fontSize: 11 }
+                            }
+                        ],
+                        margin: { left: 60, top: 30 },
+                        height: 40, width: 100,
+                    }, {
+                        id: 'node2',
+                        shape: { type: 'Flow', shape: 'Decision' },
+                        annotations: [
+                            {
+                                content: 'Does \n Consumer want \nthe product',
+                                style: { fontSize: 11 }
+                            }
+                        ],
+                        margin: { left: 200, top: 20 },
+                        height: 60, width: 120,
+                    },
+                ],
+            },
+
+        ],
+        // Set phase to swimlane
+        phases: [
+            {
+                id: 'phase1', offset: 120,
+                header: { annotation: { content: 'Phase' } }
+            }, {
+                id: 'phase2', offset: 200,
+                header: { annotation: { content: 'Phase' } }
+            },
+        ],
+        phaseSize: 20,
+    },
+    offsetX: 300, offsetY: 200,
+    height: 200,
+    width: 350
+}];
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -81,7 +82,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

@@ -21,7 +21,10 @@ and pass content by dynamically adding tab. It will reuse the content of vue com
 Refer to the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/content-reuse-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/content-reuse-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

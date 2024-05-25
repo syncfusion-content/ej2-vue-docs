@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-button id="databind" cssClass="e-info" v-on:click.native="databind">Bind Data</ejs-button>
@@ -10,11 +7,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 import { Ajax } from '@syncfusion/ej2-base';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             height: '450px',
@@ -45,6 +45,3 @@ export default {
   }
 };
 </script>
-
-
-

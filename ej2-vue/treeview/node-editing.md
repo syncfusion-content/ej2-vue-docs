@@ -21,7 +21,10 @@ If you need to validate or prevent editing, the [`nodeEditing`](https://ej2.sync
 In the following example, the first level node’s text cannot be changed, but all other level nodes' text can be changed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/node-editing-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/node-editing-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

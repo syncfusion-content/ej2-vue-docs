@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div class='wrap'>
@@ -8,7 +6,8 @@
   </div>
 </template>
 <script setup>
-import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+import { NumericTextBoxComponent as EjsNumerictextbox} from "@syncfusion/ej2-vue-inputs";
+
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -18,5 +17,3 @@ import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vu
     width: 240px;
 }
 </style>
-
-

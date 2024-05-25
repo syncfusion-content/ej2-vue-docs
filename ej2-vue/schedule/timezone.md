@@ -25,7 +25,10 @@ When no specific time zone is set to Scheduler, appointments will be displayed b
 The following code example displays an appointment from 9.00 AM to 10.00 AM when you open the Scheduler from any of the timezone. This is because, we are providing the start and end time enclosing with `new Date()` which works based on the client browser's timezone.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/time-zone-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/time-zone-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The following code example displays an appointment from 9.00 AM to 10.00 AM when
 When a time zone is set to Scheduler through [`timezone`](../api/schedule/#timezone) property, the appointments will be displayed exactly based on the Scheduler timezone regardless of its client timezone. In the following code example, appointments will be displayed based on Eastern Time (UTC -05:00).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/time-zone-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/time-zone-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ When a time zone is set to Scheduler through [`timezone`](../api/schedule/#timez
 Setting [`timezone`](../api/schedule/#timezone) to UTC for Scheduler will display the appointments on same time as in the database for all the users in different time zone.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/time-zone-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/time-zone-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ Setting [`timezone`](../api/schedule/#timezone) to UTC for Scheduler will displa
 It is possible to set different timezone for Scheduler events by setting `startTimezone` and `endTimezone` properties within the [`eventSettings`](../api/schedule/eventSettings/) option. It allows each appointment to maintain different timezone and displays on Scheduler with appropriate time differences.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/time-zone-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/time-zone-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +85,10 @@ It is possible to set different timezone for Scheduler events by setting `startT
 Instead of displaying all the timezone names within the timezone collection (more than 200 are displayed on the editor window timezone fields by default), you can customize the timezone collection at application end as shown in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/time-zone-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/time-zone-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

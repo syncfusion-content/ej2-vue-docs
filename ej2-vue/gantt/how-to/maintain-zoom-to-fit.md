@@ -17,7 +17,10 @@ In the Gantt control, While performing edit actions or dynamically change dataSo
 We can maintain `zoomToFit` after editing actions(cell edit,dialog edit,taskbar edit) by using [`fitToProject`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#fittoproject) method in `actionComplete` and `taskbarEdited` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/maintainzoomtofit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/maintainzoomtofit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ We can maintain `zoomToFit` after editing actions(cell edit,dialog edit,taskbar 
 We can maintain `zoomToFit` after change dataSource dynamically, by calling [`fitToProject`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#fittoproject) method in dataBound event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/maintainzoomtofitdatasource-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/maintainzoomtofitdatasource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

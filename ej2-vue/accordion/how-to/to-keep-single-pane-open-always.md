@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By default, all Accordion panels are collapsible. You can customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/how-to/open-always-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/how-to/open-always-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

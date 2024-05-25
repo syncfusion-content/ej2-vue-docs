@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar= "toolbar" :resourceFields= "resourceFields"
@@ -8,10 +5,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit, Selection, Toolbar  } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Edit, Selection, Toolbar  } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -90,7 +91,7 @@ export default {
       gantt: [ Edit, Selection, Toolbar ]
   },
   methods:{
-      actionBegin(args): void {
+      actionBegin(args) {
         if (args.requestType == "beforeOpenEditDialog" ||args.requestType == "beforeOpenAddDialog") {
             args.Dependency.columns[3].validationRules = { required: true }
             args.Resources.columns[2].allowEditing = true
@@ -100,6 +101,3 @@ export default {
   }
 };
 </script>
-
-
-

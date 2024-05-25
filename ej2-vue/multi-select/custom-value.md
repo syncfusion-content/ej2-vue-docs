@@ -15,7 +15,10 @@ The MultiSelect allows user to add a new non-present option to the component val
 The following sample demonstrates configuration of custom value support with the MultiSelect component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/custom-value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/custom-value-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

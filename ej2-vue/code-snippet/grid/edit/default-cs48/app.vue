@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='Grid' :dataSource='data' :allowPaging='true' height='280px' :rowDataBound='rowDataBound' :selectionSettings='selectionOptions' :dataBound='dataBound'>
@@ -14,13 +12,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin,Toolbar, Page } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective,Toolbar, Page } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from './datasource.js';
 
-Vue.use(GridPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data: () => {
     return {
       data: employeeData,
@@ -49,5 +55,3 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

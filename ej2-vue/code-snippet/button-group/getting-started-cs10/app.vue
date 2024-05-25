@@ -26,10 +26,7 @@
 <script>
 import Vue from 'vue';
 import { createButtonGroup } from '@syncfusion/ej2-splitbuttons';
-import { ButtonPlugin  } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(ButtonPlugin);
-
+import { ButtonComponent  } from '@syncfusion/ej2-vue-buttons';
 export default {
   name: 'app',
   mounted() {

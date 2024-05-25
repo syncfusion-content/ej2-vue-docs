@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel>
@@ -50,49 +48,44 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
 
-  Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
-  export default {
-    data: function () {
-      return {
-        animation: { effect: "Fade" },
-        firstInterval: 3000,
-        secondInterval: 1000,
-        thirdInterval: 2000,
-        fourthInterval: 5000,
-        fifthInterval: 6000,
-      };
-    },
-  };
+export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  },
+  data: function () {
+    return {};
+  }
+};
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
-  .control-container {
-    height: 360px;
-    margin: 0 auto;
-    width: 600px;
-  }
+.control-container {
+  height: 360px;
+  margin: 0 auto;
+  width: 600px;
+}
 
-  .img-container {
-    height: 100%;
-    margin: 0;
-  }
+.img-container {
+  height: 100%;
+  margin: 0;
+}
 
-  .img-caption {
-    color: #fff;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 3rem;
-    width: 100%;
-    text-align: center;
-  }
+.img-caption {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
 </style>
-
-

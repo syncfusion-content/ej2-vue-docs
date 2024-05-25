@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The following example demonstrate about how to disable the Fixed group header in DropDownList through CSS by using `visibility` attribute.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

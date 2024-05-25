@@ -6,11 +6,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin, PdfExport } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent, PdfExport } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent
+},
   data: function () {
     return {
       dataSource: [
@@ -44,7 +47,7 @@ export default {
     treemap: [PdfExport]
   },
   methods: {
-    clickExport: function (args) {
+    clickExport: function () {
       this.$refs.treemap.export('PDF', 'TreeMap', 0);
     }
   }

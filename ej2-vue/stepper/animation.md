@@ -22,7 +22,10 @@ You can disable the animation by setting the [enable](https://ej2.syncfusion.com
 The example demonstrates the animation `duration` and `delay` settings for the Stepper.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/animation/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/animation/app.vue %}
 {% endhighlight %}
 {% endtabs %}

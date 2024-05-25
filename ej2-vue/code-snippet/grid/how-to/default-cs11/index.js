@@ -12,8 +12,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-     <ejs-button @click.native='addAction'>Add</ejs-button>
-     <ejs-button @click.native='deleteAction'>Delete</ejs-button>
+     <ejs-button @click='addAction'>Add</ejs-button>
+     <ejs-button @click='deleteAction'>Delete</ejs-button>
         <ejs-grid ref='grid' :dataSource='data' height='280px' >
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>

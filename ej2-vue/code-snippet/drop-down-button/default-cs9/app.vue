@@ -1,18 +1,16 @@
-
-
 <template>
 <ejs-dropdownbutton :items='items' cssClass= 'e-caret-hide'>Clipboard</ejs-dropdownbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent
+},
     data () {
         return {
             items:[
@@ -36,5 +34,3 @@ export default {
   @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

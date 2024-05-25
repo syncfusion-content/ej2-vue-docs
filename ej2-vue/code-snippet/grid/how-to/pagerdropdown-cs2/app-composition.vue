@@ -1,0 +1,22 @@
+<template>
+  <div id="app">
+    <ejs-grid :dataSource='data' :allowPaging='true' :pageSettings='pageSettings' height='280px'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' :isPrimaryKey='true' textAlign='Right' width=100></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' width=80></e-column>
+        <e-column field='ShipCountry' headerText='Ship Country' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Page } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+const pageSettings = { pageSizes: ['5', '10', 'All'] };
+provide('grid', [Page]);
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+</style>

@@ -17,7 +17,10 @@ You can customize the appearance of the CheckBox component using the CSS rules. 
 The background and border color of the CheckBox is customized through the custom classes to create primary, success, warning, and danger info type of checkbox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/check-box/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/check-box/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ CheckBox frame can be customized as per the requirement by adding CSS rules.
 In the following example, to-do list is displayed with round checkbox by changing `border-radius` as `100%` by adding `e-custom` class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/check-box/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/check-box/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ CheckBox check icon can be customized as per the requirement by adding CSS rules
 In the following example, the check icon can be customized by changing check icon content, background and border color in focus and hovered states by adding `e-checkicon` class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/check-box/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/check-box/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

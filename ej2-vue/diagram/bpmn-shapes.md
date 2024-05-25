@@ -15,7 +15,10 @@ BPMN shapes are used to represent the internal business procedure in a graphical
 >Note: If you want to use BPMN shapes in diagram, you need to inject BpmnDiagrams in the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/bpmn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/bpmn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +51,10 @@ An [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent)
 The [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#event-bpmnevents) property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example illustrates how to create a BPMN event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Event-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Event-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +84,10 @@ Event triggers are notated as icons inside the circle and they represent the spe
 Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set as [`gateway`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnGateways) and the gateway property can be set with any of the appropriate gateways. The following code example illustrates how to create a BPMN Gateway.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Gateway-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Gateway-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +120,10 @@ There are two types of activities. They are listed as follows:
 To create a BPMN activity, set the shape as **activity**. You also need to set the type of the BPMN activity by using the activity property of the node. By default, the type of the activity is set as **task**. The following code example illustrates how to create an activity.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Activity-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Activity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -128,7 +140,10 @@ BPMN tasks.
 The [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#type) property of tasks allows to represent these results as an event attached to the task.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Task-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Task-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +168,10 @@ The various types of BPMN tasks are tabulated as follows.
 A [`sub-process`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess) is a group of tasks, which is used to hide or reveal details of additional levels using the [`collapsed`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess#collapsed-boolean) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Subprocess-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Subprocess-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,7 +188,10 @@ The different types of subprocess are as follows:
 A subprocess is defined as an event subprocess, when it is triggered by an event. An event subprocess is placed within another subprocess which is not part of the normal flow of its parent process. You can set event to a subprocess with the [`event`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#event-bpmnevents) and [`trigger`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnEvent#trigger-bpmntriggers) property of the subprocess. The [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess#type-bpmnsubprocesstypes) property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/EventSub-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/EventSub-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -190,7 +211,10 @@ A subprocess is defined as an event subprocess, when it is triggered by an event
 * You can also use define ports and labels to subprocess events by using event’s ports and labels properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/TransitionSub-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/TransitionSub-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -207,7 +231,10 @@ Processes is an array collection that defines the children values for BPMN subpr
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Loop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Loop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -227,7 +254,10 @@ The following table contains various types of BPMN loops.
 [`Compensation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#compensation-boolean) is triggered, when operation is partially failed and enabled it with the compensation property of the task and the subprocess.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Compensation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Compensation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -239,7 +269,10 @@ The following table contains various types of BPMN loops.
 A [`call`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#call-boolean) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Call-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Call-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -251,7 +284,10 @@ A [`call`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnTask#cal
 An adhoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`adhoc`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess#adhoc-boolean) property of subprocess.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Adhoc-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Adhoc-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -263,7 +299,10 @@ An adhoc subprocess is a group of tasks that are executed in any order or skippe
 Boundary represents the type of task that is being processed. The [`boundary`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess#boundary-bpmnboundary) property of subprocess allows you to define the type of boundary. By default, it is set as **default**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Boundary-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Boundary-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -283,7 +322,10 @@ The following table contains various types of BPMN boundaries.
 A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a [`data object`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnDataObjects), set the shape as **DataObject** and the type property defines whether data is an input or an output. You can create multiple instances of data object with the collection property of data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -303,7 +345,10 @@ The following table contains various representation of BPMN data object.
 Datasource is used to store or access data associated with a business process. To create a datasource, set the shape as **datasource**. The following code example illustrates how to create a datasource.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Datasource-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Datasource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -336,7 +381,10 @@ Artifact is used to show additional information about a process in order to make
 * The `offsetX` and `offsetY` properties are used to set the distance between the BPMN node and the TextAnnotation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Text-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -348,7 +396,10 @@ Artifact is used to show additional information about a process in order to make
 A group is used to frame a part of the diagram, shows that elements included in it are logically belong together and don’t have any other semantics other than organizing elements. To create a Group, the shape property of node should be set as “group”. The following code example illustrates how to create a BPMN Group.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Group-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Group-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -370,7 +421,10 @@ A group is used to frame a part of the diagram, shows that elements included in 
 The `association` property allows you to define the type of association. The following code example illustrates how to create an association.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Association-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Association-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -398,7 +452,10 @@ A [`Sequence`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSequ
 The sequence property allows you to define the type of sequence. The following code example illustrates how to create a sequence flow.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Sequence-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Sequence-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -426,7 +483,10 @@ A [`message`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnFlow#
 The message property allows you to define the type of message. The following code example illustrates how to define a message flow.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/bpmn-shapes/Message-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/bpmn-shapes/Message-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

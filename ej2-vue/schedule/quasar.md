@@ -84,7 +84,7 @@ Follow the below steps to add the Vue Schedule component:
 1\. First, add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`. And import the Schedule component and its child directives in the `script` section of the **src/app.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
 import { provide } from "vue";
@@ -98,8 +98,29 @@ provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month, Agenda } from "@syncfusion/ej2-vue-schedule";
+
+export default {
+  name: "App",
+  components: {
+    'ejs-schedule': ScheduleComponent,
+    "e-views": ViewsDirective,
+    "e-view": ViewDirective,
+    "e-resources": ResourcesDirective,
+    "e-resource": ResourceDirective
+  },
+  provide: {
+    schedule: [Day, Week, WorkWeek, Month, Agenda]
+  }
+}
+</script>
+
+{% endhighlight %}
 {% endtabs %}
-   
+
 2\. Then, define the Schedule component in the **src/app.vue** file, as shown below:
 
 {% tabs %}
@@ -128,7 +149,7 @@ provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 3\. Declare the values for the `selectedDate`, `eventSettings` and `dataSource` properties in the `script` section.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
 const selectedDate = new Date(2023, 7, 8);
@@ -168,12 +189,59 @@ const ownerDataSource = [
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+
+export default {
+  data() {
+    return {
+      selectedDate: new Date(2023, 7, 8),
+      eventSettings: {
+        dataSource: [
+          {
+            Id: 1,
+            Subject: 'Surgery - Andrew',
+            EventType: 'Confirmed',
+            StartTime: new Date(2023, 7, 10, 9, 0),
+            EndTime: new Date(2023, 7, 10, 10, 0),
+            OwnerId: 2
+          },
+          {
+            Id: 2,
+            Subject: 'Consulting - John',
+            EventType: 'Confirmed',
+            StartTime: new Date(2023, 7, 9, 10, 0),
+            EndTime: new Date(2023, 7, 9, 11, 30),
+            OwnerId: 3
+          },
+          {
+            Id: 3,
+            Subject: 'Therapy - Robert',
+            EventType: 'Requested',
+            StartTime: new Date(2023, 7, 8, 11, 30),
+            EndTime: new Date(2023, 7, 8, 12, 30),
+            OwnerId: 1
+          }
+        ]
+      },
+      ownerDataSource: [
+        { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
+        { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
+        { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }
+      ]
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
 {% endtabs %}
 
 Here is the summarized code for the above steps in the **src/app.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
@@ -236,6 +304,93 @@ const ownerDataSource = [
   { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
   { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }
 ];
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material3.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material3.css';
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :eventSettings='eventSettings'>
+    <e-views>
+      <e-view option='Day'></e-view>
+      <e-view option='Week'></e-view>
+      <e-view option='WorkWeek'></e-view>
+      <e-view option='Month'></e-view>
+      <e-view option='Agenda'></e-view>
+    </e-views>
+    <e-resources>
+      <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource" textField="OwnerText"
+        idField="Id" colorField="OwnerColor">
+      </e-resource>
+    </e-resources>
+  </ejs-schedule>
+</template>
+
+<script>
+import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Day, Week, WorkWeek, Month, Agenda } from "@syncfusion/ej2-vue-schedule";
+
+export default {
+  name: "App",
+  components: {
+    'ejs-schedule': ScheduleComponent,
+    "e-views": ViewsDirective,
+    "e-view": ViewDirective,
+    "e-resources": ResourcesDirective,
+    "e-resource": ResourceDirective
+  },
+  data() {
+    return {
+      selectedDate: new Date(2023, 7, 8),
+      eventSettings: {
+        dataSource: [
+          {
+            Id: 1,
+            Subject: 'Surgery - Andrew',
+            EventType: 'Confirmed',
+            StartTime: new Date(2023, 7, 10, 9, 0),
+            EndTime: new Date(2023, 7, 10, 10, 0),
+            OwnerId: 2
+          },
+          {
+            Id: 2,
+            Subject: 'Consulting - John',
+            EventType: 'Confirmed',
+            StartTime: new Date(2023, 7, 9, 10, 0),
+            EndTime: new Date(2023, 7, 9, 11, 30),
+            OwnerId: 3
+          },
+          {
+            Id: 3,
+            Subject: 'Therapy - Robert',
+            EventType: 'Requested',
+            StartTime: new Date(2023, 7, 8, 11, 30),
+            EndTime: new Date(2023, 7, 8, 12, 30),
+            OwnerId: 1
+          }
+        ]
+      },
+      ownerDataSource: [
+        { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
+        { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
+        { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }
+      ]
+    }
+  },
+  provide: {
+    schedule: [Day, Week, WorkWeek, Month, Agenda]
+  }
+}
 </script>
 
 <style>

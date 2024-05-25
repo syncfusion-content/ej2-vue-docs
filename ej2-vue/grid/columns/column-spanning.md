@@ -15,7 +15,10 @@ The column spanning feature in the Syncfusion Grid allows you to merge adjacent 
 In the following demo, Employee doing analysis from 9.00 AM to 10.00 AM, so that cells have spanned.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/spanning-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/spanning-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ In the following demo, Employee doing analysis from 9.00 AM to 10.00 AM, so that
 You can change the border color for the spanned cells by the using [QueryCellInfo](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event. This event triggers before the cell element is appended to the Grid element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/spanning-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/spanning-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

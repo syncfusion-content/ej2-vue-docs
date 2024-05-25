@@ -11,12 +11,24 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import gridData from './datasource.js';
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
+import { DataManager } from '@syncfusion/ej2-data';
+import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
 
-const data= new DataManager(gridData)
+export default {
+  name: "App",
+  components: {
+    'ejs-grid': GridComponent,
+    'e-columns': ColumnsDirective,
+    'e-column': ColumnDirective
+  },
+  data() {
+    return {
+      data: new DataManager(gridData)
+    }
+  }
+}
 </script>
 
 <style>

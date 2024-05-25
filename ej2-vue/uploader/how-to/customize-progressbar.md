@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can customize the progress bar by override the styles in uploader component. In the following example, showcase about how to customize the progress bar's size, color and progress background.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

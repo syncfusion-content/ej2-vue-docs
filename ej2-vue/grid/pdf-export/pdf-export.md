@@ -19,7 +19,10 @@ To use PDF export, inject the **PdfExport** module in the **provide** section.
 The following example demonstrates how to perform a PDF export action in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ To hide the spinner after the exporting is completed, bind the [pdfExportComplet
 The following example demonstrates how to show and hide the spinner during PDF export in a grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ To export data, you need to define the [dataSource](https://ej2.syncfusion.com/v
 The following example demonstrates how to render custom data source during PDF export. By utilizing the [pdfExport](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexport) method and passing the `pdfExportProperties` object through the grid instance, the grid data will be exported to a PDF using the dynamically defined data source.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +84,68 @@ Within the **customAggregateFn** function, it takes an input data that contains 
 The following example shows how to export the grid with a custom aggregate that shows the calculation of the **Brazil** count of the **ShipCountry** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowPdfExport='true' :toolbarClick='toolbarClick'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+          <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+          <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
+        </e-columns>
+        <e-aggregates>
+          <e-aggregate>
+            <e-columns>
+              <e-column columnName="ShipCountry" type="Custom" :customAggregate="customAggregateFn" :footerTemplate='footerTemp'></e-column>
+            </e-columns>
+          </e-aggregate>
+        </e-aggregates>
+      </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { provide, ref, createApp } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { data, changedData } from './datasource.js';
+const app = createApp();
+const grid = ref(null);
+      const toolbarOptions = ['PdfExport'];
+      const footerTemp = function () {
+        return {
+          template: app.component('footerTemplate', {
+            template: `<span> {{data.Custom}} </span>`,
+            data() { return { data: {} }; }
+          })
+        }
+      }
+    const toolbarClick = (args) => {
+      if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
+        grid.value.pdfExport();
+      }
+    }
+    const customAggregateFn = function(data) {
+      const brazilCount = data.result ? data.result.filter((item) => item['ShipCountry'] === 'Brazil').length
+      : data.filter((item) => item['ShipCountry'] === 'Brazil').length;
+    return `Brazil count: ${brazilCount}`;
+    }
+  provide('grid',  [Toolbar, PdfExport, Aggregate]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
   <div id="app">
@@ -97,20 +167,26 @@ The following example shows how to export the grid with a custom aggregate that 
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
 import { data, changedData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       toolbarOptions: ['PdfExport'],
       footerTemp: function () {
         return {
-          template: Vue.component('footerTemplate', {
+          template: app.component('footerTemplate', {
             template: `<span> {{data.Custom}} </span>`,
             data() { return { data: {} }; }
           })
@@ -161,7 +237,10 @@ To achieve this, you can utilize the [rowSpan](https://ej2.syncfusion.com/vue/do
 The following example demonstrates how to perform export with cell and row spanning using `queryCellInfo` and `pdfQueryCellInfo` events of the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/export-span-data/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/export-span-data/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +258,10 @@ To apply a custom date format to grid columns during the export, you can utilize
 The following example demonstrates how to export the grid data with custom date format. In this example, the formatOptions object is used as the `columns.format` property for the **OrderDate** column. This custom date format displays the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g., Thu, Jul 4, '96).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/export-with-custom-date/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/export-with-custom-date/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -197,7 +279,10 @@ PDF exporting provides support for exporting multiple grids on the same page. To
 The following example demonstrates how to export multiple grids to the same page in a PDF file when a toolbar item is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/multiple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/multiple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -219,7 +304,10 @@ To achieve this, you can follow these steps:
 The following example demonstrates how to export multiple grids to a PDF file when a toolbar item is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/multiple-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/multiple-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -247,7 +335,10 @@ The `hierarchyExportMode` property allows you to specify the exporting behavior 
 The following example demonstrates how to export hierarchical grid to PDF document. Also change the `pdfExportProperties.hierarchyExportMode` property by using [value](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#value) property of the `DropDownList` component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/export-hierarchy-grid/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/export-hierarchy-grid/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -263,7 +354,10 @@ To achieve this, you can utilize the [pdfHeaderQueryCellInfo](https://ej2.syncfu
 The following example demonstrates how to perform export without header using `pdfHeaderQueryCellInfo` event of the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/export-remove-header/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/export-remove-header/app.vue %}
 {% endhighlight %}
 {% endtabs %}

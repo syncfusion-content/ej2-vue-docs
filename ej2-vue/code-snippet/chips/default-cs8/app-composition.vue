@@ -1,5 +1,3 @@
-
-
 <template>
  <ejs-chiplist id="chip" text="Janet Leverling"></ejs-chiplist>
 </template>
@@ -12,5 +10,3 @@ import { ChipListComponent as EjsChiplist } from '@syncfusion/ej2-vue-buttons';
 @import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
 
 </style>
-
-

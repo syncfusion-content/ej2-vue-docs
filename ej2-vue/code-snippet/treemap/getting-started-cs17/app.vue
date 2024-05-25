@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control_wrapper">
         <ejs-treemap id="treemap" :dataSource='dataSource' :legendSettings='legendSettings' :weightValuePath='weightValuePath' :equalColorValuePath='equalColorValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
@@ -9,6 +7,7 @@
 import { TreeMapComponent, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
   components: {
     'ejs-treemap': TreeMapComponent
   },  
@@ -81,5 +80,3 @@ provide:{
 }
 }
 </script>
-
-

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The time formatting can be achieved in the same manner as date formatting using [`renderingTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider/#renderingticks) and [change](https://ej2.syncfusion.com/vue/documentation/api/slider/#change) events. The process of time formatting is explained in the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/time-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/time-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

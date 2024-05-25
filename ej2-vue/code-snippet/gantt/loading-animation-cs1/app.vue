@@ -1,17 +1,10 @@
-
-
-
 <template>
 
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Selection, VirtualScroll, Sort, Filter } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Selection, VirtualScroll, Sort, Filter } from "@syncfusion/ej2-vue-gantt";
 import{tempData} from "./datasource.js";
-
-Vue.use(GanttPlugin);
-
-
 var virtualData = [];
 var projId = 1;
 for (var i = 0; i < 50; i++) {
@@ -31,9 +24,6 @@ for (var i = 0; i < 50; i++) {
         virtualData.push(subtasks);
     }
 }
-
-
-
 new Vue({
 el: '#app',
     template: `
@@ -94,6 +84,3 @@ provide: {
 
 });
 </script>
-
-
-

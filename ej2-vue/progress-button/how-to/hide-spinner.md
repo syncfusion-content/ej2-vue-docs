@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can hide spinner in the ProgressButton by setting the `e-hide-spinner` property to [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#cssClass).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/progress-button/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

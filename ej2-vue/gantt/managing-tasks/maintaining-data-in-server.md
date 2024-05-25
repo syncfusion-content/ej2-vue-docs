@@ -25,36 +25,28 @@ In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model 
 We can define data source for Gantt as instance of DataManager using `url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
 
 ```
-
 <template>
-     <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
-    </div>
+    <div>
+       <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
+   </div>
 </template>
-<script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+<script setup>
+
+import { GanttComponent as EjsGantt } from "@syncfusion/ej2-vue-gantt";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-Vue.use(GanttPlugin);
-export default {
-  data: function() {
-      return{
-            data: new DataManager({
-                url: '/Home/UrlDatasource',
-                adaptor: new UrlAdaptor
-            }),
-            height: '450px',
-            taskFields: {
-                id: 'TaskId',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                progress: 'Progress',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                child: 'SubTasks'
-            }
-        };
-  },
+const data = new DataManager({
+    url: '/Home/UrlDatasource',
+    adaptor: new UrlAdaptor
+});
+const height = '450px';
+const taskFields = {
+    id: 'TaskId',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    progress: 'Progress',
+    duration: 'Duration',
+    dependency: 'Predecessor',
+    child: 'SubTasks'
 };
 </script>
 
@@ -75,37 +67,28 @@ public ActionResult UrlDatasource(DataManagerRequest dm)
 We can also do CRUD operations over Gantt data and save the changes to database. By using `BatchUrl` property of DataManager, we can communicate with the controller method to update the data source on CRUD operation. In gantt CRUD actions on task are dependent with other tasks. For example on editing the child record on chart side, corresponding parent item also will get affect and predecessor dependency task as well get affected. So in Gantt all the CRUD operations are considered to be batch editing where you will get all the affected records as collection. Please check the below code snippet to assign controller method to this property.
 
 ```
-
 <template>
-     <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
-    </div>
+    <div>
+       <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
+   </div>
 </template>
-<script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+<script setup>
+import { GanttComponent as EjsGantt } from "@syncfusion/ej2-vue-gantt";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-Vue.use(GanttPlugin);
-export default {
-  data: function() {
-      return{
-            data: new DataManager({
-                url: '/Home/UrlDatasource',
-                adaptor: new UrlAdaptor,
-                batchUrl: "Home/BatchSave"
-            }),
-            height: '450px',
-            taskFields: {
-                id: 'TaskId',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                progress: 'Progress',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                child: 'SubTasks'
-            }
-        };
-  },
+const data = new DataManager({
+    url: '/Home/UrlDatasource',
+    adaptor: new UrlAdaptor,
+    batchUrl: "Home/BatchSave"
+});
+const height = '450px';
+const taskFields = {
+    id: 'TaskId',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    progress: 'Progress',
+    duration: 'Duration',
+    dependency: 'Predecessor',
+    child: 'SubTasks'
 };
 </script>
 

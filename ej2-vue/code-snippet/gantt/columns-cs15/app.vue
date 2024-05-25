@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div>
     <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :height="height"
@@ -15,16 +12,23 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-gantt";
 import { editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
       return{
          data: editingData,
          projectName: function () {
-          return { template : Vue.component('columnTemplate',{
+          return { template : app.component('columnTemplate',{
              template: `<div class="image">
                     <img :src="image" width=20 height=20 class="e-image"/> Task Name
                 </div>`,
@@ -41,7 +45,7 @@ export default {
           })}
       },
      dateTemplate: function () {
-          return { template : Vue.component('columnTemplate',{
+          return { template : app.component('columnTemplate',{
              template: `<div class="image">
                     <img :src="image" width=20 height=20 class="e-image"/> Start Date
                 </div>`,
@@ -58,7 +62,7 @@ export default {
           })}
       },
       durationTemplate: function () {
-          return { template : Vue.component('columnTemplate',{
+          return { template : app.component('columnTemplate',{
              template: `<div class="image">
                     <img :src="image" width=20 height=20 class="e-image"/> Duration
                 </div>`,
@@ -75,7 +79,7 @@ export default {
           })}
       },
       progressTemplate: function () {
-          return { template : Vue.component('columnTemplate',{
+          return { template : app.component('columnTemplate',{
              template: `<div class="image">
                     <img :src="image" width=20 height=20 class="e-image"/> Progress
                 </div>`,
@@ -113,6 +117,3 @@ export default {
   },
 };
 </script>
-
-
-

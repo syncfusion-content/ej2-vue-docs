@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div id="Sign_In_Form" style="display: none; padding: 3px 0">
@@ -39,13 +37,7 @@
           </div>
         </div>
         <div class="form-group">
-          <ejs-numerictextbox
-            id="mobile"
-            format="0"
-            placeholder="Mobile"
-            floatLabelType="Auto"
-            showSpinButton="false"
-          >
+          <ejs-numerictextbox id="mobile" format="0" placeholder="Mobile" floatLabelType="Auto" showSpinButton="false">
           </ejs-numerictextbox>
         </div>
       </form>
@@ -57,13 +49,7 @@
     <div id="Card_Fill" style="display: none; padding: 3px 0">
       <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
         <div class="form-group">
-          <ejs-numerictextbox
-            id="cardNo"
-            format="0"
-            placeholder="Card No"
-            floatLabelType="Auto"
-            showSpinButton="false"
-          >
+          <ejs-numerictextbox id="cardNo" format="0" placeholder="Card No" floatLabelType="Auto" showSpinButton="false">
           </ejs-numerictextbox>
         </div>
       </div>
@@ -77,24 +63,12 @@
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
-        <ejs-datepicker
-          id="expiry"
-          width="100%"
-          format="MM/yyyy"
-          placeholder="Expiry Date"
-          floatLabelType="Auto"
-        >
+        <ejs-datepicker id="expiry" width="100%" format="MM/yyyy" placeholder="Expiry Date" floatLabelType="Auto">
         </ejs-datepicker>
       </div>
       <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
         <div class="form-group">
-          <ejs-numerictextbox
-            id="CVV"
-            format="0"
-            placeholder="CVV"
-            floatLabelType="Auto"
-            showSpinButton="false"
-          >
+          <ejs-numerictextbox id="CVV" format="0" placeholder="CVV" floatLabelType="Auto" showSpinButton="false">
           </ejs-numerictextbox>
         </div>
       </div>
@@ -104,48 +78,34 @@
         <div id="err3">* Please fill all fields</div>
       </div>
     </div>
-    <ejs-dialog
-      ref="alertDlg"
-      header="Alert"
-      width="200"
-      isModal="true"
-      content=""
-      visible="false"
-      :target="dlgTarget"
-      :buttons="dlgButtons"
-      :created="dlgCreated"
-    ></ejs-dialog>
+    <ejs-dialog ref="alertDlg" header="Alert" width="200" isModal="true" content="" visible="false" :target="dlgTarget"
+      :buttons="dlgButtons" :created="dlgCreated"></ejs-dialog>
     <ejs-accordion ref="accordionInc" :expanding="expanding">
       <e-accordionitems>
-        <e-accordionitem
-          expanded="true"
-          header="Sign In"
-          content="#Sign_In_Form"
-        ></e-accordionitem>
-        <e-accordionitem
-          header="Delivery Address"
-          content="#Address_Fill"
-        ></e-accordionitem>
-        <e-accordionitem
-          header="Card Details"
-          content="#Card_Fill"
-        ></e-accordionitem>
+        <e-accordionitem expanded="true" header="Sign In" content="#Sign_In_Form"></e-accordionitem>
+        <e-accordionitem header="Delivery Address" content="#Address_Fill"></e-accordionitem>
+        <e-accordionitem header="Card Details" content="#Card_Fill"></e-accordionitem>
       </e-accordionitems>
     </ejs-accordion>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccordionPlugin } from "@syncfusion/ej2-vue-navigations";
-import { DialogPlugin } from "@syncfusion/ej2-vue-popups";
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(AccordionPlugin);
-Vue.use(DialogPlugin);
-Vue.use(DatePickerPlugin);
-Vue.use(NumericTextBoxPlugin);
+
+import { DialogComponent } from "@syncfusion/ej2-vue-popups";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from "@syncfusion/ej2-vue-navigations";
+import { DatePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
 export default {
-  name: "app",
+  name: "App",
+  components: {
+    "ejs-numerictextbox": NumericTextBoxComponent,
+    "ejs-datepicker": DatePickerComponent,
+    "ejs-dialog": DialogComponent,
+    "ejs-accordion": AccordionComponent,
+    "e-accordionitems": AccordionItemsDirective,
+    "e-accordionitem": AccordionItemDirective
+  },
   data: function () {
     return {
       dlgButtons: [
@@ -157,7 +117,7 @@ export default {
             if (
               obj1.expandedIndices[0] === 2 &&
               this.$refs.alertDlg.ej2Instances.content ===
-                "Your payment successfully processed"
+              "Your payment successfully processed"
             ) {
               obj1.enableItem(0, true);
               obj1.enableItem(1, false);
@@ -191,7 +151,6 @@ export default {
         return false;
       }
     },
-
     checkCardNo: function (cardNo) {
       if (cardNo.match(/^\d{16}$/)) {
         return true;
@@ -219,7 +178,7 @@ export default {
       if (
         e.name === "expanding" &&
         [].indexOf.call(this.$refs.accordionInc.ej2Instances.items, e.item) ===
-          0
+        0
       ) {
         document.getElementById("Continue_Btn").onclick = () => {
           var email = document.getElementById("email");
@@ -240,7 +199,7 @@ export default {
       } else if (
         e.name === "expanding" &&
         [].indexOf.call(this.$refs.accordionInc.ej2Instances.items, e.item) ===
-          1
+        1
       ) {
         document.getElementById("Continue_BtnAdr").onclick = () => {
           var name = document.getElementById("name");
@@ -265,7 +224,7 @@ export default {
       } else if (
         e.name === "expanding" &&
         [].indexOf.call(this.$refs.accordionInc.ej2Instances.items, e.item) ===
-          2
+        2
       ) {
         document.getElementById("Back_Btn").onclick = () => {
           var acrdnObj = this.$refs.accordionInc.ej2Instances;
@@ -302,34 +261,35 @@ export default {
 };
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-  #err1, #err2, #err3 {
-    display: none;
-    color: red;
-    margin-top: 10px;
-    font-weight: 500;
-  }
+#err1,
+#err2,
+#err3 {
+  display: none;
+  color: red;
+  margin-top: 10px;
+  font-weight: 500;
+}
 
-  #err1.show,
-  #err2.show,
-  #err3.show {
-    display: block;
-  }
+#err1.show,
+#err2.show,
+#err3.show {
+  display: block;
+}
 
-  .e-dialog {
-    max-height: 300px !important; /* csslint allow: important */
-  }
+.e-dialog {
+  max-height: 300px !important;
+  /* csslint allow: important */
+}
 
-  .template_title {
-    text-align: center;
-    padding: 10px 0;
-    margin: 20px 0;
-    text-overflow: ellipsis;
-    font-weight: bold;
-    font-size: 16px;
-  }
+.template_title {
+  text-align: center;
+  padding: 10px 0;
+  margin: 20px 0;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 16px;
+}
 </style>
-
-

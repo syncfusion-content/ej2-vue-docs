@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app" class="barcodeStyle">
         <ejs-barcodegenerator
@@ -23,14 +21,12 @@
         }
 </style>
 <script setup>
-import { BarcodeGeneratorComponent as EjsBarcodegenerator } from '@syncfusion/ej2-vue-barcode-generator';
+import { BarcodeGeneratorComponent as EjsBarcodegenerator} from '@syncfusion/ej2-vue-barcode-generator';
 
 const width = "200px";
 const height = "150px";
+const mode = "SVG";
 const type = "Codabar";
 const value = "123456789";
-const mode = "SVG";
-       
+
 </script>
-
-

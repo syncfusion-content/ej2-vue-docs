@@ -16,7 +16,10 @@ Column validation validates the editing and adding data and it display errors fo
 Gantt uses [`Form Validator`](https://ej2.syncfusion.com/vue/documentation/form-validator) component for column validation. You can set [`validation rules`](https://ej2.syncfusion.com/vue/documentation/form-validator/validation-rules) by defining the [`columns.validationRules`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#validationrules). The value cannot be saved unless the validation rule get satisfied.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ You can define your own custom validation rules for the specific columns by usin
 In the below demo, custom validation applied for `TaskName` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ Validation rules can also be implemented for the dependency and resource grid in
 Within the actionBegin event, validationRules can be configured for columns in the grid of the dependency and resource tabs using the requestType `beforeOpenEditDialog` or `beforeOpenAddDialog`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}

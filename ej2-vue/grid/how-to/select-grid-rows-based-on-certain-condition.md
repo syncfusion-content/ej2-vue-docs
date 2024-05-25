@@ -15,7 +15,10 @@ You can select the specific row in the grid based on a certain condition by usin
 In the below demo, we have selected the grid rows only when `EmployeeID` column value greater than `3`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs48/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs48/app.vue %}
 {% endhighlight %}
 {% endtabs %}

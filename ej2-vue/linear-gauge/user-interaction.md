@@ -17,7 +17,10 @@ domainurl: ##DomainURL##
 Linear gauge displays the details about a pointer value through [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings), when the mouse hovers over the pointer. To enable the tooltip, set the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/#enable) property to **true** and inject the **GaugeTooltip**  module in **provide** section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs70/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs70/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Linear gauge displays the details about a pointer value through [`tooltip`](http
 Tooltip in the Linear Gauge control can be formatted using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/#format) property in [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/) object. It is used to render the tooltip in certain format or to add a user-defined unit in the tooltip. By default, the tooltip shows the pointer value only. In addition to that, more information can be added in the tooltip. For example, the format **{value}km** shows pointer value with kilometer unit in the tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs71/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs71/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ Tooltip in the Linear Gauge control can be formatted using the [`format`](https:
 The HTML element can be rendered in the tooltip of the Linear Gauge using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/#template) property in the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/). The **${value}** can be used as placeholders in the HTML element to display the pointer values of the corresponding axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs72/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs72/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ The tooltip can be customized using the following properties in [`tooltip`](http
 * [`showAtMousePosition`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/#showatmouseposition) - To show the tooltip at the mouse position.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs73/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs73/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +85,10 @@ The tooltip can be customized using the following properties in [`tooltip`](http
 The tooltip is positioned at the **End** of the pointer. To change the position of the tooltip at the start, or center of the pointer, set the [`position`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tooltipSettings/#position) property to **Start** or **Center**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs74/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs74/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +100,10 @@ The tooltip is positioned at the **End** of the pointer. To change the position 
 To drag either marker or bar pointer to the desired axis value, set the [`enableDrag`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointer/#enabledrag) property as **true** in the [`e-pointer`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/pointerModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs75/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs75/app.vue %}
 {% endhighlight %}
 {% endtabs %}

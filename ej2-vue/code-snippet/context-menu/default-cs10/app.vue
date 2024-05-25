@@ -1,24 +1,25 @@
-
-
 <template>
-<div>
-<div id="target">Right click / Touch hold to open the ContextMenu</div>
-<ejs-contextmenu target='#target' :items='menuItems' :beforeItemRender='itemRender'></ejs-contextmenu>
-</div>
+    <div>
+        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <ejs-contextmenu target='#target' :items='menuItems' :beforeItemRender='itemRender'></ejs-contextmenu>
+    </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ContextMenuPlugin);
 
 export default {
-    data () {
+    name: "App",
+    components: {
+        "ejs-contextmenu": ContextMenuComponent
+    },
+    data() {
         return {
-            menuItems:[
+            menuItems: [
                 {
                     text: 'Cut'
                 },
@@ -31,7 +32,7 @@ export default {
         };
     },
     methods: {
-        itemRender: function(args ) {
+        itemRender: function (args) {
             if (args.item.text === 'Copy') {
                 // To underline a particular character.
                 args.element.innerHTML = '<u>C</u>opy';
@@ -49,18 +50,16 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 .list {
-  display: none;
+    display: none;
 }
 
 #target {
-  border: 1px dashed;
-  height: 150px;
-  padding: 10px;
-  position: relative;
-  text-align: justify;
-  color: gray;
-  user-select: none;
+    border: 1px dashed;
+    height: 150px;
+    padding: 10px;
+    position: relative;
+    text-align: justify;
+    color: gray;
+    user-select: none;
 }
 </style>
-
-

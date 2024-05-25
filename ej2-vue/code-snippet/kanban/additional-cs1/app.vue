@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData"
@@ -15,13 +13,17 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { DataManager, ODataAdaptor, Query } from "@syncfusion/ej2-data";
 
-Vue.use(KanbanPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
   data: function() {
     let SERVICE_URI = "https://ej2services.syncfusion.com/production/web-services/api/Kanban";
     return {
@@ -29,12 +31,12 @@ export default {
             url: SERVICE_URI,
             adaptor: new ODataAdaptor(),
             crossDomain: true
-        });
+        }),
         cardSettings: {
             contentField: "Summary",
             headerField: "Id"
         },
-        query: new Query().addParams('ej2kanban', 'true');
+        query: new Query().addParams('ej2kanban', 'true')
     };
   },
   methods: {
@@ -54,6 +56,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
 </style>
-
-
-

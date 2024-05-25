@@ -22,7 +22,10 @@ To export data to PDF document, inject the `PdfExport` module in Gantt.
 >Note: Currently, we do not have support for exporting manually scheduled tasks.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ The PDF export functionality allows users to export Gantt charts enriched with d
 These indicators, represented by images,can be effortlessly defined using the  [`base64`](../api/gantt/iIndicator/#base64) encoding value in the data object of datasource.This data object field should be mapped to indiactor property of [`task fields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#indicators).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ step 1: pdfExport fourth argument set as `true`.
 step 2: Then , `pdfExpComplete` return as blob object.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/exporting-gantt-blobdata-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/exporting-gantt-blobdata-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ In Gantt, we have provided support to export the Gantt component where each rows
 Also, we can customize the chart width and grid width in exported file using [`chartWidth`](https://ej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/isFitToWidth/#chartWidth) and [`gridWidth`](https://ej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/fitToWidthSettings/isFitToWidth/#gridWidth) by defining it as percentage in string.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/single-page/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/single-page/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +97,10 @@ In the following sample, the hyperlinks and images are exported to PDF using [hy
 >Note: PDF Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-column-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-column-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +116,10 @@ In the following sample, taskbar templates with images and text are exported to 
 >Note: PDF Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-taskbar-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-taskbar-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +135,10 @@ In the following sample, task label template with images and text are exported t
 >Note: PDF Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-tasklabel-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-tasklabel-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -133,7 +154,10 @@ In the following sample, header template with images and text are exported to PD
 >Note: PDF Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-header-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-header-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

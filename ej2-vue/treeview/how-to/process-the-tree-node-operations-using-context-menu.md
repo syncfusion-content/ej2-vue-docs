@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can integrate the context menu with TreeView component in order to perform the tree view related operations like add, remove and renaming node. Following is an example which demonstrates the above cases which are used to manipulate tree view operations in the 'select ' event of context menu.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/how-to/context-menu-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/how-to/context-menu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

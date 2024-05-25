@@ -17,7 +17,10 @@ The Popup action item have an icon or image to provide visual representation of 
 In the following sample, the icons for Cut, Copy, and Paste menu items are added using the iconCss property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/split-button/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ Popup items can be customized by using the [`beforeItemRender`](https://ej2.sync
 In the following example, the icons in each li items is right aligned by appending span element while li rendering:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/split-button/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ The whole popup can be customized as per the requirement and it can be customize
 In the following sample, the whole popup item is customized as color palette by giving `div` as target and it can be achieved using `target` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/split-button/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

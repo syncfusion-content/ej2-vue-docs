@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
   <div class="container-fluid">
@@ -37,22 +35,20 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend, closest } from '@syncfusion/ej2-base';
 import { kanbanData, scheduleData } from './datasource.js';
-Vue.use(KanbanPlugin);
-import { SchedulePlugin, TimelineViews, TimelineMonth, View, Resize, DragAndDrop } from "@syncfusion/ej2-vue-schedule";
-Vue.use(SchedulePlugin);
 
-var resourceHeaderVue = Vue.component("resource-headerTemplate", {
+import { ScheduleComponent, TimelineViews, TimelineMonth, Resize, DragAndDrop, ViewDirective, ViewsDirective, ResourceDirective, ResourcesDirective } from "@syncfusion/ej2-vue-schedule";
+import {createApp} from 'vue';
+
+const app = createApp({});
+
+var resourceHeaderVue = app.component("resource-headerTemplate", {
+      data: () => ({}),
       template: '<div className="template-wrap"><div class="specialist-category"><div v-if=getConsultantImageName(data)></div><div class="specialist-name">' +
                 '{{getConsultantName(data)}}</div><div class="specialist-designation">{{getConsultantDesignation(data)}}</div></div></div>',
-      data() {
-          return {
-              data: {}
-          };
-      },
       methods: {
           getConsultantName: function (data) {
               let value = JSON.parse(JSON.stringify(data));
@@ -80,6 +76,17 @@ var resourceHeaderVue = Vue.component("resource-headerTemplate", {
 });
 
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-schedule":ScheduleComponent,
+"e-views":ViewsDirective,
+"e-view":ViewDirective,
+"e-resources":ResourcesDirective,
+"e-resource":ResourceDirective
+},
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -116,14 +123,14 @@ export default {
           { Text: 'Laura', Id: 5, GroupId: 1, Color: '#bbdc00', Designation: 'Orthopedic' },
           { Text: 'Margaret', Id: 6, GroupId: 2, Color: '#9e5fff', Designation: 'Endodontist' }
       ],
-      resourceHeaderTemplate: function (e) {
+      resourceHeaderTemplate: function () {
           return { template: resourceHeaderVue }
       }
     };
   },
   methods: {
      kanbanDragStop: function (args) {
-        let scheduleElement: Element = closest(args.event.target as Element, '#schedule');
+        let scheduleElement = closest(args.event.target, '#schedule');
         let kanbanObj = this.$refs.kanbanObj.ej2Instances;
         let scheduleObj = this.$refs.scheduleObj.ej2Instances;
         if (scheduleElement) {
@@ -133,7 +140,7 @@ export default {
         }
       },
       onItemDragStop: function (args) {
-        let kanbanElement: Element = closest(args.event.target as Element, '#kanban');
+        let kanbanElement = closest(args.event.target, '#kanban');
         let kanbanObj = this.$refs.kanbanObj.ej2Instances;
         let scheduleObj = this.$refs.scheduleObj.ej2Instances;
         if (kanbanElement) {
@@ -167,6 +174,3 @@ export default {
   display: flex;
 }
 </style>
-
-
-

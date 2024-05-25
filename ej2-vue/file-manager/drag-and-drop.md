@@ -20,7 +20,10 @@ The event triggered in drag and drop support are
 * [fileDropped](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedropped) - Triggers when the file/folder is dropped.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/drag-and-drop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/drag-and-drop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

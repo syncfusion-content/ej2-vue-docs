@@ -41,33 +41,22 @@ The following code example describes the above behavior.
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: new DataManager({
+      const data = new DataManager({
         url: "Home/DataSource",
         updateUrl: "Home/Update",
         insertUrl: "Home/Insert",
         removeUrl: "Home/Delete",
         adaptor: new UrlAdaptor
-    }),
-      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-      orderIDRules: { required: true },
-      customerIDRules: { required: true, minLength: 3 }
-    };
-  },
-  provide: {
-    grid: [Page, Edit, Toolbar]
-  }
-});
+    });
+      const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+      const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+      const orderIDRules = { required: true };
+      const customerIDRules = { required: true, minLength: 3 };
+  provide('grid',  [Page, Edit, Toolbar]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -172,31 +161,20 @@ The following code example describes the above behavior.
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: new DataManager({
+      const data = new DataManager({
             url: "Home/DataSource",
             crudUrl: "Home/CrudUpdate",
             adaptor: new UrlAdaptor
-        }),
-      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-      orderIDRules: { required: true },
-      customerIDRules: { required: true, minLength: 3 }
-    };
-  },
-  provide: {
-    grid: [Page, Edit, Toolbar]
-  }
-});
+        });
+      const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+      const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+      const orderIDRules = { required: true };
+      const customerIDRules = { required: true, minLength: 3 };
+  provide('grid',  [Page, Edit, Toolbar]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -247,31 +225,20 @@ The following code example describes the above behavior.
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-
-Vue.use(GridPlugin);
-
-export default Vue.extend({
-  data() {
-    return {
-      data: new DataManager({
+      const data = new DataManager({
             url: "Home/DataSource",
             batchUrl: "Home/BatchUpdate",
             adaptor: new UrlAdaptor
         });
-      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-      orderIDRules: { required: true },
-      customerIDRules: { required: true, minLength: 3 }
-    };
-  },
-  provide: {
-    grid: [Page, Edit, Toolbar]
-  }
-});
+      const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
+      const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+      const orderIDRules = { required: true };
+      const customerIDRules = { required: true, minLength: 3 };
+  provide('grid',  [Page, Edit, Toolbar]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";

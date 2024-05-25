@@ -16,6 +16,9 @@ You can enforce a maximum length limit for the text input in the TextArea using 
 * By setting the `maxLength` property, you can control the length of text input, preventing users from exceeding a specified character limit.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/max-length-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/max-length-cs1/app.vue %}
 {% endhighlight %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -19,11 +17,37 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Marker } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Marker, LayerDirective, LayersDirective, MarkerSettingDirective, MarkerSettingsDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
+import {createApp} from 'vue';
+
+const app = createApp({});
+ 
+const cTemplate = app.component('MapsComponent', {
+    template: '<div id="marker4" style="color:red" class="markerTemplate">Europe</div>',
+    data() { return {  }; }
+});
+
+const cTemplate1 = app.component('MapsComponent1', {
+    template: '<div id="marker5" class="markerTemplate" style="width:50px;color:blue">NorthAmerica</div>',
+    data() { return {  }; }
+});
+
+const cTemplate2 = app.component('MapsComponent2', {
+    template: '<div id="marker6" class="markerTemplate" style="width:50px;color:green">South America </div>',
+    data() { return {  }; }
+});
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective,
+"e-markerSettings":MarkerSettingsDirective,
+"e-markerSetting":MarkerSettingDirective
+},
 data () {
     return{
         shapeData: world_map,
@@ -38,26 +62,17 @@ data () {
        ],
        contentTemplate: function () {
           return {
-          template: Vue.component('MapsComponent', {
-            template: '<div id="marker4" style="color:red" class="markerTemplate">Europe</div>',
-            data() { return {  }; }
-          })
+          template: cTemplate
         }
       },
       contentTemplate1: function () {
           return {
-          template: Vue.component('MapsComponent', {
-            template: '<div id="marker5" class="markerTemplate" style="width:50px;color:blue">NorthAmerica</div>',
-            data() { return {  }; }
-          })
+          template: cTemplate1
         }
       },
       contentTemplate2: function () {
           return {
-          template: Vue.component('MapsComponent', {
-            template: '<div id="marker6" class="markerTemplate" style="width:50px;color:green">South America </div>',
-            data() { return {  }; }
-          })
+          template: cTemplate2
         }
       },
     }
@@ -73,5 +88,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

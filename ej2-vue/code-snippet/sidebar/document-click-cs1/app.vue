@@ -1,39 +1,39 @@
-
-
 <template>
-<div id="app">
-    <div class="wrapper">
-        <ejs-sidebar id="default-sidebar" ref="sidebar" :width="width" :type="type" :isOpen="isOpen" :closeOnDocumentClick="closeOnDocumentClick">
-           <div class="title"> Sidebar content</div>
-        </ejs-sidebar>
-        <div>
-            <div class="title">Main content</div>
+    <div id="app">
+        <div class="wrapper">
+            <ejs-sidebar id="default-sidebar" ref="sidebar" :width="width" :type="type" :isOpen="isOpen"
+                :closeOnDocumentClick="closeOnDocumentClick">
+                <div class="title"> Sidebar content</div>
+            </ejs-sidebar>
+            <div>
+                <div class="title">Main content</div>
                 <div class="sub-title"> Click the button to open the Sidebar.</div>
-                   <div style="padding:20px" class="center-align">
-                       <button ejs-button id="toggle"  class="e-btn e-info" v-on:click="toggleClick" >Open Sidebar</button>
+                <div style="padding:20px" class="center-align">
+                    <button ejs-button id="toggle" class="e-btn e-info" v-on:click="toggleClick">Open Sidebar</button>
                 </div>
-           </div>
-       </div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
 import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 
 export default {
-     components: {
+    name: "App",
+    components: {
         'ejs-sidebar': SidebarComponent
-     },
-     data () {
+    },
+    data() {
         return {
             closeOnDocumentClick: true,
-            isOpen:true,
-            type:'Push',
-            width:'280px'
+            isOpen: true,
+            type: 'Push',
+            width: '280px'
         }
     },
     methods: {
-        toggleClick :function() {
-          this.$refs.sidebar.toggle();
+        toggleClick: function () {
+            this.$refs.sidebar.toggle();
         },
     }
 }
@@ -77,5 +77,3 @@ export default {
     color: #fafafa;
 }
 </style>
-
-

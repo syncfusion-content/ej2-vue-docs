@@ -17,7 +17,10 @@ This can be achieved by utilizing the [toolbarTemplate](https://ej2.syncfusion.c
 The following example demonstrates, how to render the custom toolbar using `toolbarTemplate`
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/custom-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/custom-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ To render an image with text in custom toolbar, This can be achieved by utilizin
 The following example demonstrates how to render an image in the toolbar of the grid using `toolbarTemplate`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/custom-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/custom-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ This can be achieved by utilizing the [toolbarTemplate](https://ej2.syncfusion.c
 In the **onChange** method, the text of the selected item is checked to determine the appropriate action. For example, if **Update** is chosen, the [endEdit](https://ej2.syncfusion.com/vue/documentation/api/grid#endedit) method is called to exit the edit mode. If **Edit** is selected, the selected record is passed to the [startEdit](https://ej2.syncfusion.com/vue/documentation/api/grid#startedit) method to initiate the edit mode dynamically. Similarly, if **Delete** is picked, the selected record is passed to the [deleteRecord](https://ej2.syncfusion.com/vue/documentation/api/grid#deleterecord) method to remove it from the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/custom-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/custom-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ To render custom components or elements within the toolbar, use the [toolbarTemp
 The following example demonstrates how to render a **Button** component in the toolbar using `toolbarTemplate` and perform grid action based on the respected button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/custom-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/custom-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

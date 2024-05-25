@@ -1,49 +1,48 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,BpmnDiagrams,Diagram,BpmnGatewayModel,BpmnSubProcessModel } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(BpmnDiagrams);
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        // Position of the node
-        offsetX: 250,
-        offsetY: 250,
-        // Size of the node
-        width: 100,
-        height: 100,
-        //Sets type as Bpmn and shape as Activity
-        shape: {
-            type: 'Bpmn',
-            shape: 'Activity',
-            //Sets activity as SubProcess and collapsed of subprocess as true
-            activity: {
-                activity: 'SubProcess',
-                subProcess: {
-                    collapsed: true
-                }
-                as BpmnSubProcessModel
+import { DiagramComponent, BpmnDiagrams } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+    // Position of the node
+    offsetX: 250,
+    offsetY: 250,
+    // Size of the node
+    width: 100,
+    height: 100,
+    //Sets type as Bpmn and shape as Activity
+    shape: {
+        type: 'Bpmn',
+        shape: 'Activity',
+        //Sets activity as SubProcess and collapsed of subprocess as true
+        activity: {
+            activity: 'SubProcess',
+            subProcess: {
+                collapsed: true
             }
-        },
+        }
+    },
 }]
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
             height: "350px",
             nodes: nodes,
         }
+    },
+    provide: {
+        diagram: [BpmnDiagrams]
     }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

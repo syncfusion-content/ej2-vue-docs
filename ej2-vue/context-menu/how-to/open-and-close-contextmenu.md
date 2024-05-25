@@ -21,7 +21,10 @@ npm install @syncfusion/ej2-vue-buttons --save
 In the following example, the ContextMenu is opened using the [`open`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#open) method at the specified position using `top` and `left`. Also, ContextMenu is closed using [`close`](https://ej2.syncfusion.com/vue/documentation/api/context-menu#close) method on ContextMenu item click or document click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

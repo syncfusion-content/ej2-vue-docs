@@ -1,7 +1,5 @@
-
-
 <template>
-    <ejs-chiplist id="chip" v-on:click.native="chipclick">
+    <ejs-chiplist id="chip" v-on:click="chipclick">
         <e-chips>
             <e-chip text="Send a text"></e-chip>
             <e-chip text="Set a remainder"></e-chip>
@@ -12,12 +10,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ChipListPlugin } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(ChipListPlugin);
-
+import { ChipListComponent, ChipsDirective, ChipDirective } from '@syncfusion/ej2-vue-buttons';
 export default {
+name: "App",
+components: {
+"ejs-chiplist":ChiplistComponent,
+"e-chips":ChipsDirective,
+"e-chip":ChipDirective
+},
   methods: {
     chipclick: function(e) {
       alert('you have clicked ' + e.target.textContent);
@@ -25,6 +26,3 @@ export default {
   }
 }
 </script>
-
-
-

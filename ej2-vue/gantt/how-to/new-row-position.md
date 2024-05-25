@@ -15,7 +15,10 @@ In Gantt, a new row can be added in one of the following positions: Top, Bottom,
 The following code snippets demonstrate how to achieve this.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/new-row-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/new-row-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

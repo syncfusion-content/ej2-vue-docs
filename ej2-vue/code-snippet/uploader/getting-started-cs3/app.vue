@@ -1,25 +1,24 @@
-
-
 <template>
   <div>
-    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "path" ></ejs-uploader>
+    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings="path"></ejs-uploader>
   </div>
 </template>
 <script>
 import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
-    components: {
-      'ejs-uploader': UploaderComponent
-    },
-    data: function() {
-        return {
-        path:  {
-            saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
-            removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'
-        }
-        }
+  name: "App",
+  components: {
+    "ejs-uploader": UploaderComponent
+  },
+  data: function () {
+    return {
+      path: {
+        saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'
+      }
     }
+  }
 }
 </script>
 <style>
@@ -27,5 +26,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
-
-
