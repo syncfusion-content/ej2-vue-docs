@@ -16,7 +16,7 @@ You can customize the appearance of the Button by using the Cascading Style Shee
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs6/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

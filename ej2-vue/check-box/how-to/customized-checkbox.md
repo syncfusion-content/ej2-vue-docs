@@ -20,7 +20,7 @@ The background and border color of the CheckBox is customized through the custom
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +37,7 @@ In the following example, to-do list is displayed with round checkbox by changin
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +54,7 @@ In the following example, the check icon can be customized by changing check ico
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs6/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

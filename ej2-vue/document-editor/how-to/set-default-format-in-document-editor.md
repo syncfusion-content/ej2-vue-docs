@@ -18,84 +18,156 @@ You can use [`setDefaultCharacterFormat`](https://ej2.syncfusion.com/vue/documen
 
 The following example code illustrates how to change the default font size in Document editor.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  container.value.ej2Instances.documentEditor.setDefaultCharacterFormat({ fontSize: 20 });
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-      data() {
-        return {
-          serviceUrl:
-            'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-        };
-      },
-      provide: {
-        //Inject require modules.
-        DocumentEditorContainer: [Toolbar],
-      },
-        methods: {
-        onCreated: function () {
-          this.$refs.container.ej2Instances.documentEditor.setDefaultCharacterFormat({fontSize: 20});
-        },
-      },
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
     };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      this.$refs.container.ej2Instances.documentEditor.setDefaultCharacterFormat({ fontSize: 20 });
+    },
+  },
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
+
 
 Similarly, you can change the required [`CharacterFormatProperties`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/characterFormatProperties) default value.
 
 The following example code illustrates how to change other character format default value in Document editor.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  let defaultCharacterFormat = {
+    bold: false,
+    italic: false,
+    baselineAlignment: 'Normal',
+    underline: 'None',
+    fontColor: '#000000',
+    fontFamily: 'Algerian',
+    fontSize: 12,
+  };
+  container.value.ej2Instances.documentEditor.setDefaultCharacterFormat(
+    defaultCharacterFormat
+  );
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-      data() {
-        return {
-          serviceUrl:
-            'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-        };
-      },
-      provide: {
-        //Inject require modules.
-        DocumentEditorContainer: [Toolbar],
-      },
-      methods: {
-        onCreated: function () {
-          var defaultCharacterFormat = {
-            bold: false,
-            italic: false,
-            baselineAlignment: 'Normal',
-            underline: 'None',
-            fontColor: '#000000',
-            fontFamily: 'Algerian',
-            fontSize: 12,
-          };
-          this.$refs.container.ej2Instances.documentEditor.setDefaultCharacterFormat(
-            defaultCharacterFormat
-          );
-        },
-      },
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
     };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      let defaultCharacterFormat = {
+        bold: false,
+        italic: false,
+        baselineAlignment: 'Normal',
+        underline: 'None',
+        fontColor: '#000000',
+        fontFamily: 'Algerian',
+        fontSize: 12,
+      };
+      this.$refs.container.ej2Instances.documentEditor.setDefaultCharacterFormat(
+        defaultCharacterFormat
+      );
+    },
+  },
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 ## Set the default paragraph format
 
@@ -103,43 +175,78 @@ You can use [`setDefaultParagraphFormat`](https://ej2.syncfusion.com/vue/documen
 
 The following example code illustrates how to change the paragraph format(before spacing, line spacing etc.,) default value in Document editor.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  let defaultParagraphFormat = {
+    beforeSpacing: 8,
+    lineSpacing: 1.5,
+    leftIndent: 24,
+    textAlignment: "Center"
+  };
+  container.value.ej2Instances.documentEditor.setDefaultParagraphFormat(defaultParagraphFormat);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-      data() {
-        return {
-          serviceUrl:
-            'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-        };
-      },
-      provide: {
-        //Inject require modules.
-        DocumentEditorContainer: [Toolbar],
-      },
-      methods: {
-        onCreated: function () {
-        let defaultParagraphFormat = {
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      let defaultParagraphFormat = {
         beforeSpacing: 8,
         lineSpacing: 1.5,
         leftIndent: 24,
         textAlignment: "Center"
-        };
-        this.$refs.container.ej2Instances.documentEditor.setDefaultParagraphFormat(defaultParagraphFormat);
-        },
-      }
-  };
+      };
+      this.$refs.container.ej2Instances.documentEditor.setDefaultParagraphFormat(defaultParagraphFormat);
+    },
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Set the default section format
 
@@ -147,44 +254,83 @@ You can use [`setDefaultSectionFormat`](https://ej2.syncfusion.com/vue/documenta
 
 The following example code illustrates how to change the section format(header and footer distance, page width and height, etc.,) default value in Document editor.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  let defaultSectionFormat = {
+    pageWidth: 500,
+    pageHeight: 800,
+    headerDistance: 56,
+    footerDistance: 48,
+    leftMargin: 12,
+    rightMargin: 12,
+    topMargin: 0,
+    bottomMargin: 0
+  };
+  container.value.ej2Instances.documentEditor.setDefaultSectionFormat(defaultSectionFormat);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-      data() {
-        return {
-          serviceUrl:
-            'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-        };
-      },
-      provide: {
-        //Inject require modules.
-        DocumentEditorContainer: [Toolbar],
-      },
-      methods: {
-        onCreated: function () {
-        let defaultSectionFormat = {
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      let defaultSectionFormat = {
         pageWidth: 500,
         pageHeight: 800,
         headerDistance: 56,
         footerDistance: 48,
         leftMargin: 12,
         rightMargin: 12,
-        topMargin:0,
-        bottomMargin:0
+        topMargin: 0,
+        bottomMargin: 0
       };
       this.$refs.container.ej2Instances.documentEditor.setDefaultSectionFormat(defaultSectionFormat);
-        },
-      },
-    };
+    },
+  },
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}

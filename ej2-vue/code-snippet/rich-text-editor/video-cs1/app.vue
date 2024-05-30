@@ -1,6 +1,3 @@
-
-
-
 <template>
 <div>
 <div class="control-section">
@@ -24,16 +21,15 @@
         </div>
     </div>
 </div>
-
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
+import { RichTextEditorComponent, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent
+},
      data: function() {
         return {
             toolbarSettings: {
@@ -66,6 +62,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
-
-
-

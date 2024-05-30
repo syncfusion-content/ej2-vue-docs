@@ -16,7 +16,7 @@ You can hide spinner in the ProgressButton by setting the `e-hide-spinner` prope
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

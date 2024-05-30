@@ -1,16 +1,15 @@
-
-
 <template>
   <div id="app">
     <ejs-button :content="name"></ejs-button>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(ButtonPlugin);
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
   data () {
     return {
       msg: 'Hi EJ2 Components for Vue',
@@ -30,5 +29,3 @@ export default {
     width: 30%;
   }
 </style>
-
-

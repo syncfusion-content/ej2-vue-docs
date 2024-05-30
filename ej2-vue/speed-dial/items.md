@@ -32,7 +32,7 @@ You can show icon only in SpeedDial items by setting [`iconCss`](https://ej2.syn
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +47,7 @@ You can show only text in Speed Dial items by setting [`text`](https://ej2.syncf
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +62,7 @@ You can show icon along with text in Speed Dial items by setting [`iconCss`](htt
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +77,7 @@ You can disable Speed Dial items by setting [`disabled`](https://ej2.syncfusion.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +94,7 @@ Below example demonstrates the Speed Dial items with applied Zoom effect.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

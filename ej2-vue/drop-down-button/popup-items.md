@@ -20,7 +20,7 @@ In the following sample, the icons for edit, delete, mark as read  and like mess
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs17/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +37,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs18/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +56,7 @@ The following popup template is customized using `beforeItemRender` event by app
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs19/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +73,7 @@ In the following sample, the whole popup item is customized as table template by
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs20/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +90,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs21/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}

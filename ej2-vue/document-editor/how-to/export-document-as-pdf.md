@@ -20,16 +20,18 @@ Use [`pdf export component`](https://www.npmjs.com/package/@syncfusion/ej2-pdf-e
 
 The following example code illustrates how to export the document as pdf in client-side.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
+  <div id="app">
     <button id='export' v-on:click="onClick">Export</button>
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
-<script>
-  import Vue from 'vue';
-  import {
+<script setup>
+import {
   PdfBitmap,
   PdfDocument,
   PdfPageOrientation,
@@ -37,67 +39,142 @@ The following example code illustrates how to export the document as pdf in clie
   PdfSection,
   SizeF
 } from '@syncfusion/ej2-pdf-export';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-  Vue.use(DocumentEditorContainerPlugin);
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    },
-    methods: {
-      onClick:function() {
-        let obj = this;
-        let pdfdocument = new PdfDocument();
-        let count = obj.$refs.container.ej2Instances.documentEditor.pageCount;
-        obj.$refs.container.ej2Instances.documentEditor.documentEditorSettings.printDevicePixelRatio = 2;
-        let loadedPage = 0;
-        for (let i = 1; i <= count; i++) {
-          setTimeout(() => {
-            let format = 'image/jpeg';
-            // Getting pages as image
-            let image = obj.$refs.container.ej2Instances.documentEditor.exportAsImage(i, format);
-            image.onload = function () {
-              let imageHeight = parseInt(
-                image.style.height.toString().replace('px', '')
-              );
-              let imageWidth = parseInt(
-                image.style.width.toString().replace('px', '')
-              );
-              let section = pdfdocument.sections.add();
-              let settings = new PdfPageSettings(0);
-              if (imageWidth > imageHeight) {
-                settings.orientation = PdfPageOrientation.Landscape;
-              }
-              settings.size = new SizeF(imageWidth, imageHeight);
-              (section).setPageSettings(settings);
-              let page = section.pages.add();
-              let graphics = page.graphics;
-              let imageStr = image.src.replace('data:image/jpeg;base64,', '');
-              let pdfImage = new PdfBitmap(imageStr);
-              graphics.drawImage(pdfImage, 0, 0, imageWidth, imageHeight);
-              loadedPage++;
-              if (loadedPage == count) {
-                  // Exporting the document as pdf
-                pdfdocument.save(
-                  (obj.$refs.container.ej2Instances.documentEditor.documentName === ''
-                    ? 'sample'
-                    : obj.$refs.container.ej2Instances.documentEditor.documentName) + '.pdf'
-                );
-              }
-            };
-          }, 500);
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onClick = function () {
+  let pdfdocument = new PdfDocument();
+  let count = container.value.ej2Instances.documentEditor.pageCount;
+  container.value.ej2Instances.documentEditor.documentEditorSettings.printDevicePixelRatio = 2;
+  let loadedPage = 0;
+  for (let i = 1; i <= count; i++) {
+    setTimeout(() => {
+      let format = 'image/jpeg';
+      // Getting pages as image
+      let image = container.value.ej2Instances.documentEditor.exportAsImage(i, format);
+      image.onload = function () {
+        let imageHeight = parseInt(
+          image.style.height.toString().replace('px', '')
+        );
+        let imageWidth = parseInt(
+          image.style.width.toString().replace('px', '')
+        );
+        let section = pdfdocument.sections.add();
+        let settings = new PdfPageSettings(0);
+        if (imageWidth > imageHeight) {
+          settings.orientation = PdfPageOrientation.Landscape;
         }
+        settings.size = new SizeF(imageWidth, imageHeight);
+        (section).setPageSettings(settings);
+        let page = section.pages.add();
+        let graphics = page.graphics;
+        let imageStr = image.src.replace('data:image/jpeg;base64,', '');
+        let pdfImage = new PdfBitmap(imageStr);
+        graphics.drawImage(pdfImage, 0, 0, imageWidth, imageHeight);
+        loadedPage++;
+        if (loadedPage == count) {
+          // Exporting the document as pdf
+          pdfdocument.save(
+            (container.value.ej2Instances.documentEditor.documentName === ''
+              ? 'sample'
+              : container.value.ej2Instances.documentEditor.documentName) + '.pdf'
+          );
+        }
+      };
+    }, 500);
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button id='export' v-on:click="onClick">Export</button>
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import {
+  PdfBitmap,
+  PdfDocument,
+  PdfPageOrientation,
+  PdfPageSettings,
+  PdfSection,
+  SizeF
+} from '@syncfusion/ej2-pdf-export';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onClick: function () {
+      let pdfdocument = new PdfDocument();
+      let count = this.$refs.container.ej2Instances.documentEditor.pageCount;
+      this.$refs.container.ej2Instances.documentEditor.documentEditorSettings.printDevicePixelRatio = 2;
+      let loadedPage = 0;
+      for (let i = 1; i <= count; i++) {
+        setTimeout(() => {
+          let format = 'image/jpeg';
+          // Getting pages as image
+          let image = this.$refs.container.ej2Instances.documentEditor.exportAsImage(i, format);
+          image.onload = function () {
+            let imageHeight = parseInt(
+              image.style.height.toString().replace('px', '')
+            );
+            let imageWidth = parseInt(
+              image.style.width.toString().replace('px', '')
+            );
+            let section = pdfdocument.sections.add();
+            let settings = new PdfPageSettings(0);
+            if (imageWidth > imageHeight) {
+              settings.orientation = PdfPageOrientation.Landscape;
+            }
+            settings.size = new SizeF(imageWidth, imageHeight);
+            (section).setPageSettings(settings);
+            let page = section.pages.add();
+            let graphics = page.graphics;
+            let imageStr = image.src.replace('data:image/jpeg;base64,', '');
+            let pdfImage = new PdfBitmap(imageStr);
+            graphics.drawImage(pdfImage, 0, 0, imageWidth, imageHeight);
+            loadedPage++;
+            if (loadedPage == count) {
+              // Exporting the document as pdf
+              pdfdocument.save(
+                (this.$refs.container.ej2Instances.documentEditor.documentName === ''
+                  ? 'sample'
+                  : this.$refs.container.ej2Instances.documentEditor.documentName) + '.pdf'
+              );
+            }
+          };
+        }, 500);
       }
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Export document as pdf in server-side using Syncfusion DocIO
 
@@ -109,45 +186,84 @@ The following way illustrates how to convert the document as Pdf:
 
   The following example code illustrates how to convert the document to sfdt and pass it to server-side.
 
-  ```
-  <template>
-      <div id="app">
-      <button id='export' v-on:click="onClick">Export</button>
-        <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-      </div>
-  </template>
-  <script>
-    import Vue from 'vue';
-    import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-    Vue.use(DocumentEditorContainerPlugin);
+<template>
+  <div id="app">
+    <button id='export' v-on:click="onClick">Export</button>
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-    export default {
-      data() {
-        return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-        };
-      },
-      provide: {
-        //Inject require modules.
-        DocumentEditorContainer: [Toolbar]
-      },
-      methods: {
-        onClick:function() {
-          let obj = this;
-          let http = new XMLHttpRequest();
-          // Replace your running web service Url here
-          http.open('POST', 'http://localhost:62869/api/documenteditor/ExportPdf');
-          http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-          http.responseType = 'json';
-          //Serialize document content as SFDT.
-          let sfdt = { content: obj.$refs.container.ej2Instances.documentEditor.serialize() };
-          //Send the sfdt content to server side.
-          http.send(JSON.stringify(sfdt));
-        }
-      }
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onClick = function () {
+  let http = new XMLHttpRequest();
+  // Replace your running web service Url here
+  http.open('POST', 'http://localhost:62869/api/documenteditor/ExportPdf');
+  http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+  http.responseType = 'json';
+  //Serialize document content as SFDT.
+  let sfdt = { content: container.value.ej2Instances.documentEditor.serialize() };
+  //Send the sfdt content to server side.
+  http.send(JSON.stringify(sfdt));
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button id='export' v-on:click="onClick">Export</button>
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
     };
-  </script>
-  ```
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onClick: function () {
+      let http = new XMLHttpRequest();
+      // Replace your running web service Url here
+      http.open('POST', 'http://localhost:62869/api/documenteditor/ExportPdf');
+      http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+      http.responseType = 'json';
+      //Serialize document content as SFDT.
+      let sfdt = { content: this.$refs.container.ej2Instances.documentEditor.serialize() };
+      //Send the sfdt content to server side.
+      http.send(JSON.stringify(sfdt));
+    }
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 * Using Save API in server-side, you can convert the sfdt to stream.
 * Finally, convert the stream to Pdf using [`Syncfusion.DocIORenderer.Net.Core`](https://www.nuget.org/packages/Syncfusion.DocIORenderer.Net.Core) library.

@@ -16,52 +16,88 @@ The following steps are used to extract the text from the page.
 
 **Step 1:** Follow the steps provided in the [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started/) to create a simple PDF Viewer sample.
 
-**Step 2:** The following code snippet explains how to extract the text from a page .
+**Step 2:** The following code snippet explains how to extract the text from a page.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <ejs-pdfviewer
-        id="pdfViewer"
-        :serviceUrl="serviceUrl"
-        :documentPath="documentPath"
-        :isExtractText="true"
-        :extractTextCompleted="extractTextCompleted">
-    </ejs-pdfviewer>
+  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :isExtractText="true"
+    :extractTextCompleted="extractTextCompleted">
+  </ejs-pdfviewer>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+const extractTextCompleted = function (args) {
+  // Extract the Complete text of load document
+  console.log(args);
+  console.log(args.documentTextCollection[1]);
+  // Extract the Text data.
+  console.log(args.documentTextCollection[1][1].TextData);
+  // Extract Text in the Page.
+  console.log(args.documentTextCollection[1][1].PageText);
+  // Extracts the first text of the PDF document along with its bounds
+  console.log(args.documentTextCollection[1][1].TextData[0].Bounds);
+}
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :isExtractText="true"
+    :extractTextCompleted="extractTextCompleted">
+  </ejs-pdfviewer>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  data () {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf",
       extractTextCompleted: function (args) {
-      // Extract the Complete text of load document
-      console.log(args);
-      console.log(args.documentTextCollection[1]);
-      // Extract the Text data.
-      console.log(args.documentTextCollection[1][1].TextData);
-      // Extract Text in the Page.
-      console.log(args.documentTextCollection[1][1].PageText);
-      // Extracts the first text of the PDF document along with its bounds
-      console.log(args.documentTextCollection[1][1].TextData[0].Bounds);
-    }
-  };
-},
+        // Extract the Complete text of load document
+        console.log(args);
+        console.log(args.documentTextCollection[1]);
+        // Extract the Text data.
+        console.log(args.documentTextCollection[1][1].TextData);
+        // Extract Text in the Page.
+        console.log(args.documentTextCollection[1][1].PageText);
+        // Extracts the first text of the PDF document along with its bounds
+        console.log(args.documentTextCollection[1][1].TextData[0].Bounds);
+      }
+    };
+  },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch,Annotation, FormDesigner, FormFields ]}
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+    Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  }
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Find the Sample, [how to Extract Text](https://www.syncfusion.com/downloads/support/directtrac/general/ze/quickstart-1590348162.zip)

@@ -18,7 +18,7 @@ The following example illustrates how to set the disable state in SplitButton co
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs6/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -16,7 +16,7 @@ You can hide the dropdown arrow from the DropDownButton by adding class `e-caret
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs9/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

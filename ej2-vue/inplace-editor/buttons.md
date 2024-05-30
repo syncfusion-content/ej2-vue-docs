@@ -26,7 +26,10 @@ To restrict either save or cancel button rendering into a DOM, simply pass empty
 > For more details about buttons, refer this documentation [section](../button/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

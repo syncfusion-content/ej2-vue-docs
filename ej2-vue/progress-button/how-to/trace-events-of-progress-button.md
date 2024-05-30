@@ -18,7 +18,7 @@ The events available in ProgressButton are [`fail`](https://ej2.syncfusion.com/v
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

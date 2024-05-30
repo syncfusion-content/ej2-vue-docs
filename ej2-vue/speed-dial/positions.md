@@ -27,7 +27,7 @@ The position values of Speed Dial are as follows:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/position-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +68,7 @@ Below example demonstrates open/close action items on button click.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/position-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/position-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +83,7 @@ You can refresh the position of the Speed Dial using [`refreshPosition`](https:/
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/position-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/position-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

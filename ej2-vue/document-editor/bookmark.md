@@ -92,7 +92,10 @@ this.$refs.container.ej2Instances.documentEditorSettings.showBookmarks = true;
 The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/bookmark-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/bookmark-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="defaultRTE">
     <ejs-richtexteditor id="preview" ref="rteInstance" :toolbarSettings="toolbarSettings" :created="created" :actionComplete='actionComplete' :editorMode="editorMode" :height="height">
@@ -37,14 +35,14 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
     }
 </style>
 <script>
-import Vue from "vue";
 import { Browser, addClass, removeClass, isNullOrUndefined } from "@syncfusion/ej2-base";
-import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-vue-base';
-
-Vue.use(RichTextEditorPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent
+},
     data: function() {
         return {
             textArea: '',
@@ -161,5 +159,3 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

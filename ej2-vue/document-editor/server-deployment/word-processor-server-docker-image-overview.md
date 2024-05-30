@@ -143,45 +143,85 @@ You can copy the required template Word documents into docker container while de
 
 The following code example shows how to use LoadDocument() API in document editor.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-documenteditor ref="documenteditor" id="container_1" height='600px;' :enableSpellCheck='true'></ejs-documenteditor>
-    </div>
+  <div id="app">
+    <ejs-documenteditor ref="documenteditor" id="container_1" height='600px;'
+      :enableSpellCheck='true'></ejs-documenteditor>
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from 'vue';
+import { DocumentEditorComponent as EjsDocumenteditor } from '@syncfusion/ej2-vue-documenteditor';
+
+const documenteditor = ref(null);
+onMounted(function () {
+  let uploadDocument = new FormData();
+  uploadDocument.append('DocumentName', 'Getting Started.docx');
+  let baseUrl = 'http://localhost:6002/api/documenteditor/LoadDocument';
+  let httpRequest = new XMLHttpRequest();
+  httpRequest.open('POST', baseUrl, true);
+  httpRequest.onreadystatechange = function () {
+    if (httpRequest.readyState === 4) {
+      if (httpRequest.status === 200 || httpRequest.status === 304) {
+        //Open the document in DocumentEditor
+        documenteditor.value.ej2Instances.open(httpRequest.responseText);
+      }
+    }
+  };
+  httpRequest.send(uploadDocument);
+})
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditor ref="documenteditor" id="container_1" height='600px;'
+      :enableSpellCheck='true'></ejs-documenteditor>
+  </div>
 </template>
 <script>
-import Vue from 'vue'
-import { DocumentEditorPlugin } from '@syncfusion/ej2-vue-documenteditor';
-
-Vue.use(DocumentEditorPlugin);
+import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
-    data: function () {
-        return {
-        };
-    },
-    mounted: function () {
-        var dataContext = this;
-        var uploadDocument = new FormData();
-        uploadDocument.append('DocumentName', 'Getting Started.docx');
-        var baseUrl = 'http://localhost:6002/api/documenteditor/LoadDocument';
-        var httpRequest = new XMLHttpRequest();
-        httpRequest.open('POST', baseUrl, true);
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState === 4) {
-                if (httpRequest.status === 200 || httpRequest.status === 304) {
-                    //Open the document in DocumentEditor
-                    this.$refs.documenteditor.ej2Instances.open(httpRequest.responseText);
-                }
-            }
-        };
-        httpRequest.send(uploadDocument);
-    }
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  mounted: function () {
+    let uploadDocument = new FormData();
+    uploadDocument.append('DocumentName', 'Getting Started.docx');
+    let baseUrl = 'http://localhost:6002/api/documenteditor/LoadDocument';
+    let httpRequest = new XMLHttpRequest();
+    httpRequest.open('POST', baseUrl, true);
+    httpRequest.onreadystatechange = function () {
+      if (httpRequest.readyState === 4) {
+        if (httpRequest.status === 200 || httpRequest.status === 304) {
+          //Open the document in DocumentEditor
+          this.$refs.documenteditor.ej2Instances.open(httpRequest.responseText);
+        }
+      }
+    };
+    httpRequest.send(uploadDocument);
+  }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Refer to these getting started pages to create a Word Processor in [`Typescript`](https://ej2.syncfusion.com/documentation/document-editor/getting-started/), [`React`](https://ej2.syncfusion.com/react/documentation/document-editor/getting-started/), [`Vue`](https://ej2.syncfusion.com/vue/documentation/document-editor/getting-started/), [`ASP.NET MVC`](https://ej2.syncfusion.com/aspnetmvc/documentation/document-editor/getting-started/), [`ASP.NET Core`](https://ej2.syncfusion.com/aspnetcore/documentation/document-editor/getting-started-core/), and [`Blazor`](https://blazor.syncfusion.com/documentation/document-editor/getting-started/server-side-application/).

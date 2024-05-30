@@ -16,64 +16,120 @@ The Document Editor component searches a portion of text in the document through
 
 This provides the options to search for a portion of text in the document. After search operation is completed, the search results will be displayed in a list and options to navigate between them. The current occurrence of matched text or all occurrences with another text can be replaced by switching to `Replace` tab. This pane is opened using the keyboard shortcut `CTRL+F`. You can also open it programmatically using the following sample code.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-        <div id="app" height="350px">
-            <div>
-                  <button v-on:click='showOptionsPane' >Save</button>
-            </div>
-            <ejs-documenteditor ref="documenteditor" :enableEditor='true' :enableSearch='true' :enableOptionsPane='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
-        </div>
+  <div id="app" height="350px">
+    <div>
+      <button v-on:click='showOptionsPane'>Save</button>
+    </div>
+    <ejs-documenteditor ref="documenteditor" :enableEditor='true' :enableSearch='true' :enableOptionsPane='true'
+      :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
 </template>
-<script>
-        import Vue from 'vue'
-        import { DocumentEditorPlugin,  Selection, Editor, Search, OptionsPane } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, Search, OptionsPane } from '@syncfusion/ej2-vue-documenteditor';
+import { onMounted, provide, ref } from 'vue';
 
-        Vue.use(DocumentEditorPlugin);
+const documenteditor = ref(null);
+provide('DocumentEditor', [Selection, Editor, Search, OptionsPane]);
 
-        export default {
-            data: function() {
-                return {
-                };
-            },
-            provide: {
-                //Inject require modules.
-                DocumentEditor : [ Selection, Editor, Search, OptionsPane]
-            }
-            methods: {
-                showOptionsPane: function() {
-                    //Open options pane.
-                    this.$refs.documenteditor.showOptionsPane();
-                }
-            },
-            mounted() {
-                let sfdt: string = `{
-                    "sections": [
-                        {
-                            "blocks": [
-                                {
-                                    "inlines": [
-                                        {
-                                            "characterFormat": {
-                                                "bold": true,
-                                                "italic": true
-                                            },
-                                            "text": "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Bothell, Washington with 290 employees, several regional sales teams are located throughout their market base."
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ]
-                }`;
-                this.$refs.documenteditor.open(sfdt);
-            }
-        }
+const showOptionsPane = function () {
+  //Open options pane.
+  documenteditor.value.showOptionsPane();
+}
+
+onMounted(function () {
+  let sfdt = `{
+              "sections": [
+                  {
+                      "blocks": [
+                          {
+                              "inlines": [
+                                  {
+                                      "characterFormat": {
+                                          "bold": true,
+                                          "italic": true
+                                      },
+                                      "text": "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Bothell, Washington with 290 employees, several regional sales teams are located throughout their market base."
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }`;
+  documenteditor.value.open(sfdt);
+})
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app" height="350px">
+    <div>
+      <button v-on:click='showOptionsPane'>Save</button>
+    </div>
+    <ejs-documenteditor ref="documenteditor" :enableEditor='true' :enableSearch='true' :enableOptionsPane='true'
+      :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent, Selection, Editor, Search, OptionsPane } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditor: [Selection, Editor, Search, OptionsPane]
+  },
+  methods: {
+    showOptionsPane: function () {
+      //Open options pane.
+      this.$refs.documenteditor.showOptionsPane();
+    }
+  },
+  mounted() {
+    let sfdt = `{
+              "sections": [
+                  {
+                      "blocks": [
+                          {
+                              "inlines": [
+                                  {
+                                      "characterFormat": {
+                                          "bold": true,
+                                          "italic": true
+                                      },
+                                      "text": "Adventure Works Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company. The company manufactures and sells metal and composite bicycles to North American, European and Asian commercial markets. While its base operation is located in Bothell, Washington with 290 employees, several regional sales teams are located throughout their market base."
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }`;
+    this.$refs.documenteditor.open(sfdt);
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 You can close the options pane by pressing `Esc` key.
 
@@ -181,7 +237,10 @@ documenteditor.searchResultsChange = function() {
 Using the exposed APIs, you can customize the find and replace functionality in your application. Refer to the following sample code.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/replace-all-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/replace-all-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

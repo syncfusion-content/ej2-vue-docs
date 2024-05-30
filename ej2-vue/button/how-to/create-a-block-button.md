@@ -16,7 +16,7 @@ You can customize a Button into a Block Button that will span the entire width o
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

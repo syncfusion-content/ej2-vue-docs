@@ -15,7 +15,10 @@ Document Editor supports common raster format images like PNG, BMP, JPEG, SVG an
 The following example shows how to open bookmark dialog in Document Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/bookmark-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/bookmark-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

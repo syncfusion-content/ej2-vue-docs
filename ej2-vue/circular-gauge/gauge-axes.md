@@ -20,7 +20,10 @@ Background for an axis can be customized by using [`background`](https://ej2.sy
 property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ end angle is 160 degree and you can customize this option by using
 [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/axis/#startangle-number) and [`endAngle`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/axis/#endangle-number) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ The [`direction`](https://ej2.syncfusion.com/vue/documentation/api/circular-gaug
 `ClockWise` or in `AntiClockWise` direction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ It takes value either in `percentage` or in `pixel`.
 You can set the radius of the gauge in pixel as demonstrated below,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +95,10 @@ By setting value in percentage, gauge gets its dimension with respect to its ava
 For example, when the radius is ‘50%’, gauge renders to half of the available size.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +118,10 @@ and also you can customize the interval for major and minor ticks using
 `interval` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +135,10 @@ By default, offset value is 0. The [`position`](https://ej2.syncfusion.com/vue/d
 By default, ticks will be placed `inside` the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +150,10 @@ By default, ticks will be placed `inside` the axis.
 Labels of an axis can be customized by using [`font`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/labelModel/#font-fontmodel) property in [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/axis/#labelstyle-labelmodel) options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +170,10 @@ The [`position`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge
 By default, labels will be placed `inside` the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +185,10 @@ By default, labels will be placed `inside` the axis.
 If the last label is not in the visible range, it will be hidden by default. If you want to show the last label, set the `showLastLabel` property to `true` in the `axes` API of circular gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,7 +200,10 @@ If the last label is not in the visible range, it will be hidden by default. If 
 If the last label is not in the visible range, it will be hidden by default. If you want to show the last label, set the `showLastLabel` property to `true` in the `axes` API of circular gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -182,7 +215,10 @@ If the last label is not in the visible range, it will be hidden by default. If 
 Labels can be swept along the axis angle by enabling [`autoAngle`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/labelModel/#autoangle-boolean) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -199,7 +235,10 @@ then the 1st label will be hidden and when the
 then the last label will be hidden.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -211,7 +250,10 @@ then the last label will be hidden.
 Axis labels can be formatted by using [`format`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/labelModel/#format-string) property in [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/label/) and its supports all globalize format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -284,7 +326,10 @@ The following table describes the result of applying some commonly used label fo
 Axis labels support custom label format using placeholder like {value}°C, in which the value represent the axis label e.g 20°C.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -296,7 +341,10 @@ Axis labels support custom label format using placeholder like {value}°C, in 
 When the axis labels overlap with each other, you can hide the intersected labels by setting the `hideIntersectingLabel` property to true in the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -309,7 +357,10 @@ The [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/
 enables you to customize the start and end values of an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -322,7 +373,10 @@ In addition to the default axis, you can add n number of axis to a gauge.
 Each axis will have its own ranges, pointers, annotations and customization options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}

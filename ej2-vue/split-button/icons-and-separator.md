@@ -20,7 +20,7 @@ In the following example, the SplitButton with default iconPosition and `iconPos
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs8/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ The following example illustrates how to provide vertical support in SplitButton
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs9/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +58,7 @@ The following example illustrates how to enable separator support in SplitButton
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs10/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

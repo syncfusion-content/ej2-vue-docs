@@ -18,7 +18,7 @@ In the following example, `e-round-corner` class is defined with `5px` `border-r
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

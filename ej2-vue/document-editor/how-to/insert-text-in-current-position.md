@@ -23,42 +23,77 @@ The following example code illustrates how to add the text in current selection.
 this.$refs.container.ej2Instances.documentEditor.editor.insertText('Syncfusion');
 ```
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
     <div>
-        <button v-on:click='insertText'>Insert Text</button>
+      <button v-on:click='insertText'>Insert Text</button>
     </div>
-    <ejs-documenteditorcontainer ref='container'  height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref='container' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const insertText = function () {
+  //It will insert the provided text in current selection
+  container.value.ej2Instances.documentEditor.editor.insertText('Syncfusion');
+}
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div>
+      <button v-on:click='insertText'>Insert Text</button>
+    </div>
+    <ejs-documenteditorcontainer ref='container' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue'
-  import { DocumentEditorContainerPlugin, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-    export default {
-        data: function() {
-            return {
-            };
-        },
-        provide: {
-            //Inject require modules.
-            DocumentEditorContainer: [Toolbar],
-        },
-        methods: {
-            insertText: function() {
-                //It will insert the provided text in current selection
-                this.$refs.container.ej2Instances.documentEditor.editor.insertText('Syncfusion');
-            }
-        }
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    insertText: function () {
+      //It will insert the provided text in current selection
+      this.$refs.container.ej2Instances.documentEditor.editor.insertText('Syncfusion');
     }
+  }
+}
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Please check below gif which illustrates how to insert text in current cursor position on button click:
 
@@ -85,67 +120,101 @@ The following example illustrates how to insert the HTML content at current curs
 
 * Send the HTML content to server side for SFDT conversion. Refer to the following example to send the HTML content to server side and inserting it in current cursor position.
 
-    ```
-    <template>
-      <div id="app">
-        <ejs-documenteditorcontainer
-          ref="container"
-          :serviceUrl="serviceUrl"
-          height="590px"
-          id="container"
-          :enableToolbar="true"
-          v-on:created="onCreated.bind(this)"
-        ></ejs-documenteditorcontainer>
-      </div>
-    </template>
-    <script>
-      import Vue from 'vue';
-      import {
-        DocumentEditorContainerPlugin,
-        DocumentEditorContainerComponent,
-        Toolbar,
-      } from '@syncfusion/ej2-vue-documenteditor';
 
-      Vue.use(DocumentEditorContainerPlugin);
+  {% tabs %}
+  {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+  
+  <template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+        :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+    </div>
+  </template>
+  <script setup>
+  import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+  import { provide, ref } from 'vue';
 
-      export default {
-        data() {
-          return {
-            serviceUrl:
-              'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-          };
-        },
-        provide: {
-          //Inject require modules.
-          DocumentEditorContainer: [Toolbar]
-        },
-        methods: {
-          onCreated: function () {
-            let proxy = this;
-            let htmltags =
-              "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
-              let http = new XMLHttpRequest();
-              http.open('POST', 'http://localhost:5000/api/documenteditor/LoadString');
-              http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-              http.responseType = 'json';
-              http.onreadystatechange = function () {
-                if (http.readyState === 4) {
-                  if (http.status === 200 || http.status === 304) {
-                    // Insert the sfdt content in cursor position using paste API
-                    proxy.container.documentEditor.editor.paste(http.response);
-                  } else {
-                    alert('failed;');
-                  }
-                }
-              };
+  const container = ref(null);
+  const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-              let htmlContent = { content: htmltags };
-              http.send(JSON.stringify(htmlContent));
-          }
+  //Inject require modules.
+  provide('DocumentEditorContainer', [Toolbar]);
+
+  const onCreated = function () {
+    let htmltags =
+      "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
+    let http = new XMLHttpRequest();
+    http.open('POST', 'http://localhost:5000/api/documenteditor/LoadString');
+    http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    http.responseType = 'json';
+    http.onreadystatechange = function () {
+      if (http.readyState === 4) {
+        if (http.status === 200 || http.status === 304) {
+          // Insert the sfdt content in cursor position using paste API
+          container.value.ej2Instances.documentEditor.editor.paste(http.response);
+        } else {
+          alert('failed;');
         }
+      }
+    };
+
+    let htmlContent = { content: htmltags };
+    http.send(JSON.stringify(htmlContent));
+  }
+  </script>
+  {% endhighlight %}
+  {% highlight html tabtitle="Options API (~/src/App.vue)" %}
+  
+  <template>
+    <div id="app">
+      <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+        :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+    </div>
+  </template>
+  <script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+  export default {
+    components: {
+      'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+    },
+    data() {
+      return {
+        serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
       };
-    </script>
-    ```
+    },
+    provide: {
+      //Inject require modules.
+      DocumentEditorContainer: [Toolbar]
+    },
+    methods: {
+      onCreated: function () {
+        let htmltags =
+          "<?xml version='1.0' encoding='utf - 8'?><!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN''http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'><html xmlns ='http://www.w3.org/1999/xhtml' xml:lang='en' lang ='en'><body><h1>The img element</h1><img src='https://www.w3schools.com/images/lamp.jpg' alt ='Lamp Image' width='500' height='600'/></body></html>";
+        let http = new XMLHttpRequest();
+        http.open('POST', 'http://localhost:5000/api/documenteditor/LoadString');
+        http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+        http.responseType = 'json';
+        http.onreadystatechange = function () {
+          if (http.readyState === 4) {
+            if (http.status === 200 || http.status === 304) {
+              // Insert the sfdt content in cursor position using paste API
+              this.$refs.container.ej2Instances.documentEditor.editor.paste(http.response);
+            } else {
+              alert('failed;');
+            }
+          }
+        };
+
+        let htmlContent = { content: htmltags };
+        http.send(JSON.stringify(htmlContent));
+      }
+    }
+  };
+  </script>
+
+  {% endhighlight %}
+  {% endtabs %}
 
 * Please refer the following code example for server-side web implementation for HTML conversion using DocumentEditor.
 

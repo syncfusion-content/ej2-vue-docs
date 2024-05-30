@@ -36,18 +36,34 @@ As a backward compatibility to create older format SFDT files, refer the followi
 </td>
 <td>
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+    <ejs-documenteditorcontainer :documentEditorSettings="settings"></ejs-documenteditorcontainer>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer } from '@syncfusion/ej2-vue-documenteditor';
+
+const settings = {optimizeSfdt: false};
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 <template>
     <ejs-documenteditorcontainer :documentEditorSettings="settings"></ejs-documenteditorcontainer>
 </template>
 <script>
-    export default {
-        data: function () {
-            return {
-                settings: {optimizeSfdt: false},
-            };
-        },
-    };
+import { DocumentEditorContainerComponent } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+    name: "App",
+    components: {
+        "ejs-documenteditorcontainer": DocumentEditorContainerComponent
+    },
+    data: function () {
+        return {
+            settings: {optimizeSfdt: false}
+        };
+    },
+};
 </script>
 {% endhighlight %}
 {% endtabs %}
@@ -102,18 +118,34 @@ To convert from older format SFDT from a new optimized SFDT file, refer the foll
 <td>Client-side</td>
 <td>
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+<template>
+    <ejs-documenteditorcontainer :documentEditorSettings="settings"></ejs-documenteditorcontainer>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer } from '@syncfusion/ej2-vue-documenteditor';
+
+const settings = {optimizeSfdt: false};
+</script>
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 <template>
     <ejs-documenteditorcontainer :documentEditorSettings="settings"></ejs-documenteditorcontainer>
 </template>
 <script>
-    export default {
-        data: function () {
-            return {
-                settings: {optimizeSfdt: false},
-            };
-        },
-    };
+import { DocumentEditorContainerComponent } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+    name: "App",
+    components: {
+        "ejs-documenteditorcontainer": DocumentEditorContainerComponent
+    },
+    data: function () {
+        return {
+            settings: {optimizeSfdt: false}
+        };
+    },
+};
 </script>
 {% endhighlight %}
 {% endtabs %}

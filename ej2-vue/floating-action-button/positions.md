@@ -47,7 +47,7 @@ Below example demonstrates different supported positions of FAB.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/positions-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/positions-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +62,7 @@ You can define the custom position of the Floating Action Button by override the
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/positions-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/positions-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

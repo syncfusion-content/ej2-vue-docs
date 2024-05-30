@@ -1,24 +1,25 @@
-
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
             <ejs-circulargauge>
                 <e-axes>
-                    <e-axis startAngle= 0 endAngle= 180 :lineStyle= 'lineStyle'>
+                    <e-axis startAngle=0 endAngle=180 :lineStyle='lineStyle'>
                     </e-axis>
-            </e-axes>
-           </ejs-circulargauge>
+                </e-axes>
+            </ejs-circulargauge>
         </div>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin } from "@syncfusion/ej2-vue-circulargauge";
+import { CircularGaugeComponent, AxesDirective, AxisDirective } from "@syncfusion/ej2-vue-circulargauge";
 
-Vue.use(CircularGaugePlugin);
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CirculargaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective
+    },
     data: function () {
         return {
             lineStyle: {
@@ -30,11 +31,9 @@ export default {
 };
 </script>
 <style>
-    .wrapper {
-        max-width: 300px;
-        max-height: 100px;
-        margin: 0px;
-    }
+.wrapper {
+    max-width: 300px;
+    max-height: 100px;
+    margin: 0px;
+}
 </style>
-
-

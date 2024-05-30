@@ -24,7 +24,7 @@ You can use the [`openIconCss`](https://ej2.syncfusion.com/vue/documentation/api
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ You can show only text in Speed Dial button by setting [`content`](https://ej2.s
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +54,7 @@ You show icon and text in SpeedDial button using [`openIconCss`](https://ej2.syn
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +100,7 @@ The Vue Speed Dial supports the following predefined styles that can be defined 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -138,7 +138,7 @@ You can show tooltip on hover to show additional details to end-user by setting 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +153,7 @@ You can use [`opensOnHover`](https://ej2.syncfusion.com/vue/documentation/api/sp
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs6/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

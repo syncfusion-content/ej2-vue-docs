@@ -1,12 +1,9 @@
-
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
             <ejs-circulargauge>
                 <e-axes>
-                    <e-axis  :majorTicks= 'majorTicks' :minorTicks= 'minorTicks'>
+                    <e-axis :majorTicks='majorTicks' :minorTicks='minorTicks'>
                     </e-axis>
                 </e-axes>
             </ejs-circulargauge>
@@ -15,16 +12,22 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin } from "@syncfusion/ej2-vue-circulargauge";
 
-Vue.use(CircularGaugePlugin);
+import { CircularGaugeComponent, AxesDirective, AxisDirective } from "@syncfusion/ej2-vue-circulargauge";
+
+
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective
+    },
     data: function () {
         return {
             majorTicks: {
                 interval: 10,
-                color:'red',
+                color: 'red',
                 height: 10,
                 width: 3,
                 position: 'Inside',
@@ -32,7 +35,7 @@ export default {
             },
             minorTicks: {
                 interval: 5,
-                color:'green',
+                color: 'green',
                 height: 5,
                 width: 2,
                 position: 'Inside',
@@ -43,10 +46,8 @@ export default {
 };
 </script>
 <style>
-    .wrapper {
-        max-width: 300px;
-        margin: 0 auto;
-    }
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
 </style>
-
-

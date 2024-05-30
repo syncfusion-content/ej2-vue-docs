@@ -14,7 +14,10 @@ To achieve this, we need to bind the `keydown` event to the Rich Text Editor con
 In the `keydown` event handler, the `updateValue` method is called to update the [`value`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#value) property and then we can save the content in the required database using the same.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

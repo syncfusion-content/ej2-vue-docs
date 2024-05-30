@@ -60,7 +60,10 @@ The Rich Text Editor element is assigned the role of application.
 | aria-disabled | Indicates the disabled state of the Rich Text Editor. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -19,7 +19,7 @@ In the following example, the up arrow is updated on popup close and down arrow 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

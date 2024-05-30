@@ -17,7 +17,10 @@ You can categories certain interval on gauge axis using [`ranges`](https://ej2.s
 Start and end value of a range in an axis can be customized by using [`start`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/range/#start-number) and [`end`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/range/#end-number) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs51/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs51/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ Start and end value of a range in an axis can be customized by using [`start`](h
 Color and thickness of the range can be customized by using [`color`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/range/#color-string),[`startWidth`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/range/#startwidth-number) and [`endWidth`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/range/#endwidth-number) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs52/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs52/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ Color and thickness of the range can be customized by using [`color`](https://ej
 The corners of the ranges can be rounded by specifying desired values to the `roundedCornerRadius` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs53/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs53/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +69,10 @@ take 100% of the axis radius.
 You can set the radius of the range in pixel as demonstrated below,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs54/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs54/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +86,10 @@ By setting value in percentage, range gets its dimension with respect to its axi
 For example, when the radius is ‘50%’, range renders to half of the axis radius.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs55/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs55/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +101,10 @@ For example, when the radius is ‘50%’, range renders to half of the axis rad
 The ranges can be dragged on the axis line by clicking and dragging the same. To enable or disable the range drag, use the [`enableRangeDrag`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/circularGaugeModel/#enablerangedrag) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs56/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs56/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +119,10 @@ You can add multiple ranges to an axis with the above customization as demonstra
 [`minorTicks`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tick/) and [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/label/) object.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs57/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs57/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +143,10 @@ Using linear gradient, colors will be applied in a linear progression. The start
 To apply linear gradient to the range, follow the below code sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs58/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs58/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +160,10 @@ Using radial gradient, colors will be applied in circular progression. The inner
 To apply radial gradient to the range, follow the below code sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs59/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs59/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -30,7 +30,10 @@ You can add an `audio` tool in the Rich Text Editor toolbar using the `toolbarSe
 To configure the `Audio` toolbar item, refer to the below code.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/audio-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/audio-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,49 +66,37 @@ In the following illustration, the audio size has been validated before uploadin
 
 ```
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :height = "340" :insertAudioSettings = "insertAudioSettings" :toolbarSettings = "toolbarSettings" :fileUploading = "onFileUpload">
-        </ejs-richtexteditor>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertAudioSettings="insertAudioSettings"
+                        :toolbarSettings="toolbarSettings" :fileUploading="onFileUpload">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
+
     </div>
-</div>
-
-</div>
 </template>
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
-export default {
-     data: function() {
-        return {
-            toolbarSettings: {
-                items: ['Audio']
-            },
-            insertAudioSettings: {
-              saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-              removeUrl:  'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
-            }
-        };
-    },
-    methods: {
-        onFileUpload: function(args) {
-            let sizeInBytes = args.fileData.size;
-            let fileSize = 500000;
-            if (fileSize < sizeInBytes) {
-              args.cancel = true;
-            }
-        }
-    },
-    provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+const toolbarSettings = {
+    items: ['Audio']
+};
+const insertAudioSettings = {
+    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
+    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
+};
+const onFileUpload = (args) => {
+    let sizeInBytes = args.fileData.size;
+    let fileSize = 500000;
+    if (fileSize < sizeInBytes) {
+        args.cancel = true;
     }
-}
+};
+provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 </script>
 <style>
 @import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
@@ -137,40 +128,29 @@ In the following code blocks, the audio module has been injected and can insert 
 ```
 
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :height="340" :toolbarSettings="toolbarSettings" :insertAudioSettings = "insertAudioSettings" >
-        </ejs-richtexteditor>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :toolbarSettings="toolbarSettings"
+                        :insertAudioSettings="insertAudioSettings">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-</div>
 </template>
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
-export default {
-     data: function() {
-        return {
-            toolbarSettings: {
-                items: ['Audio']
-            },
-            insertAudioSettings: {
-                saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/SaveFiles",
-                path: "[SERVICE_HOSTED_PATH]/Files/"
-            }
-        };
-    },
-    provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
-    }
-}
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+const toolbarSettings = {
+    items: ['Audio']
+};
+const insertAudioSettings = {
+    saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/SaveFiles",
+    path: "[SERVICE_HOSTED_PATH]/Files/"
+};
+provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
@@ -306,39 +286,29 @@ Sets the default display property for audio when it is inserted in the Rich Text
 ```
 
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :height = "340" :insertAudioSettings = "insertAudioSettings" :toolbarSettings = "toolbarSettings" >
-        </ejs-richtexteditor>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertAudioSettings="insertAudioSettings"
+                        :toolbarSettings="toolbarSettings">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
+
     </div>
-</div>
-
-</div>
 </template>
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
-export default {
-     data: function() {
-        return {
-            toolbarSettings: {
-                items: ['Audio']
-            },
-            insertAudioSettings: {
-              layoutOption: 'Inline'
-            }
-        };
-    },
-    provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
-    }
-}
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+const toolbarSettings = {
+    items: ['Audio']
+};
+const insertAudioSettings = {
+    layoutOption: 'Inline'
+};
+provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 </script>
 <style>
 @import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
@@ -366,52 +336,43 @@ You can use the [insertAudioSettings](../api/rich-text-editor/#insertaudiosettin
 ```
 
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :height = "340" :insertAudioSettings = "insertAudioSettings" :toolbarSettings = "toolbarSettings" :fileUploadSuccess = "onFileUploadSuccess">
-            <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create and edit content, and return the valid <a href="https://ej2.syncfusion.com/home/" target="_blank">HTML markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the content</p>
-        </ejs-richtexteditor>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertAudioSettings="insertAudioSettings"
+                        :toolbarSettings="toolbarSettings" :fileUploadSuccess="onFileUploadSuccess">
+                        <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create and edit
+                            content, and return the valid <a href="https://ej2.syncfusion.com/home/" target="_blank">HTML
+                                markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the
+                            content</p>
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
+
     </div>
-</div>
-
-</div>
 </template>
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
-export default {
-     data: function() {
-        return {
-            toolbarSettings: {
-                items: ['Audio']
-            },
-            insertAudioSettings: {
-                saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/Rename",
-                path: "[SERVICE_HOSTED_PATH]/Files/"
-            }
-        };
-    },
-    methods: {
-      onFileUploadSuccess (args) {
-        alert("Get the new file name here");
-        if (args.e.currentTarget.getResponseHeader('name') != null) {
-            args.file.name = args.e.currentTarget.getResponseHeader('name');
-            let filename = document.querySelectorAll(".e-file-name")[0];
-            filename.innerHTML = args.file.name.replace(document.querySelectorAll(".e-file-type")[0].innerHTML, '');
-            filename.title = args.file.name;
-        }
-      }
-    },
-    provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+const toolbarSettings = {
+    items: ['Audio']
+};
+const insertAudioSettings = {
+    saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/Rename",
+    path: "[SERVICE_HOSTED_PATH]/Files/"
+};
+const onFileUploadSuccess = (args) => {
+    alert("Get the new file name here");
+    if (args.e.currentTarget.getResponseHeader('name') != null) {
+        args.file.name = args.e.currentTarget.getResponseHeader('name');
+        let filename = document.querySelectorAll(".e-file-name")[0];
+        filename.innerHTML = args.file.name.replace(document.querySelectorAll(".e-file-type")[0].innerHTML, '');
+        filename.title = args.file.name;
     }
 }
+provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
@@ -494,48 +455,36 @@ You can add additional data with the audio uploaded from the Rich Text Editor on
 ```
 
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :height = "340" :insertAudioSettings = "insertAudioSettings" :toolbarSettings = "toolbarSettings" :fileUploading = "onFileUpload">
-        </ejs-richtexteditor>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertAudioSettings="insertAudioSettings"
+                        :toolbarSettings="toolbarSettings" :fileUploading="onFileUpload">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
+
     </div>
-</div>
-
-</div>
 </template>
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
-export default {
-     data: function() {
-        return {
-            toolbarSettings: {
-                items: ['Audio']
-            },
-            insertAudioSettings: {
-                 saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/SaveFiles",
-                 path: "[SERVICE_HOSTED_PATH]/Files/"
-            }
-        };
-    },
-    methods: {
-      onFileUpload (args) {
-        alert("Get the new file name here");
-          var accessToken = "Authorization_token";
-          // adding custom Form Data
-          args.customFormData = [{ 'Authorization': accessToken }];
-      }
-    },
-    provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
-    }
-}
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+const toolbarSettings = {
+    items: ['Audio']
+};
+const insertAudioSettings = {
+    saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/SaveFiles",
+    path: "[SERVICE_HOSTED_PATH]/Files/"
+};
+const onFileUpload = (args) => {
+    alert("Get the new file name here");
+    var accessToken = "Authorization_token";
+    // adding custom Form Data
+    args.customFormData = [{ 'Authorization': accessToken }];
+};
+provide('richtexteditor', [Toolbar, Link, Audio, HtmlEditor, QuickToolbar]);
 </script>
 <style >
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  

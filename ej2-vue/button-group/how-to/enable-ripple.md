@@ -18,7 +18,7 @@ The following example illustrates how to enable ripple for ButtonGroup,
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs7/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

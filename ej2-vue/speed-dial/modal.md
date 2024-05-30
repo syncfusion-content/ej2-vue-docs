@@ -16,7 +16,7 @@ You can use the [`modal`](https://ej2.syncfusion.com/vue/documentation/api/speed
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/modal-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/modal-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

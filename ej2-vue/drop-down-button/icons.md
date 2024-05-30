@@ -20,7 +20,7 @@ In the following example, the DropdownButton with default iconPosition and iconP
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs13/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +35,7 @@ Icon only DropDownButton can be achieved by using [`iconCss`](https://ej2.syncfu
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs14/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +54,7 @@ In this following example, `e-image` class is added with background url of the s
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs15/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +71,7 @@ The following example illustrates how to provide vertical support in DropDownBut
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs16/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

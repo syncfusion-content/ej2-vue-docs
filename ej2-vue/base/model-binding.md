@@ -19,7 +19,10 @@ Essential JS 2 for Vue Components support Model Binding through `v-model` direct
 Refer the code snippet given below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/base/model-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/base/model-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

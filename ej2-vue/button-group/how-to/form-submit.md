@@ -18,7 +18,7 @@ In the following code snippet, the radio type ButtonGroup is explained with male
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs9/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

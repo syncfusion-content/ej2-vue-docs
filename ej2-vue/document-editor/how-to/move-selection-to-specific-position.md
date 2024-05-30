@@ -44,52 +44,73 @@ Similarly, using [`endOffset`](https://ej2.syncfusion.com/vue/documentation/api/
 
 The following code snippet illustrate how to get the selection start and end offset on selection changes in document.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:selectionChange="selectionChanged.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:selectionChange="selectionChanged.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const selectionChanged = function () {
+  //Get the start index of current selection
+  let startOffset = container.value.ej2Instances.documentEditor.selection.startOffset;
+  //Get the end index of current selection
+  let endOffset = container.value.ej2Instances.documentEditor.selection.endOffset;
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:selectionChange="selectionChanged.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      selectionChanged: function () {
-        //Get the start index of current selection
-        let startOffset =
-          this.$refs.container.ej2Instances.documentEditor.selection.startOffset;
-        //Get the end index of current selection
-        let endOffset = this.$refs.container.ej2Instances.documentEditor.selection.endOffset;
-      }
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    selectionChanged: function () {
+      //Get the start index of current selection
+      let startOffset =
+        this.$refs.container.ej2Instances.documentEditor.selection.startOffset;
+      //Get the end index of current selection
+      let endOffset = this.$refs.container.ej2Instances.documentEditor.selection.endOffset;
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Document editor have [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#selectionchange) event which is triggered whenever the selection changes in Document.
 

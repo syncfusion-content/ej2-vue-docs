@@ -16,32 +16,56 @@ Document Editor tracks the history of all editing actions done in the document, 
 
 Inject the `EditorHistory` module in your application to provide history preservation functionality for `DocumentEditor`. Refer to the following code example.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-        <div id="app">
-            <ejs-documenteditor ref="documenteditor" :enableEditor='true' :isReadOnly='false' :enableEditorHistory='true' style="width: 100%;height: 100%;"></ejs-documenteditor>
-        </div>
+  <div id="app">
+    <ejs-documenteditor ref="documenteditor" :enableEditor='true' :isReadOnly='false' :enableEditorHistory='true'
+      style="width: 100%;height: 100%;"></ejs-documenteditor>
+  </div>
 </template>
-<script>
-        import Vue from 'vue'
-        import { DocumentEditorPlugin, Editor, Selection, EditorHistory } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Editor, Selection, EditorHistory } from '@syncfusion/ej2-vue-documenteditor';
+import { provide } from 'vue';
 
-        Vue.use(DocumentEditorPlugin);
-
-        export default {
-            data: function() {
-                return {
-                };
-            },
-            provide: {
-                DocumentEditor : [Editor, Selection, EditorHistory]
-            }
-        }
+provide('DocumentEditor', [Editor, Selection, EditorHistory]);
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditor ref="documenteditor" :enableEditor='true' :isReadOnly='false' :enableEditorHistory='true'
+      style="width: 100%;height: 100%;"></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent, Editor, Selection, EditorHistory } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  provide: {
+    DocumentEditor: [Editor, Selection, EditorHistory]
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 You can enable or disable history preservation for a Document Editor instance any time using the `enableEditorHistory` property. Refer to the following sample code.
 

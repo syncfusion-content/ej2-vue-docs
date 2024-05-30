@@ -24,7 +24,10 @@ The Rich Text Editor allows you to configure different types of toolbar using [`
 The default mode of [`toolbarSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarType/#toolbartype) is Expand, it will hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ The default mode of [`toolbarSettings.type`](https://ej2.syncfusion.com/vue/docu
 Set the type as MultiRow in [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) to hide the overflowing items in the next row. All toolbar items are visible.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +56,10 @@ By default, toolbar is float at the top of the Rich Text Editor on scrolling. It
 Enable or disable the floating toolbar using [`enableFloating`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#enablefloating) of the[`toolbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +127,10 @@ In the following sample, once Rich Text Editor control is created, the concern e
 Click the **Ω** command to show the special characters list, and then choose the character to be inserted in the editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +155,10 @@ Custom tool can be added to the corresponding quick toolbar, using [`quickToolba
 The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the [`toolbarClick`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#toolbarclick) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}

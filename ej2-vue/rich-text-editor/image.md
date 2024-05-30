@@ -37,7 +37,10 @@ If the [path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/
 In the following sample, the image has been loaded from the local machine and it will be saved in the given location.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +63,10 @@ The following sample explains, how to configure `removeUrl` to remove a saved im
 * Deleting image using the quick toolbar `remove` option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +98,10 @@ By clicking the Image Caption, the image will get wrapped in an image element wi
 Sets the default display for an image when it is inserted in the Rich Text Editor using [`display`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imageSettings/#display) field in [`insertImageSettings`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/imageSettings/#imagesettings). It has two possible options: 'inline' and 'break'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +127,10 @@ By default, the Rich Text Editor allows you to insert images by drag-and-drop fr
 In the following sample, you can see feature demo.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

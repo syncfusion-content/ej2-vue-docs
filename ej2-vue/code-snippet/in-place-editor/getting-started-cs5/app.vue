@@ -1,19 +1,19 @@
-
-
 <template>
-<div  id="app">
+    <div id="app">
         <table class="table-section">
             <tr>
                 <td>EditableOn</td>
                 <td>
-                     <ejs-dropdownlist ref="editableOn" id="editableon" :dataSource='editableData' :change='onEditableOn' :value='editableValue' :fields='editableFields'>
+                    <ejs-dropdownlist ref="editableOn" id="editableon" :dataSource='editableData' :change='onEditableOn'
+                        :value='editableValue' :fields='editableFields'>
                     </ejs-dropdownlist>
                 </td>
             </tr>
             <tr>
                 <td class="sample-td">Enter your Name</td>
                 <td class="sample-td">
-                <ejs-inplaceeditor ref="editObj" id="inplace_editor" mode="Inline" type="Text" value="Andrew" submitOnEnter= "true" :model="textModel">
+                    <ejs-inplaceeditor ref="editObj" id="inplace_editor" mode="Inline" type="Text" value="Andrew"
+                        submitOnEnter="true" :model="textModel">
                     </ejs-inplaceeditor>
                 </td>
             </tr>
@@ -22,16 +22,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
 
-Vue.use(InPlaceEditorPlugin);
-Vue.use(DropDownListPlugin);
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 
 export default {
-    name: 'app',
-    data () {
+    name: "App",
+    components: {
+        "ejs-dropdownlist": DropDownListComponent,
+        "ejs-inplaceeditor": InPlaceEditorComponent,
+    },
+    data() {
         return {
             textModel: {
                 placeholder: 'Enter Some Text'
@@ -41,14 +42,11 @@ export default {
             editableValue: 'Click',
         }
     },
-    mounted: function(){
-        this.editObj = this.$refs.editObj.ej2Instances;
-    },
     methods: {
-        onEditableOn: function() {
-           var editableOn = this.$refs.editableOn.ej2Instances.value;
-           this.$refs.editObj.ej2Instances.editableOn = editableOn;
-           this.editObj.dataBind();
+        onEditableOn: function () {
+            let editableOn = this.$refs.editableOn.ej2Instances.value;
+            this.$refs.editObj.ej2Instances.editableOn = editableOn;
+            this.$refs.editObj.ej2Instances.dataBind();
         },
     }
 }
@@ -82,5 +80,3 @@ tr td:first-child {
     height: 100px;
 }
 </style>
-
-

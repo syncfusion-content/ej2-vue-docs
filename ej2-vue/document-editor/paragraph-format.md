@@ -152,116 +152,220 @@ this.$refs.documenteditor.documentEditorSettings.showHiddenMarks = true;
 
 The following sample demonstrates the paragraph formatting options using a toolbar.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app" style="height:330px">
-        <div>
-            <ejs-toolbar v-bind:clicked='toolbarButtonClick'>
-                <e-items>
-                    <e-item prefixIcon='e-de-icon-AlignLeft' id='AlignLeft' tooltipText='Align Left'></e-item>
-                    <e-item prefixIcon='e-de-icon-AlignCenter' id='Align Center' tooltipText='AlignCenter'></e-item>
-                    <e-item prefixIcon='e-de-icon-AlignRight' id='Align Right' tooltipText='AlignRight'></e-item>
-                    <e-item prefixIcon='e-de-icon-Justify' id='Justify' tooltipText='Justify'></e-item>
-                    <e-item prefixIcon='e-de-icon-IncreaseIndent' id='IncreaseIndent'
-                        tooltipText='Increase Indent'></e-item>
-                    <e-item prefixIcon='e-de-icon-DecreaseIndent' id='DecreaseIndent'
-                        tooltipText='Decrease Indent'></e-item>
-                    <e-item type='Separator'></e-item>
-                    <e-item prefixIcon='e-de-icon-ClearAll' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
-                    <e-item type='Separator'></e-item>
-                    <e-item prefixIcon='e-de-e-paragraph-mark e-icons' id='ShowParagraphMark'
-                        tooltipText='Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)'></e-item>
-                </e-items>
-            </ejs-toolbar>
-        </div>
-        <ejs-documenteditor ref="documenteditor" v-bind:selectionChange='onSelectionChange' :enableSelection='true'
-            :isReadOnly='false' :enableEditor='true' :enableEditorHistory='true' :enableSfdtExport='true'
-            :enableContextMenu='true' height="370px" style="width: 100%;"></ejs-documenteditor>
+  <div id="app" style="height:330px">
+    <div>
+      <ejs-toolbar v-bind:clicked='toolbarButtonClick'>
+        <e-items>
+          <e-item prefixIcon='e-de-icon-AlignLeft' id='AlignLeft' tooltipText='Align Left'></e-item>
+          <e-item prefixIcon='e-de-icon-AlignCenter' id='Align Center' tooltipText='AlignCenter'></e-item>
+          <e-item prefixIcon='e-de-icon-AlignRight' id='Align Right' tooltipText='AlignRight'></e-item>
+          <e-item prefixIcon='e-de-icon-Justify' id='Justify' tooltipText='Justify'></e-item>
+          <e-item prefixIcon='e-de-icon-IncreaseIndent' id='IncreaseIndent' tooltipText='Increase Indent'></e-item>
+          <e-item prefixIcon='e-de-icon-DecreaseIndent' id='DecreaseIndent' tooltipText='Decrease Indent'></e-item>
+          <e-item type='Separator'></e-item>
+          <e-item prefixIcon='e-de-icon-ClearAll' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
+          <e-item type='Separator'></e-item>
+          <e-item prefixIcon='e-de-e-paragraph-mark e-icons' id='ShowParagraphMark'
+            tooltipText='Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)'></e-item>
+        </e-items>
+      </ejs-toolbar>
     </div>
+    <ejs-documenteditor ref="documenteditor" v-bind:selectionChange='onSelectionChange' :enableSelection='true'
+      :isReadOnly='false' :enableEditor='true' :enableEditorHistory='true' :enableSfdtExport='true'
+      :enableContextMenu='true' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Editor, Selection, EditorHistory, SfdtExport, ContextMenu } from '@syncfusion/ej2-vue-documenteditor';
+import { ToolbarComponent as EjsToolbar, ItemsDirective as EItems, ItemDirective as EItem } from "@syncfusion/ej2-vue-navigations";
+import { provide, ref } from 'vue';
+
+const documenteditor = ref(null);
+provide('DocumentEditor', [Editor, Selection, EditorHistory, SfdtExport, ContextMenu])
+
+const toolbarButtonClick = function (arg) {
+  switch (arg.item.id) {
+    case 'AlignLeft':
+      //Toggle the Left alignment for selected or current paragraph
+      documenteditor.value.ej2Instances.editor.toggleTextAlignment('Left');
+      break;
+    case 'AlignRight':
+      //Toggle the Right alignment for selected or current paragraph
+      documenteditor.value.ej2Instances.editor.toggleTextAlignment('Right');
+      break;
+    case 'AlignCenter':
+      //Toggle the Center alignment for selected or current paragraph
+      documenteditor.value.ej2Instances.editor.toggleTextAlignment('Center');
+      break;
+    case 'Justify':
+      //Toggle the Justify alignment for selected or current paragraph
+      documenteditor.value.ej2Instances.editor.toggleTextAlignment('Justify');
+      break;
+    case 'IncreaseIndent':
+      //Increase the left indent of selected or current paragraph
+      documenteditor.value.ej2Instances.editor.increaseIndent();
+      break;
+    case 'DecreaseIndent':
+      //Decrease the left indent of selected or current paragraph
+      documenteditor.value.ej2Instances.editor.decreaseIndent();
+      break;
+    case 'ClearFormat':
+      documenteditor.value.ej2Instances.editor.clearFormatting();
+      break;
+    case 'ShowParagraphMark':
+      //Show or hide the hidden characters like spaces, tab, paragraph marks, and breaks.
+      documenteditor.value.ej2Instances.documentEditorSettings.showHiddenMarks = !documenteditor.value.ej2Instances.documentEditorSettings.showHiddenMarks;
+      break;
+  }
+}
+const onSelectionChange = function () {
+  if (documenteditor.value.ej2Instances.selection) {
+    var paragraphFormat = documenteditor.value.ej2Instances.selection.paragraphFormat;
+    var toggleBtnId = ['AlignLeft', 'AlignCenter', 'AlignRight', 'Justify', 'ShowParagraphMark'];
+    for (var i = 0; i < toggleBtnId.length; i++) {
+      let toggleBtn = document.getElementById(toggleBtnId[i]);
+      //Remove toggle state.
+      toggleBtn.classList.remove('e-btn-toggle');
+    }
+    //Add toggle state based on selection paragraph format.
+    if (paragraphFormat.textAlignment === 'Left') {
+      document.getElementById('AlignLeft').classList.add('e-btn-toggle');
+    } else if (paragraphFormat.textAlignment === 'Right') {
+      document.getElementById('AlignRight').classList.add('e-btn-toggle');
+    } else if (paragraphFormat.textAlignment === 'Center') {
+      document.getElementById('AlignCenter').classList.add('e-btn-toggle');
+    } else {
+      document.getElementById('Justify').classList.add('e-btn-toggle');
+    }
+    if (documenteditor.value.ej2Instances.documentEditorSettings.showHiddenMarks) {
+      document.getElementById('ShowParagraphMark').classList.add('e-btn-toggle');
+    }
+  }
+}
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app" style="height:330px">
+    <div>
+      <ejs-toolbar v-bind:clicked='toolbarButtonClick'>
+        <e-items>
+          <e-item prefixIcon='e-de-icon-AlignLeft' id='AlignLeft' tooltipText='Align Left'></e-item>
+          <e-item prefixIcon='e-de-icon-AlignCenter' id='Align Center' tooltipText='AlignCenter'></e-item>
+          <e-item prefixIcon='e-de-icon-AlignRight' id='Align Right' tooltipText='AlignRight'></e-item>
+          <e-item prefixIcon='e-de-icon-Justify' id='Justify' tooltipText='Justify'></e-item>
+          <e-item prefixIcon='e-de-icon-IncreaseIndent' id='IncreaseIndent' tooltipText='Increase Indent'></e-item>
+          <e-item prefixIcon='e-de-icon-DecreaseIndent' id='DecreaseIndent' tooltipText='Decrease Indent'></e-item>
+          <e-item type='Separator'></e-item>
+          <e-item prefixIcon='e-de-icon-ClearAll' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
+          <e-item type='Separator'></e-item>
+          <e-item prefixIcon='e-de-e-paragraph-mark e-icons' id='ShowParagraphMark'
+            tooltipText='Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)'></e-item>
+        </e-items>
+      </ejs-toolbar>
+    </div>
+    <ejs-documenteditor ref="documenteditor" v-bind:selectionChange='onSelectionChange' :enableSelection='true'
+      :isReadOnly='false' :enableEditor='true' :enableEditorHistory='true' :enableSfdtExport='true'
+      :enableContextMenu='true' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
 </template>
 <script>
-import Vue from 'vue'
-import { DocumentEditorPlugin, Editor, Selection, EditorHistory, SfdtExport, ContextMenu } from '@syncfusion/ej2-vue-documenteditor';
-import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
-
-Vue.use(DocumentEditorPlugin);
-Vue.use(ToolbarPlugin);
+import { DocumentEditorComponent, Editor, Selection, EditorHistory, SfdtExport, ContextMenu } from '@syncfusion/ej2-vue-documenteditor';
+import { ToolbarComponent, ItemDirective, ItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
 export default {
-    data: function () {
-        return {
-        };
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent,
+    'ejs-toolbar': ToolbarComponent,
+    'e-items': ItemsDirective,
+    'e-item': ItemDirective
+  },
+  data: function () {
+    return {
+    };
+  },
+  provide: {
+    DocumentEditor: [Editor, Selection, EditorHistory, SfdtExport, ContextMenu]
+  },
+  methods: {
+    toolbarButtonClick: function (arg) {
+      switch (arg.item.id) {
+        case 'AlignLeft':
+          //Toggle the Left alignment for selected or current paragraph
+          this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Left');
+          break;
+        case 'AlignRight':
+          //Toggle the Right alignment for selected or current paragraph
+          this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Right');
+          break;
+        case 'AlignCenter':
+          //Toggle the Center alignment for selected or current paragraph
+          this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Center');
+          break;
+        case 'Justify':
+          //Toggle the Justify alignment for selected or current paragraph
+          this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Justify');
+          break;
+        case 'IncreaseIndent':
+          //Increase the left indent of selected or current paragraph
+          this.$refs.documenteditor.ej2Instances.editor.increaseIndent();
+          break;
+        case 'DecreaseIndent':
+          //Decrease the left indent of selected or current paragraph
+          this.$refs.documenteditor.ej2Instances.editor.decreaseIndent();
+          break;
+        case 'ClearFormat':
+          this.$refs.documenteditor.ej2Instances.editor.clearFormatting();
+          break;
+        case 'ShowParagraphMark':
+          //Show or hide the hidden characters like spaces, tab, paragraph marks, and breaks.
+          this.$refs.documenteditor.ej2Instances.documentEditorSettings.showHiddenMarks = !this.$refs.documenteditor.ej2Instances.documentEditorSettings.showHiddenMarks;
+          break;
+      }
     },
-    provide: {
-        DocumentEditor: [Editor, Selection, EditorHistory, SfdtExport, ContextMenu]
-    },
-    methods: {
-        toolbarButtonClick: function (arg) {
-            switch (arg.item.id) {
-                case 'AlignLeft':
-                    //Toggle the Left alignment for selected or current paragraph
-                    this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Left');
-                    break;
-                case 'AlignRight':
-                    //Toggle the Right alignment for selected or current paragraph
-                    this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Right');
-                    break;
-                case 'AlignCenter':
-                    //Toggle the Center alignment for selected or current paragraph
-                    this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Center');
-                    break;
-                case 'Justify':
-                    //Toggle the Justify alignment for selected or current paragraph
-                    this.$refs.documenteditor.ej2Instances.editor.toggleTextAlignment('Justify');
-                    break;
-                case 'IncreaseIndent':
-                    //Increase the left indent of selected or current paragraph
-                    this.$refs.documenteditor.ej2Instances.editor.increaseIndent();
-                    break;
-                case 'DecreaseIndent':
-                    //Decrease the left indent of selected or current paragraph
-                    this.$refs.documenteditor.ej2Instances.editor.decreaseIndent();
-                    break;
-                case 'ClearFormat':
-                    this.$refs.documenteditor.ej2Instances.editor.clearFormatting();
-                    break;
-                case 'ShowParagraphMark':
-                    //Show or hide the hidden characters like spaces, tab, paragraph marks, and breaks.
-                    this.$refs.documenteditor.ej2Instances.documentEditorSettings.showHiddenMarks = !this.$refs.documenteditor.ej2Instances.documentEditorSettings.showHiddenMarks;
-                    break;
-            }
-        },
-        onSelectionChange: function () {
-            if (this.$refs.documenteditor.ej2Instances.selection) {
-                var paragraphFormat = this.$refs.documenteditor.ej2Instances.selection.paragraphFormat;
-                var toggleBtnId = ['AlignLeft', 'AlignCenter', 'AlignRight', 'Justify', 'ShowParagraphMark'];
-                for (var i = 0; i < toggleBtnId.length; i++) {
-                    let toggleBtn: HTMLElement = document.getElementById(toggleBtnId[i]);
-                    //Remove toggle state.
-                    toggleBtn.classList.remove('e-btn-toggle');
-                }
-                //Add toggle state based on selection paragraph format.
-                if (paragraphFormat.textAlignment === 'Left') {
-                    document.getElementById('AlignLeft').classList.add('e-btn-toggle');
-                } else if (paragraphFormat.textAlignment === 'Right') {
-                    document.getElementById('AlignRight').classList.add('e-btn-toggle');
-                } else if (paragraphFormat.textAlignment === 'Center') {
-                    document.getElementById('AlignCenter').classList.add('e-btn-toggle');
-                } else {
-                    document.getElementById('Justify').classList.add('e-btn-toggle');
-                }
-                if (this.$refs.documenteditor.ej2Instances.documentEditorSettings.showHiddenMarks) {
-                    document.getElementById('ShowParagraphMark').classList.add('e-btn-toggle');
-                }
-            }
+    onSelectionChange: function () {
+      if (this.$refs.documenteditor.ej2Instances.selection) {
+        var paragraphFormat = this.$refs.documenteditor.ej2Instances.selection.paragraphFormat;
+        var toggleBtnId = ['AlignLeft', 'AlignCenter', 'AlignRight', 'Justify', 'ShowParagraphMark'];
+        for (var i = 0; i < toggleBtnId.length; i++) {
+          let toggleBtn = document.getElementById(toggleBtnId[i]);
+          //Remove toggle state.
+          toggleBtn.classList.remove('e-btn-toggle');
         }
+        //Add toggle state based on selection paragraph format.
+        if (paragraphFormat.textAlignment === 'Left') {
+          document.getElementById('AlignLeft').classList.add('e-btn-toggle');
+        } else if (paragraphFormat.textAlignment === 'Right') {
+          document.getElementById('AlignRight').classList.add('e-btn-toggle');
+        } else if (paragraphFormat.textAlignment === 'Center') {
+          document.getElementById('AlignCenter').classList.add('e-btn-toggle');
+        } else {
+          document.getElementById('Justify').classList.add('e-btn-toggle');
+        }
+        if (this.$refs.documenteditor.ej2Instances.documentEditorSettings.showHiddenMarks) {
+          document.getElementById('ShowParagraphMark').classList.add('e-btn-toggle');
+        }
+      }
     }
+  }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 

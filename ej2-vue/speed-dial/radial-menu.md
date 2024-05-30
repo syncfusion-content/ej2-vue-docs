@@ -99,7 +99,7 @@ Below example demonstrates the radial menu settings of the Speed Dial.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/radial-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/radial-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

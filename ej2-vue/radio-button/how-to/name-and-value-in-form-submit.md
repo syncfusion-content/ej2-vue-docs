@@ -18,7 +18,7 @@ In the following code snippet, Credit and Debit card is in checked state. Now, t
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs6/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

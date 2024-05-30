@@ -16,7 +16,7 @@ DropdownButton component can be enabled/disabled by giving [`disabled`](https://
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs7/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

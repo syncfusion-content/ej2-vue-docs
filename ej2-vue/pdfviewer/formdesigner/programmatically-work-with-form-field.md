@@ -26,7 +26,10 @@ The PDF Viewer control provides the option to add, edit and delete the Form Fiel
 Using addFormField method, the form fields can be added to the PDF document programmatically. We need to pass two parameters in this method. They are Form Field Type and Properties of Form Field Type. To add form field programmatically, Use the following code.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pdfviewer/addformfield-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pdfviewer/addformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ Using addFormField method, the form fields can be added to the PDF document prog
 Using updateFormField method, Form Field can be updated programmatically. We should get the Form Field object/Id from FormFieldCollections property that you would like to edit and pass it as a parameter toupdateFormField  method. The second parameter should be the properties that you would like to update for Form Field programmatically. We have updated the value and background Color properties of Textbox Form Field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pdfviewer/updateformfield-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pdfviewer/updateformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +56,10 @@ Using updateFormField method, Form Field can be updated programmatically. We sho
 Using deleteFormField method, the form field can be deleted programmatically. We should retrieve the Form Field object/Id from FormFieldCollections property that you would like to delete and pass it as a parameter to deleteFormField method. To delete a Form Field programmatically, use the following code.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pdfviewer/deleteformfield-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pdfviewer/deleteformfield-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,56 +74,85 @@ When the download icon is selected on the toolbar, the Form Fields will be saved
 
 You can invoke download action using following code snippet.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-        <ejs-button ref="downloadBtn" v-on:click.native="downloadClicked">Download</ejs-button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-button ref="downloadBtn" v-on:click.native="downloadClicked">Download</ejs-button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+
+const downloadClicked = function () {
+  pdfviewer.value.ej2Instances.download();
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-button ref="downloadBtn" v-on:click.native="downloadClicked">Download</ejs-button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(PdfViewerPlugin);
-var viewer;
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
-  name: 'app',
-  data () {
+  name: 'App',
+  components: {
+    'ej2-pdfviewer': PdfViewerComponent,
+    'ejs-button': ButtonComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  },
   methods: {
-    downloadClicked: function (args) {
-      viewer.download();
-    },
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-    },
+    downloadClicked: function () {
+      this.$refs.pdfviewer.ej2Instances.download();
+    }
   }
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Printing the form fields
 
@@ -124,56 +162,85 @@ When the print icon is selected on the toolbar, the PDF document will be printed
 
 You can invoke print action using the following code snippet.,
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-        <ejs-button ref="printBtn" v-on:click.native="printClicked">Print</ejs-button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-button ref="printBtn" v-on:click.native="printClicked">Print</ejs-button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+
+const printClicked = function (args) {
+  pdfviewer.value.ej2Instances.print();
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-button ref="printBtn" v-on:click.native="printClicked">Print</ejs-button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
-var viewer;
 export default {
   name: 'app',
-  data () {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent,
+    'ejs-button': ButtonComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer"
-      documentPath:"PDF_Succinctly.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf"
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  },
   methods: {
     printClicked: function (args) {
-      viewer.print();
-    },
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-    },
+      this.$refs.pdfviewer.ej2Instances.print();
+    }
   }
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Open the existing PDF document
 

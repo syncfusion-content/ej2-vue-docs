@@ -20,7 +20,7 @@ You can use the [`itemTemplate`](https://ej2.syncfusion.com/vue/documentation/ap
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/template-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +35,7 @@ You can use the [`popupTemplate`](https://ej2.syncfusion.com/vue/documentation/a
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/template-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/template-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

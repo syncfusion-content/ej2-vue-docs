@@ -24,7 +24,7 @@ In this following example, ListView is created and its element is set as [`targe
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

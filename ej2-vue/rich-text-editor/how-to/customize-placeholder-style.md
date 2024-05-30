@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By using `e-rte-placeholder` class, you can customize the placeholder style.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

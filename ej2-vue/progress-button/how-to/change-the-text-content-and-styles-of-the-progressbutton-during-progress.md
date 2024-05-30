@@ -16,7 +16,7 @@ You can change the text content and styles of the ProgressButton during progress
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/custom-progress-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/custom-progress-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

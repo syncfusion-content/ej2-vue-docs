@@ -18,7 +18,7 @@ The following example illustrates how to disable support in Switch component.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs7/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

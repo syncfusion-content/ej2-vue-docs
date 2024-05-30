@@ -20,7 +20,7 @@ In the following sample, the icons for Cut, Copy, and Paste menu items are added
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs11/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ In the following example, the icons in each li items is right aligned by appendi
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs12/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +56,7 @@ In the following sample, the whole popup item is customized as color palette by 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs13/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

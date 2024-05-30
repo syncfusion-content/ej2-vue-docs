@@ -62,7 +62,10 @@ To customize the annotation tooltip, use the `annotationSettings` property in to
 The following code example shows the tooltip for the pointer, ranges and annotation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs60/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs60/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +78,10 @@ Any HTML elements can be displayed in the tooltip by using the
 [`template`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/tooltipSettings/#template-string) property of the tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs61/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs61/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +94,10 @@ Pointers can be dragged over the axis value. This can be achieved by clicking an
 [`enablePointerDrag`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/#enablepointerdrag-boolean) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs62/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs62/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +107,10 @@ Pointers can be dragged over the axis value. This can be achieved by clicking an
 ## changes
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs63/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs63/app.vue %}
 {% endhighlight %}
 {% endtabs %}

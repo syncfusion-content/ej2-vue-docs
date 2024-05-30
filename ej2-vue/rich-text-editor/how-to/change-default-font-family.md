@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By using [`default`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fontfamily) property, you can change the default font-family of the Rich Text Editor. To change the font-family of the Rich Text Editor content while loading, we need to give the font-family in the style section with the help of [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#cssclass) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

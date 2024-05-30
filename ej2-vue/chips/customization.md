@@ -28,7 +28,7 @@ The Chip control has the following predefined styles that can be defined using t
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +43,7 @@ You can add and customize the leading icon of chip using the `leadingIconCss` pr
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +58,7 @@ You can add and customize the avatar of chip using the `avatarIconCss` property.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs4/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +73,7 @@ You can add and customize the avatar content of chip using the `avatarText` prop
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +88,7 @@ You can add and customize the trailing icon of chip using the `trailingIconCss` 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs6/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +103,7 @@ Outline chip has the border with the background transparent. It can be set using
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs7/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

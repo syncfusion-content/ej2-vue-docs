@@ -21,7 +21,10 @@ Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Edit
 Enabling the [onSelection](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/inlineMode/#onselection) option of inlineMode makes the inline Rich Text Editor to appear.  You can select the text in the editable area otherwise the inline Rich Text Editor will be appear once click into the editable area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}

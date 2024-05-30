@@ -22,7 +22,7 @@ The following example illustrates the single selection behavior in ButtonGroup,
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs12/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +39,7 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs13/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +65,7 @@ In the following example, DropDownButton component is added by importing `DropDo
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs14/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +82,7 @@ In the following example, SplitButton component is added by importing `SplitButt
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs15/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

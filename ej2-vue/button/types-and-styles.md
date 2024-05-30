@@ -29,7 +29,7 @@ The Essential JS 2 Button has the following predefined styles that can be define
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs12/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ The basic Button types are explained below.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs13/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +86,7 @@ A round Button is shaped like a circle. Usually, it contains an icon representin
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs14/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +102,7 @@ recognized through the `e-active` class. The functionality of the toggle Button 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs15/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +120,7 @@ set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/button/#ico
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs16/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +137,7 @@ In the following example, SVG image is added using the iconCss class `e-search-i
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs17/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +155,7 @@ set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cs
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs18/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

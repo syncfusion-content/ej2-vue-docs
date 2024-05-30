@@ -18,7 +18,7 @@ In the following example, `e-round-corner` class is added with `border-radius` a
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

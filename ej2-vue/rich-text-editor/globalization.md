@@ -326,7 +326,10 @@ To localize the editor’s strings with your own localization, copy the default 
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -340,7 +343,10 @@ Specifies the direction of the Rich Text Editor component using the [enableRtl](
 **Note:** It will not change based on the locale property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -18,7 +18,7 @@ In the following example, `C` is underlined in the text `Copy`.
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs12/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

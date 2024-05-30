@@ -20,81 +20,176 @@ The Footnotes and endnotes are both ways of adding extra bits of information to 
 
 Document Editor exposes an API to insert footnotes at cursor position programmatically or can be inserted to the end of selected text.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-      <div id="app">
-            <div>
-                  <button v-on:click='Insertfootnote' >Insert footnote</button>
-            </div>
-            <ejs-documenteditor id="container6"  height="370px" style="width: 100%;" :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'></ejs-documenteditor>
-      </div>
+  <div id="app">
+    <div>
+      <button v-on:click='Insertfootnote'>Insert footnote</button>
+    </div>
+    <ejs-documenteditor id="container6" height="370px" style="width: 100%;" :serviceUrl='serviceUrl' :isReadOnly='false'
+      :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true'
+      :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true'
+      :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true'
+      :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true'
+      :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true'
+      :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true'
+      :enableTableOptionsDialog='true'></ejs-documenteditor>
+  </div>
 </template>
-<script>
-    import Vue from 'vue'
-    import { DocumentEditorPlugin, DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-    Vue.use(DocumentEditorPlugin);
+const documenteditor = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-    export default {
-      data() {
-        return {
-          serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-        };
-      },
-      provide: {
-        DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
-      },
-      methods: {
-            Insertfootnote: function() {
-                this.$refs.documenteditor.editor.insertFootnote();
-            }
-      }
-    }
+provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]);
+
+const Insertfootnote = function () {
+  documenteditor.value.editor.insertFootnote();
+}
+
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div>
+      <button v-on:click='Insertfootnote'>Insert footnote</button>
+    </div>
+    <ejs-documenteditor id="container6" height="370px" style="width: 100%;" :serviceUrl='serviceUrl' :isReadOnly='false'
+      :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true'
+      :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true'
+      :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true'
+      :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true'
+      :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true'
+      :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true'
+      :enableTableOptionsDialog='true'></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+    };
+  },
+  provide: {
+    DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
+  },
+  methods: {
+    Insertfootnote: function () {
+      this.$refs.documenteditor.editor.insertFootnote();
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Insert endnotes
 
 Document Editor exposes an API to insert endnotes at cursor position programmatically or can be inserted to the end of selected text.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <div>
-          <button v-on:click='Insertendnote' >Insert endnote</button>
-          </div>
-      <ejs-documenteditor id="container6"  style="width: 100%;height: 100%;" :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'></ejs-documenteditor>
+  <div id="app">
+    <div>
+      <button v-on:click='Insertendnote'>Insert endnote</button>
     </div>
+    <ejs-documenteditor id="container6" style="width: 100%;height: 100%;" :serviceUrl='serviceUrl' :isReadOnly='false'
+      :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true'
+      :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true'
+      :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true'
+      :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true'
+      :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true'
+      :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true'
+      :enableTableOptionsDialog='true'></ejs-documenteditor>
+  </div>
 </template>
-<script>
-    import Vue from 'vue'
-    import { DocumentEditorPlugin, DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-    Vue.use(DocumentEditorPlugin);
+const documenteditor = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-    export default {
-      data() {
-        return {
-          serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-        };
-      },
-      provide: {
-        DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
-      },
-      methods: {
-            Insertendnote: function() {
-                this.$refs.documenteditor.editor.insertEndnote();
-            }
-      }
-    }
+provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog])
+
+const Insertendnote = function () {
+  documenteditor.editor.insertEndnote();
+}
+
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div>
+      <button v-on:click='Insertendnote'>Insert endnote</button>
+    </div>
+    <ejs-documenteditor id="container6" style="width: 100%;height: 100%;" :serviceUrl='serviceUrl' :isReadOnly='false'
+      :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true'
+      :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true'
+      :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true'
+      :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true'
+      :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true'
+      :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true'
+      :enableTableOptionsDialog='true'></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+    };
+  },
+  provide: {
+    DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
+  },
+  methods: {
+    Insertendnote: function () {
+      this.$refs.documenteditor.editor.insertEndnote();
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Update or edit footnotes and endnotes
 

@@ -91,14 +91,23 @@ Follow the below steps to add the Vue PDF Viewer component:
 1\. First, import and register the PDF Viewer component in the `script` section of the **src/App.vue** file
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, 
+         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
+         Annotation, FormDesigner, FormFields, PageOrganizer} from '@syncfusion/ej2-vue-pdfviewer';
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
          Annotation, FormDesigner, FormFields, PageOrganizer} from '@syncfusion/ej2-vue-pdfviewer';
 
-}
 </script>
 
 {% endhighlight %}
@@ -125,32 +134,49 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 3. Declare the bound properties `serviceUrl` and `documentPath` in the `script` section.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
+<script setup>
+import { provide } from "vue";
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]);
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 <script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-
-  export default {
-
+export default {
   name: 'App',
-
   components: {
     "ejs-pdfviewer": PdfViewerComponent
   },
-
-    data () {
-      return {
-        serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      };
-    },
-
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer ]}
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]
+  }
 }
 
 </script>
@@ -161,50 +187,82 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <ejs-pdfviewer 
-    id="pdfViewer" 
-    :serviceUrl="serviceUrl" 
-    :documentPath="documentPath">
+  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+  </ejs-pdfviewer>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]);
+
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+
+<template>
+  <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
   </ejs-pdfviewer>
 </template>
 
 <script>
-  import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-           ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-  export default {
-    name: 'App',
-
-    components: {
-      "ejs-pdfviewer": PdfViewerComponent
-    },
-
-    data() {
-      return {
-        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      };
-    },
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer ]
-    }
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer]
   }
+}
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
 </style>
 
 {% endhighlight %}
@@ -213,6 +271,9 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/pdfviewer/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/pdfviewer/getting-started-cs1/app.vue %}
 {% endhighlight %}

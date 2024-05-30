@@ -145,39 +145,70 @@ N> Replace **Your_Tenent_ID**, **Your_Application_ID**, and **Your_Folder_Name_T
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server. Set the `documentPath` property of the PDF viewer component to the desired name of the PDF file you wish to load from One Drive. Ensure that you correctly pass the document name from the files available in your drive folder to the documentPath property.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+// Replace the "localhost:44396" with the actual URL of your server
+const serviceUrl = "https://localhost:44396/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]);
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-           ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
-  export default {
-    name: 'app',
-    data() {
-      return {
-        // Replace the "localhost:44396" with the actual URL of your server
-        serviceUrl: "https://localhost:44396/pdfviewer",
-        documentPath: "PDF_Succinctly.pdf"
-      };
-    },
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-    }
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'app',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      // Replace the "localhost:44396" with the actual URL of your server
+      serviceUrl: "https://localhost:44396/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
   }
+}
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 N> The following NuGet packages are required to use the previous code example
 * **Microsoft.Identity.Client**

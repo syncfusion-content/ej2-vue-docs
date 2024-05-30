@@ -16,7 +16,7 @@ You can customize the appearance of the input and anchor elements using predefin
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs7/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

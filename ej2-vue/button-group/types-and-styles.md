@@ -24,7 +24,7 @@ The following sample illustrates how to achieve outline ButtonGroup,
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs16/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +51,7 @@ The following example illustrates how to achieve predefined styles in ButtonGrou
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs17/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

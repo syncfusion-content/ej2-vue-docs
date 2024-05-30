@@ -29,7 +29,7 @@ The Vue Floating Action Button supports the following predefined styles that can
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/styles-cs1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/styles-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +60,7 @@ The content will behave the same , when the `enableHtmlSantiizer` is enabled. Si
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/styles-cs2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/styles-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

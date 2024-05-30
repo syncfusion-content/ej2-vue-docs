@@ -18,7 +18,7 @@ The following example illustrates how to enable right-to-left support in DropDow
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -18,7 +18,7 @@ The following example illustrates how to enable right-to-left support in CheckBo
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs8/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

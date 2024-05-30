@@ -106,137 +106,259 @@ The **commandManager** will have a parameter called Commands, which will hold th
 Additionally, we're introducing the **keyboardCustomCommands** parameter for the CommandManager, which will utilize the EventCallback to handle keyboard events and trigger appropriate methods when specific key combinations are pressed.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          :documentPath="documentPath"
-          :resourceUrl="resourceUrl"
-          :commandManager="commandManager">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :commandManager="commandManager">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  Annotation, ThumbnailView, Print, TextSelection, TextSearch]);
+
+const commandManager = {
+  keyboardCommand: [{
+    name: 'customCopy',
+    gesture: {
+      pdfKeys: PdfKeys.G,
+      modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+    }
+  },
+  {
+    name: 'customPaste',
+    gesture: {
+      pdfKeys: PdfKeys.H,
+      modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+    }
+  },
+  {
+    name: 'customCut',
+    gesture: {
+      pdfKeys: PdfKeys.Z,
+      modifierKeys: ModifierKeys.Control
+    }
+  },
+  {
+    name: 'customSelectAll',
+    gesture: {
+      pdfKeys: PdfKeys.E,
+      modifierKeys: ModifierKeys.Control
+    }
+  },
+  ]
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :commandManager="commandManager">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
-    methods:{
-    commandManager: function () {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
+  },
+  methods: {
+    commandManager: {
       keyboardCommand: [{
         name: 'customCopy',
         gesture: {
-            pdfKeys: PdfKeys.G,
-            modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-          }
-        },
-        {
-          name: 'customPaste',
-          gesture: {
-              pdfKeys: PdfKeys.H,
-              modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-          }
-        },
-        {
-          name: 'customCut',
-          gesture: {
-            pdfKeys: PdfKeys.Z,
-            modifierKeys: ModifierKeys.Control
-          }
-        },
-        {
-          name: 'customSelectAll',
-          gesture: {
-            pdfKeys: PdfKeys.E,
-            modifierKeys: ModifierKeys.Control
-          }
-        },
-      ] 
+          pdfKeys: PdfKeys.G,
+          modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+        }
+      },
+      {
+        name: 'customPaste',
+        gesture: {
+          pdfKeys: PdfKeys.H,
+          modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+        }
+      },
+      {
+        name: 'customCut',
+        gesture: {
+          pdfKeys: PdfKeys.Z,
+          modifierKeys: ModifierKeys.Control
+        }
+      },
+      {
+        name: 'customSelectAll',
+        gesture: {
+          pdfKeys: PdfKeys.E,
+          modifierKeys: ModifierKeys.Control
+        }
+      },
+      ]
     }
   }
 }
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
-      <ejs-pdfviewer
-          id="pdfViewer"
-          :serviceUrl="serviceUrl"
-          :documentPath="documentPath"
-          :commandManager="commandManager">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :commandManager="commandManager">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  Annotation, ThumbnailView, Print, TextSelection, TextSearch])
+
+const commandManager = {
+  keyboardCommand: [{
+    name: 'customCopy',
+    gesture: {
+      pdfKeys: PdfKeys.G,
+      modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+    }
+  },
+  {
+    name: 'customPaste',
+    gesture: {
+      pdfKeys: PdfKeys.H,
+      modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+    }
+  },
+  {
+    name: 'customCut',
+    gesture: {
+      pdfKeys: PdfKeys.Z,
+      modifierKeys: ModifierKeys.Control
+    }
+  },
+  {
+    name: 'customSelectAll',
+    gesture: {
+      pdfKeys: PdfKeys.E,
+      modifierKeys: ModifierKeys.Control
+    }
+  },
+  ]
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :commandManager="commandManager">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-                 Annotation, ThumbnailView, Print, TextSelection, TextSearch ]},
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+      Annotation, ThumbnailView, Print, TextSelection, TextSearch]
+  },
 
-  methods:{
+  methods: {
     commandManager: function () {
       keyboardCommand: [{
         name: 'customCopy',
         gesture: {
-            pdfKeys: PdfKeys.G,
-            modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-          }
-        },
-        {
-          name: 'customPaste',
-          gesture: {
-              pdfKeys: PdfKeys.H,
-              modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
-          }
-        },
-        {
-          name: 'customCut',
-          gesture: {
-            pdfKeys: PdfKeys.Z,
-            modifierKeys: ModifierKeys.Control
-          }
-        },
-        {
-          name: 'customSelectAll',
-          gesture: {
-            pdfKeys: PdfKeys.E,
-            modifierKeys: ModifierKeys.Control
-          }
-        },
-      ] 
+          pdfKeys: PdfKeys.G,
+          modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+        }
+      },
+      {
+        name: 'customPaste',
+        gesture: {
+          pdfKeys: PdfKeys.H,
+          modifierKeys: ModifierKeys.Shift | ModifierKeys.Alt
+        }
+      },
+      {
+        name: 'customCut',
+        gesture: {
+          pdfKeys: PdfKeys.Z,
+          modifierKeys: ModifierKeys.Control
+        }
+      },
+      {
+        name: 'customSelectAll',
+        gesture: {
+          pdfKeys: PdfKeys.E,
+          modifierKeys: ModifierKeys.Control
+        }
+      },
+      ]
     }
   }
 

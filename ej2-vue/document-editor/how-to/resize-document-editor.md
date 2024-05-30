@@ -42,48 +42,90 @@ Using [`resize`](https://ej2.syncfusion.com/vue/documentation/api/document-edito
 
 The following example code illustrates how to fit Document Editor to browser window size.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onWindowResize = function () {
+  //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+  updateDocumentEditorSize();
+}
+const updateDocumentEditorSize = function () {
+  //Resizes the document editor component to fit full browser window.
+  let windowWidth = window.innerWidth;
+  let windowHeight = window.innerHeight;
+  container.value.ej2Instances.resize(windowWidth, windowHeight);
+}
+const onCreated = function () {
+  setInterval(() => {
+    updateDocumentEditorSize();
+  }, 100);
+  //Adds event listener for browser window resize event.
+  window.addEventListener('resize', onWindowResize);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onWindowResize: function () {
+      //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+      this.updateDocumentEditorSize();
     },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
+    updateDocumentEditorSize: function () {
+      //Resizes the document editor component to fit full browser window.
+      let windowWidth = window.innerWidth;
+      let windowHeight = window.innerHeight;
+      this.$refs.container.ej2Instances.resize(windowWidth, windowHeight);
     },
-      methods: {
-      onWindowResize: function () {
-        //Resizes the document editor component to fit full browser window automatically whenever the browser resized.
+    onCreated: function () {
+      setInterval(() => {
         this.updateDocumentEditorSize();
-      },
-      updateDocumentEditorSize: function () {
-        //Resizes the document editor component to fit full browser window.
-        var windowWidth = window.innerWidth;
-        var windowHeight = window.innerHeight;
-        this.$refs.container.ej2Instances.resize(windowWidth, windowHeight);
-      },
-      onCreated: function () {
-        setInterval(() => {
-          this.updateDocumentEditorSize();
-        }, 100);
-        //Adds event listener for browser window resize event.
-        window.addEventListener('resize', this.onWindowResize.bind(this));
-      },
+      }, 100);
+      //Adds event listener for browser window resize event.
+      window.addEventListener('resize', this.onWindowResize.bind(this));
     },
-  };
+  },
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}

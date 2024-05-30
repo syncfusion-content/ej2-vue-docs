@@ -21,7 +21,10 @@ All of the elements in the Circular Gauge, such as the axis lines, ticks, labels
 The animation of the Circular Gauge is demonstrated in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs70/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs70/app.vue %}
 {% endhighlight %}
 {% endtabs %}

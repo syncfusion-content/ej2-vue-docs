@@ -16,7 +16,7 @@ The different Switch sizes available are default and small. To reduce the size o
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

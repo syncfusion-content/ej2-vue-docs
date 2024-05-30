@@ -21,7 +21,10 @@ Document editor have [`created`](https://ej2.syncfusion.com/vue/documentation/ap
 The following example illustrates how to open the default SFDT content once Document editor control gets created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/open-default-document-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/open-default-document-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The following example illustrates how to open the default SFDT content once Docu
 ## Opening a default document in DocumentEditorContainer
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/open-default-document-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/open-default-document-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
