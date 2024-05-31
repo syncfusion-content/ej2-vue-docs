@@ -262,7 +262,7 @@ CollaborativeEditingController.UpdateOperationsToSourceDocument(roomName, “<<d
 
 ### Step 3: Configure Microsoft SQL database connection string in application level
 
-Configure the SQL database that stores temporary data for the collaborative editing session. Provide the SQL database connection string in `appsettings.json` file.
+Configure the SQL database that stores temporary data for the collaborative editing session. Provide the SQL database connection string in `app settings.json` file.
 
 ```json
 .....
