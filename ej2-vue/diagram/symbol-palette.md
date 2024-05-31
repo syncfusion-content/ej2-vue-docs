@@ -14,9 +14,13 @@ The **SymbolPalette** displays a collection of palettes. The Palette shows a s
 
 ## Create symbol palette
 
-* The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#height-number) property of the symbolpalette allows to define the size of the symbolpalette.
+To create Symbol Palette easily and to add nodes and connectors in it, you can check the video below.
 
-```javascript
+{% youtube "youtube:https://www.youtube.com/embed/htUHPgJ31XE" %}
+
+* The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#height-number) property of the symbol palette allows to define the size of the symbol palette.
+
+{% highlight js %}
 export default {
     name: 'app'
     data() {
@@ -57,7 +61,7 @@ export default {
             }
         }
     }
-```
+{% endhighlight %}
 
 <!-- markdownlint-disable MD010 -->
 

@@ -16,7 +16,13 @@ domainurl: ##DomainURL##
 
 ## Create annotation
 
-An annotation can be added to a node/connector by defining the annotation object and adding that to the annotation collection of the node/connector. The [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#content-string) property of annotation defines the text to be displayed. The following code illustrates how to create a annotation.
+An annotation can be added to a node/connector by defining the annotation object and adding that to the annotation collection of the node/connector. The [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#content-string) property of annotation defines the text to be displayed. 
+
+To create and add annotation to Nodes and Connectors using the EJ2 Vue Diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/embed/4pAKBu0hKd0" %}
+
+The following code illustrates how to create a annotation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

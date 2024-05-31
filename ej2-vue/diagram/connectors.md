@@ -16,6 +16,10 @@ Connectors are objects used to create link between two points, nodes or ports to
 
 Connector can be created by defining the source and target point of the connector. The path to be drawn can be defined with a collection of segments. To explore the properties of a [`connector`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector), refer to [`Connector Properties`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector).
 
+To create and customize the connectors easily in the EJ2 Vue Diagram component, refer to the below video link.
+
+{% youtube "youtube:https://www.youtube.com/embed/qJJRdaST_iI" %}
+
 ## Add connectors through connectors collection
 
 * The [`sourcePoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#sourcepoint-PointModel) and [`targetPoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connector#targetpoint-PointModel) properties of connector allow you to define the end points of a connector.
