@@ -18,7 +18,10 @@ You can clone groups and rules by interacting through the user interface and met
 * Use [`cloneRule`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#clonerule) method to clone rule.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/clone-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/clone-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -14,19 +12,26 @@
                     <e-column field='City' label='City' type='string' />
                 </e-columns>
             </ejs-querybuilder>
-            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="cloneGroupClick">Clone Group</ejs-button>
-            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="cloneRuleClick">Clone Rule</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="cloneGroupClick">Clone Group</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="cloneRuleClick">Clone Rule</ejs-button>
         </div>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(QueryBuilderPlugin);
-Vue.use(ButtonPlugin);
+
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -113,5 +118,3 @@ var employeeData = [{
         margin: 0 auto;
     }
 </style>
-
-

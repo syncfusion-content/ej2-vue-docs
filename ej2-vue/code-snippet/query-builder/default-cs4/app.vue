@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -18,11 +16,19 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-Vue.use(QueryBuilderPlugin);
+
+import { QueryBuilderComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-querybuilder";
+
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -89,5 +95,3 @@ var employeeData = [{
         margin: 0 auto;
     }
 </style>
-
-

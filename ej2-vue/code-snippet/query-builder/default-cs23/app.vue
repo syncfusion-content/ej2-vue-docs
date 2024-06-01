@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -18,15 +16,23 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { DropDownList } from '@syncfusion/ej2-dropdowns'
+
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { DropDownList, MultiSelect } from '@syncfusion/ej2-dropdowns'
 import { createElement, getComponent} from "@syncfusion/ej2-base";
 
 let inOperators = ['in', 'notin'];
-Vue.use(QueryBuilderPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
     data: function() {
         return {
             dataSource: expenseData,
@@ -119,5 +125,3 @@ var expenseData = [{
         margin: 0 auto;
     }
 </style>
-
-

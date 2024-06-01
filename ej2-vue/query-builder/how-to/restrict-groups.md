@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can restrict the condition set by defining the [`maxGroupCount`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#maxgroupcount) property. By default, the value is 5. In the below demo, the `maxGroupCount` is set to 2 .
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
             <ejs-querybuilder  id="querybuilder" ref="querybuilder" :rule="importRules" width="100%" >
@@ -16,23 +14,71 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { RadioButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownList, MultiSelect, CheckBoxSelection } from '@syncfusion/ej2-dropdowns';
-import { Slider, TextBox } from '@syncfusion/ej2-inputs';
-import { CheckBox } from '@syncfusion/ej2-buttons';
-import { createElement, getComponent, isNullOrUndefined } from "@syncfusion/ej2-base";
-import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
 
+import { QueryBuilderComponent } from "@syncfusion/ej2-vue-querybuilder";
+import { MultiSelect, CheckBoxSelection } from '@syncfusion/ej2-dropdowns';
+import { getComponent } from "@syncfusion/ej2-base";
+import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import {createApp} from "vue";
 
 MultiSelect.Inject(CheckBoxSelection);
-Vue.use(QueryBuilderPlugin);
-Vue.use(CheckBoxPlugin);
-Vue.use(DropDownListPlugin);
+
+const app = createApp({});
+
+const payTemplate = app.component('paymentTemplate', {
+    components: {
+        "ejs-dropdownlist": DropDownListComponent
+    },
+    template:
+        `<div >
+            <ejs-dropdownlist  :dataSource="ds"  v-model="data.rule.value" :change="paymentChange"></ejs-dropdownlist>
+        </div>`,
+    data(args) {
+        return{
+            qryBldrObj: getComponent(document.getElementById('querybuilder'), 'query-builder'),
+            data: Object.assign({}, args, true),
+            ds: ['Cash', 'Debit Card', 'Credit Card', 'Net Banking']
+        }
+    },
+    methods: {
+        paymentChange: function(event){
+            var elem = document.getElementById(ruleID).querySelector('.e-rule-value');
+            this.qryBldrObj.notifyChange(event.value, elem, 'value');
+        }
+    }
+});
+
+const transTemplate = app.component('transactionTemplate', {
+    components: {
+        "ejs-checkbox": CheckBoxComponent
+    },
+    template:
+        `<div >
+            <ejs-checkbox  label='Is Expense' :checked="data.rule.value" :change="transactionChange"></ejs-checkbox>
+        </div>`,
+    data(args) {
+        return{
+            qryBldrObj: getComponent(document.getElementById('querybuilder'), 'query-builder'),
+            data: Object.assign({}, args, true)
+        }
+    },
+    methods: {
+        transactionChange: function(event){
+            var elem = document.getElementById(ruleID).querySelector('.e-rule-value');
+            this.qryBldrObj.notifyChange(event.checked === true ? 'Expense' : 'Income', elem, 'value');
+        }
+    }
+});
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
+
     data: function() {
         return {
             customOperators: [{value: 'equal', key: 'Equal'}, {value: 'notequal', key: 'Not Equal'}],
@@ -55,47 +101,12 @@ export default {
             },
             paymentTemplate: () => {
                 return {
-                    template: Vue.component('paymentTemplate', {
-                        template:
-                        `<div >
-                        <ejs-dropdownlist  :dataSource="ds"  v-model="data.rule.value" :change="paymentChange"></ejs-dropdownlist>
-                        </div>`,
-                        data(args) {
-                            return{
-                               qryBldrObj: getComponent(document.getElementById('querybuilder'), 'query-builder'),
-                                data: Object.assign({}, args, true),
-                                ds: ['Cash', 'Debit Card', 'Credit Card', 'Net Banking'];
-                            }
-                        },
-                        methods: {
-                            paymentChange: function(event){
-                                var elem = document.getElementById(ruleID).querySelector('.e-rule-value');
-                                this.qryBldrObj.notifyChange(event.value as string, elem, 'value');
-                            }
-                        }
-                    })
+                    template: payTemplate
                 }
             },
             transactionTemplate: () => {
                 return{
-                    template: Vue.component('transactionTemplate', {
-                        template:
-                        `<div >
-                        <ejs-checkbox  label='Is Expense' :checked="data.rule.value" :change="transactionChange"></ejs-checkbox>
-                        </div>`,
-                        data(args) {
-                            return{
-                                qryBldrObj: getComponent(document.getElementById('querybuilder'), 'query-builder'),
-                                data: Object.assign({}, args, true)
-                            }
-                        },
-                        methods: {
-                           transactionChange: function(event){
-                               var elem = document.getElementById(ruleID).querySelector('.e-rule-value');
-                               this.qryBldrObj.notifyChange(event.checked === true ? 'Expense' : 'Income', elem, 'value');
-                            }
-                        }
-                    })
+                    template: transTemplate
                 }
             }
         };
@@ -103,6 +114,3 @@ export default {
 }
 
 </script>
-
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -13,19 +11,27 @@
                   <e-column field="Status" label="Status" type="string"></e-column>
                 </e-columns>
             </ejs-querybuilder>
-            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="importSqlClick">Set Parameter SQL Rules</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="importSqlClick">Set Parameter SQL Rules</ejs-button>
         </div>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin, QueryLibrary, QueryBuilder } from "@syncfusion/ej2-vue-querybuilder";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { QueryBuilderComponent, QueryLibrary, QueryBuilder, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 QueryBuilder.Inject(QueryLibrary);
-Vue.use(QueryBuilderPlugin);
-Vue.use(ButtonPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+
+},
+
     data: function() {
         return {
             dataSource: hardwareData,
@@ -76,5 +82,3 @@ var hardwareData = [{
         margin: 0 auto;
     }
 </style>
-
-

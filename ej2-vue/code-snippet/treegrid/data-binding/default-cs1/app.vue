@@ -36,7 +36,7 @@ export default {
    methods:{
          btnClick: function (args){
         let treegrid = document.getElementsByClassName("e-treegrid")[0].ej2_instances[0]; // TreeGrid instance
-        let fetch = new Fetch ("https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData", "GET");treegrid.showSpinner();
+        let fetch = new Fetch ("https://services.syncfusion.com/vue/production/api/SelfReferenceData", "GET");treegrid.showSpinner();
         fetch.send();
         fetch.onSuccess = function (result) {
         treegrid.hideSpinner();

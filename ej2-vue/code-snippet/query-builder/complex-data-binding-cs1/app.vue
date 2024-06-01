@@ -1,13 +1,11 @@
-
-
 <template>
 <div class="control-section">
 <div>
     <table>
         <tr>
-            <td> <ejs-button id="reset" class="e-control e-danger e-btn e-small"  v-on:click.native='onReset'>Reset</ejs-button> </td>
-            <td> <ejs-button id="rule" class="e-control e-success e-btn e-small"  v-on:click.native='onSetsqlRules'>SetSqlRules</ejs-button> </td>
-            <td> <ejs-button id="sql" class="e-control e-success e-btn e-small"  v-on:click.native='onSetrules' >SetRules</ejs-button> </td>
+            <td> <ejs-button id="reset" class="e-control e-danger e-btn e-small"  v-on:click='onReset'>Reset</ejs-button> </td>
+            <td> <ejs-button id="rule" class="e-control e-success e-btn e-small"  v-on:click='onSetsqlRules'>SetSqlRules</ejs-button> </td>
+            <td> <ejs-button id="sql" class="e-control e-success e-btn e-small"  v-on:click='onSetrules' >SetRules</ejs-button> </td>
         </tr>
     </table>
 </div>
@@ -23,21 +21,21 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from '@syncfusion/ej2-vue-querybuilder';
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { getComponent, compile,closest } from '@syncfusion/ej2-base';
-import { CheckBoxPlugin, ButtonPlugin, RadioButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
 
-Vue.use(QueryBuilderPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(CheckBoxPlugin);
-Vue.use(DropDownButtonPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(RadioButtonPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-querybuilder';
+
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
     data: function() {
         return {
             importRules: {
@@ -101,13 +99,13 @@ export default {
         };  
     },
      methods: {
-        onReset: function(event){
+        onReset: function(){
             this.$refs.querybuilder.ej2Instances.reset();
         },
-        onSetsqlRules: function(event){
+        onSetsqlRules: function(){
             this.$refs.querybuilder.ej2Instances.setRulesFromSql("Employee.ID = 0 AND Name.LastName LIKE ('%malan%') AND (Country.State.City LIKE ('U%') AND Country.Region LIKE ('%c') AND Country.Name IS NOT EMPTY)");
         },
-        onSetrules: function(event){
+        onSetrules: function(){
             this.$refs.querybuilder.ej2Instances.setRules(this.importRules);
         }  
     }
@@ -133,6 +131,3 @@ export default {
         width: auto;
     }
 </style>
-
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -14,21 +12,26 @@
                     <e-column field='City' label='City' type='string' />
                 </e-columns>
             </ejs-querybuilder>
-             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="btnClick">Get Data</ejs-button>
+             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="btnClick">Get Data</ejs-button>
         </div>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { Compile } from '@syncfusion/ej2-base'
 
-Vue.use(ButtonPlugin);
-Vue.use(QueryBuilderPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { DataManager, Query } from '@syncfusion/ej2-data';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -46,9 +49,7 @@ export default {
         };
     },
       methods: {
-    btnClick: function(event) {
-        var validRule = this.$refs.querybuilder.ej2Instances.getValidRules(this.$refs.querybuilder.ej2Instances.rule);
-        var predicate = this.$refs.querybuilder.ej2Instances.getPredicate(validRule);
+    btnClick: function() {
         var dataManagerQuery = new Query().select(['EmployeeID', 'Title', 'City']);
         var fltrDataSource = [];
           new DataManager(employeeData).executeQuery(dataManagerQuery)
@@ -106,5 +107,3 @@ var employeeData = [{
         margin: 2% 1% 0 15%;
     }
 </style>
-
-

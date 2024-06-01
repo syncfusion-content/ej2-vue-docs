@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
             <ejs-querybuilder id="querybuilder" ref="querybuilder" :dataSource="dataSource" :rule="importRules" enableNotCondition = true :fieldModel = "{allowFiltering: true, popupHeight: '500px'}" :operatorModel = "{allowFiltering: true, popupHeight: '400px'}" :valueModel = "{numericTextBoxModel:
@@ -30,23 +28,18 @@
   </template>
 
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from '@syncfusion/ej2-vue-querybuilder';
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { getComponent, compile,closest } from '@syncfusion/ej2-base';
-import { DataManager, Predicate, Query } from '@syncfusion/ej2-data';
-import { CheckBoxPlugin, ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
 
-Vue.use(QueryBuilderPlugin);
-Vue.use(SliderPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(CheckBoxPlugin);
-Vue.use(DropDownButtonPlugin);
-Vue.use(ButtonPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-querybuilder';
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -89,5 +82,3 @@ var employeeData = [
     @import "../node_modules/@syncfusion/ej2-vue-querybuilder/styles/material.css";
 
 </style>
-
-

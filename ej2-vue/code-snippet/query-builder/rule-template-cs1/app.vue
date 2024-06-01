@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div id="listbox-selection">
@@ -18,18 +16,85 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from '@syncfusion/ej2-vue-querybuilder';
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { getComponent, compile } from '@syncfusion/ej2-base';
-import { DataManager, Predicate, Query } from '@syncfusion/ej2-data';
 
-Vue.use(QueryBuilderPlugin);
-Vue.use(SliderPlugin);
-Vue.use(DropDownListPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-querybuilder';
+import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { getComponent } from '@syncfusion/ej2-base';
+import { createApp} from 'vue';
+
+const app = createApp({});
+
+const rlTemplate = app.component('ruleTemplate', {
+    components: {
+        "ejs-dropdownlist": DropDownListComponent,
+        "ejs-slider": SliderComponent
+    },
+    template:
+        `<div class="e-rule e-rule-template">
+            <div class="e-rule-filter e-custom-filter">
+                <ejs-dropdownlist :change='fieldChange' :value="data.rule.field" :dataSource="data.columns" :fields="data.fields">
+                </ejs-dropdownlist>
+            </div>
+            <div>
+                <div class="e-slider-value">
+                    <ejs-slider :min="min" :max="max" ref="slider" :ticks="rangeticks" :change="valueChange" :value="value" :id="valueID">
+                    </ejs-slider>
+                </div>
+                <div class="e-rule-btn">
+                    <button class="e-removerule e-rule-delete e-css e-btn e-small e-round">
+                        <span class="e-btn-icon e-icons e-delete-icon"/>
+                    </button>
+                </div>
+            </div>
+        </div>`,
+    data() {
+        return {
+            qryBldrObj: getComponent(document.getElementById('querybuilder'), 'query-builder'),
+            rangeticks: {
+                placement: 'Before',
+                largeStep: 5,
+                smallStep: 1,
+                showSmallTicks: true
+            },
+            min: 30,
+            max: 50
+        }
+    },
+    computed: {
+        valueID: function() {
+            return `${this.data.ruleID}_valuekey0`;
+        },
+        value: function() {
+            var num = 30;
+            if (this.data.rule.value !== '') {
+                num = this.data.rule.value;
+            }
+            return num;
+        }
+    },
+    methods: {
+        fieldChange: function(args) {
+            this.qryBldrObj.notifyChange(args.value, args.element, 'field');
+        },
+        valueChange: function(args) {
+            if (args.isInteracted) {
+                var elem = this.$refs.slider.$el;
+                this.qryBldrObj.notifyChange(args.value, elem, 'value');
+            }
+        }
+    }
+});
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -45,62 +110,7 @@ export default {
             },
             ageTemplate: () => {
                 return {
-                    template : Vue.component('ruleTemplate', {
-                        template:
-                        `<div class="e-rule e-rule-template">
-                            <div class="e-rule-filter e-custom-filter">
-                                <ejs-dropdownlist :change='fieldChange' :value="data.rule.field" :dataSource="data.columns" :fields="data.fields">
-                                </ejs-dropdownlist>
-                            </div>
-                            <div>
-                                <div class="e-slider-value">
-                                    <ejs-slider :min="min" :max="max" ref="slider" :ticks="rangeticks" :change="valueChange" :value="value" :id="valueID">
-                                    </ejs-slider>
-                                </div>
-                                <div class="e-rule-btn">
-                                    <button class="e-removerule e-rule-delete e-css e-btn e-small e-round">
-                                        <span class="e-btn-icon e-icons e-delete-icon"/>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>`,
-                        data(args) {
-                            return {
-                                qryBldrObj: getComponent(document.getElementById('querybuilder'), 'query-builder'),
-                                rangeticks: {
-                                    placement: 'Before',
-                                    largeStep: 5,
-                                    smallStep: 1,
-                                    showSmallTicks: true
-                                },
-                                min: 30,
-                                max: 50
-                            }
-                        },
-                        computed: {
-                            valueID: function() {
-                                return `${this.data.ruleID}_valuekey0`;
-                            },
-                            value: function() {
-                                var num = 30;
-                                if (this.data.rule.value !== '') {
-                                    num = this.data.rule.value;
-                                }
-                                return num;
-                            }
-                        },
-                        methods: {
-                            fieldChange: function(args) {
-                                this.qryBldrObj.notifyChange(args.value, args.element, 'field');
-                            },
-                            valueChange: function(args) {
-                                if (args.isInteracted) {
-                                    var elem = this.$refs.slider.$el;
-                                    this.qryBldrObj.notifyChange(args.value, elem, 'value');
-                                }
-                            }
-                        }
-                    })
+                    template : rlTemplate
                 }
             }
         };
@@ -203,5 +213,3 @@ var employeeData = [
         width: auto;
     }
 </style>
-
-

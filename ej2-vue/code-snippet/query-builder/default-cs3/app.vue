@@ -1,32 +1,36 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
             <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource" allowValidation="true">
                 <e-columns>
-                    <e-column field='EmployeeID' label='Employee ID' type='number' validation="validateRule" />
+                    <e-column field='EmployeeID' label='Employee ID' type='number' :validation="validateRule" />
                     <e-column field='FirstName' label='First Name' type='string' />
                     <e-column field='TitleOfCourtesy' label='Title Of Courtesy' type='boolean' :values="values"/>
-                    <e-column field='Title' label='Title' type='string' validation="validateRule" />
+                    <e-column field='Title' label='Title' type='string' :validation="validateRule" />
                     <e-column field='HireDate' label='Hire Date' type='date' format='dd/MM/yyyy'  />
-                    <e-column field='Country' label='Country' type='string' validation="validateRule"/>
-                    <e-column field='City' label='City' type='string' validation="validateRule"/>
+                    <e-column field='Country' label='Country' type='string' :validation="validateRule"/>
+                    <e-column field='City' label='City' type='string' :validation="validateRule"/>
                 </e-columns>
             </ejs-querybuilder>
-             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="btnClick">Validate Fields</ejs-button>
+             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="btnClick">Validate Fields</ejs-button>
         </div>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(ButtonPlugin);
-Vue.use(QueryBuilderPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -35,7 +39,7 @@ export default {
         };
     },
     methods: {
-    btnClick: function(event) {
+    btnClick: function() {
      this.$refs.querybuilder.$el.ej2_instances[0].validateFields();
     }
   }
@@ -86,5 +90,3 @@ var employeeData = [{
         margin: 2% 1% 0 15%;
     }
 </style>
-
-

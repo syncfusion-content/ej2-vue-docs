@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -14,21 +12,27 @@
                     <e-column field='City' label='City' type='string' />
                 </e-columns>
             </ejs-querybuilder>
-             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="addRule">Add Rule</ejs-button>
-             <ejs-button cssClass="e-qbr-button" :isPrimary="true" v-on:click.native="addGroup">Add Group</ejs-button>
-             <ejs-button cssClass="e-qbr-button" :isPrimary="true" v-on:click.native="deleteGroup">Delete Group</ejs-button>
+             <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="addRule">Add Rule</ejs-button>
+             <ejs-button cssClass="e-qbr-button" :isPrimary="true" v-on:click="addGroup">Add Group</ejs-button>
+             <ejs-button cssClass="e-qbr-button" :isPrimary="true" v-on:click="deleteGroup">Delete Group</ejs-button>
         </div>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(ButtonPlugin);
-Vue.use(QueryBuilderPlugin);
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+
+},
+
     data: function() {
         return {
             dataSource: employeeData,
@@ -54,13 +58,13 @@ export default {
         };
     },
      methods: {
-    addRule: function(event) {
+    addRule: function() {
        this.$refs.querybuilder.ej2Instances.addRules([{'label': 'City','field': 'City','type': 'string','operator': 'equal','value': 'US'}], 'group0');
-    }
-     addGroup: function(event) {
+    },
+     addGroup: function() {
         this.$refs.querybuilder.ej2Instances.addGroups([{'condition': 'and','rules': [{'label': 'First Name','field': 'FirstName','type': 'string','operator': 'startswith','value': 'v' }]}], 'group0');
-    }
-     deleteGroup: function(event) {
+    },
+     deleteGroup: function() {
         this.$refs.querybuilder.ej2Instances.deleteGroups(['group1']);
     }
   }
@@ -140,5 +144,3 @@ var employeeData = [{
 }
 
 </style>
-
-
