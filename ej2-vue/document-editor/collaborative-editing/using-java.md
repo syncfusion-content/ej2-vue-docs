@@ -304,7 +304,73 @@ int clientVersion = action.getVersion();
 	return acion;
 }
 ```
+## How to perform Scaling in Collaborative Editing.
 
+### Role of Scaling in Collaborative editing
+As the number of users increases, collaborative application face challenges in maintaining responsiveness and performance. This is where scaling becomes crucial. Scaling refers to the ability of an application to handle growing demands by effectively distributing the workload across multiple resources.
+
+During scaling the users may connected to different servers, so collaborative editing application introduces a specific challenge like, updating the edit operations to all the users connected in different serves. To overcome this issue you need to use ``` Redis Cache pub/sub ``` for message relay(syncing the editing operations to the users connected to different server instance)
+
+### Use of Redis Pub/Sub in scaling environment
+Redis offers Pub/Sub functionality. The publish/subscribe (pub/sub) pattern provides asynchronous communication among multiple AWS services without creating interdependency. When a user edits a document, the application can publish the changes to a Redis channel. Clients (in different server instances) subscribed to that channel receive real-time updates, reflecting the changes in their document views. 
+
+### Steps to configure Redis in Collaborative Editing Application
+Refer to the below steps to know about the Redis pub/sub implementation to sync the messages.
+
+#### Step 1: Configure Redis in application level to establish the connection.
+
+```java
+//Redis configuration
+spring.datasource.redishost= "<Redis host link>"
+spring.datasource.redisport= "<Redis port number>"
+```
+#### Step 2: Publish each editing operation to a Redis channel
+
+Publish each editing operation to Redis channel with the room name. This will send notifications to all the users(in different servers) subscribed to that specific channel. Refer to the publishToRedis() method in DocumentEditorHub.Java for details.
+
+```java
+try (Jedis jedis = RedisSubscriber.jedisPool.getResource()) {                           
+jedis.publish("collaborativeedtiting", new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(payload));                    
+    break;
+    } catch (JedisConnectionException e) {
+    }
+```
+#### Step 3: Subscribe to the specific channel using the Redis Cache 'Subscribe'
+
+ Redis cache will be initialized and subscribe to the specific channel using the Redis Cache 'Subscribe' option. This ensures that users in any server will get notified when an editing operation is published to the Redis cache using the onMessage() API. Refer to the code snippet in RedisSubscriber.Java for details.
+
+ ```java
+@PostConstruct
+      public void subscribeToInstanceChannel() {
+            //Subscriber to `collaborativeediting`
+            String channel = "collaborativeedtiting";
+             new Thread(() -> {
+                   JedisPoolConfig poolConfig = new JedisPoolConfig();
+                    jedisPool = new JedisPool(poolConfig, REDIS_HOST, REDIS_PORT);
+                    try (Jedis jedis = jedisPool.getResource()) {      
+                           jedis.subscribe(new JedisPubSub() {
+                                 @Override
+                                 public void onMessage(String channel, String message) {                               
+                                       ------------- 
+                                        ------
+                                           // Message will be broadcasted to all the users connected to that room using sockjs
+                                              DocumentEditorHub.broadcastToRoom(action.getRoomName(), action, updateActionheaders);
+                                       } catch (JsonProcessingException e) {
+                                               e.printStackTrace();
+                                       }
+                                }
+                                 @Override
+                                 public void onSubscribe(String  channel, int subscribedChannels) {
+                                       System.out.println("Subscribed to channel: " + channel);
+                                }
+                            }, channel);
+                   } catch (JedisConnectionException e) {
+                           // Handle the connection exception
+                          System.out.println("Connection failed. Retrying ...");
+                   }
+            }).start();
+      }
+```
 
 Full version of the code discussed about can be found in below GitHub location.
 
