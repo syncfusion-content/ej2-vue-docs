@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbarTemplate="toolbarTemplate">
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarTemplate="toolbarTemplate">
 </ejs-imageeditor>
 </div>
 </template>
@@ -46,15 +46,6 @@ components: {
             }
         }
       };
-  },
-  methods: {
-    created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    }
   }
 }
 </script>

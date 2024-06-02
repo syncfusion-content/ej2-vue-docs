@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Text</ejs-button>
 </div>
 </template>
@@ -23,13 +23,6 @@ components: {
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.jpeg');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.jpeg');
-        }
-    },
     btnClick: function() {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
       this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x,dimension.y);

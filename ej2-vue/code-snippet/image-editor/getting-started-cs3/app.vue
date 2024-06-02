@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="rectangleClick">Rectangle</ejs-button>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="ellipseClick">Ellipse</ejs-button>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="lineClick">Line</ejs-button>
@@ -30,13 +30,6 @@ components: {
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     rectangleClick: function() {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
       this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x,dimension.y);

@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false :toolbar="toolbar"></ejs-imageeditor>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Delete shape</ejs-button>
 </div>
 </template>
@@ -24,13 +24,6 @@ components: {
       };
   },
   methods: {
-    created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     shapeChanging: function(event) {
       if(event.action === 'select') {
         this.id = event.currentShapeSettings.id;

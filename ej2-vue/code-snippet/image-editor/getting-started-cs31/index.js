@@ -23,13 +23,6 @@ new Vue({
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     brightnessClick: function(event) {
       this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Brightness, 10);
     },

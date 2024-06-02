@@ -21,13 +21,6 @@ new Vue({
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     toolbarUpdating: function(args) {
       if (args.toolbarItems.type === 'Text') {
         args.currentShapeSettings.color =  'red',

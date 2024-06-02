@@ -18,13 +18,6 @@ components: {
       return {};
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     shapeChanging: function(args) {
       if (args.currentShapeSettings.type === 'pen') {
         args.currentShapeSettings.strokeColor =  'red',
