@@ -55,6 +55,145 @@ The ODataV4 is an improved version of OData protocols, and the `DataManager` can
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/remote-cs4" %}
 
+## Odata with custom url
+
+The Syncfusion ODataV4 adaptor extends support for calling customized URLs to accommodate data retrieval and CRUD actions as per your application's requirements. However, when utilizing a custom URL with the ODataV4 adaptor, it's essential to modify the routing configurations in your application's route configuration file to align with your custom URL. You can invoke the custom URL by the following methods in the Datamanager
+
+**Configuring Custom URLs**
+
+To work with custom URLs for CRUD operations in the Syncfusion Grid, you can use the following properties:
+
+* insertUrl: Specifies the custom URL for inserting new records.
+* removeUrl: Specifies the custom URL for deleting records.
+* updateUrl: Specifies the custom URL for updating records.
+* batchUrl: Specifies the custom URL for batch editing operations.
+
+> Ensure that the routing configurations on the server-side are properly updated to handle these custom URLs.
+
+The following code example describes the above behavior.
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+<template>
+  <div id="app">
+    <ejs-grid :dataSource="data" :editSettings='editSettings' :toolbar='toolbar' >
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' :validationRules='orderIDRules' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+        <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' type='date' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar } from "@syncfusion/ej2-vue-grids";
+import { DataManager, ODataV4Adaptor } from "@syncfusion/ej2-data";
+
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
+
+data() {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders/";
+
+  return {
+    data: new DataManager({
+      url: SERVICE_URI,
+      updateUrl: 'https://localhost:xxxx/odata/Orders/Update', // custom URL to update the record
+      insertUrl: 'https://localhost:xxxx/odata/Orders/Insert', // custom URL to insert new record
+      removeUrl: 'https://localhost:xxxx/odata/Orders/Delete', // custom URL to delete the record
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
+    }),
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+    orderIDRules: { required: true },
+    customerIDRules: { required: true, minLength: 3 }
+  };
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endhighlight %}
+{% endtabs %}
+
+For batch editing, you can specify a custom batch URL as follows:
+
+{% tabs %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+<template>
+  <div id="app">
+    <ejs-grid :dataSource="data" :editSettings='editSettings' :toolbar='toolbar' >
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' :validationRules='orderIDRules' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+        <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' type='date' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Toolbar } from "@syncfusion/ej2-vue-grids";
+import { DataManager, ODataV4Adaptor } from "@syncfusion/ej2-data";
+
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
+
+data() {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders/";
+
+  return {
+    data: new DataManager({
+      url: SERVICE_URI,
+      BatchUrl: 'https://localhost:xxxx/odata/Orders/BatchUpdate', // custom URL for batch update
+      adaptor: new ODataV4Adaptor(),
+      crossDomain: true
+    }),
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' },
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+    orderIDRules: { required: true },
+    customerIDRules: { required: true, minLength: 3 }
+  };
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endhighlight %}
+{% endtabs %}
+
 ## Web API Adaptor
 
 You can use `WebApiAdaptor` to bind grid with Web API created using OData endpoint.
