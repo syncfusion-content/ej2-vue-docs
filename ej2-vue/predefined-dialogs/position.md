@@ -18,7 +18,10 @@ Customize the dialog position by using the [position](https://ej2.syncfusion.com
 ## Alert position
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/alert-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/alert-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -28,7 +31,10 @@ Customize the dialog position by using the [position](https://ej2.syncfusion.com
 ## Confirm position
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/confirm-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/confirm-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +44,10 @@ Customize the dialog position by using the [position](https://ej2.syncfusion.com
 ## Prompt position
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/prompt-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/prompt-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -77,7 +77,10 @@ L10n.load({
 The following example demonstrates the DateRangePicker in `German` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +93,10 @@ The DateRangePicker supports RTL (right-to-left) functionality for languages lik
 [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n#load) class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/locale-rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/locale-rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +109,10 @@ Representation of start and end date strings can be customized to required forma
 By default, the format is based on the culture. To know more about the date format standards, refer to the Internationalization Date Format section. In the following sample, the date strings are formatted to `yyyy-MM-dd` and in between the string "to" is set as a [`separator`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker#separator).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

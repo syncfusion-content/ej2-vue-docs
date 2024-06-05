@@ -1,32 +1,34 @@
-
-
 <template>
-  <div id="app">
+    <div id="app">
         <div class="wrap" style="height:357px; display: inline-block;">
-           <ejs-calendar id='calendar' ref="CalendarInstance" :isMultiSelection="isMultiSelection" :change="onChange"></ejs-calendar>
+            <ejs-calendar id='calendar' ref="CalendarInstance" :isMultiSelection="isMultiSelection"
+                :change="onChange"></ejs-calendar>
         </div>
-         <div id="btncontainer">
-            <ejs-button id="week" class="e-btn"  v-on:click.native="onweekChange"> Week </ejs-button>
-            <ejs-button id="workweek" class="e-btn" v-on:click.native="onworkweekChange"> Work Week </ejs-button>
+        <div id="btncontainer">
+            <ejs-button id="week" class="e-btn" v-on:click="onweekChange"> Week </ejs-button>
+            <ejs-button id="workweek" class="e-btn" v-on:click="onworkweekChange"> Work Week </ejs-button>
         </div>
-  </div>
+    </div>
 </template>
 <script>
-import Vue from "vue";
-import { CalendarPlugin } from "@syncfusion/ej2-vue-calendars";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { CalendarComponent } from "@syncfusion/ej2-vue-calendars";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import moment from "moment";
 
-Vue.use(CalendarPlugin);
-Vue.use(ButtonPlugin);
 export default {
+    name: "App",
+    components: {
+        "ejs-calendar": CalendarComponent,
+        "ejs-button": ButtonComponent
+    },
     data() {
         return {
             isMultiSelection: true
         }
     },
     methods: {
-        onChange: function(args) {
+        onChange: function (args) {
             let startOfWeek = moment(args.value).startOf('week');
             let endOfWeek = moment(args.value).endOf('week');
             if (this.$refs.CalendarInstance.$el.classList.contains('workweek')) {
@@ -36,26 +38,26 @@ export default {
             }
         },
         /*selected current week dates when click the button*/
-        onweekChange: function() {
+        onweekChange: function () {
             if (this.$refs.CalendarInstance.$el.classList.contains('workweek')) {
                 this.$refs.CalendarInstance.$el.classList.remove('workweek')
             }
             this.$refs.CalendarInstance.$el.classList.add('week');
         },
-        onworkweekChange: function() {
+        onworkweekChange: function () {
             if (this.$refs.CalendarInstance.$el.classList.contains('week')) {
                 this.$refs.CalendarInstance.$el.classList.remove('week')
             }
             this.$refs.CalendarInstance.$el.classList.add('workweek');
         },
-        getWeekArray: function(startOfWeek, endOfWeek) {
+        getWeekArray: function (startOfWeek, endOfWeek) {
             let days = [];
             let day = startOfWeek;
             while (day <= endOfWeek) {
                 days.push(day.toDate());
                 day = day.clone().add(1, 'd');
             }
-            this.$refs.CalendarInstance.values = days;
+            this.$refs.CalendarInstance.ej2Instances.values = days;
         }
     }
 }
@@ -70,13 +72,13 @@ export default {
     max-width: 250px;
 }
 
-#app{
+#app {
     max-width: 550px;
 }
 
-#btncontainer{
-    float:right;
-    margin-left:30px;
+#btncontainer {
+    float: right;
+    margin-left: 30px;
     margin-top: 75px;
     margin-right: 10px;
 }
@@ -84,7 +86,4 @@ export default {
 button#workweek {
     margin-left: 15px;
 }
-
 </style>
-
-

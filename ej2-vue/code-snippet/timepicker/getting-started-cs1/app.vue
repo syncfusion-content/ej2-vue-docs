@@ -1,22 +1,21 @@
-
-
 <template>
-    <div id="app">
-      <div class='wrapper'>
-        <ejs-timepicker :placeholder="waterMark"></ejs-timepicker>
-      </div>
+  <div id="app">
+    <div class='wrapper'>
+      <ejs-timepicker :placeholder="waterMark"></ejs-timepicker>
     </div>
+  </div>
 </template>
 <script>
 import { TimePickerComponent } from '@syncfusion/ej2-vue-calendars';
 
 export default {
+  name: "App",
   components: {
     'ejs-timepicker': TimePickerComponent
   },
-  data () {
+  data() {
     return {
-      waterMark : 'Select a time'
+      waterMark: 'Select a time'
     }
   }
 }
@@ -27,10 +26,9 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  .wrapper {
-    max-width: 250px;
-    margin: 0 auto;
-  }
+
+.wrapper {
+  max-width: 250px;
+  margin: 0 auto;
+}
 </style>
-
-

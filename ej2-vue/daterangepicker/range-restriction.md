@@ -21,7 +21,10 @@ You can restrict the minimum and maximum date that can be allowed as start and e
 In the following sample, you can select a range from 15th day of this month to 15th day of next month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ In this, minimum and maximum span allowed within the date range can be customize
 In the following sample, the range selection should be greater than 3 days and less than 8 days else it will not set.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ DateRangePicker provides an option to limit the user towards entering the valid 
 If any invalid range is specified, the date range value resets to previous value. This restriction can be availed by enabling [`strictMode`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/#strictmode) property as true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

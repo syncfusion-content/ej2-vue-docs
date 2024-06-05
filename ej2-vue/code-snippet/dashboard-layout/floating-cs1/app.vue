@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div>
@@ -19,19 +17,28 @@
             <!-- end of dashboardlayout element -->
         </div>
     </div>
-</template>
-
-<script>
-import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
-// Import syncfusion button component from buttons package
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-
-Vue.use(DashboardLayoutPlugin);
-Vue.use(ButtonPlugin);
-
-export default {
+  </template>
+  
+  <script>
+  
+  // Import syncfusion dashboardlayout component from layouts package
+  import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
+  // Import syncfusion button component from buttons package
+  import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+  
+  
+  
+  
+  export default {
+  name: "App",
+  components: {
+  "ejs-button":ButtonComponent,
+  "ejs-dashboardlayout":DashboardLayoutComponent,
+  "e-panels":PanelsDirective,
+  "e-panel":PanelDirective,
+  
+  },
+  
     data: function() {
         return {
             cellSpacing: [10, 10],
@@ -39,14 +46,14 @@ export default {
         };
     },
     methods: {
-        onChange: function(args) {
-            if (this.$refs.toggle.content == "Disable Floating and Reset") {
-                this.$refs.toggle.content = 'Enable Floating';
-                this.$refs.dashboard.allowFloating = false;
-                this.$refs.dashboard.panels = this.resetPanels;
+        onChange: function() {
+            if (this.$refs.toggle.ej2Instances.content == "Disable Floating and Reset") {
+                this.$refs.toggle.ej2Instances.content = 'Enable Floating';
+                this.$refs.dashboard.ej2Instances.allowFloating = false;
+                this.$refs.dashboard.ej2Instances.panels = this.resetPanels;
             } else {
-                this.$refs.toggle.content = 'Disable Floating and Reset';
-                this.$refs.dashboard.allowFloating = true;
+                this.$refs.toggle.ej2Instances.content = 'Disable Floating and Reset';
+                this.$refs.dashboard.ej2Instances.allowFloating = true;
             }
         }
     },
@@ -56,33 +63,30 @@ export default {
         this.resetPanels[1].content = '<div class="content">1</div>';
         this.resetPanels[2].content = '<div class="content">2</div>';
     }
-}
-</script>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-
-#dashboard_default .e-panel .e-panel-content {
+  }
+  </script>
+  
+  <style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  
+  #dashboard_default .e-panel .e-panel-content {
     vertical-align: middle;
     font-weight: 600;
     font-size: 20px;
     text-align: center;
     line-height: 100px;
-}
-
-#control_dash {
+  }
+  
+  #control_dash {
     display: block;
     width: 60%;
     float: left;
     padding-top: 30px;
-}
-
-#dashboard_default .e-panel {
+  }
+  
+  #dashboard_default .e-panel {
   transition:none !important;
-}
-</style>
-
-
-
+  }
+  </style>

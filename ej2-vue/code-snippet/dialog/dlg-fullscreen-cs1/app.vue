@@ -1,10 +1,8 @@
-
-
 <template>
   <div>
     <div id="target" class="control-section; position:relative" style="height:360px;">
         <!-- Render Button to open the Dialog -->
-        <ejs-button id='dlgbtn' v-on:click.native="btnClick">Open Dialog</ejs-button>
+        <ejs-button id='dlgbtn' v-on:click="btnClick">Open Dialog</ejs-button>
         <!-- Render Dialog -->
         <ejs-dialog ref="footerDialog" :header='header' :target='target' :width='width' :buttons='buttons' :visible='visible' :showCloseIcon='showCloseIcon' :content='content' :close="dlgClose">
         </ejs-dialog>
@@ -12,13 +10,15 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent
+},
     data: function() {
         return {
             target: "#target",
@@ -28,8 +28,7 @@ export default {
             showCloseIcon: true,
             content: 'This is a Dialog with fullscreen display.',
             buttons: [{ click: this.dlgButtonClick, buttonModel: { content: 'OK', isPrimary: true } },
-            { click: this.dlgButtonClick, buttonModel: { content: 'Cancel' }}],
-            animationSettings: { effect: 'None' }
+            { click: this.dlgButtonClick, buttonModel: { content: 'Cancel' }}]
         }
     },
     mounted: function(){
@@ -49,7 +48,7 @@ export default {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
     #app {
         color: #008cff;
         height: 40px;
@@ -65,6 +64,3 @@ export default {
     }
 
 </style>
-
-
-

@@ -30,7 +30,10 @@ Using the styles below, you can bring the dates of other months to visibility fr
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

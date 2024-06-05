@@ -39,7 +39,10 @@ The following steps explains you on how to define template for Spinner.
 > You have to define the styles for the template in `index.css`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spinner/setspinner-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spinner/setspinner-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

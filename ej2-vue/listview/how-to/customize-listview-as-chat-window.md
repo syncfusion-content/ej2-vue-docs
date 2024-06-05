@@ -63,7 +63,10 @@ In ListView template, we have rendered the list items based on receiver and send
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/chat-window-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/chat-window-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

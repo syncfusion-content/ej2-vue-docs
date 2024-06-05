@@ -1,22 +1,22 @@
-
-
 <template>
    <div>
     <div id="dialogTarget" class="control-section; position:relative" style="height:300px;">
-        <center><ejs-button ref='button' id="dialogbtn" cssClass="e-info" v-on:click.native="dialogBtnClick">Open</ejs-button></center>
+        <center><ejs-button ref='button' id="dialogbtn" cssClass="e-info" v-on:click="dialogBtnClick">Open</ejs-button></center>
         <ejs-dialog id="dialog" ref="Dialog" :header='header' :showCloseIcon='showCloseIcon' :target='target' :width='width' :buttons='buttons' :animationSettings='animationSettings' :visible='visible' :content='content'>
         </ejs-dialog>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent
+},
     data: function() {
         return {
             header: 'File and Folder Rename',
@@ -43,7 +43,7 @@ export default {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/bootstrap.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/bootstrap.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
     #app {
         color: #008cff;
@@ -108,6 +108,3 @@ export default {
         padding: 15px 0px 0px;
     }
 </style>
-
-
-

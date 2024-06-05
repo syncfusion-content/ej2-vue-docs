@@ -19,7 +19,10 @@ The value property depends on the min/max with respect to [`strictMode`](./stric
 The following example allows you to select a time value within a range of `9:00 AM` to `11:30 AM`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timepicker/range-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timepicker/range-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

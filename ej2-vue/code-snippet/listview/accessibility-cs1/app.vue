@@ -1,23 +1,20 @@
-
-
 <template>
   <div class="control-section">
     <!-- ListView element -->
-    <ejs-listview
-      id="listview"
-      :dataSource="continent"
-      :fields="fields"
-      :headerTitle="headerTitle"
-      showHeader="true"
-    ></ejs-listview>
+    <ejs-listview id="listview" :dataSource="continent" :fields="fields" :headerTitle="headerTitle"
+      showHeader="true"></ejs-listview>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-Vue.use(ListViewPlugin);
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    "ejs-listview": ListViewComponent
+  },
+  data: function () {
     return {
       continent: [
         {
@@ -293,6 +290,3 @@ export default {
   border-radius: 3px;
 }
 </style>
-
-
-

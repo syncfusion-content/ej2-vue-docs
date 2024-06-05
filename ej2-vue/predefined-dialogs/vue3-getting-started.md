@@ -123,8 +123,17 @@ You have completed all the necessary configurations needed for rendering the Syn
 
 * Import the `DialogUtility` in the `<script>` section of the `src/App.vue` file.
 
-  {% tabs %}
-  {% highlight html tabtitle="~/src/App.vue" %}
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<script setup>
+      import { DialogUtility } from "@syncfusion/ej2-vue-popups";
+</script>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
    <script>
       import { DialogUtility } from "@syncfusion/ej2-vue-popups";
@@ -139,37 +148,32 @@ You have completed all the necessary configurations needed for rendering the Syn
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <div class="predefinedDialogs">
-    <button id="alertDlgBtn" @click="alertBtnClick" class="e-danger">Alert</button>
-  </div>
+    <div class="predefinedDialogs">
+        <button id="alertDlgBtn" @click="alertBtnClick" class="e-danger">Alert</button>
+    </div>
 </template>
-<script>
-  import { DialogUtility } from "@syncfusion/ej2-vue-popups";
-  export default {
-    setup() {
-      const alertBtnClick = () => {
-        DialogUtility.alert({
-          title: "Low battery",
-          content: "10% of battery remaining",
-        });
-      };
-      return {
-        alertBtnClick
-      };
-    }
-  };
+<script setup>
+import { DialogUtility } from "@syncfusion/ej2-vue-popups";
+
+const alertBtnClick = () => {
+    DialogUtility.alert({
+        title: "Low battery",
+        content: "10% of battery remaining",
+    });
+};
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 
-  .predefinedDialogs {
+.predefinedDialogs {
     height: 100%;
     min-height: 350px;
-  }
+}
 </style>
 
 
 {% endhighlight %}
+
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>

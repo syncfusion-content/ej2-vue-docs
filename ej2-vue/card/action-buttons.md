@@ -37,7 +37,10 @@ By default, action buttons positioned in horizontal alignment , and also it can 
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/card/card_action_btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/card/card_action_btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

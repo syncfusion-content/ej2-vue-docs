@@ -1,12 +1,11 @@
-
-
 <template>
-   <div id='app'>
+    <div id='app'>
         <ejs-tooltip ref="tooltip" content="Tooltip content" position='TopCenter' target="#tooltip">
             <div id='container'>
                 <ejs-button id="tooltip">Show tooltip</ejs-button>
                 <div class="ddl">
-                    <select id="positions" ref="positions" class="form-control" style="width:150px" v-on:click='onclick' v-on:change='onchange'>
+                    <select id="positions" ref="positions" class="form-control" style="width:150px" v-on:click='onclick'
+                        v-on:change='onchange'>
                         <option value="TopLeft">Top Left</option>
                         <option value="TopCenter" selected>Top Center</option>
                         <option value="TopRight">Top Right</option>
@@ -26,31 +25,34 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(TooltipPlugin);
-Vue.use(ButtonPlugin);
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+    name: "App",
+    components: {
+        "ejs-tooltip": TooltipComponent,
+        "ejs-button": ButtonComponent
+    },
     data() {
-    return {
-    };
+        return {
+        };
     },
     methods: {
-        onclick: function(){
+        onclick: function () {
             this.$refs.tooltip.close();
         },
-        onchange: function(){
-            this.$refs.tooltip.position = this.$refs.positions.value;
+        onchange: function () {
+            this.$refs.tooltip.ej2Instances.position = this.$refs.positions.value;
             this.$refs.tooltip.dataBind();
         }
     }
 }
 </script>
 <style>
-@import "node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+
 #container {
     display: inline-block;
     position: relative;
@@ -69,8 +71,4 @@ export default {
     display: inline-block;
     margin: 0 30px;
 }
-
 </style>
-
-
-

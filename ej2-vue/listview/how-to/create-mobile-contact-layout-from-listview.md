@@ -43,7 +43,10 @@ You can customize the ListView using the [template](https://ej2.syncfusion.com/v
 * Enable the [`showHeader`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#showheader) property, and set the [`headerTitle`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#headertitle) as `Contacts`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/avatar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/avatar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

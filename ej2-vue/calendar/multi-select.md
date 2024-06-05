@@ -20,7 +20,10 @@ Calendar provides an option to select **single** or **multiple dates** by using 
 The following example demonstrates the functionality of  `isMultiSelection` property and `values` properties in the Calendar control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/multi-selection-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/multi-selection-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

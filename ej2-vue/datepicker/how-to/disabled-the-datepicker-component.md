@@ -15,7 +15,10 @@ To disable the DatePicker, use its [`enable`](https://ej2.syncfusion.com/vue/doc
 The following example demonstrates the DatePicker in a disabled state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/access-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/access-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

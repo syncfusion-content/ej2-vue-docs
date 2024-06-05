@@ -1,23 +1,20 @@
-
-
-
 <template>
-<div id="app" class="col-lg-12 control-section default-splitter">
-    <ejs-splitter id='splitter' ref='splitterObj'  width='600px' height='200px'>
-        <e-panes>
-            <e-pane :content='content1' size ='30%'></e-pane>
-            <e-pane :content='content2' size ='40%'></e-pane>
-            <e-pane :content='content3' size ='30%'></e-pane>
-        </e-panes>
-    </ejs-splitter>
-</div>
+    <div id="app" class="col-lg-12 control-section default-splitter">
+        <ejs-splitter id='splitter' ref='splitterObj' width='600px' height='200px'>
+            <e-panes>
+                <e-pane :content='content1' size='30%'></e-pane>
+                <e-pane :content='content2' size='40%'></e-pane>
+                <e-pane :content='content3' size='30%'></e-pane>
+            </e-panes>
+        </ejs-splitter>
+    </div>
 </template>
 <script>
-import Vue from "vue";
-import { SplitterPlugin } from '@syncfusion/ej2-vue-layouts';
 
-Vue.use(SplitterPlugin);
-var contentVue1 = Vue.component("contentTemp1", {
+import { SplitterComponent, PanesDirective, PaneDirective } from '@syncfusion/ej2-vue-layouts';
+import { createApp } from 'vue';
+
+var contentVue1 = createApp().component("contentTemp1", {
     template: `<div>Left pane</div>`,
     data() {
         return {
@@ -26,7 +23,7 @@ var contentVue1 = Vue.component("contentTemp1", {
     }
 });
 
-var contentVue2 = Vue.component("contentTemp2", {
+var contentVue2 = createApp().component("contentTemp2", {
     template: `<div>Middle pane</div>`,
     data() {
         return {
@@ -35,7 +32,7 @@ var contentVue2 = Vue.component("contentTemp2", {
     }
 });
 
-var contentVue3 = Vue.component("contentTemp3", {
+var contentVue3 = createApp().component("contentTemp3", {
     template: `<div>Right pane</div>`,
     data() {
         return {
@@ -44,18 +41,23 @@ var contentVue3 = Vue.component("contentTemp3", {
     }
 });
 export default {
-    name: 'app',
-    data () {
+    name: "App",
+    components: {
+        "ejs-splitter": SplitterComponent,
+        "e-panes": PanesDirective,
+        "e-pane": PaneDirective
+    },
+    data() {
         return {
-        content1: function (){
-            return { template: contentVue1 }
-        },
-        content2: function (){
-            return { template: contentVue2 }
-        },
-        content3: function (){
-            return { template: contentVue3 }
-        }
+            content1: function () {
+                return { template: contentVue1 }
+            },
+            content2: function () {
+                return { template: contentVue2 }
+            },
+            content3: function () {
+                return { template: contentVue3 }
+            }
         }
     }
 }
@@ -68,10 +70,11 @@ export default {
     text-align: center;
     margin: 65px auto;
 }
+
 .content {
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
 }
 
 .e-splitter {
@@ -83,6 +86,3 @@ export default {
     display: grid;
 }
 </style>
-
-
-

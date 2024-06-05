@@ -19,7 +19,10 @@ The value property depends on the min/max with respect to [`strictMode`](./stric
 The below example allows selecting a date within the range from 7th to 27th day in a month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/min-max-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/min-max-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

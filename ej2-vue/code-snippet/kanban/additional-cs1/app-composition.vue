@@ -17,7 +17,7 @@
 import { KanbanComponent as EjsKanban, ColumnDirective as EColumn, ColumnsDirective as EColumns} from '@syncfusion/ej2-vue-kanban';
 import { DataManager, ODataAdaptor, Query } from "@syncfusion/ej2-data";
 
-let SERVICE_URI = "https://ej2services.syncfusion.com/production/web-services/api/Kanban";
+let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Kanban";
 const kanbanData = new DataManager({
   url: SERVICE_URI,
   adaptor: new ODataAdaptor(),

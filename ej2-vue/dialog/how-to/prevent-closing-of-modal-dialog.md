@@ -14,7 +14,10 @@ You can prevent closing of modal dialog by setting the [beforeClose](https://ej2
 In the following sample, the dialog is closed when you enter the username value with minimum 4 characters. Otherwise, it will not be closed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dlg-validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dlg-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

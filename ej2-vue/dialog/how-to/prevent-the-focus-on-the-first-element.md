@@ -15,7 +15,10 @@ By default, the dialog focuses on the first elements of the content area which c
 Bind the open event and enable the preventFocus argument within an event like the below sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dlg-focus-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dlg-focus-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

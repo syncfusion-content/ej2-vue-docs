@@ -1,23 +1,20 @@
-
-
-
 <template>
-<div id="app" class="col-lg-12 control-section default-splitter">
-    <ejs-splitter id='splitter' ref='splitterObj'  width='600px' height='200px'>
-        <e-panes>
-            <e-pane :content='content1' size ='200px' min='20%' max='40%'></e-pane>
-            <e-pane :content='content2' size ='200px' min='20%' max='60%'></e-pane>
-            <e-pane :content='content3' size = '200px'></e-pane>
-        </e-panes>
-    </ejs-splitter>
-</div>
+    <div id="app" class="col-lg-12 control-section default-splitter">
+        <ejs-splitter id='splitter' ref='splitterObj' width='600px' height='200px'>
+            <e-panes>
+                <e-pane :content='content1' size='200px' min='20%' max='40%'></e-pane>
+                <e-pane :content='content2' size='200px' min='20%' max='60%'></e-pane>
+                <e-pane :content='content3' size='200px'></e-pane>
+            </e-panes>
+        </ejs-splitter>
+    </div>
 </template>
 <script>
-import Vue from "vue";
-import { SplitterPlugin } from '@syncfusion/ej2-vue-layouts';
 
-Vue.use(SplitterPlugin);
-var contentVue1 = Vue.component("contentTemp1", {
+import { SplitterComponent, PanesDirective, PaneDirective } from '@syncfusion/ej2-vue-layouts';
+import { createApp } from 'vue';
+
+var contentVue1 = createApp().component("contentTemp1", {
     template: `<div class="content">
                     <h3 class="h3">PARIS </h3>
                     Paris, the city of lights and love - this short guide is full of ideas for how to make the most of the romanticism...
@@ -29,7 +26,7 @@ var contentVue1 = Vue.component("contentTemp1", {
     }
 });
 
-var contentVue2 = Vue.component("contentTemp2", {
+var contentVue2 = createApp().component("contentTemp2", {
     template: `<div class="content">
                     <h3 class="h3">CAMEMBERT </h3>
                     The village in the Orne département of Normandy where the famous French cheese is originated from.
@@ -41,7 +38,7 @@ var contentVue2 = Vue.component("contentTemp2", {
     }
 });
 
-var contentVue3 = Vue.component("contentTemp3", {
+var contentVue3 = createApp().component("contentTemp3", {
     template: `<div class="content">
                     <h3 class="h3">GRENOBLE </h3>
                     The capital city of the French Alps and a major scientific center surrounded by many ski resorts, host of the Winter Olympics in 1968.
@@ -53,18 +50,23 @@ var contentVue3 = Vue.component("contentTemp3", {
     }
 });
 export default {
-    name: 'app',
-    data () {
+    name: "App",
+    components: {
+        "ejs-splitter": SplitterComponent,
+        "e-panes": PanesDirective,
+        "e-pane": PaneDirective
+    },
+    data() {
         return {
-        content1: function (){
-            return { template: contentVue1 }
-        },
-        content2: function (){
-            return { template: contentVue2 }
-        },
-        content3: function (){
-            return { template: contentVue3 }
-        }
+            content1: function () {
+                return { template: contentVue1 }
+            },
+            content2: function () {
+                return { template: contentVue2 }
+            },
+            content3: function () {
+                return { template: contentVue3 }
+            }
         }
     }
 }
@@ -76,6 +78,7 @@ export default {
 #app {
     margin: 65px auto;
 }
+
 .content {
     padding: 10px;
 }
@@ -85,17 +88,14 @@ export default {
 }
 
 .default-splitter .e-splitter .e-split-bar .e-resize-handler:before {
-  content: "\e934";
-  font-family: 'e-icons';
-  font-size: 11px;
-  transform: rotate(90deg);
+    content: "\e934";
+    font-family: 'e-icons';
+    font-size: 11px;
+    transform: rotate(90deg);
 }
 
 .e-splitter .e-split-bar.e-split-bar-horizontal.e-resizable-split-bar,
 .e-splitter .e-split-bar.e-split-bar-horizontal.e-resizable-split-bar::after {
-  cursor: e-resize;
+    cursor: e-resize;
 }
 </style>
-
-
-

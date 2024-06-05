@@ -1,33 +1,33 @@
-
-
 <template>
   <div id="app">
-        <div class='wrap'>
-           <ejs-calendar id='calendar' :value='calVal' start='Year'></ejs-calendar>
-        </div>
+    <div class='wrap'>
+      <ejs-calendar id='calendar' :value='calVal' start='Year'></ejs-calendar>
+    </div>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { CalendarPlugin } from "@syncfusion/ej2-vue-calendars";
 
-Vue.use(CalendarPlugin);
+import { CalendarComponent } from "@syncfusion/ej2-vue-calendars";
+
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-calendar": CalendarComponent
+  },
+  data() {
     return {
-        calVal: new Date()
+      calVal: new Date()
     }
   }
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
- .wrap {
-    margin: 35px auto;
-    width: 240px;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+
+.wrap {
+  margin: 35px auto;
+  width: 240px;
 }
 </style>
-
-

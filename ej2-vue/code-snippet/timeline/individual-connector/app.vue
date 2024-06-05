@@ -13,6 +13,7 @@
 <script>
 import { TimelineComponent, ItemsDirective, ItemDirective } from "@syncfusion/ej2-vue-layouts";
 export default {
+name: "App",
   components: {
     'ejs-timeline': TimelineComponent,
     'e-items': ItemsDirective,

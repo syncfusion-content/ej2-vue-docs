@@ -101,15 +101,6 @@
         </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-
-export default {
-  data() {
-    return {};
-  }
-}
-</script>
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";

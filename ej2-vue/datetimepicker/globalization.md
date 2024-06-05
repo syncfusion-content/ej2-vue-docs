@@ -71,7 +71,10 @@ L10n.load({
 The following example demonstrates the DateTimePicker in `German` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datetimepicker/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datetimepicker/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +86,10 @@ The following example demonstrates the DateTimePicker in `German` culture.
 The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/datetimepicker#enablertl) property to set the RTL direction. The following code example initialize the DateTimePicker component in `Arabic` culture and also explains how to set the localized text to the placeholder using `load` method of [L10n](https://ej2.syncfusion.com/documentation/api/base/l10n#load) class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datetimepicker/locale-rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datetimepicker/locale-rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

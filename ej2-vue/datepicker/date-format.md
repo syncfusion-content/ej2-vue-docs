@@ -21,7 +21,10 @@ To know more about the date format standards, refer to the [Internationalization
 The following example demonstrates the DatePicker with the custom format (`yyyy-MM-dd`).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

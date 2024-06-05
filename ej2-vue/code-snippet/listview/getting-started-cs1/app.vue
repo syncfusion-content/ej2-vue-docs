@@ -1,7 +1,5 @@
-
-
 <template>
-    <div id="app">
+  <div id="app">
     <ejs-listview id='flat-list' :dataSource='dataSource' width="330px"></ejs-listview>
   </div>
 </template>
@@ -9,13 +7,13 @@
 import { ListViewComponent } from '@syncfusion/ej2-vue-lists';
 
 export default {
+  name: "App",
   components: {
     'ejs-listview': ListViewComponent
   },
-  name: 'app',
-   data () {
+  data() {
     return {
-       dataSource : [
+      dataSource: [
         { text: 'Hennessey Venom', id: 'list-01' },
         { text: 'Bugatti Chiron', id: 'list-02' },
         { text: 'Bugatti Veyron Super Sport', id: 'list-03' },
@@ -32,17 +30,17 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
-  #flat-list {
-        border: 1px solid #dddddd;
-        border-radius: 3px;
-    }
-  #app {
-    color: #008cff;
-    height: 40px;
-    left: 30%;
-    position: absolute;
-  }
+@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
+
+#flat-list {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+
+#app {
+  color: #008cff;
+  height: 40px;
+  left: 30%;
+  position: absolute;
+}
 </style>
-
-

@@ -17,7 +17,10 @@ The Calendar provides an option to change the first day of the week by using the
 The following example shows the Calendar with `Tuesday` as the first day of the week.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

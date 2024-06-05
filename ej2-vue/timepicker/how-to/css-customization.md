@@ -31,7 +31,10 @@ state by using `e-custom-style` class. Following is the list of available classe
 | e-active | Applied to active LI element. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timepicker/strict-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timepicker/strict-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

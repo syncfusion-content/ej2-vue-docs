@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <div id = 'sample'>
@@ -10,24 +8,16 @@
     </div>
   </div>
 </template>
-<style>
-#list {
-  box-shadow: 0 1px 4px #ddd;
-  border-bottom: 1px solid #ddd;
-}
-#sample {
-  height: 220px;
-  margin: 0 auto;
-  display: table;
-}
-</style>
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-import { DataManager, Query, ODataV4Adaptor } from "@syncfusion/ej2-data";
-Vue.use(ListViewPlugin);
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+import { DataManager, Query } from "@syncfusion/ej2-data";
 
 export default {
+name: "App",
+components: {
+"ejs-listview":ListViewComponent
+},
   data: function() {
     return {
       data: [
@@ -41,17 +31,26 @@ export default {
     };
   },
   methods:{
-   onkeyup: function(event){
+   onkeyup: function(){
       let keyupvalue = this.$refs.textboxEle.value;
       let data = new DataManager(this.data).executeLocal(new Query().where("text", "startswith", keyupvalue, true));
       if (!keyupvalue) {
-        this.$refs.listObj.dataSource = this.data.slice();
+        this.$refs.listObj.ej2Instances.dataSource = this.data.slice();
       } else {
-        this.$refs.listObj.dataSource = data;
+        this.$refs.listObj.ej2Instances.dataSource = data;
       }
     }
   }
 }
 </script>
-
-
+<style>
+#list {
+  box-shadow: 0 1px 4px #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#sample {
+  height: 220px;
+  margin: 0 auto;
+  display: table;
+}
+</style>

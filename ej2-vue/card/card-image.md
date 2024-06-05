@@ -38,7 +38,10 @@ overlay.
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/card/images-divider/title-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/card/images-divider/title-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +55,10 @@ Divider used to separate the elements inside the card. You can add divider insid
 * Place the `div` element with `e-card-separator` class inside the card element for adding a divider.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/card/images-divider/divider-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/card/images-divider/divider-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

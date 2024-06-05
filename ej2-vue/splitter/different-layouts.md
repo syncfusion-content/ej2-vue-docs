@@ -67,12 +67,12 @@ Create the element with two child to render the outer splitter and render the fi
 
 ```javascript
 
-<script>
-import Vue from "vue";
-import { SplitterPlugin } from '@syncfusion/ej2-vue-layouts';
+<script setup>
+
+import { SplitterComponent } from '@syncfusion/ej2-vue-layouts';
 import { Splitter } from '@syncfusion/ej2-layouts';
 
-Vue.use(SplitterPlugin);
+
 
 export default Vue.extend({
     data: function() {
@@ -174,15 +174,15 @@ Create the element with three panes and place the elements within the pane to re
         padding-right: 4px;
     }
 </style>
-<script>
-import Vue from "vue";
-import { SplitterPlugin } from '@syncfusion/ej2-vue-layouts';
+<script setup>
+
+import { SplitterComponent } from '@syncfusion/ej2-vue-layouts';
 import pane1Content from "./outlook-pane1-content.vue";
 import pane2Content from "./outlook-pane2-content.vue";
 import pane3Content from "./outlook-pane3-content.vue";
 
 
-Vue.use(SplitterPlugin);
+
 
 export default Vue.extend({
     data: function() {
@@ -223,11 +223,11 @@ Below template defined for treeview
         width: 100%;
     }
 </style>
-<script>
-import Vue from "vue";
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
+<script setup>
 
-Vue.use(TreeViewPlugin);
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+
+
 
 var mailBox = [
         { id: 1, name: 'Favorites', hasChild: true},
@@ -282,14 +282,14 @@ Below template defined for listview
     <ejs-listview id='listview' :dataSource='outlookdata' :cssClass='cssClass' :template='datatemplate'></ejs-listview>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
+<script setup>
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
 import { enableRipple } from "@syncfusion/ej2-base";
 import datatempVue from "./data-vue-template.vue";
 
 enableRipple(false);
-Vue.use(ListViewPlugin);
+
 export default Vue.extend({
   data: function() {
     return {
@@ -346,15 +346,15 @@ Below template defined for RTE
     </div>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Link, Image, HtmlEditor, Toolbar } from "@syncfusion/ej2-vue-richtexteditor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { TextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
+<script setup>
 
-Vue.use(TextBoxPlugin);
-Vue.use(RichTextEditorPlugin);
-Vue.use(ButtonPlugin);
+import { RichTextEditorComponent, Link, Image, HtmlEditor, Toolbar } from "@syncfusion/ej2-vue-richtexteditor";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
+
+
+
+
 
 export default Vue.extend({
     data: function() {

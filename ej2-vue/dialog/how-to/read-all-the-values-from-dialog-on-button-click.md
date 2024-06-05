@@ -14,7 +14,10 @@ You can read the dialog element values by binding the action handler to the foot
 In the below sample, value of input elements within the dialog has been checked in the footer button click event and send the values as the content of confirmation dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/read-all-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/read-all-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

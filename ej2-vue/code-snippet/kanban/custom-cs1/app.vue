@@ -36,7 +36,7 @@ components: {
 "e-column":ColumnDirective
 },
   data: function() {
-    let SERVICE_URI = "https://ej2services.syncfusion.com/production/web-services/api/Kanban";
+    let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Kanban";
     return {
         kanbanData: new DataManager({
             url: SERVICE_URI,

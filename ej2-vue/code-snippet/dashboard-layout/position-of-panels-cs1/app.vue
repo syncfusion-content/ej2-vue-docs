@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <!--  DashboardLayout element declaration -->
@@ -18,18 +16,25 @@
 </template>
 
 <script>
-import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 
-Vue.use(DashboardLayoutPlugin);
+// Import syncfusion dashboardlayout component from layouts package
+import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
+
+
 
 export default {
-    data: function() {
-        return {
-            cellSpacing: [20, 20]
-        };
-    }
+  name: "App",
+  components: {
+    "ejs-dashboardlayout": DashboardLayoutComponent,
+    "e-panels": PanelsDirective,
+    "e-panel": PanelDirective
+  },
+
+  data: function () {
+    return {
+      cellSpacing: [20, 20]
+    };
+  }
 }
 </script>
 
@@ -47,9 +52,6 @@ export default {
 }
 
 #dashboard_default .e-panel {
-  transition:none !important;
+  transition: none !important;
 }
 </style>
-
-
-

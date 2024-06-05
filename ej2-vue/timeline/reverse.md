@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can display the Timeline items in reverse order, for different alignments by using the [reverse](https://ej2.syncfusion.com/vue/documentation/api/timeline#reverse) property which provides adaptability and improves user interaction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/reverse/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/reverse/app.vue %}
 {% endhighlight %}
 {% endtabs %}

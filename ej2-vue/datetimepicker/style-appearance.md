@@ -63,11 +63,11 @@ The DateTimePicker component's full-screen mode feature enables users to view th
     <ejs-datetimepicker :fullScreenMode="mobileMode" ></ejs-datetimepicker>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { DateTimePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+<script setup>
 
-Vue.use(DateTimePickerPlugin);
+import { DateTimePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
+
 export default {
   name: 'app',
   data () {

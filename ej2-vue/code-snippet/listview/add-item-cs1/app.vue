@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <div id = 'flat-list'>
@@ -40,12 +38,12 @@
 }
 </style>
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ListViewPlugin);
-Vue.use(ButtonPlugin);
-var demoVue = Vue.component("demo", {
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import {createApp} from 'vue';
+
+var demoVue = createApp().component("demo", {
   template: `<div class='text-content'> {{data.text}} <span class = 'delete-icon'></span> </div>`,
   data() {
     return {
@@ -55,6 +53,12 @@ var demoVue = Vue.component("demo", {
 });
 
 export default {
+name: "App",
+components: {
+"ejs-listview":ListViewComponent,
+"ejs-button":ButtonComponent
+},
+
   data: function() {
     return {
         data: [
@@ -78,12 +82,11 @@ export default {
             this.$refs.list.removeItem(liItem);
             this.onComplete();
         },
-        onComplete: function(args) {
+        onComplete: function() {
             let iconEle = document.getElementsByClassName("delete-icon");
-            var _this =this;
             //Event handler to bind the click event for delete icon
-            Array.from(iconEle).forEach(function(element) {
-                element.addEventListener("click", _this.deleteItem.bind(_this));
+            Array.from(iconEle).forEach((element) => {
+                element.addEventListener("click", this.deleteItem.bind(this));
             });
         },
         onClick: function(){
@@ -97,5 +100,3 @@ export default {
     }
 }
 </script>
-
-

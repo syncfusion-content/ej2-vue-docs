@@ -40,7 +40,10 @@ Tooltip appears when you focus (say through tab key) on a target element.
 Tooltip is not triggered by any default action. So, bind your own events and use either open or close public methods.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/mode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/mode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

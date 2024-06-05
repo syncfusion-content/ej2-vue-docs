@@ -18,7 +18,10 @@ set the outer dimension of the Tooltip element. The default value for both the p
 The following sample explains how to set dimensions for the Tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/dimensions/height-width-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/dimensions/height-width-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ The following sample explains how to set dimensions for the Tooltip.
 When `height` is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/dimensions/scroll-mode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/dimensions/scroll-mode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

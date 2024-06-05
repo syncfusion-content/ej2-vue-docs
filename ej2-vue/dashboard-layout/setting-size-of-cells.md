@@ -23,7 +23,10 @@ In a dashboard, the data to be held by the panel in a cell may be of different s
 The following sample demonstrates how to modify a cell size using the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#columns) and [`cellAspectRatio`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellaspectratio) properties. In the following sample the width of the parent element is divided into 5 equal cells based on the columns property value resulting the width of each cell as 100 px. The height of these cells will be 50 px based on the cellAspectRatio value 100/50 (i.e. for every 100 px of width, 50 px will be the height of the cell).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/modifying-cell-size-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/modifying-cell-size-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The spacing between each panel in a row and column can be defined using the [`ce
 The following sample demonstrates the usage of the [`cellSpacing`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellspacing) property which helps in a neat and clear representation of a data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/setting-cell-spacing-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/setting-cell-spacing-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ These cells combinedly forms a grid-structured layout which will be hidden initi
 In the following sample, the grid lines indicate the cells split-up of the layout and the data containers placed over these cells are known as panels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/graphical-layout-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/graphical-layout-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ It is possible to render the Dashboard Layout in right-to-left direction by sett
 The following sample demonstrates Dashboard Layout in right-to-left direction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

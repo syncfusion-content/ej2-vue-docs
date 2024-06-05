@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <ejs-listview ref='listview' id='sample-list' :dataSource='data' showCheckBox=true :fields='fields'></ejs-listview>
@@ -18,12 +16,12 @@
 }
 </style>
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ListViewPlugin);
-Vue.use(ButtonPlugin);
-var demoVue = Vue.component("demo", {
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { createApp } from "vue";
+
+createApp().component("demo", {
   template: `<div class='text-content'> {{data.text}} <span class = 'delete-icon'></span> </div>`,
   data() {
     return {
@@ -33,6 +31,11 @@ var demoVue = Vue.component("demo", {
 });
 
 export default {
+name: "App",
+components: {
+"ejs-listview":ListViewComponent,
+"ejs-button":ButtonComponent
+},
   data: function() {
     return {
       data: [
@@ -48,7 +51,7 @@ export default {
     };
   },
   methods: {
-    onClick: function(event){
+    onClick: function(){
       let selecteditem =this.$refs.listview.getSelectedItems();
       this.$refs.valEle.innerHTML="";
       for(let i=0; i< selecteditem["data"].length; i++) {
@@ -60,5 +63,3 @@ export default {
   }
 }
 </script>
-
-

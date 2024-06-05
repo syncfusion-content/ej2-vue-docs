@@ -44,7 +44,10 @@ Local data can be represented in two ways, they are as follows:
 ListView supports to load the array of primitive data like string and numbers. Here, both value and text field act as same.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/data-binding/simple-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/data-binding/simple-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +61,10 @@ ListView can generate its list items through an array of complex data. To get it
 In the following example, role column is mapped with the text field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/data-binding/array-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/data-binding/array-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ The Query property allows to fetch data and return it to the ListView from the d
 In the following sample, first 10 Employees from the ListView table are displayed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/data-binding/remote-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/data-binding/remote-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -17,7 +17,10 @@ Specifies the direction of the Splitter component using the enableRtl property. 
 The following code shows how to enable RTL behavior.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

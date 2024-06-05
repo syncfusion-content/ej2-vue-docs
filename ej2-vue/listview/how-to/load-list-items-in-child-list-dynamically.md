@@ -19,7 +19,10 @@ Refer to the following steps to load list item into the child list:
 2. Bind the [`select`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#select) event that triggers selecting list item in the ListView component. By using the select event, you can push the new list item to the child list of the data source on specifying its item index. Item index can be obtained from the [`SelectEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/list-view/selectEventArgs/) of the select event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

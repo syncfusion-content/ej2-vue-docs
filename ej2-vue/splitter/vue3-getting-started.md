@@ -181,8 +181,8 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     </ejs-splitter>
 </template>
 <script setup>
-import { SplitterComponent as EjsSplitter, PanesDirective as EPanes, PaneDirective as Epane } from "@syncfusion/ej2-vue-layouts";
-  const data = [];
+import { SplitterComponent as EjsSplitter, PanesDirective as EPanes, PaneDirective as EPane } from "@syncfusion/ej2-vue-layouts";
+
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';

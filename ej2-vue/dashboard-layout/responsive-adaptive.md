@@ -17,7 +17,10 @@ The dashboard layout is designed to automatically adapt with lower resolutions b
 The following sample demonstrates the usage of the [`mediaQuery`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#mediaquery) property to turn out the layout into a stacked one in user defined resolution. Here, whenever, the window size reaches 700 px or lesser, the layout becomes a stacked layout.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/responsive-adaptive-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/responsive-adaptive-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

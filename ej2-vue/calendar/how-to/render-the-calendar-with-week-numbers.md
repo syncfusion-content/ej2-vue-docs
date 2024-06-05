@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can enable `weekNumbers` in the Calendar by using the [`weekNumber`](https://ej2.syncfusion.com/vue/documentation/api/calendar#weeknumber) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

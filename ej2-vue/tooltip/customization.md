@@ -17,7 +17,10 @@ The Tooltip can be customized by using the `cssClass` property, which accepts cu
 Styling the tip pointer's size, background, and border colors can be done using the `cssClass` property, as given below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/custom-tip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/custom-tip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The complete look and feel of the Tooltip can be customized by changing it's bac
 The following code example shows the way to achieve it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/custom-tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/custom-tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

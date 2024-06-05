@@ -29,7 +29,10 @@ The Dialog content can be updated by providing any HTML string through the [`con
 The below example demonstrates the usage of header, footer and content template in the Dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

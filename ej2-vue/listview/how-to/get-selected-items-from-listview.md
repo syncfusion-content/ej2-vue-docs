@@ -25,7 +25,10 @@ The `getSelectedItems` method returns the following items from the selected list
 | item | Returns the collections of list items |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

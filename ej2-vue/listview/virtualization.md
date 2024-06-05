@@ -43,7 +43,10 @@ It has two types of scrollers as follows:
 **Container scroll**: This scroller is used, when the height property of the ListView is set.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/virtualization/flat-list-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/virtualization/flat-list-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +58,10 @@ It has two types of scrollers as follows:
 We can use `template` property to customize list items in UI virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/virtualization/template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/virtualization/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +81,10 @@ The following conditional rendering support is provided for the template and gro
 In the following sample, the light blue is applied for the even list and light coral is applied for the odd list based on the conditional class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/virtualization/conditional-ui-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/virtualization/conditional-ui-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

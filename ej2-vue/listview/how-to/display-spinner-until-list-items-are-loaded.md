@@ -24,7 +24,10 @@ Refer to the following code sample to render the spinner component.
 Here, the data is fetched from `Northwind` Service URL; it takes a few seconds to load the data. To enhance the UI, the spinner component has been rendered initially. After the data is loaded from remote URL, the spinner component will be hidden in ListView [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#actioncomplete) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/data-binding/remote-data-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/data-binding/remote-data-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

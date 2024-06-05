@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <ejs-tooltip ref="tooltip"  class="tooltipcontainer" :cssClass="cssClass" content='Tooltip arrow customized' >
@@ -10,11 +8,13 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-Vue.use(TooltipPlugin);
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
 
 export default {
+name: "App",
+components: {
+"ejs-tooltip":TooltipComponent
+},
     data() {
     return {
         cssClass: 'customtip'
@@ -23,8 +23,8 @@ export default {
 }
 </script>
 <style>
-@import "node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 #target {
     background-color: #cfd8dc;
     border: 3px solid #eceff1;
@@ -90,6 +90,3 @@ export default {
 }
 /* csslint ignore:end */
 </style>
-
-
-

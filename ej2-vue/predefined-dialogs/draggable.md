@@ -15,7 +15,10 @@ The predefined dialogs supports dragging within its target container by grabbing
 ## Alert drag
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/alert-drag-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/alert-drag-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ The predefined dialogs supports dragging within its target container by grabbing
 ## Confirm drag
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/confirm-drag-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/confirm-drag-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +41,10 @@ The predefined dialogs supports dragging within its target container by grabbing
 ## Prompt drag
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/prompt-drag-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/prompt-drag-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

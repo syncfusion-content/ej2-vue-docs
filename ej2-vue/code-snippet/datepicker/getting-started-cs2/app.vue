@@ -1,23 +1,24 @@
-
-
 <template>
-    <div id="app">
-      <div class='wrapper'>
-        <ejs-datepicker :placeholder="waterMark" :value="dateVal" :format="dateFormat"></ejs-datepicker>
-      </div>
+  <div id="app">
+    <div class='wrapper'>
+      <ejs-datepicker :placeholder="waterMark" :value="dateVal" :format="dateFormat"></ejs-datepicker>
+    </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DatePickerPlugin } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(DatePickerPlugin);
+import { DatePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
 export default {
-data () {
+  name: "App",
+  components: {
+    "ejs-datepicker": DatePickerComponent
+  },
+  data() {
     return {
-      waterMark : 'Select a date',
-      dateVal : new Date(),
-      dateFormat : 'yyyy-MM-dd'
+      waterMark: 'Select a date',
+      dateVal: new Date(),
+      dateFormat: 'yyyy-MM-dd'
     }
   }
 }
@@ -28,10 +29,9 @@ data () {
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  .wrapper {
-    max-width: 250px;
-    margin: 0 auto;
-  }
+
+.wrapper {
+  max-width: 250px;
+  margin: 0 auto;
+}
 </style>
-
-

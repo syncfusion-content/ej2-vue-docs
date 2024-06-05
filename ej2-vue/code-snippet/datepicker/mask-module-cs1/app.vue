@@ -1,28 +1,27 @@
-
-
-
 <template>
-<div id="app">
-        <div class='wrapper'>
-         <ejs-datepicker id="datepicker" :enableMask="true"></ejs-datepicker>
-     </div>
+  <div id="app">
+    <div class='wrapper'>
+      <ejs-datepicker id="datepicker" :enableMask="true"></ejs-datepicker>
+    </div>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { DatePickerPlugin, DatePicker, MaskedDateTime } from "@syncfusion/ej2-vue-calendars";
 
-DatePicker.Inject(MaskedDateTime)
-Vue.use(DatePickerPlugin);
-export default Vue.extend({
-  data: function() {
+import { DatePickerComponent, MaskedDateTime } from "@syncfusion/ej2-vue-calendars";
+
+export default {
+  name: "App",
+  components: {
+    "ejs-datepicker": DatePickerComponent
+  },
+  data: function () {
     return {
     };
   },
   provide: {
-      datepicker: [MaskedDateTime]
+    datepicker: [MaskedDateTime]
   }
-});
+}
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -30,11 +29,9 @@ export default Vue.extend({
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  .wrapper {
-    max-width: 250px;
-    margin: 0 auto;
-  }
+
+.wrapper {
+  max-width: 250px;
+  margin: 0 auto;
+}
 </style>
-
-
-

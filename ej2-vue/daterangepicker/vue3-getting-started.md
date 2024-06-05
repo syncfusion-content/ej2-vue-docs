@@ -142,7 +142,7 @@ import { DateRangePickerComponent } from "@syncfusion/ej2-vue-calendars";
 export default {
     name: "App",
     components: {
-        'ejs-daterangepicker' : DateRangePickerComponent,
+        'ejs-daterangepicker' : DateRangePickerComponent
     }
 }
 </script>
@@ -205,7 +205,7 @@ export default {
     name: 'App',
     components: {
         "ejs-daterangepicker": DateRangePickerComponent
-    },
+    }
 }
 </script>
 <style>

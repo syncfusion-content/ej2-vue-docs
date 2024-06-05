@@ -87,7 +87,10 @@ The TimePicker component has built-in keyboard accessibility support by followin
 In the below sample use the `alt+t` keys to focus the TimePicker component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timepicker/access-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timepicker/access-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -71,7 +71,10 @@ L10n.load({
 The following example demonstrates the Calendar in `German` culture
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/internationalization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/internationalization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +89,10 @@ The Calendar supports right-to-left functionality for languages like Arabic,  He
 The following code example initializes the Calendar component in `Arabic` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
