@@ -15,7 +15,10 @@ You can prevent identical same toast displaying in a screen by the event functio
 The following sample demonstrates preventing duplicate title toast element displaying with custom code blocks.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/duplicate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/duplicate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -26,7 +26,10 @@ If user prefers, the pivot chart component can also be displayed individually wi
 The below sample displays the pivot chart component based on the pivot report bound on it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs177/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs177/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +72,10 @@ Supports 21 different types of charts as follows,
 In the below code sample, the pivot chart type is set as **Bar**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs178/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs178/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +96,10 @@ As like other chart types it can be changed using the property [`type`](https://
 In the below code sample, the **Pie** chart is rendered, and the other accumulation charts can be switched using the drop-down list.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs179/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs179/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,14 +109,17 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
 ### Drill Down/Up
 
 In the accumulation charts, drill down and drill up operations can be performed using the built-in context menu option. It will be shown while clicking on the chart series. The context menu has the following options:
-* **Expand** - It is to drill down the corresponding series until the last level.
-* **Collapse** - It is to drill up the corresponding series until the first level.
-* **Exit** - It is to close the context menu.
+**Expand** - It is to drill down the corresponding series until the last level.
+**Collapse** - It is to drill up the corresponding series until the first level.
+**Exit** - It is to close the context menu.
 
 > The drill operation in accumulation charts can be performed only for row headers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs180/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs180/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +135,10 @@ Unlike other chart types, the accumulation charts consider the values of a singl
 If the column has more than one header, then need to mention all the headers separated by the delimiter **-**, for example,**Germany-Road Bikes**. Using the property `columnDelimiter` in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings), one can set the desired delimiter to separate the column headers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs181/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs181/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -140,7 +155,10 @@ The `position` property in `dataLabel` allows to specify the position of the dat
 In the following code sample, the data labels are placed inside.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs182/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs182/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -150,7 +168,10 @@ In the following code sample, the data labels are placed inside.
 The **Connector Line** will be visible when the data label is placed outside the chart. It can be customized using the `connectorStyle` property in `dataLabel` for its color, length, width etc. In the following code sample, the connector line is customized.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs183/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs183/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -162,7 +183,10 @@ The **Connector Line** will be visible when the data label is placed outside the
 User can draw pie and doughnut charts within the specified range using the `startAngle` and `endAngle` properties in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). The default value of the `startAngle` property is **0**, and the `endAngle` property is **360**. By customizing these properties, user can draw semi pie and semi doughnut charts.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs184/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs184/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,7 +197,10 @@ Users can get doughnut chart from pie chart and vice-versa using the `innerRadiu
 > It takes the value only in percentage.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs185/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs185/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +212,10 @@ Users can get doughnut chart from pie chart and vice-versa using the `innerRadiu
 Exploding can be enabled by setting the `explode` property in [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **true**. The series points will be exploded either on mouse click or touch.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs186/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs186/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -200,7 +230,10 @@ By using this, user can customize the report dynamically and view the result in 
 In the following sample, the `Popup` mode of field list is enabled in the pivot chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs187/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs187/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -214,7 +247,10 @@ User can enable the grouping bar by setting the property [`showGroupingBar`](htt
 > For multiple axis support, buttons will be placed in value axis instead of dropdown list.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs188/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs188/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -224,7 +260,10 @@ User can enable the grouping bar by setting the property [`showGroupingBar`](htt
 For accumulation charts alone, a drop-down list will be placed in the column axis instead of the buttons. The drop-down list shows the column headers available in the pivot table. Users can dynamically switch column headers with the help of the drop-down list, and the accumulation chart will be updated accordingly.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs189/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs189/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -236,7 +275,10 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
 By default, the pivot chart will be drawn with the value field (measure) which is set first in the report under value axis. But, user can change to specific value field using the property [`value`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs190/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs190/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -250,7 +292,10 @@ User can draw the pivot chart with multiple value fields by setting the property
 > The multiple axis support is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs191/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs191/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -260,7 +305,10 @@ User can draw the pivot chart with multiple value fields by setting the property
 If the user binds more value fields, the result will be multiple pivot charts, and each chart will shrink within the parent container height. To avoid this, set the [`enableScrollOnMultiAxis`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) property in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) to **true**. By doing so, each pivot chart will only shrink to a minimal "160px" - "180px" height showing a vertical scrollbar for a clear view.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs192/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs192/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -272,7 +320,10 @@ Meanwhile, there is another way to display multiple values in a chart. In this a
 In the following code sample, the pivot chart can be seen as a single chart with multiple value fields such as **Sold** and **Amount** that are drawn as multiple Y axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs193/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs193/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -286,7 +337,10 @@ Additionally, to display chart series for multiple values within a single y-axis
 The pivot chart in the following code sample can be seen as a single chart with multiple value fields such as **Sold** and **Amount** drawn as a single y-axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs194/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs194/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -300,7 +354,10 @@ When multiple axes are enabled, you can display the same color for each member 
 Furthermore, end user can see or hide specific members across different measures in the entire chart with a single click on the legend item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs195/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs195/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -312,7 +369,10 @@ Furthermore, end user can see or hide specific members across different measur
 User can customize series of the pivot chart using [`chartSeries`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings) in [`chartSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#chartsettings). The changes handled in the property will be reflected commonly in all chart series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs196/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs196/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -324,7 +384,10 @@ User can also customize the pivot chart series individually using the [`chartSer
 In the following sample, the even series are hidden in the pivot chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs197/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs197/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -340,7 +403,10 @@ In the following sample, title of y-axis and x-axis are customized.
 > Axis customization is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs198/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs198/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -380,7 +446,10 @@ Also user can set the position of the legend in pivot chart using the property [
 In the following sample, the legend shape and its position can be customized.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs199/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs199/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -400,7 +469,10 @@ Also user can enable and customize the crosshair tooltip for axes using `crossha
 In the following sample, the marker and crosshair can be enabled and customized.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs200/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs200/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -431,7 +503,10 @@ This can be set using the property [`mode`](https://ej2.syncfusion.com/vue/docum
 In the following sample, all the four types of zooming are enabled with toolbar options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs201/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs201/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -447,7 +522,10 @@ By default, tooltip for the pivot chart is enabled. User can customize it by usi
 In the following sample, the default appearance of tooltip is modified.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs202/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs202/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -468,7 +546,10 @@ The following are the four export types:
 In the following sample, exporting can be done using an external button named as "Export".
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs203/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs203/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -482,7 +563,10 @@ The rendered pivot chart can be printed directly from the browser by calling [`p
 In the following sample, printing can be done using an external button named as "Print".
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs204/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs204/app.vue %}
 {% endhighlight %}
 {% endtabs %}

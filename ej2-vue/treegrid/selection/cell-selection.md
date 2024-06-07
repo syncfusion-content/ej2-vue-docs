@@ -19,7 +19,10 @@ TreeGrid supports two types of cell selection mode which can be set by using
 * **`Box`** - Select range of cells within the start and end column indexes which includes in between cells of rows within the range.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/selection/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/selection/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

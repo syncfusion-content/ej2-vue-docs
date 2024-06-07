@@ -18,7 +18,10 @@ Value sorting can be configured using the `valueSortSettings` option through cod
 * `sortOrder`: It allows to set the sort direction of the value field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs259/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs259/app.vue %}
 {% endhighlight %}
 {% endtabs %}

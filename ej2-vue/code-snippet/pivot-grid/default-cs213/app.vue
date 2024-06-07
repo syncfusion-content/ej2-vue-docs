@@ -1,22 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :dataBound="trend"
+      :showGroupingBar="showGroupingBar"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,9 +29,9 @@ export default {
     }
   },
   methods: {
-    trend: function() {
-     let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-     if (pivotGridObj.showGroupingBar) {
+    trend: function () {
+      let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
+      if (pivotGridObj.showGroupingBar) {
         let columns = [];
         for (let i = 1; i < (pivotGridObj.grid).columnModel.length; i++) {
           columns.push((pivotGridObj.grid).columnModel[i].field);
@@ -43,13 +40,9 @@ export default {
       }
     }
   },
-  provide: {pivotview: [GroupingBar]}
+  provide: { pivotview: [GroupingBar] }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

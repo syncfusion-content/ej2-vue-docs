@@ -16,7 +16,10 @@ The [`hideAtMedia`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/co
 [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}

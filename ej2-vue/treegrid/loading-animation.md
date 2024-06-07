@@ -17,7 +17,10 @@ The tree grid supports two indicator types, which can be enabled by setting the 
 In the following sample, the Shimmer indicator is displayed while the tree grid is loading and refreshing when using the remote data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/indicator/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/indicator/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

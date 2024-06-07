@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid :dataSource='data' childMapping='Children' :treeColumnIndex='0'  :allowFiltering='true' height='275px'  :filterSettings='filterSettings'>
@@ -13,13 +11,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Filter } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Filter, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { diacritics } from "./datasource.js";
 
-Vue.use(TreeGridPlugin),
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: diacritics,
@@ -33,6 +37,3 @@ export default {
   }
   }
 </script>
-
-
-

@@ -1,11 +1,8 @@
-
-
-
 <template>
     <div id="app">
         <div>
-            <ejs-button  iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true" v-on:click.native="Add">Add</ejs-button>
-            <ejs-button  iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true" v-on:click.native="Delete">Delete</ejs-button>
+            <ejs-button  iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true" v-on:click="Add">Add</ejs-button>
+            <ejs-button  iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true" v-on:click="Delete">Delete</ejs-button>
              <ejs-treegrid :dataSource="data" :treeColumnIndex="1" height='210px' idMapping= 'TaskID' parentIdMapping='parentID' ref="treegrid" :editSettings="editSettings" :toolbar="toolbar">
               <e-columns>
                <e-column field="TaskID" headerText="Task ID" :isPrimaryKey='true' width="70" textAlign="Right"></e-column>
@@ -19,15 +16,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-treegrid";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { TreeGridComponent, Page, Toolbar, Edit, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { projectData } from './datasource.js';
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: projectData,
@@ -46,7 +49,7 @@ export default {
       };
       this.data.unshift(customData);
       this.data = [...this.data];
-    }
+    },
     Delete(){
      let selectedRow = this.$refs.treegrid.getSelectedRowIndexes().length;
      let selectedRowIndex = this.$refs.treegrid.getSelectedRowIndexes()[0];
@@ -58,13 +61,9 @@ export default {
        }
        this.data = [...this.data];
       }
-    }
+    },
   provide: {
     treegrid: [Page, Edit, Toolbar]
   },
 }
 </script>
-
-
-
-

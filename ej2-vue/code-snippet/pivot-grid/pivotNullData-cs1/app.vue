@@ -1,26 +1,24 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height= "height" :showFieldList="showFieldList"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotNullData } from './pivotNullData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotNullData,
         expandAll: false,
-        rows: [{ name: 'Country' }, { name: 'State'}],
+        rows: [{ name: 'Country' }, { name: 'State' }],
         columns: [{ name: 'Product', showNoDataItems: true }, { name: 'Date' }],
         values: [{ name: 'Amount' }, { name: 'Quantity' }],
         showHeaderWhenEmpty: false
@@ -30,13 +28,10 @@ export default {
     }
   },
   provide: {
-        pivotview: [FieldList]
-    }
+    pivotview: [FieldList]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

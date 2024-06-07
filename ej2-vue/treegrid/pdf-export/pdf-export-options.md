@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 PDF export provides an option to export hidden columns of TreeGrid by defining the `includeHiddenColumn` as `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ In the pdfExportComplete event, We have reversed the state back to the previous 
 In the below example, we have `Duration` as a hidden column in the treegrid. While exporting, we have changed `Duration` to visible column and `StartDate` as hidden column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ In the below example, we have `Duration` as a hidden column in the treegrid. Whi
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the `exportProperties`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +95,10 @@ Supported page sizes are:
 * Ledger
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +114,10 @@ PDF export provides an option to customize mapping of treegrid to exported PDF d
 You can assign the file name for the exported document by defining `fileName` property in `PdfExportProperties`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +158,10 @@ You can change the default font of TreeGrid header, content and caption cells in
 In the following example, we have used Advent Pro font to export the treegrid with Hungarian fonts.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

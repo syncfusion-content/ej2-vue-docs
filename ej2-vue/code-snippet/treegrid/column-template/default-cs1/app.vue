@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid :dataSource="data" :treeColumnIndex='0' :height='260' :rowHeight='83' childMapping='Children'>
@@ -13,46 +11,52 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin } from "@syncfusion/ej2-vue-treegrid";
-import { SparklinePlugin } from "@syncfusion/ej2-vue-charts";
-import { sparkdata, getSparkData, textData } from "./datasource.js";
-import { RowDataBoundEventArgs, getObject } from '@syncfusion/ej2-grids';
-import { EmitType } from '@syncfusion/ej2-base';
-import { Sparkline, ISparklineLoadEventArgs, SparklineTheme } from '@syncfusion/ej2-charts';
 
-Vue.use(TreeGridPlugin);
-Vue.use(SparklinePlugin);
+import { TreeGridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { SparklineComponent } from "@syncfusion/ej2-vue-charts";
+import { getSparkData, textData } from "./datasource.js";
+import { createApp } from 'vue';
 
-let winloss: Sparkline;
+const app = createApp({});
+
+const columnTemplate = app.component('columnTemplate', {
+    components: {
+        "ejs-sparkline": SparklineComponent
+    },
+    template: `<ejs-sparkline :id='elemid' height='50px' width='150px' type='WinLoss' valueType='Numeric' fill='#3C78EF' negativePointColor='#f7a816' tiePointColor='darkgray'  :dataSource='sparkData(data.EmployeeID)'></ejs-sparkline> `,
+    data: function() {
+        return {
+            data: {},
+        }
+    },
+    methods:{
+        sparkData: function(id){
+            return getSparkData('column', id);
+        }
+    },
+    computed: {
+        elemid: function() {
+            return 'spkwl' + this.data.EmployeeID;
+         },
+    }
+});
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+
+},
+
  data() {
     return {
       data: textData,
        template1: function () {
-          return { template : Vue.component('columnTemplate',{
-             template: `<ejs-sparkline :id='elemid' height='50px' width='150px' type='WinLoss' valueType='Numeric' fill='#3C78EF' negativePointColor='#f7a816' tiePointColor='darkgray'  :dataSource='sparkData(data.EmployeeID)'></ejs-sparkline> `,
-                data: function() {
-                    return {
-                        data: {},
-                    }
-                },
-                methods:{
-                    sparkData: function(id: number){
-                        return getSparkData('column', id);
-                    }
-                },
-                computed: {
-                    elemid: function() {
-                        return 'spkwl' + this.data.EmployeeID;
-                     },
-          })}
-    };
+          return { template : columnTemplate }
+        }
     };
   }
 }
 </script>
-
-
-

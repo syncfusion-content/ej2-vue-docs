@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
         <ejs-treegrid :dataSource="data" :treeColumnIndex="1" height='250px' idMapping= 'TaskID' parentIdMapping='parentID' ref="treegrid" :editSettings="editSettings" :toolbar="toolbar">
@@ -16,8 +14,8 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, Toolbar, Edit, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { projectData } from "./datasource.js";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { Query } from '@syncfusion/ej2-data';
@@ -36,8 +34,16 @@ let durationData = [
     { durationValue: 20, priorityId: '2', durationId: 20 }
   ];
 let priorityElem, durationElem, priorityObj, durationObj;
-Vue.use(TreeGridPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: projectData,
@@ -104,6 +110,3 @@ export default {
   }
 }
 </script>
-
-
-

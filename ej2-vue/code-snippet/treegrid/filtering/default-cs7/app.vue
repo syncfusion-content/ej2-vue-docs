@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
  <div style="padding-top: 7px; display: inline-block">Hierarchy Mode</div>
@@ -17,15 +15,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Filter, TreeGridComponent  } from "@syncfusion/ej2-vue-treegrid";
-import { DropDownListPlugin, ChangeEventArgs } from '@syncfusion/ej2-vue-dropdowns';
+
+import { TreeGridComponent, Filter, ColumnDirective, ColumnsDirective  } from "@syncfusion/ej2-vue-treegrid";
+import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-Vue.use(DropDownListPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data () {
     return {
       data: sampleData,
@@ -43,14 +47,11 @@ export default {
       treegrid: [ Filter ]
     },
     methods: {
-        change: function (e: ChangeEventArgs)  {
-        let mode: any = e.value;
+        change: function (e)  {
+        let mode = e.value;
         this.$refs.treegrid.ej2Instances.filterSettings.hierarchyMode = mode;
         this.$refs.treegrid.clearFiltering();
     }
     }
 }
 </script>
-
-
-

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The [`rowTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowtemplate) has an option to customise the look and behavior of the treegrid rows. The [`rowTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowtemplate) property accepts either the template string or HTML element ID.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/row/rowtemplate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/row/rowtemplate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The [`rowTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#r
 If the [`rowTemplate`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowtemplate) is used, the value cannot be  formatted  inside the template using the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format) property. In that case, a function should be defined globally to format the value and invoke it inside the template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/row/rowtemplateformat-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/row/rowtemplateformat-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

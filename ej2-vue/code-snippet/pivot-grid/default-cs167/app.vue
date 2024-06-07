@@ -1,25 +1,23 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">PDF Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :beforeExport="beforeExport"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowPdfExport="allowPdfExport" :enableVirtualization="enableVirtualization" :beforeExport="beforeExport">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PDFExport, BeforeExportEventArgs, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent, PDFExport, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -44,12 +42,12 @@ export default {
     ]
   },
   methods: {
-    beforeExport: function (args: BeforeExportEventArgs) {
+    beforeExport: function (args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       args.width = pivotGridObj.element.offsetWidth;
       args.height = pivotGridObj.element.offsetHeight;
     },
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.pdfExport();
     }
@@ -57,9 +55,4 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-</style>
-
-
-
-
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";</style>

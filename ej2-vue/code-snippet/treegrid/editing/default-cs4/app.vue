@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' childMapping='subtasks' :treeColumnIndex='1' height='270px' :editSettings='editSettings'>
@@ -13,14 +11,20 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Edit, CommandColumn, IRow, Column } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Edit, CommandColumn, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 import { closest } from '@syncfusion/ej2-base';
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData,
@@ -33,13 +37,10 @@ export default {
   },
     methods: {
     onClick: function(args) {
-    let rowIndex: number = (closest(args.target as Element, '.e-row')).rowIndex;
-    let data: Object = this.$refs.treegrid.ej2Instances.getCurrentViewRecords();
+    let rowIndex = (closest(args.target, '.e-row')).rowIndex;
+    let data = this.$refs.treegrid.ej2Instances.getCurrentViewRecords();
     alert(JSON.stringify(data[rowIndex]));
     }
   }
 }
 </script>
-
-
-

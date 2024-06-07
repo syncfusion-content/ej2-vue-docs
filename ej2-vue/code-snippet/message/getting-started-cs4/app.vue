@@ -1,5 +1,3 @@
-
-
 <template>
   <ejs-message id="msg" :content="content"></ejs-message>
 </template>
@@ -12,10 +10,11 @@
 import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
 
 export default {
-  name: "app",
-  components: {
-    'ejs-message': MessageComponent
+name: "App",
+components: {
+"ejs-message":MessageComponent
   },
+
   data() {
     return {
       content: "Please read the comments carefully"
@@ -23,9 +22,8 @@ export default {
   }
 }
 </script>
+
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/message/material.css";
 </style>
-
-

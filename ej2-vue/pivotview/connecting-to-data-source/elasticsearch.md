@@ -75,13 +75,13 @@ This section describes how to retrieve data from Elasticsearch database using [N
 **2.** Map the hosted Web API's URL link `https://localhost:44323/Pivot` to the Pivot Table component in **App.vue** by using the [url](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property under [`dataSourceSettings`](https://helpej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings/).
 
 ```typescript
-<script>
-import Vue from "vue";
+<script setup>
+
 import {
   FieldList,
-  PivotViewPlugin,
+  PivotViewComponent,
 } from "@syncfusion/ej2-vue-pivotview";
-Vue.use(PivotViewPlugin);
+
 export default {
   data() {
     return {
@@ -116,13 +116,14 @@ export default {
     </div>
   </div>
 </template>
-<script>
-  import Vue from "vue";
+<script setup>
+import { provide } from "vue";
+  
   import {
     FieldList,
-    PivotViewPlugin,
+    PivotViewComponent,
   } from "@syncfusion/ej2-vue-pivotview";
-  Vue.use(PivotViewPlugin);
+  
   export default {
     data() {
       return {
@@ -141,9 +142,7 @@ export default {
     },
     methods: {
     },
-    provide: {
-      pivotview: [FieldList]
-    }
+    provide('pivotview',  [FieldList]);
   };
 </script>
 <style>

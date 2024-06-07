@@ -1,10 +1,8 @@
-
-
 <template>
    <div id='app'>
         <div id="default" style="padding-bottom:75px;">
             <div class='row'>
-                 <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+                 <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
              </div>
             <div class='row'>
                 <div class="col-xs-6 col-sm-6 col-lg-6 col-md-6">
@@ -26,22 +24,22 @@
             </div>
         </div>
          <ejs-toast ref='elementRef' id='element' :position='position' :animation='animation' title='Matt sent you a friend request' content='You have a new friend request yet to accept'></ejs-toast>
-    </div>
-</script>
 </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast } from "@syncfusion/ej2-vue-notifications";
-import { DropDownListPlugin, DropDownList, ChangeEventArgs } from '@syncfusion/ej2-vue-dropdowns';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DropDownListPlugin);
+import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-toast":ToastComponent
+},
    data: function(){
         return {
             position: { X: 'Right', Y: 'Bottom' },
@@ -81,7 +79,7 @@ export default {
       this.toastObj.show();
   },
   methods: {
-      showBtnClick: function(args){
+      showBtnClick: function(){
           this.toastObj.show();
       },
       showChange: function(args){
@@ -113,6 +111,3 @@ export default {
     margin: 15px;
 }
 </style>
-
-
-

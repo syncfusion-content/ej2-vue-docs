@@ -1,34 +1,28 @@
-
-
-
-
 <template>
-    <div id="app">
-    <div id="template" >
-    <div>
-     <ejs-button id="expandall" :isPrimary="isPrimary" cssClass='e-flat' v-on:click.native="expandAll">EXPAND ALL</ejs-button>
-      <ejs-button id="collapseall" :isPrimary="isPrimary" cssClass='e-flat' v-on:click.native="collapseAll">COLLAPSE ALL</ejs-button>
+  <div id="app">
+    <div id="template">
+      <div>
+        <ejs-button id="expandall" :isPrimary="isPrimary" cssClass='e-flat' v-on:click="expandAll">EXPAND ALL</ejs-button>
+        <ejs-button id="collapseall" :isPrimary="isPrimary" cssClass='e-flat' v-on:click="collapseAll">COLLAPSE
+          ALL</ejs-button>
       </div>
-       </div>
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height" :showToolbar="showToolbar" :toolbarTemplate="toolbarTemplate"> </ejs-pivotview>
     </div>
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :showToolbar="showToolbar" :toolbarTemplate="toolbarTemplate"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { ButtonPlugin, ChangeEventArgs } from '@syncfusion/ej2-vue-buttons';
-import {
-  PivotViewPlugin,
-  IDataSet,
-  Toolbar,
-} from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { PivotViewComponent, Toolbar, } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -42,17 +36,17 @@ export default {
       gridSettings: { columnWidth: 140 },
       showToolbar: true,
       toolbarTemplate: '#template',
-      isPrimary:true
+      isPrimary: true
     };
   },
   methods: {
-    expandAll: function(args) {
+    expandAll: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.dataSourceSettings.expandAll=true;
+      pivotGridObj.dataSourceSettings.expandAll = true;
     },
-    collapseAll: function(args) {
+    collapseAll: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.dataSourceSettings.expandAll=false;
+      pivotGridObj.dataSourceSettings.expandAll = false;
     }
   },
   provide: {
@@ -63,9 +57,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

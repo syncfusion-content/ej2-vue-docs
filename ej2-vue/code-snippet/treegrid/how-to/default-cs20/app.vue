@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
       <ejs-treegrid :dataSource="data" :treeColumnIndex="1" height='300px' idMapping='TaskID' parentIdMapping='parentID' :rowDataBound="rowDataBound" :selectionSettings="selectionOptions"
@@ -16,12 +14,19 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { projectData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       selIndex: [],
@@ -35,7 +40,7 @@ export default {
         this.selIndex.push(parseInt(args.row.getAttribute("aria-rowindex")));
       }
     },
-    dataBound(args) {
+    dataBound() {
       if (this.selIndex.length) {
         this.$refs.treegrid.selectRows(this.selIndex);
         this.selIndex = [];
@@ -47,6 +52,3 @@ export default {
   }
 }
 </script>
-
-
-

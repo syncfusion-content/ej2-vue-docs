@@ -34,28 +34,17 @@ We can divide a progress bar into multiple segments using a `segmentCount` to vi
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-Vue.use(ProgressBarPlugin);
+const segmentCount = 8;
+const value = 100;
+const animation =  {
+  enable:true,
+  duration:2000,
+  delay:0
+};
 
-export default Vue.extend({
-  data: function() {
-    return {
-     segmentCount:8,
-     value:100,
-     animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-      };
-   },
-  provide: {},
-  methods: {}
-});
 </script>
 <style>
   #loader {
@@ -101,30 +90,20 @@ s
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-    trackThickness:24,
-    secondaryProgressThickness: 20,
-    progressThickness:24,
-    value:100
-      };
-  },
-  provide: {},
-  methods: {}
-});
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const trackThickness = 24;
+const secondaryProgressThickness =  20;
+const progressThickness = 24;
+const value = 100;
+
 </script>
 <style>
   #loader {
@@ -172,29 +151,19 @@ The  radius of the progress bar can be customized using `radius` property and  c
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-    trackThickness:80,
-    progressThickness:10,
-    value:60
-      };
-    },
-  provide: {},
-  methods: {}
-});
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const trackThickness = 80;
+const progressThickness = 10;
+const value = 60;
+
 </script>
 <style>
   #loader {
@@ -243,29 +212,19 @@ The inner radius of the progress bar can be customized using `innerRadius` prope
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar} from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-    trackThickness:80,
-    progressThickness:10,
-    value:60
-      };
-  },
-  provide: {},
-  methods: {}
-});
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const trackThickness = 80;
+const progressThickness = 10;
+const value = 60;
+
 </script>
 <style>
   #loader {
@@ -314,30 +273,20 @@ Customize the color of progress, secondary progress, and track by using the [`pr
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-    trackThickness:24,
-    progressThickness:24,
-    secondaryProgressColor: 'green',
-    value:70
-    };
-  },
-  provide: {},
-  methods: {}
-});
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const trackThickness = 24;
+const progressThickness = 24;
+const secondaryProgressColor =  'green';
+const value = 70;
+
 </script>
 <style>
   #loader {

@@ -1,30 +1,18 @@
-
-
-
-
 <template>
     <div id="app">
         <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :maxNodeLimitInMemberEditor="maxNodeLimitInMemberEditor"> </ejs-pivotview>
     </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
 
-Vue.use(PivotViewPlugin);
-
-/* tslint:disable */
-let date1: number;
-let date2: number;
-let isInit: boolean;
-function data(count: number) {
-  let result: Object[] = [];
-  let dt: number = 0;
-  for (let i: number = 1; i < count + 1; i++) {
+function data(count) {
+  let result= [];
+  let dt = 0;
+  for (let i = 1; i < count + 1; i++) {
     dt++;
-    let round: string;
-    let toString: string = i.toString();
+    let round;
+    let toString = i.toString();
     if (toString.length === 1) {
       round = "0000" + i;
     } else if (toString.length === 2) {
@@ -50,10 +38,14 @@ function data(count: number) {
 }
 
 export default {
+name: "App",
+components: {
+"ejs-pivotview":PivotViewComponent,
+},
   data () {
     return {
       dataSourceSettings: {
-        dataSource: data(1000) as IDataSet[],
+        dataSource: data(1000),
         enableSorting: false,
         expandAll: true,
         formatSettings: [{ name: 'Price', format: 'C0' }],
@@ -72,9 +64,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

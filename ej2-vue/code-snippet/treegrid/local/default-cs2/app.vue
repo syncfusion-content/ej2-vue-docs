@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
       <ejs-treegrid :dataSource='data' locale='de-DE' childMapping='subtasks' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings' :allowFiltering='true' :filterSettings='filterSettings' :toolbar='toolbar'>
@@ -7,18 +5,19 @@
           <e-column field='orderID' headerText='Order ID' width='90' textAlign='Right'></e-column>
           <e-column field='orderName' headerText='Order Name' width='160'></e-column>
           <e-column field='price' headerText='Price' width='90' :format='formatOptions' textAlign='Right'></e-column>
+          </e-columns>
       </ejs-treegrid>
 </div>
 </template>
 <script>
-import Vue from "vue";
+/* eslint-disable */
 import { L10n, loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 import * as currencies from './currencies.json';
 import * as cagregorian from './ca-gregorian.json';
 import * as numbers from './numbers.json';
 import * as timeZoneNames from './timeZoneNames.json';
 import * as numberingSystems from './numberingSystems.json';
-import { TreeGridPlugin, Page, Toolbar, Filter } from "@syncfusion/ej2-vue-treegrid";
+import { TreeGridComponent, Page, Toolbar, Filter, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { formatData } from "./datasource.js";
 
 setCulture('de-DE');
@@ -68,9 +67,17 @@ L10n.load({
     }
 });
 
-Vue.use(TreeGridPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: formatData,
@@ -85,6 +92,3 @@ export default {
     }
 }
 </script>
-
-
-

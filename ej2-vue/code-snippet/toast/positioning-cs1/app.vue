@@ -1,5 +1,3 @@
-
-
 <template>
    <div>
      <div class="col-lg-12 control-section toast-pos-section" style="max-width: 300px;">
@@ -61,8 +59,8 @@
                 </tr>
             </tbody></table>
             <div id="toast_btn" style="padding-top: 25px">
-                <ejs-button ref='showButtonRef' class="e-btn e-control" id="show_Toast" style="margin-right: 15px" v-on:click.native="showClicked">Show Toast</ejs-button>
-                <ejs-button class="e-btn e-control" id="hideTosat" v-on:click.native="hideClicked">Hide All</ejs-button>
+                <ejs-button ref='showButtonRef' class="e-btn e-control" id="show_Toast" style="margin-right: 15px" v-on:click="showClicked">Show Toast</ejs-button>
+                <ejs-button class="e-btn e-control" id="hideTosat" v-on:click="hideClicked">Hide All</ejs-button>
             </div>
         </div>
         </div>
@@ -71,18 +69,22 @@
     </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast } from "@syncfusion/ej2-vue-notifications";
-import { DropDownListPlugin, ChangeEventArgs } from '@syncfusion/ej2-vue-dropdowns';
-import { ButtonPlugin, RadioButtonPlugin, ChangeEventArgs as CheckBoxChange } from '@syncfusion/ej2-vue-buttons';
+
+import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
+import { ButtonComponent, RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 
-Vue.use(ToastPlugin);
-Vue.use(RadioButtonPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(ButtonPlugin);
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-toast":ToastComponent,
+"ejs-radiobutton":RadioButtonComponent,
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-button":ButtonComponent,
+
+},
+
   data: function(){
     return {
         position:  { X: 'Right', Y: 'Bottom' },
@@ -158,16 +160,16 @@ export default {
             this.toastShow(1000);
         }
        },
-       showClicked: function(args){
+       showClicked: function(){
            if (this.customFlag) {
               this.setcustomPosValue();
         }
         this.$refs.toastRef.show();
        },
-       hideClicked: function(args){
+       hideClicked: function(){
            this.$refs.toastRef.hide('All');
        },
-        setcustomPosValue: function(args){
+        setcustomPosValue: function(){
            this.obj.width = this.initialWid;
            this.obj.position.X = parseInt(document.getElementById('xPos').value, 10);
            this.obj.position.Y = parseInt(document.getElementById('yPos').value, 10);
@@ -193,7 +195,7 @@ export default {
                 this.obj.width = '100%'; this.obj.position.X = 'Center'; this.obj.position.Y = 'Bottom'; break;
         }
        },
-       created: function(args){
+       created: function(){
             document.addEventListener('click', function() {
                if (!isNullOrUndefined(this.$refs.toastRef) && event.target !== this.$refs.showButtonRef.$el &&  this.$refs.toastRef.target === document.body) {
                    this.$refs.toastRef.hide('All');
@@ -236,6 +238,3 @@ export default {
     }
 
 </style>
-
-
-

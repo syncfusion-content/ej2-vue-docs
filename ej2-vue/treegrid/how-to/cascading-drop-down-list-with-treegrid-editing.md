@@ -15,7 +15,10 @@ You can achieve the Cascading DropDownList with Tree Grid Editing by using the C
 In the below demo, Cascading DropDownList rendered for **Priority** and **Duration** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' childMapping='subtasks' :treeColumnIndex='1' :editSettings='editSettings' :allowPaging='true' :pageSettings='pageSettings' :contextMenuItems="contextMenuItems" :contextMenuOpen='contextMenuOpen' :contextMenuClick='contextMenuClick'>
@@ -14,16 +12,19 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, ContextMenu, Page, Edit, TreeGridComponent  } from "@syncfusion/ej2-vue-treegrid";
-import { sampleData } from "./datasource.js";
-import { BeforeOpenCloseEventArgs } from '@syncfusion/ej2-vue-inputs';
-import { MenuEventArgs } from '@syncfusion/ej2-vue-navigations';
-import { getValue, isNullOrUndefined } from '@syncfusion/ej2-base';
 
-Vue.use(TreeGridPlugin);
+import { TreeGridComponent, ContextMenu, Page, Edit, ColumnDirective, ColumnsDirective  } from "@syncfusion/ej2-vue-treegrid";
+import { sampleData } from "./datasource.js";
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -39,7 +40,7 @@ export default {
       treegrid: [ ContextMenu, Page, Edit ]
   },
   methods:{
-      contextMenuOpen:function (args: BeforeOpenCloseEventArgs) {
+      contextMenuOpen:function (args) {
         if (args.rowInfo.rowData.hasChildRecords == true) {
           this.$refs.treegrid.ej2Instances.grid.contextMenuModule.contextMenu.enableItems(['Edit Record'],true);
           this.$refs.treegrid.ej2Instances.grid.contextMenuModule.contextMenu.enableItems(['Delete Record'],false);
@@ -48,7 +49,7 @@ export default {
           this.$refs.treegrid.ej2Instances.grid.contextMenuModule.contextMenu.enableItems(['Delete Record'],true);
         }
       },
-      contextMenuClick:function (args: MenuEventArgs) {
+      contextMenuClick:function (args) {
         if(args.element.innerHTML == "Edit Record"){
             this.$refs.treegrid.ej2Instances.grid.editModule.startEdit(args.rowInfo.row);
         }
@@ -59,6 +60,3 @@ export default {
   }
 }
 </script>
-
-
-

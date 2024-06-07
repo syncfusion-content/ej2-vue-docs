@@ -19,7 +19,10 @@ In the [`pdfExportComplete`](https://ej2.syncfusion.com/vue/documentation/api/tr
 In the below demo, we have rendered the default spinner component when exporting the Tree Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}

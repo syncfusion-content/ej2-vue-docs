@@ -15,31 +15,31 @@
 </template>
 
 <script>
-import Vue from "vue";
+
+import {PivotViewComponent} from "@syncfusion/ej2-vue-pivotview";
 import {
-    PivotViewPlugin,
-    PivotCellSelectedEventArgs,
-    FieldList,
-} from "@syncfusion/ej2-vue-pivotview";
-import { GridSettings } from "@syncfusion/ej2-pivotview/src/pivotview/model/gridsettings";
-import {
-    ChartPlugin,
+    ChartComponent,
     ColumnSeries,
     Category,
     Legend,
     Tooltip,
+    SeriesCollectionDirective,
+    SeriesDirective
 } from "@syncfusion/ej2-vue-charts";
 import { renewableEnergy } from "./datasource.js";
 
-Vue.use(PivotViewPlugin);
-Vue.use(ChartPlugin);
-
-let onInit: boolean = true;
-let measureList: { [key: string]: string } = {};
-let chart: Chart;
-let selectedCells: CellSelectedObject[];
-let chartSeries: SeriesModel[];
+let onInit = true;
+let measureList = {};
+let selectedCells;
+let chartSeries;
 export default {
+name: "App",
+components: {
+"ejs-pivotview":PivotViewComponent,
+"ejs-chart":ChartComponent,
+"e-series-collection":SeriesCollectionDirective,
+"e-series":SeriesDirective,
+},
     data() {
         return {
             dataSourceSettings: {
@@ -91,7 +91,7 @@ export default {
         frameChartSeries: function () {
             let pivotGridObj =
                 document.getElementById("pivotview_chart").ej2_instances[0];
-            let columnGroupObject: { [key: string]: { x: string, y: number }[] } = {};
+            let columnGroupObject = {};
             let valuesContent = pivotGridObj.engineModule.valueContent;
             if (onInit) {
                 for (let cCnt = 0; cCnt < valuesContent.length; cCnt++) {
@@ -149,8 +149,8 @@ export default {
                     }
                 }
             }
-            let columnKeys: string[] = Object.keys(columnGroupObject);
-            let chartSeries: SeriesModel[] = [];
+            let columnKeys = Object.keys(columnGroupObject);
+            let chartSeries = [];
             for (let key of columnKeys) {
                 chartSeries.push({
                     dataSource: columnGroupObject[key],
@@ -198,7 +198,7 @@ export default {
                 this.chartUpdate();
             }
         },
-        cellSelected: function (args: PivotCellSelectedEventArgs) {
+        cellSelected: function (args) {
             selectedCells = args.selectedCellsInfo;
             if (selectedCells && selectedCells.length > 0) {
                 chartSeries = this.frameChartSeries();
@@ -209,5 +209,5 @@ export default {
 };
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>

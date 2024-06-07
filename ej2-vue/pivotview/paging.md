@@ -26,7 +26,10 @@ You can also change the position, visibility, compact view, and template of the 
 > In order to see and use the pager UI, insert the `Pager` module into the pivot table using the `provide` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ You can display the pager UI at top or bottom of the pivot table by using the [`
 > By default, the pager UI appears at the bottom of the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ Toggles and displays row and column pager. To show the column pager on the left 
 > By default, the row pager is displayed on the left side of the pager UI, while the column pager is displayed on the right side.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ Toggles and displays row and column pager. To show the column pager on the left 
 By hiding all except the previous and next navigation buttons, the pager UI can be displayed with the absolute minimum of paging options. The compact view can be enabled by setting the [`enableCompactView`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iPageSettings/#ipagesettings) property in [`pagerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pagersettings) to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +92,10 @@ By using the [`showRowPager`](https://ej2.syncfusion.com/vue/documentation/api/p
 In the following example, row pager has been disabled by setting the [`showRowPager`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iPageSettings/#ipagesettings) property in [`pagerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pagersettings) to **false**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +107,10 @@ In the following example, row pager has been disabled by setting the [`showRowPa
 By using the [`showRowPageSize`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iPageSettings/#ipagesettings) and [`showColumnPageSize`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iPageSettings/#ipagesettings) properties in [`pagerSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pagersettings), you can show or hide "Rows per page" and "Columns per page" dropdown menu. The dropdown menu contains a list of pre-defined or user-defined page sizes, which will be displayed in the "Rows per page" and "Columns per page" dropdowns, allowing you to change the page size for the row and column axes at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +126,10 @@ By using the [`rowPageSizes`](https://ej2.syncfusion.com/vue/documentation/api/p
 In the following example, the "Rows per page" dropdown is set with user-defined page sizes of **10, 20, 30, 40, and 50** and the "Columns per page" dropdown is set with user-defined page sizes of **5, 10, 15, 20, and 30**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +141,10 @@ In the following example, the "Rows per page" dropdown is set with user-defined 
 The [`template`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iPageSettings/#ipagesettings) property allows to change the appearance of the pager UI by displaying user-defined HTML elements instead of built-in HTML elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}

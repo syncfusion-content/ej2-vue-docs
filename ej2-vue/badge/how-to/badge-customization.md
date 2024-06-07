@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Even though badges come with `8 predefined colors`, you can also customize the colour of the badge as desired.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/badge/color-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/badge/color-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Even though badges come with `8 predefined colors`, you can also customize the c
 Badges are designed to change its size based on the content. To change the size of a badge, adjust the `font size` of the badge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/badge/size-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/badge/size-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ Badges are designed to change its size based on the content. To change the size 
 Even though the badges support the conventional `top` and `bottom` positions, the position of the badges can be changed as desired. This can be done by adding a custom class to the badge element to override the default position applied from the source.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/badge/custom-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/badge/custom-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

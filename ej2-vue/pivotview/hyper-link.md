@@ -27,7 +27,10 @@ The pivot table allows you to show hyperlink option to the link data for individ
 The pivot table has an option to show hyperlink option to all the cells that are currently displaying. To show hyperlink option, you need to set `showHyperlink` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs143/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs143/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The pivot table has an option to show hyperlink option to all the cells that are
 The pivot table has an option to show hyperlink option to row header cells that are currently displaying. To show hyperlink option for row headers alone, you need to set `showRowHeaderHyperlink` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs144/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs144/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ The pivot table has an option to show hyperlink option to row header cells that 
 The pivot table has an option to show hyperlink option to columns header cells that are currently displaying. To show hyperlink option for column headers alone, you need to set `showColumnHeaderHyperlink` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs145/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs145/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ The pivot table has an option to show hyperlink option to columns header cells t
 The pivot table has an option to show hyperlink option to value cells that are currently displaying. To show hyperlink option for values alone, you need to set `showValueCellHyperlink` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs146/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs146/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +87,10 @@ The pivot table has an option to show hyperlink option to value cells that are c
 The pivot table has an option to show hyperlink option to summary value cells that are currently displaying. To show hyperlink option for summary values alone, you need to set `showSummaryCellHyperlink` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs147/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs147/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +107,10 @@ The pivot table has an option to show hyperlink option to the cells based on spe
 * `value2`: Specifies the end value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs148/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs148/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +122,10 @@ The pivot table has an option to show hyperlink option to the cells based on spe
 The pivot table has an option to show hyperlink option to the cells based on specific row or column. It can be configured using the `headerText` option through code behind, during initial rendering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs149/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs149/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +139,10 @@ The event [`hyperlinkCellClick`](https://ej2.syncfusion.com/vue/documentation/ap
 It has following parameters - `Cancel` and `CurrentCell`. The parameter `CurrentCell` is used to customize the host cell element by any means. Meanwhile, when the parameter `Cancel` is set to **true**, applied customization will not be updated to the host cell element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs150/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs150/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ You can customize the row height of treegrid rows through the [`rowHeight`](http
 In the below example, the `rowHeight` is set as '60px'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/row/row-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/row/row-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ event by setting the `rowHeight` in arguments for each row based on the requirem
 In the below example, the row height for the row with Task ID as '3' is set as '90px' using the `rowDataBound` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/row/row-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/row/row-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

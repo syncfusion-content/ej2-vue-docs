@@ -34,22 +34,12 @@ This is the default state. You can use it when the progress estimation is known.
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbat } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value:100
-      };
-    },
-  provide: {},
-  methods: {}
-});
+const value = 100;
+
 </script>
 <style>
   #loader {
@@ -91,23 +81,13 @@ By enabling the **IsIndeterminate** property, the state of the progress bar can 
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value:20,
-    isIndeterminate:true
-      };
-    },
-  provide: {},
-  methods: {}
-});
+const value = 20;
+const isIndeterminate = true;
+
 </script>
 <style>
   #loader {
@@ -149,23 +129,13 @@ You can use a secondary progress indicator when the primary progress depends on 
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value:40,
-    secondaryProgress:60
-      };
-   },
-  provide: {},
-  methods: {}
-});
+const value = 40;
+const secondaryProgress = 60;
+
 </script>
 <style>
   #loader {

@@ -20,7 +20,10 @@ The available variants are **Text**, **Outlined** and **Filled**. The default va
 The following example demonstrates the default message with different variant types.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/message/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/message/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

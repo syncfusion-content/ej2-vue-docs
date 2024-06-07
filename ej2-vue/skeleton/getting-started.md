@@ -99,11 +99,29 @@ import { SkeletonComponent as EjsSkeleton } from "@syncfusion/ej2-vue-notificati
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
+export default {
+    components: {
+    'ejs-skeleton': SkeletonComponent
+    }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 export default {
+name: "App",
+components: {
+"ejs-skeleton':":Skeleton':Component
+
+},
+
     components: {
     'ejs-skeleton': SkeletonComponent
     }

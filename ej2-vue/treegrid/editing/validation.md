@@ -16,7 +16,10 @@ Column validation allows you to validate the edited or added row data and it dis
 TreeGrid uses `Form Validator` component for column validation. You can set validation rules by defining the [`columns.validationRules`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#validationrules).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ You can define your own custom validation rules for the specific columns by usin
 In the below demo, custom validation applied for `Priority` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

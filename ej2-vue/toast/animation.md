@@ -17,7 +17,10 @@ The default animation is given as `FadeIn` for showing the toast and `FadeOut` f
 The following sample demonstrates some types of animations that suit toast. You can check all the animation effects here.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/animations-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/animations-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

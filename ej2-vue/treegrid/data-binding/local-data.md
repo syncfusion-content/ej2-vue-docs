@@ -28,7 +28,10 @@ The [`childMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#c
 The following code example shows you how to bind the hierarchical local data into the TreeGrid control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 * **Parent ID Field**: This field contains values that indicate parent nodes. Its name is assigned to the [`parentIdMapping`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#parentIdMapping) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

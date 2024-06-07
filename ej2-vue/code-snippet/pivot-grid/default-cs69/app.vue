@@ -1,26 +1,24 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="flist-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Show Field List</ejs-button>
-        <ejs-pivotview id="pivotview_flist" :height="height" :enginePopulated="enginePopulated"></ejs-pivotview>
-        <ejs-pivotfieldlist id="pivotfieldlist1" :dataSourceSettings="dataSourceSettings" :enginePopulated="fieldEnginePopulated" :renderMode="renderMode" :target="target"></ejs-pivotfieldlist>
-    </div>
+  <div id="app">
+    <ejs-button id="flist-btn" :isPrimary="isPrimary" v-on:click="btnClick">Show Field List</ejs-button>
+    <ejs-pivotview id="pivotview_flist" :height="height" :enginePopulated="enginePopulated"></ejs-pivotview>
+    <ejs-pivotfieldlist id="pivotfieldlist1" :dataSourceSettings="dataSourceSettings"
+      :enginePopulated="fieldEnginePopulated" :renderMode="renderMode" :target="target"></ejs-pivotfieldlist>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotFieldListPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent, PivotFieldListComponent} from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(PivotFieldListPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent,
+    "ejs-pivotfieldlist": PivotFieldListComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -39,18 +37,19 @@ export default {
     }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function () {
       let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
       fieldListObj.dialogRenderer.fieldListDialog.show();
     },
-    fieldEnginePopulated: function() {
+    fieldEnginePopulated: function () {
       let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
       let pivotGridObj = document.getElementById('pivotview_flist').ej2_instances[0];
       fieldListObj.updateView(pivotGridObj);
     },
-    enginePopulated: function() {
+    enginePopulated: function () {
       let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
-      if(fieldListObj) {
+      let pivotGridObj = document.getElementById('pivotview_flist').ej2_instances[0];
+      if (fieldListObj) {
         fieldListObj.updateView(pivotGridObj);
       }
     }
@@ -58,11 +57,9 @@ export default {
 }
 </script>
 <style>
-    @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-    .e-toggle-field-list {
-      display: none !important;
-    }
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+
+.e-toggle-field-list {
+  display: none !important;
+}
 </style>
-
-
-

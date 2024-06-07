@@ -27,7 +27,10 @@ The default items are displayed in following table.
 | `Filter` | Show the filter option as given in `filterSettings.type` |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ The action for custom column menu items can be performed using [`columnMenuClick
 In the below example, clear sorting action was performed through `columnMenuItems` by using [`clearSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#clearsorting) method of the Tree Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +63,10 @@ It is possible to customize specific items from the column menu for particular [
 The following example shows how to hide the built-in **Filter** menu item when the column menu is opened for the **taskName** column, while allowing it to remain visible for all other columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

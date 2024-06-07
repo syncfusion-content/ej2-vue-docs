@@ -1,30 +1,27 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :enableValueSorting="enableValueSorting"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :enableValueSorting="enableValueSorting">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
         valueSortSettings: {
-            headerText: 'FY 2015##Sold Amount',
-            headerDelimiter: '##',
-            sortOrder: 'Descending'
+          headerText: 'FY 2015##Sold Amount',
+          headerDelimiter: '##',
+          sortOrder: 'Descending'
         },
         drilledMembers: [{ name: 'Country', items: ['France'] }],
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -40,9 +37,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

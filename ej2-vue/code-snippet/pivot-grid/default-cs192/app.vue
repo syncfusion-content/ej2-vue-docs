@@ -1,47 +1,40 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings" :height="height"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings"
+      :height="height"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotChart } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotChart } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
-        values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' },{name: 'Products', type:'Count'}],
+        values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }, { name: 'Products', type: 'Count' }],
         rows: [{ name: 'Country' }],
         formatSettings: [{ name: 'Amount', format: 'C0' }],
         filters: []
       },
       height: 350,
       displayOption: { view: 'Chart' },
-      chartSettings: { enableScrollOnMultiAxis:true,
-      enableMultipleAxis: true, chartSeries: { type: 'Column' } }
+      chartSettings: {
+        enableScrollOnMultiAxis: true,
+        enableMultipleAxis: true, chartSeries: { type: 'Column' }
+      }
     }
   },
-    provide: {
-        pivotview: [PivotChart]
-    }
+  provide: {
+    pivotview: [PivotChart]
+  }
 }
 </script>
-<style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-</style>
-
-
-
-
+<style>@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";</style>

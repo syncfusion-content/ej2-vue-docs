@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :showFieldList="showFieldList" :actionComplete="actionComplete"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"
+      :showFieldList="showFieldList" :actionComplete="actionComplete"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, FieldList, PivotActionCompleteEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,20 +30,17 @@ export default {
     }
   },
   methods: {
-    actionComplete: function (args: PivotActionCompleteEventArgs) {
-        if (args.actionName == 'Field aggregated') {
-            // Triggers when the aggregation type is applied.
-        }
+    actionComplete: function (args) {
+      if (args.actionName == 'Field aggregated') {
+        // Triggers when the aggregation type is applied.
+      }
     }
   },
   provide: {
-        pivotview: [GroupingBar, FieldList]
-    }
+    pivotview: [GroupingBar, FieldList]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

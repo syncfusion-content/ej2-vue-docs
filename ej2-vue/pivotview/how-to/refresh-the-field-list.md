@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can refresh pivot table and field list with new data source dynamically.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -30,7 +30,10 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 >Remote Data Binding supports only Self-Referential Data and by default the `pageSizeMode` for Remote Data is `Root` mode. i.e only root node’s count will be shown in pager while using Remote Data
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,12 +65,13 @@ The following code example describes the behavior of the loadChildOnDemand featu
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Page } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -83,9 +87,7 @@ export default {
       })
     };
   },
-    provide: {
-    treegrid: [ Page ]
-  }
+    provide('treegrid',  [ Page ]);
 }
 
 </script>
@@ -167,7 +169,10 @@ public ActionResult UrlDatasource(DataManagerRequest dm)
 On remote data binding, all treegrid actions such as paging, loading child on-demand, will be processed on server-side. To avoid postback, set the treegrid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `offline` property of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +184,10 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the `processResponse` method of the `WebApiAdaptor`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -191,7 +199,10 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 To add a custom parameter to the data request, use the `addParams` method of `Query` class. Assign the `Query` object with additional parameters to the treegrid [`query`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#query) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +216,10 @@ During server interaction from the treegrid, some server-side exceptions may occ
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -232,12 +246,13 @@ When using virtualization with remote data binding, it helps you to improve the 
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -254,9 +269,7 @@ export default {
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     };
   },
-    provide: {
-    treegrid: [ Sort, VirtualScroll, Filter, Edit, Toolbar ]
-  }
+    provide('treegrid',  [ Sort, VirtualScroll, Filter, Edit, Toolbar ]);
 }
 
 </script>
@@ -562,12 +575,13 @@ When using virtualization with `loadChildOnDemand` , it helps you to improve the
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -584,9 +598,7 @@ export default {
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     };
   },
-    provide: {
-    treegrid: [ Sort, VirtualScroll, Filter, Edit, Toolbar ]
-  }
+    provide('treegrid',  [ Sort, VirtualScroll, Filter, Edit, Toolbar ]);
 }
 
 </script>

@@ -15,7 +15,10 @@ You can set the visibility of tooltip using `showTooltip` in the pivot table.
 > By Default, tooltip enabled in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs141/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs141/app.vue %}
 {% endhighlight %}
 {% endtabs %}

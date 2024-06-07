@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' height='220' childMapping='subtasks' :treeColumnIndex='1' :toolbar='toolbar' :allowFiltering='true' :toolbarClick='toolbarClick'>
@@ -13,14 +11,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Toolbar, Filter } from "@syncfusion/ej2-vue-treegrid";
-import { sampleData } from "./datasource.js";
-import { ClickEventArgs } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TreeGridPlugin);
+import { TreeGridComponent, Toolbar, Filter, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-treegrid";
+import { sampleData } from "./datasource.js";
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -28,7 +31,7 @@ export default {
     };
   },
   methods: {
-    toolbarClick: function (args: ClickEventArgs) {
+    toolbarClick: function (args) {
       if (args.item.id === 'toolbarfilter') {
         this.$refs.treegrid.filterByColumn('taskName', 'startswith', 'Testing');
       }
@@ -39,6 +42,3 @@ export default {
   }
 }
 </script>
-
-
-

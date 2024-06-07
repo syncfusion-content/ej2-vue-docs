@@ -19,7 +19,10 @@ When binding one million raw data, the pivot table processes all raw data to gen
 > This options will only function when the virtual scrolling is enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}

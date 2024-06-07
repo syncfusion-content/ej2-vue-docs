@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <div style="padding-top: 7px; float:left">Hierarchy Mode</div><div style="padding-left: 10px; display: inline-block">
@@ -15,15 +13,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, CopyHierarchyType } from "@syncfusion/ej2-vue-treegrid";
-import { DropDownListPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-dropdowns";
+
+import { TreeGridComponent, Page, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-Vue.use(DropDownListPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       treeGridData: sampleData,
@@ -35,20 +39,17 @@ export default {
         { id: 'Child', mode: 'Child' },
         { id: 'Both', mode: 'Both' },
         { id: 'None', mode: 'None' },
-    ];
+    ]
     };
   },
   provide: {
       treegrid: [ Page ]
     },
     methods: {
-    onChange: function(e: ChangeEventArgs): void {
-      let mode:CopyHierarchyType = e.value.toString();
+    onChange: function(e) {
+      let mode = e.value.toString();
       this.$refs.treegrid.ej2Instances.copyHierarchyMode = mode;
     }
   }
 }
 </script>
-
-
-

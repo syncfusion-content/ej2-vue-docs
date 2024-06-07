@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
     <ejs-numerictextbox ref='numeric' format='N' min='0' placeholder='Enter index to select a row' width=200 :showSpinButton='false' :change='onchange'></ejs-numerictextbox>
@@ -14,15 +12,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin } from "@syncfusion/ej2-vue-treegrid";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+
+import { TreeGridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-Vue.use(NumericTextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData
@@ -31,14 +35,11 @@ export default {
   methods: {
     onchange: function(){
       this.$refs.treegrid.selectRow(parseInt(this.$refs.numeric.getText(), 10));
-    }
-    rowSelected: function (args) {
+    },
+    rowSelected: function () {
         let rowHeight = this.$refs.treegrid.getRows()[this.$refs.treegrid.getSelectedRowIndexes()[0]].scrollHeight;
         this.$refs.treegrid.getContent().children[0].scrollTop = rowHeight * this.$refs.treegrid.getSelectedRowIndexes()[0];
     }
   }
 }
 </script>
-
-
-

@@ -3,25 +3,24 @@
     <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"></ejs-pivotview>
   </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, IDataSet } from "@syncfusion/ej2-vue-pivotview";
-import { DataManager, WebApiAdaptor, ODataAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(PivotViewPlugin);
-
-let remoteData: DataManager = new DataManager({
+let remoteData = new DataManager({
   url: "https://bi.syncfusion.com/northwindservice/api/orders",
   adaptor: new WebApiAdaptor(),
   crossDomain: true
 });
-
 export default {
+name: "App",
+components: {
+"ejs-pivotview":PivotViewComponent
+},
   data() {
     return {
       dataSourceSettings: {
-        dataSource: remoteData as DataManager,
+        dataSource: remoteData,
         expandAll: true,
         filters: [],
         columns: [{ name: 'ProductName', caption: 'Product Name' }],
@@ -35,5 +34,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>

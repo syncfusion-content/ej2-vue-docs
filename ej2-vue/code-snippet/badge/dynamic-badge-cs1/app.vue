@@ -1,5 +1,3 @@
-
-
 <template>
     <div id='element'>
         <div class="sample_container badge-list">
@@ -14,10 +12,13 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-Vue.use(ListViewPlugin);
-var templateVue = Vue.component("template", {
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+import {createApp} from 'vue';
+
+const app = createApp({});
+
+var templateVue = app.component("template", {
   template: `
     <div class="listWrapper" style="width: inherit;height: inherit;">
         <span :class="[data.icons + 'list_svg']">&nbsp;</span>
@@ -33,6 +34,12 @@ var templateVue = Vue.component("template", {
 });
 
 export default {
+name: "App",
+components: {
+"ejs-listview":ListViewComponent,
+
+},
+
     data: function() {
         return {
             data: [
@@ -222,6 +229,3 @@ export default {
     background-color: #009688;
 }
 </style>
-
-
-

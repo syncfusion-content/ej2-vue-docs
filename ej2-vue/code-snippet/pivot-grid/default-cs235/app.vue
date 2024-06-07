@@ -1,27 +1,24 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="save-btn" :isPrimary="isPrimary" v-on:click.native="saveBtnClick">Save Layout</ejs-button>
-        <ejs-button id="load-btn" :isPrimary="isPrimary" v-on:click.native="loadBtnClick">Load Layout</ejs-button>
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :enablePersistence="enablePersistence"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="save-btn" :isPrimary="isPrimary" v-on:click="saveBtnClick">Save Layout</ejs-button>
+    <ejs-button id="load-btn" :isPrimary="isPrimary" v-on:click="loadBtnClick">Load Layout</ejs-button>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"
+      :showGroupingBar="showGroupingBar" :enablePersistence="enablePersistence"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotFieldListPlugin, FieldList, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(PivotFieldListPlugin);
-Vue.use(ButtonPlugin);
-let layout: string;
+let layout;
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -39,14 +36,14 @@ export default {
     }
   },
   provide: {
-       pivotview: [GroupingBar]
-   }
+    pivotview: [GroupingBar]
+  },
   methods: {
-    saveBtnClick: function(args) {
+    saveBtnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       this.layout = pivotGridObj.getPersistData();
     },
-    loadBtnClick: function(args) {
+    loadBtnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.loadPersistData(this.layout);
     }
@@ -54,9 +51,5 @@ export default {
 }
 </script>
 <style>
-    @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

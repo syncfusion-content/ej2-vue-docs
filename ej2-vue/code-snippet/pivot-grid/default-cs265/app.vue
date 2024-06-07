@@ -1,25 +1,20 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
-        :showToolbar="showToolbar" :allowPdfExport="allowPdfExport" :displayOption="displayOption"
-        :showFieldList="showFieldList" :toolbar="toolbar" :actionBegin="actionBegin" 
-        :enableVirtualization="enableVirtualization"> </ejs-pivotview>
-</div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :showToolbar="showToolbar"
+      :allowPdfExport="allowPdfExport" :displayOption="displayOption" :showFieldList="showFieldList" :toolbar="toolbar"
+      :actionBegin="actionBegin" :enableVirtualization="enableVirtualization"> </ejs-pivotview>
+  </div>
 </template >
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, Toolbar, FieldList, PDFExport } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, Toolbar, FieldList, PDFExport } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -30,7 +25,7 @@ export default {
         formatSettings: [{ name: 'Amount', format: 'C0' }],
       },
       height: 350,
-      displayOption: { view:'Both' },
+      displayOption: { view: 'Both' },
       toolbar: ['Grid', 'Chart', 'Export', 'FieldList'],
       showFieldList: true,
       showToolbar: true,
@@ -42,20 +37,16 @@ export default {
     actionBegin: function (args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       if (args.actionName == 'PDF export') {
-          args.cancel = true;
-          pivotGridObj.pdfExport({}, false, null, false, true);
+        args.cancel = true;
+        pivotGridObj.pdfExport({}, false, null, false, true);
       }
     }
   },
   provide: {
-        pivotview: [Toolbar, FieldList, PDFExport]
-    }
+    pivotview: [Toolbar, FieldList, PDFExport]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

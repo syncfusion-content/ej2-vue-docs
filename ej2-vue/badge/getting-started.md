@@ -99,7 +99,10 @@ Add an HTML span element with `e-badge` class inside any wrapper element `(h1)` 
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/badge/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/badge/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

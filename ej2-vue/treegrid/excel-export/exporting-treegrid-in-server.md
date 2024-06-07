@@ -64,12 +64,13 @@ public class TreeGridColumnModel
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Page, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
+
 
 export default {
   data ()  {
@@ -85,9 +86,7 @@ export default {
         }
     }
   },
-  provide: {
-      treegrid: [ Page, Toolbar, ExcelExport ]
-  }
+  provide('treegrid',  [ Page, Toolbar, ExcelExport ]);
 }
 </script>
 
@@ -140,12 +139,13 @@ public class TreeGridColumnModel
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Page, Toolbar } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
+
 
 export default {
   data ()  {
@@ -161,9 +161,7 @@ export default {
         }
     }
   },
-  provide: {
-      treegrid: [ Page, Toolbar, CsvExport ]
-  }
+  provide('treegrid',  [ Page, Toolbar, CsvExport ]);
 }
 </script>
 ```

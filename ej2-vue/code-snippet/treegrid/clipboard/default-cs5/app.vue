@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <ejs-treegrid :dataSource='treeGridData' childMapping='subtasks' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings' height='220px' :selectionSettings='selectionOptions' :editSettings='editSettings' :toolbar='toolbar'>
@@ -14,13 +11,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Edit, Page, Toolbar } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Edit, Page, Toolbar, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       treeGridData: sampleData,
@@ -36,6 +39,3 @@ export default {
   }
 
 </script>
-
-
-

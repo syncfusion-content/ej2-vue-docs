@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The excel export provides an option to include header and footer content for exported excel document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/excel/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/excel/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

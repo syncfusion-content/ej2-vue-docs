@@ -1,21 +1,20 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :editSettings="editSettings" :beginDrillThrough="beginDrillThrough"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :editSettings="editSettings"
+      :beginDrillThrough="beginDrillThrough"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, BeginDrillThroughEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
-import { Grid, Sort, Filter, Group, Inject } from '@syncfusion/ej2-grids';
-Vue.use(PivotViewPlugin);
+import { Grid, Sort, Filter, Group } from '@syncfusion/ej2-grids';
 
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,22 +31,19 @@ export default {
     }
   },
   methods: {
-    beginDrillThrough: function(args: BeginDrillThroughEventArgs) {
-        if (args.gridObj) {
-            Grid.Inject(Sort, Filter, Group);
-            let gridObj: Grid = args.gridObj;
-            gridObj.allowGrouping = true;
-            gridObj.allowSorting = true;
-            gridObj.allowFiltering = true;
-            gridObj.filterSettings = { type: 'CheckBox' };
-        }
+    beginDrillThrough: function (args) {
+      if (args.gridObj) {
+        Grid.Inject(Sort, Filter, Group);
+        let gridObj = args.gridObj;
+        gridObj.allowGrouping = true;
+        gridObj.allowSorting = true;
+        gridObj.allowFiltering = true;
+        gridObj.filterSettings = { type: 'CheckBox' };
+      }
     },
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

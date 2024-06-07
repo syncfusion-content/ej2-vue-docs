@@ -43,7 +43,10 @@ Operators that can be used in label filtering are:
 | NotBetween| Displays the pivot table that does not record between start and end values.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs258/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs258/app.vue %}
 {% endhighlight %}
 {% endtabs %}

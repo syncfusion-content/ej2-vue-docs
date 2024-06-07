@@ -99,12 +99,31 @@ import { ToastComponent as EjsToast } from '@syncfusion/ej2-vue-notifications';
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { ToastComponent } from '@syncfusion/ej2-vue-notifications';
+
+export default {
+  components: {
+    'ejs-toast': ToastComponent
+  }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { ToastComponent } from '@syncfusion/ej2-vue-notifications';
 
 export default {
+name: "App",
+components: {
+"ejs-toast':":Toast':Component
+
+},
+
   components: {
     'ejs-toast': ToastComponent
   }

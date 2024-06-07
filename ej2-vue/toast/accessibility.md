@@ -53,7 +53,10 @@ The toast component implements the keyboard navigation support by using the foll
 | role | <b>alert:</b> Identifies the element as a container when alert content will be added or updated. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/accessibility-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/accessibility-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

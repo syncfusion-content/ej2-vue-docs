@@ -1,30 +1,23 @@
-
-
-
-
 <template>
-    <div id="app">
-     <ejs-button id="enablertl" :isPrimary="isPrimary" cssClass='e-flat' v-on:click.native="enableRtl">ENABLE RTL</ejs-button>
-      <ejs-button id="disablertl" :isPrimary="isPrimary" cssClass='e-flat' v-on:click.native="disableRtl">DISABLE RTL</ejs-button>
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height" :showToolbar="showToolbar" :toolbar="toolbar"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="enablertl" :isPrimary="isPrimary" cssClass='e-flat' v-on:click="enableRtl">ENABLE RTL</ejs-button>
+    <ejs-button id="disablertl" :isPrimary="isPrimary" cssClass='e-flat' v-on:click="disableRtl">DISABLE RTL</ejs-button>
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :showToolbar="showToolbar" :toolbar="toolbar"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { ButtonPlugin, ChangeEventArgs } from '@syncfusion/ej2-vue-buttons';
-import {
-  PivotViewPlugin,
-  IDataSet,
-  Toolbar,
-} from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { PivotViewComponent, Toolbar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -37,18 +30,18 @@ export default {
       height: 350,
       gridSettings: { columnWidth: 140 },
       showToolbar: true,
-      toolbar: [{template:'#enablertl'}, {template:'#disablertl'}],
-      isPrimary:true
+      toolbar: [{ template: '#enablertl' }, { template: '#disablertl' }],
+      isPrimary: true
     };
   },
   methods: {
-    enableRtl: function(args) {
+    enableRtl: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.enableRtl=true;
+      pivotGridObj.enableRtl = true;
     },
-    disableRtl: function(args) {
+    disableRtl: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      pivotGridObj.enableRtl=false;
+      pivotGridObj.enableRtl = false;
     }
   },
   provide: {
@@ -59,9 +52,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

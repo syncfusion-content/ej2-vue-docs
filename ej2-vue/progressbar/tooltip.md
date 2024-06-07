@@ -32,31 +32,21 @@ The tooltip for the progress bar is used to represent the progress value. During
          </div>
       </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value1:100,
-    animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      },
-      tooltip: {
-        enable: true,
-        showTooltipOnHover: true
-      }
-      };
-      },
-      provide: {},
-      methods: {}
-   });
+const value1 =100;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const tooltip = {
+  enable: true,
+  showTooltipOnHover: true
+};
+
 </script>
 <style>
   #loader {
@@ -97,31 +87,21 @@ By default, the tooltip shows information about progress. In addition to that, s
          </div>
       </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value1:100,
-    animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      },
-      tooltip: {
-        enable: true,
-        format: "Progress: ${value}"
-      }
-      };
-      },
-      provide: {},
-      methods: {}
-   });
+const value1 =100;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const tooltip = {
+  enable: true,
+  format: "Progress: ${value}"
+};
+
 </script>
 <style>
   #loader {
@@ -162,31 +142,21 @@ The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/progressbar/toolti
          </div>
       </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value1:100,
-    animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      },
-      tooltip: {
-        enable: true,
-        format: "Progress: ${value}"
-      }
-      };
-      },
-      provide: {},
-      methods: {}
-   });
+const value1 =100;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const tooltip = {
+  enable: true,
+  format: "Progress: ${value}"
+};
+
 </script>
 <style>
   #loader {

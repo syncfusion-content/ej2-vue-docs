@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
 <ejs-treegrid ref='treegrid' :dataSource="virtualData" :enableVirtualization='true' :enableColumnVirtualization='true' :treeColumnIndex='1' childMapping='Crew' height=317>
@@ -41,13 +39,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, VirtualScroll } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, VirtualScroll, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { dataSource, virtualData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data () {
     return {
       virtualData: dataSource(),
@@ -58,6 +62,3 @@ export default {
   }
 }
 </script>
-
-
-
