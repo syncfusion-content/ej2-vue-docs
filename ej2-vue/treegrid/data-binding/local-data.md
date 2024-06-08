@@ -34,6 +34,9 @@ The following code example shows you how to bind the hierarchical local data int
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs2/app.vue %}
 {% endhighlight %}
+{% highlight html tabtitle="datasource.js" %}
+{% include code-snippet/treegrid/data-binding/default-cs2/datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/treegrid/data-binding/default-cs2" %}
@@ -51,6 +54,9 @@ TreeGrid is rendered from Self-Referential data structures by providing two fiel
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs3/app.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="datasource.js" %}
+{% include code-snippet/treegrid/data-binding/default-cs3/datasource.js %}
 {% endhighlight %}
 {% endtabs %}
         

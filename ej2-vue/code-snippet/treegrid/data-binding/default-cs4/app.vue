@@ -25,7 +25,7 @@ components: {
 },
 
    data() {
-    let SERVICE_URI ="https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData";
+    let SERVICE_URI ="https://services.syncfusion.com/vue/production/api/SelfReferenceData";
     return {
       data: new DataManager({
         url: SERVICE_URI,
