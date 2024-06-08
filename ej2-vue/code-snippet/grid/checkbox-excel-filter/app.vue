@@ -33,7 +33,7 @@ export default {
     getTradeData: function () {
         let SERVICE_URI = "https://services.syncfusion.com/vue/production/";
         let getTradeData = new DataManager({
-            url: SERVICE_URI + 'api/UrlDataSource',
+            url: SERVICE_URI + 'api/Orders',
             adaptor: new UrlAdaptor()
         });
         return getTradeData;

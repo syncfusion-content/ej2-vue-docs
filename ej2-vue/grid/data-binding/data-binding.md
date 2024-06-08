@@ -118,7 +118,7 @@ export default Vue.extend({
   methods:{
    btnClick: function (args){
         var grid = document.getElementsByClassName("e-grid")[0].ej2_instances[0]; // Grid instance
-        var ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
+        var ajax = new Ajax("https://services.syncfusion.com/vue/production/api/Orders", "GET");
         ajax.send();
         ajax.onSuccess = function (result) {
         grid.dataSource = JSON.parse(result);
