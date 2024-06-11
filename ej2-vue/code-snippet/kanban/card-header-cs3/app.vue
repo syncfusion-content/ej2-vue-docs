@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-dropdownlist
@@ -28,15 +26,21 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from "@syncfusion/ej2-vue-kanban";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-kanban";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { extend } from "@syncfusion/ej2-base";
 import { Query } from "@syncfusion/ej2-data";
 import { kanbanData } from "./datasource.js";
-Vue.use(KanbanPlugin);
-Vue.use(DropDownListPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function () {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -72,6 +76,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css";
 </style>
-
-
-

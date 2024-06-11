@@ -17,7 +17,10 @@ The Grid user interface (UI) was redesigned to provide an optimal viewing experi
 When we enable the [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentation/api/grid/#enableadaptiveui) property, the grid will render the filter, sort, and edit dialogs in full screen for a better user experience. This behavior is demonstrated in the below demo.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/adaptive-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/adaptive-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ When we enable the [enableAdaptiveUI](https://ej2.syncfusion.com/vue/documentati
 The grid will render the row elements in vertical order while setting the [`rowRenderingMode`](https://ej2.syncfusion.com/vue/documentation/api/grid#rowrenderingmode) property value as **Vertical**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/adaptive-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/adaptive-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

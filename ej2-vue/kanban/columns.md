@@ -19,7 +19,10 @@ Kanban columns are categorized by mapping the **key** from the datasource using 
 > The `keyField` property is mandatory to render the columns in the Kanban board.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/single-key-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/single-key-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Kanban columns are categorized by mapping the **key** from the datasource using 
 Kanban board allows to render a single column by mapping multiple keys using `keyField` property. In below sample, specified the multiple keys(Open, Validate) to a single column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/multiple-keys-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/multiple-keys-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ To learn about Kanban customize column header using templates, you can check out
 You can customize the column header with any HTML or CSS element using the `template` property as shown in the following code.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/header-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/header-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ Kanban allows to expand or collapse its columns using `allowToggle` inside the `
 > By default, collapsed column width is set to `50px`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/toggle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/toggle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +93,10 @@ By default, all columns are on expanded state when loading the Kanban board init
 In the following example, the backlog column is collapsed on initialization of Kanban board.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/expanded-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/expanded-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +116,10 @@ To learn about Kanban stacked headers, you can check out this video:
 In the following code, the kanban columns 'InProgress, Review' are grouped under 'Development Phase' category.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/stacked-headers-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/stacked-headers-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

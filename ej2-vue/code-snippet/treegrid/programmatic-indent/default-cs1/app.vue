@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <button v-on:click="Indenting()">Indent</button>
@@ -15,13 +13,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, RowDD } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, RowDD, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData
@@ -30,7 +34,7 @@ export default {
   methods: {
     Indenting() {
       this.$refs.treegrid.indent(this.$refs.treegrid.getCurrentViewRecords()[2]);
-    }
+    },
     Outdenting() {
       this.$refs.treegrid.outdent(this.$refs.treegrid.getCurrentViewRecords()[2]);
     }
@@ -40,6 +44,3 @@ export default {
   }
 }
 </script>
-
-
-

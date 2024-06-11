@@ -38,7 +38,10 @@ Required CSS file of code mirror
 Add a custom icon for HTML source editor in the toolbar of Rich Text Editor using the template option of ToolbarSettings, define the code mirror plugins, and then pass the Rich Text Editor content as argument in the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#actioncomplete) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

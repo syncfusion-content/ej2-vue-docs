@@ -115,15 +115,24 @@ Follow the below steps to add the Vue File manager component:
 1\. First, import and register the File manager component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
-    components: {
-        'ejs-filemanager': FileManagerComponent
-    }
+name: "App",
+components: {
+"ejs-filemanager":FilemanagerComponent
+},
 }
 </script>
 
@@ -148,6 +157,16 @@ export default {
 3\. Declare the value for the `ajaxSettings` property in the `script` section.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+const ajaxSettings =
+{
+    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+};
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
@@ -167,6 +186,9 @@ data () {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/file-manager/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/file-manager/getting-started-cs1/app.vue %}
 {% endhighlight %}
@@ -193,12 +215,26 @@ yarn run serve
 To perform the download operation, initialize the `downloadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager component.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings =
+{
+    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
+name: "App",
     components: {
         'ejs-filemanager': FileManagerComponent
     },
@@ -222,13 +258,27 @@ export default {
 To perform the upload operation, initialize the `uploadUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager Component.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings =
+{
+    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+};
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
-    components: {
+name: "App",
+components: {
         'ejs-filemanager': FileManagerComponent
     },
     data () {
@@ -251,7 +301,10 @@ export default {
 To perform the image preview support in the File Manager component, need to initialize the `getImageUrl` property in a [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#ajaxsettings) of File Manager component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -265,7 +318,10 @@ Basically, the file manager component contains large-icons view for displaying t
 The following example shows you the File Manager with all feature modules.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/overview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/overview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -279,7 +335,10 @@ The following example shows you the File Manager with all feature modules.
 The initial view of the File Manager can be changed to details or largeicons view with the help of [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) property. By default, the File Manager will be rendered in large icons view. When the File Manager is initially rendered, [created](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#created) will be triggered. This event can be utilized for performing operations once the File Manager has been successfully created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/view-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/view-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -296,7 +355,10 @@ The File Manager supports maintaining the component state on page reload. This c
 For every operation in File Manager, ajax request will be sent to the server which then processes the request and sends back the response. When the ajax request is success, [success](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#success) event will be triggered and [failure](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#failure) event will be triggered if the request gets failed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/persistence-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/persistence-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -310,7 +372,10 @@ For every operation in File Manager, ajax request will be sent to the server whi
 It is possible to render the File Manager in right-to-left direction by setting the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#enablertl) API to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -324,7 +389,47 @@ The current path of the File Manager can be specified initially or dynamically u
 The following code snippet demonstrates specifying the current path in File Manager on rendering.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-filemanager id="file-manager" :path="path" :ajaxSettings="ajaxSettings">
+        </ejs-filemanager>
+    </div>
+</template>
+<script setup>
+import { provide } from "vue";
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings =
+{
+    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
+    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
+    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+};
+// Initial view of File Manager is set to details view
+const view = "Details";
+// Specify the required current path
+const path: '/Food';
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div id="app">
@@ -335,9 +440,10 @@ The following code snippet demonstrates specifying the current path in File Mana
 <script>
 import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 export default {
-    components: {
-        'ejs-filemanager': FileManagerComponent
-    },
+name: "App",
+components: {
+"ejs-filemanager":FilemanagerComponent,
+},
     data () {
         return {
            ajaxSettings:

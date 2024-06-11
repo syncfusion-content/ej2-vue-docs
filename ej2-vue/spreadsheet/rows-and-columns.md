@@ -30,7 +30,10 @@ The rows can be inserted in the following ways,
 The following code example shows the options for inserting rows in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/insert-row-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/insert-row-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ The columns can be inserted in the following ways,
 The following code example shows the options for inserting columns in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/insert-column-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/insert-column-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +72,10 @@ The rows and columns can be deleted dynamically in the following ways,
 The following code example shows the delete operation of rows and columns in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/delete-row-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/delete-row-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +114,10 @@ The columns can be hidden or shown through following ways,
 The following code example shows the hide/show rows and columns operation in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/show-hide-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/show-hide-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -130,7 +142,10 @@ You can provide the following type of ranges to the method:
 The following code example shows how to change the height for single/multiple rows in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/row-height-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/row-height-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +166,10 @@ You can provide the following type of ranges to the method:
 The following code example shows how to change the width for single/multiple columns in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/column-width-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/column-width-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -165,7 +183,10 @@ Using the [`beforeCellRender`](https://ej2.syncfusion.com/vue/documentation/api/
 The following code example shows how to change the text in the column headers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/column-header-change-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/column-header-change-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

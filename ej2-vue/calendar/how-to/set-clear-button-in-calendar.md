@@ -21,7 +21,10 @@ To configure `clear` button in Calendar UI, do the following:
 4. Bind the required event handler to the button tags to update the value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

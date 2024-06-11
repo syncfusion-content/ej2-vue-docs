@@ -85,7 +85,10 @@ It supports the following list of shortcut keys:
 > To focus the Calendar component, use `alt+t` keys.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -130,7 +130,7 @@ import { AppBarComponent } from "@syncfusion/ej2-vue-navigations";
 export default {
   name: "App",
   components: {
-    "ejs-appbar": AppBarComponent,
+    "ejs-appbar": AppBarComponent
   }
 }
 </script>
@@ -187,11 +187,13 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
 <script>
 import { AppBarComponent } from '@syncfusion/ej2-vue-navigations';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
   name: "App",
   components: {
-    "ejs-appbar": AppBarComponent
+    "ejs-appbar": AppBarComponent,
+    "ejs-button":ButtonComponent
   }
 }
 </script>

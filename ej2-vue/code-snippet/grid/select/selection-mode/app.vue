@@ -19,14 +19,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { data } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { data } from "./datasource.js";
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropdownlistComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

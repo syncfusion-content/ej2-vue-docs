@@ -36,35 +36,31 @@ Initialize the treemap and enable the drill-down option.
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { TreeMapPlugin } from '@syncfusion/ej2-vue-treemap';
+<script setup>
+
+import { TreeMapComponent as EjsTreemap} from '@syncfusion/ej2-vue-treemap';
 import { data } from './datasource.js';
 
-Vue.use(TreeMapPlugin);
-export default {
-   data () {
-    return {
-      dataSource:  data,
-        palette: ["#9999ff", "#CCFF99", "#FFFF99", "#FF9999", "#FF99FF", "#FFCC66"],
-        levels: [
-            {
-                groupPath: 'Continent', border: { color: 'black', width: 0.5 },
-            },
-            {
-              groupPath: 'States', border: { color: 'black', width: 0.5 },
-            },
-            {
-              groupPath: 'Region', border: { color: 'black', width: 0.5 },
-            }
-        ],
-        leafItemSettings: {
-          labelPath:'Name',
-          showLabels: false
-        }
-    }
+const dataSource = data;
+const palette = ["#9999ff", "#CCFF99", "#FFFF99", "#FF9999", "#FF99FF", "#FFCC66"];
+
+const levels: [
+  {
+    groupPath: 'Continent', border: { color: 'black', width: 0.5 },
   },
-}
+  {
+    groupPath: 'States', border: { color: 'black', width: 0.5 },
+  },
+  {
+    groupPath: 'Region', border: { color: 'black', width: 0.5 },
+  }
+];
+
+const leafItemSettings = {
+  labelPath:'Name',
+  showLabels: false
+};
+
 </script>
 ```
 
@@ -88,7 +84,10 @@ Show the population of a particular continent in the treemap `loaded` event. In 
 Customize the population for drilled countries or states in the header element when drill-down the treemap. The `drillEnd` event will be triggered when treemap is drilled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

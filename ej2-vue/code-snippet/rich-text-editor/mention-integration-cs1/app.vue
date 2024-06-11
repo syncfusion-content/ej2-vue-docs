@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <ejs-richtexteditor id="mention_integration"  placeholder="Type @ and tag the name" :actionBegin="onActionBegin">
@@ -17,14 +15,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-import { MentionPlugin } from "@syncfusion/ej2-vue-dropdowns";
-
-Vue.use(MentionPlugin);
-Vue.use(RichTextEditorPlugin);
-
+import { RichTextEditorComponent, Toolbar, Link, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { MentionComponent } from "@syncfusion/ej2-vue-dropdowns";
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent,
+"ejs-mention":MentionComponent
+},
     data: function() {
         return {
           data: [
@@ -117,5 +115,3 @@ export default {
         cursor: pointer;
     }
 </style>
-
-

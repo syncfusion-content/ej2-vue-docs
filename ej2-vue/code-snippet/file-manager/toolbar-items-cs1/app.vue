@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-button id="enable" cssClass="e-success">Enable New Folder toolbar item</ejs-button>
@@ -9,14 +7,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(FileManagerPlugin);
-Vue.use(ButtonPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
 
 export default {
+    name: "App",
+    components: {
+        "ejs-button":ButtonComponent,
+        "ejs-filemanager":FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:
@@ -26,7 +27,6 @@ export default {
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
-            view: "Details",
             height: "330px"
         };
     },
@@ -74,5 +74,3 @@ export default {
 }
 
 </style>
-
-

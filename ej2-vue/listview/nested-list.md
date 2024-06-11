@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The ListView component supports Nested list. For that, the child property should be defined for the nested list in the array of JSON.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/nested-list-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/nested-list-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

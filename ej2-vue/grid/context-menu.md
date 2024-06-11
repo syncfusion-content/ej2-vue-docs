@@ -57,7 +57,10 @@ Items| Description
 The following example demonstrates how to enable context menu feature in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/contextMenu/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/contextMenu/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +78,10 @@ Furthermore, you can assign actions to these custom items by utilizing the [cont
 The following example demonstrates how to add custom context menu items in the Grid component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/contextMenu/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/contextMenu/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +99,10 @@ By using the `onclick` event listener of the Grid, you can obtain the clicked po
 The following example demonstrates how to show context menu on left click using `created` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/contextMenu/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/contextMenu/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +120,10 @@ This can be achieved using the [enableItems](https://ej2.syncfusion.com/vue/docu
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to enable and disable the context menu items using `enableItems` method. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered, and the **Copy** items is updated accordingly.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/contextMenu/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/contextMenu/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +139,10 @@ This can be achieved using the [showItems](https://ej2.syncfusion.com/vue/docume
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to show or hide the context menu items using `showItems` and `hideItems` methods. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered, and the **Edit** and **Delete** items are updated accordingly. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/contextMenu/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/contextMenu/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

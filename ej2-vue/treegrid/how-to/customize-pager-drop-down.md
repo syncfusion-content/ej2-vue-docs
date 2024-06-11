@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To customize default values of pager dropdown, you need to define [`pageSizes`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettings/#pagesizes) as array of strings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

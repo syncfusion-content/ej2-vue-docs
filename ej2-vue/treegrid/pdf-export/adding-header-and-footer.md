@@ -123,7 +123,10 @@ let exportProperties: PdfExportProperties = {
 The below code illustrates the pdf export customization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/pdf/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/pdf/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

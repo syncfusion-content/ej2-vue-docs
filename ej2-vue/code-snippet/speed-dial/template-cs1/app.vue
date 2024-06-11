@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
       <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;"></div>
@@ -9,12 +7,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+
+import { SpeedDialComponent  } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(SpeedDialPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-speeddial":SpeedDialComponent
+},
     data() {
         return {
             itemTemplateContent:"<div class='itemlist'><span class='icon ${iconCss}' style='padding:3px'></span><span class='text' style='padding:0 5px'>${text}</span></div>",
@@ -51,5 +53,3 @@ export default {
   background-color: rgb(224, 224, 224);
 }
 </style>
-
-

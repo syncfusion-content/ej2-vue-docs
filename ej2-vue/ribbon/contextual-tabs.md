@@ -21,7 +21,10 @@ You can utilize the [visible](https://ej2.syncfusion.com/vue/documentation/api/r
 You can utilize the `e-ribbon-contextual-tabs` tag directive to add contextual tabs in the Ribbon where you can add multiple tabs based on your needs.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/add-contextual-tab/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/add-contextual-tab/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ You can utilize the `e-ribbon-contextual-tabs` tag directive to add contextual t
 By using the [isSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonContextualTabSettings/#isselected) property you can control the selected state of each contextual tab and indicates which tab is currently active.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/select-contextual-tab/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/select-contextual-tab/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ You can use the [showTab](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 You can use the [hideTab](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#hidetab) method to hide specific Contextual tab in the Ribbon.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/contextual-tab-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/contextual-tab-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -22,7 +22,10 @@ While resizing, previous and next panes will be adjust its dimensions automatica
 Splitter allows you to set the minimum and maximum sizes for each pane. Resizing will not be occur over the [minimum](https://ej2.syncfusion.com/vue/documentation/api/splitter/paneProperties/#min) and [maximum](https://ej2.syncfusion.com/vue/documentation/api/splitter/paneProperties/#max) values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ You can disable the resizing for the pane by setting `false` to the [`resizable`
 > Splitter resizing will be enabled only when the target of the adjacent pane's `resizable` api should also be in `true` state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ While resizing the panes, you can refresh the pane contents by using either [`re
 You can customize the resize gripper icon and cursor in css level.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

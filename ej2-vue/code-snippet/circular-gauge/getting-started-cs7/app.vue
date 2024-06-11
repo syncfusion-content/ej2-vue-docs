@@ -1,24 +1,27 @@
-
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
             <ejs-circulargauge>
                 <e-axes>
-                    <e-axis startAngle= 230 endAngle= 130  maximum= 120 radius= '90%':pointers = 'pointers' :ranges='ranges' :lineStyle= 'lineStyle' :minorTicks= 'minorTicks' :majorTicks = 'majorTicks'>
-                </e-axis>
+                    <e-axis startAngle=230 endAngle=130 maximum=120 radius='90%' :pointers='pointers' :ranges='ranges'
+                        :lineStyle='lineStyle' :minorTicks='minorTicks' :majorTicks='majorTicks'>
+                    </e-axis>
                 </e-axes>
             </ejs-circulargauge>
         </div>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin } from "@syncfusion/ej2-vue-circulargauge";
 
-Vue.use(CircularGaugePlugin);
+import { CircularGaugeComponent, AxesDirective, AxisDirective } from "@syncfusion/ej2-vue-circulargauge";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective
+    },
     data: function () {
         return {
             majorTicks: {
@@ -53,10 +56,8 @@ export default {
 };
 </script>
 <style>
-    .wrapper {
-        max-width: 300px;
-        margin: 0 auto;
-    }
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
 </style>
-
-

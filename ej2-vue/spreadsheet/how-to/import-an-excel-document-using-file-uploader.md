@@ -15,7 +15,10 @@ If you explore your machine to select and upload an excel document using the fil
 The following code example shows how to import an excel document using file uploader in spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-uploader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-uploader-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

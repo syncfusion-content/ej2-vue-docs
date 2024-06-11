@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The spin buttons allow you to increase or decrease the value with the predefined [`step`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#step-number) value. The visibility of spin buttons can be set using the[`showSpinButton`](https://ej2.syncfusion.com/vue/documentation/api/numerictextbox/#showspinbutton-boolean) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/how-to/step-value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/how-to/step-value-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,22 +1,24 @@
-
-
 <template>
-<div id="app">
+  <div id="app">
     <div id="wrapper1">
-        <ejs-datepicker id="datepicker" v-model="date"></ejs-datepicker>
+      <ejs-datepicker id="datepicker" v-model="date"></ejs-datepicker>
     </div>
     <div id="wrapper2">
-        <ejs-datepicker id="datepicker1" v-model="date"></ejs-datepicker>
+      <ejs-datepicker id="datepicker1" v-model="date"></ejs-datepicker>
     </div>
-</div>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
 
-Vue.use(DatePickerPlugin);
+import { DatePickerComponent } from "@syncfusion/ej2-vue-calendars";
+
+
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    "ejs-datepicker": DatePickerComponent
+  },
+  data: function () {
     return {
       date: new Date()
     };
@@ -24,19 +26,19 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-#wrapper1{
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+
+#wrapper1 {
   min-width: 250px;
-    float: left;
-    margin-left: 100px;
+  float: left;
+  margin-left: 100px;
 }
-#wrapper2{
+
+#wrapper2 {
   min-width: 250px;
-    float: right;
-     margin-right: 100px;
+  float: right;
+  margin-right: 100px;
 }
 </style>
-
-

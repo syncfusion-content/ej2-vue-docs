@@ -31,7 +31,10 @@ Checkbox type ButtonGroup creation is similar to radio type ButtonGroup, instead
 The following example illustrates how to create ButtonGroup using `createButtonGroup` function for basic, checkbox and radio type behavior.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

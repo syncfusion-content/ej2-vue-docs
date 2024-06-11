@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 This demo showcases the quick popups for cells and appointments with the customized templates.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/quick-info-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/quick-info-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

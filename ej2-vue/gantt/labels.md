@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The Gantt component maps any data source fields to task labels using the [`labelSettings.leftLabel`](https://ej2.syncfusion.com/vue/documentation/api/gantt/labelSettings/#leftlabel), [`labelSettings.rightLabel`](https://ej2.syncfusion.com/vue/documentation/api/gantt/labelSettings/#rightlabel), and [`labelSettings.taskLabel`](https://ej2.syncfusion.com/vue/documentation/api/gantt/labelSettings/#tasklabel) properties. You can customize the task labels with templates.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/appearance-customization-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/appearance-customization-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

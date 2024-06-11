@@ -15,7 +15,10 @@ The AutoComplete has built-in support to [`highlight`](https://ej2.syncfusion.co
 In the below sample, customized the matched character in suggestion list by `e-highlight` class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

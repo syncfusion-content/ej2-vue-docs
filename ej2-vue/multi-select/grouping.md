@@ -19,7 +19,10 @@ To group the Vue MultiSelect dropdown items, you can check on this video:
 In the following sample, vegetables are grouped according on its category using `groupBy` field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/grouping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/grouping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ Previously, there is no checkbox for group headers. Now, this feature allow to r
 Inject the `CheckBoxSelection` module in the MultiSelect to use the checkbox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/grouping-with-checkbox-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/grouping-with-checkbox-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
  <ejs-progressbutton content="Spin Left"></ejs-progressbutton>
 </template>
@@ -11,6 +9,7 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+name: "App",
   components: {
     'ejs-progressbutton': ProgressButtonComponent
   }
@@ -23,5 +22,3 @@ export default {
   @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

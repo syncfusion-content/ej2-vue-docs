@@ -88,11 +88,13 @@ Follow the below steps to add the Vue Range slider component using `Composition 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
-import { SliderComponent as EjsSlider } from "@syncfusion/ej2-vue-inputs";
+import { SliderComponent as EjsSlider} from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -100,9 +102,10 @@ import { SliderComponent as EjsSlider } from "@syncfusion/ej2-vue-inputs";
 import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-  components: {
-    'ejs-slider': SliderComponent
-  }
+name: "App",
+components: {
+"ejs-slider':":SliderComponent
+}
 }
 </script>
 
@@ -127,11 +130,13 @@ export default {
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
 const value = 30;
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 

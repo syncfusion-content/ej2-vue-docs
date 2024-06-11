@@ -131,14 +131,11 @@ Follow the below steps to add the Vue Grid component using `Composition API` or 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
 <script setup>
   import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn } from '@syncfusion/ej2-vue-grids';
 </script>
-
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <script>
 import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
 //Component registration

@@ -15,7 +15,10 @@ The following example demonstrates how to set [`placeholder`](https://ej2.syncfu
 Using `placeholder` you can display a short hint in the input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

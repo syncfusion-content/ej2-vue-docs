@@ -11,13 +11,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { GridPlugin, Group, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, Group, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data: () => {
         return {
             data: employeeData,

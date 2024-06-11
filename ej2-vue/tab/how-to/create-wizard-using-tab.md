@@ -33,7 +33,10 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 the wizard all the data get cleared and wizard goes back to starting tab.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/wizard-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/wizard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

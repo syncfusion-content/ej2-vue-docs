@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div class='wrap'>
@@ -7,14 +5,17 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+
+ 
+
 const format = 'c2';
 // sets value to the NumericTextBox
 const value = 10;
+   
 </script>
-\<style>
+<style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
  .wrap {
@@ -22,5 +23,3 @@ const value = 10;
     width: 240px;
 }
 </style>
-
-

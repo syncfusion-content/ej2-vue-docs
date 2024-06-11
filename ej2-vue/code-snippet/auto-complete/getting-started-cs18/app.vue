@@ -1,39 +1,38 @@
-
-
 <template>
-    <div id="app">
-    <ejs-autocomplete :dataSource='data' :locale='locale' :fields='fields' sortOrder='sortOrder' :query='query' :placeholder="waterMark" ></ejs-autocomplete>
+  <div id="app">
+    <ejs-autocomplete :dataSource='data' :locale='locale' :fields='fields' sortOrder='sortOrder' :query='query'
+      :placeholder="waterMark"></ejs-autocomplete>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { AutoCompletePlugin } from '@syncfusion/ej2-vue-dropdowns';
-import { loadCldr,L10n } from '@syncfusion/ej2-base';
+import { AutoCompleteComponent } from '@syncfusion/ej2-vue-dropdowns';
+import { L10n } from '@syncfusion/ej2-base';
 import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
-Vue.use(AutoCompletePlugin);
-
-var remoteData = new DataManager({
-    url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
-    adaptor: new ODataV4Adaptor,
-    crossDomain: true
+const remoteData = new DataManager({
+  url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
+  adaptor: new ODataV4Adaptor,
+  crossDomain: true
 });
 
 L10n.load({
-    'fr-BE': {
-        'dropdowns': {
-            noRecordsTemplate: "Aucun enregistrement trouvé",
-            actionFailureTemplate: "Modèle d'échec d'action"
-        }
-    },
+  'fr-BE': {
+    'dropdowns': {
+      noRecordsTemplate: "Aucun enregistrement trouvé",
+      actionFailureTemplate: "Modèle d'échec d'action"
+    }
+  },
 
 });
 
 export default {
-  name: 'app',
-   data () {
+  name: "App",
+  components: {
+    "ejs-autocomplete": AutoCompleteComponent
+  },
+  data() {
     return {
-      waterMark : 'Trouver un client',
+      waterMark: 'Trouver un client',
       query: new Query().select(['ContactName', 'CustomerID']),
       data: remoteData,
       locale: 'fr-BE',
@@ -44,17 +43,16 @@ export default {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-  #app {
-    color: #008cff;
-    height: 40px;
-    left: 35%;
-    position: absolute;
-    top: 15%;
-    width: 30%;
-  }
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+
+#app {
+  color: #008cff;
+  height: 40px;
+  left: 35%;
+  position: absolute;
+  top: 15%;
+  width: 30%;
+}
 </style>
-
-

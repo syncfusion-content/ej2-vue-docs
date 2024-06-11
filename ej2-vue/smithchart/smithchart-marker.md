@@ -19,7 +19,10 @@ Markers and Datalabels are used to provide information about the data points in 
 Default visibility of marker is false. You can enable the marker by setting property visible as true in marker settings. This will add marker for each point in the series. Using marker setting, you can customize marker differently for each series in smithchart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ Using marker settings in series, you can customize the marker for each series di
 * [`shape`] - Used to change the shape of the marker.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +56,10 @@ Using marker settings in series, you can customize the marker for each series di
 By default, datalabel is disabled. You can enable the datalabel by setting property visible as true in datalabel settings. For each point in series, data label is created. Datalabel for each series can be customized differently using datalabel settings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ Using datalabel settings in marker, you can customize the datalabel for each ser
 * [`textStyle`] - Used to customize the font color, width and size.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}

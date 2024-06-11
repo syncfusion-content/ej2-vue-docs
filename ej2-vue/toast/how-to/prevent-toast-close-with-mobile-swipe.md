@@ -15,7 +15,10 @@ You can prevent the toast close with mobile swipe action by setting [beforeClose
 The following sample demonstrates preventing toast close with mobile swipe element displaying with custom code blocks.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/preventSwipe-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/preventSwipe-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

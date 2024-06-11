@@ -1,21 +1,21 @@
-
-
-
 <template>
      <div>
-        <ejs-button id="selectCell" cssClass="e-info" v-on:click.native="select">Select Cell</ejs-button>
+        <ejs-button id="selectCell" cssClass="e-info" v-on:click="select">Select Cell</ejs-button>
         <br>
         <br>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height ="height" :selectionSettings="selectionSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Selection } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+import { GanttComponent, Selection } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -69,6 +69,3 @@ export default {
   }
 };
 </script>
-
-
-

@@ -1,28 +1,27 @@
-
-
 <template>
    <div id='app'>
-       <center><ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showToast">Show Toast</ejs-button></center>
+       <center><ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showToast">Show Toast</ejs-button></center>
    </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast, ToastUtility } from "@syncfusion/ej2-vue-notifications";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { closest } from '@syncfusion/ej2-base';
 
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
+import { ToastUtility } from "@syncfusion/ej2-vue-notifications";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
 let ToastObj = undefined;
 
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
+
   data: function(){
     return { }
   },
   methods: {
-      showToast: function(args){
+      showToast: function(){
           ToastObj = ToastUtility.show({
             title: 'Toast Title',
             content: 'Toast shown using utility function with ToastModel',
@@ -37,7 +36,7 @@ export default {
       },
       toastClose: function(){
         ToastObj.hide();
-      }
+      },
       toastClick: function(){
         console.log('Toast click event triggered');
       }
@@ -58,6 +57,3 @@ export default {
     width: 30%;
 }
 </style>
-
-
-

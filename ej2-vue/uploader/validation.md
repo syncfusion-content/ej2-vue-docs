@@ -18,7 +18,10 @@ The uploader component validate the selected files extension and size using the 
 You can allow the specific types of files alone to upload using the [allowedExtensions](https://ej2.syncfusion.com/vue/documentation/api/uploader/#allowedextensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files matched against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute accept to original input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/file-type-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/file-type-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ You can allow the specific types of files alone to upload using the [allowedExte
 The uploader component allows you to validate the files based on its size. The validation helps to restrict uploading large files or empty files to the server. The size can be represented in `bytes`. By default, the uploader component allows you to upload **minimum file size** as 0 byte and **maximum file size** as 28.4 MB using using `minFileSize` and `maxFileSize` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/file-size-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/file-size-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +48,10 @@ The uploader component allows you to validate the files based on its size. The v
 You can restrict uploading the maximum number of files using the **selected** event. In the selected event arguments, you can get the currently selected files details using the `getFilesData()`. You can modify the files details and assign the modified file list to the `eventArgs.modifiedFilesData`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/file-count-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/file-count-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +63,10 @@ You can restrict uploading the maximum number of files using the **selected** ev
 You can validate the duplicate files before uploading to server using the selected event. Compare the selected files with the existing files data and filter the file list by removing the duplicate files.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

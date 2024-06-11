@@ -25,7 +25,10 @@ To enable the Hierarchy Grid feature:
 The following example demonstrates how to enable the hierarchy feature in the grid
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ By default, the parent and child grid relation is maintained using the [queryStr
 In the following example, the `load` event is utilized to customize the mapping value for the child grid. By accessing the `parentDetails` property and its **parentKeyFieldValue**, you can set the desired mapping value. The `parentRowData` property contains the data of the parent row, and by using the **EmployeeID** field name, you can extract the corresponding value from the parent row data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +68,10 @@ To achieve this, you can use the [expand](https://ej2.syncfusion.com/vue/documen
 In the provided example, expand the third record of the grid by utilizing the `expand` method within the `dataBound` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +89,10 @@ To dynamically load the `dataSource` of a child grid in the Grid, you can utiliz
 The following example demonstrates how to dynamically load child grid data using the `load` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +108,10 @@ To dynamically bind data to the child grid based on the parent row data instead 
 In the `detailDataBound` event handler, you can filter the child grid's dataSource based on the **EmployeeID** column value of the parent row data. This can be achieved by using the `DataManager` plugin and applying a filter to the child grid's dataSource. The filtered data can be assigned as the new dataSource for the child grid. This can be demonstrated by the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -112,7 +127,10 @@ To maintain the parent-child relationship in the Grid when adding a record to th
 In the following example, the parent and child grids are related by the **EmployeeID** field. To add a new record in the child grid, the **EmployeeID** field needs to be set with the value of the parent record's `queryString` in the `actionBegin` event. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -128,7 +146,10 @@ To achieve this, you can utilize the [template](https://ej2.syncfusion.com/vue/d
 The following example demonstrates, how to show a custom image in the **Employee Image** column of the child grid by utilizing the `template` property of the column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +165,10 @@ To achieve this, you can utilize the [created](https://ej2.syncfusion.com/vue/do
 The following example demonstrates how to obtain parent details in a child grid using the `created` event. Within the `created` event, you can access the parent row data using `this.parentDetails.parentRowData` and display the desired details in the message.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -160,7 +184,10 @@ By default, Grid renders all child grid rows in collapsed state. To expand all c
 The following example demonstrates how to expand and collapse the hierarchy grid using an external button click function.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -208,7 +235,10 @@ To hide the expand/collapse icon in parent row when no records in child grid, fo
 The following example demonstrates how to hide the expand/collapse icon in the row with **EmployeeID** as **1**, which does not have record in child Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -778,5 +808,3 @@ To customize the appearance of the child grid's column selection, you can use th
 In this example, the **.e-columnselection** class targets the background color of the column selection. You can modify the `background-color` property to change the background color of the selected columns.
 
 ![Child grid cell selection](images/child-grid-column-selection.png)
-
-

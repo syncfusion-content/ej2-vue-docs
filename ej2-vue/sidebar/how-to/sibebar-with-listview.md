@@ -15,7 +15,10 @@ Any HTML element can be placed in the Sidebar content area. Sidebar supports all
 In the following example, the Sidebar is rendered with ListView component in its content area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/listview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/listview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

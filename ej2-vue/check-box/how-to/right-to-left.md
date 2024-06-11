@@ -15,7 +15,10 @@ CheckBox component has RTL support. This can be achieved by setting [`enableRtl`
 The following example illustrates how to enable right-to-left support in CheckBox component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/check-box/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/check-box/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

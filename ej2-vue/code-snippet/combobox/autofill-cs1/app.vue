@@ -1,31 +1,30 @@
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;">
-        <br>
-        <ejs-combobox id='combobox' :dataSource='sportsData' :autofill='autofill' placeholder='Select a game'></ejs-combobox>
+      <br>
+      <ejs-combobox id='combobox' :dataSource='sportsData' :autofill='autofill'
+        placeholder='Select a game'></ejs-combobox>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ComboBoxPlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(ComboBoxPlugin);
+import { ComboBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
 
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-combobox": ComboBoxComponent
+  },
+  data() {
     return {
       sportsData: ['Badminton', 'Cricket', 'Football', 'Golf', 'Tennis'],
-      autofill : true,
+      autofill: true,
     }
   }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
-
-

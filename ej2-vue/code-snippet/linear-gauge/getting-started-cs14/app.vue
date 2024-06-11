@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="content-wrapper">
     <div align='center'>
@@ -9,10 +7,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin } from "@syncfusion/ej2-vue-lineargauge";
-Vue.use(LinearGaugePlugin);
+
+import { LinearGaugeComponent } from "@syncfusion/ej2-vue-lineargauge";
+
 export default {
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent
+},
   data: function () {
     return {
       orientation: "Horizontal",
@@ -24,5 +26,3 @@ export default {
   }
 };
 </script>
-
-

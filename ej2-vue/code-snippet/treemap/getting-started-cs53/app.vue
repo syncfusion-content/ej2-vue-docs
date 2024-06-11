@@ -6,11 +6,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin, ImageExport } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent, ImageExport } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent,
+},
   data: function () {
     return {
       dataSource: [

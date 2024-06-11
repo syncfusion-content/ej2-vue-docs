@@ -17,7 +17,10 @@ The critical path can be enabled in Gantt by using the built-in toolbar button o
 The following code example shows how to display the critical path in the Gantt control:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/criticalpath-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/criticalpath-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The taskbar in critical path can be customized by using [queryTaskbarInfo](https
 The following code example shows how to customize the critical path taskbar in the Gantt control:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/customizeCriticalPath-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/customizeCriticalPath-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -100,12 +100,21 @@ Follow the below steps to add the Vue Progressbar component:
 1\. First, import and register the Progressbar component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { ProgressBarComponent as EjsProgressbar } from '@syncfuion/ej2-vue-charts';
+
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { ProgressBarComponent } from '@syncfuion/ej2-vue-charts';
 export default {
-  components: {
+name: "App",
+components: {
     'ejs-progressbar': ProgressBarComponent
   }
 }
@@ -144,6 +153,18 @@ export default {
 3\. Declare the value for the `animation` and `value` properties in the `script` section.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+const value = 100;
+const animation= {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
@@ -165,7 +186,55 @@ data: function() {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div>
+    <div id='loader'>LOADING....</div>
+    <div id="container">
+      <div class="row linear-parent">
+        <div id="percentage" class="linear-progress">
+          <ejs-progressbar
+            id="percentage"
+            type='Circular'
+            :value='value'
+            :animation="animation"
+          >
+          </ejs-progressbar>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
+
+const value = 100;
+const animation= {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+
+</script>
+<style>
+  #loader {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+  #container {
+    display: -webkit-box;
+}
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
   <div>
@@ -190,7 +259,8 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 import { ProgressBarComponent } from "@syncfusion/ej2-vue-progressbar";
 
 export default {
-  components: {
+name: "App",
+components: {
     'ejs-progressbar': ProgressBarComponent
   },
   data: function() {

@@ -1,9 +1,7 @@
-
-
 <template>
 <div id="app">
-      <ejs-button id='enable' cssClass='e-flat' @click.native='enable'>Enable</ejs-button>
-      <ejs-button id='disable' cssClass='e-flat' @click.native='disable'>Disable</ejs-button>
+      <ejs-button id='enable' cssClass='e-flat' @click='enable'>Enable</ejs-button>
+      <ejs-button id='disable' cssClass='e-flat' @click='disable'>Disable</ejs-button>
       <ejs-treegrid ref='treegrid' :dataSource='data' height='200' childMapping='subtasks' :treeColumnIndex='1' :toolbar='toolbar' :toolbarClick='toolbarClick' :allowFiltering='true'>
             <e-columns>
               <e-column field='taskID' headerText='Task ID' width='90' textAlign='Right'></e-column>
@@ -15,17 +13,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Toolbar, Filter } from "@syncfusion/ej2-vue-treegrid";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { EmitType } from '@syncfusion/ej2-base';
-import { sampleData } from "./datasource.js";
-import { ClickEventArgs } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
+import { TreeGridComponent, Toolbar, Filter, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { sampleData } from "./datasource.js";
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -33,7 +35,7 @@ export default {
     };
   },
   methods: {
-    toolbarClick: function (args: ClickEventArgs) {
+    toolbarClick: function (args) {
       if (args.item.text === 'QuickFilter') {
         this.$refs.treegrid.filterByColumn('taskName', 'startswith', 'Testing');
       }
@@ -53,6 +55,3 @@ export default {
   }
 }
 </script>
-
-
-

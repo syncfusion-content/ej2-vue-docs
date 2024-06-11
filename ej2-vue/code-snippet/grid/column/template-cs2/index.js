@@ -21,7 +21,7 @@ new Vue({
           </e-columns>
           <template v-slot:columnTemplate="{data}">
             <div>
-              <ejs-button class="empData" v-on:click.native="showDetails(data)">View</ejs-button>
+              <ejs-button class="empData" v-on:click="showDetails(data)">View</ejs-button>
               <ejs-dialog ref="dialog" :visible="false" width="50%" showCloseIcon="true" :beforeOpen="contentShow" :header="header">
               </ejs-dialog>
             </div>

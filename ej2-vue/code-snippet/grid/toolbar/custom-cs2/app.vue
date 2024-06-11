@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' id='Grid' :dataSource='data' :editSettings='editSettings' :toolbarTemplate='toolbar'>
@@ -13,20 +11,24 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { ToolbarComponent } from "@syncfusion/ej2-vue-navigations";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { addImage } from "./add.ts";
 import { deleteImage } from "./delete.ts";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ToolbarPlugin);
-Vue.use(ButtonPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
-  
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-toolbar":ToolbarComponent,
+"ejs-button":ButtonComponent
+},
   data() {
     return {
       data: data,
@@ -36,13 +38,13 @@ export default {
         var addImageSource = `data:image/png;base64, ${addImage}`;
         var deleteImageSource = `data:image/png;base64, ${deleteImage}`;
         return {
-          template: Vue.component('custom-toolbar', {
+          template: app.component('custom-toolbar', {
             template: `<ejs-toolbar>
                         <div>
                           <img :src="addImageSource" id="addImage" />
-                          <ejs-button ref='button' id="addButton" class="button" cssClass='e-outline' v-on:click.native="editAction">Add</ejs-button>
+                          <ejs-button ref='button' id="addButton" class="button" cssClass='e-outline' v-on:click="editAction">Add</ejs-button>
                           <img :src="deleteImageSource" id="deleteImage" />
-                          <ejs-button ref='button'  id="deleteButton" class="button" cssClass='e-outline' v-on:click.native="editAction">Delete</ejs-button>
+                          <ejs-button ref='button'  id="deleteButton" class="button" cssClass='e-outline' v-on:click="editAction">Delete</ejs-button>
                         </div>
                     </ejs-toolbar>`,
             data: function () {
@@ -92,6 +94,3 @@ export default {
     width: 30px;
 }
 </style>
-
-
-

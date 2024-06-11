@@ -67,7 +67,10 @@ L10n.load({
 * Set the culture by using the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#locale) property. The following example demonstrates the DatePicker in `German` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +83,10 @@ The DatePicker supports right-to-left functionality for languages like Arabic, H
 [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/datepicker#enablertl) property to set the RTL direction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

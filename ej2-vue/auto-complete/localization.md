@@ -24,7 +24,10 @@ To load translation object to your application, use load function of the L10n cl
 Hence, the noRecordsTemplate property displays its text in French culture initially and if the sample is run offline, the actionFailureTemplate property displays its text appropriately.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

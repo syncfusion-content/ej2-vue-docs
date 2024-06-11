@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -18,17 +16,25 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
-Vue.use(QueryBuilderPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
    data(){
         return {
             values: ['Mr.', 'Mrs.'],
             data: new DataManager({
-            url: "https://services.syncfusion.com/js/production/api/Employees/";
+            url: "https://services.syncfusion.com/js/production/api/Employees/",
             adaptor: new ODataAdaptor(),
           }),
           importRules: {
@@ -49,7 +55,7 @@ export default {
                 }]
             }
         };
-    };
+    }
 }
 </script>
 <style>
@@ -58,5 +64,3 @@ export default {
         margin: 0 auto;
     }
 </style>
-
-

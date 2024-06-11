@@ -1,35 +1,23 @@
-
-
 <template>
   <div class="control-section">
-     <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi' >
+    <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi'>
     </ejs-listview>
   </div>
 </template>
-<style>
-#app {
-    color: #008cff;
-    height: 40px;
-    left: 30%;
-    position: absolute;
-}
 
-#ui-list {
-  display: block;
-  max-width: 400px;
-  margin: auto;
-  border-radius: 3px;
-  cursor: pointer;
-}
-</style>
 <script>
-import Vue from "vue";
-import { ListViewPlugin, Virtualization } from "@syncfusion/ej2-vue-lists";
-Vue.use(ListViewPlugin);
+
+import { ListViewComponent, Virtualization } from "@syncfusion/ej2-vue-lists";
+
 let listData = [];
 
 export default {
-  beforeCreate: function() {
+  name: "App",
+  components: {
+    "ejs-listview": ListViewComponent
+  },
+
+  beforeCreate: function () {
     listData = [
       { text: "Nancy", id: "0" },
       { text: "Andrew", id: "1" },
@@ -48,7 +36,7 @@ export default {
       listData.push({ text: listData[index].text, id: i.toString() });
     }
   },
-  data: function() {
+  data: function () {
     return {
       listData: listData,
       enableUi: true
@@ -59,5 +47,19 @@ export default {
   }
 };
 </script>
+<style>
+#app {
+  color: #008cff;
+  height: 40px;
+  left: 30%;
+  position: absolute;
+}
 
-
+#ui-list {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 3px;
+  cursor: pointer;
+}
+</style>

@@ -17,7 +17,10 @@ Accordion supports to load external contents through `AJAX` library. Refer the b
 * Get data from the Ajax Success event to initialize Accordion with retrieved external path data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/how-to/accordion-ajax-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/how-to/accordion-ajax-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

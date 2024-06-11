@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The avatar comes with default background color (grey). This can be easily customized to desired color by adding custom class or directly selecting the avatar class from the CSS.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/color-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/color-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The avatar comes with default background color (grey). This can be easily custom
 Even though the avatar comes with five predefined sizes, sometimes it's not enough. So, the avatar is designed in such a way that the width and height will be relative to font-size. By changing the `font-size` of the avatar element, you can change the width and height automatically.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/custom-size-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/custom-size-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ Even though the avatar comes with five predefined sizes, sometimes it's not enou
 Avatars can be used with a wide variety of media formats like SVG, font-icons, images, letters, words, etc. Some of them are given below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/media-formats-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/media-formats-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

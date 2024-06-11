@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowFiltering='true' height='273px'>
@@ -13,13 +11,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Filter } from "@syncfusion/ej2-vue-grids";
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { data } from './datasource.js'
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter } from "@syncfusion/ej2-vue-grids";
+import { DropDownList } from '@syncfusion/ej2-dropdowns';
+import { data } from './datasource.js';
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -30,17 +32,17 @@ export default {
                 return dd;
             },
             write: function (args) {
-               let DropDownListObj: DropDownList = new DropDownList({
+               let DropDownListObj = new DropDownList({
                    dataSource: ['All','1','3','4','5','6','8','9'],
                    fields: { text: 'EmployeeID', value: 'EmployeeID' },
                    placeholder: 'Select a value',
                    popupHeight: '200px',
                    change: function(e) {
-                       var gridObj = (document.getElementsByClassName('e-grid')[0] as any).ej2_instances[0];
+                       var gridObj = (document.getElementsByClassName('e-grid')[0]).ej2_instances[0];
                        if(e.value =='All') {
                            gridObj.removeFilteredColsByField('EmployeeID');
                         } else {
-                            gridObj.filterByColumn('EmployeeID','equal',parseInt(e.value as any));
+                            gridObj.filterByColumn('EmployeeID','equal',parseInt(e.value));
                         }
                     }
                 });
@@ -57,5 +59,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

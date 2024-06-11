@@ -22,7 +22,10 @@ The available built-in command buttons are:
 | Cancel | Cancel the edited state. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ The available built-in command buttons are:
 the action for the custom buttons can be defined in the [`buttonOption.click`](https://ej2.syncfusion.com/vue/documentation/api/grid/commandButtonOptions/#click) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

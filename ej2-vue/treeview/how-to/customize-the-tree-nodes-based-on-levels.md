@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can customize the tree nodes level wise by adding custom cssClass to the component and enabling styles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/how-to/cssClass-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/how-to/cssClass-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

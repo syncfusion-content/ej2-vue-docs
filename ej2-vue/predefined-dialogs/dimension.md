@@ -17,7 +17,10 @@ You can specify the dimension values in both pixels and percentage format to cha
 ## Alert dimension
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/alert-dimension-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/alert-dimension-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ You can specify the dimension values in both pixels and percentage format to cha
 ## Confirm dimension
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/confirm-dimension-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/confirm-dimension-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +43,10 @@ You can specify the dimension values in both pixels and percentage format to cha
 ## Prompt dimension
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/prompt-dimension-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/prompt-dimension-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ To have a restricted max-width and max-height dialog dimension, you need to spec
 Use the following code to customize the max-width and max-height for alert dialog:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/maxWidth-maxHeight-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/maxWidth-maxHeight-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +77,10 @@ To have a restricted min-width and min-height dialog dimension, you need to spec
 Use the following code to customize the min-width and min-height for alert dialog:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/minWidth-minHeight-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/minWidth-minHeight-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

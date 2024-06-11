@@ -1,15 +1,12 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,UmlClassifierShapeModel } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
     id: "Patient",
     //Position of the node
     offsetX: 200,
@@ -18,31 +15,33 @@
         fill: '#26A0DA',
     },
     shape: {
-      type: "UmlClassifier",
-      //Define class object
-      classShape: {
-        name: "Patient",
-        //Define class attributes
-        attributes: [{ name: "accepted", type: "Date" }],
-        //Define class methods
-        methods: [{ name: "getHistory", type: "getHistory" }]
-      },
-      classifier: "Class"
-    } as UmlClassifierShapeModel
+        type: "UmlClassifier",
+        //Define class object
+        classShape: {
+            name: "Patient",
+            //Define class attributes
+            attributes: [{ name: "accepted", type: "Date" }],
+            //Define class methods
+            methods: [{ name: "getHistory", type: "getHistory" }]
+        },
+        classifier: "Class"
+    }
 }]
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
             height: "350px",
-            nodes: nodes,
+            nodes: nodes
         }
     }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

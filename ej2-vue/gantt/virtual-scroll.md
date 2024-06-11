@@ -21,7 +21,10 @@ The number of records displayed in the Gantt is determined by the height.
 This mode can be enable by setting the `enableVirtualization` property to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/virtual-scroll-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/virtual-scroll-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ Timeline virtualization allows you to load a data source having large timespan w
 This mode can be enable by setting the [enableTimelineVirtualization](https://ej2.syncfusion.com/vue/documentation/api/gantt/#enabletimelinevirtualization) property to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/virtual-scroll-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/virtual-scroll-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

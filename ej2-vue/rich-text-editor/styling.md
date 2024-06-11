@@ -39,7 +39,10 @@ The following table list the default font size and width of the fontsize dropdow
 The following sample demonstrates the option to add the font name and font size tools to the toolbar as well as modify the default width of the tools.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +56,10 @@ Rich Text Editor supports to provide custom font and size with existing list.
 If you want to add additional font names and font sizes to font drop-down, pass the font information as JSON data to the items field of the [`fontSize`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontSize/#fontsize) and the [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontFamily/#fontfamily) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +75,10 @@ Rich Text Editor supports to provide customs font color and background color wit
 The FontColor and the BackgroundColor property has two [mode](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontColor/#mode) Picker and Palette. Palette mode has predefined set of colorCode and in the picker mode, more colors has been provided. Through [modeSwitcher](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/fontColor/#modeswitcher), you can able to switch between these two options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}

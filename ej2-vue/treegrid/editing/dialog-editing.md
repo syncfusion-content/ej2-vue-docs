@@ -15,7 +15,10 @@ In Dialog edit mode, when you start editing the currently selected row, data wil
 To enable Dialog edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/editSettingsModel/#mode) as `Dialog`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

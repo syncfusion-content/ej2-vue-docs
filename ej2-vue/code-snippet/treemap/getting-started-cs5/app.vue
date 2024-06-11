@@ -1,19 +1,19 @@
-
-
 <template>
     <div class="control_wrapper">
-        <ejs-treemap id="treemap"  :dataSource='dataSource' :rangeColorValuePath='rangeColorValuePath' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
+        <ejs-treemap id="treemap" :dataSource='dataSource' :rangeColorValuePath='rangeColorValuePath' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent,
+},
   data: function() {
     return {
-    height:'350px',
      dataSource: [
                        { fruit:'Apple', count:5000 },
                        { fruit:'Mango', count:3000 },
@@ -44,5 +44,3 @@ export default {
   }
 }
 </script>
-
-

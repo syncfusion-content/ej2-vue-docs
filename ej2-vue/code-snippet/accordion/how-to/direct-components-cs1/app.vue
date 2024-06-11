@@ -1,9 +1,7 @@
-
-
 <template>
-    <div id="app">
-   <ejs-accordion >
-        <e-accordionitems>
+  <div id="app">
+    <ejs-accordion>
+      <e-accordionitems>
         <e-accordionitem expanded='true' header='Calendar' :content='Template1'></e-accordionitem>
         <e-accordionitem header='DatePicker' :content='Template2'></e-accordionitem>
         <e-accordionitem header='Numeric Textbox' :content='Template3'></e-accordionitem>
@@ -12,57 +10,71 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { AccordionPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(AccordionPlugin);
-import { DatePickerComponent,CalendarComponent, DatePickerPlugin,CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
-Vue.use(DatePickerPlugin);
-Vue.use(CalendarPlugin);
-import { NumericTextBoxComponent,NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(NumericTextBoxPlugin);
+
+import { AccordionComponent, AccordionItemDirective, AccordionItemsDirective } from "@syncfusion/ej2-vue-navigations";
+import { createApp } from 'vue'
+import { CalendarComponent, DatePickerComponent } from "@syncfusion/ej2-vue-calendars";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+
 export default {
-  name: 'app',
-  data: function(){
+  name: "App",
+  components: {
+    "ejs-accordion": AccordionComponent,
+    "e-accordionitems": AccordionItemsDirective,
+    "e-accordionitem": AccordionItemDirective
+  },
+  data: function () {
     return {
-         Template1: function () {
-          return {
-          template: Vue.component('CalendarComponent', {
+      Template1: function () {
+        return {
+          template: createApp().component('CalendarComponent', {
             template: '<ejs-calendar ></ejs-calendar>',
-            data() { return {  }; }
+            components: {
+              'ejs-calendar': CalendarComponent,
+              'ejs-datepicker': DatePickerComponent,
+              "ejs-numerictextbox": NumericTextBoxComponent
+            },
+            data() { return {}; }
           })
         }
       },
-        Template2: function () {
+      Template2: function () {
         return {
-          template: Vue.component('DatePickerComponent', {
+          template: createApp().component('DatePickerComponent', {
             template: ' <ejs-datepicker :min="minDate" :max="maxDate" :value="dateVal" ></ejs-datepicker>',
-            data() { return { minDate : new Date("05/09/2017"),
-                             maxDate : new Date("05/15/2017"),
-                             dateVal : new Date("05/11/2017") }; }
+            components: {
+              'ejs-datepicker': DatePickerComponent,
+            },
+            data() {
+              return {
+                minDate: new Date("05/09/2017"),
+                maxDate: new Date("05/15/2017"),
+                dateVal: new Date("05/11/2017")
+              };
+            }
           })
         }
       },
       Template3: function () {
         return {
-          template: Vue.component('NumericTextBoxComponent', {
+          template: createApp().component('NumericTextBoxComponent', {
             template: '<ejs-numerictextbox value="100"></ejs-numerictextbox>',
-            data() { return { }; }
+            components: {
+              "ejs-numerictextbox": NumericTextBoxComponent
+            },
+            data() { return {}; }
           })
         }
       }
-   }
- }
+    }
+  }
 }
 </script>
-
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
-
-
-

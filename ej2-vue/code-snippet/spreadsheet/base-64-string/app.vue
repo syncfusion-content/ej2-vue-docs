@@ -23,19 +23,27 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent, SheetsDirective, SheetDirective, RangesDirective, RangeDirective, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-spreadsheet";
 import { data } from './data.js';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(SpreadsheetPlugin);
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
-var base64String;
+let base64String;
 export default {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-spreadsheet": SpreadsheetComponent,
+    "e-sheets": SheetsDirective,
+    "e-sheet": SheetDirective,
+    "e-ranges": RangesDirective,
+    "e-range": RangeDirective,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
   data: () => {
     return {
       dataSource: data,
-      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
+      openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open'
     }
   },
   methods: {
@@ -45,23 +53,23 @@ export default {
     },
     saveComplete: function (args) {
       // Convert blob data to base64 string.
-      var reader = new FileReader();
+      let reader = new FileReader();
       reader.readAsDataURL(args.blobData);
       reader.onloadend = function () {
         base64String = reader.result;
       };
     },
     importBtn: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       fetch(base64String)
         .then((response) => response.blob())
         .then((fileBlob) => {
-          var file = new File([fileBlob], 'Sample.xlsx');
+          let file = new File([fileBlob], 'Sample.xlsx');
           spreadsheet.open({ file: file });
         });
     },
     exportBtn: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.save({
         url: 'https://services.syncfusion.com/vue/production/api/spreadsheet/save',
         fileName: 'Worksheet',
@@ -84,9 +92,8 @@ export default {
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+
 .custom-btn {
   margin-bottom: 10px;
 }
 </style>
-
-

@@ -19,7 +19,10 @@ You can display the suggestions list items in a specific order. It has possible 
 In the following sample, the popup list data is rendered in `Descending` order.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/sorting-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/sorting-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

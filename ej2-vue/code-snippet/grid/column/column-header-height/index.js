@@ -10,9 +10,9 @@ new Vue({
   template: `
       <div id="app">
         <div style="display: flex">
-          <ejs-button id="small" v-on:click.native="changeHeaderHeight">Change height 20px</ejs-button>
-          <ejs-button  id="medium"  v-on:click.native="changeHeaderHeight">Default height 42px</ejs-button>
-          <ejs-button id="big" v-on:click.native="changeHeaderHeight">Change height 60px</ejs-button>
+          <ejs-button id="small" v-on:click="changeHeaderHeight">Change height 20px</ejs-button>
+          <ejs-button  id="medium"  v-on:click="changeHeaderHeight">Default height 42px</ejs-button>
+          <ejs-button id="big" v-on:click="changeHeaderHeight">Change height 60px</ejs-button>
         </div>
         <div style="padding-top: 20px">
           <ejs-grid ref="grid" :dataSource="data">

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The rendered pivot table can be printed directly from the browser by invoking the [`print`](https://ej2.syncfusion.com/vue/documentation/api/grid/#print) method from the grid's instance. The below sample code illustrates the print option being invoked by an external button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs270/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs270/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Similarly, to print the pivot chart, use the [`print`](https://ej2.syncfusion.co
 > To display the pivot chart, set the [`displayOption`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#displayoption) property to either **Chart** or **Both**. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs271/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs271/app.vue %}
 {% endhighlight %}
 {% endtabs %}

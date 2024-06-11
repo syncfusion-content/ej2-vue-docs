@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-toast ref='defaultRef' title='Matt sent you a friend request' timeOut=0 content='Hey, wanna dress up as wizards and ride our hoverboards?'></ejs-toast>
@@ -10,10 +8,10 @@
 import { ToastComponent } from '@syncfusion/ej2-vue-notifications';
 
 export default {
-  components: {
-    'ejs-toast': ToastComponent
+name: "App",
+components: {
+"ejs-toast":ToastComponent,
   },
-  name: 'app',
   mounted: function() {
       this.$refs.defaultRef.show();
   }
@@ -23,5 +21,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
 </style>
-
-

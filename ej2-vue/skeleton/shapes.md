@@ -23,11 +23,11 @@ The Skeleton component supports the following content shapes:
     </div>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+    
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
+    
 
     export default { }
 </script>
@@ -47,11 +47,11 @@ The Skeleton component supports the following content shapes:
     </div>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+    
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
+    
 
     export default { }
 </script>
@@ -71,11 +71,11 @@ The Skeleton component supports the following content shapes:
     </div>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+    
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
+    
 
     export default { }
 </script>
@@ -95,11 +95,11 @@ The Skeleton component supports the following content shapes:
     </div>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+    
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
+    
 
     export default { }
 </script>
@@ -113,7 +113,10 @@ The Skeleton component supports the following content shapes:
 Below example demonstrates the above functionalities of a Skeleton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/skeleton/shapes-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/skeleton/shapes-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

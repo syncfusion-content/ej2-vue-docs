@@ -26,7 +26,10 @@ The Vue Floating Action Button supports the following predefined styles that can
 | e-danger | Used to represent a negative action. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/floating-action-button/styles-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/styles-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +57,10 @@ By using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/floating-
 The content will behave the same , when the `enableHtmlSantiizer` is enabled. Since we are adding only the valid tags in content, sanitizing the content will not affect it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/floating-action-button/styles-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/styles-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

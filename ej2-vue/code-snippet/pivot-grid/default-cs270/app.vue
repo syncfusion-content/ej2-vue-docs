@@ -1,26 +1,22 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="print-btn" :isPrimary="isPrimary" v-on:click.native="btnClick" >Print</ejs-button>
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" >
-        </ejs-pivotview>
-</div>
+  <div id="app">
+    <ejs-button id="print-btn" :isPrimary="isPrimary" v-on:click="btnClick">Print</ejs-button>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -35,7 +31,7 @@ export default {
     }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.grid.print();
     }
@@ -43,9 +39,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

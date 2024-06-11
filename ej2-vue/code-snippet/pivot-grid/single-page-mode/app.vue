@@ -5,21 +5,18 @@
     </ejs-pivotview>
   </div>
 </template>
-
 <script>
-  import Vue from "vue";
-  import { PivotViewPlugin, VirtualScroll, IDataSet } from "@syncfusion/ej2-vue-pivotview";
 
-  Vue.use(PivotViewPlugin);
+  import { PivotViewComponent, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
 
   /* tslint:disable */
-  function data(count: number) {
-    let result: Object[] = [];
-    let dt: number = 0;
-    for (let i: number = 1; i < count + 1; i++) {
+  function data(count) {
+    let result = [];
+    let dt = 0;
+    for (let i = 1; i < count + 1; i++) {
       dt++;
-      let round: string;
-      let toString: string = i.toString();
+      let round;
+      let toString = i.toString();
       if (toString.length === 1) {
         round = "0000" + i;
       } else if (toString.length === 2) {
@@ -45,10 +42,14 @@
   }
 
   export default {
+name: "App",
+components: {
+"ejs-pivotview":PivotViewComponent
+},
     data () {
       return {
         dataSourceSettings: {
-          dataSource: data(1000) as IDataSet[],
+          dataSource: data(1000),
           enableSorting: false,
           expandAll: true,
           formatSettings: [{ name: 'Price', format: 'C0' }],
@@ -73,5 +74,5 @@
 </script>
 
 <style>
-  @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>

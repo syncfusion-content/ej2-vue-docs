@@ -1,26 +1,31 @@
-
-
 <template>
-<div>
-<ejs-breadcrumb :enableNavigation='false'>
-  <e-breadcrumb-items>
-    <e-breadcrumb-item iconCss= 'e-svg-home' url= 'https://ej2.syncfusion.com/vue/demos/'></e-breadcrumb-item>
-    <e-breadcrumb-item text= 'Components' url= 'https://ej2.syncfusion.com/vue/demos/datagrid/overview'></e-breadcrumb-item>
-    <e-breadcrumb-item text= 'Navigations' url= 'https://ej2.syncfusion.com/vue/demos/menu/default'></e-breadcrumb-item>
-    <e-breadcrumb-item text= 'Breadcrumb' url= 'https://ej2.syncfusion.com/vue/demos/breadcrumb/default'></e-breadcrumb-item>
-  </e-breadcrumb-items>
-</ejs-breadcrumb>
-</div>
+  <div>
+    <ejs-breadcrumb :enableNavigation='false'>
+      <e-breadcrumb-items>
+        <e-breadcrumb-item iconCss='e-svg-home' url='https://ej2.syncfusion.com/vue/demos/'></e-breadcrumb-item>
+        <e-breadcrumb-item text='Components'
+          url='https://ej2.syncfusion.com/vue/demos/datagrid/overview'></e-breadcrumb-item>
+        <e-breadcrumb-item text='Navigations'
+          url='https://ej2.syncfusion.com/vue/demos/menu/default'></e-breadcrumb-item>
+        <e-breadcrumb-item text='Breadcrumb'
+          url='https://ej2.syncfusion.com/vue/demos/breadcrumb/default'></e-breadcrumb-item>
+      </e-breadcrumb-items>
+    </ejs-breadcrumb>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { BreadcrumbPlugin } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(BreadcrumbPlugin);
+import { BreadcrumbComponent, BreadcrumbItemDirective, BreadcrumbItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    "ejs-breadcrumb": BreadcrumbComponent,
+    'e-breadcrumb-item': BreadcrumbItemDirective,
+    'e-breadcrumb-items': BreadcrumbItemsDirective
+  },
+  data: function () {
     return {};
   }
 }
@@ -39,7 +44,6 @@ body {
   background-image: url('home.svg');
   height: 20px;
   width: 20px;
+  background-size: 20px;
 }
 </style>
-
-

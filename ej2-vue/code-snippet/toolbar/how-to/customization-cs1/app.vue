@@ -1,60 +1,59 @@
-
-
 <template>
-  <div id="app">
-    <div id='container' style="margin:50px auto 0; width:100%;">
-        <br>
-         <ejs-toolbar >
-           <e-items>
-             <e-item text='Bold'  :htmlAttributes = 'boldAttribute'></e-item>
-             <e-item text='Italic' :htmlAttributes = 'italicAttribute'></e-item>
-             <e-item text='Underline' :htmlAttributes = 'underAttribute'></e-item>
-             <e-item type='Separator'></e-item>
-             <e-item text='Uppercase' cssClass = 'e-txt-casing'></e-item>
-          </e-items>
-    </ejs-toolbar>
+    <div id="app">
+        <div id='container' style="margin:50px auto 0; width:100%;">
+            <br>
+            <ejs-toolbar>
+                <e-items>
+                    <e-item text='Bold' :htmlAttributes='boldAttribute'></e-item>
+                    <e-item text='Italic' :htmlAttributes='italicAttribute'></e-item>
+                    <e-item text='Underline' :htmlAttributes='underAttribute'></e-item>
+                    <e-item type='Separator'></e-item>
+                    <e-item text='Uppercase' cssClass='e-txt-casing'></e-item>
+                </e-items>
+            </ejs-toolbar>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(ToolbarPlugin);
+
+import { ToolbarComponent, ItemDirective, ItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
 export default {
-
-name: 'app',
-
-
-   data() {
-  return {
-      boldAttribute: { 'class': 'custom_bold', 'id': 'itemId' }
-      italicAttribute :{ 'class': 'custom_italic' }
-      underAttribute : { 'class': 'custom_underline' }
-   }
-   }
+    name: "App",
+    components: {
+        "ejs-toolbar": ToolbarComponent,
+        "e-items": ItemsDirective,
+        "e-item": ItemDirective
+    },
+    data() {
+        return {
+            boldAttribute: { 'class': 'custom_bold', 'id': 'itemId' },
+            italicAttribute: { 'class': 'custom_italic' },
+            underAttribute: { 'class': 'custom_underline' }
+        }
+    }
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
 .custom_bold .e-tbar-btn-text {
-     font-weight: 900;
+    font-weight: 900;
 }
 
 .custom_italic .e-tbar-btn-text {
-   font-style: italic;
+    font-style: italic;
 }
 
 .custom_underline .e-tbar-btn-text {
-   text-decoration: underline red;
+    text-decoration: underline red;
 }
 
 .e-txt-casing .e-tbar-btn-text {
-   font-variant: small-caps;
+    font-variant: small-caps;
 }
 
 
@@ -162,5 +161,3 @@ name: 'app',
     content: "\e7ea"
 }
 </style>
-
-

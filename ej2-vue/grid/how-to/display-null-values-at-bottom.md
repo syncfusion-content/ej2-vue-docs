@@ -15,7 +15,10 @@ By default the null values are displayed at bottom of the Grid row while perform
 In the below demo we have displayed the null date values at bottom of the Grid row while sorting the **OrderDate** column in both ways.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/null-date-value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/null-date-value-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

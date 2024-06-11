@@ -1,15 +1,15 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating"></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating"></ejs-rating>
+  </div>
 </template>
 
 <script setup>
 import { RatingComponent as EjsRating } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
+
 enableRipple(true);
+
 </script>
 
 <style>
@@ -21,7 +21,4 @@ enableRipple(true);
   margin: 50px auto;
   text-align: center;
 }
-
 </style>
-
-

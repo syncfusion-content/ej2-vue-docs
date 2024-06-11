@@ -17,7 +17,10 @@ You can customize skeleton control in the below ways.
 You can customize the style of a Skeleton control by using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/skeleton/#cssclass). The appearance of Vue Skeleton can be customized by changing the wave color, background color, width, and height. For detailed information, refer `index.css` file below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/skeleton/styles-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/skeleton/styles-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,11 +38,11 @@ You can use the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/ske
     </div>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+    
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
+    
 
     export default { }
 </script>

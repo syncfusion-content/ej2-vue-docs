@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 RTL provides an option to switch the text direction and layout of the Query Builder component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL, set the [`enableRtl`]  (https://ej2.syncfusion.com/vue/documentation/right-to-left/) to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

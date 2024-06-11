@@ -19,7 +19,10 @@ The [template](https://ej2.syncfusion.com/vue/documentation/api/uploader/#templa
 For example, you can display file type icon along with default UI elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/filelist-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/filelist-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ when you use custom template to upload or remove the files, pass the custom UI a
 Refer to the following code sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/custom-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/custom-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

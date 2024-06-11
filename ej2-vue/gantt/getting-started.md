@@ -119,15 +119,28 @@ Follow the below steps to add the Vue Gantt component:
 1\. First, import and register the Gantt component in the `script` section of the **src/App.vue** file. 
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { GanttComponent as EjsGantt } from "@syncfusion/ej2-vue-gantt";
+export default {
+  components: {
+    'ejs-gantt': GanttComponent
+  }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 
 export default {
-  components: {
-    'ejs-gantt': GanttComponent
-  }
+name: "App",
+components: {
+"ejs-gantt':":Gantt':Component
+}
 }
 </script>
 
@@ -163,6 +176,17 @@ Find the relevant feature modules and descriptions as follows:
 Now, import the above-mentioned modules from the Gantt package and inject them using `provide`like following code:
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { provide } from "vue";
+import { GanttComponent as EjsGantt , Edit, Filter, Sort } from "@syncfusion/ej2-vue-gantt";
+export default {
+  provide('gantt',  [ Edit, Filter, Sort ]);
+};
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
@@ -182,7 +206,43 @@ export default {
 Bind data with the Gantt component by using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) property. It accepts an array of JavaScript object or the DataManager instance.
 
  {% tabs %}
- {% highlight html tabtitle="~/src/App.vue" %}
+ {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div>
+       <ejs-gantt ref='gantt' :dataSource="data"></ejs-gantt>
+   </div>
+</template>
+<script setup>
+import { GanttComponent as EjsGantt } from "@syncfusion/ej2-vue-gantt";
+const data = [
+    {
+        TaskID: 1,
+        TaskName: 'Project Initiation',
+        StartDate: new Date('04/02/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            {  TaskID: 2, TaskName: 'Identify Site location', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
+            { TaskID: 3, TaskName: 'Perform Soil test', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50  },
+            { TaskID: 4, TaskName: 'Soil test approval', StartDate: new Date('04/02/2019'), Duration: 4, Progress: 50 },
+        ]
+    },
+    {
+        TaskID: 5,
+        TaskName: 'Project Estimation',
+        StartDate: new Date('04/02/2019'),
+        EndDate: new Date('04/21/2019'),
+        subtasks: [
+            { TaskID: 6, TaskName: 'Develop floor plan for estimation', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
+            { TaskID: 7, TaskName: 'List materials', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 },
+            { TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'), Duration: 3, Progress: 50 }
+        ]
+    },
+];
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
      <div>
@@ -192,6 +252,7 @@ Bind data with the Gantt component by using the [`dataSource`](https://ej2.syncf
 <script>
 import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 export default {
+name: "App",
   components: {
     'ejs-gantt': GanttComponent
   },
@@ -235,6 +296,9 @@ The data source fields that are required to render the tasks are mapped to the G
 
  {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -249,6 +313,9 @@ The Gantt has an option to define timeline using [`timelineSettings`](https://ej
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -262,6 +329,9 @@ The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#toolbar)
 To use toolbar, inject the `Toolbar` module in the `provide` section.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs3/app.vue %}
 {% endhighlight %}
@@ -288,6 +358,9 @@ Modify the task details through cell editing by setting the edit [`mode`](https:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -301,6 +374,9 @@ Modify the task details through cell editing by setting the edit [`mode`](https:
 Modify the task details through dialog by setting edit [`mode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#mode) property as `Dialog`.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs5/app.vue %}
 {% endhighlight %}
@@ -316,6 +392,9 @@ Modify the task details through user interaction such as resizing and dragging t
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -327,6 +406,9 @@ Modify the task details through user interaction such as resizing and dragging t
 Modify the task dependencies using mouse interactions by enabling the [`allowTaskbarEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowtaskbarediting) property along with mapping the task dependency data source field to the [`dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs7/app.vue %}
 {% endhighlight %}
@@ -347,6 +429,9 @@ You can show the relationship in tasks, by using the [`dependency`](https://ej2.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -358,6 +443,9 @@ You can show the relationship in tasks, by using the [`dependency`](https://ej2.
 You can display and assign the resource for each task in the Gantt control.Create a collection of JSON object, which contains id, name, unit and group of the resources and assign it to the [`resources`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#resources) property. Map these fields to the Gantt control using the [`resourceFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#resourceFields) property.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs9/app.vue %}
 {% endhighlight %}
@@ -373,6 +461,9 @@ To use Filtering, inject the [`Filter`](https://ej2.syncfusion.com/vue/documenta
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -386,6 +477,9 @@ The sorting feature enables you to order the records. It can be enabled by setti
 To use Sorting, inject the [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#sortmodule) module in the `provide` section.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs11/app.vue %}
 {% endhighlight %}
@@ -401,6 +495,9 @@ To highlight the days, inject the `DayMarkers` module in the `provide` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -414,6 +511,9 @@ Now run the `npm run serve` command in the console, it will build your applicati
 The following example shows a basic Gantt:
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/gantt/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/gantt/getting-started-cs13/app.vue %}
 {% endhighlight %}

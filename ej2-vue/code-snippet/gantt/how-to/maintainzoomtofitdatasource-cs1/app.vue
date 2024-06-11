@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-button id="changeData" cssClass="e-info" v-on:click.native="changeData">Change Data</ejs-button>
@@ -9,13 +6,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GanttComponent, Toolbar } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { projectNewData, data } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: projectNewData,
@@ -41,12 +43,9 @@ export default {
         var obj = document.getElementById('GanttContainer').ej2_instances[0];
         obj.dataSource = data;
       }
-  }
+  },
   provide: {
       gantt: [Toolbar]
   }
 };
 </script>
-
-
-

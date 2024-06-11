@@ -1,44 +1,45 @@
-
-
 <template>
-<div>
-<div id="target">Right click / Touch hold to open the ContextMenu</div>
-<ejs-contextmenu target='#target' :items='menuItems' :beforeItemRender="onBeforeItemRender"></ejs-contextmenu>
-</div>
+    <div>
+        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <ejs-contextmenu target='#target' :items='menuItems' :beforeItemRender="onBeforeItemRender"></ejs-contextmenu>
+    </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple, createElement } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ContextMenuPlugin);
 
 export default {
-    data () {
+    name: "App",
+    components: {
+        "ejs-contextmenu": ContextMenuComponent
+    },
+    data() {
         return {
-            menuItems:[
-            {
-                text: 'Save as...'
-            },
-            {
-                text: 'View page source'
-            },
-            {
-                text: 'Inspect'
-            }]
+            menuItems: [
+                {
+                    text: 'Save as...'
+                },
+                {
+                    text: 'View page source'
+                },
+                {
+                    text: 'Inspect'
+                }]
         };
     },
     methods: {
-        onBeforeItemRender: function(args) {
+        onBeforeItemRender: function (args) {
             var shortCutSpan = createElement('span');
             var text = args.item.text;
             var shortCutText = text === 'Save as...' ? 'Ctrl + S' : (text === 'View page source' ?
-            'Ctrl + U'      : 'Ctrl + Shift + I');
+                'Ctrl + U' : 'Ctrl + Shift + I');
             shortCutSpan.textContent = shortCutText;
             args.element.appendChild(shortCutSpan);
-            shortCutSpan.setAttribute('class','shortcut');
+            shortCutSpan.setAttribute('class', 'shortcut');
         }
     }
 }
@@ -52,22 +53,19 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 #target {
-  border: 1px dashed;
-  height: 150px;
-  padding: 10px;
-  position: relative;
-  text-align: justify;
-  color: gray;
-  user-select: none;
+    border: 1px dashed;
+    height: 150px;
+    padding: 10px;
+    position: relative;
+    text-align: justify;
+    color: gray;
+    user-select: none;
 }
 
 .shortcut {
-  float: right;
-  font-size: 10px;
-  opacity: 0.5;
-  padding-left: 50px;
+    float: right;
+    font-size: 10px;
+    opacity: 0.5;
+    padding-left: 50px;
 }
-
 </style>
-
-

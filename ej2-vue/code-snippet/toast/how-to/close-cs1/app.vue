@@ -1,20 +1,21 @@
-
-
 <template>
    <div id='app'>
-       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
        <ejs-toast ref='elementRef' id='element' :position='position' title='Matt sent you a friend request' content='You have a new friend request yet to accept' :click='onClick' timeOut=0></ejs-toast>
     </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast } from "@syncfusion/ej2-vue-notifications";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
+
+import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-toast":ToastComponent
+},
   data: function(){
         return {
             position:  { X: 'Right', Y: 'Bottom' }
@@ -24,7 +25,7 @@ export default {
        this.$refs.elementRef.show();
      },
   methods: {
-       showBtnClick: function(args){
+       showBtnClick: function(){
            this.$refs.elementRef.show();
        },
        onClick: function(e){
@@ -50,6 +51,3 @@ export default {
   width: 30%;
 }
 </style>
-
-
-

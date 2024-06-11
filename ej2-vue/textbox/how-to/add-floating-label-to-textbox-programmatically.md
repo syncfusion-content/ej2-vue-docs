@@ -35,7 +35,10 @@ The `watermark label` will be updated based on the specified `placehol
 * You can add the `icons` on the input by passing `buttons` property value with the class name `e-input-group-icon` as parameter to the `createInput` method.
 
   {% tabs %}
-  {% highlight html tabtitle="app.vue" %}
+  {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+  {% include code-snippet/textbox/floating-label-cs1/app-composition.vue %}
+  {% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
   {% include code-snippet/textbox/floating-label-cs1/app.vue %}
   {% endhighlight %}
   {% endtabs %}

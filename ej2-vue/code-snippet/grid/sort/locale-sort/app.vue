@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id="app">
     <ejs-grid :dataSource='data' :allowSorting='true' :locale='locale' height='315px'>
@@ -14,8 +11,8 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Sort } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Sort } from "@syncfusion/ej2-vue-grids";
 import {loadCldr, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
 import * as currencies from "./currencies.json";
 import * as cagregorian from "./ca-gregorian.json";
@@ -23,14 +20,16 @@ import * as numbers from "./numbers.json";
 import * as timeZoneNames from "./timeZoneNames.json";
 import * as numberingSystems from'./numberingSystems.json'
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 loadCldr(cagregorian, currencies, numbers, timeZoneNames, numberingSystems);
 setCulture('ar');
 setCurrencyCode('QAR');
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -73,5 +72,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

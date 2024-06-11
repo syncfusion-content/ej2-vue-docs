@@ -1,20 +1,17 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height"  :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar" :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport" :removeReport="removeReport" :newReport="newReport" :displayOption="displayOption"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting"
+      :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting"
+      :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar"
+      :saveReport="saveReport" :loadReport="loadReport" :fetchReport="fetchReport" :renameReport="renameReport"
+      :removeReport="removeReport" :newReport="newReport" :displayOption="displayOption"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
 import {
-  PivotViewPlugin,
-  GroupingBar,
+  PivotViewComponent,
   FieldList,
-  IDataSet,
   CalculatedField,
   Toolbar,
   PDFExport,
@@ -24,10 +21,12 @@ import {
 } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -44,7 +43,7 @@ export default {
       allowConditionalFormatting: true,
       allowNumberFormatting: true,
       allowPdfExport: true,
-      displayOption: { view:'Both' },
+      displayOption: { view: 'Both' },
       showToolbar: true,
       allowCalculatedField: true,
       showFieldList: true,
@@ -67,7 +66,7 @@ export default {
     };
   },
   methods: {
-    saveReport: function(args: any) {
+    saveReport: function (args) {
       let reports = [];
       let isSaved = false;
       if (
@@ -77,7 +76,7 @@ export default {
         reports = JSON.parse(localStorage.pivotviewReports);
       }
       if (args.report && args.reportName && args.reportName !== "") {
-        reports.map(function(item: any) {
+        reports.map(function (item) {
           if (args.reportName === item.reportName) {
             item.report = args.report;
             isSaved = true;
@@ -89,21 +88,21 @@ export default {
         localStorage.pivotviewReports = JSON.stringify(reports);
       }
     },
-    fetchReport: function(args: any) {
+    fetchReport: function (args) {
       let reportCollection = [];
-      let reeportList: any = [];
+      let reeportList = [];
       if (
         localStorage.pivotviewReports &&
         localStorage.pivotviewReports !== ""
       ) {
         reportCollection = JSON.parse(localStorage.pivotviewReports);
       }
-      reportCollection.map(function(item: any) {
+      reportCollection.map(function (item) {
         reeportList.push(item.reportName);
       });
       args.reportName = reeportList;
     },
-    loadReport: function(args: any) {
+    loadReport: function (args) {
       let pivotObj = document.getElementById('pivotview').ej2_instances[0];
       let reportCollection = [];
       if (
@@ -112,7 +111,7 @@ export default {
       ) {
         reportCollection = JSON.parse(localStorage.pivotviewReports);
       }
-      reportCollection.map(function(item: any) {
+      reportCollection.map(function (item) {
         if (args.reportName === item.reportName) {
           args.report = item.report;
         }
@@ -121,7 +120,7 @@ export default {
         pivotObj.dataSourceSettings = JSON.parse(args.report).dataSourceSettings;
       }
     },
-    removeReport: function(args: any) {
+    removeReport: function (args) {
       let reportCollection = [];
       if (
         localStorage.pivotviewReports &&
@@ -141,7 +140,7 @@ export default {
         localStorage.pivotviewReports = JSON.stringify(reportCollection);
       }
     },
-    renameReport: function(args: any) {
+    renameReport: function (args) {
       let reportCollection = [];
       if (
         localStorage.pivotviewReports &&
@@ -149,7 +148,7 @@ export default {
       ) {
         reportCollection = JSON.parse(localStorage.pivotviewReports);
       }
-      reportCollection.map(function(item: any) {
+      reportCollection.map(function (item) {
         if (args.reportName === item.reportName) {
           item.reportName = args.rename;
         }
@@ -161,7 +160,7 @@ export default {
         localStorage.pivotviewReports = JSON.stringify(reportCollection);
       }
     },
-    newReport: function() {
+    newReport: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.setProperties(
         {
@@ -177,22 +176,8 @@ export default {
     },
   },
   provide: {
-    pivotview: [
-      FieldList,
-      CalculatedField,
-      Toolbar,
-      PDFExport,
-      ExcelExport,
-      ConditionalFormatting,
-      NumberFormatting
-    ]
+    pivotview: [FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting]
   }
 }
 </script>
-<style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-</style>
-
-
-
-
+<style>@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";</style>

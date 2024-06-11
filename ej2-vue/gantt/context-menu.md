@@ -33,7 +33,10 @@ Items| Description
 `Convert` | Converts current task to milestone or vice-versa.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/contextmenu-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/contextmenu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ To create custom context menu items for header area, define the target property 
 The following sample shows context menu item for parent rows to expand or collapse child rows in the content area and a context menu item to hide columns in the header area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/customContextMenu-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/customContextMenu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <table>
@@ -17,19 +15,19 @@
         <tr>
           <td>
             <div>
-              <ejs-button cssClass="e-info" v-on:click.native="addTopEvent"
+              <ejs-button cssClass="e-info" v-on:click="addTopEvent"
                 >Add 5 rows at top</ejs-button
               >
-              <ejs-button cssClass="e-info" v-on:click.native="addBottomEvent"
+              <ejs-button cssClass="e-info" v-on:click="addBottomEvent"
                 >Add 5 rows at bottom</ejs-button
               >
-              <ejs-button cssClass="e-info" v-on:click.native="deleteEvent"
+              <ejs-button cssClass="e-info" v-on:click="deleteEvent"
                 >Delete 5 rows</ejs-button
               >
-              <ejs-button cssClass="e-info" v-on:click.native="sortEvent"
+              <ejs-button cssClass="e-info" v-on:click="sortEvent"
                 >Sort Order ID</ejs-button
               >
-              <ejs-button cssClass="e-info" v-on:click.native="pageEvent"
+              <ejs-button cssClass="e-info" v-on:click="pageEvent"
                 >Paging</ejs-button
               >
             </div>
@@ -132,15 +130,19 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+import { GridComponent, ColumnsDirective, Page } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
+
   data() {
     return {
       data: data,
@@ -296,5 +298,3 @@ export default {
 }
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

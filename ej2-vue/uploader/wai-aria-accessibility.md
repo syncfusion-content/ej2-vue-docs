@@ -52,7 +52,10 @@ The following are the standard keys that works on uploader component:
 | <kbd>Esc</kbd> | Close the file browser dialog alone and cancels the upload on drop the file.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/accessibility-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/accessibility-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

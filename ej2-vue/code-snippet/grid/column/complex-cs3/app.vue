@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data" :query='query' allowPaging=true>
@@ -13,13 +11,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { DataManager, ODataV4Adaptor, Query } from "@syncfusion/ej2-data";
 
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
   data() {
     let query = new Query().expand('Employee');
     let SERVICE_URI =
@@ -32,14 +34,9 @@ export default {
       }),
       query: query
     };
-  },
-  provide: {
-    grid: [Page]
   }
 }
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

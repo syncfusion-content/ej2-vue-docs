@@ -53,7 +53,10 @@ Restrict Editing Pane provides the following options to manage the document:
 The following code shows Restrict Editing Pane. To unprotect the document, use password '123'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,9 +1,6 @@
-
-
-
 <template>
     <div id="app">
-      <ejs-button ref='button' style="margin-top: 10px " cssClass='e-outline' v-on:click.native="onExternalSort">Clear Sorting</ejs-button>
+      <ejs-button ref='button' style="margin-top: 10px " cssClass='e-outline' v-on:click="onExternalSort">Clear Sorting</ejs-button>
         <ejs-grid ref='grid' style="padding: 10px 10px" :dataSource='data' :allowSorting='true' :sortSettings='initialSort' height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -15,15 +12,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Sort } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { GridComponent, ColumnsDirective, ColumnDirective, Sort } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -56,5 +55,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

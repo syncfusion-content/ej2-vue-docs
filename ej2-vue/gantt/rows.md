@@ -17,7 +17,10 @@ Row represents a task information from the data source, and it is possible to pe
 It is possible to change the height of the row in Gantt by setting row height in pixels to the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#rowheight) property. The following code example explains how to change the row height in the Gantt at load time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ In Gantt parent tasks are expanded/collapsed by using expand/collapse icons, exp
 All tasks available in Gantt was rendered in collapsed state by setting [`collapseAllParentTasks`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#collapseallparenttasks) property as `true`. The following code example shows how to use [`collapseAllParentTasks`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#collapseallparenttasks) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ All tasks available in Gantt was rendered in collapsed state by setting [`collap
 In Gantt, you can render some tasks in collapsed state and some tasks in expanded state, this can done by defining expand status of the task in data source. This value was mapped to Gantt component by using [`expandState`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#expandstate) property. The following code example shows how to use this property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ In Gantt, you can render some tasks in collapsed state and some tasks in expande
 On expand action [`expanding`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#expanding) and [`expanded`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#expanded) event will be triggered with current expanding row’s information. Similarly on collapse action [`collapsing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#collapsing) and [`collapsed`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#collapsed) event will be triggered. Using this events and it’s arguments you can customize the expand/collapse action. The following code example shows how to prevent the particular row from expand/collapse action using [`expanding`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#expanding) and [`collapsing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#collapsing) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +81,10 @@ On expand action [`expanding`](https://ej2.syncfusion.com/vue/documentation/api/
 You can customize the appearance of a row in grid side, by using the [`rowDataBound`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#rowdatabound) event and in chart side by using [`queryTaskbarInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#querytaskbarinfo) event
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +102,10 @@ You can customize the appearance of a row in grid side, by using the [`rowDataBo
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +119,10 @@ Gantt chart has an option to span row cells. You can achieve this using [`rowSpa
 In the following demo, **Soil test approval** cell is spanned to two rows in the **TaskName** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/rows-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/rows-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +134,10 @@ In the following demo, **Soil test approval** cell is spanned to two rows in the
 While rendering the TreeGrid part in Gantt, the [`rowDataBound`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#rowdatabound) and [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#querycellinfo) events trigger for every row and cell. Using these events, you can customize the rows and cells. The following code example shows how to customize the cell and row elements using these events.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/appearance-customization-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/appearance-customization-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -138,7 +162,10 @@ The following are three types of `clipMode`:
 You can enable or disable the Grid cell tooltip using the [`columns.clipMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#clipmode) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/tooltip-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/tooltip-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -78,40 +78,71 @@ public IActionResult Load([FromBody] Dictionary<string, string> jsonData)
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load. 
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+// Replace the "localhost:44396" with the actual URL of your server
+const serviceUrl = "https://localhost:44396/pdfviewer";
+// Replace  correct PDF Document URL want to load
+const documentPath = "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]);
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-           ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
-  export default {
-    name: 'app',
-    data() {
-      return {
-        // Replace the "localhost:44396" with the actual URL of your server
-        serviceUrl: "https://localhost:44396/pdfviewer",
-        // Replace  correct PDF Document URL want to load
-        documentPath: "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
-      };
-    },
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-    }
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'app',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      // Replace the "localhost:44396" with the actual URL of your server
+      serviceUrl: "https://localhost:44396/pdfviewer",
+      // Replace  correct PDF Document URL want to load
+      documentPath: "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
   }
+}
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20URL)
 
@@ -125,48 +156,82 @@ Start by following the steps provided in this [link](https://ej2.syncfusion.com/
 
 **Step 2:** Use the following code snippet to load the PDF document using a base64 string.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-  <button v-on:click="load">LoadDocumentFromBase64</button>
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath"
-    >
+    <button v-on:click="load">LoadDocumentFromBase64</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide, ref } from "vue";
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+const pdfviewer = ref(null);
+// Replace the "localhost:44396" with the actual URL of your server
+const serviceUrl = "https://localhost:44396/pdfviewer";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]);
+
+// Event triggers on the Export FDF button click.
+const load = function () {
+  pdfviewer.value.ej2Instances.load('data:application/pdf;base64,' + AddBase64String, null);
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="load">LoadDocumentFromBase64</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-           ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
-  export default {
-    name: 'app',
-    data() {
-      return {
-        // Replace the "localhost:44396" with the actual URL of your server
-        serviceUrl: "https://localhost:44396/pdfviewer"
-      };
-    },
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]
-    },
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
- methods: {
-    // Event triggers on the Export FDF button click.
-  load: function (event) {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-    viewer.load('data:application/pdf;base64,'+ AddBase64String, null);
+export default {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      // Replace the "localhost:44396" with the actual URL of your server
+      serviceUrl: "https://localhost:44396/pdfviewer"
+    }
+  },
+  methods: {
+    // Event triggers on the Export PDF button click.
+    load: function () {
+      pdfviewer.value.ej2Instances.load('data:application/pdf;base64,' + AddBase64String, null);
+    }
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
   }
- }
 }
-</script> 
 
-```
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Save%20and%20Load/Load%20PDF%20file%20from%20base64%20string)
 

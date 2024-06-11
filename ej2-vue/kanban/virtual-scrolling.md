@@ -19,7 +19,10 @@ Virtual scrolling optimizes data rendering within each column when using large d
 When the Kanban column is scrolled, the virtual scrolling feature dynamically loads additional data on demand into view and unloads the data that is no longer visible.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/virtual-scrolling-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/virtual-scrolling-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -40,7 +40,10 @@ Following is the list of classes that provides flexible way to customize the Dat
 | e-disabled | Applied to Calendar disabled dates.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

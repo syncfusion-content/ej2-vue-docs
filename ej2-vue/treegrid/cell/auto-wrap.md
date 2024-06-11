@@ -23,7 +23,10 @@ Note: When a column width is not specified, then auto wrap of columns will be ad
 In the following example, the `textWrapSettings.wrapMode` is set to `Content`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/cell/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/cell/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

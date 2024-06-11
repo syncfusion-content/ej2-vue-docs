@@ -1,0 +1,64 @@
+<template>
+<div class='wrap'>
+    <h4>Choose Color</h4>
+    <ejs-colorpicker :inline="true" :modeSwitcher="false" :change="onChange"></ejs-colorpicker>
+    <ejs-dropdownbutton id="dropdownbtn" ref="ddb" target=".e-colorpicker-wrapper" iconCss="e-dropdownbtn-preview" :beforeClose="beforeDdbClose" :open="ddbOpen"></ejs-dropdownbutton>
+</div>
+</template>
+
+<script setup>
+
+import { ColorPickerComponent as EjsColorpicker } from '@syncfusion/ej2-vue-inputs';
+import { DropDownButtonComponent as EjsDropdownbutton } from '@syncfusion/ej2-vue-splitbuttons';
+import { enableRipple } from '@syncfusion/ej2-base';
+import { ref } from "vue";
+const ddb = ref(null);
+enableRipple(true);
+
+const onChange = (args) => {
+  ddb.value.ej2Instances.element.children[0].style.backgroundColor = args.currentValue.rgba;
+  closePopup();
+};
+const ddbOpen = (args) => {
+  args.element.querySelector('.e-cancel').addEventListener('click', closePopup);
+  tooltip();
+};
+const beforeDdbClose = (args) => {
+  args.element.querySelector('.e-cancel').removeEventListener('click', closePopup);
+};
+const closePopup = () => {
+  ddb.value.ej2Instances.toggle()
+};
+const tooltip = () => {
+  var zindex = (document.getElementsByClassName('e-color-picker-tooltip')[0]).style.zIndex;
+  var zindexIntValue = parseInt(zindex) + 2;
+  (document.getElementsByClassName('e-color-picker-tooltip')[0]).style.zIndex = zindexIntValue.toString();
+};
+
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+
+.wrap {
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+/* DropDownButton preview customization */
+#dropdownbtn .e-btn-icon.e-dropdownbtn-preview {
+  background-color: #008000;
+  height: 18px;
+  width: 18px;
+  margin-top: 0;
+}
+
+#dropdownbtn {
+  padding: 4px;
+}
+</style>

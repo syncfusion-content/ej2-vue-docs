@@ -24,7 +24,10 @@ We are providing two types of save APIs  as mentioned below.
 The following example shows how to export documents in Document Editor as Syncfusion document text (.sfdt).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ The following example shows how to export the document as Word document (.docx).
 >Note: The Syncfusion Document Editor component's document pagination (page-by-page display) can't be guaranteed for all the Word documents to match the pagination of Microsoft Word application. For more information about [why the document pagination (page-by-page display) differs from Microsoft Word](../document-editor/import/#why-the-document-pagination-differs-from-microsoft-word)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/export-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/export-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +94,10 @@ The following example shows how to export the document as Word Template (.dotx).
 The following example shows how to export document as text document (.txt).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/export-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/export-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,44 +116,80 @@ The following example shows how to export document as text document (.txt).
 
 Document Editor also supports API to store the document into a blob. Refer to the following sample to export document into blob in client-side.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <div>
-         <button v-on:click='exportBlob' >Save</button>
-        </div>
-        <ejs-documenteditor ref="documenteditor" :enableSfdtExport='true' :enableWordExport='true' :enableSelection='true' :enableEditor='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  <div id="app">
+    <div>
+      <button v-on:click='exportBlob'>Save</button>
     </div>
+    <ejs-documenteditor ref="documenteditor" :enableSfdtExport='true' :enableWordExport='true' :enableSelection='true'
+      :enableEditor='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
 </template>
-<script>
-        import Vue from 'vue'
-        import { DocumentEditorPlugin, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-        Vue.use(DocumentEditorPlugin);
+const documenteditor = ref(null);
+//Inject require modules.
+provide('DocumentEditor', [SfdtExport, WordExport, Selection, Editor])
 
-        export default {
-            data: function() {
-                return {
-                };
-            },
-            provide: {
-                //Inject require modules.
-                DocumentEditor : [SfdtExport, WordExport, Selection, Editor]
-            }
-            methods: {
-                exportBlob: function() {
-                    //Export the document as Blob object.
-                    this.$refs.documenteditor.saveAsBlob('Docx').then((exportedDocument: Blob) => {
-                        // The blob can be processed further
-                    });
-                }
-            }
-        }
+const exportBlob = function () {
+  //Export the document as Blob object.
+  documenteditor.value.saveAsBlob('Docx').then((exportedDocument: Blob) => {
+    // The blob can be processed further
+  });
+}
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div>
+      <button v-on:click='exportBlob'>Save</button>
+    </div>
+    <ejs-documenteditor ref="documenteditor" :enableSfdtExport='true' :enableWordExport='true' :enableSelection='true'
+      :enableEditor='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditor: [SfdtExport, WordExport, Selection, Editor]
+  },
+  methods: {
+    exportBlob: function () {
+      //Export the document as Blob object.
+      this.$refs.documenteditor.saveAsBlob('Docx').then((exportedDocument: Blob) => {
+        // The blob can be processed further
+      });
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 For instance, to export the document as Rich Text Format file, implement an ASP.NET MVC web API controller using DocIO library by passing the DOCX blob. Refer to the following code example.
 

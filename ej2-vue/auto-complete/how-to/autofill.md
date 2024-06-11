@@ -15,7 +15,10 @@ The AutoComplete supports the autofill behavior with the help of [`autofill`](ht
 In the below sample, showcase that how to work autofill with AutoComplete.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

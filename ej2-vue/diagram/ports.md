@@ -26,12 +26,19 @@ Ports act as the connection points of the node and allows to create connections 
 
 ## Create Port
 
+To create and customize the ports in the EJ2 Vue Diagram, refer to the below video link.
+
+{% youtube "youtube:https://www.youtube.com/embed/w8F08xQUggU" %}
+
 ## Add ports when initializing nodes
 
 To add a connection port, define the port object and add it to node’s ports collection. The `offset` property of port accepts an object of fractions and used to determine the position of ports. The following code illustrates how to add ports when initializing the node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/Remove-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ports/Remove-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +53,10 @@ The port’s ID property is used to define the unique ID for the port and its fu
 If ID is not set, then default ID is automatically set.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/Node-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ports/Node-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +68,10 @@ If ID is not set, then default ID is automatically set.
 Remove ports at runtime by using client-side method [`removePorts`](https://ej2.syncfusion.com/vue/documentation/api/diagram#removePorts). Refer to the following example which shows how to remove ports at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/ports-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ports/ports-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +85,10 @@ You can change any port properties at runtime and update it through the client-s
 The following code example illustrates how to change the port properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/ports-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ports/ports-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +109,10 @@ The following code example illustrates how to change the port properties.
 The following code illustrates how to change the appearance of port.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ports/ports-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ports/ports-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -36,7 +36,10 @@ Other properties include:
 * [`currency`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#currency): It allows to set the currency code which needs to considered for the currency formatting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs155/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs155/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +67,10 @@ You can add any custom format directly to the [`format`](https://ej2.syncfusion.
 >NOTE: If custom format is defined, certain properties such as [`useGrouping`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#usegrouping) and [`currency`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFormatSettings/#currency) will not be considered.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs156/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs156/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +82,10 @@ You can add any custom format directly to the [`format`](https://ej2.syncfusion.
 You can enable formatting dialog option in the toolbar by adding `NumberFormatting` in the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#toolbar). After that, you can see the option to invoke the formatting dialog in the toolbar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs157/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs157/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +97,10 @@ You can enable formatting dialog option in the toolbar by adding `NumberFormatti
 You can invoke the formatting dialog by clicking an external button using the `ShowNumberFormattingDialog` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs158/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs158/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +122,10 @@ The event [`numberFormatting`](https://ej2.syncfusion.com/vue/documentation/ap
 In the below sample, the customization done in number formatting dialog for the field "Amount" won’t be applied.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs159/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs159/app.vue %}
 {% endhighlight %}
 {% endtabs %}

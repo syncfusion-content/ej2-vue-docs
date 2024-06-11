@@ -41,7 +41,10 @@ The template function needs to be assigned to the template property of the EJ2 V
 Template mode, the `value` property not handled by the In-place Editor component. So, before sending a value to the server, you need to modify at [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#actionbegin) event, otherwise, an empty string will pass. In the following template sample, before submitting a data to the server, event argument and [value](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#value) property content updated in the `actionBegin` event handler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

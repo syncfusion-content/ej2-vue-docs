@@ -19,7 +19,10 @@ The DateRangePicker is available for UI customization based on your application 
 The following example disables the weekends of every month by using `renderDayCell` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The following example disables the weekends of every month by using `renderDayCe
 DateRangePicker provides an option to set the predefined ranges via [`presets`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/#presets) property with the corresponding label. This property will accept the values in the order of label, start date (date object), end date (date object), and append these ranges in the component for quick selection. In the following sample, you can easily choose the frequently used range options from the list of ranges.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ DateRangePicker provides an option to set the predefined ranges via [`presets`](
 Start day in a week will differ based on the culture, but you can also customize this based on the application needs. For this, you have to make use of [`firstDayOfWeek`](https://ej2.syncfusion.com/vue/documentation/api/daterangepicker/#firstdayofweek) property. By default, first day of a week in en-US is Sunday. In the following example it is customized to Monday with the help of this property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

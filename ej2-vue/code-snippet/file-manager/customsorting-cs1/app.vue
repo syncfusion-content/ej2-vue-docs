@@ -6,11 +6,14 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar, sortComparer } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar, sortComparer } from "@syncfusion/ej2-vue-filemanager";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+    },
     data () {
         return {
            ajaxSettings:

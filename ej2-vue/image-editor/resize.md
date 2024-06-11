@@ -25,7 +25,10 @@ The Image Editor control includes a [`resize`](https://ej2.syncfusion.com/vue/do
 Here is an example of resizing the image using the [`resize`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#resize) method. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs42/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs42/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,22 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :cellSelecting="cellSelecting"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :cellSelecting="cellSelecting"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotCellSelectedEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -37,17 +34,13 @@ export default {
     }
   },
   methods: {
-    cellSelecting: function(args: PivotCellSelectedEventArgs) {
-        //args.selectedCellsInfo -> get selected cells information.
-        //args.pivotValues -> get the pivot values of the pivot table.
+    cellSelecting: function () {
+      //args.selectedCellsInfo -> get selected cells information.
+      //args.pivotValues -> get the pivot values of the pivot table.
     },
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

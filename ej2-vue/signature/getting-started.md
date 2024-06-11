@@ -80,20 +80,23 @@ Follow the below steps to add the Vue Signature component using `Composition API
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
 import { SignatureComponent as EjsSignature } from '@syncfusion/ej2-vue-inputs';
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { SignatureComponent } from '@syncfusion/ej2-vue-inputs';
 export default {
-    components: {
-        'ejs-signature': SignatureComponent
-    }
+name: "App",
+components: {
+"ejs-signature':":SignatureComponent
+},
 }
 </script>
 

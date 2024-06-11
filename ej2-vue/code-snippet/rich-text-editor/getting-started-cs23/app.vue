@@ -1,8 +1,7 @@
-
-
 <template>
   <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarData" :keyConfigs="keyConfig">
-    <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+    <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user
+      experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
       <li>
@@ -34,45 +33,45 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
-    data() {
-      return {
-        toolbarData: {
-          items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
-            'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
-            'LowerCase', 'UpperCase', '|',
-            'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
-            'Outdent', 'Indent', '|',
-            'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
-            'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
-        },
-        keyConfig: {
-          'copy': 'ctrl+1',
-          'cut': 'ctrl+2',
-          'paste': 'ctrl+3'
-        }
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+export default {
+  name: "App",
+  components: {
+    "ejs-richtexteditor": RichTextEditorComponent
+  },
+  data() {
+    return {
+      toolbarData: {
+        items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
+          'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
+          'LowerCase', 'UpperCase', '|',
+          'Formats', 'Alignments', 'OrderedList', 'UnorderedList',
+          'Outdent', 'Indent', '|',
+          'CreateLink', 'Image', '|', 'ClearFormat', 'Print',
+          'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
+      },
+      keyConfig: {
+        'copy': 'ctrl+1',
+        'cut': 'ctrl+2',
+        'paste': 'ctrl+3'
       }
-    },
-    mounted() {
-      document.addEventListener('keyup', this.onKeyUp);
-    },
-    methods: {
-      onKeyUp (e) {
-        if (e.altKey && e.keyCode === 84) { /* t */
-          // press alt+t to focus the component.
-          this.$refs.defaultRTE.ej2Instances.focusIn();
-        }
-      }
-    },
-    provide: {
-      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
     }
+  },
+  mounted() {
+    document.addEventListener('keyup', this.onKeyUp);
+  },
+  methods: {
+    onKeyUp(e) {
+      if (e.altKey && e.keyCode === 84) { /* t */
+        // press alt+t to focus the component.
+        this.$refs.defaultRTE.ej2Instances.focusIn();
+      }
+    }
+  },
+  provide: {
+    richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
   }
+}
 </script>
 
 <style>
@@ -85,5 +84,3 @@
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

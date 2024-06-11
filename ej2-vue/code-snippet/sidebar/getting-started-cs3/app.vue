@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div id="wrapper">
@@ -39,12 +37,17 @@
     <!--end of main content declaration -->
 </template>
 <script>
-import Vue from "vue";
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
+
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use(SidebarPlugin);
+
+enableRipple(true);
 
 export default {
+    name: "App",
+    components: {
+        "ejs-sidebar": SidebarComponent
+    },
     data() {
         return {
             enableDock: true,
@@ -210,5 +213,3 @@ export default {
     font-style: normal;
 }
 </style>
-
-

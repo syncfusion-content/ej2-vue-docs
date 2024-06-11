@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <div class="control-section">
@@ -98,16 +96,16 @@
 </style>
 
 <script>
-import Vue from "vue";
 import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
-import { RichTextEditorPlugin, Toolbar, Link, NodeSelection, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
+import { RichTextEditorComponent, Toolbar, Link, NodeSelection, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
 let proxy = undefined;
-
-Vue.use(RichTextEditorPlugin);
-Vue.use(DialogPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent,
+"ejs-dialog":DialogComponent
+},
     data: function() {
         return {
             selection: new NodeSelection(),
@@ -145,7 +143,7 @@ export default {
             proxy.$refs.dialogObj.ej2Instances.content = document.getElementById('rteSpecial_char');
             proxy.$refs.dialogObj.ej2Instances.dataBind();
             proxy.$refs.dialogObj.ej2Instances.show();
-        }
+        },
         dialogCreate: function() {
             var dialogCtn = document.getElementById('rteSpecial_char');
             proxy = this;
@@ -190,5 +188,3 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

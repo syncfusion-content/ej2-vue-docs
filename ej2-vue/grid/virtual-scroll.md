@@ -23,7 +23,10 @@ To setup the row virtualization, you need to define [`enableVirtualization`](htt
 The number of records displayed in the Grid is determined implicitly by height of content area. Also you have an option to define visible number of records by [`pageSettings.pageSize`](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#pagesize) property. The loaded data will be cached and reused when it is needed for next time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/virtualscroll/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/virtualscroll/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ Column virtualization allows you to virtualize columns. It will render columns w
 To setup the column virtualization, set the [`enableVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablevirtualization) and [`enableColumnVirtualization`](https://ej2.syncfusion.com/vue/documentation/api/grid/#enablecolumnvirtualization) properties as `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/virtualscroll/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/virtualscroll/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -39,7 +39,10 @@ You can update your own custom actions in UndoRedo collection, by using the [`up
 The following code example shows `How to update and customize your own actions for undo redo` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/undo-redo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/undo-redo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

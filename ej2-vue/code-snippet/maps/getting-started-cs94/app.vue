@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -10,11 +8,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Highlight, Legend } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Highlight, Legend } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent
+},
 data () {
     return {
         layers: [
@@ -63,5 +65,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

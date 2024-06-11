@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowPaging='true' :editSettings='editSettings'  :toolbar='toolbar'>
@@ -16,16 +14,12 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { MaskedTextBox } from '@syncfusion/ej2-inputs';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 let element;
 let maskObj;
-
 function create() {
   element = document.createElement('input');
   return element;
@@ -45,6 +39,12 @@ function write(args) {
 }
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: employeeData,
@@ -66,5 +66,3 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

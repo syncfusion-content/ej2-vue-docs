@@ -1,22 +1,22 @@
-
-
-
 <template>
      <div>
-        <ejs-button id="selectRow" cssClass="e-info" v-on:click.native="select">Select Multiple Rows</ejs-button>
-        <ejs-button id="clearSelection" cssClass="e-info" v-on:click.native="clear">Clear Selection</ejs-button>
+        <ejs-button id="selectRow" cssClass="e-info" v-on:click="select">Select Multiple Rows</ejs-button>
+        <ejs-button id="clearSelection" cssClass="e-info" v-on:click="clear">Clear Selection</ejs-button>
         <br>
         <br>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :selectionSettings="selectionSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Selection } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+import { GanttComponent, Selection } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -75,6 +75,3 @@ export default {
   }
 };
 </script>
-
-
-

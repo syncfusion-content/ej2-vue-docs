@@ -17,7 +17,10 @@ When the min and max properties are configured and the selected datetime value i
 The below example allows selecting a date within the range from 7th to 27th day in a month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datetimepicker/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datetimepicker/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

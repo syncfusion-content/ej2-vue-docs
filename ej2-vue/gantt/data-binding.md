@@ -36,7 +36,10 @@ The [`child`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/
 The following code example shows how to bind the hierarchical local data into the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +54,10 @@ The Gantt component can be bound with self-referential data by mapping the data 
 * Parent ID field: This field contains values that indicate parent tasks and it is mapped to the [`parentID`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#parentid) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +69,10 @@ The Gantt component can be bound with self-referential data by mapping the data 
 To bind remote data to the Gantt component, assign service data as an instance of `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#datasource) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,39 +88,29 @@ In Gantt, we can fetch data from SQL database using `ADO.NET` Entity Data Model 
 We can define data source for Gantt as instance of DataManager using `url` property of DataManager. Please Check the below code snippet to assign data source to Gantt.
 
 ```
-
 <template>
-     <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
+    <div>
+        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :height="height"></ejs-gantt>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+<script setup>
+import { GanttComponent as EjsGantt } from "@syncfusion/ej2-vue-gantt";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-Vue.use(GanttPlugin);
-export default {
-  data: function() {
-      return{
-            data: new DataManager({
-                url: '/Home/UrlDatasource',
-                adaptor: new UrlAdaptor
-            }),
-            height: '450px',
-            taskFields: {
-                id: 'TaskId',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                progress: 'Progress',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                child: 'SubTasks'
-            }
-        };
-  },
-};
+const data = new DataManager({
+    url: '/Home/UrlDatasource',
+    adaptor: new UrlAdaptor
+});
+const height = '450px';
+const taskFields = {
+    id: 'TaskId',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    progress: 'Progress',
+    duration: 'Duration',
+    dependency: 'Predecessor',
+    child: 'SubTasks'
+}
 </script>
-
 ```
 
 ```ts
@@ -134,43 +133,32 @@ Datasource must be set to the **json** property and set **RemoteSaveAdaptor** to
 You can use the following code example to use **RemoteSaveAdaptor** in Gantt.
 
 ```
-
 <template>
-     <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
-    </div>
+    <div>
+       <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height"></ejs-gantt>
+   </div>
 </template>
-<script>
-import Vue from "vue";
-import { GanttPlugin, Edit } from "@syncfusion/ej2-vue-gantt";
+<script setup>
+import { GanttComponent as EjsGantt, Edit } from "@syncfusion/ej2-vue-gantt";
 import { DataManager, RemoteSaveAdaptor } from '@syncfusion/ej2-data';
-Vue.use(GanttPlugin);
-export default {
-  data: function() {
-      return{
-            data: new DataManager({
-                batchUrl: 'Home/BatchUpdate',
-                adaptor: new RemoteSaveAdaptor
-            }),
-            height: '450px',
-            taskFields: {
-                id: 'TaskId',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                progress: 'Progress',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                child: 'SubTasks'
-            },
-            editSettings: {
-              allowAdding: true,
-              allowEditing: true,
-              allowDeleting: true,
-              allowTaskbarEditing: true,
-              showDeleteConfirmDialog: true
-    },
-        };
-  },
+const data = new DataManager({
+    url: 'https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Tasks/'
+});
+const height = '450px';
+const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    child: 'subtasks'
+};
+const editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true,
+    allowTaskbarEditing: true,
+    showDeleteConfirmDialog: true
 };
 </script>
 
@@ -256,72 +244,59 @@ When the <code>loadChildOnDemand</code> is enabled, parent records are rendered 
 
 ```
 <template>
-<div id="app">
-        <ejs-gantt ref='gantt' id="GanttContainer" 
-            :dataSource= "dataSource"
-            :taskFields= "taskFields"
-            :allowSelection= "true"
-            :allowResizing= "true"
-            :height= "height"
-            :treeColumnIndex= "1"
-            :highlightWeekends= "true"
-            :columns= "columns"
-            :enableVirtualization="true"
-            :loadChildOnDemand = "false"
-            :projectStartDate= "projectStartDate"
-            :projectEndDate= "projectEndDate"
-            :splitterSettings= "splitterSettings"
-            >
-        </ejs-gantt>
-</div>
-</template>
-<script>
-import Vue from "vue";
-import { GanttPlugin, GanttComponent, Selection, VirtualScroll  } from "@syncfusion/ej2-vue-gantt";
-import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
-
-Vue.use(GanttPlugin);
-
-
-export default {
-  data() {
-    return {
-      data: new DataManager({
+    <div id="app">
+            <ejs-gantt ref='gantt' id="GanttContainer" 
+                :dataSource= "dataSource"
+                :taskFields= "taskFields"
+                :allowSelection= "true"
+                :allowResizing= "true"
+                :height= "height"
+                :treeColumnIndex= "1"
+                :highlightWeekends= "true"
+                :columns= "columns"
+                :enableVirtualization="true"
+                :loadChildOnDemand = "false"
+                :projectStartDate= "projectStartDate"
+                :projectEndDate= "projectEndDate"
+                :splitterSettings= "splitterSettings"
+                >
+            </ejs-gantt>
+    </div>
+    </template>
+    <script setup>
+    import { provide } from "vue";
+    import { GanttComponent as EjsGantt, GanttComponent as EjsGantt, Selection, VirtualScroll  } from "@syncfusion/ej2-vue-gantt";
+    import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
+    const data = new DataManager({
         url: 'https://services.syncfusion.com/vue/production/api/GanttLoadOnDemand',
         adaptor: new WebApiAdaptor,
         crossDomain: true
-      }),     
-      projectStartDate: new Date('01/02/2000'),
-      projectEndDate: new Date('12/01/2002'),
-      splitterSettings: {
+    });
+    const projectStartDate = new Date('01/02/2000');
+    const projectEndDate = new Date('12/01/2002');
+    const splitterSettings = {
         columnIndex: 3
-      },
-      taskFields: {
-            id: 'taskId',
-            name: 'taskName',
-            startDate: 'startDate',
-            endDate: 'endDate',
-            duration: 'duration',
-            progress: 'progress',
-            hasChildMapping: 'isParent',
-            parentID: 'parentID'
-        },
-        height: '460px',
-        columns: [
-		    { field: 'taskId' },
-            { field: 'taskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
-            { field: 'startDate' },
-            { field: 'duration' },
-            { field: 'progress' }
-        ]
     };
-  },
-    provide: {
-      gantt: [ Selection, VirtualScroll]
-  }
-}
-
-</script>
+    const taskFields = {
+        id: 'taskId',
+        name: 'taskName',
+        startDate: 'startDate',
+        endDate: 'endDate',
+        duration: 'duration',
+        progress: 'progress',
+        hasChildMapping: 'isParent',
+        parentID: 'parentID'
+    };
+    const height = '460px';
+    const columns = [
+        { field: 'taskId' },
+        { field: 'taskName', headerText: 'Task Name', width: '250', clipMode: 'EllipsisWithTooltip' },
+        { field: 'startDate' },
+        { field: 'duration' },
+        { field: 'progress' }
+    ];
+    provide('gantt',  [ Selection, VirtualScroll]);
+    </script>
 
 ```
 
@@ -621,50 +596,41 @@ public object Get()
 We can pass additional parameters using `addParams` method of `Query` class. In server side we have inherited and shown the additional parameter value in Syncfusion DataManager class itself. We pass an additional parameter in load time using [`load`](https://ej2.syncfusion.com/vue/documentation/api/gantt#load) event. We can also pass additional parameter to the CRUD model. Please Check the below code snippet to send additional parameter to Gantt.
 
 ```
-
 <template>
-     <div>
-        <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings" :load= "load"></ejs-gantt>
-    </div>
+    <div>
+       <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings" :load= "load"></ejs-gantt>
+   </div>
 </template>
-<script>
-import Vue from "vue";
-import { GanttPlugin, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
+<script setup>
+import { provide } from "vue";
+
+import { GanttComponent as EjsGantt, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
 import { DataManager, UrlAdaptor, Query } from '@syncfusion/ej2-data';
-Vue.use(GanttPlugin);
-export default {
-  data: function() {
-      return{
-            data: new DataManager({
-                url: 'http://localhost:50039/Home/UrlDatasource',
-                adaptor: new UrlAdaptor,
-                batchUrl: 'http://localhost:50039/Home/BatchSave'
-            }),
-            height: '450px',
-            taskFields: {
-                id: 'TaskId',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                progress: 'Progress',
-                duration: 'Duration',
-                dependency: 'Predecessor',
-                parentID: 'parentID'
-            },
-            toolbar: ['Add', 'Edit', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Update'],
-             editSettings: {
-                allowAdding: true,
-                allowEditing: true,
-                allowDeleting: true
-            },
-        };
-        load: function(args) {
-            this.query = new Query().addParams('ej2Gantt', "test");
-        }
-  },
-  provide: {
-      gantt: [ Edit, Toolbar ]
-  }
+const data = new DataManager({
+    url: 'http://localhost:50039/Home/UrlDatasource',
+    adaptor: new UrlAdaptor,
+    batchUrl: 'http://localhost:50039/Home/BatchSave'
+});
+const height = '450px';
+const taskFields = {
+    id: 'TaskId',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    progress: 'Progress',
+    duration: 'Duration',
+    dependency: 'Predecessor',
+    parentID: 'parentID'
 };
+const toolbar = ['Add', 'Edit', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Update'];
+const editSettings = {
+    allowAdding: true,
+    allowEditing: true,
+    allowDeleting: true
+};
+const load = (args) => {
+    this.query = new Query().addParams('ej2Gantt', "test");
+};
+provide('gantt', [Edit, Toolbar]);
 </script>
 
 ```
@@ -726,7 +692,10 @@ During server interaction from the Gantt, some server-side exceptions may occur,
 The argument passed to the `actionFailure` event contains the error details returned from the server.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -738,7 +707,10 @@ The argument passed to the `actionFailure` event contains the error details retu
 You can use Gantt [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/gantt#datasource) property to bind the data source to Gantt from external Ajax request. In the below code we have fetched the data source from the server with the help of Ajax request and provided that to `dataSource` property by using `onSuccess` event of the Ajax.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -770,7 +742,10 @@ To split a task at load time in hierarchical way, we need to define the segment 
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -796,7 +771,10 @@ We can also define segment details as a flat data and this collection can be map
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-binding-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-binding-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -810,7 +788,10 @@ We can also define segment details as a flat data and this collection can be map
 The [`autoCalculateDateScheduling`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#autoCalculateDateScheduling) property can help you reduce the time taken for the Gantt chart to render on the initial load. When this API is enabled, parent-child validation, data validation, and predecessor validation are restricted, allowing the Gantt chart to load more quickly. Since we are disabling the validations, data source provided to gantt should have all data such as start date, end date, duration, as proper data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/virtual-scroll-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/virtual-scroll-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

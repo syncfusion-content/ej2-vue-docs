@@ -68,31 +68,17 @@ public class GridColumnModel
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Toolbar } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent, Toolbar } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: data,
-      toolbarOptions: ['PdfExport']
-    };
-  },
-  methods: {
-      toolbarClick: function(args) {
+      const toolbarOptions = ['PdfExport'];
+      const toolbarClick = function(args) {
         if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
-            this.$refs.grid.serverPdfExport('Home/PdfExport');
+            grid.value.serverPdfExport('Home/PdfExport');
         }
     }
-  },
-  provide: {
-    grid: [Toolbar]
-  }
-}
+  provide('grid',  [Toolbar]);
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
@@ -316,7 +302,10 @@ You can achieve this by utilizing the [query](https://ej2.syncfusion.com/vue/doc
 The following example demonstrates how to pass additional parameters to the server when PDF exporting within the `toolbarClick` event. Within the event, the additional parameters, specifically **recordcount** as **15**, are passed using the addParams method and displayed as a message.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/additional-parameters-export/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/additional-parameters-export/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -17,7 +17,10 @@ If the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItem
 To use the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/tab/tabItemModel/#tabindex) property, you can assign a positive value to the property of each tab item that you want to enable tab key navigation. For example:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/tab-container-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/tab-container-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

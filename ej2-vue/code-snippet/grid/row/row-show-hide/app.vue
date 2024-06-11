@@ -17,15 +17,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(CheckBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-checkbox":CheckBoxComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

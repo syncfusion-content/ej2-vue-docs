@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <div class="e-adaptive-demo e-bigger">
@@ -16,7 +14,7 @@
             </ejs-grid>
             </div>
             </div>
-            <br></br>
+            <br>
             <div class="datalink">Source:
               <a href="https://en.wikipedia.org/wiki/List_of_Android_smartphones"
                 target="_blank">Wikipedia: List of Android smartphones</a>
@@ -25,12 +23,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Filter, Sort, Edit, Toolbar, Page } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js'
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter, Sort, Edit, Toolbar, Page } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js'
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -49,7 +51,7 @@ export default {
   },
   methods: {
     load: function() {
-        (this.$refs.grid as any).$el.ej2_instances[0].adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
+        (this.$refs.grid).$el.ej2_instances[0].adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
     }
   },
   provide: {
@@ -217,5 +219,3 @@ export default {
     overflow: auto !important;
   }
 </style>
-
-

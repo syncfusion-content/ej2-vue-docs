@@ -1,18 +1,16 @@
-
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;"><br>
-      <ejs-dropdowntree id='dropdowntree' :fields='fields' placeholder='Select an employee':footerTemplate='footerTemplate' ></ejs-dropdowntree>
+      <ejs-dropdowntree id='dropdowntree' :fields='fields' placeholder='Select an employee'
+        :footerTemplate='footerTemplate'></ejs-dropdowntree>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DropDownTreePlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(DropDownTreePlugin);
-var data = [
+import { createApp } from "vue";
+import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
+
+let data = [
   { "id": 1, "name": "Steven Buchanan", "job": "General Manager", "hasChild": true, "expanded": true },
   { "id": 2, "pid": 1, "name": "Laura Callahan", "job": "Product Manager", "hasChild": true },
   { "id": 3, "pid": 2, "name": "Andrew Fuller", "job": "Team Lead", "hasChild": true },
@@ -24,7 +22,7 @@ var data = [
   { "id": 11, "pid": 6, "name": "Mary", "job": "Developer " },
   { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
 ];
-var footerVue = Vue.component("footerTemplate", {
+let footerVue = createApp().component("footerTemplate", {
   template: `<span class='foot'> Total number of employees: 10</span>`,
   data() {
     return {
@@ -32,15 +30,21 @@ var footerVue = Vue.component("footerTemplate", {
     };
   }
 });
+
 export default {
-  data (){
+  name: "App",
+  components: {
+    "ejs-dropdowntree": DropDownTreeComponent
+  },
+
+  data() {
     return {
-      fields: { dataSource: data, value: 'id', text: 'name', parentValue:"pid", hasChildren: 'hasChild' },
-        footerTemplate : function(e) {
-          return {
-            template: footerVue
-          }
+      fields: { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' },
+      footerTemplate: function (e) {
+        return {
+          template: footerVue
         }
+      }
     }
   }
 }
@@ -52,18 +56,17 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+
 .foot {
-    text-indent: 1.2em;
-    display: block;
-    font-size: 14px;
-    line-height: 40px;
-    border-top: 1px solid #e0e0e0;
-    font-weight: bold;
+  text-indent: 1.2em;
+  display: block;
+  font-size: 14px;
+  line-height: 40px;
+  border-top: 1px solid #e0e0e0;
+  font-weight: bold;
 }
-.custom .e-ddt-footer{
-    border-top: 1px solid #e0e0e0;
+
+.custom .e-ddt-footer {
+  border-top: 1px solid #e0e0e0;
 }
 </style>
-
-
-

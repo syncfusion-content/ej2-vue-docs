@@ -1,8 +1,6 @@
-
-
 <template>
   <div class="control-container">
-    <ejs-carousel :showPlayButton="true" :playButtonTemplate="'playTemplate'">
+    <ejs-carousel ref="Carousel_instance" :showPlayButton="true" :playButtonTemplate="'playTemplate'">
       <template v-slot:playTemplate>
         <ejs-button ref="playBtn" cssClass="e-info playBtn" content="Pause" v-on:click="btnClick"></ejs-button>
       </template>
@@ -53,16 +51,20 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
-  import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-  Vue.use(ButtonPlugin);
-  Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
-  export default {
-    methods: {
-      btnClick: function () {
+export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "ejs-button": ButtonComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  },
+  methods: {
+    btnClick: function () {
       if (this.$refs.Carousel_instance.ej2Instances.autoPlay) {
         this.$refs.Carousel_instance.ej2Instances.autoPlay = false;
         this.$refs.playBtn.ej2Instances.content = "Play";
@@ -71,34 +73,33 @@
         this.$refs.playBtn.ej2Instances.content = "Pause";
       }
     },
-    },
-  };
+  },
+};
+
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
-  .control-container {
-    height: 360px;
-    margin: 0 auto;
-    width: 600px;
-  }
+.control-container {
+  height: 360px;
+  margin: 0 auto;
+  width: 600px;
+}
 
-  .img-container {
-    height: 100%;
-    margin: 0;
-  }
+.img-container {
+  height: 100%;
+  margin: 0;
+}
 
-  .img-caption {
-    color: #fff;
-    font-size: 1rem;
-    position: absolute;
-    bottom: 3rem;
-    width: 100%;
-    text-align: center;
-  }
+.img-caption {
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  width: 100%;
+  text-align: center;
+}
 </style>
-
-

@@ -89,7 +89,10 @@ Use the following list of keys to navigate the currently focused Calendar after 
 > To focus the DateRangePicker component, use the `alt+t` keys.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

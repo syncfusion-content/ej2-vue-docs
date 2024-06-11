@@ -1,34 +1,34 @@
-
-
 <template>
-<div id="app">
-<h4>Example of data-underline attribute</h4>
-    <table class="table-section">
-        <tr>
-        <td>Intractable UI</td>
-        <td>
-        <ejs-inplaceeditor mode="Inline" :model="textModel" type="Text" value="Andrew">
-        </ejs-inplaceeditor>
-        </td>
-        </tr>
-        <tr>
-        <td class="sample-td">Normal UI </td>
-        <td class="sample-td">
-        <ejs-inplaceeditor mode="Inline" :model="textModel" type="Text" data-underline="false" value="Andrew">
-        </td>
-        </tr>
-    </table>
+    <div id="app">
+        <h4>Example of data-underline attribute</h4>
+        <table class="table-section">
+            <tr>
+                <td>Intractable UI</td>
+                <td>
+                    <ejs-inplaceeditor mode="Inline" :model="textModel" type="Text" value="Andrew">
+                    </ejs-inplaceeditor>
+                </td>
+            </tr>
+            <tr>
+                <td class="sample-td">Normal UI </td>
+                <td class="sample-td">
+                    <ejs-inplaceeditor mode="Inline" :model="textModel" type="Text" data-underline="false"
+                        value="Andrew" />
+                </td>
+            </tr>
+        </table>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
 
-Vue.use(InPlaceEditorPlugin);
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
 
 export default {
-    name: 'app',
-    data () {
+    name: "App",
+    components: {
+        "ejs-inplaceeditor": InPlaceEditorComponent
+    },
+    data() {
         return {
             textModel: {
                 placeholder: 'Enter Some Text'
@@ -66,10 +66,8 @@ tr td:first-child {
     height: 100px;
 }
 
-h4{
+h4 {
     text-align: center;
     font-size: 18px;
 }
 </style>
-
-

@@ -23,7 +23,10 @@ is used. The supported effects for ContextMenu are,
 The following sample illustrates how to open ContextMenu with `FadeIn` effect with the `duration` of `800ms`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

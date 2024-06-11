@@ -99,20 +99,21 @@ Follow the below steps to add the Vue Color picker component using `Composition 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script>
+{% raw %}
+<script setup>
 import { ColorPickerComponent as EjsColorpicker } from '@syncfusion/ej2-vue-inputs';
 </script>
-
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 export default {
-  components: {
-    'ejs-colorpicker': ColorPickerComponent
-  }
+name: "App",
+components: {
+"ejs-colorpicker':":ColorPickerComponent
+}
 }
 </script>
 

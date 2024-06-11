@@ -17,7 +17,10 @@ Tasks can be dynamically added to the Gantt project by enabling the [`editSettin
 A row can be added to the Gantt component from the toolbar while the  [`editSettings.allowAdding`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowadding) property is set to `true`. On clicking the toolbar add icon, you should provide the task information in the add dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ A row can be added to the Gantt component from the toolbar while the  [`editSett
 A row can also be added above, below or child of the selected row by using context menu support. For this, we need to enable the property[`enableContextMenu`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#enablecontextmenu) and inject the [`ContextMenu`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#contextmodule) module into the Gantt control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ You can add rows to the Gantt component dynamically using the [`addRecord`](http
 * As child to the selected row
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

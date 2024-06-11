@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id="app">
     <ejs-grid id="grid" :dataSource="data" :editSettings="editSettings" :toolbar="toolbar" height="273px">
@@ -17,14 +14,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { NumericTextBox } from "@syncfusion/ej2-inputs";
 import { productData } from "./datasource.js";
-
 let priceElem, stockElem, priceObj, stockObj;
-Vue.use(GridPlugin);
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: productData,
@@ -95,6 +96,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

@@ -1,18 +1,20 @@
-
-
 <template>
  <ejs-progressbutton content="Submit"  :spinSettings="spinSettings" ></ejs-progressbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ProgressButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { ProgressButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ProgressButtonPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-progressbutton":ProgressButtonComponent
+},
     data () {
         return {
             spinSettings: { position: 'Right', width: 20, template: '<div class="template"></div>' }
@@ -50,5 +52,3 @@ export default {
     animation: custom-rolling 1.3s linear infinite;
   }
 </style>
-
-

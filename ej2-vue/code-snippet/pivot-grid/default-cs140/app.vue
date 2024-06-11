@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList" :dataBound="ondataBound"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList"
+      :dataBound="ondataBound"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -34,22 +32,19 @@ export default {
     }
   },
   methods: {
-    ondataBound: function() {
-     let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-     pivotGridObj.pivotFieldListModule.dialogRenderer.fieldListDialog.target = document.body;
-     if (pivotGridObj && pivotGridObj.dataSourceSettings.values.length === 0) {
-        (pivotGridObj.pivotFieldListModule.dialogRenderer as any).onShowFieldList();
-     }
+    ondataBound: function () {
+      let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
+      pivotGridObj.pivotFieldListModule.dialogRenderer.fieldListDialog.target = document.body;
+      if (pivotGridObj && pivotGridObj.dataSourceSettings.values.length === 0) {
+        (pivotGridObj.pivotFieldListModule.dialogRenderer).onShowFieldList();
+      }
     }
   },
   provide: {
-        pivotview: [FieldList]
-    }
+    pivotview: [FieldList]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

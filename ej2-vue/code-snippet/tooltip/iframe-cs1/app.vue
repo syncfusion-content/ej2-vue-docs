@@ -1,8 +1,7 @@
-
-
 <template>
-   <div id='app'>
-        <ejs-tooltip target='#iframeContent' cssClass='e-tooltip-css' ref="tooltipTitle" :position='position' :opensOn='opensOn' :content='content'>
+    <div id='app'>
+        <ejs-tooltip target='#iframeContent' cssClass='e-tooltip-css' ref="tooltipTitle" :position='position'
+            :opensOn='opensOn' :content='content'>
             <div id='container'>
                 <div id="tooltipContent">
                     <div class="content">
@@ -13,32 +12,29 @@
         </ejs-tooltip>
     </div>
 </template>
-<style>
-@import "node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-</style>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ButtonPlugin);
-import { TooltipPlugin } from '@syncfusion/ej2-vue-popups';
-Vue.use(TooltipPlugin);
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { TooltipComponent } from '@syncfusion/ej2-vue-popups';
 
 export default {
-  data: function() {
-    return {
-      position: 'BottomCenter',
-      opensOn: 'Click',
-      content: '<iframe src="https://ej2.syncfusion.com/showcase/typescript/expensetracker/#/dashboard"></iframe>'
-    };
-  },
-  methods: {
-  }
+    name: "App",
+    components: {
+        "ejs-tooltip": TooltipComponent,
+        "ejs-button": ButtonComponent
+    },
+    data: function () {
+        return {
+            position: 'BottomCenter',
+            opensOn: 'Click',
+            content: '<iframe src="https://ej2.syncfusion.com/showcase/typescript/expensetracker/#/dashboard"></iframe>'
+        };
+    }
 }
 </script>
 <style>
-@import "node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+
 #tooltipContent {
     position: relative;
     left: 50%;
@@ -66,6 +62,3 @@ export default {
     transform: translateX(-50%);
 }
 </style>
-
-
-

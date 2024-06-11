@@ -15,7 +15,10 @@ The ComboBox supports the `autofill` behaviour with the help of [autofill](https
 The following examples, showcase that how to work autofill with ComboBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/autofill-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/autofill-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

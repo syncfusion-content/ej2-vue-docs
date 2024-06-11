@@ -15,7 +15,10 @@ You can customize the appearance of the RadioButton component by using the CSS r
 The background and border color of the RadioButton is customized through the custom classes to create the primary, success, info, warning, and danger type of RadioButton.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/radio-button/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

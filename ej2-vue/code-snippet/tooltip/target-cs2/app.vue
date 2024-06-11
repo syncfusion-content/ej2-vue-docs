@@ -1,5 +1,3 @@
-
-
 <template>
    <div id='app'>
         <ejs-tooltip target='.e-info' position='RightCenter'>
@@ -34,8 +32,8 @@
                     </div>
                     <br/>
                     <div class="btn">
-                        <ejs-button id="sample" v-on:click.native='onSubmit'>Submit</ejs-button>
-                        <ejs-button id='clear' v-on:click.native='onClear'type='reset'>Reset</ejs-button>
+                        <ejs-button id="sample" v-on:click='onSubmit'>Submit</ejs-button>
+                        <ejs-button id='clear' v-on:click='onClear' type='reset'>Reset</ejs-button>
                     </div>
                 </form>
             </div>
@@ -81,19 +79,21 @@
 }
 </style>
 <script>
-import Vue from 'vue';
-import { TooltipPlugin } from '@syncfusion/ej2-vue-popups';
-Vue.use(TooltipPlugin);
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ButtonPlugin);
+import { TooltipComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
+name: "App",
+components: {
+"ejs-tooltip":TooltipComponent,
+"ejs-button":ButtonComponent
+},
   data: function() {
     return {
     };
   },
   methods: {
-    onSubmit:function(args){
+    onSubmit:function(){
     let name = this.$refs.uname.value;
     let pwd = this.$refs.pwd.value;
     let cpwd = this.$refs.cpwd.value;
@@ -120,7 +120,7 @@ export default {
         alert('Details are not Valid');
     }
     },
-    onClear:function(args){
+    onClear:function(){
         this.$refs.uname.style.backgroundColor = 'white';
         this.$refs.pwd.style.backgroundColor = 'white';
         let target = this.$refs.uname;
@@ -132,6 +132,3 @@ export default {
   }
 }
 </script>
-
-
-

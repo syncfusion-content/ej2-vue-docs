@@ -8,13 +8,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(GanttPlugin);
-Vue.use(SwitchPlugin);
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-switch":SwitchComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [

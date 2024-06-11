@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' :dataSource='parentData' height='265px' :childGrid='childGrid' :rowDataBound='rowDataBound'>
@@ -13,14 +11,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, DetailRow } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { data, employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       parentData: employeeData,
@@ -73,5 +74,3 @@ export default {
       background-color: #eee;
   }
 </style>
-
-

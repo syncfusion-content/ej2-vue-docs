@@ -15,7 +15,10 @@ Vue Button component can be enabled/disabled by giving [`disabled`](https://ej2.
 The following example demonstrates Button in `disabled` state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

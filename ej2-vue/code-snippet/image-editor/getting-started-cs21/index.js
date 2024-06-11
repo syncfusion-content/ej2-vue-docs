@@ -25,13 +25,6 @@ new Vue({
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     btn1Click: function(event) {
       if (this.zoomLevel < 1) {
         this.zoomLevel += 0.1;

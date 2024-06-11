@@ -28,11 +28,25 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+  
+  import { RibbonItemSize } from "@syncfusion/ej2-vue-ribbon";
+  import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
 
   export default {
+name: "App",
+components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective
+},
+
     data: function () {
       return {
         largeSize: RibbonItemSize.Large,
@@ -43,8 +57,7 @@
           items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }]
         },
         cutButton:  { iconCss: "e-icons e-cut", content: "Cut" },
-        copyButton:  { iconCss: "e-icons e-copy", content: "Copy" },
-        formatButton:  { iconCss: "e-icons e-format-painter", content: "Format Painter" }
+        copyButton:  { iconCss: "e-icons e-copy", content: "Copy" }
       };
     }
   };

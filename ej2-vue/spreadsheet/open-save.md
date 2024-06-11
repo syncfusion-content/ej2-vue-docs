@@ -23,7 +23,10 @@ In user interface you can open an Excel document by clicking `File > Open` menu 
 The following sample shows the `Open` option by using the [`openUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openurl) property in the Spreadsheet control. You can also use the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforeopen) event to trigger before opening an Excel file.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ Please find the below table for the beforeOpen event arguments.
 You can achieve to access the remote excel file by using the [`created`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#created) event. In this event you can fetch the excel file and convert it to a blob. Convert this blob to a file and [`open`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) this file by using Spreadsheet component open method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ You can achieve to access the remote excel file by using the [`created`](https:/
 You can add your own custom header to the open action in the Spreadsheet. For processing the data, it has to be sent from server to client side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforeopen) event, the custom header can be added to the request during open action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/custom-header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +79,10 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 You can open excel file into a read-only mode by using the [`openComplete`](../api/spreadsheet/#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#lockcells) methods
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-readonly-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-readonly-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +128,10 @@ In user interface, you can save Spreadsheet data as Excel document by clicking `
 The following sample shows the `Save` option by using the [`saveUrl`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#saveurl) property in the Spreadsheet control. You can also use the [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforesave) event to trigger before saving the Spreadsheet as an Excel file.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-save-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +159,10 @@ Please find the below table for the beforeSave event arguments.
 Passing the custom parameters from client to server by using [`beforeSave`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforesave) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-save-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +185,10 @@ Server side code snippets:
 You can add your own custom header to the save action in the Spreadsheet. For processing the data, it has to be sent from client to server side and adding customer header can provide privacy to the data with the help of Authorization Token. Through the [`fileMenuItemSelect`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#filemenuitemselect) event, the custom header can be added to the request during save action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/custom-header-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/custom-header-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -184,7 +205,10 @@ The possible values are:
 * **Landscape** - Used to display content in a horizontal layout.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-save-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/open-save-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +229,10 @@ The following list of Excel file formats are supported in Spreadsheet:
 To save the Spreadsheet document as an `xlsx, xls, csv, or pdf` file, by using [save](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#save) method should be called with the `url`, `fileName` and `saveType` as parameters. The following code example shows to save the spreadsheet file as an `xlsx, xls, csv, or pdf` in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/save-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/save-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

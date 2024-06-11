@@ -1,7 +1,3 @@
-
-
-
-
 <template>
     <div class="control-section" id="pivot-grid-section">
         <div id="dropdown-control" style="margin-bottom:5px;">
@@ -30,14 +26,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotChart } from "@syncfusion/ej2-vue-pivotview";
-import { DropDownListPlugin, ChangeEventArgs } from "@syncfusion/ej2-vue-dropdowns";
+
+import { PivotViewComponent, PivotChart } from "@syncfusion/ej2-vue-pivotview";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { pivotData } from './pivotData.js';
-Vue.use(PivotViewPlugin);
-Vue.use(DropDownListPlugin)
 
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-pivotview":PivotViewComponent
+},
     data() {
         return {
             dataSourceSettings: {
@@ -74,7 +73,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
-
-
-
-

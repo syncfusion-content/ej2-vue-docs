@@ -15,7 +15,10 @@ You can select the specific row in the Tree Grid based on a certain condition by
 In the below demo, we have selected the Tree Grid rows only when *Duration* column value greater than *4*.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}

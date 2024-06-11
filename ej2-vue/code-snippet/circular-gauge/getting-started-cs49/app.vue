@@ -1,10 +1,7 @@
-
-
-
 <template>
   <div id="app">
     <div class='wrapper'>
-      <ejs-button id='print' isToggle="true" v-on:click.native='clickPrint'> Print
+      <ejs-button id='print' isToggle="true" v-on:click='clickPrint'> Print
       </ejs-button>
       <ejs-circulargauge id="gauge" ref="gauge" allowPrint="true">
       </ejs-circulargauge>
@@ -12,15 +9,15 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin, Print } from "@syncfusion/ej2-vue-circulargauge";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(CircularGaugePlugin);
-Vue.use(ButtonPlugin);
+import { CircularGaugeComponent, Print } from "@syncfusion/ej2-vue-circulargauge";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
+
 export default {
-  data() {
-    return {
-    }
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-circulargauge": CircularGaugeComponent
   },
   methods: {
     clickPrint: function (args) {
@@ -38,4 +35,3 @@ export default {
   margin: 0 auto;
 }
 </style>
-

@@ -8,9 +8,6 @@
               :value="value"
               :mode="mode"
             ></ejs-datamatrixgenerator>
-
-
-
     </div>
 </template>
 <style>
@@ -28,7 +25,5 @@ const width = "200px";
 const height = "150px";
 const mode = "SVG";
 const value = "Syncfusion";
-        
+
 </script>
-
-

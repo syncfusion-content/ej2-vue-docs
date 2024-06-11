@@ -31,7 +31,10 @@ You can also enable filtering for the DropDownList by passing the [`allowFilteri
 In the below demo, DropDownList is rendered with custom [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#datasource) for the *Priority* column and enabled filtering to search DropDownList items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

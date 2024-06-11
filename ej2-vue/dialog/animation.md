@@ -41,7 +41,10 @@ In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `Zo
 and close with `ZoomOut` effects.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

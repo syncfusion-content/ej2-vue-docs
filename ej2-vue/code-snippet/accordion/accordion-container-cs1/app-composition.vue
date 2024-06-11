@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <ejs-accordion>
@@ -40,5 +38,3 @@ import { AccordionComponent as EjsAccordion } from '@syncfusion/ej2-vue-navigati
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
-
-

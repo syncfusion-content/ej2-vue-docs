@@ -18,7 +18,10 @@ You can change the Tab content height by using the [`heightAdjustMode`](https://
 * **Fill**: Each tab content height is set based on the full height of Tabs parent element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/height-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/height-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

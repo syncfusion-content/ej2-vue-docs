@@ -16,7 +16,10 @@ You can achieve collapse and expand functionality in Tab by adding/removing a cu
 * In the event handler, add and remove 'collapse' class to hide and show the corresponding Tab content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/collapsible-tab-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/collapsible-tab-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

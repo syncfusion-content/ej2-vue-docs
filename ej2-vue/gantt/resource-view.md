@@ -22,7 +22,10 @@ A task assigned to one or more resources are termed as resource task and it is a
 >Note: Currently there is no support for unscheduled task in Resource view Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/resource-view-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/resource-view-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ The range of overallocation dates can be highlighted by a square bracket. It can
 >Note: By default, the `showOverAllocation` property value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/resource-view-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/resource-view-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ A task not assigned to any one of the resource are termed as unassigned tasks. T
 In Gantt, you can enable taskbar drag and drop between resources by using the [`allowTaskbarDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowtaskbardraganddrop) property. This allows you to move a taskbar from one resource to another vertically, making it easier to schedule tasks and manage resources.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/resource-view-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/resource-view-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

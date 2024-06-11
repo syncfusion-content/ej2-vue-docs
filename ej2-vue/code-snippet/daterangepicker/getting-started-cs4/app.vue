@@ -1,24 +1,25 @@
-
-
 <template>
-    <div id="app">
-      <div class='wrapper'>
-        <ejs-daterangepicker :firstDayOfWeek="week" :placeholder="waterMark"></ejs-daterangepicker>
-      </div>
+  <div id="app">
+    <div class='wrapper'>
+      <ejs-daterangepicker :firstDayOfWeek="week" :placeholder="waterMark"></ejs-daterangepicker>
     </div>
+  </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(DateRangePickerPlugin);
+import { DateRangePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
 export default {
-   data () {
-     return {
-           waterMark : 'Select a Range',
-           week : 1
-        }
+  name: "App",
+  components: {
+    "ejs-daterangepicker": DateRangePickerComponent
+  },
+  data() {
+    return {
+      waterMark: 'Select a Range',
+      week: 1
     }
+  }
 }
 </script>
 <style>
@@ -28,10 +29,9 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
- .wrapper {
-    max-width: 250px;
-    margin: 0 auto;
-  }
+
+.wrapper {
+  max-width: 250px;
+  margin: 0 auto;
+}
 </style>
-
-

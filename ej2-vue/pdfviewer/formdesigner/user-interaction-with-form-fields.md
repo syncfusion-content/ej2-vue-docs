@@ -25,44 +25,72 @@ The PDF viewer control provides the option for interaction with Form Fields such
 
 We should inject FormDesigner module and set enableFormDesignerToolbar as true to enable the Form designer icon on the toolbar. By default, enableFormDesignerToolbar is set as true. Use the following code to inject FormDesigner module and to enable the enableFormDesignerToolbar property.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "FormDesigner.pdf";
+const enableFormDesignerToolbar = true;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'app',
-  data () {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"FormDesigner.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "FormDesigner.pdf",
       enableFormDesignerToolbar: true
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+    Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  }
 
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Add the form field dynamically
 
@@ -102,52 +130,90 @@ The PDF Viewer control supports the clipboard operations such as cut, copy and p
 
 We provided support to undo/redo the Form Field actions that are performed at runtime. Use the following code example to perform undo/redo actions.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-        <ejs-button ref="undoBtn" v-on:click.native="undoClicked">Undo</ejs-button>
-        <ejs-button ref="redoBtn" v-on:click.native="redoClicked">Redo</ejs-button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-button ref="undoBtn" v-on:click.native="undoClicked">Undo</ejs-button>
+    <ejs-button ref="redoBtn" v-on:click.native="redoClicked">Redo</ejs-button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "FormDesigner.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
+
+const undoClicked = function (args) {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.undo();
+}
+const redoClicked = function (args) {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.redo();
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-button ref="undoBtn" v-on:click.native="undoClicked">Undo</ejs-button>
+    <ejs-button ref="redoBtn" v-on:click.native="redoClicked">Redo</ejs-button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
   name: 'app',
-  data () {
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"FormDesigner.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "FormDesigner.pdf"
     };
   },
-  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  },
   methods: {
     undoClicked: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.undo();
     },
     redoClicked: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.redo();
-    },
+    }
   }
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}

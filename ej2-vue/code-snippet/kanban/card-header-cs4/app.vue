@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData"
@@ -15,14 +13,20 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend } from '@syncfusion/ej2-base';
 import { DialogUtility } from '@syncfusion/ej2-popups';
 import { kanbanData } from './datasource.js';
-Vue.use(KanbanPlugin);
-Vue.use(DialogUtility);
+
+
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -34,8 +38,8 @@ export default {
   },
   methods: {
     OnDataBound: function() {
-        var headerEle: HTMLElement = document.querySelector('.e-header-row');
-        headerEle.addEventListener("dblclick", function (e: Event) {
+        var headerEle = document.querySelector('.e-header-row');
+        headerEle.addEventListener("dblclick", function (e) {
             var target = closest(e.target, '.e-header-cells');
             DialogUtility.alert({
                 title: 'Header',
@@ -59,6 +63,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
 </style>
-
-
-

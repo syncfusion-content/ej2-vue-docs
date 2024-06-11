@@ -15,7 +15,10 @@ In the Syncfusion Vue Grid component, you have the capability to **freeze** colu
 In the following example, the [frozenColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#frozencolumns) property is set to **2**. This configuration freezes the left two columns of the grid, and they will remain fixed in their positions while the rest of the columns grid can be scrolled horizontally.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/frozen-column-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/frozen-column-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ To freeze a particular column in the grid, you can utilize the [isFrozen](https:
 The following example demonstrates how to freeze particular column in grid using `isFrozen` property. This is achieved by the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the `DropDownList` component. Within the change event, you can modify the `isFrozen` property of the selected column using the [getColumnByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnbyfield) method. Afterward, you can use the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method to update the displayed columns based on your interaction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/frozen-column-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/frozen-column-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ The types of the `column.freeze` directions:
 In the following example, the **ShipCountry** column is frozen on the left side, the **CustomerID** column is frozen on the right side and the **Freight** column is frozen on the fixed of the content table. Additionally, you can modify the `column.freeze` property to **Left**, **Right** and **Fixed** based on the selected column by utilizing the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the `DropDownList` component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/frozen-column-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/frozen-column-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +112,10 @@ For fixed frozen columns, you need to specify both left and right border as ment
 The following example demonstrates how to change the default frozen line color using CSS.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/frozen-column-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/frozen-column-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

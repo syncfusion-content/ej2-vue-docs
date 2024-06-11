@@ -24,15 +24,19 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin,Edit as GridEdit,RowDD, Page } from "@syncfusion/ej2-vue-grids";
-import { TreeGridPlugin,Edit as TreeGridEdit   } from "@syncfusion/ej2-vue-treegrid";
+
+import { GridComponent, ColumnsDirective, ColumnDirective,Edit as GridEdit,RowDD, Page } from "@syncfusion/ej2-vue-grids";
+import { TreeGridComponent, ColumnsDirective, ColumnDirective,Edit as TreeGridEdit   } from "@syncfusion/ej2-vue-treegrid";
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { employeeData } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-treegrid":TreeGridComponent
+},
   data() {
     return {
       data: employeeData,

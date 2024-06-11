@@ -19,7 +19,10 @@ Opening and closing the Sidebar can be achieved with built-in public methods.
 In the following sample, toggle method has been used to show or hide the Sidebar on button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/howto-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/howto-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

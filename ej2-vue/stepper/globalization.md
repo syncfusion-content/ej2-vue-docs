@@ -21,7 +21,10 @@ Locale key | en-US (default) |
 In this example, the `French` culture is set to Stepper and the default text is updated with the content defined by the locale key.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/localization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/localization/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ In this example, the `French` culture is set to Stepper and the default text is 
 RTL provides an option to switch the text direction and layout of the Stepper component from right to left by setting the [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#enablertl) property to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/rtl/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/rtl/app.vue %}
 {% endhighlight %}
 {% endtabs %}

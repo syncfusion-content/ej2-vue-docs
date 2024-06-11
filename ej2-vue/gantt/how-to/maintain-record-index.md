@@ -15,60 +15,51 @@ Row dropped record’s index position can be maintained in the Gantt chart by ch
 ```ts
 
 <template>
-     <div>
-        <ejs-gantt :dataSource="data" :allowRowDragAndDrop='true' :taskFields = "taskFields" :height = "height"></ejs-gantt>
-    </div>
+    <div>
+       <ejs-gantt :dataSource="data" :allowRowDragAndDrop='true' :taskFields = "taskFields" :height = "height"></ejs-gantt>
+   </div>
 </template>
-<script>
-import Vue from "vue";
-import { GanttPlugin, RowDD, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+<script setup>
+import { provide } from "vue";
+import { GanttComponent as EjsGantt, RowDD, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-Vue.use(GanttPlugin);
-export default {
-  data: function() {
-      return{
-            data: new DataManager({
-                url: 'https://localhost:44379/Home/UrlDatasource',
-                adaptor: new UrlAdaptor,
-                crossDomain: true,
-                batchUrl: 'https://localhost:44379/Home/BatchUpdate'
-            }),
-            height: '450px',
-            taskFields: {
-                id: 'TaskID',
-                name: 'TaskName',
-                startDate: 'StartDate',
-                duration: 'Duration',
-                progress: 'Progress',
-                dependency: 'Predecessor',
-                child: 'subtasks'
-            },
-            rowDrop: function(args) {
-                var record = this.flatData[args.fromIndex][this.taskFields.id];
-                var record2 = this.flatData[args.dropIndex][this.taskFields.id];
-                var data: IGanttData = args.data[0];
-                var uri = 'https://localhost:44379/Home/RowDropMethod';
-                var dragdropdata = {
-                   record: data[0].taskData,
-                   position: args.dropIndex,
-                   dragidMapping: record,
-                   dropidMapping: record2
-                };
-                var ajax = new Ajax(
-                {
-                  url: uri,
-                  type: 'POST',
-                  contentType: "application/json",
-                  data: JSON.stringify(dragdropdata),
-                });
-                ajax.send();
-            }
-        };
-    },
-    provide: {
-      gantt: [ RowDD, Edit, Selection ]
-  }
+const data = new DataManager({
+    url: 'https://localhost:44379/Home/UrlDatasource',
+    adaptor: new UrlAdaptor,
+    crossDomain: true,
+    batchUrl: 'https://localhost:44379/Home/BatchUpdate'
+});
+const height = '450px';
+const taskFields = {
+    id: 'TaskID',
+    name: 'TaskName',
+    startDate: 'StartDate',
+    duration: 'Duration',
+    progress: 'Progress',
+    dependency: 'Predecessor',
+    child: 'subtasks'
 };
+const rowDrop = function(args) {
+    var record = this.flatData[args.fromIndex][this.taskFields.id];
+    var record2 = this.flatData[args.dropIndex][this.taskFields.id];
+    var data = args.data[0];
+    var uri = 'https://localhost:44379/Home/RowDropMethod';
+    var dragdropdata = {
+       record: data[0].taskData,
+       position: args.dropIndex,
+       dragidMapping: record,
+       dropidMapping: record2
+    };
+    var ajax = new Ajax(
+    {
+      url: uri,
+      type: 'POST',
+      contentType: "application/json",
+      data: JSON.stringify(dragdropdata),
+    });
+    ajax.send();
+};
+provide('gantt',  [ RowDD, Edit, Selection ]);
 </script>
 
 ```

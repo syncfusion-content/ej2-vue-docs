@@ -15,7 +15,10 @@ You can render the custom component in frozen columns using edit params.
 In the following example, we have rendered the **Datepicker** component to the **OrderDate** column. Here the datepicker object is appended to the corresponding input element in the editing row.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/dropdown-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/dropdown-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ By default, the positions of the new toasts are only updated after the visible t
 The following sample demonstrates adding multiple toasts in different positions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

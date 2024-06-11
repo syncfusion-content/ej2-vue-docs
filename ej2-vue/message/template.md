@@ -15,7 +15,10 @@ The message supports templates that allows the user to customize the content wit
 In the following sample, the Message component content is customized with HTML elements and Vue Button components, which are directly added to the `<ejs-message>` element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/message/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/message/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

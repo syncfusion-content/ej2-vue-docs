@@ -27,7 +27,10 @@ Internationalization library is used to globalize number in Circular Gauge compo
 In the below example, axis labels are globalized to **EUR**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs66/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs66/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ Circular Gauge can render its elements from right to left, which improves the us
 The following example illustrates the right to left rendering of the Circular Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs67/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs67/app.vue %}
 {% endhighlight %}
 {% endtabs %}

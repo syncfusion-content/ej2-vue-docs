@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :showColumnMenu='true' height='315px' >
@@ -13,13 +11,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, ColumnMenu, Resize } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, ColumnMenu, Resize } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
-Vue.use(GridPlugin);
-
-  export default {
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
       return {
         data: data

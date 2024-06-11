@@ -1,5 +1,3 @@
-
-
 <template>
     <ejs-chiplist id="chip" selection="Single">
         <e-chips>
@@ -12,13 +10,13 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ChipListPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(ChipListPlugin);
-
-export default {}
+import { ChipListComponent, ChipsDirective, ChipDirective } from '@syncfusion/ej2-vue-buttons';
+export default {
+name: "App",
+components: {
+"ejs-chiplist":ChipListComponent,
+"e-chips":ChipsDirective,
+"e-chip":ChipDirective
+},
+}
 </script>
-
-
-

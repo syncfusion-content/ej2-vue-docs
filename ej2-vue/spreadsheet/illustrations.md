@@ -70,7 +70,10 @@ Image feature allows you to view and insert an image in a spreadsheet, and you c
 * Use the `top` and `left` property in the `insertImage()` method programmatically.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/link-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +127,10 @@ The available arguments in the `ChartModel` are:
 * markerSettings: Specifies the marker settings. The marker is used to provide information about the data points in the series and is currently only applicable to the line chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/chart-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +157,10 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 * You can change the position of the chart by drag and drop.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/chart-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -163,7 +172,10 @@ Chart feature allows you to view and insert a chart in a spreadsheet, and you ca
 Using the [`actionBegin`](../api/spreadsheet/#actionbegin) event, you can change the shape, size, fill color, and border of the line chart marker. In the following example, you can see the modified marker appearance, such as shape and size, while creating the line chart with UI interaction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/chart-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/chart-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

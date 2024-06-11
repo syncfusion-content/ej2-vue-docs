@@ -48,7 +48,10 @@ Meanwhile filtering can also be configured at code behind using the [`filterSett
 > When specifying unavailable or inappropriate members to include or exclude filter items collection, they will be ignored.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs78/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs78/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +87,10 @@ In member filter dialog, end user can set the limit to display members while loa
 The data limit can be set using the [`maxNodeLimitInMemberEditor`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#maxnodelimitinmembereditor) property in pivot table. By default, the property holds the numeric value **1000**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +111,10 @@ Allows to load members inside the filter dialog on-demand by setting the [`loadO
 This will help to avoid performance lags when opening a member editor whose hierarchy has a large number of members. Once level members are queried and added one after the other, they will be maintained internally (for all operations like dialog re-opening, drag and drop, etc...) and will not be removed until the web page is refreshed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +141,10 @@ If the property is set to **false**, all members of all levels will be queried a
 Allows user to load the members on the basis of the level number set in the [`levelCount`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFilter/#levelcount) property in the [`filterSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#filtersettings). By default, this property is set to **1** and the search will only take place within the members of the first level.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +197,10 @@ For example, in a "Country" field, to show countries names that contains "United
 | NotBetween| Displays the pivot table that does not record between the start and end text.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs79/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs79/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -203,7 +218,10 @@ For example, in a "Sold" field, to show the values less than "40000", set [`valu
 > Number filtering option is enabled only when the field contains the **number** format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs80/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs80/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -222,7 +240,10 @@ For example, in a "Delivery Date" field, to show the delivery records of the fir
 > Date filtering option is enabled only when the field has **date** type `formatsettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs81/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs81/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -268,7 +289,10 @@ For example, to show the data where total sum of units sold for each country exc
 | NotBetween| Displays the pivot table that does not record between start and end values.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs82/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs82/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -292,7 +316,10 @@ The event [`memberFiltering`](https://ej2.syncfusion.com/vue/documentation/api/p
 * `dataSourceSettings` - It holds updated datasource settings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs83/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs83/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -312,7 +339,10 @@ The event [`memberEditorOpen`](https://ej2.syncfusion.com/vue/documentation/ap
 In the below sample, the member editor of field "Country" shows only the selected Item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs84/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs84/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -336,7 +366,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 In the below sample, filter action can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs85/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs85/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -358,7 +391,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 * `actionInfo`: It holds the unique information about the current UI action. For example, if the filter action is completed, the event argument contains information such as filter members, field name, and so on.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs86/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs86/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -374,7 +410,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 * `errorInfo`: It holds the error information of the current UI action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs87/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs87/app.vue %}
 {% endhighlight %}
 {% endtabs %}

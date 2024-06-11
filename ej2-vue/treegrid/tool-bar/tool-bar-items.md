@@ -32,7 +32,10 @@ The following table shows built-in toolbar items and its actions.
 | Outdent | Outdents the record to one level of hierarchy.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/toolbar/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/toolbar/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ Custom toolbar items can be added by defining the [`toolbar`](https://ej2.syncfu
 By default, Custom toolbar items are in position `Left`. You can change the position by using the [`align`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/#item) property. In the below sample, we have applied position `Right` for the `Quick Filter` toolbar item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/toolbar/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/toolbar/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +72,10 @@ TreeGrid have an option to use both built-in and custom toolbar items at same ti
 In the below example, `ExpandAll`, `CollapseAll` are built-in toolbar items and `Click` is custom toolbar item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/toolbar/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/toolbar/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

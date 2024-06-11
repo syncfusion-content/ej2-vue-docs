@@ -1,20 +1,20 @@
-
-
-
 <template>
      <div>
-        <ejs-button id="updateRecord" cssClass="e-info" v-on:click.native="update">update</ejs-button>
+        <ejs-button id="updateRecord" cssClass="e-info" v-on:click="update">update</ejs-button>
         <br><br><br>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :editSettings= "editSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+import { GanttComponent, Edit } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -75,6 +75,3 @@ export default {
   }
 };
 </script>
-
-
-

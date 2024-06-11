@@ -24,7 +24,10 @@ Data markers can be defined using the following properties:
 The following code example demonstrates how to implement data markers in the Gantt chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/data-markers-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/data-markers-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

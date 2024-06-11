@@ -67,32 +67,22 @@ Set **type** to Linear to get the linear progress bar. It also support secondary
          </div>
       </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value1:100,
-    value2:20,
-    value3:40,
-    value4:100,
-    isIndeterminate:true,
-    secondaryProgress:60,
-    animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      },
-      };
-      },
-      provide: {},
-      methods: {}
-   });
+const value1 = 100;
+const value2 = 20;
+const value3 = 40;
+const value4 = 100;
+const isIndeterminate = true;
+const secondaryProgress = 60;
+const animation =  {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+
 </script>
 <style>
   #loader {
@@ -166,32 +156,22 @@ Set **type** to Circular to get the circular progress bar. It also support secon
          </div>
       </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-    value1:100,
-    value2:20,
-    value3:40,
-    value4:100,
-    isIndeterminate:true,
-    secondaryProgress:60,
-    animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      },
-      };
-      },
-  provide: {},
-  methods: {}
-   });
+const value1 = 100;
+const value2 = 20;
+const value3 = 40;
+const value4 = 100;
+const isIndeterminate = true;
+const secondaryProgress = 60;
+const animation =  {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+
 </script>
 <style>
   #loader {

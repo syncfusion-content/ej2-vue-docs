@@ -17,7 +17,10 @@ To reorder the columns, set the [allowReordering](https://ej2.syncfusion.com/vue
 Here's an example for column reordering in your Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ By default, all columns in the Syncfusion Vue Grid can be reordered by dragging 
 In this example, the **ShipCity** column is prevented from being reordered by setting the `allowReordering` property to **false**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-reorder-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-reorder-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +65,10 @@ Here is an example of how to use the `reorderColumnByIndex` method:
 In this example, we are moving the column at index **1** to index **3**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-reorder-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-reorder-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +85,10 @@ You can also use the [reorderColumnByTargetIndex](https://ej2.syncfusion.com/vue
 Here is an example of how to use the `reorderColumnByTargetIndex` method to reorder single column and multiple columns based on target index:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +105,10 @@ The [reorderColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#reor
 Here is an example of how to use the `reorderColumns` method to reorder single column and multiple columns based on field names:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +128,10 @@ When reordering columns in the Syncfusion Vue Grid component, you may want to ta
 In the following example, we have implemented the `columnDragStart`, `columnDrag`, and `columnDrop` events in the Syncfusion Grid component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

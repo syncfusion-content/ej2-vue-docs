@@ -26,7 +26,10 @@ This section explains the supported rendering modes of the In-place Editor. Poss
 In the following sample, the In-place Editor renders with `Inline` mode. You can dynamically switch into another mode by changing the drop-down item value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +60,10 @@ In the following sample, popup [title](https://ej2.syncfusion.com/vue/documentat
 * RightBottom
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +83,10 @@ The event action of the editor that enable in the edit mode based on the [editab
 In the following sample, when switching drop-down item, the selected value assigned to the `editableOn` property. If you changed to `DblClick`, the editor will open when making a double click on the input.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +104,10 @@ Action to be performed when the user clicks outside the container, that means fo
 In the following sample, when switching drop-down item, the selected value assigned to the `actionOnBlur` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -109,7 +121,10 @@ By default, In-place Editor input element highlighted with a dotted underline. T
 In the following sample, denotes to indicate intractable and normal display modes with different samples.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

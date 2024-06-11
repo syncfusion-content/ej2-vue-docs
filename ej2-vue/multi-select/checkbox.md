@@ -15,7 +15,10 @@ The MultiSelect has built-in support to select multiple values through checkbox,
 To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/checkbox/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/checkbox/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 [`unSelectAllText`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#unselectalltext).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/checkbox/selectall-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/checkbox/selectall-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +50,10 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 Defines the limit of the selected items using [`maximumSelectionLength`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#maximumselectionlength).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/checkbox/selectionlimit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/checkbox/selectionlimit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +65,10 @@ Defines the limit of the selected items using [`maximumSelectionLength`](https:/
 Using [`enableSelectionOrder`](https://ej2.syncfusion.com/vue/documentation/api/multi-select/#enableselectionorder) to Reorder the selected items in popup visibility state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/checkbox/selectionreorder-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/checkbox/selectionreorder-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

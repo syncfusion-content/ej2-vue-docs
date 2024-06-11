@@ -31,7 +31,10 @@ By default, all the card elements are aligned vertically one after the other as 
         ```
 
         {% tabs %}
-        {% highlight html tabtitle="app.vue" %}
+        {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+        {% include code-snippet/card/horizontal-cs1/app-composition.vue %}
+        {% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
         {% include code-snippet/card/horizontal-cs1/app.vue %}
         {% endhighlight %}
         {% endtabs %}

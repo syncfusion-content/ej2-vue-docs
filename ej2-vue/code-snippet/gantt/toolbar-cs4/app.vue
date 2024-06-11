@@ -1,23 +1,25 @@
-
-
-
 <template>
      <div>
-     <ejs-button id="enable" cssClass="e-info" v-on:click.native="enable">Enable</ejs-button>
-     <ejs-button id="disable" cssClass="e-info" v-on:click.native="disable">Disable</ejs-button>
+     <ejs-button id="enable" cssClass="e-info" v-on:click="enable">Enable</ejs-button>
+     <ejs-button id="disable" cssClass="e-info" v-on:click="disable">Disable</ejs-button>
      <br>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowFiltering='true'></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Filter  } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GanttComponent, Toolbar, Filter  } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { editingData } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: editingData,
@@ -33,7 +35,7 @@ export default {
                 child: 'subtasks'
             },
             toolbar: ['QuickFilter', 'ClearFilter'],
-            toolbarClick:  (args: ClickEventArgs) => {
+            toolbarClick:  (args) => {
                 if (args.item.text === 'QuickFilter') {
                     var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttChart.filterByColumn('TaskName', 'startswith', 'Identify');
@@ -60,6 +62,3 @@ export default {
   },
 };
 </script>
-
-
-

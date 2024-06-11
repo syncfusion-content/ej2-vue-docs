@@ -15,7 +15,10 @@ To render the `Palette` alone in ColorPicker, specify the [`mode`](https://ej2.s
 In the following sample, the [`showButtons`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#showbuttons) property is disabled to hide the control buttons and it renders only the `Palette` area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

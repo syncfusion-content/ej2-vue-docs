@@ -1,7 +1,5 @@
-
-
 <template>
-<ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
+    <ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
 </template>
 
 <script setup>
@@ -10,16 +8,15 @@ import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
 const items = [
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            }];
-       
+    {
+        text: 'Cut'
+    },
+    {
+        text: 'Copy'
+    },
+    {
+        text: 'Paste'
+    }]
 </script>
 
 <style>
@@ -28,5 +25,3 @@ const items = [
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

@@ -17,7 +17,10 @@ The HTML tags such as `<div>`, `<span>`, `bold`, `italic`, `underline`, etc., ca
 Here, Bold, Italic, Underline, and Anchor tags are used.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/tags-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/tags-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -16,7 +16,10 @@ The ContextMenu item have an icon/image in it to provide visual representation o
 added using the `iconCss` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -28,7 +31,10 @@ added using the `iconCss` property.
 Navigation in ContextMenu is usage to navigate to the other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [`url`](https://ej2.syncfusion.com/vue/documentation/api/context-menu/menuItemModel#url) property. In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal menu items are added using the `url` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
   <div class="container-fluid">
@@ -24,15 +22,17 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend, closest } from '@syncfusion/ej2-base';
 import { kanbanData, treeViewData } from './datasource.js';
-Vue.use(KanbanPlugin);
-import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
-Vue.use(TreeViewPlugin);
 
- var treeVue = Vue.component("tree-template", {
+import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+import { createApp } from "vue";
+
+const app = createApp();
+
+ var treeVue = app.component("tree-template", {
         template: '<div id="treelist"><div id="treeviewlist">{{data.Id}} - {{data.Status}}</div></div>',
         data() {
             return {
@@ -41,6 +41,13 @@ Vue.use(TreeViewPlugin);
         }
     });
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-treeview":TreeViewComponent
+},
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -50,14 +57,14 @@ export default {
       },
       externalKanbanDropId: ['#treeView'],
       treeViewFields: { dataSource: treeViewData, id: 'Id', text: 'Status' },
-      treeTemplate: function(e) {
+      treeTemplate: function() {
           return { template: treeVue }
       }
     };
   },
    methods: {
       kanbanDragStop: function (args) {
-          let treeViewElement = closest(args.event.target as Element, '#treeView');
+          let treeViewElement = closest(args.event.target, '#treeView');
           let kanbanObj = this.$refs.kanbanObj.ej2Instances;
           let treeObj = this.$refs.treeViewObj.ej2Instances;
           if (treeViewElement) {
@@ -67,15 +74,15 @@ export default {
           }
       },
       onItemDragStop: function (args) {
-        let kanbanElement = closest(args.event.target as Element, '#kanban');
+        let kanbanElement = closest(args.event.target, '#kanban');
         let kanbanObj = this.$refs.kanbanObj.ej2Instances;
         let treeObj = this.$refs.treeViewObj.ej2Instances;
         if (kanbanElement) {
           let treeData =
-            treeObj.fields.dataSource as { [key: string]: Object }[];
+            treeObj.fields.dataSource;
           const filteredData =
-            treeData.filter((item) => item.Id === parseInt(args.draggedNodeData.id as string, 10));
-          treeObj.removeNodes([args.draggedNodeData.id] as string[]);
+            treeData.filter((item) => item.Id === parseInt(args.draggedNodeData.id, 10));
+          treeObj.removeNodes([args.draggedNodeData.id]);
           kanbanObj.openDialog('Add', filteredData[0]);
           args.cancel = true;
         }
@@ -96,6 +103,3 @@ export default {
   display: flex;
 }
 </style>
-
-
-

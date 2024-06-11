@@ -130,12 +130,32 @@ Follow the below steps to add the Vue Toast component using `Composition API` or
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+//Component registeration
+  export default {
+    name: "App",
+    components: {
+      "ejs-toast": ToastComponent,
+    }
+  }
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
 //Component registeration
   export default {
+name: "App",
+components: {
+"ejs-toast":":Toast":Component
+
+},
+
     name: "App",
     components: {
       "ejs-toast": ToastComponent,
@@ -199,6 +219,49 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 </style>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <ejs-toast
+      id="toast_default"
+      ref="defaultRef"
+      title="Adaptive Tiles Meeting"
+      timeOut="0"
+      icon="e-meeting"
+      content="Conference Room 01 / Building 135 10:00 AM-10:30 AM"
+    ></ejs-toast>
+  </div>
+</template>
+<script setup>
+  import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+  export default {
+      name: "App",
+      components: {
+        "ejs-toast": ToastComponent,
+      },
+      mounted: function () {
+        this.$refs.defaultRef.show();
+      },
+      data: function () {
+        return {};
+      },
+  };
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
+  #toast_default .e-meeting::before {
+    content: "\e705";
+    font-size: 17px;
+  }
+  .bootstrap4 #toast_default .e-meeting::before {
+    content: "\e763";
+    font-size: 20px;
+  }
+</style>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
@@ -216,6 +279,16 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <script>
   import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
   export default {
+name: "App",
+components: {
+"ejs-toast
+":Toast
+Component,
+"ejs-toast":ToastComponent,
+"ejs-toast":":Toast":Component
+
+},
+
       name: "App",
       components: {
         "ejs-toast": ToastComponent,

@@ -12,8 +12,9 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+  name: "App",
   components: {
-    'ejs-colorpicker': ColorPickerComponent
+    "ejs-colorpicker": ColorPickerComponent
   }
 }
 </script>
@@ -31,5 +32,3 @@ export default {
   text-align: center;
 }
 </style>
-
-

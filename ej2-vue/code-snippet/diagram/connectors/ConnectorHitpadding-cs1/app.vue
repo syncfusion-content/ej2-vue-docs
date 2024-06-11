@@ -1,21 +1,18 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :connectors='connectors' :getConnectorDefaults='getConnectorDefaults' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :connectors='connectors'
+            :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { Diagram,DiagramPlugin,ConnectorEditing,ConnectorConstraints} from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    Diagram.Inject(ConnectorEditing);
+import { DiagramComponent, ConnectorEditing, ConnectorConstraints } from '@syncfusion/ej2-vue-diagrams';
+
 let connectors = [{
     // Name of the connector
     id: "connector1",
-    type:"Orthogonal",
+    type: "Orthogonal",
     //set hit padding
-    hitPadding:50,
+    hitPadding: 50,
     style: {
         strokeColor: '#6BA5D7',
         fill: '#6BA5D7',
@@ -29,9 +26,12 @@ let connectors = [{
     },
     sourcePoint: { x: 100, y: 100 },
     targetPoint: { x: 300, y: 300 }
-}, ]
+}]
 export default {
-    name: 'app',
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -42,11 +42,12 @@ export default {
                 return connector;
             },
         }
+    },
+    provide: {
+        diagram: [ConnectorEditing]
     }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

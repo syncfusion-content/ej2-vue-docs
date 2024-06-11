@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="col-lg-8 control-section msg-icon-section">
     <div class="content-section">
@@ -26,44 +24,64 @@
     </div>
   </div>
 </template>
-<script setup>
-import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notifications";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+<script>
+import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
+import { ButtonComponent, CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
 
-const showCloseIcon = true;
-const defaultClick = function () {
-  this.show(this.$refs.msgDefault, this.$refs.defaultBtn);
-}
-const infoClick = function () {
-  this.show(this.$refs.msgInfo, this.$refs.infoBtn);
-}
-const successClick = function () {
-  this.show(this.$refs.msgSuccess, this.$refs.successBtn);
-}
-const warningClick = function () {
-  this.show(this.$refs.msgWarning, this.$refs.warningBtn);
-}
-const errorClick = function () {
-  this.show(this.$refs.msgError, this.$refs.errorBtn);
-}
-const defaultClosed = function () {
-  this.$refs.defaultBtn.ej2Instances.element.classList.remove("msg-hidden");
-}
-const infoClosed = function () {
-  this.$refs.infoBtn.ej2Instances.element.classList.remove("msg-hidden");
-}
-const warningClosed = function () {
-  this.$refs.warningBtn.ej2Instances.element.classList.remove("msg-hidden");
-}
-const successClosed = function () {
-  this.$refs.successBtn.ej2Instances.element.classList.remove("msg-hidden");
-}
-const errorClosed = function () {
-  this.$refs.errorBtn.ej2Instances.element.classList.remove("msg-hidden");
-}
-const show = function (message, btn) {
-  message.ej2Instances.visible = true;
-  btn.ej2Instances.element.classList.add("msg-hidden");
+export default {
+  data: function () {
+    return {
+      showCloseIcon: true,
+      checked: true,
+    };
+  },
+  components: { 
+    'ejs-message': MessageComponent,
+    'ejs-button': ButtonComponent,
+    'ejs-checkbox': CheckBoxComponent
+  },
+  methods: {
+    defaultClick: function () {
+      this.show(this.$refs.msgDefault, this.$refs.defaultBtn);
+    },
+    infoClick: function () {
+      this.show(this.$refs.msgInfo, this.$refs.infoBtn);
+    },
+    successClick: function () {
+      this.show(this.$refs.msgSuccess, this.$refs.successBtn);
+    },
+    warningClick: function () {
+      this.show(this.$refs.msgWarning, this.$refs.warningBtn);
+    },
+    errorClick: function () {
+      this.show(this.$refs.msgError, this.$refs.errorBtn);
+    },
+    defaultClosed: function () {
+      this.$refs.defaultBtn.ej2Instances.element.classList.remove("msg-hidden");
+    },
+    infoClosed: function () {
+      this.$refs.infoBtn.ej2Instances.element.classList.remove("msg-hidden");
+    },
+    warningClosed: function () {
+      this.$refs.warningBtn.ej2Instances.element.classList.remove("msg-hidden");
+    },
+    successClosed: function () {
+      this.$refs.successBtn.ej2Instances.element.classList.remove("msg-hidden");
+    },
+    errorClosed: function () {
+      this.$refs.errorBtn.ej2Instances.element.classList.remove("msg-hidden");
+    },
+    severityIconChange: function (args) {
+      this.changeProp("showIcon", args.checked);
+    },
+    closeIconChange: function (args) {
+      this.changeProp("showCloseIcon", args.checked);
+    },
+    show: function (message, btn) {
+      message.ej2Instances.visible = true;
+      btn.ej2Instances.element.classList.add("msg-hidden");
+    }
+  }
 }
 </script>
 <style>
@@ -90,5 +108,3 @@ const show = function (message, btn) {
     display: none;
   }
 </style>
-
-

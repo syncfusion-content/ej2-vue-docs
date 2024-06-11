@@ -17,7 +17,10 @@ For example, if the raw data for the field 'Country' is defined as **"United Kin
 > By default, this property is set as **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivotNullData-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivotNullData-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,29 +1,32 @@
-
-
 <template>
-<div>
-<div class='wrapper1'>
-    <h4>Choose Color</h4>
-    <ejs-colorpicker v-model="value"></ejs-colorpicker>
-</div>
-<div class="wrapper2">
-<h4>Choose Color</h4>
-    <ejs-colorpicker v-model="value"></ejs-colorpicker>
+    <div>
+        <div class='wrapper1'>
+            <h4>Choose Color</h4>
+            <ejs-colorpicker v-model="value"></ejs-colorpicker>
+        </div>
+        <div class="wrapper2">
+            <h4>Choose Color</h4>
+            <ejs-colorpicker v-model="value"></ejs-colorpicker>
+        </div>
+    </div>
 </template>
-</div>
-</div>
+
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ColorPickerPlugin);
 
 export default {
-    data(){
-        return{
+    name: "App",
+    components: {
+        "ejs-colorpicker": ColorPickerComponent
+    },
+
+    data() {
+        return {
             value: null
         }
     }
@@ -38,11 +41,11 @@ export default {
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 
 .wrapper1 {
-  /* margin: 0 auto;
+    /* margin: 0 auto;
   width: 300px;
   text-align: center; */
-  float: left;
-  padding: 10px 0 0 160px;
+    float: left;
+    padding: 10px 0 0 160px;
 }
 
 .wrapper2 {
@@ -50,6 +53,3 @@ export default {
     padding: 10px 330px 0 0;
 }
 </style>
-
-
-

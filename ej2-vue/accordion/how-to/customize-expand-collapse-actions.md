@@ -17,7 +17,10 @@ By default, the Accordion component pane is expanded or collapsed, when click th
 The following sample demonstrates, how to expand the collapsed Accordion item after collapse animation performed on the expanded Accordion item using [`created`](https://ej2.syncfusion.com/vue/documentation/api/accordion/#created), [`expanding`](https://ej2.syncfusion.com/vue/documentation/api/accordion/#expanding), and [`expanded`](https://ej2.syncfusion.com/vue/documentation/api/accordion/#expanded) event. In the Expanding event, get the previously expanded item index and prevent the expanding behavior using `args.cancel` option. Expand the Accordion item dynamically based on specifying the `index` value using the [`expandItem`](https://ej2.syncfusion.com/vue/documentation/api/accordion/#expanditem) public method and [`expanded`](https://ej2.syncfusion.com/vue/documentation/api/accordion/#expanded) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/accordion-actions-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/accordion-actions-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

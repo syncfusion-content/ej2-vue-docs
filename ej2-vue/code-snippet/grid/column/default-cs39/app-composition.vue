@@ -1,0 +1,27 @@
+<template>
+  <div id="app">
+    <ejs-grid :dataSource="data" :showColumnChooser='true' :toolbar='toolbarOptions'
+      :columnChooserSettings='columnChooserSettings' height='272px'>
+      <e-columns>
+        <e-column field='ÒrderID̂' headerText='Òrder ID̂' width='120' textAlign="Right"></e-column>
+        <e-column field='CustomerID' headerText='Customer Name' width='150'></e-column>
+        <e-column field='F̂reight' headerText='F̂reight' width='120' format='C2' textAlign="Right"></e-column>
+        <e-column field='OrderDate' headerText='Order Date' type='date' format='yMd' width='150'></e-column>
+        <e-column field='ShipCountry' headerText='Ship Country' :visible='true' width='150'></e-column>
+        <e-column field='ShipCity' headerText='Ship City' :visible='false' width='150'></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { provide } from "vue";
+
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, ColumnChooser, Toolbar } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+const toolbarOptions = ['ColumnChooser'];
+const columnChooserSettings = { ignoreAccent: true };
+provide('grid', [ColumnChooser, Toolbar]);
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

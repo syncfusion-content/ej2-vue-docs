@@ -1,90 +1,99 @@
-
-
 <template>
-<div id="app">
-<ejs-sidebar id="default-sidebar" ref="sidebar" :type="type" :target="target">
-    <div class="title"> Sidebar content</div>
-    <div class="sub-title">
-        Click the button to close the Sidebar.
-    </div>
-    <div class="center-align">
-        <button ejs-button id="close" v-on:click="closeClick" class="e-btn close-btn">Close Sidebar</button>
-    </div>
-</ejs-sidebar>
-<div id="head">
-    <ejs-button id="toggle" ref="togglebtn"  cssClass="e-flat" iconCss="e-icons burg-icon" isToggle="true" v-on:click.native="btnClick" >Open</ejs-button>
-</div>
-<div>
-<div id="maincontent" class="content">
-    <div>
-        <div class="title">Main content</div>
-        <div class="rows">
-            <div class="row">
-                <ejs-radiobutton id='push' label="Push" name="type"  :change="changeHandler" ></ejs-radiobutton>
+    <div id="app">
+        <ejs-sidebar id="default-sidebar" ref="sidebar" :type="type" :target="target">
+            <div class="title"> Sidebar content</div>
+            <div class="sub-title">
+                Click the button to close the Sidebar.
             </div>
-            <div class="row">
-                <ejs-radiobutton id='slide'  label="Slide" name="type" :change="changeHandler"></ejs-radiobutton>
+            <div class="center-align">
+                <button ejs-button id="close" v-on:click="closeClick" class="e-btn close-btn">Close Sidebar</button>
             </div>
-            <div class="row">
-                <ejs-radiobutton id='over'  label="Over" name="type"  :change="changeHandler"></ejs-radiobutton>
-            </div>
-            <div class="row">
-                <ejs-radiobutton id='auto'  label="Auto" name="type" checked="true" :change="changeHandler"></ejs-radiobutton>
+        </ejs-sidebar>
+        <div id="head">
+            <ejs-button id="toggle" ref="togglebtn" cssClass="e-flat" iconCss="e-icons burg-icon" isToggle="true"
+                v-on:click.native="btnClick">Open</ejs-button>
+        </div>
+        <div>
+            <div id="maincontent" class="content">
+                <div>
+                    <div class="title">Main content</div>
+                    <div class="rows">
+                        <div class="row">
+                            <ejs-radiobutton id='push' label="Push" name="type"
+                                :change="changeHandler"></ejs-radiobutton>
+                        </div>
+                        <div class="row">
+                            <ejs-radiobutton id='slide' label="Slide" name="type"
+                                :change="changeHandler"></ejs-radiobutton>
+                        </div>
+                        <div class="row">
+                            <ejs-radiobutton id='over' label="Over" name="type"
+                                :change="changeHandler"></ejs-radiobutton>
+                        </div>
+                        <div class="row">
+                            <ejs-radiobutton id='auto' label="Auto" name="type" checked="true"
+                                :change="changeHandler"></ejs-radiobutton>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>
-<!--end of main content declaration -->
+    <!--end of main content declaration -->
 </template>
 <script>
-import Vue from 'vue';
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
-import { ButtonPlugin,RadioButtonPlugin} from '@syncfusion/ej2-vue-buttons';
+
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+import { ButtonComponent, RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use(SidebarPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(RadioButtonPlugin);
+
+
+
 
 export default {
-    data () {
+    name: "App",
+    components: {
+        "ejs-sidebar": SidebarComponent,
+        "ejs-button": ButtonComponent,
+        "ejs-radiobutton": RadioButtonComponent
+    },
+    data() {
         return {
-         type :'Push',
-         target : '.content'
+            type: 'Push',
+            target: '.content'
         }
     },
     methods: {
-        btnClick: function(){
-        if(this.$refs.togglebtn.$el.classList.contains('e-active')){
-            this.$refs.togglebtn.Content = 'Open';
-            this.$refs.sidebar.hide();
-        }
-        else{
-            this.$refs.togglebtn.Content = 'Close';
-            this.$refs.sidebar.show();
-        }
-    },
-        closeClick: function() {
-         this.$refs.sidebar.hide();
-         this.$refs.togglebtn.$el.classList.remove('e-active');
-         this.$refs.togglebtn.Content = 'Open';
+        btnClick: function () {
+            if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
+                this.$refs.togglebtn.Content = 'Open';
+                this.$refs.sidebar.hide();
+            }
+            else {
+                this.$refs.togglebtn.Content = 'Close';
+                this.$refs.sidebar.show();
+            }
         },
-        changeHandler:  function(args) {
-        if(args.event.target.id == 'over') {
-            this.type = 'Over';
-            this.dataBind();
-        } else if (args.event.target.id == 'push') {
-             this.type = 'Push';
-             this.dataBind();
-        } else if (args.event.target.id == 'slide') {
-             this.type = 'Slide';
-             this.dataBind();
-        } else {
-             this.type = 'Auto';
-             this.dataBind();
+        closeClick: function () {
+            this.$refs.sidebar.hide();
+            this.$refs.togglebtn.$el.classList.remove('e-active');
+            this.$refs.togglebtn.Content = 'Open';
+        },
+        changeHandler: function (args) {
+            if (args.event.target.id == 'over') {
+                this.type = 'Over';
+                this.$refs.togglebtn.dataBind();
+            } else if (args.event.target.id == 'push') {
+                this.type = 'Push';
+                this.$refs.togglebtn.dataBind();
+            } else if (args.event.target.id == 'slide') {
+                this.type = 'Slide';
+                this.$refs.togglebtn.dataBind();
+            } else {
+                this.type = 'Auto';
+                this.$refs.togglebtn.dataBind();
+            }
         }
-    }
     }
 }
 </script>
@@ -92,20 +101,21 @@ export default {
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-.rows{
-    margin:auto;
-    text-align:center;
+
+.rows {
+    margin: auto;
+    text-align: center;
 }
 
-.row{
-    padding:10px;
-    margin:auto;
+.row {
+    padding: 10px;
+    margin: auto;
 }
 
 .header {
-    width:100%;
+    width: 100%;
     height: 40px;
-    font-size:20px;
+    font-size: 20px;
     line-height: 40px;
     font-weight: 500;
     background: #eee;
@@ -117,9 +127,9 @@ export default {
     padding: 20px;
 }
 
-.burg-icon:before{
+.burg-icon:before {
     content: '\e10d';
-    font-size:16px;
+    font-size: 16px;
 }
 
 .title {
@@ -130,12 +140,14 @@ export default {
 
 #head {
     border: 1px solid #424242;
-    border-bottom-color:transparent;
-    background:#00897B;
+    border-bottom-color: transparent;
+    background: #00897B;
 }
 
-#toggle,#container .e-btn.e-info:hover,
-#toggle:focus {/* csslint allow:   adjoining-classes*/
+#toggle,
+#container .e-btn.e-info:hover,
+#toggle:focus {
+    /* csslint allow:   adjoining-classes*/
     background: #00695C;
     box-shadow: none;
     border-radius: 0;
@@ -143,9 +155,13 @@ export default {
     width: 100px;
 }
 
-#close,#close:hover,#close:active,#close:focus{ /* csslint allow: adjoining-classes*/
+#close,
+#close:hover,
+#close:active,
+#close:focus {
+    /* csslint allow: adjoining-classes*/
     background: #fafafa;
-    color:black
+    color: black
 }
 
 .sub-title {
@@ -154,9 +170,9 @@ export default {
     padding: 10px;
 }
 
-.radiobutton{
-    display:inline-block;
-    padding:10px;
+.radiobutton {
+    display: inline-block;
+    padding: 10px;
 }
 
 .center {
@@ -167,12 +183,12 @@ export default {
     margin-top: 20px;
 }
 
-.content{
-    height:305px;
+.content {
+    height: 305px;
     border: 1px solid grey;
 }
 
-  #default-sidebar {
+#default-sidebar {
     background-color: #26A69A;
     color: #ffffff;
 }
@@ -182,7 +198,7 @@ export default {
 }
 
 #toggle {
-    color:white;
+    color: white;
 }
 
 @font-face {
@@ -191,7 +207,4 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
-
 </style>
-
-

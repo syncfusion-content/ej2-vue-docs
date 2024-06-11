@@ -19,7 +19,10 @@ But [actionSuccess](https://ej2.syncfusion.com/vue/documentation/api/inplace-edi
 > To send input value to local, set the `URL` property as empty.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

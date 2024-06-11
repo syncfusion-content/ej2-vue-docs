@@ -1,16 +1,16 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings = "splitterSettings" :filterSettings="filterSettings" :allowFiltering= "true"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Filter } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Filter } from "@syncfusion/ej2-vue-gantt";
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -36,7 +36,7 @@ export default {
             {TaskID: 8, TaskName: 'Estimation approval', StartDate: new Date('04/04/2019'),Duration: 0, Predecessor: '7', resources: [12, 5]
             }
         ]
-    }];
+    }],
             height: '450px',
             columns: [
             { field: 'TaskID', headerText: 'Task ID', textAlign: 'Left', width: '100' },
@@ -67,6 +67,3 @@ export default {
   }
 };
 </script>
-
-
-

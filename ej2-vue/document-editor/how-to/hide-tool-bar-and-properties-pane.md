@@ -20,43 +20,57 @@ By default, Document editor container has built-in properties pane which contain
 
 The following example code illustrates how to hide the properties pane.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      :showPropertiesPane='false'
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" :showPropertiesPane='false'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide } from 'vue';
+
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" :showPropertiesPane='false'></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    }
-  };
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Note: Positioning and customizing the properties pane in Document editor container is not possible. Instead, you can hide the exiting properties pane and create your own pane using public API's.
 
@@ -66,41 +80,57 @@ You can use [`enableToolbar`](https://ej2.syncfusion.com/vue/documentation/api/d
 
 The following example code illustrates how to hide the existing toolbar.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="false"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide } from 'vue';
+
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
       :enableToolbar="false"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    }
-  };
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 

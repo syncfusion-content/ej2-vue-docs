@@ -22,7 +22,58 @@ Group footer aggregates are displayed in the footer cells of each group. These c
 Here's an example that demonstrates how to use group footer aggregates in the Syncfusion Vue Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='290px' :allowGrouping="true" :groupSettings="groupOptions">
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' format='yMd' width=120 type='date'></e-column>
+                <e-column field='Freight' format='C2' width=150></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
+            </e-columns>
+            <e-aggregates>
+                <e-aggregate>
+                    <e-columns>
+                        <e-column type="Sum" field="Freight" format="C2" :groupFooterTemplate ='footerSum'></e-column>
+                    </e-columns>
+                </e-aggregate>
+          </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { provide, createApp } from "vue";
+import { data } from './datasource.js';
+const app = createApp();
+      const groupOptions = {showDropArea: false, columns: ['ShipCountry'] };
+      const footerSum = function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+  provide('grid', [Group, Aggregate]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -45,19 +96,25 @@ Here's an example that demonstrates how to use group footer aggregates in the Sy
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       groupOptions: {showDropArea: false, columns: ['ShipCountry'] },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
@@ -97,7 +154,58 @@ Group caption aggregates are displayed in the caption cells of each group. These
 Here's an example that demonstrates how to use group and caption aggregates in the Syncfusion Vue Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='290px' :allowGrouping="true" :groupSettings="groupOptions">
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' format='yMd' width=120 type='date'></e-column>
+                <e-column field='Freight' format='C2' width=150></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
+            </e-columns>
+            <e-aggregates>
+                <e-aggregate>
+                    <e-columns>
+                        <e-column type="Sum" field="Freight" format="C2" :groupCaptionTemplate ='footerSum'></e-column>
+                    </e-columns>
+                </e-aggregate>
+          </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { provide, createApp } from "vue";
+      const app = createApp();
+      const groupOptions = {showDropArea: false, columns: ['ShipCountry'] };
+      const footerSum = function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+  provide('grid', [Group, Aggregate]);
+</script>
+<style>
+   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -120,19 +228,25 @@ Here's an example that demonstrates how to use group and caption aggregates in t
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = crateApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       groupOptions: {showDropArea: false, columns: ['ShipCountry'] },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
@@ -171,7 +285,70 @@ export default {
 In some cases, you may want to disable the page-wise aggregates for grouping in the Syncfusion Vue Grid component. By default, when grouping is enabled with paging, the grid calculates the aggregates for each page separately. However, you can choose to disable this behavior and calculate aggregates for the entire grouped data instead. This can be achieved by setting the [disablePageWiseAggregates](https://ej2.syncfusion.com/vue/documentation/api/grid/groupSettings/#disablepagewiseaggregates) property to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='290px' :allowPaging="true" :allowGrouping="true" :groupSettings="groupOptions">
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' format='yMd' width=120 type='date'></e-column>
+                <e-column field='Freight' format='C2' width=150></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
+            </e-columns>
+            <e-aggregates>
+                <e-aggregate>
+                    <e-columns>
+                        <e-column type="Sum" field="Freight" format="C2" :groupFooterTemplate ='footerSum'></e-column>
+                    </e-columns>
+                </e-aggregate>
+                <e-aggregate>
+                    <e-columns>
+                        <e-column type="Average" field="Freight" format="C2" :groupCaptionTemplate ='footerAvg'></e-column>
+                    </e-columns>
+                </e-aggregate>
+          </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Group, Page, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { provide, createApp } from "vue";
+const app = createApp();
+      const groupOptions = {showDropArea: false, columns: ['ShipCountry'], disablePageWiseAggregates: true };
+      const footerSum = function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+      const footerAvg = function () {
+        return  { template : app.component('maxTemplate', {
+            template: `<span>Average: {{data.Average}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+  provide('grid', [Group, Page, Aggregate]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -199,13 +376,17 @@ In some cases, you may want to disable the page-wise aggregates for grouping in 
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Page, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Group, Page, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,

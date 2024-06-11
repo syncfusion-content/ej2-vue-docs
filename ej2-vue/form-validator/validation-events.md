@@ -60,7 +60,10 @@ The following values are passed in `args`. You can use this values in event vali
 Please find the simple sample for validation events.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/form-validator/form-validation-events-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/form-validator/form-validation-events-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

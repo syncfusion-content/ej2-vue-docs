@@ -53,7 +53,10 @@ In the ListView component, sorting is enabled using the [`sortOrder`](https://ej
 * By using the dual list, list items can be sorted in the ListView component using the [`sortOrder`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#sortorder) property. You can enable sorting in one ListView; in the same order, data can be transferred to another ListView.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

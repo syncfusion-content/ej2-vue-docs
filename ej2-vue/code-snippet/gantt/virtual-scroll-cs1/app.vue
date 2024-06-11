@@ -1,15 +1,13 @@
-
-
 <template>
 
 </template>
 <script>
 
-import Vue from "vue";
-import { GanttPlugin, Selection, VirtualScroll } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Selection, VirtualScroll } from "@syncfusion/ej2-vue-gantt";
 import{tempData} from "./datasource.js";
 
-Vue.use(GanttPlugin);
+
 
 
 var virtualData = [];
@@ -90,6 +88,3 @@ provide: {
 
 });
 </script>
-
-
-

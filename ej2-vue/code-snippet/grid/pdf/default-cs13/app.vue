@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowGrouping='true' :groupSettings='groupOptions' :allowPdfExport='true' :toolbarClick='toolbarClick'>
@@ -13,14 +11,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Group, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
 import { data, base64AlgeriaFont } from './datasource.js';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -71,6 +72,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

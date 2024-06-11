@@ -1,31 +1,30 @@
-
-
 <template>
   <div>
-    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings= "path" :directoryUpload = 'directory'></ejs-uploader>
+    <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :asyncSettings="path"
+      :directoryUpload='directory'></ejs-uploader>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(UploaderPlugin);
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
-    data: function() {
-        return {
-            path:  {
-                saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
-                removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'
-            },
-            directory: true
-        }
+  name: "App",
+  components: {
+    "ejs-uploader": UploaderComponent
+  },
+  data: function () {
+    return {
+      path: {
+        saveUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Save',
+        removeUrl: 'https://services.syncfusion.com/vue/production/api/FileUploader/Remove'
+      },
+      directory: true
     }
+  }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 </style>
-
-

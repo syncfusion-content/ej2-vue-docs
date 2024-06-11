@@ -1,5 +1,3 @@
-
-
 <template>
   <div id='app'>
         <ejs-tooltip id="targetContainer" ref="tooltip" content='Drag me !!!' target='#demoSmart' :animation='tooltipAnimation'>
@@ -8,12 +6,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
 import { Draggable } from '@syncfusion/ej2-base';
-Vue.use(TooltipPlugin);
 
 export default {
+name: "App",
+components: {
+"ejs-tooltip":TooltipComponent,
+},
     data() {
         return {
             tooltipAnimation: {
@@ -22,7 +22,7 @@ export default {
             }
         };
     },
-    mounted: function (args) {
+    mounted: function () {
         var ele = this.$refs.demoSmart;
         var drag = new Draggable(ele, {
             clone : false,
@@ -39,7 +39,7 @@ export default {
                     this.$refs.tooltip.open(args.element);
                 }
             },
-            dragStop: (args) => {
+            dragStop: () => {
                 this.$refs.tooltip.close();
             }
         });
@@ -47,8 +47,8 @@ export default {
 }
 </script>
 <style>
-@import "node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
   #app {
     height: 96%;
     position: absolute;
@@ -68,6 +68,3 @@ export default {
     width: 50px;
 }
 </style>
-
-
-

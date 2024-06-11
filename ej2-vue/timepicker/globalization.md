@@ -61,7 +61,10 @@ L10n.load({
 The following example demonstrates the TimePicker in `German` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timepicker/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timepicker/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +79,10 @@ The code example demonstrates the TimePicker component in `Arabic` culture. It a
 
 `
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timepicker/locale-rtl-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timepicker/locale-rtl-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

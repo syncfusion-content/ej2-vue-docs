@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <button v-on:click="btnClick">Grid is Addable</button>
@@ -15,13 +12,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: employeeData,
@@ -30,8 +30,6 @@ export default {
       isAddable: true,
     };
   },
-  
-  methods: {
     cellEdit: function (args) {
       if (args.rowData["Role"] === "Employee") {
         args.cancel = true;
@@ -51,7 +49,6 @@ export default {
       args.target.innerText === "Grid is Addable" ? (args.target.innerText = "Grid is Not Addable") : (args.target.innerText = "Grid is Addable");
       this.isAddable = !this.isAddable;
     },
-  },
   provide: {
     grid: [Page, Edit, Toolbar]
   }
@@ -60,6 +57,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

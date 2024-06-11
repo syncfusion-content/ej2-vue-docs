@@ -31,7 +31,10 @@ The Gantt component supports three types of selection modes that can be set by u
 * `Both`: Allows you to select rows and cells at the same time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/selection-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ The Gantt component supports three types of selection modes that can be set by u
 The toggle selection allows you to select and deselect a specific row or cell. To enable toggle selection, set the `enableToggle` property of the selectionSettings to `true`. If you click the selected row or cell, then it will be deselected and vice versa. By default, the `enableToggle` property is set to `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/selection-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ The toggle selection allows you to select and deselect a specific row or cell. T
 You can clear the selected cells and selected rows by using a method called [`clearSelection`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#clearselection). The following code example demonstrates how to clear the selected rows in Gantt Chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/selection-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ You can clear the selected cells and selected rows by using a method called [`cl
 You can get the selected row indexes by using the [`getSelectedRowIndexes`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#getselectedrowindexes) method. And by using [`getSelectedRecords`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#getSelectedRecords) method, you can get the selected record details.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/selection-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +93,10 @@ You can select multiple rows based on condition by using the [`selectRows`](http
 In the following code, the rows which contains `TaskId` value as 3 and 4 are selected at initial rendering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/selection-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/selection-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

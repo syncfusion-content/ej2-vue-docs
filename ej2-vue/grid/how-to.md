@@ -71,7 +71,10 @@ When applied the changes in dataSource then refresh Grid at own.
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +123,10 @@ Add/Remove the CSS class to the Grid in the click event handler of Button.
 In the below demo, the button click will enable/disable the Grid and its actions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs37/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -161,7 +167,10 @@ Create a css class with custom style to override the default style for rowcell a
 Add the custom css class to particular column by using [`customAttributes`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#customattributes) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +194,10 @@ tooltip (args) {
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -197,7 +209,10 @@ tooltip (args) {
 You can render any component in a grid column using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/dropdown-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/dropdown-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -244,7 +259,10 @@ setHeaderHeight(args) {
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -264,7 +282,10 @@ You can customize the column menu icon by overriding the default grid class `.e-
 In the below sample, grid is rendered with a customized column menu icon.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -278,7 +299,10 @@ You can emit values from one component and listen emitted values in other compon
 In the below example, we have defined template column in grid column definition which emits a value and listen the emitted value in `created` event of the grid component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/template-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -294,7 +318,10 @@ You can edit template column value by defining `field` for that particular colum
 In the below demo, the `ShipCountry` column is rendered with the template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -308,7 +335,10 @@ You can customize the appearance of the edit dialog in the [`actionComplete`](ht
 In the below example, we have changed the dialog's header text for editing and adding records.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs38/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -326,7 +356,10 @@ In the `actionComplete` event, based on `requestType` as `save`. We can reset th
 In the below example, we have rendered the grid columns `CustomerID` as hidden column and `ShipCountry` as visible column. In the edit mode, we have changed the `CustomerID` column to visible state and `ShipCountry` column to hidden state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs39/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs39/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -340,7 +373,10 @@ You can achieve the Cascading DropDownList with grid Editing by using the Cell E
 In the below demo, Cascading DropDownList rendered for `ShipCountry` and `ShipState` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -370,7 +406,10 @@ You can also enable filtering for the DropDownList by passing the `allowFilterin
 In the below demo, DropDownList is rendered with custom Datasource for the `ShipCountry` column and enabled filtering to search DropDownList items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -384,7 +423,10 @@ You can disable the editing for a particular row by using the [`actionBegin`](ht
 In the below demo, the rows which are having the value for `ShipCountry` column as "France" is prevented from editing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs40/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -394,7 +436,10 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 For batch mode of editing, you can use [`cellEdit`](https://ej2.syncfusion.com/vue/documentation/api/grid/#celledit) event of Grid. In the below demo, the cells which are having the value as "France" is prevented from editing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs41/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs41/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -410,7 +455,10 @@ In addition, You can also perform grid actions with custom keyboard shortcuts. T
 The following example demonstrates on `Adding` a new row when `Enter` key is pressed in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs42/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs42/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -424,7 +472,10 @@ You can make a cell editable on a single click with `batch` mode of editing in G
 Bind the click event for the Grid and in the click event handler call the **editCell** method, based on the clicked target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs43/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs43/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -445,7 +496,10 @@ Bind the click event for the Grid and in the click event handler call the **edit
 
 In the following sample, we have customized string filter operators.
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -478,7 +532,10 @@ To perform multi-column sorting, you need to push the columns to be sorted into 
 In the below demo, click on the corresponding button to perform single-column or multi-column sorting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/sort-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/sort-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -514,7 +571,10 @@ To clear sorting for all the sorted columns, use the [`clearSorting`](https://ej
 In the below demo, click on the corresponding button to clear sort for particular or entire sorted columns in Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/sort-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/sort-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -532,7 +592,10 @@ The following example demonstrates the way of using edit template in foreign col
 In the following example, The `Employee Name` is a foreign key column and while editing, AutoComplete component is rendered instead of DropDownList.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -547,7 +610,10 @@ The following example demonstrates the way to create a custom filtering UI in th
 In the following example, The `Employee Name` is a foreign key column. DropDownList is rendered using Filter UI.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -563,7 +629,10 @@ The following example demonstrates the way to achieve aggregation in foreign key
 In the following example, The `Employee Name` is a foreign key column and the aggregation for the foreign column was calculated in customAggregateFn.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -575,7 +644,10 @@ In the following example, The `Employee Name` is a foreign key column and the ag
 When editing, you can bind foreign key datasource to a dropdown list by using [`column.dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#datasource) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -591,7 +663,10 @@ When editing, you can bind foreign key datasource to a dropdown list by using [`
 Cordova application does not support direct file download. So we have to use the Blob stream to export the Grid.You can use corresponding exporting methods and exportComplete events to get the Blob stream.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/foreignKey-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/foreignKey-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -605,7 +680,10 @@ You can export the filtered data by defining the resulted data in `exportPropert
 In the below Pdf exporting demo, We have gotten the filtered data by applying filter query to the grid data and then defines the resulted data in `exportProperties.dataSource` and pass it to `pdfExport` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/export-filtered-data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/export-filtered-data-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -619,7 +697,10 @@ In the below Pdf exporting demo, We have gotten the filtered data by applying fi
 To customize default values of pager dropdown, you need to define `pageSizes` as array of strings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/pagerdropdown-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/pagerdropdown-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -669,7 +750,10 @@ Add the CSS class to the Grid in the [`rowDataBound`](https://ej2.syncfusion.com
 In the below demo, the expand/collapse icon in the row with `EmployeeID` as `1` is hidden as it does not have record in child Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs44/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs44/app.vue %}
 {% endhighlight %}
 {% endtabs %}

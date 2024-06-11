@@ -19,7 +19,10 @@ The column definitions are used as the [`dataSource`](https://ej2.syncfusion.com
 The [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#columns) are automatically generated when the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#columns) declaration is empty or undefined while initializing the query builder. All the columns in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) are bound as the query builder columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +66,10 @@ The Query Builder allows you to set the step values to the number fields. So tha
 The Query Builder formats date and number values. Use the [`format`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/columnsModel/#format) property to format date and number values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +87,10 @@ npm install @syncfusion/ej2-vue-buttons --save
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

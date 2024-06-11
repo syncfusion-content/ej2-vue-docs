@@ -15,7 +15,10 @@ The ListView supports checkbox in default and group-lists which is used to selec
 The Checkbox will be useful in the scenario where we need to select multiple options.For Example, In Shipping cart we can be able to select or unselect the desired items before checkout. It will be useful in selecting multiple items that belongs to same category using the group list.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The Checkbox will be useful in the scenario where we need to select multiple opt
 In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text. This can be achieved by `checkBoxPositon` property. By default, checkbox will be positioned to `Left` of list-item text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

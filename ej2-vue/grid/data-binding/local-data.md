@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To bind local data to the grid, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property. The local data source can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/databind/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ Please follow the below steps to refresh the grid after datasource change.
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

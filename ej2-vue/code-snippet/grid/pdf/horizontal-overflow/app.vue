@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
       <div style="display: flex;">
@@ -23,15 +21,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(SwitchPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-switch":SwitchComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -64,6 +65,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

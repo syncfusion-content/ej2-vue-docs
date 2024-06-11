@@ -1,25 +1,22 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="chartexport" :isPrimary="isPrimary" v-on:click.native="exportClick">Export</ejs-button>
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings" :height="height"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="chartexport" :isPrimary="isPrimary" v-on:click="exportClick">Export</ejs-button>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :displayOption="displayOption"
+      :chartSettings="chartSettings" :height="height"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotChart } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent, PivotChart } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -34,27 +31,23 @@ export default {
       displayOption: { view: 'Chart' },
       chartSettings: {
         chartSeries: {
-         type: 'Column'
+          type: 'Column'
         }
       },
       isPrimary: true
     }
   },
   methods: {
-    exportClick: function(args) {
+    exportClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.chartExport('PNG', 'result');
     }
-  }
+  },
   provide: {
-        pivotview: [PivotChart]
+    pivotview: [PivotChart]
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

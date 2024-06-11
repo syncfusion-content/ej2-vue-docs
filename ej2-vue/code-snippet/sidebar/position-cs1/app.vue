@@ -1,62 +1,65 @@
-
-
 <template>
-<div id="app">
-   <ejs-sidebar id="default-sidebar" ref="sidebar" :type="type" :target="target">
-        <div class="title"> Sidebar content</div>
-        <div class="sub-title">
-           Click the button to close the Sidebar.
-        </div>
-        <div class="center-align">
-          <button ejs-button id="close" v-on:click="closeClick" class="e-btn close-btn">Close Sidebar</button>
-        </div>
-    </ejs-sidebar>
+    <div id="app">
+        <ejs-sidebar id="default-sidebar" ref="sidebar" :type="type" :target="target">
+            <div class="title"> Sidebar content</div>
+            <div class="sub-title">
+                Click the button to close the Sidebar.
+            </div>
+            <div class="center-align">
+                <button ejs-button id="close" v-on:click="closeClick" class="e-btn close-btn">Close Sidebar</button>
+            </div>
+        </ejs-sidebar>
         <div id="head">
-          <ejs-button id="toggle"  ref="togglebtn" cssClass="e-flat" iconCss="e-icons burg-icon" isToggle="true" v-on:click.native="btnClick">Open</ejs-button>
+            <ejs-button id="toggle" ref="togglebtn" cssClass="e-flat" iconCss="e-icons burg-icon" isToggle="true"
+                v-on:click.native="btnClick">Open</ejs-button>
         </div>
         <div>
-        <div id="maincontent" class="content">
-            <div>
-                <div class="title">Main content</div>
-                <div class="center-align">
-                   content goes here.
+            <div id="maincontent" class="content">
+                <div>
+                    <div class="title">Main content</div>
+                    <div class="center-align">
+                        content goes here.
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-</div>
-<!--end of main content declaration -->
+    </div>
+    <!--end of main content declaration -->
 </template>
 <script>
-import Vue from 'vue';
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
-import { ButtonPlugin} from '@syncfusion/ej2-vue-buttons';
+
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use(SidebarPlugin);
-Vue.use(ButtonPlugin);
+enableRipple(true);
 
 export default {
-    data () {
+    name: "App",
+    components: {
+        "ejs-sidebar": SidebarComponent,
+        "ejs-button": ButtonComponent
+    },
+    data() {
         return {
-         type :'Push',
-         target : '.content'
+            type: 'Push',
+            target: '.content'
         }
     },
     methods: {
-        btnClick: function(){
-        if(this.$refs.togglebtn.$el.classList.contains('e-active')){
-            this.$refs.togglebtn.Content = 'Open';
+        btnClick: function () {
+            if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
+                this.$refs.togglebtn.Content = 'Open';
+                this.$refs.sidebar.hide();
+            }
+            else {
+                this.$refs.togglebtn.Content = 'Close';
+                this.$refs.sidebar.show();
+            }
+        },
+        closeClick: function () {
             this.$refs.sidebar.hide();
-        }
-        else{
-            this.$refs.togglebtn.Content = 'Close';
-            this.$refs.sidebar.show();
-        }
-    },
-        closeClick: function() {
-         this.$refs.sidebar.hide();
-         this.$refs.togglebtn.$el.classList.remove('e-active');
-         this.$refs.togglebtn.Content = 'Open';
+            this.$refs.togglebtn.$el.classList.remove('e-active');
+            this.$refs.togglebtn.Content = 'Open';
         }
     }
 }
@@ -65,6 +68,7 @@ export default {
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+
 .center-align {
     text-align: center;
     padding: 20px;
@@ -87,7 +91,10 @@ export default {
     background: #00897B;
 }
 
-#toggle,#container .e-btn.e-info:hover,#toggle:focus {/*csslintallow:adjoining-classes*/
+#toggle,
+#container .e-btn.e-info:hover,
+#toggle:focus {
+    /*csslintallow:adjoining-classes*/
     background: #00695C;
     box-shadow: none;
     border-radius: 0;
@@ -95,7 +102,11 @@ export default {
     width: 100px;
 }
 
-#close,#close:hover,#close:active,#close:focus{ /* csslint allow: adjoining-classes*/
+#close,
+#close:hover,
+#close:active,
+#close:focus {
+    /* csslint allow: adjoining-classes*/
     background: #fafafa;
     color: black
 }
@@ -111,8 +122,8 @@ export default {
     color: #ffffff;
 }
 
-.content{
-    height:305px;
+.content {
+    height: 305px;
     border: 1px solid grey;
 }
 
@@ -130,7 +141,4 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
-
 </style>
-
-

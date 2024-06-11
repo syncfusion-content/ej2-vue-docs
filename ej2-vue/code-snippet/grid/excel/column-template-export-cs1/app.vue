@@ -11,19 +11,24 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { GridPlugin, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
+
+import { GridComponent, ColumnsDirective, ColumnDirective, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data: () => {
         return {
             data: employeeData,
             toolbar: ['ExcelExport'],
             imageTemplate: function () {
-                return { template : Vue.component('imageTemplate',{
+                return { template : app.component('imageTemplate',{
                     template: `<div class="image">
                         <img :src="'data:image/jpeg;base64,'+data.EmployeeImage" :alt="data.EmployeeID"/>
                     </div>`,
@@ -35,7 +40,7 @@ export default {
                 })}
             },
             mailTemplate: function () {
-                return { template : Vue.component('mailTemplate',{
+                return { template : app.component('mailTemplate',{
                     template: `<div class="link">
                         <a :href="'mailto:'+data.EmailID">{{data.EmailID}}</a></div>
                     </div>`,
@@ -85,5 +90,3 @@ export default {
         box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
     }
 </style>
-
-

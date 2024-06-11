@@ -53,7 +53,10 @@ Create an icon element as a span with the class `e-input-group-icon`, and the us
 For the floating label enabled TextBox add the icon element as first or last element inside the TextBox wrapper, and based on the element position it will act as prefix or suffix icon.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/icon-floating-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/icon-floating-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +72,10 @@ The clear button is added to the input for clearing the value given in the TextB
 You can add the clear button to the TextBox by using [showClearButton](https://ej2.syncfusion.com/vue/documentation/api/textbox/#showclearbutton) API
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/clear-icon-samples-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/textbox/clear-icon-samples-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +93,10 @@ Class Name        | Description
   e-label-bottom  | Label to be placed as placeholder for the TextBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/floating-label-02-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/floating-label-02-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +110,10 @@ Add the HTML textarea element with the `e-input` class to create default multi-l
 Add the floating label support to the `multi-line input` by creating the floating label structure as defined in the initial section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/getting-started-html-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/getting-started-html-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <div class="e-bigger e-adaptive-demo">
@@ -19,13 +17,19 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Edit, Sort, Filter, Toolbar } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, Edit, Sort, Filter, Toolbar, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData,
@@ -36,7 +40,7 @@ export default {
   },
   methods: {
     load: function() {
-        (this.$refs.treegrid as any).$el.ej2_instances[0].grid.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
+        (this.$refs.treegrid).$el.ej2_instances[0].grid.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
     }
   },
   provide: {
@@ -103,5 +107,3 @@ export default {
         box-shadow: -1px 2px white, -2px -2px white, 2px -2px white, 2px 1px white;
     }
 </style>
-
-

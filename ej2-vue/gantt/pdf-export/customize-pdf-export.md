@@ -17,7 +17,10 @@ PDF export provides an option to customize the mapping of Gantt to exported PDF 
 You can assign a file name for the exported document by defining the `fileName` property in `pdfExportProperties`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ You can assign a file name for the exported document by defining the `fileName` 
 Page orientation can be changed to `Portrait` (Default Landscape) for the exported document using the property `pdfExportProperties.pageOrientation`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +76,10 @@ The supported page sizes are:
 * Ledger
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +91,10 @@ The supported page sizes are:
 PDF export provides an option to export the current view data into PDF. To export current view data alone, define the `exportType` to `CurrentViewData`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +106,10 @@ PDF export provides an option to export the current view data into PDF. To expor
 By default, we render the default footer for a PDF file, this can be enabled or disabled by using the `enableFooter` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +121,10 @@ By default, we render the default footer for a PDF file, this can be enabled or 
 PDF export provides an option to export hidden columns of Gantt by defining the `includeHiddenColumn` to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +136,10 @@ PDF export provides an option to export hidden columns of Gantt by defining the 
 By using `showPredecessorLines`, you can hide or show predecessor lines in the exported PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +155,10 @@ You can show or hide columns by setting the `column.visible` property to `true` 
 In the following example, there is a hidden column `Duration` in the Gantt. While exporting, we have changed `Duration` to visible column and `StartDate` to hidden column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +172,10 @@ TreeGrid cells in the exported PDF can be customized or formatted using the [`pd
 In the following sample, the background color is set for `Progress` column in the exported document by using the `args.style` and `backgroundColor` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -162,7 +189,10 @@ Timeline cells in the exported PDF document can be customized or formatted using
 In the following sample, the header background color is set for timeline cells in the exported document by using the `args.headerBackgroundColor` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -176,7 +206,10 @@ Taskbars in the exported PDF document can be customized or formatted using the [
 In the following sample, the taskbar background color is customized in the chart side of the exported document by using the `args.taskbar` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -190,7 +223,10 @@ PDF export provides an option to customize the Gantt style in the exported PDF d
 To customize the Gantt style in exported PDF, define the 'ganttStyle' in `pdfExportProperties`.  
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/pdf-export-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

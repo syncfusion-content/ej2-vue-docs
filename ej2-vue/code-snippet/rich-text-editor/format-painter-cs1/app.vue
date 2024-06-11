@@ -38,13 +38,13 @@
         </div>
     </div>
 </template>
-    <script>
-    import Vue from "vue";
-    import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, FormatPainter } from "@syncfusion/ej2-vue-richtexteditor";
-    
-    Vue.use(RichTextEditorPlugin);
-    
-    export default {
+<script>    
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar, FormatPainter } from "@syncfusion/ej2-vue-richtexteditor";    
+export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent
+},
          data: function() {
             return {
                 toolbarSettings: {

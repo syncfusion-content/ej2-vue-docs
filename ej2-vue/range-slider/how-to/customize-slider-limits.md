@@ -19,7 +19,10 @@ Slider appearance can be customized via CSS. By overriding the slider CSS classe
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/limits-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/limits-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

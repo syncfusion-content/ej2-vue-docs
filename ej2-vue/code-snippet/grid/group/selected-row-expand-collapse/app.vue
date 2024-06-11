@@ -1,10 +1,8 @@
-
-
 <template>
   <div id="app">
     <div style="display: inline-block;">
       <ejs-numerictextbox id='textbox' floatLabelType="Auto" format="##"  width='250px' placeholder="Enter Grouped Row Index"></ejs-numerictextbox>
-      <ejs-button style="margin-top:25px"ref='button' cssClass='e-outline' v-on:click.native="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
+      <ejs-button style="margin-top:25px" ref='button' cssClass='e-outline' v-on:click="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
     </div>
     <div style="padding-top:5px"><p style="color:red;" id="message">{{ message }}</p></div>
     <ejs-grid ref='grid' style="padding-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
@@ -18,17 +16,19 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { NumericTextBoxPlugin  } from '@syncfusion/ej2-vue-inputs';
+import { GridComponent, ColumnsDirective, ColumnDirective, Group } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { NumericTextBoxComponent  } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(NumericTextBoxPlugin );
-
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -70,5 +70,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

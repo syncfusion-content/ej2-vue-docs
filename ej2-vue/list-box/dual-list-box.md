@@ -26,7 +26,10 @@ The following operations can be performed in dual list box,
 The following example illustrates how to move items from `Group A` to `Group B` list box.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

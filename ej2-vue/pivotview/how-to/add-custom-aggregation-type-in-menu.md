@@ -18,7 +18,10 @@ By using the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/pivo
 In the following example, we have added the aggregation types **CustomAggregateType 1** and **CustomAggregateType 2** to the aggregate menu. The calculation for those aggregated types can be done using the [`aggregateCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#aggregatecellinfo) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs266/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs266/app.vue %}
 {% endhighlight %}
 {% endtabs %}

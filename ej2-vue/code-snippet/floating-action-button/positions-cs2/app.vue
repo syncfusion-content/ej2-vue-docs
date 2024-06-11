@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;"></div>
@@ -9,26 +7,25 @@
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-    import { enableRipple } from '@syncfusion/ej2-base';
-
-    enableRipple(true);
-    Vue.use(FabPlugin);
-
-    export default {}
+import { FabComponent } from "@syncfusion/ej2-vue-buttons";
+import { enableRipple } from '@syncfusion/ej2-base';
+enableRipple(true);
+export default {
+    name: "App",
+    components: {
+        "ejs-fab": FabComponent
+    }
+}
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 
-    .e-fab.e-btn.custom-position {
-        left: 40px;
-        top: 40px;
-        bottom: unset;
-        right: unset;
-    }
+.e-fab.e-btn.custom-position {
+    left: 40px;
+    top: 40px;
+    bottom: unset;
+    right: unset;
+}
 </style>
-
-

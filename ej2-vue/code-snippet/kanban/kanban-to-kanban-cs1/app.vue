@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
   <div class="container-fluid">
@@ -30,12 +28,18 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend, closest } from '@syncfusion/ej2-base';
 import { kanbanData } from './datasource.js';
-Vue.use(KanbanPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -49,7 +53,7 @@ export default {
   },
    methods: {
       kanbanDragStopA: function (args) {
-          let kanbanBElement = closest(args.event.target as Element, '#kanbanB');
+          let kanbanBElement = closest(args.event.target, '#kanbanB');
           let kanbanObjA = this.$refs.kanbanObjA.ej2Instances;
           let kanbanObjB = this.$refs.kanbanObjB.ej2Instances;
           if (kanbanBElement) {
@@ -100,6 +104,3 @@ export default {
   display: flex;
 }
 </style>
-
-
-

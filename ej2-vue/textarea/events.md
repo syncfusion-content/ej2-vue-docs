@@ -23,7 +23,7 @@ The TextArea component triggers the [created](https://ej2.syncfusion.com/vue/doc
     </div>
 </template>
 
-<script>
+<script setup>
 import { TextAreaComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -66,7 +66,7 @@ The [InputEventArgs](https://ej2.syncfusion.com/vue/documentation/api/textbox/In
     </div>
 </template>
 
-<script>
+<script setup>
 import { TextAreaComponent, InputEventArgs } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -109,7 +109,7 @@ The [ChangedEventArgs](https://ej2.syncfusion.com/vue/documentation/api/textbox/
     </div>
 </template>
 
-<script>
+<script setup>
 import { TextAreaComponent, ChangedEventArgs } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -152,7 +152,7 @@ The [FocusInEventArgs](https://ej2.syncfusion.com/vue/documentation/api/textbox/
     </div>
 </template>
 
-<script>
+<script setup>
 import { TextAreaComponent, FocusInEventArgs } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -195,7 +195,7 @@ The [FocusOutEventArgs](https://ej2.syncfusion.com/vue/documentation/api/textbox
     </div>
 </template>
 
-<script>
+<script setup>
 import { TextAreaComponent, FocusOutEventArgs } from '@syncfusion/ej2-vue-inputs';
 
 export default {
@@ -237,7 +237,7 @@ The TextArea component triggers the [destroyed](https://ej2.syncfusion.com/vue/d
     </div>
 </template>
 
-<script>
+<script setup>
 import { TextAreaComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {

@@ -17,7 +17,10 @@ Axis is used to indicate the numeric values in the linear scale. The Linear Gaug
 The start value and end value for the Linear Gauge can be set using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/#minimum) and [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/#maximum) properties in the [`e-axis`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/) respectively. By default, the start value of the axis is **0** and the end value of the axis is **100**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ The following properties in the [`line`](https://ej2.syncfusion.com/vue/documen
 * [`offset`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/lineModel/#offset) - To render the axis line with the specified distance from the Linear Gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ Ticks are used to specify the interval in the axis. Ticks are of two types, majo
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ Ticks are used to specify the interval in the axis. Ticks are of two types, majo
 The minor and major ticks can be positioned by using the [`offset`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tickModel/#offset) and [`position`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tickModel/#position) properties. The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tickModel/#offset) is used to render the ticks with the specified distance from the axis. By default, the offset value is **0**. The possible values of the [`position`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/tickModel/#position) property are **Inside**, **Outside**, **Cross**, and **Auto**. By default, the ticks will be placed inside the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +98,10 @@ The style of the labels can be customized using the following properties in the 
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +113,10 @@ The style of the labels can be customized using the following properties in the 
 Labels can be positioned by using [`offset`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#offset) and [`position`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#position) properties in the [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel). The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#offset) defines the distance between the labels and ticks. By default, the offset value is **0**. The possible values of the  [`position`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#position) are **Inside**, **Outside**, **Cross**, and **Auto**. By default, the labels will be placed inside the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +128,10 @@ Labels can be positioned by using [`offset`](https://ej2.syncfusion.com/vue/docu
 If the last label is not in the visible range, it will be hidden by default. The last label can be made visible by setting the [`showLastLabel`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#showlastlabel) property as **true** in the [`e-axis`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +143,10 @@ If the last label is not in the visible range, it will be hidden by default. The
 Axis labels in the Linear Gauge control can be formatted using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/labelModel/#format) property in [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#labelstyle). It is used to render the axis labels in a certain format or to add a user-defined unit in the label. It works with the help of placeholder like **{value}°C**, where **value** represents the axis value. For example, 20°C.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -193,7 +217,10 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 </table>
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -207,7 +234,10 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 By default, the Linear Gauge is rendered vertically. To change its orientation, the [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#orientation) property must be set to **Horizontal**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -219,7 +249,10 @@ By default, the Linear Gauge is rendered vertically. To change its orientation, 
 The axis of the Linear Gauge component can be inversed by setting the [`isInversed`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#isinversed) property to **true** in the [`e-axis`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,7 +264,10 @@ The axis of the Linear Gauge component can be inversed by setting the [`isInvers
 To place an axis opposite from its original position, [`opposedPosition`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axis/#opposedposition) property in the [`e-axis`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/) must be set as **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -243,7 +279,10 @@ To place an axis opposite from its original position, [`opposedPosition`](https:
 Multiple axes can be added to the Linear Gauge by adding multiple [`e-axis`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/) in the [`e-axes`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/linearGaugeModel/#axes) and customization can be done with the [`e-axis`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/axisModel/). Each axis can be customized separately as shown in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

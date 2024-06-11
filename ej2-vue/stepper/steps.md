@@ -21,7 +21,10 @@ You can define the icon and text content for each step using the `iconCss`, `tex
 You can define the CSS class to show the icon for each step using the `iconCss` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/icon/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/icon/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ You can define text instead of an icon by setting the `text` property and displa
 > When both label and text are defined, the label takes priority for display based on the `stepType`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/text/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/text/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ You can define text instead of an icon by setting the `text` property and displa
 You can show whether the step is optional or not by using `optional` property. By default, the `optional` property is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/optional/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/optional/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ You can show whether the step is optional or not by using `optional` property. B
 You can use the `disabled` property to disable a step, preventing user interaction when set to `true`. By default, the value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/disabled/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/disabled/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +83,10 @@ You can use the `disabled` property to disable a step, preventing user interacti
 You can set the active step by specifying its index using the [activeStep](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#activestep) property. The default value is `0`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/activeStep/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/activeStep/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +98,10 @@ You can set the active step by specifying its index using the [activeStep](https
 Each step's progress state can be specified using the `status` property. The possible values are `NotStarted`, `InProgress` and `Completed`. By default, the value is `NotStarted`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/stepStatus/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/stepStatus/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +113,10 @@ Each step's progress state can be specified using the `status` property. The pos
 You can use the `cssClass` property to customize the appearance of each step.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/cssclass/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/cssclass/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -130,16 +130,25 @@ Import and register the TextArea component in the `script` section of the **src/
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<script setup>
+  import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
+</script>
+
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { TextAreaComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-textarea' :TextAreaComponent,
-    }
+name: "App",
+components: {
+"ejs-textarea'":TextareaComponent
+}
 }
 </script>
 
@@ -204,6 +213,32 @@ import { TextAreaComponent as EjsTextArea } from '@syncfusion/ej2-vue-inputs';
 </style>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<template>
+  <div class ='wrap'>
+    <div id ='input-container'>
+      <ejs-textarea id='default'></ejs-textarea>
+    </div>
+  </div>
+</template>
+<script setup>
+import { TextAreaComponent as EjsTextArea } from '@syncfusion/ej2-vue-inputs';
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+  .wrap {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 10px;
+    width: 340px;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
@@ -215,20 +250,19 @@ import { TextAreaComponent as EjsTextArea } from '@syncfusion/ej2-vue-inputs';
 </template>
 <script>
 import { TextAreaComponent } from '@syncfusion/ej2-vue-inputs';
-
 export default {
-   components: {
-    'ejs-textarea': TextAreaComponent
-   },
-   data: function() {
-        return { }
-    }
+name: "App",
+components: {
+"ejs-textarea":TextAreaComponent
+},
+  data: function() {
+      return { }
+  }
 }
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-
   .wrap {
     box-sizing: border-box;
     margin: 0 auto;
@@ -249,7 +283,35 @@ The output will appear as follows:
 To set the initial value of the TextArea component, you can utilize the [`value`](https://ej2.syncfusion.com/vue/documentation/api/textarea/#value) property. Here's how you can achieve it:
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<template>
+    <div class='wrap'>
+        <ejs-textarea id="default" value="comments"></ejs-textarea>
+    </div>
+</template>
+
+<script setup>
+
+import { TextAreaComponent as EjsTextArea} from "@syncfusion/ej2-vue-inputs";
+
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+
+.wrap {
+  margin: 50px auto;
+  text-align: center;
+}
+
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div class='wrap'>
@@ -258,16 +320,17 @@ To set the initial value of the TextArea component, you can utilize the [`value`
 </template>
 
 <script>
-import Vue from 'vue';
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-    components: {
-    'ejs-textarea': TextAreaComponent
-    },
-    data: function() {
-      return { }
-    }
+name: "App",
+components: {
+"ejs-textarea":TextAreaComponent
+},
+data: function() {
+  return { }
+}
 }
 </script>
 
@@ -288,7 +351,37 @@ export default {
 * Alternatively, you can set the value of the TextArea using v-model.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<template>
+    <div class='wrap'>
+        <ejs-textarea id="default" v-model="value"></ejs-textarea>
+    </div>
+</template>
+
+<script setup>
+
+import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
+
+const  value = 'Comments';
+  
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+
+.wrap {
+  margin: 50px auto;
+  text-align: center;
+}
+
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div class='wrap'>
@@ -297,18 +390,19 @@ export default {
 </template>
 
 <script>
-import Vue from 'vue';
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-    components: {
-    'ejs-textarea': TextAreaComponent
-    },
-    data: function() {
-      return {
-        value: 'Comments'
-      }
+name: "App",
+components: {
+"ejs-textarea":TextAreaComponent
+},
+  data: function() {
+    return {
+      value: 'Comments'
     }
+  }
 }
 </script>
 
@@ -329,7 +423,42 @@ export default {
 * You can dynamically retrieve the value of the TextArea component using the state variable assigned to the `value` property of the TextArea component.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<template>
+    <div class='wrap'>
+        <ejs-textarea id="default" v-model="value"></ejs-textarea>
+        <button id="valuebtn" @click="onButtonClick">Get Value</button>
+    </div>
+</template>
+
+<script setup>
+
+import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
+
+const  value = 'Comments';
+
+const onButtonClick = () => {
+    // Retrieve the value from the textarea
+    const textareaValue = this.value;
+    console.log(textareaValue);
+}
+
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+
+.wrap {
+  margin: 50px auto;
+  text-align: center;
+}
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div class='wrap'>
@@ -339,25 +468,26 @@ export default {
 </template>
 
 <script>
-import Vue from 'vue';
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-    components: {
-        'ejs-textarea': TextAreaComponent
-    },
-    data() {
-        return {
-            value: 'Comments'
-        }
-    },
-    methods: {
-        onButtonClick() {
-            // Retrieve the value from the textarea
-            const textareaValue = this.value;
-            console.log(textareaValue);
-        }
+name: "App",
+components: {
+"ejs-textarea":TextAreaComponent
+},
+data() {
+    return {
+        value: 'Comments'
     }
+},
+methods: {
+    onButtonClick() {
+        // Retrieve the value from the textarea
+        const textareaValue = this.value;
+        console.log(textareaValue);
+    }
+}
 }
 </script>
 
@@ -377,7 +507,39 @@ export default {
 * You can retrieve the value of the TextArea by accessing it as an argument from the [`change`](https://ej2.syncfusion.com/vue/documentation/api/textarea/#change) event.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div class='wrap'>
+        <ejs-textarea id="default" v-model="value" :change="onChange"></ejs-textarea>
+    </div>
+</template>
+
+<script setup>
+
+import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
+
+const  value = 'Comments';
+
+const onButtonClick = () => {
+    // Retrieve the value from the textarea
+    const textareaValue = this.value;
+    console.log(textareaValue);
+}
+</script>
+
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+
+.wrap {
+  margin: 50px auto;
+  text-align: center;
+}
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div class='wrap'>
@@ -386,23 +548,24 @@ export default {
 </template>
 
 <script>
-import Vue from 'vue';
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-    components: {
-        'ejs-textarea': TextAreaComponent
-    },
-    data() {
-        return {
-            value: 'Comments'
-        }
-    },
-    methods: {
-        onChange: function(args) {
-          let textareaValue = args.value;
-        }
+name: "App",
+components: {
+"ejs-textarea":TextareaComponent
+},
+data() {
+    return {
+        value: 'Comments'
     }
+},
+methods: {
+    onChange: function(args) {
+      let textareaValue = args.value;
+    }
+}
 }
 </script>
 

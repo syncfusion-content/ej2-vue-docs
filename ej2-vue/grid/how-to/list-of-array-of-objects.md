@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The following example shows how to set Complex field for datasource having Array Of Objects.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/complex-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/complex-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

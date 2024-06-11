@@ -13,7 +13,7 @@ new Vue({
 	template: `
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;">
-        <ejs-button id="refresh" class="e-primary" v-on:click.native="refresh"> Refresh </ejs-button></div>
+        <ejs-button id="refresh" class="e-primary" v-on:click="refresh"> Refresh </ejs-button></div>
         <ejs-speeddial ref="speeddial" id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' target='#targetElement' position='MiddleRight' :items='items'></ejs-speeddial>
     </div>
 `,

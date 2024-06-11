@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app" class="barcodeStyle">
         <ejs-barcodegenerator
@@ -26,10 +24,10 @@
 import { BarcodeGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
 
 export default {
+    name: "App",
     components: {
-        'ejs-barcodegenerator': BarcodeGeneratorComponent
+        "ejs-barcodegenerator":BarcodegeneratorComponent
     },
-    name: 'app',
     data () {
         return {
             width: "200px",
@@ -41,5 +39,3 @@ export default {
     }
 }
 </script>
-
-

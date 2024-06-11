@@ -23,7 +23,10 @@ The scrollbar will be displayed in the treegrid when content exceeds the element
 To specify the [`width`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#height) of the scroller in the pixel, set the pixel value to a number.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/scroll/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/scroll/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ Specify the [`width`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/
 Setting the [`height`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#height) to `100%` requires the treegrid parent element to have explicit height.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/scroll/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/scroll/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ Setting the [`height`](https://ej2.syncfusion.com/vue/documentation/api/treegrid
 You can scroll the treegrid content to the selected row position by using the [`rowSelected`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#rowselected) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/scroll/selectrow-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/scroll/selectrow-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

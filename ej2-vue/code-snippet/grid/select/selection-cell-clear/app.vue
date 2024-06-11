@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div style="padding: 20px 0px 0px 0px">
-      <ejs-button @click.native='onClick'>Clear cell selection</ejs-button>
+      <ejs-button @click='onClick'>Clear cell selection</ejs-button>
     </div>
     <div style="padding: 20px 0px 0px 0px">
       <ejs-grid ref="grid" :dataSource='data' :selectionSettings='selectionOptions'>
@@ -21,14 +21,17 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

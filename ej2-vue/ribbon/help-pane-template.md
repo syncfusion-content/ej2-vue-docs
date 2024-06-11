@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The help pane is dedicated area where the users can define help contents like controlling document permissions, sharing features, and more which appears on the right side of the Ribbon. You can use the [helpPaneTemplate](https://ej2.syncfusion.com/vue/documentation/api/ribbon/#helppanetemplate) property to set the help pane contents.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/helpPaneTemplate/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/helpPaneTemplate/app.vue %}
 {% endhighlight %}
 {% endtabs %}

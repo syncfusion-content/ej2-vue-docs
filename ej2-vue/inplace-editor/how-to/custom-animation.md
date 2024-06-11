@@ -15,7 +15,10 @@ In popup mode, the In-place Editor rendered with the Essential JS 2 `Tooltip` co
 In the following sample, popup animation can be customized by passing animation effect using the [model](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/popupSettings/#model) property and the dynamic animation effect changes configured from the Essential JS 2 Vue `DropDownList` component `change` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

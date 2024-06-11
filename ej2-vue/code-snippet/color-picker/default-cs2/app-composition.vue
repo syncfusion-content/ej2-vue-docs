@@ -10,6 +10,7 @@ import { ColorPickerComponent as EjsColorpicker } from '@syncfusion/ej2-vue-inpu
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
+
 </script>
 
 <style>
@@ -25,5 +26,3 @@ enableRipple(true);
   text-align: center;
 }
 </style>
-
-

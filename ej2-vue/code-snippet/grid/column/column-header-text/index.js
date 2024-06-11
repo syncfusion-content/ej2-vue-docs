@@ -27,7 +27,7 @@ new Vue({
         <label style="padding: 30px 17px 0 0">Enter new header text :</label>
         <ejs-textbox ref="textbox" required placeholder="Enter new header text" width="220">
         </ejs-textbox>
-        <ejs-button style="margin-left: 10px" id="buttons"  v-on:click.native="changeHeaderText" >
+        <ejs-button style="margin-left: 10px" id="buttons"  v-on:click="changeHeaderText" >
           Change
         </ejs-button>
       </div>

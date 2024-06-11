@@ -19,7 +19,10 @@ To get start quickly with filtering options, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=sTDENvq2bVE" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ The below are the type of filter mode available in TreeGrid.
 * **None** : The filtered records are only displayed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +63,10 @@ To apply the filter at initial rendering, set the filter `predicate` object in
 [`filterSettings.columns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettingsModel/#columns).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +98,10 @@ lessthanorequal |Checks whether the value is less than or equal to the specifie
 You can change the default filter operator by extending `filterModule.filterOperators`property in [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#databound) event. In the following sample, we have changed the default operator for string typed columns as `contains` from `startsWith`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +115,10 @@ By default, treegrid ignores diacritic characters while filtering. To include di
 In the following sample, type **aero** in `Name` column to filter diacritic characters.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

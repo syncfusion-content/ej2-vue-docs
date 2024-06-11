@@ -1,5 +1,3 @@
-
-
 <template>
      <div>
      <p><b>First Gantt:</b></p>
@@ -9,12 +7,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, ExcelExport, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, ExcelExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { ganttData  } from './data-source.js';
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         fData: [ganttData[0]],
@@ -32,9 +34,9 @@ export default {
         toolbar: ['ExcelExport'],
         projectStartDate: new Date('03/31/2019'),
         projectEndDate: new Date('04/14/2019'),
-        toolbarClick: (args: ClickEventArgs) => {
+        toolbarClick: (args) => {
                 if (args.item.id === 'GanttContainer1_excelexport') {
-                    var appendExcelExportProperties: ExcelExportProperties = {
+                    var appendExcelExportProperties = {
                         multipleExport: {type: 'AppendToSheet',blankRows: 2}
                     };
                     var FirstGantt = document.getElementById('GanttContainer1').ej2_instances[0];
@@ -52,5 +54,3 @@ export default {
   }
 };
 </script>
-
-

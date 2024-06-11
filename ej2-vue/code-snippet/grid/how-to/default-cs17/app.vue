@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px' >
@@ -13,9 +11,8 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
 import { createElement } from '@syncfusion/ej2-base';
-import { GridPlugin,Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective,Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { Query } from '@syncfusion/ej2-data';
 import { cascadeData } from './datasource.js';
@@ -33,8 +30,16 @@ let state = [
         { stateName: 'Victoria', countryId: '2', stateId: '106' }
     ];
 let countryElem, stateElem, countryObj, stateObj;
-Vue.use(GridPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
     data: () => {
       return {
         data: cascadeData,
@@ -101,5 +106,3 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

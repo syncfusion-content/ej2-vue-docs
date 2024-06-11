@@ -15,7 +15,10 @@ You can search records in the Gantt component by using the [`search`](https://ej
 To search records, inject the [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filtermodule) module in the `provide` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ To search records, inject the [`Filter`](https://ej2.syncfusion.com/vue/document
 In the Gantt component, you can load a task with some search criteria and this can be done by using the [`searchSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/) property. To apply search at initial rendering, set the value for [`fields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/#fields), [`operator`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/#operator), [`key`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/#key), and [`ignoreCase`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/#ignorecase) in the [`searchSettings`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +63,10 @@ notEqual |Checks for values not equal to the specified value.
 To search the Gantt records from an external button, invoke the [`search`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#search) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +80,10 @@ To search the Gantt records from an external button, invoke the [`search`](https
 By default, the Gantt component searches all the columns. You can search specific columns by defining the specific column's field names in the [`searchSettings.fields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/#fields) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +97,10 @@ By default, the Gantt component searches all the columns. You can search specifi
 You can set [`searchSettings.key`](https://ej2.syncfusion.com/vue/documentation/api/gantt/searchSettings/#key) property as `empty` string, to clear the searched Gantt records from external button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

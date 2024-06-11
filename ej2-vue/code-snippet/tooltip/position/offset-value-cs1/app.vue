@@ -1,30 +1,31 @@
-
-
 <template>
-  <div id='app'>
-        <ejs-tooltip mouseTrail='true' content='Tooltip content' :offsetX='xvalue' :offsetY='yvalue' :showTipPointer=false target="#target">
-          <div id="target">Show tooltip</div>
+    <div id='app'>
+        <ejs-tooltip mouseTrail='true' content='Tooltip content' :offsetX='xvalue' :offsetY='yvalue' :showTipPointer=false
+            target="#target">
+            <div id="target">Show tooltip</div>
         </ejs-tooltip>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-Vue.use(TooltipPlugin);
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
 
 export default {
+    name: "App",
+    components: {
+        "ejs-tooltip": TooltipComponent
+    },
     data() {
-    return {
-        xvalue: 30,
-        yvalue: 30,
-        tip: false
-    };
+        return {
+            xvalue: 30,
+            yvalue: 30
+        };
     }
 }
 </script>
 <style>
 @import "node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+
 #target {
     background-color: #cfd8dc;
     border: 3px solid #eceff1;
@@ -37,6 +38,3 @@ export default {
     font-size: 20px;
 }
 </style>
-
-
-

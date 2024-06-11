@@ -14,7 +14,10 @@ Pointers are used to indicate values on the axis. Value of the pointer can be mo
 [`value`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#value-number) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs35/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ can be customized by using [`radius`](https://ej2.syncfusion.com/vue/documentat
 length takes value either in `percentage` or `pixel`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs36/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ Cap and tails can be customized by using [`cap`](https://ej2.syncfusion.com/vue/
 [`needleTail`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#needletail-needletailmodel) object.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs37/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ Cap and tails can be customized by using [`cap`](https://ej2.syncfusion.com/vue/
 The appearance of the needle pointer can be customized by using [`needleStartWidth`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#needlestartwidth) and [`needleEndWidth`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#needleendwidth).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs38/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +80,10 @@ RangeBar pointer is like ranges in an axis, that can be placed on gauge to mark 
 RangeBar starts from the beginning of the gauge and ends at the pointer value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs39/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs39/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +95,10 @@ RangeBar starts from the beginning of the gauge and ends at the pointer value.
 The corners of the range bar pointer can be rounded by specifying desired values to the `roundedCornerRadius` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs40/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +111,10 @@ RangeBar can be customized in terms of color, border and thickness by using
 [`color`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#color-string), [`border`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#border-bordermodel) and [`pointerWidth`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#pointerwidth-number) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs41/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs41/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -112,7 +133,10 @@ Different type of marker shape can be used to mark the pointer value in axis.  Y
 We can use image instead of rendering marker shape to denote the pointer value. It can be achieved by setting [`markerShape`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#markershape-string) to Image and assigning  image path to [`imageUrl`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/#imageurl-string) in pointer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs42/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs42/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +153,10 @@ The marker can be customized in terms of color, border, width and height by usin
 [`pointer`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointer/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs43/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs43/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +168,10 @@ The marker can be customized in terms of color, border, width and height by usin
 The pointers can be dragged over the axis line by clicking and dragging the same. To enable or disable the pointer drag, use the [`enablePointerDrag`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/circularGaugeModel/#enablepointerdrag) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs44/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs44/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +183,10 @@ The pointers can be dragged over the axis line by clicking and dragging the same
 In addition to the default pointer, you can add n number of pointer to an axis by using `pointers` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs45/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs45/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -168,7 +201,10 @@ The [`enable`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/a
 The [`duration`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/animationModel/#duration-number) property specify the duration of the animation in milliseconds.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs46/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs46/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -189,7 +225,10 @@ Using linear gradient, colors will be applied in a linear progression. The start
 The linear gradient can be applied to all pointer types like marker, range bar and needle. To do so, follow the below code sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs47/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs47/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -203,7 +242,10 @@ Using radial gradient, colors will be applied in circular progression. The inner
 The radial gradient can be applied to all pointer types like marker, range bar and needle. To do so, follow the below code sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs48/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs48/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -44,7 +44,10 @@ Refer to the following code snippet to change the tooltip content dynamically.
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/dynamic-content-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/dynamic-content-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

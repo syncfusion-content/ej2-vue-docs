@@ -1,9 +1,7 @@
-
-
 <template>
   <div id="app">
        <div id='container'>
-        <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+        <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
         <ejs-toast ref='defaultRef' id='element' title='Matt sent you a friend request' content='You have a new friend request yet to accept' :position='position' width=400 height=150></ejs-toast>
             <div class='row' style="padding-top: 20px" id= "toast_pos_target">
               <table>
@@ -34,15 +32,19 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ToastPlugin } from '@syncfusion/ej2-vue-notifications';
-import { ButtonPlugin, RadioButtonPlugin, CheckBoxPlugin, ChangeEventArgs as CheckBoxChange, ChangeEventArgs } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ToastPlugin);
-Vue.use(RadioButtonPlugin);
-Vue.use(CheckBoxPlugin);
-Vue.use(ButtonPlugin);
+
+import { ToastComponent } from '@syncfusion/ej2-vue-notifications';
+import { ButtonComponent, RadioButtonComponent, CheckBoxComponent } from '@syncfusion/ej2-vue-buttons';
+
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-toast":ToastComponent,
+"ejs-radiobutton":RadioButtonComponent,
+"ejs-checkbox":CheckBoxComponent
+},
+
   data: function(){
     return {
         position: { X: "Center", Y: "Bottom" },
@@ -54,7 +56,7 @@ export default {
       this.toast = document.getElementById('element').ej2_instances[0];
   },
   methods: {
-      showBtnClick: function(args){
+      showBtnClick: function(){
           this.$refs.defaultRef.show();
       },
       onChange: function(e) {
@@ -118,6 +120,3 @@ table td {
 width: 50%;
 }
 </style>
-
-
-

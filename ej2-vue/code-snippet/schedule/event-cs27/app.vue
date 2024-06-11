@@ -1,21 +1,21 @@
-
-
 <template>
   <div id='app'>
     <div id='container'>
-        <ejs-schedule :height='height' :width='width' :selectedDate='selectedDate' :views='views' cssClass= 'custom-class' :eventSettings='eventSettings' :eventRendered='onEventRendered'></ejs-schedule>
+      <ejs-schedule :height='height' :width='width' :selectedDate='selectedDate' :views='views' cssClass='custom-class'
+        :eventSettings='eventSettings' :eventRendered='onEventRendered'></ejs-schedule>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 import { scheduleData } from './datasource.js';
 
-Vue.use(SchedulePlugin);
-
 export default {
-  data (){
+  name: "App",
+  components: {
+    "ejs-schedule": ScheduleComponent,
+  },
+  data() {
     return {
       height: '550px',
       width: '100%',
@@ -26,16 +26,16 @@ export default {
       selectedDate: new Date(2018, 1, 15),
     }
   },
-  methods:{
-    onEventRendered: function(args) {
+  methods: {
+    onEventRendered: function (args) {
       let categoryColor = args.data.CategoryColor;
       if (!args.element || !categoryColor) {
-          return;
+        return;
       }
       if (this.currentView === 'Agenda') {
-          args.element.firstChild.style.borderLeftColor = categoryColor;
+        args.element.firstChild.style.borderLeftColor = categoryColor;
       } else {
-          args.element.style.backgroundColor = categoryColor;
+        args.element.style.backgroundColor = categoryColor;
       }
     }
   },
@@ -46,15 +46,12 @@ export default {
 
 </script>
 <style>
-  @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 </style>
-
-
-

@@ -1,16 +1,16 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :editSettings= "editSettings" :toolbar="toolbar" :enableContextMenu="true"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, ContextMenu, Edit, Selection, Toolbar } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, ContextMenu, Edit, Selection, Toolbar } from "@syncfusion/ej2-vue-gantt";
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -58,7 +58,7 @@ export default {
                 allowDeleting:true,
                 allowTaskbarEditing: true
             },
-            toolbar: ['Add', 'Edit', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll' 'Update'],
+            toolbar: ['Add', 'Edit', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll', 'Update'],
       };
   },
   provide: {
@@ -66,6 +66,3 @@ export default {
   }
 };
 </script>
-
-
-

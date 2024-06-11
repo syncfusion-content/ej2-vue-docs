@@ -70,8 +70,8 @@ You have completed all of the necessary configurations required to render the Sy
 1. Import the Barcode component in the `<script>` section of the `src/App.vue` file.
 
     ```
-      <script>
-        import { BarcodeGeneratorComponent, QRCodeGeneratorComponent, DataMatrixGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
+      <script setup>
+        import { BarcodeGeneratorComponent as EjsBarcodegenerator, QRCodeGeneratorComponent as EjsQrcodegenerator, DataMatrixGeneratorComponent as EjsDatamatrixgenerator} from '@syncfusion/ej2-vue-barcode-generator';
       </script>
     ```
 
@@ -107,16 +107,12 @@ You have completed all of the necessary configurations required to render the Sy
 4. Declare the barcode generator properties in the `script` section. Here, declare the width, Height, type, value, and mode values for the `ejs-barcodegenerator` property.
 
     ```js
-    data() {
-      return {
-        width: "200px",
-        height: "150px",
-        type: "Codabar",
-        value: "123456789",
-        mode: "SVG",
-        displaytext: { text: 'BarcodeGenerator'}
-        };
-    }
+    const width = "200px";
+    const height = "150px";
+    const displaytext = { text: 'BarcodeGenerator' };
+    const mode = "SVG";
+    const type = "Codabar";
+    const value = "123456789";
       ```
 
 5. Summarizing the above steps, update the `src/App.vue` file with following code.
@@ -139,31 +135,17 @@ You have completed all of the necessary configurations required to render the Sy
       </div>
     </template>
 
-    <script>
+    <script setup>
     import {
-      BarcodeGeneratorComponent,
+      BarcodeGeneratorComponent as EjsBarcodegenerator
     } from "@syncfusion/ej2-vue-barcode-generator";
 
-    import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-    import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
-
-    export default {
-      name: "App",
-      components: {
-        "ejs-barcodegenerator": BarcodeGeneratorComponent,
-      },
-      data() {
-        return {
-          width: "200px",
-            height: "150px",
-            type: "Codabar",
-            value: "123456789",
-            mode: "SVG",
-            displaytext: { text: 'BarcodeGenerator'},
-        };
-      },
-    };
+    const width = "200px";
+    const height = "150px";
+    const displaytext = { text: 'BarcodeGenerator' };
+    const mode = "SVG";
+    const type = "Codabar";
+    const value = "123456789";
     </script>
 
     <style>
@@ -206,32 +188,19 @@ You can add the QR code generator component by using the following code sample.
   </div>
 </template>
 
-<script>
+<script setup>
 
 import {
-  QRCodeGeneratorComponent,
+  QRCodeGeneratorComponent as EjsQrcodegenerator
 } from "@syncfusion/ej2-vue-barcode-generator";
 
-import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
+  const width = "200px";
+  const height = "150px";
+  const displaytext = { text: 'QRcodeGenerator' };
+  const mode = "SVG";
+  const type = "Codabar";
+  const value = "123456789";
 
-export default {
-  name: "App",
-  components: {
-    "ejs-qrcodegenerator": QRCodeGeneratorComponent,
-  },
-  data() {
-    return {
-      width: "200px",
-        height: "150px",
-        type: "Codabar",
-        value: "123456789",
-        mode: "SVG",
-        displaytext: { text: 'QRcodeGenerator' },
-    };
-  },
-};
 </script>
 
 <style>
@@ -265,32 +234,19 @@ You can add the datamatrix code generator component by using the following code 
   </div>
 </template>
 
-<script>
+<script setup>
 
 import {
-  DataMatrixGeneratorComponent,
+  DataMatrixGeneratorComponent as EjsDatamatrixgenerator
 } from "@syncfusion/ej2-vue-barcode-generator";
 
-import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-import "../node_modules/@syncfusion/ej2-vue-barcode-generator/styles/material.css";
+  const width = "200px";
+  const height = "150px";
+  const displaytext = { text: 'DataMatrix' };
+  const mode = "SVG";
+  const type = "Codabar";
+  const value = "123456789";
 
-export default {
-  name: "App",
-  components: {
-    "ejs-datamatrixgenerator": DataMatrixGeneratorComponent,
-  },
-  data() {
-    return {
-      width: "200px",
-        height: "150px",
-        type: "Codabar",
-        value: "123456789",
-        mode: "SVG",
-        displaytext: { text: 'DataMatrix' },
-    };
-  },
-};
 </script>
 
 <style>

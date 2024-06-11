@@ -15,7 +15,10 @@ The Stepper component enables users to progress sequentially through each step, 
 The example demonstrates the functionality of both linear and non-linear flow in the Stepper.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/linear/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/linear/app.vue %}
 {% endhighlight %}
 {% endtabs %}

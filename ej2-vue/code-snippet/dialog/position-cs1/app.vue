@@ -1,9 +1,7 @@
-
-
 <template>
   <div>
      <div id="target" class="control-section">
-         <ejs-button id="dialogBtn" v-on:click.native="buttonClick">Open Dialog</ejs-button>
+         <ejs-button id="dialogBtn" v-on:click="buttonClick">Open Dialog</ejs-button>
 
         <ejs-dialog id='defaultDialog' header='Choose a Dialog Position' showCloseIcon='true' :position='position' :footerTemplate='footerTemplate' width='406px' ref='dialogObj'
             target='#target' :open='dialogOpen' :close='dialogClose' closeOnEscape='false'>
@@ -30,15 +28,18 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { RadioButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(RadioButtonPlugin);
+
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent,
+"ejs-radiobutton":RadioButtonComponent,
+},
     data: function() {
         return {
             footerTemplate: '<span id="posvalue" style="float:left;margin-left:8px;padding:10px;">Position: { X: "Center", Y: "Center" }</span>',
@@ -46,13 +47,13 @@ export default {
         }
     },
     methods: {
-        buttonClick: function(args){
+        buttonClick: function(){
             this.$refs.dialogObj.show();
         },
         changePosition: function(event) {
             this.$refs.dialogObj.position = { X: event.value.split(" ")[0], Y: event.value.split(" ")[1] };
             document.getElementById('posvalue').innerHTML = 'Position: {X: "' + event.value.split(" ")[0] + '", Y: "' + event.value.split(" ")[1] + '"}'
-            var txt = event.event.target.parentElement.querySelector('.e-label').innerText.split(" ");
+            const txt = event.event.target.parentElement.querySelector('.e-label').innerText.split(" ");
             document.getElementById('posvalue').innerHTML = 'Position: { X: "' + txt[0] + '", Y: "' + txt[1] + '" }';
         },
         dialogClose() {
@@ -110,5 +111,3 @@ export default {
         padding: 6px;
     }
 </style>
-
-

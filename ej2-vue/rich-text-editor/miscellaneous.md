@@ -23,7 +23,10 @@ Through the `e-rte-placeholder` class to define our custom font family, font col
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ The character count color will be modified based on the characters in the Rich T
 > To create Rich Text Editor with character count feature, inject the Count module to the Rich Text Editor using the `RichTextEditor.Inject(Count)` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,8 +63,14 @@ The character count color will be modified based on the characters in the Rich T
 Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in Source view directly, the changes will be reflected in the Rich Text Editor's content. So, the users will have more flexibility over the content they have created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/code-mirror-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/code-mirror-cs1/app.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="index.html" %}
+{% include code-snippet/rich-text-editor/code-mirror-cs1/index.html %}
 {% endhighlight %}
 {% highlight html tabtitle="index.html" %}
 {% include code-snippet/rich-text-editor/code-mirror-cs1/index.html %}
@@ -78,7 +90,10 @@ To undo and redo operations, do one of the following:
 Customize the undo/redo step count using the [undoRedoSteps](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredosteps) property. By default, undo/redo actions take 300ms time interval for store the action to the undoRedoManager. The time interval can be customized by using the [undoRedoTimer](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#undoredotimer).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +107,10 @@ The Rich Text Editor allows the users to edit the content with security by preve
 In the following sample, removed `script` tag and `onmouseover` attribute from content of the Rich Text Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +126,10 @@ You can also filter the elements and attributes additionally, which cause the XS
 The following sample demonstrates how to filter `script` tag from value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +145,10 @@ This feature allows the editor to be resized dynamically. The users can enable o
 To render the Rich Text Editor in the resizable mode, set the `enableResize` property to true. The above feature is built as module and hence the `Resize` module needs to be included in your application.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +160,10 @@ To render the Rich Text Editor in the resizable mode, set the `enableResize` pro
 To have a restricted resizable area for the Rich Text Editor, you need to specify the min-width, max-width, min-height, and max-height CSS properties for the control's wrapper element. By default, the control is capable of resizing upto the current viewport. The `e-richtexteditor` CSS class will be available in the component's wrapper and can be used for applying the above mentioned styles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +175,10 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 This feature allows the user to change the appearance of the Numbered and Bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square and circles. You can also customize the style type of the lists to be populated in the dropdown from the toolbar by using the `numberFormatList` and `bulletFormatList` properties in the Rich Text Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}

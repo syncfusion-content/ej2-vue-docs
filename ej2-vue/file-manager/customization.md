@@ -27,7 +27,10 @@ The file manager component allows customizing its functionalities like, context 
 The context menu settings like, items to be displayed on files, folders and layout click and visibility can be customized using [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/contextmenu-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/contextmenu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The context menu settings like, items to be displayed on files, folders and layo
 The details view settings like, column width, header text, template for each field can be customized using [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#detailsviewsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/detailsview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/detailsview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ The details view settings like, column width, header text, template for each fie
 The navigation pane settings like, minimum and maximum width and visibility can be customized using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/navigationpane-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/navigationpane-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ The file extensions are displayed in the File Manager by default. This can be hi
 In File Manager [fileLoad](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#fileload) and [fileOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#fileopen) events are triggered before the file/folder is rendered and before the file/folder is opened respectively. These events can be utilized to perform operations before a file/folder is rendered or opened.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/fileextension-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/fileextension-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +89,10 @@ In File Manager [fileLoad](https://ej2.syncfusion.com/vue/documentation/api/file
 The File Manager provides support to show/hide the hidden items by enabling/disabling the [showHiddenItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showhiddenitems) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/hiddenitems-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/hiddenitems-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +104,10 @@ The File Manager provides support to show/hide the hidden items by enabling/disa
 The thumbnail images are displayed in the File Manager's large icons view by default. This can be hidden by disabling the [showThumbnail](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showthumbnail) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/disablethumbnail-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/disablethumbnail-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +119,10 @@ The thumbnail images are displayed in the File Manager's large icons view by def
 The toolbar settings like, items to be displayed in toolbar and visibility can be customized using [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#toolbarsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/toolbar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/toolbar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +138,10 @@ The toolbar settings like, items to be displayed in toolbar and visibility can b
 The upload settings like, minimum and maximum file size and enabling auto upload can be customized using [uploadSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#uploadsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/upload-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +153,10 @@ The upload settings like, minimum and maximum file size and enabling auto upload
 The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the file manager element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

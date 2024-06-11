@@ -12,8 +12,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-button @click.native='expand'>Expand All</ejs-button>
-        <ejs-button @click.native='collapse'>Collapse All</ejs-button>
+        <ejs-button @click='expand'>Expand All</ejs-button>
+        <ejs-button @click='collapse'>Collapse All</ejs-button>
         <ejs-grid style="margin-top:10px" ref='grid' :dataSource='parentData' height='265px' :childGrid='childGrid'>
             <e-columns>
                 <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=80></e-column>

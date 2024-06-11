@@ -140,35 +140,67 @@ Document editor provides an option to protect and unprotect document using [`enf
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
-```ts
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { onMounted, provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+onMounted(function () {
+  //enforce protection
+  container.value.ej2Instances.documentEditor.editor.enforceProtection('123', 'RevisionsOnly');
+  //stop the document protection
+  container.value.ej2Instances.documentEditor.editor.stopProtection('123');
+})
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'};
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    },
-    mounted(){
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return { serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  mounted() {
     //enforce protection
-    this.$refs.container.ej2Instances.documentEditor.editor.enforceProtection('123','RevisionsOnly');
+    this.$refs.container.ej2Instances.documentEditor.editor.enforceProtection('123', 'RevisionsOnly');
     //stop the document protection
     this.$refs.container.ej2Instances.documentEditor.editor.stopProtection('123');
-    }
   }
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Tracked changes only protection can be enabled in UI by using [Restrict Editing pane](../document-editor/document-management#restrict-editing-pane)
 
@@ -180,33 +212,53 @@ Tracked changes only protection can be enabled in UI by using [Restrict Editing 
 
 You can restrict the accept and reject changes based on the author name. The following example demonstrates how to restrict an author from accept/reject changes.
 
-```ts
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div>
     <div>
       <div>
-        <DocumentEditorContainerComponent
-          ref="container"
-          style="display: block;"
-          :height="'590px'"
-          @beforeAcceptRejectChanges="beforeAcceptRejectChanges"
-          :enableToolbar="true"
-        />
+        <ejs-documenteditorcontainer ref="container" style="display: block;" :height="'590px'"
+          @beforeAcceptRejectChanges="beforeAcceptRejectChanges" :enableToolbar="true" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer } from '@syncfusion/ej2-vue-documenteditor';
+
+
+const beforeAcceptRejectChanges = function (args) {
+  // Check the author of the revision
+  if (args.author !== 'Hary') {
+    // Cancel the accept/reject action
+    args.cancel = true;
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <div>
+      <div>
+        <ejs-documenteditorcontainer ref="container" style="display: block;" :height="'590px'"
+          @beforeAcceptRejectChanges="beforeAcceptRejectChanges" :enableToolbar="true" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
-  
-Vue.use(DocumentEditorContainerPlugin);
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
-    DocumentEditorContainerComponent
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
   },
   methods: {
     beforeAcceptRejectChanges(args) {
@@ -219,3 +271,6 @@ export default {
   }
 };
 </script>
+
+{% endhighlight %}
+{% endtabs %}

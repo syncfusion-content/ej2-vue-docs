@@ -1,5 +1,3 @@
-
-
 <template>
 <ul>
 <li><div id="text">Selected: Option 1</div></li>
@@ -10,14 +8,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { RadioButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(RadioButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-radiobutton":RadioButtonComponent
+},
   methods: {
     onChange: function(args) {
       document.getElementById('text').innerText = 'Selected : ' + args.event.target.ej2_instances[0].label;
@@ -43,5 +42,3 @@ li {
 }
 
 </style>
-
-

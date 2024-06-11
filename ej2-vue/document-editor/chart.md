@@ -15,7 +15,10 @@ Document Editor provides chart preservation support. Using Document Editor, you 
 The following example shows chart preservation in Document Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/chart-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/chart-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

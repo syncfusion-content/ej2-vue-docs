@@ -15,7 +15,10 @@ To prevent the DatePicker popup from closing, use the preventDefault method from
 The following example demonstrates how to prevent the popup from closing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/min-max-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/min-max-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

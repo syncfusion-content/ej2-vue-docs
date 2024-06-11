@@ -20,7 +20,10 @@ The Query Builder uses `DataManager`, which supports both RESTful JSON data serv
 To bind local data to the query builder, you can assign the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) property  with a JavaScript object array. The local data source can also be provided as an instance of the `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ To bind local data to the query builder, you can assign the [`dataSource`](https
 To bind remote  data to the query builder, assign service data as an instance of  `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#datasource) property. To interact with remote data source, provide the endpoint `url`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ To bind remote  data to the query builder, assign service data as an instance of
 [`OData`](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +69,10 @@ To bind remote  data to the query builder, assign service data as an instance of
 The ODataV4 is an improved version of OData protocols, and the `DataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [`odata documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the `ODataV4Adaptor`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,11 +101,11 @@ You can use `WebApiAdaptor` to bind query builder with Web API created using ODa
         </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+<script setup>
+
+import { QueryBuilderComponent } from "@syncfusion/ej2-vue-querybuilder";
 import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
-Vue.use(QueryBuilderPlugin);
+
 
 export default {
     data: function() {
@@ -144,7 +156,10 @@ npm install @syncfusion/ej2-vue-buttons --save
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +173,10 @@ Complex Data Binding allows you to create subfield for columns. To implement com
 In the following sample, complex data was bound in nested columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/complex-data-binding-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/complex-data-binding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

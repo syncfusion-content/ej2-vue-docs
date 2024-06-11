@@ -1,15 +1,12 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :connectors='connectors' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let connectors = [{
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let connectors = [{
     id: 'connector3',
     type: 'Bezier',
     style: {
@@ -44,9 +41,12 @@
         x: 200,
         y: 100
     },
-}, ]
+},]
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -57,7 +57,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 When the iframeSettings option is enabled, the Rich Text Editor creates the iframe element as the content area on control initialization; it is used to display and editing the content. In content area, the editor displays only the body tag of a `<iframe>` document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ When the iframeSettings option is enabled, the Rich Text Editor creates the ifra
 The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using attributes fields of the [iframeSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/iFrameSettings/#iframesettings) property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ The editor offers you to add external CSS file to style the `<iframe>` element. 
 Likewise, add the external script file to the `<iframe>` element using the [scripts](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/resources/#scripts) field of iframeSettings to provide the additional functionalities to the Rich Text Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/iframe-resources-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/iframe-resources-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

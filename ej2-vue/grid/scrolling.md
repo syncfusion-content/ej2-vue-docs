@@ -23,7 +23,10 @@ domainurl: ##DomainURL##
 To specify the [`width`](https://ej2.syncfusion.com/vue/documentation/api/grid/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/grid/#height) of scroller in pixel, set the pixel value as number.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/scroll/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/scroll/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ To specify the [`width`](https://ej2.syncfusion.com/vue/documentation/api/grid/#
 Specify the [`width`](https://ej2.syncfusion.com/vue/documentation/api/grid/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/grid/#height) as `100%` to make the grid element fill its parent container. Setting the [`height`](https://ej2.syncfusion.com/vue/documentation/api/grid/#height) to `100%` requires the grid parent element to have explicit height.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/scroll/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/scroll/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ You can make the Grid column headers remain fixed while scrolling by using the [
 In the below demo, the Grid headers will be sticky while scrolling the Grid's parent div element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ In the below demo, the Grid headers will be sticky while scrolling the Grid's pa
 You can scroll the grid content to the selected row position by using the [`rowSelected`](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowselected) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/scroll/selectrow-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/scroll/selectrow-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +87,10 @@ You can hide the scrollbar of Grid content by using the [`hideScroll`](https://e
 In the following sample, we have invoked the [`hideScroll`](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidescroll) method inside the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/search/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/search/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
   <div class=" msg-template-section">
     <div class="content-section">
@@ -18,18 +16,30 @@
     </div>
   </div>
 </template>
-<script setup>
-import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notifications";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
-const showClick = function () {
-  this.$refs.msgTemplate.ej2Instances.visible = true;
-  this.$refs.showBtn.ej2Instances.element.classList.add("msg-hidden");
-};
-const dismissClick = function () {
-  this.$refs.msgTemplate.ej2Instances.visible = false;
-};
-const closed = function () {
-  this.$refs.showBtn.ej2Instances.element.classList.remove("msg-hidden");
+<script>
+import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
+export default {
+  data: function () {
+    return {};
+  },
+  components: { 
+    'ejs-message': MessageComponent,
+    'ejs-button': ButtonComponent
+  },
+  methods: {
+    showClick: function () {
+      this.$refs.msgTemplate.ej2Instances.visible = true;
+      this.$refs.showBtn.ej2Instances.element.classList.add("msg-hidden");
+    },
+    dismissClick: function () {
+      this.$refs.msgTemplate.ej2Instances.visible = false;
+    },
+    closed: function () {
+      this.$refs.showBtn.ej2Instances.element.classList.remove("msg-hidden");
+    },
+  },
 };
 </script>
 <style>
@@ -67,5 +77,3 @@ const closed = function () {
   padding: 0;
 }
 </style>
-
-

@@ -1,25 +1,25 @@
-
-
 <template>
-<div>
-<div id="target">Right click / Touch hold to open the ContextMenu</div>
-<ejs-contextmenu target='#target' :items='menuItems' :animationSettings='animationSettings'></ejs-contextmenu>
-</div>
+    <div>
+        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <ejs-contextmenu target='#target' :items='menuItems' :animationSettings='animationSettings'></ejs-contextmenu>
+    </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
-import { MenuEventArgs } from '@syncfusion/ej2-navigations';
+
+import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ContextMenuPlugin);
 
 export default {
-    data () {
+    name: "App",
+    components: {
+        "ejs-contextmenu": ContextMenuComponent
+    },
+    data() {
         return {
-            menuItems:[
+            menuItems: [
                 {
                     text: 'Show All Bookmarks'
                 },
@@ -28,7 +28,7 @@ export default {
                     items: [
                         {
                             text: 'Most Visited',
-                            items:[
+                            items: [
                                 {
                                     text: 'Gmail'
                                 },
@@ -42,10 +42,10 @@ export default {
                         }
                     ]
                 }],
-                 animationSettings: { effect: 'FadeIn', duration: 800 }
-                }
+            animationSettings: { effect: 'FadeIn', duration: 800 }
         }
-    };
+    }
+}
 </script>
 
 <style>
@@ -56,14 +56,12 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 #target {
-  border: 1px dashed;
-  height: 150px;
-  padding: 10px;
-  position: relative;
-  text-align: justify;
-  color: gray;
-  user-select: none;
+    border: 1px dashed;
+    height: 150px;
+    padding: 10px;
+    position: relative;
+    text-align: justify;
+    color: gray;
+    user-select: none;
 }
 </style>
-
-

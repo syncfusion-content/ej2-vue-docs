@@ -68,7 +68,10 @@ The below table shows shortcut keys and its corresponding usage.
 | <kbd>Arrow Up</kbd> | Decrements the value |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/getting-started/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/getting-started/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height='290px' :allowGrouping="true" :groupSettings="groupOptions">
@@ -21,19 +19,27 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
+import { createApp } from "vue";
 
-Vue.use(GridPlugin);
-
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       groupOptions: {showDropArea: false, columns: ['ShipCountry'] },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })

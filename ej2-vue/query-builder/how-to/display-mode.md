@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Display options allow you to view the Query Builder in Vertically or Horizontally. For this, you should use the [`displayMode`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#displaymode) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

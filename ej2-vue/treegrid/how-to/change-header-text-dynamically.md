@@ -39,7 +39,10 @@ To reflect the changes in the Tree Grid header, invoke the [`refreshColumns`](ht
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

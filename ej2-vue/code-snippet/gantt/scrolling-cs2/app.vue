@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div>
     <p class="e-text"> The parent container can be resizable by dragging the bottom-right corner.</p>
@@ -10,11 +7,14 @@
    </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit} from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Edit} from "@syncfusion/ej2-vue-gantt";
 import { projectNewData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data: projectNewData,
@@ -54,5 +54,3 @@ export default {
       min-width: 250px;
   }
 </style>
-
-

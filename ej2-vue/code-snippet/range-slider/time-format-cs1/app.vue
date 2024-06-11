@@ -1,47 +1,23 @@
-
-
 <template>
   <div id="app">
     <div class="wrap">
-      <ejs-slider
-        id="ticks"
-        :min="minVal"
-        :max="maxVal"
-        :value="value"
-        :tooltip="tooltip"
-        :ticks="ticks"
-        showButtons="true"
-        :step="stepVal"
-        v-on:renderingTicks="onRenderingTicks"
-        v-on:tooltipChange="onTooltipChange"
-      ></ejs-slider>
+      <ejs-slider id="ticks" :min="minVal" :max="maxVal" :value="value" :tooltip="tooltip" :ticks="ticks"
+        showButtons="true" :step="stepVal" v-on:renderingTicks="onRenderingTicks"
+        v-on:tooltipChange="onTooltipChange"></ejs-slider>
     </div>
   </div>
 </template>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-#app {
-  height: 40px;
-  position: absolute;
-  width: 98%;
-}
-.wrap {
-  box-sizing: border-box;
-  height: 260px;
-  margin: 0 auto;
-  padding: 30px 10px;
-  width: 460px;
-}
-</style>
+
 <script>
-import Vue from "vue";
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(SliderPlugin);
+
+import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
+
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    "ejs-slider": SliderComponent
+  },
+  data: function () {
     return {
       tooltip: { placement: "Before", isVisible: true },
       minVal: new Date(2013, 6, 13, 11).getTime(),
@@ -72,6 +48,23 @@ export default {
   }
 };
 </script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
+#app {
+  height: 40px;
+  position: absolute;
+  width: 98%;
+}
 
-
+.wrap {
+  box-sizing: border-box;
+  height: 260px;
+  margin: 0 auto;
+  padding: 30px 10px;
+  width: 460px;
+}
+</style>

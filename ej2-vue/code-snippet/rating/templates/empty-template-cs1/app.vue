@@ -1,19 +1,22 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating" value="3" emptyTemplate="<span class='custom-font sf-rating-heart'></span>" ></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating" value="3" emptyTemplate="<span class='custom-font sf-rating-heart'></span>"></ejs-rating>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin } from "@syncfusion/ej2-vue-inputs";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
-Vue.use(RatingPlugin);
 
-export default {}
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
+import { enableRipple } from '@syncfusion/ej2-base';
+
+enableRipple(true);
+
+export default {
+  name: "App",
+  components: {
+    "ejs-rating": RatingComponent
+  },
+}
 </script>
 
 <style>
@@ -28,14 +31,14 @@ export default {}
 
 .e-rating-container .custom-font {
   /* To add the background color for the font icon. */
-  background: linear-gradient(to right, rgb(254,87,133,255) var(--rating-value), transparent var(--rating-value));
+  background: linear-gradient(to right, rgb(254, 87, 133, 255) var(--rating-value), transparent var(--rating-value));
   /* To clip the background to the icon (text) alone. */
   background-clip: text;
   -webkit-background-clip: text;
   /* To make the background color visible instead of font color. */
   -webkit-text-fill-color: transparent;
   /* To provide a border for font icon. */
-  -webkit-text-stroke: 1px rgb(254,87,133,255);
+  -webkit-text-stroke: 1px rgb(254, 87, 133, 255);
 }
 
 @font-face {
@@ -45,7 +48,8 @@ export default {}
   font-style: normal;
 }
 
-[class^="sf-rating-"], [class*=" sf-rating-"] {
+[class^="sf-rating-"],
+[class*=" sf-rating-"] {
   font-family: "rating" !important;
   speak: none;
   font-style: normal;
@@ -60,7 +64,4 @@ export default {}
 .sf-rating-heart:before {
   content: "\e702";
 }
-
 </style>
-
-

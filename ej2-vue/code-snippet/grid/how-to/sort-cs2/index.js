@@ -12,8 +12,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-     <ejs-button @click.native='SingleClearSort'>Clear the sort for <b>OrderID</b> column</ejs-button>
-     <ejs-button @click.native='MultiClearSort'>Clear sorting for entire sorted columns</ejs-button>
+     <ejs-button @click='SingleClearSort'>Clear the sort for <b>OrderID</b> column</ejs-button>
+     <ejs-button @click='MultiClearSort'>Clear sorting for entire sorted columns</ejs-button>
         <ejs-grid ref='grid' :dataSource='data' :allowSorting='true' :sortSettings='sortOptions' height='280px' >
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>

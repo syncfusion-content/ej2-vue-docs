@@ -1,16 +1,16 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :allowSelection='true' :rowSelected="rowSelected"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Selection } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Selection } from "@syncfusion/ej2-vue-gantt";
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -50,9 +50,9 @@ export default {
             },
             rowSelected: function(args) {
                 var ganttObj = document.getElementById('GanttContainer').ej2_instances[0];
-                let selectedrowindex: number[] = ganttObj.selectionModule.getSelectedRowIndexes();  // get the selected row indexes.
+                let selectedrowindex = ganttObj.selectionModule.getSelectedRowIndexes();  // get the selected row indexes.
                 alert(selectedrowindex); // to alert the selected row indexes.
-                let selectedrecords: Object[] = ganttObj.selectionModule.getSelectedRecords();  // get the selected records.
+                let selectedrecords = ganttObj.selectionModule.getSelectedRecords();  // get the selected records.
                 console.log(selectedrecords); // to print the selected records in console window.
             }
       };
@@ -62,6 +62,3 @@ export default {
   }
 };
 </script>
-
-
-

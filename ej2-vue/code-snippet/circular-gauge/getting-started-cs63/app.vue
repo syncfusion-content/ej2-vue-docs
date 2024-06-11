@@ -1,26 +1,37 @@
-
-
 <template>
-<div id="app">
-      <div class='wrapper'>
-        <ejs-circulargauge style='display:block' align='center' id='tooltip-container' :title='title' :titleStyle='titleStyle' :enablePointerDrag='enablePointerDrag' :tooltipRender='tooltipRender' :tooltip='tooltip'>
-            <e-axes>
-                <e-axis :radius='gaugeradius' :startAngle='startAngle' minimum=0 maximum=120 :endAngle='endAngle' :majorTicks='majorTicks' :lineStyle='lineStyle' :minorTicks='minorTicks' :labelStyle='labelStyle' :ranges='ranges'>
-                    <e-pointers>
-                        <e-pointer :value='value' :cap='cap' :radius='pointerRadius' :color='color' :animation='animation'></e-pointer>
-                    </e-pointers>
-                </e-axis>
-            </e-axes>
-        </ejs-circulargauge>
+    <div id="app">
+        <div class='wrapper'>
+            <ejs-circulargauge style='display:block' align='center' id='tooltip-container' ref="gauge" :title='title'
+                :titleStyle='titleStyle' :enablePointerDrag='enablePointerDrag' :tooltipRender='tooltipRender'
+                :tooltip='tooltip'>
+                <e-axes>
+                    <e-axis :radius='gaugeradius' :startAngle='startAngle' minimum=0 maximum=120 :endAngle='endAngle'
+                        :majorTicks='majorTicks' :lineStyle='lineStyle' :minorTicks='minorTicks'
+                        :labelStyle='labelStyle' :ranges='ranges'>
+                        <e-pointers>
+                            <e-pointer :value='value' :cap='cap' :radius='pointerRadius' :color='color'
+                                :animation='animation'></e-pointer>
+                        </e-pointers>
+                    </e-axis>
+                </e-axes>
+            </ejs-circulargauge>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {CircularGaugePlugin, GaugeTooltip } from "@syncfusion/ej2-vue-circulargauge";
-Vue.use(CircularGaugePlugin);
+
+import { CircularGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective, GaugeTooltip } from "@syncfusion/ej2-vue-circulargauge";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective,
+        "e-pointers": PointersDirective,
+        "e-pointer": PointerDirective
+    },
     data: function () {
         return {
             title: 'Tooltip Customization',
@@ -103,7 +114,7 @@ export default {
         },
         tooltipRender: function (args) {
             let color;
-            let cotainerObj = document.getElementById('tooltip-container');
+            let cotainerObj = this.$refs.gauge.ej2Instances;
             let value = args.pointer.currentValue;
             debugger;
             let content = args.content;
@@ -112,19 +123,19 @@ export default {
                 content.children[1].remove();
                 args.textStyle.color = color;
                 args.border.color = color;
-                cotainerObj.ej2_instances[0].axes[0].pointers[0].animation.enable = false;
-                cotainerObj.ej2_instances[0].axes[0].pointers[0].color = color;
-                cotainerObj.ej2_instances[0].axes[0].pointers[0].cap.border.color = color;
-                cotainerObj.ej2_instances[0].setPointerValue(0, 0, value);
+                cotainerObj.axes[0].pointers[0].animation.enable = false;
+                cotainerObj.axes[0].pointers[0].color = color;
+                cotainerObj.axes[0].pointers[0].cap.border.color = color;
+                cotainerObj.setPointerValue(0, 0, value);
             } else {
                 let color = '#33BCBD';
                 content.children[0].remove();
                 args.textStyle.color = color;
                 args.border.color = color;
-                cotainerObj.ej2_instances[0].axes[0].pointers[0].animation.enable = false;
-                cotainerObj.ej2_instances[0].axes[0].pointers[0].color = color;
-                cotainerObj.ej2_instances[0].axes[0].pointers[0].cap.border.color = color;
-                cotainerObj.ej2_instances[0].setPointerValue(0, 0, value);
+                cotainerObj.axes[0].pointers[0].animation.enable = false;
+                cotainerObj.axes[0].pointers[0].color = color;
+                cotainerObj.axes[0].pointers[0].cap.border.color = color;
+                cotainerObj.setPointerValue(0, 0, value);
             }
         }
     }
@@ -132,10 +143,11 @@ export default {
 </script>
 
 <style>
-  .wrapper {
+.wrapper {
     max-width: 300px;
     margin: 0 auto;
-  }
+}
+
 #templateWrap img {
     border-radius: 30px;
     width: 30px;
@@ -149,6 +161,3 @@ export default {
     line-height: 30px;
 }
 </style>
-
-
-

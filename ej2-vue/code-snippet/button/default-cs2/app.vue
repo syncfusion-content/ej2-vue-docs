@@ -1,5 +1,3 @@
-
-
 <template>
 <ejs-button cssClass='e-flat'>Button</ejs-button>
 </template>
@@ -11,6 +9,7 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+name: "App",
   components: {
     'ejs-button': ButtonComponent
   }
@@ -25,5 +24,3 @@ button {
   margin: 25px 5px 20px 20px;
 }
 </style>
-
-

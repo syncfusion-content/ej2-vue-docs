@@ -1,21 +1,21 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :allowDrillThrough="allowDrillThrough"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :allowDrillThrough="allowDrillThrough"  :beginDrillThrough="beginDrillThrough">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, DrillThrough, DrillThroughEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, DrillThrough } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
+import { Grid,Sort, Filter, Group, ContextMenu } from '@syncfusion/ej2-grids';
 
-Vue.use(PivotViewPlugin);
 
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,28 +32,25 @@ export default {
     }
   },
   provide: {
-        pivotview: [DrillThrough]
+    pivotview: [DrillThrough]
   },
   methods: {
-    beginDrillThrough: function(args: BeginDrillThroughEventArgs) {
-        if (args.gridObj) {
-            Grid.Inject(Sort, Filter, Group, ContextMenu);
-            let gridObj: Grid = args.gridObj;
-            gridObj.allowGrouping = true;
-            gridObj.allowSorting = true;
-            gridObj.allowFiltering = true;
-            gridObj.filterSettings = { type: 'CheckBox' };
-            gridObj.contextMenuItems = ['AutoFit', 'AutoFitAll', 'SortAscending', 'SortDescending',
-                'Copy', 'Edit', 'Delete', 'Save', 'Cancel', 'FirstPage', 'PrevPage',
-                'LastPage', 'NextPage'];
-        }
+    beginDrillThrough: function (args) {
+      if (args.gridObj) {
+        Grid.Inject(Sort, Filter, Group, ContextMenu);
+        let gridObj = args.gridObj;
+        gridObj.allowGrouping = true;
+        gridObj.allowSorting = true;
+        gridObj.allowFiltering = true;
+        gridObj.filterSettings = { type: 'CheckBox' };
+        gridObj.contextMenuItems = ['AutoFit', 'AutoFitAll', 'SortAscending', 'SortDescending',
+          'Copy', 'Edit', 'Delete', 'Save', 'Cancel', 'FirstPage', 'PrevPage',
+          'LastPage', 'NextPage'];
+      }
     }
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

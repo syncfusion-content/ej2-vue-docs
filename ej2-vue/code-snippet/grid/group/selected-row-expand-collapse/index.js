@@ -15,7 +15,7 @@ new Vue({
   <div id="app">
     <div style="display: inline-block;">
       <ejs-numerictextbox id='textbox' floatLabelType="Auto" format="##"  width='250px' placeholder="Enter Grouped Row Index"></ejs-numerictextbox>
-      <ejs-button style="margin-top:25px"ref='button' cssClass='e-outline' v-on:click.native="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
+      <ejs-button style="margin-top:25px"ref='button' cssClass='e-outline' v-on:click="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
     </div> 
     <div style="padding-top:5px"><p style="color:red;" id="message">{{ message }}</p></div>
     <ejs-grid ref='grid' style="padding-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>

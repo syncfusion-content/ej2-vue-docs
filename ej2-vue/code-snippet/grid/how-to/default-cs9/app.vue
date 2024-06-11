@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <ejs-dropdownlist ref='dropdown' id='dropdownlist' :dataSource='degree' placeholder='Select a degree'></ejs-dropdownlist>
@@ -14,15 +12,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin,  Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+
+import { GridComponent, ColumnsDirective, ColumnDirective,  Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: data,
@@ -81,5 +82,3 @@ export default {
     padding-top:5px;
 }
 </style>
-
-

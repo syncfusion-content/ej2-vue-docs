@@ -16,7 +16,10 @@ and [`beforeClose`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-b
 In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using `beforeOpen` and `beforeClose` event by adding and removing `e-caret-up` class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

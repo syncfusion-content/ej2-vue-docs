@@ -21,7 +21,10 @@ The drag and drop feature allows you to rearrange rows within the grid by draggi
 Here's an example of how to enable drag and drop within the Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-drag-drop/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-drag-drop/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ To specify the target component where the grid rows should be dropped, use the [
 Here's an example code snippet that demonstrates how to enable Row drag and drop another Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-drag-grid/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-drag-grid/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ The Grid provides the feature to drag and drop grid rows to any custom component
 In the below example, the selected grid row is dragged and dropped in to the TreeView component by using [rowDrop](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowdrop) event. Once the row is dropped into the TreeView component, we have removed the corresponding grid row from grid and its data inserted in custom component. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-drag-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-drag-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ By setting the `targetID`, the Grid will render without a helper icon for row dr
 Here's an example of how to hide the drag and drop icon in the Syncfusion Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-drag-icons/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-drag-icons/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +107,10 @@ The Grid component provides a set of events that are triggered during drag and d
 4. [rowDrop](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowdrop): This event is triggered when a drag element is dropped onto a target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-drag-event/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-drag-event/app.vue %}
 {% endhighlight %}
 {% endtabs %}

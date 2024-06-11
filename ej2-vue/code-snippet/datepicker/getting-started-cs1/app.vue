@@ -1,21 +1,23 @@
-
-
 <template>
-    <div id="app">
-      <div class='wrapper'>
-        <ejs-datepicker :placeholder="waterMark" :floatLabelType="Auto"></ejs-datepicker>
-      </div>
+  <div id="app">
+    <div class='wrapper'>
+      <ejs-datepicker :placeholder="waterMark" :floatLabelType="Auto"></ejs-datepicker>
+    </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DatePickerPlugin } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(DatePickerPlugin);
+import { DatePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
+
 export default {
-data () {
+  name: "App",
+  components: {
+    "ejs-datepicker": DatePickerComponent
+  },
+  data() {
     return {
-      waterMark : 'Select a date'
+      waterMark: 'Select a date'
     }
   }
 }
@@ -26,15 +28,14 @@ data () {
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  .wrapper {
-    max-width: 250px;
-    margin: 0 auto;
-  }
 
-  .e-input-group.e-control-wrapper.e-float-input .e-float-text::after {
-    content: '*';
-    color: red;
-  }
+.wrapper {
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.e-input-group.e-control-wrapper.e-float-input .e-float-text::after {
+  content: '*';
+  color: red;
+}
 </style>
-
-

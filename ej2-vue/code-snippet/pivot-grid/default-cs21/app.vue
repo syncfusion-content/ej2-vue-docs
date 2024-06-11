@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :showFieldList="showFieldList"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"
+      :showFieldList="showFieldList"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -28,9 +26,9 @@ export default {
         formatSettings: [{ name: 'Amount', format: 'C0' }],
         filters: [],
         fieldMapping: [
-           { name: 'Quarter', showSortIcon: false },
-           { name: 'Products', showFilterIcon: false, showRemoveIcon: false },
-           { name: 'Amount', showValueTypeIcon: false, caption: 'Sold Amount' },
+          { name: 'Quarter', showSortIcon: false },
+          { name: 'Products', showFilterIcon: false, showRemoveIcon: false },
+          { name: 'Amount', showValueTypeIcon: false, caption: 'Sold Amount' },
         ]
       },
       height: 350,
@@ -40,8 +38,8 @@ export default {
     }
   },
   provide: {
-        pivotview: [GroupingBar, FieldList]
-    }
+    pivotview: [GroupingBar, FieldList]
+  }
 }
 </script>
 <style>
@@ -50,6 +48,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
 </style>
-
-
-

@@ -18,7 +18,10 @@ End user can also hide grand totals for row or columns separately by setting the
 > By default, [`showGrandTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showgrandtotals), [`showRowGrandTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showrowgrandtotals) and [`showColumnGrandTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showcolumngrandtotals) properties in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) are set as **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs236/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs236/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ End user can also hide grand totals for row or columns separately by setting the
 Allows to show grand totals either at top or bottom in rows and columns using the [`grandTotalsPosition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#grandtotalsposition) property. To show the grand totals at top in rows and columns, set the [`grandTotalsPosition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#grandtotalsposition) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **Top**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs237/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs237/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +50,10 @@ Allows to show or hide sub-totals in rows and columns using the [`showSubTotals`
 > By default, [`showSubTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showsubtotals), [`showRowSubTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showrowsubtotals) and [`showColumnSubTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showcolumnsubtotals) properties in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) are set as **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs238/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs238/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +67,10 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 > By default, [`showSubTotals`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#showsubtotals) property in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) or [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) is set as **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs239/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs239/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +84,10 @@ Allows to show sub-totals either at top or bottom of the header group in rows an
 To show sub-totals at top of the header group in rows and columns, set the [`subTotalsPosition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#subtotalsposition) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **Top**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs240/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs240/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +97,10 @@ To show sub-totals at top of the header group in rows and columns, set the [`sub
 To show sub-totals at bottom of the header group in rows and columns, set the [`subTotalsPosition`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#subtotalsposition) property in [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) to **Bottom**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs241/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs241/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +114,10 @@ It can also be achieved using built-in toolbar options by setting the [`showTool
 The grand totals and sub-totals can be dynamically displayed at the top or bottom of the pivot table's row and column axes by using the built-in options "Grand totals position" and "Subtotals position" available in the grand totals and sub-totals drop down menus, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs242/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs242/app.vue %}
 {% endhighlight %}
 {% endtabs %}

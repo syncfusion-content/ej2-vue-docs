@@ -1,33 +1,34 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        // Position of the node
-        offsetX: 250,
-        offsetY: 250,
-        // Size of the node
-        width: 100,
-        height: 100,
-        //sets the type of the shape as Flow
-        shape: {
-            type: 'Flow',
-            shape: 'Document'
-        },
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-}]
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+const nodes = [{
+    // Position of the node
+    offsetX: 250,
+    offsetY: 250,
+    // Size of the node
+    width: 100,
+    height: 100,
+    //sets the type of the shape as Flow
+    shape: {
+        type: 'Flow',
+        shape: 'Document'
+    },
+    style: {
+        fill: '#6BA5D7',
+        strokeColor: 'white'
+    },
+}];
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -38,7 +39,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

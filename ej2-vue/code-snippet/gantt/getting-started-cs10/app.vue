@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :toolbar="toolbar" :allowFiltering= "true" :timelineSettings="timelineSettings" :splitterSettings= "splitterSettings" :labelSettings= "labelSettings" :projectStartDate="projectStartDate" :projectEndDate= "projectEndDate"></ejs-gantt>
@@ -10,6 +7,7 @@
 import { GanttComponent, Filter, Toolbar } from "@syncfusion/ej2-vue-gantt";
 
 export default {
+name: "App",
   components: {
     'ejs-gantt': GanttComponent
   },
@@ -99,5 +97,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
-
-

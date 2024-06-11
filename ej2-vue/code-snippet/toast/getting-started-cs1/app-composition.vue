@@ -9,9 +9,10 @@ import { ToastComponent as EjsToast } from '@syncfusion/ej2-vue-notifications';
 import { ref, onMounted } from 'vue';
 
 const defaultRef = ref(null);
-onMounted (() => {
-      defaultRef.value.show();
-  });
+
+onMounted(() => {
+    defaultRef.value.show();
+});
 
 </script>
 <style>

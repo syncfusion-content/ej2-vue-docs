@@ -1,5 +1,3 @@
-
-
 <template>
  <ejs-progressbutton content="Spin Left"  :enableProgress="true"></ejs-progressbutton>
 </template>
@@ -7,7 +5,9 @@
 <script setup>
 import { ProgressButtonComponent as EjsProgressbutton } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
+
 enableRipple(true);
+
 </script>
 
 <style>
@@ -16,5 +16,3 @@ enableRipple(true);
   @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

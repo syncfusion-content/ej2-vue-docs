@@ -23,7 +23,10 @@ To get start quickly with Edit Options, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=VUWaKKppBEg" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ To get start quickly with Edit Options, you can check on this video:
 The grid toolbar has the [built-in items](../tool-bar#built-in-toolbar-items) to execute Editing actions.You can define this by using the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ You can disable editing for particular columns by using the [`columns.allowEditi
 In the following demo, editing is disabled for the **CustomerID** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ You can disable the editing for a particular row by using the [`actionBegin`](ht
 In the below demo, the rows which are having the value for `ShipCountry` column as "France" is prevented from editing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +88,10 @@ In the below demo, the rows which are having the value for `ShipCountry` column 
 For batch mode of editing, you can use [`cellEdit`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#celledit) event of Grid. In the below demo, the cells which are having the value as "France" is prevented from editing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +105,10 @@ You can edit template column value by defining `field` for that particular colum
 In the below demo, the `ShipCountry` column is rendered with the template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +126,10 @@ Make the Grid column always editable using the column template feature of the Gr
 In the following example, the textbox is rendered in the Freight column using a column template. The keyup event for the Grid is bound using the [created](https://ej2.syncfusion.com/vue/documentation/api/grid#created) event of the Grid, and the edited changes are saved in the data source using the [updateRow](https://ej2.syncfusion.com/vue/documentation/api/grid#updaterow) method of the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}

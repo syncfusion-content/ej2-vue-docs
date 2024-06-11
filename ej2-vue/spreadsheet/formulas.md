@@ -32,7 +32,10 @@ When loading spreadsheet data with culture-based formula argument separators usi
 In the example below, the Spreadsheet component is rendered with the `German culture (de)`. Additionally, you can find references on how to set the culture-based argument separator and culture-based formatted numeric value as arguments to the formulas.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/formula-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +51,10 @@ You can define and use an unsupported formula, i.e. a user defined/custom formul
 The following code example shows an unsupported formula in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/formula-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ Second, if you want to directly compute any formula or expression, you can use t
 The following code example shows how to use `computeExpression` method in the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/formula-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/formula-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +92,10 @@ You can define a meaningful name for a cell range and use it in the formula for 
 The following code example shows the usage of named ranges support.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/defined-name-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/defined-name-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

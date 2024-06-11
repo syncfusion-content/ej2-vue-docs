@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <ejs-button iconCss='e-search-icon'></ejs-button>
@@ -7,14 +5,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(ButtonPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
+}
 </script>
 
 <style>
@@ -32,5 +31,3 @@ button {
 }
 
 </style>
-
-

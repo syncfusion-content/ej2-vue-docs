@@ -39,26 +39,18 @@ For example, you can include add, start, or pause button to control the progress
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
+<script setup>
+import { provide } from "vue";
+
 import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin, ProgressAnnotation } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent as EjsProgressbar, ProgressAnnotation } from "@syncfusion/ej2-vue-progressbar";
 
-Vue.use(ProgressBarPlugin);
+const trackThickness = 10;
+const progressThickness = 10;
+const content = '<div id="point1" style="font-size:20px;font-weight:bold;color:#ffffff;fill:#ffffff"><span>60%span><div>';
 
-export default Vue.extend({
-  data: function() {
-    return {
-     trackThickness:10,
-     progressThickness:10,
-     content: '<div id="point1" style="font-size:20px;font-weight:bold;color:#ffffff;fill:#ffffff"><span>60%span><div>'
-    };
-  },
-  provide: {
-    progressbar: [ProgressAnnotation]
-  },
-  methods: {}
-});
+provide('progressbar',  [ProgressAnnotation]);
+
 </script>
 <style>
   #loader {
@@ -104,37 +96,29 @@ You can show the progress value in both linear and cicular progress bar using **
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
+<script setup>
+import { provide } from "vue";
+
 import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-Vue.use(ProgressBarPlugin);
+const trackThickness = 24;
+const progressThickness = 24;
+const value = 50;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const labelStyle = {
+  color: '#FFFFFF'
+};
+const showProgressValue = true;
 
-export default Vue.extend({
-  data: function() {
-    return {
-     trackThickness:24,
-     progressThickness:24,
-     value:50,
-     animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-     labelStyle: {
-       color: '#FFFFFF'
-       },
-     showProgressValue: true
-    };
-  },
-  provide: {},
-  methods: {
-     textRender: function(args) {
-        args.text = '50';
-     }
-  }
-});
+const textRender = function(args){
+  args.text = '50';
+};
+
 </script>
 <style>
   #loader {

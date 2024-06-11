@@ -36,7 +36,10 @@ In overview, the view port of the diagram is highlighted with a red colored rect
 The following image shows how the diagram is zoomed/panned with overview.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/overview/overview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/overview/overview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

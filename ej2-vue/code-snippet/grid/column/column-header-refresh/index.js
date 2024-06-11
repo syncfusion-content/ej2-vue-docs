@@ -9,7 +9,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-      <ejs-button  v-on:click.native="refreshHeader">Refresh Header</ejs-button>
+      <ejs-button  v-on:click="refreshHeader">Refresh Header</ejs-button>
       <div style='padding:20px 0px 0px 0px'>
         <ejs-grid ref="grid" :dataSource="data">
           <e-columns>

@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid id='TreeGrid' ref='treeGrid' :dataSource="data" :allowRowDragAndDrop='true' height='315' :treeColumnIndex='1'
@@ -14,11 +12,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, RowDD } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, RowDD, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
-Vue.use(TreeGridPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data () {
     return {
       data: sampleData,
@@ -37,6 +43,3 @@ export default {
   },
 }
 </script>
-
-
-

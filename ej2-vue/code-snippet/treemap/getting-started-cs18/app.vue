@@ -1,5 +1,3 @@
-
-
 <template>
       <div class='control_wrapper'>
          <ejs-treemap id='container' :dataSource="dataSource" weightValuePath="Sales" enableDrillDown="true" :palette="palette"
@@ -9,11 +7,14 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin } from '@syncfusion/ej2-vue-treemap';
 
-Vue.use(TreeMapPlugin);
+import { TreeMapComponent } from '@syncfusion/ej2-vue-treemap';
+
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent
+},
    data () {
     return {
       dataSource:  [
@@ -50,12 +51,10 @@ export default {
     }
   },
   methods:{
-    drillStart:function(args){
+    drillStart:function(){
         let labelElementGroup = document.getElementById('container_Label_Template_Group');
         labelElementGroup.remove();
     }
   }
 }
 </script>
-
-

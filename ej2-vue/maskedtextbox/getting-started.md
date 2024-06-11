@@ -85,11 +85,13 @@ Follow the below steps to add the Vue Maskedtextbox component using `Composition
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
-import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
+import { MaskedTextBoxComponent as EjsMaskedtextbox} from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -97,9 +99,10 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 
 export default {
-  components: {
-    'ejs-maskedtextbox': MaskedTextBoxComponent
-  }
+name: "App",
+components: {
+"ejs-maskedtextbox':":MaskedTextBoxComponent
+}
 }
 </script>
 
@@ -112,7 +115,7 @@ Add the EJ2 Vue MaskedTextBox using `<ejs-maskedtextbox>` to the `<template>` se
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% raw %}
 <template>
     <div class="control_wrapper">
       <div class="control-label">MaskedTextbox
@@ -124,6 +127,7 @@ Add the EJ2 Vue MaskedTextBox using `<ejs-maskedtextbox>` to the `<template>` se
 import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -137,9 +141,10 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 <script>
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
-  components: {
-    'ejs-maskedtextbox': MaskedTextBoxComponent
-  },
+name: "App",
+components: {
+"ejs-maskedtextbox":MaskedTextboxComponent
+},
   data () {
     return {}
   }
@@ -157,7 +162,7 @@ The following example demonstrates the usage of mask element 0 that allows any s
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% raw %}
 <template>
     <div class="control_wrapper">
         <div class="control-label">MaskedTextBox
@@ -170,6 +175,7 @@ The following example demonstrates the usage of mask element 0 that allows any s
 import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -184,9 +190,11 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 <script>
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
-    components: {
-        'ejs-maskedtextbox': MaskedTextBoxComponent
-    }
+name: "App",
+components: {
+"ejs-maskedtextbox":MaskedTextboxComponent
+},
+
 }
 </script>
 

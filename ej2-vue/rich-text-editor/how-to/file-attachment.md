@@ -21,74 +21,72 @@ The following sample illustrates how to attach a file in the Rich Text Editor.
 
 ```
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :insertImageSettings="insertImageSettings">
-       <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
-        <p><b>Key features:</b></p>
-          <ul>
-            <li><p>Provides IFRAME and DIV modes</p></li>
-            <li><p>Capable of handling markdown editing.</p></li>
-            <li><p>Contains a modular library to load the necessary functionality on demand.</p></li>
-            <li><p>Provides a fully customizable toolbar.</p></li>
-          </ul>
-        </ejs-richtexteditor>
-             <ejs-uploader ref="uploadObj" :asyncSettings= "path"
-            :dropArea = "dropElement" :success= "onImageUploadSuccess" ></ejs-uploader>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :insertImageSettings="insertImageSettings">
+                        <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides
+                            the best user experience to create and update the content. Users can format their content using
+                            standard toolbar commands.</p>
+                        <p><b>Key features:</b></p>
+                        <ul>
+                            <li>
+                                <p>Provides IFRAME and DIV modes</p>
+                            </li>
+                            <li>
+                                <p>Capable of handling markdown editing.</p>
+                            </li>
+                            <li>
+                                <p>Contains a modular library to load the necessary functionality on demand.</p>
+                            </li>
+                            <li>
+                                <p>Provides a fully customizable toolbar.</p>
+                            </li>
+                        </ul>
+                    </ejs-richtexteditor>
+                    <ejs-uploader ref="uploadObj" :asyncSettings="path" :dropArea="dropElement"
+                        :success="onImageUploadSuccess"></ejs-uploader>
+                </div>
+            </div>
         </div>
+
     </div>
-</div>
-
-</div>
 </template>
+<script setup>
+import { provide, createApp, ref } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar, Table, NodeSelection } from "@syncfusion/ej2-vue-richtexteditor";
+import { UploaderComponent as EjsUploader } from "@syncfusion/ej2-vue-inputs";
+const rteObj = ref(null);
+const uploadObj = ref(null);
+const selection = new NodeSelection();
+const range = null;
+const dropElement = '.e-richtexteditor';
+const saveSelection = null;
+const insertImageSettings = {
+    saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/Save",
+    path: "../Files/"
+};
+const path = {
+    saveUrl: '[SERVICE_HOSTED_PATH]/api/uploadbox/Save'
+};
+const onImageUploadSuccess = (args) => {
+    rteObj.value.ej2Instances.contentModule.getEditPanel().focus();
+    range = selection.getRange(document);
+    saveSelection = selection.save(range, document);
+    var fileUrl = document.URL + rteObj.value.ej2Instances.insertImageSettings.path + args.file.name;
+    rteObj.value.ej2Instances.executeCommand('createLink', { url: fileUrl, text: fileUrl, selection: saveSelection });
 
-<script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar, Table ,NodeSelection} from "@syncfusion/ej2-vue-richtexteditor";
-import {UploaderPlugin} from "@syncfusion/ej2-vue-inputs";
-Vue.use(RichTextEditorPlugin);
-Vue.use(UploaderPlugin);
-
-export default Vue.extend({
-    data: function() {
-        return {
-           selection: new NodeSelection(),
-            range: null,
-            dropElement: '.e-richtexteditor',
-            saveSelection : null,
-          insertImageSettings: {
-                    saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/Save",
-                    path: "../Files/"
-                },
-                 path:  {
-            saveUrl: '[SERVICE_HOSTED_PATH]/api/uploadbox/Save'
-          },
-        };
-    },
-    methods: {
-        onImageUploadSuccess: function(args){
-        this.$refs.rteObj.ej2Instances.contentModule.getEditPanel().focus();
-        this.range = this.selection.getRange(document);
-        this.saveSelection = this.selection.save(this.range, document);
-        var fileUrl = document.URL + this.$refs.rteObj.ej2Instances.insertImageSettings.path + args.file.name;
-        this.$refs.rteObj.ej2Instances.executeCommand('createLink', { url: fileUrl, text: fileUrl, selection: this.saveSelection });
-
-        if (this.$refs.rteObj.ej2Instances.formatter.getUndoRedoStack().length === 0) {
-                        this.$refs.rteObj.ej2Instances.formatter.saveData();
-                    }
-        saveSelection.restore();
-        this.$refs.rteObj.ej2Instances.executeCommand('createLink', { url: fileUrl, text: fileUrl, selection: saveSelection });
-        this.$refs.rteObj.ej2Instances.formatter.saveData();
-        this.$refs.rteObj.ej2Instances.formatter.enableUndo(this.$refs.rteObj.ej2Instances);
-        this.$refs.uploadObj.ej2Instances.clearAll();
-        }
-    },
-    provide:{
-        richtexteditor:[Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar, Table]
+    if (rteObj.value.ej2Instances.formatter.getUndoRedoStack().length === 0) {
+        rteObj.value.ej2Instances.formatter.saveData();
     }
-});
+    saveSelection.restore();
+    rteObj.value.ej2Instances.executeCommand('createLink', { url: fileUrl, text: fileUrl, selection: saveSelection });
+    rteObj.value.ej2Instances.formatter.saveData();
+    rteObj.value.ej2Instances.formatter.enableUndo(rteObj.value.ej2Instances);
+    uploadObj.value.ej2Instances.clearAll();
+};
+provide('richtexteditor', [Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar, Table]);
 </script>
 
 ```

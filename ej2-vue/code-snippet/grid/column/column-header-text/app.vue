@@ -9,7 +9,7 @@
       <label style="padding: 30px 17px 0 0">Enter new header text :</label>
       <ejs-textbox ref="textbox" required placeholder="Enter new header text" width="220">
       </ejs-textbox>
-      <ejs-button style="margin-left: 10px" id="buttons"  v-on:click.native="changeHeaderText" >
+      <ejs-button style="margin-left: 10px" id="buttons"  v-on:click="changeHeaderText" >
         Change
       </ejs-button>
     </div>
@@ -28,18 +28,22 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { TextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
-import { data } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(TextBoxPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+import { data } from "./datasource.js";
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-textbox":TextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

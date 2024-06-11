@@ -15,7 +15,10 @@ The floating functionality of the component allows you to effectively use the en
 The following sample demonstrates how to enable or disable the floating of panels in the Dashboard Layout component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/floating-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/floating-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

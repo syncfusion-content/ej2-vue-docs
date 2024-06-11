@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Document Editor provides RTL (right-to-left) support. This can be enabled using the “enableRtl” property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/right-to-left-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/right-to-left-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ By using the `hidePopup` method in DropDownList, you can close the popup on scro
 The following example demonstrate about how to close the popup on scroll.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/scroll-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/scroll-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

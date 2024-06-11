@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 We can prevent the tab selection on touch swipe action by using the Tab [`selecting`](https://ej2.syncfusion.com/vue/documentation/api/tab#selecting) event. Refer the below sample with preventing swipe selection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/swipe-selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/swipe-selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

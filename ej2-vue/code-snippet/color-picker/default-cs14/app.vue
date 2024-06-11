@@ -1,21 +1,23 @@
-
-
 <template>
-<div class='wrap'>
+  <div class='wrap'>
     <h4>Choose Color</h4>
     <ejs-colorpicker :showButtons="false"></ejs-colorpicker>
-</div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ColorPickerPlugin);
 
-export default {}
+export default {
+  name: "App",
+  components: {
+    "ejs-colorpicker": ColorPickerComponent
+  }
+}
 </script>
 
 <style>
@@ -31,5 +33,3 @@ export default {}
   text-align: center;
 }
 </style>
-
-

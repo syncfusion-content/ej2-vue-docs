@@ -1,30 +1,39 @@
-
-
 <template>
-<div id="app">
-      <div class='wrapper'>
-        <ejs-circulargauge  style='display:block' align='center' id='tooltip-container'  :enablePointerDrag='enablePointerDrag' :tooltip='tooltip'>
-            <e-axes>
-                <e-axis :annotations='annotations' :radius='gaugeradius' :startAngle='startAngle' minimum=0 maximum=120 :endAngle='endAngle' :majorTicks='majorTicks' :lineStyle='lineStyle' :minorTicks='minorTicks' :labelStyle='labelStyle' :ranges='ranges'>
-                    <e-pointers>
-                        <e-pointer :value='value' :cap='cap' :radius='pointerRadius' :color='color' :animation='animation'></e-pointer>
-                    </e-pointers>
-                </e-axis>
-            </e-axes>
-        </ejs-circulargauge>
+    <div id="app">
+        <div class='wrapper'>
+            <ejs-circulargauge style='display:block' align='center' id='tooltip-container'
+                :enablePointerDrag='enablePointerDrag' :tooltip='tooltip'>
+                <e-axes>
+                    <e-axis :annotations='annotations' :radius='gaugeradius' :startAngle='startAngle' minimum=0
+                        maximum=120 :endAngle='endAngle' :majorTicks='majorTicks' :lineStyle='lineStyle'
+                        :minorTicks='minorTicks' :labelStyle='labelStyle' :ranges='ranges'>
+                        <e-pointers>
+                            <e-pointer :value='value' :cap='cap' :radius='pointerRadius' :color='color'
+                                :animation='animation'></e-pointer>
+                        </e-pointers>
+                    </e-axis>
+                </e-axes>
+            </ejs-circulargauge>
+        </div>
     </div>
-</div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {CircularGaugePlugin, GaugeTooltip, Annotations } from "@syncfusion/ej2-vue-circulargauge";
-Vue.use(CircularGaugePlugin);
+import { CircularGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective, GaugeTooltip, Annotations } from "@syncfusion/ej2-vue-circulargauge";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective,
+        "e-pointers": PointersDirective,
+        "e-pointer": PointerDirective
+    },
     data: function () {
         return {
             annotations: [{
-                  content: 'CircularGauge', zIndex:'1', angle: 180
+                content: 'CircularGauge', zIndex: '1', angle: 180
             }],
             gaugeradius: '90%',
             startAngle: 240,
@@ -78,11 +87,11 @@ export default {
                 color: '#33BCBD',
             }],
             tooltip: {
-                type:['Pointer', 'Range', 'Annotation'],
+                type: ['Pointer', 'Range', 'Annotation'],
                 enable: true,
                 enableAnimation: false,
-                annotationSettings: { template:'<div>CircularGauge</div>' },
-                rangeSettings: { fill:'red' }
+                annotationSettings: { template: '<div>CircularGauge</div>' },
+                rangeSettings: { fill: 'red' }
             },
             enablePointerDrag: true
         }
@@ -90,26 +99,25 @@ export default {
     provide: {
         circulargauge: [GaugeTooltip, Annotations]
     },
- };
+};
 </script>
 
 <style>
-  .wrapper {
+.wrapper {
     max-width: 300px;
     margin: 0 auto;
-  }
+}
+
 #templateWrap img {
     border-radius: 30px;
     width: 30px;
     height: 30px;
     margin: 0 auto;
 }
+
 #templateWrap .des {
     float: right;
     padding-left: 10px;
     line-height: 30px;
 }
 </style>
-
-
-

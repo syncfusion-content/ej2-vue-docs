@@ -15,7 +15,10 @@ You can render icons to the list items by mapping the [`iconCss`](https://ej2.sy
 In the following sample, the icon classes are mapped with iconCss field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,27 +1,28 @@
-
-
 <template>
-<div>
-    <div id="target">
-        <div id='left' class='e-div'>Clipboard</div>
-        <div id='right' class='e-div'>Editor</div>
+    <div>
+        <div id="target">
+            <div id='left' class='e-div'>Clipboard</div>
+            <div id='right' class='e-div'>Editor</div>
+        </div>
+        <ejs-contextmenu id='cmenu' target='#target' :items='menuItems' :beforeOpen="onBeforeOpen"></ejs-contextmenu>
     </div>
-    <ejs-contextmenu id='cmenu' target='#target' :items='menuItems' :beforeOpen="onBeforeOpen"></ejs-contextmenu>
-</div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ContextMenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { ContextMenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ContextMenuPlugin);
 
 export default {
-    data () {
+    name: "App",
+    components: {
+        "ejs-contextmenu": ContextMenuComponent
+    },
+    data() {
         return {
-            menuItems:[
+            menuItems: [
                 {
                     text: 'Cut'
                 },
@@ -44,7 +45,7 @@ export default {
         };
     },
     methods: {
-        onBeforeOpen: function(args) {
+        onBeforeOpen: function (args) {
             var menuObj = document.getElementById("cmenu").ej2_instances[0];
             // To hide/show items on right click.
             if ((args.event.target).id === 'right') {
@@ -52,7 +53,7 @@ export default {
                 menuObj.showItems(['Add', 'Edit', 'Delete']);
             } else if (args.event.target.id === 'left') {
                 menuObj.showItems(['Cut', 'Copy', 'Paste']);
-                menuObj.hideItems(['Add','Edit','Delete']);
+                menuObj.hideItems(['Add', 'Edit', 'Delete']);
             }
         }
     }
@@ -67,18 +68,16 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 #target {
-  user-select: none;
+    user-select: none;
 }
 
 .e-div {
-  width: 40%;
-  border: 1px dashed;
-  height: 150px;
-  margin: 10px;
-  text-align: center;
-  line-height: 150px;
-  display: inline-block;
+    width: 40%;
+    border: 1px dashed;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    line-height: 150px;
+    display: inline-block;
 }
 </style>
-
-

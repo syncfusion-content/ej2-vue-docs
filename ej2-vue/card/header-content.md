@@ -44,7 +44,10 @@ Card header has an option for adding images in the header. It is aligned with ei
 * The header image can be added by creating a `div` element with `e-card-header-image` class which can be placed before or after the header caption wrapper element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/card/header-content/image-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/card/header-content/image-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +62,10 @@ Content in Card holds texts, images, links and all possible HTML elements. Its a
 * Place content `div` element in the Card root element or within any Card inner elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/card/header-content/content-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/card/header-content/content-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

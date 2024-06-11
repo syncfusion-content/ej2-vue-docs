@@ -165,11 +165,11 @@ The DateRangePicker component's full-screen mode feature enables users to view t
     <ejs-daterangepicker :fullScreenMode="mobileMode" ></ejs-daterangepicker>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
+<script setup>
 
-Vue.use(DateRangePickerPlugin);
+import { DateRangePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
+
 export default {
   name: 'app',
   data () {

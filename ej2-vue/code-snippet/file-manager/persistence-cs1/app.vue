@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager" :enablePersistence="enablePersistence" :ajaxSettings="ajaxSettings" :success="onAjaxSuccess" :failure="onAjaxFailure">
@@ -10,8 +8,9 @@
 import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
 export default {
+    name: "App",
     components: {
-        'ejs-filemanager': FileManagerComponent
+        "ejs-filemanager":FileManagerComponent
     },
     data () {
         return {
@@ -52,5 +51,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-
-

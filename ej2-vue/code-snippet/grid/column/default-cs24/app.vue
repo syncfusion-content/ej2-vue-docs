@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data" :allowReordering='true' :allowSelection='false' height='315px'>
@@ -15,13 +13,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Reorder } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Reorder } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -42,5 +43,3 @@ export default {
   background-color: #ecedee;
 }
 </style>
-
-

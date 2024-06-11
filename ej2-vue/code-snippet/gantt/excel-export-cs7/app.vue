@@ -1,17 +1,19 @@
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :toolbar="toolbar" :toolbarClick="toolbarClick" :excelQueryCellInfo="excelQueryCellInfo" :queryCellInfo="queryCellInfo" :queryTaskbarInfo = "queryTaskbarInfo" :allowExcelExport='true' :height="height" :treeColumnIndex="1" :columns = "columns" :labelSettings="labelSettings" :splitterSettings= "splitterSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, ExcelExport, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, ExcelExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { ganttData  } from './data-source.js';
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data: ganttData,
@@ -38,13 +40,13 @@ export default {
         splitterSettings: {
             columnIndex: 3
         },
-        toolbarClick: (args: ClickEventArgs) => {
+        toolbarClick: (args) => {
                 if (args.item.id === 'GanttContainer_excelexport') {
                     var ganttObj = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttObj.excelExport();
                 }
             },
-        excelQueryCellInfo: (args: any) => {
+        excelQueryCellInfo: (args) => {
             if(args.column.field == 'Progress'){
                 if(args.value > 80) {
                     args.style = { backColor: '#A569BD' };
@@ -63,7 +65,7 @@ export default {
                 args.taskbarBgColor = args.taskbarBorderColor = "#F08080";
             }
         },
-        queryCellInfo: (args: any) => {
+        queryCellInfo: (args) => {
             if(args.column.field == 'Progress'){
                 if(args.data.Progress > 80) {
                     args.cell.style.backgroundColor  = '#A569BD';
@@ -80,5 +82,3 @@ export default {
   }
 };
 </script>
-
-

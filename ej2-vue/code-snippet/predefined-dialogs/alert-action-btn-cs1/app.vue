@@ -1,30 +1,17 @@
-
-
 <template>
     <div class="predefinedDialog">
-      <ejs-button id="alertDlgBtn" v-on:click.native="alertBtnClick" cssClass="e-danger">Alert</ejs-button>
+      <ejs-button id="alertDlgBtn" v-on:click="alertBtnClick" cssClass="e-danger">Alert</ejs-button>
     </div>
 </template>
-
-<style>
-  @import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-.predefinedDialog {
-  height: 100%;
-  min-height: 350px;
-}
-.e-dialog.customClass {
-  min-width: 300px;
-  min-height: 200px;
-}
-</style>
-
 <script>
-import Vue from "vue";
 import { DialogUtility } from "@syncfusion/ej2-vue-popups";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(DialogUtility);
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
   data: function () {
     return {};
   },
@@ -40,5 +27,14 @@ export default {
   },
 }
 </script>
-
-
+<style>
+  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+.predefinedDialog {
+  height: 100%;
+  min-height: 350px;
+}
+.e-dialog.customClass {
+  min-width: 300px;
+  min-height: 200px;
+}
+</style>

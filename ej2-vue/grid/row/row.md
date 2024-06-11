@@ -23,7 +23,10 @@ You can customize the appearance of the rows by using the [rowDataBound](https:/
 Here's an example of how you can use the `rowDataBound` event to customize the styles of rows based on the value of the **Freight** column. This example involves checking the value of the Freight column for each row and adding a CSS class to the row based on the value. The CSS classes **below-30**, **below-80**, and **above-80** can then be defined in your stylesheet to apply the desired styles to the rows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-event/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-event/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +54,10 @@ To change the background color of the alternate rows, you can add the following 
 Here's an example of how to use the **.e-altrow** class to style alternate rows:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-css/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-css/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ To change the background color of the selected row, you can add the following CS
 Here's an example of how to use the **.e-selectionbackground** class to style the selected row:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-selected-css/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-selected-css/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +103,10 @@ The Grid provides below methods to customize the appearance of the grid rows :
 The following example demonstrates how to use [getRowByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getrowbyindex) methods to customize the appearance of the row inside the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event of the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +120,10 @@ The Syncfusion Grid allows you to customize the height of rows based on your nee
 In the below example, we will demonstrate how to dynamically change the height of the rows using the `rowHeight` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-height/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-height/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -128,7 +143,10 @@ The `rowHeight` property of the Grid component allows you to set the height of a
 In the below example, the row height for the row with OrderID as '10249' is set as '90px' using the `rowDataBound` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-customize-height/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-customize-height/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +166,10 @@ By default, the `enableHover` property is set to **true**, which means that the 
 Here is an example that demonstrates how to enable/disable the row hover based on the Switch component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-hover/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-hover/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +188,10 @@ You can retrieve row information when hovering over a specific cell. This can be
 Here's an example that demonstrates how to use the `rowDataBound` event and `getRowInfo` method to retrieve the row information when hovering over a cell in the Syncfusion Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-information/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-information/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +207,10 @@ The Syncfusion Vue Grid allows you to freeze rows to keep them visible while scr
 In the following example, the [frozenRows](https://ej2.syncfusion.com/vue/documentation/api/grid/#frozenrows) property is set to **2**. This configuration freezes the top three rows of the grid, and they will remain fixed in their positions while the rest of the grid can be scrolled vertically.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-frozenRows/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-frozenRows/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -209,7 +236,10 @@ To change the default frozen rows line color, you can use the following CSS clas
 By applying this CSS class, you can set the background color of frozen rows to the specified RGB color. The following example demonstrates how to change the default frozen rows line color using CSS.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-frozenRows-color/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-frozenRows-color/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -241,7 +271,10 @@ The addRecord method takes two parameters:
 Here's an example of how to add a new row using the `addRecord` method:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-new-row/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-new-row/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -265,7 +298,10 @@ In the following example, the **onCheckBoxChange** method is used to check wheth
 If the checkbox is unchecked, the method iterates through the hiddenRows array and shows each row by setting its display style to an empty string. The hiddenRows array is also cleared.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-show-hide/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-show-hide/app.vue %}
 {% endhighlight %}
 {% endtabs %}

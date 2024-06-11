@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div>
-      <ejs-button id="small" cssClass="e-small" v-on:click.native="clickHandler">
+      <ejs-button id="small" cssClass="e-small" v-on:click="clickHandler">
       Change height 20px</ejs-button>
-      <ejs-button id="medium" cssClass="e-small" v-on:click.native="clickHandler">
+      <ejs-button id="medium" cssClass="e-small" v-on:click="clickHandler">
       Default height 42px</ejs-button>
-      <ejs-button  id="big" cssClass="e-small" v-on:click.native="clickHandler">
+      <ejs-button  id="big" cssClass="e-small" v-on:click="clickHandler">
       Change height 60px</ejs-button>
     </div>
     <div style="padding-top:20px">
@@ -28,15 +28,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

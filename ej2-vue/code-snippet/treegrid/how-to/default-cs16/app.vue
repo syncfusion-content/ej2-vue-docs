@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
         <ejs-treegrid :dataSource="data" :allowPaging='true' :treeColumnIndex="1" idMapping='TaskID' parentIdMapping='parentID' ref="treegrid" :toolbar="toolbarOptions"  :allowPdfExport='true' :allowExcelExport='true' :pageSettings='pageSettings' :toolbarClick='toolbarClick' :excelExportComplete='excelExportComplete' :pdfExportComplete='pdfExportComplete' >
@@ -15,13 +13,20 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, PdfExport, ExcelExport} from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, Toolbar, PdfExport, ExcelExport, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { projectData } from "./datasource.js";
 import { Query } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: projectData,
@@ -43,10 +48,10 @@ export default {
             this.$refs.treegrid.excelExport();
         }
      },
-     pdfExportComplete(args) {
+     pdfExportComplete() {
         this.$refs.treegrid.query = this.queryClone();
-     }
-     excelExportComplete(args) {
+     },
+     excelExportComplete() {
         this.$refs.treegrid.query = this.queryClone();
      }
   },
@@ -55,6 +60,3 @@ export default {
   }
 }
 </script>
-
-
-

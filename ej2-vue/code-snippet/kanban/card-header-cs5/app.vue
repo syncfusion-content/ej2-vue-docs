@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <table>
@@ -16,7 +14,7 @@
           <ejs-button
             id="reset_filter"
             class="e-btn"
-            v-on:click.native="resetClick"
+            v-on:click="resetClick"
             >Reset</ejs-button
           >
         </td>
@@ -40,25 +38,30 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from "@syncfusion/ej2-vue-kanban";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { TextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-kanban";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { extend } from "@syncfusion/ej2-base";
 import { Query } from "@syncfusion/ej2-data";
 import { kanbanData } from "./datasource.js";
-Vue.use(KanbanPlugin);
-Vue.use(TextBoxPlugin);
-Vue.use(ButtonPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-textbox":TextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function () {
     return {
       kanbanData: extend([], kanbanData, null, true),
       cardSettings: {
         contentField: "Summary",
         headerField: "Id",
-      },
-      priorityData: ["None", "High", "Normal", "Low"],
+      }
     };
   },
 
@@ -97,6 +100,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css";
 </style>
-
-
-

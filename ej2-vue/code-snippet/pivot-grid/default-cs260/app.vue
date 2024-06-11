@@ -1,26 +1,23 @@
-
-
-
-
 <template>
   <div id="app">
-      <ejs-pivotview id="pivotview_flist" :height="height" :gridSettings="gridSettings" :enginePopulated="enginePopulated" :width="width" :enableVirtualization="enableVirtualization"
-      ></ejs-pivotview>
-      <ejs-pivotfieldlist id="pivotfieldlist1" :dataSourceSettings="dataSourceSettings" :enginePopulated="fieldEnginePopulated" :load="load" :dataBound="dataBound" :allowCalculatedField="allowCalculatedField" :renderMode="renderMode"
-      ></ejs-pivotfieldlist>
+    <ejs-pivotview id="pivotview_flist" :height="height" :gridSettings="gridSettings" :enginePopulated="enginePopulated"
+      :width="width" :enableVirtualization="enableVirtualization"></ejs-pivotview>
+    <ejs-pivotfieldlist id="pivotfieldlist1" :dataSourceSettings="dataSourceSettings"
+      :enginePopulated="fieldEnginePopulated" :load="load" :dataBound="dataBound"
+      :allowCalculatedField="allowCalculatedField" :renderMode="renderMode"></ejs-pivotfieldlist>
   </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotFieldListPlugin, FieldList, CalculatedField, VirtualScroll} from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotFieldListComponent, FieldList, CalculatedField, VirtualScroll } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(PivotFieldListPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent,
+    "ejs-pivotfieldlist": PivotFieldListComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -40,7 +37,7 @@ export default {
     }
   },
   methods: {
-    fieldEnginePopulated: function() {
+    fieldEnginePopulated: function () {
       let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
       let pivotGridObj = document.getElementById('pivotview_flist').ej2_instances[0];
       fieldListObj.updateView(pivotGridObj);
@@ -58,11 +55,11 @@ export default {
       fieldListObj.pageSettings = pivotObj.pageSettings;
     },
     enginePopulated: function () {
-        let pivotObj = document.getElementById('pivotview_flist').ej2_instances[0];
-        let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
-        if (fieldListObj && pivotObj) {
-          fieldListObj.update(pivotObj);
-        }
+      let pivotObj = document.getElementById('pivotview_flist').ej2_instances[0];
+      let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
+      if (fieldListObj && pivotObj) {
+        fieldListObj.update(pivotObj);
+      }
     }
   },
   provide: {
@@ -71,13 +68,10 @@ export default {
 }
 </script>
 <style>
-    @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-    #pivotfieldlist1 {
-      width: 400px;
-      margin-top: 20px;
-    }
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+
+#pivotfieldlist1 {
+  width: 400px;
+  margin-top: 20px;
+}
 </style>
-
-
-
-

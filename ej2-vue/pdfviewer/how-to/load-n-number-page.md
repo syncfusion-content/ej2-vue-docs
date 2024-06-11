@@ -17,116 +17,206 @@ To utilize this capability in Syncfusion PDF Viewer, use the `initialRenderPages
 Using the `initialRenderPages` property judiciously is advisable, especially when dealing with larger documents. It is more suitable for scenarios where a smaller range of pages, such as 10-20, can be loaded to provide a quick initial view of the document.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
 <template>
   <div id="app">
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :initialRenderPages="initialRenderPages"  >
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :initialRenderPages="initialRenderPages">
+    </ejs-pdfviewer>
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+<script setup>
 
-export default {
-  name: 'app',
-  data () {
-    return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      initialRenderPages : 10
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
 
-}
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const initialRenderPages = 10;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
-<template>
-  <div id="app">
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :serviceUrl="serviceUrl"
-        :initialRenderPages="initialRenderPages"  >
-      </ejs-pdfviewer>
-  </div>
-</template>
-
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-
-export default {
-  name: 'app',
-  data () {
-    return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-      initialRenderPages : 10
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
-}
-</script>
-{% endhighlight %}
-{% endtabs %}
-
-```
+{% highlight html tabtitle="Options API (Standalone)" %}
 
 <template>
   <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath"
-      :initialRenderPages="initialRenderPages"  >
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :initialRenderPages="initialRenderPages">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
 
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-  export default {
-    name: 'app',
-    data() {
-      return {
-        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath: "PDF_Succinctly.pdf",
-        initialRenderPages : 10
-      };
-    },
-
-    provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      initialRenderPages: 10
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
   }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl"
+      :initialRenderPages="initialRenderPages">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const initialRenderPages = 10;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
 
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl"
+      :initialRenderPages="initialRenderPages">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      initialRenderPages: 10
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :initialRenderPages="initialRenderPages">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+const initialRenderPages = 10;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :initialRenderPages="initialRenderPages">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'app',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf",
+      initialRenderPages: 10
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  }
+}
+
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Load%20N%20number%20of%20pages%20on%20initial%20loading)

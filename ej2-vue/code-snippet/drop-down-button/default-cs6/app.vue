@@ -1,18 +1,18 @@
-
-
 <template>
 <ejs-dropdownbutton :items='items' iconCss='e-icons e-search' cssClass='e-custom' iconPosition='Top'      content='Find & Select'></ejs-dropdownbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent,
+},
     data () {
         return {
             items:[
@@ -50,5 +50,3 @@ export default {
     font-size: 40px;
     }
 </style>
-
-

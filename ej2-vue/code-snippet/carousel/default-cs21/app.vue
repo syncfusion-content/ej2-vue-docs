@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel :partialVisible="true">
@@ -50,41 +48,44 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
 
-  Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
-  export default {};
+export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  }
+};
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
-  .control-container {
-      margin: 0 auto 2em;
-      max-width: 800px;
-      height: 300px;
-    }
+.control-container {
+  margin: 0 auto 2em;
+  max-width: 800px;
+  height: 300px;
+}
 
-    .img-container {
-      margin: 0 10px;
-      width: 100%;
-      height: 100%;
-    }
+.img-container {
+  margin: 0 10px;
+  width: 100%;
+  height: 100%;
+}
 
-    .img-caption {
-      bottom: 4em;
-      color: #fff;
-      font-size: 12pt;
-      height: 2em;
-      position: relative;
-      padding: 0.3em 1em;
-      text-align: center;
-      width: 100%;
-    }
+.img-caption {
+  bottom: 4em;
+  color: #fff;
+  font-size: 12pt;
+  height: 2em;
+  position: relative;
+  padding: 0.3em 1em;
+  text-align: center;
+  width: 100%;
+}
 </style>
-
-

@@ -20,54 +20,76 @@ You can use [`insertPageNumber`](https://ej2.syncfusion.com/vue/documentation/ap
 
 The following example code illustrates how to insert page number in header.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:created="onCreated.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  // To insert text in cursor position
+  container.value.ej2Instances.documentEditor.editor.insertText('Document editor');
+  // To move the selection to header
+  container.value.ej2Instances.documentEditor.selection.goToHeader();
+  // Insert page number in the current cursor position
+  container.value.ej2Instances.documentEditor.editor.insertPageNumber();
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        // To insert text in cursor position
-        this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
-        // To move the selection to header
-        this.$refs.container.ej2Instances.documentEditor.selection.goToHeader();
-        // Insert page number in the current cursor position
-        this.$refs.container.ej2Instances.documentEditor.editor.insertPageNumber();
-      }
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      // To insert text in cursor position
+      this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
+      // To move the selection to header
+      this.$refs.container.ej2Instances.documentEditor.selection.goToHeader();
+      // Insert page number in the current cursor position
+      this.$refs.container.ej2Instances.documentEditor.editor.insertPageNumber();
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Also, you use [`insertField`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/editor/#insertfield) API in Editor module to insert the Page number in current position
 
@@ -83,52 +105,72 @@ You can use [`pageCount`](https://ej2.syncfusion.com/vue/documentation/api/docum
 
 The following example code illustrates how to get the number of pages in Document.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:created="onCreated.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  // To insert text in cursor position
+  container.value.ej2Instances.documentEditor.editor.insertText('Document editor');
+  // To get the total number of pages
+  let pageCount = container.value.ej2Instances.documentEditor.pageCount;
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        // To insert text in cursor position
-        this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
-        // To get the total number of pages
-        let pageCount = this.$refs.container.ej2Instances.documentEditor.pageCount;
-      }
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      // To insert text in cursor position
+      this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
+      // To get the total number of pages
+      let pageCount = this.$refs.container.ej2Instances.documentEditor.pageCount;
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Navigate to specific page
 
@@ -136,47 +178,65 @@ You can use [`goToPage`](https://ej2.syncfusion.com/vue/documentation/api/docume
 
 The following example code illustrates how to move selection to specific page.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:created="onCreated.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  // To move selection to page number 2
+  container.value.ej2Instances.documentEditor.selection.goToPage(2);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        // To move selection to page number 2
-        this.$refs.container.ej2Instances.documentEditor.selection.goToPage(2);
-      }
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      // To move selection to page number 2
+      this.$refs.container.ej2Instances.documentEditor.selection.goToPage(2);
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}

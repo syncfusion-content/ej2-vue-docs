@@ -51,28 +51,22 @@ After setting the root directory of the file system,  build and run the project.
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager ASP.NET Core service.
-             ajaxSettings:
-            {   // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/FileManager/FileOperations",
-                getImageUrl: "http://localhost:{port}/api/FileManager/GetImage",
-                uploadUrl: "http://localhost:{port}/api/FileManager/Upload",
-                downloadUrl: "http://localhost:{port}/api/FileManager/Download"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings = 
+{   
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/FileManager/FileOperations",
+    getImageUrl: "http://localhost:{port}/api/FileManager/GetImage",
+    uploadUrl: "http://localhost:{port}/api/FileManager/Upload",
+    downloadUrl: "http://localhost:{port}/api/FileManager/Download"
+};
+
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -115,30 +109,21 @@ After setting the root directory of the file system,  build and run the project.
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-export default {
-    data () {
-        return {
-            // Initializing File Manager ASP.NET MVC service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/FileManager/FileOperations",
-                getImageUrl: "http://localhost:{port}/FileManager/GetImage",
-                uploadUrl: "http://localhost:{port}/FileManager/Upload",
-                downloadUrl: "http://localhost:{port}/FileManager/Download"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+const ajaxSettings = 
+    {
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/FileManager/FileOperations",
+    getImageUrl: "http://localhost:{port}/FileManager/GetImage",
+    uploadUrl: "http://localhost:{port}/FileManager/Upload",
+    downloadUrl: "http://localhost:{port}/FileManager/Download"
+    };
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -195,29 +180,21 @@ After setting the blob container references, just build and run the project. Now
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager Azure cloud file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/AzureProvider/AzureFileOperations",
-                getImageUrl: "http://localhost:{port}/api/AzureProvider/AzureGetImage",
-                uploadUrl: "http://localhost:{port}/api/AzureProvider/AzureUpload",
-                downloadUrl: "http://localhost:{port}/api/AzureProvider/AzureDownload"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/AzureProvider/AzureFileOperations",
+    getImageUrl: "http://localhost:{port}/api/AzureProvider/AzureGetImage",
+    uploadUrl: "http://localhost:{port}/api/AzureProvider/AzureUpload",
+    downloadUrl: "http://localhost:{port}/api/AzureProvider/AzureDownload"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -274,29 +251,21 @@ After setting the blob container references, just build and run the project. Now
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager Azure cloud file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/AzureProvider/AzureFileOperations",
-                getImageUrl: "http://localhost:{port}/AzureProvider/AzureGetImage",
-                uploadUrl: "http://localhost:{port}/AzureProvider/AzureUpload",
-                downloadUrl: "http://localhost:{port}/AzureProvider/AzureDownload"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/AzureProvider/AzureFileOperations",
+    getImageUrl: "http://localhost:{port}/AzureProvider/AzureGetImage",
+    uploadUrl: "http://localhost:{port}/AzureProvider/AzureUpload",
+    downloadUrl: "http://localhost:{port}/AzureProvider/AzureDownload"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -345,29 +314,21 @@ After registering the Amazon client account details,  build and run the project.
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager Amazon S3 file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3FileOperations",
-                getImageUrl: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3GetImage",
-                uploadUrl: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3Upload",
-                downloadUrl: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3Download"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3FileOperations",
+    getImageUrl: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3GetImage",
+    uploadUrl: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3Upload",
+    downloadUrl: "http://localhost:{port}/api/AmazonS3Provider/AmazonS3Download"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -416,29 +377,21 @@ After registering the Amazon client account details, just build and run the proj
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager Amazon S3 file service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/FileManager/FileOperations",
-                getImageUrl: "http://localhost:{port}/FileManager/GetImage",
-                uploadUrl: "http://localhost:{port}/FileManager/Upload",
-                downloadUrl: "http://localhost:{port}/FileManager/Download"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/FileManager/FileOperations",
+    getImageUrl: "http://localhost:{port}/FileManager/GetImage",
+    uploadUrl: "http://localhost:{port}/FileManager/Upload",
+    downloadUrl: "http://localhost:{port}/FileManager/Download"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -485,29 +438,22 @@ After registering the File Transfer Protocol details, just build and run the pro
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager file transfer protocol file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/FTPProvider/FTPFileOperations",
-                getImageUrl: "http://localhost:{port}/api/FTPProvider/FTPGetImage",
-                uploadUrl: "http://localhost:{port}/api/FTPProvider/FTPUpload",
-                downloadUrl: "http://localhost:{port}/api/FTPProvider/FTPDownload"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+// Initializing File Manager file transfer protocol file system service.
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/FTPProvider/FTPFileOperations",
+    getImageUrl: "http://localhost:{port}/api/FTPProvider/FTPGetImage",
+    uploadUrl: "http://localhost:{port}/api/FTPProvider/FTPUpload",
+    downloadUrl: "http://localhost:{port}/api/FTPProvider/FTPDownload"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -574,29 +520,24 @@ After configuring the connection, build and run the project. Now, the project wi
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager SQL database file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/SQLProvider/SQLFileOperations",
-                getImageUrl: "http://localhost:{port}/api/SQLProvider/SQLGetImage",
-                uploadUrl: "http://localhost:{port}/api/SQLProvider/SQLUpload",
-                downloadUrl: "http://localhost:{port}/api/SQLProvider/SQLDownload"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+// Initializing File Manager SQL database file system service.
+
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/SQLProvider/SQLFileOperations",
+    getImageUrl: "http://localhost:{port}/api/SQLProvider/SQLGetImage",
+    uploadUrl: "http://localhost:{port}/api/SQLProvider/SQLUpload",
+    downloadUrl: "http://localhost:{port}/api/SQLProvider/SQLDownload"
+};
+
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -644,29 +585,22 @@ After updating the credentials, build and run the project. Now, the project will
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager Google Drive file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveFileOperations",
-                getImageUrl: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveGetImage",
-                uploadUrl: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveUpload",
-                downloadUrl: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveDownload"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+// Initializing File Manager Google Drive file system service.
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveFileOperations",
+    getImageUrl: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveGetImage",
+    uploadUrl: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveUpload",
+    downloadUrl: "http://localhost:{port}/api/GoogleDriveProvider/GoogleDriveDownload"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -736,29 +670,22 @@ Now, mapping the ajaxSettings property of the FileManager component to the appro
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager NodeJS file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/",
-                getImageUrl: "http://localhost:{port}/GetImage",
-                uploadUrl: "http://localhost:{port}/Upload",
-                downloadUrl: "http://localhost:{port}/Download"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+// Initializing File Manager NodeJS file system service.
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/",
+    getImageUrl: "http://localhost:{port}/GetImage",
+    uploadUrl: "http://localhost:{port}/Upload",
+    downloadUrl: "http://localhost:{port}/Download"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -908,29 +835,22 @@ After configuring the Firebase Realtime Database service link, build and run the
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager NodeJS file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeFileOperations",
-                getImageUrl: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeGetImage",
-                uploadUrl: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeUpload",
-                downloadUrl: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeDownload"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+// Initializing File Manager NodeJS file system service.
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeFileOperations",
+    getImageUrl: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeGetImage",
+    uploadUrl: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeUpload",
+    downloadUrl: "http://localhost:{port}/api/FirebaseProvider/FirebaseRealtimeDownload"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -993,29 +913,22 @@ Now, just mapping the **ajaxSettings** property of the FileManager component to 
         </ejs-filemanager>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(FileManagerPlugin);
-export default {
-    data () {
-        return {
-            // Initializing File Manager NodeJS file system service.
-             ajaxSettings:
-            {
-                // Replace the hosted port number in the place of "{port}"
-                url: "http://localhost:{port}/",
-                getImageUrl: "http://localhost:{port}/GetImage",
-                uploadUrl: "http://localhost:{port}/Upload",
-                downloadUrl: "http://localhost:{port}/Download"
-            }
-        };
-    },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
+import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
+// Initializing File Manager NodeJS file system service.
+const ajaxSettings = 
+{
+    // Replace the hosted port number in the place of "{port}"
+    url: "http://localhost:{port}/",
+    getImageUrl: "http://localhost:{port}/GetImage",
+    uploadUrl: "http://localhost:{port}/Upload",
+    downloadUrl: "http://localhost:{port}/Download"
+};
+provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

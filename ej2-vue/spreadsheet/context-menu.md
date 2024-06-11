@@ -70,7 +70,10 @@ You can add the custom items in context menu using the [`addContextMenuItems`](h
 In this demo, Custom Item is added after the Paste item in the context menu.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +87,10 @@ You can remove the items in context menu using the [`removeContextMenuItems`](ht
 In this demo, Insert Column item has been removed from the row/column header context menu.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +104,10 @@ You can enable/disable the items in context menu using the [`enableContextMenuIt
 In this demo, Rename item is disabled in the pager context menu.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/contextmenu/addContextMenu-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

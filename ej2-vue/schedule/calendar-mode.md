@@ -38,7 +38,10 @@ To make use of Islamic calendar in Scheduler, import the `Calendar` and `Islamic
 > To know more information on, how to install the CLDR data, refer the [`Internationalization`](https://ej2.syncfusion.com/documentation/common/internationalization/#installing-cldr-data) topic.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/islamic-calendar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/islamic-calendar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The following example demonstrate about how to remove an item from DropDownList.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/valuechange-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/valuechange-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

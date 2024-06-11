@@ -19,7 +19,10 @@ The Image Editor allows to rotate the image and its annotations by a specific nu
 Here is an example of rotating an image in a button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ The [`Direction`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/
 Here is an example of flipping an image in a button click event. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ The Image Editor allows to magnify an image using the [`zoom`](https://ej2.syncf
 Here is an example of zooming an image in a button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +98,10 @@ The parameter available in the [`panEventArgs`](https://ej2.syncfusion.com/vue/d
 * PanEventArgs.cancel – Specifies the boolean value to cancel the panning action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,4 +144,4 @@ The parameter available in the [`flipping`](https://ej2.syncfusion.com/vue/docum
 
 * FlipEventArgs.direction - The flip direction as ImageEditorDirection to be applied in the image editor. 
 
-* FlipEventArgs.cancel - Specifies a boolean value to cancel the flip action. 
+* FlipEventArgs.cancel - Specifies a boolean value to cancel the flip action.

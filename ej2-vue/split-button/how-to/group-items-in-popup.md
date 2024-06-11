@@ -21,7 +21,10 @@ npm install @syncfusion/ej2-vue-list --save
 In this following example, ListView is created and its element is set as [`target`](https://ej2.syncfusion.com/vue/documentation/api/split-button/#target) for SplitButton.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

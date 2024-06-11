@@ -23,7 +23,10 @@ The scrollbar will be displayed in the gantt when content exceeds the element `w
 We can even set pixel values to width and height of gantt container using [width](https://ej2.syncfusion.com/vue/documentation/api/gantt/#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/gantt/#height) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scrolling-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scrolling-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ Specify the [width](https://ej2.syncfusion.com/vue/documentation/api/gantt/#widt
 Setting the `height` to `100%` requires the gantt parent element to have explicit height. Also, the component will be responsive when the parent container is resized.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scrolling-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scrolling-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +56,10 @@ In the Gantt control, When We use the [`scrollToDate`](https://ej2.syncfusion.co
 The following code examples show how the scroll To Date method works in Gantt:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/scrolltodate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/scrolltodate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +71,10 @@ The following code examples show how the scroll To Date method works in Gantt:
 In the Gantt component, you can set the vertical scroller position dynamically by clicking the custom button using the [`setScrollTop`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#setscrolltop) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/setscrolltop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/setscrolltop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

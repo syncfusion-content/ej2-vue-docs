@@ -26,7 +26,10 @@ The Essential JS 2 Button has the following predefined styles that can be define
 | e-link |  Changes the appearance of the Button like a hyperlink. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +60,10 @@ The basic Button types are explained below.
 | Reset |  This Button resets all the controls in the form elements to their initial values. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +83,10 @@ An outline Button has a border with transparent background. To create an outline
 A round Button is shaped like a circle. Usually, it contains an icon representing its action. To create a round Button, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cssclass) property to `e-round`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +99,10 @@ A toggle Button allows you to change between the two states. The Button is activ
 recognized through the `e-active` class. The functionality of the toggle Button is handled by click event. To create a toggle Button, set the [`isToggle`](https://ej2.syncfusion.com/vue/documentation/api/button/#istoggle) property to `true`. In the following code snippet, the toggle Button text changes to play/pause based on the state of the Button with the use of click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +117,10 @@ The Button can have an icon to provide the visual representation of the action. 
 set the [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/button/#iconcss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Button. You can customize the icon's position by using the[`iconPosition`](https://ej2.syncfusion.com/vue/documentation/api/button/#iconposition) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +134,10 @@ SVG image can be added to the Button using [`iconCss`](https://ej2.syncfusion.co
 In the following example, SVG image is added using the iconCss class `e-search-icon` by setting `height` and `width`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +152,10 @@ The two types of Button sizes are default and small. To change the size of the d
 set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/button/#cssclass) property to `e-small`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

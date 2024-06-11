@@ -15,7 +15,10 @@ In the following example, the sidebar is rendered with custom animation effects.
 Sidebar will automatically adjust expanding animation to match any custom size specified in `CSS` styles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

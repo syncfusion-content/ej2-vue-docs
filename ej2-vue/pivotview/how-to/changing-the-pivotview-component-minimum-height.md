@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The `minHeight` property allows you to change the minimum height for the pivot table control. For the pivot table control, the default minimum height is **300px**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs132/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs132/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <div id="wrapper1">
@@ -12,14 +10,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(SwitchPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-switch":SwitchComponent
+},
   data(){
     return{
       value: true
@@ -46,5 +45,3 @@ export default {
   padding: 0 460px 0 0;
 }
 </style>
-
-

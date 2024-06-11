@@ -1,19 +1,21 @@
-
-
 <template>
   <div id="app">
-       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
        <ejs-toast ref='defaultRef' title='Matt sent you a friend request' content='You have a new friend request yet to accept' :beforeClose='onBeforeClose' :position='position'></ejs-toast>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ToastPlugin } from '@syncfusion/ej2-vue-notifications';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
+
+import { ToastComponent } from '@syncfusion/ej2-vue-notifications';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-toast":ToastComponent
+},
   name: 'app',
   data: function(){
     return {
@@ -38,6 +40,3 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
 </style>
-
-
-

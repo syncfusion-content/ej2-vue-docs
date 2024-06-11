@@ -25,7 +25,10 @@ In mobile devices, you can open the detailed editor window in edit mode by click
 You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection used in the Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ You can change the header title and the text of buttons displayed at the footer 
 To change the default labels such as Subject, Location and other field names in the editor window, make use of the `title` property available within the field option of `eventSettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ To change the default labels such as Subject, Location and other field names in 
 It is possible to validate the required fields of the editor window from client-side before submitting it, by adding appropriate validation rules to each field. The appointment fields have been extended to accept both `string` and `object` type values. To perform validations, it is necessary to specify object values for the event fields.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ It is possible to validate the required fields of the editor window from client-
 The additional fields can be added to the default event editor by making use of the [`popupOpen`](../api/schedule/#popupopen) event which gets triggered before the event editor opens on the Scheduler. The `popupOpen` is a client-side event that triggers before any of the generic popups opens on the Scheduler. The additional field (any of the form elements) should be added with a common class name `e-field`, so as to handle and process those additional data along with the default event object. In the following example, an additional field `Event Type` has been added to the default event editor and its value is processed accordingly.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +87,10 @@ The additional fields can be added to the default event editor by making use of 
 In default event editor window, start and end time duration are processed based on the `interval` value set within the [`timeScale`](../api/schedule/#timescale) property. By default, `interval` value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the `duration` option within the [`popupOpen`](../api/schedule/#popupopen) event as shown in the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +102,10 @@ In default event editor window, start and end time duration are processed based 
 It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the [`popupOpen`](../api/schedule/#popupopen) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +131,10 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 By default, the timezone collections in the editor window have been loaded with built-in timezone collections. Now we can be able to customize the timezone collections using the `timezoneDataSource` property with the collection of `TimezoneFields` data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -135,7 +156,10 @@ Check out this video for further information on how to customise an editor windo
 {% youtube "https://www.youtube.com/watch?v=0mNyH2X-FV0" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -149,7 +173,10 @@ The editor window's header and footer can be enhanced with custom designs using 
 In this demo, we tailor the editor's header according to the appointment's subject field using the [`editorHeaderTemplate`](../api/schedule/#editorheadertemplate). Furthermore, we make use of the [`editorFooterTemplate`](../api/schedule/#editorfootertemplate) to handle the functionality of validating specific fields before proceeding with the save action or canceling it if validation requirements are not met.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-header-footer-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-header-footer-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -161,7 +188,10 @@ In this demo, we tailor the editor's header according to the appointment's subje
 The resource field can be added within editor template with multiselect control for allow multiple resources.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-field-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-field-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,7 +203,10 @@ The resource field can be added within editor template with multiselect control 
 The following code example shows how to add recurrence options within the editor template by importing `RecurrenceEditor`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-recurrence-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-recurrence-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +218,10 @@ The following code example shows how to add recurrence options within the editor
 In the following code example, validation has been added to the status field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -201,7 +237,10 @@ Note: You can allow to retrieve the data only on the `save` and `delete` option.
 The following code example shows how to save the customized event editor using a template by the `popupClose` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -231,7 +270,10 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 > The quick popup that opens while single clicking on the cells are not applicable on mobile devices.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -243,7 +285,10 @@ By default, these popups are displayed over cells and appointments of Scheduler 
 By default the `QuickInfo` popup will open on single click of the cell. To open the quick info popup on multiple cell selection, you need to select the cells and press `enter` key. You can open this popup immediately after multiple cell selection by setting up `true` to `quickInfoOnSelectionEnd` property where as its default value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -273,7 +318,10 @@ The look and feel of the built-in quick popup window, which opens when single cl
 * footer - Accepts the template design that customizes the footer part of the quick popup.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/quick-info-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/quick-info-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -293,7 +341,10 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 The following code example shows how to disable the display of such popups while clicking on the more text indicator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -305,7 +356,10 @@ The following code example shows how to disable the display of such popups while
 The following code example shows you how to customize the default more indicator popup in which number of events rendered count on the day has been shown in the header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -317,7 +371,10 @@ The following code example shows you how to customize the default more indicator
 It is possible to prevent the display of popup window by passing the value `true` to `cancel` option within the `MoreEventsClick` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -329,7 +386,10 @@ It is possible to prevent the display of popup window by passing the value `true
 The following code example shows you how to customize the [`moreEventsClick`](../api/schedule/#moreeventsclick) property to navigate to the Day view when clicking on the more text indicator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -341,7 +401,10 @@ The following code example shows you how to customize the [`moreEventsClick`](..
 You can close the editor window by using [closeEditor](https://ej2.syncfusion.com/vue/documentation/api/schedule/#closeeditor) method.  
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -353,7 +416,10 @@ You can close the editor window by using [closeEditor](https://ej2.syncfusion.co
 You can open the quick info popup in scheduler by using the [openQuickInfoPopup](https://ej2.syncfusion.com/vue/documentation/api/schedule/#openquickinfopopup) public method. To open the cell quick info popup, you can pass the cell data as an argument to the method. To open the event quick info popup, you should pass the event data object as an argument to the method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -364,7 +430,10 @@ You can open the quick info popup in scheduler by using the [openQuickInfoPopup]
 
 You can close the quick info popup in scheduler by using the [closeQuickInfoPopup](https://ej2.syncfusion.com/vue/documentation/api/schedule/#closequickinfopopup) public method. The following code example demonstrates the how to close quick info popup manually.
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/editor-window-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/editor-window-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

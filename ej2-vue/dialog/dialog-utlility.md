@@ -36,7 +36,10 @@ The following options are used as an argument on calling the utility functions:
 An alert dialog box is used to display warning like messages to the users. Use the following code to render a simple alert dialog in an application.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dialog-utility-alert-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dialog-utility-alert-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ An alert dialog box is used to display warning like messages to the users. Use t
 ### Render an alert dialog with options
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dialog-utility-alert1-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dialog-utility-alert1-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ An alert dialog box is used to display warning like messages to the users. Use t
 A confirm dialog displays a specified message along with 'OK' and 'Cancel' button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dialog-utility-confirm-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dialog-utility-confirm-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ A confirm dialog displays a specified message along with 'OK' and 'Cancel' butto
 ### Render a confirmation dialog with options
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dialog-utility-confirm1-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dialog-utility-confirm1-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +99,10 @@ You can also manually close the Dialogs by creating an instance to the dialog an
 Below sample demonstrates the different ways of hiding the utility dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dialog-utility-confirm1-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dialog-utility-confirm1-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

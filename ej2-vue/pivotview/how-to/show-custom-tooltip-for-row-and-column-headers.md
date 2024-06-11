@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can create and display the tooltip for each row and column header(s) in the pivot table by using an external tooltip component via the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#databound) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs263/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs263/app.vue %}
 {% endhighlight %}
 {% endtabs %}

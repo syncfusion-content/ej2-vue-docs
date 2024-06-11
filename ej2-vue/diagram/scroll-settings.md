@@ -25,7 +25,10 @@ Diagram allows you to pan the diagram before loading, so that any desired region
 In the following example, the vertical scroll bar is scrolled down by 50px and horizontal scroll bar is scrolled to right by 100px.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/scroll-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/scroll-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ In the following example, the vertical scroll bar is scrolled down by 50px and h
 You can programmatically change the scroll offsets at runtime by using the client-side method update. The following code illustrates how to change the scroll offsets and zoom factor at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/scrollSettings-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/scrollSettings-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ The diagram client-side event [`ScrollChange`](https://ej2.syncfusion.com/vue/do
 The autoscroll behavior in your diagram can be enabled/disabled by using the [`canAutoScroll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettings) property of the diagram. The following code example illustrates how to set autoscroll.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/scrollSettings-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/scrollSettings-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +79,10 @@ The autoscroll behavior in your diagram can be enabled/disabled by using the [`c
 The autoscroll border is used to specify the maximum distance between the object and diagram edge to trigger autoscroll. The default value is set as 15 for all sides (left, right, top, and bottom) and it can be changed by using the [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettings) property of page settings. The following code example illustrates how to set autoscroll border.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/autoScroll-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/autoScroll-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +102,10 @@ The scrollSettings [`scrollableArea`](https://ej2.syncfusion.com/vue/documentati
 The following code example illustrates how to specify the scroll limit.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/scrollLimit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/scrollLimit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +119,10 @@ The following code example illustrates how to specify the scroll limit.
 The following code example illustrates how to set scroll padding to diagram region.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/scrollLimit-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/scrollLimit-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +134,10 @@ The following code example illustrates how to set scroll padding to diagram regi
 Scrolling beyond any particular rectangular area can be restricted by using the [`scrollableArea`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettings) property of scroll settings. To restrict scrolling beyond any custom region, set the [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettings) as “limited”. The following code example illustrates how to customize scrollable area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/scroll-settings/scrollArea-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/scroll-settings/scrollArea-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

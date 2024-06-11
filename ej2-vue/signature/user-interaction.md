@@ -40,7 +40,10 @@ The [`isReadOnly`](https://ej2.syncfusion.com/vue/documentation/api/signature/#i
 The following sample explains about user interactions available in signature.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

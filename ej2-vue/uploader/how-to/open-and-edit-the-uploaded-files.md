@@ -20,11 +20,11 @@ You can retrieve the saved file path in the uploader success event and assign it
     <ejs-uploader ref="uploadObj" id='defaultfileupload' :success="onUploadSuccess" name="UploadFiles" :asyncSettings= "path"></ejs-uploader>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { UploaderPlugin, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
+<script setup>
+
+import { UploaderComponent, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
 import { createElement } from '@syncfusion/ej2-base';
-Vue.use(UploaderPlugin);
+
 
 export default {
   data: function(){

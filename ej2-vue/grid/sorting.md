@@ -17,7 +17,10 @@ To sort a particular column in the grid, click on its column header. Each time y
 To use the sorting feature, you need to inject the **Sort** module in the **provide** section. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ By default, the grid component does not apply any sorting to its records at init
 The following example demonstrates how to set [sortSettings.columns](https://ej2.syncfusion.com/vue/documentation/api/grid/sortSettings/#columns) for **OrderID** and **ShipCity** columns with a specified [direction](https://ej2.syncfusion.com/vue/documentation/api/grid/sortDescriptorModel/#direction).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ To clear multi-column sorting for a particular column, press the "Shift + mouse 
 > * Set [allowMultiSorting](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowmultisorting) property as **false** to disable multi-column sorting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +79,10 @@ It can be achieved by setting the [allowSorting](https://ej2.syncfusion.com/vue/
 The following example demonstrates, how to disable sorting for **CustomerID** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/prevent-sort/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/prevent-sort/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +102,10 @@ The Grid component provides a way to customize the default sort action for a col
 The following example demonstrates how to define custom sort comparer function for the **Customer ID** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +133,10 @@ In the case of local data in the grid, the sorting operation will be performed b
 The following example demonstrates how to perform sorting by enabling a foreign key column, where the **CustomerID** column acts as a foreign column displaying the **ContactName** column from foreign data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/sort-foreign-key/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/sort-foreign-key/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,31 +162,20 @@ In the case of remote data in the grid, the sorting operation will be performed 
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, ForeignKey, Sort } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, ForeignKey, Sort } from "@syncfusion/ej2-vue-grids";
 import { DataManager, ODataV4Adaptor } from "@syncfusion/ej2-data";
 import { data, employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: new DataManager({
+      const data: new DataManager({
         url:'/OData/Items',
         adaptor: new ODataV4Adaptor
       }),
-      employeeData: new DataManager({
+      const employeeData: new DataManager({
         url:'/OData/Brands',
         adaptor: new ODataV4Adaptor
       })
-    };
-  },
-  provide: {
-      grid: [ForeignKey, Sort]
-  }
-}
+  provide('grid',  [ForeignKey, Sort]);
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
@@ -236,7 +243,10 @@ Perform sorting based on culture in the Grid can be achieved by utilizing the [l
 In the following example, sorting is performed based on the **"ar"** locale using the [column.sortComparer](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#sortcomparer) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/locale-sort/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/locale-sort/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -259,7 +269,10 @@ To customize the sort icon in the Grid, you can override the default grid classe
 In the below sample, grid is rendered with a customized sort icon.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/sort-icon/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/sort-icon/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -277,7 +290,10 @@ To sort a column externally, you can utilize the [sortColumn](https://ej2.syncfu
 The following example demonstrates how to add sort columns to a grid. It utilizes the **DropDownList** component to select the column and sort direction. When an external button is clicked, the [sortColumn](https://ej2.syncfusion.com/vue/documentation/api/grid/#sortcolumn) method is called with the specified **columnName**, **direction**, and **isMultiSort** parameters.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/sort-columns/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/sort-columns/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -291,7 +307,10 @@ To remove a sort column externally, you can use the `removeSortColumn` method pr
 The following example demonstrates how to remove sort columns. It utilizes the **DropDownList** component to select the column. When an external button is clicked, the `removeSortColumn` method is called to remove the selected sort column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/remove-sort/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/remove-sort/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -305,7 +324,10 @@ To clear the sorting on an external button click, you can use the [clearSorting]
 The following example demonstrates how to clear the sorting using `clearSorting` method in the external button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/sort/clear-sort/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/sort/clear-sort/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -321,9 +343,53 @@ The Grid component provides two events that are triggered during the sorting act
 2. **actionComplete**: [actionComplete](https://ej2.syncfusion.com/vue/documentation/api/grid/#actioncomplete) event is triggered after the sorting action is completed. It provides a way to perform any necessary operations after the sorting action has taken place. This event provides a parameter that contains the current grid state, including the sorted data and column information.
 
 The following example demonstrates how the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) and [actionComplete](https://ej2.syncfusion.com/vue/documentation/api/grid/#actioncomplete) events work when sorting is performed. The `actionBegin` event event is used to cancel the sorting of the OrderID column. The `actionComplete` event is used to display a message.
+```
 
+```
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+      <div style="margin-left:180px"><p style="color:red;" id="message">{{ message }}</p></div>
+      <ejs-grid :dataSource='data' :actionComplete='actionComplete' :actionBegin='actionBegin' :allowSorting='true' height='315px'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+          <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+          <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+    const actionBegin = (args) => {
+      if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
+        args.cancel = true;
+      }
+    },
+    const actionComplete = (args) => {
+      this.message = args.requestType + ' action completed for ' + args.columnName + ' column';
+    }
+  provide('grid',  [Sort]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -339,13 +405,15 @@ The following example demonstrates how the [actionBegin](https://ej2.syncfusion.
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Sort } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, Sort } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data

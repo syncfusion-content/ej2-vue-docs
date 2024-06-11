@@ -28,7 +28,10 @@ Grid supports the following column types:
 Here is an example of how to specify column types in a grid using the types mentioned above.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-type-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-type-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +90,10 @@ The column width is specified as an absolute pixel value. For example, a column 
   <e-column field='OrderID' headerText='Order ID' textAlign='Right' width='100'></e-column>
 ```
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-width-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-width-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +107,10 @@ Column formatting is a powerful feature in Syncfusion Grid that allows you to cu
 You can use the [columns.format](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#format) property to specify the format for column values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +136,10 @@ Number formatting allows you to customize the display of numeric values in grid 
 The following example code demonstrates the formatting of data for **Mark 1** and **Mark 2** using the **'N'** format, **Percentage of Marks** using the **'P'** format, and **Fees** using the **'C'** format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-format-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-format-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +163,10 @@ Format | Formatted value
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/1996 12:00:00 AM
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-format-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-format-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +182,10 @@ You can also format the date column based on the localization settings of the us
 In this example, the format property specifies the date format as "**yyyy-MMM-dd**", and the locale property specifies the locale as **"de-DE"** for German (Germany).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-format-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-format-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -181,7 +199,10 @@ In the Syncfusion Vue Grid, you have the ability to customize the display of dat
 To illustrate how to format a template column value, consider the following example where the **OrderDate** column is formatted to display dates in the **'Jul 04, 1996'** format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-format-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-format-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -195,7 +216,10 @@ Syncfusion Grid allows you to customize the formatting of data in the grid colum
 In the below example, the **numberFormatOptions** object is used as the `format` property for the **'Freight'** column to apply a custom numeric format with four decimal places. Similarly, the **dateFormatOptions** object is used as the `format` property for the **'OrderDate'** column to apply a custom date format displaying the date in the format of day-of-the-week, month abbreviation, day, and 2-digit year (e.g. Sun, May 8, '23).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-format-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-format-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -216,7 +240,10 @@ You can align the text in the content of a Grid column using the [textAlign](htt
 Here is an example of using the `textAlign` property to align the text of a Grid column:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-align-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-align-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -232,7 +259,10 @@ The Grid component allows you to render boolean values as checkboxes in columns.
 To enable the rendering of boolean values as checkboxes, you need to set the `displayAsCheckBox` property of the `columns` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -249,7 +279,10 @@ To prevent the checkbox in the blank row of the Grid, even if the [displayAsChec
 Here is an example of how you can prevent a checkbox from being displayed in a blank row in a Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/blank-row-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/blank-row-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -267,7 +300,10 @@ The [autoFitColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#auto
 To use the `autoFitColumns` method, inject the **Resize** module in the provide section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -283,7 +319,10 @@ The Autofit feature is utilized to display columns in a grid based on the define
 You can enable this feature by setting the [autoFit](https://ej2.syncfusion.com/vue/documentation/api/grid/#autofit) property set to true. This feature ensures that the column width is rendered only as defined in the Grid column definition.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/autofit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/autofit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -299,7 +338,10 @@ In Syncfusion Grid, you can auto-fit columns when the column visibility is chang
 Here's an example code snippet in Vue that demonstrates how to auto fit columns when changing column visibility using column chooser:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/autofit-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/autofit-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -315,7 +357,10 @@ This feature will calculate the appropriate width based on the maximum content w
 Here is an example of how to autofit columns with specific rows. The first parameter is an array containing the specific column field names, such as  **Inventor**, **Number of INPADOC patents** and **Main fields of invention**  is passed to apply the autofit functionality to these columns. After, the second parameter are start index is set to **1** and third parameter are end index is set to **3**. When specifying these start and end index, the autofit operation is applied only to the range of rows from 1 to 3 for column width adjustment.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/autofit-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/autofit-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -329,7 +374,10 @@ The Syncfusion Grid allows you to lock columns, which prevents them from being r
 Here's an example of how you can use the `lockColumn` property to lock a column in the Syncfusion Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -347,7 +395,10 @@ You can show or hide columns in the Vue Grid using the [visible](https://ej2.syn
 In the below example, the **ShipCity** column is defined with `visible` property set to **false**, which will hide the column in the rendered grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -369,7 +420,10 @@ You can dynamically show or hide columns in the Grid based on the header text by
 Here's an example of how to show or hide a column based on the HeaderText in the Vue Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -383,7 +437,10 @@ You can dynamically show or hide columns in the Grid using external buttons base
 Here's an example of how to show or hide a column based on the field in the Vue Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -405,7 +462,10 @@ You can control various actions such as filtering, grouping, sorting, resizing, 
 Here is an example code that demonstrates how to control grid actions for specific columns:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -481,7 +541,10 @@ let fieldNames = grid.getColumnFieldNames()
 You can update the column definitions in the Grid using the [columns](https://ej2.syncfusion.com/vue/documentation/api/grid/column/) property. You can modify the properties of the column objects in the columns array to update the columns dynamically. For example, you can change the headerText, width, visible, and other properties of a column to update its appearance and behavior in the grid and then call the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method to apply the changes to the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -497,7 +560,10 @@ To add a new column to the Grid, you can directly **push** the new column object
 Here's an example of how you can add and remove a column from the grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -519,7 +585,10 @@ The Syncfusion Vue Grid provides a built-in feature to toggle the visibility of 
 In this example, we have a Grid that displays data with three columns: **Order ID, Customer ID, and Freight**. We have set the `hideAtMedia` property of the **OrderID** column to (min-width: 700px) which means that this column will be hidden when the browser screen width is less than or equal to 700px.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}

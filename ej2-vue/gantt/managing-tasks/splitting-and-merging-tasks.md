@@ -26,7 +26,10 @@ The task can be split dynamically, either by using the context menu or dialog.
 * `Context menu`: When the [`taskFields.segments`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#segments) or [`taskFields.segmentId`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#segmentId) property is mapped and the [`enableContextMenu`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#enablecontextmenu) property is enabled, `Split Task` item will be included in the context menu.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

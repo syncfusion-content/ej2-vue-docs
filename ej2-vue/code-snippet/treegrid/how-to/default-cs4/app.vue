@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
         <ejs-treegrid :dataSource="data" :treeColumnIndex="1" height='210px' :created='setHeaderHeight' childMapping="subtasks" ref="treegrid">
@@ -15,20 +13,26 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData,
     };
   },
   methods: {
-    setHeaderHeight: function(args) {
+    setHeaderHeight: function() {
       let textWidth = document.querySelector(".orientationcss > div").scrollWidth; //Obtain the width of the headerText content.
       let headerCell = document.querySelectorAll(".e-headercell");
       for (let i = 0; i < headerCell.length; i++) {
@@ -44,6 +48,3 @@ export default {
     padding-top:5px;
 }
 </style>
-
-
-

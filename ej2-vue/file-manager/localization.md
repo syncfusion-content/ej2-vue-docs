@@ -110,7 +110,10 @@ The file manager can be localized to any culture by defining the texts and messa
 The below example shows adding the German culture locale(`de-DE`)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/locale-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/locale-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

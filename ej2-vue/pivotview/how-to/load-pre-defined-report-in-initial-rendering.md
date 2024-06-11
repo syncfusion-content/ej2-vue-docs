@@ -16,7 +16,10 @@ domainurl: ##DomainURL##
 By default, the pivot table is displayed with the report bound at the code-behind. To load a desired report from the previously saved report collection during initial rendering, set the desired report name in the [`dataBound`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#databound) event, along with the additional report-based customization code shown below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs269/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs269/app.vue %}
 {% endhighlight %}
 {% endtabs %}

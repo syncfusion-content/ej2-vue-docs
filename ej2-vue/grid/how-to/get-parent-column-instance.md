@@ -15,7 +15,10 @@ Emit values from one component and listen to emitted values in other component b
 In the following example, we have defined a template column in the grid column definition which emits a value and listens the emitted value in the [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) event of the Grid component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

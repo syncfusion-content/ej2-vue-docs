@@ -1,8 +1,7 @@
-
-
 <template>
-  <ejs-richtexteditor ref="defaultRTE" :placeholder="placeholder" :formatter="formatter" >
-    <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+  <ejs-richtexteditor ref="defaultRTE" :placeholder="placeholder" :formatter="formatter">
+    <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user
+      experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
       <li>
@@ -22,27 +21,27 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, IHtmlFormatterModel, HTMLFormatter } from '@syncfusion/ej2-vue-richtexteditor';
-
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
-    data() {
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar, IHtmlFormatterModel, HTMLFormatter } from '@syncfusion/ej2-vue-richtexteditor';
+export default {
+  name: "App",
+  components: {
+    "ejs-richtexteditor": RichTextEditorComponent
+  },
+  data() {
     var customHTMLModel = {
-  keyConfig: {
-'insert-link': 'ctrl+q', // confite the desired key
-}
-}
-      return {
-        placeholder: "Type Something",
-        formatter: new HTMLFormatter(customHTMLModel), // to configure custom key
+      keyConfig: {
+        'insert-link': 'ctrl+q', // confite the desired key
+      }
     }
-    },
-    provide: {
-      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
+    return {
+      placeholder: "Type Something",
+      formatter: new HTMLFormatter(customHTMLModel), // to configure custom key
     }
+  },
+  provide: {
+    richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
   }
+}
 </script>
 
 <style>
@@ -55,6 +54,3 @@
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-
-

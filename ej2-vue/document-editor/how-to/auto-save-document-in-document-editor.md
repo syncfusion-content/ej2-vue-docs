@@ -16,69 +16,137 @@ The following example illustrates how to auto save the document in AWS S3.
 
 * In the client-side, using content change event, we can automatically save the edited content in regular intervals of time. Based on `contentChanged` boolean, the document send as Docx format to server-side using [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#saveasblob) method.
 
-    ```
-    <template>
-        <div id="app">
-          <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" v-on:contentChange="contentChangeEvent" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-        </div>
-    </template>
-    <script>
-      import Vue from 'vue';
-      import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-      Vue.use(DocumentEditorContainerPlugin);
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated"
+      v-on:contentChange="contentChangeEvent" height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-      export default {
-        data() {
-          return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-          contentChanged:false};
-        },
-        provide: {
-          //Inject require modules.
-          DocumentEditorContainer: [Toolbar]
-        },
-        methods: {
-          contentChangeEvent: function () {
-            this.contentChanged = true;
-          },
-          onCreated: function () {
-            setInterval(() => {
-              if (this.contentChanged) {
-                //You can save the document as below
-                this.$refs.container.ej2Instances.documentEditor
-                  .saveAsBlob('Docx')
-                  .then((blob) => {
-                    console.log('Saved sucessfully');
-                    let exportedDocument = blob;
-                    //Now, save the document where ever you want.
-                    let formData = new FormData();
-                    formData.append('fileName', 'sample.docx');
-                    formData.append('data', exportedDocument);
-                    /* tslint:disable */
-                    var req = new XMLHttpRequest();
-                    // Replace your running Url here
-                    req.open(
-                      'POST',
-                      'http://localhost:62869/api/documenteditor/SaveToS3',
-                      true
-                    );
-                    req.onreadystatechange = () => {
-                      if (req.readyState === 4) {
-                        if (req.status === 200 || req.status === 304) {
-                          console.log('Saved sucessfully');
-                        }
-                      }
-                    };
-                    req.send(formData);
-                  });
-                this.contentChanged = false;
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+const contentChanged = ref(false);
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const contentChangeEvent = function () {
+  contentChanged.value = true;
+}
+const onCreated = function () {
+  setInterval(() => {
+    if (contentChanged.value) {
+      //You can save the document as below
+      container.value.ej2Instances.documentEditor
+        .saveAsBlob('Docx')
+        .then((blob) => {
+          console.log('Saved sucessfully');
+          let exportedDocument = blob;
+          //Now, save the document where ever you want.
+          let formData = new FormData();
+          formData.append('fileName', 'sample.docx');
+          formData.append('data', exportedDocument);
+          /* tslint:disable */
+          var req = new XMLHttpRequest();
+          // Replace your running Url here
+          req.open(
+            'POST',
+            'http://localhost:62869/api/documenteditor/SaveToS3',
+            true
+          );
+          req.onreadystatechange = () => {
+            if (req.readyState === 4) {
+              if (req.status === 200 || req.status === 304) {
+                console.log('Saved sucessfully');
               }
-            }, 1000);
-          },
-        },
-      };
-    </script>
-    ```
+            }
+          };
+          req.send(formData);
+        });
+      contentChanged.value = false;
+    }
+  }, 1000);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated"
+      v-on:contentChange="contentChangeEvent" height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+      contentChanged: false
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    contentChangeEvent: function () {
+      this.contentChanged = true;
+    },
+    onCreated: function () {
+      setInterval(() => {
+        if (this.contentChanged) {
+          //You can save the document as below
+          this.$refs.container.ej2Instances.documentEditor
+            .saveAsBlob('Docx')
+            .then((blob) => {
+              console.log('Saved sucessfully');
+              let exportedDocument = blob;
+              //Now, save the document where ever you want.
+              let formData = new FormData();
+              formData.append('fileName', 'sample.docx');
+              formData.append('data', exportedDocument);
+              /* tslint:disable */
+              var req = new XMLHttpRequest();
+              // Replace your running Url here
+              req.open(
+                'POST',
+                'http://localhost:62869/api/documenteditor/SaveToS3',
+                true
+              );
+              req.onreadystatechange = () => {
+                if (req.readyState === 4) {
+                  if (req.status === 200 || req.status === 304) {
+                    console.log('Saved sucessfully');
+                  }
+                }
+              };
+              req.send(formData);
+            });
+          this.contentChanged = false;
+        }
+      }, 1000);
+    },
+  },
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 * In server-side, configure the access key and secret key in `web.config` file and register profile in `startup.cs`.
 

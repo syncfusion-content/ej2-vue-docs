@@ -137,10 +137,10 @@ Follow the below steps to add the Vue Dialog component using `Composition API` o
 import { DialogComponent } from "@syncfusion/ej2-vue-popups";
 //Component registeration
 export default {
-  name: "App",
-  components: {
-    "ejs-dialog": DialogComponent,
-  }
+name: "App",
+components: {
+"ejs-dialog":DialogComponent
+},
 }
 </script>
 
@@ -205,10 +205,10 @@ import { DialogComponent as EjsDialog } from "@syncfusion/ej2-vue-popups";
 <script>
 import { DialogComponent } from "@syncfusion/ej2-vue-popups";
 export default {
-  name: "App",
-  components: {
-    "ejs-dialog": DialogComponent,
-  },
+name: "App",
+components: {
+"ejs-dialog":DialogComponent
+},
   data: function () {
     return {
       target: "#target",
@@ -217,7 +217,7 @@ export default {
     };
   },
   methods: {},
-};
+}
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";

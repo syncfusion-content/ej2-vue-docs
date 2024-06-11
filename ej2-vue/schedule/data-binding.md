@@ -20,7 +20,10 @@ The Scheduler uses `DataManager`, which supports both RESTful data service bindi
 To bind local JSON data to the Scheduler, you can simply assign a JavaScript object array to the [`dataSource`](../api/schedule/eventSettings/#datasource) option of the scheduler within the [`eventSettings`](../api/schedule/eventSettings/) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Scheduler `dataSource` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ Any kind of remote data services can be bound to the Scheduler. To do so, create
 [ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. Refer to the following code example to retrieve the data from ODataV4 service using the DataManager. To connect with ODataV4 service end points, it is necessary to make use of `ODataV4Adaptor` within `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ To enable server-side filtering operations based on predetermined conditions, th
 This method greatly improves the component's performance by reducing the data that needs to be transferred to the client side. As a result, the component's efficiency and responsiveness are significantly enhanced, resulting in a better user experience. However, it is important to consider the possibility of longer query strings, which may cause issues with the maximum URL length or server limitations on query string length.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +79,10 @@ The following image represents how the parameters are passed using ODataV4 filte
 It is possible to create your own custom adaptor by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to add a custom field `EventID` for the appointments by overriding the built-in response processing using the `processResponse` method of the `ODataV4Adaptor`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,44 +91,77 @@ It is possible to create your own custom adaptor by extending the built-in avail
 
 ## Loading data via AJAX post
 
-You can bind the event data through external ajax request and assign it to the [`dataSource`](../api/schedule/eventSettings#datasource)property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
+You can bind the event data through external ajax request and assign it to the [`dataSource`](../api/schedule/eventSettings#datasource) property of Scheduler. In the following code example, we have retrieved the data from server with the help of ajax request and assigned the resultant data to the `dataSource` property of Scheduler within the `onSuccess` event of Ajax.
 
-`[src/app/App.vue]`
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-```html
 <template>
-    <div id='app'>
-      <div id='container'>
-        <ejs-schedule height='550px' :selectedDate='selectedDate'
-        :eventSettings='eventSettings'></ejs-schedule>
-      </div>
+  <div id='app'>
+    <div id='container'>
+      <ejs-schedule height='550px' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
     </div>
+  </div>
+</template>
+<script setup>
+import { provide, ref } from "vue";
+import { Ajax } from '@syncfusion/ej2-base';
+import { ScheduleComponent as EjsSchedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+
+let dataManager = ref([]);
+let ajax = new Ajax('Home/GetData', 'GET', false);
+ajax.onSuccess = function (value) {
+  dataManager = value;
+};
+ajax.send();
+
+const selectedDate = new Date(2017, 5, 11);
+const eventSettings = { dataSource: dataManager };
+
+provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id='app'>
+    <div id='container'>
+      <ejs-schedule height='550px' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
+    </div>
+  </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { Ajax } from '@syncfusion/ej2-base';
-    import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda, View } from '@syncfusion/ej2-vue-schedule';
-    Vue.use(SchedulePlugin);
+import { Ajax } from '@syncfusion/ej2-base';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, View } from '@syncfusion/ej2-vue-schedule';
 
-    let dataManager = [];
-    let ajax = new Ajax('Home/GetData', 'GET', false);
-    ajax.onSuccess = function (value) {
-        dataManager = value;
+let dataManager = [];
+let ajax = new Ajax('Home/GetData', 'GET', false);
+ajax.onSuccess = function (value) {
+  dataManager = value;
+};
+ajax.send();
+
+export default {
+  components: {
+    'ejs-schedule': ScheduleComponent
+  },
+  data() {
+    return {
+      selectedDate: new Date(2017, 5, 11),
+      eventSettings: { dataSource: dataManager }
     };
-    ajax.send();
-    export default {
-        data() {
-            return {
-                selectedDate: new Date(2017, 5, 11),
-                eventSettings: { dataSource: dataManager }
-            };
-        },
-        provide: {
-            schedule: [Day, Week, WorkWeek, Month, Agenda]
-        }
-    }
+  },
+  provide: {
+    schedule: [Day, Week, WorkWeek, Month, Agenda]
+  }
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
+
 
 > Definition for the controller method `GetData` can be referred [here](#scheduler-crud-actions).
 
@@ -125,7 +170,10 @@ You can bind the event data through external ajax request and assign it to the [
 To send an additional custom parameter to the server-side post, you need to make use of the `addParams` method of `Query`. Now, assign this `Query` object with additional parameters to the [`query`](../api/schedule/eventSettings/#query) property of Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +189,10 @@ During the time of Scheduler interacting with server, there are chances that som
 The argument passed to the [`actionFailure`](../api/schedule/#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -154,42 +205,72 @@ The argument passed to the [`actionFailure`](../api/schedule/#actionfailure) eve
 
 The CRUD (Create, Read, Update and Delete) actions can be performed easily on Scheduler appointments using the various adaptors available within the `DataManager`. Most preferably, we will be using `UrlAdaptor` for performing CRUD actions on scheduler appointments.
 
-`[src/app/App.vue]`
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-```html
 <template>
-    <div id='app'>
-      <div id='container'>
-        <ejs-schedule height='550px' :selectedDate='selectedDate'
-        :eventSettings='eventSettings'></ejs-schedule>
-      </div>
+  <div id='app'>
+    <div id='container'>
+      <ejs-schedule height='550px' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
     </div>
+  </div>
+</template>
+<script setup>
+import { provide } from 'vue';
+import { ScheduleComponent as EjsSchedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+
+let dataManager = new DataManager({
+  url: 'Home/GetData', // 'controller/actions'
+  crudUrl: 'Home/UpdateData',
+  adaptor: new UrlAdaptor
+});
+
+const selectedDate = new Date(2017, 5, 11);
+const eventSettings = { dataSource: dataManager };
+
+provide('schedule', [Day, Week, WorkWeek, Month, Agenda])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id='app'>
+    <div id='container'>
+      <ejs-schedule height='550px' :selectedDate='selectedDate' :eventSettings='eventSettings'></ejs-schedule>
+    </div>
+  </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda, View } from '@syncfusion/ej2-vue-schedule';
-    import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-    Vue.use(SchedulePlugin);
+let dataManager = new DataManager({
+  url: 'Home/GetData', // 'controller/actions'
+  crudUrl: 'Home/UpdateData',
+  adaptor: new UrlAdaptor
+});
 
-    let dataManager = new DataManager({
-       url: 'Home/GetData', // 'controller/actions'
-       crudUrl: 'Home/UpdateData',
-       adaptor: new UrlAdaptor
-    });
-    export default {
-        data() {
-            return {
-                selectedDate: new Date(2017, 5, 11),
-                eventSettings: { dataSource: dataManager }
-            };
-        },
-        provide: {
-            schedule: [Day, Week, WorkWeek, Month, Agenda]
-        }
-    }
+export default {
+  components: {
+    'ejs-schedule': ScheduleComponent
+  },
+  data() {
+    return {
+      selectedDate: new Date(2017, 5, 11),
+      eventSettings: { dataSource: dataManager }
+    };
+  },
+  provide: {
+    schedule: [Day, Week, WorkWeek, Month, Agenda]
+  }
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 The server-side controller code to handle the CRUD operations are as follows.
 
@@ -302,7 +383,10 @@ namespace ScheduleSample.Controllers
 We have assigned our custom created Google Calendar url to the DataManager and assigned the same to the Scheduler `dataSource`. Since the events data retrieved from the Google Calendar will be in its own object format, therefore it needs to be resolved manually within the Scheduler’s `dataBinding` event. Within this event, the event fields needs to be mapped properly and then assigned to the result.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/data-bind-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/data-bind-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

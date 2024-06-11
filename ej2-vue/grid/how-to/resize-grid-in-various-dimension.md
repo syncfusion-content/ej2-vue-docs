@@ -17,7 +17,10 @@ To resize the grid externally, you can use an external button to modify the widt
 The following example demonstrates how to resize the grid on external button click based on input. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/grid-resize/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/grid-resize/app.vue %}
 {% endhighlight %}
 {% endtabs %}

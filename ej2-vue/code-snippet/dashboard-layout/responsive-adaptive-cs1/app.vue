@@ -1,9 +1,8 @@
-
-
 <template>
     <div className="control-section">
         <!--  DashboardLayout element declaration -->
-        <ejs-dashboardlayout id='dashboard_layout' ref="dashboard" :cellSpacing='cellSpacing' :mediaQuery='mediaQuery' :columns="6">
+        <ejs-dashboardlayout id='dashboard_layout' ref="dashboard" :cellSpacing='cellSpacing' :mediaQuery='mediaQuery'
+            :columns="6">
             <e-panels>
                 <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div>0</div>"></e-panel>
                 <e-panel :sizeX="2" :sizeY="2" :row="0" :col="1" content="<div>1</div>"></e-panel>
@@ -16,17 +15,23 @@
 </template>
 
 <script>
-import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 
-Vue.use(DashboardLayoutPlugin);
+// Import syncfusion dashboardlayout component from layouts package
+import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
+
+
 
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-dashboardlayout": DashboardLayoutComponent,
+        "e-panels": PanelsDirective,
+        "e-panel": PanelDirective
+    },
+    data: function () {
         return {
             cellSpacing: [20, 20],
-            mediaQuery:'max-width: 700px',
+            mediaQuery: 'max-width: 700px',
         };
     }
 }
@@ -46,9 +51,6 @@ export default {
 }
 
 #dashboard_layout .e-panel {
-  transition:none !important;
+    transition: none !important;
 }
 </style>
-
-
-

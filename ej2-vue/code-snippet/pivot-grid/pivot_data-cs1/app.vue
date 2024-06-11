@@ -1,21 +1,20 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowConditionalFormatting="allowConditionalFormatting" :toolbar="toolbar" :showToolbar="showToolbar" > </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowConditionalFormatting="allowConditionalFormatting" :toolbar="toolbar" :showToolbar="showToolbar">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, ConditionalFormatting, Toolbar } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, ConditionalFormatting, Toolbar } from "@syncfusion/ej2-vue-pivotview";
 import { Pivot_Data } from './Pivot_Data.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: Pivot_Data,
@@ -27,23 +26,20 @@ export default {
         values: [{ name: 'In_Stock', caption: 'In Stock' },
         { name: 'Sold', caption: 'Units Sold' }],
         filters: [{ name: 'Product_Categories', caption: 'Product Categories' }]
-    },
-    allowConditionalFormatting: true,
-    height: 350,
-    showToolbar: true,
-    toolbar: [
+      },
+      allowConditionalFormatting: true,
+      height: 350,
+      showToolbar: true,
+      toolbar: [
         "ConditionalFormatting"
       ]
     }
   },
   provide: {
-        pivotview: [ConditionalFormatting,Toolbar]
-    }
+    pivotview: [ConditionalFormatting, Toolbar]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div style="padding: 20px 0px">
-      <ejs-button @click.native="showSelectedRecords">Show Selected Records</ejs-button>
+      <ejs-button @click="showSelectedRecords">Show Selected Records</ejs-button>
     </div>
     <ejs-grid ref="grid" :dataSource="data" :allowPaging="true" :selectionSettings="selectionOptions" :pageSettings='pageSettings'>
       <e-columns>
@@ -17,16 +17,24 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin,Page} from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
+
+import { GridComponent, ColumnsDirective, ColumnDirective,Page} from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
 import { data } from './datasource.js';
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DialogPlugin);
+
+
+
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-dialog":DialogComponent
+},
   data() {
     return {
       data: data,

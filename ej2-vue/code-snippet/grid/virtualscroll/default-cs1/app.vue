@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height=300 :enableInfiniteScrolling='true' :pageSettings='options'>
@@ -14,11 +12,8 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, InfiniteScroll } from "@syncfusion/ej2-vue-grids";
 
-Vue.use(GridPlugin);
-
+import { GridComponent, ColumnsDirective, ColumnDirective, InfiniteScroll } from "@syncfusion/ej2-vue-grids";
 let names = ['TOM', 'Hawk', 'Jon', 'Chandler', 'Monica', 'Rachel', 'Phoebe', 'Gunther', 'Ross', 'Geller', 'Joey', 'Bing', 'Tribbiani', 'Janice', 'Bong', 'Perk', 'Green', 'Ken', 'Adams'];
 let hours = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let designation = ['Manager', 'Engineer 1', 'Engineer 2', 'Developer', 'Tester'];
@@ -36,8 +31,13 @@ let data = (count) => {
     }
     return result;
 };
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data(1000),
@@ -52,5 +52,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

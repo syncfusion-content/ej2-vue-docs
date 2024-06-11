@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can achieve the invisible upload feature by using selected event in uploader component. In the following example, explains how to achieve invisible upload in uploader component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

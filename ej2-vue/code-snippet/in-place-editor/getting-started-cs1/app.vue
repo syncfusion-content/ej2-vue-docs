@@ -1,35 +1,37 @@
-
-
 <template>
-<div id="app">
-    <table class="table-section">
-        <tr>
-            <td>ShowButtons:</td>
-            <td>
-        <ejs-checkbox ref="checkObj" id="showbuttons" checked=true :change="onChange" :labelPosition="labelPosition" :label="label"></ejs-checkbox>
-        </td>
-    </tr>
-    <tr>
-        <td class="sample-td">Enter your name:</td>
-        <td class="sample-td">
-      <ejs-inplaceeditor ref="editObj" mode="Inline" :model="textModel" type="Text" value="Andrew" data-underline="false">
-      </ejs-inplaceeditor>
-      </td>
-    </tr>
+    <div id="app">
+        <table class="table-section">
+            <tr>
+                <td>ShowButtons:</td>
+                <td>
+                    <ejs-checkbox ref="checkObj" id="showbuttons" checked=true :change="onChange"
+                        :labelPosition="labelPosition" :label="label"></ejs-checkbox>
+                </td>
+            </tr>
+            <tr>
+                <td class="sample-td">Enter your name:</td>
+                <td class="sample-td">
+                    <ejs-inplaceeditor ref="editObj" mode="Inline" :model="textModel" type="Text" value="Andrew"
+                        data-underline="false">
+                    </ejs-inplaceeditor>
+                </td>
+            </tr>
+        </table>
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
-import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(InPlaceEditorPlugin);
-Vue.use(CheckBoxPlugin);
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
+import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
-  name: 'app',
-      data () {
+    name: "App",
+    components: {
+        "ejs-checkbox": CheckBoxComponent,
+        "ejs-inplaceeditor": InPlaceEditorComponent
+    },
+    data() {
         return {
             textModel: {
                 placeholder: 'Enter Some Text'
@@ -38,12 +40,12 @@ export default {
             label: 'show',
         };
     },
-    mounted: function() {
-    this.editObj = this.$refs.editObj.ej2Instances;
+    mounted: function () {
+        this.editObj = this.$refs.editObj.ej2Instances;
     },
     methods: {
-        onChange: function(args) {
-        args.checked ? this.editObj.showButtons = true : this.editObj.showButtons = false
+        onChange: function (args) {
+            args.checked ? this.editObj.showButtons = true : this.editObj.showButtons = false
         }
     }
 }
@@ -77,5 +79,3 @@ tr td:first-child {
     height: 100px;
 }
 </style>
-
-

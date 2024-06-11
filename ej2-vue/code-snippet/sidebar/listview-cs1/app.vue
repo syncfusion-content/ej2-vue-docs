@@ -1,64 +1,65 @@
-
-
 <template>
-<div id="app">
+    <div id="app">
         <ejs-sidebar id="default-sidebar" ref="sidebar" :width="width" :type="type">
-    <div class="title1">Menu</div>
-           <div class="closebtn">
-               <button  ejs-button id="close" class="e-btn close-btn" v-on:click="closeClick">
-                   <span id="innerclose" class="e-icons close-icon"></span>
-               </button>
-           </div>
-           <div id="listcontainer">
-         <ejs-listview id='list' :dataSource="dataList" ></ejs-listview>
-         </div>
-             <div class="sub-title">
-                    * ListView component is rendered in the sidebar container.
-                </div>
-</ejs-sidebar>
-<div>
-    <div>
-        <div class="title2">Main content</div>
-        <div class="sub-title"> Click the button to open/close the Sidebar.
-            <div style="padding:20px" class="center-align">
-                <button ejs-button id="toggle" class="e-btn e-info" v-on:click="toggleClick">Toggle Sidebar</button>
+            <div class="title1">Menu</div>
+            <div class="closebtn">
+                <button ejs-button id="close" class="e-btn close-btn" v-on:click="closeClick">
+                    <span id="innerclose" class="e-icons close-icon"></span>
+                </button>
             </div>
+            <div id="listcontainer">
+                <ejs-listview id='list' :dataSource="dataList"></ejs-listview>
+            </div>
+            <div class="sub-title">
+                * ListView component is rendered in the sidebar container.
+            </div>
+        </ejs-sidebar>
+        <div>
+            <div>
+                <div class="title2">Main content</div>
+                <div class="sub-title"> Click the button to open/close the Sidebar.
+                    <div style="padding:20px" class="center-align">
+                        <button ejs-button id="toggle" class="e-btn e-info" v-on:click="toggleClick">Toggle
+                            Sidebar</button>
+                    </div>
 
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </template>
 <script>
-import Vue from "vue";
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
-import { ListViewPlugin, SelectEventArgs } from '@syncfusion/ej2-vue-lists';
+
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+import { ListViewComponent } from '@syncfusion/ej2-vue-lists';
 import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use(SidebarPlugin);
-Vue.use(ListViewPlugin);
 
+enableRipple(true);
 
-Vue.use(SidebarPlugin);
-Vue.use(ListViewPlugin);
 export default {
-    data () {
-           return {
-          dataList: [
-        { text: 'Home', id: 'list-02' },
-        { text: 'Offers', id: 'list-03' },
-        { text: 'Support', id: 'list-04' },
-        { text: 'Logout', id: 'list-06' }
-    ],
-    type: 'Over',
-    width: '100%'
-     }
-     },
-     methods: {
-        toggleClick :function() {
-          this.$refs.sidebar.toggle();
+    name: "App",
+    components: {
+        "ejs-sidebar": SidebarComponent,
+        "ejs-listview": ListViewComponent
+    },
+    data() {
+        return {
+            dataList: [
+                { text: 'Home', id: 'list-02' },
+                { text: 'Offers', id: 'list-03' },
+                { text: 'Support', id: 'list-04' },
+                { text: 'Logout', id: 'list-06' }
+            ],
+            type: 'Over',
+            width: '100%'
+        }
+    },
+    methods: {
+        toggleClick: function () {
+            this.$refs.sidebar.toggle();
         },
-        closeClick: function() {
-         this.$refs.sidebar.hide();
+        closeClick: function () {
+            this.$refs.sidebar.hide();
         }
     }
 }
@@ -71,7 +72,9 @@ export default {
     padding: 20px;
 }
 
-.close-btn,.e-listview .e-list-item, #default-sidebar {
+.close-btn,
+.e-listview .e-list-item,
+#default-sidebar {
     background-color: rgb(20, 118, 210);
     color: #ffffff;
 }
@@ -109,12 +112,14 @@ export default {
     padding: 0;
 }
 
-.e-btn.close-btn :hover { /* csslint allow: adjoining-classes*/
+.e-btn.close-btn :hover {
+    /* csslint allow: adjoining-classes*/
     box-shadow: none;
     background: transparent;
 }
 
-.e-icons.close-icon { /* csslint allow: adjoining-classes*/
+.e-icons.close-icon {
+    /* csslint allow: adjoining-classes*/
     line-height: 2.2;
 }
 
@@ -148,7 +153,8 @@ export default {
     color: #fafafa;
 }
 
-.content-section { /* csslint allow: adjoining-classes */
+.content-section {
+    /* csslint allow: adjoining-classes */
     padding: 30px 10px 10px 20px;
 }
 
@@ -158,7 +164,4 @@ export default {
     font-weight: normal;
     font-style: normal;
 }
-
 </style>
-
-

@@ -31,7 +31,10 @@ You can change the floating label color of the TextBox for both `success` and `w
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/validation-state-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/validation-state-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

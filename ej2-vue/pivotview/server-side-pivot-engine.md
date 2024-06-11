@@ -37,11 +37,11 @@ This section briefs the Syncfusion assembly [`Syncfusion.Pivot.Engine`](https://
 **2.** Then in the Pivot Table sample, set the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) property under [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings) as **Server** and map the URL of the hosted Server-side application in [`URL`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#url) property of `dataSourceSettings`.
 
 ```javascript
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -64,11 +64,11 @@ export default {
 **3.** Frame and set the report based on the data source available in the **PivotController** application.
 
 ```javascript
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -185,11 +185,11 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
 
 ```javascript
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -280,11 +280,11 @@ public async Task<object> GetData(FetchData param)
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
 ```javascript
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -415,11 +415,11 @@ Finally set the appropriate report to the Pivot Table sample based on the above 
 
 ```javascript
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -534,11 +534,11 @@ public async Task<object> GetData(FetchData param)
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
 ```javascript
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -633,11 +633,11 @@ public async Task<object> GetData(FetchData param)
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
 ```javascript
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -743,11 +743,11 @@ public async Task<object> GetData(FetchData param)
 Finally set the appropriate report to the Pivot Table sample based on the above data source.
 
 ```javascript
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {

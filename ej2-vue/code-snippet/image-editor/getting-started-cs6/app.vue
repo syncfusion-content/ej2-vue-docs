@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-imageeditor id="image-editor" height="350px" width="550px"></ejs-imageeditor>
@@ -10,6 +8,7 @@
 import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 
 export default {
+  name: "App",
   components: {
     'ejs-imageeditor': ImageEditorComponent
   },
@@ -36,5 +35,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

@@ -28,7 +28,10 @@ The diagram provides support to show tooltip when the mouse hovers over any node
 To show tooltip on mouse over, the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram#tooltip) property of diagram model needs to be set with the tooltip [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#content) and [`position`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#position) as shown in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +60,10 @@ The tooltip on mouse over can be disabled by assigning the [`tooltip`](https://e
 The tooltip can be customized for each node and connector. Remove the **InheritTooltip** option from the [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram#constraints) of that node/connector. The following code example illustrates how to customize the tooltip for individual elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +109,10 @@ The following image illustrates how the diagram displays tooltips during an inte
 Here, the code provided below demonstrates the port tooltip Interaction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +126,10 @@ Any text or image can be added to the tooltip, by default. To customize the tool
 The following code example illustrates how to add formatted HTML content to the tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +146,10 @@ The [`relativeMode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/di
 The following code example illustrates how to position the tooltip around object.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -147,7 +162,10 @@ To display the tooltip at mouse position, need to set **mouse** option to the [`
 The following code example illustrates how to show tooltip at mouse position.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +177,10 @@ The following code example illustrates how to show tooltip at mouse position.
 To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the [`animation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip#animation) property. The animation property also allows you to set delay, duration, and various other effects of your choice.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/tooltip-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

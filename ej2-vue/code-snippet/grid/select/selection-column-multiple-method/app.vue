@@ -1,25 +1,25 @@
 <template>
   <div id="app">
     <div style="padding: 10px 0px 20px 0px">
-      <ejs-button class="btn" @click.native="selectColumns([1, 2])">
+      <ejs-button class="btn" @click="selectColumns([1, 2])">
       select [1, 2] </ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([0, 2])">
+      <ejs-button class="btn" @click="selectColumns([0, 2])">
       select [0, 2]</ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([1, 3])">
+      <ejs-button class="btn" @click="selectColumns([1, 3])">
       select [1, 3] </ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([0,5])">
+      <ejs-button class="btn" @click="selectColumns([0,5])">
       select [0,5]</ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([1,6])">
+      <ejs-button class="btn" @click="selectColumns([1,6])">
       select [1,6]</ejs-button>
     </div>
     <div style="padding: 10px 0px 20px 0px">
-      <ejs-button class="btn" @click.native="selectColumns([0,2,5])">
+      <ejs-button class="btn" @click="selectColumns([0,2,5])">
       select [0,2,5]</ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([1,3,6])">
+      <ejs-button class="btn" @click="selectColumns([1,3,6])">
       select [1,3,6]</ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([2,4,6])">
+      <ejs-button class="btn" @click="selectColumns([2,4,6])">
       select [2,4,6]</ejs-button>
-      <ejs-button class="btn" @click.native="selectColumns([0,3,5])">
+      <ejs-button class="btn" @click="selectColumns([0,3,5])">
       select [0,3,5]</ejs-button>
     </div>
     <div style="padding: 20px 0px 0px 0px">
@@ -45,14 +45,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { data } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { data } from "./datasource.js";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

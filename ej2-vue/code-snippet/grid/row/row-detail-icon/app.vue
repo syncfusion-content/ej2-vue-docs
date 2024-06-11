@@ -72,16 +72,19 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, DetailRow } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { Internationalization } from "@syncfusion/ej2-base";
 let instance = new Internationalization();
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: employeeData,

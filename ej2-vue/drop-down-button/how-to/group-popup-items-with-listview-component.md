@@ -21,7 +21,10 @@ npm install @syncfusion/ej2-vue-list --save
 In the following example, ListView element is given as `target` to DropDownButton and header can be achieved by [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

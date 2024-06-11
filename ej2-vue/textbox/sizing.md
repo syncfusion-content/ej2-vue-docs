@@ -18,7 +18,10 @@ Property   | Description
   Small      | You need to add `e-small` class to the input element, or else add to the input container.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/icon-samples-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/icon-samples-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

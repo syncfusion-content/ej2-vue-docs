@@ -95,20 +95,9 @@ Here the pager is rendered with `totalRecordsCount` which is used to render nume
       <ejs-pager> </ejs-pager>
   </div>
 </template>
-
-<script>
-import Vue from 'vue';
-import { PagerPlugin } from '@syncfusion/ej2-vue-grids';
-
-Vue.use(PagerPlugin);
-export default {
-  data () {
-    return {
-    }
-  }
-}
+<script setup>
+import { PagerComponent as EjsPager } from '@syncfusion/ej2-vue-grids';
 </script>
-
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
@@ -123,24 +112,12 @@ Modify the template in [src/app.vue] file to render the pager component.
       <ejs-pager :totalRecordsCount='20'> </ejs-pager>
   </div>
 </template>
-
-<script>
-import Vue from 'vue';
-import { PagerPlugin } from '@syncfusion/ej2-vue-grids';
-
-Vue.use(PagerPlugin);
-export default {
-  data () {
-    return {
-    }
-  }
-}
+<script setup>
+import { PagerComponent as EjsPager } from '@syncfusion/ej2-vue-grids';
 </script>
-
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
 ```
 
 ## Page Size
@@ -148,7 +125,10 @@ export default {
 `pageSize` value defines the number of records to be displayed per page. The default value for the `pageSize` is 12.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pager/pager-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pager/pager-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -162,7 +142,10 @@ The default value for `pageCount` is 10 and value will be updated based on [`tot
 and [`pageSize`](#page-size) values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pager/pager-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pager/pager-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -180,7 +163,10 @@ npm run dev
 Output will be appears as follows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pager/pager-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pager/pager-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

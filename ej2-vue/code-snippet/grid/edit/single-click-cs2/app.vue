@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' id='grid' :dataSource='data' :load='load' :actionComplete='onActionComplete' :editSettings='editSettings' :toolbar='toolbar' :allowPaging="true">
@@ -13,13 +11,19 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Edit  } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit  } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
-Vue.use(GridPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
       data: data,
@@ -39,7 +43,8 @@ export default {
                   this.isDropdown = true;
               this.$refs.grid.ej2Instances.selectRow(rowInfo.rowIndex);
               this.$refs.grid.ej2Instances.startEdit();
-        }.bind(this));
+        }
+      }).bind(this);
       },
       onActionComplete: function(args) {
         if (args.requestType =="beginEdit" && this.isDropdown) {
@@ -58,5 +63,3 @@ export default {
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

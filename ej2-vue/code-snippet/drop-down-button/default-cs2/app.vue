@@ -1,7 +1,5 @@
-
-
 <template>
-<ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
+    <ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
 </template>
 
 <script>
@@ -11,21 +9,22 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+    name: "App",
     components: {
         'ejs-dropdownbutton': DropDownButtonComponent
     },
-    data () {
+    data() {
         return {
-            items:[
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            }]
+            items: [
+                {
+                    text: 'Cut'
+                },
+                {
+                    text: 'Copy'
+                },
+                {
+                    text: 'Paste'
+                }]
         };
     }
 }
@@ -37,5 +36,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

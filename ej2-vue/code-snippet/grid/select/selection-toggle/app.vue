@@ -26,17 +26,19 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns';
-import { SwitchPlugin } from "@syncfusion/ej2-vue-buttons";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(SwitchPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-switch":SwitchComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

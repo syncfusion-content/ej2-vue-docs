@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -13,12 +11,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Marker, Zoom, MapsTooltip, Point } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Marker, Zoom, MapsTooltip, Point, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
 import { cluster } from './marker-cluster.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
         useGroupingSeparator: true,
@@ -78,5 +82,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

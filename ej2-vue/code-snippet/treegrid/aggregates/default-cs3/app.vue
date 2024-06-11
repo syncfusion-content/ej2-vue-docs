@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid :dataSource="data" childMapping='subtasks' :treeColumnIndex='1' height='260px'>
@@ -20,21 +18,34 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Aggregate } from "@syncfusion/ej2-vue-treegrid";
-import { summaryData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
+import { TreeGridComponent, Aggregate, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective } from "@syncfusion/ej2-vue-treegrid";
+import { summaryData } from "./datasource.js";
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+const minTemplate = app.component('minTemplate', {
+    template: `<span>Min: {{data.Sum}}</span>`,
+    data () {return { data: {}};}
+});
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective,
+
+},
+
   data() {
     return {
       data: summaryData,
             footerSum: function () {
-        return  { template : Vue.component('minTemplate', {
-            template: `<span>Sum: {{data.Sum}}</span>`,
-            data () {return { data: {}};}
-            })
+        return  { template : minTemplate
           }
       }
     };
@@ -44,6 +55,3 @@ export default {
   }
 }
 </script>
-
-
-

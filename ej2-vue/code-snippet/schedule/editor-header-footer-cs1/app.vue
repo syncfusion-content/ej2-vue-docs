@@ -1,20 +1,15 @@
 <template>
   <div id="app">
     <div id="container">
-      <ejs-schedule
-        :height="height"
-        :width="width"
-        ref='schedule_instance'
-        :eventSettings="eventSettings"
-        :editorHeaderTemplate="'editorHeaderTemplate'"
-        :editorFooterTemplate="'editorFooterTemplate'"
-        :popupOpen="onPopupOpen"
-      >
+      <ejs-schedule :height="height" :width="width" ref='schedule_instance' :eventSettings="eventSettings"
+        :editorHeaderTemplate="'editorHeaderTemplate'" :editorFooterTemplate="'editorFooterTemplate'"
+        :popupOpen="onPopupOpen">
         <template v-slot:editorHeaderTemplate="{ data }">
-            <div class="event-header">{{getName(data)}}</div>
-          </template>
-          <template v-slot:editorFooterTemplate="{ data }">
-            <div id="event-footer"><div id="verify">
+          <div class="event-header">{{ getName(data) }}</div>
+        </template>
+        <template v-slot:editorFooterTemplate="{ data }">
+          <div id="event-footer">
+            <div id="verify">
               <input type="checkbox" id="check-box" value="unchecked" />
               <label htmlFor="check-box" id="text">Verified</label>
             </div>
@@ -22,6 +17,7 @@
               <button id="Save" className="e-control e-btn e-primary" disabled data-ripple="true"> Save</button>
               <button id="Cancel" className="e-control e-btn e-primary" data-ripple="true"> Cancel </button>
             </div>
+          </div>
         </template>
       </ejs-schedule>
     </div>
@@ -29,16 +25,7 @@
 </template>
 
 <script>
-import Vue from "vue";
-import {
-  SchedulePlugin,
-  Day,
-  Week,
-  WorkWeek,
-  Month,
-} from "@syncfusion/ej2-vue-schedule";
-Vue.use(SchedulePlugin);
-
+import { ScheduleComponent, Day, Week, WorkWeek, Month } from "@syncfusion/ej2-vue-schedule";
 
 const today = new Date();
 var data = [
@@ -52,32 +39,36 @@ var data = [
   {
     Id: 2,
     Subject: "Consulting - John",
-    StartTime: new Date(today.getFullYear(), today.getMonth(),today.getDate(), 10, 0),
+    StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 10, 0),
     EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 30),
     IsAllDay: false
   },
   {
     Id: 3,
     Subject: "Therapy - Robert",
-    StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11,30),
+    StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 11, 30),
     EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 30),
     IsAllDay: false
   },
   {
     Id: 4,
     Subject: "Observation - Steven",
-    StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(),12, 30),
+    StartTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 12, 30),
     EndTime: new Date(today.getFullYear(), today.getMonth(), today.getDate(), 13, 30),
     IsAllDay: false
   },
 ];
 
 export default {
+  name: "App",
+  components: {
+    "ejs-schedule": ScheduleComponent
+  },
   data() {
     return {
       height: "550px",
       width: "100%",
-      eventSettings: {dataSource: data}
+      eventSettings: { dataSource: data }
     };
   },
   methods: {
@@ -125,33 +116,34 @@ export default {
 };
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+
 #verify {
-   position: fixed;
-   padding: 0 20px;
+  position: fixed;
+  padding: 0 20px;
 }
 
 #text {
-   cursor: pointer;
-   display: inline-block;
-   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
-   font-size: 14px;
-   font-weight: normal;
-   line-height: 14px;
-   user-select: none;
-   margin-left: 8px;
-   vertical-align: middle;
-   white-space: normal;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 14px;
+  user-select: none;
+  margin-left: 8px;
+  vertical-align: middle;
+  white-space: normal;
 }
 
 #right-button {
-   padding: 0 10px;
+  padding: 0 10px;
 }
 </style>

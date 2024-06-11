@@ -29,15 +29,10 @@ The position values of Floating Action Button are as follows:
     <ejs-fab id='fab' content='Add' position='BottomLeft'></ejs-fab>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+    import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
     import { enableRipple } from '@syncfusion/ej2-base';
-
     enableRipple(true);
-    Vue.use(FabPlugin);
-
-    export default {}
 </script>
 
 <style>
@@ -49,7 +44,10 @@ The position values of Floating Action Button are as follows:
 Below example demonstrates different supported positions of FAB.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/floating-action-button/positions-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/positions-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +59,10 @@ Below example demonstrates different supported positions of FAB.
 You can define the custom position of the Floating Action Button by override the `top`, `left`, `right`, and `bottom` CSS properties using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#cssclass). For detailed information, refer `app.vue` file below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/floating-action-button/positions-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/positions-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

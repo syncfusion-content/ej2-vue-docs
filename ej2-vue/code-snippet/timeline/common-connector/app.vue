@@ -13,6 +13,7 @@
 <script>
 import { TimelineComponent, ItemsDirective, ItemDirective } from "@syncfusion/ej2-vue-layouts";
 export default {
+  name: "App",
   components: {
     'ejs-timeline': TimelineComponent,
     'e-items': ItemsDirective,
@@ -26,11 +27,11 @@ export default {
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
-  .custom-connector .e-timeline-item.e-connector::after {
-    border-color: #f7c867;
-    border-width: 1.4px;
-  }
+.custom-connector .e-timeline-item.e-connector::after {
+  border-color: #f7c867;
+  border-width: 1.4px;
+}
 </style>

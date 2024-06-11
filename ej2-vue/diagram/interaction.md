@@ -73,7 +73,10 @@ The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentatio
 You can change the size of the node resize thumb and the connector end point handle by using the `handleSize` property. The appearance such as fill, stroke, and stroke width of the node resize thumb and connector end point handle can be customized by overriding the e-diagram-resize-handle and e-diagram-endpoint-handle classes respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/resizeThumb-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/resizeThumb-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,45 +173,86 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 | Middle | When the mouse wheel is clicked, middle is notified |
 | Right | When the right mouse button is clicked, right is notified |
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :click="click"></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :click="click"></ejs-diagram>
+  </div>
+</template>
+<script setup>
+import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  // Position of the node
+  offsetX: 250,
+  offsetY: 250,
+  // Size of the node
+  width: 100,
+  height: 100,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+  // Text(label) added to the node
+}]
+
+const width = "100%";
+const height = "700px";
+const click = (args) => {
+  //Obtains the button clicked
+  let clickNotify = args.button
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :click="click"></ejs-diagram>
+  </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,DiagramTools } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        // Position of the node
-        offsetX: 250,
-        offsetY: 250,
-        // Size of the node
-        width: 100,
-        height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-        // Text(label) added to the node
-    }]
-    export default {
-        name: 'app',
-        data() {
-            return {
-                width: "100%",
-                height: "700px",
-                nodes: nodes,
-                click: (args) => {
-                //Obtains the button clicked
-                let clickNotify = args.button
-                }
-            }
-        },
+
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  // Position of the node
+  offsetX: 250,
+  offsetY: 250,
+  // Size of the node
+  width: 100,
+  height: 100,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+  // Text(label) added to the node
+}]
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "700px",
+      nodes: nodes,
+      click: (args) => {
+        //Obtains the button clicked
+        let clickNotify = args.button
+      }
     }
+  },
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 
 
@@ -217,7 +261,10 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 The appearance of the user handle can be customized by using the [`size`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#size-number), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#bordercolor-string), [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#backgroundcolor-string), [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#visible-boolean), [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#pathdata-string), and [`pathColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#pathcolor-string) properties of the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/UserHandle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/UserHandle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -242,48 +289,90 @@ Diagram provides the support to notify the pan status of the zoom pan tool. When
 | Progress | When the mouse is in motion the status is notified as progress.|
 | Completed | When panning is stopped the status is notified with completed.|
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :tool='tools' :scrollChange="scrollChange"></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :tool='tools'
+      :scrollChange="scrollChange"></ejs-diagram>
+  </div>
+</template>
+<script setup>
+import { DiagramComponent as EjsDiagram, DiagramTools } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  // Position of the node
+  offsetX: 250,
+  offsetY: 250,
+  // Size of the node
+  width: 100,
+  height: 100,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+  // Text(label) added to the node
+}];
+
+
+const width = "100%";
+const height = "700px";
+const tools = DiagramTools.ZoomPan;
+const scrollChange = (args) => {
+  //Obtains the pan status
+  let panStatus = args.panState
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :tool='tools'
+      :scrollChange="scrollChange"></ejs-diagram>
+  </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,DiagramTools } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        // Position of the node
-        offsetX: 250,
-        offsetY: 250,
-        // Size of the node
-        width: 100,
-        height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-        // Text(label) added to the node
-    }]
-    export default {
-        name: 'app',
-        data() {
-            return {
-                width: "100%",
-                height: "700px",
-                nodes: nodes,
-                tools: DiagramTools.ZoomPan,
-                scrollChange: (args) => {
-                //Obtains the pan status
-                let panStatus = args.panState
-                },
-            }
-        },
+import { DiagramComponent, DiagramTools } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+  // Position of the node
+  offsetX: 250,
+  offsetY: 250,
+  // Size of the node
+  width: 100,
+  height: 100,
+  style: {
+    fill: '#6BA5D7',
+    strokeColor: 'white'
+  },
+  // Text(label) added to the node
+}];
+
+export default {
+  name: 'app',
+  components: {
+    'ejs-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "700px",
+      nodes: nodes,
+      tools: DiagramTools.ZoomPan,
+      scrollChange: (args) => {
+        //Obtains the pan status
+        let panStatus = args.panState
+      },
     }
+  },
+}
 </script>
-```
 
-
+{% endhighlight %}
+{% endtabs %}
 
 ## Keyboard
 

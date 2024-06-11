@@ -31,7 +31,10 @@ In case, if you need to add some other additional fields to the editor window, t
 The appointments can be created dynamically by using `addEvent` method. Either you can add a single or a collection of appointment objects using `addEvent` method. The following code example let you know how to use the `addEvent` method to create multiple appointments simultaneously.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/add-event-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/add-event-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +79,10 @@ In the following example, the specific fields of Scheduler editor window such as
 Additionally, the regex condition has been added to the Location field, so that if any special characters are typed into it, then the custom validation message will be displayed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +92,10 @@ Additionally, the regex condition has been added to the Location field, so that 
 You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the [`actionBegin`](../api/schedule/#actionbegin) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +122,10 @@ The appointments can be edited and updated manually using the `saveEvent` method
 **Normal event** - Here, an event with ID `3` is edited and its subject is changed with a new text. When the modified data object is passed onto the `saveEvent` method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/edit-event-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/edit-event-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +139,10 @@ When the second argument is passed as `EditOccurrence`, which means that the pas
 In case of modifying the single occurrence, it is also necessary to update the `RecurrenceException` field of parent event altogether with the occurrence editing. To know more about how to set `RecurrenceException` values, refer the [recurring events](./appointments/#adding-exceptions) topic.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/edit-event-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/edit-event-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -358,7 +373,10 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the [`actionBegin`](../api/schedule/#actionbegin) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -387,7 +405,10 @@ The appointments can be removed manually using the `deleteEvent` method. The fol
 **Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the `deleteEvent` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/delete-event-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/delete-event-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -397,7 +418,10 @@ The appointments can be removed manually using the `deleteEvent` method. The fol
 **Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the deleteEvent method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters. The following code example shows how to delete entire series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/delete-event-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/delete-event-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -559,7 +583,10 @@ You can watch the following video to learn more about Vue Scheduler's advanced d
 {% youtube "https://www.youtube.com/watch?v=vDLrkQLO1uU" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/event-cs38/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/event-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -573,7 +600,10 @@ When you resize a normal event on the Scheduler, the event editing action takes 
 > By default, when you resize a recurring instance, only the occurrence of the event gets edited and not a whole series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/event-cs39/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/event-cs39/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,9 +1,7 @@
-
-
 <template>
   <div>
     <div id="target" class="col-lg-12 control-section" style="padding:10px;position:relative;">
-        <ejs-button id='dlgbtn' v-on:click.native="buttonClick">Open Dialog</ejs-button>
+        <ejs-button id='dlgbtn' v-on:click="buttonClick">Open Dialog</ejs-button>
 
         <ejs-dialog ref='dialogObj' :visible="true" header='First Dialog' showCloseIcon='true' :animationSettings='animationSettings' width='330px' height='260px'
             target='#target' content='<p>This is the first dialog and acts as a parent dialog, you can open the second (child) dialog by clicking "Next".</p>' :buttons='dlgButton' :open='dialogOpen' :close='dialogClose'>
@@ -15,7 +13,39 @@
     </div>
   </div>
 </template>
+<script>
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
+export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent
+},
+    data: function() {
+        return {
+            dlgButton: [{'click': () => { this.$refs.secondDialog.show();}, buttonModel: { isPrimary:'true', content: 'Next' }}],
+
+            dlg2Button: [{ 'click': () => { this.$refs.secondDialog.hide(); },buttonModel: { isPrimary:'true', content: 'Close' }}],
+
+            animationSettings: { effect: 'None' },
+            isModal: true,
+        }
+    },
+    methods: {
+            buttonClick: function(){
+                this.$refs.dialogObj.show();
+            },
+            dialogClose: function() {
+                document.querySelector('#dlgbtn').style.display='block';
+            },
+            dialogOpen: function() {
+                document.querySelector('#dlgbtn').style.display='none';
+            }
+    }
+};
+</script>
 <style>
     #dlgbtn {
         margin-right: 5%;
@@ -33,38 +63,3 @@
         width: 30%;
     }
 </style>
-
-<script>
-import Vue from "vue";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
-
-export default {
-    data: function() {
-        return {
-            dlgButton: [{'click': () => { this.$refs.secondDialog.show();}, buttonModel: { isPrimary:'true', content: 'Next' }}],
-
-            dlg2Button: [{ 'click': () => { this.$refs.secondDialog.hide(); },buttonModel: { isPrimary:'true', content: 'Close' }}],
-
-            animationSettings: { effect: 'None' },
-            isModal: true,
-        }
-    },
-    methods: {
-            buttonClick: function(args){
-                this.$refs.dialogObj.show();
-            },
-            dialogClose: function() {
-                document.querySelector('#dlgbtn').style.display='block';
-            },
-            dialogOpen: function() {
-                document.querySelector('#dlgbtn').style.display='none';
-            }
-    }
-};
-</script>
-
-

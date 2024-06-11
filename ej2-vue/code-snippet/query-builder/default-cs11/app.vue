@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -21,10 +19,12 @@
 import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 
 export default {
-    components: {
-        'ejs-querybuilder': QueryBuilderComponent,
-        'e-column': ColumnDirective,
-        'e-columns': ColumnsDirective
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
     },
     data: function() {
         return {
@@ -93,5 +93,3 @@ var employeeData = [{
         margin: 0 auto;
     }
 </style>
-
-

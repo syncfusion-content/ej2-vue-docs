@@ -21,7 +21,10 @@ You can customize the icon and text of Vue Speed Dial button using [`openIconCss
 You can use the [`openIconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#openiconcss) and [`closeIconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#closeiconcss) properties to show icons in speed dial button. You can also show tooltip on hover to show additional details to end-user by setting `title` attribute.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/styles-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ You can use the [`openIconCss`](https://ej2.syncfusion.com/vue/documentation/api
 You can show only text in Speed Dial button by setting [`content`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#content) property  without setting icon properties..
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/styles-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ You can show only text in Speed Dial button by setting [`content`](https://ej2.s
 You show icon and text in SpeedDial button using [`openIconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#openiconcss), [`closeIconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#closeiconcss) and [`content`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#content) properties together.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/styles-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,14 +70,11 @@ You can enable or disable the SpeedDial component using [`disabled`](https://ej2
     <ejs-speeddial id='speeddial' content='Edit' disabled=true></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+import { SpeedDialComponent as EJsSpeeddial } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(SpeedDialPlugin);
-export default {}
 </script>
 
 <style>
@@ -91,7 +97,10 @@ The Vue Speed Dial supports the following predefined styles that can be defined 
 | e-danger | Used to represent a negative action. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/styles-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,14 +116,12 @@ You can set the Speed Dial button to visible/hidden state using [`visible`](http
     <ejs-speeddial id='speeddial' content='Edit' visible=false></ejs-speeddial>
 </template>
 
-<script>
-import Vue from 'vue';
-import { SpeedDialPlugin  } from "@syncfusion/ej2-vue-buttons";
+<script setup>
+
+import { SpeedDialComponent as EjsSpeeddial } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(SpeedDialPlugin);
-export default {}
 </script>
 
 <style>
@@ -128,7 +135,10 @@ export default {}
 You can show tooltip on hover to show additional details to end-user by setting [`title`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#title) to Speed Dial button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/styles-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -140,7 +150,10 @@ You can show tooltip on hover to show additional details to end-user by setting 
 You can use [`opensOnHover`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/#opensonhover) property to open actions items on hover itself. By default action items displayed only when clicking the speed dial button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/styles-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/styles-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

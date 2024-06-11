@@ -1,19 +1,19 @@
-
-
 <template>
     <div id="app">
-       <table class="table-section">
+        <table class="table-section">
             <tr>
                 <td>Mode</td>
                 <td>
-                    <ejs-dropdownlist ref="editorMode" id="editorMode" :dataSource='dataPlace' :change='changeEditorMode' :value='dataValue' :fields='placeFields'>
+                    <ejs-dropdownlist ref="editorMode" id="editorMode" :dataSource='dataPlace'
+                        :change='changeEditorMode' :value='dataValue' :fields='placeFields'>
                     </ejs-dropdownlist>
                 </td>
             </tr>
             <tr>
                 <td class="sample-td">Enter your Name</td>
                 <td class="sample-td">
-                <ejs-inplaceeditor ref="editObj" id="inplace_editor" mode="Inline" type="Text" value="Andrew" submitOnEnter= "true" :model="textModel">
+                    <ejs-inplaceeditor ref="editObj" id="inplace_editor" mode="Inline" type="Text" value="Andrew"
+                        submitOnEnter="true" :model="textModel">
                     </ejs-inplaceeditor>
                 </td>
             </tr>
@@ -22,16 +22,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-
-Vue.use(InPlaceEditorPlugin);
-Vue.use(DropDownListPlugin);
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 
 export default {
-  name: 'app',
-    data () {
+    name: "App",
+    components: {
+        "ejs-dropdownlist": DropDownListComponent,
+        "ejs-inplaceeditor": InPlaceEditorComponent
+    },
+    data() {
         return {
             textModel: {
                 placeholder: 'Enter Some Name'
@@ -41,14 +41,11 @@ export default {
             dataPlace: [{ id: 'inline', mode: 'Inline' }, { id: 'popup', mode: 'Popup' }],
         }
     },
-    mounted: function(){
-        this.editObj = this.$refs.editObj.ej2Instances;
-    },
     methods: {
-        changeEditorMode: function(args) {
-           var editMode = this.$refs.editorMode.$el.value;
-           this.editObj.mode = editMode;
-           this.editObj.dataBind();
+        changeEditorMode: function (args) {
+            const editMode = this.$refs.editorMode.$el.value;
+            this.$refs.editObj.ej2Instances.mode = editMode;
+            this.$refs.editObj.ej2Instances.dataBind();
         }
     }
 }
@@ -82,5 +79,3 @@ tr td:first-child {
     height: 100px;
 }
 </style>
-
-

@@ -15,7 +15,10 @@ The ListBox supports scrolling and it can be achieved by restricting the height 
 In the following sample, `height` of the list box is restricted to `290px`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
@@ -14,15 +11,20 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
-
-Vue.use(GridPlugin);
-Vue.use(DatePickerPlugin);
-
+import { DatePickerComponent } from "@syncfusion/ej2-vue-calendars";
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-datepicker":DatePickerComponent
+},
   data() {
     return {
       data: data,
@@ -32,7 +34,7 @@ export default {
   },
   methods: {
       editTemplate: function() {
-          return {template: Vue.component('datePicker', {
+          return {template: app.component('datePicker', {
               template: `<ejs-datepicker id="OrderDate" placeholder="Order Date" v-model="data.OrderDate" floatLabelType='Never'></ejs-datepicker>`,
               data() {
                   return {data:{}}
@@ -49,6 +51,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

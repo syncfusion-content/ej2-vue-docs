@@ -35,7 +35,7 @@ new Vue({
   methods: {
     btnClick: function (args){
         var kanbanData = this.$refs.kanbanObj.ej2Instances;
-        var ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
+      var ajax = new Ajax("https://services.syncfusion.com/vue/production/api/Orders", "GET");
         ajax.send();
         ajax.onSuccess = function (result) {
           kanbanData.dataSource = JSON.parse(result);

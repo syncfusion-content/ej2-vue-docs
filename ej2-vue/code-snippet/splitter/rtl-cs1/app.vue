@@ -1,5 +1,4 @@
-
- html
+html
 <template>
     <div id="app" class="col-lg-12 control-section default-splitter">
         <ejs-splitter id='splitter' height='200px' enableRtl='true'>
@@ -12,15 +11,20 @@
     </div>
 </template>
 <script>
-    import Vue from "vue";
-    import { SplitterPlugin} from '@syncfusion/ej2-vue-layouts';
-    Vue.use(SplitterPlugin);
-    export default {
-        name: 'app',
-        data() {
-            return {}
-        }
+
+import { SplitterComponent, PanesDirective, PaneDirective } from '@syncfusion/ej2-vue-layouts';
+
+export default {
+    name: "App",
+    components: {
+        "ejs-splitter": SplitterComponent,
+        "e-panes": PanesDirective,
+        "e-pane": PaneDirective
+    },
+    data() {
+        return {}
     }
+}
 </script>
 
 <style>
@@ -29,7 +33,6 @@
     padding: 9px;
     display: flex;
 }
-    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+
+@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 </style>
-
-

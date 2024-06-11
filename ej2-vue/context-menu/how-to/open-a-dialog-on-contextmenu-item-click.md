@@ -21,7 +21,10 @@ npm install @syncfusion/ej2-vue-popups --save
 In the following sample, Dialog will open while clicking `Save As...` item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/context-menu/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By default, the toasts are expired based on the timeOut value. You can customize the toast hiding process with click/tap action by setting the event args in the [clicked](https://ej2.syncfusion.com/vue/documentation/api/toast/toastClickEventArgs/#clicktoclose) callback function with [static Toast](../timeout/#static-toast).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/close-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/close-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -52,7 +52,10 @@ Operators that can be used in label filtering are:
 | NotBetween| Displays the pivot table that does not record between the start and end text.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs151/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs151/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +90,10 @@ Operators that can be used in date filtering are:
 > Date filtering option is enabled only when the field has **date** type `formatsettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs152/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs152/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +128,10 @@ Operators that can be used in date filtering are:
 > Number filtering option is enabled only when the field contains the **number** format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs153/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs153/app.vue %}
 {% endhighlight %}
 {% endtabs %}

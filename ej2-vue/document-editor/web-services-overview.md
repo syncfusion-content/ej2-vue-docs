@@ -58,64 +58,118 @@ Document editor component provides an option to customize the expected method na
 
 The following example code illustrates how to customize the method name using serverActionSettings.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :serverActionSettings='settings' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :serverActionSettings='settings'
+      height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
-<script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide } from 'vue';
 
-  Vue.use(DocumentEditorContainerPlugin);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+// Customize the API name
+const settings = { import: 'Import1', systemClipboard: 'SystemClipboard1', spellCheck: 'SpellCheck1', restrictEditing: 'RestrictEditing1' };
 
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      // Customize the API name
-      settings:{ import: 'Import1', systemClipboard: 'SystemClipboard1', spellCheck: 'SpellCheck1', restrictEditing: 'RestrictEditing1'} };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    }
-  }
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :serverActionSettings='settings'
+      height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+      // Customize the API name
+      settings: { import: 'Import1', systemClipboard: 'SystemClipboard1', spellCheck: 'SpellCheck1', restrictEditing: 'RestrictEditing1' }
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Add the custom headers to XMLHttpRequest
 
 Document editor component provides an an option to add custom headers of XMLHttpRequest using the [`headers`](./api/document-editor-container/documentEditorContainerModel/#headers).
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :headers='customHeaders' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :headers='customHeaders' height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
-<script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide } from 'vue';
 
-  Vue.use(DocumentEditorContainerPlugin);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+// custom headers
+const customHeaders = [{ 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' }, { 'Content-Type': 'application/json' }]
 
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      // custom headers
-      customHeaders: [{ 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' }, { 'Content-Type': 'application/json' }] };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    }
-  }
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :headers='customHeaders' height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+      // custom headers
+      customHeaders: [{ 'Authorization': 'Bearer YOUR_ACCESS_TOKEN' }, { 'Content-Type': 'application/json' }]
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Modify the XMLHttpRequest before request send
 
@@ -125,11 +179,51 @@ You can customize the required [`XMLHttpRequest`](https://ej2.syncfusion.com/vue
 
 The following example code illustrates how to modify the XMLHttpRequest using beforeXmlHttpRequestSend.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { onMounted, provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+onMounted(function () {
+  //Here, modifying the request headers
+  container.value.headers = [{ syncfusion: 'true' }];
+  // Below action, cancel all server-side interactions expect spell check
+  container.value.beforeXmlHttpRequestSend = (
+    args) => {
+    args.headers = container.value.headers;
+    args.withCredentials = true;
+    switch (args.serverActionType) {
+      case 'Import':
+      case 'RestrictEditing':
+      case 'SystemClipboard':
+        args.cancel = true;
+        break;
+    }
+  };
+})
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
   import Vue from 'vue';
@@ -158,10 +252,11 @@ The following example code illustrates how to modify the XMLHttpRequest using be
           break;
       }
     };
-    }
   }
+}
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Note: Find the customizable serverActionType values are `'Import' | 'RestrictEditing' | 'SpellCheck' | 'SystemClipboard'`.

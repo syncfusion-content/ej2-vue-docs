@@ -15,7 +15,7 @@ new Vue({
     <div id="app">
         <div style="display: inline-block;">
           <ejs-textbox ref='textbox'placeholder="Search" width='250px'></ejs-textbox>
-          <ejs-button id='search' v-on:click.native='search'>Search</ejs-button>
+          <ejs-button id='search' v-on:click='search'>Search</ejs-button>
         </div>
         <ejs-grid ref='grid' style="padding-top: 5px" :dataSource='data' height='262px'>
             <e-columns>

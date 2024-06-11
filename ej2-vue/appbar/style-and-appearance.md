@@ -29,7 +29,10 @@ To modify the AppBar appearance, you need to override the default CSS of the App
 CssClass is used for AppBar customization based on the custom class. In the example below, the AppBar background and color are customized using the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/appbar#cssclass) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ CssClass is used for AppBar customization based on the custom class. In the exam
 It can be used for additional inline attributes by specifying as inline attributes or by specifying htmlAttributes directive. In the code example below, the aria-label of the AppBar is customized by specifying as attributes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

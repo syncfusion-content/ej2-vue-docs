@@ -21,7 +21,10 @@ An Outline ButtonGroup has a border with transparent background. To create Outli
 The following sample illustrates how to achieve outline ButtonGroup,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ The Essential JS 2 ButtonGroup has the following predefined styles. This can be 
 The following example illustrates how to achieve predefined styles in ButtonGroup,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

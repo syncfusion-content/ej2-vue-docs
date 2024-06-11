@@ -1,26 +1,29 @@
-
-
-
 <template>
     <div id="app">
-         <div class='wrapper'>
-             <ejs-circulargauge>
-                 <e-axes>
-                     <e-axis :startAngle = 270 :endAngle= 90 :lineStyle= 'lineStyle' :labelStyle= 'labelStyle' :majorTicks= 'majorTicks' :minorTicks= 'minorTicks' :radius= 'radius' :minimum= 0 :maximum= 100 :pointers='pointers' >
-                     </e-axis>
-                 </e-axes>
-             </ejs-circulargauge>
-         </div>
+        <div class='wrapper'>
+            <ejs-circulargauge>
+                <e-axes>
+                    <e-axis :startAngle=270 :endAngle=90 :lineStyle='lineStyle' :labelStyle='labelStyle'
+                        :majorTicks='majorTicks' :minorTicks='minorTicks' :radius='radius' :minimum=0 :maximum=100
+                        :pointers='pointers'>
+                    </e-axis>
+                </e-axes>
+            </ejs-circulargauge>
+        </div>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin, Gradient} from "@syncfusion/ej2-vue-circulargauge";
+import { CircularGaugeComponent, AxesDirective, AxisDirective, Gradient } from "@syncfusion/ej2-vue-circulargauge";
 
-Vue.use(CircularGaugePlugin);
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective
+    },
     data: function () {
-        var pointerLinearGradient = {
+        let pointerLinearGradient = {
             startValue: '0%',
             endValue: '100%',
             colorStop: [
@@ -30,7 +33,7 @@ export default {
         return {
             lineStyle: { width: 3, color: '#E63B86' },
             labelStyle: {
-                font: { size: '0px'}
+                font: { size: '0px' }
             }, majorTicks: {
                 height: 0
             }, minorTicks: {
@@ -55,21 +58,21 @@ export default {
                     length: '20%',
                     linearGradient: pointerLinearGradient
                 }
-                }, {
-                    radius: '60%', value: 40,
-                    animation: { duration: 1000 },
-                    pointerWidth: 10,
-                    linearGradient: pointerLinearGradient,
-                    cap: {
-                        radius: 8, color: 'white',
-                        border: { color: '#E63B86', width: 1 }
-                    },
-                    needleTail: {
-                         length: '20%',
-                         linearGradient: pointerLinearGradient
-                    }
-               }]
-      }
+            }, {
+                radius: '60%', value: 40,
+                animation: { duration: 1000 },
+                pointerWidth: 10,
+                linearGradient: pointerLinearGradient,
+                cap: {
+                    radius: 8, color: 'white',
+                    border: { color: '#E63B86', width: 1 }
+                },
+                needleTail: {
+                    length: '20%',
+                    linearGradient: pointerLinearGradient
+                }
+            }]
+        }
     },
     provide: {
         circulargauge: [Gradient]
@@ -77,10 +80,8 @@ export default {
 };
 </script>
 <style>
-  .wrapper {
+.wrapper {
     max-width: 500px;
     margin: 0 auto;
-  }
+}
 </style>
-
-

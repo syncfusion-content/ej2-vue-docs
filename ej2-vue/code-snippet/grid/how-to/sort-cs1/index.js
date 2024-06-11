@@ -12,8 +12,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-     <ejs-button @click.native='singleSort'>SingleSort</ejs-button>
-     <ejs-button @click.native='multiSort'>MultiSort</ejs-button>
+     <ejs-button @click='singleSort'>SingleSort</ejs-button>
+     <ejs-button @click='multiSort'>MultiSort</ejs-button>
         <ejs-grid ref='grid' :dataSource='data' :allowSorting='true' height='280px' >
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>

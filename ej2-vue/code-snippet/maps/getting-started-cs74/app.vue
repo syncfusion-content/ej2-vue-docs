@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
@@ -18,11 +16,19 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, NavigationLine } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, NavigationLine, LayerDirective, LayersDirective, NavigationLineSettingDirective, NavigationLineSettingsDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective,
+"e-navigationLineSettings":NavigationLineSettingsDirective,
+"e-navigationLineSetting":NavigationLineSettingDirective
+},
 data () {
     return {
         latitude: [37.6276571, -14.2350],
@@ -50,5 +56,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

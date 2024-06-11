@@ -1,28 +1,26 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 100,
-    },
-    {
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 300,
-        offsetY: 100,
-    }
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+    id: 'node',
+    width: 100,
+    height: 100,
+    offsetX: 100,
+    offsetY: 100,
+},
+{
+    id: 'node1',
+    width: 100,
+    height: 100,
+    offsetX: 300,
+    offsetY: 100,
+}
 ];
 let connectors = [{
     id: "connector1",
@@ -40,12 +38,15 @@ let connectors = [{
     sourceID: "node",
     targetID: "node1",
     // Set Source Padding value
-    sourcePadding:20,
+    sourcePadding: 20,
     // Set Target Padding value
-    targetPadding:20
-}, ]
+    targetPadding: 20
+},]
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -64,7 +65,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

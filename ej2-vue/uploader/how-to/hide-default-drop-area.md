@@ -17,7 +17,10 @@ You can achieve this behavior by override the corresponding uploader styles. In 
     * .e-upload .e-file-drop
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/hide-drop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/hide-drop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

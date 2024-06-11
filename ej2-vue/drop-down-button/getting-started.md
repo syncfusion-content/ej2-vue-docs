@@ -122,7 +122,6 @@ export default {
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
-
 <template>
 <ejs-dropdownbutton :items='items'>Clipboard</ejs-dropdownbutton>
 </template>

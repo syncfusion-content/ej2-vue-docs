@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"
+      :showFieldList="showFieldList"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -38,40 +36,37 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 
 /* csslint ignore:start */
 #PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-dropdown-icon::before,
 #PivotView .e-pivot-button .e-icons.e-dropdown-icon::before {
-    content: "\e941";
+  content: "\e941";
 }
 
 #PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-pv-filtered::before,
 #PivotView .e-pivot-button .e-icons.e-pv-filtered::before {
-    content: "\e974";
+  content: "\e974";
 }
 
 #PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-pv-filter::before,
 #PivotView .e-pivot-button .e-icons.e-pv-filter::before {
-    content: '\e202';
+  content: '\e202';
 }
 
 #PivotView_PivotFieldList .e-icons.e-toggle-field-list::before {
-    content: '\e337';
+  content: '\e337';
 }
 
 #PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-sort::before,
 #PivotView .e-pivot-button .e-icons.e-sort::before {
-    content: '\e306';
+  content: '\e306';
 }
 
 #PivotView_PivotFieldList_Wrapper .e-pivot-button .e-icons.e-remove::before,
 #PivotView .e-pivot-button .e-icons.e-remove::before {
-    content: '\e201';
+  content: '\e201';
 }
 
 /* csslint ignore:end */
 </style>
-
-
-

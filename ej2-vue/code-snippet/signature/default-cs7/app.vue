@@ -1,10 +1,8 @@
-
-
 <template>
-<div class='wrap'>
-    <h4>Sign here</h4>
-    <ejs-signature id="signature"></ejs-signature>
-</div>
+    <div class='wrap'>
+        <h4>Sign here</h4>
+        <ejs-signature id="signature"></ejs-signature>
+    </div>
 </template>
 
 <script>
@@ -14,9 +12,10 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+    name: "App",
     components: {
-        'ejs-signature': SignatureComponent
-    }
+        "ejs-signature": SignatureComponent
+    },
 }
 </script>
 
@@ -35,5 +34,3 @@ export default {
     width: 550px;
 }
 </style>
-
-

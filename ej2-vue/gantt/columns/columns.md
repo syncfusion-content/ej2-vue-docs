@@ -24,7 +24,10 @@ To learn about Gantt Chart Customize Column Data, you can check on this video:
 Using the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#columns) property, you can define the columns in Gantt. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the [`taskFields`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskfields) property. Refer to the following code example for defining the columns in Gantt along with their widths.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ Using the [`columns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#co
 The column header text can be defined using the [`headerText`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#headertext) property, and you can customize the column headers using the [`headerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#headertemplate) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ The column header text can be defined using the [`headerText`](https://ej2.syncf
 To format the cell values based on a specific culture, use the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#format) property. The Gantt component uses the [`Internationalization`](../../common/internationalization/) library to format `number` and `date` values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +93,10 @@ Format | Formatted value
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/1996 12:00:00 AM
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +108,10 @@ Format | Formatted value
 The tree/expander column is a column in the Gantt component, that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt component by using the [`treeColumnIndex`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#treecolumnindex) property and the default value of this property is `0`. The following code example shows how to use this property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +123,10 @@ The tree/expander column is a column in the Gantt component, that has icons to e
 You can show or hide gantt columns dynamically using external buttons by invoking the [`showColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#showcolumn) or [`hideColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#hidecolumn) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +138,10 @@ You can show or hide gantt columns dynamically using external buttons by invokin
 You can enable or disable gantt action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowfiltering), [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowsorting), [`allowReordering`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#allowreordering),and [`allowEditing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#editsettings) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

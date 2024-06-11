@@ -15,7 +15,10 @@ The badges can be integrated with the `listview` component to indicate new notif
 In the following sample, `default` badges are used and there is no need to customize the badge size. The component will automatically adjust the size based on the container element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/badge/listview-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/badge/listview-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

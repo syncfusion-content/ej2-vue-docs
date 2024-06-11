@@ -1,19 +1,22 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating" value="3" :showTooltip="true" cssClass="customtooltip" ></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating" value="3" :showTooltip="true" cssClass="customtooltip"></ejs-rating>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin } from "@syncfusion/ej2-vue-inputs";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
-Vue.use(RatingPlugin);
 
-export default {}
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
+import { enableRipple } from '@syncfusion/ej2-base';
+
+enableRipple(true);
+
+export default {
+  name: "App",
+  components: {
+    "ejs-rating": RatingComponent
+  },
+}
 </script>
 
 <style>
@@ -33,7 +36,7 @@ export default {}
 
 /* To change the size of the tooltip content. */
 .customtooltip.e-tooltip-wrap .e-tip-content {
-  font-size:14px;
+  font-size: 14px;
 }
 
 /* To change the border color and width for tooltip. */
@@ -50,7 +53,4 @@ export default {}
 .customtooltip.e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom {
   border-top: 9.5px solid #000000;
 }
-
 </style>
-
-

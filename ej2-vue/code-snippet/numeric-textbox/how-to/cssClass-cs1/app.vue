@@ -1,19 +1,21 @@
-
-
 <template>
   <div id="app">
-        <div class='wrap'>
-           <ejs-numerictextbox id="numeric" :value="value" placeholder='Enter value' floatLabelType='Always' cssClass='e-style'></ejs-numerictextbox>
-        </div>
+    <div class='wrap'>
+      <ejs-numerictextbox id="numeric" :value="value" placeholder='Enter value' floatLabelType='Always'
+        cssClass='e-style'></ejs-numerictextbox>
+    </div>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
 
-Vue.use(NumericTextBoxPlugin);
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
+
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-numerictextbox": NumericTextBoxComponent
+  },
+  data() {
     return {
       value: 10
     }
@@ -21,37 +23,43 @@ export default {
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
- .wrap {
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
+.wrap {
   margin: 0 auto;
   width: 240px;
   padding-top: 100px;
 }
-  .e-numeric.e-style .e-control.e-numerictextbox  {
-    color: royalblue ;
-    font-size: xx-large ;
-    border: 0px ;
-  }
-  .e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), .e-float-input.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left) {
-    border-color: royalblue;
-  }
-  .e-control-wrapper.e-numeric.e-float-input.e-style .e-spin-down  {
-    color:royalblue;
-  }
-  .e-control-wrapper.e-numeric.e-float-input.e-style .e-float-line::before {
-    background: royalblue ;
-  }
-  .e-control-wrapper.e-numeric.e-float-input.e-style .e-float-line::after {
-    background: royalblue ;
-   }
-  .e-control-wrapper.e-numeric.e-float-input.e-style .e-spin-up {
-    color:royalblue ;
-  }
-  .e-control-wrapper.e-numeric.e-float-input.e-style .e-float-text.e-label-top {
-    color: royalblue ;
-    font-size: medium ;
-  }
-</style>
 
+.e-numeric.e-style .e-control.e-numerictextbox {
+  color: royalblue;
+  font-size: xx-large;
+  border: 0px;
+}
 
+.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.e-float-input.e-control-wrapper:hover:not(.e-success):not(.e-warning):not(.e-error):not(.e-disabled):not(.e-float-icon-left) {
+  border-color: royalblue;
+}
+
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-spin-down {
+  color: royalblue;
+}
+
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-float-line::before {
+  background: royalblue;
+}
+
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-float-line::after {
+  background: royalblue;
+}
+
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-spin-up {
+  color: royalblue;
+}
+
+.e-control-wrapper.e-numeric.e-float-input.e-style .e-float-text.e-label-top {
+  color: royalblue;
+  font-size: medium;
+}</style>

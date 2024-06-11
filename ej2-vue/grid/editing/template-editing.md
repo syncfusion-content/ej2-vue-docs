@@ -23,7 +23,10 @@ To get start quickly with Dialog/Inline template edit Option, you can check on t
 In the following sample, grid enabled with dialog template editing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/dialogtemplate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/dialogtemplate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

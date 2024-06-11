@@ -15,7 +15,10 @@ By default, the progress bar appears based on the theme stylings and dimensions.
 The following sample demonstrates customizing the progress bar stylings using the [`beforeOpen`](https://ej2.syncfusion.com/vue/documentation/api/toast/#beforeopen) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/custom-progress-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/custom-progress-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ State persistence refers to the Kanban state maintained in the browser's [`local
 State persistence stores Kanban datasource, column and swimlane expand/collapse state in the local storage when the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#enablepersistence) is defined as true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/persistence-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/persistence-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

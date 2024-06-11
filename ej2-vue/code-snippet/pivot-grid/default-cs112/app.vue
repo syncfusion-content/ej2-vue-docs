@@ -1,24 +1,22 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
-        dataSource: pivotData as IDataSet[],
+        dataSource: pivotData,
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter', showFilterIcon: false }],
         values: [{ name: 'Sold', caption: 'Units Sold' }, { name: 'Amount', caption: 'Sold Amount' }],
         rows: [{ name: 'Country' }, { name: 'Products', showFilterIcon: false }],
@@ -26,17 +24,14 @@ export default {
         filters: []
       },
       height: 350,
-      showGroupingBar: true,
+      showGroupingBar: true
     }
   },
   provide: {
-        pivotview: [GroupingBar]
-    }
+    pivotview: [GroupingBar]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

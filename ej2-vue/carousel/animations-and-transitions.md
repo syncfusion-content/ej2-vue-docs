@@ -19,7 +19,10 @@ In Carousel, two built-in animations are provided for slide transitions. You can
 The following demo depicts the example for fade animation,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ In Carousel, you can use customized animation effects for slide transitions usin
 The following demo depicts the example for `parallax` custom animation,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ The following demo depicts the example for `parallax` custom animation,
 Using the items property, you can set different intervals for each item to transition between slides. The default interval is `5000 ms` (5 seconds). The following example depicts the code for setting the different intervals between each item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ Using the items property, you can set different intervals for each item to trans
 In the carousel, all slides transitions are performed continuously after the specified or default intervals. You can enable or disable the auto slide transition using the [`autoPlay`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#autoplay) property. The following example depicts the code to enable or disable the auto slide transitions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +85,10 @@ By default, Slide transitions are paused when hovering the mouse pointer over th
 The following example depicts the code to play the slides when hovering the mouse pointer over the Carousel element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +100,10 @@ The following example depicts the code to play the slides when hovering the mous
 In the carousel, slides transitions are repeated continuously when you reach the last slide by default. You can enable or disable the infinite slide transition using the [`loop`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#loop) property. The following example depicts the code to enable or disable the infinite slide transitions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +117,10 @@ Using the [`slideChanging`](https://ej2.syncfusion.com/vue/documentation/api/car
 The following demo depicts the example for carousel events,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +132,10 @@ The following demo depicts the example for carousel events,
 In the carousel, you can swipe the carousel slides using touch actions by default. The swipe action can be enabled or disabled using the [`enableTouchSwipe`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#enabletouchswipe) property. The following example depicts the code to disable the swipe action for the slide.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +155,10 @@ The following are the different swipe modes available in the carousel:
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/swipe-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/swipe-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

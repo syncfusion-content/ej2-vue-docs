@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' height='220' childMapping='subtasks' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings' :allowPdfExport='true' :toolbar='toolbarOptions' :toolbarClick='toolbarClick' :pdfExportComplete='pdfExportComplete'>
@@ -13,13 +11,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, PdfExport } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent as EjsTreegrid, Page, Toolbar, PdfExport,
+ColumnDirective as EColumn, ColumnsDirective as EColumns
+ } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -34,8 +40,8 @@ export default {
           this.$refs.treegrid.ej2Instances.grid.getColumns()[3].visible = true;
           this.$refs.treegrid.pdfExport();
         }
-      }
-      pdfExportComplete(args) {
+      },
+      pdfExportComplete() {
         this.$refs.treegrid.ej2Instances.grid.getColumns()[2].visible = true;
         this.$refs.treegrid.ej2Instances.grid.getColumns()[3].visible = false;
       }
@@ -45,6 +51,3 @@ export default {
   }
 }
 </script>
-
-
-

@@ -216,7 +216,10 @@ To prevent the default key action behavior in the grid, you can utilize the [key
 The following example demonstrates how to prevent the default behavior of the **"ENTER"** key using the `keyPressed` event. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/accessibility/keyboard-navigation/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/accessibility/keyboard-navigation/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -248,7 +251,10 @@ And prevented the default actions associated with the following keyboard shortcu
 You can add more custom shortcuts and actions as needed to enhance the functionality of your Syncfusion Vue Grid component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/accessibility/custom-shortcut-key/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/accessibility/custom-shortcut-key/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -262,7 +268,96 @@ The Grid component's accessibility levels are ensured through an [accessibility-
 The accessibility compliance of the Grid component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/grid.html) in a new window to evaluate the accessibility of the Grid component with accessibility tools.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+      <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings='pageSettings' :allowSorting='true' :sortSettings='sortSettings' :showColumnChooser='true' 
+      :toolbar="toolbar" :editSettings='editSettings' :allowFiltering='true' :filterSettings='filterSettings' :searchSettings='searchSettings' :selectedRowIndex='6' 
+      :allowGrouping='true' :groupSettings='groupSettings' :allowRowDragAndDrop="true" :allowReordering='true'>
+        <e-columns>
+          <e-column type="checkbox" width=50></e-column>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+          <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
+          <e-column field='Freight' headerText='Freight($)' textAlign='Right' format='C2' width=90></e-column>                    
+          <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
+          <e-column field='ShipCountry' headerText='Ship Country' width=140></e-column>
+          <e-column field='ShipName' headerText='Shipped Name' textAlign='Right' width=140></e-column>          </e-columns>
+          <e-aggregates>
+            <e-aggregate>
+                <e-columns>
+                <e-column type="Sum" field="Freight" format="C2" :footerTemplate="footerTemplate" >
+                </e-column>
+                </e-columns>
+            </e-aggregate>
+            <e-aggregate>
+                <e-columns>
+                <e-column type="Sum" field="Freight" format="C2" :groupFooterTemplate="groupFooterTemplate">
+                </e-column>
+                </e-columns>
+            </e-aggregate>
+            <e-aggregate>
+                <e-columns>
+                <e-column type="Max" field="Freight" format="C2" :groupCaptionTemplate="groupCaptionTemplate">
+                </e-column>
+                </e-columns>
+            </e-aggregate>
+            </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide, createApp } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates,  ColumnChooser, Page, Toolbar, Sort, Filter, 
+Group, Aggregate, Edit, RowDD, Reorder } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+const app = createApp();
+      const pageSettings = { pageCount: 2, pageSizes: true };
+      const searchSettings = { fields: ['ShipCountry'], operator: 'contains', key: 'a', ignoreCase: true };
+      const sortSettings = { columns: [{ field: 'OrderID', direction: 'Ascending' }, { field: 'ShipCity', direction: 'Descending' }] };
+      const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search', 'ColumnChooser'];
+      const selectionSettings = { type: 'Multiple', mode: 'Both' };
+      const filterSettings = { type: 'Excel' };
+      const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' };
+      const groupSettings = { columns: ['CustomerID'] };
+      const footerTemplate = function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+      const groupFooterTemplate = function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Sum: {{data.Sum}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+      const groupCaptionTemplate: function () {
+        return  { template : app.component('sumTemplate', {
+            template: `<span>Max: {{data.Max}}</span>`,
+            data () {return { data: {}};}
+            })
+          }
+      }
+  provide('grid',  [Page, Sort, Filter, Group, Aggregate, ColumnChooser, Toolbar, Edit, RowDD, Reorder ]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -302,14 +397,20 @@ The accessibility compliance of the Grid component is shown in the following sam
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin,  ColumnChooser, Page, Toolbar, Sort, Filter, 
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, ColumnChooser, Page, Toolbar, Sort, Filter, 
 Group, Aggregate, Edit, RowDD, Reorder } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
@@ -322,21 +423,21 @@ export default {
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Normal' },
       groupSettings: { columns: ['CustomerID'] },
       footerTemplate: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       groupFooterTemplate: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       groupCaptionTemplate: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Max: {{data.Max}}</span>`,
             data () {return { data: {}};}
             })

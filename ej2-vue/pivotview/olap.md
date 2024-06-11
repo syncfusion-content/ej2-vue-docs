@@ -120,11 +120,11 @@ Add the EJ2 Vue pivot table using `<ejs-pivotview>` to the `<template>` section 
     </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -147,11 +147,11 @@ Next we need to add the the following code in **App.vue** file to populate pivot
     </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -195,7 +195,10 @@ In-order to define each [OLAP cube element](#olap-cube-elements) in the respecti
 In this sample, "Product Categories" is added in column, "Customer Geography" in row, and "Customer Count" and "Internet Sales Amount" in value axes respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -209,7 +212,10 @@ Formatting defines a way in which values should be displayed in pivot table. For
 > Only measures from value axis, which is in the form of numeric data values are applicable for formatting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -223,7 +229,10 @@ The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube
 > If the **GroupingBar** module is not injected, the grouping bar will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -237,7 +246,10 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 > If the **FieldList** module is not injected, the Field List will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -249,7 +261,10 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows), [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) and [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#values) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -278,7 +293,10 @@ Also calculated fields can be added at run time through the built-in dialog. The
 > If the **CalculatedField** module is not injected, the calculated field dialog will not be rendered with the pivot table component. Moreover calculated measure can be added only in value axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -390,7 +408,10 @@ Allows large amounts of data to be loaded without any performance degradation by
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -415,7 +436,10 @@ npm run dev
 Output will be displayed as follows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -434,7 +458,10 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 | [`catalog`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#catalog "catalog")| Contains the database name (catalog name) to fetch the data.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -448,7 +475,10 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 By default, the measures are plotted in column axis. To plot those measures in row axis, place the **Measures** button in the row axis as follows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -460,7 +490,10 @@ By default, the measures are plotted in column axis. To plot those measures in r
 You can place measures in different position in row or column axis either thorough code behind or UI. In this sample, **measures** placed before the dimension in the column axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -474,7 +507,10 @@ Named set is a multidimensional expression (MDX) that returns a set of dimension
 You can bind the named sets in the pivot table by setting it's unique name in the [`name`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#name) property either in row or column axis and [`isNamedSet`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#isnamedset) boolean property to **true**. In this sample, we have added "Core Product Group" named set in the column axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -497,11 +533,12 @@ Users can configure basic authentication information to access the OLAP cube usi
     </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -543,9 +580,7 @@ export default {
       showFieldList: true
     }
   },
-  provide: {
-        pivotview: [FieldList]
-    }
+  provide('pivotview',  [FieldList]);
 }
 </script>
 <style>
@@ -566,11 +601,12 @@ SQL Server Analysis Services uses [`roles`](https://learn.microsoft.com/en-us/an
     </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -597,9 +633,7 @@ export default {
       height: 350
     }
   },
-  provide: {
-        pivotview: []
-    }
+  provide('pivotview',  []);
 }
 </script>
 <style>

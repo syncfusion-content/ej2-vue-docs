@@ -109,7 +109,10 @@ Use the below list of shortcut keys to interact with the TimePicker after the Ti
 > To focus the DateTimePicker component use the `alt+t` keys.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datetimepicker/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datetimepicker/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

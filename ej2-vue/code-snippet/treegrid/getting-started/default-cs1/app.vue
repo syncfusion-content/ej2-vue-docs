@@ -1,8 +1,3 @@
-
-
-
-
-
 <template>
     <div id="app">
         <ejs-treegrid :dataSource="data" :treeColumnIndex='1' childMapping='subtasks' :allowPaging="true" :pageSettings='pageSettings'>
@@ -89,10 +84,11 @@ let dataSource = [{
         }];
 
 export default {
-  components: {
-    'ejs-treegrid': TreeGridComponent,
-    'e-column': ColumnDirective,
-    'e-columns': ColumnsDirective
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
   },
   data() {
     return {
@@ -117,7 +113,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-treegrid/styles/material.css";
 </style>
-
-
-
-

@@ -38,35 +38,25 @@ Range represents the entire span of the ProgressBar and can be defined using the
          </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-     trackThickness:24,
-     progressThickness:24,
-     minimum:10,
-     maximum:90,
-     value:90,
-     animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-     labelStyle: {
-       color: '#FFFFFF'
-       },
-     showProgressValue: true
-    };
-  },
-  provide: {},
-  methods: {}
-});
+const trackThickness = 24;
+const progressThickness = 24;
+const minimum = 10;
+const maximum = 90;
+const value = 90;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const labelStyle = {
+  color: '#FFFFFF'
+};
+const showProgressValue = true;
+
 </script>
 <style>
   #loader {

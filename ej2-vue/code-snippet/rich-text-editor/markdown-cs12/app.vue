@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
     <div id='container'>
@@ -19,13 +17,15 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Count, Image, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorComponent, Toolbar, Link, Count, Image, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
 import { FormValidator } from '@syncfusion/ej2-inputs';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(RichTextEditorPlugin);
-Vue.use(ButtonPlugin);
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent,
+"ejs-button":ButtonComponent
+},
    data: function() {
     return {
       value : null,
@@ -76,5 +76,3 @@ methods: {
 }
 
 </style>
-
-

@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :actionComplete="actionComplete"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"
+      :actionComplete="actionComplete"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, PivotActionCompleteEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -33,20 +31,17 @@ export default {
     }
   },
   methods: {
-    actionComplete: function (args: PivotActionCompleteEventArgs) {
+    actionComplete: function (args) {
       if (args.actionName == 'Field sorted' || args.actionName == 'Field filtered') {
         // Triggers when the grouping bar UI actions such as sorting and filtering are completed.
       }
     }
   },
   provide: {
-        pivotview: [GroupingBar]
-    }
+    pivotview: [GroupingBar]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

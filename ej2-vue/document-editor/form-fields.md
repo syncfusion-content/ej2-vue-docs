@@ -112,34 +112,65 @@ Document editor provides an option to protect and unprotect document using [`enf
 
 The following example code illustrates how to enforce and stop protection in Document editor container.
 
-```ts
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { onMounted, provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+provide('DocumentEditorContainer', [Toolbar])
+
+onMounted(function () {
+  //enforce protection
+  this.$refs.container.ej2Instances.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
+  //stop the document protection
+  this.$refs.container.ej2Instances.documentEditor.editor.stopProtection('123');
+});
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'};
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    },
-    mounted(){
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return { serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  mounted() {
     //enforce protection
-    this.$refs.container.ej2Instances.documentEditor.editor.enforceProtection('123','FormFieldsOnly');
+    this.$refs.container.ej2Instances.documentEditor.editor.enforceProtection('123', 'FormFieldsOnly');
     //stop the document protection
     this.$refs.container.ej2Instances.documentEditor.editor.stopProtection('123');
-    }
   }
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 >Note: In enforce Protection method, first parameter denotes password and second parameter denotes protection type. Possible values of protection type are `NoProtection |ReadOnly |FormFieldsOnly`. In stop protection method, parameter denotes the password.

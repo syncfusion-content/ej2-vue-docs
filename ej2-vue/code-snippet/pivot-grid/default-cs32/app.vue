@@ -1,21 +1,18 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :actionBegin="actionBegin"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :actionBegin="actionBegin"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotActionBeginEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -30,17 +27,14 @@ export default {
     }
   },
   methods: {
-    actionBegin: function (args: PivotActionBeginEventArgs) {
+    actionBegin: function (args) {
       if (args.actionName == 'Drill down' || args.actionName == 'Drill up') {
-            args.cancel = true;
+        args.cancel = true;
       }
     }
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

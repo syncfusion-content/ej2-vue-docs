@@ -9,14 +9,14 @@
       </e-items>
       <template v-slot:timelineTemplate="{ data }">
         <div :class="'template-container item-' + data.itemIndex">
-        <div class="content-container">
+          <div class="content-container">
             <div class="timeline-content"> <span v-html="data.item.content"></span></div>
-        </div>
-        <div class="content-connector"></div>
-        <div class="progress-line">
+          </div>
+          <div class="content-connector"></div>
+          <div class="progress-line">
             <span class="indicator"></span>
+          </div>
         </div>
-    </div>
       </template>
     </ejs-timeline>
   </div>
@@ -25,6 +25,7 @@
 <script>
 import { TimelineComponent, ItemsDirective, ItemDirective } from "@syncfusion/ej2-vue-layouts";
 export default {
+  name: "App",
   components: {
     'ejs-timeline': TimelineComponent,
     'e-items': ItemsDirective,
@@ -150,5 +151,4 @@ export default {
 }
 
 /* END --- Customizing Icon and progress line */
-
 </style>

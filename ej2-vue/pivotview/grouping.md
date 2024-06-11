@@ -31,7 +31,10 @@ To quickly learn how to group row and column field items in the Vue Pivot Table,
 > Similar to Excel, only one type of grouping can be applied for a field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ To quickly learn how to group row and column field items in the Vue Pivot Table,
 Number grouping allows users to organize data, which is in number format into different ranges, such as 1-5, 6-10, etc. Number grouping can be configured via UI, by right-clicking on the number based header in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +84,10 @@ Number grouping can also be configured using the [`groupSettings`](https://ej2.s
 > If starting and ending numbers specified in [`startingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#startingat) and [`endingAt`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#endingat) properties are in-between the number range, then rest of the numbers will be grouped and placed in “Out of Range” section introduced specific to this feature.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +107,10 @@ By right-clicking the appropriate header and selecting "**Ungroup**" from the co
 Date grouping allows users to organize data, which is in date format into different sections such as years, quarters, months, days, hours, minutes, and seconds. Date grouping can be configured via UI, by right-clicking on the date and time based header in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +148,10 @@ Date grouping can also be configured using the [`groupSettings`](https://ej2.syn
 > From the date format "YYYY-DD-MM HH:MM:SS", if user wants to display only year and month, then the [`groupInterval`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#groupinterval) property should be set with **Years** and **Months** alone. Also, user can shuffle the order of year, quarter, month, day, hour, minute, or second based on their requirement and display the same in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +173,10 @@ By right-clicking the appropriate header and selecting "**Ungroup**" from the co
 Custom grouping can group any data type, such as date, time, number and string, into a custom field based on the user's needs. It can be configured via the UI by right-clicking on any header in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -202,7 +220,10 @@ The available custom group properties in [`customGroups`](https://ej2.syncfusion
 > When the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#groupname) with the headers listed in [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#items) in the [`customGroups`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#customgroups) property is grouped by the defined [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iCustomGroups/#groupname) and the rest is grouped by its own name in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/group_data-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/group_data-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

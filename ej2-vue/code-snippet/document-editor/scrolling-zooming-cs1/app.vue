@@ -1,80 +1,77 @@
-
-
 <template>
-      <div id="app">
-          <ejs-documenteditor ref="documenteditor" height="370px" style="width: 100%;"></ejs-documenteditor>
-      </div>
+    <div id="app">
+        <ejs-documenteditor ref="documenteditor" height="370px" style="width: 100%;"></ejs-documenteditor>
+    </div>
 </template>
 <script>
-    import Vue from 'vue'
-    import { DocumentEditorPlugin } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
 
-    Vue.use(DocumentEditorPlugin);
-
-    export default {
-        data: function() {
-            return {
-            };
-        },
-        mounted: function() {
-                let defaultDocument: object = {
-                    "sections": [
+export default {
+    name: "App",
+    components: {
+        "ejs-documenteditor": DocumentEditorComponent
+    },
+    data: function () {
+        return {
+        };
+    },
+    mounted: function () {
+        let defaultDocument = {
+            "sections": [
+                {
+                    "blocks": [
                         {
-                            "blocks": [
+                            "paragraphFormat": {
+                                "styleName": "Normal"
+                            },
+                            "inlines": [
                                 {
-                                    "paragraphFormat": {
-                                        "styleName": "Normal"
-                                    },
-                                    "inlines": [
-                                        {
-                                            "text": "First page"
-                                        }
-                                    ]
+                                    "text": "First page"
                                 }
-                            ],
-                            "headersFooters": {},
-                        },
-                        {
-                            "blocks": [
-                                {
-                                    "paragraphFormat": {
-                                        "styleName": "Normal"
-                                    },
-                                    "inlines": [
-                                        {
-                                            "text": "Second page"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "headersFooters": {},
+                            ]
                         }
                     ],
-                    "characterFormat": {},
-                    "paragraphFormat": {},
-                    "background": {
-                        "color": "#FFFFFFFF"
-                    },
-                    "styles": [
+                    "headersFooters": {},
+                },
+                {
+                    "blocks": [
                         {
-                            "type": "Paragraph",
-                            "name": "Normal",
-                            "next": "Normal"
-                        },
-                        {
-                            "type": "Character",
-                            "name": "Default Paragraph Font"
+                            "paragraphFormat": {
+                                "styleName": "Normal"
+                            },
+                            "inlines": [
+                                {
+                                    "text": "Second page"
+                                }
+                            ]
                         }
-                    ]
-            }
-            this.$refs.documenteditor.open(JSON.stringify(defaultDocument));
-            //Scroll to specified page.
-            this.$refs.documenteditor.scrollToPage(2);
+                    ],
+                    "headersFooters": {},
+                }
+            ],
+            "characterFormat": {},
+            "paragraphFormat": {},
+            "background": {
+                "color": "#FFFFFFFF"
+            },
+            "styles": [
+                {
+                    "type": "Paragraph",
+                    "name": "Normal",
+                    "next": "Normal"
+                },
+                {
+                    "type": "Character",
+                    "name": "Default Paragraph Font"
+                }
+            ]
         }
+        this.$refs.documenteditor.open(JSON.stringify(defaultDocument));
+        //Scroll to specified page.
+        this.$refs.documenteditor.scrollToPage(2);
     }
+}
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-
-

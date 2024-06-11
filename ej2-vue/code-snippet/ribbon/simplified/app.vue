@@ -7,7 +7,7 @@
             <e-ribbon-collections>
               <e-ribbon-collection>
                 <e-ribbon-items>
-                  <e-ribbon-item type="SplitButton" :allowedSizes="largeSize" :splitButtonSettings="pasteSettigs" >
+                  <e-ribbon-item type="SplitButton" :allowedSizes="largeSize" :splitButtonSettings="pasteSettigs">
                   </e-ribbon-item>
                 </e-ribbon-items>
               </e-ribbon-collection>
@@ -38,34 +38,47 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
 
-  export default {
-    data: function () {
-      return {
-        largeSize: RibbonItemSize.Large,
-        pasteSettigs:{ 
-          iconCss: "e-icons e-paste", content: "Paste",
-          items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }]
-        },
-        cutButton:  { iconCss: "e-icons e-cut", content: "Cut" },
-        copyButton:  { iconCss: "e-icons e-copy", content: "Copy" },
-        formatButton:  { iconCss: "e-icons e-format-painter", content: "Format Painter" }
-      };
-    }
-  };
+import { RibbonItemSize, RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
+
+export default {
+  name: "App",
+  components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective
+  },
+
+  data: function () {
+    return {
+      largeSize: RibbonItemSize.Large,
+      pasteSettigs: {
+        iconCss: "e-icons e-paste", content: "Paste",
+        items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }]
+      },
+      cutButton: { iconCss: "e-icons e-cut", content: "Cut" },
+      copyButton: { iconCss: "e-icons e-copy", content: "Copy" },
+      formatButton: { iconCss: "e-icons e-format-painter", content: "Format Painter" }
+    };
+  }
+};
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
 </style>

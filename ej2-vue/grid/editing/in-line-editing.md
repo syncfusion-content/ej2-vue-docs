@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 In Normal edit mode, when you start editing the currently selected record is changed to edit state.You can change the cell values and save edited data to the data source. To enable Normal edit, set the [`editSettings.mode`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) as **Normal**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ You can update the column value based on another column edited value by using th
 In the below demo, we have update the `TotalCost` column value based on the `UnitPrice` and `UnitInStock` column value while editing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ You can prevent the CRUD operations of the Grid by using condition in the [`acti
 In the below demo, we prevent the CRUD operation based on the `Role` column value. If the Role Column is `Employee`, we are unable to edit/delete that row.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ Grid methods can be used to perform CRUD operations programmatically. The [addRe
 >Note: In both normal and dialog editing modes, these methods can be used.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +92,10 @@ The delete confirm dialog can be shown when deleting a record by defining the
 [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#showdeleteconfirmdialog) as **true**
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +109,10 @@ The delete confirm dialog can be shown when deleting a record by defining the
 The grid provides an option to set the default value for the columns when adding a new record in it.To set a default value for the particular column by defining the [`columns.defaultValue`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#defaultvalue).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +124,10 @@ The grid provides an option to set the default value for the columns when adding
 By default, a new row will be added at the top of the grid. You can change it by setting [`editSettings.newRowPosition`](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#newrowposition) as **Bottom**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +143,10 @@ The Syncfusion Grid simplifies the addition of new records by consistently prese
 The following sample demonstrates how to add a new record continuously using `showAddNewRow` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs49/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs49/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -142,7 +166,10 @@ The following sample demonstrates how to add a new record continuously using `sh
 The [recordDoubleClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#recordDoubleClick) event allows you to move the focus to the corresponding cell (the cell that you doubled-clicked to edit a row) instead of the first cell in edit form. With the help of this event, you can focus the double-clicked column in inline edit mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}

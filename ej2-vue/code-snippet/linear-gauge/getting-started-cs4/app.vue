@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <div align='center'>
@@ -15,10 +13,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { LinearGaugePlugin, Annotations } from "@syncfusion/ej2-vue-lineargauge";
-Vue.use(LinearGaugePlugin);
+
+import { LinearGaugeComponent, Annotations, AnnotationDirective, AnnotationsDirective } from "@syncfusion/ej2-vue-lineargauge";
+
 export default {
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent,
+"e-annotations":AnnotationsDirective,
+"e-annotation":AnnotationDirective,
+},
   data:function() {
     return {
       zindex: 1,
@@ -35,6 +39,3 @@ export default {
   },
 };
 </script>
-
-
-

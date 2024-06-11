@@ -35,40 +35,66 @@ The PDF Viewer has an option to show or hide the complete default toolbar. You c
 * **Show/Hide toolbar using enableToolbar API as in the following code snippet**
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :documentPath="documentPath"
-            :enableToolbar="false"
-            :resourceUrl="resourceUrl"> 
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :enableToolbar="false" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :documentPath="documentPath" :enableToolbar="false" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  }
 }
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -81,50 +107,80 @@ Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serv
 * **Show/Hide toolbar using showToolbar as in the following code snippet**
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <button v-on:click="showToolbarClicked">showToolbarClicked</button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad"
-            :resourceUrl="resourceUrl">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <button v-on:click="showToolbarClicked">showToolbarClicked</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :documentLoad="documentLoad"
+      :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib;;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const showToolbarClicked = function (args) {
+  pdfviewer.value.ej2Instances.toolbar.showToolbar(false);
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="showToolbarClicked">showToolbarClicked</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :documentLoad="documentLoad"
+      :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-var viewer;
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
   methods: {
     showToolbarClicked: function (args) {
-      viewer.toolbar.showToolbar(false);
-    },
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-    },
+      this.$refs.pdfviewer.ej2Instances.toolbar.showToolbar(false);
+    }
   }
 }
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -141,43 +197,70 @@ The PDF Viewer has an option to show or hide these grouped items in the default 
 * **Show/Hide toolbaritem using toolbarSettings as in the following code snippet.**
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :documentPath="documentPath"
-            :enableTextSelection="false"
-            :toolbarSettings="toolbarSettings"
-            :resourceUrl="resourceUrl">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :enableTextSelection="false"
+      :toolbarSettings="toolbarSettings" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+const toolbarSettings = { showTooltip: true, toolbarItems: ['OpenOption', 'UndoRedoTool', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'CommentTool', 'SubmitForm', 'AnnotationEditTool', 'FormDesignerEditTool', 'FreeTextAnnotationOption', 'InkAnnotationOption', 'ShapeAnnotationOption', 'StampAnnotation', 'SignatureOption', 'SearchOption', 'PrintOption', 'DownloadOption'], annotationToolbarItems: ['HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'StampAnnotationTool', 'HandWrittenSignatureTool', 'InkAnnotationTool', 'ShapeTool', 'CalibrateTool', 'StrokeColorEditTool', 'ThicknessEditTool', 'FreeTextAnnotationTool', 'FontFamilyAnnotationTool', 'FontSizeAnnotationTool', 'FontStylesAnnotationTool', 'FontAlignAnnotationTool', 'FontColorAnnotationTool', 'CommentPanelTool'], formDesignerToolbarItems: ['TextboxTool', 'PasswordTool', 'CheckBoxTool', 'RadioButtonTool', 'DropdownTool', 'ListboxTool', 'DrawSignatureTool', 'DeleteTool'] };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :enableTextSelection="false"
+      :toolbarSettings="toolbarSettings" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
-      toolbarSettings:{ showTooltip : true, toolbarItems: ['OpenOption', 'UndoRedoTool', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'CommentTool', 'SubmitForm', 'AnnotationEditTool', 'FormDesignerEditTool', 'FreeTextAnnotationOption', 'InkAnnotationOption', 'ShapeAnnotationOption', 'StampAnnotation', 'SignatureOption', 'SearchOption', 'PrintOption', 'DownloadOption'], annotationToolbarItems: ['HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'StampAnnotationTool', 'HandWrittenSignatureTool', 'InkAnnotationTool', 'ShapeTool', 'CalibrateTool', 'StrokeColorEditTool', 'ThicknessEditTool', 'FreeTextAnnotationTool', 'FontFamilyAnnotationTool', 'FontSizeAnnotationTool', 'FontStylesAnnotationTool', 'FontAlignAnnotationTool', 'FontColorAnnotationTool', 'CommentPanelTool'], formDesignerToolbarItems: ['TextboxTool', 'PasswordTool', 'CheckBoxTool', 'RadioButtonTool', 'DropdownTool', 'ListboxTool', 'DrawSignatureTool', 'DeleteTool']}
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
+      toolbarSettings: { showTooltip: true, toolbarItems: ['OpenOption', 'UndoRedoTool', 'PageNavigationTool', 'MagnificationTool', 'PanTool', 'SelectionTool', 'CommentTool', 'SubmitForm', 'AnnotationEditTool', 'FormDesignerEditTool', 'FreeTextAnnotationOption', 'InkAnnotationOption', 'ShapeAnnotationOption', 'StampAnnotation', 'SignatureOption', 'SearchOption', 'PrintOption', 'DownloadOption'], annotationToolbarItems: ['HighlightTool', 'UnderlineTool', 'StrikethroughTool', 'ColorEditTool', 'OpacityEditTool', 'AnnotationDeleteTool', 'StampAnnotationTool', 'HandWrittenSignatureTool', 'InkAnnotationTool', 'ShapeTool', 'CalibrateTool', 'StrokeColorEditTool', 'ThicknessEditTool', 'FreeTextAnnotationTool', 'FontFamilyAnnotationTool', 'FontSizeAnnotationTool', 'FontStylesAnnotationTool', 'FontAlignAnnotationTool', 'FontColorAnnotationTool', 'CommentPanelTool'], formDesignerToolbarItems: ['TextboxTool', 'PasswordTool', 'CheckBoxTool', 'RadioButtonTool', 'DropdownTool', 'ListboxTool', 'DrawSignatureTool', 'DeleteTool'] }
     };
   },
-
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]}
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  }
 
 }
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -190,50 +273,79 @@ Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serv
 * **Show/Hide toolbaritem using showToolbaritem as in the following code snippet**
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <button v-on:click="showToolbarClicked">ShowToolbar</button>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad"
-            :resourceUrl="resourceUrl">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <button v-on:click="showToolbarClicked">ShowToolbar</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :documentLoad="documentLoad"
+      :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const showToolbarClicked = function (args) {
+  pdfviewer.ej2Instances.toolbar.showToolbarItem(["OpenOption"], false);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="showToolbarClicked">ShowToolbar</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :documentLoad="documentLoad"
+      :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-var viewer;
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, Annotation, BookmarkView,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
   },
   methods: {
     showToolbarClicked: function (args) {
-      viewer.toolbar.showToolbarItem(["OpenOption"],false);
-    },
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-    },
+      this.$refs.pdfviewer.ej2Instances.toolbar.showToolbarItem(["OpenOption"], false);
+    }
   }
 }
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 

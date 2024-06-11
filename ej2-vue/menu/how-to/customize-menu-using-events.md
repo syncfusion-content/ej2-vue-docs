@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The Menu provides a set of [`events`](https://ej2.syncfusion.com/vue/documentation/api/menu#events) to enable users to customize it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,17 +1,18 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' :dataSource="data" :allowRowDragAndDrop='true' :taskFields = "taskFields" :height = "height" :rowDrop="rowDrop"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, RowDD, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, RowDD, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ganttData } from "./data-source.js";
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: ganttData,
@@ -41,6 +42,3 @@ export default {
 
 };
 </script>
-
-
-

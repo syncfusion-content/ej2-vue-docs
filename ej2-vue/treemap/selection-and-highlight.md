@@ -17,7 +17,10 @@ Selection is used to select a particular group or item to differentiate from oth
 The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/treemap/selectionSettings/#fill) property is used to change the selected item color. The [`color`](https://ej2.syncfusion.com/vue/documentation/api/treemap/borderModel/#color) and the [`width`](https://ej2.syncfusion.com/vue/documentation/api/treemap/borderModel/#width) properties are used to customize the selected item border, and the selection is enabled by using the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/treemap/selectionSettings/#enable) property  to **true** in the [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/selectionSettings/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs55/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs55/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Highlight is used to highlight an item or group from other items or groups. Each
 The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/treemap/highlightSettings/#fill) property is used to change the highlighted item color. The [`color`](https://ej2.syncfusion.com/vue/documentation/api/treemap/borderModel/#color) and the [`width`](https://ej2.syncfusion.com/vue/documentation/api/treemap/borderModel/#width) properties are used to customize the highlighted item border, and the highlight is enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/treemap/highlightSettings/#enable) property to **true** in the [`highlightSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/highlightSettings/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs56/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs56/app.vue %}
 {% endhighlight %}
 {% endtabs %}

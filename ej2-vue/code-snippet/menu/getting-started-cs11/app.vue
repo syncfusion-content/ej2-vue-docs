@@ -1,65 +1,66 @@
-
-
 <template>
-<div>
-<ejs-menu ref="menu" id="menu" :items='menuItems' :fields='menuFields' :created='onCreated'></ejs-menu>
-</div>
+    <div>
+        <ejs-menu ref="menu" id="menu" :items='menuItems' :fields='menuFields' :created='onCreated'></ejs-menu>
+    </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { MenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(MenuPlugin);
 
 export default {
-   data: function() {
+    name: "App",
+    components: {
+        "ejs-menu": MenuComponent
+    },
+    data: function () {
         return {
-           menuItems:  [
-            {
-                continent: 'Asia',
-                countries: [
-                    { country: 'China' },
-                    { country: 'India' },
-                    { country: 'Japan' }
-                ]
-            },
-            {
-                continent: 'North America',
-                countries: [
-                    { country: 'Canada' },
-                    { country: 'Mexico' },
-                    { country: 'USA' }
-                ]
-            },
-            {
-                continent: 'South America',
-                countries: [
-                    { country: 'Brazil' },
-                    { country: 'Colombia' },
-                    { country: 'Argentina' }
-                ]
-            },
-            {
-                continent: 'Oceania',
-                countries: [
-                    { country: 'Australia' },
-                    { country: 'New Zealand' },
-                    { country: 'Samoa' },
-                ]
-            },
-            { continent: 'Antarctica' }
-        ],
-        menuFields: {
-            text: ['continent', 'country'],
-            children: ['countries']
-        }
-     };
-   },
-   methods: {
-       onCreated: function(args) {
+            menuItems: [
+                {
+                    continent: 'Asia',
+                    countries: [
+                        { country: 'China' },
+                        { country: 'India' },
+                        { country: 'Japan' }
+                    ]
+                },
+                {
+                    continent: 'North America',
+                    countries: [
+                        { country: 'Canada' },
+                        { country: 'Mexico' },
+                        { country: 'USA' }
+                    ]
+                },
+                {
+                    continent: 'South America',
+                    countries: [
+                        { country: 'Brazil' },
+                        { country: 'Colombia' },
+                        { country: 'Argentina' }
+                    ]
+                },
+                {
+                    continent: 'Oceania',
+                    countries: [
+                        { country: 'Australia' },
+                        { country: 'New Zealand' },
+                        { country: 'Samoa' },
+                    ]
+                },
+                { continent: 'Antarctica' }
+            ],
+            menuFields: {
+                text: ['continent', 'country'],
+                children: ['countries']
+            }
+        };
+    },
+    methods: {
+        onCreated: function () {
             var insertItem = [
                 {
                     continent: 'Europe',
@@ -80,8 +81,8 @@ export default {
             ];
             this.$refs.menu.insertAfter(insertItem, 'Oceania', false);
             this.$refs.menu.removeItems(['South America', 'Mexico'], false);
-       }
-   }
+        }
+    }
 }
 </script>
 
@@ -94,7 +95,4 @@ body {
     margin-top: 100px;
     text-align: center;
 }
-
 </style>
-
-

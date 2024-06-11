@@ -21,7 +21,10 @@ In the Breadcrumb component, the item represents the url. The breadcrumb items c
 The breadcrumb items with relative URL contain only the path but do not locate the path or server. The following example represents the breadcrumb items with relative url.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/breadcrumb/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/breadcrumb/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The breadcrumb items with relative URL contain only the path but do not locate t
 The breadcrumb items with Absolute URL contain the path and locate to the resource if the absolute url is bound to the breadcrumb item. The following example represents the breadcrumb items with absolute url.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/breadcrumb/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/breadcrumb/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ The breadcrumb items with Absolute URL contain the path and locate to the resour
 The feature enables the last item of the Breadcrumb component by setting the [`enableActiveItemNavigation`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#enableactiveitemnavigation) property to true. In the following example, the last item of the `Breadcrumb` was enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/breadcrumb/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/breadcrumb/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ The feature enables the last item of the Breadcrumb component by setting the [`e
 To open the breadcrumb item in a new page or tab, set the target property of the required item url to blank in the Breadcrumb component. In the following example, the target property of items url was set to blank by using the [`beforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/breadcrumb/#beforeitemrender) event which locates to the path in the new tab.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/breadcrumb/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/breadcrumb/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

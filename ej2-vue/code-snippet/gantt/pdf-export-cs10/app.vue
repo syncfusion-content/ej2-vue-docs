@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields"
@@ -8,13 +5,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, PdfExport, Selection, PdfQueryTimelineCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, PdfExport, Selection, PdfQueryTimelineCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
 import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import {editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data:editingData,
@@ -44,14 +45,11 @@ export default {
             },
         pdfQueryTimelineCellInfo: (args) => {
           args.timelineCell.backgroundColor = new PdfColor(240, 248, 255);
-        };
-      };
+        }
+      }
   },
   provide: {
       gantt: [Toolbar, PdfExport]
   }
 };
 </script>
-
-
-

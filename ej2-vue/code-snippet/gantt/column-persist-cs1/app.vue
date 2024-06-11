@@ -1,32 +1,28 @@
-
-
 <template>
-    <div id="app">
-       <button id="restore"  @click="clickRestore">Restore</button>
-      <br /><br />
-        <ejs-gantt ref="gantt" :dataSource='data' :enablePersistence='true' height='230px' id="Gantt" :taskFields = "taskFields">
-            <e-columns>
-                <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=120></e-column>
-                <e-column field='TaskName' headerText='Task Name' width=150 :headerTemplate="hTemplate"></e-column>
-                <e-column field='StartDate' headerText='Start Date' width=150 ></e-column>
-                <e-column field='Duration' headerText='Duration' width=150 ></e-column>
-            </e-columns>
-        </ejs-gantt>
-    </div>
+  <div id="app">
+    <button id="restore" @click="clickRestore">Restore</button>
+    <br /><br />
+    <ejs-gantt ref="gantt" :dataSource='data' :enablePersistence='true' height='230px' id="Gantt"
+      :taskFields="taskFields">
+      <e-columns>
+        <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=120></e-column>
+        <e-column field='TaskName' headerText='Task Name' width=150 :headerTemplate="hTemplate"></e-column>
+        <e-column field='StartDate' headerText='Start Date' width=150></e-column>
+        <e-column field='Duration' headerText='Duration' width=150></e-column>
+      </e-columns>
+    </ejs-gantt>
+  </div>
 </template>
   
-    <script id="customertemplate" type="text/x-template">
-        <span class="e-icons e-header" ></span>
-        Task Name
-    </script>
+<script id="customertemplate" type="text/x-template">
+<span class="e-icons e-header" ></span>
+</script>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
-
-Vue.use(GanttPlugin);
-
-var headTemplate = Vue.component("header", {
+import { createApp } from 'vue';
+const app = createApp();
+var headTemplate = app.component("header", {
     template: '<span class="e-icons e-header">Task Name</span>',
     data() {
     return {
@@ -34,8 +30,15 @@ var headTemplate = Vue.component("header", {
     };
     }
 });
-
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: projectNewData,
@@ -79,13 +82,11 @@ export default {
 }
 </script>
 <style>
-   .e-column:before {
-      content: '\e815';
-    }
+.e-column:before {
+  content: '\e815';
+}
 
-    .e-header:before {
-      content: '\ea9a';
-    }
+.e-header:before {
+  content: '\ea9a';
+}
 </style>
-
-

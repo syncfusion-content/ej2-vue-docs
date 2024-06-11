@@ -28,7 +28,10 @@ You can disable weekends of every month in the Calendar by using the [`renderDay
 The following example demonstrates how to disable weekends of every month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +59,10 @@ You can also highlight specific dates by adding custom CSS or element to the day
 The following example highlights the World Health Day (every 7th April) and World Forest Day (every 21st March) by using the custom icon and ToolTip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +74,10 @@ The following example highlights the World Health Day (every 7th April) and Worl
 You can highlight the weekends of every month in a Calendar by using the [`renderDayCell`](https://ej2.syncfusion.com/vue/documentation/api/calendar/renderDayCellEventArgs/) event. The following example demonstrates how to highlights the weekends of every month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/highlight-weekend-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/highlight-weekend-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

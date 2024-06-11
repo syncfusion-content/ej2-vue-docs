@@ -106,7 +106,10 @@ Permission denied for writing and uploading in root folder.
 The following example demonstrate the file manager rendered with access control support.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/access-control-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/access-control-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

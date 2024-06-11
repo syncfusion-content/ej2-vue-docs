@@ -1,5 +1,3 @@
-
-
 <template>
 <ejs-checkbox label='Default'></ejs-checkbox>
 </template>
@@ -18,5 +16,3 @@ enableRipple(true);
   margin-top: 18px;
 }
 </style>
-
-

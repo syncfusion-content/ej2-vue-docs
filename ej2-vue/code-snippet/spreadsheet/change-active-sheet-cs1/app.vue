@@ -1,12 +1,16 @@
 <template>
-  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl" :openComplete="openComplete"></ejs-spreadsheet>
+  <ejs-spreadsheet ref="spreadsheet" :openUrl="openUrl" :saveUrl="saveUrl"
+    :openComplete="openComplete"></ejs-spreadsheet>
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
-Vue.use(SpreadsheetPlugin);
+import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
+
 export default {
+  name: "App",
+  components: {
+    "ejs-spreadsheet": SpreadsheetComponent
+  },
   data: () => {
     return {
       openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open',
@@ -15,7 +19,7 @@ export default {
   },
   methods: {
     openComplete: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       if (spreadsheet) {
         spreadsheet.activeSheetIndex = 2;
       }
@@ -35,5 +39,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
 </style>
-
-

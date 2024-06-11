@@ -39,7 +39,10 @@ In this section, we will discuss about rendering of list items in grid layout.
 In the below sample, we have rendered List items in grid layout.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/grid-layout-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/grid-layout-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +103,10 @@ Listview data can be filtered with the help of [`dataManager`](https://ej2.syncf
 In the below sample, we can filter fruit items with the help of search text box. This will filter fruit items based on your input. Here we used [`startswith`](https://ej2.syncfusion.com/documentation/data/querying#filter-operators) of input text to filter data in DataManager.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/grid-layout-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/grid-layout-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

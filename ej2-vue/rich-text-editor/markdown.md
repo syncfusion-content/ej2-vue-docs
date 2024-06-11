@@ -58,7 +58,10 @@ The Rich Text Editor allows you to preview markdown changes immediately using pr
 This sample demonstrates how to preview markdown changes in Rich Text Editor. Type or edit the display text, and apply format to view the preview of markdown. The `actionComplete` event can be used to convert Markdown to HTML.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +78,10 @@ To insert the table in Rich Text Editor, click the `table` toolbar option to ins
 Please refer the below sample and code snippets to add the table in Markdown editor
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +93,10 @@ Please refer the below sample and code snippets to add the table in Markdown edi
 The Markdown table constants can be changed for the table heading and the column names.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +112,10 @@ This sample demonstrates how to customize tags of markdown formatting.
 For example, apply  `+` to Unordered list, apply `1., 2., 3.` to Ordered list, for bold, `__`, and for italic `_`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

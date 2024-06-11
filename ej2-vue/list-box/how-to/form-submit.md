@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 In the following code snippet, the value that is in selected state will be sent on form submit.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -19,11 +19,11 @@ You can use the [`shimmerEffect`](https://ej2.syncfusion.com/vue/documentation/a
     </div>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+<script setup>
+    
+    import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
+    
 
     export default { }
 </script>
@@ -37,7 +37,10 @@ You can use the [`shimmerEffect`](https://ej2.syncfusion.com/vue/documentation/a
 Below example demonstrates a list with pulse effect skeleton.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/skeleton/effects-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/skeleton/effects-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -10,20 +10,24 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { GridPlugin, DetailRow, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: employeeData,
       toolbar: ['ExcelExport'],
       detailTemplate: function () {
         return {
-          template: Vue.component('detailTemplate', {
+          template: app.component('detailTemplate', {
             template: `<table class="detailtable" width="100%">
             <colgroup>
                 <col width="40%" />
@@ -228,6 +232,3 @@ export default {
         }
     }
 </style>
-
-
-

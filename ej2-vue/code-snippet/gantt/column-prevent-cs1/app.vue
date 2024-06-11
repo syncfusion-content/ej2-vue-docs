@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
        <button id="add"  @click="clickAdd">Add Columns</button>
@@ -16,13 +14,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
-
-Vue.use(GanttPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: projectNewData,
@@ -39,7 +39,7 @@ export default {
   methods: {
     dataBound: function () {
         let cloned =  this.$refs.gantt.ej2Instances.addOnPersist;
-        this.$refs.gantt.ej2Instances.addOnPersist = function (key: any) {
+        this.$refs.gantt.ej2Instances.addOnPersist = function (key) {
             key = key.filter((item)  => item !== "columns");
             return cloned.call(this, key);
         };
@@ -58,5 +58,3 @@ export default {
 </script>
 <style>
 </style>
-
-

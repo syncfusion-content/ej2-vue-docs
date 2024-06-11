@@ -8,8 +8,6 @@
               :value="value"
               :mode="mode"
             ></ejs-qrcodegenerator>
-
-
     </div>
 </template>
 <style>
@@ -24,10 +22,10 @@
 import { QRCodeGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator';
 
 export default {
+    name: "App",
     components: {
-        'ejs-qrcodegenerator': QRCodeGeneratorComponent
+        "ejs-qrcodegenerator":QRCodeGeneratorComponent
     },
-    name: 'app',
     data () {
         return {
             width: "200px",
@@ -38,5 +36,3 @@ export default {
     }
 }
 </script>
-
-

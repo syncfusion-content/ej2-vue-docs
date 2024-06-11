@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <ul id="skeleton-list" class="e-card">
@@ -26,16 +24,18 @@
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+    
+import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
-
-    export default {
-        data: function () {
-            return {};
-        }
+export default {
+    name: "App",
+    components: {
+        "ejs-skeleton":SkeletonComponent
+    },
+    data: function () {
+        return {};
     }
+}
 </script>
 
 <style>
@@ -58,5 +58,3 @@
     }
 
 </style>
-
-

@@ -24,7 +24,10 @@ It can be configured using the `filterSettings` option through code-behind. The 
 * `items`: It allows to set the filter members of the field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs154/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs154/app.vue %}
 {% endhighlight %}
 {% endtabs %}

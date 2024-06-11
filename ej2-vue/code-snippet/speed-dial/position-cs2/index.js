@@ -13,8 +13,8 @@ new Vue({
 	template: `
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;">
-        <ejs-button id="show" class="e-primary" v-on:click.native="showClick"> Show </ejs-button>
-        <ejs-button id="hide" class="e-primary" v-on:click.native="hideClick"> Hide </ejs-button></div>
+        <ejs-button id="show" class="e-primary" v-on:click="showClick"> Show </ejs-button>
+        <ejs-button id="hide" class="e-primary" v-on:click="hideClick"> Hide </ejs-button></div>
         <ejs-speeddial ref="speeddial" id='speeddial' openIconCss='e-icons e-edit' closeIconCss='e-icons e-close' opensOnHover= true target='#targetElement' :items='items'></ejs-speeddial>
     </div>
 `,

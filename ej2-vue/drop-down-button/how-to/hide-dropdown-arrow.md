@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can hide the dropdown arrow from the DropDownButton by adding class `e-caret-hide` to DropDownButton element using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-button/#cssclass) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

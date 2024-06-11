@@ -31,7 +31,10 @@ Dropdown Tree can be populated with the hierarchical data source that contains n
 In the following example, **code**, **name**, and **countries** columns from the hierarchical data have been mapped to **value**, **text**, and **child** fields, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/data-binding/hierarchial-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/data-binding/hierarchial-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ To render the root level items, specify the parentValue as null or no need to sp
 In the following example, **id**, **pid**, **hasChild**, and **name** columns from self-referential data have been mapped to **value**, **parentValue**, **hasChildren**, and **text** fields, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/data-binding/self-referential-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/data-binding/self-referential-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +93,10 @@ In the following example, `ODataV4Adaptor` is used to fetch data from the remote
 The **OrderID**, **EmployeeID**, and **ShipName** columns from the orders table have been mapped to **value**, **parentValue**, and **text** fields respectively for second level items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/data-binding/remote-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/data-binding/remote-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +110,10 @@ You can prevent the selection of individual tree node by using the [selectable](
 The `selectable` property is disabled and the selection is prevented for parent nodes in below sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/data-binding/prevent-node-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-tree/data-binding/prevent-node-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

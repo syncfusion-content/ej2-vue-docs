@@ -23,7 +23,10 @@ Axis labels are used to denote what kind of data is bound for smithchart. Using 
 * [`labelStyle`] - used to customize the properties such as font size, family, weight, opacity.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ We can customize following things, in major as well as minor gridlines.
 * [`count`] - used to customize the count of the minor gridlines.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ As name suggests that, it is a line in smithchart that can be configured to deno
 * [`visible`] - used to enable or disable the visibility of the axis line.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/smithchart/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/smithchart/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

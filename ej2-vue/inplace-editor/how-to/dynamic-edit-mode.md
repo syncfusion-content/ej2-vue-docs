@@ -15,7 +15,10 @@ At component initial load, if you want to open editor state without interacting 
 In the following sample, editor opened at initial load and when toggling a checkbox, it will remove or open the editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

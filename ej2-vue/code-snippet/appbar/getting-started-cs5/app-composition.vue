@@ -8,8 +8,8 @@
 </template>
 
 <script setup>
-import { AppBarComponent as EjsAppbar } from '@syncfusion/ej2-vue-navigations';
-import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
+  import { AppBarComponent as EjsAppbar } from "@syncfusion/ej2-vue-navigations";
+  import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 </script>
 
 <style>
@@ -17,4 +17,3 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 </style>
-

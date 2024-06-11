@@ -19,7 +19,10 @@ The grid have an option to export the hierarchy grid to excel document. By defau
 | None     | Exports all child grids in collapsed state when args.isChild property is set to true in [beforeExcelExport](https://ej2.syncfusion.com/vue/documentation/api/grid/#beforeexcelexport) event. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/hierarchy-grid/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/hierarchy-grid/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -4,10 +4,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit, RowDD } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Edit, RowDD } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [

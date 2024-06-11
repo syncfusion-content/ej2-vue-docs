@@ -1,65 +1,76 @@
 <template>
     <ejs-ribbon id="ribbon" ref="backstageRibbon" :backStageMenu="backstageSettings">
-      <e-ribbon-tabs>
-        <e-ribbon-tab header="Home">
-          <e-ribbon-groups>
-            <e-ribbon-group header="Clipboard">
-              <e-ribbon-collections>
-                <e-ribbon-collection>
-                  <e-ribbon-items>
-                    <e-ribbon-item type="Button" :buttonSettings="cutButton">
-                    </e-ribbon-item>
-                    <e-ribbon-item type="Button" :buttonSettings="copyButton">
-                    </e-ribbon-item>
-                    <e-ribbon-item type="Button" :buttonSettings="pasteButton">
-                    </e-ribbon-item>
-                  </e-ribbon-items>
-                </e-ribbon-collection>
-              </e-ribbon-collections>
-            </e-ribbon-group>
-          </e-ribbon-groups>
-        </e-ribbon-tab>
-      </e-ribbon-tabs>
+        <e-ribbon-tabs>
+            <e-ribbon-tab header="Home">
+                <e-ribbon-groups>
+                    <e-ribbon-group header="Clipboard">
+                        <e-ribbon-collections>
+                            <e-ribbon-collection>
+                                <e-ribbon-items>
+                                    <e-ribbon-item type="Button" :buttonSettings="cutButton">
+                                    </e-ribbon-item>
+                                    <e-ribbon-item type="Button" :buttonSettings="copyButton">
+                                    </e-ribbon-item>
+                                    <e-ribbon-item type="Button" :buttonSettings="pasteButton">
+                                    </e-ribbon-item>
+                                </e-ribbon-items>
+                            </e-ribbon-collection>
+                        </e-ribbon-collections>
+                    </e-ribbon-group>
+                </e-ribbon-groups>
+            </e-ribbon-tab>
+        </e-ribbon-tabs>
     </ejs-ribbon>
 </template>
 
 <script>
-import Vue from "vue";
-import { RibbonPlugin, RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
-Vue.use(RibbonPlugin);
+
+import { RibbonBackstage, RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
 
 export default {
-  provide: {
-  ribbon: [RibbonBackstage]
-},
-data: function () {
-  return {
-    backstageSettings: {
-      visible: true,
-      template: this.homeContentTemplate()
+    name: "App",
+    components: {
+        "ejs-ribbon": RibbonComponent,
+        "e-ribbon-tabs": RibbonTabsDirective,
+        "e-ribbon-tab": RibbonTabDirective,
+        "e-ribbon-groups": RibbonGroupsDirective,
+        "e-ribbon-group": RibbonGroupDirective,
+        "e-ribbon-collections": RibbonCollectionsDirective,
+        "e-ribbon-collection": RibbonCollectionDirective,
+        "e-ribbon-items": RibbonItemsDirective,
+        "e-ribbon-item": RibbonItemDirective
     },
-    cutButton: { iconCss: "e-icons e-cut", content: "Cut" },
-    copyButton: { iconCss: "e-icons e-copy", content: "Copy" },
-    pasteButton: { iconCss: "e-icons e-paste", content: "Paste" },
-  };
-},
-methods: {
-  displayPopup() {
-    this.backstagePopup = this.ribbonEle.querySelector('#ribbon_backstagepopup');
-    if (this.backstagePopup) {
-      this.backstagePopup.style.display = 'block';
-    }
-  },
-  contentClick (id) {
-      this.content = this.ribbonEle.querySelector('.content-open')
-      if(this.content) { this.content.classList.replace('content-open', 'content-close'); }
-      this.ribbonEle.querySelector('#' + id +'-wrapper').classList.add('content-open');
-  },
-  closeContent () {
-      this.ribbonEle.querySelector('#ribbon_backstagepopup').style.display = 'none'
-  },
-  homeContentTemplate() {
-    return `
+    provide: {
+        ribbon: [RibbonBackstage]
+    },
+    data: function () {
+        return {
+            backstageSettings: {
+                visible: true,
+                template: this.homeContentTemplate()
+            },
+            cutButton: { iconCss: "e-icons e-cut", content: "Cut" },
+            copyButton: { iconCss: "e-icons e-copy", content: "Copy" },
+            pasteButton: { iconCss: "e-icons e-paste", content: "Paste" },
+        };
+    },
+    methods: {
+        displayPopup() {
+            this.backstagePopup = this.ribbonEle.querySelector('#ribbon_backstagepopup');
+            if (this.backstagePopup) {
+                this.backstagePopup.style.display = 'block';
+            }
+        },
+        contentClick(id) {
+            this.content = this.ribbonEle.querySelector('.content-open')
+            if (this.content) { this.content.classList.replace('content-open', 'content-close'); }
+            this.ribbonEle.querySelector('#' + id + '-wrapper').classList.add('content-open');
+        },
+        closeContent() {
+            this.ribbonEle.querySelector('#ribbon_backstagepopup').style.display = 'none';
+        },
+        homeContentTemplate() {
+            return `
     <div id="temp-content" style="width: 550px; height: 350px; display: flex">
       <div id="items-wrapper" style="width: 130px; height:100%; background: #779de8;">
           <ul>
@@ -163,27 +174,27 @@ methods: {
       </div>
   </div>
       `;
-  },
-},
-mounted() {
-  this.ribbonEle = document.getElementById('ribbon');
-  document.querySelector('.e-ribbon-backstage').onClick = this.displayPopup.bind(this);
-},
+        },
+    },
+    mounted() {
+        this.ribbonEle = document.getElementById('ribbon');
+        document.querySelector('.e-ribbon-backstage').onclick = this.displayPopup.bind(this);
+    },
 };
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
 
-.e-ribbon-backstage-content{
+.e-ribbon-backstage-content {
     width: 550px;
     height: 350px;
 }
@@ -229,13 +240,14 @@ mounted() {
     padding: 0px 10px;
 }
 
-.category_container:hover, .section-content:hover {
+.category_container:hover,
+.section-content:hover {
     background-color: #dfdfdf;
     border-radius: 5px;
     transition: all 0.3s;
 }
 
-#targetElement{
+#targetElement {
     width: 500px;
     height: 500px;
 }
@@ -259,15 +271,15 @@ mounted() {
     font-size: 14px;
 }
 
-#items-wrapper ul li:hover{
+#items-wrapper ul li:hover {
     background-color: #a5bff4;
 }
 
-#content-wrapper .content-close{
+#content-wrapper .content-close {
     display: none;
 }
 
-#content-wrapper .content-open{
+#content-wrapper .content-open {
     display: block;
 }
 </style>

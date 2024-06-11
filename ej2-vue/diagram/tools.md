@@ -19,7 +19,10 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) property. The following code example illustrates how to draw a rectangle at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/shape-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/shape-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
 The following code example illustrates how to draw a path.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/path-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/path-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ The following code example illustrates how to draw a path.
 To draw connectors, set the JSON of the connector to the drawType property. The drawing [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/connector-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/connector-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
 Diagram allows you to create a textNode, when you click on the diagram page. The following code illustrates how to draw a text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/text-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +83,10 @@ Diagram allows to create the polygon shape by clicking and moving the mouse at r
 The following code illustrates how to draw a polygon shape.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/polygon-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/polygon-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +100,10 @@ Diagram allows to create the polyline segments with straight lines and angled ve
 The following code illustrates how to draw a polyline connector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/polyline-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/polyline-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -114,7 +132,10 @@ As all the three behaviors are completely different, you can achieve only one be
 Set the desired [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tool) to the tool property of the diagram model. The following code illustrates how to enable Zoom pan in the diagram
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/connector-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/connector-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +147,10 @@ Set the desired [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagra
 [`elementDraw`](https://ej2.syncfusion.com/vue/documentation/api/diagram)  event is triggered when node or connector is drawn using drawing tool.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/connector-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/connector-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -140,7 +164,10 @@ Diagram has support for free-hand drawing to draw anything on the diagram page i
 The following code illustrates how to draw a freehand drawing.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/Tools/connector-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/Tools/connector-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

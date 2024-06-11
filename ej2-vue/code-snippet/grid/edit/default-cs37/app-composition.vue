@@ -1,0 +1,51 @@
+<template>
+  <div id="app">
+    <div>
+      <ejs-button iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true"
+        v-on:click="btnClick">Enable/Disable Grid</ejs-button>
+      <div id="GridParent">
+        <ejs-grid ref='Grid' :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
+          <e-columns>
+            <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' width=100></e-column>
+            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+            <e-column field='Freight' headerText='Freight' textAlign='Right' editType='numericedit' width=120
+              format='C2'></e-column>
+            <e-column field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width=150></e-column>
+          </e-columns>
+        </ejs-grid>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup>
+import { provide, ref } from "vue";
+
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { data } from './datasource.js';
+var Grid = ref(null);
+const editSettings = { allowAdding: true, allowDeleting: true, allowEditing: true };
+const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+const btnClick = (args) => {
+  if (Grid.value.$el.classList.contains('disablegrid')) {
+    Grid.value.$el.classList.remove('disablegrid');
+    document.getElementById("GridParent").classList.remove('wrapper');
+  }
+  else {
+    Grid.value.$el.classList.add('disablegrid');
+    document.getElementById("GridParent").classList.add('wrapper');
+  }
+}
+provide('grid', [Page, Edit, Toolbar]);
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+
+.disablegrid {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.wrapper {
+  cursor: not-allowed;
+}</style>

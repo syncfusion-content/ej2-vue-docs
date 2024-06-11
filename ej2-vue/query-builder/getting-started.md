@@ -105,12 +105,33 @@ Follow the below steps to add the Vue Query builder component:
 1\. First, import and register the Query builder component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+
+export default {
+    components: {
+        'ejs-querybuilder': QueryBuilderComponent,
+        'e-column': ColumnDirective,
+        'e-columns': ColumnsDirective
+    }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder':":Querybuilder':Component
+
+},
+
     components: {
         'ejs-querybuilder': QueryBuilderComponent,
         'e-column': ColumnDirective,
@@ -151,6 +172,17 @@ export default {
 3\. Declare the value for the `values` property in the `script` section. 
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+data: function() {
+    return {
+        values: ['Mr.', 'Mrs.']
+    };
+}
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
@@ -168,6 +200,9 @@ data: function() {
 Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/query-builder/default-cs10/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/query-builder/default-cs10/app.vue %}
 {% endhighlight %}
@@ -194,7 +229,96 @@ yarn run serve
 Add the EJ2 Vue Query Builder using `<ejs-querybuilder>` to the `<template>` section of the `App.vue` file in `src` directory.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div class="control-section">
+        <div class="col-lg-12 querybuilder-control">
+            <ejs-querybuilder :dataSource="dataSource" :rule="importRules" width="70%">
+                <e-columns>
+                    <e-column field='EmployeeID' label='Employee ID' type='number' />
+                    <e-column field='FirstName' label='First Name' type='string' />
+                    <e-column field='TitleOfCourtesy' label='Title Of Courtesy' type='boolean' :values="values" />
+                    <e-column field='Title' label='Title' type='string' />
+                    <e-column field='HireDate' label='Hire Date' type='date' format='dd/MM/yyyy' />
+                    <e-column field='Country' label='Country' type='string' />
+                    <e-column field='City' label='City' type='string' />
+                </e-columns>
+            </ejs-querybuilder>
+        </div>
+    </div>
+</template>
+
+<style>
+    .e-query-builder {
+        margin: 0 auto;
+    }
+</style>
+
+<script setup>
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+
+export default {
+  components: {
+    'ejs-querybuilder': QueryBuilderComponent,
+    'e-column': ColumnDirective,
+    'e-columns': ColumnsDirective
+  },
+  data: function() {
+    return {
+      dataSource: employeeData,
+      values: ['Mr.', 'Mrs.'],
+      importRules: {
+        'condition': 'and',
+        'rules': [{
+                'label': 'Employee ID',
+                'field': 'EmployeeID',
+                'type': 'number',
+                'operator': 'equal',
+                'value': 1
+            },
+            {
+                'label': 'Title',
+                'field': 'Title',
+                'type': 'string',
+                'operator': 'equal',
+                'value': 'Sales Manager'
+            }]
+        }
+    };
+  }
+}
+var employeeData = [{
+      'EmployeeID': 1,
+      'FirstName': 'Nancy',
+      'Title': 'Sales Representative',
+      'TitleOfCourtesy': 'Ms.',
+      'HireDate': '22/07/2001',
+      'City': 'Seattle',
+      'Country': 'USA'
+    },
+    {
+      'EmployeeID': 2,
+      'FirstName': 'Andrew',
+      'Title': 'Vice President',
+      'TitleOfCourtesy': 'Dr.',
+      'HireDate': '21/04/2003',
+      'City': 'Tacoma',
+      'Country': 'USA'
+    },
+    {
+      'EmployeeID': 3,
+      'FirstName': 'Janet',
+      'Title': 'Sales Representative',
+      'TitleOfCourtesy': 'Ms.',
+      'HireDate': '22/07/2001',
+      'City': 'Kirkland',
+      'Country': 'USA'
+    }];
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div class="control-section">
@@ -224,6 +348,15 @@ Add the EJ2 Vue Query Builder using `<ejs-querybuilder>` to the `<template>` sec
 import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QuerybuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-querybuilder':":Querybuilder':Component
+
+},
+
   components: {
     'ejs-querybuilder': QueryBuilderComponent,
     'e-column': ColumnDirective,
@@ -288,6 +421,9 @@ var employeeData = [{
 The following example shows a basic Query builder.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/query-builder/default-cs11/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/query-builder/default-cs11/app.vue %}
 {% endhighlight %}

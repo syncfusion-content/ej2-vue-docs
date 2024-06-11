@@ -1,40 +1,41 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'
+            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: "rectangle1",
-        offsetX: 100,
-        offsetY: 100,
-        width: 100,
-        height: 100,
-        annotations: [{
-            content: 'rectangle1'
-        }]
-    }, {
-        id: "rectangle2",
-        offsetX: 200,
-        offsetY: 200,
-        width: 100,
-        height: 100,
-        annotations: [{
-            content: 'rectangle2'
-        }]
-    },
-    {
-        id: 'group',
-        children: ['rectangle1', 'rectangle2']
-    },
-]
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+    id: "rectangle1",
+    offsetX: 100,
+    offsetY: 100,
+    width: 100,
+    height: 100,
+    annotations: [{
+        content: 'rectangle1'
+    }]
+}, {
+    id: "rectangle2",
+    offsetX: 200,
+    offsetY: 200,
+    width: 100,
+    height: 100,
+    annotations: [{
+        content: 'rectangle2'
+    }]
+},
+{
+    id: 'group',
+    children: ['rectangle1', 'rectangle2']
+}]
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -48,11 +49,9 @@ export default {
                 return node;
             },
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
+    },
+    mounted: function () {
+        const diagramInstance = this.$refs.diagram.ej2Instances;
         diagramInstance.selectAll();
         // Ungroup the selected group into nodes
         diagramInstance.unGroup();
@@ -60,7 +59,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

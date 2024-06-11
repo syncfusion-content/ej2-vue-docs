@@ -35,7 +35,10 @@ It is tabulated as follows
 The default error message for a rule can be customizable by defining it along with concern rule object as follows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/form-validator/form-validation-events-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/form-validator/form-validation-events-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

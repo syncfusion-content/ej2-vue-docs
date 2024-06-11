@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The edit mode of In-place Editor can be disabled by setting the [disabled](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#disabled) property value to `true`. In the following sample, when check or uncheck the checkbox, In-place Editor component will disable or enable the edit mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

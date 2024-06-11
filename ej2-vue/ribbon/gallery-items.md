@@ -21,7 +21,10 @@ You can render the groups inside the gallery items by using [groups](https://ej2
 You can render the gallery items by using [items](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryGroupModel/#items) property and customize using the [RibbonGalleryItemModel](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryItemModel/), which provides options such as `content`, `iconCss`, `disabled` and more.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/galleryItems/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/galleryItems/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ You can render the gallery items by using [items](https://ej2.syncfusion.com/vue
 You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryItemModel/#content) property to define the text content for the gallery item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/ItemContent/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/ItemContent/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ You can use the [content](https://ej2.syncfusion.com/vue/documentation/api/ribbo
 You can use the [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryItemModel/#iconcss) property to define the icons for the gallery item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/galleryIcon/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/galleryIcon/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,21 +68,27 @@ You can use the [htmlAttributes](https://ej2.syncfusion.com/vue/documentation/ap
 The following sample showcases how to add title attribute to the gallery item using `htmlAttributes` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/htmlAttribute/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/htmlAttribute/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/htmlAttribute" %}
 
-#### Css class
+#### CSS class
 
 You can use the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryItemModel/#cssclass) property to customize the gallery item.
 
 The following sample showcases how to customize the appearance of each gallery item using the `cssClass` property .
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/classCustomization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/classCustomization/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +100,10 @@ The following sample showcases how to customize the appearance of each gallery i
 You can use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryItemModel/#disabled) property to disable the Ribbon gallery item. It prevents the user interaction when set to `true`. By default, the value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/disabledItem/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/disabledItem/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +115,10 @@ You can use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/ribb
 You can use the [header](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryGroupModel/#header) property to set header for the group items in the Ribbon gallery popup.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/galleryItems/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/galleryItems/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -115,7 +136,10 @@ You can use the [itemHeight](https://ej2.syncfusion.com/vue/documentation/api/ri
 The provided example demonstrates how to customize gallery items using the `itemWidth` and `itemHeight` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/itemWidthHeight/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/itemWidthHeight/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +151,10 @@ The provided example demonstrates how to customize gallery items using the `item
 You can use the [cssClass](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalleryGroupModel/#cssclass) property to customize the appearance of gallery groups.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/groupCustomization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/groupCustomization/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +168,10 @@ You can customize the number if items to be displayed in Ribbon gallery by using
 The following example showcases the utilization of the `itemCount` property, displaying a ribbon gallery with `4` items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/itemCount/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/itemCount/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +183,10 @@ The following example showcases the utilization of the `itemCount` property, dis
 You can use the [selectedItemIndex](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettingsModel/#selecteditemindex) property to define the currently selected item in the Ribbon gallery items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/selectedIndex/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/selectedIndex/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -166,16 +199,37 @@ You can specify the height of the gallery popup by using the [popupHeight](https
 
 ## Setting popup width
 
-you can specify the width of the gallery popup by using the [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettingsModel/#popupwidth) propery.
+you can specify the width of the gallery popup by using the [popupWidth](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettingsModel/#popupwidth) property.
 
 The example demonstrates the customization of popup with `popupHeight` and `popupWidth` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/popupWidthHeight/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/popupWidthHeight/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/popupWidthHeight" %}
+
+## Template
+
+You can customize the default appearance and content of Ribbon gallery items by using the [template](../api/ribbon/ribbonGallerySettingsModel/#template) property.
+
+### Popup Template
+
+You can customize the appearance of Ribbon gallery popup by using the [popupTemplate](../api/ribbon/ribbonGallerySettingsModel/#popuptemplate) property.
+
+The below example demonstrates the customization of both the `template` and `popupTemplate` properties:
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/ribbon/gallery-template/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/ribbon/gallery/galleryTemplate" %}
 
 > To know more about the built-in Ribbon items, please refer to the [Ribbon Items](./items) section.

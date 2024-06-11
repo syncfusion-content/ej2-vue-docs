@@ -15,7 +15,10 @@ You can customize the appearance of the loading indicator in the pivot table by 
 > You can also disable the loading indicator by setting [`spinnerTemplate`](https://ej2.syncfusion.com/documentation/api/pivotview/#spinnertemplate) to empty string.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/common-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/common-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

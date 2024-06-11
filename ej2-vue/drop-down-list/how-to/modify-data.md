@@ -15,7 +15,10 @@ When binding the remote data source, by using the [`actionComplete`](https://ej2
 The following sample demonstrate how to modify the result data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/modify-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/modify-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

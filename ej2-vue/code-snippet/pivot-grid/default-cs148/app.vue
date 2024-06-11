@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :hyperlinkSettings="hyperlinkSettings"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :hyperlinkSettings="hyperlinkSettings">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,14 +30,14 @@ export default {
       hyperlinkSettings: {
         cssClass: 'e-custom-class',
         conditionalSettings: [{
-            measure: 'Sold',
-            conditions: 'Between',
-            value1: 150,
-            value2: 200
-        },{
-            label: 'Germany',
-            conditions: 'GreaterThan',
-            value1: 500
+          measure: 'Sold',
+          conditions: 'Between',
+          value1: 150,
+          value2: 200
+        }, {
+          label: 'Germany',
+          conditions: 'GreaterThan',
+          value1: 500
         }]
       }
     }
@@ -47,7 +45,8 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+
 .e-custom-class {
   color: #008cff;
   text-decoration: underline;
@@ -58,6 +57,3 @@ export default {
   text-decoration: none;
 }
 </style>
-
-
-

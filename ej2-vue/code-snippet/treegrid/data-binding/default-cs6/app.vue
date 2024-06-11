@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid :dataSource="data" idMapping='TaskID' parentIdMapping='ParentItem' hasChildMapping='isParent' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings'>
@@ -13,27 +11,35 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
 
-Vue.use(TreeGridPlugin);
+
 
 class SerialNoAdaptor extends WebApiAdaptor {
-    public processResponse(): Object[] {
-        let i: number = 0;
+    processResponse() {
+        let i= 0;
         // calling base class processResponse function
-        let original: Object[] = super.processResponse.apply(this, arguments);
+        let original = super.processResponse.apply(this, arguments);
         // adding serial number
-        original.forEach((item: Object) => item['Sno'] = ++i);
+        original.forEach((item) => item['Sno'] = ++i);
         return original;
     }
 }
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data () {
-      let SERVICE_URI: string =
-      "https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData";
+      let SERVICE_URI =
+      "https://services.syncfusion.com/vue/production/api/SelfReferenceData";
     return {
       data: new DataManager({
         url: SERVICE_URI,
@@ -48,6 +54,3 @@ export default {
     },
 }
 </script>
-
-
-

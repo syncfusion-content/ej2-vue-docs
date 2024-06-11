@@ -1,22 +1,24 @@
-
-
-
 <template>
      <div>
-       <ejs-button id="zoomIn" cssClass="e-info" v-on:click.native="zoomIn">ZoomIn</ejs-button>
-       <ejs-button id="zoomOut" cssClass="e-info" v-on:click.native="zoomOut">ZoomOut</ejs-button>
-       <ejs-button id="fitToProject" cssClass="e-info" v-on:click.native="fitToProject">FitToProject</ejs-button>
+       <ejs-button id="zoomIn" cssClass="e-info" v-on:click="zoomIn">ZoomIn</ejs-button>
+       <ejs-button id="zoomOut" cssClass="e-info" v-on:click="zoomOut">ZoomOut</ejs-button>
+       <ejs-button id="fitToProject" cssClass="e-info" v-on:click="fitToProject">FitToProject</ejs-button>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { projectNewData } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: projectNewData,
@@ -45,6 +47,3 @@ export default {
   },
 };
 </script>
-
-
-

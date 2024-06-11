@@ -21,14 +21,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
 import { data } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(TooltipPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-tooltip":TooltipComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

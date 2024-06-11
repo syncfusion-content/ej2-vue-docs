@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource="data" :allowResizing='true' :toolbar='toolbarOptions' :showColumnChooser='true' height='400px' width='600px' :autoFit='true' :actionComplete='actionComplete'>
@@ -14,13 +12,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Resize, ColumnChooser, Toolbar  } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize, ColumnChooser, Toolbar  } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -43,5 +43,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

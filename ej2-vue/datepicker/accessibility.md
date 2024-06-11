@@ -97,7 +97,10 @@ Use the below list of keys to navigate the Calendar after the popup has opened.
 > To focus the DatePicker component use the `alt+t` keys.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/access-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/access-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

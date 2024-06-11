@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :eventMarkers="eventMarkers"></ejs-gantt>
@@ -11,6 +8,7 @@ import { GanttComponent, DayMarkers} from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
 
 export default {
+name: "App",
   components: {
     'ejs-gantt': GanttComponent
   },
@@ -66,6 +64,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
 </style>
-
-
-

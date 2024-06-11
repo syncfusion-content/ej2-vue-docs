@@ -21,7 +21,10 @@ import {Input} from '@syncfusion/ej2-inputs';
 * You can also add the `icons` on the input by passing `buttons` property value with the class name `e-input-group-icon` as parameter to the `createInput` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/utility-rendering-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/utility-rendering-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

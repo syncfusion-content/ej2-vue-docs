@@ -23,7 +23,10 @@ The default items are displayed in the following table:
 | `Filter` | Show the filter option as given in `filterSettings.type` |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ During the resizing action, the gantt component triggers the below two events.
 2. The [`columnMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#columnmenuclick) event triggers when the user clicks the column menu of the gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ Custom column menu items can be added by defining the [`columnMenuItems`](https:
 Actions for this customized items can be defined in the [`columnMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#columnmenuclick) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ Sometimes, you have a scenario that to hide an item from column menu for particu
 The following sample, **Filter** item was hidden in column menu when opens for the **Task Name** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

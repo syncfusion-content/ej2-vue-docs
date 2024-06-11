@@ -1,18 +1,17 @@
-
-
 <template>
  <ejs-progressbutton ref="progressbutton" :content="content"  duration=4000 :enableProgress="true" :cssClass="cssClass" :begin ="begin" :end="end"></ejs-progressbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ProgressButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { ProgressButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple} from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(ProgressButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-progressbutton":ProgressButtonComponent
+},
 methods: {
     begin: function(args) {
         this.$refs.progressbutton.content = 'Uploading...';
@@ -42,5 +41,3 @@ methods: {
   @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 </style>
-
-

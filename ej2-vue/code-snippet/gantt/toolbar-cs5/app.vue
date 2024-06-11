@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
      <ejs-numerictextbox id="inputEle" format='c2' value='1' width='150'></ejs-numerictextbox>
@@ -9,13 +6,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+import { GanttComponent, Toolbar } from "@syncfusion/ej2-vue-gantt";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { projectNewData } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(NumericTextBoxPlugin);
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: projectNewData,
@@ -37,6 +36,3 @@ export default {
   }
 };
 </script>
-
-
-

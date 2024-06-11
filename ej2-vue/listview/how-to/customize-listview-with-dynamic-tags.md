@@ -69,7 +69,10 @@ You can customize the ListView items using the [`template`](https://ej2.syncfusi
   ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/data-binding/remote-data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/data-binding/remote-data-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -36,7 +36,10 @@ The panels within the layout can be easily positioned or ordered using the `row`
 The following sample demonstrates the positioning of panels within the dashboard layout using the row, and,column properties of the panels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/position-of-panels-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/position-of-panels-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +53,10 @@ A panel's size can be varied easily by defining the `sizeX` and `sizeY` properti
 The following sample demonstrates the sizing of panels within the dashboard layout using the sizeX and sizeY properties of the panels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/setting-cell-spacing-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/setting-cell-spacing-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

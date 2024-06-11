@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To customize default values of pager dropdown, you need to define `pageSizes` as array of strings.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/pagerdropdown-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/pagerdropdown-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

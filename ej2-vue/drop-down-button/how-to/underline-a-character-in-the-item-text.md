@@ -15,7 +15,10 @@ Underline a particular character in a text can be handled in [`beforeItemRender`
 In the following example, `C` is underlined in the text `Copy`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

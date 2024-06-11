@@ -15,7 +15,10 @@ You can export the selected records data by passing it to [`PdfExportProperties.
 In the below exporting demo, we can get the selected records using [`getSelectedRecords`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#getselectedrecords) method and pass the selected data to [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pdfexport) or [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#excelExport) methods using respective export properties..
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

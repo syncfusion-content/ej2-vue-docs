@@ -21,13 +21,15 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin,Page,Edit,Toolbar,Filter} from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective,Page,Edit,Toolbar,Filter} from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     for (let i = 0; i < data.length; i++) {
       data[i]['List'] = i + 1;

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref="grid1" :dataSource="data" :allowPaging="true" :allowFiltering="true" :filterSettings="filterOptions" :dataBound="dataBound">
@@ -17,12 +15,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Filter } from "@syncfusion/ej2-vue-grids";
-
-Vue.use(GridPlugin);
-
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Filter } from "@syncfusion/ej2-vue-grids";
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
         return {
             data: [
@@ -78,5 +78,3 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

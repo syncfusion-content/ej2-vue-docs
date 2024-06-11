@@ -1,57 +1,56 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,BpmnDiagrams,Diagram,BpmnGatewayModel,BpmnShapeModel } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(BpmnDiagrams);
+import { DiagramComponent, BpmnDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
-    Vue.use(DiagramPlugin);
-
-    let nodes = [ {
+let nodes = [{
     id: 'event1', style: { strokeWidth: 2 },
-    height:70,width:70,offsetX:400,offsetY:200,
-    shape: { type: 'Bpmn', shape: 'Event',
+    height: 70, width: 70, offsetX: 400, offsetY: 200,
+    shape: {
+        type: 'Bpmn', shape: 'Event',
         event: { event: 'Start', trigger: 'None' },
-     } as BpmnShapeModel
+    }
 },
 //node with target
 {
     id: 'textNode1', width: 70, height: 70,
-    offsetX:400,offsetY:400,
-    annotations:[{content:'textNode1'}],
-        shape: {
-            type: 'Bpmn', shape: 'TextAnnotation',
-            textAnnotation:{ textAnnotationDirection:'Auto',textAnnotationTarget:'event1'}
-        } as BpmnShapeModel
+    offsetX: 400, offsetY: 400,
+    annotations: [{ content: 'textNode1' }],
+    shape: {
+        type: 'Bpmn', shape: 'TextAnnotation',
+        textAnnotation: { textAnnotationDirection: 'Auto', textAnnotationTarget: 'event1' }
+    }
 },
 //Node without target
 {
     id: 'textNode2', width: 70, height: 70,
-    offsetX:600,offsetY:400,
-    annotations:[{content:'textNode1'}],
-        shape: {
-            type: 'Bpmn', shape: 'TextAnnotation',
-            textAnnotation:{ textAnnotationDirection:'Auto',textAnnotationTarget:''}
-        } as BpmnShapeModel
+    offsetX: 600, offsetY: 400,
+    annotations: [{ content: 'textNode1' }],
+    shape: {
+        type: 'Bpmn', shape: 'TextAnnotation',
+        textAnnotation: { textAnnotationDirection: 'Auto', textAnnotationTarget: '' }
+    }
 },]
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
             height: "600px",
             nodes: nodes,
         }
+    },
+    provide: {
+        diagram: [BpmnDiagrams]
     }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

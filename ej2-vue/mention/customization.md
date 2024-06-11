@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 You can show mention character as prefix of selected item in mention component using [showMentionChar](https://ej2.syncfusion.com/vue/documentation/api/mention/#showmentionchar) property. The default value of `showMentionChar` is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/customization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/customization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ The Mention has provided support to specify the custom suffix to append alongsid
 The following example displays the white space next to the text selected since the suffixText is configured as `&nbsp;`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/customization-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/customization-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ You can customize the suggestion list width and height using the [popupHeight](h
 By default, the popup list width value is set as `auto`. Depending on the mentioned suggestion data list, the width value is automatically adjusted. The popup list height value is set as `300px`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/customization-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/customization-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

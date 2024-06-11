@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager" :allowDragAndDrop="allowDragAndDrop"  :fileDragStart="onFileDragStart"  :fileDragStop="onFileDragStop" :fileDragging="onFileDragging" :fileDropped="onFileDropped" :ajaxSettings="ajaxSettings">
@@ -7,11 +5,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+    },
     data () {
         return {
              ajaxSettings:
@@ -29,19 +30,19 @@ export default {
     },
     methods: {
         // File Manager's file Drag start event function
-        onFileDragStart: function(args){
+        onFileDragStart: function(){
             console.log("File Drag Start");
         },
         // File Manager's file Drag stop event function
-        onFileDragStop: function(args){
+        onFileDragStop: function(){
             console.log("File Drag Stop");
         },
         // File Manager's file Dragging event function
-        onFileDragging: function(args){
+        onFileDragging: function(){
             console.log("File Dragging");
         },
         // File Manager's file Dropped event function
-        onFileDropped: function(args){
+        onFileDropped: function(){
             console.log("File Dropped");
         }
     }
@@ -59,5 +60,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-
-

@@ -1,10 +1,7 @@
-
-
-
 <template>
     <div id="app">
         <div>
-            <ejs-button  iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true" v-on:click.native="btnClick">Enable/Disable Grid</ejs-button>
+            <ejs-button  iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true" v-on:click="btnClick">Enable/Disable Grid</ejs-button>
             <div id="TreeGridParent">
               <ejs-treegrid :dataSource="data" :treeColumnIndex="1" height='210px' childMapping="subtasks" ref="treegrid" :editSettings="editSettings" :toolbar="toolbar">
                <e-columns>
@@ -20,15 +17,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-treegrid";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { TreeGridComponent, Page, Toolbar, Edit, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { sampleData } from './datasource.js';
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData,
@@ -37,7 +40,7 @@ export default {
     };
   },
   methods: {
-    btnClick(args) {
+    btnClick() {
       if (this.$refs.treegrid.$el.classList.contains('disabletreegrid')) {
           this.$refs.treegrid.$el.classList.remove('disabletreegrid');
           document.getElementById("TreeGridParent").classList.remove('wrapper');
@@ -62,6 +65,3 @@ export default {
     cursor: not-allowed;
   }
 </style>
-
-
-

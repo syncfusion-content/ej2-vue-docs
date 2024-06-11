@@ -1,19 +1,11 @@
-
-
-
-
 <template>
-     <div id="app">
-          <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" 
-        :load="load" :height="height" :showFieldList="showFieldList" > </ejs-pivotview>
-</div>
+    <div id="app">
+        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :load="load" :height="height"
+            :showFieldList="showFieldList"> </ejs-pivotview>
+    </div>
 </template >
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
-
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 
 var parentProp = {};
 var dataSource;
@@ -151,57 +143,57 @@ function pivotData() {
 }
 
 export default {
-  data () {
-    return {
-      dataSourceSettings: {
-        expandAll: true,
-        enableSorting: true,
-        dataSource: pivotData(),
-        columns: [{ name: 'OrderDetails' }],
-        values: [{ name: 'Freight', caption: 'Units Sold' }],
-        rows: [{ name: 'ShipDetails' }],
-        valueSortSettings: { headerDelimiter: ' - ' },
-        formatSettings: [{ name: 'Amount', format: 'C0' }]
-      },
-      height: 350,
-      showFieldList: true
-    }
-  },
-  methods: {
-     load: function (args) {
-          dataSource = JSON.parse(JSON.stringify(args.dataSourceSettings.dataSource));
-          args.dataSourceSettings.dataSource = complexToFlatJson(dataSource);
-          var rows = [];
-          for (var i = 0; i < args.dataSourceSettings.rows.length; i++) {
-              if (args.dataSourceSettings.rows[i].name in parentProp) {
-                  rows = rows.concat(parentProp[args.dataSourceSettings.rows[i].name]);
-              }
-              else {
-                  rows.push(args.dataSourceSettings.rows[i]);
-              }
-          }
-          args.dataSourceSettings.rows = rows;
-          var columns = [];
-          for (var i = 0; i < args.dataSourceSettings.columns.length; i++) {
-              if (args.dataSourceSettings.columns[i].name in parentProp) {
-                  columns = columns.concat(parentProp[args.dataSourceSettings.columns[i].name]);
-              }
-              else {
-                  columns.push(args.dataSourceSettings.columns[i]);
-              }
-          }
-          args.dataSourceSettings.columns = columns;
-      },
-  },
-  provide: {
+    name: "App",
+    components: {
+        "ejs-pivotview": PivotViewComponent
+    },
+    data() {
+        return {
+            dataSourceSettings: {
+                expandAll: true,
+                enableSorting: true,
+                dataSource: pivotData(),
+                columns: [{ name: 'OrderDetails' }],
+                values: [{ name: 'Freight', caption: 'Units Sold' }],
+                rows: [{ name: 'ShipDetails' }],
+                valueSortSettings: { headerDelimiter: ' - ' },
+                formatSettings: [{ name: 'Amount', format: 'C0' }]
+            },
+            height: 350,
+            showFieldList: true
+        }
+    },
+    methods: {
+        load: function (args) {
+            dataSource = JSON.parse(JSON.stringify(args.dataSourceSettings.dataSource));
+            args.dataSourceSettings.dataSource = complexToFlatJson(dataSource);
+            var rows = [];
+            for (let i = 0; i < args.dataSourceSettings.rows.length; i++) {
+                if (args.dataSourceSettings.rows[i].name in parentProp) {
+                    rows = rows.concat(parentProp[args.dataSourceSettings.rows[i].name]);
+                }
+                else {
+                    rows.push(args.dataSourceSettings.rows[i]);
+                }
+            }
+            args.dataSourceSettings.rows = rows;
+            var columns = [];
+            for (let i = 0; i < args.dataSourceSettings.columns.length; i++) {
+                if (args.dataSourceSettings.columns[i].name in parentProp) {
+                    columns = columns.concat(parentProp[args.dataSourceSettings.columns[i].name]);
+                }
+                else {
+                    columns.push(args.dataSourceSettings.columns[i]);
+                }
+            }
+            args.dataSourceSettings.columns = columns;
+        },
+    },
+    provide: {
         pivotview: [FieldList]
     }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

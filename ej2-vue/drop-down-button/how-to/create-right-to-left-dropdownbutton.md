@@ -15,7 +15,10 @@ DropDownButton component has RTL support. This can be achieved by setting [`enab
 The following example illustrates how to enable right-to-left support in DropDownButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

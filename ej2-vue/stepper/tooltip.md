@@ -15,7 +15,10 @@ The Stepper component supports tooltip to show additional information in the ste
 The tooltip appears when the user hovers over the step, providing the information such as the label or text. By default, the `showTooltip` property is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The tooltip appears when the user hovers over the step, providing the informatio
 You can use the [tooltipTemplate](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#tooltiptemplate) property to specify a custom template for the tooltips, providing detailed information about the steps.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/tooltipTemplate/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/tooltipTemplate/app.vue %}
 {% endhighlight %}
 {% endtabs %}

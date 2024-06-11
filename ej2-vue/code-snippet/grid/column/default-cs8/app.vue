@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
   <p style="color: red; text-align: center;" id="message">{{ message }}</p>
@@ -17,12 +15,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Sort, Resize, ColumnMenu, Page,Filter } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Group, Sort, Resize, ColumnMenu, Page,Filter } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

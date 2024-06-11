@@ -31,7 +31,10 @@ Local data can be represented by the following ways as described below.
 The ListBox has support to load array of primitive data such as strings or numbers. Here, both value and text field acts as same.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ The ListBox can generate its list items through an array of object data. For thi
 In the following example, `id` and `sports` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +65,10 @@ The ListBox can generate its list items through an array of complex data. For th
 In the following example, `Sports.Name` column from complex data have been mapped to the `text` field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +82,10 @@ The ListBox supports retrieval of data from remote data services with the help o
 The following sample displays the first 10 products from `Products` table of the `Northwind` Data Service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

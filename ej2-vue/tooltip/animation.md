@@ -19,7 +19,10 @@ By default, Tooltip entrance occurs over 150 ms using the `ease-out` timing func
 The default animation effect for the Tooltip is set to `FadeIn` for its open action, and `FadeOut` for its close action. The default `duration` is set to 150 ms and `delay` is set to 0.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/animation/default-animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/animation/default-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +63,10 @@ Animations can also be applied on Tooltips dynamically through `open` and `close
 Refer to the code snippet below to apply animations using public methods.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/animation/animation-effects-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/animation/animation-effects-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +78,10 @@ Refer to the code snippet below to apply animations using public methods.
 The transition effect can be applied on Tooltips by using the `beforeRender` event as given in the following work-around code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/animation/transition-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/animation/transition-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

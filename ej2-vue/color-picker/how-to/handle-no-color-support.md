@@ -19,7 +19,10 @@ To achieve this, set [`noColor`](https://ej2.syncfusion.com/vue/documentation/ap
 In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile you can achieve the above functionalities.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ In the following sample, the first tile of the color palette represents the no c
 The following sample show the color palette with custom no color option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

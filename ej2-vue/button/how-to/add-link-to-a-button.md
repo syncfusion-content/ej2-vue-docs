@@ -15,7 +15,10 @@ The appearance of the Button can be changed like a link by `e-link` class using 
 In the following example, link is added in Button click by using `window.open()` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

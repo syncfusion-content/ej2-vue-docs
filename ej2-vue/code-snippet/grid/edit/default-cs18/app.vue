@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowPaging='true' :editSettings='editSettings'  :toolbar='toolbar'>
@@ -14,14 +12,11 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { Query } from '@syncfusion/ej2-data';
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 let element;
 let dropdownobj;
 
@@ -47,8 +42,13 @@ function write(args) {
       });
       dropdownobj.appendTo(element);
 }
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -99,5 +99,3 @@ export default {
         padding-right:0px;
     }
 </style>
-
-

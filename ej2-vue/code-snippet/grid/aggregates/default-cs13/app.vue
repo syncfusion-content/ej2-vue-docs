@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height='290px' :allowGrouping="true" :groupSettings="groupOptions">
@@ -26,26 +24,32 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { createApp } from "vue";
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective,
+},
   data() {
     return {
       data: data,
       groupOptions: {showDropArea: false, columns: ['ShipCountry'], disablePageWiseAggregates: true },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       footerAvg: function () {
-        return  { template : Vue.component('maxTemplate', {
+        return  { template : app.component('maxTemplate', {
             template: `<span>Average: {{data.Average}}</span>`,
             data () {return { data: {}};}
             })
@@ -70,5 +74,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
 </style>
-
-

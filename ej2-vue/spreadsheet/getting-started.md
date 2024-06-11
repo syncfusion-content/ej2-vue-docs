@@ -110,12 +110,22 @@ Follow the below steps to add the Vue Spreadsheet component using `Composition A
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+
+<script setup>
+import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
+</script>
+
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { SpreadsheetComponent } from "@syncfusion/ej2-vue-spreadsheet";
 
 export default {
+   name: "App",
    components: {
       'ejs-spreadsheet': SpreadsheetComponent
    }

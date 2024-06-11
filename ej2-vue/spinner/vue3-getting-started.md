@@ -124,35 +124,26 @@ You have completed all the necessary configurations needed for rendering the Syn
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <div id="app"></div>
+    <div id="app"></div>
 </template>
-<script>
+<script setup>
 import { onMounted } from 'vue';
 import { createSpinner, showSpinner, hideSpinner } from "@syncfusion/ej2-vue-popups";
-export default {
-  name: "App",
-  setup() {
-    onMounted(() => {
-      const appElement = document.getElementById("app");
-      const spinner = createSpinner({
+onMounted(() => {
+    const appElement = document.getElementById("app");
+    createSpinner({
         target: appElement,
-      });
-  
-      showSpinner(appElement);
-  
-      setInterval(() => {
-        hideSpinner(appElement);
-      }, 100000);
     });
-
-    return {};
-  },
-};
+    showSpinner(appElement);
+    setInterval(() => {
+        hideSpinner(appElement);
+    }, 100000);
+});
 </script>
-
+  
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -171,21 +162,18 @@ export default {
     // Specify the target for the spinner to show
     target: document.getElementById("app"),
   });
-
   // showSpinner() will make the spinner visible
   showSpinner(document.getElementById("app"));
-  
   setInterval(function () {
     // hideSpinner() method used hide spinner
     hideSpinner(document.getElementById("app"));
   }, 100000);
 },
-
   data: function () {
     return {};
   },
   methods: {},
-};
+}
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

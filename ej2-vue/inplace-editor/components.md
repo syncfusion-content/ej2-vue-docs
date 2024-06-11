@@ -28,7 +28,10 @@ The following table explains Injectable components module name and built-in comp
 In the following sample, built-in and injectable based In-place Editor components are rendered.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,9 +51,30 @@ In the following code, the [type](https://ej2.syncfusion.com/vue/documentation/a
     }
 ```
 
-`[src/app/app.vue]`
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-inplaceeditor id="inplace_editor" type="Date" :value="datepickerValue" :model="model">
+    </ejs-inplaceeditor>
+  </div>
+</template>
+
+<script setup>
+
+import { InPlaceEditorComponent as EjsInplaceeditor } from '@syncfusion/ej2-vue-inplace-editor';
+
+const datepickerValue = new Date('04/12/2018');
+const dateModel = {
+  showTodayButton: true,
+  placeholder: 'Select Date'
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
@@ -60,25 +84,28 @@ In the following code, the [type](https://ej2.syncfusion.com/vue/documentation/a
 </template>
 
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
 
-Vue.use(InPlaceEditorPlugin);
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
+
 export default {
   name: 'app',
-  data () {
+  components: {
+    'ejs-inplaceeditor': InPlaceEditorComponent
+  },
+  data() {
     return {
-        datepickerValue: new Date('04/12/2018');
-        dateModel: {
-            showTodayButton: true,
-            placeholder: 'Select Date'
-        },
+      datepickerValue: new Date('04/12/2018');
+      dateModel: {
+        showTodayButton: true,
+        placeholder: 'Select Date'
+      },
     }
   }
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## See Also
 

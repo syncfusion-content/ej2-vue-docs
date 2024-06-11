@@ -1,18 +1,16 @@
-
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;"><br>
-      <ejs-dropdowntree id='dropdowntree' :fields='fields' placeholder='Select an employee':itemTemplate='itemTemplate' ></ejs-dropdowntree>
+      <ejs-dropdowntree id='dropdowntree' :fields='fields' placeholder='Select an employee'
+        :itemTemplate='itemTemplate'></ejs-dropdowntree>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DropDownTreePlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(DropDownTreePlugin);
-var data = [
+import { createApp } from "vue";
+import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
+
+let data = [
   { "id": 1, "name": "Steven Buchanan", "job": "General Manager", "hasChild": true, "expanded": true },
   { "id": 2, "pid": 1, "name": "Laura Callahan", "job": "Product Manager", "hasChild": true },
   { "id": 3, "pid": 2, "name": "Andrew Fuller", "job": "Team Lead", "hasChild": true },
@@ -24,18 +22,24 @@ var data = [
   { "id": 11, "pid": 6, "name": "Mary", "job": "Developer " },
   { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
 ];
-var itemVue = Vue.component("itemTemplate", {
+let itemVue = createApp.component("itemTemplate", {
   template: `<span><span  class="ename">{{data.name}} - </span><span class="ejob">{{data.job}}</span></span>`,
-  data() {return {data: {}};
+  data() {
+    return { data: {} };
   }
 });
+
 export default {
-  data (){
+  name: "App",
+  components: {
+    "ejs-dropdowntree": DropDownTreeComponent
+  },
+  data() {
     return {
-      itemTemplate : function() {
-        return {template: itemVue};
+      itemTemplate: function () {
+        return { template: itemVue };
       },
-      fields: { dataSource: data, value: 'id', text: 'name', parentValue:"pid", hasChildren: 'hasChild' },
+      fields: { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' },
     }
   }
 }
@@ -47,10 +51,8 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-.ejob{
-    opacity: .60;
+
+.ejob {
+  opacity: .60;
 }
 </style>
-
-
-

@@ -17,7 +17,10 @@ To activate this feature, set the `emptyRecordTemplate` property of the Grid. Th
 In the following example, an image and text have been rendered as a template to indicate that the grid has no data to display.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/empty-record-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/empty-record-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

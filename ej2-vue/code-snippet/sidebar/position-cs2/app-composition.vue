@@ -1,82 +1,85 @@
-
-
 <template>
-<div id="app">
-    <ejs-sidebar id="default-sidebar" ref="sidebar" :type="type" :target="target" :position="position" :enablePersistence="enablePersistence">
-      <div class="title"> Sidebar content</div>
-       <div class="sub-title">
-        Click the button to close the Sidebar.
-    </div>
-    <div class="center-align">
-        <button ejs-button id="close" v-on:click="closeClick" class="e-btn close-btn">Close Sidebar</button>
-    </div>
-</ejs-sidebar>
-<div id="head">
-    <ejs-button id="toggle" ref="togglebtn" class="e-btn e-info"  cssClass="e-flat" iconCss="e-icons burg-icon" isToggle="true" v-on:click.native="btnClick">Open</ejs-button>
-</div>
-<div>
-<div id="maincontent" class="content">
-    <div>
-        <div class="title">Main content</div>
-            <div class="rows">
-                <div class="row">
-                  <ejs-radiobutton id="left" label='Left' name='state' checked='true' :change="positionChange"></ejs-radiobutton>
-                </div>
-                <div class="row">
-                  <ejs-radiobutton id="right" label='Right' name='state' :change="positionChange"></ejs-radiobutton>
+    <div id="app">
+        <ejs-sidebar id="default-sidebar" ref="sidebar" :type="type" :target="target" :position="position"
+            :enablePersistence="enablePersistence">
+            <div class="title"> Sidebar content</div>
+            <div class="sub-title">
+                Click the button to close the Sidebar.
+            </div>
+            <div class="center-align">
+                <button ejs-button id="close" v-on:click="closeClick" class="e-btn close-btn">Close Sidebar</button>
+            </div>
+        </ejs-sidebar>
+        <div id="head">
+            <ejs-button id="toggle" ref="togglebtn" class="e-btn e-info" cssClass="e-flat" iconCss="e-icons burg-icon"
+                isToggle="true" v-on:click="btnClick">Open</ejs-button>
+        </div>
+        <div>
+            <div id="maincontent" class="content">
+                <div>
+                    <div class="title">Main content</div>
+                    <div class="rows">
+                        <div class="row">
+                            <ejs-radiobutton id="left" label='Left' name='state' checked='true'
+                                :change="positionChange"></ejs-radiobutton>
+                        </div>
+                        <div class="row">
+                            <ejs-radiobutton id="right" label='Right' name='state'
+                                :change="positionChange"></ejs-radiobutton>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-</div>
-</div>
-<!--end of main content declaration -->
+    </div>
+    <!--end of main content declaration -->
 </template>
 <script setup>
 import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { ButtonComponent as EjsButton ,RadioButtonComponent as EjsRadiobutton } from '@syncfusion/ej2-vue-buttons';
-import { ref } from "vue";
+import { ButtonComponent as EjsButton, RadioButtonComponent as EjsRadiobutton } from '@syncfusion/ej2-vue-buttons';
+import { ref } from 'vue';
 
+const sidebar = ref(null);
+const togglebtn = ref(null);
 const type = 'Push';
 const target = '.content';
-const position = ref('Left');
+let position = 'Left';
 const enablePersistence = true;
-const sidebar = ref(null);
-const togglebtn = ref('Open');
-    
+
+
 const positionChange = (args) => {
-        position.value = args.event.target.id == "left" ? "Left" : "Right";
-        }
+    position = args.event.target.id == "left" ? "Left" : "Right";
+};
 const btnClick = () => {
-        if(togglebtn.value.$el.classList.contains('e-active')){
-            togglebtn.value.Content = 'Open';
-            sidebar.value.hide();
-        }
-        else{
-            togglebtn.value.Content = 'Close';
-            sidebar.value.show();
-        }
-    };
+    if (togglebtn.value.$el.classList.contains('e-active')) {
+        togglebtn.value.Content = 'Open';
+        sidebar.value.hide();
+    }
+    else {
+        togglebtn.value.Content = 'Close';
+        sidebar.value.show();
+    }
+};
 const closeClick = () => {
-         sidebar.value.hide();
-         togglebtn.value.$el.classList.remove('e-active');
-         togglebtn.value.Content = 'Open';
-    };
-    
+    sidebar.value.hide();
+    togglebtn.value.$el.classList.remove('e-active');
+    togglebtn.value.Content = 'Open';
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-.rows{
-    margin:auto;
-    text-align:center;
+
+.rows {
+    margin: auto;
+    text-align: center;
 }
 
-.row{
-    display:inline-block;
-    padding:10px;
-    margin:auto;
+.row {
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
 }
 
 .center-align {
@@ -84,9 +87,9 @@ const closeClick = () => {
     padding: 20px;
 }
 
-.burg-icon:before{
+.burg-icon:before {
     content: '\e10d';
-    font-size:16px;
+    font-size: 16px;
 }
 
 .title {
@@ -97,21 +100,28 @@ const closeClick = () => {
 
 #head {
     border: 1px solid #424242;
-    border-bottom-color:transparent;
-    background:#00897B;
+    border-bottom-color: transparent;
+    background: #00897B;
 }
 
-#toggle,#container .e-btn.e-info:hover,#toggle:focus { /* csslint allow: adjoining-classes*/
-    background:#00695C;
-    box-shadow:none;
-    border-radius:0;
-    height:39px;
-    width:100px;
+#toggle,
+#container .e-btn.e-info:hover,
+#toggle:focus {
+    /* csslint allow: adjoining-classes*/
+    background: #00695C;
+    box-shadow: none;
+    border-radius: 0;
+    height: 39px;
+    width: 100px;
 }
 
-#close,#close:hover,#close:active,#close:focus{ /* csslint allow: adjoining-classes*/
+#close,
+#close:hover,
+#close:active,
+#close:focus {
+    /* csslint allow: adjoining-classes*/
     background: #fafafa;
-    color:black
+    color: black
 }
 
 .sub-title {
@@ -120,9 +130,9 @@ const closeClick = () => {
     padding: 10px;
 }
 
-.radiobutton{
-    display:inline-block;
-    padding:10px;
+.radiobutton {
+    display: inline-block;
+    padding: 10px;
 }
 
 .center {
@@ -143,11 +153,11 @@ const closeClick = () => {
 }
 
 #toggle {
-   color:white;
+    color: white;
 }
 
-.content{
-    height:305px;
+.content {
+    height: 305px;
     border: 1px solid grey;
 }
 
@@ -157,7 +167,4 @@ const closeClick = () => {
     font-weight: normal;
     font-style: normal;
 }
-
 </style>
-
-

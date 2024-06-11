@@ -17,7 +17,10 @@ The following sample demonstrates how to get the Rich Text Editor value in butto
 Render the Rich Text Editor in form.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

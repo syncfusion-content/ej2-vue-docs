@@ -35,7 +35,10 @@ Users can define their own toolbars for an image editor by customizing the items
 The built-in toolbar can be customized using the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property, so the specified toolbar items can be enabled in the Image Editor toolbar. And the contextual toolbar which is enabled while inserting annotations can also be customized in the [`toolbarUpdating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarupdating) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#t
 Here is an example of hiding the toolbar of the image editor using [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs35/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#t
 Here is an example of hiding the toolbar of the image editor using [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs36/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +97,10 @@ Here is an example of using [`toolbarTemplate`](https://ej2.syncfusion.com/vue/d
 The toolbar of the Image Editor can be replaced with the user specific UI using the [`toolbarTemplate`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbartemplate) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +114,10 @@ The [`toolbarUpdating`](https://ej2.syncfusion.com/vue/documentation/api/image-e
 In the following example, the contextual toolbar for rectangle will be rendered with only stroke color by excluding fill color and stroke width using [`toolbarUpdating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarupdating) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -114,7 +129,10 @@ In the following example, the contextual toolbar for rectangle will be rendered 
 The [`toolbarItemClicked`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbaritemclicked) event is triggered when a toolbar item is clicked in the Image Editor. This event is particularly useful when you have added custom options to both the main toolbar and contextual toolbar, as it allows you to capture the user's interaction with those custom options. By subscribing to the [`toolbarItemClicked`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbaritemclicked) event, you can execute specific actions or handle logic based on the toolbar item that was clicked. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs40/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +150,10 @@ The contextual toolbar that appears when inserting annotations in the Image Edit
 Here is an example of adding the custom toolbar item to the contextual toolbar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

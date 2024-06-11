@@ -1,8 +1,8 @@
 <template>
-<div>
-<div id="target">Right click / Touch hold to open the ContextMenu</div>
-<ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
-</div>
+    <div>
+        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
+    </div>
 </template>
 
 <script>
@@ -12,21 +12,22 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+    name: "App",
     components: {
         'ejs-contextmenu': ContextMenuComponent
     },
-    data () {
+    data() {
         return {
-            menuItems:[
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            }]
+            menuItems: [
+                {
+                    text: 'Cut'
+                },
+                {
+                    text: 'Copy'
+                },
+                {
+                    text: 'Paste'
+                }]
         };
     }
 }
@@ -49,5 +50,3 @@ export default {
     user-select: none;
 }
 </style>
-
-

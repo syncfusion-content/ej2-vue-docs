@@ -1,25 +1,23 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Excel Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowExcelExport="allowExcelExport" :enableVirtualization="enableVirtualization" :exportComplete="exportComplete"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">Excel Export</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowExcelExport="allowExcelExport" :enableVirtualization="enableVirtualization" :exportComplete="exportComplete">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, VirtualScroll, ExportCompleteEventArgs, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
-import { ExcelExportProperties } from '@syncfusion/ej2-grids';
+import { PivotViewComponent, VirtualScroll, ExcelExport } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -42,16 +40,16 @@ export default {
       VirtualScroll,
       ExcelExport
     ]
-  }
+  },
   methods: {
-    exportComplete: function (args: ExportCompleteEventArgs) {
-      args.promise.then( function(e: { blobData: Blob }) {
+    exportComplete: function (args) {
+      args.promise.then(function (e) {
         console.log(e.blobData);
       });
     },
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      let excelExportProperties: ExcelExportProperties = {
+      let excelExportProperties = {
         fileName: 'excelexport.xlsx'
       };
       pivotGridObj.excelExport(excelExportProperties, false, null, true);
@@ -60,8 +58,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

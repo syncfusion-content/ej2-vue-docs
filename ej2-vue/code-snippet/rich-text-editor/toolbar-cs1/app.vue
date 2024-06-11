@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <div class="control-section">
@@ -20,12 +18,12 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Count, Image, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
+import { RichTextEditorComponent, Toolbar, Link, Count, Image, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent
+},
      data: function() {
         return {
        fontFamily: {
@@ -57,6 +55,3 @@ export default {
 <style>
   @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-
-

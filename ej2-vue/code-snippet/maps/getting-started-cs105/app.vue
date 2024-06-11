@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
@@ -17,10 +15,11 @@ import { MapsComponent, LayersDirective, LayerDirective } from '@syncfusion/ej2-
 import { world_map } from './world-map.js';
 
 export default {
-  components: {
-    'ejs-maps' : MapsComponent,
-    'e-layers' : LayersDirective,
-    'e-layer' : LayerDirective
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
   },
   data () {
     return {
@@ -35,5 +34,3 @@ export default {
     margin: 0 auto;
   }
 </style>
-
-

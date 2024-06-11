@@ -63,7 +63,10 @@ You can use the following key shortcuts to access the Mention without interrupti
 | <kbd>Tab</kbd> | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, inserts the selected popup list item and closes the popup list. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/Accessibility-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/Accessibility-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

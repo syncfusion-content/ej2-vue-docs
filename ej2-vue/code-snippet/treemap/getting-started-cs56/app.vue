@@ -1,16 +1,17 @@
-
-
 <template>
     <div class="control_wrapper">
         <ejs-treemap id="treemap" :dataSource='dataSource' :levels='levels' :highlightSettings='highlightSettings' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin, TreeMapHighlight } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent, TreeMapHighlight } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent,
+},
   data: function() {
     return {
      dataSource: [
@@ -54,5 +55,3 @@ export default {
 },
 }
 </script>
-
-

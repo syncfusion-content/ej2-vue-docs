@@ -29,7 +29,10 @@ Determines on which filter type, the component needs to be considered on search 
 The following examples shows the data filtering is done with StartsWith type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ You can specify the filter suggestion item count through [`suggestionCount`](htt
 The following example, to restrict the suggestion list item counts as 5.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +63,10 @@ You can set the limit for the character count to filter the data on the AutoComp
 In the following example, the remote request doesn't fetch the search data, until the search key contains three characters.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +80,10 @@ Data items can be filtered either with or without case sensitivity using the `Da
 The following sample depicts how to filter the data with case-sensitive.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +97,10 @@ An AutoComplete supports diacritics filtering which will ignore the diacritics a
 In the following sample,data with diacritics are bound as dataSource for AutoComplete.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

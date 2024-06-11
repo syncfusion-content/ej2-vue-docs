@@ -1,8 +1,8 @@
 <template>
-<div>
-<div id="target">Right click / Touch hold to open the ContextMenu</div>
-<ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
-</div>
+    <div>
+        <div id="target">Right click / Touch hold to open the ContextMenu</div>
+        <ejs-contextmenu target='#target' :items='menuItems'></ejs-contextmenu>
+    </div>
 </template>
 
 <script>
@@ -12,30 +12,31 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+    name: "App",
     components: {
         'ejs-contextmenu': ContextMenuComponent
     },
-    data () {
+    data() {
         return {
-            menuItems:[
-            {
-                text: 'Cut'
-            },
-            {
-                text: 'Copy'
-            },
-            {
-                text: 'Paste'
-            },
-            {
-                separator: true
-            },
-            {
-                text: 'Font'
-            },
-            {
-                text: 'Paragraph'
-            }]
+            menuItems: [
+                {
+                    text: 'Cut'
+                },
+                {
+                    text: 'Copy'
+                },
+                {
+                    text: 'Paste'
+                },
+                {
+                    separator: true
+                },
+                {
+                    text: 'Font'
+                },
+                {
+                    text: 'Paragraph'
+                }]
         };
     }
 }
@@ -49,14 +50,12 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
 #target {
-  border: 1px dashed;
-  height: 150px;
-  padding: 10px;
-  position: relative;
-  text-align: justify;
-  color: gray;
-  user-select: none;
+    border: 1px dashed;
+    height: 150px;
+    padding: 10px;
+    position: relative;
+    text-align: justify;
+    color: gray;
+    user-select: none;
 }
 </style>
-
-

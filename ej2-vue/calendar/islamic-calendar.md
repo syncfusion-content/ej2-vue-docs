@@ -22,7 +22,10 @@ By default, calendar mode is in **Gregorian**. You can enable the Islamic mode b
 The following example demonstrates how to display the Islamic Calendar (Hijri Calendar).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/islamic-calendar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/islamic-calendar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

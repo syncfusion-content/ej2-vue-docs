@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [`enableToggle`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/selectionSettings/#enableToggle) property of the selectionSettings as true. If you click on the selected row or cell then it will be unselected and vice versa.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/selection/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/selection/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

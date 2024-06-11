@@ -18,7 +18,10 @@ You can lock groups and rules by interacting through the user interface and meth
 * Use [`lockRule`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#lockrule) method to lock rule.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/lock-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/lock-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

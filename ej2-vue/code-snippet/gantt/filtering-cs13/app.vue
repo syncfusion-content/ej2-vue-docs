@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-button id="clearSearch" cssClass="e-info" v-on:click.native="clearSearch">Clear Search</ejs-button>
@@ -9,12 +6,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Filter } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+import { GanttComponent, Toolbar, Filter } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -73,6 +73,3 @@ export default {
     }
 };
 </script>
-
-
-

@@ -17,7 +17,10 @@ You can render other components inside Accordion using Vue **template**. Through
 * The template function needs to be assigned to the content property of the EJ2 Vue Accordion Component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/how-to/direct-components-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/how-to/direct-components-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

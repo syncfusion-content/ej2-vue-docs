@@ -38,7 +38,10 @@ Margin is an absolute value used to add some blank space in any one of its four 
 The appearance of the user handle can be customized by using the [`size`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#size-number), [`borderColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#bordercolor-string), [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#backgroundcolor-string), [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#visible-boolean), [`pathData`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#pathdata-string), and [`pathColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/userHandle#pathcolor-string) properties of the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/UserHandle-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/UserHandle-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +57,10 @@ The fixed user handles are used to add some frequently used commands around the 
 To create the fixed user handles, define and add them to the collection of nodes and connectors property. The following code example used to create an fixed user handles for the  nodes and connectors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/FixedUserHandle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/FixedUserHandle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +96,10 @@ To create the fixed user handles, define and add them to the collection of nodes
 The following code explains how to customize the appearance of the fixed user handles.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/CustomizingFixedUserHandle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/CustomizingFixedUserHandle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +135,10 @@ The following table shows all the possible alignments visually shows the fixed u
 The following code explains how to customize the node fixed user handle.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/NodeFixedUserHandle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/NodeFixedUserHandle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,7 +185,10 @@ The following table shows all the possible alignments visually shows the fixed u
 The following code explains how to customize the connector fixed user handle.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/ConnectorFixedUserHandle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/ConnectorFixedUserHandle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -186,7 +201,10 @@ The diagram provides support to show tooltip when the mouse hovers over any user
 To show tooltip on mouse over, the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram#tooltip) property of diagram model needs to be set with the tooltip [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#content) and [`position`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#position) as shown in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/UserHandle-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/interaction/UserHandle-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

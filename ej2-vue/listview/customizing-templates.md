@@ -31,7 +31,10 @@ let listviewInstance: ListView = new ListView({
 In the below example, we have rendered Listview with customized header which contains search, add and sort buttons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/templates/customizing-templates-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/templates/customizing-templates-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +76,169 @@ We provided the following built-in CSS classes to customize the list-items. Refe
 In the following example, we have customized list items like `Contact` app with our avatar component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+{%  raw %}
+
+<template>
+  <div class="control-section">
+    <div id = 'flat-list'>
+    <!-- ListView element -->
+    <ejs-listview id='List' :dataSource='data' headerTitle='Contacts' showHeader='true' cssClass='e-list-template' :template='template' sortOrder='Ascending' width='350px'></ejs-listview>
+    </div>
+  </div>
+</template>
+<style>
+
+#List {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+#List .e-list-item {
+  height: 60px;
+  cursor: pointer;
+}
+
+#List .e-list-header .e-text {
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 16px;
+}
+
+#List #content {
+  margin: 0;
+}
+
+#List .e-list-header{
+  background: rgb(2, 120, 215);
+  color: white;
+}
+
+#List #info,
+#List .name {
+  font-size: 14px;
+  margin: 0 60px;
+  line-height: 20px;
+}
+
+#List .name {
+  padding-top: 8px;
+  font-weight: 500;
+}
+
+.pic01 {
+  background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/1.png");
+}
+
+.pic02 {
+  background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/3.png");
+}
+
+.pic03 {
+  background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/5.png");
+}
+
+.pic04 {
+  background-image: url("https://ej2.syncfusion.com/demos/src/grid/images/2.png");
+}
+
+#List .e-list-item:nth-child(1) .e-avatar {
+  background-color: #039be5;
+}
+
+#List .e-list-item:nth-child(2) .e-avatar {
+  background-color: #e91e63;
+}
+
+#List .e-list-item:nth-child(6) .e-avatar {
+  background-color: #009688;
+}
+
+#List .e-list-item:nth-child(8) .e-avatar {
+  background-color: #0088;
+}
+
+</style>
+<script setup>
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+
+var demoVue = Vue.component("demo", {
+  template:
+    `<div class="e-list-wrapper e-list-multi-line e-list-avatar">
+      <span :class="['e-avatar e-avatar-circle']" v-if="data.avatar !== ''">{{data.avatar}}</span>
+      <span :class="[data.pic + ' e-avatar e-avatar-circle']" v-if="data.pic !== '' "> </span>
+      <span class="e-list-item-header">{{data.text}}</span>
+      <span class="e-list-content">{{data.contact}}</span>
+    </div>`,
+  data() {
+    return {
+      data: {}
+    };
+  }
+});
+
+export default {
+  data: function() {
+    return {
+      data: [
+  {
+    text: "Jenifer",
+    contact: "(206) 555-985774",
+    id: "1",
+    avatar: "",
+    pic: "pic01"
+  },
+  { text: "Amenda", contact: "(206) 555-3412", id: "2", avatar: "A", pic: "" },
+  {
+    text: "Isabella",
+    contact: "(206) 555-8122",
+    id: "4",
+    avatar: "",
+    pic: "pic02"
+  },
+  {
+    text: "William ",
+    contact: "(206) 555-9482",
+    id: "5",
+    avatar: "W",
+    pic: ""
+  },
+  {
+    text: "Jacob",
+    contact: "(71) 555-4848",
+    id: "6",
+    avatar: "",
+    pic: "pic04"
+  },
+  { text: "Matthew", contact: "(71) 555-7773", id: "7", avatar: "M", pic: "" },
+  {
+    text: "Oliver",
+    contact: "(71) 555-5598",
+    id: "8",
+    avatar: "",
+    pic: "pic03"
+  },
+  {
+    text: "Charlotte",
+    contact: "(206) 555-1189",
+    id: "9",
+    avatar: "C",
+    pic: ""
+  }
+],
+    fields: {text: 'text'},
+    template: function () {
+                return { template : demoVue};
+            }
+    };
+  },
+}
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {%  raw %}
 
 <template>
@@ -157,9 +322,9 @@ In the following example, we have customized list items like `Contact` app with 
 
 </style>
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-Vue.use(ListViewPlugin);
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+
 var demoVue = Vue.component("demo", {
   template:
     `<div class="e-list-wrapper e-list-multi-line e-list-avatar">
@@ -176,6 +341,12 @@ var demoVue = Vue.component("demo", {
 });
 
 export default {
+name: "App",
+components: {
+"ejs-listview":ListviewComponent,
+
+},
+
   data: function() {
     return {
       data: [
@@ -260,7 +431,102 @@ var tempVue = Vue.component("demo", {
 In the below example, we have grouped Listview based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have alsodisplayed  grouped list items count in the group list header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+{%  raw %}
+
+<template>
+  <div class="control-section">
+    <div id = 'flat-list'>
+      <!-- ListView element -->
+      <ejs-listview id='List' ref='list' :dataSource='data' :fields='fields' :template="demoTemplate" :groupTemplate="groupTemplate" cssClass='e-list-template' width='350px'>
+      </ejs-listview>
+    </div>
+  </div>
+</template>
+<style>
+
+  #List {
+      display: block;
+      margin: auto;
+      border: 1px solid;
+      border-color: #ccc;
+      border-color: rgba(0, 0, 0, 0.12);
+      width: 60%;
+  }
+
+  #List .settings {
+      height: auto;
+  }
+
+  #List .e-list-item {
+      height: auto;
+      padding: 0;
+      cursor: pointer;
+      box-sizing: border-box;
+  }
+  #List .e-list-header .e-text {
+      font-family: sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+  }
+</style>
+<script setup>
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+
+var demoVue = Vue.component("demo", {
+  template:
+  `<div class="e-list-wrapper e-list-multi-line e-list-avatar">
+    <img class="e-avatar e-avatar-circle" :src='data.image' style="background:#BCBCBC" />
+    <span class="e-list-item-header">{{data.Name}}</span>
+    <span class="e-list-content">{{data.contact}}</span>
+  </div>`,
+  data() {
+    return {
+      data: {}
+    };
+  }
+});
+var tempVue = Vue.component("demo", {
+  template:
+  `<div>
+    <span class="category">{{data.items[0].category}}</span>
+    <span class="count"> {{data.items.length}} Item(s)</span>
+  </div>`,
+  data() {
+    return {
+      data: {}
+    };
+  }
+});
+export default {
+  data: function() {
+    return {
+        data: [
+        { Name: 'Nancy', contact:'(206) 555-985774', id: '1', image: 'https://ej2.syncfusion.com/demos/src/grid/images/1.png',  category: 'Experience'},
+        { Name: 'Janet', contact: '(206) 555-3412', id: '2', image: 'https://ej2.syncfusion.com/demos/src/grid/images/3.png', category: 'Fresher' },
+        { Name: 'Margaret', contact:'(206) 555-8122', id:'4', image: 'https://ej2.syncfusion.com/demos/src/grid/images/4.png', category: 'Experience' },
+        { Name: 'Andrew ', contact:'(206) 555-9482', id: '5', image: 'https://ej2.syncfusion.com/demos/src/grid/images/2.png', category: 'Experience'},
+        { Name: 'Steven', contact:'(71) 555-4848', id: '6', image: 'https://ej2.syncfusion.com/demos/src/grid/images/5.png', category: 'Fresher' },
+        { Name: 'Michael', contact:'(71) 555-7773', id: '7', image: 'https://ej2.syncfusion.com/demos/src/grid/images/6.png', category: 'Experience' },
+        { Name: 'Robert', contact:'(71) 555-5598', id: '8', image: 'https://ej2.syncfusion.com/demos/src/grid/images/7.png', category: 'Fresher' },
+        { Name: 'Laura', contact:'(206) 555-1189', id: '9', image: 'https://ej2.syncfusion.com/demos/src/grid/images/8.png', category: 'Experience' },
+        ],
+        fields: {text: 'Name', groupBy: 'category'},
+        demoTemplate: function () {
+            return { template : demoVue};
+        },
+        groupTemplate: function () {
+            return { template : tempVue};
+        },
+    };
+  },
+}
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {%  raw %}
 
 <template>
@@ -300,9 +566,9 @@ In the below example, we have grouped Listview based on the category. The catego
   }
 </style>
 <script>
-import Vue from "vue";
-import { ListViewPlugin } from "@syncfusion/ej2-vue-lists";
-Vue.use(ListViewPlugin);
+
+import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+
 var demoVue = Vue.component("demo", {
   template:
   `<div class="e-list-wrapper e-list-multi-line e-list-avatar">
@@ -329,6 +595,12 @@ var tempVue = Vue.component("demo", {
   }
 });
 export default {
+name: "App",
+components: {
+"ejs-listview":ListviewComponent,
+
+},
+
   data: function() {
     return {
         data: [

@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel :swipeMode=swipeModes>
@@ -50,12 +48,17 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { CarouselPlugin, CarouselSwipeMode } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselSwipeMode } from "@syncfusion/ej2-vue-navigations";
+import { CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
 export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  },
   data: function () {
     return {
       swipeModes: CarouselSwipeMode.Touch & CarouselSwipeMode.Mouse
@@ -89,5 +92,3 @@ export default {
   text-align: center;
 }
 </style>
-
-

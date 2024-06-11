@@ -15,7 +15,10 @@ By using the Rich text editor's `imageUploading` event, you can get the image si
 In the following, we have validated the image size before uploading and determined whether the image has been uploaded or not.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

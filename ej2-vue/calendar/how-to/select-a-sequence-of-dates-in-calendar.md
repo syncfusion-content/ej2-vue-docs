@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The following example demonstrates how to select the week dates of chosen date in the Calendar using [`values`](https://ej2.syncfusion.com/vue/documentation/api/calendar#values) property, when [`isMultiSelection`](https://ej2.syncfusion.com/vue/documentation/api/calendar#ismultiselection) property is enabled. Methods of Moment.js is used in this sample for calculating the start and end of week from the selected date.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/multi-selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/multi-selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

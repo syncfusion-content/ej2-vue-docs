@@ -71,7 +71,10 @@ In current theme, to make the component compact we have reduced the height of ea
 In the below code sample, we replicate the older theme style.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs243/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs243/app.vue %}
 {% endhighlight %}
 {% endtabs %}

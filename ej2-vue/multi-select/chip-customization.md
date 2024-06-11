@@ -15,7 +15,10 @@ The MultiSelect allows the user to customize the selected chip element through t
 The following sample demonstrates chip-customization with the MultiSelect component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/chip-customization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/chip-customization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

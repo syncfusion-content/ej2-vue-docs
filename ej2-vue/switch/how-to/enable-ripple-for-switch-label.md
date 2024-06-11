@@ -15,7 +15,10 @@ By default, label with ripple effect is not available in Switch. You can achieve
 The following example illustrates how to enable ripple effect for labels in Switch component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/switch/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

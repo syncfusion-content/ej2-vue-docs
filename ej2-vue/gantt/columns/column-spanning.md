@@ -15,7 +15,10 @@ The gantt has option to span the adjacent cells. You need to define the [`colSpa
 In the following demo, **Work 1**  cells have been spanned.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

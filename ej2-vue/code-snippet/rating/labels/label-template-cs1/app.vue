@@ -1,33 +1,40 @@
-
-
 <template>
     <div class='wrap'>
-        <ejs-rating id="rating" value="3" :showLabel="true" :labelTemplate="labelTemplate" ></ejs-rating>
+        <ejs-rating id="rating" value="3" :showLabel="true" :labelTemplate="labelTemplate"></ejs-rating>
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin } from "@syncfusion/ej2-vue-inputs";
+
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
+import { createApp } from "vue";
+
 enableRipple(true);
-Vue.use(RatingPlugin);
+
+const app= createApp();
 
 export default {
+    name: "App",
+    components: {
+        "ejs-rating": RatingComponent
+    },
     data() {
         return {
-            labelTemplate: function(e) {
-                 return { template: Vue.component("labelTemplate", {
-                    template: '<span>{{data.value}} out of 5</span>',
-                    data() {
-                        return {
-                            data: {}
-                        };
-                    }
-                })}
+            labelTemplate: function ( ) {
+                return {
+                    template: app.component("labelTemplate", {
+                        template: '<span>{{data.value}} out of 5</span>',
+                        data() {
+                            return {
+                                data: {}
+                            };
+                        }
+                    })
+                }
             }
         }
-    };
+    }
 }
 
 </script>
@@ -38,10 +45,7 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 
 .wrap {
-  margin: 50px auto;
-  text-align: center;
+    margin: 50px auto;
+    text-align: center;
 }
-
 </style>
-
-

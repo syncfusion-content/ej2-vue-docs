@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -17,10 +15,10 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
+
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
 import { L10n, setCulture } from '@syncfusion/ej2-base';
-Vue.use(QueryBuilderPlugin);
+
 
 setCulture('de-DE');
 
@@ -61,6 +59,14 @@ L10n.load({
 });
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
     data: function() {
         return {
             dataSource: hardwareData,
@@ -116,5 +122,3 @@ var hardwareData = [{
         margin: 0 auto;
     }
 </style>
-
-

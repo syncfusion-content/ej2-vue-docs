@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-<ejs-button v-on:click.native="btnClick">Load Data</ejs-button>
+<ejs-button v-on:click="btnClick">Load Data</ejs-button>
    <ejs-kanban ref="kanbanObj" id="kanban" keyField="ShipCountry"
     :cardSettings="cardSettings">
       <e-columns>
@@ -14,14 +14,19 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { Ajax } from '@syncfusion/ej2-base';
 
-Vue.use(KanbanPlugin);
-Vue.use(ButtonPlugin);
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
         cardSettings: {
@@ -31,9 +36,9 @@ export default {
     };
   },
   methods: {
-    btnClick: function (args){
+    btnClick: function (){
         var kanbanData = this.$refs.kanbanObj.ej2Instances;
-        var ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
+        var ajax = new Ajax("https://services.syncfusion.com/vue/production/api/Orders", "GET");
         ajax.send();
         ajax.onSuccess = function (result) {
             kanbanData.dataSource = JSON.parse(result);

@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-button id="changebypostion" cssClass="e-info" v-on:click.native="changep">Change By Postion</ejs-button>
@@ -18,15 +15,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DropDownListPlugin);
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: editingData,
@@ -51,12 +51,12 @@ export default {
         changep: function(e){
             var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
             ganttChart.setSplitterPosition('50%', 'position');
-        }
+        },
 
         changei: function(e){
             var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
             ganttChart.setSplitterPosition(1, 'columnIndex');
-        }
+        },
 
         change: function (e) {
             var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
@@ -67,6 +67,3 @@ export default {
     },
 };
 </script>
-
-
-

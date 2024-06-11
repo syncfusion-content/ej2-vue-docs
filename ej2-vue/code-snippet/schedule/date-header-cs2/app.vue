@@ -1,11 +1,10 @@
-
-
 <template>
     <div id='app'>
         <div id='container'>
-            <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate' :dateRangeTemplate="'dateRangeTemplate'">
+            <ejs-schedule height='550px' width='100%' :selectedDate='selectedDate'
+                :dateRangeTemplate="'dateRangeTemplate'">
                 <template v-slot:dateRangeTemplate="{ data }">
-                    <div class="date-text">{{getDateRange(data.startDate)}}-{{getDateRange(data.endDate)}}</div>
+                    <div class="date-text">{{ getDateRange(data.startDate) }}-{{ getDateRange(data.endDate) }}</div>
                 </template>
                 <e-views>
                     <e-view option='Day'></e-view>
@@ -19,14 +18,20 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
+
 import { Internationalization } from '@syncfusion/ej2-base';
-import { SchedulePlugin, Day, Week, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
-Vue.use(SchedulePlugin);
+import { ScheduleComponent, ViewDirective, ViewsDirective, Day, Week, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+
 
 var instance = new Internationalization();
 
 export default {
+    name: "App",
+    components: {
+        "ejs-schedule": ScheduleComponent,
+        "e-views": ViewsDirective,
+        "e-view": ViewDirective
+   },
     data() {
         return {
             selectedDate: new Date(2018, 1, 15)
@@ -43,14 +48,12 @@ export default {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>
-
-

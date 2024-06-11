@@ -1,38 +1,41 @@
-
-
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :insertImageSettings="insertImageSettings"><p>Rich Text Editor allows to insert images from online source as well as local
-            computer where you want to insert the image in your content.</p>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :insertImageSettings="insertImageSettings">
+                        <p>Rich Text Editor allows to insert images from online source as well as local
+                            computer where you want to insert the image in your content.</p>
 
-            <p><b>Get started Quick Toolbar to click on the image</b></p>
+                        <p><b>Get started Quick Toolbar to click on the image</b></p>
 
-            <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-            <img id="rteImageID" style="width:300px; height:300px;transform: rotate(0deg);" alt="Logo" src="https://ej2.syncfusion.com/demos/src/rich-text-editor/images/RTEImage-Feather.png"></ejs-richtexteditor>
+                        <p>It is possible to add custom style on the selected image inside the Rich Text Editor through
+                            quick toolbar.</p>
+                        <img id="rteImageID" style="width:300px; height:300px;transform: rotate(0deg);" alt="Logo"
+                            src="https://ej2.syncfusion.com/demos/src/rich-text-editor/images/RTEImage-Feather.png">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-</div>
 </template>
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Image,  Link, HtmlEditor, QuickToolbar, NodeSelection } from "@syncfusion/ej2-vue-richtexteditor";
 
-Vue.use(RichTextEditorPlugin);
-
+import { RichTextEditorComponent, Toolbar, Image, Link, HtmlEditor, QuickToolbar, NodeSelection } from "@syncfusion/ej2-vue-richtexteditor";
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-richtexteditor": RichTextEditorComponent
+    },
+    data: function () {
         return {
             insertImageSettings: {
                 display: 'inline'
             }
         };
     },
-    provide:{
-        richtexteditor:[Toolbar, Image,  Link, HtmlEditor, QuickToolbar]
+    provide: {
+        richtexteditor: [Toolbar, Image, Link, HtmlEditor, QuickToolbar]
     }
 }
 </script>
@@ -44,7 +47,4 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-</style>
-
-
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";</style>

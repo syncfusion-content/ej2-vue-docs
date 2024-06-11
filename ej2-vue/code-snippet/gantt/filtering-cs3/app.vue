@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
      <table>
@@ -15,13 +12,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Filter, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { GanttComponent, Filter, Toolbar } from "@syncfusion/ej2-vue-gantt";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { projectNewData } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(DropDownListPlugin);
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-gantt":GanttComponent
+},
+
   data: function() {
       return{
             data: projectNewData,
@@ -66,6 +66,3 @@ export default {
   },
 };
 </script>
-
-
-

@@ -14,7 +14,10 @@ ColorPicker can be rendered without control buttons (Apply/Cancel). In this case
 ColorPicker pop-up is closed and selected colors can be applied directly. To hide control buttons, set the [`showButtons`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#showbuttons) property to `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

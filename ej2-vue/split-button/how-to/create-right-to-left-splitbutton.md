@@ -15,7 +15,10 @@ SplitButton component has RTL support. This can be achieved by setting [`enableR
 The following example illustrates how to enable right-to-left support in SplitButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

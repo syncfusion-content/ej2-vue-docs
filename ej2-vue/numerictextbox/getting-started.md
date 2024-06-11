@@ -90,20 +90,23 @@ Follow the below steps to add the Vue Numerictextbox component using `Compositio
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
-import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+import { NumericTextBoxComponent as EjsNumerictextbox} from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
-  components: {
-    'ejs-numerictextbox': NumericTextBoxComponent
-  }
+name: "App",
+components: {
+"ejs-numerictextbox':":NumericTextBoxComponent
+},
 }
 </script>
 
