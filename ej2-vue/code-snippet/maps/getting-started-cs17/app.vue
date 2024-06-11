@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -13,12 +11,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
 import { population_density } from './population-density.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
         shapeData: world_map,
@@ -50,5 +54,3 @@ data () {
     margin: 0 auto;
   }
 </style>
-
-

@@ -14,7 +14,10 @@ You can prevent opening of the dialog by setting the [beforeOpen](https://ej2.sy
 In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dlg-check-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dlg-check-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

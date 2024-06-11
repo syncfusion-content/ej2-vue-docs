@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' id='Grid' :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' :toolbarTemplate='toolbar'>
@@ -13,22 +11,28 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Group } from "@syncfusion/ej2-vue-grids";
-import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
+import { createApp } from "vue";
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Group } from "@syncfusion/ej2-vue-grids";
+import { ToolbarComponent, ItemsDirective, ItemDirective } from "@syncfusion/ej2-vue-navigations";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ToolbarPlugin);
-
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-toolbar":ToolbarComponent,
+"e-items":ItemsDirective,
+"e-item":ItemDirective
+},
   data() {
     return {
       data: data,
       groupOptions: { columns: ['CustomerID'] },
       toolbar: function () {
         return {
-          template: Vue.component('custom-toolbar', {
+          template: app.component('custom-toolbar', {
             template: `<ejs-toolbar :clicked='clickHandler'>
                         <e-items>
                           <e-item id="collapse" text="Collapse All" prefixIcon="e-chevron-up icon"></e-item>
@@ -76,6 +80,3 @@ export default {
   content: "\e834";
 }
 </style>
-
-
-

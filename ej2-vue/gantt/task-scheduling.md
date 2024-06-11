@@ -28,7 +28,10 @@ To learn about Gantt Chart Scheduling Concepts, you can check on this video:
 When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskmode) property is set as `Auto`, the start date and end date of all the tasks in the project will be automatically validated. That is, dates are validated based on various factors such as working time, holidays, weekends and predecessors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/task-scheduling-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/task-scheduling-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +45,10 @@ When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#ta
 We can restrict this mode in predecessor validation alone. That is, we can automatically validate the dates based on predecessor values by enabling the [`validateManualTasksOnLinking`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#validatemanualtasksonlinking) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/task-scheduling-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/task-scheduling-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 When the [`taskMode`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#taskmode) property is set as `Custom`, the scheduling mode for each tasks will be mapped from the data source field. The `Boolean` property [`taskFields.manual`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#manual) is used to map the manual scheduling mode field from the data source.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/task-scheduling-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/task-scheduling-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +88,10 @@ Taskbar state |Auto |Manual
 You can define the various types of unscheduled tasks in the data source as follows
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/task-scheduling-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/task-scheduling-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +108,10 @@ In the Gantt control, working hours in a day for a project can be defined by usi
 The following code snippet explains how to define the working time range for the project in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/task-scheduling-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/task-scheduling-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -112,7 +127,10 @@ The following code snippet explains how to define the working time range for the
 Non-working days/weekend are used to represent the non-productive days in a project. You can define the non-working days in a week using the [`workWeek`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#workweek) property in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/task-scheduling-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/task-scheduling-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -140,7 +158,10 @@ In Gantt, we can define duration unit for whole project by using [`durationUnit`
 The below code snippet explains the mapping of duration unit data source field to the Gantt control using the [`taskFields.durationUnit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#durationunit) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +176,10 @@ The default value of the [`durationUnit`](https://ej2.syncfusion.com/vue/documen
 A duration unit for a task can be defined along with duration value, the following code snippet explains the duration unit for a task along with duration value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/scheduling-tasks-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/scheduling-tasks-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

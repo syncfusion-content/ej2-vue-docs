@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
   <div class='wrap'>
@@ -13,10 +11,11 @@
   </div>
 </template>
 <script setup>
-import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
+import { MaskedTextBoxComponent as EjsMaskedtextbox} from "@syncfusion/ej2-vue-inputs";
+import {ref} from 'vue';
 
-const value = '';
-    
+const value=ref(null);
+
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -26,5 +25,3 @@ const value = '';
   width: 240px;
 }
 </style>
-
-

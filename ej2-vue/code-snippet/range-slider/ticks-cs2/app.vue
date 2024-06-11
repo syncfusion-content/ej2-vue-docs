@@ -1,16 +1,17 @@
-
-
 <template>
     <div id="app">
     <ejs-slider id='ticks' :value='value' :tooltip="tooltip" :ticks="ticks"></ejs-slider>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { SliderPlugin } from "@syncfusion/ej2-vue-inputs";
-Vue.use(SliderPlugin);
+
+import { SliderComponent } from "@syncfusion/ej2-vue-inputs";
 
 export default {
+name: "App",
+components: {
+"ejs-slider":SliderComponent
+},
   data() {
     return {
        tooltip: { placement: 'Before', isVisible: true, showOn: 'Always' },
@@ -34,6 +35,3 @@ export default {
     width: 50%;
   }
 </style>
-
-
-

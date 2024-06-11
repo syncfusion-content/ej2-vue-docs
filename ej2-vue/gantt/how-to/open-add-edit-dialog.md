@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 In the Gantt component, add and edit dialogs can be opened dynamically by using [`openAddDialog`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#openadddialog) and [`openEditDialog`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#openeditdialog) methods. The following code example shows how to open add and dialog on separate button click actions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/open-add-edit-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/open-add-edit-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

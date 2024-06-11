@@ -30,11 +30,11 @@ By using the [`insertImageSettings`](https://ej2.syncfusion.com/vue/documentatio
     </div>
 </div>
 </template>
-<script>
-    import Vue from "vue";
-    import { RichTextEditorPlugin, Toolbar, Link, Count, Image, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+<script setup>
+    
+    import { RichTextEditorComponent, Toolbar, Link, Count, Image, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 
-    Vue.use(RichTextEditorPlugin);
+    
 
     export default {
         data: function() {

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can make the TextBox as `read-only` by setting the `readonly` attribute to the input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/getting-started-html-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/getting-started-html-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

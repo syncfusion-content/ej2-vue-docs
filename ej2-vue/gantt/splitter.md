@@ -19,7 +19,10 @@ In the Gantt component, the Splitter separates the TreeGrid section from the Cha
 * `Chart`: Shows chart side alone in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/appearance-customization-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/appearance-customization-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ In the Gantt component, the Splitter separates the TreeGrid section from the Cha
 In Gantt, we can change the splitter position dynamically by using [`setSplitterPosition`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#setsplitterposition) method. Either We can change the splitter position with splitter position or columnIndex values by passing these values as arguments to [`setSplitterPosition`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#setsplitterposition) method. The following code example shows how to use this methods.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/appearance-customization-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/appearance-customization-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

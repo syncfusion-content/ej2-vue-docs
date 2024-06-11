@@ -1,19 +1,22 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating" value="3" cssClass="custom-icon" ></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating" value="3" cssClass="custom-icon"></ejs-rating>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
-Vue.use(RatingPlugin);
 
-export default {}
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
+import { enableRipple } from '@syncfusion/ej2-base';
+
+enableRipple(true);
+
+export default {
+  name: "App",
+  components: {
+    "ejs-rating": RatingComponent
+  },
+}
 </script>
 
 <style>
@@ -48,7 +51,4 @@ export default {}
 .custom-icon .e-icons.e-star-filled:before {
   content: "\e702";
 }
-
 </style>
-
-

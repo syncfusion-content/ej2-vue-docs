@@ -1,47 +1,47 @@
-
-
 <template>
     <div>
         <div id="targetElement" style="position:relative;min-height:350px;border:1px solid;"></div>
         <!-- To render Floating Action Button -->
-        <ejs-fab id='fab' iconCss='e-icons e-edit' content='<span class="text-container"><span class="textEle">Edit</span></span>' cssClass='fab-hover' target='#targetElement'></ejs-fab>
+        <ejs-fab id='fab' iconCss='e-icons e-edit'
+            content='<span class="text-container"><span class="textEle">Edit</span></span>' cssClass='fab-hover'
+            target='#targetElement'></ejs-fab>
     </div>
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-    import { enableRipple } from '@syncfusion/ej2-base';
 
-    enableRipple(true);
-    Vue.use(FabPlugin);
+import { FabComponent } from "@syncfusion/ej2-vue-buttons";
+import { enableRipple } from '@syncfusion/ej2-base';
 
-    export default {}
+enableRipple(true);
+export default {
+    name: "App",
+    components: {
+        "ejs-fab": FabComponent
+    }
+}
 </script>
 
 <style>
-    @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-    @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 
-    /* start of onhover customization */
-    .e-fab.e-btn.fab-hover {
-        padding: 6px 0px 10px 10px;
-    }
+/* start of onhover customization */
+.e-fab.e-btn.fab-hover {
+    padding: 6px 0px 10px 10px;
+}
 
-    .fab-hover .text-container {
-        overflow: hidden;
-        width: 0;
-        margin: 0;
-        transition: width .5s linear 0s, margin .2s linear .5s;
-    }
+.fab-hover .text-container {
+    overflow: hidden;
+    width: 0;
+    margin: 0;
+    transition: width .5s linear 0s, margin .2s linear .5s;
+}
 
-    .fab-hover:hover .text-container {
-        width: 35px;
-        margin: 0 5px;
-        transition: width .5s linear .2s, margin .2s linear 0s;
-    }
+.fab-hover:hover .text-container {
+    width: 35px;
+    margin: 0 5px;
+    transition: width .5s linear .2s, margin .2s linear 0s;
+}
 
-    /* end of onhover customization */
-</style>
-
-
+/* end of onhover customization */</style>

@@ -22,7 +22,10 @@ In this case, the tooltip content is assigned from the title attribute of the ta
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/target-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/target-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

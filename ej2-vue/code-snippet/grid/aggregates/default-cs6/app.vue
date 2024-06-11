@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' height='290px' allowPaging='true' allowGrouping='true' :groupSettings='groupOptions' :toolbar='toolbarOptions' :editSettings='editSettings'>
@@ -31,13 +29,22 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Group, Aggregate, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Page, Group, Aggregate, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
+import { createApp } from "vue";
 
-Vue.use(GridPlugin);
-
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective,
+
+},
   data() {
     return {
       data: data,
@@ -45,21 +52,21 @@ export default {
       toolbarOptions : ['Delete', 'Update', 'Cancel'],
       editSettings : { allowEditing: true, allowDeleting: true, mode: 'Batch' },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       groupFooterSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       footerAvg: function () {
-        return  { template : Vue.component('maxTemplate', {
+        return  { template : app.component('maxTemplate', {
             template: `<span>Average: {{data.Average}}</span>`,
             data () {return { data: {}};}
             })
@@ -84,5 +91,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
 </style>
-
-

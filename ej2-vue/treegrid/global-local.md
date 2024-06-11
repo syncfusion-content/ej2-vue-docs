@@ -114,7 +114,10 @@ To load translation object in an application, use `load` function of the `L10n` 
 The following example demonstrates the TreeGrid in `Deutsch` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/local/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/local/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +129,10 @@ The following example demonstrates the TreeGrid in `Deutsch` culture.
 The [`Internationalization`](../common/internationalization/) library is used to globalize number, date, and time values in treegrid component using format strings in the [`columns.format`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#format).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/local/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/local/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +147,10 @@ The [`Internationalization`](../common/internationalization/) library is used to
 RTL provides an option to switch the text direction and layout of the TreeGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable RTL Grid, set the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enablertl) to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/local/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/local/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

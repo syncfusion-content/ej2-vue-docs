@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can change the appearance of the NumericTextBox by adding custom `cssClass` to the component and enabling styles. Refer to the following example to change the appearance of the NumericTextBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/how-to/cssClass-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/how-to/cssClass-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

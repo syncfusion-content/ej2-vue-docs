@@ -1,16 +1,17 @@
-
-
 <template>
     <div class="control_wrapper">
-        <ejs-treemap id="treemap"  :dataSource='dataSource' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
+        <ejs-treemap id="treemap" :dataSource='dataSource' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
 
-import { TreeMapPlugin } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
-let contentVue = Vue.component("contentTemplate", {
+
+import { TreeMapComponent } from "@syncfusion/ej2-vue-treemap";
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+let contentVue =app.component("contentTemplate", {
   template: '<div>{{data.Car}}-{{data.Brand}}</div>',
   data() {
     return {
@@ -18,10 +19,15 @@ let contentVue = Vue.component("contentTemplate", {
     };
   }
 });
+
 let contentTemplate = function() {
   return { template: contentVue };
 };
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent
+},
   data: function() {
     return {
      dataSource: [
@@ -42,5 +48,3 @@ export default {
   }
 }
 </script>
-
-

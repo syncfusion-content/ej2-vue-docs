@@ -1,21 +1,24 @@
-
-
 <template>
    <div id='app'>
-       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
        <ejs-toast ref='elementRef' id='element' :position='position' :click='onClick'></ejs-toast>
         <div id='templateToast' style="display: none;color:red"> System affected by virus !!! </div>
     </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast, ToastClickEventArgs  } from "@syncfusion/ej2-vue-notifications";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
+
+import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-toast":ToastComponent,
+
+},
+
   data: function(){
         return {
             position:  { X: 'Right', Y: 'Bottom' }
@@ -33,7 +36,7 @@ export default {
        ++this.toastFlag;
      },
   methods: {
-       showBtnClick: function(args){
+       showBtnClick: function(){
            this.$refs.elementRef.show(this.toasts[this.toastFlag]);
            ++this.toastFlag;
            if (this.toastFlag === (this.toasts.length)) {
@@ -63,5 +66,3 @@ export default {
   width: 30%;
 }
 </style>
-
-

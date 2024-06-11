@@ -24,7 +24,10 @@ npm install @syncfusion/ej2-vue-buttons --save
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

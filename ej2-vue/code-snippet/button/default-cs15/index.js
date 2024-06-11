@@ -10,7 +10,7 @@ Vue.use(ButtonPlugin);
 new Vue({
 	el: '#app',
 	template: `
-    <ejs-button ref="toggleBtn" cssClass='e-flat' iconCss='e-btn-sb-icon e-play-icon' isToggle=true v-on:click.native='btnClick'>Play</ejs-button>
+    <ejs-button ref="toggleBtn" cssClass='e-flat' iconCss='e-btn-sb-icon e-play-icon' isToggle=true v-on:click='btnClick'>Play</ejs-button>
 `,
 
   methods : {

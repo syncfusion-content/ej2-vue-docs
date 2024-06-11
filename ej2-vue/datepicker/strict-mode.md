@@ -19,7 +19,10 @@ The following example demonstrates the DatePicker in `strictMode` with min/max r
 only the valid date within the specified range. If you are trying to enter the out-of-range value as like 28th of May, then the value will set to the max date of 25th May. Since the value 28th is greater than to `max` value of 25th. Or else if you are trying to enter the invalid date, then the value will stay with the previous value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/strict-mode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/strict-mode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The following example demonstrates the `strictMode` as `false`. Here, it allows 
 The following example demonstrates the DatePicker with strictMode `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/strict-mode-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/strict-mode-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

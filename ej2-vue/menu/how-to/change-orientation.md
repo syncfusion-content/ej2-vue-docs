@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Orientation in menu items can be changed horizontally or vertically using the [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/menu#orientation) property. By default, it is horizontally aligned.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

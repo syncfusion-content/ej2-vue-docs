@@ -27,7 +27,10 @@ The Combobox can generate its list items through an array of complex data. For t
 In the following example, `id` column and `text` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/virtual-scroll/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/virtual-scroll/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ The Combobox supports retrieval of data from remote data services with the help 
 The following sample displays the OrderId from the `Orders` Data Service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/virtual-scroll-remote/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/virtual-scroll-remote/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ The Combobox component supports grouping with Virtualization. It allows you to o
 The following sample shows the example for Grouping with Virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/virtual-scroll-group/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/virtual-scroll-group/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +78,10 @@ The ComboBox component supports Filtering with Virtualization. The ComboBox incl
 The following sample shows the example for Filtering with Virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/virtual-scroll-filter/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/virtual-scroll-filter/app.vue %}
 {% endhighlight %}
 {% endtabs %}

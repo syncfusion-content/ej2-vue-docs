@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowPaging='true' :editSettings='editSettings' :pageSettings='pageSettings' :toolbar='toolbar' height='175px'>
@@ -14,17 +12,12 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { TimePicker } from "@syncfusion/ej2-calendars";
 import { enableRipple } from "@syncfusion/ej2-base";
 import { purchaseData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 let ddElem;
 let timeObject;
-
 function createOrderDateFn() {
   ddElem = document.createElement('input');
   return ddElem;
@@ -43,8 +36,13 @@ function writeOrderDateFn(args) {
   });
   timeObject.appendTo(ddElem);
 }
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: purchaseData,
@@ -69,5 +67,3 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

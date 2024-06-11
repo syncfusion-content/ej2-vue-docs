@@ -29,7 +29,10 @@ To load translation object in an application use `load` function of `L10n` class
 The below example demonstrates the ColorPicker in `Deutsch` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ It improves the user experiences and accessibility for users who use right-to-le
 The following example illustrates how to enable right-to-left support in ColorPicker component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

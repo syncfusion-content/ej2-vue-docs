@@ -1,0 +1,53 @@
+<template>
+    <div class="control_wrapper">
+        <ejs-treemap id="treemap" :dataSource='dataSource' :rangeColorValuePath='rangeColorValuePath' :legendSettings='legendSettings' :weightValuePath='weightValuePath' :leafItemSettings='leafItemSettings'></ejs-treemap>
+    </div>
+</template>
+<script setup>
+
+import { TreeMapComponent as EjsTreemap, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
+import { provide } from 'vue';
+
+const dataSource = [
+    { fruit:'Apple', count:5000 },
+    { fruit:'Mango', count:3000 },
+    { fruit:'Orange', count:2300 },
+    { fruit:'Banana', count:500 },
+    { fruit:'Grape', count:4300 },
+    { fruit:'Papaya', count:1200 },
+    { fruit:'Melon', count:4500 }
+];
+
+const weightValuePath = 'count';
+
+const rangeColorValuePath = 'count';
+
+const legendSettings = {
+    visible: true
+};
+
+const leafItemSettings = {
+    labelPath: 'fruit',
+    colorMapping:[
+        {
+           from: 500,
+           to: 2500,
+           color:'green',
+            showLegend: false,
+       },
+       {
+           from: 3000,
+           to: 4000,
+           color:'red',
+            showLegend: true,
+       },
+       {
+           color:'orange',
+            showLegend: true
+       }
+    ]
+};
+
+provide('treemap', [TreeMapLegend]);
+
+</script>

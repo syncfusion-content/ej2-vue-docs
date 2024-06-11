@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div>
@@ -13,11 +11,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Marker, Legend, MapsTooltip} from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Marker, Legend, MapsTooltip, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
         shapeData: world_map,
@@ -60,7 +64,7 @@ provide: {
     maps: [Marker, Legend, MapsTooltip]
 },
 methods:{
-    markerDragStart: function(args) {
+    markerDragStart: function() {
        // When the marker begins to move on the map, the event is triggered.
     },
     markerDragEnd: function(args) {
@@ -72,5 +76,3 @@ methods:{
 }
 }
 </script>
-
-

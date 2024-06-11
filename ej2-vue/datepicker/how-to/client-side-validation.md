@@ -15,7 +15,10 @@ To achieve the client side validation in a DatePicker component by using [Essent
 In the below example, the required field validation is implemented by mapping the name attribute value to the rules property. It will validate the DatePicker component and display the validation message when the textbox value is empty during form post back or focus out.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

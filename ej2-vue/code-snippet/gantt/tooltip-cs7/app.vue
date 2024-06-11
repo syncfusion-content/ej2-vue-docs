@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div>
     <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :renderBaseline="true" :taskFields="taskFields"
@@ -14,13 +11,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, DayMarkers } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, DayMarkers } from "@syncfusion/ej2-vue-gantt";
 import { baselineData  } from './data-source.js';
 import { Internationalization } from '@syncfusion/ej2-base';
 let instance = new Internationalization();
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: baselineData,
@@ -71,6 +71,3 @@ export default {
   }
 };
 </script>
-
-
-

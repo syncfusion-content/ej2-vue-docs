@@ -142,7 +142,7 @@ import { DateTimePickerComponent } from "@syncfusion/ej2-vue-calendars";
 export default {
     name: "App",
     components: {
-        'ejs-datetimepicker' : DateTimePickerComponent,
+        'ejs-datetimepicker' : DateTimePickerComponent
     }
 }
 
@@ -204,7 +204,7 @@ export default {
     name: 'App',
     components: {
         "ejs-datetimepicker": DateTimePickerComponent
-    },
+    }
 }
 </script>
 <style>

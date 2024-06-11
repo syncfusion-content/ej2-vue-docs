@@ -17,7 +17,10 @@ The TreeGrid user interface (UI) was redesigned to provide an optimal viewing ex
 When you enable the [`enableAdaptiveUI`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#enableadaptiveui) property, the tree grid will render the filter, sort, and edit dialogs in full screen for a better user experience. The following demo demonstrates this behaviour.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/adaptive-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/adaptive-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

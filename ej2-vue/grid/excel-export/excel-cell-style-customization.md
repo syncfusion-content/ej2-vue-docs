@@ -17,7 +17,10 @@ Grid cells in the exported Excel can be customized or formatted using [`excelQue
 In the below sample, we have set the background color for **Freight** column in the exported excel by **args.cell** and **backColor** property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The excel export provides an option to include theme for exported excel document
 To apply theme in exported Excel, define the **theme** in [`exportProperties`](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties/) .
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ The `excelHeaderQueryCellInfo` will be triggered when creating a column header f
 In the following demo, using the `rotation` property of the style argument in the `excelHeaderQueryCellInfo` event, you can rotate the header text of the column header in the excel exported document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

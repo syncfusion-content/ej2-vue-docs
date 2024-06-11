@@ -20,7 +20,10 @@ In the below demo, Data is fetched from an `OData` service using `DataManager`. 
 and `content` fields, which is set to items property of Tab.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/datasource-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/datasource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

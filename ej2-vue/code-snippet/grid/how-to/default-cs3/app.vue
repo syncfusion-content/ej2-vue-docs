@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <ejs-tooltip ref="tooltip" target=".e-rowcell" :beforeRender="beforeRender">
@@ -15,15 +13,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-
-Vue.use(TooltipPlugin);
-Vue.use(GridPlugin);
-
-  export default {
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
+export default {
+name: "App",
+components: {
+"ejs-tooltip":TooltipComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
     data() {
       return {
         data: data
@@ -41,5 +41,3 @@ Vue.use(GridPlugin);
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

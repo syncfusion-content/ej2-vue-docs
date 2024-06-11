@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' height='220' childMapping='subtasks' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings' :allowPdfExport='true' :toolbar='toolbarOptions' :toolbarClick='toolbarClick' :queryCellInfo='queryCellInfo'
@@ -14,13 +12,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, PdfExport } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, Toolbar, PdfExport, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -33,7 +37,7 @@ export default {
         if (args['item'].text === 'PDF Export') {
           this.$refs.treegrid.pdfExport();
         }
-      }
+      },
       pdfQueryCellInfo(args) {
         if(args.column.field == 'duration'){
           if(+args.value === 0 || args.value === "") {
@@ -43,7 +47,7 @@ export default {
             args.style = {backgroundColor: '#7b2b1d'};
           }
         }
-      }
+      },
       queryCellInfo(args) {
         if (args.data['duration'] == 0 && args.column.field === 'duration' ) {
             args.cell.style.background= '#336c12';
@@ -57,6 +61,3 @@ export default {
   }
 }
 </script>
-
-
-

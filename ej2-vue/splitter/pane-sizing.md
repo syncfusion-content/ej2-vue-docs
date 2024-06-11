@@ -17,7 +17,10 @@ Splitter allows you to provide pane sizes either in `pixel` or `percentage` form
 The splitter's panes are adjusted automatically during resizing if the size is not specified externally to panes, because the panes are designed based on flex layout by default. When add/remove or show/hide the panes, the panes are auto aligned within its container.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can render the split panes with fixed size in both `horizontal` and `vertica
 > Last pane is flexible because the splitter needs one pane as flexible pane always, to adjust its remaining layout space.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ You can render the split panes with fixed size in both `horizontal` and `vertica
 {% previewsample "page.domainurl/code-snippet/splitter/resize-min-max-cs5" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

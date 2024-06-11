@@ -32,7 +32,10 @@ Local data can be represented in two ways as described below.
 The MultiSelect has support to load array of primitive data such as strings and numbers. Here, both value and text field act the same.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/data-binding/simple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/data-binding/simple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ The MultiSelect can generate its list items through an array of complex data. Fo
 In the following example, `id` column and `sports` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/data-binding/json-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/data-binding/json-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ The MultiSelect can generate its list items through an array of complex data. Fo
 In the following example, `Code.Id` column and `Country.Name` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/data-binding/complex-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/data-binding/complex-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +83,10 @@ The MultiSelect supports retrieval of data from remote data services with the he
 The following sample displays the first 6 contacts from “Customers” table of the `Northwind` Data Service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/data-binding/remote-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/data-binding/remote-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

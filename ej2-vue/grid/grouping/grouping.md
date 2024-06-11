@@ -19,7 +19,10 @@ To get start quickly with Grouping Options, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=SGpR92dMHnw" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ To enable initial grouping in the Grid, you can use the [groupSettings](https://
 The following example demonstrates how to set an initial grouping for the **CustomerID** and **ShipCity** columns during the initial rendering grid, by using the `groupSettings.columns` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +56,10 @@ The following example demonstrates how to set an initial grouping for the **Cust
 The Grid component provides the ability to prevent grouping for a particular column. This can be useful when you have certain columns that you do not want to be included in the grouping process. It can be achieved by setting the [allowGrouping](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#allowgrouping) property of the particular `column` to **false**. The following example demonstrates, how to disable grouping for **CustomerID** column. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/prevent-group/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/prevent-group/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ To hide the drop area in the Syncfusion Vue Grid, you can set the [groupSettings
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to hide or show the drop area. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered and the `groupSettings.showDropArea` property of the grid is updated accordingly.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +94,10 @@ The Syncfusion Vue Grid has a default behavior where the grouped column is hidde
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to hide or show the grouped columns. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered and the `groupSettings.showGroupedColumn` property of the grid is updated accordingly. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/show-grouped-column/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/show-grouped-column/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +111,10 @@ The Syncfusion Vue Grid allows you to easily reorder the grouped columns by drag
 To enable this feature, you have to set the [groupSettings.allowReordering](https://ej2.syncfusion.com/vue/documentation/api/grid/groupSettings/#allowReordering) property as **true**. This is demonstrated in the sample below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +128,10 @@ By default, grouped columns are sorted in ascending order. However, you can sort
 The following example demonstrates how to sort the **CustomerID** column by setting the `sortSettings.columns` property to **Descending** during the initial grouping of the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -130,7 +151,10 @@ By default, columns are grouped by the data or value present for the particular 
 The following example demonstrates how to perform a group action using the `enableGroupByFormat` property for the  **OrderDate** and **Freight** columns of the grid. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +172,10 @@ The Grid component allows you to display the number of records based on the [pag
 Customizing the `generateQuery` method of the **Data prototype** allows you to modify the query used for data retrieval. By doing so, you can achieve the display of grouped rows based on the page size according to your specific requirements. This can be achieved in the below example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +191,10 @@ To collapse all grouped rows at the initial rendering of the Grid using the [dat
 The following example demonstrates how to collapse all grouped rows at the initial rendering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -190,7 +220,10 @@ By default, the Syncfusion Grid supports interaction-oriented column grouping, w
 The following example demonstrates how to group and upgroup the columns in a grid. It utilizes the [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) component to select the column. When an external button is clicked, the `groupColumn` and `ungroupColumn` methods are called to group or ungroup the selected column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/external-group/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/external-group/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -208,7 +241,10 @@ Grid provides an ability to expand or collapse grouped rows using [groupExpandAl
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to expand or collapse grouped rows. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered and the `groupExpandAll` and `groupCollapseAll` methods are called to expand or collapse grouped rows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/group-expand-collapse/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/group-expand-collapse/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -232,7 +268,66 @@ To implement this functionality, follow these steps:
 The following example demonstrates the function that collapses the selected row using an external button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="display: inline-block;">
+      <ejs-numerictextbox id='textbox' floatLabelType="Auto" format="##"  width='200px' placeholder="Enter Grouped Row Index"></ejs-numerictextbox>
+    </div>
+    <div style="display: inline-block;">
+      <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
+    </div> 
+    <div style="padding-top:5px"><p style="color:red;" id="message">{{ message }}</p></div>
+    <ejs-grid ref='grid' style="padding-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' :allowGrouping='false' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='ShipCity' headerText='Ship City' :allowGrouping='false' width=100></e-column>
+        <e-column field='ShipName' headerText='Ship Name' :allowGrouping='false' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent as EjsButton} from "@syncfusion/ej2-vue-buttons";
+import { NumericTextBoxComponent as EjsNumerictextbox } from '@syncfusion/ej2-vue-inputs';
+import { data } from './datasource.js';
+const grid = ref(null);
+      const groupOptions = { columns: ['CustomerID'] };
+      let message = '';
+    const onExpandCollapseButtonClick = function(args) {
+      const groupedRowIndex = parseInt(textbox.value);
+      const groupedRows = Array.from(
+        grid.ej2Instances.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse')
+      );
+      if (groupedRows.length >= 0 && groupedRowIndex < groupedRows.length) {
+        message = '';
+        const groupCaptionElement = groupedRows[groupedRowIndex];
+        grid.ej2Instances.groupModule.expandCollapseRows(groupCaptionElement);
+      } else {
+        message =
+          'The entered index exceeds the total number of grouped rows. Please enter a valid grouped index.';
+      }
+    }
+  provide('grid',  [Group]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
   <div id="app">
@@ -254,17 +349,19 @@ The following example demonstrates the function that collapses the selected row 
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { NumericTextBoxPlugin  } from '@syncfusion/ej2-vue-inputs';
+import { GridComponent, ColumnsDirective, ColumnDirective, Group } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { NumericTextBoxComponent  } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(NumericTextBoxPlugin );
-
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -279,7 +376,6 @@ export default {
       const groupedRows = Array.from(
         grid.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse')
       );
-  
       if (groupedRows.length >= 0 && groupedRowIndex < groupedRows.length) {
         this.message = '';
         const groupCaptionElement = groupedRows[groupedRowIndex];
@@ -321,7 +417,10 @@ To clear all the grouped columns in the Grid, you can utilize the [clearGrouping
 The following example demonstrates how to clear the grouping using `clearGrouping` method in the external button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/clear-group/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/clear-group/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -339,7 +438,56 @@ The Grid component provides two events that are triggered during the group actio
 The following example demonstrates how the `actionBegin` and `actionComplete` events work when grouping is performed. The `actionBegin` event event is used to cancel the grouping of the **OrderID** column. The `actionComplete` event is used to display a message.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="margin-left:180px"><p style="color:red;" id="message">{{ message }}</p></div>
+    <ejs-grid :dataSource='data' :allowGrouping='true' :actionComplete='actionComplete' :actionBegin='actionBegin' height='260px'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=120></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+      let message = '';
+    const actionBegin = function (args) {
+      if (args.requestType === 'grouping' && args.columnName === 'OrderID') {
+        args.cancel = true
+        message = args.requestType + ' action is cancelled for ' + args.columnName + ' column';
+      }
+    }
+    const actionComplete = function (args) {
+      if (args.requestType === 'grouping') {
+        message = args.requestType + ' action completed for ' + args.columnName + ' column';
+      }
+      else {
+        message = '';
+      }
+    }
+  provide('grid',  [Group]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
   <div id="app">
@@ -355,13 +503,15 @@ The following example demonstrates how the `actionBegin` and `actionComplete` ev
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
   data() {
     return {
       data: data,

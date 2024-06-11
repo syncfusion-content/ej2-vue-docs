@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By default, when scroll the page/container Dialog also scrolled along with the page/container. When a user expects to display the Dialog in the same position without scrolling achieving this in sample level as like below. Here added `e-fixed` class to Dialog element and prevent the scrolling.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/scroll-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/scroll-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

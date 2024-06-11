@@ -163,7 +163,10 @@ let pdfExportProperties = {
 The following example demonstrates how to add a header and footer to the exported grid. In the given example, we added lines in the header and footer, inserted an image in the header, and also added page number in the footer.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +182,10 @@ By default, the column header is occurs only on the first page of the PDF docume
 The following example demonstrates how to repeat the column header on every page of the exported PDF document using the `pdfHeaderQueryCellInfo` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

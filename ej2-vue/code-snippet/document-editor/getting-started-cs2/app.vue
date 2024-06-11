@@ -1,30 +1,34 @@
-
-
 <template>
-    <div id="app">
-      <ejs-documenteditor id="container6" height="370px"  style="width: 100%" :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'></ejs-documenteditor>
-    </div>
+  <div id="app">
+    <ejs-documenteditor id="container6" height="370px" style="width: 100%" :serviceUrl='serviceUrl' :isReadOnly='false'
+      :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true'
+      :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true'
+      :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true'
+      :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true'
+      :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true'
+      :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true'
+      :enableTableOptionsDialog='true'></ejs-documenteditor>
+  </div>
 </template>
 <script>
-    import Vue from 'vue'
-    import { DocumentEditorPlugin, DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
 
-    Vue.use(DocumentEditorPlugin);
-
-    export default {
-      data() {
-        return {
-          serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-        };
-      },
-      provide: {
-        //Inject require modules.
-        DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
-      }
-    }
+export default {
+  name: "App",
+  components: {
+    "ejs-documenteditor": DocumentEditorComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
+  }
+}
 </script>
 <style>
- @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-
-

@@ -27,7 +27,10 @@ Allows end user to set the pivot table's height and width by using [`height`](ht
 > The pivot table will not be displayed less than **400px**, since it's the minimum width of the component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs205/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs205/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ Allows end user to set the height of each pivot table rows commonly using the [`
 In the below code sample, the [`rowHeight`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **60** pixels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs206/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs206/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +67,10 @@ Allows end user to set the width of each pivot table columns commonly using the 
 In the below example, the [`columnWidth`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property is set as **200** pixels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs207/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs207/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +82,10 @@ In the below example, the [`columnWidth`](https://ej2.syncfusion.com/vue/documen
 Allows end user to reorder a particular column header from one index to another index within the pivot table through drag-and-drop option. It can be enabled by setting the [`allowReordering`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs208/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs208/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +100,10 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 > In RTL mode, user can click and drag the left edge of the header cell to resize the column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs209/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs209/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +115,10 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 Allows end user to wrap the cell content to the next line when it exceeds the boundary of the cell width. To enable text wrap, set the [`allowTextWrap`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) property in [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs210/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs210/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +135,10 @@ Allows end user to align the content of the pivot table's row and column headers
 * `Justify` - It allows the content to be as flexible as possible, when the cell does not occupy the entire available area.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs211/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs211/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +150,10 @@ Allows end user to align the content of the pivot table's row and column headers
 Allows the user to fit the Pivot Table columns as wide as the content of the cell without wrapping. It auto fits all of the Pivot Table columns by invoking the [`autoFitColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#autofitcolumns) method from the grid instance.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs212/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs212/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +163,10 @@ Allows the user to fit the Pivot Table columns as wide as the content of the cel
 > The minimum width of 250 pixels is set by default with the grouping bar UI for the first column and cannot be reduced further. So, when the grouping bar is enabled, one can auto fit the Pivot Table columns by calling the [`autoFitColumns`](https://ej2.syncfusion.com/vue/documentation/api/grid/#autofitcolumns) method from the grid instance with the parameter contained pivot table columns field name excluding first column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs213/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs213/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +178,10 @@ Allows the user to fit the Pivot Table columns as wide as the content of the cel
 During initial rendering, the parameter `autoFit` in the [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) event under [`gridSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) can be set to **true** to auto fit specific columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs214/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs214/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -175,7 +205,10 @@ Available mode of grid lines are:
 > By default, pivot table renders grid lines in **Both** mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs215/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs215/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -194,7 +227,10 @@ The pivot table supports two types of selection that can be set using [`type`](h
 To perform multi-selection, press and hold "CTRL" key and click the desired rows or cells. To select range of rows or cells, press and hold the "SHIFT" key and click the rows or columns or cells.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs216/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs216/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -211,7 +247,10 @@ The pivot table supports four types of selection mode that can be set using [`mo
 * **Both**: Allows user to select rows and columns at the same time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs217/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs217/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +265,10 @@ The pivot table supports two types of cell selection mode that can be set using 
 * **Box**: Range of cells are selected from the start and end column indexes that includes in-between cells of rows within the range.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs218/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs218/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -240,7 +282,10 @@ The pivot table supports two types of cell selection mode that can be set using 
 The background-color of the selected cell can be changed using built-in CSS names. To do so, please refer to the code sample below, which shows that the selected cells are changed to a **green yellow** color.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs219/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs219/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -254,7 +299,10 @@ The background-color of the selected cell can be changed using built-in CSS name
 The event `cellSelected` is triggered when cell selection gets completed. It provides selected cells information with its corresponding column and row headers. It has following parameters - `selectedCellsInfo`, `currentCell` and `target`. This event allows user to view selected cells information and user can pass those selected cells information to any external component for data binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs220/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs220/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -266,7 +314,10 @@ The event `cellSelected` is triggered when cell selection gets completed. It pro
 The event `cellSelecting` triggers before cell gets selected gets completed. It provides selected cells information with its corresponding column and row headers. It has following parameters - `currentCell`, `data` and `cancel`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs221/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs221/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -284,7 +335,10 @@ The clip mode provides options to display its overflow cell content in the pivot
 >By default, [`clipMode`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#gridsettings) value is set to **Ellipsis**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs222/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs222/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -302,7 +356,10 @@ To learn about the **Cell Template** in the Vue Pivot Table component, you can w
 In this demo, the revenue cost for each year is represented with trend icons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/renewableEnergy-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/renewableEnergy-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -324,7 +381,10 @@ It has the following parameters:
 * `pivotview` - it holds pivot instance
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs223/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs223/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -339,7 +399,10 @@ It has the following parameters:
 * `node` - it holds the current header cell info
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs224/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs224/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -356,7 +419,10 @@ The event [`columnRender`](https://ej2.syncfusion.com/vue/documentation/api/pivo
 * `stackedColumns` - It holds the drilled columns (i.e., including column and value headers) information.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs225/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs225/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -371,7 +437,10 @@ The event [`cellClick`](https://ej2.syncfusion.com/vue/documentation/api/pivotvi
 * `data` - It holds the clicked cell's data like axis, formatted text, actual text, row header, column header and value informations.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs226/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs226/app.vue %}
 {% endhighlight %}
 {% endtabs %}

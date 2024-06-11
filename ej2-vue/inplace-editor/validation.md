@@ -41,7 +41,10 @@ Step 1: To perform default validation in In-place Editor the `name` property is 
 Step 2:  The corresponding name specified in the name property should bind with the `validationRules` property. For example, in the below code snippet, the `Number`  in the name property is bind with the `maxLength`  of validationRules.  Likewise, you can bind with the in-build validation configurations in the above table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +54,10 @@ Step 2:  The corresponding name specified in the name property should bind with 
 In the following sample, first editor value submitted without select any date, so the default error message will be displayed below the `DatePicker` element. Second editor configured with the [validating](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/#validating) event with the handler. In handler event [errorMessage](https://ej2.syncfusion.com/vue/documentation/api/inplace-editor/validateEventArgs/#errormessage) argument value modified and it will show below the `DatePicker` element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}

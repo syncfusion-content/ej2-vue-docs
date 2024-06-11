@@ -28,7 +28,10 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 > By default, Tooltip is placed at the `TopCenter` of the target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/position/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/position/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ The Tooltip pointer can be attached or detached from the Tooltip by using the `s
 The following code example illustrates how to set the pointer to the start position of the Tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/position/tip-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/position/tip-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +68,10 @@ The Tooltip and its tip pointer can be positioned dynamically based on the targe
 method, which auto adjusts the Tooltip over the target.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/position/dynamic-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/position/dynamic-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +83,10 @@ method, which auto adjusts the Tooltip over the target.
 Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the `mouseTrail` property. By default, it is set to `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/position/mouse-trail-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/position/mouse-trail-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +107,10 @@ Offset values are set to specify the distance between the target and tooltip ele
 The following code example illustrates how to set offset values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/position/offset-value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/position/offset-value-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

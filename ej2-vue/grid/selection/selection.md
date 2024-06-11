@@ -24,7 +24,10 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 To select range of rows or cells or columns, press and hold the SHIFT key and click the rows or cells or columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-type/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-type/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +51,10 @@ To enable selection mode, you can set the [selectionSettings.mode](https://ej2.s
 The following example, demonstrates how to dynamically enable and change the `selectionSettings.mode` using the `DropDownList` component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-mode/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-mode/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -90,7 +96,10 @@ To enable the toggle selection feature, you need to set the [selectionSettings.e
 The following example demonstrates how to enable the toggle selection for both cells and rows in a Grid using the `selectionSettings.enableToggle` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-type/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-type/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +119,10 @@ To clear the selection in the component programmatically, you can use the [clear
 In the following example, it demonstrates how to clear all selection by calling the [clearSelection](https://ej2.syncfusion.com/vue/documentation/api-grid.html#clearSelection) method in the button `click` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-clear/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-clear/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +144,10 @@ To enable persist selection, set the [selectionSettings.persistSelection](https:
 In the following example, it demonstrates how to enable the persist selection feature for both rows and columns using the `selectionSettings.persistSelection` property :
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-persist/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-persist/app.vue %}
 {% endhighlight %}
 {% endtabs %}

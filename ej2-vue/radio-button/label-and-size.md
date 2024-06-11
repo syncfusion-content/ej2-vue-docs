@@ -17,7 +17,10 @@ This section explains the different sizes and labels.
 RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#label) property. This reduces the manual addition of label for RadioButton. You can customize the label position before or after the RadioButton through the [`labelPosition`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#labelposition) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/radio-button/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ RadioButton caption can be defined by using the [`label`](https://ej2.syncfusion
 The different RadioButton sizes available are default and small. To reduce the size of default RadioButton to small, set the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#cssclass) property to `e-small`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/radio-button/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,16 +1,18 @@
-
-
 <template>
     <div class="control_wrapper">
-        <ejs-treemap id="treemap"  :dataSource='dataSource' :palette='palette' :enableDrillDown= 'enableDrillDown' :weightValuePath='weightValuePath' :levels='levels' :breadcrumbConnector= 'breadcrumbConnector' :enableBreadcrumb='enableBreadcrumb' ></ejs-treemap>
+        <ejs-treemap id="treemap" :dataSource='dataSource' :palette='palette' :enableDrillDown= 'enableDrillDown' :weightValuePath='weightValuePath' :levels='levels' :breadcrumbConnector= 'breadcrumbConnector' :enableBreadcrumb='enableBreadcrumb' ></ejs-treemap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent } from "@syncfusion/ej2-vue-treemap";
+
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent,
+},
   data: function() {
     return {
      dataSource: [
@@ -47,5 +49,3 @@ export default {
   }
 }
 </script>
-
-

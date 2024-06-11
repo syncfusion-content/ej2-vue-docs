@@ -78,12 +78,42 @@ Follow the below steps to add the Vue TreeMap component:
 1\. First, import and register the TreeMap component in the `script` section of the **src/App.vue** file. 
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { TreeMapComponent as EjsTreemap } from "@syncfusion/ej2-vue-treemap";
+
+const dataSource = [
+            { Title: 'State wise International Airport count in South America', State: "Brazil", Count: 25 },
+            { Title: 'State wise International Airport count in South America', State: "Colombia", Count: 12 },
+            { Title: 'State wise International Airport count in South America', State: "Argentina", Count: 9 },
+            { Title: 'State wise International Airport count in South America', State: "Ecuador", Count: 7 },
+            { Title: 'State wise International Airport count in South America', State: "Chile", Count: 6 },
+            { Title: 'State wise International Airport count in South America', State: "Peru", Count: 3 },
+            { Title: 'State wise International Airport count in South America', State: "Venezuela", Count: 3 },
+            { Title: 'State wise International Airport count in South America', State: "Bolivia", Count: 2 },
+            { Title: 'State wise International Airport count in South America', State: "Paraguay", Count: 2 },
+            { Title: 'State wise International Airport count in South America', State: "Uruguay", Count: 2 },
+            { Title: 'State wise International Airport count in South America', State: "Falkland Islands",Count: 1 },
+            { Title: 'State wise International Airport count in South America', State: "French Guiana", Count:1 },
+            { Title: 'State wise International Airport count in South America', State: "Guyana", Count: 1 },
+            { Title: 'State wise International Airport count in South America', State: "Suriname", Count: 1 },
+];
+const weightValuePath = 'Count';
+const leafItemSettings: {
+  labelPath: 'State',
+};
+
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { TreeMapComponent } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
   components: {
     'ejs-treemap': TreeMapComponent
   },
@@ -135,6 +165,9 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treemap/getting-started-cs60/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treemap/getting-started-cs60/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,6 +206,9 @@ This section explains how to render the tree map with data source.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treemap/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treemap/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -187,6 +223,9 @@ The color mapping feature supports customization of item colors based on the und
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treemap/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treemap/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -198,6 +237,9 @@ The color mapping feature supports customization of item colors based on the und
 You can show legend for the tree map by setting the [`visible`] property to true in [`legendSettings`] object and injecting the `TreeMapLegend` module using the `provide` option.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treemap/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treemap/getting-started-cs17/app.vue %}
 {% endhighlight %}

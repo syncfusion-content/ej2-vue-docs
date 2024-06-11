@@ -23,7 +23,10 @@ To enable single row selection, set the [selectionSettings.mode](https://ej2.syn
 Here's an example of how to enable single row selection using properties:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-single/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-single/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ To enable multiple row selection, set the [selectionSettings.mode](https://ej2.s
 Here's an example of how to enable multiple rows selection using properties:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-multiple/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-multiple/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ You have the ability to select a specific row during the initial rendering of th
 In the following example, it demonstrates how to select a row at initial rendering:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-initial/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-initial/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +80,10 @@ Additionally, by handling the [actionComplete](https://ej2.syncfusion.com/vue/do
 The following example demonstrates how to select rows in any page based on index value using `actionComplete` and `change` event:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-any-page/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-any-page/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +99,10 @@ To enable the simple multiple row selection, you need to set the [selectionSetti
 The following example demonstrates how to enable multiple row selection with a single click on the Grid row using `enableSimpleMultiRowSelection` property:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-multiple-single/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-multiple-single/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +122,10 @@ To achieve single row selection, you can use the [selectRow](https://ej2.syncfus
 The following example demonstrates how to select a single row within the Grid by obtaining the selected row index through a textbox component and passing these row index as argument to the `selectRow` method. When the button event is triggered by clicking the **Select Row** button, a single row is selected within the Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-single-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-single-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +141,10 @@ To achieve multiple row selection, you can use the [selectRows](https://ej2.sync
 The following example, demonstrates how to select multiple rows in the Grid by calling the `selectRows` method within the button click event and passing an array of row indexes as arguments.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-multiple-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-multiple-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +160,10 @@ To achieve range of row selection, you can use the [selectRowsByRange](https://e
 The following example, demonstrates how to select a range of rows within the Grid by obtaining the selected rows start index and end index through textbox components. Then, pass these start index and end index as arguments to the `selectRowsByRange` method. When you trigger the button event by clicking the **Select Rows** button, a range of rows is selected within the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-range/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-range/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +177,10 @@ You can programmatically select specific rows in the Vue Grid component based on
 In the below demo, we have selected the grid rows only when **EmployeeID** column value greater than **3**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-condition/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-condition/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -169,7 +196,10 @@ To achieve this, you can leverage the [getSelectedRowIndexes](https://ej2.syncfu
 The following example demonstrates how to get selected row indexes using  `getSelectedRowIndexes` method: 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-indexes/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-indexes/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -187,7 +217,10 @@ To retrieve the selected records from different pages, you can use the  [getSele
 The following example demonstrates how to retrieve selected records from various pages using the `getSelectedRecords` method and display **OrderID** in a dialog when a button is clicked:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-various-pages/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-various-pages/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +238,10 @@ To retrieve the selected records, you can use the [getSelectedRecords](https://e
 Here's an example that displays the selected row count using the `getSelectedRecords` method:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-records/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-records/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -221,7 +257,10 @@ Clearing row selection programmatically in the Grid component is a useful featur
 The following example demonstrates how to clear row selection by calling the [clearRowSelection](https://ej2.syncfusion.com/vue/documentation/api/grid/#clearselection) method in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-clear/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-clear/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -243,7 +282,10 @@ The Grid provides several events related to row selection that allow you to resp
 In the following example, row selection is canceled when the value of **CustomerID** is equal to **VINET** within the `rowSelecting` event. The background color changes to green when the value of **Freight** is greater than 10 and less than or equal to 140, triggering the `rowDeselected` event. The background color changes to red when the value of **Freight** is less than or equal to 10 during the `rowDeselected` event. Furthermore, the background color changes to yellow when the value of **Freight** is greater than 140 during the `rowDeselected` event. A notification message is displayed to indicate which event was triggered whenever a row is selected.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-row-events/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-row-events/app.vue %}
 {% endhighlight %}
 {% endtabs %}

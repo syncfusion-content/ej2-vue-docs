@@ -15,7 +15,10 @@ The [`name`](https://ej2.syncfusion.com/vue/documentation/api/radio-button/#name
 In the following code snippet, Credit and Debit card is in checked state. Now, the value that is in checked state will be sent on form submit.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/radio-button/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

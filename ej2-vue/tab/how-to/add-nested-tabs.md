@@ -14,7 +14,10 @@ Tab supports to render the nested level of Tabs by using `content` property. You
  property. To render the nested Tab, initialize the component using the id of Tab from a selected event handler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/nested-tab-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/nested-tab-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

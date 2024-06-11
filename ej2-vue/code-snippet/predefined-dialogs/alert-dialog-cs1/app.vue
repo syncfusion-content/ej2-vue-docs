@@ -1,25 +1,9 @@
-
-
 <template>
   <div class="predefinedDialogs">
-    <ejs-button id="alertDlgBtn" v-on:click.native="alertBtnClick" cssClass="e-danger">Alert</ejs-button>
+    <ejs-button id="alertDlgBtn" v-on:click="alertBtnClick" cssClass="e-danger">Alert</ejs-button>
     <span id="statusText"></span>
   </div>
 </template>
-
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-#statusText {
-  font-size: 16px;
-  margin-top: 20px;
-}
-.predefinedDialogs {
-  height: 100%;
-  min-height: 350px;
-}
-</style>
 
 <script>
 import { DialogUtility } from "@syncfusion/ej2-vue-popups";
@@ -27,9 +11,10 @@ import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 let dialogObj = undefined;
 export default {
-  components: {
-    'ejs-button': ButtonComponent
-  },
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
   data: function () {
     return {};
   },
@@ -52,5 +37,16 @@ export default {
   },
 }
 </script>
-
-
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+#statusText {
+  font-size: 16px;
+  margin-top: 20px;
+}
+.predefinedDialogs {
+  height: 100%;
+  min-height: 350px;
+}
+</style>

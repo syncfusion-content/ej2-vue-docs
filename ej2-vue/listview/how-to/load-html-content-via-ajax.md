@@ -26,7 +26,10 @@ ajax.send();
 In the below sample, we have rendered smartphone settings template from external `HTML` file.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/ajax-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/ajax-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

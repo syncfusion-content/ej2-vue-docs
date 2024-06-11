@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData"
@@ -15,12 +13,33 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend } from '@syncfusion/ej2-base';
 import { kanbanData } from './datasource.js';
-Vue.use(KanbanPlugin);
+import { createApp } from 'vue';
+
+const app = createApp({});
+var clTemplate= app.component('kanbanComponent', {
+  data: () => ({}),
+  template: `<div class="header-template-wrap">
+    <div :class="getClassName(data)"></div>
+    <div class="header-text">{{data.headerText}}</div>
+  </div>`,
+  methods: {
+    getClassName(data) {
+      return "header-icon e-icons " + data.keyField;
+    }
+  }
+});
+
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
       kanbanData: extend([], kanbanData, null, true),
@@ -30,25 +49,10 @@ export default {
       },
       columnsTemplate: function () {
         return {
-          template: Vue.component('columnsTemplate', {
-            template: `<div class="header-template-wrap">
-                          <div :class="getClassName(data)"></div>
-                          <div class="header-text">{{data.headerText}}</div>
-                        </div>`,
-            data() {
-              return {
-                data: {}
-              };
-            },
-            methods: {
-              getClassName: function(data) {
-                return "header-icon e-icons " + data.keyField;
-              }
-            }
-          })
+          template: clTemplate
         }
       },
-    };
+    }
   },
 }
 </script>
@@ -133,6 +137,3 @@ export default {
   }
   
 </style>
-
-
-

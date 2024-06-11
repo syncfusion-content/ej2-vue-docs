@@ -25,7 +25,10 @@ In navigators, the previous and next slide transition buttons are used to perfor
 The following example depicts the code to show/hide the navigators in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The following example depicts the code to show/hide the navigators in the carous
 In the carousel, you can show the previous and next buttons only on mouse hover using the [`buttonsVisibility`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#buttonsvisibility) property. The following example depicts the code to show the navigators on mouse hover in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ In the carousel, you can show the previous and next buttons only on mouse hover 
 Template options are provided to customize the previous button using [`previousButtonTemplate`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#previousbuttontemplate) and the next button using [`nextButtonTemplate`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#nextbuttontemplate). The following example depicts the code for applying the template to previous and next buttons in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ Template options are provided to customize the previous button using [`previousB
 In indicators, the total slides and current slide state have been depicted. You can show/hide the indicators using the [`showIndicators`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#showindicators) property. The following example depicts the code to show/hide the indicators in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +87,10 @@ In indicators, the total slides and current slide state have been depicted. You 
 Template option is provided to customize the indicators by using the [`indicatorTemplate`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#indicatorstemplate) property. The following example depicts the code for applying a template to indicators in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +102,10 @@ Template option is provided to customize the indicators by using the [`indicator
 You can customize the indicators by showing the preview image of each slide using the [`indicatorTemplate`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#indicatorstemplate) property. The following example depicts the code for showing the preview image using a template for indicators in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +126,10 @@ Choose different types of indicators available using the [`indicatorsType`](../a
 A default indicator in a carousel is a set of dots that indicate the current position of the slide in the carousel. The Default indicator can be achieved by setting the [`indicatorsType`](../api/carousel/#indicatorstype) to `Default`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/indicator-type-cs0/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/indicator-type-cs0/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +140,10 @@ A default indicator in a carousel is a set of dots that indicate the current pos
 A dynamic indicator in a carousel provides visual cues or markers that dynamically change or update to indicate the current position. The Dynamic indicator can be achieved by setting the [`indicatorsType`](../api/carousel/#indicatorstype) to `Dynamic`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/indicator-type-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/indicator-type-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +155,10 @@ A dynamic indicator in a carousel provides visual cues or markers that dynamical
 The fraction indicator type displays the current slide index and total slide count as a fraction. The Fraction indicator can be achieved by setting the [`indicatorsType`](../api/carousel/#indicatorstype) to `Fraction`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/indicator-type-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/indicator-type-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +170,10 @@ The fraction indicator type displays the current slide index and total slide cou
 The Progress Indicator type displays the current slide as a progress bar. The Progress indicator can be achieved by setting the [`indicatorsType`](../api/carousel/#indicatorstype) to `Progress`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/indicator-type-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/indicator-type-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -158,7 +188,10 @@ The Progress Indicator type displays the current slide as a progress bar. The Pr
 In the carousel, [`autoPlay`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#autoplay) actions have been controlled by using the [`showPlayButton`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#showplaybutton) property in the user interface. When you enable this property, the slide transitions are controlled using this play and pause button. This property depends on the [`buttonsVisibility`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#buttonsvisibility) property. The following example depicts the code to show the play button in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,7 +203,10 @@ In the carousel, [`autoPlay`](https://ej2.syncfusion.com/vue/documentation/api/c
 Template option is provided to customize the play button by using the [`playButtonTemplate`](https://ej2.syncfusion.com/vue/documentation/api/carousel/#playbuttontemplate) property. The following example depicts the code for applying a template to play Button in the carousel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/carousel/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/carousel/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

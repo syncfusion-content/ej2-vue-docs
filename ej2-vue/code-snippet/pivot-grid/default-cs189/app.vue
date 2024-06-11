@@ -1,22 +1,18 @@
-
-
-
-
 <template>
     <div id="app">
         <ejs-pivotview :dataSourceSettings="dataSourceSettings" :showGroupingBar="showGroupingBar"
             :displayOption="displayOption" :chartSettings="chartSettings" :height="height"> </ejs-pivotview>
     </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotChart, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotChart, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
+    name: "App",
+    components: {
+        "ejs-pivotview": PivotViewComponent
+    },
     data() {
         return {
             dataSourceSettings: {
@@ -45,7 +41,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
 </style>
-
-
-
-

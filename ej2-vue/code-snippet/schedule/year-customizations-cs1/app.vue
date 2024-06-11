@@ -1,53 +1,28 @@
-
-
 <template>
   <div>
     <div id="app">
       <div id="container">
-        <ejs-schedule
-          id="Schedule"
-          height="650px"
-          :eventSettings="eventSettings"
-          :currentView="currentView"
-          :firstMonthOfYear="firstMonthOfYear"
-          :monthsCount="monthsCount"
-          :group="group"
-          :monthHeaderTemplate="'monthHeaderTemplate'"
-          :resourceHeaderTemplate="'resourceHeaderTemplate'"
-        >
-          <template v-slot:resourceHeaderTemplate="{data}">
+        <ejs-schedule id="Schedule" height="650px" :eventSettings="eventSettings" :currentView="currentView"
+          :firstMonthOfYear="firstMonthOfYear" :monthsCount="monthsCount" :group="group"
+          :monthHeaderTemplate="'monthHeaderTemplate'" :resourceHeaderTemplate="'resourceHeaderTemplate'">
+          <template v-slot:resourceHeaderTemplate="{ data }">
             <div class='template-wrap'>
               <div class="resource-details">
-                <div class="resource-name">{{data.resourceData.OwnerText}}</div>
+                <div class="resource-name">{{ data.resourceData.OwnerText }}</div>
               </div>
-            </div>                            
+            </div>
           </template>
           <template v-slot:monthHeaderTemplate="{ data }">
-            <div>{{monthHeaderTemplate(data.date)}}</div>
+            <div>{{ monthHeaderTemplate(data.date) }}</div>
           </template>
           <e-views>
             <e-view option="Year"></e-view>
-            <e-view
-              option="TimelineYear"
-              displayName="Horizontal TimelineYear"
-              isSelected="true"
-            ></e-view>
-            <e-view
-              option="TimelineYear"
-              displayName="Vertical TimelineYear"
-              orientation="Vertical"
-            ></e-view>
+            <e-view option="TimelineYear" displayName="Horizontal TimelineYear" isSelected="true"></e-view>
+            <e-view option="TimelineYear" displayName="Vertical TimelineYear" orientation="Vertical"></e-view>
           </e-views>
           <e-resources>
-            <e-resource
-              field="OwnerId"
-              title="Owner"
-              name="Owners"
-              :dataSource="ownerDataSource"
-              textField="OwnerText"
-              idField="Id"
-              colorField="OwnerColor"
-            ></e-resource>
+            <e-resource field="OwnerId" title="Owner" name="Owners" :dataSource="ownerDataSource" textField="OwnerText"
+              idField="Id" colorField="OwnerColor"></e-resource>
           </e-resources>
         </ejs-schedule>
       </div>
@@ -56,19 +31,19 @@
 </template>
 
 <script>
-import Vue from "vue";
 import { resourceData } from "./datasource.js";
-import {
-  SchedulePlugin,
-  Year,
-  TimelineYear,
-  Resize,
-  DragAndDrop
-} from "@syncfusion/ej2-vue-schedule";
-
-Vue.use(SchedulePlugin);
+import { ScheduleComponent, Year, TimelineYear, Resize, DragAndDrop } from "@syncfusion/ej2-vue-schedule";
 
 export default {
+  name: "App",
+  components: {
+    "ejs-schedule": ScheduleComponent,
+    "e-views": ViewsDirective,
+    "e-view": ViewDirective,
+    "e-view": ViewDirective,
+    "e-resources": ResourcesDirective,
+    "e-resource": ResourceDirective
+  },
   data() {
     return {
       width: "100%",
@@ -95,7 +70,7 @@ export default {
     schedule: [Year, TimelineYear, Resize, DragAndDrop]
   },
   methods: {
-    monthHeaderTemplate: function(date) {
+    monthHeaderTemplate: function (date) {
       return (
         date.toLocaleString("en-us", { month: "long" }) +
         " " +
@@ -106,14 +81,14 @@ export default {
 };
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 
 .e-schedule .e-vertical-view .e-resource-cells {
   height: 62px;
@@ -143,6 +118,3 @@ export default {
   height: 50px;
 }
 </style>
-
-
-

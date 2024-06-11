@@ -89,7 +89,10 @@ For Example,
 In the following example, the paste cleanup related settings are explained with its module configuration
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/toolbar-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/toolbar-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

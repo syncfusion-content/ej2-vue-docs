@@ -38,7 +38,10 @@ It is necessary to import and inject the appropriate view modules into the appli
 In the following example, the Scheduler displays 4 views namely, Week, Month, TimelineWeek and TimelineMonth. The appropriate view modules are imported and injected properly to display those views on the Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +51,10 @@ In the following example, the Scheduler displays 4 views namely, Week, Month, Ti
 To configure Scheduler with simply 2 views, but with different configurations on each view, refer the following code example. Here, the Week view displays the dates in `dd-MM-yyyy` format whereas the Month view hides the weekend days and also displays it in readonly mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +92,10 @@ There are scenarios where each view may need to have different configurations. F
 Usually a day view displays a single day with all its related appointments. It is possible to customize the day view to display more number of days by extending the `views` property with `interval` option. You can also define any of the above defined properties within the `views` object definition as depicted in the following code example.  
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +109,10 @@ Usually a day view displays a single day with all its related appointments. It i
 The Week view displays a count of 7 days (from Sunday to Saturday) with all its related appointments. The first day of the week can be changed using the `firstDayOfWeek` which accepts the integer (Sunday=0, Monday=1, Tuesday=2 and so on) value. You can navigate to a particular date in day view from the week view by clicking on the appropriate dates on the date header bar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +128,10 @@ The Work week view displays only the working days of a week (count of 5 days) an
 The following code example depicts how to change the working days only on the `Work Week` view of the Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +149,10 @@ By default, when you try to create an appointment through Month view, it is cons
 You can also have the `+ more` text indicator on each day cell of a Month view, clicking on which will allows you to view the hidden appointments of a day.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +166,10 @@ A Year view displays all the days of a particular year with months and all its r
 Year view is available in both the `Horizontal` and `Vertical` orientations. You can manage the orientation of year view through `views` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +185,10 @@ The Agenda view lists out the appointments in a grid-like view for the next 7 da
 The following code example depicts how to customize the display of events within Agenda view alone.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -178,7 +202,10 @@ A Month-Agenda view shows a month calendar, where clicking on a particular day w
 The following code example shows how to hide the weekend days on `MonthAgenda` view as well as the working days list is modified on Month Agenda view alone.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -192,7 +219,10 @@ Similar to the day view, timeline day view shows a single day with all its appoi
 To make use of the timeline views (Timeline Day, Timeline Week and Timeline Work Week) on Scheduler, import and inject the module `TimelineViews` from the `ej2-schedule` package.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -202,7 +232,10 @@ To make use of the timeline views (Timeline Day, Timeline Week and Timeline Work
 Similar to the Week view, the timeline week view shows 7 days with its associated appointments with the time slots displayed horizontally.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -212,7 +245,10 @@ Similar to the Week view, the timeline week view shows 7 days with its associate
 The following code example depicts how to display the timeline work week view on Scheduler,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +262,10 @@ The following code example depicts how to display the timeline work week view on
 A Timeline Month view displays the current month days along with its appointments. To make use of the timeline Month view on Scheduler, import and inject `TimelineMonth` module from the `ej2-schedule` package.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -242,7 +281,10 @@ In Timeline Year view, each row depicts a single resource. Whereas in the vertic
 To make use of the timeline Year view on Scheduler, import and inject `TimelineYear` module from the `ej2-schedule` package.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -253,74 +295,142 @@ To make use of the timeline Year view on Scheduler, import and inject `TimelineY
 
 The following code example depicts how to group the multiple resources on Timeline Year view and its relevant events are displayed accordingly under those resources.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div>
-        <div id='app'>
-            <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView'>
-                    <e-views>
-                        <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected: true ></e-view>
-                        <e-view option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical' ></e-view>
-                    </e-views>
-                    <e-resources>
-                        <e-resource field='OwnerId' title='Owner' name='Owners' :allowMultiple='allowMultiple' :dataSource='resourceDataSource' textField='OwnerText' idField='Id' colorField='OwnerColor'>
-                        </e-resource>
-                    </e-resources>
-                </ejs-schedule>
-            </div>
-        </div>
+  <div>
+    <div id='app'>
+      <div id='container'>
+        <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+          :selectedDate='selectedDate' :currentView='currentView'>
+          <e-views>
+            <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected: true></e-view>
+            <e-view option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical'></e-view>
+          </e-views>
+          <e-resources>
+            <e-resource field='OwnerId' title='Owner' name='Owners' :allowMultiple='allowMultiple'
+              :dataSource='resourceDataSource' textField='OwnerText' idField='Id' colorField='OwnerColor'>
+            </e-resource>
+          </e-resources>
+        </ejs-schedule>
+      </div>
     </div>
+  </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import { resourceData } from './datasource.js';
+import { ScheduleComponent as EjsSchedule, ViewDirective as EView, ViewsDirective as EViews, ResourcesDirective as EResources, ResourceDirective as EResource, TimelineYear } from '@syncfusion/ej2-vue-schedule';
+
+const width = '100%';
+const height = '550px';
+const currentView = 'Week';
+const views = ['TimelineYear'];
+const selectedDate = new Date(2018, 3, 1);
+const allowMultiple = true;
+const resourceDataSource = [
+  { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
+  { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
+  { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
+];
+const eventSettings = { dataSource: resourceData };
+
+provide('schedule', [TimelineYear]);
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <div id='app'>
+      <div id='container'>
+        <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+          :selectedDate='selectedDate' :currentView='currentView'>
+          <e-views>
+            <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected: true></e-view>
+            <e-view option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical'></e-view>
+          </e-views>
+          <e-resources>
+            <e-resource field='OwnerId' title='Owner' name='Owners' :allowMultiple='allowMultiple'
+              :dataSource='resourceDataSource' textField='OwnerText' idField='Id' colorField='OwnerColor'>
+            </e-resource>
+          </e-resources>
+        </ejs-schedule>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { resourceData } from './datasource.js';
-    import { SchedulePlugin, TimelineYear } from '@syncfusion/ej2-vue-schedule';
+import { resourceData } from './datasource.js';
+import { ScheduleComponent, ViewDirective, ViewsDirective, ResourcesDirective, ResourceDirective, TimelineYear } from '@syncfusion/ej2-vue-schedule';
 
-    Vue.use(SchedulePlugin);
-
-    export default {
-        data () {
-            return {
-                width: '100%',
-                height: '550px',
-                currentView: 'Week',
-                views: ['TimelineYear'],
-                selectedDate: new Date(2018, 3, 1),
-                allowMultiple: true,
-                resourceDataSource: [
-                    { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
-                    { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
-                    { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
-                ],
-                eventSettings: { dataSource: resourceData }
-            }
-        },
-        provide: {
-            schedule: [TimelineYear]
-        }
+export default {
+  components: {
+    'ejs-schedule': ScheduleComponent,
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective,
+    'e-resources': ResourcesDirective,
+    'e-resource': ResourceDirective
+  },
+  data() {
+    return {
+      width: '100%',
+      height: '550px',
+      currentView: 'Week',
+      views: ['TimelineYear'],
+      selectedDate: new Date(2018, 3, 1),
+      allowMultiple: true,
+      resourceDataSource: [
+        { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
+        { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
+        { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
+      ],
+      eventSettings: { dataSource: resourceData }
     }
+  },
+  provide: {
+    schedule: [TimelineYear]
+  }
+}
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 #### Auto row height
 
 Timeline Year view supports Auto row height. When the feature `rowAutoHeight` is enabled, the row height gets auto-adjusted based on the number of overlapping events occupied in the same time range. If you disable the Auto row height, you have the `+ more` text indicator on each day cell of a Timeline Year view, clicking on which will allow you to view the hidden appointments of a day.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -334,7 +444,10 @@ It is possible to customize the display of default number of days on different S
 You can provide the alternative display name for such customized views on the Scheduler header bar, by setting the appropriate `displayName` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/view-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/view-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

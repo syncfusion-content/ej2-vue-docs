@@ -1,23 +1,21 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview_flist" :height="height"></ejs-pivotview>
-        <ejs-pivotfieldlist id="pivotfieldlist1" :dataSourceSettings="dataSourceSettings" :enginePopulated="fieldEnginePopulated" :renderMode="renderMode"></ejs-pivotfieldlist>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview_flist" :height="height"></ejs-pivotview>
+    <ejs-pivotfieldlist id="pivotfieldlist1" :dataSourceSettings="dataSourceSettings"
+      :enginePopulated="fieldEnginePopulated" :renderMode="renderMode"></ejs-pivotfieldlist>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotFieldListPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotFieldListComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(PivotFieldListPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent,
+    "ejs-pivotfieldlist": PivotFieldListComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -29,12 +27,11 @@ export default {
         filters: []
       },
       height: 350,
-      renderMode: "Fixed",
-      showValuesButton: true,
+      renderMode: "Fixed"
     }
   },
   methods: {
-    fieldEnginePopulated: function(args) {
+    fieldEnginePopulated: function () {
       let fieldListObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
       let pivotGridObj = document.getElementById('pivotview_flist').ej2_instances[0];
       fieldListObj.updateView(pivotGridObj);
@@ -43,12 +40,10 @@ export default {
 }
 </script>
 <style>
-    @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-    #pivotfieldlist1 {
-      width: 400px;
-      margin-top: 20px;
-    }
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+
+#pivotfieldlist1 {
+  width: 400px;
+  margin-top: 20px;
+}
 </style>
-
-
-

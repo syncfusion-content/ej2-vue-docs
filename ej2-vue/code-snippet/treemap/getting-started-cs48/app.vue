@@ -1,16 +1,17 @@
-
-
 <template>
     <div class="control_wrapper">
-        <ejs-treemap id="treemap"  :dataSource='dataSource' :weightValuePath='weightValuePath' :levels='levels' :palette= 'palette'></ejs-treemap>
+        <ejs-treemap id="treemap" :dataSource='dataSource' :weightValuePath='weightValuePath' :levels='levels' :palette= 'palette'></ejs-treemap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent,
+},
   data: function() {
     return {
      dataSource: [
@@ -40,11 +41,9 @@ export default {
         headerAlignment:'Center', border: { color: 'black', width: 0.5 } },
         { groupPath: 'JobDescription',headerFormat:'${JobDescription}-${EmployeesCount}', headerAlignment:'Far', border: { color: 'black', width: 0.5 } },
         { groupPath: 'JobGroup', headerAlignment:'Near',
-        headerFormat:'${JobGroup}-${EmployeesCount}', border: { color: 'black', width: 0.5 } },
+        headerFormat:'${JobGroup}-${EmployeesCount}', border: { color: 'black', width: 0.5 } }
     ]
     }
   }
 }
 </script>
-
-

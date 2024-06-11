@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The appearance of cells can be customized by using the [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#querycellinfo) event. The [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#querycellinfo) event triggers for every cell. In that event handler, you can get `QueryCellInfoEventArgs` that contains the details of the cell.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/cell/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/cell/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ You can customize the treegrid cells by adding a CSS class to the [`customAttrib
 In the below example, we have customized the cells of `TaskID` and `StartDate` columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/cell/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/cell/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +70,10 @@ The available modes of grid lines are:
 | Default | Displays grid lines based on the theme.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/cell/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/cell/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

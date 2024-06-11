@@ -1,0 +1,77 @@
+<template>
+    <ejs-grid id="ColumnTemplateGrid" ref="grid" :dataSource="data" :allowExcelExport="true"
+    :toolbar="toolbar" :toolbarClick="toolbarClick" :excelQueryCellInfo="excelQueryCellInfo" height=315>
+        <e-columns>
+            <e-column headerText="Employee Image" textAlign="Center" :template="imageTemplate" width="150"></e-column>
+            <e-column field="EmployeeID" headerText="Employee ID" width="125"></e-column>
+            <e-column field="FirstName" headerText="Name" width="120"></e-column>
+            <e-column headerText="Email ID" :template="mailTemplate" width="170"></e-column>
+        </e-columns>
+    </ejs-grid>
+</template>
+
+<script setup>
+import { provide, ref, createApp } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
+import { employeeData } from './datasource.js';
+import { createApp } from "vue";
+const app = createApp();
+const grid = ref(null);
+            const data = employeeData;
+            const toolbar = ['ExcelExport'];
+            const imageTemplate = function () {
+                return { template : app.component('imageTemplate',{
+                    template: `<div class="image">
+                        <img :src="'data:image/jpeg;base64,'+data.EmployeeImage" :alt="data.EmployeeID"/>
+                    </div>`,
+                    data: function() {
+                        return {
+                            data: {}
+                        }
+                    },
+                })}
+            }
+            const mailTemplate = function () {
+                return { template : app.component('mailTemplate',{
+                    template: `<div class="link">
+                        <a :href="'mailto:'+data.EmailID">{{data.EmailID}}</a></div>
+                    </div>`,
+                    data: function() {
+                        return {
+                            data: {}
+                        }
+                    }
+               })}
+            }
+            const toolbarClick = function (args) {
+            if (args.item.id === 'ColumnTemplateGrid_excelexport') {
+                grid.value.excelExport();
+            }
+        }
+        const excelQueryCellInfo = function(args) {
+            if (args.column.headerText === 'Employee Image') {
+                args.image = {
+                    base64: args.data.EmployeeImage,
+                    height: 70,
+                    width: 70,
+                };
+            }
+            if (args.column.headerText === 'Email ID') {
+                args.hyperLink = {
+                    target: 'mailto:' + args.data.EmailID,
+                    displayText: args.data.EmailID,
+                };
+            }
+        }
+    provide('grid',  [ExcelExport, Toolbar]);
+</script>
+<style>
+ @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+
+ .image img {
+        height: 55px;
+        width: 55px;
+        border-radius: 50px;
+        box-shadow: inset 0 0 1px #e0e0e0, inset 0 0 14px rgba(0,0,0,0.2);
+    }
+</style>

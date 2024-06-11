@@ -4,12 +4,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import {editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data:editingData,
@@ -32,7 +35,7 @@ export default {
                         isFitToWidth: true,       
                        }        
                     };
-                    var ganttChart = document.getElementById('app').ej2_instances[0];
+                    var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttChart.pdfExport(exportProperties);
                 }
             },
@@ -43,6 +46,3 @@ export default {
   }
 };
 </script>
-
-
-

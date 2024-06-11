@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid :dataSource='data' height='315px' >
@@ -15,15 +13,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ChipListPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ChipListComponent } from '@syncfusion/ej2-vue-buttons';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ChipListPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-chiplist":ChipListComponent
+},
   data() {
     return {
       data: employeeData,
@@ -42,5 +43,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

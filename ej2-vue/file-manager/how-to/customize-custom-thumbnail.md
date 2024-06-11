@@ -15,7 +15,10 @@ The default appearance of the file manager can customize with your own icon by u
 The following example demonstrate how to add a custom icon in largeicons view.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/custom-thumbnail-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/custom-thumbnail-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

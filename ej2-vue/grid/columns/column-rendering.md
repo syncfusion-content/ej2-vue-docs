@@ -25,7 +25,10 @@ To define columns manually in grid, you can use the `e-columns` element to defin
 Here's an example code snippet that demonstrates how to define columns manually in the Syncfusion Vue Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/columns-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/columns-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The Grid automatically generates columns when the [columns](https://ej2.syncfusi
 You can use the following code snippet to enable auto-generated columns in the Syncfusion Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ By setting `isPrimaryKey` to **true** for an auto-generated column in the Syncfu
 Here is an example code snippet that shows how to set a primary key for an auto-generated column when editing is enabled:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +93,10 @@ Here's an example of how you can set column options for auto-generated columns u
 In the below example, `width` is set for **OrderID** column, **date** `type` is set for **OrderDate** column and `format` is set for **Freight** and **OrderDate** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +114,10 @@ To create dynamically generated columns in the Syncfusion Grid component using t
 Here is an example for dynamically generate columns in the grid using v-for directive:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/dynamic-column-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/dynamic-column-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +137,10 @@ To use `valueAccessor` property, define the column with the property and provide
 In the provided code, the **currencyFormatter** function takes the Freight value of the data object, appends the Euro symbol to it, and returns the formatted string. The **concatenateFields** function concatenates the ShipCity and ShipRegion values of the data object and returns the combined string.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -140,7 +158,10 @@ For example, consider a column named **Name** that contains an array of two obje
 This will display the concatenated value of **FirstName** and **LastName** in the **Full Name** column of the grid. Here's an example of how this can be achieved:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/arraytypecolumn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/arraytypecolumn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -154,7 +175,10 @@ You can achieve an expression column in the Grid by using the [valueAccessor](ht
 In this example, we have a grid with columns **Food Name**, **Protein**, **Fat**, and **Carbohydrate**. We want to add an expression column called **Calories Intake** that calculates the total calories for each row based on the values of **Protein**, **Fat**, and **Carbohydrate** columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/expression-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/expression-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,7 +194,10 @@ Within the event handler, the [pagesize](https://helpej2.syncfusion.com/vue/docu
 Here is an example code snippet that demonstrates how to display serial numbers in a Syncfusion Grid using `rowDataBound` event:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/dynamic-column-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/dynamic-column-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +215,10 @@ To enable complex data binding in the Grid component using local data, use the d
 In the below example, we have bound the nested **Employee** object's **FirstName** and **LastName** properties using the dot (.) operator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/complex-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/complex-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -202,7 +232,10 @@ To enable complex data binding in the Grid component using remote data, add the 
 In the below example, we have used the `expand` query to load the nested Employee object's **City** property using the dot (.) operator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/complex-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/complex-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -216,7 +249,10 @@ The Syncfusion Grid supports complex data binding with lists of arrays of object
 The following example shows how to set complex field for datasource having array Of objects.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/complex-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/complex-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -230,7 +266,10 @@ The Syncfusion Grid component provides the ability to set complex columns as for
 The following example demonstrates how to set the **Employee.EmployeeID** column as a foreign key column, and display the **FirstName** column from the foreign data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

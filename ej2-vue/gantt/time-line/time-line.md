@@ -29,7 +29,10 @@ Timescale mode in the Gantt component can be defined using the [`timelineViewMod
 In the `Week` timeline mode, the upper part of the schedule header displays the weeks, whereas the bottom half of the header displays the days. Refer to the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ In the `Week` timeline mode, the upper part of the schedule header displays the 
 In the `Month` timeline mode, the upper part of the schedule header displays the months, whereas the bottom header of the schedule displays its corresponding weeks. Refer to the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ In the `Month` timeline mode, the upper part of the schedule header displays the
 In the `Year` timeline mode, the upper schedule header displays the years whereas, the bottom header displays its corresponding months. Refer to the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ In the `Year` timeline mode, the upper schedule header displays the years wherea
 In the `Day` timeline mode, the upper part of the header displays the days whereas, the bottom schedule header displays its corresponding hours. Refer to the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +89,10 @@ In the `Day` timeline mode, the upper part of the header displays the days where
 An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upper schedule header displays hour scale and the lower schedule header displays its corresponding minutes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +104,10 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the upp
 In the Gantt component, you can customize the week start day using the [`weekStartDay`](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings/#weekstartday) property. By default, the [`weekStartDay`](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings/#weekstartday) is set to `0`, which specifies the Sunday as a start day of the week. But, you can customize the week start day by using the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +119,10 @@ In the Gantt component, you can customize the week start day using the [`weekSta
 In the Gantt component, the schedule timeline will be automatically updated when the tasks date values are updated beyond the project start date and end date ranges. This can be enabled or disabled using the [`updateTimescaleView`](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings/#updatetimescaleview) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/timeline-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +134,10 @@ In the Gantt component, the schedule timeline will be automatically updated when
 In the Gantt component, you can enable or disable the mouse hover tooltip of timeline cells using the [`timelineSettings.showTooltip`](https://ej2.syncfusion.com/vue/documentation/api/gantt/timelineSettings/#showtooltip) property. The default value of this property is `true`. The following code example shows how to enable the timeline cells tooltip in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/tooltip-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/tooltip-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

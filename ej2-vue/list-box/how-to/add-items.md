@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To add an item or multiple items, [`addItems`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#additems) method can be used. In the following example, the `Bugatti Veyron Super Sport` and `SSC Ultimate Aero` items will be added while clicking `Add Items` button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

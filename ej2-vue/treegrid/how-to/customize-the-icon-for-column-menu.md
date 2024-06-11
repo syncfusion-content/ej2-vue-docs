@@ -21,7 +21,10 @@ You can customize the column menu icon by overriding the default Tree Grid class
 In the below sample, Tree Grid is rendered with a customized column menu icon.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

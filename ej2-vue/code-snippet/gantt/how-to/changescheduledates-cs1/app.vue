@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-button id="changedate" cssClass="e-info" v-on:click.native="change">Change Date</ejs-button>
@@ -9,13 +6,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: editingData,
@@ -38,6 +39,3 @@ export default {
     },
 };
 </script>
-
-
-

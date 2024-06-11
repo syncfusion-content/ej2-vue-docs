@@ -21,7 +21,10 @@ Document Editor triggers ‘requestNavigate’ event whenever user clicks Ctrl k
 The following example illustrates how to add requestNavigate event for DocumentEditor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/link-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,47 +35,90 @@ The following example illustrates how to add requestNavigate event for DocumentE
 
 The following example illustrates how to add requestNavigate event for DocumentEditorContainer component.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
-<script>
-    import Vue from 'vue'
-    import { DocumentEditorContainerPlugin, Selection, Editor, RequestNavigateEventArgs, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-    Vue.use(DocumentEditorContainerPlugin);
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-    export default {
-        data: function() {
-            return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-            };
-        },
-        provide: {
-            DocumentEditorContainer: [Toolbar],
-        },
-        methods: {
-          onCreated() {
-            // Add event listener for requestNavigate event to customize hyperlink navigation functionality
-            this.$refs.container.ej2Instances.documentEditor.requestNavigate = function (args) {
-              if (args.linkType !== 'Bookmark') {
-                      let link: string = args.navigationLink;
-                      if (args.localReference.length > 0) {
-                      link += '#' + args.localReference;
-                      }
-                      window.open(link);
-                      args.isHandled = true;
-              }
-            }
-          }
-        }  
+provide('DocumentEditorContainer', [Toolbar])
+
+const onCreated = function () {
+  // Add event listener for requestNavigate event to customize hyperlink navigation functionality
+  container.value.ej2Instances.documentEditor.requestNavigate = function (args) {
+    if (args.linkType !== 'Bookmark') {
+      let link = args.navigationLink;
+      if (args.localReference.length > 0) {
+        link += '#' + args.localReference;
+      }
+      window.open(link);
+      args.isHandled = true;
+    }
   }
+}
+
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data: function () {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+    };
+  },
+  provide: {
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated() {
+      // Add event listener for requestNavigate event to customize hyperlink navigation functionality
+      this.$refs.container.ej2Instances.documentEditor.requestNavigate = function (args) {
+        if (args.linkType !== 'Bookmark') {
+          let link = args.navigationLink;
+          if (args.localReference.length > 0) {
+            link += '#' + args.localReference;
+          }
+          window.open(link);
+          args.isHandled = true;
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 If the selection is in hyperlink, trigger this event by calling `navigateHyperlink` method of `Selection` instance. Refer to the following example.
 
@@ -97,7 +143,10 @@ To create a basic hyperlink in the document, press `ENTER` / `SPACEBAR` / `SHIFT
 Refer to the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/link-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/link-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +176,10 @@ To remove link from hyperlink in the document, press Backspace key at the end of
 Document Editor provides dialog support to insert or edit a hyperlink. Refer to the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/link-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/link-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,9 +188,9 @@ Document Editor provides dialog support to insert or edit a hyperlink. Refer to 
 
 You can use the following keyboard shortcut to open the hyperlink dialog if the selection is in hyperlink.
 
-| Key Combination | Description |
-|-----------------|-------------|
-|Ctrl + K | Open hyperlink dialog that allows you to create or edit hyperlink|
+| Key Combination | Description                                                       |
+| --------------- | ----------------------------------------------------------------- |
+| Ctrl + K        | Open hyperlink dialog that allows you to create or edit hyperlink |
 
 ## See Also
 

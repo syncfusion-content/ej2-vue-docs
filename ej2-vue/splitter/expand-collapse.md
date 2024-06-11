@@ -17,7 +17,10 @@ The Vue Splitter panes can be configured with built-in expand and collapse funct
 The following code shows how to enable collapsible behavior.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/expand-collapse-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/expand-collapse-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ The following code shows how to enable collapsible behavior.
 The Vue Splitter provides public method to control the expand and collapse behavior programmatically using the [expand](https://ej2.syncfusion.com/vue/documentation/api/splitter/#expand) and [collapse](https://ej2.syncfusion.com/vue/documentation/api/splitter/#collapse) methods. Refer to the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/expand-collapse-method-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/expand-collapse-method-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ The Vue Splitter provides public method to control the expand and collapse behav
 You can render specific panes with collapsed state on page load. Specify a Boolean value to the [collapsed](https://ej2.syncfusion.com/vue/documentation/api/splitter/#collapsed) property to control this behavior. The following code explains how to collapse panes on rendering (the second panes renders with collapsed state).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/collapsed-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/collapsed-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

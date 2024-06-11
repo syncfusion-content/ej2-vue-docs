@@ -15,7 +15,10 @@ Reordering can be done by drag and drop of a particular column header from one i
 To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#reordermodule) module in the treegrid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ To use reordering, inject the [`Reorder`](https://ej2.syncfusion.com/vue/documen
 Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column#reordercolumns) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

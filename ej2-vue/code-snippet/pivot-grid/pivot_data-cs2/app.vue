@@ -1,24 +1,22 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="formatting-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">APPLY FORMAT</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowConditionalFormatting="allowConditionalFormatting"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="formatting-btn" :isPrimary="isPrimary" v-on:click="btnClick">APPLY FORMAT</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowConditionalFormatting="allowConditionalFormatting"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, ConditionalFormatting } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent, ConditionalFormatting } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { Pivot_Data } from './Pivot_Data.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: Pivot_Data,
@@ -31,50 +29,47 @@ export default {
         { name: 'Sold', caption: 'Units Sold' }],
         filters: [{ name: 'Product_Categories', caption: 'Product Categories' }],
         conditionalFormatSettings: [
-            {
-                measure: 'In_Stock',
-                value1: 5000,
-                conditions: 'LessThan',
-                style: {
-                    backgroundColor: '#80cbc4',
-                    color: 'black',
-                    fontFamily: 'Tahoma',
-                    fontSize: '12px'
-                }
-            },
-            {
-                value1: 3400,
-                value2: 40000,
-                measure: 'Sold',
-                conditions: 'Between',
-                style: {
-                    backgroundColor: '#f48fb1',
-                    color: 'black',
-                    fontFamily: 'Tahoma',
-                    fontSize: '12px'
-                }
+          {
+            measure: 'In_Stock',
+            value1: 5000,
+            conditions: 'LessThan',
+            style: {
+              backgroundColor: '#80cbc4',
+              color: 'black',
+              fontFamily: 'Tahoma',
+              fontSize: '12px'
             }
+          },
+          {
+            value1: 3400,
+            value2: 40000,
+            measure: 'Sold',
+            conditions: 'Between',
+            style: {
+              backgroundColor: '#f48fb1',
+              color: 'black',
+              fontFamily: 'Tahoma',
+              fontSize: '12px'
+            }
+          }
         ]
-    },
-    allowConditionalFormatting: true,
-    height: 320,
-    isPrimary: true
+      },
+      allowConditionalFormatting: true,
+      height: 320,
+      isPrimary: true
     }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.conditionalFormattingModule.showConditionalFormattingDialog();
     }
   },
   provide: {
-        pivotview: [ConditionalFormatting]
-    }
+    pivotview: [ConditionalFormatting]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

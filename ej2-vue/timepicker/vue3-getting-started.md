@@ -141,7 +141,7 @@ import { TimePickerComponent } from "@syncfusion/ej2-vue-calendars";
 export default {
     name: "App",
     components: {
-        'ejs-timepicker' : TimePickerComponent,
+        'ejs-timepicker' : TimePickerComponent
     }
 }
 </script>
@@ -203,7 +203,7 @@ export default {
     name: 'App',
     components: {
         "ejs-timepicker": TimePickerComponent
-    },
+    }
 }
 </script>
 <style>

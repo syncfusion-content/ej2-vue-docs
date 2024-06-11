@@ -7,7 +7,7 @@
   </div>
 </template>
 <script setup>
-import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notifications";
+import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
 
 </script>
 <style>
@@ -36,5 +36,3 @@ import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notification
     content: '\e894';
   }
 </style>
-
-

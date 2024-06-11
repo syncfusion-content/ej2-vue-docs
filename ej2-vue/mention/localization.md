@@ -23,7 +23,10 @@ To load the translation object to your application, use the load function of the
 In the following sample, French culture is set to the mention component and no data is loaded. Hence, the [noRecordsTemplate](https://ej2.syncfusion.com/vue/documentation/api/mention/#norecordstemplate) property displays its text in French culture initially.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/mention/localization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/mention/localization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

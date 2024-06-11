@@ -1,53 +1,51 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'Start',
-        width: 140,
-        height: 50,
-        offsetX: 300,
-        offsetY: 50,
-        annotations: [{
-            content: 'Node1'
-        }],
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-        expandIcon: {
-            shape: 'ArrowDown',
-            width: 10,
-            height: 10
-        },
-        collapseIcon: {
-            shape: 'ArrowUp',
-            width: 10,
-            height: 10
-        }
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+    id: 'Start',
+    width: 140,
+    height: 50,
+    offsetX: 300,
+    offsetY: 50,
+    annotations: [{
+        content: 'Node1'
+    }],
+    style: {
+        fill: '#6BA5D7',
+        strokeColor: 'white'
     },
-    {
-        id: 'Init',
-        width: 140,
-        height: 50,
-        offsetX: 300,
-        offsetY: 140,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-        annotations: [{
-            content: 'Node2'
-        }],
+    expandIcon: {
+        shape: 'ArrowDown',
+        width: 10,
+        height: 10
+    },
+    collapseIcon: {
+        shape: 'ArrowUp',
+        width: 10,
+        height: 10
     }
+},
+{
+    id: 'Init',
+    width: 140,
+    height: 50,
+    offsetX: 300,
+    offsetY: 140,
+    style: {
+        fill: '#6BA5D7',
+        strokeColor: 'white'
+    },
+    annotations: [{
+        content: 'Node2'
+    }],
+}
 ];
+
 let connectors = [{
     // Unique name for the connector
     id: "connector1",
@@ -55,9 +53,13 @@ let connectors = [{
     sourceID: "Start",
     targetID: "Init",
     type: 'Orthogonal'
-}]
+}];
+
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -69,7 +71,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

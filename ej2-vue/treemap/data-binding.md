@@ -23,7 +23,10 @@ The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#dat
 The following code shows, how to bind a flat collection as data source to the TreeMap control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

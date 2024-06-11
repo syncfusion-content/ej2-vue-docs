@@ -21,7 +21,10 @@ By default, the header text of a column in Grid is displayed from the column's [
 To enable the `headerText` property, you simply need to define it in the **e-column** element. The following example demonstrates how to enable header text for a  Grid column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-headertext/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-headertext/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ To implement a header template, set the [headerTemplate](https://ej2.syncfusion.
 The following example demonstrate, the custom element is rendered for both **CustomerID** and **OrderDate** column headers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ You can customize the appearance of the stacked header elements by using the `he
 Here's an example of how to use stacked headers with a custom `headerTemplate` in Syncfusion Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-stacked-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-stacked-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +88,10 @@ You can horizontally align the text in column headers of the Grid component usin
 The following example demonstrates how to dynamically change the alignment of the header text based on DropDown change:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-headertext-align/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-headertext-align/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +120,10 @@ Grid provides the below three options for configuring:
 The following example demonstrates how to dynamically change the auto-wrap of the header text based on DropDown change.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-autowarp/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-autowarp/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +151,10 @@ To change the height of the header dynamically, you can use the [getHeaderConten
 The following example demonstrates how to dynamically change the height of the header based on a Button `click` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-height/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-height/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +203,10 @@ The Grid component provides several methods that allow you to change the column 
 Here is an example of how to change the header text of a column using the `getColumnByField` method:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-text/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-text/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -210,7 +231,10 @@ To enable the `headerValueAccessor` property, you need to set the [headerValueAc
 Here's an example of how to use the `headerValueAccessor` property to change the header text of a column:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-change-valueaccessor/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-change-valueaccessor/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -222,7 +246,10 @@ Here's an example of how to use the `headerValueAccessor` property to change the
 If you want to change the header text of all columns in the grid, you can loop through the Columns collection of the grid and set the `headerText` property for each column. Here is an example:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-headertext-all/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-headertext-all/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -275,7 +302,10 @@ setHeaderHeight: function () {
 The following example demonstrates how to change the orientation of the **Freight** column header text to 90 degrees:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-roatation/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-roatation/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -291,7 +321,10 @@ To enable custom tooltips for headers, you can use the [beforeRender](https://ej
 Here's an example of how to use the `beforeRender` event to add a custom tooltip to a header cell:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -317,7 +350,10 @@ You can apply styles to the header cells using CSS selectors. The Grid provides 
 Here's an example that demonstrates how to customize the appearance of a column header in the Grid using **className**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-using-css/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-using-css/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -351,7 +387,10 @@ Step 2: Set the **customAttributes** property of the desired column to an object
 The following example demonstrates how to customize the appearance of the **OrderID** and **OrderDate** columns using custom attributes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-using-property/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-using-property/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -374,7 +413,10 @@ The Syncfusion Grid provides methods to customize the appearance of the grid col
 Here's an example of how to use these methods to change the style of a specific column header:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-using-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-using-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -390,7 +432,10 @@ To customize the appearance of the grid header, you can handle the [headerCellIn
 The following example demonstrates how to add a `headerCellInfo` event handler to the grid. In the event handler, checked whether the current header column is **Order Date** field and then applied the appropriate CSS class to the cell based on its value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-using-event/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-using-event/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -406,7 +451,10 @@ To use the refresh header feature, you can call the [refreshHeader](https://ej2.
 The following example demonstrates how to use the `refreshHeader` method to update the grid header:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-header-refresh/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/column-header-refresh/app.vue %}
 {% endhighlight %}
 {% endtabs %}

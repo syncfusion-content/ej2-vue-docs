@@ -20,7 +20,10 @@ The Kanban uses `DataManager`, which supports both RESTful data service binding 
 To bind local JSON data to the Kanban, you can simply assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#datasource) property. The JSON object dataSource can also be provided as an instance of `DataManager` and assigned to the Kanban `dataSource` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/local-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/local-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ To bind local JSON data to the Kanban, you can simply assign a JavaScript object
 To bind remote data to kanban component, assign service data as an instance of [`DataManager`](../data) to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#datasource) property. To interact with remote data source,  provide the endpoint **url**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/remote-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/remote-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ To bind remote data to kanban component, assign service data as an instance of [
 [`OData`](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the DataManager. Refer to the following code example for remote Data binding using OData service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/odata-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/odata-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +69,10 @@ To bind remote data to kanban component, assign service data as an instance of [
 The ODataV4 is an improved version of OData protocols, and the [`DataManager`](../data) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [`odata documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/odataV4-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/odataV4-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,31 +98,25 @@ You can use **WebApiAdaptor** to bind kanban with Web API created using OData en
   </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
-import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
-Vue.use(KanbanPlugin);
-export default {
-  data: function() {
-    return {
-        kanbanData: new DataManager({
-            url: '/api/Tasks',
-            adaptor: new WebApiAdaptor(),
-            crossDomain: true
-        });
-        cardSettings: {
-            contentField: "Summary",
-            headerField: "Id",
-        }
-    };
-  },
-  methods: {
-    dialogOpen: function (args) {
-        args.cancel = true;
-    }
-  }
-}
+<script setup>
+
+import { KanbanComponent as EjsKanban, ColumnsDirective as EColumns, ColumnDirective as EColumn} from '@syncfusion/ej2-vue-kanban';
+import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+
+const kanbanData = new DataManager({
+  url: '/api/Tasks',
+  adaptor: new WebApiAdaptor(),
+  crossDomain: true
+});
+const cardSettings = {
+  contentField: "Summary",
+  headerField: "Id",
+};
+
+const dialogOpen = (args) => {
+  args.cancel = true;
+};
+
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -164,29 +170,25 @@ The CRUD operation in Kanban can be mapped to server-side controller actions usi
   </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+<script setup>
+
+import { KanbanComponent as EjsKanban, ColumnsDirective as EColumns, ColumnDirective as EColumn} from '@syncfusion/ej2-vue-kanban';
 import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-Vue.use(KanbanPlugin);
-export default {
-  data: function() {
-    return {
-        kanbanData: new DataManager({
-            url: 'Home/DataSource',
-            updateUrl: 'Home/Update',
-            insertUrl: 'Home/Insert',
-            removeUrl: 'Home/Delete',
-            adaptor: new UrlAdaptor(),
-            crossDomain: true
-        });
-        cardSettings: {
-            contentField: "Summary",
-            headerField: "Id",
-        }
-    };
-  }
-}
+
+const kanbanData = new DataManager({
+  url: 'Home/DataSource',
+  updateUrl: 'Home/Update',
+  insertUrl: 'Home/Insert',
+  removeUrl: 'Home/Delete',
+  adaptor: new UrlAdaptor(),
+  crossDomain: true
+});
+
+const cardSettings = {
+  contentField: "Summary",
+  headerField: "Id"
+};
+
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -238,7 +240,10 @@ public class Params {
 It is possible to create your own custom adaptor by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to add a custom field `TaskId` for the cards by overriding the built-in response processing using the `processResponse` method of the `ODataAdaptor`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/custom-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/custom-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -250,7 +255,10 @@ It is possible to create your own custom adaptor by extending the built-in avail
 To add a custom parameter to the data request, use the **addParams** method of **Query** class. Assign the **Query** object with additional parameters to the kanban [`query`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#query) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/additional-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/additional-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -267,7 +275,10 @@ in client-side using the [`actionFailure`](https://ej2.syncfusion.com/vue/docume
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/error-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/error-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -282,7 +293,10 @@ also when there is an exception while processing the kanban actions.
 You can use Kanban [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#datasource) property to bind the datasource to Kanban from external ajax request. In the following code, we have fetched the datasource from the server using ajax request and provided that to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/kanban/#datasource) property by using the **onSuccess** event of ajax.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/ajax-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/ajax-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

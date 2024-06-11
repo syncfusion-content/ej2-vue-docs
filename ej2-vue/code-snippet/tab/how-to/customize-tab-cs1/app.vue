@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="wrapper" style='margin-top: 20px'>
         <div>
@@ -8,12 +6,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TabPlugin);
+import { TabComponent } from '@syncfusion/ej2-vue-navigations';
+
 export default {
-    name: 'app',
+    name: "App",
+    components: {
+        "ejs-tab": TabComponent
+    },
     data: function () {
         return {
             items: [
@@ -63,15 +63,18 @@ export default {
     margin: 0 auto;
 }
 
-.e-image.e-andrew { /* csslint allow: adjoining-classes */
+.e-image.e-andrew {
+    /* csslint allow: adjoining-classes */
     background-image: url('https://ej2.syncfusion.com/demos/src/images/employees/3.png');
 }
 
-.e-image.e-margaret { /* csslint allow: adjoining-classes */
+.e-image.e-margaret {
+    /* csslint allow: adjoining-classes */
     background-image: url('https://ej2.syncfusion.com/demos/src/images/employees/6.png');
 }
 
-.e-image.e-janet { /* csslint allow: adjoining-classes */
+.e-image.e-janet {
+    /* csslint allow: adjoining-classes */
     background-image: url('https://ej2.syncfusion.com/demos/src/images/employees/7.png');
 }
 
@@ -85,7 +88,8 @@ export default {
     height: 50px;
 }
 
-.e-tab .e-tab-header .e-toolbar-item.e-active .e-tab-wrap { /* csslint allow: adjoining-classes */
+.e-tab .e-tab-header .e-toolbar-item.e-active .e-tab-wrap {
+    /* csslint allow: adjoining-classes */
     background-color: #08c;
 }
 
@@ -102,7 +106,8 @@ export default {
     height: 50px;
 }
 
-.e-tab .e-toolbar-item.e-active .e-title { /* csslint allow: adjoining-classes */
+.e-tab .e-toolbar-item.e-active .e-title {
+    /* csslint allow: adjoining-classes */
     display: block;
     color: white;
 }

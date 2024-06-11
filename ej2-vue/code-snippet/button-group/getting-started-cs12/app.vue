@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='app'>
     <div class='e-btn-group'>
@@ -15,7 +12,6 @@
 </template>
 <script>
 import Vue from 'vue';
-
 export default {
   name: 'app'
 }

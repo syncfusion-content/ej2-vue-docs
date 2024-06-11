@@ -1,21 +1,23 @@
-
-
-
 <template>
      <div>
-        <ejs-button id="Clearsort" cssClass="e-info" v-on:click.native="sort">Clear Sorting</ejs-button>
+        <ejs-button id="Clearsort" cssClass="e-info" v-on:click="sort">Clear Sorting</ejs-button>
      <br>
         <br>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings= "splitterSettings" :sortSettings="sortSettings" :allowSorting= 'true'></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Sort } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+import { GanttComponent, Sort } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -75,6 +77,3 @@ export default {
   }
 };
 </script>
-
-
-

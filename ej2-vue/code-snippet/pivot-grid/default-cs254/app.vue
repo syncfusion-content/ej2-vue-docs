@@ -1,34 +1,22 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height"  :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar" :actionComplete="actionComplete" :displayOption="displayOption"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting"
+      :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting"
+      :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar"
+      :actionComplete="actionComplete" :displayOption="displayOption"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import {
-  PivotViewPlugin,
-  GroupingBar,
-  FieldList,
-  IDataSet,
-  CalculatedField,
-  Toolbar,
-  PDFExport,
-  ExcelExport,
-  ConditionalFormatting,
-  NumberFormatting,
-  PivotActionCompleteEventArgs
-} from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList, CalculatedField, Toolbar, PDFExport, ExcelExport, ConditionalFormatting, NumberFormatting } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -45,7 +33,7 @@ export default {
       allowConditionalFormatting: true,
       allowNumberFormatting: true,
       allowPdfExport: true,
-      displayOption: { view:'Both' },
+      displayOption: { view: 'Both' },
       showToolbar: true,
       allowCalculatedField: true,
       showFieldList: true,
@@ -68,7 +56,7 @@ export default {
     };
   },
   methods: {
-    actionComplete: function (args: PivotActionCompleteEventArgs) {
+    actionComplete: function (args) {
       if (args.actionName == 'New report added' || args.actionName == 'Report saved') {
         // Triggers when the toolbar UI actions such as add new report and save current report icon are completed.
       }
@@ -88,9 +76,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

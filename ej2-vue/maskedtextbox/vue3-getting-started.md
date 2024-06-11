@@ -124,11 +124,13 @@ Follow the below steps to add the Vue MaskedTextBox component using `Composition
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
-  import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
+import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -136,10 +138,10 @@ Follow the below steps to add the Vue MaskedTextBox component using `Composition
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-maskedtextbox': MaskedTextBoxComponent,
-    }
+name: "App",
+components: {
+"ejs-maskedtextbox':":MaskedTextBoxComponent
+}
 }
 </script>
 
@@ -194,10 +196,10 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-maskedtextbox": MaskedTextBoxComponent
-    }
+name: "App",
+components: {
+"ejs-maskedtextbox":MaskedTextBoxComponent
+},
 }
 </script>
 <style>
@@ -271,13 +273,13 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-maskedtextbox": MaskedTextBoxComponent
-    },
-    data () {
-        return {}
-    }
+name: "App",
+components: {
+"ejs-maskedtextbox":MaskedtextboxComponent
+}
+data () {
+    eturn {}
+}
 }
 </script>
 <style>
@@ -346,24 +348,25 @@ import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-
 import { MaskedTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: 'App',
-    components: {
-        "ejs-maskedtextbox": MaskedTextBoxComponent
-    },
-    data () {
-        return {
-            value : ''
-        }
+name: "App",
+components: {
+"ejs-maskedtextbox":MaskedtextboxComponent
+},
+data () {
+    return {
+        value : ''
     }
+}
 }
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-    .wrap {
-        margin: 35px auto;
-        width: 240px;
-    }
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+
+.wrap {
+    margin: 35px auto;
+    width: 240px;
+}
 </style>
 
 {% endhighlight %}

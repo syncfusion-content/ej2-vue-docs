@@ -1,31 +1,29 @@
-
-
-
-
 <template>
-    <div id="app">
-      <ejs-button id="calculated-field-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Number Formatting</ejs-button>
-      <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList" :allowNumberFormatting="allowNumberFormatting" :numberFormatting="numberFormatting"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="calculated-field-btn" :isPrimary="isPrimary" v-on:click="btnClick">Number Formatting</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList"
+      :allowNumberFormatting="allowNumberFormatting" :numberFormatting="numberFormatting"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, NumberFormatting, FieldList, NumberFormattingEventArgs } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent, NumberFormatting, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
         expandAll: false,
         enableSorting: true,
-        formatSettings: [{ name: 'Amount', format: 'C2', useGrouping: false, currency: 'EUR' }],            drilledMembers: [{ name: 'Country', items: ['France', 'Germany'] }],
+        formatSettings: [{ name: 'Amount', format: 'C2', useGrouping: false, currency: 'EUR' }],
+        drilledMembers: [{ name: 'Country', items: ['France', 'Germany'] }],
         columns: [{ name: 'Year' }],
         rows: [{ name: 'Country' }, { name: 'Products' }],
         values: [{ name: 'Amount', caption: 'Sold Amount' },
@@ -36,27 +34,24 @@ export default {
       showFieldList: true,
       allowNumberFormatting: true,
       isPrimary: true,
-   }
+    }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.numberFormattingModule.showNumberFormattingDialog();
     },
-     numberFormatting: function (args: NumberFormattingEventArgs) {
-        if(args.formatName === 'Amount') {
-            args.cancel = true;
-        }
-  },
-  provide: {
-        pivotview: [NumberFormatting, FieldList]
+    numberFormatting: function (args) {
+      if (args.formatName === 'Amount') {
+        args.cancel = true;
+      }
+    },
+    provide: {
+      pivotview: [NumberFormatting, FieldList]
     }
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

@@ -3,11 +3,11 @@
 </template>
 <script>
 
-import Vue from "vue";
-import { GanttPlugin, Selection, VirtualScroll,Edit } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Selection, VirtualScroll,Edit } from "@syncfusion/ej2-vue-gantt";
 import{tempData} from "./datasource.js";
 
-Vue.use(GanttPlugin);
+
 
 var virtualData = [];
 var projId = 1;

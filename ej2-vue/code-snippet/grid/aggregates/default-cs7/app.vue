@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' height='290px' allowPaging='true' :toolbar='toolbarOptions' :editSettings='editSettings' :actionBegin='actionBegin'>
@@ -20,13 +18,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Aggregate, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
 
-Vue.use(GridPlugin);
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Page, Aggregate, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { createApp } from "vue";
+const app = createApp();
 let selectedRecord = {};
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
@@ -34,7 +40,7 @@ export default {
       toolbarOptions : ['Delete', 'Update', 'Cancel'],
       editSettings : { allowEditing: true, allowDeleting: true, mode: 'Inline' },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
@@ -72,5 +78,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
 </style>
-
-

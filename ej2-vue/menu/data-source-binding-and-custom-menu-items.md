@@ -23,7 +23,10 @@ The Menu can be populated with hierarchical data source by assigning it to the [
 The Menu can generate its menu items through an array of complex data source by mapping fields from the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/menu/fieldSettingsModel) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ In application level, remote data binding can be achieved using [`DataManager`](
 To create Menu, assign `items` property with resultant data from [`callback`](https://ej2.syncfusion.com/documentation/api/data/deferred/#then) function.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +57,10 @@ Menu can be populated from self-referential data structure that contains array o
 In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the **itemId**, **parentId**, and **text** fields, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ npm install @syncfusion/ej2-vue-navigations --save
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,22 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :gridSettings="gridSettings">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -29,26 +26,24 @@ export default {
       },
       height: 350,
       gridSettings: {
-          rowHeight: 36
+        rowHeight: 36
       }
     }
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+
 /* csslint ignore:start */
-    .e-pivotview .e-rowsheader, 
-    .e-pivotview .e-columnsheader,
-    .e-pivotview .e-gtot,
-    .e-pivotview .e-content,
-    .e-pivotview .e-gridheader,
-    .e-pivotview .e-headercell {
-        background-color:#fff !important;
-    }
+.e-pivotview .e-rowsheader,
+.e-pivotview .e-columnsheader,
+.e-pivotview .e-gtot,
+.e-pivotview .e-content,
+.e-pivotview .e-gridheader,
+.e-pivotview .e-headercell {
+  background-color: #fff !important;
+}
+
 /* csslint ignore:end */
 </style>
-
-
-
-

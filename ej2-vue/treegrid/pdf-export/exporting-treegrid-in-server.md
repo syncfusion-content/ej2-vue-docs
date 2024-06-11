@@ -71,12 +71,13 @@ public class TreeGridColumnModel
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, PdfExport } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Page, Toolbar, PdfExport } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
+
 
 export default {
   data ()  {
@@ -92,9 +93,7 @@ export default {
         }
     }
   },
-  provide: {
-      treegrid: [ Page, Toolbar, PdfExport ]
-  }
+  provide('treegrid',  [ Page, Toolbar, PdfExport ]);
 }
 </script>
 

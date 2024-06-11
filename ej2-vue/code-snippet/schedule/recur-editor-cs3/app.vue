@@ -1,52 +1,51 @@
-
-
 <template>
-  <div id='app'>
-    <div id='container'>
-        <div style='padding-bottom:15px;'>
-            <label id='rule-label'>Date Collections</label>
+    <div id='app'>
+        <div id='container'>
+            <div style='padding-bottom:15px;'>
+                <label id='rule-label'>Date Collections</label>
                 <div class='rule-output-container'>
                     <div id='rule-output'>
                         <div v-for="(date, index) in dates" :key="index">{{ date }}</div>
                     </div>
                 </div>
             </div>
-        <ejs-recurrenceeditor id='editor' style="display: none;" ref='EditorObj' :selectedType='selectedType'>
-        </ejs-recurrenceeditor>
+            <ejs-recurrenceeditor id='editor' style="display: none;" ref='EditorObj' :selectedType='selectedType'>
+            </ejs-recurrenceeditor>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { RecurrenceEditorPlugin } from '@syncfusion/ej2-vue-schedule';
+import { RecurrenceEditorComponent } from '@syncfusion/ej2-vue-schedule';
 
-  Vue.use(RecurrenceEditorPlugin);
-
-  export default {
-    data () {
-      return {
-        selectedType: 1,
-        dates: []  
-      }
+export default {
+    name: "App",
+    components: {
+        "ejs-recurrenceeditor": RecurrenceEditorComponent
+    },
+    data() {
+        return {
+            selectedType: 1,
+            dates: []
+        }
     },
     mounted: function () {
         let recObject = this.$refs.EditorObj;
-        this.dates = recObject.getRecurrenceDates(new Date(2018, 0, 7, 10, 0), 'FREQ=DAILY;INTERVAL=1', '20180108T114224Z,20180110T114224Z', 4, new Date(2018, 0, 7));
+        this.dates = recObject.getRecurrenceDates(new Date(2018, 0, 7, 10, 0), 'FREQ=DAILY;INTERVAL=1', '20180108T114224Z,20180110T114224Z', 4, new Date(2018, 0, 7));
         for (let index = 0; index < this.dates.length; index++) {
             this.dates[index] = new Date(this.dates[index]).toString();
         }
     }
-  }
+}
 </script>
 <style>
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 
 .recurrence-editor-wrap {
     margin: 0 25%;
@@ -71,5 +70,3 @@
     }
 }
 </style>
-
-

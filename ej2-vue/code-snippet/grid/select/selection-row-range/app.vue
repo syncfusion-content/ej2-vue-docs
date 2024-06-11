@@ -9,7 +9,7 @@
       <ejs-textbox ref="textbox1" required width="120"></ejs-textbox>
     </div>
     <div style="padding: 10px 0 0px 180px">
-      <ejs-button id="button" @click.native="onClick">Select rows</ejs-button>
+      <ejs-button id="button" @click="onClick">Select rows</ejs-button>
     </div>
     <div style="padding: 20px 0px 0px 0px">
       <ejs-grid ref="grid" :dataSource="data" :selectionSettings="selectionOptions">
@@ -24,17 +24,20 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { TextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { TextBoxComponent as EjsTextbox } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(TextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-textbox":TextboxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -65,5 +68,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

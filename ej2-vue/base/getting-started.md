@@ -121,7 +121,10 @@ Add Button component's styles as given below in `<style>` section of the `App.vu
 Now run the `npm run dev` command in the console, it will build your application and open in the browser.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/base/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/base/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

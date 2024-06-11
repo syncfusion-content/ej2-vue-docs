@@ -1,18 +1,20 @@
-
-
 <template>
 <ejs-dropdownbutton :items='items' iconCss= 'e-cart-icon e-shopping' :beforeItemRender='onBeforeItemRender'>Shop By</ejs-dropdownbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
+
 
 export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent
+},
     data () {
         return {
             items:[
@@ -76,5 +78,3 @@ export default {
         content: '\e700';
     }
 </style>
-
-

@@ -17,7 +17,10 @@ To enable column selection in the Grid, you need to set the [selectionSettings.a
 Here's an example of how to enable column selection using `allowColumnSelection` property in the Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ To enable single column selection, set the [selectionSettings.allowColumnSelecti
 Here's an example of how to enable single column selection using `allowColumnSelection` and `type` property :
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-single/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-single/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ To enable multiple column selection, set the [selectionSettings.allowColumnSelec
 Here's an example of how to enable multiple column selection using `allowColumnSelection` and `type` property :
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-multiple/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-multiple/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +80,10 @@ To achieve single column selection, you can use the [selectColumn](https://ej2.s
 The following example, demonstrates how to select a single column within the Grid by obtaining the selected column index through a textbox component and passing these column index as argument to the `selectColumn` method. When the button event is triggered by clicking the **Select Column** button, a single column is selected within the Grid:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-signle-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-signle-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +101,10 @@ To achieve multiple column selection, you can use the [selectColumns](https://ej
 The following example demonstrates how to select multiple columns in the Grid by calling the `selectColumns` method within the button click event and passing an array of column indexes as arguments.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-multiple-method/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-multiple-method/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +120,10 @@ To achieve range of column selection, you can use the [selectColumnsByRange](htt
 The following example demonstrates how to select a range of columns within the Grid by obtaining the selected column's start index and end index through textbox components. Then, pass these start index and end index as arguments to the `selectColumnsByRange` method. When you trigger the button event by clicking the **Select Columns** button, a range of columns is selected within the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-range/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-range/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +139,10 @@ To achieve this, you can use the [selectColumnWithExisting](https://ej2.syncfusi
 The following example demonstrates how to select a column with an existing column by obtaining the selected column index through a textbox component and passing this column index as an argument to the `selectColumnWithExisting` method. When you trigger the button event by clicking the **Select Columns** button,  it selects the specified column along with any existing selections within the Grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-existing/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-existing/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +158,10 @@ Clearing column selection programmatically in the Grid component is a useful fea
 In the following example, it demonstrates how to clear column selection by calling the `clearColumnSelection` method in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-clear/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-clear/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +183,10 @@ The Grid provides several events related to column selection that allow you to r
 In the following example, column selection is canceled when the value of `field` is equal to **CustomerID** within the `columnSelecting` event. The **headerCell** background color changes to green when the `columnSelected` event is triggered, and it changes to red when the `columnDeselecting` event is triggered. Furthermore, column selection is canceled when the value of `field` is equal to **CustomerID** within the `columnDeselected` event is triggered. A notification message is displayed to indicate which event was triggered whenever a column is selected.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-column-events/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-column-events/app.vue %}
 {% endhighlight %}
 {% endtabs %}

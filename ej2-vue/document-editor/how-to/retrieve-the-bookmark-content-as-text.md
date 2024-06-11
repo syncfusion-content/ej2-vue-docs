@@ -18,59 +18,88 @@ You can [`selectBookmark`](../../document-editor/bookmark#select-bookmark) API t
 
 The following example code illustrates how to get the bookmark content as plain text.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:created="onCreated.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  // To insert text in cursor position
+  container.value.ej2Instances.documentEditor.editor.insertText('Document editor');
+  // To select all the content in document
+  container.value.ej2Instances.documentEditor.selection.selectAll();
+  // Insert bookmark to selected content
+  container.value.ej2Instances.documentEditor.editor.insertBookmark('Bookmark1');
+
+  // Provide your bookmark name to navigate to specific bookmark
+  container.value.ej2Instances.documentEditor.selection.selectBookmark('Bookmark1');
+
+  // To get the selected content as text
+  let selectedContent = container.value.ej2Instances.documentEditor.selection.text;
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      // To insert text in cursor position
+      this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
+      // To select all the content in document
+      this.$refs.container.ej2Instances.documentEditor.selection.selectAll();
+      // Insert bookmark to selected content
+      this.$refs.container.ej2Instances.documentEditor.editor.insertBookmark('Bookmark1');
 
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        // To insert text in cursor position
-        this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
-        // To select all the content in document
-        this.$refs.container.ej2Instances.documentEditor.selection.selectAll();
-        // Insert bookmark to selected content
-        this.$refs.container.ej2Instances.documentEditor.editor.insertBookmark('Bookmark1');
+      // Provide your bookmark name to navigate to specific bookmark
+      this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark('Bookmark1');
 
-        // Provide your bookmark name to navigate to specific bookmark
-        this.$refs.container.ej2Instances.documentEditor.selection.selectBookmark('Bookmark1');
-
-        // To get the selected content as text
-        let selectedContent = this.$refs.container.ej2Instances.documentEditor.selection.text;
-      }
+      // To get the selected content as text
+      let selectedContent = this.$refs.container.ej2Instances.documentEditor.selection.text;
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 To get the bookmark content as SFDT (rich text), please check this [`link`](../../document-editor/how-to/get-the-selected-content/#get-the-selected-content-as-sfdt-rich-text)
 
@@ -80,54 +109,78 @@ You can use [`text`](https://ej2.syncfusion.com/vue/documentation/api/document-e
 
 The following example code illustrates how to get the whole document content as plain text.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:created="onCreated.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  // To insert text in cursor position
+  container.value.ej2Instances.documentEditor.editor.insertText('Document editor');
+  // To select all the content in document
+  container.value.ej2Instances.documentEditor.selection.selectAll();
+
+  // To get the content as text
+  let selectedContent = container.value.ej2Instances.documentEditor.selection.text;
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      // To insert text in cursor position
+      this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
+      // To select all the content in document
+      this.$refs.container.ej2Instances.documentEditor.selection.selectAll();
 
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        // To insert text in cursor position
-        this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
-        // To select all the content in document
-        this.$refs.container.ej2Instances.documentEditor.selection.selectAll();
-
-        // To get the content as text
-        let selectedContent = this.$refs.container.ej2Instances.documentEditor.selection.text;
-      }
+      // To get the content as text
+      let selectedContent = this.$refs.container.ej2Instances.documentEditor.selection.text;
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Get the whole document content as SFDT(rich text)
 
@@ -135,52 +188,75 @@ You can use [`serialize`](https://ej2.syncfusion.com/vue/documentation/api/docum
 
 The following example code illustrates how to get the whole document content as SFDT.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-documenteditorcontainer
-      ref="container"
-      :serviceUrl="serviceUrl"
-      height="590px"
-      id="container"
-      :enableToolbar="true"
-      v-on:created="onCreated.bind(this)"
-    ></ejs-documenteditorcontainer>
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  // To insert text in cursor position
+  container.value.ej2Instances.documentEditor.editor.insertText('Document editor');
+
+  // To get the content as SFDT
+  let selectedContent = container.value.ej2Instances.documentEditor.serialize();
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" :serviceUrl="serviceUrl" height="590px" id="container"
+      :enableToolbar="true" v-on:created="onCreated.bind(this)"></ejs-documenteditorcontainer>
   </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import {
-    DocumentEditorContainerPlugin,
-    DocumentEditorContainerComponent,
-    Toolbar,
-  } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      // To insert text in cursor position
+      this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
 
-  export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        // To insert text in cursor position
-        this.$refs.container.ej2Instances.documentEditor.editor.insertText('Document editor');
-
-        // To get the content as SFDT
-        let selectedContent: string = this.$refs.container.ej2Instances.documentEditor.serialize();
-      }
+      // To get the content as SFDT
+      let selectedContent = this.$refs.container.ej2Instances.documentEditor.serialize();
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Get the header content as text
 
@@ -201,15 +277,16 @@ The following example code illustrates how to get the header content as plain te
     ></ejs-documenteditorcontainer>
   </div>
 </template>
-<script>
-  import Vue from 'vue';
+<script setup>
+import { provide } from "vue";
+  
   import {
-    DocumentEditorContainerPlugin,
+    DocumentEditorContainerComponent,
     DocumentEditorContainerComponent,
     Toolbar,
   } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
+  
 
   export default {
     data() {
@@ -218,10 +295,8 @@ The following example code illustrates how to get the header content as plain te
           'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
       };
     },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
+    provide('//Inject require modules.
+      DocumentEditorContainer',  [Toolbar],);,
     methods: {
       onCreated: function () {
         // To navigate the selection to header

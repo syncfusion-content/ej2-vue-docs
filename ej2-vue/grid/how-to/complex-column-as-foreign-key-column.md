@@ -15,7 +15,10 @@ The following example shows how to set the complex column as foreign key column.
 In the following example, `Employee.EmployeeID` is a complex column and also declared as a foreign column which shows `FirstName` column from foreign data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/foreigncolumn-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/foreigncolumn-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

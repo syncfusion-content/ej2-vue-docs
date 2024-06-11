@@ -17,7 +17,10 @@ To place the icon on a list box, set the [`iconCss`](https://ej2.syncfusion.com/
 In the following sample, icon classes are mapped with `iconCss` field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ ListBox items can be customized according to the requirement using [`itemTemplat
 In the following sample, the items in the cart are displayed using list box template,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}

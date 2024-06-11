@@ -19,7 +19,10 @@ ButtonGroup supports radio type selection in which only one button can be select
 The following example illustrates the single selection behavior in ButtonGroup,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ ButtonGroup supports checkbox type selection in which multiple button can be sel
 The following example illustrates the multiple selection behavior in ButtonGroup,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ To initialize DropDownButton component refer [`DropDownButton Getting Started do
 In the following example, DropDownButton component is added by importing `DropDownButtonPlugin` from `ej2-vue-splitbuttons`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +79,10 @@ To initialize SplitButton component refer [`SplitButton Getting Started document
 In the following example, SplitButton component is added by importing `SplitButtonPlugin` from `ej2-vue-splitbuttons`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

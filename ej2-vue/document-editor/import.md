@@ -15,7 +15,10 @@ In Document Editor, the documents are stored in its own format called **Syncfusi
 The following example shows how to open SFDT data in Document Editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/import-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/import-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The following example shows how to open SFDT data in Document Editor.
 The following example shows how to import document from local machine.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/import-sfdt-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/import-sfdt-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,66 +48,130 @@ You can convert word documents into SFDT format using the .NET Standard library 
 
 Please refer the following example for converting word documents into SFDT.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-        <input type="file" ref="fileUpload" v-on:change="onFileUpload" accept=".dotx,.docx,.docm,.dot,.doc,.rtf,.txt,.xml,.sfdt" style="position:fixed; left:-100em" />
-        <div>
-            <div>
-                  <button v-on:click='openFileButtonClickHandler'>Import</button>
-            </div>
-            <ejs-documenteditor ref="documenteditor" height="370px" style="width: 100%;display:block"></ejs-documenteditor>
-        </div>
+  <input type="file" ref="fileUpload" v-on:change="onFileUpload"
+    accept=".dotx,.docx,.docm,.dot,.doc,.rtf,.txt,.xml,.sfdt" style="position:fixed; left:-100em" />
+  <div>
+    <div>
+      <button v-on:click='openFileButtonClickHandler'>Import</button>
+    </div>
+    <ejs-documenteditor ref="documenteditor" height="370px" style="width: 100%;display:block"></ejs-documenteditor>
+  </div>
 </template>
-<script>
-    import Vue from 'vue'
-    import { DocumentEditorPlugin } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor } from '@syncfusion/ej2-vue-documenteditor';
+import { ref } from 'vue';
 
-    Vue.use(DocumentEditorPlugin);
+const documenteditor = ref(null);
+const fileUpload = ref(null);
 
-    export default {
-        data: function() {
-            return {
-            };
-        },
-        methods: {
-            loadFile: function(file: File): void {
-                let ajax: XMLHttpRequest = new XMLHttpRequest();
-                ajax.open('POST', 'https://localhost:4000/api/documenteditor/Import', true);
-                ajax.onreadystatechange = () => {
-                    if (ajax.readyState === 4) {
-                        if (ajax.status === 200 || ajax.status === 304) {
-                            // open SFDT text in document editor
-                            this.$refs.documenteditor.open(ajax.responseText);
-                        }
-                    }
-                }
-                let formData: FormData = new FormData();
-                formData.append('files', file);
-                ajax.send(formData);
-            },
-            openFileButtonClickHandler: function() {
-                this.$refs.fileUpload.click();
-            },
-            onFileUpload: function(e) {
-                if (e.target.files[0]) {
-                    let file = e.target.files[0];
-                    if (file.name.substr(file.name.lastIndexOf('.')) === '.sfdt') {
-                        let fileReader: FileReader = new FileReader();
-                        fileReader.onload = (e: any) => {
-                            let contents: string = e.target.result;
-                            this.$refs.documenteditor.open(contents);
-                        };
-                        fileReader.readAsText(file);
-                    }
-                }
-            }
-        }
+const loadFile = function (file) {
+  let ajax = new XMLHttpRequest();
+  ajax.open('POST', 'https://localhost:4000/api/documenteditor/Import', true);
+  ajax.onreadystatechange = () => {
+    if (ajax.readyState === 4) {
+      if (ajax.status === 200 || ajax.status === 304) {
+        // open SFDT text in document editor
+        documenteditor.value.open(ajax.responseText);
+      }
     }
+  }
+  let formData = new FormData();
+  formData.append('files', file);
+  ajax.send(formData);
+}
+
+const openFileButtonClickHandler = function () {
+  fileUpload.value.click();
+}
+
+const onFileUpload = function (e) {
+  if (e.target.files[0]) {
+    let file = e.target.files[0];
+    if (file.name.substr(file.name.lastIndexOf('.')) === '.sfdt') {
+      let fileReader = new FileReader();
+      fileReader.onload = (e) => {
+        let contents = e.target.result;
+        documenteditor.value.open(contents);
+      };
+      fileReader.readAsText(file);
+    }
+  }
+}
+
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <input type="file" ref="fileUpload" v-on:change="onFileUpload"
+    accept=".dotx,.docx,.docm,.dot,.doc,.rtf,.txt,.xml,.sfdt" style="position:fixed; left:-100em" />
+  <div>
+    <div>
+      <button v-on:click='openFileButtonClickHandler'>Import</button>
+    </div>
+    <ejs-documenteditor ref="documenteditor" height="370px" style="width: 100%;display:block"></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  methods: {
+    loadFile: function (file) {
+      let ajax = new XMLHttpRequest();
+      ajax.open('POST', 'https://localhost:4000/api/documenteditor/Import', true);
+      ajax.onreadystatechange = () => {
+        if (ajax.readyState === 4) {
+          if (ajax.status === 200 || ajax.status === 304) {
+            // open SFDT text in document editor
+            this.$refs.documenteditor.open(ajax.responseText);
+          }
+        }
+      }
+      let formData = new FormData();
+      formData.append('files', file);
+      ajax.send(formData);
+    },
+    openFileButtonClickHandler: function () {
+      this.$refs.fileUpload.click();
+    },
+    onFileUpload: function (e) {
+      if (e.target.files[0]) {
+        let file = e.target.files[0];
+        if (file.name.substr(file.name.lastIndexOf('.')) === '.sfdt') {
+          let fileReader = new FileReader();
+          fileReader.onload = (e) => {
+            let contents = e.target.result;
+            this.$refs.documenteditor.open(contents);
+          };
+          fileReader.readAsText(file);
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 Here’s how to handle the server-side action for converting word document in to SFDT.
 

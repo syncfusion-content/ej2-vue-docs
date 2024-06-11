@@ -28,7 +28,10 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/range-slider/ticks-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/range-slider/ticks-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

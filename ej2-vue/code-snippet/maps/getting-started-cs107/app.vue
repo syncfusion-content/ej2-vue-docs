@@ -1,7 +1,7 @@
 <template>
     <div id="app">
           <div class='wrapper'>
-             <ejs-button id='button' isToggle="true" v-on:click.native='getMinMaxValues'> GetMinMaxLatitudeLongitude
+             <ejs-button id='button' isToggle="true" v-on:click='getMinMaxValues'> GetMinMaxLatitudeLongitude
              </ejs-button>
              <p id="coordinatesDisplay"></p>
             <ejs-maps id="maps" ref="maps" :zoomSettings='zoomSettings' :centerPosition='centerPosition'>
@@ -14,13 +14,20 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Marker, Zoom} from '@syncfusion/ej2-vue-maps';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { MapsComponent, Marker, Zoom, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
-Vue.use(ButtonPlugin);
+
+
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
         shapeData: world_map,

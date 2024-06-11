@@ -17,7 +17,10 @@ Set the [CloseOnEscape](https://ej2.syncfusion.com/vue/documentation/api/dialog/
 In the following sample, dialog is closed when clicking outside the dialog area using [hide](https://ej2.syncfusion.com/vue/documentation/api/dialog/#hide) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/outside-click-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/outside-click-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The rendered Linear Gauge can be printed directly from the browser by calling the [`print`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#print) method. To use the print functionality, set the [`allowPrint`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#allowprint) property as **true** and inject the **Print** module in **provide** section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs48/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs48/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ To use the image export functionality, set the [`allowImageExport`](https://ej2.
 * SVG
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs49/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs49/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ To use the image export functionality, set the [`allowImageExport`](https://ej2.
 To use the PDF export functionality, set the [`allowPdfExport`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#allowpdfexport) property as **true** and inject the **PdfExport** module in **provide** section. The rendered Linear Gauge can be exported as PDF using the [`export`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#export) method. The [`export`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#export) method requires three parameters: file type, file name, and orientation of the PDF document. The orientation of the PDF document can be set as **Portrait** or **Landscape**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs50/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs50/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ To use the PDF export functionality, set the [`allowPdfExport`](https://ej2.sync
 The Linear Gauge can be exported as base64 string for the JPEG, PNG and PDF formats. The rendered Linear Gauge can be exported as base64 string of the exported image or PDF document used in the [`export`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#export) method. The arguments that are required for this method is export type, file name, orientation of the exported PDF document and **allowDownload** boolean value that is set as **false** to return base64 string. The value for the orientation of the exported PDF document is set as **null** for image export and **Portrait** or **Landscape** for the PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs51/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs51/app.vue %}
 {% endhighlight %}
 {% endtabs %}

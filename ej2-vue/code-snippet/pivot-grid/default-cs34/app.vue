@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :actionFailure="actionFailure"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :actionFailure="actionFailure">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotActionFailureEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -29,8 +27,8 @@ export default {
       height: 350
     }
   },
-   methods: {
-    actionFailure: function (args: PivotActionFailureEventArgs) {
+  methods: {
+    actionFailure: function (args) {
       if (args.actionName == 'Drill down' || args.actionName == 'Drill up') {
         // Triggers when the current UI action fails to achieve the desired result.
       }
@@ -39,8 +37,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

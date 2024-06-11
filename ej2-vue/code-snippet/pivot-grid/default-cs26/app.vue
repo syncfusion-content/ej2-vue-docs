@@ -1,23 +1,22 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview_flist" :height="height" :allowDeferLayoutUpdate="allowDeferLayoutUpdate"></ejs-pivotview>
-        <ejs-pivotfieldlist id="pivotfieldlist1" :allowDeferLayoutUpdate="allowDeferLayoutUpdate" :dataSourceSettings="dataSourceSettings" :enginePopulated="fieldEnginePopulated" :renderMode="renderMode"></ejs-pivotfieldlist>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview_flist" :height="height" :allowDeferLayoutUpdate="allowDeferLayoutUpdate"></ejs-pivotview>
+    <ejs-pivotfieldlist id="pivotfieldlist1" :allowDeferLayoutUpdate="allowDeferLayoutUpdate"
+      :dataSourceSettings="dataSourceSettings" :enginePopulated="fieldEnginePopulated"
+      :renderMode="renderMode"></ejs-pivotfieldlist>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotFieldListPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotFieldListComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(PivotFieldListPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent,
+    "ejs-pivotfieldlist": PivotFieldListComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -34,25 +33,22 @@ export default {
     }
   },
   methods: {
-    fieldEnginePopulated: function(args) {
+    fieldEnginePopulated: function (args) {
       let fieldlistObj = document.getElementById('pivotfieldlist1').ej2_instances[0];
       let pivotGridObj = document.getElementById('pivotview_flist').ej2_instances[0];
       if (fieldlistObj.isRequiredUpdate) {
-            fieldlistObj.updateView(pivotGridObj);
-        }
-        pivotGridObj.notify('ui-update', pivotGridObj);
-        fieldlistObj.notify('tree-view-update', fieldlistObj);
+        fieldlistObj.updateView(pivotGridObj);
+      }
+      pivotGridObj.notify('ui-update', pivotGridObj);
+      fieldlistObj.notify('tree-view-update', fieldlistObj);
     }
   }
 }
 </script>
 <style>
-    @import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-    #pivotfieldlist1 {
-      width: 400px;
-      margin-top: 20px;
-    }
-</style>
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 
-
-
+#pivotfieldlist1 {
+  width: 400px;
+  margin-top: 20px;
+}</style>

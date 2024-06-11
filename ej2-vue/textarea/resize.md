@@ -20,6 +20,9 @@ The TextArea allows users to input and edit large amounts of text. Resizing this
 | None | Disables the resizing in the TextArea. This option is ideal for situations where maintaining a consistent layout is critical, and resizing by users is unnecessary. |
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/resize-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/resize-cs1/app.vue %}
 {% endhighlight %}
@@ -32,6 +35,9 @@ The TextArea allows users to input and edit large amounts of text. Resizing this
 You can easily customize the width of the TextArea using the [width](https://ej2.syncfusion.com/vue/documentation/api/textarea/#width) property. This property allows precise adjustment of the TextArea's width according to the specific layout requirements of the application.
 
 {% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textarea/resize-cs2/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textarea/resize-cs2/app.vue %}
 {% endhighlight %}

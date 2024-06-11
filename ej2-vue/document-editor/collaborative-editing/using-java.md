@@ -16,7 +16,7 @@ Allows multiple users to work on the same document simultaneously. This can be d
 
 The following are needed to enable collaborative editing in Document Editor.
 
-- Socket JS
+- Sock JS
 - PostgreSQL database
 
 ## How to enable collaborative editing in client side
@@ -62,9 +62,9 @@ export default {
 
 ```
 
-### Step 2: Configure SocketJS to send and receive changes
+### Step 2: Configure SockJS to send and receive changes
 
-To broadcast the changes made and receive changes from remote users, configure SocketJS like below.
+To broadcast the changes made and receive changes from remote users, configure SockJS like below.
 
 ```javaScript
 methods: {
@@ -97,7 +97,7 @@ methods: {
 
 ### Step 3: Subscribe to specific topic while opening the document
 
-When opening a document, we need to generate a unique ID for each document. These unique IDs are then used to create rooms using SocketJS, which facilitates sending and receiving data from the server.
+When opening a document, we need to generate a unique ID for each document. These unique IDs are then used to create rooms using SockJS, which facilitates sending and receiving data from the server.
 
 ```javaScript
 methods: {
@@ -149,9 +149,9 @@ methods: {
 
 ## How to enable collaborative editing in Java
 
-### Step 1: Configure SocketJS hub to create room for collaborative editing session.
+### Step 1: Configure SockJS hub to create room for collaborative editing session.
 
-To manage groups for each document, create a folder named “Hub” and add a file named ``` DocumentEditorHub.java ``` inside it. Add the following code to the file to manage SocketJS groups using room names.
+To manage groups for each document, create a folder named “Hub” and add a file named ``` DocumentEditorHub.java ``` inside it. Add the following code to the file to manage SockJS groups using room names.
 
 Join the group by using unique id of the document by using JoinGroup method.
 
@@ -184,7 +184,7 @@ public static void broadcastToRoom(String roomName, Object payload, MessageHeade
     }
 }
 ```
-### Step 2: Handle user disconnection using SocketJS.
+### Step 2: Handle user disconnection using SockJS.
 
 ```java
 @EventListener
@@ -274,7 +274,7 @@ private ActionInfo addOperationsToTable(ActionInfo action) {
 ```
 
 #### Add Web API to get previous operation as a backup to get lost operations
-On the client side, messages send from server using SocketJS may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the database.
+On the client side, messages send from server using SockJS may be received in a different order, or some operations may be missed due to network issues. In these cases, we need a backup method to retrieve missing records from the database.
 Using the following method, we can retrieve all operations after the last successful client-synced version and return all missing operations to the requesting client. 
 
 ```java

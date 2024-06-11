@@ -16,32 +16,61 @@ domainurl: ##DomainURL##
 
 The diagram is serialized as string while saving. The client-side method, [`saveDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#savediagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram ref="diagramObject" id="diagram"  :width='width' :height='height'></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram ref="diagramObject" id="diagram" :width='width' :height='height'></ejs-diagram>
+  </div>
+</template>
+<script setup>
+import { onMounted, ref } from "vue";
+import { DiagramComponent as EjsDiagram } from "@syncfusion/ej2-vue-diagrams";
+
+const diagramObject = ref(null);
+const width = "100%";
+const height = "350px";
+
+onMounted(function () {
+  let diagramInstance = diagramObject.value.ej2Instances;
+  //returns serialized string of the Diagram
+  let saveData = diagramInstance.saveDiagram();
+});
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram ref="diagramObject" id="diagram" :width='width' :height='height'></ejs-diagram>
+  </div>
 </template>
 <script>
+import { DiagramComponent } from "@syncfusion/ej2-vue-diagrams";
+
 export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-        }
-    },
-    mounted: function() {
-        let diagramInstance: Diagram = this.$refs.diagramObject.ej2Instances;
-        let saveData: string;
-//returns serialized string of the Diagram
-saveData = diagramInstance.saveDiagram();
+  name: 'App',
+  components: {
+    'ej2-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "350px",
     }
+  },
+  mounted: function () {
+    let diagramInstance = this.$refs.diagramObject.ej2Instances;
+    //returns serialized string of the Diagram
+    let saveData = diagramInstance.saveDiagram();
+  }
 }
 </script>
 
-```
-
+{% endhighlight %}
+{% endtabs %}
 
 This string can be converted to JSON data and stored for future use. The following snippet illustrates how to save the serialized string into local storage.
 
@@ -59,30 +88,61 @@ Diagram can also be saved as raster or vector image files. For more information 
 Diagram is loaded from the serialized string data by client-side method, [`loadDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#loaddiagram).
 The following code illustrates how to load the diagram from serialized string data.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-diagram ref="diagramObject" id="diagram"  :width='width' :height='height'></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram ref="diagramObject" id="diagram" :width='width' :height='height'></ejs-diagram>
+  </div>
 </template>
 <script>
+import { DiagramComponent } from "@syncfusion/ej2-vue-diagrams";
+
 export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-        }
-    },
-    mounted: function() {
-        let diagram: Diagram = this.$refs.diagramObject.ej2Instances;
-//Loads the Diagram from saved json data
-diagram.loadDiagram(saveData);
+  name: 'app',
+  components: {
+    'ej2-diagram': DiagramComponent
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "350px",
     }
+  },
+  mounted: function () {
+    let diagram = this.$refs.diagramObject.ej2Instances;
+    //Loads the Diagram from saved json data
+    diagram.loadDiagram(saveData);
+  }
 }
 </script>
 
-```
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-diagram ref="diagramObject" id="diagram" :width='width' :height='height'></ejs-diagram>
+  </div>
+</template>
+<script setup>
+import { onMounted, ref } from "vue";
+import { DiagramComponent as EjsDiagram } from "@syncfusion/ej2-vue-diagrams";
+
+const diagramObject = ref(null);
+const width = "100%";
+const height = "350px";
+
+onMounted(function () {
+  let diagram = diagramObject.value.ej2Instances;
+  //Loads the Diagram from saved json data
+  diagram.loadDiagram(saveData);
+})
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 >Note: Before loading a new diagram, existing diagram is cleared.
 
@@ -95,3 +155,4 @@ The following code illustrates how to simplify the JSON object.
 let diagram: Diagram = new Diagram({
  serializationSettings: { preventDefaults: true },
 });
+```

@@ -15,7 +15,10 @@ You can get the total size of selected files before upload it to designated serv
 In the following example, explains about how to calculate total file size before upload.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

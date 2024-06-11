@@ -22,20 +22,11 @@ Event triggers after the creation of Floating Action Button.
         <ejs-fab id='fab' iconCss='e-icons e-edit' content='Edit' :created="onCreate"></ejs-fab>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(FabPlugin);
-
-    export default {
-        methods: {
-            onCreate: function () {
+<script setup>
+    import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
+            const onCreate = function () {
                 //Your required action here
             }
-        }
-    }
-
 </script>
 
 <style>
@@ -51,23 +42,14 @@ Event triggers when the Floating Action Button is clicked.
 ```
 <template>
         <!-- To render Floating Action Button -->
-        <ejs-fab id='fab' iconCss='e-icons e-edit' content='Edit' v-on:click.native="onClick"></ejs-fab>
+        <ejs-fab id='fab' iconCss='e-icons e-edit' content='Edit' v-on:click="onClick"></ejs-fab>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(FabPlugin);
-
-    export default {
-        methods: {
-            onClick: function () {
+<script setup>
+    import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
+            const onClick = function () {
                 //Your required action here
             }
-        }
-    }
-
 </script>
 
 <style>
@@ -79,7 +61,10 @@ Event triggers when the Floating Action Button is clicked.
 Below example demonstrates the click event of the Floating Action Button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/floating-action-button/events-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/events-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

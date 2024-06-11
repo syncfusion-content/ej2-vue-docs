@@ -50,7 +50,10 @@ Add/Remove the CSS class to the Tree Grid in the click event handler of Button.
 In the below demo, the button click will enable/disable the Tree Grid and its actions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

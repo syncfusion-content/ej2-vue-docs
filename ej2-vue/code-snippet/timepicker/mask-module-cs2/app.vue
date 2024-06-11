@@ -1,6 +1,3 @@
-
-
-
 <template>
 <div id="app">
         <div class='wrapper1'>
@@ -14,12 +11,14 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { TimePickerPlugin, TimePicker, MaskedDateTime } from "@syncfusion/ej2-vue-calendars";
 
-TimePicker.Inject(MaskedDateTime)
-Vue.use(TimePickerPlugin);
+import { TimePickerComponent, MaskedDateTime } from "@syncfusion/ej2-vue-calendars";
+
 export default{
+  name: "App",
+  components: {
+    "ejs-timepicker": TimePickerComponent
+  },
   data() {
     return {
       dateFormat: 'hh:mm a'
@@ -47,5 +46,3 @@ export default{
      margin-right: 100px;
 }
 </style>
-
-

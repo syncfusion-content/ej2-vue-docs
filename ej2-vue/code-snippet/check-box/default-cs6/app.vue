@@ -1,5 +1,3 @@
-
-
 <template>
 <ul>
 <li><ejs-checkbox label='Buy Groceries' cssClass='e-checkicon' checked=true></ejs-checkbox></li>
@@ -10,14 +8,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { CheckBoxPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { CheckBoxComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(CheckBoxPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-checkbox":CheckBoxComponent
+},
+}
 </script>
 
 <style>
@@ -84,5 +85,3 @@ li {
     background: grey;
 }
 </style>
-
-

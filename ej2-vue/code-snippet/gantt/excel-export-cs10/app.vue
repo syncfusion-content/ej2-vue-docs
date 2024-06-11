@@ -1,17 +1,21 @@
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowExcelExport='true' :height="height" :treeColumnIndex="1"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, ExcelExport, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, ExcelExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { ganttData } from './data-source.js';
-Vue.use(GanttPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+
+},
+
   data: function() {
       return{
         data: ganttData,
@@ -47,5 +51,3 @@ export default {
   }
 };
 </script>
-
-

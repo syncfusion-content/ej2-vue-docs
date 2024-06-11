@@ -1,5 +1,3 @@
-
-
 <template>
 <ul>
 <li><ejs-checkbox label='Checked State' checked=true></ejs-checkbox></li>
@@ -11,6 +9,7 @@
 <script setup>
 import { CheckBoxComponent as EjsCheckbox } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
+
 enableRipple(true);
 </script>
 
@@ -26,5 +25,3 @@ li {
   list-style: none;
 }
 </style>
-
-

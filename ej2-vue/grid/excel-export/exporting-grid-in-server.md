@@ -57,31 +57,18 @@ private Grid ConvertGridObject(string gridProperty)
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Toolbar } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumnsGridComponent, Toolbar } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: data,
-      toolbarOptions: ['ExcelExport']
-    };
-  },
-  methods: {
-      toolbarClick: function(args) {
+const grid = ref(null);
+      const toolbarOptions = ['ExcelExport'];
+      const toolbarClick = function(args) {
         if (args.item.id === 'Grid_excelexport') { // 'Grid_excelexport' -> Grid component id + _ + toolbar item name
-            this.$refs.grid.serverExcelExport('Home/ExcelExport');
+            grid.value.serverExcelExport('Home/ExcelExport');
         }
     }
-  },
-  provide: {
-    grid: [Toolbar]
-  }
-}
+  provide('grid',  [Toolbar]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -129,31 +116,18 @@ private Grid ConvertGridObject(string gridProperty)
         </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Toolbar } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumnsGridComponent, Toolbar } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: data,
-      toolbarOptions: ['CsvExport']
-    };
-  },
-  methods: {
-      toolbarClick: function(args) {
+const grid = ref(null);
+      const toolbarOptions = ['CsvExport'];
+      const toolbarClick: function(args) {
         if (args.item.id === 'Grid_csvexport') { // 'Grid_csvexport' -> Grid component id + _ + toolbar item name
-            this.$refs.grid.serverCsvExport('Home/CsvGridExport');
+            grid.value.serverCsvExport('Home/CsvGridExport');
         }
     }
-  },
-  provide: {
-    grid: [Toolbar]
-  }
-}
+  provide('grid',  [Toolbar]);
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";

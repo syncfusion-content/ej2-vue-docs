@@ -19,7 +19,10 @@ Toast can be created with the notification message. The message contains [title]
 > The Title or Content property can be given as HTML element/element ID to a string that can be displayed as a toast.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/config/title-content-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/config/title-content-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ By default, the newly created toasts will append next with existing toasts. You 
 Here, The following sample demonstrates the combination of the `target`, `showCloseButton`, `showProgressBar`, and `newestOnTop` properties in toast.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/config/custom-target-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/config/custom-target-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +74,10 @@ By default, the toast can be rendered with `300px` width with `auto` height.
 Both the width and height properties allow setting pixels/numbers/percentage. The number value is considered as pixels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/config/width-height-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/config/width-height-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

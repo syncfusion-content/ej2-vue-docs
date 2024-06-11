@@ -156,6 +156,9 @@ Rich Text Editor can be initialized on div element.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rich-text-editor/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -169,6 +172,9 @@ The Rich Text Editor’s content is placed in an iframe and isolated from the re
 Initialize the Rich Text Editor on div element and set the `enable` field of `iframeSettings` property as true.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rich-text-editor/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs6/app.vue %}
 {% endhighlight %}
@@ -202,6 +208,9 @@ Configure the toolbar with the tools using items field of the [`toolbarSettings`
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rich-text-editor/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -219,6 +228,9 @@ The link inject module adds a link icon to the toolbar and the image inject modu
 Specifies the items to be rendered in the quick toolbar based on the target element such image, link and text element. The quick toolbar opens to customize the element by clicking the target element.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rich-text-editor/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs8/app.vue %}
 {% endhighlight %}
@@ -262,6 +274,9 @@ yarn run serve
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rich-text-editor/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -273,6 +288,9 @@ yarn run serve
 Rich Text Editor content can be added using valueTemplate property as given below
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/rich-text-editor/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/rich-text-editor/getting-started-cs10/app.vue %}
 {% endhighlight %}

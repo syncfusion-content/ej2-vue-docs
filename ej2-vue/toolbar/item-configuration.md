@@ -29,7 +29,10 @@ suffixIcon | Defines the class used to specify an icon for the button. The icon 
 The `Separator` type adds a vertical separation between the Toolbar's single/multiple commands.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/toolbar-items-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/toolbar-items-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,11 +61,11 @@ For example, to enable tab key navigation for two Toolbar items, you can use the
     </ejs-toolbar>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { ToolbarPlugin } from '@syncfusion/ej2-vue-navigations';
+<script setup>
 
-Vue.use(ToolbarPlugin);
+import { ToolbarComponent } from '@syncfusion/ej2-vue-navigations';
+
+
 export default {
   name: 'app',
 }
@@ -85,11 +88,11 @@ If you set the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/too
     </ejs-toolbar>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { ToolbarPlugin } from '@syncfusion/ej2-vue-navigations';
+<script setup>
 
-Vue.use(ToolbarPlugin);
+import { ToolbarComponent } from '@syncfusion/ej2-vue-navigations';
+
+
 export default {
   name: 'app',
 }
@@ -103,7 +106,10 @@ Example:
 Here is an example of how you can use the [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/toolbar/item/#tabindex) property to enable tab key navigation for a Toolbar component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/toolbar-container-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/toolbar-container-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

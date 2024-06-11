@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The Excel export allows pivot table data to export as Excel document. To enable Excel export in the pivot table, set the [`allowExcelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#allowexcelexport) as **true**. You need to use the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method for Excel exporting.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs48/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs48/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The Excel export provides support to export multiple pivot tables in same sheet.
 >By default, `multipleExport.blankRows` value is 5 between pivot tables within the same sheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs49/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs49/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ The Excel export provides support to export multiple pivot tables in same sheet.
 Excel export provides support to export multiple pivot tables into new sheets. To export in new sheets, define  `multipleExport.type` as `NewSheet` in `ExcelExportProperties`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs50/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs50/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ The Excel export provides an option to change colors for headers, caption and re
 >By default, material theme is applied to exported Excel document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs51/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs51/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +81,10 @@ The Excel export provides an option to change colors for headers, caption and re
 The Excel export provides an option to include header and footer content for the excel document before exporting. In-order to add header and footer, define **header** and **footer** properties in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs52/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs52/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +96,10 @@ The Excel export provides an option to include header and footer content for the
 The Excel export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **excelExportProperties** object and pass it as a parameter to the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#excelexport) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs53/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs53/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +115,10 @@ By default, Microsoft Excel supports only 1,048,576 records in an Excel sheet. H
 Also, the Excel export allows pivot table data to be exported in `CSV` file format. To export pivot table in `CSV` file format, you need to use the `csvExport` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs54/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs54/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -114,7 +135,10 @@ You can export the pivot table virtual scroll data as Excel/CSV document by usin
 ### Virtual Scroll Data Excel Export
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs55/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs55/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +148,10 @@ You can export the pivot table virtual scroll data as Excel/CSV document by usin
 ### Virtual Scroll Data CSV Export
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs56/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs56/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -138,7 +165,10 @@ The pivot engine exports the entire virtual data of the pivot table (i.e. the da
 > By default, the pivot engine export will be performed while virtual scrolling is enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs57/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs57/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -157,7 +187,10 @@ The event `excelQueryCellInfo` triggers while framing each row and value cell du
 * `style`  - It holds the style properties for the cell.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs58/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs58/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -172,7 +205,10 @@ The event `excelHeaderQueryCellInfo` triggers on framing each header cell during
 * `style`  -  It holds the style properties for the cell.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs59/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs59/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -187,7 +223,10 @@ The event [`exportComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 * `promise` - It holds the promise object for blob data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs60/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs60/app.vue %}
 {% endhighlight %}
 {% endtabs %}

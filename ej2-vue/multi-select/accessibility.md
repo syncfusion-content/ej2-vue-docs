@@ -76,7 +76,10 @@ You can use the following key shortcuts to access the MultiSelect without interr
 > In the below sample, focus the MultiSelect component using <kbd>alt+t</kbd> keys.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/accessibility-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/accessibility-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

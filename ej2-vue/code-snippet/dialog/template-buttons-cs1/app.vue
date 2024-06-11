@@ -1,24 +1,28 @@
-
-
 <template>
-  <div>
-    <div id="target">
-        <center><ejs-button ref='button' id="dialogbtn" cssClass="e-info" v-on:click.native="dialogBtnClick">Open</ejs-button></center>
+    <div>
+        <div id="target">
+            <center><ejs-button ref='button' id="dialogbtn" cssClass="e-info" v-on:click="dialogBtnClick">Open</ejs-button>
+            </center>
 
-        <ejs-dialog id="dialog" ref="Dialog" :header='header' :showCloseIcon='showCloseIcon' :target='target' :width='width' :buttons='buttons' :animationSettings='animationSettings' :visible='visible' :content='content' :closeOnEscape='closeOnEscape'>
-        </ejs-dialog>
+            <ejs-dialog id="dialog" ref="Dialog" :header='header' :showCloseIcon='showCloseIcon' :target='target'
+                :width='width' :buttons='buttons' :animationSettings='animationSettings' :visible='visible'
+                :content='content' :closeOnEscape='closeOnEscape'>
+            </ejs-dialog>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
+
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-button": ButtonComponent,
+        "ejs-dialog": DialogComponent
+    },
+    data: function () {
         return {
             header: 'Delete Multiple Items',
             content: "Are you sure you want to permanently delete all of these items?",
@@ -26,24 +30,23 @@ export default {
             visible: false,
             buttons: [{ buttonModel: { isPrimary: true, content: 'Yes', iconCss: 'e-icons e-ok-icon' }, click: this.btnClick }, { buttonModel: { content: 'No', iconCss: 'e-icons e-close-icon' }, click: this.btnClick }],
             target: document.body,
-            height: 'auto',
             width: '300px',
             animationSettings: { effect: 'Zoom' },
             closeOnEscape: true
         }
     },
     methods: {
-        dialogBtnClick: function() {
+        dialogBtnClick: function () {
             this.$refs.Dialog.show();
         },
-        btnClick: function() {
+        btnClick: function () {
             this.$refs.Dialog.hide();
         }
     }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 
 #app {
     color: #008cff;
@@ -53,10 +56,12 @@ export default {
     top: 45%;
     width: 30%;
 }
+
 #target {
     height: 100%;
     min-height: 350px;
 }
+
 .e-ok-icon::before {
     content: '\e7ff';
 }
@@ -65,6 +70,3 @@ export default {
     content: '\e825';
 }
 </style>
-
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='315'>
@@ -13,13 +11,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, ForeignKey, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, ForeignKey, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data, employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -36,5 +37,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

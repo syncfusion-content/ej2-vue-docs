@@ -19,7 +19,10 @@ To add and remove items dynamically in Vue DropDownList component, you can check
 The following example demonstrate how to add item in between in DropDownList.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/valuechange-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/valuechange-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

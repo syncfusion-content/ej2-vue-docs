@@ -37,12 +37,13 @@ The following code example describes the above behavior.
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Edit, Toolbar } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Edit, Toolbar } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -60,9 +61,7 @@ export default {
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row', newRowPosition: 'Below' }
     };
   },
-    provide: {
-    treegrid: [ Edit, Toolbar ]
-  }
+    provide('treegrid',  [ Edit, Toolbar ]);
 }
 </script>
 
@@ -217,13 +216,14 @@ You can use the following code example to use **RemoteSaveAdaptor** in TreeGrid.
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Edit, Toolbar } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Edit, Toolbar } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, RemoteSaveAdaptor } from '@syncfusion/ej2-data';
 import { projectData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -241,9 +241,7 @@ export default {
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Row', newRowPosition: 'Below' }
     };
   },
-    provide: {
-    treegrid: [ Edit, Toolbar ]
-  }
+    provide('treegrid',  [ Edit, Toolbar ]);
 }
 </script>
 

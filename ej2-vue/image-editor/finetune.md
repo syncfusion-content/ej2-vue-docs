@@ -22,7 +22,10 @@ The [`finetuneImage`](https://ej2.syncfusion.com/vue/documentation/api/image-edi
 Here is an example of brightness, contrast, and sharpness fine-tuning using the [`finetuneImage`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#finetuneImage) method. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ The [`finetuneImage`](https://ej2.syncfusion.com/vue/documentation/api/image-edi
 Here is an example of hue, exposure, and blur fine-tuning using the [`finetuneImage`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#finetuneImage) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}

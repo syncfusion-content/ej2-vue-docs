@@ -30,7 +30,10 @@ N/A |N/A | `Equal` operator will always be used for date filter. |Date
 N/A |N/A |`Equal` operator will always be used for Boolean filter. |Boolean
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

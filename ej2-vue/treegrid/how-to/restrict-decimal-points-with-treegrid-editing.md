@@ -15,7 +15,10 @@ By default, the number of decimal places will be restricted to two in the Numeri
 In the below demo, while editing the row we have restricted to type the decimal point value in the NumericTextBox of **Price** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

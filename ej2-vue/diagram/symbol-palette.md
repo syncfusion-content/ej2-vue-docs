@@ -14,9 +14,13 @@ The **SymbolPalette** displays a collection of palettes. The Palette shows a s
 
 ## Create symbol palette
 
-* The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#height-number) property of the symbolpalette allows to define the size of the symbolpalette.
+To create Symbol Palette easily and to add nodes and connectors in it, you can check the video below.
 
-```javascript
+{% youtube "youtube:https://www.youtube.com/embed/htUHPgJ31XE" %}
+
+* The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#height-number) property of the symbol palette allows to define the size of the symbol palette.
+
+{% highlight js %}
 export default {
     name: 'app'
     data() {
@@ -57,7 +61,7 @@ export default {
             }
         }
     }
-```
+{% endhighlight %}
 
 <!-- markdownlint-disable MD010 -->
 
@@ -73,7 +77,10 @@ To initialize a palette, define a JSON object with the property [`id`](https://e
 The following code example illustrates how to define a palette and how its added to symbol palette.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +105,10 @@ Also, we can embed any HTML element into a palette header by defining the getSy
 Following code example illustrates how to customize palette headers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -112,7 +122,10 @@ The symbol palette panel can be restricted from getting expanded. The [`cancel`]
 In the following code example, the basic shapes palette is restricted from getting collapsed whereas the swimlane shapes palette can be expanded or collapsed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +137,10 @@ In the following code example, the basic shapes palette is restricted from getti
 The [`fit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolInfo#fit-boolean) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, When we resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -142,7 +158,10 @@ The [`fit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolInfo#
 You can customize the size of the individual symbol. The [`symbolWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#symbolwidth) and  [`symbolHeight`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#symbolheight) property of node enables you to define the size of the symbols. The following code example illustrates how to change the size of a symbol.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -160,7 +179,10 @@ The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPre
 The following code example illustrates how to change the preview size of a palette item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -172,7 +194,10 @@ The following code example illustrates how to change the preview size of a palet
 While adding more number of symbols such as nodes and connectors to the palette, you can define the default settings for those objects through [getNodeDefaults](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#getnodedefaults) property of defaultSettings allows to define the default settings for nodes and [getConnectorDefaults](https://ej2.syncfusion.com/vue/documentation/api/diagram/symbolPaletteModel/#getconnectordefaults) property of defaultSettings allows to define the default settings for connectors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -186,7 +211,10 @@ The diagram provides support to add symbol description below each symbol of a pa
  The following code is an example to set a symbol description for symbols in the palette.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -200,7 +228,10 @@ The appearance of a symbol description in the palette can be customized by chang
 The following code is an example to change the color of a symbol description for symbols in the palette.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +257,10 @@ To customize the tooltips for symbols in the symbol palette, assign a custom too
 Here, the code provided below demonstrates how to define tooltip content to symbols within a symbol palette.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/symbol-palette/palettes-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/symbol-palette/palettes-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

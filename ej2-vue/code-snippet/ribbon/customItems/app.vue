@@ -8,10 +8,12 @@
               <e-ribbon-collection>
                 <e-ribbon-items>
                   <e-ribbon-item type="Template" :itemTemplate="'customItem'">
-                    <template v-slot:customItem = "{data}">
-                      <div v-bind:class="'custom-template ' + data.activeSize"><label for="fname">First name:</label><input type="text" id="fname" name="fname"/><br/><br/><label for="lname">Last name:</label><input type="text" id="lname" name="lname"/></div>
+                    <template v-slot:customItem="{ data }">
+                      <div v-bind:class="'custom-template ' + data.activeSize"><label for="fname">First
+                          name:</label><input type="text" id="fname" name="fname" /><br /><br /><label for="lname">Last
+                          name:</label><input type="text" id="lname" name="lname" /></div>
                     </template>
-                </e-ribbon-item>
+                  </e-ribbon-item>
                 </e-ribbon-items>
               </e-ribbon-collection>
             </e-ribbon-collections>
@@ -21,10 +23,11 @@
               <e-ribbon-collection>
                 <e-ribbon-items>
                   <e-ribbon-item type="Template" :itemTemplate="'ribbonTemplate'">
-                    <template v-slot:ribbonTemplate = "{data}">
-                      <span v-bind:class="'ribbonTemplate ' + data.activeSize"><span class="e-icons e-video"></span><span class="text">Video</span></span>
+                    <template v-slot:ribbonTemplate="{ data }">
+                      <span v-bind:class="'ribbonTemplate ' + data.activeSize"><span
+                          class="e-icons e-video"></span><span class="text">Video</span></span>
                     </template>
-                </e-ribbon-item>
+                  </e-ribbon-item>
                 </e-ribbon-items>
               </e-ribbon-collection>
             </e-ribbon-collections>
@@ -36,48 +39,63 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+
+import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
+
+export default {
+  name: "App",
+  components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective
+  }
+};
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";  
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
 
-  .ribbonTemplate {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
+.ribbonTemplate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
 
-  .ribbonTemplate.Large {
-    flex-direction: column;
-  }
+.ribbonTemplate.Large {
+  flex-direction: column;
+}
 
-  .ribbonTemplate.Large .e-icons {
-    font-size: 35px;
-  }
+.ribbonTemplate.Large .e-icons {
+  font-size: 35px;
+}
 
-  .ribbonTemplate.Medium .e-icons,
-  .ribbonTemplate.Small .e-icons{
-    font-size: 20px;
-    margin: 15px 5px;
-  }
+.ribbonTemplate.Medium .e-icons,
+.ribbonTemplate.Small .e-icons {
+  font-size: 20px;
+  margin: 15px 5px;
+}
 
-  .ribbonTemplate.Small .text {
-    display:none;
-  }
+.ribbonTemplate.Small .text {
+  display: none;
+}
 
-  .custom-template input {
+.custom-template input {
   margin-left: 10px;
   width: 100px;
 }
@@ -86,9 +104,9 @@
   display: flex;
   align-items: center;
 }
+
 .custom-template.Medium input {
   height: 14px;
   margin-right: 10px;
 }
-
 </style>

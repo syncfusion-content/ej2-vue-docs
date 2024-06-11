@@ -18,57 +18,110 @@ Hence, it is recommended to switch the Document editor component as read-only in
 
 The following example code illustrates how to deploy Document Editor component for Mobile.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-<div id="app">
-    <ejs-documenteditorcontainer ref="container" height="590px" :serviceUrl='serviceUrl' :enableToolbar='true' :documentChange='onDocumentChange'> </ejs-documenteditorcontainer>
-</div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" height="590px" :serviceUrl='serviceUrl' :enableToolbar='true'
+      :documentChange='onDocumentChange'> </ejs-documenteditorcontainer>
+  </div>
+</template>
+
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const onDocumentChange = function (args) {
+  //To detect the device
+  let isMobileDevice = /Android|Windows Phone|webOS/i.test(navigator.userAgent);
+
+  if (isMobileDevice) {
+    container.value.ej2Instances.restrictEditing = true;
+    setTimeout(() => {
+      container.value.ej2Instances.documentEditor.fitPage("FitPageWidth");
+    }, 50);
+  }
+  else {
+    container.value.ej2Instances.restrictEditing = false;
+  }
+}
+
+</script>
+<style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref="container" height="590px" :serviceUrl='serviceUrl' :enableToolbar='true'
+      :documentChange='onDocumentChange'> </ejs-documenteditorcontainer>
+  </div>
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-  export default {
-    data(){
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' }
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    },
-    methods:{
-      onDocumentChange: function (args) {
-          //To detect the device
-          let isMobileDevice = /Android|Windows Phone|webOS/i.test(navigator.userAgent);
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return { serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' }
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onDocumentChange: function (args) {
+      //To detect the device
+      let isMobileDevice = /Android|Windows Phone|webOS/i.test(navigator.userAgent);
 
-          if (isMobileDevice) {
-            this.$refs.container.ej2Instances.restrictEditing = true;
-            setTimeout(() => {
-              this.$refs.container.ej2Instances.documentEditor.fitPage("FitPageWidth");
-            }, 50);
-          }
-          else {
-            this.$refs.container.ej2Instances.restrictEditing = false;
-          }
+      if (isMobileDevice) {
+        this.$refs.container.ej2Instances.restrictEditing = true;
+        setTimeout(() => {
+          this.$refs.container.ej2Instances.documentEditor.fitPage("FitPageWidth");
+        }, 50);
+      }
+      else {
+        this.$refs.container.ej2Instances.restrictEditing = false;
       }
     }
   }
+}
 </script>
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-  @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 You can download the complete working example from this [GitHub location](https://github.com/SyncfusionExamples/Deploy-Document-Editor-in-Mobile-Friendly-Web-page/)
 

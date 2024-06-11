@@ -48,7 +48,10 @@ Refresh the Tree Grid after the datasource change by assign the modified data to
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

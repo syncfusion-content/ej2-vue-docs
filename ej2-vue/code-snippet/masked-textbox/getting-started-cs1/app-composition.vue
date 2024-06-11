@@ -5,11 +5,10 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { MaskedTextBoxComponent as EjsMaskedtextbox } from "@syncfusion/ej2-vue-inputs";
-</script>
-
+ 
+</script >
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";

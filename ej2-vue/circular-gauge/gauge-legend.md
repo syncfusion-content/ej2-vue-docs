@@ -101,7 +101,10 @@ The font of the legend item text can be customized using the following prope
 The following code example shows how to add legend in the gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +116,10 @@ The following code example shows how to add legend in the gauge.
 The toggle option has been provided for legend. So, if you toggle the legend, the given color will be changed to the corresponding circular gauge range. You can enable the toggle option using `toggleVisibility` in the `legendSettings` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -125,7 +131,10 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 By default, paging will be enabled if the legend items exceed the legend bounds. You can view each legend item by navigating between the pages using navigation buttons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +146,10 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 You can customize the legend text using `legendText` property in `ranges`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}

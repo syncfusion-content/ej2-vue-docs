@@ -20,7 +20,10 @@ The Essential JS 2 toast has the following predefined styles that can be defined
 | e-toast-danger | Represents a negative toast |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/different-toast-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/different-toast-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

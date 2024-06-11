@@ -23,7 +23,10 @@ The size of the AppBar can be set using the [mode](https://ej2.syncfusion.com/vu
 This mode is the default one in which the AppBar is displayed with the default height.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ This mode is the default one in which the AppBar is displayed with the default h
 This height mode can be set to the AppBar by setting `Prominent` to the property [mode](https://ej2.syncfusion.com/vue/documentation/api/appbar#mode). The prominent AppBar is displayed with a longer height and can be used for larger titles, images, or texts. It is also longer than the regular AppBar. In the following example, we have customized the prominent text using align-self and white-space CSS properties. You can change the prominent AppBar height if larger titles, images, or texts are used.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ This height mode can be set to the AppBar by setting `Prominent` to the property
 This height mode can be set to the AppBar by setting `Dense` to the property [mode](https://ej2.syncfusion.com/vue/documentation/api/appbar#mode). Dense AppBar is displayed with shorter height which is denser to accommodate all the AppBar content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ The background and font colors can be set using the [colorMode](https://ej2.sync
 This color mode is the default one in which the AppBar can be displayed with a light background and its corresponding font color.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +92,10 @@ This color mode is the default one in which the AppBar can be displayed with a l
 This color mode can be set to the AppBar by setting `Dark` to the property [colorMode](https://ej2.syncfusion.com/vue/documentation/api/appbar#colormode). A dark AppBar can be displayed with a dark background and its corresponding font color.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +107,10 @@ This color mode can be set to the AppBar by setting `Dark` to the property [colo
 This color mode can be set to the AppBar by setting `Primary` to the property [colorMode](https://ej2.syncfusion.com/vue/documentation/api/appbar#colormode). The primary AppBar can be displayed with primary colors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +122,10 @@ This color mode can be set to the AppBar by setting `Primary` to the property [c
 This color mode can be set to the AppBar by setting `Inherit` to the property [colorMode](https://ej2.syncfusion.com/vue/documentation/api/appbar#colormode). The AppBar inherits the background and font color from its parent element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}

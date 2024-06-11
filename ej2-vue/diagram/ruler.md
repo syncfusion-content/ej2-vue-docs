@@ -23,7 +23,10 @@ The Ruler provides a horizontal and vertical guide for measuring in the Diagram 
 The following code shows how to add a ruler to the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ruler/ruler-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ruler/ruler-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ By default, the ruler segments are arranged based on pixel values.
 The following code shows how the diagram ruler can be customized.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/ruler/ruler-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/ruler/ruler-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

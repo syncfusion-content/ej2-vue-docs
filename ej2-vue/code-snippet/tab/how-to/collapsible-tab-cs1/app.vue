@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div class="info">
@@ -14,18 +12,23 @@
         <e-tabitem :header='headerText0' :content="content0"></e-tabitem>
         <e-tabitem :header='headerText1' :content="content1"></e-tabitem>
         <e-tabitem :header='headerText2' :content="content2"></e-tabitem>
-        <e-tabitems>
+      </e-tabitems>
     </ejs-tab>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
-import { Tab, TabComponent, SelectEventArgs } from '@syncfusion/ej2-navigations';
+
+import { TabComponent, TabItemDirective, TabItemsDirective } from '@syncfusion/ej2-vue-navigations';
 import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use(TabPlugin);
+enableRipple(true);
+
 export default {
-  name: 'app',
+  name: "App",
+  components: {
+    "ejs-tab": TabComponent,
+    "e-tabitems": TabItemsDirective,
+    "e-tabitem": TabItemDirective
+  },
   data: function () {
     return {
       headerText0: { 'text': 'Twitter' },
@@ -43,7 +46,7 @@ export default {
       content1: 'Facebook is an online social networking service headquartered in Menlo Park, California.'
         + 'Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College'
         + 'roommates and fellow students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris'
-        + 'Hughes.The founders had initially limited the website\'\s membership to Harvard students, but'
+        + 'Hughes.The founders had initially limited the website\'s membership to Harvard students, but'
         + 'later expanded it to colleges in the Boston area, the Ivy League, and Stanford University. It'
         + 'gradually added support for students at various other universities and later to high-school'
         + 'students.',
@@ -79,7 +82,7 @@ export default {
       if (this.actLine !== undefined) { this.actLine.classList.remove('collapse'); }
       this.trgIndex = e.selectedIndex;
       // Custom click event binding for each tab item to make collapse/expand
-      e.selectedItem.addEventListener('click', function (e) {
+      e.selectedItem.addEventListener('click', function () {
         this.updateCollapseClass(this.trgIndex);
       }.bind(this));
     },
@@ -140,5 +143,3 @@ export default {
   display: none;
 }
 </style>
-
-

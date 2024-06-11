@@ -17,7 +17,10 @@ By default, Sidebar initializes target to the body element. Using the [target](h
 > If required , `zIndex` can be set when sidebar act as overlay type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/sidebar/position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/sidebar/position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

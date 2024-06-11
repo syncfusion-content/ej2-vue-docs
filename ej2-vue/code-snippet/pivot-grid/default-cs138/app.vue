@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :editSettings="editSettings"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :editSettings="editSettings" :drillThrough="drillThrough">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, DrillThrough, DrillThroughEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, DrillThrough } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,27 +30,24 @@ export default {
     }
   },
   provide: {
-        pivotview: [DrillThrough]
+    pivotview: [DrillThrough]
   },
   methods: {
-    drillThrough:function(args: DrillThroughEventArgs) {
-        for (var i = 0; i < args.gridColumns.length; i++) {
-            if (args.gridColumns[i].field === 'Country') {
-                args.gridColumns[i].editType = 'dropdownedit';
-                //args.gridColumns[i].editType = 'numericedit';
-                //args.gridColumns[i].editType = 'textedit';
-                //args.gridColumns[i].editType = 'booleanedit';
-                //args.gridColumns[i].editType = 'datepickeredit';
-                //args.gridColumns[i].editType = 'datetimepickeredit';
-            }
+    drillThrough: function (args) {
+      for (var i = 0; i < args.gridColumns.length; i++) {
+        if (args.gridColumns[i].field === 'Country') {
+          args.gridColumns[i].editType = 'dropdownedit';
+          //args.gridColumns[i].editType = 'numericedit';
+          //args.gridColumns[i].editType = 'textedit';
+          //args.gridColumns[i].editType = 'booleanedit';
+          //args.gridColumns[i].editType = 'datepickeredit';
+          //args.gridColumns[i].editType = 'datetimepickeredit';
         }
+      }
     }
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

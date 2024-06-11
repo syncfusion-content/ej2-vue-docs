@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview  id="pivotview_flist" :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList" :enginePopulated="fieldEnginePopulated"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview_flist" :dataSourceSettings="dataSourceSettings" :height="height"
+      :showFieldList="showFieldList" :enginePopulated="fieldEnginePopulated"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -31,26 +29,23 @@ export default {
     }
   },
   provide: {
-        pivotview: [FieldList]
-    },
+    pivotview: [FieldList]
+  },
   methods: {
-    fieldEnginePopulated: function(args) {
+    fieldEnginePopulated: function () {
       let pivotTableObj = document.getElementById('pivotview_flist').ej2_instances[0];
-      Object.keys(pivotTableObj.engineModule.fieldList).forEach((key, index) => {
-                if (key === 'Quarter') {
-                    pivotTableObj.engineModule.fieldList[key].caption = 'Production Quarter Year';
-                }
-                else if (key === 'Year') {
-                    pivotTableObj.engineModule.fieldList[key].caption = 'Production Year';
-                }
+      Object.keys(pivotTableObj.engineModule.fieldList).forEach((key) => {
+        if (key === 'Quarter') {
+          pivotTableObj.engineModule.fieldList[key].caption = 'Production Quarter Year';
+        }
+        else if (key === 'Year') {
+          pivotTableObj.engineModule.fieldList[key].caption = 'Production Year';
+        }
       });
     }
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

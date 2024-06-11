@@ -23,7 +23,10 @@ The ListView component triggers events based on its actions. The events can be u
 5. Use clear button to remove event trace information.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

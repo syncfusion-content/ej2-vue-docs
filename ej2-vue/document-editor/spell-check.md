@@ -12,35 +12,65 @@ domainurl: ##DomainURL##
 
 Document editor supports performing spell checking for any input text. You can perform spell checking for the text in Document Editor and it will provide suggestions for the mis-spelled words through dialog and in context menu. Document editor's spell checker is compatible with [hunspell dictionary files](https://github.com/wooorm/dictionaries).
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <ejs-documenteditor ref="documenteditor" id="container_1" height="370px" style="width: 100%;" :enableSpellCheck='true'></ejs-documenteditor>
-    </div>
+  <div id="app">
+    <ejs-documenteditor ref="documenteditor" id="container_1" height="370px" style="width: 100%;"
+      :enableSpellCheck='true'></ejs-documenteditor>
+  </div>
 </template>
-<script>
-    import Vue from 'vue'
-    import { DocumentEditorPlugin } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor } from '@syncfusion/ej2-vue-documenteditor';
+import { onMounted, ref } from 'vue';
 
-    Vue.use(DocumentEditorPlugin);
-
-    export default {
-        data: function() {
-            return {
-            };
-        },
-        mounted: function() {
-            //Set language id to map dictionary.
-            this.$refs.documenteditor.ej2Instances.spellChecker.languageID = 1033;
-            this.$refs.documenteditor.ej2Instances.spellChecker.removeUnderline = false;
-            this.$refs.documenteditor.ej2Instances.spellChecker.allowSpellCheckAndSuggestion = true;
-        }
-    }
+const documenteditor = ref(null);
+onMounted(function () {
+  //Set language id to map dictionary.
+  documenteditor.value.ej2Instances.spellChecker.languageID = 1033;
+  documenteditor.value.ej2Instances.spellChecker.removeUnderline = false;
+  documenteditor.value.ej2Instances.spellChecker.allowSpellCheckAndSuggestion = true;
+})
 </script>
 <style>
- @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditor ref="documenteditor" id="container_1" height="370px" style="width: 100%;"
+      :enableSpellCheck='true'></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  mounted: function () {
+    //Set language id to map dictionary.
+    this.$refs.documenteditor.ej2Instances.spellChecker.languageID = 1033;
+    this.$refs.documenteditor.ej2Instances.spellChecker.removeUnderline = false;
+    this.$refs.documenteditor.ej2Instances.spellChecker.allowSpellCheckAndSuggestion = true;
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 ## Features
 

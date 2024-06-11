@@ -17,7 +17,10 @@ Render the ListView with `dataSource`, and bind the [`scroll`](https://ej2.syncf
 In the given example, new data is seamlessly added while scrolling. When you scrolls to the bottom and the distance scrolled is less than 100 pixels, it dynamically loads a batch of items into the list as long as there are more items to render.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/scrolling/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/scrolling/app.vue %}
 {% endhighlight %}
 {% endtabs %}

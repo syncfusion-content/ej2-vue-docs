@@ -5,6 +5,7 @@
 <script setup>
 import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
+
 enableRipple(true);
 </script>
 

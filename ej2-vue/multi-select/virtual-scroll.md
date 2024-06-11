@@ -25,7 +25,10 @@ The MultiSelect can generate its list items through an array of complex data. Fo
 In the following example, `id` column and `text` column from complex data have been mapped to the `value` field and `text` field, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The MultiSelect supports retrieval of data from remote data services with the he
 The following sample displays the OrderId from the `Orders` Data Service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-remote/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-remote/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ When the `enableVirtualization` property is enabled, the `take` property provide
 The following sample shows the example for Customizing items count in virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-remote/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-remote/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ The MultiSelect component supports grouping with Virtualization. It allows you t
 The following sample shows the example for Grouping with Virtualization. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-group/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-group/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +94,10 @@ The MultiSelect component supports Filtering with Virtualization. The MultiSelec
 The following sample shows the example for Filtering with Virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-filter/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-filter/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +111,10 @@ The MultiSelect component supports CheckBox selection with Virtualization. The M
 The following sample shows the example for checkbox with Virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-check/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-check/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +128,10 @@ The MultiSelect component supports custom valie with Virtualization. When the [`
 The following sample shows the example for custom value with Virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,10 +145,12 @@ The MultiSelect component extends its support for preselected values with Virtua
 The following sample shows the example for Preselect value with Virtualization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multi-select/virtual-scroll-preselect/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/multi-select/virtual-scroll-preselect/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/multi-select/virtual-scroll-preselect" %}
-

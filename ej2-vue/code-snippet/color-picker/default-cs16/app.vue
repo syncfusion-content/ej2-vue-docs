@@ -1,15 +1,13 @@
-
-
 <template>
-<div class='wrap'>
-    <h4>Choose Color</h4>
-    <ejs-colorpicker locale='de-DE'></ejs-colorpicker>
-</div>
+    <div class='wrap'>
+        <h4>Choose Color</h4>
+        <ejs-colorpicker locale='de-DE'></ejs-colorpicker>
+    </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple, L10n } from '@syncfusion/ej2-base';
 
 enableRipple(true);
@@ -24,9 +22,12 @@ L10n.load({
     }
 });
 
-Vue.use(ColorPickerPlugin);
-
-export default {}
+export default {
+    name: "App",
+    components: {
+        "ejs-colorpicker": ColorPickerComponent,
+    }
+}
 </script>
 
 <style>
@@ -37,10 +38,8 @@ export default {}
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 
 .wrap {
-  margin: 0 auto;
-  width: 300px;
-  text-align: center;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
 }
 </style>
-
-

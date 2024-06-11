@@ -15,7 +15,10 @@ Toolbar supports to customize the scrolling distance when you click the left and
 By using Toolbar scrollStep property, pass a required value to customize toolbar scrollStep.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/how-to/scrollstep-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/how-to/scrollstep-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -46,140 +46,277 @@ The data for resources can bind with Scheduler either as a local JSON collection
 
 The following code example depicts how to bind the local JSON data to the `dataSource` of `resources` collection.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div>
-        <div id='app'>
-            <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView'>
-                    <e-views>
-                        <e-view option='Week'></e-view>
-                        <e-view option='Month'></e-view>
-                        <e-view option='TimelineWeek'></e-view>
-                        <e-view option='TimelineMonth'></e-view>
-                        <e-view option='Agenda'></e-view>
-                    </e-views>
-                    <e-resources>
-                        <e-resource field='OwnerId' title='Owner' name='Owners'  :dataSource='resourceDataSource' textField='OwnerText' idField='Id' colorField='OwnerColor'>
-                        </e-resource>
-                    </e-resources>
-                </ejs-schedule>
-            </div>
-        </div>
+  <div>
+    <div id='app'>
+      <div id='container'>
+        <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+          :selectedDate='selectedDate' :currentView='currentView'>
+          <e-views>
+            <e-view option='Week'></e-view>
+            <e-view option='Month'></e-view>
+            <e-view option='TimelineWeek'></e-view>
+            <e-view option='TimelineMonth'></e-view>
+            <e-view option='Agenda'></e-view>
+          </e-views>
+          <e-resources>
+            <e-resource field='OwnerId' title='Owner' name='Owners' :dataSource='resourceDataSource'
+              textField='OwnerText' idField='Id' colorField='OwnerColor'>
+            </e-resource>
+          </e-resources>
+        </ejs-schedule>
+      </div>
     </div>
+  </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import { resourceData } from './datasource.js';
+import { ScheduleComponent as EjsSchedule, ViewDirective as EView, ViewsDirective as EViews, ResourcesDirective as EResources, ResourceDirective as EResource, Week, Month, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+
+const width = '100%';
+const height = '550px';
+const currentView = 'Week';
+const views = ['Week', 'Month', 'TimelineWeek', 'TimelineMonth', 'Agenda'];
+const selectedDate = new Date(2018, 3, 1);
+const resourceDataSource = [
+  { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
+  { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
+  { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
+];
+const eventSettings = { dataSource: resourceData };
+
+provide('schedule', [Week, Month, Agenda, TimelineViews, TimelineMonth]);
+
+</script>
+<style>
+@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <div id='app'>
+      <div id='container'>
+        <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+          :selectedDate='selectedDate' :currentView='currentView'>
+          <e-views>
+            <e-view option='Week'></e-view>
+            <e-view option='Month'></e-view>
+            <e-view option='TimelineWeek'></e-view>
+            <e-view option='TimelineMonth'></e-view>
+            <e-view option='Agenda'></e-view>
+          </e-views>
+          <e-resources>
+            <e-resource field='OwnerId' title='Owner' name='Owners' :dataSource='resourceDataSource'
+              textField='OwnerText' idField='Id' colorField='OwnerColor'>
+            </e-resource>
+          </e-resources>
+        </ejs-schedule>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { resourceData } from './datasource.js';
-    import { SchedulePlugin, Week, Month, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+import { resourceData } from './datasource.js';
+import { ScheduleComponent, ViewDirective, ViewsDirective, ResourcesDirective, ResourceDirective, Week, Month, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
 
-    Vue.use(SchedulePlugin);
-
-    export default {
-        data () {
-            return {
-                width: '100%',
-                height: '550px',
-                currentView: 'Week',
-                views: ['Week', 'Month', 'TimelineWeek','TimelineMonth', 'Agenda'],
-                selectedDate: new Date(2018, 3, 1),
-                resourceDataSource: [
-                    { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
-                    { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
-                    { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
-                ],
-                eventSettings: { dataSource: resourceData }
-            }
-        },
-        provide: {
-            schedule: [Week, Month, Agenda, TimelineViews, TimelineMonth]
-        }
+export default {
+  components: {
+    'ejs-schedule': ScheduleComponent,
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective,
+    'e-resources': ResourcesDirective,
+    'e-resource': ResourceDirective
+  },
+  data() {
+    return {
+      width: '100%',
+      height: '550px',
+      currentView: 'Week',
+      views: ['Week', 'Month', 'TimelineWeek', 'TimelineMonth', 'Agenda'],
+      selectedDate: new Date(2018, 3, 1),
+      resourceDataSource: [
+        { OwnerText: 'Nancy', Id: 1, OwnerColor: '#ffaa00' },
+        { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
+        { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
+      ],
+      eventSettings: { dataSource: resourceData }
     }
+  },
+  provide: {
+    schedule: [Week, Month, Agenda, TimelineViews, TimelineMonth]
+  }
+}
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ### Using remote service URL
 
 The following code example depicts how to bind the remote data for resources `dataSource`.
 
-```html
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div>
-        <div id='app'>
-            <div id='container'>
-                <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings' :selectedDate='selectedDate' :currentView='currentView'>
-                    <e-views>
-                        <e-view option='Week'></e-view>
-                        <e-view option='Month'></e-view>
-                        <e-view option='TimelineWeek'></e-view>
-                        <e-view option='TimelineMonth'></e-view>
-                        <e-view option='Agenda'></e-view>
-                    </e-views>
-                    <e-resources>
-                        <e-resource field='OwnerId' title='Owner' name='Owners'  :dataSource='resourceDataSource' textField='OwnerText' idField='Id' colorField='OwnerColor'>
-                        </e-resource>
-                    </e-resources>
-                </ejs-schedule>
-            </div>
-        </div>
+  <div>
+    <div id='app'>
+      <div id='container'>
+        <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+          :selectedDate='selectedDate' :currentView='currentView'>
+          <e-views>
+            <e-view option='Week'></e-view>
+            <e-view option='Month'></e-view>
+            <e-view option='TimelineWeek'></e-view>
+            <e-view option='TimelineMonth'></e-view>
+            <e-view option='Agenda'></e-view>
+          </e-views>
+          <e-resources>
+            <e-resource field='OwnerId' title='Owner' name='Owners' :dataSource='resourceDataSource'
+              textField='OwnerText' idField='Id' colorField='OwnerColor'>
+            </e-resource>
+          </e-resources>
+        </ejs-schedule>
+      </div>
     </div>
+  </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { ScheduleComponent as EjsSchedule, ViewDirective as EView, ViewsDirective as EViews, ResourcesDirective as EResources, ResourceDirective as EResource, Week, Month, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+import { resourceData } from './datasource.js';
+
+let resource = new DataManager({
+  url: 'Home/GetResourceData',
+  adaptor: new UrlAdaptor,
+  crossDomain: true
+});
+
+const width = '100%';
+const height = '550px';
+const currentView = 'Week';
+const views = ['Week', 'Month', 'TimelineWeek', 'TimelineMonth', 'Agenda'];
+const selectedDate = new Date(2018, 3, 1);
+const resourceDataSource = resource;
+const eventSettings = { dataSource: resourceData };
+
+provide('schedule', [Week, Month, Agenda, TimelineViews, TimelineMonth]);
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <div id='app'>
+      <div id='container'>
+        <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
+          :selectedDate='selectedDate' :currentView='currentView'>
+          <e-views>
+            <e-view option='Week'></e-view>
+            <e-view option='Month'></e-view>
+            <e-view option='TimelineWeek'></e-view>
+            <e-view option='TimelineMonth'></e-view>
+            <e-view option='Agenda'></e-view>
+          </e-views>
+          <e-resources>
+            <e-resource field='OwnerId' title='Owner' name='Owners' :dataSource='resourceDataSource'
+              textField='OwnerText' idField='Id' colorField='OwnerColor'>
+            </e-resource>
+          </e-resources>
+        </ejs-schedule>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
-    import { SchedulePlugin, Week, Month, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
-    import { resourceData } from './datasource.js';
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+import { ScheduleComponent, ViewDirective, ViewsDirective, ResourcesDirective, ResourceDirective, Week, Month, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+import { resourceData } from './datasource.js';
 
-    Vue.use(SchedulePlugin);
+let resource = new DataManager({
+  url: 'Home/GetResourceData',
+  adaptor: new UrlAdaptor,
+  crossDomain: true
+});
 
-    let resource = new DataManager({
-       url: 'Home/GetResourceData',
-       adaptor: new UrlAdaptor,
-       crossDomain: true
-    });
-
-    export default {
-        data () {
-            return {
-                width: '100%',
-                height: '550px',
-                currentView: 'Week',
-                views: ['Week', 'Month', 'TimelineWeek','TimelineMonth', 'Agenda'],
-                selectedDate: new Date(2018, 3, 1),
-                resourceDataSource: resource,
-                eventSettings: { dataSource: resourceData }
-            }
-        },
-        provide: {
-            schedule: [Week, Month, Agenda, TimelineViews, TimelineMonth]
-        }
+export default {
+  components: {
+    'ejs-schedule': ScheduleComponent,
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective,
+    'e-resources': ResourcesDirective,
+    'e-resource': ResourceDirective
+  },
+  data() {
+    return {
+      width: '100%',
+      height: '550px',
+      currentView: 'Week',
+      views: ['Week', 'Month', 'TimelineWeek', 'TimelineMonth', 'Agenda'],
+      selectedDate: new Date(2018, 3, 1),
+      resourceDataSource: resource,
+      eventSettings: { dataSource: resourceData }
     }
+  },
+  provide: {
+    schedule: [Week, Month, Agenda, TimelineViews, TimelineMonth]
+  }
+}
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Scheduler with multiple resources
 
@@ -194,7 +331,10 @@ Learn how to add appointments from multiple resources to Vue Scheduler by watchi
 **Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the `resources` property with all its internal options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/multiple-resources-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/multiple-resources-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -214,7 +354,10 @@ Scheduler supports both single and multiple levels of resource grouping that can
 The following code example displays how the multiple resources are grouped and its events are portrayed in the default calendar views.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +369,10 @@ The following code example displays how the multiple resources are grouped and i
 The following code example depicts how to group the multiple resources on Timeline Scheduler views and its relevant events are displayed accordingly under those resources.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -240,7 +386,10 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 **Example:** To display the Scheduler with single level resource grouping,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/single-level-resource-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/single-level-resource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -260,7 +409,10 @@ To get start quickly about Grouping Multiple Resources in Vue Scheduler, you can
 **Example:** To display the Scheduler with multiple level resource grouping options,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -272,7 +424,10 @@ To get start quickly about Grouping Multiple Resources in Vue Scheduler, you can
 In multi-level grouping, Scheduler usually groups the resources on the child level based on the `GroupID` that maps with the `Id` field of parent level resources (as `byGroupID` set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the `byGroupID` option within the `group` property. In the following code example, there are two levels of resources, on which all the 3 resources at the child level is mapped one to one with each resource on the first level.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -286,7 +441,10 @@ It groups the number of resources under each date and is applicable only on the 
 **Example:** To display the Scheduler with resources grouped by date,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/single-level-resource-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/single-level-resource-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -300,7 +458,10 @@ It groups the number of resources under each date and is applicable only on the 
 In timeline view work cells of parent resource can be customized by checking the `elementType` as `resourceGroupCells` in the event `renderCell`. In the following code example, background color of the work hours has been changed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -317,7 +478,10 @@ object will be maintained within the appointment collection, even if it is share
 **Example:** To edit all the resource events simultaneously,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -331,7 +495,10 @@ It is possible to customize the resource header cells using built-in template op
 **Example:** To customize the resource header and display it along with designation field, refer the below code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -347,7 +514,10 @@ It is possible to customize the resource header cells using built-in template op
 It is possible to customize the resource headers to display with multiple columns such as Room, Type and Capacity. The following code example depicts the way to achieve it and is applicable only on timeline views.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-header-column-customization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-header-column-customization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -359,7 +529,10 @@ It is possible to customize the resource headers to display with multiple column
 It is possible to expand and collapse the resources which have child resource in timeline views dynamically. By default, resources are in expanded state with their child resource. We can collapse and expand the child resources in UI by setting `expandedField` option as `false` whereas its default value is `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -371,7 +544,10 @@ It is possible to expand and collapse the resources which have child resource in
 It is possible to display tooltips over the resource headers showing the resource information. By default, there won't be any tooltips displayed on the resource headers, and to enable it, you need to assign the customized template design to the `headerTooltipTemplate` option within the `group` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/header-tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/header-tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -385,7 +561,10 @@ By default, the colors defined on the top level resources collection will be app
 In the following example, the colors mentioned in the second level will get applied over the events.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-color-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-color-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -401,7 +580,10 @@ It is possible to add or remove the resources dynamically to and from the Schedu
 To remove the resources dynamically, `removeResource` method is used which accepts the index (position from where the resource to be removed) and resource name (within which level, the resource object presents) as parameters.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/dynamic-resource-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/dynamic-resource-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -417,7 +599,10 @@ Each resource in the Scheduler can have different working hours as well as diffe
 Different working days can be set for the resources of Scheduler using the `workDaysField` property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/multiple-resources-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/multiple-resources-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -432,7 +617,10 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 * `endHourField` - Denotes the end time limit of the working/business hour in a day.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/multiple-resources-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/multiple-resources-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -450,7 +638,10 @@ To use the [`hideNonWorkingDays`](https://ej2.syncfusion.com/vue/documentation/a
 **Example:** To display the Scheduler with resources grouped by date for custom working days,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/single-level-resource-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/single-level-resource-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -482,7 +673,10 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 * With Multiple resources – only one resource has been shown to enhance the view experience of resource events details clearly. To switch to other resources, there is a TreeView on the left that lists all other available resources, clicking on which will display that particular resource and its related events.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/resource-grouping-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/resource-grouping-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

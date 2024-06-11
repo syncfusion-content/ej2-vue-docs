@@ -15,7 +15,10 @@ The submenu position can be changed by using the [`beforeOpen`](https://ej2.sync
 In the below sample, the sub menu opens above the parent menu item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

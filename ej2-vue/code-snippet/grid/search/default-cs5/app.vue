@@ -1,10 +1,8 @@
-
-
 <template>
     <div id="app">
         <div style="display: inline-block;">
-          <ejs-textbox ref='textbox'placeholder="Search" width='250px'></ejs-textbox>
-          <ejs-button id='search' v-on:click.native='search'>Search</ejs-button>
+          <ejs-textbox ref='textbox' placeholder="Search" width='250px'></ejs-textbox>
+          <ejs-button id='search' v-on:click='search'>Search</ejs-button>
         </div>
         <ejs-grid ref='grid' :dataSource='data' height='262px'>
             <e-columns>
@@ -17,17 +15,20 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { TextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js'
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(TextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-textbox":TextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data
@@ -55,5 +56,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

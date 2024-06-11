@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-sidebar id="default-sidebar" :width="width" :mediaQuery="mediaQuery">
@@ -14,11 +12,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(SidebarPlugin);
+import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+
 export default {
+    name: "App",
+    components: {
+        "ejs-sidebar": SidebarComponent
+    },
     data() {
         return {
             width: '280px',
@@ -57,5 +58,3 @@ export default {
     color: #ffffff;
 }
 </style>
-
-

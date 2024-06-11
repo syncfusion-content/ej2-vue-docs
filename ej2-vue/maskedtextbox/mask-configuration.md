@@ -41,7 +41,10 @@ The mask can be formed by combining any one or more of these mask elements.
 The following example demonstrates the usage of standard mask elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/mask-configuration/standard-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/masked-textbox/mask-configuration/standard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +62,10 @@ You can define any of the non-mask element as the mask element and its behavior 
 In the following example, non-mask element `P` accepts the values `P, A, p, a` and `M` accepts the values `M, m` as mentioned in the custom characters collection.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/mask-configuration/custom-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/masked-textbox/mask-configuration/custom-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ Instead of the mask element, you can define your own regular expression to valid
 In the following example, regular expression has been set for each input places.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/mask-configuration/regular-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/masked-textbox/mask-configuration/regular-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +96,10 @@ The Prompt character is a prompting symbol in the MaskedTextBox for the mask ele
 The following example demonstrates the MaskedTextBox with customized prompt character as `*`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/mask-configuration/prompt-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/masked-textbox/mask-configuration/prompt-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

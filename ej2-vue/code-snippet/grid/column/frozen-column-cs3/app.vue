@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div style="display: inline-block;">
@@ -8,7 +6,7 @@
       <label> Change freeze direction: </label> 
       <ejs-dropdownlist ref='directionDropdown' id='directionDropdown' :dataSource='directionData' index="0" :fields='fields' width="150"></ejs-dropdownlist>
     </div>
-    <ejs-button ref='button' cssClass='e-outline' v-on:click.native="freezeDirectionFn">Update</ejs-button>
+    <ejs-button ref='button' cssClass='e-outline' v-on:click="freezeDirectionFn">Update</ejs-button>
     <ejs-grid ref='grid' style="padding: 5px 5px"  :dataSource="data" height='315px'  :enableHover='false'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' width='90' textAlign='Right'></e-column>
@@ -24,17 +22,19 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Freeze } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { GridComponent, ColumnsDirective, ColumnDirective, Freeze } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DropDownListPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -79,5 +79,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

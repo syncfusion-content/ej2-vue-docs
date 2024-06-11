@@ -27,7 +27,10 @@ The Gantt supports a set of filtering modes with the [`filterSettings.hierarchyM
 * `None`: Displays only the filtered records.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The Gantt supports a set of filtering modes with the [`filterSettings.hierarchyM
 To apply the filter at initial rendering, set the filter to predicate object in the [`filterSettings.columns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/filterSettings/#columns) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ By default, the Gantt component ignores the diacritic characters while filtering
 In the following sample, type **Project** in the `TaskName` column to filter diacritic characters.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +94,10 @@ In the following sample, type **Project** in the `TaskName` column to filter dia
 You can filter the columns dynamically by using the [`filterByColumn`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#filterbycolumn) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +111,10 @@ You can clear all the filtering condition done in the Gantt component by using t
 The following code snippet explains the above behavior.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +133,10 @@ To implement a custom filter UI, define the following functions:
 In the following sample, the dropdown is used  as a custom component in the TaskName column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/filtering-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/filtering-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

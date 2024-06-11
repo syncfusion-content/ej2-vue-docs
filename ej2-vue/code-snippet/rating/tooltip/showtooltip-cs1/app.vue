@@ -1,19 +1,22 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating" value="3" :showTooltip="true" ></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating" value="3" :showTooltip="true"></ejs-rating>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin } from "@syncfusion/ej2-vue-inputs";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
-Vue.use(RatingPlugin);
 
-export default {}
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
+import { enableRipple } from '@syncfusion/ej2-base';
+
+enableRipple(true);
+
+export default {
+  name: "App",
+  components: {
+    "ejs-rating": RatingComponent
+  },
+}
 </script>
 
 <style>
@@ -25,7 +28,4 @@ export default {}
   margin: 50px auto;
   text-align: center;
 }
-
 </style>
-
-

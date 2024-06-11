@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 A task delete option in the Gantt component can be enabled by enabling the [`ediSettings.allowDeleting`](https://ej2.syncfusion.com/vue/documentation/api/gantt/editSettings/#allowdeleting) property. Tasks can be deleted by clicking the delete toolbar item or using the `deleteRow` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ Delete confirmation message is used to get the confirmation from users before de
 The following code snippet explains how to enable the delete confirmation message in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

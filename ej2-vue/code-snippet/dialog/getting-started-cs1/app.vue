@@ -1,20 +1,21 @@
-
-
 <template>
-  <div>
-    <div id="target"  class="control-section">
-        <ejs-dialog :target='target' :width='width' :content='content'>
-        </ejs-dialog>
+    <div>
+        <div id="target" class="control-section">
+            <ejs-dialog :target='target' :width='width' :content='content'>
+            </ejs-dialog>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-import Vue from "vue";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-Vue.use(DialogPlugin);
+
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
 
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-dialog": DialogComponent
+    },
+    data: function () {
         return {
             target: "#target",
             width: '335px',
@@ -24,11 +25,10 @@ export default {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-    .control-section {
-        height: 100%;
-        min-height: 200px;
-    }
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+
+.control-section {
+    height: 100%;
+    min-height: 200px;
+}
 </style>
-
-

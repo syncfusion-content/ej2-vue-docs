@@ -1,13 +1,11 @@
-
-
-
-     <template>
+<template>
     <div id="app">
         <table class="table-section">
             <tr>
                 <td>select date: </td>
                 <td>
-                    <ejs-inplaceeditor ref="dateObj" id="datePickerEle" mode="Inline" type="Date" :value="datePickerValue" :model="datePickerModel">
+                    <ejs-inplaceeditor ref="dateObj" id="datePickerEle" mode="Inline" type="Date"
+                        :value="datePickerValue" :model="datePickerModel">
                     </ejs-inplaceeditor>
                 </td>
             </tr>
@@ -16,25 +14,23 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { InPlaceEditorPlugin } from '@syncfusion/ej2-vue-inplace-editor';
 
-Vue.use(InPlaceEditorPlugin);
+import { InPlaceEditorComponent } from '@syncfusion/ej2-vue-inplace-editor';
 
 export default {
-  name: 'app',
-      data () {
+    name: "App",
+    components: {
+        "ejs-inplaceeditor": InPlaceEditorComponent
+    },
+    data() {
         return {
             datePickerModel: {
                 placeholder: 'Select date',
                 format: 'yyyy-MM-dd'
             },
-           datePickerValue: new Date('11/23/2018'),
+            datePickerValue: new Date('11/23/2018'),
         };
-    },
-    mounted: function(){
-        this.dateObj = this.$refs.dateObj.ej2Instances;
-    },
+    }
 }
 </script>
 
@@ -60,5 +56,3 @@ tr td:first-child {
     padding-right: 20px;
 }
 </style>
-
-

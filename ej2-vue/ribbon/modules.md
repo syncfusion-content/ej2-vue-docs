@@ -35,12 +35,11 @@ These selective modules should be injected into the `provide` section and use `r
   </ejs-ribbon>
 </template>
 
-<script>
+<script setup>
+import { provide } from "vue";
     import { RibbonFileMenu, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
     export default {
-        provide: {
-            ribbon: [RibbonFileMenu, RibbonColorPicker]
-        },
+        provide('ribbon',  [RibbonFileMenu, RibbonColorPicker]);,
     };
 </script>
 ```

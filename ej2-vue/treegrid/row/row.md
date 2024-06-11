@@ -19,7 +19,10 @@ The [`rowDataBound`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#
 `RowDataBoundEventArgs` that contains details of the row.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/row/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/row/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The [`rowDataBound`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#
 Please refer to the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/row/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/row/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

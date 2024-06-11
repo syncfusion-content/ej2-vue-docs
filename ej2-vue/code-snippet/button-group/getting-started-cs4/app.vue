@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='app'>
     <div class="e-btn-group">
@@ -11,12 +8,13 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(ButtonPlugin);
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 export default {
-  name: 'app'
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+}
 }
 </script>
 <style>
@@ -42,6 +40,3 @@ export default {
     content: '\e35e';
   }
 </style>
-
-
-

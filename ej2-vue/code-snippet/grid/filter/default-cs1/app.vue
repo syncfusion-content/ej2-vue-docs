@@ -1,13 +1,10 @@
-
-
-
 <template>
   <div id="app">
     <ejs-grid ref="Grid" :dataSource="data" :allowFiltering="true" :filterSettings="filterOptions" height="273px">
       <e-columns>
         <e-column field="OrderID" headerText="ID" width="80" isPrimaryKey="true"></e-column>
         <e-column field="CustomerID" headerText="CustomerID" width="90"></e-column>
-        <e-column field="OrderDate" headerText="OrderDate" width="120" format="yMd"><e-column>
+        <e-column field="OrderDate" headerText="OrderDate" width="120" format="yMd"></e-column>
         <e-column field="ShipName" headerText="ShipName" width="120"></e-column>
         <e-column field="ShipCity" headerText="ShipCity" width="120"></e-column>
       </e-columns>
@@ -15,12 +12,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Filter } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js'
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js'
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
   data() {
     return {
       data: data,
@@ -38,6 +39,3 @@ export default {
 <style>
 @import "https://cdn.syncfusion.com/ej2/material.css";
 </style>
-
-
-

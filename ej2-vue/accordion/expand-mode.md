@@ -21,7 +21,10 @@ The property enables to expand only one Accordion item at a time. If you expand 
 new item changed to expanded state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/expandmode/single-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/expandmode/single-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ Default expand mode of the Accordion is `Multiple`. It enables you to expand mor
 can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/expandmode/multiple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/expandmode/multiple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -41,7 +41,10 @@ You can also define custom rules in the [`rules`](https://ej2.syncfusion.com/doc
 The custom validation method need to return the boolean value for validating an input.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/form-validator/form-validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/form-validator/form-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

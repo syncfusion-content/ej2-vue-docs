@@ -1,5 +1,3 @@
-
-
 <template>
     <div class ='wrap'>
         <div id ='input-container'>
@@ -7,8 +5,8 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { Input, InputObject } from  '@syncfusion/ej2-inputs';
+
+import { Input } from  '@syncfusion/ej2-inputs';
 
 export default {
    data: function() {
@@ -16,11 +14,9 @@ export default {
     },
     mounted: function() {
         // To get the all input fields and its container.
-
         let inputElement = document.querySelectorAll('.e-input-group .e-input,.e-float-input.e-input-group input');
 
         // Add 'e-input-focus' class to the input for achive ripple effect when focus on the input field.
-
         for (let i = 0; i < inputElement.length; i++) {
             inputElement[i].addEventListener("focus", function () {
                 this.parentNode.classList.add('e-input-focus')
@@ -31,7 +27,6 @@ export default {
         }
 
         // Add 'e-input-btn-ripple' class to the icon element for achive ripple effect when click on the icon.
-
         var inputIcon = document.querySelectorAll('.e-input-group-icon');
         for (let i = 0; i < inputIcon.length; i++) {
             inputIcon[i].addEventListener('mousedown', function () {
@@ -44,8 +39,6 @@ export default {
                 }, 500);
             });
         }
-
-        let inputObj;
 
         let element = document.createElement('input');
         document.getElementById('input-container').appendChild(element);
@@ -69,8 +62,8 @@ export default {
 }
 </script>
 <style>
-  @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
   .wrap {
     box-sizing: border-box;

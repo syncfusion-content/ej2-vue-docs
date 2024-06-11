@@ -17,7 +17,10 @@ the details and designed for getting user details and making payment at the end.
 option to enable/disable to next Accordion.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/how-to/accordion-wizard-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/how-to/accordion-wizard-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

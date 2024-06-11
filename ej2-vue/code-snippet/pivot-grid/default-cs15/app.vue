@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-      <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList" :allowCalculatedField="allowCalculatedField" :actionFailure="actionFailure"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList"
+      :allowCalculatedField="allowCalculatedField" :actionFailure="actionFailure"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, CalculatedField, FieldList, PivotActionFailureEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, CalculatedField, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,24 +30,20 @@ export default {
       height: 350,
       allowCalculatedField: true,
       showFieldList: true,
-      isPrimary: true
     }
   },
   methods: {
-    actionFailure: function (args: PivotActionFailureEventArgs) {
-        if (args.actionName == 'Open calculated field dialog') {
-            // Triggers when the current UI action fails to achieve the desired result.
-        }
+    actionFailure: function (args) {
+      if (args.actionName == 'Open calculated field dialog') {
+        // Triggers when the current UI action fails to achieve the desired result.
+      }
     }
   },
   provide: {
-        pivotview: [CalculatedField, FieldList]
-    }
+    pivotview: [CalculatedField, FieldList]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

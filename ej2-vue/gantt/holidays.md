@@ -22,7 +22,10 @@ To highlight the days, inject the [`DayMarkers`](https://ej2.syncfusion.com/vue/
 The following code example shows how to display the non-working days in the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/holidays-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/holidays-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

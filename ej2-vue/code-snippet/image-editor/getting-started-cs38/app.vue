@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarUpdating="toolbarUpdating"></ejs-imageeditor>
@@ -7,27 +5,19 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin, ImageFinetuneOption } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ImageEditorComponent} from "@syncfusion/ej2-vue-image-editor";
 import { Browser } from "@syncfusion/ej2-base";
 
-Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(ImageFinetuneOption);
-
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent
+},
   data: function() {
       return {};
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     toolbarUpdating: function(args) {
       if (args.toolbarItems.type === 'Text') {
         args.currentShapeSettings.color =  'red',
@@ -55,5 +45,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

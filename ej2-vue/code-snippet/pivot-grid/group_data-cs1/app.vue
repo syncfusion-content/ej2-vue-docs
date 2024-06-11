@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :allowGrouping="allowGrouping"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"
+      :allowGrouping="allowGrouping"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, Grouping } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar, Grouping } from "@syncfusion/ej2-vue-pivotview";
 import { Group_Data } from './datasource.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: Group_Data,
@@ -36,13 +34,10 @@ export default {
     }
   },
   provide: {
-        pivotview: [GroupingBar, Grouping]
-    }
+    pivotview: [GroupingBar, Grouping]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

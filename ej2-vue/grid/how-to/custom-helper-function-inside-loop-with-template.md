@@ -38,7 +38,10 @@ The `v-bind:class` directive dynamically assigns classes based on the result of 
 This is demonstrated in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/custom-helper-loop-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/custom-helper-loop-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}

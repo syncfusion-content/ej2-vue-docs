@@ -1,16 +1,17 @@
-
-
 <template>
     <div class="control_wrapper">
-        <ejs-treemap id="treemap"  :dataSource='dataSource' :legendSettings='legendSettings' :colorValuePath ='colorValuePath' :weightValuePath='weightValuePath'  :leafItemSettings='leafItemSettings'></ejs-treemap>
+        <ejs-treemap id="treemap" :dataSource='dataSource' :legendSettings='legendSettings' :colorValuePath ='colorValuePath' :weightValuePath='weightValuePath'  :leafItemSettings='leafItemSettings'></ejs-treemap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+
+import { TreeMapComponent, TreeMapLegend } from "@syncfusion/ej2-vue-treemap";
 
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent
+},
   data: function() {
     return {
      dataSource: [
@@ -23,7 +24,6 @@ export default {
     ],
   weightValuePath: 'count',
     colorValuePath: 'color',
-    enableRtl:true,
     legendSettings: {
         visible: true,
         position:'Top'
@@ -38,5 +38,3 @@ export default {
 },
 }
 </script>
-
-

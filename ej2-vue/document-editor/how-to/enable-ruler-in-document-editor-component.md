@@ -17,7 +17,10 @@ Using ruler we can refer to setting specific margins, tab stops, or indentations
 The following example illustrates how to enable ruler in Document Editor
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/ruler-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/ruler-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Using ruler we can refer to setting specific margins, tab stops, or indentations
 The following example illustrates how to enable ruler in Document Editor Container.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/ruler-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/ruler-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

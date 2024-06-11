@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid :dataSource="data" idMapping='TaskID' parentIdMapping='ParentItem' hasChildMapping='isParent' :query='query' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings'>
@@ -13,23 +11,29 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, WebApiAdaptor , Query } from "@syncfusion/ej2-data";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data () {
-      let SERVICE_URI: string =
-      "https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData";
+      let SERVICE_URI =
+      "https://services.syncfusion.com/vue/production/api/SelfReferenceData";
     return {
       data: new DataManager({
         url: SERVICE_URI,
         adaptor: new WebApiAdaptor(),
       }),
-      pageSettings: { pageCount: 4 }
-      query: new Query().addParams('ej2treegrid', 'true');
+      pageSettings: { pageCount: 4 },
+      query: new Query().addParams('ej2treegrid', 'true')
     };
   },
   provide: {
@@ -37,6 +41,3 @@ export default {
     },
 }
 </script>
-
-
-

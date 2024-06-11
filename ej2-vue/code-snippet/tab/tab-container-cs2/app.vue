@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-tab id='element'>
@@ -12,12 +10,16 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TabPlugin);
+import { TabComponent, TabItemsDirective, TabItemDirective } from '@syncfusion/ej2-vue-navigations';
+
 export default {
-  name: 'app',
+  name: "App",
+  components: {
+    "ejs-tab": TabComponent,
+    "e-tabitems": TabItemsDirective,
+    "e-tabitem": TabItemDirective
+  },
   data: function () {
     return {
       headerText0: { text: 'ASP.NET' },
@@ -27,7 +29,7 @@ export default {
       content0: 'ASP.NET is an open-source server-side web application framework designed for web development to produce ' +
         'dynamic web pages. It was developed by Microsoft to allow programmers to build dynamic web sites, web applications ' +
         'and web services. It was first released in January 2002 with version 1.0 of the .NET Framework, and is the successor ' +
-        'to Microsoft\'\s Active Server Pages (ASP) technology. ASP.NET is built on the Common Language Runtime (CLR), allowing ' +
+        'to Microsoft\'s Active Server Pages (ASP) technology. ASP.NET is built on the Common Language Runtime (CLR), allowing ' +
         'programmers to write ASP.NET code using any supported .NET language. The ASP.NET SOAP extension framework allows ' +
         'ASP.NET components to process SOAP messages.',
 
@@ -50,5 +52,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 </style>
-
-

@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
      <p><b>First Gantt:</b></p>
@@ -10,16 +7,19 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, PdfExport, Selection } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import {editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
-        fData: [ganttData[0]],
-        sData: [ganttData[1]],
+        fData: [editingData[0]],
+        sData: [editingData[1]],
         height1:'280px',
         height2:'250px',
         taskFields: {
@@ -50,6 +50,3 @@ export default {
   }
 };
 </script>
-
-
-

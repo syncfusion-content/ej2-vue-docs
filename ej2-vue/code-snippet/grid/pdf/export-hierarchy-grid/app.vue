@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div style="display: inline-block;">
@@ -20,13 +18,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropdownlistComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: employeeData,
@@ -75,6 +77,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-
-

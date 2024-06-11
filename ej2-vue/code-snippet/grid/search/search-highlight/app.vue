@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref="grid" :dataSource='data' :toolbar='toolbarOptions' :actionBegin="actionBegin" :queryCellInfo="queryCellInfo" height='272px'>
@@ -15,12 +13,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js'
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js'
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
   data() {
     return {
       data: data,
@@ -73,5 +75,3 @@ export default {
   background-color: yellow;
 }
 </style>
-
-

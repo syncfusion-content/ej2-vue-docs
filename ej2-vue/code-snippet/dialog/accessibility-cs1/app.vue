@@ -1,25 +1,27 @@
-
-
 <template>
-  <div>
-    <div id="target" class="control-section; position:relative" style="height:350px;">
+    <div>
+        <div id="target" class="control-section; position:relative" style="height:350px;">
 
-        <ejs-button id='modalbtn' v-on:click.native="btnClick">Open</ejs-button>
+            <ejs-button id='modalbtn' v-on:click="btnClick">Open</ejs-button>
 
-        <ejs-dialog ref="accessDialog" :header='header' :target='target' :width='width' :height='height' :showCloseIcon='true'  :buttons='buttons' :content='content' :open="dlgOpen" :close="dlgClose">
-        </ejs-dialog>
+            <ejs-dialog ref="accessDialog" :header='header' :target='target' :width='width' :height='height'
+                :showCloseIcon='true' :buttons='buttons' :content='content' :open="dlgOpen" :close="dlgClose">
+            </ejs-dialog>
+        </div>
     </div>
-  </div>
 </template>
 <script>
-import Vue from "vue";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-button": ButtonComponent,
+        "ejs-dialog": DialogComponent
+    },
+    data: function () {
         return {
             target: '#target',
             width: '335px',
@@ -33,43 +35,43 @@ export default {
                 "</div>" +
                 "</form>",
             buttons: [{ click: this.dlgButtonClick, buttonModel: { content: 'OK', isPrimary: true } },
-            { click: this.dlgButtonClick, buttonModel: { content: 'Cancel' }}]
+            { click: this.dlgButtonClick, buttonModel: { content: 'Cancel' } }]
         }
     },
-    mounted: function(){
+    mounted: function () {
         document.getElementById('modalbtn').focus();
     },
     methods: {
-        btnClick: function() {
+        btnClick: function () {
             this.$refs.accessDialog.show();
         },
-        dlgClose: function() {
+        dlgClose: function () {
             document.getElementById('modalbtn').style.display = '';
         },
-        dlgOpen: function() {
+        dlgOpen: function () {
             document.getElementById('modalbtn').style.display = 'none';
         },
-        dlgButtonClick: function() {
+        dlgButtonClick: function () {
             this.$refs.accessDialog.hide();
         }
     }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
-    #app {
-        color: #008cff;
-        height: 40px;
-        left: 45%;
-        position: absolute;
-        top: 45%;
-        width: 30%;
-    }
-    .control-section {
-        height: 100%;
-        min-height: 200px;
-    }
+
+#app {
+    color: #008cff;
+    height: 40px;
+    left: 45%;
+    position: absolute;
+    top: 45%;
+    width: 30%;
+}
+
+.control-section {
+    height: 100%;
+    min-height: 200px;
+}
 </style>
-
-

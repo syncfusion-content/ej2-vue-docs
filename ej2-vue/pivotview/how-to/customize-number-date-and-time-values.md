@@ -22,7 +22,10 @@ For numbers, the formatting settings required to apply through code behind are:
 > Also, you can customize the applied number format by setting the [`NumberFormatOptions`](https://ej2.syncfusion.com/vue/documentation/common/internationalization#manipulating-numbers) options in `formatSettings` itself.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs135/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs135/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ For date and time, the formatting settings required to apply through code behind
 > Also, you can customize the applied date format by setting [`DateFormatOptions`](https://ej2.syncfusion.com/vue/documentation/common/internationalization#manipulating-datetime) options in `formatSettings` itself.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs136/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs136/app.vue %}
 {% endhighlight %}
 {% endtabs %}

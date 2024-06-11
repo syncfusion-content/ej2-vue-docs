@@ -1,5 +1,3 @@
-
-
 <template>
   <div id='app'>
       <ejs-kanban id="kanban" keyField="Status">
@@ -13,14 +11,15 @@
   </div>
 </template>
 <script>
-  import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
-  export default {
-    components: {
-      'ejs-kanban': KanbanComponent,
-      'e-column': ColumnDirective,
-      'e-columns': ColumnsDirective
-    }
-   }
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
+export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
+}
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -32,5 +31,3 @@
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
 </style>
-
-

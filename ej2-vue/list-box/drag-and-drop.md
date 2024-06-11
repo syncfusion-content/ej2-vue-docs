@@ -27,7 +27,10 @@ To drag and drop an item or group of item within the list box can be achieved by
 The following sample illustrates how to drag and drop an item within the same list box by enabling `allowDragAndDrop` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ To drag and drop an item or group of item between two list boxes can be achieved
 In the following sample, the `allowDragAndDrop` property is set as `true` and `scope` is set as `combined-list` to enable drop and drop in both list boxes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

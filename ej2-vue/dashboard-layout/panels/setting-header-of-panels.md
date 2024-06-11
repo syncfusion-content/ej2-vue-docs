@@ -15,7 +15,10 @@ The dashboard layout component is mostly used to represent the data used for mon
 The following sample demonstrates how to add content for each panel using the header and content properties of the panels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ To design a Vue Dashboard Layout with UI components, you can check on this video
 The following sample demonstrates how to add EJ2 Chart components as the `content` for each panel in the dashboard layout component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/content-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/content-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

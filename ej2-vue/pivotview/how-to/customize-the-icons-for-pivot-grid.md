@@ -23,7 +23,10 @@ You can customize the pivot button icons in the pivot table by overriding the cl
 In the below sample, pivot table is rendered with a customized pivot button icons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs137/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs137/app.vue %}
 {% endhighlight %}
 {% endtabs %}

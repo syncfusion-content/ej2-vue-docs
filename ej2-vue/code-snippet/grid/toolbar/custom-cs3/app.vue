@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' id='Grid' :dataSource='data' :editSettings='editSettings' :toolbarTemplate='toolbar'>
@@ -13,18 +11,22 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { ToolbarPlugin } from "@syncfusion/ej2-vue-navigations";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { ToolbarComponent } from "@syncfusion/ej2-vue-navigations";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ToolbarPlugin);
-Vue.use(DropDownListPlugin);
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
-  
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-toolbar":ToolbarComponent,
+"ejs-dropdownlist":DropDownListComponent
+},
   data() {
     return {
       data: data,
@@ -32,7 +34,7 @@ export default {
       editSettings: { allowAdding: true, allowEditing: true, allowDeleting: true },
       toolbar: function () {
         return {
-          template: Vue.component('custom-toolbar', {
+          template: app.component('custom-toolbar', {
             template: `<ejs-toolbar>
                         <div style="display: inline-block;">
                           <label style="padding:  10px 10px 12px 0"> Change the value: </label> 
@@ -59,7 +61,6 @@ export default {
                 }
                 this.$refs.dropDown.$el.value = '';
                 this.$refs.dropDown.$el.placeholder = args.itemData.text;
-
               }
             }
           })
@@ -92,6 +93,3 @@ export default {
     width: 30px;
 }
 </style>
-
-
-

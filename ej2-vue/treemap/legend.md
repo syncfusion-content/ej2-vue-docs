@@ -26,7 +26,10 @@ The following options are available to customize the legend position:
 * Float
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ Legend Alignment is used to align the legend items in specific location. The fol
 * Far
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs35/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ The TreeMap control supports two different types of legend rendering modes such 
 In default mode, the legends have symbols with legend labels that are used to identify the items in the TreeMap.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs36/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ In default mode, the legends have symbols with legend labels that are used to id
 The legends can be made interactive with an arrow mark that indicates exact range color in the legend when the mouse hovers on the TreeMap item. Enable this option by setting the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#mode) property in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/) to **Interactive**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs37/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +96,10 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 Customize the legend size by modifying the [`height`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#height) and [`width`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#width) properties in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/). It accepts values in both percentage and pixel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs38/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +111,10 @@ Customize the legend size by modifying the [`height`](https://ej2.syncfusion.com
 TreeMap support legend paging, if the legend items cannot be placed within the provided [`height`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#height) and [`width`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#width) of the legend.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs39/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs39/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +126,10 @@ TreeMap support legend paging, if the legend items cannot be placed within the p
 Based on the mapping ranges in the data source, get the excluded ranges from the color mapping, and show the legend with the excluded range values that are bound to the specific legend.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs40/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +141,10 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 To enable or disable the desired legend item for each color mapping, set the [`showLegend`](https://ej2.syncfusion.com/vue/documentation/api/treemap/colorMapping/#showlegend) property to **true** in the [`colorMapping`](https://ej2.syncfusion.com/vue/documentation/api/treemap/colorMapping/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs41/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs41/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +156,10 @@ To enable or disable the desired legend item for each color mapping, set the [`s
 To enable or disable the legend visibility for each item through the data source, bind the appropriate data source field name to [`showLegendPath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#showlegendpath) property in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs42/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs42/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +171,10 @@ To enable or disable the legend visibility for each item through the data source
 To show the legend item text from the data source, bind the property name from data source to the [`valuePath`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#valuepath) property in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs43/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs43/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -156,7 +186,10 @@ To show the legend item text from the data source, bind the property name from d
 To enable or disable the duplicate legend items, set the [`removeDuplicateLegend`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#removeduplicatelegend) property to **true** in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs44/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs44/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -168,7 +201,10 @@ To enable or disable the duplicate legend items, set the [`removeDuplicateLegend
 Use a responsive legend that switches positions between the right and the bottom based on the available height and width. To enable the responsive legend, set the [`position`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/#position) property to **Auto** in the [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/treemap/legendSettings/) and the legend position is changed based on the available height and width.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs45/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs45/app.vue %}
 {% endhighlight %}
 {% endtabs %}

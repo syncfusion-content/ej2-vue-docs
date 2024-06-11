@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <div class="control-section">
@@ -20,13 +18,12 @@
         </div>
     </div>
 </div>
-
 </div>
 </template>
 <script>
 import { RichTextEditorComponent, Toolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-
 export default {
+name: "App",
     components: {
       'ejs-richtexteditor': RichTextEditorComponent
     },
@@ -45,5 +42,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

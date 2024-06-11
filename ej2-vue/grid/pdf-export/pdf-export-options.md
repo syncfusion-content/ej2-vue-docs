@@ -23,7 +23,10 @@ To export the current page of the grid to a PDF document, you need to specify th
 The following example demonstrates how to export current page to a PDF document when a toolbar item is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ To export the selected records from the grid to a PDF file, you can follow these
 The following example demonstrates how to export the selected records to a PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/export-filtered-data-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/export-filtered-data-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +81,10 @@ To export only the filtered data from the grid to a PDF file, you can follow the
 The following example demonstrates how to export the filtered records to a PDF document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/export-filtered-data-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/export-filtered-data-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +100,10 @@ To export hidden columns of the grid to a PDF file, you need to set the [include
 The following example demonstrates how to export hidden columns to a PDF file. In this example, the **ShipCity** column, which is not visible in the UI, is exported to the PDF document. You can also export the grid by changing the `pdfExportProperties.includeHiddenColumn` property based on the switch toggle using the [checked](https://ej2.syncfusion.com/vue/documentation/api/switch/#checked) property of the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -115,7 +127,10 @@ To show or hide columns based on user interaction during the export process, you
 In the following example, the **CustomerID** is initially a hidden column in the grid. However, during the export process, the **CustomerID** column is made visible, while the **ShipCity** column is hidden.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +152,10 @@ The supported `pageOrientation` options are:
 The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageOrientation` property using the [value](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#value) property of the `DropDownList` component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +201,10 @@ Supported `pdfPageSize` are:
 The following example demonstrates how to export the grid into PDF document by setting the `pdfExportProperties.pageSize` property by using [value](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#value) property of the `DropDownList` component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -199,7 +220,10 @@ To assign a custom file name for the exported document, you can set the [fileNam
 The following example demonstrates how to define a file name using `pdfExportProperties.fileName` property when exporting to PDF, based on the entered value as the file name.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -215,7 +239,10 @@ You can achieve this by utilizing the [pdfExportProperties.allowHorizontalOverfl
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added to enable and disable the `pdfExportProperties.allowHorizontalOverflow` property. Based on the switch toggle, the `pdfExportProperties.allowHorizontalOverflow` property is updated using the [checked](https://ej2.syncfusion.com/vue/documentation/api/switch/#checked) property, and the export action is performed accordingly when the toolbar is clicked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/horizontal-overflow/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/horizontal-overflow/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -237,7 +264,10 @@ To customize the grid columns, you can follow these steps:
 The following example demonstrates how to customize the grid columns when exporting a document. In this scenario, the attributes for different columns have been customized: **OrderID** with `textAlign` set to **Right**, **CustomerID** with `headerText` as **"Customer Name"**, and **Freight** with a center-aligned `textAlign` property, which is not rendered in the grid columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/export-customizing-columns/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/export-customizing-columns/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -269,7 +299,10 @@ To change the default font, you can follow these steps:
 The following example demonstrates, how to change the default font when exporting a document.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-font/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-font/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -285,7 +318,10 @@ When using a custom font, it's important to provide the font in a format that ca
 The following example demonstrates how to use the custom **Algeria** font for exporting the grid. The **base64AlgeriaFont** variable contains the base64 encoded string representing the **Algeria** font file. This encoded font data is used in the PDF export properties to specify the custom font.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -303,7 +339,10 @@ To implement conditional cell formatting, you can utilize the [pdfQueryCellInfo]
 The following example demonstrate how to customize the background color of the **Freight** column in the exported PDF document using the **args.cell** and **backgroundColor** properties of the `pdfQueryCellInfo` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -317,7 +356,10 @@ The Grid offers an option to export the data as a `Blob` instead of downloading 
 The following example demonstrates how to obtain the blob data of the exported grid by executing the promise in the `pdfExportComplete` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/export-grid-as-blob-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/pdf/export-grid-as-blob-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

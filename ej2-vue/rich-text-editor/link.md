@@ -28,7 +28,10 @@ To use use image and link tool, inject `ImageService, LinkService` in the provid
 | Open Link in New Window | Specify whether, the given link will be open in new window or not |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +64,10 @@ The quick toolbar for the Link has the following options.
 | Custom Tool | Used to add the custom options in the quick toolbar. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

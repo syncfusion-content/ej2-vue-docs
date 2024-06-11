@@ -19,174 +19,324 @@ The following steps are used to load the PDF document dynamically.
 **Step 2:** Use the following code snippet to load the PDF document using a base64 string.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
 <template>
   <div id="app">
     <button v-on:click="load">LoadDocument</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+// Load the PDF document from a Base64 string
+const load = function (event) {
+  var viewer = pdfviewer.value.ej2Instances;
+  viewer.load('data:application/pdf;base64', +AddBase64String, null);
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="load">LoadDocument</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
-    methods: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
+  methods: {
     // Load the PDF document from a Base64 string
     load: function (event) {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.load('data:application/pdf;base64',+AddBase64String, null);
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.load('data:application/pdf;base64', +AddBase64String, null);
     }
   }
 }
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
 <template>
+  <div>
+    <button v-on:click="load_1">LoadDocumentFromBase64</button>
     <div>
-        <button v-on:click="load_1">LoadDocumentFromBase64</button>
-        <div>
-            <ejs-pdfviewer
-                id="pdfViewer"
-                :serviceUrl="serviceUrl"
-                :documentPath="documentPath">
-            </ejs-pdfviewer>
-        </div>
+      <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+      </ejs-pdfviewer>
     </div>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+
+// Load the PDF document from a Base64 string
+const load_1 = function (event) {
+  var viewer = pdfviewer.value.ej2Instances;
+  viewer.load('data:application/pdf;base64,' + AddBase64String, null);
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div>
+    <button v-on:click="load_1">LoadDocumentFromBase64</button>
+    <div>
+      <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+      </ejs-pdfviewer>
+    </div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch,Annotation, FormDesigner, FormFields ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  },
   methods: {
-  // Load the PDF document from a Base64 string
-  load_1: function (event) {
-    var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-    viewer.load('data:application/pdf;base64,'+ AddBase64String, null);
+    // Load the PDF document from a Base64 string
+    load_1: function (event) {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.load('data:application/pdf;base64,' + AddBase64String, null);
+    }
   }
- }
 }
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 
 **Step 3:** Use the following code snippet to load the PDF document using the document name.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
 <template>
   <div id="app">
     <button v-on:click="load_2">LoadDocument</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
 
-export default {
-  name: 'app',
-  data () {
-    return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
 
-  methods: {
-    load_2: function (event) {
-      // Load the PDF document using the file name
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.load('https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf', null);
-    }
-  }
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const load_2 = function (event) {
+  // Load the PDF document using the file name
+  let viewer = pdfviewer.value.ej2Instances;
+  viewer.load('https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf', null);
 }
+
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
 <template>
   <div id="app">
     <button v-on:click="load_2">LoadDocument</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :serviceUrl="serviceUrl">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
   methods: {
     load_2: function (event) {
       // Load the PDF document using the file name
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      let viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.load('https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf', null);
     }
   }
 }
 </script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="load_2">LoadDocument</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const load_2 = function (event) {
+  // Load the PDF document using the file name
+  let viewer = pdfviewer.value.ej2Instances;
+  viewer.load('https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf', null);
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="load_2">LoadDocument</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
+  methods: {
+    load_2: function (event) {
+      // Load the PDF document using the file name
+      let viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.load('https://cdn.syncfusion.com/content/pdf/hive-succinctly.pdf', null);
+    }
+  }
+}
+</script>
+
 {% endhighlight %}
 {% endtabs %}
 

@@ -19,7 +19,10 @@ To use CRUD, inject the [`Edit`](https://ej2.syncfusion.com/vue/documentation/ap
 The following code example demonstrates how to enable cell editing in the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +61,10 @@ Edit Type |Component |Example
 `datetimepickeredit` | [`DateTimePicker`](https://ej2.syncfusion.com/vue/documentation/datetimepicker/getting-started/) | params: { value: new Date() }
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +84,10 @@ The cell edit template is used to create a custom component for a particular col
 * `destroy` - It is used to destroy the component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +101,10 @@ You can disable editing for particular columns, by using the [`columns.allowEdit
 In the following demo, editing is disabled for the `TaskName` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -104,7 +116,10 @@ In the following demo, editing is disabled for the `TaskName` column.
 In Gantt, all create, update, delete operations can be disabled by setting the `readOnly` property as `true`. The following sample demonstrates, rendering the Gantt chart as read only.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +135,10 @@ Editing feature requires a primary key column for CRUD operations. While definin
 You can set default values when new task dialog opens using [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionbegin) event when `requestType` is `beforeOpenAddDialog`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -138,7 +156,10 @@ In the general tab of add/edit dialog, the custom input [fields](https://ej2.syn
 In the below sample, added field from the template to general tab.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -152,7 +173,10 @@ In the below sample, added field from the template to general tab.
 In the below code show cases, how to add additional features to dependency, segments and resources tab.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -166,7 +190,10 @@ In the below code show cases, how to add additional features to dependency, segm
  The below code shows how to enable inline mode to RTE in notes tab.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/managing-tasks-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/managing-tasks-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -201,7 +228,10 @@ Taskbar state |Description
 `Removing dependency` | Once you tap the taskbar with direct dependency, then confirmation dialog will be shown for removing dependency. <br> ![Confirm dialog](../images/confirm-dialog.PNG)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/touch-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/touch-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -215,7 +245,10 @@ Taskbar state |Description
 The taskbar editing tooltip can be customized using the [`tooltipSettings.editing`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#editing) property. The following code example shows how to customize the taskbar editing tooltip in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/tooltip-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/tooltip-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

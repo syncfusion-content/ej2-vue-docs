@@ -24,27 +24,13 @@ You can achieve the dialog template editing using another vue page.
     </ejs-grid>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 import DialogTemplate from "./dialogtemp.vue";
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { NumericTextBox } from "@syncfusion/ej2-inputs";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
 import { DataUtil } from '@syncfusion/ej2-data';
-
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(DatePickerPlugin);
-Vue.use(NumericTextBoxPlugin)
-
-export default {
-  data() {
-    return {
-      data: data,
-      editSettings: {
+      const editSettings = {
         allowEditing: true,
         allowAdding: true,
         allowDeleting: true,
@@ -52,28 +38,21 @@ export default {
         template: function() {
           return { template: DialogTemplate };
         }
-      },
-      toolbar: ["Add", "Edit", "Delete", "Update", "Cancel"]
-    };
-  },
-  provide: {
-    grid: [Page, Edit, Toolbar]
-  },
-  methods: {
-    actionBegin(args) {
+      };
+      const toolbar = ["Add", "Edit", "Delete", "Update", "Cancel"];
+      provide('grid',  [Page, Edit, Toolbar]);
+      const actionBegin = (args) => {
       if (args.requestType === "save") {
         // cast string to integer value.
         args.data["Freight"] = parseFloat(args.form.querySelector("#Freight").value);
       }
     },
-    actionComplete(args) {
+    const actionComplete(args) {
       // Set initail Focus
       if (args.requestType === "beginEdit") {
         args.form.elements.namedItem("OrderID").focus();
       }
     }
-  }
-}
 </script>
 <style>
  @import "https://cdn.syncfusion.com/ej2/material.css";
@@ -141,28 +120,23 @@ Create new vue page with the name of `dialogtemp.vue` and paste the below code.
     </div>
   </div>
 </template>
-<script>
+<script setup>
 import { data } from './datasource.js';
 import { DataUtil } from "@syncfusion/ej2-data";
-
-export default {
-  data() {
+import { onmount, ref } from "vue";
+const OrderID = ref(null);
+const CustomerID = ref(null);
     let shipCity = DataUtil.distinct(data, "ShipCity", true);
     let shipCountry = DataUtil.distinct(data, "ShipCountry", true);
-    return {
-      data: {},
-      shipCityDistinctData: shipCity,
-      shipCountryDistinctData: shipCountry
-    };
-  },
-  mounted() {
+      const shipCityDistinctData = shipCity;
+      const shipCountryDistinctData = shipCountry;
+  onmounted() {
     // Set initail Focus
     if (this.data.isAdd) {
-      this.$refs.OrderID.focus();
+      OrderID.value.focus();
     } else {
-      this.$refs.CustomerID.focus();
+      CustomerID.value.focus();
     }
   }
-};
 </script>
 ```

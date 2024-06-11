@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <button id="print" @click="clickPrint">Print</button>
@@ -14,13 +12,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, ImageExport, PdfExport, Print } from '@syncfusion/ej2-vue-maps';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { MapsComponent, ImageExport, PdfExport, Print, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { enableRipple } from '@syncfusion/ej2-base';
-Vue.use( MapsPlugin, ButtonPlugin);
+
 enableRipple(true);
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return {
         urlTemplate: 'https://tile.openstreetmap.org/level/tileX/tileY.png',
@@ -36,10 +39,10 @@ provide: {
     maps: [ImageExport, PdfExport, Print]
 },
 methods: {
-    clickExport: function(args) {
+    clickExport: function() {
       this.$refs.maps.ej2Instances.export("PNG","GAUGE");
     },
-    clickPrint:function(args){
+    clickPrint:function(){
         this.$refs.maps.ej2Instances.print();
     }
 }
@@ -50,5 +53,3 @@ methods: {
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 
 </style>
-
-

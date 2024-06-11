@@ -1,22 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings" :height="height"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings"
+      :height="height"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotChart } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotChart } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -32,23 +29,19 @@ export default {
       chartSettings: {
         crosshair: { enable: true },
         chartSeries: {
-         type: 'Line',
-         marker: { fill: '#EEE', height: 10, width: 10, shape: 'Pentagon', visible: true }
+          type: 'Line',
+          marker: { fill: '#EEE', height: 10, width: 10, shape: 'Pentagon', visible: true }
         },
         primaryXAxis: { crosshairTooltip: { enable: true, fill: '#ff0000' } },
         primaryYAxis: { crosshairTooltip: { enable: true, fill: '#0000FF' } }
       }
     }
   },
-    provide: {
-        pivotview: [PivotChart]
-    }
+  provide: {
+    pivotview: [PivotChart]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

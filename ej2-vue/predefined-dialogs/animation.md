@@ -17,7 +17,10 @@ In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `Zo
 ## Alert animation
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/alert-animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/alert-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `Zo
 ## Confirm animation
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/confirm-animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/confirm-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +43,10 @@ In the below sample, `Zoom` effect is enabled. So, The Dialog will open with `Zo
 ## Prompt animation
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/prompt-animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/prompt-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

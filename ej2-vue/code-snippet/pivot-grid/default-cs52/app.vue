@@ -1,25 +1,22 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Excel Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowExcelExport="allowExcelExport"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">Excel Export</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowExcelExport="allowExcelExport"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
-import { ExcelExportProperties } from '@syncfusion/ej2-grids';
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -37,22 +34,22 @@ export default {
     }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      let excelExportProperties: ExcelExportProperties = {
-          header: {
-              headerRows: 2,
-              rows: [
-                  { cells: [{ colSpan: 4, value: "Pivot Table", style: { fontColor: '#C67878', fontSize: 20, hAlign: 'Center', bold: true, underline: true } }] }
-              ]
-          },
-          footer: {
-              footerRows: 4,
-              rows: [
-                  { cells: [{ colSpan: 4, value: "Thank you for your business!", style: { hAlign: 'Center', bold: true } }] },
-                  { cells: [{ colSpan: 4, value: "!Visit Again!", style: { hAlign: 'Center', bold: true } }] }
-              ]
-          }
+      let excelExportProperties = {
+        header: {
+          headerRows: 2,
+          rows: [
+            { cells: [{ colSpan: 4, value: "Pivot Table", style: { fontColor: '#C67878', fontSize: 20, hAlign: 'Center', bold: true, underline: true } }] }
+          ]
+        },
+        footer: {
+          footerRows: 4,
+          rows: [
+            { cells: [{ colSpan: 4, value: "Thank you for your business!", style: { hAlign: 'Center', bold: true } }] },
+            { cells: [{ colSpan: 4, value: "!Visit Again!", style: { hAlign: 'Center', bold: true } }] }
+          ]
+        }
       };
       pivotGridObj.excelExport(excelExportProperties);
     }
@@ -60,8 +57,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

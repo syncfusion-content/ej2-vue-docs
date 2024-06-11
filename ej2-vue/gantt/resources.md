@@ -86,7 +86,10 @@ When resource unit is defined in resource collection, the amount of work done by
 The following code snippet shows how to assign the resource for each task and map to Gantt control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/resources-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/resources-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

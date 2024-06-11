@@ -19,7 +19,10 @@ There are three types of [`clipMode`](https://ej2.syncfusion.com/vue/documentati
 * **`EllipsisWithTooltip`**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/cell/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/cell/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

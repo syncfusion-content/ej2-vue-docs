@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='app'>
     <div class="e-btn-group">
@@ -14,14 +11,15 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
 
-Vue.use(ButtonPlugin);
-Vue.use(DropDownButtonPlugin);
-
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-dropdownbutton":DropdownbuttonComponent
+},
   name: 'app',
   data () {
         return {
@@ -49,6 +47,3 @@ export default {
   }
 
 </style>
-
-
-

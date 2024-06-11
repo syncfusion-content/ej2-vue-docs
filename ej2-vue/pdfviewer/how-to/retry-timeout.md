@@ -18,47 +18,76 @@ By default, when an AJAX request fails, the Retry Timeout property is set to `0`
 
 To set the retry timeout, use the `retryTimeout` property in the PDF Viewer configuration. This property takes a value in seconds.
  
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath"
-      :retryTimeout="retryTimeout" 
-      :retryCount="retryCount" >
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :retryTimeout="retryTimeout"
+      :retryCount="retryCount">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+const retryTimeout = 10;
+const retryCount = 10;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :retryTimeout="retryTimeout"
+      :retryCount="retryCount">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  Annotation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';;
 
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';;
-  Vue.use(PdfViewerPlugin);
-
-  export default {
-    name: 'app',
-    data() {
-      return {
-        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath: "PDF_Succinctly.pdf",
-        retryTimeout : 10,
-        retryCount : 10
-      };
-    },
-
-    provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
+export default {
+  name: 'app',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf",
+      retryTimeout: 10,
+      retryCount: 10
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
   }
+}
 
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 In the given example, the `retryTimeout` is set to 10 seconds, and the `retryCount` is set to 5. This means that if a request made by the PDF Viewer takes longer than 10 seconds to receive a response, it will be considered a timeout. In such cases, The PDF Viewer will resend the same request based on the retryCount. Here, this process will repeat up to maximum of 5 retries.
 

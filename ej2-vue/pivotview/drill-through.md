@@ -15,7 +15,10 @@ Allows to view the underlying raw data of a summarized cell in the pivot table. 
 To use the drill through feature, inject the `DrillThrough` module in the pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs35/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs35/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ To use the drill through feature, inject the `DrillThrough` module in the pivot 
 Users can also view the underlying raw data though the pivot chart. By clicking on any data point, user can view the detailed raw data in a data grid inside a new window.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs36/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs36/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,11 +51,12 @@ The [`maxRowsInDrillThrough`](https://ej2.syncfusion.com/vue/documentation/api/p
     </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+<script setup>
+import { provide } from "vue";
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
+
+
 
 export default {
   data () {
@@ -103,9 +110,7 @@ export default {
       height: 350
     }
   },
-  provide: {
-    pivotview: [FieldList]
-  }
+  provide('pivotview',  [FieldList]);
 }
 </script>
 <style>
@@ -131,7 +136,10 @@ The event [`drillThrough`](https://ej2.syncfusion.com/vue/documentation/api/pivo
 * `cancel` - It is a boolean property and by setting this to true, dialog won’t be created.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs37/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs37/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -148,7 +156,10 @@ The event [`beginDrillThrough`](https://ej2.syncfusion.com/vue/documentation/api
 > Grid features are segregated into individual feature-wise modules. For example, to use sorting feature, you should inject `Sort` using the `Grid.Inject(Sort)` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs38/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs38/app.vue %}
 {% endhighlight %}
 {% endtabs %}

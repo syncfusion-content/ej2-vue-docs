@@ -1,34 +1,33 @@
-
-
-
 <template>
-<div id="app">
-        <div class='wrapper1'>
-         <!-- Specifies the masked datepicker without format property. -->
-         <ejs-datepicker id="datepicker" :enableMask='true' ></ejs-datepicker>
-     </div>
-     <div class='wrapper2'>
-          <!-- Specifies the masked datepicker with format property. -->
-         <ejs-datepicker id="format" :enableMask='true' :format='dateFormat'></ejs-datepicker>
-     </div>
+  <div id="app">
+    <div class='wrapper1'>
+      <!-- Specifies the masked datepicker without format property. -->
+      <ejs-datepicker id="datepicker" :enableMask='true'></ejs-datepicker>
+    </div>
+    <div class='wrapper2'>
+      <!-- Specifies the masked datepicker with format property. -->
+      <ejs-datepicker id="format" :enableMask='true' :format='dateFormat'></ejs-datepicker>
+    </div>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { DatePickerPlugin, DatePicker, MaskedDateTime } from "@syncfusion/ej2-vue-calendars";
 
-DatePicker.Inject(MaskedDateTime)
-Vue.use(DatePickerPlugin);
-export default Vue.extend({
-  data: function() {
+import { DatePickerComponent, MaskedDateTime } from "@syncfusion/ej2-vue-calendars";
+
+export default {
+  name: "App",
+  components: {
+    "ejs-datepicker": DatePickerComponent
+  },
+  data: function () {
     return {
       dateFormat: 'M/d/yyyy'
     };
   },
   provide: {
-      datepicker: [MaskedDateTime]
-  }  
-});
+    datepicker: [MaskedDateTime]
+  }
+}
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -36,16 +35,16 @@ export default Vue.extend({
 @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-#wrapper1{
+
+#wrapper1 {
   min-width: 250px;
-    float: left;
-    margin-left: 100px;
+  float: left;
+  margin-left: 100px;
 }
-#wrapper2{
+
+#wrapper2 {
   min-width: 250px;
-    float: right;
-     margin-right: 100px;
+  float: right;
+  margin-right: 100px;
 }
 </style>
-
-

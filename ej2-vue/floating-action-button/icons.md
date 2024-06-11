@@ -22,13 +22,8 @@ You can show icon only in Floating Action Button by setting [`iconCss`](https://
     <ejs-fab id='fab' iconCss='fab-icons fab-icon-people'></ejs-fab>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(FabPlugin);
-
-    export default {}
+<script setup>
+    import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
 </script>
 
 <style>
@@ -47,12 +42,8 @@ You can show icon along with text in Floating Action Button by setting [`iconCss
     <ejs-fab id='fab' iconCss='fab-icons fab-icon-people' content='Contacts'></ejs-fab>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(FabPlugin);
-
+<script setup>
+    import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
     export default {}
 </script>
 
@@ -72,13 +63,8 @@ You can change the position of icon when showing along with content by setting [
     <ejs-fab id='fab' iconCss='fab-icons fab-icon-people' content='Contacts' iconPosition='Right'></ejs-fab>
 </template>
 
-<script>
-    import Vue from 'vue';
-    import { FabPlugin } from "@syncfusion/ej2-vue-buttons";
-
-    Vue.use(FabPlugin);
-
-    export default {}
+<script setup>
+    import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
 </script>
 
 <style>
@@ -90,7 +76,10 @@ You can change the position of icon when showing along with content by setting [
 Below example demonstrates a FAB with icon and text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/floating-action-button/icons-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/floating-action-button/icons-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -18,7 +18,10 @@ You can customize the background filler UI using the [`cssClass`](https://ej2.sy
 You can also show reverse progress by adding custom class to the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#cssClass) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/custom-progress-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/custom-progress-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

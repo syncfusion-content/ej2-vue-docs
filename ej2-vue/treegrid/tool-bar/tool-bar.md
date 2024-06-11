@@ -20,7 +20,10 @@ To use ToolBar, inject `Toolbar` module in the treegrid.
 You can enable/disable toolbar items by using the `enableItems` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/toolbar/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/toolbar/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

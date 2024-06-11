@@ -19,7 +19,10 @@ To enable this feature, need to set the [groupSettings.enableLazyLoading](https:
 The following example demonstrates how to enable the lazy load grouping feature by setting `groupSettings.enableLazyLoading` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/lazy-load-group-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/lazy-load-group-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +55,7 @@ public IActionResult UrlDatasource([FromBody] DataManagerRequest dm)
     {
         DataSource = operation.PerformSearching(DataSource, dm.Search);  //Search
     }
-    if (dm.Sorted != null && dm.Sorted.Count > 0) //Sorting
+    if (dm.IsLazyLoad == false && dm.Sorted != null && dm.Sorted.Count > 0) //Sorting for grouping
     {
         DataSource = operation.PerformSorting(DataSource, dm.Sorted);
     }
@@ -72,6 +75,7 @@ public IActionResult UrlDatasource([FromBody] DataManagerRequest dm)
     if (dm.IsLazyLoad)
     {
         groupedData = operation.PerformGrouping<Customers>(DataSource, dm); // Lazy load grouping
+        groupedData = operation.PerformSorting(groupedData, dm); // Sorting with Lazy load grouping
         if (dm.OnDemandGroupInfo != null && dm.Group.Count() == dm.OnDemandGroupInfo.Level)
         {
             count = groupedData.Cast<Customers>().Count();
@@ -85,8 +89,9 @@ public IActionResult UrlDatasource([FromBody] DataManagerRequest dm)
     }
 return dm.RequiresCounts ? Json(new { result = groupedData == null ? DataSource : groupedData, count = count }) : Json(DataSource);
 }
-
 ```
+
+> For optimal performance, especially when dealing with lazy loading grouping, it is recommended to perform sorting after the grouping action.
 
 ## Lazy load grouping with infinite scrolling
 
@@ -105,7 +110,10 @@ To enable this feature, you need to set the [groupSettings.enableLazyLoading](ht
 The following example demonstrates how to enable the lazy load grouping with infinite scrolling feature using the `groupSettings.enableLazyLoading` and `enableInfiniteScrolling` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/lazy-load-group-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/lazy-load-group-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +140,10 @@ To enable this feature, you need to set the [groupSettings.enableLazyLoading](ht
 The following example demonstrates how to enable the lazy load grouping with virtual scrolling feature using the `groupSettings.enableLazyLoading` and `enableVirtualization` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/group/lazy-load-group-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/group/lazy-load-group-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

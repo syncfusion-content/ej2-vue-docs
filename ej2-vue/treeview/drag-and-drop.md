@@ -31,7 +31,10 @@ The following table explains the usage of indicator icons.
 In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowdraganddrop) property is enabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/drag-and-drop/single-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/drag-and-drop/single-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ To perform multi-selection, press and hold **CTRL** key and click the desired no
 In the following sample,  the `allowMultiSelection` property is  enabled along with the `allowDragAndDrop` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/drag-and-drop/multiple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/drag-and-drop/multiple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

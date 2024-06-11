@@ -1,9 +1,7 @@
-
-
 <template>
   <div id="app">
     <div>
-      <ejs-button ref='button' style="margin-top: 10px " cssClass='e-outline' v-on:click.native="clearGroup">Clear Grouping</ejs-button>
+      <ejs-button ref='button' style="margin-top: 10px " cssClass='e-outline' v-on:click="clearGroup">Clear Grouping</ejs-button>
     </div>
     <ejs-grid ref='grid' style="padding-top: 10px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
       <e-columns>
@@ -16,15 +14,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Group } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Group } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -53,5 +54,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

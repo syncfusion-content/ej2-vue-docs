@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel>
@@ -50,18 +48,19 @@
 </template>
 
 <script>
-  import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
-  export default {
-    components: {
-      'ejs-carousel': CarouselComponent,
-      'e-carousel-item': CarouselItemDirective,
-      'e-carousel-items': CarouselItemsDirective
-    },
-    data: function () {
-      return {};
-    },
-  };
+export default {
+  name: "App",
+  components: {
+    'ejs-carousel': CarouselComponent,
+    'e-carousel-item': CarouselItemDirective,
+    'e-carousel-items': CarouselItemsDirective
+  },
+  data: function () {
+    return {};
+  }
+};
 </script>
 
 <style>
@@ -89,5 +88,3 @@
   text-align: center;
 }
 </style>
-
-

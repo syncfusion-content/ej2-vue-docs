@@ -20,7 +20,10 @@ You can place any custom element on the axis area by assigning the id of the ele
 >Note: To use annotation feature, we need to inject `Annotations` module using `CircularGauge.Inject(Annotations)` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ For example, if the angle is 90 degree and the radius is 110%, then the annotati
 Radius of the annotation takes value either in pixel or percentage. By setting value in percentage, annotation gets its position with respect to its axis radius.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ As the annotation allows you to place any custom element, we can initialize a ga
 be used to place that in another gauge.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

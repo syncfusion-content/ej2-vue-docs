@@ -1,26 +1,17 @@
-
-
 <template>
-    <div class="predefinedDialogs">
-      <ejs-button id="confirmDlgBtn" v-on:click.native="confirmBtnClick" cssClass="e-success">Confirm</ejs-button>
-    </div>
+  <div class="predefinedDialogs">
+    <ejs-button id="confirmDlgBtn" v-on:click="confirmBtnClick" cssClass="e-success">Confirm</ejs-button>
+  </div>
 </template>
-
-<style>
-    @import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-.predefinedDialogs {
-  height: 100%;
-  min-height: 350px;
-}
-</style>
-
 <script>
-import Vue from "vue";
 import { DialogUtility } from "@syncfusion/ej2-vue-popups";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(DialogUtility);
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+
 export default {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent
+  },
   data: function () {
     return {};
   },
@@ -36,5 +27,11 @@ export default {
   },
 }
 </script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 
-
+.predefinedDialogs {
+  height: 100%;
+  min-height: 350px;
+}
+</style>

@@ -35,20 +35,23 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ChipListPlugin } from '@syncfusion/ej2-vue-buttons';
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ChipListComponent } from '@syncfusion/ej2-vue-buttons';
+import { DatePickerComponent } from "@syncfusion/ej2-vue-calendars";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { employeeData } from './datasource.js';
-Vue.use(GridPlugin);
-Vue.use(DatePickerPlugin);
-Vue.use(ChipListPlugin);
-Vue.use(DropDownListPlugin );
-Vue.use(NumericTextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-chiplist":ChipListComponent,
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-datepicker":DatePickerComponent,
+"ejs-dropdownlist":DropDownListComponent
+},
   data() {
     return {
       data: employeeData,

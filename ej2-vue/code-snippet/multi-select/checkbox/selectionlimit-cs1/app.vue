@@ -1,21 +1,21 @@
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:15px auto 0; width:250px;">
-        <br>
-        <ejs-multiselect id='multiselect' :dataSource='sportsData' placeholder="Select a game" mode="CheckBox" :fields='fields' :maximumSelectionLength='maximumSelectionLength'></ejs-multiselect>
+      <br>
+      <ejs-multiselect id='multiselect' :dataSource='sportsData' placeholder="Select a game" mode="CheckBox"
+        :fields='fields' :maximumSelectionLength='maximumSelectionLength'></ejs-multiselect>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { MultiSelectPlugin } from "@syncfusion/ej2-vue-dropdowns";
-import { MultiSelect, CheckBoxSelection } from '@syncfusion/ej2-dropdowns';
-MultiSelect.Inject(CheckBoxSelection);
-Vue.use(MultiSelectPlugin);
+import { MultiSelectComponent, CheckBoxSelection } from "@syncfusion/ej2-vue-dropdowns";
+
 export default {
-  data (){
+  name: "App",
+  components: {
+    "ejs-multiselect": MultiSelectComponent
+  },
+  data() {
     return {
       sportsData: [
         { Id: 'game1', Game: 'Badminton' },
@@ -28,18 +28,19 @@ export default {
         { Id: 'game8', Game: 'Fencing' },
         { Id: 'game9', Game: 'Boxing' }
       ],
-      fields : { text: 'Game', value: 'Id' },
-      maximumSelectionLength : 3
+      fields: { text: 'Game', value: 'Id' },
+      maximumSelectionLength: 3
     }
+  },
+  provide: {
+    multiselect: [CheckBoxSelection]
   }
 }
 
 </script>
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 </style>
-
-

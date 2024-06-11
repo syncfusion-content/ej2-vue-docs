@@ -31,7 +31,10 @@ The editor checks the following settings on validation:
 * Should not use inline elements inside the block elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,11 +1,9 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel :indicatorsTemplate="'indicatorsTemplate'">
       <template v-slot:indicatorsTemplate>
         <div class="indicator" indicator-index="{data.index}">
-      </div>
+        </div>
       </template>
       <e-carousel-items>
         <e-carousel-item template="Cardinal"></e-carousel-item>
@@ -54,12 +52,17 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
-export default {};
+export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  }
+};
 </script>
 
 <style>
@@ -98,6 +101,5 @@ export default {};
 
 .e-carousel .e-carousel-indicators .e-indicator-bars .e-indicator-bar.e-active .indicator {
   background-color: #3c78ef;
-}</style>
-
-
+}
+</style>

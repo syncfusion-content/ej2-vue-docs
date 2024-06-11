@@ -6,6 +6,7 @@
 
 <script setup>
 import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+
 </script>
 
 <style>
@@ -16,6 +17,7 @@ import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-imag
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
 

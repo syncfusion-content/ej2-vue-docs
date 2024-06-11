@@ -1,16 +1,18 @@
-
-
 <template>
   <div>
     <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :selected = "onSelect" :asyncSettings= "path"></ejs-uploader>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { UploaderPlugin, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
-Vue.use(UploaderPlugin);
 
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
+ 
+let initial = true;
 export default {
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
   data: function(){
         return {
           path:  {
@@ -20,21 +22,41 @@ export default {
         }
     },
     methods: {
-  onSelect:function(args: SelectedEventArgs): void {
-    let totalSize: number = 0;
-    for (let file of args.filesData) {
-        totalSize = totalSize + file.size;
+ onSelect: function(args) {
+    if (initial) { initial = false; return; }
+    args.isModified = true;
+    let oldFiles = this.$refs.uploadObj.getFilesData();
+    let filesData = args.filesData.concat(oldFiles);
+    let modifiedDataleInfo = this.sortFileList(filesData);
+    args.modifiedFilesData = modifiedDataleInfo;
+},
+
+ sortFileList: function(filesData){
+    let files= filesData;
+    let fileNames = [];
+    for (let i = 0; i < files.length; i++) {
+        fileNames.push(files[i].name);
     }
-    let size: string = this.$refs.uploadObj.bytesToSize(totalSize);
-    alert("Total select file's size is " + size);
+    let sortedFileNames = fileNames.sort();
+    let sortedFilesData = [];
+
+    for (let name of sortedFileNames) {
+        for (let i = 0; i < files.length; i++) {
+            if (name === files[i].name) {
+                sortedFilesData.push(files[i]);
+            }
+        }
+    }
+    return sortedFilesData;
 }
+
     }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
  #container {
         visibility: hidden;
         padding-left: 5%;
@@ -50,7 +72,4 @@ export default {
         top: 45%;
         width: 30%;
     }
-
 </style>
-
-

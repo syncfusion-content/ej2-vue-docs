@@ -15,7 +15,10 @@ A particular character in a text can be underlined in the [`beforeItemRender`](h
 In the following example, the first character in `File`, `Open`, and `Save` menu items are underlined.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -19,7 +19,10 @@ You can customize the Timeline items dot size, connectors, dot borders, dot oute
 You can define the styles applicable to the all the Timeline item connectors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/common-connector/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/common-connector/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can define the styles applicable to the all the Timeline item connectors.
 You can also apply unique styles to individual connectors, to differentiate specific items within the Timeline.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/individual-connector/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/individual-connector/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ You can also apply unique styles to individual connectors, to differentiate spec
 You can modify the color of the dots to highlight the specific Timeline items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/dot-color/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/dot-color/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ You can modify the color of the dots to highlight the specific Timeline items.
 You can adjust the size of the dot to make it larger or smaller by using the `--dot-size` variable.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/dot-size/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/dot-size/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +81,10 @@ You can adjust the size of the dot to make it larger or smaller by using the `--
 You can add shadow effects to the Timeline dots to make it feel visually engaging by using the `--dot-outer-space` & `--dot-border` variables.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/dot-shadow/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/dot-shadow/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +96,10 @@ You can add shadow effects to the Timeline dots to make it feel visually engagin
 You can achieve the desired dot variant by customizing the border, outline and background colors of the Timeline dots.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/dot-variant/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/dot-variant/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +111,10 @@ You can achieve the desired dot variant by customizing the border, outline and b
 By adding the `e-outline` class to the Timeline `cssClass` property it enables the dots to have an outline state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/dot-outline/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/dot-outline/app.vue %}
 {% endhighlight %}
 {% endtabs %}

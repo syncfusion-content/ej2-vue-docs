@@ -15,7 +15,10 @@ The name attribute of the input element  is used to group checkbox/radio type Bu
 In the following code snippet, the radio type ButtonGroup is explained with male value as checked. Now, the value that is in checked state will be sent on form submit.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

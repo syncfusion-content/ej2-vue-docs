@@ -20,7 +20,10 @@ In this demo, the [`frozenColumns`](https://ej2.syncfusion.com/vue/documentation
 is set as '3'. Hence, the left two columns and top three rows are frozen.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/scroll/frozencolumn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/scroll/frozencolumn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ In this demo, the columns with field name `taskName` and `startDate` is frozen u
 the `isFrozen` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/scroll/isfrozen-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/scroll/isfrozen-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ Types of the [`column.freeze`](https://ej2.syncfusion.com/vue/documentation/api/
 In this demo, the **Task Name** column is frozen at the left and the **Priority** column is frozen at the right side of the content table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/scroll/freeze-direction-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/scroll/freeze-direction-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

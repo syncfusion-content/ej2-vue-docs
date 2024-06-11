@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
       <div style="display: inline-block;">
@@ -10,7 +8,7 @@
       <div>
       <label style="padding: 30px 17px 0 0">Enter the width: </label>
       <ejs-textbox ref='textbox' type="textbox" placeholder="Enter new width" width="120"></ejs-textbox>
-      <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExternalResize">Resize</ejs-button>
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="onExternalResize">Resize</ejs-button>
       </div> 
       <ejs-grid ref='grid' style="padding: 5px 5px" :dataSource='data' height='315' :allowResizing='true'>
         <e-columns>
@@ -23,18 +21,22 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Resize } from "@syncfusion/ej2-vue-grids";
-import { DropDownListPlugin  } from "@syncfusion/ej2-vue-dropdowns";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { TextBoxPlugin } from '@syncfusion/ej2-vue-inputs';
-import { data } from './datasource.js';
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(TextBoxPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent  } from "@syncfusion/ej2-vue-dropdowns";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
+import { data } from './datasource.js';
 export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-textbox":TextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -68,5 +70,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

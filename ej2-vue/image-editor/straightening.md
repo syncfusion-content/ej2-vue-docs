@@ -21,7 +21,10 @@ The Image Editor control includes a [`straightenImage`](https://ej2.syncfusion.c
 Here is an example of straightening the image using the [`straightenImage`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#straightenimage) method. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs45/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs45/app.vue %}
 {% endhighlight %}
 {% endtabs %}

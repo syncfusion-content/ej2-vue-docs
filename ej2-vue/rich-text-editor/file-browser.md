@@ -45,7 +45,10 @@ The following example explains about how to configure the file browser within th
 > Rich Text Editor features are segregated into individual feature-wise modules. To use the file browser tool, configure `FileManager` in the provider.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/file-browser-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/file-browser-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

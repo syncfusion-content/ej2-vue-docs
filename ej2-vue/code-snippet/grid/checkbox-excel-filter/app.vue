@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id="app">
     <ejs-grid ref='grid' :dataSource="getTradeData" :query="query" :allowPaging='true' :allowFiltering='true'
@@ -15,12 +12,16 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Filter, Page, Sort  } from "@syncfusion/ej2-vue-grids";
-import { DataManager, Query, UrlAdaptor } from "@syncfusion/ej2-data";
-Vue.use(GridPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter, Page, Sort  } from "@syncfusion/ej2-vue-grids";
+import { DataManager, Query, UrlAdaptor } from "@syncfusion/ej2-data";
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       pageSettings: { pageCount: 5 },
@@ -33,7 +34,7 @@ export default {
     getTradeData: function () {
         let SERVICE_URI = "https://services.syncfusion.com/vue/production/";
         let getTradeData = new DataManager({
-            url: SERVICE_URI + 'api/Orders',
+            url: SERVICE_URI + 'api/UrlDataSource',
             adaptor: new UrlAdaptor()
         });
         return getTradeData;

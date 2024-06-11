@@ -23,7 +23,10 @@ The [`show`](https://ej2.syncfusion.com/vue/documentation/api/diagram/contextMen
 The following code illustrates how to enable the default context menu items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/contextmenu/events-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/contextmenu/events-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ Context menu can be defined for individual node with the desired context menu it
 The following code example illustrates how to add custom context menu items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/contextmenu/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/contextmenu/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +69,10 @@ To display the custom context menu items alone, set  the [`showCustomMenuOnly`](
 * In the following sample, the menu item is rendered with key code for specified action in Context Menu using the template. Here, the key code is specified for the cut and copy at right corner of the menu items by adding a span element in the `contextMenuBeforeItemRender` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/contextmenu/menutemplate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/contextmenu/menutemplate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +85,10 @@ You would be notified with events, when you try to open the context menu items [
 The following code example illustrates how to define those events.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/contextmenu/custom-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/contextmenu/custom-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

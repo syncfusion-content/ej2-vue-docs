@@ -28,7 +28,10 @@ Even though we have hidden the checkbox the functionality will be same for the l
 > In this process we will exclude the visible checkbox list items and only consider the hidden checkbox items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

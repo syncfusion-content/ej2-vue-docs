@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
   <div id='preview'></div>
@@ -7,12 +5,15 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { UploaderPlugin, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
-import { createElement, detach, EventHandler } from '@syncfusion/ej2-base';
-Vue.use(UploaderPlugin);
+
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
+import { createElement } from '@syncfusion/ej2-base';
 
 export default {
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
   data: function(){
         return {
           path:  {
@@ -24,7 +25,7 @@ export default {
         }
     },
     methods: {
-        onupload:function(args: SelectedEventArgs){
+        onupload:function(args){
     for(let i = 0; i< args.filesData.length ; i++){
         let liparentDiv = createElement('div',  { className: 'image-list'});
         let liImage = createElement('img',  { className: 'image'});
@@ -35,24 +36,24 @@ export default {
     args.cancel=true;
 },
 
- readURL: function(liImage: HTMLElement, file: any) {
-    let imgPreview: HTMLImageElement = liImage as HTMLImageElement;
-    let imageFile: File = file.rawFile;
-    let reader: FileReader = new FileReader();
+ readURL: function(liImage, file) {
+    let imgPreview = liImage ;
+    let imageFile = file.rawFile;
+    let reader = new FileReader();
     reader.addEventListener( 'load', () => {
         imgPreview.src = reader.result;
     }, false);
     if (imageFile) {
         reader.readAsDataURL(imageFile);
     }
-};
+}
     }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
  #container {
         visibility: hidden;
         padding-left: 5%;
@@ -105,5 +106,3 @@ export default {
   margin-top: 20px;
 }
 </style>
-
-

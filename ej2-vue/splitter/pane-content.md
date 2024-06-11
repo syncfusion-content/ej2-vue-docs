@@ -17,7 +17,10 @@ This section explains how to provide plain text content or HTML markup or integr
 Splitter is a layout based container component. You can render the pane contents from existing HTML markups. Converting HTML markup as splitter pane is easy way to add the panes content dynamically.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ You can refer [Accordion within splitter](https://ej2.syncfusion.com/vue/demos/#
 You can add the plain text as a pane contents using either inner HTML or [content](https://ej2.syncfusion.com/vue/documentation/api/splitter/panePropertiesModel/#content) API
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ You can set HTML element as pane [content](https://ej2.syncfusion.com/vue/docume
 The following code demonstrates how to fetch an element from the document and load it to pane using its ID.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/splitter/resize-min-max-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/splitter/resize-min-max-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

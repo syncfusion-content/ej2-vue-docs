@@ -17,7 +17,10 @@ The header part of Scheduler can be customized easily with the built-in options 
 By default, the header bar holds the date and view navigation options, through which the user can switch between the dates and various views. This header bar can be hidden from the UI by setting `false` to the [`showHeaderBar`](../api/schedule/#showheaderbar) property. It's default value is `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/header-bar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/header-bar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ By default, the header bar holds the date and view navigation options, through w
 Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#toolbaritems) property. To display the default items, it's essential to assign a [`name`](https://ej2.syncfusion.com/vue/documentation/api/schedule/toolbarItemModel/#name) field to each item. The names of the default items are `Previous`, `Next`, `Today`, `DateRangeText`, `NewEvent`, and `Views`. For custom items you can give the name as `Custom` to the `name` field. Here, the default items such as previous, next, date range text, and today have been used along with external icon as custom items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/header-bar-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/header-bar-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ Apart from the default date navigation and view options available on the header 
 Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the `actionBegin` event. Here, an employee image is added to the header bar, clicking on which will open the popup showing that person's short profile information.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/header-bar-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/header-bar-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +62,10 @@ Apart from the default date navigation and view options available on the header 
 By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the [`enableAdaptiveUI`](../api/schedule/#enableadaptiveui) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/header-bar-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/header-bar-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +83,10 @@ The Scheduler UI that displays the date text on all views are considered as the 
 The [`dateHeaderTemplate`](../api/schedule/#dateheadertemplate) option is used to customize the date header cells of day, week and work-week views.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/date-header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/date-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +98,10 @@ The [`dateHeaderTemplate`](../api/schedule/#dateheadertemplate) option is used t
 In month view, the date header template is not applicable and therefore the same customization can be added beside the date text in month cells by making use of the `renderCell` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/render-cell-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/render-cell-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +115,10 @@ The [`dateRangeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/sched
 The [`dateRangeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule/#daterangetemplate) property includes `startDate`, `endDate` and `currentView` options, you can customize the date range text using these available options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/date-header-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/date-header-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +132,10 @@ It is possible to customize the header indent cells using the `headerIndentTempl
 **Example:** To customize the header left indent cell to display resources text, refer to the below code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/header-indent-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/header-indent-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

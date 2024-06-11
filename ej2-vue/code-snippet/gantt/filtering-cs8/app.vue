@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
     <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings = "splitterSettings" :filterSettings="filterSettings" :allowFiltering= true>
@@ -15,16 +12,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Filter, } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, ColumnsDirective, ColumnDirective, Filter, } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
-Vue.use(GanttPlugin);
-import { DropDownListPlugin } from '@syncfusion/ej2-vue-dropdowns';
-Vue.use(DropDownListPlugin);
+
+import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
 import { DataManager } from "@syncfusion/ej2-data";
 import {createElement} from "@syncfusion/ej2-base";
 
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
       return{
             data: [
@@ -102,6 +104,3 @@ export default {
   }
 };
 </script>
-
-
-

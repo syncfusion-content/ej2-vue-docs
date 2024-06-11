@@ -20,13 +20,6 @@ new Vue({
       return {};
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     shapeChanging: function(args) {
       args.currentShapeSettings.fontColor =  'red',
       args.currentShapeSettings.fontStyle =  'georgia'

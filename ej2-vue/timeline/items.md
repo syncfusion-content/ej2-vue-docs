@@ -21,19 +21,37 @@ You can define the item content using the [content](https://ej2.syncfusion.com/v
 You can define string content for the Timeline items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/string-content/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/string-content/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/timeline/string-content" %}
 
+### Templated content
+
+You can specify the template content for the items, by using the selector for an element in HTML.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/timeline/templated-content/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/timeline/templated-content" %}
+
 ## Adding opposite content
 
 You can add additional information to each Timeline item, by using the [oppositeContent](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#oppositecontent) property which is positioned opposite to the item content. Similar to the `content` property you can define `string` or `function` as contents to the oppositeContent.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/opposite-content/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/opposite-content/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +75,10 @@ You can include images for the Timeline items using the `dotCss` property, by se
 You can display text for the Timeline items using the `dotCss` property, by adding text to the CSS `content` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/dot-item/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/dot-item/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +90,10 @@ You can display text for the Timeline items using the `dotCss` property, by addi
 You can use the [disabled](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#disabled) property to disable an item when set to `true`. By default, the value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/disabled/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/disabled/app.vue %}
 {% endhighlight %}
 {% endtabs %}

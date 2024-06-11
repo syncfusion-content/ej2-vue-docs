@@ -15,7 +15,10 @@ Paging provides an option to display TreeGrid data in page segments. To enable p
 To use paging, inject the [`Page`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#pagermodule) module in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/paging/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/paging/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ Two behaviors are available in TreeGrid paging to display certain number of reco
 With [`pageSizeMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/pageSettingsModel/#pagesizemode) property as `Root`, only the root level or the 0th level records are considered in records count.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/paging/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/paging/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ pageSettings: {pageSize: 7, pageSizes: true},
 By default, Pager will be rendered at the bottom of the TreeGrid. You can also render the Pager at the top of the TreeGrid by using the `dataBound` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/paging/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/paging/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

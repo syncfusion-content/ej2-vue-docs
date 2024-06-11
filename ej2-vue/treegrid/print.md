@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To print the TreeGrid, use the [`print`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#print) method from treegrid instance. The print option can be displayed on the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#toolbar) by adding the `print` toolbar item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/print/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/print/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ Some of the print options cannot be configured through JavaScript code. So, you 
 To print the treegrid from an external button, invoke the [`print`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#print) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/print/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/print/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +52,10 @@ To print the treegrid from an external button, invoke the [`print`](https://ej2.
 By default, the grid prints all the pages. To print the current page alone, set the [`printMode`](https://ej2.syncfusion.com/vue/documentation/api/grid/#printmode) to `CurrentPage`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/print/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/print/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ In the printComplete event, We have reversed the state back to the previous stat
 In the below example, we have `Duration` as a hidden column in the treegrid. While printing, we have changed `Duration` to visible column and `StartDate` as hidden column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/print/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/print/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

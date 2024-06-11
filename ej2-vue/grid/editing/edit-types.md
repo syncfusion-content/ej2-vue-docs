@@ -37,7 +37,10 @@ Component |Example
 [`Checkbox`](../../check-box) | params: { checked: true}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +56,10 @@ By default, the number of decimal places will be restricted to two in the Numeri
 In the below demo, while editing the row we have restricted to type the decimal point value in the NumericTextBox of `Freight` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +89,10 @@ You can also enable filtering for the DropDownList by passing the `allowFilterin
 In the below demo, DropDownList is rendered with custom Datasource for the `ShipCountry` column and enabled filtering to search DropDownList items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +116,10 @@ The cell edit template is used to add a custom component for a particular column
 Use the cell edit template feature of the Grid to render the TimePicker component in the Grid edit form. In the below sample, we have rendered TimePicker component in the **OrderDate** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +131,10 @@ Use the cell edit template feature of the Grid to render the TimePicker componen
 Use the cell edit template feature of the Grid to render the AutoComplete component in the Grid edit form. In the below sample, we have rendered AutoComplete component in the **CustomerID** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +146,10 @@ Use the cell edit template feature of the Grid to render the AutoComplete compon
 Use the cell edit template feature of the Grid to render the MultiSelect DropDown component in the Grid edit form. In the below sample, we have rendered MultiSelect DropDown component in the **ShipCity** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +161,10 @@ Use the cell edit template feature of the Grid to render the MultiSelect DropDow
 Use the cell edit template feature of the Grid to render the MaskedTextBox component in the Grid edit form. In the following sample, the MaskedTextBox component is rendered in the Mask column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -155,7 +176,10 @@ Use the cell edit template feature of the Grid to render the MaskedTextBox compo
 Use the cell edit template feature of the Grid to render the RichTextEditor component in the Grid edit form. In the below sample, we have rendered RichTextEditor component in the **ShipAddress** column, so we use [allowTextWrap](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowtextwrap) property to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,7 +195,10 @@ The DropDownList has been provided with several options to customize each list i
 This is demonstrated in the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +210,10 @@ This is demonstrated in the following sample.
 The cell editor for a particular column can be specified using a Vue Component. The [`column.editTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#edittemplate) property used to define the corresponding column editor.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

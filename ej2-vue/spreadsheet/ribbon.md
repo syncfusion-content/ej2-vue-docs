@@ -31,7 +31,10 @@ You can customize the ribbon using the following methods,
 The following code example shows the usage of ribbon customization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/ribbon-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/ribbon-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

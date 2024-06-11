@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="sample-container">
@@ -20,14 +18,14 @@
   }
 </style>
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Image, Resize, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-
-Vue.use(RichTextEditorPlugin);
-
+import { RichTextEditorComponent, Toolbar, Link, Image, Resize, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
 export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent
+},
     provide:{
-        richtexteditor:[Toolbar, Image, Resize HtmlEditor, Link]
+        richtexteditor:[Toolbar, Image, Resize, HtmlEditor, Link]
     }
 }
 </script>
@@ -41,5 +39,3 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

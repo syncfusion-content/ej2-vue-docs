@@ -20,7 +20,10 @@ To enable sorting in the TreeGrid, set the [`allowSorting`](https://ej2.syncfusi
 To sort, inject the [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#sortmodule) module in the treegrid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/sorting/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/sorting/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ To sort, inject the [`Sort`](https://ej2.syncfusion.com/vue/documentation/api/tr
 To sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/sortDescriptorModel/#field) and [`direction`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/sortDescriptorModel/#direction) in the `sortSettings.columns`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/sorting/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/sorting/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ To sort at initial rendering, set the [`field`](https://ej2.syncfusion.com/vue/d
 During the sort action, the treegrid component triggers two events. The [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionbegin) event triggers before the sort action starts, and the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actioncomplete) event triggers after the sort action is completed. Using these events you can perform the needed actions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/sorting/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/sorting/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,4 +74,3 @@ When you tap the treegrid header on touchscreen devices, the selected column hea
 The following screenshot shows treegrid touch sorting.
 
 <img src="./images/touch-sorting.jpg" alt="Touch interaction image" style="width:320px;height: 620px">
-

@@ -17,7 +17,10 @@ The Circular Gauge can be printed directly from the browser by calling the [pri
 >To use the print functionality, inject the `Print` module using the `provide` option and set the property `allowPrint` in the Circular Gauge to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs49/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs49/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ The Circular Gauge can be exported as an image in **JPEG**, **PNG** and **SVG** 
 |   allowDownload      | Specifies whether the exported image file should be downloaded or not. When the value is set to **true**, the file will be downloaded. When set to **false**, the base64 string of the file will be returned. This is an optional parameter, with the default value set to **true**. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs50/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs50/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ The Circular Gauge can be exported as an image in **JPEG**, **PNG** and **SVG** 
 The base64 string of the exported image files can only be received using the `export` method for JPEG and PNG formats. The **allowDownload** parameter in the `export` method must be set to **false**, as explained in the table above.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs68/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs68/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ The Circular Gauge can be exported as a PDF document using [export](https://ej2.
 |   allowDownload      | This is an optional parameter, with the default value set to **true**. This parameter is supported only for the image export. The exported PDF document cannot be returned as base64 string. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/getting-started-cs69/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-gauge/getting-started-cs69/app.vue %}
 {% endhighlight %}
 {% endtabs %}

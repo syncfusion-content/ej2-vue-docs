@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div id="target" style='border: 1px solid grey;'>
@@ -18,14 +16,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent
+}
+}
 </script>
 
 <style>
@@ -47,5 +47,3 @@ export default {}
     padding-right: 3px;
     }
 </style>
-
-

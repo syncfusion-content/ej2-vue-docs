@@ -1,56 +1,55 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,PointPortModel,PortVisibility } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodeport: PointPortModel = {
+
+import { DiagramComponent, PortVisibility } from '@syncfusion/ej2-vue-diagrams';
+
+let nodeport = {
     style: {
         strokeColor: '#366F8C',
         fill: '#366F8C'
     }
 };
-    nodeport.shape = 'Circle';
-    nodeport.visibility = PortVisibility.Visible
-    nodeport.id = 'port';
-    nodeport.offset = {
-        x: 0,
-        y: 0.5
-    };
-    let port2: PointPortModel = {
-        style: {
-            strokeColor: '#366F8C',
-            fill: '#366F8C'
-        }
+nodeport.shape = 'Circle';
+nodeport.visibility = PortVisibility.Visible
+nodeport.id = 'port';
+nodeport.offset = {
+    x: 0,
+    y: 0.5
+};
+let port2 = {
+    style: {
+        strokeColor: '#366F8C',
+        fill: '#366F8C'
     }
-    port2.offset = {
-        x: 0,
-        y: 0.5
-    };
-    port2.id = 'port1';
-    port2.visibility = PortVisibility.Visible
-    port2.shape = 'Circle';
+}
+port2.offset = {
+    x: 0,
+    y: 0.5
+};
+port2.id = 'port1';
+port2.visibility = PortVisibility.Visible
+port2.shape = 'Circle';
 let nodes = [{
-        id: 'node',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 100,
-        ports: [nodeport]
-    },
-    {
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 300,
-        offsetY: 100,
-        ports: [port2]
-    },
+    id: 'node',
+    width: 100,
+    height: 100,
+    offsetX: 100,
+    offsetY: 100,
+    ports: [nodeport]
+},
+{
+    id: 'node1',
+    width: 100,
+    height: 100,
+    offsetX: 300,
+    offsetY: 100,
+    ports: [port2]
+},
 ];
 let connectors = {
     id: "connector1",
@@ -80,7 +79,10 @@ let connectors = {
     targetPortID: 'port1'
 }
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -99,7 +101,5 @@ export default {
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

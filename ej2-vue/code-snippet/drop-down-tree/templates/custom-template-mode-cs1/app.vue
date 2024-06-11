@@ -1,18 +1,16 @@
-
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;"><br>
-      <ejs-dropdowntree id='dropdowntree' ref="ddtreeObj" :fields='fields' :customTemplate='customTemplate' :showCheckBox='true' :treeSettings='treeSettings' mode= 'Custom' :placeholder='waterMark' :popupHeight='height'></ejs-dropdowntree>
+      <ejs-dropdowntree id='dropdowntree' ref="ddtreeObj" :fields='fields' :customTemplate='customTemplate'
+        :showCheckBox='true' :treeSettings='treeSettings' mode='Custom' :placeholder='waterMark'
+        :popupHeight='height'></ejs-dropdowntree>
     </div>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { DropDownTreePlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(DropDownTreePlugin);
-var data = [
+import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
+
+let data = [
   { "id": 1, "name": "Steven Buchanan", "job": "General Manager", "hasChild": true, "expanded": true },
   { "id": 2, "pid": 1, "name": "Laura Callahan", "job": "Product Manager", "hasChild": true },
   { "id": 3, "pid": 2, "name": "Andrew Fuller", "job": "Team Lead", "hasChild": true },
@@ -24,18 +22,22 @@ var data = [
   { "id": 11, "pid": 6, "name": "Mary", "job": "Developer " },
   { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
 ];
-export default Vue.extend({
-  data: function() {
-    var temp = this;
-      return {
-        fields: { dataSource: data, value: 'id', text: 'name', parentValue: 'pid', hasChildren: 'hasChild' },
-        height: '200px',
-        waterMark: 'Select an employee',
-        treeSettings: { autoCheck: true },
-        customTemplate: '${value.length} item(s) selected'
-      };
+
+export default {
+  name: 'App',
+  components: {
+    'ejs-dropdowntree': DropDownTreeComponent
+  },
+  data: function () {
+    return {
+      fields: { dataSource: data, value: 'id', text: 'name', parentValue: 'pid', hasChildren: 'hasChild' },
+      height: '200px',
+      waterMark: 'Select an employee',
+      treeSettings: { autoCheck: true },
+      customTemplate: '${value.length} item(s) selected'
+    };
   }
-});
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -45,6 +47,3 @@ export default Vue.extend({
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
 </style>
-
-
-

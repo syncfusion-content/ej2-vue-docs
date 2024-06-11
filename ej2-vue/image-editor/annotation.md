@@ -45,7 +45,10 @@ By utilizing the [`drawText`](https://ej2.syncfusion.com/vue/documentation/api/i
 Here is an example of adding a text in a button click using [`drawText`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawtext) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +62,10 @@ The [`drawText`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#
 Here is an example of adding a multiline text in a button click using [`drawText`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawtext) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +83,10 @@ To retrieve the inserted text annotations, you can utilize the [`getShapeSetting
 Here is an example of deleting a text in a button click using [`deleteShape`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#deleteshape) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +102,10 @@ By leveraging the [shapeChanging](https://ej2.syncfusion.com/vue/documentation/a
 Here is an example of changing the text’s color and its font family using the [shapeChanging](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#shapechanging) event. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +119,10 @@ The [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/image-editor
 By leveraging the [`fontFamily`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#fontfamily) property, you can elevate the scope of customization for text annotations, enriching the user experience within the Image Editor control. This enhancement offers a more personalized and dynamic interaction, empowering users to tailor their text styles for a truly engaging editing experience.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs44/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs44/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +138,10 @@ The [`freehandDraw`](https://ej2.syncfusion.com/vue/documentation/api/image-edit
 Here is an example of using the [`freeHandDraw`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#freehanddraw) method in a button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +159,10 @@ To retrieve the inserted freehand annotations, you can utilize the [`getShapeSet
 Here is an example of deleting a freehand annotation in a button click using [`deleteShape`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#deleteshape) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -157,7 +178,10 @@ By leveraging the [shapeChanging](https://ej2.syncfusion.com/vue/documentation/a
 Here is an example of changing the freehand draw stroke width and color using the [shapeChanging](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#shapechanging) event.  
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -270,7 +294,10 @@ The [`drawPath`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#
 Here is an example of inserting rectangle, ellipse, arrow, path, and line in a button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -288,7 +315,10 @@ To retrieve the inserted shape annotations, you can utilize the [`getShapeSettin
 Here is an example of deleting rectangle, ellipse, arrow, path, and line in a button click event. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -326,7 +356,10 @@ The [`drawImage`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/
 In the following example, you can use the [`drawImage`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#drawimage) method in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs43/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs43/app.vue %}
 {% endhighlight %}
 {% endtabs %}

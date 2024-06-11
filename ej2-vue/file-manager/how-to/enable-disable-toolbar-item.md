@@ -15,7 +15,10 @@ The toolbar items can be enabled/disabled by specifying the items in [enableTool
 The following example shows enabling and disabling toolbar items on button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/toolbar-items-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/toolbar-items-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

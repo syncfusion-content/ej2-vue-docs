@@ -16,31 +16,60 @@ Similarly, you can use [`documentEditorSettings`](https://ej2.syncfusion.com/vue
 
 The following example code illustrates how to change the font families in Document editor container.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings'
+      height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide } from 'vue';
+
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+// Add required font families to list it in font drop down
+const settings = { fontFamilies: ['Algerian', 'Arial', 'Calibri', 'Cambria'] }
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='documenteditor' :serviceUrl='serviceUrl' :documentEditorSettings='settings'
+      height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
       // Add required font families to list it in font drop down
-      settings:{ fontFamilies: ['Algerian', 'Arial', 'Calibri', 'Cambria']} };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    }
+      settings: { fontFamilies: ['Algerian', 'Arial', 'Calibri', 'Cambria'] }
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
   }
+}
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 Output will be like below:
 

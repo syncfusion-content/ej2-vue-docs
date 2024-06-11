@@ -1,27 +1,20 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height" :showToolbar="showToolbar" :toolbar="toolbar" :toolbarRender="beforeToolbarRender" :displayOption="displayOption" :saveReport="saveReport" :showFieldList="showFieldList"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :showToolbar="showToolbar" :toolbar="toolbar" :toolbarRender="beforeToolbarRender"
+      :displayOption="displayOption" :saveReport="saveReport" :showFieldList="showFieldList"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import {
-  PivotViewPlugin,
-  IDataSet,
-  Toolbar,
-  FieldList
-} from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, Toolbar, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -33,7 +26,7 @@ export default {
       },
       height: 350,
       gridSettings: { columnWidth: 140 },
-      displayOption: { view:'Both' },
+      displayOption: { view: 'Both' },
       showToolbar: true,
       showFieldList: true,
       toolbar: [
@@ -44,7 +37,7 @@ export default {
     };
   },
   methods: {
-     saveReport: function(args: any) {
+    saveReport: function (args) {
       let reports = [];
       let isSaved = false;
       if (
@@ -54,7 +47,7 @@ export default {
         reports = JSON.parse(localStorage.pivotviewReports);
       }
       if (args.report && args.reportName && args.reportName !== "") {
-        reports.map(function(item: any) {
+        reports.map(function (item) {
           if (args.reportName === item.reportName) {
             item.report = args.report;
             isSaved = true;
@@ -66,24 +59,24 @@ export default {
         localStorage.pivotviewReports = JSON.stringify(reports);
       }
     },
-    beforeToolbarRender: function (args: any) {
+    beforeToolbarRender: function (args) {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       args.customToolbar.splice(2, 0, {
-          prefixIcon: 'e-rename-report e-icons', tooltipText: 'Custom Button',
-          click: this.customButton.bind(this),
-        });
+        prefixIcon: 'e-rename-report e-icons', tooltipText: 'Custom Button',
+        click: this.customButton.bind(this),
+      });
       args.customToolbar.splice(3, 0, {
-            prefixIcon: 'e-pivotview-expand e-icons', tooltipText: 'Expand/Collapse',
-            click: this.toolbarClicked.bind(this),
-        });
-        args.customToolbar[0].align = "Left";
-        args.customToolbar[1].align = "Center";
-        args.customToolbar[2].align = "Right";
+        prefixIcon: 'e-pivotview-expand e-icons', tooltipText: 'Expand/Collapse',
+        click: this.toolbarClicked.bind(this),
+      });
+      args.customToolbar[0].align = "Left";
+      args.customToolbar[1].align = "Center";
+      args.customToolbar[2].align = "Right";
     },
-    customButton: function (args: any) {
+    customButton: function () {
       // Here you can customize the click event for custom button
     },
-    toolbarClicked: function (args: any) {
+    toolbarClicked: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.dataSourceSettings.expandAll = !pivotGridObj.dataSourceSettings.expandAll;
     }
@@ -96,9 +89,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

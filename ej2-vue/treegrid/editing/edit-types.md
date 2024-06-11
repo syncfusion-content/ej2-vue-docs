@@ -41,7 +41,10 @@ Component |Example
 [`DateTimePicker`](../../datetimepicker) | params: { value: new Date() }
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

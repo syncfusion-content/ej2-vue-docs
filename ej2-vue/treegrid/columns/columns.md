@@ -25,7 +25,10 @@ To format cell values based on specific culture, use the [`columns.format`](http
 values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +66,10 @@ Format | Formatted value
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss a' } | 07/04/1996 12:00:00 AM
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +83,10 @@ You can lock columns by using [`column.lockColumn`](https://ej2.syncfusion.com/v
 In the below example, duration column is locked and its reordering functionality is disabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -117,7 +126,10 @@ To render checkboxes in existing column, you need to set [`columns.showCheckbox`
 It is also possible to select the rows hierarchically using checkboxes in TreeGrid by enabling [`autoCheckHierarchy`] property. When we check on any parent record checkbox then the child record checkboxes will get checked.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +141,10 @@ It is also possible to select the rows hierarchically using checkboxes in TreeGr
 You can enable or disable treegrid action for a particular column by setting the [`allowFiltering`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#allowfiltering), and [`allowSorting`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#allowsorting) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +156,10 @@ You can enable or disable treegrid action for a particular column by setting the
 You can show or hide treegrid columns dynamically using external buttons by invoking the [`showColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#showcolumns) or [`hideColumns`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#hidecolumns) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +171,10 @@ You can show or hide treegrid columns dynamically using external buttons by invo
 The [`valueAccessor`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#valueaccessor) is used to access/manipulate the value of display data. You can achieve custom value formatting by using the [`valueAccessor`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#valueaccessor).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -167,7 +188,10 @@ In this example, the name field has an array of two objects, FirstName and LastN
 [`valueAccessor`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#valueaccessor).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +203,10 @@ In this example, the name field has an array of two objects, FirstName and LastN
 You can achieve the expression column by using the [`valueAccessor`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#valueaccessor) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -191,7 +218,10 @@ You can achieve the expression column by using the [`valueAccessor`](https://ej2
 To render boolean values as checkbox in columns, you need to set [`displayAsCheckBox`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#displayascheckbox) property as `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

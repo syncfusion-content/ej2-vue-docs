@@ -26,7 +26,10 @@ To enable the field list in pivot table UI, set the [`showFieldList`](https://ej
 To use field list, you need to inject the `FieldList` module in pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs61/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs61/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ The field list can be rendered in a static position, anywhere in web page layout
 > To make field list interact with pivot table, you need to use the **updateView** and **update** methods for data source update in both field list and pivot table simultaneously.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs62/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs62/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ End user can search for desired field in the field list UI by typing the field n
 To enable search box in the static field list UI, set the [`enableFieldSearching`](https://ej2.syncfusion.com/vue/documentation/api/pivotfieldlist/#enablefieldsearching) property  to **true** in `ejs-pivotfieldlist`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs63/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs63/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ To enable search box in the static field list UI, set the [`enableFieldSearching
 To enable search box in the pivot table's built-in popup field list UI, set the [`enableFieldSearching`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#enablefieldsearching) property to **true** in `ejs-pivotview`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs64/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs64/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +98,10 @@ End user can sort fields in the field list UI to ascending (or) descending (or)
 To display the fields in descending order by default, set the [defaultFieldListOrder](https://ej2.syncfusion.com/vue/documentation/api/pivotview/loadEventArgs/#defaultfieldlistorder) property to **Descending** in the [load](https://ej2.syncfusion.com/vue/documentation/api/pivotview#load) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs261/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs261/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +115,10 @@ In the field list UI, you can display fields by grouping them under the desired 
 > You can only group fields to one level using the [`groupName`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#groupname) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs65/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs65/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +136,10 @@ Using check box besides each field, end user can select or unselect to add or re
 When a data source is bound to the component, fields will be automatically populated inside the Field List. In such case, user can also restrict specific field(s) from displaying. To do so, set the appropriate field name(s) in [`excludeFields`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#excludefields) property belonging to [`dataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#datasourcesettings).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs66/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs66/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -183,7 +204,10 @@ By passing the target element to the built-in field list dialog module in the [
 The sample code below shows the built-in field list dialog using `document.body` as the target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs67/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs67/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -195,7 +219,10 @@ The sample code below shows the built-in field list dialog using `document.body
 It can also be viewed in toolbar by setting [`showFieldList`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showfieldlist) and [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showtoolbar) properties in pivot table to **true**. Also, include the item **FieldList** within the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#toolbar) property in pivot table. When toolbar is enabled, field list icon will be automatically added into the toolbar and the icon won't appear on top left corner in the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs68/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs68/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -212,7 +239,10 @@ Also, you can display the field list dialog independently through other means. F
 The below sample code illustrates the field list dialog invoked on an external button click.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs69/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs69/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -226,7 +256,10 @@ One can set the caption to all fields from the data source even if it is not bou
 In the sample, we have set caption to the fields `Year` and `Quarter` dynamically.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs70/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs70/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -240,7 +273,10 @@ During runtime, the **Values** button in the field list can be moved to a differ
 > This support is only available for relational data sources.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs71/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs71/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -262,7 +298,10 @@ The event [`enginePopulated`](https://ej2.syncfusion.com/vue/documentation/api/p
 >Note: This event is not required for Popup field list since it is a in built one.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs72/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs72/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -276,7 +315,10 @@ The event [`fieldListRefreshed`](https://ej2.syncfusion.com/vue/documentation/ap
 For example, if we perform a sort operation within the field list, the field list will be refreshed. The [`fieldListRefreshed`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#fieldlistrefreshed) event will be triggered at that time and the user can perform custom operation inside that event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs73/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs73/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -288,7 +330,10 @@ For example, if we perform a sort operation within the field list, the field lis
 The event [`onFieldDropped`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#onfielddropped) fires whenever a field is dropped in an axis. It has following parameters - `droppedAxis`, `droppedField` and `dataSourceSettings`. In this illustration, we have modified the `droppedField` caption through this event at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs74/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs74/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -322,7 +367,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 In the below sample, opening pop-up field list can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs75/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs75/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -354,7 +402,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs76/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs76/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -380,7 +431,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 * `errorInfo`: It holds the error information of the current UI action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs77/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs77/app.vue %}
 {% endhighlight %}
 {% endtabs %}

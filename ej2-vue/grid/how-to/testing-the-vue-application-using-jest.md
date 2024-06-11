@@ -67,20 +67,11 @@ Refer to the [documentation](https://ej2.syncfusion.com/vue/documentation/grid/g
       </ejs-grid>
   </div>
 </template>
-<script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+<script setup>
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
 // import the your datasource instead of this
 import { customerData } from './datasource';
-Vue.use(GridPlugin);
-
-export default {
-  data() {
-    return {
-      data: customerData
-    };
-  }
-}
+const data = customerData;
 </script>
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
@@ -147,11 +138,20 @@ it('Length of the record', () => {
 The following example illustrates how to create the grid sample and how to write the Jest test case.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/testcase-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/testcase-cs1/app.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="app.spec.js" %}
 {% include code-snippet/grid/how-to/testcase-cs1/app.spec.js %}
+{% endhighlight %}
+{% highlight html tabtitle="app.spec.js" %}
+{% include code-snippet/grid/how-to/testcase-cs1/app.spec.js %}
+{% endhighlight %}
+{% highlight html tabtitle="snap.spec.js" %}
+{% include code-snippet/grid/how-to/testcase-cs1/snap.spec.js %}
 {% endhighlight %}
 {% highlight html tabtitle="snap.spec.js" %}
 {% include code-snippet/grid/how-to/testcase-cs1/snap.spec.js %}

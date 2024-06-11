@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="msg-default-section">
     <div class="content-section">
@@ -11,8 +9,18 @@
     </div>
   </div>
 </template>
-<script setup>
-import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notifications";
+<script>
+import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
+
+export default {
+  components: {
+    'ejs-message': MessageComponent
+  },
+  data() {
+    return {
+    };
+  }
+};
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -28,5 +36,3 @@ import { MessageComponent as EjsMessage } from "@syncfusion/ej2-vue-notification
     margin: 10px 0;
   }
 </style>
-
-

@@ -46,7 +46,10 @@ In the active Spreadsheet, the sheet protection can be done by any of the follow
 The following example shows `Protect Sheet` functionality in the Spreadsheet control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/protect-sheet-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/protect-sheet-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +73,10 @@ In the active Spreadsheet, the sheet Unprotection can be done by any of the foll
 In protected spreadsheet, to make some particular cell or range of cells are editable, you can use [`lockCells()`](../api/spreadsheet/#lockcells) method, with the parameter `range` and `isLocked` property as false.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/lock-cells-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/lock-cells-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +102,10 @@ In the active Spreadsheet, you can protect the worksheet by selecting the Data t
 The following example shows `Protect Workbook` by using the [`isProtected`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#isprotected) property in the Spreadsheet control.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/local-data-binding-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +115,10 @@ The following example shows `Protect Workbook` by using the [`isProtected`](http
 The following example shows `Protect Workbook` by using the [`password`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#password) property in the Spreadsheet control. To unprotect the workbook, click the unprotect workbook button in the data tab and provide the password as syncfusion in the dialog box.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/local-data-binding-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/local-data-binding-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

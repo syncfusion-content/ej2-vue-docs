@@ -14,7 +14,10 @@ The badge is dependent and supportive component, and it can be used with avatar 
 The default avatar (.`e-avatar`) and circle avatar (.`e-avatar-circle`) have been used with notification badges (.`e-badge-notification`) in the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/badge-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/badge-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

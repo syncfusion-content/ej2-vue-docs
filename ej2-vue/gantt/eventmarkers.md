@@ -15,7 +15,10 @@ The event markers in the Gantt component is used to highlight the important even
 To highlight the days, inject the [`DayMarkers`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#daymarkersmodule) module in the `provide` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/eventmarkers-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/eventmarkers-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

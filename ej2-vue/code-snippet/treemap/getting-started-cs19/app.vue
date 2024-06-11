@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
     <div id="header" style="background-color: #179bd7"></div>
@@ -13,12 +11,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { TreeMapPlugin } from '@syncfusion/ej2-vue-treemap';
+
+import { TreeMapComponent } from '@syncfusion/ej2-vue-treemap';
 import { data } from './datasource.js';
 
-Vue.use(TreeMapPlugin);
 export default {
+name: "App",
+components: {
+"ejs-treemap":TreeMapComponent
+},
    data () {
     return {
       dataSource:  data,
@@ -72,5 +73,3 @@ export default {
 }
 }
 </script>
-
-

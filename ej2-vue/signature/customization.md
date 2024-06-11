@@ -19,7 +19,10 @@ The variable stroke width is based on the values of [`maxStrokeWidth`](https://e
 In the following example, minimum stroke width is set as 0.5, maximum stroke width is set as 3 and velocity is set as 0.7.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ In the following example, minimum stroke width is set as 0.5, maximum stroke wid
 Color of the stroke can be specified by using [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/signature/#strokecolor) property and it accepts hexadecimal code, RGB, and text. The default value of this property is “#000000”.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ Color of the stroke can be specified by using [`strokeColor`](https://ej2.syncfu
 Background color of a signature can be specified by using [`backgroundColor`](https://ej2.syncfusion.com/vue/documentation/api/signature/#backgroundcolor) property and it accepts hexadecimal code, RGB, and text. The default value of this property is “#ffffff”.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ Background color of a signature can be specified by using [`backgroundColor`](ht
 Background image of a signature can be specified by using [`backgroundImage`](https://ej2.syncfusion.com/vue/documentation/api/signature/#backgroundimage) property. The background image can be set by either hosting the image in our local IIS or online image.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/signature/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

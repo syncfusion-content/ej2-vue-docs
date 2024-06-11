@@ -40,47 +40,87 @@ Please refer the following code example.
 
 Please refer the client side example to serialize the sfdt and send to the server.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-        <div>
-         <button v-on:click='exportBlob' >Save</button>
-        </div>
-        <ejs-documenteditor ref="documenteditor" :enableSfdtExport='true' :enableWordExport='true' :enableSelection='true' :enableEditor='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  <div id="app">
+    <div>
+      <button v-on:click='exportBlob'>Save</button>
     </div>
+    <ejs-documenteditor ref="documenteditor" :enableSfdtExport='true' :enableWordExport='true' :enableSelection='true'
+      :enableEditor='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
 </template>
-<script>
-        import Vue from 'vue'
-        import { DocumentEditorPlugin, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-        Vue.use(DocumentEditorPlugin);
+const documenteditor = ref(null);
+//Inject require modules.
+provide('DocumentEditor', [SfdtExport, WordExport, Selection, Editor])
 
-        export default {
-            data: function() {
-                return {
-                };
-            },
-            provide: {
-                //Inject require modules.
-                DocumentEditor : [SfdtExport, WordExport, Selection, Editor]
-            }
-            methods: {
-                exportBlob: function() {
-                    let http: XMLHttpRequest = new XMLHttpRequest();
-                    http.open('POST', 'http://localhost:5000/api/documenteditor/ExportSFDT');
-                    http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-                    http.responseType = 'json';
-                    //Serialize document content as SFDT.
-                    let sfdt: any = { content: this.$refs.documenteditor.serialize() };
-                    //Send the sfdt content to server side.
-                    http.send(JSON.stringify(sfdt));
-                }
-            }
-        }
+const exportBlob = function () {
+    let http = new XMLHttpRequest();
+    http.open('POST', 'http://localhost:5000/api/documenteditor/ExportSFDT');
+    http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    http.responseType = 'json';
+    //Serialize document content as SFDT.
+    let sfdt = { content: documenteditor.value.serialize() };
+    //Send the sfdt content to server side.
+    http.send(JSON.stringify(sfdt));
+  }
 </script>
 <style>
-      @import "../../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div>
+      <button v-on:click='exportBlob'>Save</button>
+    </div>
+    <ejs-documenteditor ref="documenteditor" :enableSfdtExport='true' :enableWordExport='true' :enableSelection='true'
+      :enableEditor='true' :isReadOnly='false' height="370px" style="width: 100%;"></ejs-documenteditor>
+  </div>
+</template>
+<script>
+import { DocumentEditorComponent, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditor': DocumentEditorComponent
+  },
+  data: function () {
+    return {
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditor: [SfdtExport, WordExport, Selection, Editor]
+  },
+  methods: {
+    exportBlob: function () {
+      let http = new XMLHttpRequest();
+      http.open('POST', 'http://localhost:5000/api/documenteditor/ExportSFDT');
+      http.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+      http.responseType = 'json';
+      //Serialize document content as SFDT.
+      let sfdt = { content: this.$refs.documenteditor.serialize() };
+      //Send the sfdt content to server side.
+      http.send(JSON.stringify(sfdt));
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
 
 > DocumentEditor object is available in DocumentEditorContainer component(DocumentEditor packaged with toolbar, status bar & properties pane) as [`documentEditor`](https://ej2.syncfusion.com/vue/documentation/api/document-editor-container#documenteditor-code-classlanguage-textdocumenteditorcode/)

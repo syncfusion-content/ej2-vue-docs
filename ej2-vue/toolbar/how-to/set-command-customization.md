@@ -18,7 +18,10 @@ When style attributes are added, if the same attributes were already present, th
 Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `cssClass` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toolbar/how-to/customization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toolbar/how-to/customization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

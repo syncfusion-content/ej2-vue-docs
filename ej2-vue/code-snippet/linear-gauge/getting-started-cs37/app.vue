@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div class="content-wrapper">
@@ -18,14 +16,17 @@
     </div>
 </template>
 <script>
-import { LinearGaugeComponent, AxesDirective, AxisDirective } from "@syncfusion/ej2-vue-lineargauge";
+import { LinearGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective } from "@syncfusion/ej2-vue-lineargauge";
 
 export default {
-    components: {
-        'ejs-lineargauge': LinearGaugeComponent,
-        'e-axes': AxesDirective,
-        'e-axis': AxisDirective
-    },
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent,
+"e-axes":AxesDirective,
+"e-axis":AxisDirective,
+"e-pointers":PointersDirective,
+"e-pointer":PointerDirective
+},
     data: function () {
         return {
             labelStyle: {
@@ -61,5 +62,3 @@ export default {
     padding: 0px !important;
 }
 </style>
-
-

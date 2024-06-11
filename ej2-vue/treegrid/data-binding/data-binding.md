@@ -23,7 +23,10 @@ To learn about tree grid data binding quickly, you can check on this video:
 You can use TreeGrid [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property to bind the data source to TreeGrid from external Fetch request. In the below code we have fetched the data source from the server with the help of Fetch request and provided that to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#datasource) property by using `onSuccess` event of the Fetch.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,12 +51,12 @@ To denotes the expand status of parent row, define the [`expandStateMapping`](ht
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+
+import { TreeGridComponent, Page } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {

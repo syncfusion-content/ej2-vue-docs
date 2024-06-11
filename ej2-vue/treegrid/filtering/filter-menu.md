@@ -15,7 +15,10 @@ You can enable filter menu by setting the [`filterSettings.type`](https://ej2.sy
 You can filter the records with different operators.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ In the following sample menu filter is enabled by default and Excel filter is en
 [`column.filter.type`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#filter).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/filtering/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/filtering/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

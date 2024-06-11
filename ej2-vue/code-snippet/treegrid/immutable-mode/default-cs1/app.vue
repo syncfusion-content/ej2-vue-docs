@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <div id='container'>
@@ -18,11 +16,11 @@
         <tr>
           <td>
             <div>
-              <ejs-button cssClass="e-info" v-on:click.native="addTopEvent">Add row at top</ejs-button>
-              <ejs-button cssClass="e-info" v-on:click.native="addBottomEvent">Add row at bottom</ejs-button>
-              <ejs-button cssClass="e-info" v-on:click.native="deleteEvent">Delete 5 rows</ejs-button>
-              <ejs-button cssClass="e-info" v-on:click.native="sortEvent">Sort Task ID</ejs-button>
-              <ejs-button cssClass="e-info" v-on:click.native="pageEvent">Paging</ejs-button>
+              <ejs-button cssClass="e-info" v-on:click="addTopEvent">Add row at top</ejs-button>
+              <ejs-button cssClass="e-info" v-on:click="addBottomEvent">Add row at bottom</ejs-button>
+              <ejs-button cssClass="e-info" v-on:click="deleteEvent">Delete 5 rows</ejs-button>
+              <ejs-button cssClass="e-info" v-on:click="sortEvent">Sort Task ID</ejs-button>
+              <ejs-button cssClass="e-info" v-on:click="pageEvent">Paging</ejs-button>
             </div>
           </td>
         </tr>
@@ -63,19 +61,25 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Edit } from "@syncfusion/ej2-vue-treegrid";
-import { sampleData, sampleData2, dataSource1 } from "./datasource.js";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
+import { TreeGridComponent, Page, Edit, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { sampleData, sampleData2, dataSource1 } from "./datasource.js";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 if(sampleData2.length == 0){
   dataSource1();
 }
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData2,
@@ -155,5 +159,3 @@ export default {
 }
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

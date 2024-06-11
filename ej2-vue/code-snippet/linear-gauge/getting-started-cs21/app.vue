@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="content-wrapper">
     <div align='center'>
@@ -10,19 +8,23 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin, Print } from "@syncfusion/ej2-vue-lineargauge";
-Vue.use(LinearGaugePlugin);
+
+import { LinearGaugeComponent, Print } from "@syncfusion/ej2-vue-lineargauge";
+
 export default {
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent,
+},
   data () {
     return {
       allowPrint: true
     }
   },
   methods: {
-    beforePrint: function (event) {
+    beforePrint: function () {
     },
-    print: function (event) {
+    print: function () {
       this.$refs.gauge.ej2Instances.print();
     }
   },
@@ -36,5 +38,3 @@ export default {
     padding: 0px !important;
 }
 </style>
-
-

@@ -1,21 +1,18 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -29,15 +26,11 @@ export default {
         formatSettings: [{ name: 'Amount', format: 'C0' }],
         filters: []
       },
-      height: 350,
-      showTooltip: false
+      height: 350
     }
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

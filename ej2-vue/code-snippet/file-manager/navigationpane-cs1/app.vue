@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager" :navigationPaneSettings="navigationPaneSettings" :ajaxSettings="ajaxSettings">
@@ -7,11 +5,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent
+    },
     data () {
         return {
            ajaxSettings:
@@ -31,7 +32,7 @@ export default {
 }
 </script>
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
@@ -42,5 +43,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-
-

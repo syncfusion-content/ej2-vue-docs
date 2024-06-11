@@ -23,7 +23,10 @@ The Rich Text Editor provides the functionality of character count and its valid
 This sample is used to validate form using the obtrusive Validation. Type the values in Rich Text Editor and the form enables the validation with the formvalidator rules by clicking on the submit externally. All rules are validated by the formvalidator rules.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The default error message for a rule can be customizable by defining it along wi
 In the following sample, customize the error message along with the concern rule.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/markdown-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/markdown-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

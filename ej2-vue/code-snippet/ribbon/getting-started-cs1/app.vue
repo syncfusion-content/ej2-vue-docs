@@ -138,6 +138,7 @@
   import { RibbonFileMenu, RibbonItemSize, RibbonComponent, RibbonTabDirective, RibbonTabsDirective, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionDirective, RibbonCollectionsDirective, RibbonItemDirective, RibbonItemsDirective, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
   
   export default {
+name: "App",
     components: {
       'ejs-ribbon': RibbonComponent,
       'e-ribbon-tab': RibbonTabDirective,

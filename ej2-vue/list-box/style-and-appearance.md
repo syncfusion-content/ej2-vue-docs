@@ -27,7 +27,10 @@ CSS Class | Purpose of Class
 You can use [cssClass](https://ej2.syncfusion.com/vue/documentation/api/list-box/#cssClass) property to display the Listbox horizontally.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}

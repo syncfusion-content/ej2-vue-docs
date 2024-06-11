@@ -124,11 +124,14 @@ Follow the below steps to add the Vue TextBox component using `Composition API` 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
   import { TextBoxComponent as EjsTextbox } from "@syncfusion/ej2-vue-inputs";
 </script>
+</script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -136,10 +139,10 @@ Follow the below steps to add the Vue TextBox component using `Composition API` 
 import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 //Component registeration
 export default {
-    name: "App",
-    components: {
-        'ejs-textbox' : TextBoxComponent,
-    }
+name: "App",
+components: {
+"ejs-textbox'":TextBoxComponent
+}
 }
 </script>
 
@@ -169,6 +172,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
     <div id ='wrap'>
@@ -186,7 +190,6 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-
     .wrap {
         box-sizing: border-box;
         margin: 0 auto;
@@ -195,6 +198,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -216,7 +220,6 @@ name: 'App',
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-
     .wrap {
         box-sizing: border-box;
         margin: 0 auto;
@@ -275,6 +278,7 @@ You can create the floating label TextBox by using `floatLabelType` API.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <template>
     <div class ='wrap'>
@@ -283,10 +287,12 @@ You can create the floating label TextBox by using `floatLabelType` API.
         </div>
     </div>
 </template>
+
 <script setup>
 import { TextBoxComponent as EjsTextbox } from "@syncfusion/ej2-vue-inputs";
   const data = [];
 </script>
+
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
@@ -299,6 +305,7 @@ import { TextBoxComponent as EjsTextbox } from "@syncfusion/ej2-vue-inputs";
     }
 </style>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
@@ -309,22 +316,23 @@ import { TextBoxComponent as EjsTextbox } from "@syncfusion/ej2-vue-inputs";
         </div>
     </div>
 </template>
+
 <script>
 import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
-    name: 'App',
-    components: {
-        "ejs-textbox": TextBoxComponent
-    },
-    data: function () {
-        return {}
-    },
+name: "App",
+components: {
+"ejs-textbox":TextBoxComponent
+},
+data: function () {
+    return {}
+},
 }
 </script>
+
 <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-
     .wrap {
         box-sizing: border-box;
         margin: 0 auto;

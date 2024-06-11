@@ -22,7 +22,10 @@ The ChipList control has the following types.
 Input Chip holds information in compact form. It converts user input into chips.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ Input Chip holds information in compact form. It converts user input into chips.
 Choice Chip allows you to select a single chip from the set of ChipList/ChipCollection. It can be enabled by setting the `selection` property to `Single`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +52,10 @@ Choice Chip allows you to select a single chip from the set of ChipList/ChipColl
 Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCollection. It can be enabled by setting the `selection` property to `Multiple`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +67,10 @@ Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCo
 The Action Chip triggers the event like click or delete, which helps doing action based on the event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +82,10 @@ The Action Chip triggers the event like click or delete, which helps doing actio
 Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the `enableDelete` property to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chips/default-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

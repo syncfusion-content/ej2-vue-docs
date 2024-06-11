@@ -54,7 +54,10 @@ The following list of properties and its values are used in the Query Builder.
 | False | False |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

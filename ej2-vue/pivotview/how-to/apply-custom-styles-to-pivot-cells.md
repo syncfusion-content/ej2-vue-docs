@@ -15,7 +15,10 @@ The [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#que
 In the following example, a custom style has been applied to the column header **"Sold Amount"** under **"FY 2016"** via the [`headerCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#headercellinfo) event and to the row header **"Germany"** and its aggregated value via the [`queryCellInfo`](https://ej2.syncfusion.com/vue/documentation/api/grid/#querycellinfo) event by adding the **"e-custom"** class to the cell element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs262/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs262/app.vue %}
 {% endhighlight %}
 {% endtabs %}

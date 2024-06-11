@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
             <div class="filemanagerContainer">
@@ -10,15 +8,17 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { getValue, select } from '@syncfusion/ej2-base';
-import { FileManagerPlugin, NavigationPane, Toolbar, DetailsView, FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
-Vue.use(FileManagerPlugin);
+import { getValue, select } from '@syncfusion/ej2-base';
+import { FileManagerComponent, NavigationPane, Toolbar, DetailsView } from "@syncfusion/ej2-vue-filemanager";
 
 let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
 
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+    },
     data () {
         return {
             ajaxSettings:  {
@@ -63,5 +63,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 
 </style>
-
-

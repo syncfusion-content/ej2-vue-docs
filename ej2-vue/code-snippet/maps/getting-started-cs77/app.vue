@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <button id="print" @click="clickPrint">Print</button>
@@ -12,12 +9,17 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { MapsPlugin, MapsTooltip, DataLabel, Print } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, MapsTooltip, DataLabel, Print, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { usMap } from './usa.js';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(MapsPlugin,ButtonPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return {
         dataLabelSettings: {
@@ -40,12 +42,10 @@ provide: {
     maps: [MapsTooltip, DataLabel, Print]
 },
 methods: {
-    clickPrint: function(args) {
+    clickPrint: function() {
         let map=document.getElementById('container');
         map.ej2_instances[0].print();
     }
 }
 }
 </script>
-
-

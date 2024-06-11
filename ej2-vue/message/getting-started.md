@@ -88,12 +88,32 @@ Follow the below steps to add the Vue Message component using `Composition API` 
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
+//Component registration
+export default {
+  name: 'app',
+  components: {
+    'ejs-message': MessageComponent
+  }
+}
+</script>
+{% endraw %}
+{% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { MessageComponent } from "@syncfusion/ej2-vue-notifications";
 //Component registration
 export default {
+name: "App",
+components: {
+"ejs-message':":Message':Component
+
+},
+
   name: 'app',
   components: {
     'ejs-message': MessageComponent
@@ -125,6 +145,17 @@ export default {
     const content = "Please read the comments carefully";
 </script>
 
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+data() {
+  return {
+    content: "Please read the comments carefully"
+  };
+}
+</script>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 

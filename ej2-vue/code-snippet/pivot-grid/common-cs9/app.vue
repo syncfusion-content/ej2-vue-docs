@@ -1,19 +1,16 @@
-
-
-
 <template>
     <div id="app">
         <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList"> </ejs-pivotview>
     </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
-
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 
 export default {
+name: "App",
+components: {
+"ejs-pivotview":PivotViewComponent
+},
   data () {
     return {
       dataSourceSettings: {
@@ -68,8 +65,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

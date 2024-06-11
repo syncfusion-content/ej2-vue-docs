@@ -17,7 +17,10 @@ To enable the row template feature, you need to set the [rowTemplate](https://ej
 In the following example, Employee Information with Employee Photo is presented in the first column and employee details like Name, Address, etc., are presented in the second column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ To format the values within the row template, you can define a global function t
 Here is an example of how to define a global formatting function for a date column and use it inside a `rowTemplate`:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-template-format/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-template-format/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ To enable a Syncfusion control in a row template, you need to set the [rowTempla
 Here is an example that demonstrates rendering Syncfusion controls within a row template :
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/row/row-template-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/row/row-template-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}

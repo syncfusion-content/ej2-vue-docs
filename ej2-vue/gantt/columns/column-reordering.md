@@ -15,7 +15,10 @@ The column reordering can be done by dragging a column header from one index to 
 To reorder the columns, inject the `Reorder` module in the `provide` section.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ During the reorder action, the gantt component triggers the below three events.
 3. The [`columnDrop`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#columndrop) event triggers when a column header element is dropped on the target column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ During the reorder action, the gantt component triggers the below three events.
 Multiple columns can be reordered at a time by using the [`reorderColumns`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#reordercolumns)method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

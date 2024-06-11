@@ -1,17 +1,17 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns="columns" :splitterSettings = "splitterSettings" :queryCellInfo='queryCellInfoEvent'  gridLines='Both'></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 import { colSpanData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
          data: colSpanData,
@@ -37,7 +37,7 @@ export default {
             { field: 'Progress', headerText: 'Progress'}
         ],
       };
-    }
+    },
     methods: {
        queryCellInfoEvent: function (args) {
         switch(args.data.TaskID) {
@@ -76,6 +76,3 @@ export default {
    }
 };
 </script>
-
-
-

@@ -18,8 +18,8 @@ new Vue({
         <ejs-dropdownlist ref='dropDown' id='dropDown' style="margin-top:3px" index="0"
         width="100" :dataSource="columnData" :fields='fields'></ejs-dropdownlist>
       </div>
-    <ejs-button ref='button' style="margin-top: 10px " cssClass='e-outline' v-on:click.native="groupColumn">Group column</ejs-button>
-    <ejs-button ref='button' style="margin-top: 10px; margin-right: 5px " cssClass='e-outline' v-on:click.native="unGroupColumn"> UnGroup column</ejs-button>
+    <ejs-button ref='button' style="margin-top: 10px " cssClass='e-outline' v-on:click="groupColumn">Group column</ejs-button>
+    <ejs-button ref='button' style="margin-top: 10px; margin-right: 5px " cssClass='e-outline' v-on:click="unGroupColumn"> UnGroup column</ejs-button>
     <ejs-grid ref='grid' style="padding: 10px 10px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>

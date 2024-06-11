@@ -35,7 +35,10 @@ cardSettings.priority(If applicable) | Numeric | -
 swimlaneSettings.keyField(If applicable) | DropDown | -
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/getting-started-key-field-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/getting-started-key-field-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +61,10 @@ The following types are available in dialog fields.
 > If `type` is not defined in the fields, then it renders as the HTML input element in dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/custom-dialog-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/custom-dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +76,10 @@ The following types are available in dialog fields.
 By default, the fields `key` mapping value is considered as a `label` and you can change this label by using `text` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/label-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/label-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +91,10 @@ By default, the fields `key` mapping value is considered as a `label` and you ca
 The dialog fields can be validated while click on the `Save` button. This can be achieved by using `validationRules` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/fields-validation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/fields-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +110,10 @@ To get start quickly with Dialog template edit Option, you can check on this vid
 Using the dialog template, you can render your own dialog by defining the `template` property. Initialize the template as SCRIPT element Id or HTML string which holds the template and map it to the template property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/dialog-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/dialog-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +125,10 @@ Using the dialog template, you can render your own dialog by defining the `templ
 The Kanban allows to prevent to open a dialog on card double-click by enabling `args.cancel` in `dialogOpen` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/prevent-dialog-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/prevent-dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,29 +171,25 @@ The following code example describes the above behavior.
   </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+<script setup>
+
+import { KanbanComponent as EjsKanban, ColumnsDirective as EColumns, ColumnDirective as EColumn} from '@syncfusion/ej2-vue-kanban';
 import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-Vue.use(KanbanPlugin);
-export default {
-  data: function() {
-    return {
-        kanbanData: new DataManager({
-          url: 'Home/DataSource',
-          updateUrl: 'Home/Update',
-          insertUrl: 'Home/Insert',
-          removeUrl: 'Home/Delete',
-          adaptor: new UrlAdaptor(),
-          crossDomain: true
-        });
-        cardSettings: {
-            contentField: "Summary",
-            headerField: "Id",
-        }
-    };
-  }
-}
+
+const kanbanData = new DataManager({
+    url: 'Home/DataSource',
+    updateUrl: 'Home/Update',
+    insertUrl: 'Home/Insert',
+    removeUrl: 'Home/Delete',
+    adaptor: new UrlAdaptor(),
+    crossDomain: true
+});
+
+const cardSettings = {
+    contentField: "Summary",
+    headerField: "Id"
+};
+
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
@@ -291,30 +305,26 @@ The following code example describes the above behavior.
   </div>
 </template>
 
-<script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+<script setup>
+
+import { KanbanComponent as EjsKanban, ColumnsDirective as EColumns, ColumnDirective as EColumn} from '@syncfusion/ej2-vue-kanban';
 import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-Vue.use(KanbanPlugin);
-export default {
-  data: function() {
-    return {
-        kanbanData: new DataManager({
-            url: 'Home/DataSource',
-            updateUrl: 'Home/UpdateData',
-            insertUrl: 'Home/UpdateData',
-            removeUrl: 'Home/UpdateData',
-            crudUrl: 'Home/UpdateData',
-            adaptor: new UrlAdaptor(),
-            crossDomain: true
-        });
-        cardSettings: {
-            contentField: "Summary",
-            headerField: "Id",
-        }
-    };
-  }
-}
+
+const kanbanData = new DataManager({
+    url: 'Home/DataSource',
+    updateUrl: 'Home/UpdateData',
+    insertUrl: 'Home/UpdateData',
+    removeUrl: 'Home/UpdateData',
+    crudUrl: 'Home/UpdateData',
+    adaptor: new UrlAdaptor(),
+    crossDomain: true
+});
+
+const cardSettings = {
+    contentField: "Summary",
+    headerField: "Id"
+};
+
 </script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';

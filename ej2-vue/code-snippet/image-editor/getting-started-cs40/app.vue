@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarItemClicked="toolbarItemClicked" :toolbar="toolbar"></ejs-imageeditor>
@@ -7,27 +5,21 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 import { Browser } from "@syncfusion/ej2-base";
 
-Vue.use(ImageEditorPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent
+},
   data: function() {
       return {
         toolbar: [{text: 'Custom'}]
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     toolbarItemClicked: function(args) {
       if(args.item.text === 'Custom') {
         this.$refs.imageEditorObj.rotate(90);
@@ -54,5 +46,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

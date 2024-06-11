@@ -1,4 +1,3 @@
-
 <template>
   <div id="app">
    <ejs-kanban id="kanban" ref="KanbanObj" keyField="Status" :dataSource="kanbanData"
@@ -15,13 +14,17 @@
 
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
 
-Vue.use(KanbanPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
   return {
       kanbanData: new DataManager({

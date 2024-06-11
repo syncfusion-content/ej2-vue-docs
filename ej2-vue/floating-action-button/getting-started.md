@@ -97,7 +97,6 @@ Follow the below steps to add the Vue Floating action button component using `Co
 <script setup>
 import { FabComponent as EjsFab } from "@syncfusion/ej2-vue-buttons";
 </script>
-
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 

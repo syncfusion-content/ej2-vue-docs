@@ -20,7 +20,10 @@ The `template` context receives the following information:
 | `itemIndex` | Indicates the current index of the Timeline item. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/template/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ By default the null values are displayed at bottom of the Tree Grid row while pe
 In the below demo we have displayed the null date values at bottom of the Grid row while sorting the **StartDate** column in both ways.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

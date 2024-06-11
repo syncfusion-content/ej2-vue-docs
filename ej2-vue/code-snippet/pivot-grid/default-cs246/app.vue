@@ -1,26 +1,20 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings"  :height="height" :showToolbar="showToolbar"  :toolbar="toolbar" :displayOption="displayOption" :chartTypes="chartTypes"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"
+      :showToolbar="showToolbar" :toolbar="toolbar" :displayOption="displayOption" :chartTypes="chartTypes">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import {
-  PivotViewPlugin,
-  IDataSet,
-  Toolbar,
-} from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, Toolbar, } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -31,23 +25,16 @@ export default {
         filters: []
       },
       height: 350,
-      displayOption: { view:'Both' },
+      displayOption: { view: 'Both' },
       showToolbar: true,
-      chartTypes:['Column', 'Bar', 'Line', 'Area']
+      chartTypes: ['Column', 'Bar', 'Line', 'Area'],
       toolbar: ['Grid', 'Chart']
     };
   },
   provide: {
-    pivotview: [
-      Toolbar,
-    ]
+    pivotview: [Toolbar]
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
-</style>
-
-
-
-
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";</style>

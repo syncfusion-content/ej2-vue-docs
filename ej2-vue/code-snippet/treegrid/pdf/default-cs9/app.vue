@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' height='220' childMapping='subtasks' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings' :allowPdfExport='true' :toolbar='toolbarOptions' :toolbarClick='toolbarClick'>
@@ -13,14 +11,20 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page, Toolbar, PdfExport } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, Toolbar, PdfExport, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { sampleData, adventProFont } from "./datasource.js";
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -46,6 +50,3 @@ export default {
   }
 }
 </script>
-
-
-

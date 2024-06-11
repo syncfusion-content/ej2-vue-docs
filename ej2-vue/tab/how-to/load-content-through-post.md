@@ -17,7 +17,10 @@ The Tab supports to load external contents through AJAX library. Refer to the fo
 * Get the data from Ajax Success event, then initialize the Tab with retrieved external path data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/ajax-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/ajax-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

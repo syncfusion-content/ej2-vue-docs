@@ -15,7 +15,10 @@ The Repeat button is a type of Button in that the click event is triggered at re
 The following example explains about how to achieve Repeat Button in mouse and touch events.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

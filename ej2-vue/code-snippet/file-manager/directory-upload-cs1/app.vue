@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
     <div class="control-section folder-upload">
@@ -11,14 +9,17 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, NavigationPane, Toolbar, DetailsView, FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
-import { DropDownButton, ItemModel } from "@syncfusion/ej2-splitbuttons";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, NavigationPane, Toolbar, DetailsView } from "@syncfusion/ej2-vue-filemanager";
+import { DropDownButton } from "@syncfusion/ej2-splitbuttons";
+
 // File Manager directory upload feature sample
-let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
+
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent
+    },
      data () {
         return {
             ajaxSettings:
@@ -41,7 +42,8 @@ export default {
             };
             //DropDownButton items definition
             var items = [{ text: "Folder" }, { text: "Files" }];
-            var drpDownBtn = new DropDownButton({
+            var drpDownBtn;
+            drpDownBtn = new DropDownButton({
                 items: items,
                 select: (args) => {
                     var fileObj = document.getElementById("filemanager").ej2_instances[0];
@@ -59,7 +61,7 @@ export default {
             );
         },
     },
-});
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
@@ -76,5 +78,3 @@ export default {
     margin: 10px 10px 10px 10px;
 }
 </style>
-
-

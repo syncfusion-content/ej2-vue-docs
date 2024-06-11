@@ -18,63 +18,119 @@ You can use [`text`](https://ej2.syncfusion.com/vue/documentation/api/document-e
 
 The following example code illustrates how to add search in google option in context menu for the selected text.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar])
+
+const handleCustomMenuSelect = function (args) {
+  let documentEditor = container.value.ej2Instances.documentEditor;
+  // custom Options Functionality
+  let id = documentEditor.element.id;
+  switch (args.id) {
+    case id + 'search_in_google':
+      let searchContent = documentEditor.selection.text;
+      if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
+        window.open('http://google.com/search?q=' + searchContent);
+      }
+      break;
+  }
+}
+
+const onCreated = function () {
+  let obj = container.value.ej2Instances.documentEditor;
+  let menuItems = [
+    {
+      text: 'Search In Google',
+      id: 'search_in_google',
+      iconCss: 'e-icons e-de-ctnr-find',
+    },
+  ];
+  // adding Custom Options
+  obj.contextMenu.addCustomMenu(menuItems, false);
+  // custom Options Select Event
+  obj.customContextMenuSelect = (args) => {
+    handleCustomMenuSelect(args);
+  };
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
- export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    handleCustomMenuSelect: function (args) {
+      var documentEditor = this.$refs.container.ej2Instances.documentEditor;
+      // custom Options Functionality
+      let id = documentEditor.element.id;
+      switch (args.id) {
+        case id + 'search_in_google':
+          var searchContent = documentEditor.selection.text;
+          if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
+            window.open('http://google.com/search?q=' + searchContent);
+          }
+          break;
+      }
+    },
+    onCreated: function () {
+      var obj = this.$refs.container.ej2Instances.documentEditor;
+      var menuItems = [
+        {
+          text: 'Search In Google',
+          id: 'search_in_google',
+          iconCss: 'e-icons e-de-ctnr-find',
+        },
+      ];
+      // adding Custom Options
+      obj.contextMenu.addCustomMenu(menuItems, false);
+      // custom Options Select Event
+      obj.customContextMenuSelect = (args) => {
+        this.handleCustomMenuSelect(args);
       };
     },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      handleCustomMenuSelect: function (args) {
-        var documentEditor = this.$refs.container.ej2Instances.documentEditor;
-        // custom Options Functionality
-        let id = documentEditor.element.id;
-        switch (args.id) {
-          case id + 'search_in_google':
-            var searchContent = documentEditor.selection.text;
-            if (!documentEditor.selection.isEmpty && /\S/.test(searchContent)) {
-              window.open('http://google.com/search?q=' + searchContent);
-            }
-            break;
-        }
-      },
-      onCreated: function () {
-        var obj = this.$refs.container.ej2Instances.documentEditor;
-        var menuItems = [
-          {
-            text: 'Search In Google',
-            id: 'search_in_google',
-            iconCss: 'e-icons e-de-ctnr-find',
-          },
-        ];
-        // adding Custom Options
-        obj.contextMenu.addCustomMenu(menuItems, false);
-        // custom Options Select Event
-        obj.customContextMenuSelect = (args) => {
-          this.handleCustomMenuSelect(args);
-        };
-      },
-    }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 You can add the following custom options using this API,
 
@@ -88,49 +144,89 @@ You can use [`sfdt`](https://ej2.syncfusion.com/vue/documentation/api/document-e
 
 The following example code illustrates how to get the content of a bookmark and export it as SFDT.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+ <template>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px"
+      id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
+
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onCreated = function () {
+  let obj = container.value.ej2Instances.documentEditor;
+  // To insert text in cursor position
+  obj.editor.insertText('Document editor');
+  // To select all the content in document
+  obj.selection.selectAll();
+  // Insert bookmark to selected content
+  obj.editor.insertBookmark('Bookmark1');
+  //Select the bookmark
+  obj.selection.selectBookmark('Bookmark1');
+  // To get the selected content as sfdt
+  let selectedContent = obj.selection.sfdt;
+  // Insert the sfdt content in cursor position using paste API
+  obj.editor.paste(selectedContent);
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+  <div id="app">
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' v-on:created="onCreated" height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
 <script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
-  Vue.use(DocumentEditorContainerPlugin);
-
- export default {
-    data() {
-      return {
-        serviceUrl:
-          'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar],
-    },
-    methods: {
-      onCreated: function () {
-        var obj = this.$refs.container.ej2Instances.documentEditor;
-        // To insert text in cursor position
-        obj.editor.insertText('Document editor');
-        // To select all the content in document
-        obj.selection.selectAll();
-        // Insert bookmark to selected content
-        obj.editor.insertBookmark('Bookmark1');
-        //Select the bookmark
-        obj.selection.selectBookmark('Bookmark1');
-        // To get the selected content as sfdt
-        let selectedContent = obj.selection.sfdt;
-        // Insert the sfdt content in cursor position using paste API
-        obj.editor.paste(selectedContent);
-      }
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl:
+        'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/',
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onCreated: function () {
+      let obj = this.$refs.container.ej2Instances.documentEditor;
+      // To insert text in cursor position
+      obj.editor.insertText('Document editor');
+      // To select all the content in document
+      obj.selection.selectAll();
+      // Insert bookmark to selected content
+      obj.editor.insertBookmark('Bookmark1');
+      //Select the bookmark
+      obj.selection.selectBookmark('Bookmark1');
+      // To get the selected content as sfdt
+      let selectedContent = obj.selection.sfdt;
+      // Insert the sfdt content in cursor position using paste API
+      obj.editor.paste(selectedContent);
     }
-  };
+  }
+};
 </script>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 You can add the following custom options using this API,
 

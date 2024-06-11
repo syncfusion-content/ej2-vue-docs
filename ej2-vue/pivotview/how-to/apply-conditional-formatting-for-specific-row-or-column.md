@@ -21,7 +21,10 @@ You can apply conditional formatting for specific row or column using `label` op
 To use the conditional formatting feature, You need to inject the `ConditionalFormatting` module in pivot table.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivot_data-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivot_data-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

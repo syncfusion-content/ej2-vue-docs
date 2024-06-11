@@ -1,86 +1,87 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :constraints='constraints' :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
+            :constraints='constraints' :getNodeDefaults='getNodeDefaults'
+            :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { Diagram,DiagramPlugin,DiagramConstraints,ConnectorBridging } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(ConnectorBridging);
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'Transaction',
-        width: 150,
-        height: 60,
-        offsetX: 300,
-        offsetY: 60,
-        shape: {
-            type: 'Flow',
-            shape: 'Terminator'
-        },
-        annotations: [{
-            id: 'label1',
-            content: 'Start Transaction',
-            offset: {
-                x: 0.5,
-                y: 0.5
-            }
-        }],
+import { DiagramComponent, DiagramConstraints, ConnectorBridging } from '@syncfusion/ej2-vue-diagrams';
+
+let nodes = [{
+    id: 'Transaction',
+    width: 150,
+    height: 60,
+    offsetX: 300,
+    offsetY: 60,
+    shape: {
+        type: 'Flow',
+        shape: 'Terminator'
     },
-    {
-        id: 'Verification',
-        width: 150,
-        height: 60,
-        offsetX: 300,
-        offsetY: 250,
-        shape: {
-            type: 'Flow',
-            shape: 'Process'
-        },
-        annotations: [{
-            id: 'label2',
-            content: 'Verification',
-            offset: {
-                x: 0.5,
-                y: 0.5
-            }
-        }]
-    }
+    annotations: [{
+        id: 'label1',
+        content: 'Start Transaction',
+        offset: {
+            x: 0.5,
+            y: 0.5
+        }
+    }],
+},
+{
+    id: 'Verification',
+    width: 150,
+    height: 60,
+    offsetX: 300,
+    offsetY: 250,
+    shape: {
+        type: 'Flow',
+        shape: 'Process'
+    },
+    annotations: [{
+        id: 'label2',
+        content: 'Verification',
+        offset: {
+            x: 0.5,
+            y: 0.5
+        }
+    }]
+}
 ];
 let connectors = [{
-        id: 'connector1',
-        type: 'Straight',
-        sourceID: 'Transaction',
-        targetID: 'Verification'
-    }, {
-        id: 'connector2',
-        type: 'Straight',
-        sourcePoint: {
-            x: 200,
-            y: 130
-        },
-        targetPoint: {
-            x: 400,
-            y: 130
-        }
+    id: 'connector1',
+    type: 'Straight',
+    sourceID: 'Transaction',
+    targetID: 'Verification'
+}, {
+    id: 'connector2',
+    type: 'Straight',
+    sourcePoint: {
+        x: 200,
+        y: 130
     },
-    {
-        id: 'connector3',
-        type: 'Straight',
-        sourcePoint: {
-            x: 200,
-            y: 170
-        },
-        targetPoint: {
-            x: 400,
-            y: 170
-        }
+    targetPoint: {
+        x: 400,
+        y: 130
     }
+},
+{
+    id: 'connector3',
+    type: 'Straight',
+    sourcePoint: {
+        x: 200,
+        y: 170
+    },
+    targetPoint: {
+        x: 400,
+        y: 170
+    }
+}
 ]
 export default {
-    name: 'app'
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
     data() {
         return {
             width: "100%",
@@ -105,11 +106,12 @@ export default {
             },
 
         }
+    },
+    provide: {
+        diagram: [ConnectorBridging]
     }
 }
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

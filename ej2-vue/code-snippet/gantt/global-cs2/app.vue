@@ -1,21 +1,16 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" locale = "de-DE"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { L10n, loadCldr, setCulture } from '@syncfusion/ej2-base';
 import * as cagregorian from './ca-gregorian.js';
 import * as numbers from './numbers.js';
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
-
 setCulture('de-DE');
-
 L10n.load({
   'de-DE': {
       'gantt': {
@@ -28,9 +23,11 @@ L10n.load({
   }
 });
 loadCldr(cagregorian,numbers);
-
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: projectNewData,
@@ -47,6 +44,3 @@ export default {
   }
 };
 </script>
-
-
-

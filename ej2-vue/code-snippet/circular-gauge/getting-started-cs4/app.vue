@@ -1,20 +1,20 @@
-
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
-            <ejs-circulargauge title= 'Speedometer' :titleStyle= 'titleStyle'>
+            <ejs-circulargauge title='Speedometer' :titleStyle='titleStyle'>
             </ejs-circulargauge>
         </div>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin } from "@syncfusion/ej2-vue-circulargauge";
 
-Vue.use(CircularGaugePlugin);
+import { CircularGaugeComponent } from "@syncfusion/ej2-vue-circulargauge";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent
+    },
     data: function () {
         return {
             titleStyle: {
@@ -25,11 +25,8 @@ export default {
 };
 </script>
 <style>
-    .wrapper {
-        max-width: 300px;
-        margin: 0 auto;
-    }
+.wrapper {
+    max-width: 300px;
+    margin: 0 auto;
+}
 </style>
-
-
-

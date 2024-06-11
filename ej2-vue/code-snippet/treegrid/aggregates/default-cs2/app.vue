@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid :dataSource="data" childMapping='children' :treeColumnIndex='1' height='260px'>
@@ -21,28 +19,43 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Aggregate } from "@syncfusion/ej2-vue-treegrid";
-import { summaryRowData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
+import { TreeGridComponent, Aggregate, AggregateDirective, AggregatesDirective, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { summaryRowData } from "./datasource.js";
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+const minTemplate = app.component('minTemplate', {
+    template: `<span>Min: {{data.Min}}</span>`,
+    data () {return { data: {}};}
+});
+
+const maxTemplate = app.component('maxTemplate', {
+    template: `<span>Max: {{data.Max}}</span>`,
+    data () {return { data: {}};}
+});
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective,
+
+},
+
   data() {
     return {
       data: summaryRowData,
             footerMin: function () {
-        return  { template : Vue.component('minTemplate', {
-            template: `<span>Min: {{data.Min}}</span>`,
-            data () {return { data: {}};}
-            })
+        return  { template : minTemplate
           }
       },
       footerMax: function () {
-        return  { template : Vue.component('maxTemplate', {
-            template: `<span>Max: {{data.Max}}</span>`,
-            data () {return { data: {}};}
-            })
+        return  { template : maxTemplate
           }
       }
     };
@@ -52,6 +65,3 @@ export default {
   }
 }
 </script>
-
-
-

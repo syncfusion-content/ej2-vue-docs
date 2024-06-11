@@ -19,107 +19,198 @@ The following steps are used to import and export annotation as object.
 **Step 2:** Use the following code snippet to perform import and export annotation.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
 <template>
   <div id="app">
-      <button v-on:click="exportAnnotation">Export Annotation</button>
-      <button v-on:click="importAnnotation">Import Annotation</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath">
-      </ejs-pdfviewer>
+    <button v-on:click="exportAnnotation">Export Annotation</button>
+    <button v-on:click="importAnnotation">Import Annotation</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
   </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-var exportObject;
+<script setup>
 
-export default {
-  name: 'app',
-  data () {
-    return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-    };
-  },
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
 
-  methods: {
-    //Export annotation as object.
-    exportAnnotation: function() {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.exportAnnotationsAsObject().then(function(value) {
-        exportObject = value;
-      });
-    },
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const exportObject = null;
 
-    //Import annotation that are exported as object.
-    importAnnotation: function() {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.importAnnotation(JSON.parse(exportObject));
-    }
-  }
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]);
+
+//Export annotation as object.
+const exportAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.exportAnnotationsAsObject().then(function (value) {
+    exportObject = value;
+  });
 }
+//Import annotation that are exported as object.
+const importAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.importAnnotation(JSON.parse(exportObject));
+}
+
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
 <template>
   <div id="app">
-      <button v-on:click="exportAnnotation">Export Annotation</button>
-      <button v-on:click="importAnnotation">Import Annotation</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :serviceUrl="serviceUrl"
-        :documentPath="documentPath">
-      </ejs-pdfviewer>
+    <button v-on:click="exportAnnotation">Export Annotation</button>
+    <button v-on:click="importAnnotation">Import Annotation</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-var exportObject;
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      exportObject: null
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
   methods: {
     //Export annotation as object.
-    exportAnnotation: function() {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.exportAnnotationsAsObject().then(function(value) {
-        exportObject = value;
+    exportAnnotation: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.exportAnnotationsAsObject().then(function (value) {
+        this.exportObject = value;
       });
     },
 
     //Import annotation that are exported as object.
-    importAnnotation: function() {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.importAnnotation(JSON.parse(exportObject));
+    importAnnotation: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.importAnnotation(JSON.parse(this.exportObject));
     }
   }
 }
 </script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="exportAnnotation">Export Annotation</button>
+    <button v-on:click="importAnnotation">Import Annotation</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const exportObject = null;
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+//Export annotation as object.
+const exportAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.exportAnnotationsAsObject().then(function (value) {
+    exportObject = value;
+  });
+}
+//Import annotation that are exported as object.
+const importAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.importAnnotation(JSON.parse(exportObject));
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="exportAnnotation">Export Annotation</button>
+    <button v-on:click="importAnnotation">Import Annotation</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      exportObject: null
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
+  methods: {
+    //Export annotation as object.
+    exportAnnotation: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.exportAnnotationsAsObject().then(function (value) {
+        this.exportObject = value;
+      });
+    },
+    //Import annotation that are exported as object.
+    importAnnotation: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      viewer.importAnnotation(JSON.parse(this.exportObject));
+    }
+  }
+}
+</script>
+
 {% endhighlight %}
 {% endtabs %}
 

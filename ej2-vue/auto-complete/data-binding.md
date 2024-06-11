@@ -29,7 +29,10 @@ Local data can be represented in two ways, they are as follows:
 The AutoComplete has support to load array of primitive data such as strings and numbers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +46,10 @@ The AutoComplete can generate its list items through an array of complex data. F
 In the following example, Game column from complex data have been mapped to the value field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ In the following example, Game column from complex data have been mapped to the 
 The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the `fields` property. In the following example, `Country.Name` column from complex data have been mapped to the value field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ The AutoComplete can generate its list items through an array of complex data. F
 The AutoComplete supports retrieval of data from remote data services with the help of `DataManager` component. The Query property is used to fetch data from the database and bind it to the AutoComplete. The following sample displays the first 6 contacts from the Customers table of the `Northwind` data service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/auto-complete/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/auto-complete/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

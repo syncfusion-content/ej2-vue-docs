@@ -15,7 +15,10 @@ CRUD actions can be manually performed on appointments using `addEvent`, `saveEv
 ## Normal event
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/app-crud-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/app-crud-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ CRUD actions can be manually performed on appointments using `addEvent`, `saveEv
 ## Recurrence event
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/app-crud-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/app-crud-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

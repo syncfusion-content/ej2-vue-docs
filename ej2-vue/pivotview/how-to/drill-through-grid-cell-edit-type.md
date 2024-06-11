@@ -24,7 +24,10 @@ Using the [`drillThrough`](https://ej2.syncfusion.com/vue/documentation/api/pivo
 In the below example, the data type of the `Country` column is set to `DropDownList`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs138/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs138/app.vue %}
 {% endhighlight %}
 {% endtabs %}

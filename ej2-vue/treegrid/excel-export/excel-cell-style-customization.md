@@ -17,7 +17,10 @@ TreeGrid cells in the exported Excel can be customized or formatted using [`exce
 In the below sample, we have set the background color for `Duration` column in the exported excel by `args.cell` and `backgroundColor` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/excel/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/excel/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The excel export provides an option to include theme for exported excel document
 To apply theme in exported Excel, define the `theme` in `exportProperties`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/excel/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/excel/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

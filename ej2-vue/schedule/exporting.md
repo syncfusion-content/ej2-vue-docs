@@ -19,7 +19,10 @@ The Scheduler allows you to export all its events into an Excel format file by u
 > Before you start with excel exporting functionality, you need to import and inject the `ExcelExport` module from the '@syncfusion/ej2-schedule' package using the `Inject` method of Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The Scheduler allows you to export all its events into an Excel format file by u
 By default, Scheduler exports all the default event fields that are mapped to it through the `eventSettings` property. To limit the number of fields on the exported excel file, it provides an option to export only the custom fields of the event data. To export such custom fields alone, define the required `fields` through the [`ExportOptions`](../api/schedule/exportOptions/) interface and pass it as argument to the `exportToExcel` method as shown in the following example. For example: `['Id', 'Subject', 'StartTime', 'EndTime', 'Location']`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ By default, Scheduler exports all the default event fields that are mapped to it
 By default, the Scheduler exports recurring events as a single data by exporting only its parent record into the excel file. If you want to export each individual occurrences of a recurring series appointment as separate records in an Excel file, define the `includeOccurrences` option as `true` through the [`ExportOptions`](../api/schedule/exportOptions/) interface and pass it as argument to the `exportToExcel` method. By default, the `includeOccurrences` option is set to `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 > By default, the event data are taken from Scheduler dataSource.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +81,10 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 Using fields property, we can only export the defined fields into excel without customizing the header. Now we can provide the alternate support to customize the header of custom fields exporting using the `fieldsInfo` option through the [`ExportFieldInfo`](../api/schedule/exportFieldInfo/) interface and pass it as an argument to the `exportToExcel` method as shown in the following example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +96,10 @@ Using fields property, we can only export the defined fields into excel without 
 By default, the Scheduler allows you to download the exported Excel file with a name `Schedule.xlsx`. It also provides an option to export the excel file with a custom file name, by defining the desired `fileName` through the [`ExportOptions`](../api/schedule/exportOptions/) interface and passing it as an argument to the `exportToExcel` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +111,10 @@ By default, the Scheduler allows you to download the exported Excel file with a 
 By default, the Scheduler exports event data to an excel file in the `.xlsx` format. You can also export the Scheduler data in either of the file type such as `.xlsx` or `csv` formats, by defining the `exportType` option as either `csv` or `xlsx` through the [`ExportOptions`](../api/schedule/exportOptions/) interface. By default, the `exportType` is set to `xlsx`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +126,10 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
 The Scheduler exports the event data to CSV format with `,` as separator. You can change separator by setting [separator](../api/schedule/exportOptions/#separator) property in [ExportOptions](../api/schedule/exportOptions/#exporttype).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/excel-export-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -119,7 +143,10 @@ You can export the Scheduler events to a calendar (.ics) file format, and open i
 The following code example shows how the Scheduler events are exported to a calendar (.ics) file by making use of the `exportToICalendar` public method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/calendar-export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/calendar-export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -133,7 +160,10 @@ By default, the calendar is exported with a file name `Calendar.ics`. To change 
 The following example downloads the iCal file with a name `ScheduleEvents.ics`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/calendar-export-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/calendar-export-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -149,7 +179,10 @@ The events from external calendars (ICS files) can be imported into Scheduler by
 The following example shows how to import an ICS file into Scheduler, using the `importICalendar` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/calendar-import-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/calendar-import-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -170,7 +203,10 @@ The Scheduler allows you to print the Scheduler element by using the [`print`](.
 You can print the Schedule element with the current view by using the [`print`](../api/schedule/#print) method without passing the options. The following example shows how to print the Scheduler using the `print` method without passing options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/print-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/print-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -182,7 +218,10 @@ You can print the Schedule element with the current view by using the [`print`](
 You can print the Schedule element based on your needs using the [`print`](../api/schedule/#print) method by passing the print options used in this example with its values. The following example shows how to print the Scheduler using the `print` method by passing the options.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/print-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/print-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns = "columns" :splitterSettings = "splitterSettings" :showColumnMenu = 'true' :allowSorting = 'true' :columnMenuClick='columnMenuClick' :columnMenuItems='columnMenuItems'
@@ -7,11 +5,13 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Sort, Filter, ColumnMenu } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent, Sort, Filter, ColumnMenu } from "@syncfusion/ej2-vue-gantt";
 import { editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
          data: editingData,
@@ -51,6 +51,3 @@ export default {
   }
 };
 </script>
-
-
-

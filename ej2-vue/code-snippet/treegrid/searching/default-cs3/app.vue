@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
 <div class="e-float-input" style="width: 200px; display: inline-block;">
@@ -7,7 +5,7 @@
                 <span class="e-float-line"></span>
                 <label class="e-float-text">Search text</label>
             </div>
-        <ejs-button id='search' @click.native='search'>Search</ejs-button>
+        <ejs-button id='search' @click='search'>Search</ejs-button>
         <ejs-treegrid ref='treegrid' :dataSource='data' childMapping='subtasks' :treeColumnIndex='1' height='220px'>
             <e-columns>
                 <e-column field='taskID' headerText='Task ID' width='90' textAlign='Right'></e-column>
@@ -19,15 +17,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Filter } from "@syncfusion/ej2-vue-treegrid";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { TreeGridComponent, Filter } from "@syncfusion/ej2-vue-treegrid";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -44,6 +48,3 @@ export default {
 }
 }
 </script>
-
-
-

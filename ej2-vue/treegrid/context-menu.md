@@ -38,7 +38,10 @@ Items| Description
 `Outdent` | Outdents the record to one level of hierarchy.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/contextMenu/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/contextMenu/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +57,10 @@ Actions for this customized items can be defined in the [`contextMenuClick`](htt
 In the below sample, we have shown context menu item for parent rows to expand or collapse child rows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/contextMenu/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/contextMenu/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +72,10 @@ In the below sample, we have shown context menu item for parent rows to expand o
 You can enable and disable the context menu items using the [`enableItems`](https://ej2.syncfusion.com/documentation/api/menu/#enableitems) method in [`contextMenuOpen`](https://ej2.syncfusion.com/documentation/api/treegrid/#contextmenuopen) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/contextMenu/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/contextMenu/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <div class="col-lg-4 property-section">
@@ -40,14 +38,14 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
-
-Vue.use(RichTextEditorPlugin);
-Vue.use(CheckBoxPlugin);
-
+import { RichTextEditorComponent, Toolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { CheckBoxComponent as EjsCheckbox } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-checkbox":CheckboxComponent,
+"ejs-richtexteditor":RichTextEditorComponent
+},
     data: function() {
         return {
         toolbarSettings: {
@@ -76,5 +74,3 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

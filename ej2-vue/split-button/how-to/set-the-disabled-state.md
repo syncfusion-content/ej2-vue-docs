@@ -15,7 +15,10 @@ SplitButton component can be enabled or disabled by [`disabled`](https://ej2.syn
 The following example illustrates how to set the disable state in SplitButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

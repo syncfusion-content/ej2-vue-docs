@@ -12,15 +12,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: employeeData,

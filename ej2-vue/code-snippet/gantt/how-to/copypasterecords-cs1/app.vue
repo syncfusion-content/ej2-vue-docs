@@ -1,18 +1,18 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="customContextMenu" :dataSource="data" :taskFields = "taskFields" :height = "height" :editSettings="editSettings" :enableContextMenu="true" :contextMenuItems="contextMenuItems" :contextMenuClick = "contextMenuClick" :contextMenuOpen= "contextMenuOpen" :addChildRecords= "addChildRecords"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, ContextMenu, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, ContextMenu, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
 import { editingData } from './data-source.js';
-Vue.use(GanttPlugin);
 var copiedRecord;
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data: editingData,
@@ -76,6 +76,3 @@ export default {
     }
 };
 </script>
-
-
-

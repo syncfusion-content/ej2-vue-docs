@@ -13,13 +13,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Resize } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data

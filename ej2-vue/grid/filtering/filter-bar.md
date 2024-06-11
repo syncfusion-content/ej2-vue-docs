@@ -30,7 +30,10 @@ N/A |N/A |Always **equal** operator will be used for Date filter |Date
 N/A |N/A |Always **equal** operator will be used for Boolean filter |Boolean
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +49,10 @@ The [`filterBarTemplate`](https://ej2.syncfusion.com/vue/documentation/api/grid/
 In the following sample dropdown is used  as custom component in EmployeeID column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

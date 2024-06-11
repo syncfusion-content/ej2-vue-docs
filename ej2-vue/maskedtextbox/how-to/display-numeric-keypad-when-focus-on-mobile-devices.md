@@ -14,7 +14,10 @@ By default, on focusing the MaskedTextBox, alphanumeric keypad will be displayed
 values is needed, and this can be achieved by setting "type" property to `tel`. Refer to the following example to enable numeric keypad in MaskedTextBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/masked-textbox/how-to/numeric-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/masked-textbox/how-to/numeric-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,16 +1,17 @@
-
-
 <template>
   <div>
     <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles"  :autoUpload="autoUpload" :asyncSettings= "path" :uploading="onBeforeUpload"></ejs-uploader>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { UploaderPlugin } from '@syncfusion/ej2-vue-inputs';
-Vue.use(UploaderPlugin);
+
+import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
+name: "App",
+components: {
+"ejs-uploader":UploaderComponent
+},
   data: function(){
         return {
           path:  {
@@ -21,9 +22,9 @@ export default {
         }
     },
     methods: {
-onBeforeUpload: function(args): void {
+onBeforeUpload: function(args) {
     // get the file size in bytes
-    let sizeInBytes: number = args.fileData.size;
+    let sizeInBytes = args.fileData.size;
     // get the file size in standard format
     alert("File size is: " + this.$refs.uploadObj.bytesToSize(sizeInBytes))
 }
@@ -31,9 +32,9 @@ onBeforeUpload: function(args): void {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
  #container {
         padding-left: 5%;
         width: 100%;
@@ -49,5 +50,3 @@ onBeforeUpload: function(args): void {
         width: 30%;
     }
 </style>
-
-

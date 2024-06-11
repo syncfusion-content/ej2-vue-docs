@@ -1,18 +1,18 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :toolbarClick="toolbarClick" :columns="columns" :toolbar="toolbar" :allowFiltering='true'></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Filter } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, Filter } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations';
 import { editingData } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: editingData,
@@ -34,7 +34,7 @@ export default {
             { field: 'Duration', headerText: 'Duration', width: '150' },
             { field: 'Progress', headerText: 'Progress', width: '150' },
         ],
-            toolbarClick: (args: ClickEventArgs) => {
+            toolbarClick: (args) => {
                 if (args.item.id === 'toolbarfilter') {
                     var ganttObj = document.getElementById('GanttContainer').ej2_instances[0];
                     ganttObj.filterByColumn('TaskName', 'startswith', 'Identify');
@@ -53,6 +53,3 @@ export default {
             content: '\e7ee';
         }
     </style>
-
-
-

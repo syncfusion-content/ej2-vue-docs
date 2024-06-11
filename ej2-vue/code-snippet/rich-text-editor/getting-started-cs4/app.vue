@@ -1,5 +1,3 @@
-
-
 <template>
 <div class="control-section">
     <div class="sample-container">
@@ -46,16 +44,15 @@
     }
 </style>
 
-
-<script>
-  import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-  import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
-  
-  Vue.use(DropDownListPlugin);
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
+<script>  
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+export default {
+name: "App",
+components: {
+"ejs-dropdownlist":DropDownListComponent,
+"ejs-richtexteditor":RichTextEditorComponent
+},
     data() {
       return {
         height: 220,
@@ -98,5 +95,3 @@
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
-
-

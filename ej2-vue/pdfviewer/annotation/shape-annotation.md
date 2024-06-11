@@ -37,95 +37,168 @@ Refer to the following code sample to switch to the circle annotation mode.
 
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
 <template>
   <div id="app">
-     <button id="set">Circle</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :resourceUrl="resourceUrl"
-        :documentPath="documentPath"
-        :documentLoad="documentLoad">
-      </ejs-pdfviewer>
+    <button id="set">Circle</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = () => {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('set').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('Circle');
+  });
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Circle</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl" :documentPath="documentPath"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-var viewer;
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
 
-   methods: {
+  methods: {
     documentLoad() {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-      document.getElementById('set').addEventListener('click', ()=> {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', () => {
         viewer.annotation.setAnnotationMode('Circle');
       });
     }
   }
 }
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
 <template>
   <div id="app">
-     <button id="set">Circle</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :serviceUrl="serviceUrl"
-        :documentLoad="documentLoad">
-      </ejs-pdfviewer>
+    <button id="set">Circle</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const documentLoad = () => {
+  const viewer = pdfviewer.value.ej2Instances;
+  document.getElementById('set').addEventListener('click', () => {
+    viewer.annotation.setAnnotationMode('Circle');
+  });
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button id="set">Circle</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl"
+      :documentLoad="documentLoad">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
-var viewer;
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
   methods: {
     documentLoad() {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-      document.getElementById('set').addEventListener('click', ()=> {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
+      document.getElementById('set').addEventListener('click', () => {
         viewer.annotation.setAnnotationMode('Circle');
       });
     }
   }
 }
 </script>
+
 {% endhighlight %}
 {% endtabs %}
 
@@ -136,7 +209,7 @@ With the PDF Viewer library, you can add a shape annotation to the PDF Viewer co
 Here's a example of how you can utilize the **addAnnotation()** method to include a shape annotation programmatically:
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -145,36 +218,113 @@ Here's a example of how you can utilize the **addAnnotation()** method to includ
     <button v-on:click="addRectangleAnnotation">Add Rectangle Annotation programatically</button>
     <button v-on:click="addCircleAnnotation">Add Circle Annotation programatically</button>
     <button v-on:click="addPolygonAnnotation">Add Polygon Annotation programatically</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :resourceUrl="resourceUrl">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const addLineAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Line", {
+    offset: { x: 200, y: 230 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+  });
+}
+
+const addArrowAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Arrow", {
+    offset: { x: 200, y: 370 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
+  });
+}
+
+const addRectangleAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Rectangle", {
+    offset: { x: 200, y: 500 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+  });
+}
+
+const addCircleAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Circle", {
+    offset: { x: 200, y: 630 },
+    pageNumber: 1,
+    width: 90,
+    height: 90
+  });
+}
+
+const addPolygonAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Polygon", {
+    offset: { x: 200, y: 800 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
+  });
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addLineAnnotation">Add Line Annotation programatically</button>
+    <button v-on:click="addArrowAnnotation">Add Arrow Annotation programatically</button>
+    <button v-on:click="addRectangleAnnotation">Add Rectangle Annotation programatically</button>
+    <button v-on:click="addCircleAnnotation">Add Circle Annotation programatically</button>
+    <button v-on:click="addPolygonAnnotation">Add Polygon Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
-      };
+    };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
-    methods: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
     addLineAnnotation: function () {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Line", {
         offset: { x: 200, y: 230 },
         pageNumber: 1,
@@ -182,7 +332,7 @@ export default {
       });
     },
     addArrowAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Arrow", {
         offset: { x: 200, y: 370 },
         pageNumber: 1,
@@ -190,7 +340,7 @@ export default {
       });
     },
     addRectangleAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Rectangle", {
         offset: { x: 200, y: 500 },
         pageNumber: 1,
@@ -198,7 +348,7 @@ export default {
       });
     },
     addCircleAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Circle", {
         offset: { x: 200, y: 630 },
         pageNumber: 1,
@@ -207,7 +357,7 @@ export default {
       });
     },
     addPolygonAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Polygon", {
         offset: { x: 200, y: 800 },
         pageNumber: 1,
@@ -219,7 +369,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -228,36 +378,113 @@ export default {
     <button v-on:click="addRectangleAnnotation">Add Rectangle Annotation programatically</button>
     <button v-on:click="addCircleAnnotation">Add Circle Annotation programatically</button>
     <button v-on:click="addPolygonAnnotation">Add Polygon Annotation programatically</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :serviceUrl="serviceUrl">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const addLineAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Line", {
+    offset: { x: 200, y: 230 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 230 }, { x: 350, y: 230 }]
+  });
+}
+
+const addArrowAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Arrow", {
+    offset: { x: 200, y: 370 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 370 }, { x: 350, y: 370 }]
+  });
+}
+
+const addRectangleAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Rectangle", {
+    offset: { x: 200, y: 500 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 500 }, { x: 288, y: 499 }, { x: 289, y: 553 }, { x: 200, y: 500 }]
+  });
+}
+
+const addCircleAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Circle", {
+    offset: { x: 200, y: 630 },
+    pageNumber: 1,
+    width: 90,
+    height: 90
+  });
+}
+
+const addPolygonAnnotation = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  viewer.annotation.addAnnotation("Polygon", {
+    offset: { x: 200, y: 800 },
+    pageNumber: 1,
+    vertexPoints: [{ x: 200, y: 800 }, { x: 242, y: 771 }, { x: 289, y: 799 }, { x: 278, y: 842 }, { x: 211, y: 842 }, { x: 200, y: 800 }]
+  });
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="addLineAnnotation">Add Line Annotation programatically</button>
+    <button v-on:click="addArrowAnnotation">Add Arrow Annotation programatically</button>
+    <button v-on:click="addRectangleAnnotation">Add Rectangle Annotation programatically</button>
+    <button v-on:click="addCircleAnnotation">Add Circle Annotation programatically</button>
+    <button v-on:click="addPolygonAnnotation">Add Polygon Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      };
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+    };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
-    methods: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
     addLineAnnotation: function () {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Line", {
         offset: { x: 200, y: 230 },
         pageNumber: 1,
@@ -265,7 +492,7 @@ export default {
       });
     },
     addArrowAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Arrow", {
         offset: { x: 200, y: 370 },
         pageNumber: 1,
@@ -273,7 +500,7 @@ export default {
       });
     },
     addRectangleAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Rectangle", {
         offset: { x: 200, y: 500 },
         pageNumber: 1,
@@ -281,7 +508,7 @@ export default {
       });
     },
     addCircleAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Circle", {
         offset: { x: 200, y: 630 },
         pageNumber: 1,
@@ -290,7 +517,7 @@ export default {
       });
     },
     addPolygonAnnotation: function () {
-    var viewer = this.$refs.pdfviewer.ej2Instances;
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       viewer.annotation.addAnnotation("Polygon", {
         offset: { x: 200, y: 800 },
         pageNumber: 1,
@@ -311,7 +538,7 @@ To modify existing shape annotation in the Syncfusion PDF viewer programmaticall
 Here is an example of how you can use the **editAnnotation()** method:
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
@@ -320,51 +547,146 @@ Here is an example of how you can use the **editAnnotation()** method:
     <button v-on:click="editRectangleAnnotation">Edit Rectangle Annotation programatically</button>
     <button v-on:click="editCircleAnnotation">Edit Circle Annotation programatically</button>
     <button v-on:click="editPolygonAnnotation">Edit Polygon Annotation programatically</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :resourceUrl="resourceUrl">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const editLineAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Line") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editArrowAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Arrow") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editRectangleAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Rectangle") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editCircleAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Circle") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editPolygonAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Polygon") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="editLineAnnotation">Edit Line Annotation programatically</button>
+    <button v-on:click="editArrowAnnotation">Edit Arrow Annotation programatically</button>
+    <button v-on:click="editRectangleAnnotation">Edit Rectangle Annotation programatically</button>
+    <button v-on:click="editCircleAnnotation">Edit Circle Annotation programatically</button>
+    <button v-on:click="editPolygonAnnotation">Edit Polygon Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
       resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
-      };
+    };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
-    methods: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
     editLineAnnotation: function () {
-      var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Line") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
         }
       }
     },
     editArrowAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Arrow") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -372,11 +694,11 @@ export default {
       }
     },
     editRectangleAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Rectangle") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -384,11 +706,11 @@ export default {
       }
     },
     editCircleAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Circle") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -396,11 +718,11 @@ export default {
       }
     },
     editPolygonAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Polygon") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -412,7 +734,7 @@ export default {
 </script>
 
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
   <div id="app">
@@ -421,51 +743,148 @@ export default {
     <button v-on:click="editRectangleAnnotation">Edit Rectangle Annotation programatically</button>
     <button v-on:click="editCircleAnnotation">Edit Circle Annotation programatically</button>
     <button v-on:click="editPolygonAnnotation">Edit Polygon Annotation programatically</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :serviceUrl="serviceUrl">
-      </ejs-pdfviewer>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer])
+
+const editLineAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Line") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editArrowAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Arrow") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editRectangleAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Rectangle") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editCircleAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Circle") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+
+const editPolygonAnnotation = function () {
+  const pdfviewer = pdfviewer.value.ej2Instances;
+  for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
+    if (pdfviewer.annotationCollection[i].subject === "Polygon") {
+      pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
+      pdfviewer.annotationCollection[i].thickness = 2;
+      pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
+      pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
+      pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="editLineAnnotation">Edit Line Annotation programatically</button>
+    <button v-on:click="editArrowAnnotation">Edit Arrow Annotation programatically</button>
+    <button v-on:click="editRectangleAnnotation">Edit Rectangle Annotation programatically</button>
+    <button v-on:click="editCircleAnnotation">Edit Circle Annotation programatically</button>
+    <button v-on:click="editPolygonAnnotation">Edit Polygon Annotation programatically</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      };
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+    };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer ]},
-    methods: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner, PageOrganizer]
+  },
+  methods: {
     editLineAnnotation: function () {
-      var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Line") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
         }
       }
     },
     editArrowAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Arrow") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -473,11 +892,11 @@ export default {
       }
     },
     editRectangleAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Rectangle") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -485,11 +904,11 @@ export default {
       }
     },
     editCircleAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Circle") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -497,11 +916,11 @@ export default {
       }
     },
     editPolygonAnnotation: function () {
-    var pdfviewer = this.$refs.pdfviewer.ej2Instances;
+      const pdfviewer = this.$refs.pdfviewer.ej2Instances;
       for (let i = 0; i < pdfviewer.annotationCollection.length; i++) {
         if (pdfviewer.annotationCollection[i].subject === "Polygon") {
           pdfviewer.annotationCollection[i].strokeColor = "#0000FF";
-          pdfviewer.annotationCollection[i].thickness = 2 ;
+          pdfviewer.annotationCollection[i].thickness = 2;
           pdfviewer.annotationCollection[i].fillColor = "#FFFF00";
           pdfviewer.annotationCollection[i].annotationSelectorSettings.resizerShape = "Circle"
           pdfviewer.annotation.editAnnotation(pdfviewer.annotationCollection[i]);
@@ -556,94 +975,154 @@ Refer to the following code sample to set the default annotation settings.
 The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :documentPath="documentPath"
-            :lineSettings="lineSettings"
-            :arrowSettings="arrowSettings"
-            :rectangleSettings="rectangleSettings"
-            :circleSettings="circleSettings"
-            :polygonSettings="polygonSettings"
-            :resourceUrl="resourceUrl">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :lineSettings="lineSettings"
+      :arrowSettings="arrowSettings" :rectangleSettings="rectangleSettings" :circleSettings="circleSettings"
+      :polygonSettings="polygonSettings" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
-<script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
 
-var viewer;
-export default {
-  name: 'app',
-  data () {
-    return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
-      lineSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
-      arrowSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
-      rectangleSettings: {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
-      circleSettings: {fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'},
-      polygonSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
-    };
-  },
-  
-  provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
-}
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib';
+const lineSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
+const arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
+const rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
+const circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
+const polygonSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :lineSettings="lineSettings"
-            :arrowSettings="arrowSettings"
-            :rectangleSettings="rectangleSettings"
-            :circleSettings="circleSettings"
-            :polygonSettings="polygonSettings">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :lineSettings="lineSettings"
+      :arrowSettings="arrowSettings" :rectangleSettings="rectangleSettings" :circleSettings="circleSettings"
+      :polygonSettings="polygonSettings" :resourceUrl="resourceUrl">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
-          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
-          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-var viewer;
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      lineSettings: {fillColor: 'blue', opacity: 0.6, strokeColor: 'green'},
-      arrowSettings: {fillColor: 'green', opacity: 0.6, strokeColor: 'blue'},
-      rectangleSettings: {fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange'},
-      circleSettings: {fillColor: 'orange', opacity: 0.6, strokeColor: 'pink'},
-      polygonSettings: {fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow'}
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/25.1.35/dist/ej2-pdfviewer-lib',
+      lineSettings: { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' },
+      arrowSettings: { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' },
+      rectangleSettings: { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' },
+      circleSettings: { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' },
+      polygonSettings: { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' }
     };
   },
-  
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]},
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
+  },
 }
 </script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :lineSettings="lineSettings" :arrowSettings="arrowSettings" :rectangleSettings="rectangleSettings"
+      :circleSettings="circleSettings" :polygonSettings="polygonSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const lineSettings = { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' };
+const arrowSettings = { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' };
+const rectangleSettings = { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' };
+const circleSettings = { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' };
+const polygonSettings = { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' };
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer])
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :lineSettings="lineSettings" :arrowSettings="arrowSettings" :rectangleSettings="rectangleSettings"
+      :circleSettings="circleSettings" :polygonSettings="polygonSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+  TextSearch, FormFields, FormDesigner, PageOrganizer
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      lineSettings: { fillColor: 'blue', opacity: 0.6, strokeColor: 'green' },
+      arrowSettings: { fillColor: 'green', opacity: 0.6, strokeColor: 'blue' },
+      rectangleSettings: { fillColor: 'yellow', opacity: 0.6, strokeColor: 'orange' },
+      circleSettings: { fillColor: 'orange', opacity: 0.6, strokeColor: 'pink' },
+      polygonSettings: { fillColor: 'pink', opacity: 0.6, strokeColor: 'yellow' }
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
+  }
+}
+</script>
+
 {% endhighlight %}
 {% endtabs %}

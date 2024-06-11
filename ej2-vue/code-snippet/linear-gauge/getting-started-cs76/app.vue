@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
@@ -24,13 +22,23 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { LinearGaugePlugin, Annotations } from '@syncfusion/ej2-vue-lineargauge';
-Vue.use(LinearGaugePlugin);
 
-
+import { LinearGaugeComponent, Annotations, AxesDirective, AxisDirective, AnnotationDirective, AnnotationsDirective,
+    PointersDirective, PointerDirective, RangesDirective, RangeDirective } from '@syncfusion/ej2-vue-lineargauge';
 
 export default {
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent,
+"e-annotations":AnnotationsDirective,
+"e-annotation":AnnotationDirective,
+"e-axes":AxesDirective,
+"e-axis":AxisDirective,
+"e-pointers":PointersDirective,
+"e-pointer":PointerDirective,
+"e-ranges":RangesDirective,
+"e-range":RangeDirective
+},
     data() {
         return {
           content:'<div id="pointer" style="width: 70px;margin-left:-25%;margin-top: 42%;font-size: 16px;">10 MPH</div>',
@@ -75,5 +83,3 @@ export default {
     margin: 0 auto;
 }
 </style>
-
-

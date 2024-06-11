@@ -1,18 +1,21 @@
 <template>
      <div>
-        <ejs-button id="getundocollection" cssClass="e-info" v-on:click.native="getundocollection">GetUndoCollection</ejs-button>
-        <ejs-button id="getredocollection" cssClass="e-info" v-on:click.native="getredocollection">GetRedoCollection</ejs-button>
+        <ejs-button id="getundocollection" cssClass="e-info" v-on:click="getundocollection">GetUndoCollection</ejs-button>
+        <ejs-button id="getredocollection" cssClass="e-info" v-on:click="getredocollection">GetRedoCollection</ejs-button>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :allowSorting='true' :allowFiltering='true' :enableUndoRedo='true' :allowRowDragAndDrop='true' :undoRedoActions="undoRedoActions" :allowReordering='true' :showColumnMenu='true' :allowResizing='true' :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Selection, Edit, Filter,Sort,RowDD,ColumnMenu,Reorder,Resize,UndoRedo } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, Selection, Edit, Filter,Sort,RowDD,ColumnMenu,Reorder,Resize,UndoRedo } from "@syncfusion/ej2-vue-gantt";
 import { projectNewData } from './data-source.js';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: projectNewData,
@@ -55,6 +58,3 @@ export default {
   }
 };
 </script>
-
-
-

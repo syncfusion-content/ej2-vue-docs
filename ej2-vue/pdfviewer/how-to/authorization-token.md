@@ -18,52 +18,93 @@ The following steps are used to include the authorization token to the PDF viewe
 
 **Step 2:** Add the following code snippet to include the authorization token.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div>
-        <ejs-pdfviewer
-            id="pdfViewer"
-            :serviceUrl="serviceUrl"
-            :documentPath="documentPath"
-            :ajaxRequestSettings="ajaxRequestSettings">
-        </ejs-pdfviewer>
-    </div>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :ajaxRequestSettings="ajaxRequestSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "PDF_Succinctly.pdf";
+
+// Include Authorization Token.
+const ajaxRequestSettings = {
+  ajaxHeaders: [
+    {
+      headerName: 'Authorization',
+      headerValue: 'Bearer 64565dfgfdsjweiuvbiuyhiueygf'
+    }
+  ],
+  withCredentials: false
+}
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div>
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+      :ajaxRequestSettings="ajaxRequestSettings">
+    </ejs-pdfviewer>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView,ThumbnailView, Print,TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+
 
 export default {
-  data () {
+  name: 'App',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"PDF_Succinctly.pdf",
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "PDF_Succinctly.pdf",
 
       // Include Authorization Token.
-      ajaxRequestSettings:{
+      ajaxRequestSettings: {
         ajaxHeaders: [
-        {
-        headerName: 'Authorization',
-
-        headerValue: 'Bearer 64565dfgfdsjweiuvbiuyhiueygf'
-        }
-      ],
-      withCredentials: false
-    },
-  };
-},
+          {
+            headerName: 'Authorization',
+            headerValue: 'Bearer 64565dfgfdsjweiuvbiuyhiueygf'
+          }
+        ],
+        withCredentials: false
+      },
+    };
+  },
   provide: {
-PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-             Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]}
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+    Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
+  }
 }
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 Find the Sample, [how to include authorization token](https://www.syncfusion.com/downloads/support/directtrac/general/ze/quickstart-1627983082.zip)

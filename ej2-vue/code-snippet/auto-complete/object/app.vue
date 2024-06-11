@@ -1,14 +1,14 @@
-
-
 <template>
-<div id="app">
-    <div id="wrapper1">
-          <ejs-autocomplete id='autocomplete' :value='value' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields' :allowObjectBinding='true' popupHeight="200px"></ejs-autocomplete>
+    <div id="app">
+        <div id="wrapper1">
+            <ejs-autocomplete id='autocomplete' :value='value' :dataSource='itemData' placeholder='e.g Item 1'
+                :fields='fields' :allowObjectBinding='true' popupHeight="200px"></ejs-autocomplete>
+        </div>
     </div>
-</div>
 </template>
 <script>
 import { AutoCompleteComponent } from "@syncfusion/ej2-vue-dropdowns";
+
 let records = [];
 function dataSource() {
     for (let i = 1; i <= 150; i++) {
@@ -23,35 +23,34 @@ dataSource();
 
 //Component registeration
 export default {
-    name: 'App',
+    name: "App",
     components: {
         "ejs-autocomplete": AutoCompleteComponent
     },
-    data (){
+    data() {
         return {
             itemData: records,
             fields: { value: 'text' },
             value: { id: 'id5', text: 'Item 5' },
         }
-    },
-   
+    }
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-notifications/styles/material.css";
-#wrapper1{
-  min-width: 250px;
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
+
+#wrapper1 {
+    min-width: 250px;
     float: left;
     margin-left: 350px;
 }
-#wrapper2{
-  min-width: 250px;
+
+#wrapper2 {
+    min-width: 250px;
     float: right;
-     margin-right: 100px;
+    margin-right: 100px;
 }
 </style>
-
-

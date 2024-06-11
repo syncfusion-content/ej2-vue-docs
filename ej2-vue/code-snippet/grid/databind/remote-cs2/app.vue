@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data">
@@ -13,13 +11,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+},
   data() {
     let SERVICE_URI =
       "https://services.syncfusion.com/js/production/api/Orders";
@@ -35,5 +36,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

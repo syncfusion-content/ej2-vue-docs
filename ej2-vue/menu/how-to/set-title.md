@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 In this sample , the title for menu item  can be achievable by using 'beforeItemRender' client-side event in Menu component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}

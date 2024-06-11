@@ -1,33 +1,29 @@
-
-
-
-
 <template>
   <div id="app">
-    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" 
-        :aggregateCellInfo="aggregateCell" :showFieldList="showFieldList" > </ejs-pivotview>
-</div>
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height"
+      :aggregateCellInfo="aggregateCell" :showFieldList="showFieldList"> </ejs-pivotview>
+  </div>
 </template >
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 function secondsToHms(d) {
-     d = Number(d);
-     var h = Math.floor(d / 3600);
-     var m = Math.floor((d % 3600) / 60);
-     var s = Math.floor((d % 3600) % 60);
-     return (
-          ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2)
-     );
+  d = Number(d);
+  var h = Math.floor(d / 3600);
+  var m = Math.floor((d % 3600) / 60);
+  var s = Math.floor((d % 3600) % 60);
+  return (
+    ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2)
+  );
 }
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -42,11 +38,11 @@ export default {
     }
   },
   methods: {
-    aggregateCell:function(args) {
+    aggregateCell: function (args) {
       if (args.fieldName === 'Sold') {
-          args.value = secondsToHms(args.value);
+        args.value = secondsToHms(args.value);
+      }
     }
-  }
   },
   provide: {
     pivotview: [FieldList]
@@ -54,9 +50,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

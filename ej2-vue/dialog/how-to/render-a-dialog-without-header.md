@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The dialog can be rendered without header by setting the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog/#header) property value as empty string or null. By default, dialog is rendered without header.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dlg-header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dlg-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

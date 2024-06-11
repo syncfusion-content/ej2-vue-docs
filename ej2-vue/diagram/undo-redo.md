@@ -58,7 +58,10 @@ History list allows to revert or restore multiple changes through a single undo/
 The client-side method [`startGroupAction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#startgroupaction) is used to notify the diagram to start grouping the changes. The client-side method [`endGroupAction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#endgroupaction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo fillColor change of multiple elements at a time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/undo-redo/undo-redo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/undo-redo/undo-redo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +109,10 @@ export default {
 canLog in the history list, which takes a history entry as argument and returns whether the specific entry can be added or not.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/undo-redo/undo-redo-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/undo-redo/undo-redo-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,7 +177,10 @@ export default {
 The [`stackLimit`](https://ej2.syncfusion.com/vue/documentation/api/diagram) property of history manager is used to limits the number of actions to be stored on the history manager.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/undo-redo/undo-redo-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/undo-redo/undo-redo-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -17,7 +17,10 @@ The Stepper component provides support for displaying steps with the following s
 In default type, the Stepper displays steps with a combination of both indicators and labels by setting the [stepType](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#steptype) property as `Default`. By default, the Stepper displays steps in the `Default` type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/defaultStepType/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/defaultStepType/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ In label type, the Stepper displays the steps with only the step labels by setti
 > When both label and text are defined, the label takes priority in displaying the steps.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/labelStepType/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/labelStepType/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ The following label positions are supported in Stepper:
 | `End` | Positions the label to the right side of each step. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/labelPosition/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/labelPosition/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +73,10 @@ The following label positions are supported in Stepper:
 In indicator type, the Stepper displays steps with only the step indicators  by setting the [stepType](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#steptype) property as `Indicator`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/indicatorType/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stepper/indicatorType/app.vue %}
 {% endhighlight %}
 {% endtabs %}

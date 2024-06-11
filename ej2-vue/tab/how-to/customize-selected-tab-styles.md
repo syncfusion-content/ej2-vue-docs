@@ -15,7 +15,10 @@ the Tab header and pass it to [`text`](https://ej2.syncfusion.com/vue/documentat
 the Tab elements.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tab/how-to/customize-tab-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tab/how-to/customize-tab-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

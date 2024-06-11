@@ -22,7 +22,10 @@ View is the section where the files and folders are displayed for the user to br
 By Default, File Manager is rendered with largeicons view. The following example demonstrate this.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/detailsview-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/detailsview-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ By Default, File Manager is rendered with largeicons view. The following example
 Details view is an injectable module in the file manager so, it should be injected before rendering the file manager to avail its functionality. The default appearance of the file manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) property. The following example demonstrate the file manager with details view.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/detailsview-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/file-manager/detailsview-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

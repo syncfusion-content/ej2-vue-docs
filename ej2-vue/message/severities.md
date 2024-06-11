@@ -17,7 +17,10 @@ The available severity types are **Normal**, **Success**, **Info**, **Warning** 
 The following example demonstrates the severity of the messages.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/message/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/message/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

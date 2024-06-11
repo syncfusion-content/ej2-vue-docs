@@ -16,12 +16,10 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { GridPlugin, GridComponent, ColumnDirective, ColumnsDirective, Edit, Page, Toolbar } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit, Page, Toolbar } from "@syncfusion/ej2-vue-grids";
 import { cascadeData } from "./datasource";
-
-Vue.use(GridPlugin);
 export default {
+name: "App",
   components: {
       'ejs-grid': GridComponent,
       'e-column': ColumnDirective,
@@ -62,4 +60,3 @@ export default {
       margin: 10px auto;
   }
 </style>
-  

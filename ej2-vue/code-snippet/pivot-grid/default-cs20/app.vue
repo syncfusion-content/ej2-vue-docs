@@ -1,26 +1,25 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height"> </ejs-pivotview>
+  </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
-import { pivotData } from './pivotData.js';
-import { DataManager, JsonAdaptor, Query, ReturnOption } from '@syncfusion/ej2-data';
 
-Vue.use(PivotViewPlugin);
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { pivotData } from './pivotData.js';
+import { DataManager, JsonAdaptor } from '@syncfusion/ej2-data';
 
 let remoteData = new DataManager({
   json: pivotData,
   adaptor: new JsonAdaptor()
 });
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: remoteData,
@@ -42,7 +41,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
 </style>
-
-
-
-

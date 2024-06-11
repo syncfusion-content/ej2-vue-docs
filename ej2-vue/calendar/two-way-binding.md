@@ -15,7 +15,10 @@ Two-way binding can be achieved by using the `v-model` directive in Vue. In the 
 The following example demonstrates how to set the `two-way-binding` in the Calendar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/two-way-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/two-way-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

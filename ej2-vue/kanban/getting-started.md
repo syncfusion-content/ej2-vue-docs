@@ -93,11 +93,20 @@ Follow the below steps to add the Vue Kanban component using `Composition API` o
 1\. First, import and register the Kanban component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+  import { KanbanComponent as EjsKanban, ColumnDirective as EColumn, ColumnsDirective as EColumns } from '@syncfusion/ej2-vue-kanban';
+
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
   import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
   export default {
+name: "App",
     components: {
       'ejs-kanban': KanbanComponent,
       'e-column': ColumnDirective,
@@ -136,6 +145,9 @@ Add the EJ2 Vue Kanban using `<ejs-kanban>` to the `<template>` section of the `
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/kanban/getting-started-empty-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-empty-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -150,6 +162,9 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/kanban/getting-started-key-field-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-key-field-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -161,6 +176,9 @@ To populate the empty Kanban with cards, define the local JSON data or remote da
 `Swimlane` can be enabled by mapping the fields `swimlaneSettings.keyField` to appropriate column name in dataSource. This enables the grouping of the cards based on the mapped column values.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/kanban/getting-started-swimlane-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/kanban/getting-started-swimlane-cs1/app.vue %}
 {% endhighlight %}

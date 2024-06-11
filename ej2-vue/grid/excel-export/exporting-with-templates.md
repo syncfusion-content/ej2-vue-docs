@@ -21,7 +21,10 @@ In the following sample, the hyperlinks and images are exported to Excel using [
 > Excel Export supports base64 string to export the images.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/column-template-export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/column-template-export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ In the following sample, the detail row content is formatted by specifying the [
 > When using [rowSpan](https://ej2.syncfusion.com/vue/documentation/api/grid/detailTemplateCell/#rowspan), it is essential to provide the cell's [index](https://ej2.syncfusion.com/vue/documentation/api/grid/detailTemplateCell/#index) for proper functionality.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/detail-template-export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/detail-template-export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +69,10 @@ The Excel export feature enables exporting of Grid with a caption template to an
 In the following sample, the customized caption text is exported to Excel using [captionText](https://ej2.syncfusion.com/vue/documentation/api/grid/exportGroupCaptionEventArgs/#captiontext) property in the [exportGroupCaption](https://ej2.syncfusion.com/vue/documentation/api/grid/#exportgroupcaption) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/excel/caption-template-export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/excel/caption-template-export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

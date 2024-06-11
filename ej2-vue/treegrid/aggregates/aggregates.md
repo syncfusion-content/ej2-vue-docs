@@ -42,7 +42,10 @@ with an array of aggregate types.
 Aggregate value is calculated for child rows, and it is displayed in the parent row footer. Use the [`childSummary`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/aggregateRowModel/#showchildsummary) property to render the child rows aggregate value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/aggregates/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/aggregates/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

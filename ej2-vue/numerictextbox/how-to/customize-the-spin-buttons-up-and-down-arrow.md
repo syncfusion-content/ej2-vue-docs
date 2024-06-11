@@ -28,7 +28,10 @@ You can override the default icons of `e-spin-up` and `e-spin-down` classes usin
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/how-to/spin-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/how-to/spin-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

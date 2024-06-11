@@ -22,7 +22,10 @@ The [`applyImageFilter`](https://helpej2.syncfusion.com/vue/documentation/api/im
 In the following example, you can using the applyImageFilter method in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}

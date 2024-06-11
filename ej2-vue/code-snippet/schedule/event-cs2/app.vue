@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div id="container">
@@ -10,19 +8,9 @@
 </template>
 
 <script>
-import Vue from "vue";
-import {
-  ScheduleComponent,
-  Day,
-  Week,
-  Month,
-  Agenda,
-  Inject,
-  Resize,
-  DragAndDrop,
-  SchedulePlugin,
-} from "@syncfusion/ej2-vue-schedule";
-var initialLoad = true;
+import { ScheduleComponent, Day, Week, Month, Agenda, DragAndDrop } from "@syncfusion/ej2-vue-schedule";
+
+let initialLoad = true;
 let data = [
   {
     EndTime: new Date(2022, 3, 30, 0, 0),
@@ -68,9 +56,12 @@ let data = [
     Subject: " VP Highland Model | 3719 :: Pool",
   },
 ];
-Vue.use(SchedulePlugin);
-export default {
 
+export default {
+  name: "App",
+  components: {
+    "ejs-schedule": ScheduleComponent
+  },
   data() {
     return {
       height: "550px",
@@ -102,14 +93,12 @@ export default {
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
-@import '../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-calendars/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 </style>
-
-

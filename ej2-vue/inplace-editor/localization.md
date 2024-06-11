@@ -26,7 +26,10 @@ Localization library allows you to localize the default text content of the In-p
 To load translation object in an application use `load` function of `L10n` class. In the following sample, `French` culture is set to In-place Editor and change the tooltip text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ Specifies the direction of the In-place Editor component using the [enableRtl](h
 > It will not change based on the locale property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +65,10 @@ Formatting is a way of representing the value in different format. You can forma
 * [TimePicker](https://ej2.syncfusion.com/vue/documentation/api/timepicker/#format)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/in-place-editor/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/in-place-editor/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,18 +1,16 @@
-
-
 <template>
 <ejs-dropdownbutton :items='items' iconCss= 'e-icons e-menu' cssClass= 'e-caret-hide'></ejs-dropdownbutton>
 </template>
 
 <script>
-import Vue from 'vue';
-import { DropDownButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(DropDownButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-dropdownbutton":DropDownButtonComponent
+},
     data () {
         return {
             items:[
@@ -51,5 +49,3 @@ export default {
     content: '\e984';
   }
 </style>
-
-

@@ -21,7 +21,10 @@ To get start quickly with Edit Options, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=oo1SOrOM5nk" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The treegrid toolbar has the built-in items to execute Editing actions.
 You can define this by using the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#toolbar) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +94,7 @@ You can convert the form editors to EJ2 controls in the [`actionComplete`](https
 The following code example illustrates rendering the drop-down list control in the `actionComplete` event.
 
 ```
-<script>
+<script setup>
     actionComplete: function(args) {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             let priorityData: {}[] = DataUtil.distinct(this.$refs.treegrid.grid.dataSource, 'priority',true);
@@ -107,7 +113,7 @@ You can read, format, and update the current editor value in the [`actionBegin`]
 In the following code example, the `progress` value has been formatted and updated.
 
 ``` html
-<script>
+<script setup>
     actionBegin: function(args) {
         if (args.requestType === 'save') {
             // cast string to integer value.
@@ -126,7 +132,7 @@ If the first input element is in disabled or hidden state, focus the valid input
 event based on `requestType` as `beginEdit`.
 
 ```
-<script>
+<script setup>
     actionComplete: function(args) {
         // Set initail Focus
         if (args.requestType === 'beginEdit') {
@@ -142,7 +148,7 @@ event based on `requestType` as `beginEdit`.
 If you have used additional fields that are not present in the column model, then add the validation rules to the [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actioncomplete) event.
 
 ```
-<script>
+<script setup>
     actionComplete: function(args) {
         if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
             // Add Validation Rules
@@ -163,7 +169,10 @@ The TreeGrid control provides the support to add the new row in the top, bottom,
 The following examples shows how to set new row position as `Child` in tree grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -177,7 +186,10 @@ The following examples shows how to set new row position as `Child` in tree grid
 The delete confirm dialog can be shown when deleting a record by defining the [`showDeleteConfirmDialog`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/editSettingsModel/#showdeleteconfirmdialog) as `true`
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -192,7 +204,10 @@ The treegrid provides an option to set the default value for the columns when ad
 To set a default value for the particular column by defining the [`columns.defaultValue`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#defaultvalue).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -206,7 +221,10 @@ You can disable editing for particular columns by using the [`columns.allowEditi
 In the following demo, editing is disabled for the `Start Date` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/editing/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/editing/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

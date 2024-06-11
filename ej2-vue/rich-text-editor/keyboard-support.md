@@ -53,7 +53,10 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Format Painter Paste| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> |
 | Format Painter Escape | <kbd>Esc</kbd> |
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +90,10 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Unordered list| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>o</kbd> |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +107,10 @@ Customize the key config for the keyboard interaction of Rich Text Editor, using
 In the following sample, customize the cut, copy, paste toolbar action with `ctrl+1`, `ctrl+2`, `ctrl+3`, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}

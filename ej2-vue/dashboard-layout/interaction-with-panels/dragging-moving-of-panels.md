@@ -22,7 +22,10 @@ While dragging a panel in Dashboard layout the following dragging events will be
 The following sample demonstrates dragging and pushing of panels. For example, while dragging the panel 0 over panel 1, these panels get collided and push the panel 1 towards the feasible direction, so that, the panel 0 gets placed in the panel 1 position.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/setting-cell-spacing-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/setting-cell-spacing-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ Initially, the complete panel will act as the handler for dragging the panel suc
 The following sample demonstrates customizing the dragging handler of the panels where the dragging action of panel occurs only with the header of the panel.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/drag-handler-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/drag-handler-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ By default, the dragging of panels is enabled in Dashboard Layout. It can also b
 The following sample demonstrates Dashboard Layout with dragging support disabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/disable-dragging-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/disable-dragging-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

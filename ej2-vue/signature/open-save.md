@@ -17,7 +17,10 @@ The Signature component supports to open the signature by using hosted/online UR
 The signature component opens a pre-drawn signature as either base64 or hosted/ online URL using the [`load`](https://ej2.syncfusion.com/vue/documentation/api/signature/#load) method. It supports the PNG, JPEG, and SVG image’s base64.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The Signature component saves the signature as base64, blob, and image like PNG,
 The `getSignature` method is used to get the signature as base64 with the PNG, JPEG, and SVG type. This can be loaded to signature using [`load`](https://ej2.syncfusion.com/vue/documentation/api/signature/#load) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ The [`saveAsBlob`](https://ej2.syncfusion.com/vue/documentation/api/signature/#s
 The [`save`](https://ej2.syncfusion.com/vue/documentation/api/signature/#save) method is used to saves the signature as an image. And it accepts file name and file type as parameter. The file type parameter supports PNG, JPEG, and SVG and the default file type is PNG.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +72,10 @@ The [`saveWithBackground`](https://ej2.syncfusion.com/vue/documentation/api/sign
 In the following sample, the background color is set as ‘rgb(103 58 183)’ and save with background as true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/signature/default-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

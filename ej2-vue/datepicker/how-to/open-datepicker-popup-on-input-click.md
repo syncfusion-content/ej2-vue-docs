@@ -15,7 +15,10 @@ You can open the DatePicker popup on input focus by calling the `show` method in
 The following example demonstrates how to open the DatePicker popup when the input is focused.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/open-popup-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/open-popup-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

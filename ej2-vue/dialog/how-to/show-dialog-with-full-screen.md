@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can show the dialog in fullscreen by passing `true` as argument to the dialog [show](https://ej2.syncfusion.com/vue/documentation/api/dialog/#show) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dlg-fullscreen-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dlg-fullscreen-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

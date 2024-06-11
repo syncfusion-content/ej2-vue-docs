@@ -88,7 +88,10 @@ Once the package is installed, you can find the culture specific JSON data under
 * Set the culture to Scheduler by using the `locale` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/localization-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/localization-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +105,10 @@ Once the package is installed, you can find the culture specific JSON data under
 For example, the following code example lets you to define the French translation words for all the static words used in Scheduler.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/localization-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/localization-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -227,7 +233,10 @@ L10n.load({
 Scheduler can be used with all valid date formats and by default it follows the universal date format "MM/dd/yyyy". If the `dateFormat` property is not specified particularly, then it will work based on the locale that is assigned to the Scheduler. As the default locale applied on Scheduler is "en-US", this makes it to follow the "MM/dd/yyyy" pattern.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/localization-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/localization-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -241,7 +250,10 @@ Time formats is a way of representing the time value in different string formats
 The following example demonstrates the Scheduler component in 24 hours format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/localization-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/localization-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -255,7 +267,10 @@ The following example demonstrates the Scheduler component in 24 hours format.
 The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting [`enableRtl`](../api/schedule/#enablertl) to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/localization-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/localization-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

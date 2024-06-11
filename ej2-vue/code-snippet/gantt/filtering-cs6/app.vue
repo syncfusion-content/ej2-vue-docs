@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
        <ejs-button id="filterRecord" cssClass="e-info" v-on:click.native="filter">Filter</ejs-button>
@@ -9,13 +6,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Filter } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GanttComponent, Filter } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { projectNewData } from './data-source.js';
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -74,6 +74,3 @@ export default {
     }
 };
 </script>
-
-
-

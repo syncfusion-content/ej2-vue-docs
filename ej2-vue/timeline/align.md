@@ -17,7 +17,10 @@ You can display the Timeline content `Before`, `After`, `Alternate` and `Alterna
 In [Before](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAlign/) alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/align-before/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/align-before/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ In [Before](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAl
 In [After](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAlign/) alignment, for `horizontal` orientation the item content is placed at the bottom and oppositeContent at the top whereas in `vertical`, the content to the right and oppositeContent to the left.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/align-after/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/align-after/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ In [After](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAli
 In [Alternate](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAlign/) alignment, the item content are arranged alternatively regardless of the Timeline orientation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/align-alternate/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/align-alternate/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +62,10 @@ In [Alternate](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelin
 In [AlternateReverse](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAlign/) alignment, the item content are arranged in reverse alternate regardless of the Timeline orientation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/align-alternate-reverse/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/timeline/align-alternate-reverse/app.vue %}
 {% endhighlight %}
 {% endtabs %}

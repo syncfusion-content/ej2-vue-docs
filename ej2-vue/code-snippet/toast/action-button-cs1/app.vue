@@ -1,22 +1,22 @@
-
-
 <template>
    <div id='app'>
-       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
        <ejs-toast ref='elementToastTime' id='elementToastTime' :position='position' title='Anjolie Stokes' content='<p><img src="https://ej2.syncfusion.com/vue/demos/src/toast/resource/laura.png"></p>' width=230 height=250 :buttons='button'></ejs-toast>
    </div>
 </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast } from "@syncfusion/ej2-vue-notifications";
-import { ButtonPlugin, RadioButtonPlugin, ChangeEventArgs as CheckBoxChange } from '@syncfusion/ej2-vue-buttons';
+
+import { ToastComponent } from "@syncfusion/ej2-vue-notifications";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { closest } from '@syncfusion/ej2-base';
 
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-toast":ToastComponent
+},
   data: function(){
     return {
         position:  { X: 'Right', Y: 'Bottom' },
@@ -29,7 +29,7 @@ export default {
     }
   },
   methods: {
-      showBtnClick: function(args){
+      showBtnClick: function(){
           this.$refs.elementToastTime.show();
       },
       btnClick: function(e){
@@ -68,6 +68,3 @@ export default {
   }
 
 </style>
-
-
-

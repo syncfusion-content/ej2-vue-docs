@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <ejs-button cssClass="e-success" v-on:click.native='changeHeaderText'>Change Header Text</ejs-button>
+      <ejs-button cssClass="e-success" v-on:click='changeHeaderText'>Change Header Text</ejs-button>
       <div style="padding: 20px 17px 0 0">
         <ejs-grid ref="grid" :dataSource='data' height='280'>
           <e-columns>
@@ -14,14 +14,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { data } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
 
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { data } from "./datasource.js";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

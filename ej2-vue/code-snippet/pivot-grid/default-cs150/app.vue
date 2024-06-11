@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :hyperlinkSettings="hyperlinkSettings" :hyperlinkCellClick="hyperlinkCellClick"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :height="height" :dataSourceSettings="dataSourceSettings" :hyperlinkSettings="hyperlinkSettings"
+      :hyperlinkCellClick="hyperlinkCellClick"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -30,13 +28,13 @@ export default {
       },
       height: 350,
       hyperlinkSettings: {
-          showHyperlink: true,
-          cssClass: 'e-custom-class'
+        showHyperlink: true,
+        cssClass: 'e-custom-class'
       }
     }
   },
   methods: {
-    hyperlinkCellClick: function(args) {
+    hyperlinkCellClick: function (args) {
       args.cancel = false;
       args.currentCell.setAttribute("data-url", "https://ej2.syncfusion.com/");//here we have redirected to EJ2 Syncfusion on hyperlinkcell click
     }
@@ -44,7 +42,8 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+
 .e-custom-class {
   color: #008cff;
   text-decoration: underline;
@@ -55,6 +54,3 @@ export default {
   text-decoration: none;
 }
 </style>
-
-
-

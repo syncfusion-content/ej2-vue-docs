@@ -1,7 +1,5 @@
-
-
 <template>
-<ejs-checkbox label='Default'></ejs-checkbox>
+  <ejs-checkbox label='Default'></ejs-checkbox>
 </template>
 
 <script>
@@ -11,6 +9,7 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+  name: "App",
   components: {
     'ejs-checkbox': CheckBoxComponent
   }
@@ -18,12 +17,10 @@ export default {
 </script>
 
 <style>
-  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 
 .e-checkbox-wrapper {
   margin-top: 18px;
 }
 </style>
-
-

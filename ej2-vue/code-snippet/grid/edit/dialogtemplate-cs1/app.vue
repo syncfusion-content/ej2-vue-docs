@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data' :editSettings='editSettings' :actionBegin="actionBegin" :actionComplete="actionComplete" :toolbar='toolbar' height='273px'>
@@ -13,27 +10,33 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 import DialogTemplate from "./dialogtemp.vue";
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
-import { DropDownListPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { DatePickerComponent } from "@syncfusion/ej2-vue-calendars";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { NumericTextBox } from "@syncfusion/ej2-inputs";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { DataUtil } from '@syncfusion/ej2-data';
-
-Vue.use(GridPlugin);
-Vue.use(DropDownListPlugin);
-Vue.use(DatePickerPlugin);
-Vue.use(NumericTextBoxPlugin)
-
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-datepicker":DatePickerComponent,
+"ejs-dropdownlist":DropDownListComponent
+},
+
   data() {
     return {
       data: data,
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog',  template: function () {
-          return { template : Vue.component('todo-item', {
+          return { template : app.component('todo-item', {
             template: `<div formGroup="orderForm">
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -130,6 +133,3 @@ export default {
 }
 
 </style>
-
-
-

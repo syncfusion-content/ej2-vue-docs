@@ -15,7 +15,7 @@ Represents the Tooltip component that displays a piece of information about the 
 <div id="tooltip">Show Tooltip</div>
 ```
 ```ts
-<script>
+<script setup>
   var tooltipObj = new Tooltip({ content: 'Tooltip text' });
   tooltipObj.appendTo("#tooltip");
 </script>

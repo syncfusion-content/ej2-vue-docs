@@ -15,7 +15,10 @@ The dialog is always centered based on the target container. If the target is no
 In the following sample, the model dialog is centered based on its current scroll position of the page.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/center-the-dialog-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/center-the-dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -39,7 +39,10 @@ The following table shows built-in toolbar items and its actions.
 | NextTimeSpan | Navigate the Gantt timeline to Next time span.|
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/toolbar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/toolbar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +59,10 @@ Actions for this customized toolbar items are defined in the [`toolbarClick`](ht
 By default, the custom toolbar items are at left position. You can change the position by using the `align` property. In the following sample, the `Quick Filter` toolbar item is positioned at right.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/toolbar-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/toolbar-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +79,10 @@ The Gantt component has an option to use both built-in and custom toolbar items 
 In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar items and `Test` is the custom toolbar item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/toolbar-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/toolbar-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +94,10 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 You can enable or disable the toolbar items by using the `enableItems` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/toolbar-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/toolbar-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +109,10 @@ You can enable or disable the toolbar items by using the `enableItems` method.
 In the Gantt toolbar, you can add EJ2 editor elements like numeric text box, drop-down list, and date picker controls. The following code snippets demonstrates how to add EJ2 editors to the Gantt toolbar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/toolbar-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/toolbar-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

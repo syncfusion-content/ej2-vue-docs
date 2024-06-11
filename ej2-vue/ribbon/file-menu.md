@@ -17,7 +17,10 @@ The Ribbon component provides a built-in file menu that allows you to add menu i
 You can show the file menu by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettingsModel/#visible) property to `true`. By default, the file menu is hidden.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/modules/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/modules/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ You can show the file menu by setting the [visible](https://ej2.syncfusion.com/v
 The menu items can be added to the file menu using the [menuItems](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettingsModel/#menuitems) property as an array of [MenuItemModel](https://ej2.syncfusion.com/vue/documentation/api/menu/menuItemModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/menuItems/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/menuItems/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ The menu items can be added to the file menu using the [menuItems](https://ej2.s
 You can open the submenu on menu item click, by setting the [showItemOnClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettingsModel/#showitemonclick) property to `true`. By default, the submenu will open on mouse hover.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/subMenuOnClick/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/subMenuOnClick/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +62,10 @@ You can open the submenu on menu item click, by setting the [showItemOnClick](ht
 You can define the file menu header text content by using the [text](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSettingsModel/#text) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/headerText/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/headerText/app.vue %}
 {% endhighlight %}
 {% endtabs %}

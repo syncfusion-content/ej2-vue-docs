@@ -25,7 +25,10 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 ## Alert action button
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/alert-action-btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/alert-action-btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -35,7 +38,10 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 ## Confirm action buttons
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/confirm-action-btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/confirm-action-btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ For prompt dialog , customized the default dialog buttons content as `Connect` a
 ## Prompt action buttons
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/prompt-action-btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/prompt-action-btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ Use the following code for **alert**, **confirm** and **prompt** to demonstrates
 ## Alert dialog close button
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/alert-close-btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/alert-close-btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +88,10 @@ Use the following code for **alert**, **confirm** and **prompt** to demonstrates
 ## Confirm dialog close button
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/confirm-close-btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/confirm-close-btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +101,10 @@ Use the following code for **alert**, **confirm** and **prompt** to demonstrates
 ## Prompt dialog close button
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/prompt-close-btn-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/prompt-close-btn-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +118,10 @@ You can load custom content in predefined dialogs using the `content` property.
 Use the following code to customize the dialog content to render the custom TextBox component inside the prompt dialog to get the username from the user.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/predefined-dialogs/custom-content-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/predefined-dialogs/custom-content-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

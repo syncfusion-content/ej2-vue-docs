@@ -25,7 +25,10 @@ The Essential JS 2 Avatar has the following predefined sizes that can be used wi
 | e-avatar-xsmall    | Displays apply xsmall size avatar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/size-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/size-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ The types of Essential JS 2 avatar are:
 The default style of the avatar is rectangular shape with rounded corners, which can be applied from adding the modifier class `.e-avatar` to the target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ The default style of the avatar is rectangular shape with rounded corners, which
 The circle avatar style can be applied by adding the modifier class `.e-avatar-circle` to the target element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/avatar/circle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/avatar/circle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

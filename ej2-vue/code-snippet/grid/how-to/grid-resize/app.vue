@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <div style="display: inline-block;">
@@ -7,7 +5,7 @@
       <ejs-numerictextbox ref='widthTextbox' :min="400" :max="650" :step='5' :placeholder="400" format="n"  width='120px'></ejs-numerictextbox>
       <label> Enter the height </label> 
       <ejs-numerictextbox ref='heightTextbox' :min="200" :max="600" :step='5' :placeholder="200" format="n"  width='120px'></ejs-numerictextbox>
-      <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExternalResize">Update</ejs-button>
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="onExternalResize">Update</ejs-button>
     </div>
     <div id="parent">
       <ejs-grid ref='grid' style="padding: 5px 5px"  :dataSource='data'  height='100%'>
@@ -22,17 +20,19 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { NumericTextBoxPlugin  } from '@syncfusion/ej2-vue-inputs';
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { NumericTextBoxComponent  } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(NumericTextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: () => {
     return {
       data: data
@@ -59,5 +59,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

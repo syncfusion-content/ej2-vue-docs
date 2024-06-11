@@ -1,19 +1,22 @@
-
-
 <template>
-    <div class='wrap'>
-        <ejs-rating id="rating" value="3" cssClass="custom-border" ></ejs-rating>
-    </div>
+  <div class='wrap'>
+    <ejs-rating id="rating" value="3" cssClass="custom-border"></ejs-rating>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { RatingPlugin  } from "@syncfusion/ej2-vue-inputs";
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
-Vue.use(RatingPlugin);
 
-export default {}
+import { RatingComponent } from "@syncfusion/ej2-vue-inputs";
+import { enableRipple } from '@syncfusion/ej2-base';
+
+enableRipple(true);
+
+export default {
+  name: "App",
+  components: {
+    "ejs-rating": RatingComponent
+  },
+}
 </script>
 
 <style>
@@ -31,7 +34,4 @@ export default {}
   /* To change rating symbol border color */
   -webkit-text-stroke: 2px #ae9e9d;
 }
-
 </style>
-
-

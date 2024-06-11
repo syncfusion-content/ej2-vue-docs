@@ -19,7 +19,10 @@ Normally, the message content is aligned to the **left**. The Message component 
 The following example demonstrates the message with different content alignments.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/message/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/message/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ To customize the Message component's appearance, add the custom class to the mes
 The following example shows the rounded and squared appearance of the message, which can be achieved by adding the `cssClass` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/message/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/message/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +89,10 @@ The following is the available list of predefined CSS classes to make the appear
 The following example shows the message which renders without any script reference.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/message/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/message/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

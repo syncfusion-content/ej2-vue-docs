@@ -23,7 +23,10 @@ To customize the appearance of **unrated** items, you can use the `emptyTemplate
 If the `fullTemplate` is not defined, the `emptyTemplate` will be used as the default for both rated and unrated items. You can apply custom styles to differentiate between the rated and unrated states of the items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/templates/empty-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/templates/empty-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ If the `fullTemplate` is not defined, the `emptyTemplate` will be used as the de
 To customize the appearance of **rated** items in the rating component, you can use the `fullTemplate` tag directive. This directive allows you to specify a custom layout for the rated items, which can include any content you desire. The `value` and `index` are available in the template context for accessing information about the rated item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/templates/full-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/templates/full-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ To customize the appearance of **rated** items in the rating component, you can 
 You can use emojis of your choice as rating symbol by specifying them as template content within the `emptyTemplate` tag directive.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/templates/emoji-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/templates/emoji-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ You can use emojis of your choice as rating symbol by specifying them as templat
 You can use SVG icons of your choice as rating symbol by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directive
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/templates/svg-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/templates/svg-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +85,10 @@ You can use SVG icons of your choice as rating symbol by specifying them as temp
 You can use PNG images of your choice as rating symbol by specifying them as template content within the `emptyTemplate` and `fullTemplate` tag directives.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rating/templates/png-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rating/templates/png-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='app'>
     <div class="e-btn-group e-vertical">
@@ -13,15 +10,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { SplitButtonPlugin  } from "@syncfusion/ej2-vue-splitbuttons";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(ButtonPlugin);
-Vue.use(SplitButtonPlugin );
-
+import { SplitButtonComponent  } from "@syncfusion/ej2-vue-splitbuttons";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-splitbutton":SplitButtonComponent
+},
   data () {
         return {
             items:[
@@ -48,6 +44,3 @@ export default {
   }
 
 </style>
-
-
-

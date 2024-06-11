@@ -15,7 +15,10 @@ By using the `highlightSearch` method, you can highlight the matched character i
 The following example demonstrates about how to highlight the matched character in filtering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-list/how-to/highlight-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-list/how-to/highlight-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

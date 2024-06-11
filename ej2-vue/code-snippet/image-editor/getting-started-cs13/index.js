@@ -22,13 +22,6 @@ new Vue({
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     btnClick: function(event) {
       this.$refs.imageEditorObj.ej2Instances.select("Circle");
     }

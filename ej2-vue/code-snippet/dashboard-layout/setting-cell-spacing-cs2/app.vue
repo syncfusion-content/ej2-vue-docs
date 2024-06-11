@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <!--  DashboardLayout element declaration -->
@@ -10,8 +8,8 @@
         <e-panel :sizeX="1" :sizeY="3" :row="0" :col="4" content="<div class='content'>2</div>"></e-panel>
         <e-panel :sizeX="1" :sizeY="1" :row="1" :col="0" content="<div class='content'>3</div>"></e-panel>
         <e-panel :sizeX="2" :sizeY="1" :row="2" :col="0" content="<div class='content'>4</div>"></e-panel>
-        <e-panel :sizeX="1" :sizeY="1" :row="2" :col="2" content="<div class='content'>5</div>"></e-panel>  
-        <e-panel :sizeX="1" :sizeY="1" :row="2" :col="3" content="<div class='content'>6</div>"></e-panel>  
+        <e-panel :sizeX="1" :sizeY="1" :row="2" :col="2" content="<div class='content'>5</div>"></e-panel>
+        <e-panel :sizeX="1" :sizeY="1" :row="2" :col="3" content="<div class='content'>6</div>"></e-panel>
       </e-panels>
     </ejs-dashboardlayout>
     <!-- end of dashboardlayout element -->
@@ -19,17 +17,24 @@
 </template>
 
 <script>
-import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 
-Vue.use(DashboardLayoutPlugin);
+// Import syncfusion dashboardlayout component from layouts package
+import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
+
+
 
 export default {
-    data: function() {
-        return {
-        };
-    }
+  name: "App",
+  components: {
+    "ejs-dashboardlayout": DashboardLayoutComponent,
+    "e-panels": PanelsDirective,
+    "e-panel": PanelDirective,
+
+  },
+  data: function () {
+    return {
+    };
+  }
 }
 </script>
 
@@ -47,9 +52,6 @@ export default {
 }
 
 #dashboard_default .e-panel {
-  transition:none !important;
+  transition: none !important;
 }
 </style>
-
-
-

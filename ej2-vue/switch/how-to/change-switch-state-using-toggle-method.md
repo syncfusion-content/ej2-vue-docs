@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 This section explains about how to toggle between the switch states using [`toggle`](https://ej2.syncfusion.com/vue/documentation/api/switch/#toggle) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/switch/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

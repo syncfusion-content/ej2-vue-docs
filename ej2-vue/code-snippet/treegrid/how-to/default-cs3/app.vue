@@ -1,8 +1,6 @@
-
-
 <template>
 <div id="app">
-        <ejs-button @click.native='changeHeader'>Change HeaderText</ejs-button>
+        <ejs-button @click='changeHeader'>Change HeaderText</ejs-button>
         <ejs-treegrid :dataSource="data" :treeColumnIndex="1" height='280px' childMapping="subtasks" ref="treegrid">
         <e-columns>
           <e-column field="taskID" headerText="Task ID" width="70" textAlign="Right"></e-column>
@@ -16,15 +14,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin } from "@syncfusion/ej2-vue-treegrid";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { TreeGridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData,
@@ -39,6 +43,3 @@ export default {
   }
 }
 </script>
-
-
-

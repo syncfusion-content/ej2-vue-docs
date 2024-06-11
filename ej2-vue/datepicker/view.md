@@ -25,7 +25,10 @@ You can use the `start` property to define the initial rendering view.
 The following example demonstrates how to create a DatePicker with `decade` as initial rendering view.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/view-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/view-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ Define the `depth` property to control the view navigation.
 The following example demonstrates how to create a DatePicker that allows users to select a month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/depth-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/depth-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

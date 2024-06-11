@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="grid">
     <ejs-grid ref="grid" :dataSource="ds">
@@ -12,14 +10,8 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
-
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 var demoTemplate = Vue.component("demo", {
   template: '<ejs-button :content="`${data.ShipCountry}`"></ejs-button>',
   data() {
@@ -28,7 +20,6 @@ var demoTemplate = Vue.component("demo", {
     };
   }
 });
-
 var empData = [{
       OrderID: 10248,
       ShipCountry: "France",
@@ -51,6 +42,13 @@ var empData = [{
     }];
 
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent
+},
   data () {
     return {
       ds: empData,
@@ -74,5 +72,3 @@ export default {
     width: 30%;
   }
 </style>
-
-

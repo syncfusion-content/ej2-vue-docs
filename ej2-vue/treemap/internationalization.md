@@ -33,16 +33,13 @@ In the following code example, tooltip is globalized to Deutsch culture.
         <ejs-treemap id="treemap" :dataSource='dataSource' :weightValuePath='weightValuePath' :format='format' :leafItemSettings='leafItemSettings' useGroupingSeparator='true'></ejs-treemap>
     </div>
 </template>
-<script>
-import Vue from 'vue';
-import { TreeMapPlugin } from "@syncfusion/ej2-vue-treemap";
-Vue.use(TreeMapPlugin);
+<script setup>
 
-export default {
-  data: function() {
-    return {
-        format:'c',
-    dataSource: [
+import { TreeMapComponent as EjsTreemap } from "@syncfusion/ej2-vue-treemap";
+
+const format = 'c';
+
+const dataSource = [
         {State:"United States", GDP:17946, percentage:11.08, Rank:1},
     {State:"China", GDP:10866, percentage: 28.42, Rank:2},
     {State:"Japan", GDP:4123, percentage:-30.78, Rank:3},
@@ -53,14 +50,14 @@ export default {
     {State:"Italy", GDP:1814, percentage:-12.45, Rank:8},
     {State:"Brazil", GDP:1774, percentage:-27.88, Rank:9},
     {State:"Canada", GDP:1550, percentage:-15.02, Rank:10}
-    ],
-    weightValuePath: 'GDP',
-    leafItemSettings: {
-        labelPath: 'GDP',
-    }
-    }
-  }
-}
+];
+
+const weightValuePath = 'GDP';
+
+const leafItemSettings = {
+    labelPath: 'GDP'
+};
+
 </script>
 ```
 
@@ -73,7 +70,10 @@ The TreeMap control supports right-to-left rendering for all its elements such a
 If the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#enablertl) property is set to **true**, then the legend icon will be rendered on the right and the legend text will be rendered on the left of the legend icon.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +85,10 @@ If the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#e
 If the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/treemap/#enablertl) property is set to **true**, the tooltip data will be rendered in reverse direction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +109,10 @@ The TreeMap can be rendered in the following directions:
 The following example demonstrate, how to render the treemap in the RTL direction with `TopLeftBottomRight`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +122,10 @@ The following example demonstrate, how to render the treemap in the RTL directio
 The following example demonstrate, how to render the treemap in the RTL direction with `TopRightBottomLeft`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -126,7 +135,10 @@ The following example demonstrate, how to render the treemap in the RTL directio
 The following example demonstrate, how to render the treemap in the RTL direction with `BottomRightTopLeft`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +148,10 @@ The following example demonstrate, how to render the treemap in the RTL directio
 The following example demonstrate, how to render the treemap in the RTL direction with `BottomLeftTopRight`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treemap/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treemap/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}

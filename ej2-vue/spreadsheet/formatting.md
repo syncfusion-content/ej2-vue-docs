@@ -41,7 +41,10 @@ Number formatting can be applied in following ways,
 The following code example shows the number formatting in cell data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/number-format-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/number-format-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -112,7 +115,10 @@ Borders can be applied in the following ways,
 The following code example shows the style formatting in text and cells of the spreadsheet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/cell-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/cell-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -206,7 +212,10 @@ You can clear the defined rules by using one of the following ways,
 * Using the [`clearConditionalFormat()`](../api/spreadsheet/#clearconditionalformat) method to clear the defined rules.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/conditional-formatting-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/conditional-formatting-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,22 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings" :height="height"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :displayOption="displayOption" :chartSettings="chartSettings"
+      :height="height"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, PivotChart } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, PivotChart } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         columns: [{ name: 'Year', caption: 'Production Year' }, { name: 'Quarter' }],
@@ -30,20 +27,18 @@ export default {
       },
       height: 350,
       displayOption: { view: 'Chart' },
-      chartSettings: {  title: 'Sales Analysis', value: 'Amount', chartSeries: { type: 'Column' },
+      chartSettings: {
+        title: 'Sales Analysis', value: 'Amount', chartSeries: { type: 'Column' },
         enableMultipleAxis: true, showPointColorByMembers: true, multipleAxisMode: 'Stacked',
-        primaryYAxis: {border: {width: '0'}} }
+        primaryYAxis: { border: { width: '0' } }
+      }
     }
   },
-    provide: {
-        pivotview: [PivotChart]
-    }
+  provide: {
+    pivotview: [PivotChart]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

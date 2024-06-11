@@ -22,11 +22,23 @@
 </template>
 
 <script>
-  import Vue from "vue";
-  import { RibbonFileMenu, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+  
+  import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
+name: "App",
+components: {
+"ejs-ribbon":RibbonComponent,
+"e-ribbon-tabs":RibbonTabsDirective,
+"e-ribbon-tab":RibbonTabDirective,
+"e-ribbon-groups":RibbonGroupsDirective,
+"e-ribbon-group":RibbonGroupDirective,
+"e-ribbon-collections":RibbonCollectionsDirective,
+"e-ribbon-collection":RibbonCollectionDirective,
+"e-ribbon-items":RibbonItemsDirective,
+"e-ribbon-item":RibbonItemDirective
+},
   provide: {
     ribbon: [RibbonFileMenu]
   },

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
@@ -14,12 +12,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, Zoom } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Zoom, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { usMap } from './usa.js';
 import { electionData } from './election-data.js';
 import { L10n } from '@syncfusion/ej2-base';
-Vue.use(MapsPlugin);
+
 
 L10n.load({
     'ar-AR': {
@@ -33,6 +31,12 @@ L10n.load({
     }
 });
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective,
+},
 data () {
     return {
         zoomSettings: {
@@ -66,5 +70,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

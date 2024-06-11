@@ -1,5 +1,3 @@
-
-
 <template>
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
@@ -7,12 +5,14 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
 
-Vue.use(ImageEditorPlugin);
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent,
+},
   data: function() {
       return {
         toolbar: ['Crop', 'ZoomIn', 'ZoomOut', {text: 'Custom'}]
@@ -38,5 +38,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

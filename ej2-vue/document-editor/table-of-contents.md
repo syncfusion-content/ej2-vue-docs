@@ -36,7 +36,10 @@ this.$refs.documenteditor.ej2Instances.editor.insertTableOfContents(tocSettings)
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/export-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/export-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

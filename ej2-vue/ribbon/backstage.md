@@ -19,7 +19,10 @@ The backstage view options are displayed on the left, while the content of each 
 The menu items can be added to the backstage view by using the [items](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItem/) property. You can show the backstage view by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageBackButtonModel/#visible) property to `true`. By default, the backstage view is hidden.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backStageItem/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backStageItem/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The menu items can be added to the backstage view by using the [items](https://e
 You can use the [isFooter](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItemModel/#isfooter) property in the `items` collection to add the backstage view footer items. By default, the value is false.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backstageFooter-item/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backstageFooter-item/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ You can use the [isFooter](https://ej2.syncfusion.com/vue/documentation/api/ribb
 The separators are horizontal lines used to separate the backstage view items. You can use the [separator](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageItemModel/#separator) property to split the menu items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backstageSeparator/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backstageSeparator/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ The separators are horizontal lines used to separate the backstage view items. Y
 You can use the [backButton](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageBackButton/) property to customize the text and icon of the close button using the [text]((https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageBackButton/#text)) and [iconCss](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageBackButton/#iconcss) property. You can show the back button by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backstageBackButtonModel/#visible) property to `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backstageBackButton/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backstageBackButton/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +79,10 @@ You can use the [backButton](https://ej2.syncfusion.com/vue/documentation/api/ri
 The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backStageMenuModel/#target) property specifies the element selector in which backstage will be displayed. The target element should have the position as relative, else the backstage will be positioned nearest to the relative element. By default, the backstage is positioned to ribbon element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backstageTarget/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backstageTarget/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +94,10 @@ The [target](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backStageMe
 You can use the [template](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backStageMenuModel/#template) property to modify the backstage view menu items and their contents.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backStageTemplate/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backStageTemplate/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +109,10 @@ You can use the [template](https://ej2.syncfusion.com/vue/documentation/api/ribb
 You can customize the height and width of the backstage view using the [height](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backStageMenuModel/#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/ribbon/backStageMenuModel/#width) property. By default, dimensions are set based on the content added.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/backstageCustomization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/backstageCustomization/app.vue %}
 {% endhighlight %}
 {% endtabs %}

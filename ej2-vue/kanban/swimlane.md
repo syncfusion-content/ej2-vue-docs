@@ -17,7 +17,10 @@ Swimlanes are horizontal categorizations of cards on the Kanban board.  It is us
 Cards can be grouped based on `keyField` and displayed in rows, which are separated by columns. It is mandatory to define the `keyField` that is mapped from the datasource for rendering swimlane rows in the Kanban board.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-key-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-key-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ Customize the swimlane row header text by using the `textField` property mapped 
 > If the mapping `textField` key is not present in the datasource, it will consider the swimlane `keyField` as swimlane row header text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-text-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-text-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ To learn about Kanban customize swimlane using templates, you can check out this
 You can customize the Kanban swimlane row by using the `template` property, which is specified within the `swimlaneSettings` property. In this demo, the swimlane header is customized with HTML element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +69,10 @@ You can customize the Kanban swimlane row by using the `template` property, whic
 Swimlane rows are rendered on descending order when using the `sortBy` property set to `Descending` order. By default, swimlane rows are rendered by **Ascending** order.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-sort-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-sort-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +84,10 @@ Swimlane rows are rendered on descending order when using the `sortBy` property 
 By default, The Kanban does not allow dragging the cards across the swimlane rows. Enabling the `dragAndDrop` property allows you to drag the cards across the swimlane rows, which is specified inside `swimlaneSettings` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-drag-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-drag-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +99,10 @@ By default, The Kanban does not allow dragging the cards across the swimlane row
 You can render the empty swimlane row by enabling the `showEmptyRow` property.  If mapping `keyField` does not have cards, empty swimlane row will be rendered.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-empty-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-empty-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +118,10 @@ Users can show or hide the cards count by swimlane row in header when enabling t
 In below demo, disabled on `showItemCount` property on rendering swimlane row without total count.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-total-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-total-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -116,7 +137,10 @@ By default, the `enableFrozenRows` property is set as `false`. If you wish to sh
 > This feature support only when using Kanban content scrolling.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/swimlane-enable-frozen-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/swimlane-enable-frozen-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

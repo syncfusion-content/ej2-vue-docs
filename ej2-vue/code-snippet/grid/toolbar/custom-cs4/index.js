@@ -32,9 +32,9 @@ new Vue({
           template: Vue.component('custom-toolbar', {
             template: `<ejs-toolbar>
                         <div id="toolbar">
-                          <ejs-button id="excelButton" cssClass='e-outline' v-on:click.native="exportAction">Excel Export</ejs-button>
-                          <ejs-button id="pdfButton" cssClass='e-outline' v-on:click.native="exportAction">Pdf Export</ejs-button>
-                          <ejs-button id="printButton" cssClass='e-outline' v-on:click.native="exportAction">Print</ejs-button>
+                          <ejs-button id="excelButton" cssClass='e-outline' v-on:click="exportAction">Excel Export</ejs-button>
+                          <ejs-button id="pdfButton" cssClass='e-outline' v-on:click="exportAction">Pdf Export</ejs-button>
+                          <ejs-button id="printButton" cssClass='e-outline' v-on:click="exportAction">Print</ejs-button>
                         </div>
                       </ejs-toolbar>`,
             data: function () {

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id='app'>
         <div id='container'>
@@ -16,11 +14,16 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
 import { employeeEventData } from './datasource.js';
-import { SchedulePlugin, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
-Vue.use(SchedulePlugin);
+import { ScheduleComponent, ViewDirective, ViewsDirective, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
+
 export default {
+    name: "App",
+    components: {
+        "ejs-schedule": ScheduleComponent,
+        "e-views": ViewsDirective,
+        "e-view": ViewDirective
+    },
     data() {
         return {
             eventSettings: { dataSource: employeeEventData },
@@ -49,14 +52,14 @@ export default {
 
 </script>
 <style>
-@import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
-@import '../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 
 .schedule-cell-customization.e-schedule .e-month-view .e-work-cells:not(.e-work-days) {
     background-color: #f08080;

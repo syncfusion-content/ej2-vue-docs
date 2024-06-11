@@ -1,5 +1,3 @@
-
-
 <template>
    <div id='app'>
         <ejs-tooltip id="tooltip" content='Click close icon to close me' isSticky='true'>
@@ -9,9 +7,23 @@
     </ejs-tooltip>
     </div>
 </template>
+<script>
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
+
+export default {
+name: "App",
+components: {
+"ejs-tooltip":TooltipComponent
+},
+  data: function() {
+    return {
+    };
+  }
+}
+</script>
 <style>
-@import "node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 #target {
     background-color: #cfd8dc;
     border: 3px solid #eceff1;
@@ -25,17 +37,3 @@
     user-select: none;
 }
 </style>
-<script>
-import Vue from "vue";
-import { TooltipPlugin } from "@syncfusion/ej2-vue-popups";
-Vue.use(TooltipPlugin);
-export default {
-  data: function() {
-    return {
-    };
-  }
-}
-</script>
-
-
-

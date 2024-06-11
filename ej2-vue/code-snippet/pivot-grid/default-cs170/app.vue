@@ -1,28 +1,23 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">PDF Export</ejs-button>
-        <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings" :allowPdfExport="allowPdfExport"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="export-btn" :isPrimary="isPrimary" v-on:click="btnClick">PDF Export</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowPdfExport="allowPdfExport"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
-import { PdfExportProperties } from '@syncfusion/ej2-grids';
-import { ButtonPlugin, ChangeEventArgs} from "@syncfusion/ej2-vue-buttons";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData, base64AlgeriaFont } from './pivotData.js';
 import { PdfTrueTypeFont } from '@syncfusion/ej2-pdf-export';
 
-
-Vue.use(PivotViewPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -40,13 +35,13 @@ export default {
     }
   },
   methods: {
-    btnClick: function(args) {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-      let pdfExportProperties: PdfExportProperties = {
+      let pdfExportProperties = {
         theme: {
-            header: {font:  new PdfTrueTypeFont(base64AlgeriaFont, 11) }, 
-            caption: { font: new PdfTrueTypeFont(base64AlgeriaFont, 9) }, 
-            record: { font: new PdfTrueTypeFont(base64AlgeriaFont, 10) } 
+          header: { font: new PdfTrueTypeFont(base64AlgeriaFont, 11) },
+          caption: { font: new PdfTrueTypeFont(base64AlgeriaFont, 9) },
+          record: { font: new PdfTrueTypeFont(base64AlgeriaFont, 10) }
         }
       };
       pivotGridObj.pdfExport(pdfExportProperties);
@@ -55,9 +50,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

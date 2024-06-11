@@ -1,27 +1,27 @@
-
-
 <template>
     <div class="control_wrapper">
         <ejs-smithchart id="smithchart" :legendSettings='legendSettings'>
-                <e-seriesCollection>
-                    <e-series :title='title' :dataSource='dataSource' :tooltip='tooltip' :name='name' :reactance='reactance' :resistance='resistance' marker='marker'></e-series>
-                    <e-series :points='points' :name='name2' :tooltip='tooltip2'></e-series>
-                </e-seriesCollection>
+            <e-seriesCollection>
+                <e-series :title='title' :dataSource='dataSource' :tooltip='tooltip' :name='name' :reactance='reactance'
+                    :resistance='resistance' marker='marker'></e-series>
+                <e-series :points='points' :name='name2' :tooltip='tooltip2'></e-series>
+            </e-seriesCollection>
         </ejs-smithchart>
     </div>
 </template>
 <script>
-import { SmithchartComponent, SeriesDirective, SeriesCollectionDirective, SmithchartLegend,TooltipRender } from "@syncfusion/ej2-vue-charts";
+import { SmithchartComponent, SeriesDirective, SeriesCollectionDirective, SmithchartLegend, TooltipRender } from "@syncfusion/ej2-vue-charts";
 
 export default {
-  components: {
-    'ejs-smithchart': SmithchartComponent,
-    'e-series': SeriesDirective,
-    'e-seriesCollection': SeriesCollectionDirective
-  },
-  data: function() {
-    return {
-            title: { text: 'Transmission lines applied for both impedance and admittance'},
+    name: "App",
+    components: {
+        'ejs-smithchart': SmithchartComponent,
+        'e-series': SeriesDirective,
+        'e-seriesCollection': SeriesCollectionDirective
+    },
+    data: function () {
+        return {
+            title: { text: 'Transmission lines applied for both impedance and admittance' },
             legendSettings: {
                 visible: true
             },
@@ -62,12 +62,10 @@ export default {
             tooltip2: {
                 visible: true
             }
+        }
+    },
+    provide: {
+        smithchart: [SmithchartLegend, TooltipRender]
     }
-  },
-provide:{
-    smithchart:[SmithchartLegend,TooltipRender]
-}
 }
 </script>
-
-

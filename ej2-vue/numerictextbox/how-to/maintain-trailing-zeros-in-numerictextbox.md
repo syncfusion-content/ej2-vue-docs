@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By default, trailing zeros disappear when the NumericTextBox gets focus. However, you can use the following sample to maintain the trailing zeros while focusing the NumericTextBox.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/numeric-textbox/how-to/null-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/numeric-textbox/how-to/null-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

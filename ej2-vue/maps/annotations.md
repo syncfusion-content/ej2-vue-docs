@@ -17,7 +17,10 @@ Annotations are used to mark the specific area of interest in the Maps with text
 By using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/#content) property of [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/), text content or id of an element or an HTML string can be specified to render a new HTML element in Maps.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ By using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/maps/a
 The stack order of an annotation element can be changed using the [`zIndex`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/#zindex) property in the [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ The stack order of an annotation element can be changed using the [`zIndex`](ht
 Annotations can be placed anywhere in the Maps by specifying pixel or percentage values to the [`x`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/#y) properties in the [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ Annotations can be placed anywhere in the Maps by specifying pixel or percentage
 Annotations can be aligned using the [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/#verticalalignment) properties in the [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/). The possible values can be **Center**, **Far**, **Near** and **None**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +79,10 @@ Annotations can be aligned using the [`horizontalAlignment`](https://ej2.syncfus
 Multiple annotations can be added to the Maps by adding multiple [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/) in the [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/#annotations) and customization for the annotations can be done with the [`e-maps-annotation`](https://ej2.syncfusion.com/vue/documentation/api/maps/annotationModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/maps/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

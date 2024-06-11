@@ -1,18 +1,15 @@
-
-
 <template>
 <div id="app">
     <div class="wrapper">
      <ejs-filemanager id="locale_filemanager" :ajaxSettings="ajaxSettings" :locale="locale">
      </ejs-filemanager>
     </div>
+</div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-import { loadCldr,L10n } from "@syncfusion/ej2-base";
 
-Vue.use(FileManagerPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+import { L10n } from "@syncfusion/ej2-base";
 
 //Defining texts and messages corresponding to German culture
 L10n.load({
@@ -115,6 +112,10 @@ L10n.load({
 });
 
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent
+    },
      data () {
         return {
            ajaxSettings:
@@ -145,5 +146,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
-
-

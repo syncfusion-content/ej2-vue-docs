@@ -29,7 +29,10 @@ You can customize the icon and text of Speed Dial action items using [`iconCss`]
 You can show icon only in SpeedDial items by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#iconcss) property. You can show tooltip on hover to show additional details to end-user by setting [`title`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#title) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/items-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ You can show icon only in SpeedDial items by setting [`iconCss`](https://ej2.syn
 You can show only text in Speed Dial items by setting [`text`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#text) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/items-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ You can show only text in Speed Dial items by setting [`text`](https://ej2.syncf
 You can show icon along with text in Speed Dial items by setting [`iconCss`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#iconcss) and [`text`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#text) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/items-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ You can show icon along with text in Speed Dial items by setting [`iconCss`](htt
 You can disable Speed Dial items by setting [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial/speedDialItemModel/#disabled) property as `true`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/items-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +91,10 @@ The Speed Dial items can be animated during the opening and closing of the popup
 Below example demonstrates the Speed Dial items with applied Zoom effect.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speed-dial/items-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/speed-dial/items-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

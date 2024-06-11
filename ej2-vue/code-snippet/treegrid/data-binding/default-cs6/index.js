@@ -34,7 +34,7 @@ new Vue({
 
   data () {
       let SERVICE_URI: string =
-      "https://ej2services.syncfusion.com/production/web-services/api/SelfReferenceData";
+      "https://services.syncfusion.com/vue/production/api/SelfReferenceData";
     return {
       data: new DataManager({
         url: SERVICE_URI,

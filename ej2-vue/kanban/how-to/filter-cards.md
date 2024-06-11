@@ -19,7 +19,10 @@ To learn about Kanban filtering cards, you can check out this video:
 In the below sample, you can filter the cards based on the ‘where’ query and display the filtered data to the Kanban board.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/card-header-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/card-header-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

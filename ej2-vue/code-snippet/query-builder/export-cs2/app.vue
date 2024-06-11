@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -13,23 +11,31 @@
                   <e-column field="Status" label="Status" type="string"></e-column>
                 </e-columns>
             </ejs-querybuilder>
-            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getSqlClick">Get Parameter Named sql</ejs-button>
-            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getRuleClick">Get Rule</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="getSqlClick">Get Parameter Named sql</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="getRuleClick">Get Rule</ejs-button>
         </div>
         <ejs-dialog id="dialog" ref="Dialog" :header="header" :width="width" :visible="visible" :animationSettings="animateSettings" :showCloseIcon="showCloseIcon"></ejs-dialog>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { QueryBuilderPlugin, QueryLibrary, QueryBuilder } from "@syncfusion/ej2-vue-querybuilder";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-Vue.use(DialogPlugin);
-Vue.use(QueryBuilderPlugin);
-Vue.use(ButtonPlugin);
+
+import { QueryBuilderComponent, QueryLibrary, QueryBuilder, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+
 QueryBuilder.Inject(QueryLibrary);
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent,
+
+},
+
     data: function() {
         return {
             animateSettings: { effect: 'Zoom' },
@@ -118,5 +124,3 @@ var hardwareData = [{
         margin: 0 auto;
     }
 </style>
-
-

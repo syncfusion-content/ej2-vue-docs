@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -15,13 +13,19 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { usMap } from './usa.js';
 import { california } from './california.js';
 import { texas } from './texas.js';
-Vue.use(MapsPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
         shapeData: usMap,
@@ -59,5 +63,3 @@ data () {
     margin: 0 auto;
   }
 </style>
-
-

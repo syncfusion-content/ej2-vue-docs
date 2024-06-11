@@ -28,7 +28,10 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 >Note: If you want to use hierarchical tree layout in diagram, you need to inject HierarchicalTree in the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/HierarchicalLayout-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/HierarchicalLayout-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ To arrange nodes in a radial tree structure, set the [`type`](https://ej2.syncfu
 >Note: If you want to use radial tree layout in diagram, you need to inject DataBinding and RadialTree in the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/RadialTreeLayout-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/RadialTreeLayout-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +68,10 @@ To create and position an organization chart using the Syncfusion Vue Diagram co
 The following code example illustrates how to create an organizational chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/OrganizationalChart-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/OrganizationalChart-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +87,10 @@ Set chart orientations, chart types, and offset to be left between parent and ch
     * options: Object to set the customizable properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/GetLayoutInfo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/GetLayoutInfo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +125,10 @@ The following table illustrates the different chart orientations and chart types
 The following code example illustrates how to set the vertical right arrangement to the leaf level trees.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/illustration-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/illustration-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +142,10 @@ Assistants are child item that have a different relationship with the parent nod
 The following code example illustrates how to add assistants to layout.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/Assistant-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/Assistant-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -147,6 +165,10 @@ The following code illustrates how to arrange the nodes in a radial tree structu
 ## Mind Map layout
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout/#type) of layout should be set as `MindMap`.
+
+To create a Mind map Layout using the EJ2 Vue Diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/embed/v36LMAfiY_c" %}
 
 ## Tree Orientation in layout
 
@@ -172,7 +194,10 @@ N> If you want to use mind map layout in diagram, you need to inject MindMap in 
 The following code example illustrates how to create an mind map layout.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/Mind-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/Mind-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -188,7 +213,10 @@ Complex hierarchical tree layout is the extended version of the hierarchical tre
 The following code example illustrates how to create a complex hierarchical tree.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/Complex-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/Complex-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -204,7 +232,10 @@ The following code example illustrates how to create a complex hierarchical tree
 >Note: If you want to use line distribution in diagram layout, you need to inject  LineDistribution module in the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/LineDistribution-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/LineDistribution-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -285,7 +316,10 @@ The layout can be aligned anywhere over the layout bounds/viewport using the [`h
 The following code illustrates how to align the layout at the top-left of the layout bounds.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/Layout-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/Layout-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -303,7 +337,10 @@ Layout provides support to add some blank space between the layout bounds/viewpo
 The following code illustrates how to set the layout margin.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/LayoutMargin-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/LayoutMargin-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -328,7 +365,10 @@ Diagram provides support to customize the  [`orientation`](https://ej2.syncfusio
 The following code illustrates how to arrange the nodes in a BottomToTop orientation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/LayoutOrientation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/LayoutOrientation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -340,7 +380,10 @@ The following code illustrates how to arrange the nodes in a BottomToTop orienta
 Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the [`fixedNode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layout/#fixednode) of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/Fixed-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/Fixed-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -352,7 +395,10 @@ Layout provides support to arrange the nodes with reference to the position of a
 Diagram allows to expand/collapse the subtrees of a layout. The node’s isExpanded property allows you to expand/collapse its children. The following code example shows how to expand/collapse the children of a node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/ExpandAndCollapse-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/ExpandAndCollapse-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -370,7 +416,10 @@ Diagram allows to refresh the layout at runtime. To refresh the layout, refer to
  The setNodeTemplate function is provided for the purpose of customizing nodes. It will be called for each node on node initialization. In this function, the node style and its properties can be customized and can bind the custom JSON with node.
 
  {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/automatic-layout/setNodeTemplate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/automatic-layout/setNodeTemplate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

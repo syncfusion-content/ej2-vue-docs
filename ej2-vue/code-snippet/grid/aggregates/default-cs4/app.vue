@@ -23,25 +23,34 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Aggregate } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
+import { createApp, ref } from "vue";
+const grid = ref(null);
 
-Vue.use(GridPlugin);
-
+const app = createApp();
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
   data() {
     return {
       data: data,
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
           }
       },
       footerMax: function () {
-        return  { template : Vue.component('maxTemplate', {
+        return  { template : app.component('maxTemplate', {
             template: `<span>Max: {{data.Max}}</span>`,
             data () {return { data: {}};}
             })
@@ -51,7 +60,7 @@ export default {
   },
   methods: {
       dataBound: function (args) {
-          this.$refs.grid.ej2Instances.getHeaderContent().append(this.$refs.grid.ej2Instances.getFooterContent());
+        grid.value.getHeaderContent().append(grid.value.getFooterContent());
       }
   },
   provide: {

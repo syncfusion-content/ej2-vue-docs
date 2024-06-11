@@ -19,7 +19,10 @@ To save an edited image in the Image Editor component, use the toBlob method to 
 The [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method in the Image Editor component offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method, and it will load the specified image into the image editor component. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +53,10 @@ By utilizing the [`export`](https://ej2.syncfusion.com/vue/documentation/api/ima
 In the following example, the [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method is used in the button click event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

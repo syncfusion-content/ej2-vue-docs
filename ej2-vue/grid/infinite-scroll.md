@@ -17,7 +17,10 @@ To enable Infinite scrolling, set `enableInfiniteScrolling` property as true.
 > In this feature, Grid will not make a new data request when you visit the same page again.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/virtualscroll/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/virtualscroll/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can define the initial loading pages count by using `infiniteScrollSettings.
 In the below demo, we have changed this property value to load five page records instead of three.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/virtualscroll/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/virtualscroll/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ Cache is used to store the loaded rows object in the Grid instance which can be 
 To enable the cache mode in Infinite scrolling, set `infiniteScrollSettings.enableCache` property as true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/virtualscroll/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/virtualscroll/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,20 +1,20 @@
-
-
 <template>
-<div class='wrap'>
+  <div class='wrap'>
     <h4>Choose Color</h4>
     <ejs-colorpicker id="element" type="text" class="e-input"></ejs-colorpicker>
-</div>
+  </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ColorPickerPlugin } from '@syncfusion/ej2-vue-inputs';
 
-Vue.use(ColorPickerPlugin);
+import { ColorPickerComponent } from '@syncfusion/ej2-vue-inputs';
 
 export default {
-  mounted: function() {
+  name: "App",
+  components: {
+    "ejs-colorpicker": ColorPickerComponent
+  },
+  mounted: function () {
     var target = document.getElementById("element");
     target.nextElementSibling.insertBefore(target, target.nextElementSibling.children[1]);
   }
@@ -70,5 +70,3 @@ export default {
   transform: rotate(180deg);
 }
 </style>
-
-

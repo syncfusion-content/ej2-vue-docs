@@ -1,18 +1,18 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :height="height"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, PdfExport, Selection, PdfExportProperties } from "@syncfusion/ej2-vue-gantt";
+
+import { GanttComponent, Toolbar, PdfExport, Selection, PdfExportProperties } from "@syncfusion/ej2-vue-gantt";
 import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
 import {editingData  } from './data-source.js';
-Vue.use(GanttPlugin);
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
         data:editingData,
@@ -28,7 +28,7 @@ export default {
         toolbar: ['PdfExport'],
         toolbarClick: (args) => {
                 if (args.item.id === 'GanttContainer_pdfexport') {
-                    var exportProperties: PdfExportProperties = {
+                    var exportProperties = {
                       pageSize: 'A0'
                     };
                     var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
@@ -42,6 +42,3 @@ export default {
   }
 };
 </script>
-
-
-

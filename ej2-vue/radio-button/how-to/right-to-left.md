@@ -15,7 +15,10 @@ RadioButton component has RTL support. This can be achieved by setting [`enableR
 The following example illustrates how to enable right-to-left support in RadioButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/radio-button/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/radio-button/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

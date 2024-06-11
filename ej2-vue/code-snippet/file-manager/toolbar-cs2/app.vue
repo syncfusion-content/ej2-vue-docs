@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-filemanager id="file-manager"  ref="fileManagerInstance" :ajaxSettings="ajaxSettings" >
@@ -27,13 +25,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { FileManagerPlugin, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-import { CheckBoxPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(FileManagerPlugin);
-Vue.use(CheckBoxPlugin);
+import { FileManagerComponent, DetailsView, NavigationPane, Toolbar, ToolbarItemDirective, ToolbarItemsDirective } from "@syncfusion/ej2-vue-filemanager";
+import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
+
 export default {
+    name: "App",
+    components: {
+        "ejs-filemanager":FileManagerComponent,
+        "e-toolbaritems":ToolbarItemsDirective,
+        "e-toolbaritem":ToolbarItemDirective,
+        "ejs-checkbox":CheckBoxComponent,
+    },
     data () {
         return {
            ajaxSettings:
@@ -78,5 +81,3 @@ export default {
     content: '\e614';
 }
 </style>
-
-

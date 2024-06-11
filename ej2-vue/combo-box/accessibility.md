@@ -77,7 +77,10 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 > In the below sample, <kbd>alt+t</kbd> keys are used to focus the ComboBox component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/combobox/accessibility-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/combobox/accessibility-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

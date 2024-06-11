@@ -15,7 +15,10 @@ The ButtonGroup with rounded corner has round edges on both sided. To ButtonGrou
 The following example illustrates how to create ButtonGroup with rounded corner,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

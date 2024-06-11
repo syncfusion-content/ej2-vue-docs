@@ -180,7 +180,6 @@ export default {
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
 <template>
   <ejs-button :content="content"></ejs-button>
 </template>

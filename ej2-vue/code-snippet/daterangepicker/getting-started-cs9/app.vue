@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
       <div class='wrapper'>
@@ -8,11 +6,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DateRangePickerPlugin } from '@syncfusion/ej2-vue-calendars';
 
-Vue.use(DateRangePickerPlugin);
+import { DateRangePickerComponent } from '@syncfusion/ej2-vue-calendars';
+
 export default {
+name: "App",
+components: {
+"ejs-daterangepicker":DateRangePickerComponent
+},
    data () {
         return {
             waterMark:'Select a Range',
@@ -32,5 +33,3 @@ export default {
     margin: 0 auto;
   }
 </style>
-
-

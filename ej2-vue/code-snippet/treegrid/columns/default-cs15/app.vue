@@ -1,9 +1,7 @@
-
-
 <template>
 <div id="app">
-        <ejs-button @click.native="show"> Show </ejs-button>
-        <ejs-button @click.native="hide"> Hide </ejs-button>
+        <ejs-button @click="show"> Show </ejs-button>
+        <ejs-button @click="hide"> Hide </ejs-button>
         <ejs-treegrid ref=treegrid :dataSource="data" childMapping='subtasks' :treeColumnIndex='1' :height='270'>
             <e-columns>
                 <e-column field='taskID' headerText='Task ID' width=90 textAlign='Right'></e-column>
@@ -15,15 +13,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin } from "@syncfusion/ej2-vue-treegrid";
-import { sampleData } from "./datasource.js";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
+import { TreeGridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { sampleData } from "./datasource.js";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data() {
     return {
       data: sampleData
@@ -40,6 +44,3 @@ export default {
 
 }
 </script>
-
-
-

@@ -16,7 +16,10 @@ To learn about Gantt Chart Drag and Drop, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=NeObMFJEhGU" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/draganddrop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/draganddrop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

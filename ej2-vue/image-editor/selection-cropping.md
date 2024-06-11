@@ -31,7 +31,10 @@ height - Specify the height of the selection region
 Here is an example of square selection using the [`select`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#select) method. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +54,10 @@ startY - Specify the y-coordinate of the selection region’s starting point
 Here is an example of ratio selection using the [`select`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#select) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +87,10 @@ The [`crop`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#crop
 Here is an example of circle cropping using the [`select`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#select) and [`crop`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#crop) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/image-editor/getting-started-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,4 +107,4 @@ CroppingEventArgs.startPoint – The x and y coordinates of a start point as Ima
 
 CroppingEventArgs.endPoint - The x and y coordinates of an end point as ImageEditorPoint of the selection region. 
 
-CroppingEventArgs.cancel - To cancel the cropping action. 
+CroppingEventArgs.cancel - To cancel the cropping action.

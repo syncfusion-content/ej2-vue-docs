@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div id="app">
         <div class='wrapper'>
@@ -8,7 +5,8 @@
                 <e-axes>
                     <e-axis>
                         <e-pointers>
-                            <e-pointer value=90  :border= 'border' type= 'Marker' markerWidth= 15 markerHeight= 15 markerShape= 'Triangle' radius= '100%' color= 'white' ></e-pointer>
+                            <e-pointer value=90 :border='border' type='Marker' markerWidth=15 markerHeight=15
+                                markerShape='Triangle' radius='100%' color='white'></e-pointer>
                         </e-pointers>
                     </e-axis>
                 </e-axes>
@@ -17,14 +15,20 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { CircularGaugePlugin } from "@syncfusion/ej2-vue-circulargauge";
+import { CircularGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective } from "@syncfusion/ej2-vue-circulargauge";
 
-Vue.use(CircularGaugePlugin);
 export default {
+    name: "App",
+    components: {
+        "ejs-circulargauge": CircularGaugeComponent,
+        "e-axes": AxesDirective,
+        "e-axis": AxisDirective,
+        "e-pointers": PointersDirective,
+        "e-pointer": PointerDirective
+    },
     data: function () {
         return {
-          border: {
+            border: {
                 color: '#007DD1',
                 width: 2
             }
@@ -33,10 +37,8 @@ export default {
 };
 </script>
 <style>
-  .wrapper {
+.wrapper {
     max-width: 300px;
     margin: 0 auto;
-  }
+}
 </style>
-
-

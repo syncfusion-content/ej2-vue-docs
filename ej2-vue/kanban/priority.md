@@ -38,7 +38,10 @@ Column B having Card D with priority value `5`. Dropped Card D between Card A an
 > The `priority` property mapping key value must be `number` format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/priority-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/priority-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

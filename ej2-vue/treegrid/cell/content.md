@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The HTML tags can be displayed in the TreeGrid header and content by enabling the [`disableHtmlEncode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#disablehtmlencode) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/cell/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/cell/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

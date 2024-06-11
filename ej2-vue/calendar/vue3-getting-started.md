@@ -138,8 +138,9 @@ import { CalendarComponent } from "@syncfusion/ej2-vue-calendars";
 export default {
     name: "App",
     components: {
-        'ejs-calendar' : CalendarComponent,
+        'ejs-calendar' : CalendarComponent
     }
+}
 </script>
 
 {% endhighlight %}
@@ -197,7 +198,7 @@ export default {
     name: 'App',
     components: {
         "ejs-calendar": CalendarComponent
-    },
+    }
 }
 </script>
 <style>

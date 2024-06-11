@@ -17,7 +17,10 @@ Default animation is given as `SlideDown` for expanding the panel and `SlideUp` 
 The sample demonstrates some types of animation that suits for Accordion. You can check all the animation effects here.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/accordion/how-to/accordion-custom-animation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/accordion/how-to/accordion-custom-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

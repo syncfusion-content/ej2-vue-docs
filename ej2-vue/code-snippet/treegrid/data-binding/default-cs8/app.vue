@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref=treegrid :dataSource="data" idMapping='TaskID' parentIdMapping='parentItem':treeColumnIndex='1' :actionFailure='actionFailure'>
@@ -13,15 +11,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, Page, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, WebApiAdaptor } from "@syncfusion/ej2-data";
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data () {
-      let SERVICE_URI: string =
+      let SERVICE_URI =
       "http://some.com/invalidUrl";
     return {
       data: new DataManager({
@@ -46,6 +50,3 @@ export default {
   }
 }
 </script>
-
-
-

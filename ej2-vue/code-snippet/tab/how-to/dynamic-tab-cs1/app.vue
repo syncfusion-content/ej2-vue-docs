@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <div id='tab1_content' style='display: none'>
@@ -29,62 +27,66 @@
                 <span class='info'> * Title is mandatory to add a new Tab</span>
             </div>
         </div>
-        <ejs-tab id='dynamic_tab' ref='TabInstance'  :selected= "tabSelected">
-        <e-tabitems>
-            <e-tabitem :header='headerText0' :content="content0"></e-tabitem>
-            <e-tabitem :header='headerText1' :content="content1"></e-tabitem>
-        <e-tabitems>
+        <ejs-tab id='dynamic_tab' ref='TabInstance' :selected="tabSelected">
+            <e-tabitems>
+                <e-tabitem :header='headerText0' :content="content0"></e-tabitem>
+                <e-tabitem :header='headerText1' :content="content1"></e-tabitem>
+            </e-tabitems>
         </ejs-tab>
-  </div>
+    </div>
 </template>
 <script>
-import Vue from 'vue';
-import { TabPlugin } from '@syncfusion/ej2-vue-navigations';
-import { Tab, TabComponent, SelectEventArgs } from '@syncfusion/ej2-navigations';
+
+import { TabComponent, TabItemsDirective, TabItemDirective } from '@syncfusion/ej2-vue-navigations';
 import { enableRipple, createElement } from '@syncfusion/ej2-base';
-Vue.use(TabPlugin);
+
+enableRipple(true);
 export default {
-   name: 'app',
-   data: function(){
+    name: "App",
+    components: {
+        "ejs-tab": TabComponent,
+        "e-tabitems": TabItemsDirective,
+        "e-tabitem": TabItemDirective
+    },
+    data: function () {
         return {
-          totalItems: 0,
-          headerText0: { 'text': 'Tab1' },
-          headerText1: { 'iconCss': 'e-add-icon' },
-
-         content0: '#tab1_content',
-         content1: '#form-container',
+            totalItems: 0,
+            headerText0: { 'text': 'Tab1' },
+            headerText1: { 'iconCss': 'e-add-icon' },
+            content0: '#tab1_content',
+            content1: '#form-container',
         }
-  },
+    },
 
-  mounted: function() {
-    let addBtn = document.querySelectorAll(".e-ileft.e-icon");
-    addBtn[0].setAttribute("title", "Add Tab");
-  },
+    mounted: function () {
+        let addBtn = document.querySelectorAll(".e-ileft.e-icon");
+        addBtn[0].setAttribute("title", "Add Tab");
+    },
 
-  methods:{
-  tabSelected: function(args) {
-    if (args.selectedIndex === document.querySelectorAll('#dynamic_tab .e-toolbar-item').length - 1) {
-        document.getElementById('tab-title').value = '';
-        document.getElementById('tab-content').value = '';
+    methods: {
+        tabSelected: function (args) {
+            if (args.selectedIndex === document.querySelectorAll('#dynamic_tab .e-toolbar-item').length - 1) {
+                document.getElementById('tab-title').value = '';
+                document.getElementById('tab-content').value = '';
+            }
+        },
+        btnClicked: function () {
+            let title = document.getElementById('tab-title').value;
+            let content = document.getElementById('tab-content').value;
+            var tabObj = this.$refs.TabInstance.ej2Instances;
+            let item = { header: { text: title }, content: createElement('pre', { innerHTML: content.replace(/\n/g, '<br>\n') }).outerHTML };
+
+            let totalItems = document.querySelectorAll('#dynamic_tab .e-toolbar-item').length;
+            tabObj.addTab([item], totalItems - 1);
+        }
     }
- },
-  btnClicked: function(e) {
-    let title = document.getElementById('tab-title').value;
-    let content = document.getElementById('tab-content').value;
-    var tabObj = this.$refs.TabInstance.ej2Instances;
-    let item =  { header: { text: title }, content: createElement('pre', { innerHTML: content.replace(/\n/g, '<br>\n') }).outerHTML };
-
-    let totalItems = document.querySelectorAll('#dynamic_tab .e-toolbar-item').length;
-    tabObj.addTab([item], totalItems-1);
-  }
- }
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
 #container {
     visibility: hidden;
@@ -104,6 +106,7 @@ export default {
     margin: 10px;
     text-align: justify;
 }
+
 .container {
     min-width: 350px;
     max-width: 500px;
@@ -131,5 +134,3 @@ export default {
     content: '\e823';
 }
 </style>
-
-

@@ -15,7 +15,10 @@ You can search records in a TreeGrid, by using the [`search`](https://ej2.syncfu
 To search records, inject the [`Filter`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#fitermodule) module in the treegrid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/searching/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/searching/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ To search records, inject the [`Filter`](https://ej2.syncfusion.com/vue/document
 To apply search at initial rendering, set the fields, operator, key, and ignoreCase in the [`searchSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#searchsettings).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/searching/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/searching/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +63,10 @@ notEqual |Checks for values not equal to the specified value.
 To search treegrid records from an external button, invoke the [`search`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#search) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/searching/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/searching/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +78,10 @@ To search treegrid records from an external button, invoke the [`search`](https:
 By default, treegrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`searchSettings.fields`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/searchSettingsModel/#fields) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/searching/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/searching/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

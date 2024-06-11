@@ -18,7 +18,10 @@ You can apply conditions for specific row or column using `label` option to show
 * `value2`: Specifies the end value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs131/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs131/app.vue %}
 {% endhighlight %}
 {% endtabs %}

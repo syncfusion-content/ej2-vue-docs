@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
         <div class='wrap'>
@@ -8,11 +6,14 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { DatePickerPlugin } from "@syncfusion/ej2-vue-calendars";
 
-Vue.use(DatePickerPlugin);
+import { DatePickerComponent } from "@syncfusion/ej2-vue-calendars";
+
 export default {
+name: "App",
+components: {
+"ejs-datepicker":DatePickerComponent
+},
   data () {
       return {
         dateVal: new Date('5/28/2017'),
@@ -33,5 +34,3 @@ export default {
     width: 240px;
 }
 </style>
-
-

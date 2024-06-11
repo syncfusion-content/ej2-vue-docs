@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <ejs-menu :items='menuItems' :beforeOpen='onBeforeOpen'></ejs-menu>
@@ -7,51 +5,54 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple, closest } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(MenuPlugin);
 
 export default {
-  data: function() {
-    return {
-        // Menu items definition
-        menuItems: [
-        {
-            text: 'File',
-            items: [
-                { text: 'Open' },
-                { text: 'Save' },
-                { text: 'Exit' }]
-        },
-        {
-            text: 'Edit',
-            items: [
-                { text: 'Cut' },
-                { text: 'Copy' },
-                { text: 'Paste' }]
-        },
-        {
-            text: 'View',
-            items: [
-                { text: 'Toolbar' },
-                { text: 'Sidebar' }]
-        },
-        {
-            text: 'Tools',
-            items: [
-                { text: 'Spelling & Grammar' },
-                { text: 'Customize' },
-                { text: 'Options' }]
-        },
-        { text: 'Go' },
-        { text: 'Help' }
-    ]
-    };
-  },
-   methods: {
+    name: "App",
+    components: {
+        "ejs-menu": MenuComponent
+    },
+    data: function () {
+        return {
+            // Menu items definition
+            menuItems: [
+                {
+                    text: 'File',
+                    items: [
+                        { text: 'Open' },
+                        { text: 'Save' },
+                        { text: 'Exit' }]
+                },
+                {
+                    text: 'Edit',
+                    items: [
+                        { text: 'Cut' },
+                        { text: 'Copy' },
+                        { text: 'Paste' }]
+                },
+                {
+                    text: 'View',
+                    items: [
+                        { text: 'Toolbar' },
+                        { text: 'Sidebar' }]
+                },
+                {
+                    text: 'Tools',
+                    items: [
+                        { text: 'Spelling & Grammar' },
+                        { text: 'Customize' },
+                        { text: 'Options' }]
+                },
+                { text: 'Go' },
+                { text: 'Help' }
+            ]
+        };
+    },
+    methods: {
         onBeforeOpen(args) {
             // Getting parent menu item element offset
             let relativeOffset = closest(args.event.target, '.e-menu-item').getBoundingClientRect();
@@ -62,7 +63,7 @@ export default {
             args.left = relativeOffset.left + pageXOffset;
             subMenuEle.style.display = '';
         }
-   }
+    }
 }
 </script>
 <style>
@@ -75,5 +76,3 @@ body {
     text-align: center;
 }
 </style>
-
-

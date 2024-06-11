@@ -42,40 +42,33 @@ domainurl: ##DomainURL##
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
+import {ref} from "vue";
 
-export default Vue.extend({
-  data: function() {
-    return {
-     trackThickness:24,
-     progressThickness:24,
-     value:90,
-     animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-     labelStyle: {
-       color: '#FFFFFF'
-       },
-     showProgressValue: true
-    };
-  },
-  provide: {},
-  methods: {
-     valueChanged: function(args) {
-        args.progressColor = '#2BB20E';
-     },
-     onClick: ()=> {
-       this.refs.event.value = 50;
-     }
-  }
-});
+const event = ref(null);
+
+const trackThickness = 24;
+const progressThickness = 24;
+const value = 90;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const labelStyle = {
+  color: '#FFFFFF'
+};
+const showProgressValue = true;
+
+const valueChanged = function(args) {
+  args.progressColor = '#2BB20E';
+  };
+const onClick = ()=> {
+  event.value.value = 50;
+};
+
 </script>
 <style>
   #loader {
@@ -121,37 +114,27 @@ export default Vue.extend({
          </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+<script setup>
 
-Vue.use(ProgressBarPlugin);
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-export default Vue.extend({
-  data: function() {
-    return {
-     trackThickness:24,
-     progressThickness:24,
-     value:90,
-     animation: {
-       enable: true,
-       duration: 2000,
-       delay: 0
-       },
-     labelStyle: {
-       color: '#FFFFFF'
-       },
-     showProgressValue: true
-    };
-  },
-  provide: {},
-  methods: {
-     ProgressCompleted: function(args) {
-        args.progressColor = '#2BB20E';
-     }
-   }
-});
+const trackThickness = 24;
+const progressThickness = 24;
+const value = 90;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
+const labelStyle = {
+  color: '#FFFFFF'
+};
+const showProgressValue = true;
+
+const ProgressCompleted = function(args) {
+  args.progressColor = '#2BB20E';
+};
+
 </script>
 <style>
   #loader {

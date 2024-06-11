@@ -8,7 +8,7 @@ Vue.use(ChipListPlugin);
 new Vue({
 	el: '#app',
 	template: `
-    <ejs-chiplist id="chip" v-on:click.native="chipclick">
+    <ejs-chiplist id="chip" v-on:click="chipclick">
         <e-chips>
             <e-chip text="Send a text"></e-chip>
             <e-chip text="Set a remainder"></e-chip>

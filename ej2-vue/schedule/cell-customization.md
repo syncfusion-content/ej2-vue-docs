@@ -17,7 +17,10 @@ The cells of the Scheduler can be easily customized either using the cell templa
 The height and width of the Scheduler cells can be customized either to increase or reduce its size through the `cssClass` property, which overrides the default CSS applied on cells.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/cell-dimension-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/cell-dimension-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ You can check whether the given time range slots are available for event creatio
 >Note: The **isSlotAvailable** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/cell-dimension-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/cell-dimension-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ It is possible to customize the appearance of the cells using both template opti
 The [`cellTemplate`](../api/schedule/#celltemplate) option accepts the template string and is used to customize the cell background with specific images or appropriate text on the given date values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/cell-dimension-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/cell-dimension-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ The [`cellTemplate`](../api/schedule/#celltemplate) option accepts the template 
 An alternative to [`cellTemplate`](../api/schedule/#celltemplate) is the `renderCell` event, which can also be used to customize the cells with appropriate images or formatted text values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/cell-dimension-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/cell-dimension-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +99,10 @@ You can customize cells such as work cells, month cells, all-day cells, header c
 The month header of each date cell in the month view can be customized using the [`cellHeaderTemplate`](../api/schedule/#cellheadertemplate) option which accepts the string or HTMLElement. The corresponding date can be accessed with the template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/cell-dimension-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/cell-dimension-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +114,10 @@ The month header of each date cell in the month view can be customized using the
 Providing the [`minDate`](../api/schedule/#mindate) and  [`maxDate`](../api/schedule/#maxdate) property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/cell-dimension-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/cell-dimension-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -141,7 +159,10 @@ And, the background color for weekend cells in the Month view through the [`cssC
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/weekend-cell-color/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/weekend-cell-color/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -49,7 +49,10 @@ You cannot finish a task until the dependent task is completed.
 Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt component by using the [`taskFields.dependency`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#dependency) property. The following code example demonstrates how to enable the predecessor in the Gantt component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskdependency-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/taskdependency-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +70,10 @@ In the Gantt component, the predecessor offset can be defined with the following
 You can define an offset with various offset duration units for predecessors by using the following code example.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskdependency-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/taskdependency-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +85,10 @@ You can define an offset with various offset duration units for predecessors by 
 By default, the dependency offsets are automatically updated in the Gantt chart whenever a task's start or end date is changed. However, if you want to disable this feature, you can do so by disabling the [`updateOffsetOnTaskbarEdit`](https://ej2.syncfusion.com/vue/documentation/api/gantt/taskFields/#updateOffsetOnTaskbarEdit) property. Once this property is disabled, you can only update the offset value by editing the predecessor column cell or the offset column in the dependency tab of the edit dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskdependency-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/taskdependency-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +116,10 @@ By default, the `preserveLinkWithEditing` validation mode will be enabled, so th
 The following sample explains enabling the `respectLink` validation mode while editing the linked tasks in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#actionbegin) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskdependency-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/taskdependency-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +146,10 @@ If you move the successor task that starts before the predecessor task’s end d
 The following code example shows how to enable the predecessor validation dialog in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskdependency-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/taskdependency-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +161,10 @@ The following code example shows how to enable the predecessor validation dialog
 By default, mapping the dependency field in taskFields displays dependency lines in the Gantt chart. To hide the dependency line upon button click, set `visibility` style to hidden for the CSS class name `.e-gantt-dependency-view-container`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/taskdependency-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/taskdependency-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

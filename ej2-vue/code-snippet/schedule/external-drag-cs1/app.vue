@@ -1,5 +1,3 @@
-
-
 <template>
   <div id='app'>
     <div id='container'>
@@ -9,7 +7,9 @@
             <h1 class='title-text'>Scheduler</h1>
           </div>
           <div>
-            <ejs-schedule ref='ScheduleObj' :height='height' :width='width' :selectedDate='selectedDate' :views = 'views' :eventSettings='eventSettings' cssClass='schedule-drag-drop' :actionBegin='onActionBegin' :drag='onItemDrag'></ejs-schedule>
+            <ejs-schedule ref='ScheduleObj' :height='height' :width='width' :selectedDate='selectedDate' :views='views'
+              :eventSettings='eventSettings' cssClass='schedule-drag-drop' :actionBegin='onActionBegin'
+              :drag='onItemDrag'></ejs-schedule>
           </div>
         </div>
         <div class='treeview-container'>
@@ -17,7 +17,8 @@
             <h1 class='title-text'>Waiting List</h1>
           </div>
           <div>
-            <ejs-treeview id='Tree' cssClass='treeview-external-drag' :allowDragAndDrop=true :fields='treeViewFields' :nodeDragging='onItemDrag' :nodeDragStop='onTreeDragStop' ></ejs-treeview>
+            <ejs-treeview id='Tree' cssClass='treeview-external-drag' :allowDragAndDrop=true :fields='treeViewFields'
+              :nodeDragging='onItemDrag' :nodeDragStop='onTreeDragStop'></ejs-treeview>
           </div>
         </div>
       </div>
@@ -117,21 +118,23 @@
     position: relative !important;
   }
 }
+
 /* csslint ignore:end */
 </style>
 
 <script>
-import Vue from 'vue';
 import { closest, remove, addClass } from '@syncfusion/ej2-base';
-import { SchedulePlugin, Month, Resize, DragAndDrop } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, Month, Resize, DragAndDrop } from '@syncfusion/ej2-vue-schedule';
 import { eventData, waitingList } from './datasource.js';
-
-Vue.use(SchedulePlugin);
-import { TreeViewPlugin } from '@syncfusion/ej2-vue-navigations';
-Vue.use(TreeViewPlugin);
+import { TreeViewComponent } from '@syncfusion/ej2-vue-navigations';
 
 export default {
-  data (){
+  name: "App",
+  components: {
+    "ejs-schedule": ScheduleComponent,
+    "ejs-treeview": TreeViewComponent
+  },
+  data() {
     return {
       height: '510px',
       width: '100%',
@@ -141,7 +144,7 @@ export default {
       },
       selectedDate: new Date(2018, 1, 15),
       treeViewFields: { dataSource: waitingList, id: 'Id', text: 'Name' },
-      draggedItemId : null
+      draggedItemId: null
     }
   },
   methods: {
@@ -157,7 +160,7 @@ export default {
         }
       }
     },
-    onItemDrag: function(event) {
+    onItemDrag: function (event) {
       let scheduleObj = this.$refs.ScheduleObj.ej2Instances;
       if (scheduleObj.isAdaptive) {
         let classElement = scheduleObj.element.querySelector('.e-device-hover');
@@ -181,7 +184,7 @@ export default {
     dataFilter: function (item) {
       return item.Id !== parseInt(this.draggedItemId, 10);
     },
-    onTreeDragStop: function(event) {
+    onTreeDragStop: function (event) {
       let treeElement = closest(event.target, '.e-treeview');
       let classElement = scheduleObj.element.querySelector('.e-device-hover');
       if (classElement) {
@@ -218,15 +221,12 @@ export default {
 
 </script>
 <style>
-  @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 </style>
-
-
-

@@ -15,7 +15,10 @@ Tooltip can be shown on Button hover and it can be achieved by setting `title` a
 The following snippets illustrates how to show tooltip on Button hover.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button/default-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button/default-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}

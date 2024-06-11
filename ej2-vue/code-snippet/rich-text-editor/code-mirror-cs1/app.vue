@@ -1,17 +1,15 @@
-
-
 <template>
   <ejs-richtexteditor ref="rteObj" :value="value" :height="340" :toolbarSettings="toolbarSettings" :actionComplete="actionCompleteHandler" :showCharCount="showCharCount" :maxLength="maxLength"></ejs-richtexteditor>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
-  import { RichTextEditorPlugin, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
+<script>  
+import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
+import { RichTextEditorComponent, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+export default {
+name: "App",
+components: {
+"ejs-richtexteditor":RichTextEditorComponent
+},
     data: function() {
       return {
         showCharCount: true,
@@ -133,6 +131,3 @@
     display: none;
   }
 </style>
-
-
-

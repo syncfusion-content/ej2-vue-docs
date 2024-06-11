@@ -21,7 +21,10 @@ To disable whole ButtonGroup, [`disabled`](https://ej2.syncfusion.com/vue/docume
 The following example illustrates how to disable the particular and the whole ButtonGroup.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/button-group/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/button-group/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

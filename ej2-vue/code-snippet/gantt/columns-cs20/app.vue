@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-button id="show" cssClass="e-info" v-on:click.native="show">Show</ejs-button>
@@ -10,13 +7,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
 import { editingData } from './data-source.js';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(ButtonPlugin);
-Vue.use(GanttPlugin);
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: editingData,
@@ -40,7 +39,7 @@ export default {
             { field: 'Progress', headerText: 'Progress', width: '150' },
         ]
       };
-  }
+  },
   methods: {
       show: function(e){
           var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
@@ -53,6 +52,3 @@ export default {
   },
 };
 </script>
-
-
-

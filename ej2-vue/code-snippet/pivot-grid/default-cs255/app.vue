@@ -1,34 +1,31 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height"  :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting" :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting" :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar" :actionFailure="actionFailure" :displayOption="displayOption"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :allowExcelExport="allowExcelExport" :allowConditionalFormatting="allowConditionalFormatting"
+      :allowPdfExport="allowPdfExport" :showToolbar="showToolbar" :allowNumberFormatting="allowNumberFormatting"
+      :allowCalculatedField="allowCalculatedField" :showFieldList="showFieldList" :toolbar="toolbar"
+      :actionFailure="actionFailure" :displayOption="displayOption"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
 import {
-  PivotViewPlugin,
-  GroupingBar,
+  PivotViewComponent,
   FieldList,
-  IDataSet,
   CalculatedField,
   Toolbar,
   PDFExport,
   ExcelExport,
   ConditionalFormatting,
-  NumberFormatting,
-  PivotActionFailureEventArgs
+  NumberFormatting
 } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -45,7 +42,7 @@ export default {
       allowConditionalFormatting: true,
       allowNumberFormatting: true,
       allowPdfExport: true,
-      displayOption: { view:'Both' },
+      displayOption: { view: 'Both' },
       showToolbar: true,
       allowCalculatedField: true,
       showFieldList: true,
@@ -68,10 +65,10 @@ export default {
     };
   },
   methods: {
-    actionFailure: function (args: PivotActionFailureEventArgs) {
+    actionFailure: function (args) {
       if (args.actionName == 'Add new report' || args.actionName == 'Save current report') {
-            // Triggers when the current UI action fails to achieve the desired result. 
-        }
+        // Triggers when the current UI action fails to achieve the desired result. 
+      }
     }
   },
   provide: {
@@ -88,9 +85,5 @@ export default {
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

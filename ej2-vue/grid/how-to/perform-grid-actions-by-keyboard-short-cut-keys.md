@@ -17,7 +17,10 @@ In addition, You can also perform grid actions with custom keyboard shortcuts. T
 The following example demonstrates on `Adding` a new row when `Enter` key is pressed in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs47/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs47/app.vue %}
 {% endhighlight %}
 {% endtabs %}

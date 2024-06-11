@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-container">
     <ejs-carousel :indicatorsType="Fraction">
@@ -50,12 +48,17 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { CarouselPlugin } from "@syncfusion/ej2-vue-navigations";
 
-Vue.use(CarouselPlugin);
+import { CarouselComponent, CarouselItemDirective, CarouselItemsDirective } from "@syncfusion/ej2-vue-navigations";
 
-export default {};
+export default {
+  name: "App",
+  components: {
+    "ejs-carousel": CarouselComponent,
+    "e-carousel-items": CarouselItemsDirective,
+    "e-carousel-item": CarouselItemDirective
+  }
+};
 </script>
 
 <style>
@@ -83,5 +86,3 @@ export default {};
   text-align: center;
 }
 </style>
-
-

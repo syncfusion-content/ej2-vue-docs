@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/gantt/column/#template) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/columns-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/columns-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

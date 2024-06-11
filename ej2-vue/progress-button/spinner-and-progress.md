@@ -26,7 +26,10 @@ You can use custom spinner by specifying the [`template`](https://ej2.syncfusion
 The following sample demonstrates the above functionalities of the spinner.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ The following sample demonstrates the above functionalities of the spinner.
 The [`content`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#content) of the ProgressButton can be animated during progress using the [`effect`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/animationSettingsModel/#effect) property of [`animationSettingsModel`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/animationSettingsModel). You can also set custom duration and timing function using the [`duration`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/animationSettingsModel/#duration) and [`easing`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/animationSettingsModel/#easing) properties. The possible `effect` values are `None`, `SlideLeft`, `SlideRight`, `SlideUp`, `SlideDown`, `ZoomIn`, and `ZoomOut`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ The [`content`](https://ej2.syncfusion.com/vue/documentation/api/progress-button
 The progress can be visualized at the specified interval by changing the [`step`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/progressEventArgs/#step) property in the [`begin`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#begin) event of the ProgressButton. In this demo, the `step` property is set to `20` to show progress at every 20% increment.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ The progress can be visualized at the specified interval by changing the [`step`
 The progress can be changed dynamically by modifying the [`percent`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/progressEventArgs/#percent) property in the ProgressButton events. In this demo, on 40% completion of progress, the `percent` property is set to `90` to show dynamic change of the progress.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +92,10 @@ The progress can be changed dynamically by modifying the [`percent`](https://ej2
 You can pause and resume the progress using the [`stop`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#start) and [`start`](https://ej2.syncfusion.com/vue/documentation/api/progress-button/#stop) methods, respectively. In this demo, clicking the ProgressButton will pause and resume the progress.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/progress-button/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/progress-button/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

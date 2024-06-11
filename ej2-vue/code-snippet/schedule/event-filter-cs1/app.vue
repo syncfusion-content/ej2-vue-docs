@@ -1,5 +1,3 @@
-
-
 <template>
     <div id='app'>
         <div id='container'>
@@ -7,10 +5,12 @@
                 <tbody>
                     <tr>
                         <td>
-                            <ejs-checkbox ref='confirmedObj' label='Confirmed' :checked='true' :change='onChange'></ejs-checkbox>
+                            <ejs-checkbox ref='confirmedObj' label='Confirmed' :checked='true'
+                                :change='onChange'></ejs-checkbox>
                         </td>
                         <td>
-                            <ejs-checkbox ref='requestedObj' label='Requested' :checked='true' :change='onChange'></ejs-checkbox>
+                            <ejs-checkbox ref='requestedObj' label='Requested' :checked='true'
+                                :change='onChange'></ejs-checkbox>
                         </td>
                         <td>
                             <ejs-checkbox ref='newObj' label='New' :checked='true' :change='onChange'></ejs-checkbox>
@@ -19,23 +19,24 @@
                 </tbody>
             </table>
             <ejs-schedule ref='scheduleObj' :height='height' :width='width' :selectedDate='selectedDate'
-            :eventSettings='eventSettings' :eventRendered='onEventRendered'></ejs-schedule>
+                :eventSettings='eventSettings' :eventRendered='onEventRendered'></ejs-schedule>
         </div>
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
 import { Query, Predicate } from '@syncfusion/ej2-data';
-import { SchedulePlugin, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
-import { CheckBoxPlugin } from '@syncfusion/ej2-vue-buttons';
+import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { CheckBoxComponent } from '@syncfusion/ej2-vue-buttons';
 import { scheduleData } from './datasource.js';
 
-Vue.use(SchedulePlugin);
-Vue.use(CheckBoxPlugin);
-
 export default {
-    data (){
+    name: "App",
+    components: {
+        "ejs-checkbox": CheckBoxComponent,
+        "ejs-schedule": ScheduleComponent
+    },
+    data() {
         return {
             height: '525px',
             width: '100%',
@@ -46,7 +47,7 @@ export default {
         }
     },
     methods: {
-        onEventRendered: function(args) {
+        onEventRendered: function (args) {
             switch (args.data.EventType) {
                 case 'Requested':
                     args.element.style.backgroundColor = '#F57F17';
@@ -59,7 +60,7 @@ export default {
                     break;
             }
         },
-        onChange: function(args) {
+        onChange: function (args) {
             let predicate;
             let checkBoxes = [this.$refs.confirmedObj.ej2Instances, this.$refs.requestedObj.ej2Instances, this.$refs.newObj.ej2Instances];
             checkBoxes.forEach((checkBoxObj) => {
@@ -80,18 +81,16 @@ export default {
 }
 </script>
 <style>
-  @import '../../node_modules/@syncfusion/ej2-base/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
-  @import '../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css';
 
-  #property td {
+#property td {
     padding: 0 5px;
-  }
+}
 </style>
-
-

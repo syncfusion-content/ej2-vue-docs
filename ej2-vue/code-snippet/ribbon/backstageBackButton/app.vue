@@ -1,5 +1,5 @@
 <template>
-  <ejs-ribbon ref="backstageRibbon"  :backStageMenu="backstageSettings">
+  <ejs-ribbon ref="backstageRibbon" :backStageMenu="backstageSettings">
     <e-ribbon-tabs>
       <e-ribbon-tab header="Home">
         <e-ribbon-groups>
@@ -24,33 +24,47 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { RibbonPlugin, RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
-Vue.use(RibbonPlugin);
+
+import { RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
+import { RibbonComponent, RibbonGroupDirective, RibbonGroupsDirective, RibbonCollectionsDirective, RibbonCollectionDirective, RibbonItemsDirective, RibbonItemDirective, RibbonTabsDirective, RibbonTabDirective } from "@syncfusion/ej2-vue-ribbon";
+
 
 export default {
+  name: "App",
+  components: {
+    "ejs-ribbon": RibbonComponent,
+    "e-ribbon-tabs": RibbonTabsDirective,
+    "e-ribbon-tab": RibbonTabDirective,
+    "e-ribbon-groups": RibbonGroupsDirective,
+    "e-ribbon-group": RibbonGroupDirective,
+    "e-ribbon-collections": RibbonCollectionsDirective,
+    "e-ribbon-collection": RibbonCollectionDirective,
+    "e-ribbon-items": RibbonItemsDirective,
+    "e-ribbon-item": RibbonItemDirective
+  },
+
   provide: {
-      ribbon: [RibbonBackstage]
+    ribbon: [RibbonBackstage]
   },
   data: function () {
-      return {
-        backstageSettings: {
-          visible: true,
-          items: [
-            { id: 'home', text: 'Home', iconCss: 'e-icons e-home', content: this.homeContentTemplate() },
-          ],
-          backButton: {
-            text: 'Close',
-          }
+    return {
+      backstageSettings: {
+        visible: true,
+        items: [
+          { id: 'home', text: 'Home', iconCss: 'e-icons e-home', content: this.homeContentTemplate() },
+        ],
+        backButton: {
+          text: 'Close',
+        }
       },
-        cutButton:  { iconCss: "e-icons e-cut", content: "Cut" },
-        copyButton: { iconCss: "e-icons e-copy", content: "Copy"},
-        pasteButton: { iconCss: "e-icons e-paste", content: "Paste"},
-      };
-    },
-    methods: {
-      homeContentTemplate() {
-        return `
+      cutButton: { iconCss: "e-icons e-cut", content: "Cut" },
+      copyButton: { iconCss: "e-icons e-copy", content: "Copy" },
+      pasteButton: { iconCss: "e-icons e-paste", content: "Paste" },
+    };
+  },
+  methods: {
+    homeContentTemplate() {
+      return `
         <div id='home-wrapper' style="padding: 20px;">
           <div id='new-section' class='new-wrapper'>
               <div class='section-title'> New </div>
@@ -76,72 +90,72 @@ export default {
           </div>
       </div>
         `;
-      },
+    },
   }
 };
 </script>
 
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-ribbon/styles/material.css";
 
-.e-ribbon-backstage-content{
-    width: 550px;
-    height: 350px;
+.e-ribbon-backstage-content {
+  width: 550px;
+  height: 350px;
 }
 
 .section-title {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .new-docs {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .category_container {
-    width: 150px;
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
+  width: 150px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .doc_category_image {
-    width: 80px;
-    height: 100px;
-    background-color: #fff;
-    border: 1px solid rgb(125, 124, 124);
-    text-align: center;
-    overflow: hidden;
-    margin: 0px auto 10px;
+  width: 80px;
+  height: 100px;
+  background-color: #fff;
+  border: 1px solid rgb(125, 124, 124);
+  text-align: center;
+  overflow: hidden;
+  margin: 0px auto 10px;
 }
 
 .doc_category_text {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .section-content {
-    padding: 12px 0px;
-    cursor: pointer;
+  padding: 12px 0px;
+  cursor: pointer;
 }
 
 .doc_icon {
-    font-size: 16px;
-    padding: 0px 10px;
+  font-size: 16px;
+  padding: 0px 10px;
 }
 
-.category_container:hover, .section-content:hover {
-    background-color: #dfdfdf;
-    border-radius: 5px;
-    transition: all 0.3s;
+.category_container:hover,
+.section-content:hover {
+  background-color: #dfdfdf;
+  border-radius: 5px;
+  transition: all 0.3s;
 }
-
 </style>

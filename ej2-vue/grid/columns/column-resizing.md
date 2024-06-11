@@ -17,7 +17,10 @@ Once column resizing is enabled, columns width can be resized by clicking and dr
 To use the column resize, inject **ResizeService** in the provider section of **AppModule**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/resize-column/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/resize-column/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ To enable this feature, you can define the [columns.minWidth](https://ej2.syncfu
 In the below code, **OrderID**, **Ship Name** and **Ship Country** columns are defined with minimum and maximum width. The **OrderID** column is set to have a minimum width of 100 pixels and a maximum width of 200 pixels. Similarly, the **ShipName** column is set to have a minimum width of 150 pixels and a maximum width of 300 pixels. The **ShipCountry** column is set to have a minimum width of 120 pixels and a maximum width of 280 pixels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/resize-min-max/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/resize-min-max/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ The Grid component provides the ability to prevent resizing for a particular col
 You can disable resizing for a particular column by setting the [allowResizing](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#allowresizing) property of the column to **false**. The following example demonstrates, how to disabled resize for **Customer ID** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/prevent-resize/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/prevent-resize/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +84,10 @@ The Syncfusion Grid component provides a [ResizeSettingsModel](https://ej2.syncf
 The following example demonstrates how to set the [resizeSettings.mode](https://ej2.syncfusion.com/vue/documentation/api/grid/resizeSettings/#mode) property to **Normal** and **Auto** on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/resize-mode/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/resize-mode/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +101,10 @@ Grid component allows to resize stacked columns by clicking and dragging the rig
 In this below code, we have disabled resize for **Ship City** column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/resize-stack-column/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/resize-stack-column/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +138,10 @@ Grid provides the ability to resize columns using an external button click. This
 The following example demonstrates how to resize the columns in a grid. This is done by using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component by change the [width](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#width) property of the selected column. This is accomplished using the  [getColumnByField](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnbyfield) on external button click. Then, the [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is called on the grid component to update the displayed columns based on interaction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/resize-externally/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/resize-externally/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -145,7 +163,67 @@ During the resizing action, the grid component triggers the below three events.
 The following is an example of using the resizing events, the [resizeStart](https://ej2.syncfusion.com/vue/documentation/api/grid/#resizestart) event is used to cancel the resizing of the **OrderID** column. The [resizeStop](https://ej2.syncfusion.com/vue/documentation/api/grid/#resizestop) event is used to apply custom CSS attributes to the resized column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <div style="margin-left:180px"><p style="color:red;" id="message">{{ message }}</p></div>
+        <ejs-grid ref='grid' :dataSource="data" :allowResizing='true' height='315px' :resizeStart='resizeStart' :resizing='resizing' :resizeStop='resizeStop'>
+          <e-columns>
+            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
+            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+            <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+            <e-column field='ShipName' headerText='Ship Name' width=80></e-column>
+            <e-column field='ShipCountry' headerText='Ship Country' textAlign='Right' width=100></e-column>
+            <e-column field='ShipAddress' headerText='Ship Address' width=120></e-column>
+            <e-column field='Freight' headerText='Freight' width=80></e-column>
+          </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, Resize } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+const grid = ref(null);
+    const resizeStart = function (args) {
+      this.message = `resizeStart event triggered`;
+      if (args.column.field === 'OrderID') {
+        args.cancel = true;
+      }
+    }
+    const resizing = function (args) {
+      this.message = `resizing event triggered`;
+    },
+    const resizeStop = function (args) {
+      this.message = `resizeStop event triggered`;
+      const headerCell = grid.value.getColumnHeaderByField(args.column.field);
+      headerCell.classList.add('customcss');
+      const columnCells = grid.value.getContentTable()
+        .querySelectorAll(`[data-colindex="${args.column.index}"]`);
+      columnCells.forEach(cell => {
+        cell.style.backgroundColor = 'rgb(43, 195, 226)';
+      });
+    }
+    provide('grid',  [Resize]);
+</script>
+<style>
+.e-grid .customcss {
+  background-color: rgb(43, 195, 226);
+}
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 {% raw %}
 <template>
     <div id="app">
@@ -164,13 +242,15 @@ The following is an example of using the resizing events, the [resizeStart](http
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Resize } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, Resize } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data
@@ -222,4 +302,4 @@ export default {
         
 {% previewsample "page.domainurl/code-snippet/grid/column/resize-event" %}
 
->The ResizeArgs object passed to the events contains information such as the current column width, new column width, column index, and the original event. The [resizing](https://ej2.syncfusion.com/vue/documentation/api/grid/#resizing) event is triggered multiple times during a single resize operation, so be careful when performing heavy operations in this event. 
+>The ResizeArgs object passed to the events contains information such as the current column width, new column width, column index, and the original event. The [resizing](https://ej2.syncfusion.com/vue/documentation/api/grid/#resizing) event is triggered multiple times during a single resize operation, so be careful when performing heavy operations in this event.

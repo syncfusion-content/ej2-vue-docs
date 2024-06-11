@@ -39,21 +39,15 @@ To render the custom HTML elements in the Linear Gauge component, use the [`cont
     padding: 0px !important;
   }
 </style>
-<script>
-import Vue from "vue";
-import { LinearGaugePlugin, Annotations } from "@syncfusion/ej2-vue-lineargauge";
-Vue.use(LinearGaugePlugin);
-export default {
-  data:function() {
-    return {
-      zindex: 1,
-      contentTemplate: '<div id="first"><h1>Gauge</h1></div>',
-    }
-  },
-  provide: {
-    lineargauge: [Annotations]
-  },
-};
+<script setup>
+import { provide } from "vue";
+
+import { LinearGaugeComponent as EjsLineargauge, Annotations, AnnotationDirective as EAnnotation, AnnotationsDirective as EAnnotations } from "@syncfusion/ej2-vue-lineargauge";
+
+const zindex = 1;
+const contentTemplate = '<div id="first"><h1>Gauge</h1></div>';
+provide('lineargauge',  [Annotations]);
+
 </script>
 
 ```
@@ -74,7 +68,10 @@ The following properties are used to customize the annotation.
 To change the stack order of an annotation element, the [`zIndex`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#zindex) property of the [`e-annotation`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/) can be used.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +83,10 @@ To change the stack order of an annotation element, the [`zIndex`](https://ej2.s
 The annotation can be placed anywhere in the Linear Gauge by setting the pixel value to the [`x`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#y) properties in the [`e-annotation`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +99,10 @@ The annotation can be placed anywhere in the Linear Gauge by setting the pixel v
 The annotation can be aligned horizontally and vertically by using the [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#verticalalignment) properties respectively. The possible values can be **Center**, **Far**, **Near**, and **None**. The [`horizontalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#horizontalalignment) and [`verticalAlignment`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#verticalalignment) properties are not applicable when the [`x`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#x) and [`y`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/#y) properties are set in the [`e-annotation`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +114,10 @@ The annotation can be aligned horizontally and vertically by using the [`horizon
 Multiple annotations can be added to the Linear Gauge component by adding the multiple [`e-annotation`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/) in the [`e-annotations`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/#annotations) and customization for the annotation can be done with the [`e-annotation`](https://ej2.syncfusion.com/vue/documentation/api/linear-gauge/annotation/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/linear-gauge/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/linear-gauge/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -24,7 +24,10 @@ The class name returned by the [contextMenuBeforeOpen](https://ej2.syncfusion.co
 The following code example shows how to identify the context menu opened.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/find-target-context-menu/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/find-target-context-menu/app.vue %}
 {% endhighlight %}
 {% endtabs %}

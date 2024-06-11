@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar" :fieldRemove="fieldRemove"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showGroupingBar="showGroupingBar"
+      :fieldRemove="fieldRemove"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, GroupingBar, FieldRemoveEventArgs } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, GroupingBar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -30,20 +28,17 @@ export default {
     }
   },
   methods: {
-     fieldRemove: function (args: FieldRemoveEventArgs ) {
-        if(args.fieldName === 'Country') {
-            args.cancel = true;
-        }
+    fieldRemove: function (args) {
+      if (args.fieldName === 'Country') {
+        args.cancel = true;
+      }
     }
   },
   provide: {
-      pivotview: [GroupingBar]
-    }
+    pivotview: [GroupingBar]
+  }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

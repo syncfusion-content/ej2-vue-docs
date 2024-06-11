@@ -20,7 +20,10 @@ Refer to the following steps to add or remove a list item.
 * Bind the click handler to the delete icon created in step 1. Within the click event, remove the list item by passing the delete icon list item to [`removeItem`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#removeitem) method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/add-item-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/add-item-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

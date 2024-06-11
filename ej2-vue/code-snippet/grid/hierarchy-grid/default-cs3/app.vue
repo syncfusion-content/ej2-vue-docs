@@ -1,9 +1,7 @@
-
-
 <template>
   <div id="app">
-    <ejs-button @click.native='expand'>Expand All</ejs-button>
-    <ejs-button @click.native='collapse'>Collapse All</ejs-button>
+    <ejs-button @click='expand'>Expand All</ejs-button>
+    <ejs-button @click='collapse'>Collapse All</ejs-button>
     <ejs-grid style="margin-top:10px" ref='grid' :dataSource='parentData' height='265px' :childGrid='childGrid'>
         <e-columns>
           <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=80></e-column>
@@ -15,15 +13,18 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, DetailRow } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data, employeeData } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       parentData: employeeData,
@@ -63,5 +64,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

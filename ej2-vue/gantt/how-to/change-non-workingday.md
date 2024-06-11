@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Non-working days/weekend are used to represent the non-productive days in a project. You can define the non-working days in a week using the `workWeek` property in Gantt.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/how-to/changenonworkingday-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/how-to/changenonworkingday-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

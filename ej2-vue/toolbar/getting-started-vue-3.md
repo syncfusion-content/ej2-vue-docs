@@ -130,7 +130,7 @@ import { ToolbarComponent as EjsToolbar, ItemsDirective as EItems, ItemDirective
   import {
   ToolbarComponent,
   ItemDirective,
-  ItemsDirective,
+  ItemsDirective
 } from "@syncfusion/ej2-vue-navigations";
 export default {
   name: "App",
@@ -372,7 +372,7 @@ import { ToolbarComponent as EjsToolbar, ItemsDirective as EItems, ItemDirective
   import {
   ToolbarComponent,
   ItemDirective,
-  ItemsDirective,
+  ItemsDirective
 } from "@syncfusion/ej2-vue-navigations";
 export default {
   name: "App",

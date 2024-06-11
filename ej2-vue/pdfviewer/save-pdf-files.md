@@ -61,39 +61,69 @@ public IActionResult Download([FromBody] Dictionary<string, string> jsonObject)
 
 Modify the `serviceUrl` property of the PDF viewer component with the accurate URL of your web service project, replacing `https://localhost:44396/pdfviewer` with the actual URL of your server.Modify the documentPath with the correct PDF Document URL want to load. 
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
   <div id="app">
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide } from "vue";
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+// Replace the "localhost:44396" with the actual URL of your server
+const serviceUrl = "https://localhost:44396/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]);
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-           ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
-  export default {
-    name: 'app',
-    data() {
-      return {
-        // Replace the "localhost:44396" with the actual URL of your server
-        serviceUrl: "https://localhost:44396/pdfviewer",
-        documentPath: "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
-      };
-    },
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
-    }
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: 'app',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      // Replace the "localhost:44396" with the actual URL of your server
+      serviceUrl: "https://localhost:44396/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
   }
+}
 </script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 [View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/Save%20and%20Load/Save%20PDF%20file%20to%20server)
 
@@ -101,50 +131,83 @@ Modify the `serviceUrl` property of the PDF viewer component with the accurate U
 
 In the built-in toolbar, you have an option to download the updated PDF to the local file system, you can use it to download the PDF file.
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
   <div id="app">
-  <button v-on:click="downloadClicked">Download</button>
-    <ejs-pdfviewer
-      id="pdfViewer"
-      :serviceUrl="serviceUrl"
-      :documentPath="documentPath">
+    <button v-on:click="downloadClicked">Download</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import { provide, ref } from "vue";
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+const pdfviewer = ref(null);
+// Replace the "localhost:44396" with the actual URL of your server
+const serviceUrl = "https://localhost:44396/pdfviewer";
+// Replace PDF_Succinctly.pdf with the actual document name that you want to load
+const documentPath = "PDF_Succinctly.pdf"
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]);,
+
+const downloadClicked = function (args) {
+  pdfviewer.value.ej2Instances.download();
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="downloadClicked">Download</button>
+    <ejs-pdfviewer id="pdfViewer" :serviceUrl="serviceUrl" :documentPath="documentPath">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
-           ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
-  export default {
-    name: 'app',
-    data() {
-      return {
-        // Replace the "localhost:44396" with the actual URL of your server
-        serviceUrl: "https://localhost:44396/pdfviewer",
-        // Replace PDF_Succinctly.pdf with the actual document name that you want to load
-        documentPath:"PDF_Succinctly.pdf"
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView,
+  ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
-      };
-    },
-    provide: {
-      PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                   Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner ]
-    },
+export default {
+  name: 'app',
+  components: {
+    'ejs-pdfviewer': PdfViewerComponent
+  },
+  data() {
+    return {
+      // Replace the "localhost:44396" with the actual URL of your server
+      serviceUrl: "https://localhost:44396/pdfviewer",
+      // Replace PDF_Succinctly.pdf with the actual document name that you want to load
+      documentPath: "PDF_Succinctly.pdf"
 
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
+  },
   methods: {
     downloadClicked: function (args) {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
-      viewer.download();
+      this.$refs.pdfviewer.ej2Instances.download();
     },
   }
 }
-</script> 
+</script>
 
-```
+{% endhighlight %}
+{% endtabs %}
 
 ## Save PDF file to Database
 

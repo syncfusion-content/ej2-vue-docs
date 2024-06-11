@@ -15,7 +15,10 @@ Filtering allows you to view specific rows in a spreadsheet while hiding the oth
 The following code example shows how to get the filtered rows.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/filter-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/filter-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

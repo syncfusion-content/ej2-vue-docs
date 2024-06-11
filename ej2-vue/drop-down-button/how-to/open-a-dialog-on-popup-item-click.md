@@ -21,7 +21,10 @@ npm install @syncfusion/ej2-vue-list --save
 In the following example, Dialog will open while selecting `Other Folder...` item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-button/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/drop-down-button/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

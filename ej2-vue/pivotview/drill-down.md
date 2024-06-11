@@ -31,7 +31,10 @@ Allows to drill only the current position of the selected member and exclude the
 Allows to either expand or collapse all headers that are displayed in row and column axes. To display all headers in expanded state, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) to **true** and to collapse all headers, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) to **false**. By default, [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) property is set to **false**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ Allows to either expand or collapse all headers that are displayed in row and co
 Allows to expand or collapse all headers for specific fields (only) in row and column axes. To expand headers for a specific field in row or column axis, set the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#expandall) in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) or [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) to **true**. By default, [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#expandall) property in [`rows`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#rows) or [`columns`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#columns) is set to **false**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +70,10 @@ In addition to the previous topic, there is an enhancement to expand all headers
 > The [`drilledMember`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#drilledmembers) option always works in vice-versa with respect to the property [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) in pivot table. For example, if [`expandAll`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDataOptions/#expandall) is set to **true**, then the member(s) added in [`items`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#items) collection alone will be in collapsed state.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +89,10 @@ End user can also manually expand or collapse specific member(s) in each fields 
 * [`delimiter`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iDrillOptions/#delimiter): It allows to separate next level of member from its parent member.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +107,10 @@ The event [`drill`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#
 * `pivotview` - It holds pivot table instance.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs31/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs31/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +135,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 In the below sample, drill down and drill up action can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs32/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs32/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -143,7 +161,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 * `actionInfo`: It holds the unique information about the current UI action. For example, if drill down action is completed, the event argument contains information such as field name and the drill information.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs33/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs33/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +185,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 * `errorInfo`: It holds the error information of the current UI action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs34/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs34/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,60 +1,51 @@
-
-
 <template>
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="chromeClick">Chrome</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="coldClick">Cold</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="warmClick">Warm</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="grayScaleClick">GrayScale</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="sepiaClick">Sepia</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="invertClick">Invert</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="chromeClick">Chrome</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="coldClick">Cold</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="warmClick">Warm</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="grayScaleClick">GrayScale</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="sepiaClick">Sepia</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="invertClick">Invert</ejs-button>
 </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { ImageEditorPlugin, ImageFilterOption } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
-Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(ImageFilterOption);
-
 export default {
+name: "App",
+components: {
+"ejs-imageeditor":ImageEditorComponent,
+"ejs-button":ButtonComponent
+},
   data: function() {
       return {
         toolbar: []
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
-    chromeClick: function(event) {
+    chromeClick: function() {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Chrome');
     },
-    coldClick: function(event) {
+    coldClick: function() {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Cold');
     },
-    warmClick: function(event) {
+    warmClick: function() {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Warm');
     },
-    grayScaleClick: function(event) {
+    grayScaleClick: function() {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('GrayScale');
     },
-    sepiaClick: function(event) {
+    sepiaClick: function() {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Sepia');
     },
-    invertClick: function(event) {
+    invertClick: function() {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Invert');
     }
-
   }
 }
 </script>
@@ -76,5 +67,3 @@ export default {
     height: 350px !important;
 }
 </style>
-
-

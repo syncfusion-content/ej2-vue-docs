@@ -1,21 +1,22 @@
-
-
-
 <template>
      <div>
-     <ejs-button id="indent" cssClass="e-info" v-on:click.native="indent">Indent</ejs-button>
-     <ejs-button id="outdent" cssClass="e-info" v-on:click.native="outdent">Outdent</ejs-button>
+     <ejs-button id="indent" cssClass="e-info" v-on:click="indent">Indent</ejs-button>
+     <ejs-button id="outdent" cssClass="e-info" v-on:click="outdent">Outdent</ejs-button>
      <br>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields = "taskFields" :height = "height" :columns = "columns" :editSettings= "editSettings" :toolbar="toolbar"></ejs-gantt>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Edit, Selection, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-Vue.use(GanttPlugin);
-Vue.use(ButtonPlugin);
+
+import { GanttComponent, Edit, Selection, Toolbar } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-gantt":GanttComponent
+},
+
   data: function() {
       return{
             data: [
@@ -80,6 +81,3 @@ export default {
   },
 };
 </script>
-
-
-

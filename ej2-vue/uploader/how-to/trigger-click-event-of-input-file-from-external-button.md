@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can trigger the input type file click event from external button. In the below sample, click event of input file was triggered from `Essential JavaScript 2 Button`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/invisible-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/uploader/invisible-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Summary view allows you to show or hide the filtered query. By default, the value is false. You can enable by setting the [`summaryView`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#summaryview) property to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}

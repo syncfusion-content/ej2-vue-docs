@@ -1,11 +1,9 @@
-
-
 <template>
-    <div class ='wrap'>
-        <div id ='input-container'>
-                <input class="e-input" type="text" placeholder="Enter Date" />
+    <div class='wrap'>
+        <div id='input-container'>
+            <input class="e-input" type="text" placeholder="Enter Date" />
             <div class="e-input-group">
-                <input class="e-input" name='input' type="text" placeholder="Enter Date"/>
+                <input class="e-input" name='input' type="text" placeholder="Enter Date" />
                 <span class="e-input-group-icon e-input-popup-date"></span>
             </div>
         </div>
@@ -14,10 +12,10 @@
 <script>
 
 export default {
-   data: function() {
-        return { }
+    data: function () {
+        return {}
     },
-    mounted: function() {
+    mounted: function () {
         // To get the all input fields and its container.
 
         let inputElement = document.querySelectorAll('.e-input-group .e-input,.e-float-input.e-input-group input');
@@ -61,34 +59,35 @@ export default {
 }
 </script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
 
-  .wrap {
+.wrap {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 20px 10px;
     width: 340px;
-  }
+}
 
-  #input-container .e-input-group {
+#input-container .e-input-group {
     margin: 30px 0;
-  }
-  .e-input-group-icon:before {
+}
+
+.e-input-group-icon:before {
     font-family: e-icons;
-  }
+}
 
-  .e-input-group .e-input-group-icon.e-input-popup-date {
-    font-size:16px;
-  }
+.e-input-group .e-input-group-icon.e-input-popup-date {
+    font-size: 16px;
+}
 
-  .e-input-group.e-small .e-input-group-icon.e-input-popup-date {
-    font-size:14px;
-  }
+.e-input-group.e-small .e-input-group-icon.e-input-popup-date {
+    font-size: 14px;
+}
 
-  .e-input-group-icon.e-input-popup-date:before {
+.e-input-group-icon.e-input-popup-date:before {
     content: "\e901";
-  }
+}
 </style>
 
 

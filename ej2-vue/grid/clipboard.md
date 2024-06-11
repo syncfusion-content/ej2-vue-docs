@@ -22,7 +22,10 @@ By using these keyboard shortcuts, you can quickly copy data from the grid to th
 To enable the clipboard feature, you can use the grid component with your data source and selection property. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/clipboard/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/clipboard/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ Copying data to the clipboard by using external buttons in the Syncfusion Vue Gr
 To copy selected rows or cells data into the clipboard with the help of external buttons, you can utilize the [copy](https://ej2.syncfusion.com/vue/documentation/api/grid/clipboard/#copy) method available in the grid component. This is demonstrated in the following example,
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/clipboard/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/clipboard/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +68,10 @@ This feature is enabled by defining [enableAutoFill](https://ej2.syncfusion.com/
 The following example demonstrates, how to enable autofill feature in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/clipboard/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/clipboard/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +104,10 @@ Follow the steps below to use the Paste feature in the grid:
 4. Press the <kbd>Ctrl + V</kbd> shortcut key to paste the copied content into the target cells.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/clipboard/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/clipboard/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

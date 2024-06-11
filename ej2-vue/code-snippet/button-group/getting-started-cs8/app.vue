@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='app'>
     <div class='e-btn-group e-rtl'>
@@ -11,14 +8,14 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ButtonPlugin  } from '@syncfusion/ej2-vue-buttons';
+import { ButtonComponent  } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(ButtonPlugin);
-
 export default {
-  name: 'app'
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+}
 }
 </script>
 <style>
@@ -33,6 +30,3 @@ export default {
     margin: 25px 5px 20px 20px;
   }
 </style>
-
-
-

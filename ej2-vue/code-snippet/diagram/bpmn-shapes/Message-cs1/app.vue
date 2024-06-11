@@ -1,17 +1,12 @@
-
-
 <template>
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :connectors='connectors' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { DiagramPlugin,BpmnDiagrams,Diagram } from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(BpmnDiagrams);
-    Vue.use(DiagramPlugin);
+import { DiagramComponent, BpmnDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
-    let connectors = [{
+let connectors = [{
     // Position of the node
     sourcePoint: {
         x: 100,
@@ -29,19 +24,24 @@
         message: 'InitiatingMessage'
     },
 }]
- export default {
-     name: 'app'
+
+export default {
+    name: "App",
+    components: {
+        "ejs-diagram": DiagramComponent
+    },
      data() {
-         return {
-             width: "100%",
-             height: "350px",
-             connectors: connectors
-         }
-     }
- }
+        return {
+            width: "100%",
+            height: "350px",
+            connectors: connectors
+        }
+    },
+    provide: {
+        diagram: [BpmnDiagrams]
+    }
+}
 </script>
 <style>
-    @import "../../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
 </style>
-
-

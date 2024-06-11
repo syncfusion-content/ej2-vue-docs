@@ -35,7 +35,10 @@ These items can be added by defining the [toolbar](https://ej2.syncfusion.com/vu
 The following example demonstrates how to enable built-in toolbar items such as **Print** and **Search** in the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +63,10 @@ To display only icons in the built-in toolbar items of the Grid, you can use CSS
 This is demonstrated in the following sample:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +82,10 @@ Custom toolbar items can be added to the Grid component by defining the [toolbar
 By default, custom toolbar items are positioned on the **left** side of the toolbar. However, you can change the position by using the [align](https://ej2.syncfusion.com/vue/documentation/api/toolbar/itemModel/#align) property of the `ItemModel`. The following example demonstrates how to apply the `align` property with the value **Right** for the **Collapse All** toolbar item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +104,10 @@ To use both types of toolbar items, you can define the [toolbar](https://ej2.syn
 The following example demonstrates, how to use both built-in and custom toolbar items in the grid. The built-in toolbar items includes **Add**, **Edit**, **Delete**, **Update**, and **Cancel**, while the custom toolbar item is **Click**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +123,10 @@ By default, custom toolbar items in Grid component are aligned on the left side 
 In the following sample, the **Collapse All** toolbar item is positioned on the **Right**, the **Expand All** toolbar item is positioned on the **Left**, and the **Search** toolbar item is positioned at the **Center**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/toolbar/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

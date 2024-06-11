@@ -1,9 +1,7 @@
-
-
 <template>
 <div id="app">
-<ejs-button id='copy' @click.native='copy'>Copy</ejs-button>
-        <ejs-button id='copyHeader' @click.native='copyHeader'>CopyHeader</ejs-button>
+<ejs-button id='copy' @click='copy'>Copy</ejs-button>
+        <ejs-button id='copyHeader' @click='copyHeader'>CopyHeader</ejs-button>
         <ejs-treegrid ref=treegrid :dataSource='treeGridData' childMapping='subtasks' :treeColumnIndex='1' :allowPaging='true' :pageSettings='pageSettings' height='230px' :selectionSettings='selectionOptions'>
             <e-columns>
                 <e-column field='taskID' headerText='Task ID' width='90' textAlign='Right'></e-column>
@@ -15,15 +13,21 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { TreeGridComponent, Page, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-treegrid";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { sampleData } from "./datasource.js";
 
-Vue.use(TreeGridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       treeGridData: sampleData,
@@ -44,6 +48,3 @@ export default {
   }
 }
 </script>
-
-
-

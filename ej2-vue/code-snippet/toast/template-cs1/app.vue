@@ -1,8 +1,6 @@
-
-
 <template>
    <div id='app'>
-       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click.native="showBtnClick">Show Toast</ejs-button>
+       <ejs-button ref='showButtonRef' class="e-btn" id="show_toast" v-on:click="showBtnClick">Show Toast</ejs-button>
        <div id='element'></div>
        <script id="template_toast_ele" type="text/x-template">
     <div id='template_toast'>
@@ -22,17 +20,18 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { ToastPlugin, Toast, ToastOpenArgs, ToastCloseArgs, ToastBeforeOpenArgs } from "@syncfusion/ej2-vue-notifications";
-import { DropDownListPlugin, DropDownList, ChangeEventArgs } from '@syncfusion/ej2-vue-dropdowns';
-import { compile, Browser, closest } from '@syncfusion/ej2-base';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 
-Vue.use(ToastPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(DropDownListPlugin);
+import { Toast } from "@syncfusion/ej2-vue-notifications";
+
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
 export default {
-  name: 'app',
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+
+},
+
   mounted: function() {
        this.toastObj = new Toast({
            template: document.getElementById('template_toast_ele').innerHTML,
@@ -45,7 +44,7 @@ export default {
       this.toastObj.show();
   },
   methods: {
-      showBtnClick: function(args){
+      showBtnClick: function(){
           this.toastObj.show();
       }
   }
@@ -121,6 +120,3 @@ body>#element .e-toast {
     margin-left: 10px;
 }
 </style>
-
-
-

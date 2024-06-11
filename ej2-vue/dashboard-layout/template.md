@@ -38,10 +38,11 @@ Refer to the following code snippet of pietemplate.vue file.
         </ejs-accumulationchart>
     </div>
 </template>
-<script>
-import Vue from "vue";
-import { AccumulationChartPlugin, PieSeries, AccumulationDataLabel, AccumulationTooltip } from "@syncfusion/ej2-vue-charts";
-Vue.use(AccumulationChartPlugin);
+<script setup>
+import { provide } from "vue";
+
+import { AccumulationChartComponent, PieSeries, AccumulationDataLabel, AccumulationTooltip } from "@syncfusion/ej2-vue-charts";
+
 export default {
   data() {
     return {
@@ -58,9 +59,7 @@ export default {
      palettes: ['#00bdae', '#357cd2', '#e56691'],
     };
   },
-  provide: {
-     accumulationchart: [PieSeries, AccumulationDataLabel, AccumulationTooltip]
-  },
+  provide('accumulationchart',  [PieSeries, AccumulationDataLabel, AccumulationTooltip]);,
     mounted(){
     this.$refs.accumulationInstance.height ="100%";
     this.$refs.accumulationInstance.width ="100%";
@@ -107,15 +106,15 @@ Refer to the following code snippet of App.vue file.
     </ejs-dashboardlayout>
     </div>
 </template>
-<script>
-import Vue from 'vue';
+<script setup>
+
 // Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
+import { DashboardLayoutComponent } from "@syncfusion/ej2-vue-layouts";
 import pieTemplate from "./pietemplate.vue";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
-Vue.use(DashboardLayoutPlugin);
+
 
 export default {
        data () {
@@ -188,7 +187,10 @@ export default {
 The following sample demonstrates how to add EJ2 Chart components as the `content` for  panel in the dashboard layout component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dashboard-layout/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

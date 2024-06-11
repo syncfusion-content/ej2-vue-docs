@@ -32,27 +32,19 @@ Progress Bar support to animate the progress by using `animation` property. Enab
        </div>
     </div>
 </template>
-<script>
-import Vue from "vue";
+<script setup>
+import { provide } from "vue";
+
 import { Browser } from "@syncfusion/ej2-base";
-import { ProgressBarPlugin } from "@syncfusion/ej2-vue-progressbar";
+import { ProgressBarComponent as EjsProgressbar } from "@syncfusion/ej2-vue-progressbar";
 
-Vue.use(ProgressBarPlugin);
+const value = 100;
+const animation = {
+  enable: true,
+  duration: 2000,
+  delay: 0
+};
 
-export default Vue.extend({
-  data: function() {
-    return {
-      value : 100,
-      animation: {
-        enable: true,
-        duration: 2000,
-        delay: 0
-      },
-    };
-  },
-  provide: {},
-  methods: {}
-});
 </script>
 <style>
   #loader {

@@ -20,11 +20,11 @@ In the following code snippet, explains about how to add additional data on file
     <ejs-uploader ref="uploadObj" id='defaultfileupload' :uploading="onFileUpload" name="UploadFiles"  :autoUpload="autoUpload" :asyncSettings= "path"></ejs-uploader>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { UploaderPlugin, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
+<script setup>
+
+import { UploaderComponent, SelectedEventArgs } from '@syncfusion/ej2-vue-inputs';
 import { createElement } from '@syncfusion/ej2-base';
-Vue.use(UploaderPlugin);
+
 
 export default {
   data: function(){

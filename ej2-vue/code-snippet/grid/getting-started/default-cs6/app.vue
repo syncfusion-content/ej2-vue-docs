@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource="data" :allowPaging="true" :allowSorting='true' :allowFiltering='true' :allowGrouping='true' :pageSettings='pageSettings'>
@@ -19,10 +17,12 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridComponent, ColumnDirective, ColumnsDirective, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, ColumnDirective, ColumnsDirective, Page, Sort, Filter, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { createApp } from "vue";
+const app = createApp();
 export default {
+name: "App",
   components: {
     'ejs-grid': GridComponent,
     'e-column': ColumnDirective,
@@ -43,7 +43,7 @@ export default {
       ],
       pageSettings: { pageSize: 5 },
       footerSum: function () {
-        return  { template : Vue.component('sumTemplate', {
+        return  { template : app.component('sumTemplate', {
             template: `<span>Sum: {{data.Sum}}</span>`,
             data () {return { data: {}};}
             })
@@ -67,5 +67,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

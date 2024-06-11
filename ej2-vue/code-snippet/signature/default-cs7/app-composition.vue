@@ -1,8 +1,8 @@
 <template>
-<div class='wrap'>
-    <h4>Sign here</h4>
-    <ejs-signature id="signature"></ejs-signature>
-</div>
+    <div class='wrap'>
+        <h4>Sign here</h4>
+        <ejs-signature id="signature"></ejs-signature>
+    </div>
 </template>
 
 <script setup>
@@ -10,6 +10,7 @@ import { SignatureComponent as EjsSignature } from '@syncfusion/ej2-vue-inputs';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
+
 </script>
 
 <style>

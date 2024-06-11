@@ -99,20 +99,23 @@ Import and register the TextArea component in the `script` section of the **src/
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
 
 <script setup>
 import { TextAreaComponent as EjsTextArea } from "@syncfusion/ej2-vue-inputs";
 </script>
 
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
 import { TextAreaComponent } from "@syncfusion/ej2-vue-inputs";
 export default {
-  components: {
-    'ejs-textarea': TextAreaComponent
-  }
+name: "App",
+components: {
+"ejs-textarea':":TextareaComponent
+}
 }
 </script>
 
@@ -172,8 +175,8 @@ To set the initial value of the TextArea component, you can utilize the [`value`
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
+<script setup>
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
@@ -207,8 +210,8 @@ export default {
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
+<script setup>
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
@@ -245,8 +248,8 @@ export default {
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
+<script setup>
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {
@@ -288,8 +291,8 @@ export default {
     </div>
 </template>
 
-<script>
-import Vue from 'vue';
+<script setup>
+
 import { TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 
 export default {

@@ -44,7 +44,10 @@ btnClick(args) {
 In the below demo, the button click will enable/disable the Grid and its actions.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-cs45/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/edit/default-cs45/app.vue %}
 {% endhighlight %}
 {% endtabs %}

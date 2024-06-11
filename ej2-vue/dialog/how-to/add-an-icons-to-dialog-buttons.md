@@ -15,7 +15,10 @@ You can add icons to the dialog buttons using the [buttons](https://ej2.syncfusi
 In the following sample, dialog footer buttons are customized with icons using `buttons` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/template-buttons-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/template-buttons-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ In the following sample, dialog footer buttons are customized with icons using `
 In the following sample, dialog footer buttons are customized with icons using `footerTemplate` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/template-footer-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/template-footer-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

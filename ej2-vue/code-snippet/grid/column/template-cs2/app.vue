@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-grid ref="grid" :dataSource="data" height=315>
@@ -10,7 +8,7 @@
           </e-columns>
           <template v-slot:columnTemplate="{data}">
             <div>
-              <ejs-button class="empData" v-on:click.native="showDetails(data)">View</ejs-button>
+              <ejs-button class="empData" v-on:click="showDetails(data)">View</ejs-button>
               <ejs-dialog ref="dialog" :visible="false" width="50%" showCloseIcon="true" :beforeOpen="contentShow" :header="header">
               </ejs-dialog>
             </div>
@@ -19,17 +17,20 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, RecordClickEventArgs } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(GridPlugin);
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
-
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent
+},
   data: () => {
     return {
       data: employeeData,
@@ -63,5 +64,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-
-

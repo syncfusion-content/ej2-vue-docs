@@ -1,22 +1,21 @@
-
-
 <template>
   <div id='app'>
     <div id='container'>
       <ejs-schedule ref='scheduleObj' :height='height' :selectedDate='selectedData' :eventSettings='eventSettings'
         :views='views'>
-          <e-resources>
-            <e-resource field="OwnerId" title="Owners" :dataSource="resourceDataSource" :query='resourceQuery' :allowMultiple="allowMultiple" name="Owners"
-              textField="OwnerText" idField="OwnerId" colorField='Color'>
-            </e-resource>
-          </e-resources>
+        <e-resources>
+          <e-resource field="OwnerId" title="Owners" :dataSource="resourceDataSource" :query='resourceQuery'
+            :allowMultiple="allowMultiple" name="Owners" textField="OwnerText" idField="OwnerId" colorField='Color'>
+          </e-resource>
+        </e-resources>
         <e-toolbaritems>
           <e-toolbaritem name='Previous' align='Left'></e-toolbaritem>
           <e-toolbaritem name='Next' align='Left'></e-toolbaritem>
           <e-toolbaritem name='DateRangeText' align='Left'></e-toolbaritem>
           <e-toolbaritem :template="'Template'">
             <template v-slot:Template>
-              <ejs-dropdownlist id='dropdownlist' :value="dropdownvalue" :change="onResourceChange" width="125px" :showClearButton=false :dataSource='resourceDataSource' :fields='fields'></ejs-dropdownlist>
+              <ejs-dropdownlist id='dropdownlist' :value="dropdownvalue" :change="onResourceChange" width="125px"
+                :showClearButton=false :dataSource='resourceDataSource' :fields='fields'></ejs-dropdownlist>
             </template>
           </e-toolbaritem>
           <e-toolbaritem name='Today' align='Right'></e-toolbaritem>
@@ -26,13 +25,13 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
 import { ScheduleComponent, Month, ToolbarItemsDirective, ToolbarItemDirective, ResourceDirective, ResourcesDirective } from '@syncfusion/ej2-vue-schedule';
 import { scheduleData } from './datasource.js';
 import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
-import {Predicate, Query } from '@syncfusion/ej2-data';
+import { Predicate, Query } from '@syncfusion/ej2-data';
 
 export default {
+  name: "App",
   components: {
     'ejs-schedule': ScheduleComponent,
     'e-resource': ResourceDirective,
@@ -41,7 +40,6 @@ export default {
     'e-toolbaritem': ToolbarItemDirective,
     'ejs-dropdownlist': DropDownListComponent
   },
-
   data() {
     return {
       height: '550px',
@@ -78,12 +76,12 @@ export default {
 }
 </script>
 <style>
-@import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
 </style>

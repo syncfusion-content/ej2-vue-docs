@@ -27,7 +27,10 @@ The card header is achieved by mapping the `headerField` property, which is plac
 In the following demo, the `showHeader` property is disabled on Kanban board.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/card-header-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/card-header-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ To learn about Kanban customize card using templates, you can check out this vid
 You can customize the default card layout using template as per your application needs. This can be achieved by template of the `cardSettings` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/card-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/card-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +73,10 @@ Kanban board allows to select single and multiple selection of cards when mouse 
 Select the multiple cards randomly using Ctrl + mouse click and select the multiple cards continuously using Shift + mouse click action on Kanban board. Set `Multiple` in `selectionType` to enable the multiple selection in a board.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/kanban/multiple-selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/kanban/multiple-selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

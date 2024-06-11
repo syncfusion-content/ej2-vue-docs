@@ -35,7 +35,10 @@ In the following example, **code**, **name**, and **countries** columns from hie
 and **text** fields, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/data-binding/hierarchical-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/data-binding/hierarchical-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +56,10 @@ To render the root level nodes, specify the parentID as null or no need to speci
 In the following example, **ID**, **pid**, **hasChild**, and **name** columns from self-referential data have been mapped to **ID** **parentID**, **hasChildren**, and **text** fields, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/data-binding/self-referential-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/data-binding/self-referential-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -94,7 +100,10 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 respectively for second level nodes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/data-binding/remote-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/data-binding/remote-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

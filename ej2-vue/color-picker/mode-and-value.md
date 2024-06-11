@@ -17,7 +17,10 @@ By default, the `Picker` area will be rendered at initial load. To render the Pa
 In the following sample, it will render the `Palette` at initial load.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The [`value`](https://ej2.syncfusion.com/vue/documentation/api/color-picker/#val
 In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/color-picker/default-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/color-picker/default-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

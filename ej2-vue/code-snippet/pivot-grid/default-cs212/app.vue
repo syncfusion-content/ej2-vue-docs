@@ -1,22 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :dataBound="ondataBound"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" :dataSourceSettings="dataSourceSettings" :height="height" :dataBound="ondataBound">
+    </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -31,17 +28,13 @@ export default {
     }
   },
   methods: {
-    ondataBound: function() {
-     let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
-     pivotGridObj.grid.autoFitColumns();
+    ondataBound: function () {
+      let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
+      pivotGridObj.grid.autoFitColumns();
     }
   },
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

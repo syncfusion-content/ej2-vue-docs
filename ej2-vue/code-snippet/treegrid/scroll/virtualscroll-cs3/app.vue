@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource="virtualData" :enableInfiniteScrolling='true' :treeColumnIndex='1' childMapping='Crew' :height=317 :pageSettings='pageSettings' :infiniteScrollSettings='infiniteScrollSettings'>
@@ -15,15 +13,19 @@
 </template>
 <script>
 
-import Vue from "vue";
-import { TreeGridPlugin, InfiniteScroll, TreeGridComponent, Page } from "@syncfusion/ej2-vue-treegrid";
-import { DataManager, JsonAdaptor } from '@syncfusion/ej2-data';
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { TreeGridComponent, InfiniteScroll, Page, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { dataSource, virtualData } from './datasource.js';
 
-Vue.use(TreeGridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data: function() {
     return {
         virtualData: dataSource(),
@@ -36,6 +38,3 @@ export default {
   }
 }
 </script>
-
-
-

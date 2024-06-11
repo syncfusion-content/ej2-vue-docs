@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-kanban id="kanban" keyField="ContactTitle" :dataSource="kanbanData"
@@ -14,12 +12,17 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { DataManager, ODataV4Adaptor } from "@syncfusion/ej2-data";
-import { extend } from '@syncfusion/ej2-base';
-Vue.use(KanbanPlugin);
+
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     let SERVICE_URI = "https://services.odata.org/v4/northwind/northwind.svc/Suppliers";
     return {
@@ -27,7 +30,7 @@ export default {
             url: SERVICE_URI,
             adaptor: new ODataV4Adaptor(),
             crossDomain: true
-        });
+        }),
         cardSettings: {
             contentField: "ContactName",
             headerField: "SupplierID",
@@ -51,6 +54,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-kanban/styles/material.css';
 </style>
-
-
-

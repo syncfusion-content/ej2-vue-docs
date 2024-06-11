@@ -1,9 +1,6 @@
-
-
-
 <template>
     <div id="app">
-        <ejs-grid id="Grid" v-on:click.native="click" ref="grid" :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
+        <ejs-grid id="Grid" v-on:click="click" ref="grid" :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' width=100></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
@@ -14,13 +11,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -30,10 +30,10 @@ export default {
   },
   methods: {
     click(event) {
-      if((event.target as any).classList.contains("e-rowcell")){
-          let index: number = parseInt((event.target as any).getAttribute("Index"));
-          let colindex:number = parseInt((event.target as any).getAttribute("aria-colindex"));
-          let field:string = this.$refs.grid.ej2Instances.getColumns()[colindex].field;
+      if((event.target).classList.contains("e-rowcell")){
+          let index = parseInt((event.target).getAttribute("Index"));
+          let colindex = parseInt((event.target).getAttribute("aria-colindex"));
+          let field = this.$refs.grid.ej2Instances.getColumns()[colindex].field;
           this.$refs.grid.ej2Instances.editModule.editCell(index, field);
       }
     }
@@ -46,6 +46,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
 <ejs-button>Button</ejs-button>
 </template>
@@ -20,5 +18,3 @@ button {
   margin: 25px 5px 20px 20px;
 }
 </style>
-
-

@@ -1,8 +1,8 @@
-
-
 <template>
-  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarSettings" :fontFamily="fontFamily" :fontSize="fontSize">
-    <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>
+  <ejs-richtexteditor ref="defaultRTE" :height="340" :toolbarSettings="toolbarSettings" :fontFamily="fontFamily"
+    :fontSize="fontSize">
+    <p>The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor that provides the best user
+      experience to create and update the content. Users can format their content using standard toolbar commands.</p>
     <p><b>Key features:</b></p>
     <ul>
       <li>
@@ -34,29 +34,29 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
-    data() {
-      return {
-        toolbarSettings: {
-          items: ['FontName', 'FontSize']
-        },
-        fontFamily: {
-          width: '60px'
-        },
-        fontSize: {
-          width: '40px'
-        }
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+export default {
+  name: "App",
+  components: {
+    "ejs-richtexteditor": RichTextEditorComponent
+  },
+  data() {
+    return {
+      toolbarSettings: {
+        items: ['FontName', 'FontSize']
+      },
+      fontFamily: {
+        width: '60px'
+      },
+      fontSize: {
+        width: '40px'
       }
-    },
-    provide: {
-      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
     }
+  },
+  provide: {
+    richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
   }
+}
 </script>
 
 <style>
@@ -67,7 +67,4 @@
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-</style>
-
-
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";</style>

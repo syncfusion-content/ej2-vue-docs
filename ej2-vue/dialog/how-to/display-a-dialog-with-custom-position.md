@@ -15,7 +15,10 @@ By default, the dialog is displayed in the center of the target container. The d
 The dialog can be positioned inside the target based on the given X and Y values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/dlg-position-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/dlg-position-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

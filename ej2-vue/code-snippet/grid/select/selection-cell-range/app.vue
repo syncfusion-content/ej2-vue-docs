@@ -15,7 +15,7 @@
       <div style="padding-top: 10px">
         <label style="padding: 30px 19px 0 0px">Enter the end column index: </label>
         <ejs-textbox ref="textbox3" required width="120"></ejs-textbox>
-        <ejs-button id="button" @click.native="onClick">Select range of Cell</ejs-button >
+        <ejs-button id="button" @click="onClick">Select range of Cell</ejs-button >
       </div>
       <div style="padding: 20px 0px 0px 0px">
         <ejs-grid ref="grid" :dataSource="data" :selectionSettings="selectionOptions">
@@ -32,16 +32,19 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { TextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { data } from "./datasource.js";
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(TextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-textbox":TextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

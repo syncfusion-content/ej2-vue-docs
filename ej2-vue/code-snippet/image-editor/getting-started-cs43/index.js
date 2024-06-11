@@ -21,13 +21,6 @@ new Vue({
       };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
     btnClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
       this.$refs.imageEditorObj.ej2Instances.drawImage('flower.png', dimension.x, dimension.y, 100, 80, true, 0);

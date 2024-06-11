@@ -1,5 +1,3 @@
-
-
 <template>
    <div>
     <div class="content-wrapper">
@@ -21,13 +19,15 @@
 import { LinearGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective } from "@syncfusion/ej2-vue-lineargauge";
 
 export default {
-    components: {
-        'ejs-lineargauge': LinearGaugeComponent,
-        'e-axes': AxesDirective,
-        'e-axis': AxisDirective,
-        'e-pointer': PointerDirective,
-        'e-pointers': PointersDirective
-    }
+name: "App",
+components: {
+"ejs-lineargauge":LinearGaugeComponent,
+"e-axes":AxesDirective,
+"e-axis":AxisDirective,
+"e-pointers":PointersDirective,
+"e-pointer":PointerDirective
+},
+
 };
 </script>
 <style>
@@ -35,5 +35,3 @@ export default {
     padding: 0px !important;
 }
 </style>
-
-

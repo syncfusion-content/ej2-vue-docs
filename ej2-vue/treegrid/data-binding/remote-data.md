@@ -30,12 +30,127 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 >Remote Data Binding supports only Self-Referential Data and by default the `pageSizeMode` for Remote Data is `Root` mode. i.e only root node’s count will be shown in pager while using Remote Data
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/treegrid/data-binding/default-cs4" %}
+
+**Service code snippet:**
+
+```ts
+
+namespace Controllers
+{
+    [Produces("application/json")]
+    [Route("api/SelfReferenceData")]
+    public class SelfReferenceDataController : Controller
+    {
+        public static List<SelfReferenceData> tree = new List<SelfReferenceData>();
+        // GET: api/SelfReferenceData
+        [HttpGet]
+
+        public object Get()
+        {
+            var queryString = Request.Query;
+            if (tree.Count == 0)
+                tree = SelfReferenceData.GetTree();
+            //Filtering
+            if (queryString.Keys.Contains("$filter") && !queryString.Keys.Contains("$top"))
+            {
+                StringValues filter;
+                queryString.TryGetValue("$filter", out filter);
+                int fltr = Int32.Parse(filter[0].ToString().Split("eq")[1]);
+                IQueryable<SelfReferenceData> data1 = tree.Where(f => f.ParentItem == fltr).AsQueryable();
+                return new { result = data1.ToList(), count = data1.Count() };
+            }
+            List<SelfReferenceData> data = tree.ToList();
+            if (queryString.Keys.Contains("$select"))
+            {
+                data = (from ord in tree
+                        select new SelfReferenceData
+                        {
+                            ParentItem = ord.ParentItem
+                        }
+                        ).ToList();
+                return data;
+            }
+            data = data.Where(p => p.ParentItem == null).ToList();
+            int count = data.Count;
+             //Paging
+            if (queryString.Keys.Contains("$inlinecount"))
+            {
+                StringValues Skip;
+                StringValues Take;
+                
+                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
+       
+                return new { result = tree.Skip(skip).Take(top), count = tree.Count };
+            }
+            else
+            {
+                return SelfReferenceData.GetTree();
+            }
+                public class SelfReferenceData
+        {
+
+            [Key]
+            public int TaskID { get; set; }
+            public string TaskName { get; set; }
+            public DateTime StartDate { get; set; }
+            public DateTime EndDate { get; set; }
+            public String Progress { get; set; }
+            public String Priority { get; set; }
+            public int Duration { get; set; }
+            public int? ParentItem { get; set; }
+            public bool? isParent { get; set; }
+            public SelfReferenceData() { }
+            public static List<SelfReferenceData> GetTree()
+            {
+                if (tree.Count == 0)
+                {
+                    int root = -1;
+                    for (var t = 1; t <= 60; t++)
+                    {
+                        Random ran = new Random();
+                        string math = (ran.Next() % 3) == 0 ? "High" : (ran.Next() % 2) == 0 ? "Release Breaker" : "Critical";
+                        string progr = (ran.Next() % 3) == 0 ? "Started" : (ran.Next() % 2) == 0 ? "Open" : "In Progress";
+                        root++;
+                        int rootItem = tree.Count + root + 1;
+                        tree.Add(new SelfReferenceData() { TaskID = rootItem, TaskName = "Parent Task " + rootItem.ToString(), StartDate = new DateTime(1992, 06, 07), EndDate = new DateTime(1994, 08, 25), isParent = true, ParentItem = null, Progress = progr, Priority = math, Duration = ran.Next(1, 50) });
+                        int parent = tree.Count;
+                        for (var c = 0; c < 10; c++)
+                        {
+                            root++;
+                            string val = ((parent + c + 1) % 3 == 0) ? "Low" : "Critical";
+                            int parn = parent + c + 1;
+                            progr = (ran.Next() % 3) == 0 ? "In Progress" : (ran.Next() % 2) == 0 ? "Open" : "Validated";
+                            int iD = tree.Count + root + 1;
+                            tree.Add(new SelfReferenceData() { TaskID = iD, TaskName = "Child Task " + iD.ToString(), StartDate = new DateTime(1992, 06, 07), EndDate = new DateTime(1994, 08, 25), isParent = (((parent + c + 1) % 3) == 0), ParentItem = rootItem, Progress = progr, Priority = val, Duration = ran.Next(1, 50) });
+                            if ((((parent + c + 1) % 3) == 0))
+                            {
+                                int immParent = tree.Count;
+                                for (var s = 0; s < 3; s++)
+                                {
+                                    root++;
+                                    string Prior = (immParent % 2 == 0) ? "Validated" : "Normal";
+                                    tree.Add(new SelfReferenceData() { TaskID = tree.Count + root + 1, TaskName = "Sub Task " + (tree.Count + root + 1).ToString(), StartDate = new DateTime(1992, 06, 07), EndDate = new DateTime(1994, 08, 25), isParent = false, ParentItem = iD, Progress = (immParent % 2 == 0) ? "On Progress" : "Closed", Priority = Prior, Duration = ran.Next(1, 50) });
+                                }
+                            }
+                        }
+                    }
+                }
+                return tree;
+            }
+        }
+    }
+
+```
 
 > By default, `DataManager` uses `ODataAdaptor` for remote data-binding.
 > Based on the RESTful web services, set the corresponding adaptor to DataManager. Refer [`here`](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
@@ -62,12 +177,13 @@ The following code example describes the behavior of the loadChildOnDemand featu
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, Page } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, Page } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -83,9 +199,7 @@ export default {
       })
     };
   },
-    provide: {
-    treegrid: [ Page ]
-  }
+    provide('treegrid',  [ Page ]);
 }
 
 </script>
@@ -167,7 +281,10 @@ public ActionResult UrlDatasource(DataManagerRequest dm)
 On remote data binding, all treegrid actions such as paging, loading child on-demand, will be processed on server-side. To avoid postback, set the treegrid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `offline` property of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -179,7 +296,10 @@ On remote data binding, all treegrid actions such as paging, loading child on-de
 You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the `processResponse` method of the `WebApiAdaptor`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -191,7 +311,10 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 To add a custom parameter to the data request, use the `addParams` method of `Query` class. Assign the `Query` object with additional parameters to the treegrid [`query`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#query) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +328,10 @@ During server interaction from the treegrid, some server-side exceptions may occ
 The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/treegrid#actionfailure) event contains the error details returned from the server.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/data-binding/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/data-binding/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -232,12 +358,13 @@ When using virtualization with remote data binding, it helps you to improve the 
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -254,9 +381,7 @@ export default {
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     };
   },
-    provide: {
-    treegrid: [ Sort, VirtualScroll, Filter, Edit, Toolbar ]
-  }
+    provide('treegrid',  [ Sort, VirtualScroll, Filter, Edit, Toolbar ]);
 }
 
 </script>
@@ -562,12 +687,13 @@ When using virtualization with `loadChildOnDemand` , it helps you to improve the
         </ejs-treegrid>
 </div>
 </template>
-<script>
-import Vue from "vue";
-import { TreeGridPlugin, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
+<script setup>
+import { provide } from "vue";
+
+import { TreeGridComponent, VirtualScroll, Sort, Filter, Edit } from "@syncfusion/ej2-vue-treegrid";
 import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
-Vue.use(TreeGridPlugin);
+
 
 
 export default {
@@ -584,9 +710,7 @@ export default {
       toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
     };
   },
-    provide: {
-    treegrid: [ Sort, VirtualScroll, Filter, Edit, Toolbar ]
-  }
+    provide('treegrid',  [ Sort, VirtualScroll, Filter, Edit, Toolbar ]);
 }
 
 </script>

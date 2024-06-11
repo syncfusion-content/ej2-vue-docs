@@ -15,7 +15,10 @@ Switch component has RTL support. This can be achieved by setting [`enableRtl`](
 The following example illustrates how to enable right-to-left support in Switch component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/switch/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/switch/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

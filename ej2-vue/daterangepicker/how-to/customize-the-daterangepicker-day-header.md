@@ -22,7 +22,10 @@ You can find the possible formats on below.
 | `Wide` | Sets the long format of day name (like Sunday ) in day header. |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/daterangepicker/header-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/daterangepicker/header-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

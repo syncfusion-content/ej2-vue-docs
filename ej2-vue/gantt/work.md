@@ -17,7 +17,10 @@ The work is the total hours required to complete a task. Work can be mapped from
 >Note: When the work field is mapped from the data source, the default task type will be `FixedWork`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/work-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/work-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ The work, duration and resource unit fields of a task depends upon each other an
 * `FixedUnit` - Resource units will remain constant while updating duration or work field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/work-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/work-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

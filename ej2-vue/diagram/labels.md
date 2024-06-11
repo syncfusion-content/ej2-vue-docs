@@ -16,10 +16,19 @@ domainurl: ##DomainURL##
 
 ## Create annotation
 
-An annotation can be added to a node/connector by defining the annotation object and adding that to the annotation collection of the node/connector. The [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#content-string) property of annotation defines the text to be displayed. The following code illustrates how to create a annotation.
+An annotation can be added to a node/connector by defining the annotation object and adding that to the annotation collection of the node/connector. The [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#content-string) property of annotation defines the text to be displayed. 
+
+To create and add annotation to Nodes and Connectors using the EJ2 Vue Diagram, refer to the below video link,
+
+{% youtube "youtube:https://www.youtube.com/embed/4pAKBu0hKd0" %}
+
+The following code illustrates how to create a annotation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Annotation-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Annotation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +42,10 @@ An annotation can be added to a node/connector by defining the annotation object
 * The annotation's [`ID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#id-string) property is used to define the name of the annotation and its further used to find the annotation at runtime and do any customization.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Run-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Run-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +57,10 @@ An annotation can be added to a node/connector by defining the annotation object
 A collection of annotations can be removed from the node by using client-side method [`removeLabels`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#removelabels). The following code illustrates how to remove a annotation to a node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Update-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Update-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +74,10 @@ You can change any annotation properties at runtime and update it through the cl
 The following code example illustrates how to change the annotation properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Update-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Update-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +97,10 @@ Set the size for a nodes annotation by using [`width`](https://ej2.syncfusion.co
 The following code shows the relationship between the annotation position (black color circle) and offset (fraction values).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Update-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Update-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +128,10 @@ The following tables illustrates all the possible alignments visually with 'offs
 The following codes illustrates how to align annotations.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Alignment-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Alignment-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +145,10 @@ The offset and alignment properties of annotation allows you to align the connec
 The following code example illustrates how to align connector annotations.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Segment-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Segment-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -135,7 +162,10 @@ The following code example illustrates how to align connector annotations.
 The following code example illustrates how to align a annotation based on its `offset`, `horizontalAlignment`, `verticalAlignment`, and `margin` values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Margin-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Margin-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -147,7 +177,10 @@ The following code example illustrates how to align a annotation based on its `o
 The [`textAlign`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textStyleModel#textAlign-textalign) property of annotation allows you to set how the text should be aligned (left, right, center, or justify) inside the text block. The following codes illustrate how to set textAlign for an annotation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/TextAlign-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/TextAlign-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -161,7 +194,10 @@ Diagram provides a support to add a [`hyperlink`](https://ej2.syncfusion.com/vue
 A User can open the hyperlink in the new window, the same tab and the new tab by using the  [`hyperlinkOpenState`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel/#hyperLink-hyperlinkmodel)  property
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Link-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Link-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -175,7 +211,10 @@ Diagram provides template support for annotation. you should define a SVG/HTML c
 The following code illustrates how to define a template in node's annotation. similarly, you can define it in connectors.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/labeltemplate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/labeltemplate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -187,7 +226,10 @@ The following code illustrates how to define a template in node's annotation. si
 When text overflows node boundaries, you can control it by using [`text wrapping`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textStyleModel#textWrapping-textwrap). So, it is wrapped into multiple lines. The wrapping property of annotation defines how the text should be wrapped. The following code illustrates how to wrap a text in a node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Wrap-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Wrap-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -205,7 +247,10 @@ When text overflows node boundaries, you can control it by using [`text wrapping
 The label’s [`TextOverflow`](https://ej2.syncfusion.com/vue/documentation/api/diagram/textStyleModel#textOverFlow-textoverflow) property is used control whether to display the overflowed content in node or not.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Overflow-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Overflow-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -223,7 +268,10 @@ The label’s [`TextOverflow`](https://ej2.syncfusion.com/vue/documentation/api/
 * The [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#visibility-number) property of the annotation enables or disables the visibility of annotation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Appear-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Appear-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -233,7 +281,10 @@ The label’s [`TextOverflow`](https://ej2.syncfusion.com/vue/documentation/api/
 The fill, border, and opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code illustrates how to customize background, opacity, and border of the annotation.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Opacity-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Opacity-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -245,7 +296,10 @@ The fill, border, and opacity appearances of the text can also be customized wit
 Diagram allows annotation to be interacted by selecting, dragging, rotating, and resizing. Annotation interaction is disabled, by default. You can enable annotation interaction with the [`constraints`](./constraints#annotation-constraints) property of annotation. You can also curtail the services of interaction by enabling either selecting, dragging, rotating, or resizing individually with the respective constraints property of annotation. The following code illustrates how to enable annotation interaction.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Interaction-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Interaction-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -272,7 +326,10 @@ When you double-click on the node/connector/diagram model, the [`doubleClick`](h
 Diagram allows to create read-only annotations. You have to set the read-only property of annotation to enable/disable the read-only [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationModel#constraints-annotationconstraints). The following code illustrates how to enable read-only mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Read-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Read-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -290,7 +347,10 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 * The following code illustrates how to set a dragLimit for connector annotations.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Interaction-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Interaction-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -302,7 +362,10 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 You can add any number of annotations to a node or connector. The following code illustrates how to add multiple annotations to a node.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/Multiple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/labels/Multiple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

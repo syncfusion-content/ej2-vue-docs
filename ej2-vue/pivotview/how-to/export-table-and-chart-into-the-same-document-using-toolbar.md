@@ -17,7 +17,10 @@ Even if the [displayOption.view](https://ej2.syncfusion.com/vue/documentation/ap
 In the following example, the built-in export action can be restricted by setting the [`args.cancel`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/pivotActionBeginEventArgs/#cancel) option to **true** in the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#actionbegin) event, and both the table and the chart can be exported by calling the [`pdfExport`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#pdfexport) method and setting the `exportBothTableAndChart` argument to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs265/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs265/app.vue %}
 {% endhighlight %}
 {% endtabs %}

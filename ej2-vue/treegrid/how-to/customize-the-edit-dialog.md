@@ -15,7 +15,10 @@ You can customize the appearance of the edit dialog in the [`actionComplete`](ht
 In the below example, we have changed the dialog's header text for editing and adding records.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/how-to/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/how-to/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

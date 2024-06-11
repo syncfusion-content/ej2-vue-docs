@@ -1,12 +1,5 @@
-
-
 <template>
-  <ejs-spreadsheet
-    ref="spreadsheet"
-    :created="created"
-    :showRibbon="false"
-    :showSheetTabs="false"
-  >
+  <ejs-spreadsheet ref="spreadsheet" :created="created" :showRibbon="false" :showSheetTabs="false">
     <e-sheets>
       <e-sheet>
         <e-ranges>
@@ -38,22 +31,14 @@
           </e-row>
           <e-row>
             <e-cells>
-              <e-cell
-                :index="1"
-                value="Number of Categories"
-                :colSpan="2"
-              ></e-cell>
+              <e-cell :index="1" value="Number of Categories" :colSpan="2"></e-cell>
               <e-cell index="3" formula="=COUNTA(A3:A11)"></e-cell>
             </e-cells>
           </e-row>
           <e-row>
             <e-cells>
               <e-cell :index="1" value="Average Spend" :colSpan="2"></e-cell>
-              <e-cell
-                index="3"
-                formula="=AVERAGE(B3:B11)"
-                format="$#,##0"
-              ></e-cell>
+              <e-cell index="3" formula="=AVERAGE(B3:B11)" format="$#,##0"></e-cell>
             </e-cells>
           </e-row>
           <e-row>
@@ -75,11 +60,25 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent, ColumnsDirective, ColumnDirective, RowsDirective, RowDirective, CellsDirective, CellDirective, RangesDirective, RangeDirective, SheetsDirective, SheetDirective } from "@syncfusion/ej2-vue-spreadsheet";
 import { data } from './data.js';
-Vue.use(SpreadsheetPlugin);
+
 export default {
+  name: "App",
+  components: {
+    "ejs-spreadsheet": SpreadsheetComponent,
+    "e-sheets": SheetsDirective,
+    "e-sheet": SheetDirective,
+    "e-ranges": RangesDirective,
+    "e-range": RangeDirective,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective,
+    "e-rows": RowsDirective,
+    "e-row": RowDirective,
+    "e-cells": CellsDirective,
+    "e-cell": CellDirective,
+    "e-cell": CellDirective
+  },
   data: () => {
     return {
       dataSource: data,
@@ -97,7 +96,7 @@ export default {
     },
 
     created: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.cellFormat(
         { fontWeight: "bold", textAlign: "center" },
         "A2:F2"
@@ -113,11 +112,10 @@ export default {
       // Calculate round down for average values using custom added formula in F12 cell.
       spreadsheet.updateCell({ formula: "=ROUNDDOWN(F11,1)" }, "F12");
     },
-  },
+  }
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
@@ -126,7 +124,5 @@ export default {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 </style>
-
-

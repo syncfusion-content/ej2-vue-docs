@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid ref='grid' :dataSource='data' :allowFiltering='true' :filterSettings='filterSettings' height='273px'>
@@ -13,20 +11,21 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Filter } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Filter } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 import { MultiSelect, CheckBoxSelection } from "@syncfusion/ej2-dropdowns";
 import { DataManager } from "@syncfusion/ej2-data";
 import {createElement} from "@syncfusion/ej2-base";
-import { MultiSelectPlugin } from "@syncfusion/ej2-vue-dropdowns";
+import { MultiSelectComponent } from "@syncfusion/ej2-vue-dropdowns";
 MultiSelect.Inject(CheckBoxSelection);
-
-Vue.use(MultiSelectPlugin);
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
       let dropInstance = null;
     return {
@@ -83,5 +82,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

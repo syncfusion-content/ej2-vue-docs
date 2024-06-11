@@ -42,7 +42,10 @@ The following example demonstrates how to prevent Gantt columns from persisting.
 >Note: When the `enablePersistence` property is set to true, the Gantt features such as column template, column formatter, header text, and value accessor will not persist.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/column-prevent-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/column-prevent-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +59,10 @@ By default, the Gantt properties such as column template, header text, header te
 If you wish to restore all these column properties, then you can achieve it by cloning the gantt columns property using JavaScript Object’s assign method and storing this along with the persist data manually. While restoring the settings, this column object must be assigned to the gantt’s columns property to restore the column settings as demonstrated in the following sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/column-persist-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/column-persist-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

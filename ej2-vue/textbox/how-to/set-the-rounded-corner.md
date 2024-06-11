@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Render the TextBox with `rounded corner` by adding the `e-corner` class to the input parent element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/textbox/round-corner-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/textbox/round-corner-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

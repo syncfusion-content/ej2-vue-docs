@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='app'>
     <div class="e-btn-group e-vertical">
@@ -12,7 +9,6 @@
 </template>
 <script>
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-
 export default {
   components: {
     'ejs-button': ButtonComponent
@@ -32,6 +28,3 @@ export default {
     margin: 25px 5px 20px 20px;
   }
 </style>
-
-
-

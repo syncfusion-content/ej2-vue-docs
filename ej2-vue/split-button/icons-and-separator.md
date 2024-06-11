@@ -17,7 +17,10 @@ SplitButton can have an icon to provide the visual representation of the action.
 In the following example, the SplitButton with default iconPosition and `iconPosition` as `Top` is showcased:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ Vertical Button in SplitButton can be achieved by adding `e-vertical` class usin
 The following example illustrates how to provide vertical support in SplitButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ The Separators are the horizontal lines that are used to separate the popup item
 The following example illustrates how to enable separator support in SplitButton component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/split-button/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/split-button/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

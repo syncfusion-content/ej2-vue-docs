@@ -17,7 +17,10 @@ The cellTemplate property accepts either an HTML string or the element's ID, whi
 In this demo, the revenue cost for each year is represented with trend icons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/renewableEnergy-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/renewableEnergy-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

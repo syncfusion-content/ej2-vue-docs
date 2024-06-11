@@ -15,7 +15,10 @@ In this article, we are going to see how to open a document in read only mode by
 ## How to open a document in read only mode by default in DocumentEditor
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/getting-started-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/getting-started-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ In this article, we are going to see how to open a document in read only mode by
 ## How to open a document in ready only mode by default in DocumentEditorContainer
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/document-editor/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/document-editor/getting-started-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

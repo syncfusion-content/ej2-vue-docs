@@ -38,10 +38,10 @@ The [tabSelected](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -96,10 +96,10 @@ The [tabSelecting](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -155,10 +155,10 @@ The [ribbonCollapsing](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -214,10 +214,10 @@ The [ribbonExpanding](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ri
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -273,10 +273,10 @@ The [launcherIconClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -334,10 +334,10 @@ The [clicked](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -394,10 +394,10 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonButt
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () { 
@@ -456,10 +456,10 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCheck
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -516,10 +516,10 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonChec
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -578,15 +578,14 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColor
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -640,15 +639,14 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -702,15 +700,14 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColorPi
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -764,15 +761,14 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonColor
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -826,15 +822,14 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -888,15 +883,14 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonC
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -950,15 +944,14 @@ The [beforeTileRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonColorPicker } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [ RibbonColorPicker ]
-    },
+    provide('ribbon',  [ RibbonColorPicker ]);,
     data: function () {
       return {
         colorPicker: {
@@ -1014,10 +1007,10 @@ The [change](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCombo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1074,10 +1067,10 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboB
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1134,10 +1127,10 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComboBo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1194,10 +1187,10 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonComb
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1254,10 +1247,10 @@ The [filtering](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1314,10 +1307,10 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonCombo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1374,10 +1367,10 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonC
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1436,10 +1429,10 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1497,10 +1490,10 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonD
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1558,10 +1551,10 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1619,10 +1612,10 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDow
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1680,10 +1673,10 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropDo
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1741,10 +1734,10 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDrop
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1802,10 +1795,10 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonDropD
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1865,10 +1858,10 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1926,10 +1919,10 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonS
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -1987,10 +1980,10 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2048,10 +2041,10 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitBu
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2109,10 +2102,10 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2170,10 +2163,10 @@ The [created](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSpli
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2231,10 +2224,10 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplit
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2292,10 +2285,10 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonSplitB
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2355,10 +2348,10 @@ The [beforeClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbon
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonGroupButtonSelection, RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonItemSize, RibbonGroupButtonSelection, RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2428,10 +2421,10 @@ The [click](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGroupB
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonItemSize, RibbonGroupButtonSelection , RibbonPlugin } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+  
+  import { RibbonItemSize, RibbonGroupButtonSelection , RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
     data: function () {
@@ -2503,15 +2496,14 @@ The [beforeClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMe
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonFileMenu]
-    },
+    provide('ribbon',  [RibbonFileMenu]);,
     data: function () {
       return {
         fileSettings: {
@@ -2575,15 +2567,14 @@ The [beforeOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMen
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonFileMenu]
-    },
+    provide('ribbon',  [RibbonFileMenu]);,
     data: function () {
       return {
         fileSettings: {
@@ -2647,15 +2638,14 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/f
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonFileMenu]
-    },
+    provide('ribbon',  [RibbonFileMenu]);,
     data: function () {
       return {
         fileSettings: {
@@ -2719,15 +2709,14 @@ The [open](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSetti
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonFileMenu]
-    },
+    provide('ribbon',  [RibbonFileMenu]);,
     data: function () {
       return {
         fileSettings: {
@@ -2791,15 +2780,14 @@ The [close](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSett
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonFileMenu]
-    },
+    provide('ribbon',  [RibbonFileMenu]);,
     data: function () {
       return {
         fileSettings: {
@@ -2863,15 +2851,14 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/fileMenuSet
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonFileMenu } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonFileMenu]
-    },
+    provide('ribbon',  [RibbonFileMenu]);,
     data: function () {
       return {
         fileSettings: {
@@ -2935,15 +2922,14 @@ The [backStageItemClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon
   </ejs-ribbon>
 </template>
 
-<script>
-  import Vue from "vue";
-  import { RibbonPlugin, RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
-  Vue.use(RibbonPlugin);
+<script setup>
+import { provide } from "vue";
+  
+  import { RibbonComponent, RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
+  
 
   export default {
-    provide: {
-      ribbon: [RibbonBackstage]
-    },
+    provide('ribbon',  [RibbonBackstage]);,
     data: function () {
       return {
         backstageSettings: {
@@ -2984,7 +2970,10 @@ The [backStageItemClick](https://ej2.syncfusion.com/vue/documentation/api/ribbon
 The [popupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#popupopen) event is triggered when the gallery popup opens.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/popupOpen/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/popupOpen/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -2996,7 +2985,10 @@ The [popupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 The [popupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#popupclose) event is triggered when the gallery popup closes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/popupClose/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/popupClose/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -3008,7 +3000,10 @@ The [popupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonG
 The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#itemhover) event is triggered when hover over the gallery item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/itemHover/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/itemHover/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -3020,7 +3015,10 @@ The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeitemrender) event is triggered while rendering each gallery item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/beforeItemRender/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/beforeItemRender/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -3032,7 +3030,10 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#beforeselect) event is triggered before selecting an item in the Ribbon gallery.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/beforeSelect/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/beforeSelect/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -3044,7 +3045,10 @@ The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
 The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGallerySettings/#select) event is triggered while selecting an item in the Ribbon gallery.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/ribbon/gallery-items/select/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/ribbon/gallery-items/select/app.vue %}
 {% endhighlight %}
 {% endtabs %}

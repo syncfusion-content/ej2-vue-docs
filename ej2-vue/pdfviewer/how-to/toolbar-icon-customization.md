@@ -21,63 +21,134 @@ PDF Viewer allows you to customize(add, show, hide, enable, and disable) existin
 * Enable, Disable -  Toolbar items can be enabled or disable using [`enabletoolbaritem`](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/toolbar/#enabletoolbaritem)
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad"
-            :resourceUrl="resourceUrl"
-            :toolbarClick="toolbarClick"
-            :OnCreateSearch="OnCreateSearch"
-            :toolbarSettings="toolbarSettings">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl"
+      :toolbarClick="toolbarClick" :OnCreateSearch="OnCreateSearch" :toolbarSettings="toolbarSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ComboBox } from "@syncfusion/ej2-dropdowns";
+import { TextBox } from "@syncfusion/ej2-inputs";
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+
+// Move the toolItem declaration inside the data function
+let toolItem1 = {
+  prefixIcon: 'e-icons e-paste',
+  id: 'print',
+  tooltipText: 'Custom toolbar item',
+  align: 'left'
+};
+let toolItem2 = {
+  id: 'download',
+  text: 'Save',
+  tooltipText: 'Custom toolbar item',
+  align: 'right'
+};
+let LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
+let toolItem3 = {
+  type: 'Input',
+  tooltipText: 'Language List',
+  cssClass: 'percentage',
+  align: 'Left',
+  id: 'dropdown',
+  template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
+};
+let toolItem4 = {
+  type: 'Input',
+  tooltipText: 'Text',
+  align: 'Right',
+  cssClass: 'find',
+  id: 'textbox',
+  template: new TextBox({ width: 125, placeholder: 'Type Here' })
+}
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib";
+const toolbarSettings = {
+  toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
+}
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
+
+const toolbarClick = function (args) {
+  if (args.item && args.item.id === 'print') {
+    pdfviewer.value.ej2Instances.printModule.print();
+  }
+  else if (args.item && args.item.id === 'download') {
+    pdfviewer.value.ej2Instances.download();
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath"
+      :resourceUrl="resourceUrl" :toolbarClick="toolbarClick" :OnCreateSearch="OnCreateSearch"
+      :toolbarSettings="toolbarSettings">
+    </ejs-pdfviewer>
+  </div>
 </template>
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 import { ComboBox } from "@syncfusion/ej2-dropdowns";
-import { TextBox } from "@syncfusion/ej2-inputs";         
-Vue.use(PdfViewerPlugin);
-var viewer;
+import { TextBox } from "@syncfusion/ej2-inputs";
+
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     // Move the toolItem declaration inside the data function
-    var toolItem1 = {
+    let toolItem1 = {
       prefixIcon: 'e-icons e-paste',
       id: 'print',
       tooltipText: 'Custom toolbar item',
       align: 'left'
     };
-    var toolItem2 = {
-    id: 'download',
-    text: 'Save',
-    tooltipText: 'Custom toolbar item',
-    align: 'right'
+    let toolItem2 = {
+      id: 'download',
+      text: 'Save',
+      tooltipText: 'Custom toolbar item',
+      align: 'right'
     };
-    var LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
-    var toolItem3 = {
-        type: 'Input',
-        tooltipText: 'Language List',
-        cssClass: 'percentage',
-        align: 'Left',
-        id: 'dropdown',
-        template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })  
+    let LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
+    let toolItem3 = {
+      type: 'Input',
+      tooltipText: 'Language List',
+      cssClass: 'percentage',
+      align: 'Left',
+      id: 'dropdown',
+      template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
     };
-    var toolItem4 = {
-        type: 'Input',
-        tooltipText: 'Text',
-        align: 'Right',
-        cssClass: 'find',
-        id: 'textbox',
-        template: new TextBox({ width: 125, placeholder: 'Type Here'})
+    let toolItem4 = {
+      type: 'Input',
+      tooltipText: 'Text',
+      align: 'Right',
+      cssClass: 'find',
+      id: 'textbox',
+      template: new TextBox({ width: 125, placeholder: 'Type Here' })
     }
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
@@ -87,85 +158,151 @@ export default {
       }
     };
   },
-
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
   },
-
   methods: {
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-    },
     toolbarClick: function (args) {
-        if (args.item && args.item.id === 'print') {
-          viewer.printModule.print();
-        }
-        else if (args.item && args.item.id === 'download') {
-          viewer.download();
-        }
+      if (args.item && args.item.id === 'print') {
+        this.$refs.pdfviewer.ej2Instances.printModule.print();
+      }
+      else if (args.item && args.item.id === 'download') {
+        this.$refs.pdfviewer.ej2Instances.download();
+      }
     },
   }
 }
 </script>
+
 {% endhighlight %}
-{% highlight html tabtitle="Server-Backed" %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
 
 <template>
-    <div id="app">
-        <ejs-pdfviewer
-            id="pdfViewer"
-            ref="pdfviewer"
-            :documentPath="documentPath"
-            :documentLoad="documentLoad"
-            :serviceUrl="serviceUrl"
-            :toolbarClick="toolbarClick"
-            :OnCreateSearch="OnCreateSearch"
-            :toolbarSettings="toolbarSettings">
-        </ejs-pdfviewer>
-    </div>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl"
+      :toolbarClick="toolbarClick" :OnCreateSearch="OnCreateSearch" :toolbarSettings="toolbarSettings">
+    </ejs-pdfviewer>
+  </div>
+</template>
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { ComboBox } from "@syncfusion/ej2-dropdowns";
+import { TextBox } from "@syncfusion/ej2-inputs";
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+
+// Move the toolItem declaration inside the data function
+let toolItem1 = {
+  prefixIcon: 'e-icons e-paste',
+  id: 'print',
+  tooltipText: 'Custom toolbar item',
+  align: 'left'
+};
+let toolItem2 = {
+  id: 'download',
+  text: 'Save',
+  tooltipText: 'Custom toolbar item',
+  align: 'right'
+};
+let LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
+let toolItem3 = {
+  type: 'Input',
+  tooltipText: 'Language List',
+  cssClass: 'percentage',
+  align: 'Left',
+  id: 'dropdown',
+  template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
+};
+let toolItem4 = {
+  type: 'Input',
+  tooltipText: 'Text',
+  align: 'Right',
+  cssClass: 'find',
+  id: 'textbox',
+  template: new TextBox({ width: 125, placeholder: 'Type Here' })
+}
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const toolbarSettings = {
+  toolbarItems: [toolItem1, toolItem2, 'OpenOption', 'PageNavigationTool', 'MagnificationTool', toolItem3, 'PanTool', 'SelectionTool', 'SearchOption', 'PrintOption', 'DownloadOption', 'UndoRedoTool', 'AnnotationEditTool', 'FormDesignerEditTool', toolItem4, 'CommentTool', 'SubmitForm']
+}
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+  Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]);
+
+const toolbarClick = function (args) {
+  if (args.item && args.item.id === 'print') {
+    this.$refs.pdfviewer.ej2Instances.printModule.print();
+  }
+  else if (args.item && args.item.id === 'download') {
+    this.$refs.pdfviewer.ej2Instances.download();
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl" :toolbarClick="toolbarClick" :OnCreateSearch="OnCreateSearch"
+      :toolbarSettings="toolbarSettings">
+    </ejs-pdfviewer>
+  </div>
 </template>
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
-         BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
+  BookmarkView, ThumbnailView, Print, TextSelection, TextSearch,
+  Annotation, FormDesigner, FormFields
+} from '@syncfusion/ej2-vue-pdfviewer';
 import { ComboBox } from "@syncfusion/ej2-dropdowns";
-import { TextBox } from "@syncfusion/ej2-inputs";         
-Vue.use(PdfViewerPlugin);
-var viewer;
+import { TextBox } from "@syncfusion/ej2-inputs";
+
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     // Move the toolItem declaration inside the data function
-    var toolItem1 = {
+    let toolItem1 = {
       prefixIcon: 'e-icons e-paste',
       id: 'print',
       tooltipText: 'Custom toolbar item',
       align: 'left'
     };
-    var toolItem2 = {
-    id: 'download',
-    text: 'Save',
-    tooltipText: 'Custom toolbar item',
-    align: 'right'
+    let toolItem2 = {
+      id: 'download',
+      text: 'Save',
+      tooltipText: 'Custom toolbar item',
+      align: 'right'
     };
-    var LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
-    var toolItem3 = {
-        type: 'Input',
-        tooltipText: 'Language List',
-        cssClass: 'percentage',
-        align: 'Left',
-        id: 'dropdown',
-        template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })  
+    let LanguageList = ['Typescript', 'Javascript', 'Angular', 'C#', 'C', 'Python'];
+    let toolItem3 = {
+      type: 'Input',
+      tooltipText: 'Language List',
+      cssClass: 'percentage',
+      align: 'Left',
+      id: 'dropdown',
+      template: new ComboBox({ width: 100, value: 'TypeScript', dataSource: LanguageList, popupWidth: 85, showClearButton: false, readonly: false })
     };
-    var toolItem4 = {
-        type: 'Input',
-        tooltipText: 'Text',
-        align: 'Right',
-        cssClass: 'find',
-        id: 'textbox',
-        template: new TextBox({ width: 125, placeholder: 'Type Here'})
+    let toolItem4 = {
+      type: 'Input',
+      tooltipText: 'Text',
+      align: 'Right',
+      cssClass: 'find',
+      id: 'textbox',
+      template: new TextBox({ width: 125, placeholder: 'Type Here' })
     }
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
@@ -175,23 +312,18 @@ export default {
       }
     };
   },
-
   provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
+      Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
   },
-
   methods: {
-    documentLoad: function (args) {
-      viewer = this.$refs.pdfviewer.ej2Instances;
-    },
     toolbarClick: function (args) {
-        if (args.item && args.item.id === 'print') {
-          viewer.printModule.print();
-        }
-        else if (args.item && args.item.id === 'download') {
-          viewer.download();
-        }
+      if (args.item && args.item.id === 'print') {
+        this.$refs.pdfviewer.ej2Instances.printModule.print();
+      }
+      else if (args.item && args.item.id === 'download') {
+        this.$refs.pdfviewer.ej2Instances.download();
+      }
     },
   }
 }

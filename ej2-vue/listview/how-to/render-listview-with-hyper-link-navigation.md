@@ -28,7 +28,10 @@ var listVue = Vue.component("demo", {
 In the below sample, we have rendered `ListView` with search engines URL.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/checklist-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/checklist-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

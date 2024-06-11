@@ -21,7 +21,10 @@ The position of the AppBar can be set using the [position](https://ej2.syncfusio
 The top AppBar is the default one in which it positions the AppBar at the top of the content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The top AppBar is the default one in which it positions the AppBar at the top of
 This position can be set to the AppBar by setting `Bottom` to the property [position](https://ej2.syncfusion.com/vue/documentation/api/appbar#position). The bottom AppBar positions the AppBar at the bottom of the content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ This position can be set to the AppBar by setting `Bottom` to the property [posi
 This position can be set to the AppBar by setting `true` to the property [isSticky](https://ej2.syncfusion.com/vue/documentation/api/appbar#issticky). AppBar will be sticky while scrolling the AppBar content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/appbar/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/appbar/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

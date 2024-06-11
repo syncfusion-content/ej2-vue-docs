@@ -1,5 +1,3 @@
-
-
 <template>
 <form>
 <ul>
@@ -13,15 +11,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { RadioButtonPlugin, ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { RadioButtonComponent, ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(RadioButtonPlugin);
-Vue.use(ButtonPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-radiobutton":RadioButtonComponent,
+"ejs-button":ButtonComponent
+}
+}
 </script>
 
 <style>
@@ -40,5 +41,3 @@ li {
   list-style: none;
 }
 </style>
-
-

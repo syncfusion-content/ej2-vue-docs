@@ -1,18 +1,16 @@
-
-
-
 <template>
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:250px;"><br>
-      <ejs-dropdowntree id='dropdowntree' :fields='fields' placeholder='Select an employee':headerTemplate='headerTemplate' ></ejs-dropdowntree>
+      <ejs-dropdowntree id='dropdowntree' :fields='fields' placeholder='Select an employee'
+        :headerTemplate='headerTemplate'></ejs-dropdowntree>
     </div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { DropDownTreePlugin } from "@syncfusion/ej2-vue-dropdowns";
-Vue.use(DropDownTreePlugin);
-var data = [
+import { createApp } from "vue";
+import { DropDownTreeComponent } from "@syncfusion/ej2-vue-dropdowns";
+
+let data = [
   { "id": 1, "name": "Steven Buchanan", "job": "General Manager", "hasChild": true, "expanded": true },
   { "id": 2, "pid": 1, "name": "Laura Callahan", "job": "Product Manager", "hasChild": true },
   { "id": 3, "pid": 2, "name": "Andrew Fuller", "job": "Team Lead", "hasChild": true },
@@ -24,7 +22,7 @@ var data = [
   { "id": 11, "pid": 6, "name": "Mary", "job": "Developer " },
   { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
 ];
-var headerVue = Vue.component("headerTemplate", {
+let headerVue = createApp().component("headerTemplate", {
   template: `<span class='head'>Employee List</span>`,
   data() {
     return {
@@ -32,15 +30,20 @@ var headerVue = Vue.component("headerTemplate", {
     };
   }
 });
+
 export default {
-  data (){
+  name: "App",
+  components: {
+    "ejs-dropdowntree": DropDownTreeComponent
+  },
+  data() {
     return {
-      fields: { dataSource: data, value: 'id', text: 'name', parentValue:"pid", hasChildren: 'hasChild' },
-        headerTemplate :  function(e) {
-          return {
-            template: headerVue
-          };
-        }
+      fields: { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' },
+      headerTemplate: function (e) {
+        return {
+          template: headerVue
+        };
+      }
     }
   }
 }
@@ -52,13 +55,11 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+
 .head {
-    height: 40px;
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 1px solid #e0e0e0;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 1px solid #e0e0e0;
 }
 </style>
-
-
-

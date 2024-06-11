@@ -15,7 +15,10 @@ The ListView supports to wrap the nested element into a group based on the categ
 In the following sample, The cars are grouped based on its category by using the groupBy field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/listview/grouping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/listview/grouping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

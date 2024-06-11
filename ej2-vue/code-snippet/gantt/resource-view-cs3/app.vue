@@ -1,6 +1,3 @@
-
-
-
 <template>
      <div>
         <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :viewType= "viewType" :taskFields= "taskFields" :resourceFields= "resourceFields"
@@ -10,10 +7,14 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GanttPlugin, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
-Vue.use(GanttPlugin);
+
+import { GanttComponent, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+
 export default {
+name: "App",
+components: {
+"ejs-gantt":GanttComponent
+},
   data: function() {
       return{
             data: [
@@ -118,7 +119,7 @@ resourceFields: {
         { field: 'StartDate' },
         { field: 'Duration' }
     ],
-    toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
+    toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
     labelSettings: {
         rightLabel: 'resources',
         taskLabel: 'TaskName'
@@ -132,6 +133,3 @@ resourceFields: {
   }
 };
 </script>
-
-
-

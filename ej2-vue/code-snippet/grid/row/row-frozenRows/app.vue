@@ -3,7 +3,7 @@
     <div style="display: inline-block; padding: 0px 0 20px 0">
     <label style="padding: 27px 17px 0 0;"> Change the frozen rows: </label>
     <ejs-numerictextbox ref="frozen" min="0"  max="5" :validateDecimalOnType="true" decimals="0" format="n" value="2" width="100px"></ejs-numerictextbox>
-    <ejs-button style="margin-left:10px" v-on:click.native="frozenRowsFn">Update</ejs-button>
+    <ejs-button style="margin-left:10px" v-on:click="frozenRowsFn">Update</ejs-button>
   </div>
   <ejs-grid ref="grid" style="padding: 5px 5px" :dataSource='data' height=315 :frozenRows=2 :allowSelection='false'  :enableHover='false'>
     <e-columns>
@@ -23,17 +23,20 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Freeze } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { NumericTextBoxPlugin } from "@syncfusion/ej2-vue-inputs";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Freeze } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { NumericTextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { data } from "./datasource.js";
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(NumericTextBoxPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-numerictextbox":NumericTextBoxComponent,
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,

@@ -58,7 +58,10 @@ These tip arrow customizations have been achieved through CSS changes in the sam
 The arrow tip pointer can also be disabled by using the [`showTipPointer`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#showtippointer) property in a tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/tooltip/customize-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/tooltip/customize-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

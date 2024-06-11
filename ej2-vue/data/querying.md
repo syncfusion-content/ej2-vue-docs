@@ -29,8 +29,68 @@ Follow these steps to use `from` method with Syncfusion [DataManager](https://ej
 The following example demonstrates how to use `from` method of `query` class in `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>   
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/";
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().from('Orders').take(12)).then((e) => {
+    items.value = e.result;
+  });
+});
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -88,6 +148,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,8 +172,67 @@ Follow these steps to use `select` method with Syncfusion `DataManager`:
 The following example demonstrates how to use `select` method of `query` class in `DataManager`. In this example, **OrderID**, **CustomerID** and **ShipCountry** columns are selected using the `select` method.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>   
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().select(['OrderID', 'CustomerID', 'ShipCountry']).take(12)).then((e) => {
+    items.value = e.result;
+  });
+})
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -169,6 +289,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -194,8 +315,69 @@ Follow these steps to use `expand` method with Syncfusion `DataManager`:
 The following example demonstrates how to use the `expand` method with Syncfusion `DataManager` for eager loading navigation properties.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee Name</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.Employee.FirstName }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>   
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query()
+  .expand('Employee').take(12)).then((e) => {
+    this.items = e.result;
+  });
+});
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -254,6 +436,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -277,8 +460,68 @@ Follow these steps to use `sortBy` method with Syncfusion `DataManager`:
 The following example demonstrates how to sort data based on the **CustomerID** field in **descending** order using the `sortBy` method of `query` class of `DataManager`. 
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>  
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().sortBy('CustomerID', 'descending').take(12)).then((e) => {
+    items.value = e.result;
+  });
+});
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -336,6 +579,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -362,8 +606,68 @@ Follow these steps to use `where` method with Syncfusion `DataManager`:
 The following example demonstrates how to filter data based on the **EmployeeID** field equal to **3** using the `where` method of `query` class of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>  
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]); 
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().where('EmployeeID', 'equal', 3).take(12)).then((e) => {
+    items.value = e.result;
+  });
+})
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -421,6 +725,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -431,17 +736,17 @@ export default {
 
 Filter operators in Syncfusion [DataManager](https://ej2.syncfusion.com/documentation/api/data/dataManager/) allow you to specify the filter type for querying data. These operators enable you to define various conditions to filter data effectively. Below is a comprehensive list of filter operators supported by Syncfusion `DataManager`.
 
-Operator |Description |
------|-----|
-greaterthan |Checks whether a value is greater than with specified value. 
-greaterthanorequal |Checks whether a value is greater than or equal to the specified value.
-lessthan |Checks whether a value is less than the specified value.
-lessthanorequal |Checks whether a value is less than or equal to the specified value.
-equal |Checks whether a value equal to the specified value. 
-notequal |Checks whether a value not equal to specified value. 
-startswith |Checks whether a value begins with the specified value. 
-endswith |Checks whether a value ends with specified value. 
-contains |Checks whether a value contains with specified value. 
+| Operator           | Description                                                             |
+| ------------------ | ----------------------------------------------------------------------- |
+| greaterthan        | Checks whether a value is greater than with specified value.            |
+| greaterthanorequal | Checks whether a value is greater than or equal to the specified value. |
+| lessthan           | Checks whether a value is less than the specified value.                |
+| lessthanorequal    | Checks whether a value is less than or equal to the specified value.    |
+| equal              | Checks whether a value equal to the specified value.                    |
+| notequal           | Checks whether a value not equal to specified value.                    |
+| startswith         | Checks whether a value begins with the specified value.                 |
+| endswith           | Checks whether a value ends with specified value.                       |
+| contains           | Checks whether a value contains with specified value.                   |
 
 > These filter operators are used for creating filter query using
 [where](https://ej2.syncfusion.com/documentation/api/data/query/#where) method and [predicate](https://ej2.syncfusion.com/documentation/api/data/predicate/) class.
@@ -463,8 +768,72 @@ Follow these steps to use `predicate` method with Syncfusion `DataManager`:
 The following example demonstrates how to filter complex data based on the **EmployeeID** field equal to **3** and **ShipCountry** field equal to **Germany** using the `predicate` method of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>  
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor, Predicate } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+
+  let predicate = new Predicate('EmployeeID', 'equal', 3);
+  predicate = predicate.and('ShipCountry', 'equal', 'Germany');
+
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().where(predicate).take(12)).then((e) => {
+    items.value = e.result;
+  });
+})
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -526,6 +895,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -551,8 +921,58 @@ To use the `search` method with `DataManager`, follow these steps:
 The following example demonstrates how to search data based on the **CustomerID** field with the searchkey of **VI** using the `search` method of `query` class of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>  
+  </div>
+</template>
+
+<script setup>
+import { data } from './datasource.js';
+import { DataManager, Query } from '@syncfusion/ej2-data';
+
+const items = new DataManager(data).executeLocal(new Query().search('VI', ['CustomerID']));
+
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="(~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -601,6 +1021,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -624,8 +1045,77 @@ To use the `group` method with `DataManager`, follow these steps:
 The following example demonstrates how to group data based on the **CustomerID** field using the `group` method of `query` class of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tbody v-for="(group, key) in items" :key="key">
+        <tr>
+          <td>{{ group.field }} - {{ group.key }}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr v-for="(item, index) in group.items" :key="index">
+          <td>{{ item.OrderID }}</td>
+          <td>{{ item.CustomerID }}</td>
+          <td>{{ item.EmployeeID }}</td>
+          <td>{{ item.ShipCountry }}</td>
+        </tr>
+      </tbody>
+    </table>    
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().group('CustomerID').take(12)).then((e) => {
+    items.value = e.result;
+  });
+});
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -715,8 +1205,69 @@ Follow these steps to use `page` method with Syncfusion `DataManager`:
 The following example demonstrates how to apply paging to the data using the `page` method of `query` class of `DataManager`.  In this example, the page index is set to **2**, and the page size is set to **12** using the `page` method.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+    </table>  
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().page(2, 12)).then((e) => {
+    items.value = e.result;
+  });
+});
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -775,6 +1326,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -800,8 +1352,79 @@ Aggregates supports the follwing built-in types:
 The following example demonstrates how to calculate the **sum** of **EmployeeID** data using the   `aggregate` method of `query` class of `DataManager`. 
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
+      <tr v-for="(item, index) in items" :key="index">
+        <td>{{ item.OrderID }}</td>
+        <td>{{ item.CustomerID }}</td>
+        <td>{{ item.EmployeeID }}</td>
+        <td>{{ item.ShipCountry }}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td>Sum: {{sum}}</td>
+        <td></td>
+      </tr>
+    </table>   
+  </div>
+</template>
+
+<script setup>
+import { onMounted, ref } from "vue";
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+const sum = ref(0);
+
+onMounted(() => {
+  let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+
+  let dataManager = new DataManager({
+    url: SERVICE_URI,
+    adaptor: new ODataV4Adaptor()
+  });
+  dataManager.executeQuery(new Query().take(8).requiresCount()
+    .aggregate('sum', 'EmployeeID')).then((e) => {
+      items.value = e.result;
+      sum.value = e.aggregates['EmployeeID - sum'];
+    }
+  );
+});
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -870,6 +1493,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -891,8 +1515,102 @@ Follow these steps to perform a hierarchical query using Syncfusion `DataManager
 The following example demonstrates how to work with hierarchical binding using `hierarchy` method of `DataManager` class.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
+
+<template>
+  <div id="app">
+    <table class='e-table'>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer ID</th>
+        <th>Employee ID</th>
+        <th>Ship Country</th>
+      </tr>
+      <tbody v-for="(item, index) in items" :key="index">
+        <tr>
+          <td>{{ item.OrderID }}</td>
+          <td>{{ item.CustomerID }}</td>
+          <td>{{ item.EmployeeID }}</td>
+          <td>{{ item.ShipCountry }}</td>
+        </tr>
+        <tr>
+          <td :colspan="4">
+            <table class='e-table'>
+              <tr>
+              <th>ID</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Product</th>              
+            </tr>
+            <tbody v-for="(order, index) in item.Order_Details" :key="index">
+              <tr>
+                <td>{{ order.OrderID }}</td>
+                <td>{{ order.UnitPrice }}</td>
+                <td>{{ order.Quantity }}</td>
+                <td>{{ order.ProductID }}</td>
+              </tr>
+            </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script setup>
+import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
+
+const items = ref([]);
+
+onMounted(() => {
+    let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/";
+
+    let dataManager = new DataManager({
+      url: SERVICE_URI,
+      adaptor: new ODataV4Adaptor()
+    });
+    
+    dataManager.executeQuery(new Query().from('Orders').take(3)
+      .hierarchy(
+        new Query()
+          .foreignKey('OrderID')
+          .from('Order_Details'),
+        () => [10248, 10249, 10250] // Selective loading of child elements
+      )).then((e) => {
+      items.value = e.result;
+    });
+  });
+</script>
+
+<style>
+  .e-table {
+    border: solid 1px #e0e0e0;
+    border-collapse: collapse;
+    font-family: Roboto;
+  }
+
+  .e-table td, .e-table th {
+    border-style: solid;
+    border-width: 1px 0 0;
+    border-color: #e0e0e0;
+    display: table-cell;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 8px 21px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+  }
+</style>
+
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% raw %}
+
 <template>
   <div id="app">
     <table class='e-table'>
@@ -985,6 +1703,7 @@ export default {
     width: auto;
   }
 </style>
+
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}

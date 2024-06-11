@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can able to restrict to drag and drop files under folder only. These can be achieved by using `nodeDragStop` and `nodeDragging` event of TreeView.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treeview/how-to/restrict-drag-drop-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treeview/how-to/restrict-drag-drop-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

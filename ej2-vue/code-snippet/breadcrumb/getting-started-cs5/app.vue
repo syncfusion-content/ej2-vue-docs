@@ -1,21 +1,20 @@
-
-
 <template>
-<div>
-<ejs-breadcrumb :enableNavigation='false'></ejs-breadcrumb>
-</div>
+    <div>
+        <ejs-breadcrumb :enableNavigation='false'></ejs-breadcrumb>
+    </div>
 </template>
 
 <script>
 import { BreadcrumbComponent } from "@syncfusion/ej2-vue-navigations";
 
 export default {
-   components:{
-    'ejs-breadcrumb': BreadcrumbComponent
-   },
-   data: function() {
-       return {};
-   }
+    name: "App",
+    components: {
+        'ejs-breadcrumb': BreadcrumbComponent
+    },
+    data: function () {
+        return {};
+    }
 }
 </script>
 
@@ -28,5 +27,3 @@ body {
     text-align: center;
 }
 </style>
-
-

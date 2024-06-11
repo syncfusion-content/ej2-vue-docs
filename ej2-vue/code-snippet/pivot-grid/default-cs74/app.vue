@@ -1,21 +1,19 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList" :onFieldDropped="onFieldDropped"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview :dataSourceSettings="dataSourceSettings" :height="height" :showFieldList="showFieldList"
+      :onFieldDropped="onFieldDropped"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import { PivotViewPlugin, FieldList } from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, FieldList } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -34,20 +32,16 @@ export default {
     }
   },
   provide: {
-        pivotview: [FieldList]
-    },
+    pivotview: [FieldList]
+  },
   methods: {
-    onFieldDropped: function(args: FieldDroppedEventArgs) {
+    onFieldDropped: function (args) {
       //Triggers, whenever field is dropped in an axis.
-        args.droppedField.caption = args.droppedField.name + " --> " + args.droppedAxis;
+      args.droppedField.caption = args.droppedField.name + " --> " + args.droppedAxis;
     }
   }
 }
-}
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-

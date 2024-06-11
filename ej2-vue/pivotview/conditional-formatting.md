@@ -19,7 +19,10 @@ To learn about the **Conditional Formatting** feature in the Vue Pivot Table com
 {% youtube "https://www.youtube.com/watch?v=6XeuaF6Ev4s&t=227s" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivot_data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivot_data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +47,10 @@ The available style properties in [`style`](https://ej2.syncfusion.com/vue/docum
 Meanwhile, user can also view conditional formatting dialog in UI by invoking [`showConditionalFormattingDialog`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/#showconditionalformattingdialog) method on an external button click which is shown in the below code sample.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivot_data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivot_data-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -56,7 +62,10 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [`
 Allows end user to apply conditional formatting commonly for all value fields just by ignoring the [`measure`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/conditionalFormatSettings/#measure) property and setting rest of the properties in [`conditionalFormatSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/conditionalFormatSettings/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivot_data-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivot_data-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ Allows end user to apply conditional formatting commonly for all value fields ju
 Allows end user to apply conditional formatting to a specific value field by setting the [`Measure`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting~Measure.html) property with specific value field name in [`PivotViewConditionalFormatSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.EJ2.Blazor~Syncfusion.EJ2.Blazor.PivotView.PivotViewConditionalFormatSetting_properties.html) class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivot_data-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivot_data-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -96,7 +108,10 @@ The event [`conditionalFormatting`](https://ej2.syncfusion.com/vue/documentation
 * `value2` - value 2 for conditional formatting dialog, this is applicable only for selected conditions like **Between** and **NotBetween**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/pivot_data-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/pivot_data-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

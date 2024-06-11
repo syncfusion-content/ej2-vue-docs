@@ -155,25 +155,21 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     <div>
         <div class="control-section">
             <div class="sample-container">
-                <div class="default-section">               
-                    <ejs-richtexteditor id="default" ref="rteInstance" v-bind:value="value" ></ejs-richtexteditor>
+                <div class="default-section">
+                    <ejs-richtexteditor id="default" ref="rteInstance" v-bind:value="value"></ejs-richtexteditor>
                 </div>
             </div>
         </div>
     </div>
-  </template>
-
-  <script setup>
-    import { RichTextEditorComponent as EjsRichtexteditor,Toolbar,Link,Image,HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-    import { provide,ref } from "vue";
-
-    const rteInstance = ref(null);  
-    const value = ref("<p>The Rich Text Editor component is a WYSIWYG editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>");
-
-    const richtexteditor =  [Toolbar, Link, Image, HtmlEditor];
-    provide('richtexteditor', richtexteditor);
-    
-  </script>
+</template>
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
+const rteInstance = ref(null);
+const value = ref("<p>The Rich Text Editor component is a WYSIWYG editor that provides the best user experience to create and update the content. Users can format their content using standard toolbar commands.</p>");
+const richtexteditor = [Toolbar, Link, Image, HtmlEditor];
+provide('richtexteditor', richtexteditor);
+</script>
   <style>
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
@@ -202,7 +198,6 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   
   <script>
   import { RichTextEditorComponent,Toolbar,Link,Image,HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-  
   export default {
     name: "NormalView",
     components: {

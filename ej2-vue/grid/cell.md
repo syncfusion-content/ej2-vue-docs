@@ -21,7 +21,10 @@ Displaying HTML content in a Grid can be useful in scenarios where you want to d
 In the following example, the [EJ2 Toggle Switch Button](https://ej2.syncfusion.com/vue/documentation/switch/getting-started) component is added  to enable and disable the [disableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#disablehtmlencode) property. When the switch is toggled, the [change](https://ej2.syncfusion.com/vue/documentation/api/switch/#change) event is triggered and the `disableHtmlEncode` property of the column is updated accordingly. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is called to refresh the grid and display the updated content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/encode-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/encode-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +64,10 @@ Grid provides the below three options for configuring:
 The following example demonstrates how to set the `allowTextWrap` property to **true** and specify the wrap mode as **Content** by setting the `textWrapSettings.wrapMode` property. Also change the `textWrapSettings.wrapMode` property to **Content** and **Both** on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/autowrap-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/autowrap-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +85,10 @@ To customize the appearance of the grid cell, you can use the [queryCellInfo](ht
 The following example demonstrates how to add a `queryCellInfo` event handler to the grid. In the event handler, checked whether the current column is **Freight** field and then applied the appropriate CSS class to the cell based on its value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -102,7 +111,10 @@ You can apply styles to the cells using CSS selectors. The Grid provides a class
 The following example demonstrates how to customize the appearance of a specific row in the grid on selection using `className`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/default-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/default-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -129,7 +141,10 @@ Here, setting the customAttributes property of the **ShipCity** column to an obj
 The following example demonstrates how to customize the appearance of the **OrderID** and **ShipCity** columns using custom attributes.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/default-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/default-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -147,7 +162,10 @@ The Grid provides below methods to customize the appearance of the grid columns 
 The following example demonstrates how to use [getColumnHeaderByIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcolumnheaderbyindex) and [getCellFromIndex](https://ej2.syncfusion.com/vue/documentation/api/grid/#getcellfromindex) methods to customize the appearance of the **CustomerID** column header and specific cell inside the [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event of the grid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -169,7 +187,10 @@ There are three types of `clipMode` available:
 The following example demonstrates, how to set the `clipMode` property to **Clip** , **Ellipsis** and **EllipsisWithTooltip** for the **Main Fields of Invention** column, on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is used to refresh the grid and display the updated content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/autowrap-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/autowrap-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -234,30 +255,14 @@ Step 2: The following code demonstrates how to render Bootstrap tooltip for the 
         </ejs-grid>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { GridPlugin, Page } from '@syncfusion/ej2-vue-grids';
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
+<script setup>
+import { provide } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from '@syncfusion/ej2-vue-grids';
+import { BootstrapVue, IconsComponent } from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { data } from './datasource.js';
-
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
-
-Vue.use(GridPlugin);
-export default {
-  name: 'app',
-  data () {
-    return {
-      data: data,
-    }
-  },
-  provide: {
-      grid: [Page]
-  },
-}
+  provide('grid',  [Page]);
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
@@ -298,7 +303,10 @@ beforeRender(args){
 The following example demonstrates how to customize the tooltip content for the grid cells by using the [beforeRender](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#beforerender) event of the EJ2 Tooltip component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/custom-tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/custom-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -320,7 +328,10 @@ The [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid/#gridlines
 The following example demonstrates how to set the [gridLines](https://ej2.syncfusion.com/vue/documentation/api/grid/#gridlines) property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the DropDownList component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/cell/autowrap-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/cell/autowrap-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

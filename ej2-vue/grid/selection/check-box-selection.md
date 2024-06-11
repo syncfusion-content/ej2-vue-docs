@@ -17,7 +17,10 @@ To render checkbox in each grid row, you need to use checkbox column with type a
 Here's an example of how to enable check box selection using `type` property in the Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-checkbox/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-checkbox/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ The checkbox selection mode in the Grid allows you to select rows either by clic
 In the following example, it demonstrates how to dynamically enable and change the `checkboxMode` using the `DropDownList` component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-checkbox-mode/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-checkbox-mode/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ By default, when you set the column type as [checkbox](https://ej2.syncfusion.co
 Here's an example of how to hide selectall checkbox in column header using empty `headerTemplate` in the Grid component:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-checkbox-selectall/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-checkbox-selectall/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +78,10 @@ To achieve this, you can use the [rowDataBound](https://ej2.syncfusion.com/vue/d
 In the following sample, the selection of specific rows has been prevented based on the `isSelectable` argument in the `rowDataBound` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-checkbox-prevent/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-checkbox-prevent/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +99,10 @@ To achieve single-row selection in checkbox selection mode within the Grid, you 
 Here's an example of how to select a single row in checkbox selection mode using the `clearSelection` method along with the `rowSelecting` event:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-checkbox-single/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-checkbox-single/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +116,10 @@ By default, the Grid component allows selection by clicking either a grid row or
 Here's an example of how to enable selection only through checkbox click using `checkboxOnly` property:
  
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/select/selection-checkbox-allow/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/select/selection-checkbox-allow/app.vue %}
 {% endhighlight %}
 {% endtabs %}

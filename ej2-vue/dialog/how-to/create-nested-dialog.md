@@ -25,7 +25,10 @@ Initialize the Dialog as mentioned in the below sample.
 Set the inner Dialog target as `#dialog`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dialog/inner-dialog-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/dialog/inner-dialog-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

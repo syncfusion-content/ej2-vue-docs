@@ -18,7 +18,10 @@ Header Template allows to define your own user interface for Header, which inclu
 
 In the following sample dropdown, splitbutton and button are used as the custom components in the header.
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/header-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/header-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ Template allows you to define your own input widgets for columns. To implement [
 In the following sample, dropdown is used as the custom component in the PaymentMode column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/default-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/default-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ In the following sample, dropdown is used as the custom component in the Payment
 Template allows you to define your own input widgets for columns. To implement template, you can create the user interface as `vue` component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +71,10 @@ Rule Template allows to define your own user interface for columns. To implement
 In the following sample, dropdown and slider are used as the custom component and applied `greaterthanorequal` operator to `Age` column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/query-builder/rule-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/query-builder/rule-template-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

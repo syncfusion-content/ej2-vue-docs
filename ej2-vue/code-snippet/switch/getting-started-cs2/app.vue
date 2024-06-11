@@ -1,5 +1,3 @@
-
-
 <template>
   <ejs-switch checked=true></ejs-switch>
 </template>
@@ -11,6 +9,7 @@ import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
 export default {
+  name: "App",
   components: {
     'ejs-switch': SwitchComponent
   }
@@ -25,5 +24,3 @@ export default {
   margin: 18px;
 }
 </style>
-
-

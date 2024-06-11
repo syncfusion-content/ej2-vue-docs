@@ -21,7 +21,10 @@ The [`snapSettings.snapConstraints`](https://ej2.syncfusion.com/vue/documentatio
 If you need to enable snapping, then inject snapping module into the diagram.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/gridlines/gridlines-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/gridlines/gridlines-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ The appearance of the gridlines can be customized by using a set of predefined p
 The following code example illustrates how to customize the appearance of gridlines.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/gridlines/gridlinesAppearance-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/gridlines/gridlinesAppearance-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ Thickness and the space between gridlines can be customized by using horizontal 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/gridlines/gridlineIntervals-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/gridlines/gridlineIntervals-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +80,10 @@ This feature allows the diagram objects to snap to the nearest intersection of g
 Snapping to gridlines can be enabled/disabled with the [`snapSettings.snapConstraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/snapSettings#constraints-SnapConstraints). The following code example illustrates how to enable/disable the snapping to gridlines.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/gridlines/snapping-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/gridlines/snapping-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +95,10 @@ Snapping to gridlines can be enabled/disabled with the [`snapSettings.snapConstr
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridlines’s [`snapInterval`](https://ej2.syncfusion.com/vue/documentation/api/diagram/gridlines#snapintervals-number) and the vertical gridlines’s [`snapInterval`](https://ej2.syncfusion.com/vue/documentation/api/diagram/gridlines#snapintervals-number) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/gridlines/snapintervals-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/gridlines/snapintervals-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +118,10 @@ The [`snapAngle`](https://ej2.syncfusion.com/vue/documentation/api/diagram/snapS
 The [`snapLineColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/snapSettings/#snaplinecolor) property allows you to define the color of the snapline.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/gridlines/snapobjects-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/diagram/gridlines/snapobjects-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

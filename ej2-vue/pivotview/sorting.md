@@ -36,7 +36,10 @@ Member sorting can also be configured using the [`sortSettings`](https://ej2.syn
 > By default the [`order`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iSort/#order) property in the [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iSort/) set as **Ascending**. Meanwhile, we can arrange the field members as its order in data source by setting it as **None** where the sort icons in grouping bar and field list buttons for the corresponding field will be removed.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs227/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs227/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +51,10 @@ Member sorting can also be configured using the [`sortSettings`](https://ej2.syn
 Usually string sorting is applied to field members even if it starts with numbers. But this kind of field members can also be sorted on the basis of numbers that are placed at the beginning of the member name. This can be achieved by setting the [`dataType`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iFieldOptions/#datatype) property as **number** to the desired field.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/alphanumeric_data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/alphanumeric_data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +70,10 @@ Allows to sort field headers (aka, members) in rows and columns based on user-de
 * [`order`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iSort/#order) : It allows to specify whether the array of headers should be sorted ascending or descending.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs228/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs228/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +93,10 @@ The value sorting can also be configured using the [`valueSortSettings`](https:/
 > Value fields are set to the column axis by default. In such cases, the value sorting applied will have an effect on the column alone. You need to place the value fields in the row axis to do so in row wise. For more information, please [`refer here`](https://ej2.syncfusion.com/vue/documentation/pivotview/data-binding/#values-in-row-axis).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs229/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs229/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +120,10 @@ When sorting is applied, the event [`onHeadersSort`](https://ej2.syncfusion.com/
 * `isOrderChanged`: By setting this boolean property to true, it allows to display the modified members order.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs230/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs230/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +152,10 @@ The event [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/pivot
 In the below sample, sort action can be restricted by setting the **args.cancel** option to **true** in the `actionBegin` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs231/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs231/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +182,10 @@ The event [`actionComplete`](https://ej2.syncfusion.com/vue/documentation/api/pi
 * `actionInfo`: It holds the unique information about the current UI action. For example, if sorting is completed, the event argument contains information such as sort order and the field name.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs232/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs232/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +206,10 @@ The event [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/piv
 * `errorInfo`: It holds the error information of the current UI action.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs233/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs233/app.vue %}
 {% endhighlight %}
 {% endtabs %}

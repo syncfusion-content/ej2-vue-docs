@@ -19,40 +19,72 @@ The following steps are used to unload the PDF document programmatically.
 **Step 2:** Add the following code snippet to perform the unload operation.
 
 {% tabs %}
-{% highlight html tabtitle="Standalone" %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
 
 <template>
   <div id="app">
-     <button v-on:click="unload">Unload Document</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath">
-      </ejs-pdfviewer>
+    <button v-on:click="unload">Unload Document</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide } from 'vue';
+
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]);
+
+const unload = function () {
+  var viewer = this.$refs.pdfviewer.ej2Instances;
+  // Unload the PDF document.
+  viewer.unload();
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="unload">Unload Document</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
   methods: {
-    unload: function() {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+    unload: function () {
+      var viewer = this.$refs.pdfviewer.ej2Instances;
       // Unload the PDF document.
       viewer.unload();
     }
@@ -61,42 +93,78 @@ export default {
 </script>
 
 {% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="unload">Unload Document</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const unload = function () {
+  const viewer = pdfviewer.value.ej2Instances;
+  // Unload the PDF document.
+  viewer.unload();
+}
+
+</script>
+
+{% endhighlight %}
 {% highlight html tabtitle="Server-Backed" %}
 
 <template>
   <div id="app">
-     <button v-on:click="unload">Unload Document</button>
-      <ejs-pdfviewer
-        id="pdfViewer"
-        ref="pdfviewer"
-        :documentPath="documentPath"
-        :serviceUrl="serviceUrl">
-      </ejs-pdfviewer>
+    <button v-on:click="unload">Unload Document</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :serviceUrl="serviceUrl">
+    </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
+
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
 
 export default {
-  name: 'app',
-  data () {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
     return {
-      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
     };
   },
   provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation, 
-                 ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner ]},
-
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
   methods: {
-    unload: function() {
-      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+    unload: function () {
+      const viewer = this.$refs.pdfviewer.ej2Instances;
       // Unload the PDF document.
       viewer.unload();
     }

@@ -67,7 +67,10 @@ Press Ctrl key with up / down arrow or mouse to select multiple items.</td></tr>
 </table>
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/list-box/getting-started/getting-started-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

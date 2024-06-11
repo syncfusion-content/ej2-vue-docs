@@ -95,7 +95,10 @@ The Internationalization library is used to globalize number, date, and time val
 * Set the culture by using the `locale` property.
 
     {% tabs %}
-    {% highlight html tabtitle="app.vue" %}
+    {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+    {% include code-snippet/pivot-grid/default-cs95/app-composition.vue %}
+    {% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
     {% include code-snippet/pivot-grid/default-cs95/app.vue %}
     {% endhighlight %}
     {% endtabs %}
@@ -115,7 +118,10 @@ The decimal separators of pivot table values varies based on the culture applied
 The following example demonstrates the decimal separators in `Deutsch` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs96/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs96/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -578,7 +584,10 @@ To load translation object in an application, use [`load`](https://ej2.syncfusio
 The following example demonstrates the pivot table in `Deutsch` culture.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs97/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs97/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -590,7 +599,10 @@ The following example demonstrates the pivot table in `Deutsch` culture.
 RTL provides an option to switch the text direction and layout of the pivot table component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). To enable RTL pivot table, set the `enableRtl` property to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/pivot-grid/default-cs98/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/pivot-grid/default-cs98/app.vue %}
 {% endhighlight %}
 {% endtabs %}

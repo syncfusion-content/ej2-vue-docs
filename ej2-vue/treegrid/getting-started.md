@@ -41,7 +41,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -78,7 +78,7 @@ import components CSS as given below in `<style>` section of the `App.vue` file.
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-<!-- Material theme used for this sample -->
+
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
@@ -101,12 +101,21 @@ Follow the below steps to add the Vue Treegrid component:
 1\. First, import and register the Treegrid component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<script setup>
+import { TreeGridComponent as EjsTreegrid } from "@syncfusion/ej2-vue-treegrid";
+
+</script>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
 import { TreeGridComponent } from "@syncfusion/ej2-vue-treegrid";
 export default {
-  components: {
+name: "App",
+components: {
     'ejs-treegrid': TreeGridComponent
   }
 }
@@ -135,7 +144,61 @@ Data for the TreeGrid component is bind by using the `dataSource` property and v
 It accepts either an array of JavaScript object or [DataManager](./data-binding) instance.
 
 {% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-treegrid :dataSource="data" childMapping="subtasks" :treeColumnIndex="1"> </ejs-treegrid>
+    </div>
+</template>
+
+<script setup>
+import { TreeGridComponent as EjsTreegrid } from "@syncfusion/ej2-vue-treegrid";
+
+let dataSource = [
+        {
+            taskID: 1,
+            taskName: 'Planning',
+            startDate: new Date('02/03/2017'),
+            endDate: new Date('02/07/2017'),
+            progress: 100,
+            duration: 5,
+            priority: 'Normal',
+            approved: false,
+            subtasks: [
+                { taskID: 2, taskName: 'Plan timeline', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Normal', approved: false },
+                { taskID: 3, taskName: 'Plan budget', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, approved: true },
+                { taskID: 4, taskName: 'Allocate resources', startDate: new Date('02/03/2017'), endDate: new Date('02/07/2017'), duration: 5, progress: 100, priority: 'Critical', approved: false },
+                { taskID: 5, taskName: 'Planning complete', startDate: new Date('02/07/2017'), endDate: new Date('02/07/2017'), duration: 0, progress: 0, priority: 'Low', approved: true }
+            ]
+        },
+        {
+            taskID: 6,
+            taskName: 'Design',
+            startDate: new Date('02/10/2017'),
+            endDate: new Date('02/14/2017'),
+            duration: 3,
+            progress: 86,
+            priority: 'High',
+            approved: false,
+            subtasks: [
+                { taskID: 7, taskName: 'Software Specification', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 60, priority: 'Normal', approved: false },
+                { taskID: 8, taskName: 'Develop prototype', startDate: new Date('02/10/2017'), endDate: new Date('02/12/2017'), duration: 3, progress: 100, priority: 'Critical', approved: false },
+                { taskID: 9, taskName: 'Get approval from customer', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
+                { taskID: 10, taskName: 'Design Documentation', startDate: new Date('02/13/2017'), endDate: new Date('02/14/2017'), duration: 2, progress: 100, approved: true },
+                { taskID: 11, taskName: 'Design complete', startDate: new Date('02/14/2017'), endDate: new Date('02/14/2017'), duration: 0, progress: 0, priority: 'Normal', approved: true }
+            ]
+        }];
+
+const data = dataSource;
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-vue-treegrid/styles/material.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <template>
     <div id="app">
@@ -182,9 +245,10 @@ let dataSource = [
         }];
 
 export default {
-  components: {
+name: "App",
+components: {
     'ejs-treegrid': TreeGridComponent
-  }
+  },
   data () {
     return {
       data: dataSource;
@@ -250,6 +314,9 @@ In root-level paging mode, paging is based on the root-level rows only i.e., it 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treegrid/getting-started/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -262,6 +329,9 @@ The sorting feature enables the user to order the records. It can be enabled by 
 If we didn't inject the `Sort` module, then user not able to sort when click on headers. Sorting feature can be customized using [`sortSettings`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/sortSettings) property.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs2/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treegrid/getting-started/default-cs2/app.vue %}
 {% endhighlight %}
@@ -276,6 +346,9 @@ The filtering feature enables you to view the reduced amount of records based on
 By default, filtered records are shown along with its parent records. This behavior can be changed by using the [`filterSettings-hierarchyMode`](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterSettings/#hierarchymode) property.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs3/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treegrid/getting-started/default-cs3/app.vue %}
 {% endhighlight %}
@@ -293,8 +366,21 @@ npm run dev
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/treegrid/getting-started/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/treegrid/getting-started/default-cs4" %}
+
+## See Also
+
+* [Getting Started with Syncfusion JavaScript documentation](https://ej2.syncfusion.com/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion JavaScript (ES5) documentation](https://ej2.syncfusion.com/javascript/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion Angular documentation](https://ej2.syncfusion.com/angular/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion React documentation](https://ej2.syncfusion.com/react/documentation/treegrid/getting-started)
+* [Getting Started with Syncfusion ASP.NET Core documentation](https://ej2.syncfusion.com/aspnetcore/documentation/tree-grid/getting-started-core)
+* [Getting Started with Syncfusion ASP.NET MVC documentation](https://ej2.syncfusion.com/aspnetmvc/documentation/tree-grid/getting-started-mvc)
+* [Getting Started with Syncfusion Blazor documentation](https://blazor.syncfusion.com/documentation/treegrid/getting-started-webapp)

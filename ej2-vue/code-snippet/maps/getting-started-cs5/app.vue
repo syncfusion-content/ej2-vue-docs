@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
           <div class='wrapper'>
@@ -20,11 +18,32 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, MapsComponent, Annotations } from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, Annotations, AnnotationDirective, AnnotationsDirective, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use(MapsPlugin);
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+const mapTemplate  = app.component('MapsComponent', {
+  data: () => ({}),
+  template: '<div id="first"><h1>Maps</h1></div>'
+});
+
+const mapTemplate1  = app.component('MapsComponent1', {
+  data: () => ({}),
+  template: '<div id="first"><h1>Multiple-annotation</h1></div>'
+});
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-maps-annotations":AnnotationsDirective,
+"e-maps-annotation":AnnotationDirective,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return{
        shapeData: world_map,
@@ -36,18 +55,12 @@ data () {
        y2: '50%',
        contentTemplate: function () {
           return {
-          template: Vue.component('MapsComponent', {
-            template: '<div id="first"><h1>Maps</h1></div>',
-            data() { return {  }; }
-          })
+          template: mapTemplate
         }
       },
       contentTemplate1: function () {
           return {
-          template: Vue.component('MapsComponent', {
-            template: '<div id="first"><h1>Multiple-annotation</h1></div>',
-            data() { return {  }; }
-          })
+          template: mapTemplate1
         }
       }
     }
@@ -63,5 +76,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

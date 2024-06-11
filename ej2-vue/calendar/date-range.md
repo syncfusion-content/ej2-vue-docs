@@ -15,7 +15,10 @@ Calendar provides an option to select a date value within a specified range by d
 The following example allows you to select a date within the range of 7th to 27th days in a month.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/calendar/min-max-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <ejs-chiplist id="chip">
         <e-chips>
@@ -12,13 +10,14 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ChipListPlugin } from '@syncfusion/ej2-vue-buttons';
-
-Vue.use(ChipListPlugin);
-
+import { ChipListComponent, ChipsDirective, ChipDirective } from '@syncfusion/ej2-vue-buttons';
 export default {
-
+name: "App",
+components: {
+"ejs-chiplist":ChipListComponent,
+"e-chips":ChipsDirective,
+"e-chip":ChipDirective
+}
 }
 </script>
 
@@ -39,6 +38,3 @@ export default {
   background-image: url('https://ej2.syncfusion.com/demos/src/chips/images/janet.png')
 }
 </style>
-
-
-

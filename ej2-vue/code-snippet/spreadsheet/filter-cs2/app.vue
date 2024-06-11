@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
     <ejs-button class="e-btn custom-btn" @click="getFilterData">Get Filtered Data</ejs-button>
@@ -23,11 +21,22 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
+import { SpreadsheetComponent, ColumnsDirective, ColumnDirective, RangesDirective, RangeDirective, SheetsDirective, SheetDirective } from "@syncfusion/ej2-vue-spreadsheet";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { defaultData } from './data.js';
-Vue.use(SpreadsheetPlugin);
+
 export default {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-spreadsheet": SpreadsheetComponent,
+    "e-sheets": SheetsDirective,
+    "e-sheet": SheetDirective,
+    "e-ranges": RangesDirective,
+    "e-range": RangeDirective,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
   data: () => {
     return {
       dataSource: defaultData,
@@ -38,9 +47,9 @@ export default {
   },
   methods: {
     created: function () {
-      var spreadsheet = this.$refs.spreadsheet;
+      let spreadsheet = this.$refs.spreadsheet;
       spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center', verticalAlign: 'middle' }, 'A1:F1');
-      var predicates = [{
+      let predicates = [{
         field: 'C',
         operator: 'equal',
         value: 'Pink',
@@ -49,14 +58,14 @@ export default {
       spreadsheet.applyFilter(predicates, 'A1:C7');
     },
     getFilterData: function () {
-      var spreadsheet = this.$refs.spreadsheet;
-      var activeSheet = spreadsheet.ej2Instances.getActiveSheet();
-      var usedRange = activeSheet.usedRange;
-      for (var i = 0; i <= usedRange.rowIndex; i++) {
+      let spreadsheet = this.$refs.spreadsheet;
+      let activeSheet = spreadsheet.ej2Instances.getActiveSheet();
+      let usedRange = activeSheet.usedRange;
+      for (let i = 0; i <= usedRange.rowIndex; i++) {
         // Get the filtered row using isFiltered property.
-        var filteredRow = (activeSheet.rows[i]).isFiltered;
+        let filteredRow = (activeSheet.rows[i]).isFiltered;
         if (!filteredRow) {
-          var rowData = spreadsheet.getRowData(i);
+          let rowData = spreadsheet.getRowData(i);
           console.log("Row:", i + 1, "Cells", rowData);
         }
       }
@@ -65,7 +74,6 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
@@ -74,10 +82,9 @@ export default {
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-spreadsheet/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-spreadsheet/styles/material.css";
+
 .custom-btn {
   margin: 0 0 10px 0;
 }
 </style>
-
-

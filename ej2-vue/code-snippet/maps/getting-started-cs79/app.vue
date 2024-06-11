@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <button id="export" @click="clickExport">Export</button>
@@ -8,16 +6,22 @@
                 <e-layer :shapeData='shapeData' :markerSettings='markerSettings' :shapeSettings='shapeSettings'></e-layer>
             </e-layers>
         </ejs-maps>
-        <div id="data"></data>
+        <div id="data"></div>
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, MapsTooltip, Marker, ImageExport} from '@syncfusion/ej2-vue-maps';
+
+import { MapsComponent, MapsTooltip, Marker, ImageExport, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
-Vue.use( MapsPlugin );
+
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return {
         shapeData: world_map,
@@ -52,7 +56,7 @@ provide: {
     maps: [Marker, MapsTooltip, ImageExport]
 },
 methods: {
-     clickExport: function(args) {
+     clickExport: function() {
         let map=document.getElementById('container');
         map.ej2_instances[0].export("PNG","Maps",null,false).then((data) => {
             document.getElementById('data').innerHTML = data;
@@ -61,5 +65,3 @@ methods: {
 }
 }
 </script>
-
-

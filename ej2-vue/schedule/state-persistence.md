@@ -17,7 +17,10 @@ State persistence allowed Scheduler to retain the [`currentView`](https://ej2.sy
 The following sample demonstrates how to set state persistence of the Scheduler component.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/working-days-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/schedule/working-days-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

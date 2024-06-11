@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can enable filter menu by setting the [`filterSettings.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#type) as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ The [`column.filter.ui`](https://ej2.syncfusion.com/vue/documentation/api/grid/c
 In the following sample, dropdown is used  as custom component in the OrderID column.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ You can customize the default filter operator list by defining the [`filterSetti
 
 In the following sample, we have customized string filter operators.
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/default-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/how-to/default-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +75,10 @@ You can use both **Menu** and **Checkbox** filter in a same Grid. To do so, set 
 In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`column.filter.type`](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#filter).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -80,7 +92,10 @@ By default, the filtering action is performed based on the single keyword filter
 In the following sample, filtering action with multiple keywords can be done by rendering the `MultiSelect` component as custom component in the OrderID column filter menu dialog.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/filter/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

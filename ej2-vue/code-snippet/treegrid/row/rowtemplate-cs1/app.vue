@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
 <ejs-treegrid :dataSource="data" childMapping='Children' height=275 :rowHeight = '83' width='auto' :treeColumnIndex='0' :rowTemplate='rowTemplate'>
@@ -12,18 +10,14 @@
         </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { textdata } from "./datasource.js";
+import {createApp } from "vue";
 
-Vue.use(TreeGridPlugin);
+const app = createApp({});
 
-export default {
-  data: () => {
-    return {
-      data: textdata,
-      rowTemplate: function () {
-        return { template : Vue.component('rowTemplate',{
+const rTemplate = app.componentVue.component('rowTemplate',{
         template: `<tr>
     <td class="border" style='padding-left:18px;'>
         <div>{{data.EmpID}}</div>
@@ -57,7 +51,22 @@ export default {
       return '../../../../treegrid/images/' + this.data.FullName + '.png';
     }
   }
-  })}
+  });
+
+export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
+  data: () => {
+    return {
+      data: textdata,
+      rowTemplate: function () {
+        return { template : rTemplate}
       }
     };
   }
@@ -81,6 +90,3 @@ export default {
         background-repeat: no-repeat;
     }
 </style>
-
-
-

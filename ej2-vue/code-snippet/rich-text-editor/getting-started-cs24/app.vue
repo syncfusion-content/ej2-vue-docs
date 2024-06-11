@@ -1,27 +1,18 @@
-
-
 <template>
   <ejs-richtexteditor ref="defaultRTE" :height="200" placeholder="Type Something">
   </ejs-richtexteditor>
 </template>
-
-<style>
-  .e-richtexteditor .rte-placeholder {
-    font-family: monospace;
-  }
-</style>
-
 <script>
-  import Vue from 'vue';
-  import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-
-  Vue.use(RichTextEditorPlugin);
-
-  export default {
-    provide: {
-      richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
-    }
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+export default {
+  name: "App",
+  components: {
+    "ejs-richtexteditor": RichTextEditorComponent
+  },
+  provide: {
+    richtexteditor: [Toolbar, Link, Image, HtmlEditor, QuickToolbar]
   }
+}
 </script>
 
 <style>
@@ -33,6 +24,7 @@
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+.e-richtexteditor .rte-placeholder {
+  font-family: monospace;
+}
 </style>
-
-

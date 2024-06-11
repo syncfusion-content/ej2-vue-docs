@@ -1,5 +1,3 @@
-
-
 <template>
  <div>
  <ejs-progressbutton content='Vertical Progress' :enableProgress="true" cssClass='e-hide-spinner e-vertical' duration=4000></ejs-progressbutton>
@@ -9,16 +7,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ProgressButtonPlugin } from "@syncfusion/ej2-vue-splitbuttons";
+
+import { ProgressButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(ProgressButtonPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-progressbutton":ProgressButtonComponent
+}
+}
 </script>
-
 <style>
   @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -46,5 +46,3 @@ button {
     left: auto;
 }
 </style>
-
-

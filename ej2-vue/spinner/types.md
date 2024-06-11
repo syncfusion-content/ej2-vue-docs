@@ -28,7 +28,10 @@ setSpinner({ type: 'Bootstrap'});
 > After Essential JS 2 component creation only, you can change the Essential JS 2 component spinner type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spinner/setspinner-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/spinner/setspinner-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -30,7 +30,10 @@ To get start quickly with selection options, you can check on this video:
 {% youtube "https://www.youtube.com/watch?v=OmEllnAzpq8" %}
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/selection/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/selection/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +50,10 @@ TreeGrid supports three types of selection mode which can be set by using
 * **`Both`** - Allows you to select rows and cells at the same time.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/selection/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/selection/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

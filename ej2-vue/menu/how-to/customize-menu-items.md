@@ -17,7 +17,10 @@ Menu items can be added or removed using the [`insertAfter`](https://ej2.syncfus
 In the following example, the **Europe** menu items are added before the **Oceania** item, the **Africa** menu items are added after the **Asia**, and the **South America** and **Mexico** items are removed from menu.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ npm install @syncfusion/ej2-vue-buttons --save
 In the following example, the **Directory** header item, **Conferences**, and **Music** sub menu items are disabled.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ In the following example, the **Directory** header item, **Conferences**, and **
 You can show or hide the menu items using the [`showItems`](https://ej2.syncfusion.com/vue/documentation/api/menu#showitems) and [`hideItems`](https://ej2.syncfusion.com/vue/documentation/api/menu#hideitems) methods.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/menu/getting-started-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/menu/getting-started-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

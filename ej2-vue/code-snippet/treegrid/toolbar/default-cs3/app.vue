@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
         <ejs-treegrid ref='treegrid' :dataSource='data' height='220' childMapping='subtasks' :treeColumnIndex='1' :toolbar='toolbar' :toolbarClick='toolbarClick' :editSettings='editSettings'>
@@ -13,15 +11,19 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, Toolbar, Edit } from "@syncfusion/ej2-vue-treegrid";
-import { EmitType } from '@syncfusion/ej2-base';
-import { sampleData } from "./datasource.js";
-import { ClickEventArgs } from '@syncfusion/ej2-vue-navigations';
 
-Vue.use(TreeGridPlugin);
+import { TreeGridComponent, Toolbar, Edit, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
+import { sampleData } from "./datasource.js";
 
 export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
   data ()  {
     return {
       data: sampleData,
@@ -30,7 +32,7 @@ export default {
     };
   },
   methods: {
-    toolbarClick: function (args: ClickEventArgs) {
+    toolbarClick: function (args) {
       if (args.item.text === 'Click') {
         alert("Custom toolbar click...");
       }
@@ -41,6 +43,3 @@ export default {
   }
 }
 </script>
-
-
-

@@ -1,8 +1,6 @@
-
-
 <template>
     <div id="app">
-        <ejs-button id='print' @click.native='print'>Print</ejs-button>
+        <ejs-button id='print' @click='print'>Print</ejs-button>
         <ejs-grid ref='grid' :dataSource='data' height='280px'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
@@ -14,15 +12,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data
@@ -38,5 +39,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

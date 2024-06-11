@@ -1,10 +1,9 @@
-
-
 <template>
- <div id='container'>
+    <div id='container'>
         <div class="control-section">
             <div class="menu-section">
-                <ejs-menu :items='menuItems' :beforeOpen='beforeOpen' :beforeClose='beforeClose' :onClose='onClose' :onOpen='onOpen' :select='select'></ejs-menu>
+                <ejs-menu :items='menuItems' :beforeOpen='beforeOpen' :beforeClose='beforeClose' :onClose='onClose'
+                    :onOpen='onOpen' :select='select'></ejs-menu>
             </div>
             <div class="property-section">
                 <table id="propertyTable" title="Event trace">
@@ -22,74 +21,77 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MenuPlugin } from "@syncfusion/ej2-vue-navigations";
+
+import { MenuComponent } from "@syncfusion/ej2-vue-navigations";
 import { enableRipple } from '@syncfusion/ej2-base';
 
 enableRipple(true);
-Vue.use(MenuPlugin);
 
 export default {
-   data: function() {
+    name: "App",
+    components: {
+        "ejs-menu": MenuComponent
+    },
+    data: function () {
         return {
-           menuItems:  [
-        {
-        text: 'Events',
-        items: [
-            { text: 'Conferences' },
-            { text: 'Music' },
-            { text: 'Workshops' }
-        ]
-    },
-    {
-        text: 'Movies',
-        items: [
-            { text: 'Now Showing' },
-            { text: 'Coming Soon' }
-        ]
-    },
-    {
-        text: 'Directory',
-        items: [
-            { text: 'Media Gallery' },
-            { text: 'Newsletters' }
-        ]
-    },
-    {
-        text: 'Queries',
-        items: [
-            { text: 'Our Policy' },
-            { text: 'Site Map' }
-        ]
-    },
-    { text: 'Services' }
-    ]
-    };
+            menuItems: [
+                {
+                    text: 'Events',
+                    items: [
+                        { text: 'Conferences' },
+                        { text: 'Music' },
+                        { text: 'Workshops' }
+                    ]
+                },
+                {
+                    text: 'Movies',
+                    items: [
+                        { text: 'Now Showing' },
+                        { text: 'Coming Soon' }
+                    ]
+                },
+                {
+                    text: 'Directory',
+                    items: [
+                        { text: 'Media Gallery' },
+                        { text: 'Newsletters' }
+                    ]
+                },
+                {
+                    text: 'Queries',
+                    items: [
+                        { text: 'Our Policy' },
+                        { text: 'Site Map' }
+                    ]
+                },
+                { text: 'Services' }
+            ]
+        };
     },
     methods: {
-updateEventLog: function(args) {
-    var propertyElem = document.getElementById('propertyTable');
-    propertyElem.getElementsByTagName('td')[0].insertAdjacentHTML('beforeend', args.name + ' Event triggered. <br />');
-},
-beforeOpen: function(args) {
-    this.updateEventLog(args);
-},
-beforeClose: function(args) {
-    this.updateEventLog(args);
-},
-onClose: function(args) {
-    this.updateEventLog(args);
-},
-onOpen: function(args) {
-    this.updateEventLog(args);
-},
-select: function(args) {
-    this.updateEventLog(args);
-},
-onClick: function(args) {
-    var propertyElem = document.getElementById('propertyTable');
-    propertyElem.getElementsByTagName('td')[0].innerHTML = '';
-}
+        updateEventLog: function (args) {
+            var propertyElem = document.getElementById('propertyTable');
+            propertyElem.getElementsByTagName('td')[0].insertAdjacentHTML('beforeend', args.name + ' Event triggered. <br />');
+        },
+        beforeOpen: function (args) {
+            this.updateEventLog(args);
+        },
+        beforeClose: function (args) {
+            this.updateEventLog(args);
+        },
+        onClose: function (args) {
+            this.updateEventLog(args);
+        },
+        onOpen: function (args) {
+            this.updateEventLog(args);
+        },
+        select: function (args) {
+            this.updateEventLog(args);
+        },
+        onClick: function (args) {
+            var propertyElem = document.getElementById('propertyTable');
+            propertyElem.getElementsByTagName('td')[0].innerHTML = '';
+        }
     }
 }
 </script>
@@ -99,7 +101,9 @@ onClick: function(args) {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 
-html, body, .control-section {
+html,
+body,
+.control-section {
     height: 95%;
 }
 
@@ -125,7 +129,4 @@ html, body, .control-section {
     float: right;
     clear: both;
 }
-
 </style>
-
-

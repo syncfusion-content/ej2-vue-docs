@@ -1,5 +1,3 @@
-
-
 <template>
     <div>
         <ejs-skeleton shape= 'Circle' width= "60px" cssClass= "e-customize"></ejs-skeleton>
@@ -7,12 +5,18 @@
 </template>
 
 <script>
-    import Vue from 'vue';
-    import { SkeletonPlugin } from "@syncfusion/ej2-vue-notifications";
+    
+import { SkeletonComponent } from "@syncfusion/ej2-vue-notifications";
 
-    Vue.use(SkeletonPlugin);
-
-    export default { }
+export default {
+    name: "App",
+    components: {
+        "ejs-skeleton":SkeletonComponent,
+    },
+    data: function () {
+        return {};
+    }
+}
 </script>
 
 <style>
@@ -29,5 +33,3 @@
         background-color: #a8c1f2;
     }
 </style>
-
-

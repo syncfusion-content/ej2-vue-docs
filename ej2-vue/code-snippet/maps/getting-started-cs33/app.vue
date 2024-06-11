@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="template">
         <div class='wrapper'>
@@ -14,12 +12,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { MapsPlugin, DataLabel } from '@syncfusion/ej2-vue-maps';
-import { usMap } from './usa.js';
 
-Vue.use(MapsPlugin);
-let contentVue = Vue.component("contentTemplate", {
+import { MapsComponent, DataLabel, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
+import { usMap } from './usa.js';
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+
+let contentVue = app.component("contentTemplate", {
     template: '<div><div><img src="https://ej2.syncfusion.com/demos/src/maps/images/weather-clear.png" style="width:22px;height:22px"> </div> {{data.Name}} </img></div>',
         data() {
             return {
@@ -31,6 +32,12 @@ let contentTemplate = function() {
     return { template: contentVue };
 };
 export default {
+name: "App",
+components: {
+"ejs-maps":MapsComponent,
+"e-layers":LayersDirective,
+"e-layer":LayerDirective
+},
 data () {
     return {
         shapeData: usMap,
@@ -62,5 +69,3 @@ provide: {
     margin: 0 auto;
   }
 </style>
-
-

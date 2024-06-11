@@ -1,26 +1,19 @@
-
-
-
-
 <template>
-    <div id="app">
-        <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings" :height="height" :showToolbar="showToolbar" :toolbar="toolbar" > </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-pivotview id="pivotview" ref="pivotview" :dataSourceSettings="dataSourceSettings" :gridSettings="gridSettings"
+      :height="height" :showToolbar="showToolbar" :toolbar="toolbar"> </ejs-pivotview>
+  </div>
 </template>
-
 <script>
-import Vue from "vue";
-import {
-  PivotViewPlugin,
-  IDataSet,
-  Toolbar
-} from "@syncfusion/ej2-vue-pivotview";
+import { PivotViewComponent, Toolbar } from "@syncfusion/ej2-vue-pivotview";
 import { pivotData } from './pivotData.js';
 
-Vue.use(PivotViewPlugin);
-
 export default {
-  data () {
+  name: "App",
+  components: {
+    "ejs-pivotview": PivotViewComponent
+  },
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -39,18 +32,12 @@ export default {
         "GrandTotal",
       ],
     };
-  }
+  },
   provide: {
-    pivotview: [
-      Toolbar
-    ]
+    pivotview: [Toolbar]
   }
 }
 </script>
 <style>
-@import "@syncfusion/ej2-vue-pivotview/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
-
-
-
-

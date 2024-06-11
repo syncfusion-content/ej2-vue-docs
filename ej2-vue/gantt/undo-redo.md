@@ -46,7 +46,10 @@ By default, all the gantt features listed in the below table will be restored fo
 In the following code example, `Edit` and `Delete` actions are specified in `undoRedoActions` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/undo-redo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/undo-redo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +67,10 @@ When the number of actions performed exceeds the `undoRedoStepsCount`, the oldes
 In the following example, `undoRedoStepsCount` value is set to 5.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/undo-redo-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/undo-redo-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +84,10 @@ You can perform undo and redo actions programatically using [undo](https://ej2.s
 The following code example demonstrates how to invoke the `undo` and `redo` method by clicking the external button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/undo-redo-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/undo-redo-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -92,7 +101,10 @@ By default, when an undo or redo action is performed, the actions are stored in 
 The following code example demonstrates how to retrieve the undo and redo collection using method by clicking the external button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/undo-redo-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/undo-redo-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -106,7 +118,10 @@ At any point, you can clear the undo and redo collections using the [clearUndoCo
 The following code example demonstrates how to clear the undo and redo collection using method by clicking the external button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/undo-redo-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/gantt/undo-redo-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

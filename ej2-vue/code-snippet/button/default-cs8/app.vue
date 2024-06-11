@@ -1,5 +1,3 @@
-
-
 <template>
     <div id='container'>
         <div class='btncontainer'>
@@ -32,14 +30,15 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple, EventHandler } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(ButtonPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent
+},
   mounted () {
       var timeout;
     document.getElementById('clear').onclick = function () {
@@ -99,5 +98,3 @@ hr {
    border-top: 1px solid #eee;
 }
 </style>
-
-

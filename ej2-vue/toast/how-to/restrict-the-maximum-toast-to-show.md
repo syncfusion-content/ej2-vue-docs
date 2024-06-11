@@ -15,7 +15,10 @@ You can restrict the maximum toast count by using the event callback function an
 The following sample demonstrates restricting toast displaying up to 3. You can restrict by your own count with custom code blocks.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/toast/how-to/maximum-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/toast/how-to/maximum-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

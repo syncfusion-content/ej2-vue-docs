@@ -15,7 +15,10 @@ Column width can be resized by clicking and dragging the right edge of the colum
 To use the column resize, inject `Resize` module in the treegrid.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ Column resize can be restricted between minimum and maximum width by defining th
 In the following sample, minimum and maximum width are defined for `Duration`, and `Task Name` columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +50,10 @@ In the following sample, minimum and maximum width are defined for `Duration`, a
 Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for particular stacked column by setting `allowResizing` as `false` to its columns.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/treegrid/columns/default-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/treegrid/columns/default-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

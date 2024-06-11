@@ -17,13 +17,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { GridPlugin, Edit } from "@syncfusion/ej2-vue-grids";
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -44,7 +47,7 @@ export default {
         this.$refs.grid.ej2Instances.updateRow(0, { OrderID: 10248, CustomerID: 'RTER', ShipCity: 'America', ShipName: 'Hanari'  });
     },
     clickUpdateCell: function () {
-        this.$refs.grid.ej2Instances.setCellValue((this.$refs.grid.ej2Instances.currentViewData[0] as any).OrderID,'CustomerID','Value Changed');
+        this.$refs.grid.ej2Instances.setCellValue((this.$refs.grid.ej2Instances.currentViewData[0]).OrderID,'CustomerID','Value Changed');
     }
   },
   provide: {

@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
        <ejs-kanban id="kanban" keyField="Status" :dataSource="kanbanData"
@@ -15,12 +13,38 @@
 </template>
 
 <script>
-import Vue from "vue";
-import { KanbanPlugin } from '@syncfusion/ej2-vue-kanban';
+
+import { KanbanComponent, ColumnDirective, ColumnsDirective } from '@syncfusion/ej2-vue-kanban';
 import { extend } from '@syncfusion/ej2-base';
 import { kanbanData } from './datasource.js';
-Vue.use(KanbanPlugin);
+import { createApp } from 'vue';
+
+const app = createApp({});
+
+const SwimTemplate = app.component('swimlaneTemplate', {
+    template: `<div class='swimlane-template e-swimlane-template-table'>
+    <div class="e-swimlane-row-text"><img :src="image(data)" :alt="data.keyField" />
+    <span>{{data.textField}}</span></div>
+    </div>`,
+    data() {
+        return {
+            data: {}
+        };
+    },
+    methods: {
+        image: function(data) {
+            return data.keyField + '.png';
+        }
+    }
+});
+
 export default {
+name: "App",
+components: {
+"ejs-kanban":KanbanComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data: function() {
     return {
         kanbanData: extend([], kanbanData, null, true),
@@ -31,23 +55,8 @@ export default {
         swimlaneSettings: {
             template: function() {
                 return {
-                    template: Vue.component('swimlaneTemplate', {
-                        template: `<div class='swimlane-template e-swimlane-template-table'>
-                                        <div class="e-swimlane-row-text"><img :src="image(data)" :alt="data.keyField" />
-                                        <span>{{data.textField}}</span></div>
-                                    </div>`,
-                        data() {
-                            return {
-                                data: {}
-                            };
-                        },
-                        methods: {
-                            image: function(data) {
-                                return data.keyField + '.png';
-                            }
-                        }
-                    })
-                }
+                    template: SwimTemplate
+                };
             }
         }
     };
@@ -85,6 +94,3 @@ export default {
     padding: 4px;
 }
 </style>
-
-
-

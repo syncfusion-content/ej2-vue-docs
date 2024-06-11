@@ -1,5 +1,3 @@
-
-
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
@@ -13,23 +11,30 @@
                   <e-column field="Status" label="Status" type="string"></e-column>
                 </e-columns>
             </ejs-querybuilder>
-            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click.native="getSql">Get SQL</ejs-button>
-            <ejs-button cssClass="e-qbr-button" :isPrimary="true" v-on:click.native="getJson">Get JSON</ejs-button>
+            <ejs-button cssClass="e-qb-button" :isPrimary="true" v-on:click="getSql">Get SQL</ejs-button>
+            <ejs-button cssClass="e-qbr-button" :isPrimary="true" v-on:click="getJson">Get JSON</ejs-button>
             <ejs-dialog ref="dialogObj" :header="header" :animationSettings="animationSettings" :showCloseIcon="true" :visible="false" width="500px" height="80%">
             </ejs-dialog>
         </div>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { QueryBuilderPlugin } from "@syncfusion/ej2-vue-querybuilder";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-import { DialogPlugin } from '@syncfusion/ej2-vue-popups';
-Vue.use(DialogPlugin);
-Vue.use(ButtonPlugin);
-Vue.use(QueryBuilderPlugin);
+
+import { QueryBuilderComponent, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-querybuilder";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { DialogComponent } from '@syncfusion/ej2-vue-popups';
 
 export default {
+name: "App",
+components: {
+"ejs-querybuilder":QueryBuilderComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"ejs-button":ButtonComponent,
+"ejs-dialog":DialogComponent,
+
+},
+
     data: function() {
         return {
             dataSource: hardwareData,
@@ -48,11 +53,11 @@ export default {
         };
     },
     methods: {
-    getSql: function(event) {
+    getSql: function() {
          this.$refs.dialogObj.content = this.$refs.querybuilder.ej2Instances.getSqlFromRules(this.$refs.querybuilder.ej2Instances.getRules());
          this.$refs.dialogObj.show();
-    }
-    getJson: function(event) {
+    },
+    getJson: function() {
          var validRule = this.$refs.querybuilder.ej2Instances.getValidRules(this.$refs.querybuilder.ej2Instances.rule);
          this.$refs.dialogObj.content =  '<pre>' + JSON.stringify(validRule, null, 4) + '</pre>';
          this.$refs.dialogObj.show();
@@ -104,5 +109,3 @@ var hardwareData = [{
        margin: 2% 1% 0 1%;
    }
 </style>
-
-

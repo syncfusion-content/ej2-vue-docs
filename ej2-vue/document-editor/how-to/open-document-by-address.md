@@ -16,51 +16,96 @@ In this article, we are going to see how to open a document from URL in Document
 
 please refer below example for client-side code
 
-```
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
 <template>
-    <div id="app">
+  <div id="app">
     <button id='import' v-on:click="onClick">Import</button>
-      <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container' :enableToolbar='true'></ejs-documenteditorcontainer>
-    </div>
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
 </template>
-<script>
-  import Vue from 'vue';
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent,Toolbar} from '@syncfusion/ej2-vue-documenteditor';
+<script setup>
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { provide, ref } from 'vue';
 
-  Vue.use(DocumentEditorContainerPlugin);
+const container = ref(null);
+const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 
-  export default {
-    data() {
-      return { serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-      };
-    },
-    provide: {
-      //Inject require modules.
-      DocumentEditorContainer: [Toolbar]
-    },
-    methods: {
-     onClick:function() {
-    let obj = this;
-    let http: XMLHttpRequest = new XMLHttpRequest();
-    //add your url in which you want to open document inside the ""
-    let content = { fileUrl: "" };
-    let baseurl: string = "/api/documenteditor/ImportFileURL";
-    http.open("POST", baseurl, true);
-    http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    http.onreadystatechange = () => {
-        if (http.readyState === 4) {
-            if (http.status === 200 || http.status === 304) {
-                //open the SFDT text in Document Editor
-                this.$refs.container.ej2Instances.documentEditor.open(http.responseText);
-            }
-        }
-    };
-    http.send(JSON.stringify(content));
-    }
+//Inject require modules.
+provide('DocumentEditorContainer', [Toolbar]);
+
+const onClick = function () {
+  let http = new XMLHttpRequest();
+  //add your url in which you want to open document inside the ""
+  let content = { fileUrl: "" };
+  let baseurl = "/api/documenteditor/ImportFileURL";
+  http.open("POST", baseurl, true);
+  http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  http.onreadystatechange = () => {
+    if (http.readyState === 4) {
+      if (http.status === 200 || http.status === 304) {
+        //open the SFDT text in Document Editor
+        container.value.ej2Instances.documentEditor.open(http.responseText);
+      }
     }
   };
+  http.send(JSON.stringify(content));
+}
+
 </script>
-```
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <button id='import' v-on:click="onClick">Import</button>
+    <ejs-documenteditorcontainer ref='container' :serviceUrl='serviceUrl' height="590px" id='container'
+      :enableToolbar='true'></ejs-documenteditorcontainer>
+  </div>
+</template>
+<script>
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+export default {
+  components: {
+    'ejs-documenteditorcontainer': DocumentEditorContainerComponent
+  },
+  data() {
+    return {
+      serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+    };
+  },
+  provide: {
+    //Inject require modules.
+    DocumentEditorContainer: [Toolbar]
+  },
+  methods: {
+    onClick: function () {
+      let http = new XMLHttpRequest();
+      //add your url in which you want to open document inside the ""
+      let content = { fileUrl: "" };
+      let baseurl = "/api/documenteditor/ImportFileURL";
+      http.open("POST", baseurl, true);
+      http.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+      http.onreadystatechange = () => {
+        if (http.readyState === 4) {
+          if (http.status === 200 || http.status === 304) {
+            //open the SFDT text in Document Editor
+            this.$refs.container.ej2Instances.documentEditor.open(http.responseText);
+          }
+        }
+      };
+      http.send(JSON.stringify(content));
+    }
+  }
+};
+</script>
+
+{% endhighlight %}
+{% endtabs %}
 
 please refer below example for server-side code
 

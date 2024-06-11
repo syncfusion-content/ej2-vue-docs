@@ -15,7 +15,10 @@ The following example demonstrates how to set `placholder` in the DatePicker com
 Using `placeholder` you can display a short hint in the input element.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/access-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/datepicker/access-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

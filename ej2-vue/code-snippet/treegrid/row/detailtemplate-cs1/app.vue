@@ -1,5 +1,3 @@
-
-
 <template>
 <div id="app">
 <ejs-treegrid :dataSource="data" childMapping='Children' height=317 width='auto' :treeColumnIndex='0' :detailTemplate='detailTemplate'>
@@ -13,22 +11,18 @@
 </div>
 </template>
 <script>
-import Vue from "vue";
-import { TreeGridPlugin, DetailRow } from "@syncfusion/ej2-vue-treegrid";
+
+import { TreeGridComponent, DetailRow, ColumnDirective, ColumnsDirective } from "@syncfusion/ej2-vue-treegrid";
 import { textdata } from "./datasource.js";
 import { Internationalization } from '@syncfusion/ej2-base';
+import {createApp} from 'vue';
 
 let instance = new Internationalization();
 
-Vue.use(TreeGridPlugin);
+const app = createApp({});
 
-export default {
-  data: () => {
-    return {
-      data: textdata,
-      detailTemplate: function () {
-        return { template : Vue.component('detailTemplate',{
-        template: `<div>
+const detTemplate = app.component('detailTemplate',{
+  template: `<div>
      <div style="position: relative; display: inline-block; float: left; font-weight: bold; width: 10%;padding:5px 4px 2px 27px;;">
         <img :src="image" alt="{{data.FullName}}"/>
     </div>
@@ -46,17 +40,32 @@ export default {
               data: {}
             }
           },
-          methods: {
-    format: function(value) {
+    methods: {
+      format: function(value) {
         return instance.formatDate(value, { skeleton: 'yMd', type: 'date' });
-    }
+      }
   },
     computed: {
-    image: function() {
+      image: function() {
        return '../../../../treegrid/images/' + this.data.FullName + '.png';
+      }
     }
-  }
-  })}
+});
+
+export default {
+name: "App",
+components: {
+"ejs-treegrid":TreeGridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
+  data: () => {
+    return {
+      data: textdata,
+      detailTemplate: function () {
+        return { template : detTemplate}
       }
     };
   },
@@ -65,6 +74,3 @@ export default {
   }
 }
 </script>
-
-
-

@@ -1,11 +1,9 @@
-
-
-
 <template>
-    <div id="app">
-        <ejs-button id="calculated-field-btn" :isPrimary="isPrimary" v-on:click.native="btnClick">Calculated Field</ejs-button>
-        <ejs-pivotview id="pivotview" :height= "height" :dataSourceSettings="dataSourceSettings" :allowCalculatedField="allowCalculatedField"> </ejs-pivotview>
-    </div>
+  <div id="app">
+    <ejs-button id="calculated-field-btn" :isPrimary="isPrimary" v-on:click="btnClick">Calculated Field</ejs-button>
+    <ejs-pivotview id="pivotview" :height="height" :dataSourceSettings="dataSourceSettings"
+      :allowCalculatedField="allowCalculatedField"> </ejs-pivotview>
+  </div>
 </template>
 
 <script>
@@ -14,11 +12,12 @@ import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { pivotData } from './pivotData.js';
 
 export default {
+  name: "App",
   components: {
-    'ejs-pivotview': PivotViewComponent,
-    'ejs-button': ButtonComponent
+    "ejs-button": ButtonComponent,
+    "ejs-pivotview": PivotViewComponent
   },
-  data () {
+  data() {
     return {
       dataSourceSettings: {
         dataSource: pivotData,
@@ -38,14 +37,14 @@ export default {
     }
   },
   methods: {
-    btnClick: function() {
+    btnClick: function () {
       let pivotGridObj = document.getElementById('pivotview').ej2_instances[0];
       pivotGridObj.calculatedFieldModule.createCalculatedFieldDialog();
     }
   },
   provide: {
-        pivotview: [CalculatedField]
-    }
+    pivotview: [CalculatedField]
+  }
 }
 </script>
 <style>
@@ -60,6 +59,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-pivotview/styles/material.css";
 </style>
-
-
-

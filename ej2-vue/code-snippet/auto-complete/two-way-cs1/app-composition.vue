@@ -1,0 +1,47 @@
+<template>
+  <div id="app">
+    <div id="wrapper1">
+      <ejs-autocomplete id='first' :dataSource='sportsData' :fields='fields' :placeholder="waterMark"
+        v-model="value"></ejs-autocomplete>
+    </div>
+    <div id="wrapper2">
+      <ejs-autocomplete id='second' :dataSource='sportsData' :fields='fields' :placeholder="waterMark"
+        v-model="value"></ejs-autocomplete>
+    </div>
+  </div>
+</template>
+<script setup>
+import { AutoCompleteComponent as EjsAutocomplete } from '@syncfusion/ej2-vue-dropdowns';
+
+const waterMark = 'Select a game';
+const value = null;
+const sportsData = [
+  { Id: 'Game1', Game: 'Badminton' },
+  { Id: 'Game2', Game: 'Basketball' },
+  { Id: 'Game3', Game: 'Cricket' },
+  { Id: 'Game4', Game: 'Football' },
+  { Id: 'Game5', Game: 'Golf' },
+  { Id: 'Game6', Game: 'Hockey' },
+  { Id: 'Game7', Game: 'Rugby' },
+  { Id: 'Game8', Game: 'Snooker' }
+];
+const fields = { value: 'Game' };
+
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+
+#wrapper1 {
+  min-width: 250px;
+  float: left;
+  margin-left: 100px;
+}
+
+#wrapper2 {
+  min-width: 250px;
+  float: right;
+  margin-right: 100px;
+}
+</style>
