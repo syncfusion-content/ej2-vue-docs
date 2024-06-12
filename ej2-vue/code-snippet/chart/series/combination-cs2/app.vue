@@ -1,33 +1,36 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='group.x' yName='group.y' name='USA' enableComplexProperty="true"> </e-series>
-                <e-series :dataSource='seriesData' type='Column' xName='group.x' yName='y' name='UK' enableComplexProperty="true"> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='group.x' yName='group.y' name='USA'
+          enableComplexProperty="true"> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='group.x' yName='y' name='UK'
+          enableComplexProperty="true"> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
-       seriesData:[
-  {group: { x: 'Aaa', y: 10}, y: 20},
-  {group: { x: 'Baa', y: 30}, y: 10}
-    ],
-        primaryXAxis: {
-            valueType: 'Category'
-        },
-        marker: { visible: true, width: 10, opacity: 0.6, height: 10 },
-         title: "Annual Growth GDP in France"
+      seriesData: [
+        { group: { x: 'Aaa', y: 10 }, y: 20 },
+        { group: { x: 'Baa', y: 30 }, y: 10 }
+      ],
+      primaryXAxis: {
+        valueType: 'Category'
+      },
+      title: "Annual Growth GDP in France"
     };
   },
   provide: {
@@ -36,9 +39,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

@@ -14,7 +14,10 @@ domainurl: ##DomainURL##
 To render a step area series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `SplineArea` and inject `SplineAreaSeries`  into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/splinearea/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/splinearea/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The following properties can be used to customize the `spline area` series.
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/splinearea-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/splinearea-cs/app.vue %}
 {% endhighlight %}
 {% endtabs %}

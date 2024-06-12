@@ -26,7 +26,11 @@ data () {
     return{
        zoomSettings: {
            enable: true,
-           toolBars: ["Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset"]
+           toolbarSettings:{
+               buttonSettings: {
+                   toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+               }
+            }
        },
        urlTemplate: 'https://tile.openstreetmap.org/level/tileX/tileY.png'
     }

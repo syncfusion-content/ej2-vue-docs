@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Data labels are fields that includes information about the sample point connected to an output. It can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#visible) property in the [`dataLabel`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#datalabel). By default, the labels will arrange smartly without overlapping.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/data-label/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/data-label/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Data labels are fields that includes information about the sample point connecte
 The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#position) property is used to place the label either on `Top`, `Middle`, or `Bottom`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/label-position/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/label-position/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLa
 Label content can be formatted by using the template option. Inside the template, the placeholder text `${point.x}` and `${point.y}` can be added to display corresponding data points x & y value. Using [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#template) property, the data label template can be set.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ Label content can be formatted by using the template option. Inside the template
 Text from the data source can be mapped using the [`name`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#name) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/text-mapping/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/text-mapping/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +75,10 @@ Text from the data source can be mapped using the [`name`](https://ej2.syncfusio
 Data label for the chart can be formatted using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#format) property. The global formatting options can be used as 'n', 'p', and 'c'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/datalabel-format/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/datalabel-format/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +147,10 @@ Data label for the chart can be formatted using the [`format`](https://ej2.syncf
 The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyleModel/#margin) for data label can be applied by using [`left`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#left), [`right`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#right), [`bottom`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#bottom) and [`top`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/marginModel/#top) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/margin/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/margin/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +162,10 @@ The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabe
 The `stroke` and `border` of data label can be customized using [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyle/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/dataLabelStyle/#border) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/datalabel-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/datalabel-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -156,7 +177,10 @@ The `stroke` and `border` of data label can be customized using [`fill`](https:/
 A specific label can be customized by using the [`textRender`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/i3DTextRenderEventArgs/) event.  The `textRender` event allows you to change the label text for the point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/label/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/label/app.vue %}
 {% endhighlight %}
 {% endtabs %}

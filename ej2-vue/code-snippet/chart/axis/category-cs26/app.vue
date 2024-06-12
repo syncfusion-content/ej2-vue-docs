@@ -1,27 +1,31 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id='chartcontainer' :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
-            :chartArea='chartArea' :legendSettings='legendSettings'
-            :selectionMode="selectionMode">
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='x' yName='y' name='USA' :animation='animation' :cornerRadius='cornerRadius'> </e-series>
-            </e-series-collection>
-            <e-rangecolorsettings>
-                <e-rangecolorsetting label="1°C to 10°C" start="1" end="10" :colors="colors1"></e-rangecolorsetting>
-                <e-rangecolorsetting label="11°C to 20°C" start="11" end="20" :colors="colors2"></e-rangecolorsetting>
-                <e-rangecolorsetting label="21°C to 30°C" start="21" end="30" :colors="colors3"></e-rangecolorsetting>
-            </e-rangecolorsettings>
-          </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id='chartcontainer' :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
+      :chartArea='chartArea' :legendSettings='legendSettings' :selectionMode="selectionMode">
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='x' yName='y' name='USA' :animation='animation'
+          :cornerRadius='cornerRadius'> </e-series>
+      </e-series-collection>
+      <e-rangecolorsettings>
+        <e-rangecolorsetting label="1°C to 10°C" start="1" end="10" :colors="colors1"></e-rangecolorsetting>
+        <e-rangecolorsetting label="11°C to 20°C" start="11" end="20" :colors="colors2"></e-rangecolorsetting>
+        <e-rangecolorsetting label="21°C to 30°C" start="21" end="30" :colors="colors3"></e-rangecolorsetting>
+      </e-rangecolorsettings>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category, Legend, Selection } from "@syncfusion/ej2-vue-charts";
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, RangecolorsettingsDirective, RangecolorsettingDirective, ColumnSeries, Category, Legend, Selection } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    "ejs-chart": ChartComponent,
+    "e-series-collection": SeriesCollectionDirective,
+    "e-series": SeriesDirective,
+    "e-rangecolorsettings": RangecolorsettingsDirective,
+    "e-rangecolorsetting": RangecolorsettingDirective,
+  },
   data() {
     return {
       seriesData: [
@@ -52,20 +56,11 @@ export default {
           width: 0
         }
       },
-      tooltip: {
-        enable: false
-      },
       title: "USA CLIMATE - WEATHER BY MONTH",
       legendSettings: {
         mode: 'Range',
         visible: true,
         toggleVisibility: false,
-      },
-      marker: {
-        dataLabel: {
-          visible: true,
-          position: 'Outer',
-        }
       },
       selectionMode: 'Point',
       animation: {
@@ -85,9 +80,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

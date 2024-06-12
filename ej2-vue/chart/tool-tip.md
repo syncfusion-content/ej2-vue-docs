@@ -19,7 +19,10 @@ Chart will display details about the points through tooltip, when the mouse is m
 By default, tooltip is not visible. You can enable the tooltip by setting [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#enable) property to **true** and by injecting `Tooltip` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ By default, tooltip is not visible. You can enable the tooltip by setting [`enab
 By default, tooltip track the mouse movement, but you can set a fixed position for the tooltip by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#location) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ information in tooltip. For example the format `${series.name} ${point.x}` sho
 value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +76,10 @@ value.
  >Note: If series [`tooltipFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#tooltipformat) is given, it shows the tooltip for that series in that format, or else it will take tooltip format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -81,7 +93,10 @@ value.
 Any HTML elements can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#template) property of the tooltip. You can use the ${x} and ${y} as place holders in the HTML element to display the x and y values of the corresponding data point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +108,10 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#border) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettingsModel/#textstyle) property in the tooltip is used to customize the font of the tooltip text. The [`highlightColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/#highlightcolor) property is used to customize the point color while hovering for tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -105,7 +123,10 @@ The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSetti
 By default, tooltip shows information of x and y value in points. You can show more information from data source in tooltip by using the [`tooltipMappingName`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#tooltipmappingname) property of the tooltip. You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/tooltip-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}

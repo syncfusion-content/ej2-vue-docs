@@ -19,7 +19,10 @@ The left and right thumb of RangeNavigator are used to indicate the selected ran
 Following code example shows the [`enableSelector`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/periodSelector/) property allows users to toggle the visibility of enable selector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/range-selector-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/range-selector-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

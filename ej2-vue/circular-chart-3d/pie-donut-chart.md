@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 To render a pie series, inject the `PieSeries3D` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/pie-donut/pie/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/pie-donut/pie/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ To render a pie series, inject the `PieSeries3D` into the `provide`.
 By default, the radius of the pie series will be 80% of the size, which is the minimum of the 3D Circular Chart's width and height. You can customize this by using the `radius` property of the series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/pie-donut/radius/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/pie-donut/radius/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ By default, the radius of the pie series will be 80% of the size, which is the m
 You can assign different radii to each slice of the pie by fetching the radius from the data source and using it with the `radius` property in the `series`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/pie-donut/various-radius/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/pie-donut/various-radius/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ You can assign different radii to each slice of the pie by fetching the radius f
 To achieve a donut in the pie series, customize the `innerRadius` property of the series. By setting a value greater than 0%, a donut will appear. The `innerRadius` property takes value from 0% to 100% of the pie radius.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/pie-donut/donut/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/pie-donut/donut/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +75,10 @@ To achieve a donut in the pie series, customize the `innerRadius` property of th
 The text and the fill color from the data source can be mapped to the 3D Circular Chart using `pointColorMapping` in the series and `name` in the data label, respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/pie-donut/color/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/pie-donut/color/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +90,10 @@ The text and the fill color from the data source can be mapped to the 3D Circula
 Individual points in pie chart can be customized using the `pointRender` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/pie-donut/customization/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/pie-donut/customization/app.vue %}
 {% endhighlight %}
 {% endtabs %}

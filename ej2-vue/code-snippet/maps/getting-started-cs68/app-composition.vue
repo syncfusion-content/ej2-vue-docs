@@ -29,7 +29,9 @@ const markerSettings = [{
 
 const zoomSettings = {
   enable: true,
-  horizontalAlignment:'Near',
+  toolbarSettings:{
+    horizontalAlignment:'Near'
+  },
   shouldZoomInitially: true
 };
 

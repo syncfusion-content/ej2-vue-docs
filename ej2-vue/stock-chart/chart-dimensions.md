@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Stock Chart can render to its container size. You can set the size via inline or CSS as demonstrated below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/chart-dimensions-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/chart-dimensions-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ You can also set size for stock chart directly through [`width`](https://ej2.syn
 You can set the size of stock chart in pixel as demonstrated below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/chart-dimensions-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/chart-dimensions-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +52,10 @@ By setting value in percentage, stock chart gets its dimension with respect to 
 when the height is ‘50%’, stock chart renders to half of the container height.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/chart-dimensions-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/chart-dimensions-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

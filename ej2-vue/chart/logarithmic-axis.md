@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numeric values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/log-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/log-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ Range of an axis, will be calculated automatically based on the provided data, y
 of the axis using [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#interval) property of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/log-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/log-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +50,10 @@ For example when the logBase is 5, the axis values follows 5<sup>-2</sup>, 5<su
 5<sup>1</sup>, 5<sup>2</sup> etc.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/log-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/log-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +67,10 @@ property of the axis. When the logarithmic base is 10 and logarithmic interval i
 placed at an interval of 10<sup>2</sup>. The default value of the interval is 1.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/log-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/log-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

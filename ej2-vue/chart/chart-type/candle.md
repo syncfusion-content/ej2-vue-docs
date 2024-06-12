@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Candle series are similar to Hilo Open Close series, are used to represent the low, high, open and closing price over time. To render a candle series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Candle` and inject `CandleSeries` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/candle-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/candle-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +63,10 @@ candles. By default is set to be false. The fill color of the candle will be def
 [`bullFillColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#bullfillcolor) will be applied when the opening value is greater than closing value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/candle-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/candle-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

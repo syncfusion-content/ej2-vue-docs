@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Open and save in the Vue Image Editor component
 
-To import an image into the canvas, it must first be converted into a blob object. The Uploader component can be used to facilitate the process of uploading an image from the user interface. Once the image has been uploaded, it can then be converted into a blob and drawn onto the canvas. 
+To import an image into the canvas, it must first be converted into a blob object. The [`Uploader`](https://ej2.syncfusion.com/vue/documentation/api/uploader) component can be used to facilitate the process of uploading an image from the user interface. Once the image has been uploaded, it can then be converted into a blob and drawn onto the canvas. 
 
 To save an edited image in the Image Editor component, use the toBlob method to convert it to a blob object. This will save the image with any annotations or filters that have been applied during the editing process. The saved image can be stored as raw image data or as an image file.
 
@@ -46,7 +46,7 @@ The [`getImageData`](https://ej2.syncfusion.com/vue/documentation/api/image-edit
 
 The [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method in the Image Editor component enables you to save the modified image as a file on the local device. This method accepts two parameters: the file name and the file type.
 
-By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, or SVG.
+By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, or SVG. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
 
 By utilizing the [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method with the appropriate file name and file type, you can conveniently save the modified image as a file on the local device, ensuring that it is easily accessible and shareable
 

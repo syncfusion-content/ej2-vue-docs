@@ -16,7 +16,10 @@ To render a step line series, use series [`type`](https://ej2.syncfusion.com/vue
 the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/line-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/line-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ The following properties can be used to customize the `step line` series.
 * [step](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#step) – Specifies the position of the step for the series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/stepline-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/stepline-cs/app.vue %}
 {% endhighlight %}
 {% endtabs %}

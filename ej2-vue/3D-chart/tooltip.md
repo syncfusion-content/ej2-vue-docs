@@ -19,7 +19,10 @@ The 3D Chart will display details about the points through tooltip, when the mou
 By default, tooltip is not visible. The tooltip can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#enable) property in `tooltipSettings` to **true** and by injecting `Tooltip3D` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ By default, tooltip is not visible. The tooltip can be enabled by setting the [`
 By default, tooltip track the mouse movement, but the tooltip can be set in fixed position by using the [`location`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#location) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/fixed-tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/fixed-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -47,7 +53,10 @@ By default, tooltip track the mouse movement, but the tooltip can be set in fixe
 By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip by using the [`format`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#format) property. For example the format `${series.name} : ${point.y}` shows series name and point x value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/format-tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/format-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ By default, tooltip shows information of x and y value in points. In addition to
 Any HTML elements can be displayed in the tooltip by using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#template) property of the tooltip. The ${x} and ${y} can be used as place holders in the HTML element to display the x and y values of the corresponding data point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/tooltip-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/tooltip-template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -71,7 +83,10 @@ Any HTML elements can be displayed in the tooltip by using the [`template`](http
 The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#fill) and [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#border) properties are used to customize the background color and border of the tooltip respectively. The [`textStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/tooltipSettings/#textstyle) property in the tooltip is used to customize the font of the tooltip text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/custom-tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/custom-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}

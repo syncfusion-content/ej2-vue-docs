@@ -136,7 +136,11 @@ data () {
     return{
         zoomSettings: {
             enable: true,
-            toolBars: ["Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset"]
+            toolbarSettings:{
+               buttonSettings: {
+                   toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+               }
+            }
         },
         layers: [{
         }]
@@ -268,7 +272,6 @@ data () {
         layers: [{
         },
         {
-            layerType: 'Geometry',
             type: 'SubLayer',
             shapeData: africa,
             shapeSettings: {

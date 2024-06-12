@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
@@ -13,7 +11,9 @@
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 export default {
-  components: {
+name: "App",
+components: {
+
     'ejs-chart': ChartComponent,
     'e-series-collection': SeriesCollectionDirective,
     'e-series': SeriesDirective
@@ -43,5 +43,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

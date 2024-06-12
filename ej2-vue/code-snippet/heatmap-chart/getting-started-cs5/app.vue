@@ -1,6 +1,3 @@
-
-
-
 <template>
     <div class="control_wrapper">
        <ejs-heatmap id="heatmap" :dataSource='dataSource' :xAxis='xAxis' :yAxis='yAxis' :titleSettings='titleSettings' :legendSettings='legendSettings' :cellSettings='cellSettings'>
@@ -11,6 +8,7 @@
 import { HeatMapComponent, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
 
 export default {
+name: "App",
   components: {
     'ejs-heatmap': HeatMapComponent
   },
@@ -62,5 +60,3 @@ export default {
 },
 }
 </script>
-
-

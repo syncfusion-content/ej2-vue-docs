@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
       <ejs-bulletchart id="bulletChart"
@@ -17,6 +15,7 @@
 import { BulletChartComponent } from '@syncfusion/ej2-vue-charts';
 
 export default {
+name: "App",
   components: {
     'ejs-bulletchart': BulletChartComponent
   },
@@ -28,5 +27,3 @@ export default {
   }
 }
 </script>
-
-

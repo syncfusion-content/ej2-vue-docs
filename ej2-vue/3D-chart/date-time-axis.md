@@ -17,7 +17,10 @@ domainurl: ##DomainURL##
 DateTime axis uses date time scale and displays the date time values as axis labels in the specified format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/dateTime/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/dateTime/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ DateTime axis uses date time scale and displays the date time values as axis lab
 DateTime category axis is used to display the date time values with non-linear intervals. For example, the business days alone have been depicted in a week here.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/datetime-category/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/datetime-category/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ DateTime category axis is used to display the date time values with non-linear i
 Range of an axis will be calculated automatically based on the provided data. You can also customize the range of an axis using [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/range/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/range/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ Date time intervals can be customized by using the [`interval`](https://ej2.sync
 * Seconds
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/interval/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/interval/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +97,10 @@ Padding can be applied to the minimum and maximum extremes of the range by using
 When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to `None`, minimum and maximum of an axis is based on the data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/none/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/none/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +112,10 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to `Round`, minimum and maximum will be rounded to the nearest possible value, which is divisible by interval. For example, when the minimum is **15th Jan**, interval is **1** and interval type is **Month**, then the axis minimum will be **Jan 1st**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/round/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/round/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -109,7 +127,10 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#rangepadding) is set to `Additional`, interval of an axis will be padded to the minimum and maximum of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/additional/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/additional/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +142,10 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart
 The date can be formatted and parsed to all globalize format using the [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#labelformat) property in an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/format/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/format/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -175,7 +199,10 @@ The following table describes the result of applying some common date time forma
 Axis also supports custom label format using placeholder like {value}°C, in which the value represent the axis label e.g 20°C.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/date-time/custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/date-time/custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}

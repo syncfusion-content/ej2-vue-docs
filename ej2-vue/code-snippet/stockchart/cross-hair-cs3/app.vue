@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <div>
@@ -17,16 +15,20 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { chartData } from "./datasource.js";
 import {
-  StockChartPlugin, DateTime, CandleSeries, RangeTooltip, LineSeries,SplineSeries,
+  StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, DateTime, CandleSeries, RangeTooltip, LineSeries,SplineSeries,
   HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, EmaIndicator, RsiIndicator,BollingerBands,  TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator, Crosshair,AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export
 } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(StockChartPlugin);
-
 export default {
+name: "App",
+components: {
+    'ejs-stockchart': StockChartComponent,
+    'e-stockchart-series-collection': StockChartSeriesCollectionDirective,
+    'e-stockchart-series': StockChartSeriesDirective
+  },
   data() {
     return {
         seriesData:chartData,
@@ -39,7 +41,7 @@ export default {
             majorTickLines: { color: "transparent", width: 0 },
             crosshairTooltip: { enable: true ,fill: 'green'}
         },
-        crosshair: {  enable: true, line: {width: 2, color: 'green'}, fill: 'green' }
+        crosshair: {  enable: true, line: {width: 2, color: 'green'}, fill: 'green' },
        title: 'AAPL Stock Price',
     };
   },
@@ -56,5 +58,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

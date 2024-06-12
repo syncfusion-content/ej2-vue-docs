@@ -4,11 +4,14 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { HeatMapPlugin, Legend, Tooltip } from '@syncfusion/ej2-vue-heatmap';
-Vue.use(HeatMapPlugin);
+
+import { HeatMapComponent, Legend, Tooltip } from '@syncfusion/ej2-vue-heatmap';
 
 export default {
+    name: "App",
+    components: {
+        "ejs-heatmap": HeatMapComponent
+    },
     data: function () {
         return {
             dataSource: [

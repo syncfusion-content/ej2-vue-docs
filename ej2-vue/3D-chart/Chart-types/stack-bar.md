@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 To render a stacked bar series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#type) as `StackingBar` and inject `StackingBarSeries3D` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/types/stackbar1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/types/stackbar1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ To render a stacked bar series, use series [`type`](https://ej2.syncfusion.com/v
 To group the stacked bar, the [`stackingGroup`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#stackinggroup) property can be used. The columns with same group name are stacked on top of each other.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/types/stackbar2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/types/stackbar2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ To group the stacked bar, the [`stackingGroup`](https://ej2.syncfusion.com/vue/d
 To render a cylindrical stacked bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/types/stackbar3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/types/stackbar3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +63,10 @@ The following properties can be used to customize the `stacked bar` series.
 * [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#opacity) – Specifies the opacity of the  [fill](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#fill) color.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/types/stackbar4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/types/stackbar4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

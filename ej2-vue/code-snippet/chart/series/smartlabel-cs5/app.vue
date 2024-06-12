@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-accumulationchart id="container" enableSmartLabels='enableSmartLabels'>
@@ -10,12 +8,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, PieSeries, AccumulationDataLabel } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
+import {  AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationDataLabel } from "@syncfusion/ej2-vue-charts";
 
 export default {
+name: "App",
+components: {
+    "ejs-accumulationchart": AccumulationChartComponent,
+    "e-accumulation-series-collection": AccumulationSeriesCollectionDirective,
+    "e-accumulation-series": AccumulationSeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -25,7 +27,7 @@ export default {
                 { x: 'Jul', y: 26, text: 'Jul: 26' }, { x: 'Aug', y: 25, text: 'Aug: 25' },
                 { x: 'Sep', y: 21, text: 'Sep: 21' }, { x: 'Oct', y: 15, text: 'Oct: 15' }],
                 datalabel: { visible: true, name: 'text', position: 'Inside',
-                template:  "<div id='templateWrap' style='background-color:#bd18f9;border-radius: 3px; float: right;padding: 2px;line-height: 20px;text-align: center;'>"+ "<img src='sun_annotation.png' />" + "<div style='color:white; font-family:Roboto; font-style: medium; fontp-size:14px;float: right;padding: 2px;line-height: 20px;text-align: center;padding-right:6px'><span>${point.y}</span></div></div>" },
+                template:  "<div id='templateWrap' style='background-color:#bd18f9;border-radius: 3px; float: right;padding: 2px;line-height: 20px;text-align: center;'>"+ "<img src='./sun_annotation.png' />" + "<div style='color:white; font-family:Roboto; font-style: medium; fontp-size:14px;float: right;padding: 2px;line-height: 20px;text-align: center;padding-right:6px'><span>${point.y}</span></div></div>" },
                 enableSmartLabels: true
            };
   },
@@ -39,5 +41,3 @@ export default {
      height: 350px;
  }
 </style>
-
-

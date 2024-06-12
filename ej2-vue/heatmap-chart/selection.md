@@ -21,7 +21,10 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 |   Keyboard              |  The **Ctrl** key on the keyboard can be used to enable multiple cell selection with mouse and touch interaction. The **Ctrl** key can only be used if the `enableMultiSelect` property is set to **true** in order to enable multiple cell selection.               |
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The HeatMap cells can be selected using the following interactions, as shown in 
 In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#enablemultiselect) property is used to allow single cell selection. When you set the `enableMultiSelect` property to **false**, only one cell is selected. By default, `enableMultiSelect` property is set to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/selection-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/selection-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ In the HeatMap, the [enableMultiSelect](https://ej2.syncfusion.com/vue/documenta
 The [clearSelection](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#clearselection) method can be used to clear all the selected cells. The below example illustrates the same.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/selection-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/selection-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -53,7 +53,10 @@ For more information about localization, refer this
 [`localization`](https://ej2.syncfusion.com/vue/documentation/common/localization/)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

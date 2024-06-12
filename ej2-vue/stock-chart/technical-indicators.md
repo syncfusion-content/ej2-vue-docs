@@ -60,7 +60,10 @@ A StockChart overlay that shows the upper and lower limits of normal price movem
 Bollinger band will be represented by three lines (upperLine, lowerLine, signalLine).The default values of the Bollinger Band [`period`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#period) is 14 and [`standardDeviations`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartIndicatorModel/#standardDeviations) is 2.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/technical-indicators-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/technical-indicators-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

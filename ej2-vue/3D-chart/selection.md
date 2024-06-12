@@ -28,7 +28,10 @@ We have different types of selection mode for selecting a data.
 To select a point, set the [`selectionMode`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#selectionmode) property to **Point**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/point-selection/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/point-selection/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -40,7 +43,10 @@ To select a point, set the [`selectionMode`](https://ej2.syncfusion.com/vue/docu
 To select a series, set the [`selectionMode`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#selectionmode) property to **Series**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/series-selection/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/series-selection/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ To select a series, set the [`selectionMode`](https://ej2.syncfusion.com/vue/doc
 To select the points that corresponds to the same index in all the series, set the [`selectionMode`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#selectionmode) property to **Cluster**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/cluster-selection/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/cluster-selection/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +73,10 @@ To select the points that corresponds to the same index in all the series, set t
 To select multiple points or series, enable the [`isMultiSelect`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#ismultiselect) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/selection-type/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/selection-type/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +88,10 @@ To select multiple points or series, enable the [`isMultiSelect`](https://ej2.sy
 In a 3D chart, selecting a point or series during initial loading can only be done programmatically. The [`selectedDataIndexes`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/chart3DModel/#selecteddataindexes) property can be used for this.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/selection-load/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/selection-load/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +103,10 @@ In a 3D chart, selecting a point or series during initial loading can only be do
 To select a point or series through legend use the [`toggleVisibility`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/legendSettingsModel/#togglevisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/legendSettingsModel/#enablehighlight) property for highlighting the series through legend.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/selection-legend/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/selection-legend/app.vue %}
 {% endhighlight %}
 {% endtabs %}

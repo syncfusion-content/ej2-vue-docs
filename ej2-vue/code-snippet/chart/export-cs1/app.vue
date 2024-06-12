@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <ejs-chart style='display:block' align='center' id='chartcontainer' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
@@ -14,12 +12,20 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartComponent, ChartPlugin, SeriesDirective, SeriesCollectionDirective, ColumnSeries, Legend, Tooltip,DateTime, Category, Highlight } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, ColumnSeries, Legend, Tooltip,DateTime, Category, Highlight } from "@syncfusion/ej2-vue-charts";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+name: "App",
+components: {
+"ejs-chart":ChartComponent,
+"e-series-collection":SeriesCollectionDirective,
+"e-series":SeriesDirective,
+"ejs-button":ButtonComponent,
+
+},
+
   data: function() {
     return {
       seriesData: [
@@ -55,7 +61,7 @@ export default {
      chart: [ColumnSeries, Legend, Tooltip, Category,DateTime, Highlight]
   },
    methods: {
-        print: function (args) {
+        print: function () {
       var svg = document.querySelector("#chartcontainer_svg");
         var svgData = new XMLSerializer().serializeToString(svg);
         var canvas = document.createElement("canvas");
@@ -84,5 +90,3 @@ export default {
    content: '\e728';
  }
 </style>
-
-

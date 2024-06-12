@@ -28,7 +28,10 @@ Globalization is the process of designing and developing an component that works
 In the below example axis, point  and tooltip labels are globalized to EUR.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/number-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/number-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

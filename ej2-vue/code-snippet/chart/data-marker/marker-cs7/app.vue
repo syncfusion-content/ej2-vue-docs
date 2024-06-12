@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :pointRender='pointRender'>
@@ -11,12 +9,18 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, LineSeries, Category } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, LineSeries, Category, SeriesCollectionDirective, SeriesDirective } from "@syncfusion/ej2-vue-charts";
 
 export default {
+name: "App",
+components: {
+"ejs-chart":ChartComponent,
+"e-series-collection":SeriesCollectionDirective,
+"e-series":SeriesDirective,
+
+},
+
   data() {
     return {
       seriesData: [
@@ -44,5 +48,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

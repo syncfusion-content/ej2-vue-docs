@@ -16,7 +16,10 @@ To render a radar series, use series [`type`](https://ej2.syncfusion.com/vue/doc
 `LineSeries` inject `LineSeries`  into the `provide`. [`isClosed`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#isclosed) property specifies whether to join start and end point of a line series used in polar chart to form a closed path. Default value of isClosed is true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/polar-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ To render a radar series, use series [`type`](https://ej2.syncfusion.com/vue/doc
 You can customize the start angle of the radar series using [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#startangle-number) property. By default, `startAngle` is 0 degree.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/polar-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +48,10 @@ You can customize the start angle of the radar series using [`startAngle`](https
 You can customize the radius of the radar series using [`coefficient`](https://ej2.syncfusion.com/vue/documentation/api/chart/axisModel/#coefficient) property. By default, `coefficient` is 100.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/polar-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}

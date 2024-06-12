@@ -414,6 +414,42 @@ provide('diagram', diagram);
 <script>
   import {DiagramComponent,DataBinding, HierarchicalTree,} from "@syncfusion/ej2-vue-diagrams";
   import { DataManager } from "@syncfusion/ej2-data";
+  let localdata = [
+    {
+      Name: "Elizabeth",
+      Role: "Editor",
+    },
+    {
+      Name: "Christina",
+      ReportingPerson: "Elizabeth",
+      Role: "Managing Editor",
+    },
+    {
+      Name: "Yoshi",
+      ReportingPerson: "Christina",
+      Role: "Assistant Editor",
+    },
+    {
+      Name: "Philip",
+      ReportingPerson: "Christina",
+      Role: "Copy Editor",
+    },
+    {
+      Name: "Yang",
+      ReportingPerson: "Elizabeth",
+      Role: "Bussiness Editor",
+    },
+    {
+      Name: "Roland",
+      ReportingPerson: "Yang",
+      Role: "Assistant Editor",
+    },
+    {
+      Name: "Yvonne",
+      ReportingPerson: "Yang",
+      Role: "Editorial Assistant",
+    },
+  ];
   // Component registration
   export default {
     name: "App",
@@ -424,42 +460,6 @@ provide('diagram', diagram);
     // Bound properties declarations
     data() {
       return {
-        data:[
-            {
-            Name: "Elizabeth",
-            Role: "Editor",
-            },
-            {
-            Name: "Christina",
-            ReportingPerson: "Elizabeth",
-            Role: "Managing Editor",
-            },
-            {
-            Name: "Yoshi",
-            ReportingPerson: "Christina",
-            Role: "Assistant Editor",
-            },
-            {
-            Name: "Philip",
-            ReportingPerson: "Christina",
-            Role: "Copy Editor",
-            },
-            {
-            Name: "Yang",
-            ReportingPerson: "Elizabeth",
-            Role: "Bussiness Editor",
-            },
-            {
-            Name: "Roland",
-            ReportingPerson: "Yang",
-            Role: "Assistant Editor",
-            },
-            {
-            Name: "Yvonne",
-            ReportingPerson: "Yang",
-            Role: "Editorial Assistant",
-            },
-        ],
         width: "1300px",
         height: "800px",
         getNodeDefaults: (node) => {
@@ -506,7 +506,10 @@ provide('diagram', diagram);
           },
         },
       };
-    }
+    },
+    provide: {
+      diagram: [DataBinding, HierarchicalTree],
+    },
   };
 </script>
 

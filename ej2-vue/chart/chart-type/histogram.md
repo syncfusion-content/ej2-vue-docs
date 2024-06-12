@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Histogram type charts can provide a visual display of large amounts of data that are difficult to understand in a tabular or spreadsheet form. To render histogram chart, use series[`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Histogram` and inject `HistogramSeries` module using `provide` method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/waterfall-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/waterfall-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

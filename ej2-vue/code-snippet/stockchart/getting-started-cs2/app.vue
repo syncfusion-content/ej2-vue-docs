@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-stockchart :valueType='valueType' :labelFormat='labelFormat' :title='title'>
@@ -16,7 +14,8 @@ import { StockChartComponent, StockChartSeriesCollectionDirective, StockChartSer
 import { chartData } from "./datasource.js";
 
 export default {
-  components: {
+name: "App",
+components: {
     'ejs-stockchart': StockChartComponent,
     'e-stockchart-series-collection': StockChartSeriesCollectionDirective,
     'e-stockchart-series': StockChartSeriesDirective
@@ -37,5 +36,3 @@ export default {
   }
 };
 </script>
-
-

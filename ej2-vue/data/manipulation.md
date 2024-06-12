@@ -23,94 +23,7 @@ The [insert](https://ej2.syncfusion.com/documentation/api/data/dataManager/#inse
 The following example demonstrates how to insert a new record into the data source using `DataManager`. In this example, an input box is added to collect the necessary data, and a button is used to trigger the insertion process using the `insert` method of the `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<template>
-  <div id="app">
-    <div class="e-form">
-      <input type="number" v-model.number="edit.OrderID"  id='OrderID' placeholder="Order ID" />
-      <input type="text" v-model="edit.CustomerID"  id="CustomerID" placeholder="Customer ID" />
-      <input type="number" v-model.number="edit.EmployeeID"  id="EmployeeID" placeholder="Employee ID" />
-      <input type="text" v-model="edit.ShipCountry"  id="ShipCountry" placeholder="Ship Country" />
-      <input type="button" id="Insert" value='Insert' v-on:click="Insert" />
-    </div>
-    <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>  
-  </div>
-</template>
-
-<script setup>
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { data } from './datasource.js';
-
-export default {
-  data() {
-    return {
-      items: [],
-      edit: {
-        OrderID: null,
-        CustomerID: null,
-        EmployeeID: null,
-        ShipCountry:null
-      },
-      dataManager: null,
-    };
-  },
-  mounted() {
-    this.dataManager = new DataManager(data);
-    this.items=this.dataManager.executeLocal(new Query())
-  },
-  methods: {
-    Insert: function() {
-      this.dataManager.insert({
-        OrderID: this.edit.OrderID,
-        CustomerID: this.edit.CustomerID,
-        EmployeeID: this.edit.EmployeeID,
-        ShipCountry: this.edit.ShipCountry
-      });
-      this.items = this.dataManager.executeLocal(new Query())
-    },
-  },
-}
-</script>
-
-<style>
-  .e-table {
-    border: solid 1px #e0e0e0;
-    border-collapse: collapse;
-    font-family: Roboto;
-    margin-top:5px;
-  }
-
-  .e-table td, .e-table th {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e0e0e0;
-    display: table-cell;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    padding: 8px 21px;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-
-  #CustomerID, #EmployeeID, #ShipCountry, #Insert{
-    margin-left:5px;
-    margin-bottom: 5px
-  }
-</style>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% raw %}
 <template>
   <div id="app">
@@ -212,95 +125,7 @@ When using the `update` method with Syncfusion DataManager, it is essential to d
 The following example demonstrates how to modify or update existing records in the data source using `DataManager`. In this example, an input box is provided to edit the existing values, and a button triggers the update process using the `update` method of the `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<template>
-  <div id="app">
-    <div class="e-form">
-      <input type="number" v-model.number="edit.OrderID"  id='OrderID' placeholder="Order ID" />
-      <input type="text" v-model="edit.CustomerID"  id="CustomerID" placeholder="Customer ID" :disabled="!edit.OrderID" />
-      <input type="number" v-model.number="edit.EmployeeID"  id="EmployeeID" placeholder="Employee ID" :disabled="!edit.OrderID" />
-      <input type="text" v-model="edit.ShipCountry"  id="ShipCountry" placeholder="Ship Country" :disabled="!edit.OrderID" />
-      <input type="button" id="Update" value='Update' v-on:click="update" />
-    </div>
-    <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>  
-  </div>
-</template>
-
-<script setup>
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { data } from './datasource.js';
-
-export default {
-  data() {
-    return {
-      items: [],
-      edit: {
-        OrderID: null,
-        CustomerID: null,
-        EmployeeID: null,
-        ShipCountry:null
-      },
-      dataManager: null,
-    };
-  },
-  
-  mounted() {
-    this.dataManager = new DataManager(data);
-    this.items=this.dataManager.executeLocal(new Query())
-  },
-  methods: {
-    update: function() {
-      this.dataManager.update('OrderID',{
-      OrderID: this.edit.OrderID,
-      CustomerID: this.edit.CustomerID,
-      EmployeeID: this.edit.EmployeeID,
-      ShipCountry: this.edit.ShipCountry
-    });
-    this.items = this.dataManager.executeLocal(new Query())
-    },
-  },
-}
-</script>
-
-<style>
-  .e-table {
-    border: solid 1px #e0e0e0;
-    border-collapse: collapse;
-    font-family: Roboto;
-    margin-top:5px;
-  }
-
-  .e-table td, .e-table th {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e0e0e0;
-    display: table-cell;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    padding: 8px 21px;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-
-  #CustomerID, #EmployeeID, #ShipCountry, #Update{
-    margin-left:5px;
-    margin-bottom: 5px
-  }
-</style>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Option API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% raw %}
 <template>
   <div id="app">
@@ -401,87 +226,8 @@ The [remove](https://ej2.syncfusion.com/documentation/api/data/dataManager/#remo
 The following example demonstrates how to remove existing records from the data source using `DataManager`. In this example, an input box is provided to collect the keyField value from the existing data, and a button triggers the removal process using the `remove` method of the `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% raw %}
-
-<template>
-  <div id="app">
-    <div class="e-form">
-      <input type="number" v-model.number="edit.OrderID"  id='OrderID' placeholder="Order ID" />
-      <input type="button" id="Remove" value='Remove' v-on:click="Remove" />
-    </div>
-    <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>  
-  </div>
-</template>
-
-<script setup>
-import { onMounted, ref } from "vue";
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { data } from './datasource.js';
-
-const items = ref([]);
-const edit = ref({
-        OrderID: null,
-        CustomerID: null,
-        EmployeeID: null,
-        ShipCountry:null
-      });
-const dataManager = ref(null);
-
-onMounted(() => {
-  dataManager.value = new DataManager(data);
-  items.value = dataManager.value.executeLocal(new Query());
-})
-
-const Remove = function() {
-  dataManager.value.remove('OrderID',{
-    OrderID: edit.value.OrderID
-  });
-  items.value = dataManager.value.executeLocal(new Query());
-}
-
-</script>
-
-<style>
-  .e-table {
-    border: solid 1px #e0e0e0;
-    border-collapse: collapse;
-    font-family: Roboto;
-    margin-top:5px;
-  }
-
-  .e-table td, .e-table th {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e0e0e0;
-    display: table-cell;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    padding: 8px 21px;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-
-  #Remove{
-    margin-left:5px
-  }
-</style>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Option API (~/src/App.vue)" %}
-{% raw %}
-
 <template>
   <div id="app">
     <div class="e-form">
@@ -517,9 +263,10 @@ export default {
       dataManager: null,
     };
   },
+  
   mounted() {
     this.dataManager = new DataManager(data);
-    this.items = this.dataManager.executeLocal(new Query())
+    this.items=this.dataManager.executeLocal(new Query())
   },
   methods: {
     Remove: function() {
@@ -558,7 +305,6 @@ export default {
     margin-left:5px
   }
 </style>
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}
@@ -574,108 +320,8 @@ Batch processing allows you to perform multiple CRUD operations simultaneously, 
 The following example illustrates how to execute batch edit operations using `DataManager`. In this example, an input box is incorporated to collect the required data for the respective action. Additionally, buttons are included to initiate and execute the corresponding action within the batch edit function. Subsequently, the **save change** button is employed to implement the modifications to the data table using the `saveChanges` method provided by `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% raw %}
-
-<template>
-  <div id="app">
-    <div class="e-form">
-      <input type="number" v-model.number="edit.OrderID"  id='OrderID' placeholder="Order ID" />
-      <input type="text" v-model="edit.CustomerID"  id="CustomerID" placeholder="Customer ID" />
-      <input type="number" v-model.number="edit.EmployeeID" id="EmployeeID" placeholder="Employee ID" />
-      <input type="text" v-model="edit.ShipCountry"  id="ShipCountry" placeholder="Ship Country" />
-      <input type="button" id="Insert" value='Insert' v-on:click="performAction('addedRecords')" />
-      <input type="button" id="Update" value='Update' v-on:click="performAction('changedRecords')" />
-      <input type="button" id="Remove" value='Remove' v-on:click="performAction('deletedRecords')" />
-    </div>
-    <div class="e-form">
-      <label>Click to save and apply changes: </label>
-      <input type="button" id="Save" value="Save Changes" v-on:click="save" />
-    </div>
-    <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>  
-  </div>
-</template>
-
-<script setup>
-import { onMounted, ref } from "vue";
-import { DataManager, Query } from '@syncfusion/ej2-data';
-import { data } from './datasource.js';
-
-const items = ref([]);
-const edit = ref({
-        OrderID: null,
-        CustomerID: null,
-        EmployeeID: null,
-        ShipCountry:null
-      });
-const changes = ref({
-        changedRecords: [],
-        addedRecords: [],
-        deletedRecords: [],
-      });
-const dataManager = ref(null);
-
-onMounted() {
-  dataManager.value = new DataManager(data);
-  items.value=dataManager.value.executeLocal(new Query())
-}
-const performAction = function(action) {
-  changes.value[action].push({
-    OrderID: edit.value.OrderID,
-    CustomerID: edit.value.CustomerID,
-    EmployeeID: edit.value.EmployeeID,
-    ShipCountry: edit.value.ShipCountry
-  });
-  edit.value = { OrderID: null, CustomerID: null, EmployeeID: null }
-}
-const save = function() {
-  dataManager.value.saveChanges(changes.value, 'OrderID');
-  items.value = dataManager.value.executeLocal(new Query());
-  changes.value = { changedRecords: [], addedRecords: [], deletedRecords: [] };
-}
-</script>
-
-<style>
-  .e-table {
-    border: solid 1px #e0e0e0;
-    border-collapse: collapse;
-    font-family: Roboto;
-    margin-top:5px;
-  }
-
-  .e-table td, .e-table th {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e0e0e0;
-    display: table-cell;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    padding: 8px 21px;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-
-  #CustomerID, #EmployeeID, #ShipCountry, #Insert, #Update, #Remove{
-    margin-left:5px;
-    margin-bottom: 5px
-  }
-</style>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Option API (~/src/App.vue)" %}
-{% raw %}
-
 <template>
   <div id="app">
     <div class="e-form">
@@ -725,6 +371,7 @@ export default {
       dataManager: null,
     };
   },
+  
   mounted() {
     this.dataManager = new DataManager(data);
     this.items=this.dataManager.executeLocal(new Query())
@@ -744,7 +391,7 @@ export default {
       this.items = this.dataManager.executeLocal(new Query());
       this.changes = { changedRecords: [], addedRecords: [], deletedRecords: [] };
     },
-  }
+  },
 }
 </script>
 
@@ -775,7 +422,6 @@ export default {
     margin-bottom: 5px
   }
 </style>
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}

@@ -19,7 +19,10 @@ inject `HiloOpenCloseSeries` into the `provide`.
 HiloOpenClose series requires 5 fields (x, high, low, open and close) to show the high, low, open and close price values in the stock.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/hiloopenclose-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/hiloopenclose-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ segment when the open value is greater than the close value and [`bearFillColor`
 By default, bullFillColor is set as red and bearFillColor is set as green.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/hiloopenclose-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/hiloopenclose-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -16,7 +16,10 @@ domainurl: ##DomainURL##
  Date time axis uses date time scale and displays the date time values as axis labels in the specified format.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ Date-time category axis is used to display the date-time values with non-linear 
 business days alone have been depicted in a week here.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ business days alone have been depicted in a week here.
 set the [`valueType`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#valuetype) of axis to `DateTimeCategory`. Of the axis using [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#interval) property of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +73,10 @@ DateTime axis supports following interval types,
 * Seconds
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +95,10 @@ Padding can be applied to the minimum and maximum extremes of the range by using
 When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#rangepadding) is set to `None`, minimum and maximum of the axis is based on the data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +112,10 @@ rounded to the nearest possible value divisible by interval. For example, when t
 1 and the interval type is ‘month’, then the axis minimum will be Jan 1st.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -110,7 +128,10 @@ When the [`rangePadding`](https://ej2.syncfusion.com/vue/documentation/api/char
 be padded to the minimum and maximum of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +143,10 @@ be padded to the minimum and maximum of the axis.
 You can format and parse the date to all globalize format using [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#labelformat) property in an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

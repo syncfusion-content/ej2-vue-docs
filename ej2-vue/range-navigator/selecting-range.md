@@ -17,7 +17,10 @@ The Range Selector's left and right thumbs are used to indicate the selected ran
 * By setting the start and the end through the [`value`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#value) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs25/app.vue %}
 {% endhighlight %}
 {% endtabs %}

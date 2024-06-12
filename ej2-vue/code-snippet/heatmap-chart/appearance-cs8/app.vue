@@ -1,25 +1,20 @@
-
-
-
 <template>
   <div id="app">
-    <ejs-heatmap
-      id="heatmap"
-      :titleSettings="titleSettings"
-      :xAxis="xAxis"
-      :yAxis="yAxis"
-      :dataSource="dataSource"
-      :cellRender="cellRender"
-    ></ejs-heatmap>
+    <ejs-heatmap id="heatmap" :titleSettings="titleSettings" :xAxis="xAxis" :yAxis="yAxis" :dataSource="dataSource"
+      :cellRender="cellRender"></ejs-heatmap>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { HeatMapPlugin, Tooltip, Legend } from "@syncfusion/ej2-vue-heatmap";
-Vue.use(HeatMapPlugin);
+
+import { HeatMapComponent, Tooltip, Legend } from "@syncfusion/ej2-vue-heatmap";
+
 
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    "ejs-heatmap": HeatMapComponent
+  },
+  data: function () {
     return {
       dataSource: [
         [73, 39, 26, 39, 94, 0],
@@ -69,11 +64,9 @@ export default {
     heatmap: [Tooltip, Legend]
   },
   methods: {
-    cellRender: function(args) {
+    cellRender: function (args) {
       args.displayText = args.value + "$";
     }
   }
 };
 </script>
-
-

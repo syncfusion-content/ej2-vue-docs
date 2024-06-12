@@ -2,19 +2,23 @@
   <div id="app">
     <ejs-chart id="container" :title='title'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='RangeArea' xName='x' high='high' low="low" name='Product A' fill='green'
-          width=2 dashArray='5,5' :border='border' :marker='marker' opacity=0.4> </e-series>
+        <e-series :dataSource='seriesData' type='RangeArea' xName='x' high='high' low="low" name='Product A'
+          fill='green' width=2 dashArray='5,5' :border='border' :marker='marker' opacity=0.4> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, RangeAreaSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, RangeAreaSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [

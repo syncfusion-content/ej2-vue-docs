@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 By default, when the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#datasource) for [`series`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#series) is empty, a lightweight Range Selector will be shown without Chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

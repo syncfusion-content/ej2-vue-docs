@@ -1,23 +1,26 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='silver' name='Gold' columnSpacing="0.25" columnWidth="0.25"> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='silver' name='Gold' columnSpacing="0.25"
+          columnWidth="0.25"> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
+  data: function () {
     return {
       seriesData: [
         { country: "USA", gold: 50, silver: 20 },
@@ -42,9 +45,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

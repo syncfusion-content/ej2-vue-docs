@@ -55,7 +55,10 @@ To render a moving average trendline, use trendline [`type`](https://ej2.syncfus
 `period` property defines the period to find the moving average.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/trend-lines-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/trend-lines-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -67,7 +70,10 @@ To render a moving average trendline, use trendline [`type`](https://ej2.syncfus
 The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartTrendlineModel/#fill-string) and [`width`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockChartTrendlineModel/#width-number) properties are used to customize the appearance of the trendline.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/trend-lines-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/trend-lines-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

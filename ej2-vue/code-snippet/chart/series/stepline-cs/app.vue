@@ -1,21 +1,24 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='StepLine' dashArray='2.5' :marker="marker" xName='x' yName='y' name='USA' width=2 fill="blue" :border='border' opacity=0.5 step="Left"> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='StepLine' dashArray='2.5' :marker="marker" xName='x' yName='y'
+          name='USA' width=2 fill="blue" :border='border' opacity=0.5 step="Left"> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, StepLineSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, StepLineSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -36,9 +39,7 @@ export default {
 };
 </script>
 <style>
-  #container {
-    height: 350px;
-  }
+#container {
+  height: 350px;
+}
 </style>
-
-

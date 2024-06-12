@@ -2,11 +2,11 @@
   <div id="app">
     <ejs-chart3d id="container" :title="title" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis">
       <e-chart3d-series-collection>
-        <e-chart3d-series :dataSource="seriesData1" type="Column" xName="x" yName="y" groupName="Iran" stackingGroup="Asia"
-          columnWidth="0.6">
+        <e-chart3d-series :dataSource="seriesData1" type="Column" xName="x" yName="y" groupName="Iran"
+          stackingGroup="Asia" columnWidth="0.6">
         </e-chart3d-series>
-        <e-chart3d-series :dataSource="seriesData2" type="Column" xName="x" yName="y" groupName="Iran" stackingGroup="Asia"
-          columnWidth="0.6">
+        <e-chart3d-series :dataSource="seriesData2" type="Column" xName="x" yName="y" groupName="Iran"
+          stackingGroup="Asia" columnWidth="0.6">
         </e-chart3d-series>
         <e-chart3d-series :dataSource="seriesData3" type="Column" xName="x" yName="y" groupName="France"
           stackingGroup="Europe" columnWidth="0.6">
@@ -28,6 +28,7 @@ import {
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,

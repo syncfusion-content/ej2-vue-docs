@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/log/log/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/log/log/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 The range of an axis will be calculated automatically based on the provided data and it can also be customized by using the [`minimum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#minimum), [`maximum`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#maximum) and [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) properties of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/log/range/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/log/range/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ The range of an axis will be calculated automatically based on the provided data
 Logarithmic base can be customized by using the [`logBase`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#logbase) property of the axis. For example when the logBase is 5, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>, 5<sup>1</sup>, 5<sup>2</sup> etc.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/log/base/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/log/base/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ Logarithmic base can be customized by using the [`logBase`](https://ej2.syncfusi
 The interval of the logarithmic axis can be customized by using the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) property in the axis. When the logarithmic base is 10 and logarithmic **interval** is 2, then the axis labels are placed at an interval of 10<sup>2</sup>. The default value of the [`interval`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#interval) is **1**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/log/interval/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/log/interval/app.vue %}
 {% endhighlight %}
 {% endtabs %}
