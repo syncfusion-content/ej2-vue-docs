@@ -3,7 +3,7 @@ layout: post
 title: Styling Modes in Vue OTP Input component | Syncfusion
 description:  Learn here all about Styling Modes in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
-control: Styling Modes
+control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,7 +14,7 @@ Styling modes specify the style variants for the input fields in the OTP Input c
 
 ## Outline mode
 
-You can use the outline style by setting the `stylingMode` property to `outlined`. The default styling mode is `outlined`.
+You can use the outline style by setting the [stylingMode](https://ej2.syncfusion.com/vue/documentation/api/otp-input#stylingmode) property to [outlined](https://ej2.syncfusion.com/vue/documentation/api/otp-input/otpInputStyle/). The default styling mode is `outlined`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ You can use the outline style by setting the `stylingMode` property to `outlined
 
 ## Filled mode
 
-You can use the filled style by setting the `stylingMode` property to `filled`.
+You can use the filled style by setting the [stylingMode](https://ej2.syncfusion.com/vue/documentation/api/otp-input#stylingmode) property to [filled](https://ej2.syncfusion.com/vue/documentation/api/otp-input/otpInputStyle/).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -45,7 +45,7 @@ You can use the filled style by setting the `stylingMode` property to `filled`.
 
 ## Underline mode
 
-You can use the underline style by setting the `stylingMode` property to `underlined`.
+You can use the underline style by setting the [stylingMode](https://ej2.syncfusion.com/vue/documentation/api/otp-input#stylingmode) property to [underlined](https://ej2.syncfusion.com/vue/documentation/api/otp-input/otpInputStyle/).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

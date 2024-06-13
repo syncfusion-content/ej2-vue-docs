@@ -3,7 +3,7 @@ layout: post
 title: Accessibility in Vue OTP Input component | Syncfusion
 description:  Learn here all about Accessibility in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
-control: Accessibility
+control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -62,10 +62,6 @@ The following keyboard shortcuts are supported by the OTP Input component.
 
 The OTP Input component's accessibility levels are ensured through an [accessibility-checker](https://www.npmjs.com/package/accessibility-checker) and [axe-core](https://www.npmjs.com/package/axe-core) software tools during automated testing.
 
-The accessibility compliance of the OTP Input component is shown in the following sample. Open the [sample](https://ej2.syncfusion.com/accessibility/otp-input.html) in a new window to evaluate the accessibility of the OTP Input component with accessibility tools.
-
-{% previewsample "https://ej2.syncfusion.com/accessibility/otp-input.html" %}
-
 ## See also
 
 * [Accessibility in Syncfusion Vue components](../common/accessibility)
@@ -74,7 +70,7 @@ The accessibility compliance of the OTP Input component is shown in the followin
 
 HtmlAttributes allow you to specify additional HTML attributes to be applied to the OTP input component.
 
-You can pass HTML attributes as key-value pairs to the `htmlAttributes` property.
+You can pass HTML attributes as key-value pairs to the [htmlAttributes](https://ej2.syncfusion.com/vue/documentation/api/otp-input#htmlattributes) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -91,7 +87,7 @@ You can pass HTML attributes as key-value pairs to the `htmlAttributes` property
 
 AriaLabels define the ARIA-label attribute for each input field in the OTP input component. ARIA-labels enhance accessibility by providing descriptive labels for screen reader users, improving the user experience for individuals with disabilities.
 
-You can provide an array of strings as ARIA-labels to the `ariaLabels` property. Each string corresponds to the ARIA-label attribute for the respective input field in the OTP input component.
+You can provide an array of strings as ARIA-labels to the [ariaLabels](https://ej2.syncfusion.com/vue/documentation/api/otp-input#arialabels) property. Each string corresponds to the ARIA-label attribute for the respective input field in the OTP input component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

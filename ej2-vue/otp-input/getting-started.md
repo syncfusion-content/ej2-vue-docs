@@ -3,7 +3,7 @@ layout: post
 title: Getting started with Vue OTP Input component | Syncfusion
 description:  Checkout and learn about Getting started with Vue OTP Input component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
-control: Getting started 
+control: OTP Input 
 publishingplatform: ##Platform_Name##
 documentation: ug
 domainurl: ##DomainURL##
