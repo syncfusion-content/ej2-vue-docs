@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 To render a funnel series, use the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeriesModel/#type) as `Funnel` and inject, the `FunnelSeries` module  into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -25,7 +28,10 @@ To render a funnel series, use the series [`type`](https://ej2.syncfusion.com/vu
 The size of the funnel chart can be customized by using the  `width` and `height` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +43,10 @@ The size of the funnel chart can be customized by using the  `width` and `height
 The funnel's neck size can be customized by using the `neckWidth` and `neckHeight` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +58,10 @@ The funnel's neck size can be customized by using the `neckWidth` and `neckHeigh
 Funnel chart provides options to customize the space between the segments by using the `gapRatio` property of the series. It ranges from 0 to 1.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +74,10 @@ Points can be exploded on mouse click by setting the `explode` property to true.
 on load using `explodeIndex`. Explode distance can be set by using `explodeOffset` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +89,10 @@ on load using `explodeIndex`. Explode distance can be set by using `explodeOffse
 It provides the data label smart arrangement of the funnel and pyramid series. The overlap data label will be placed on left side of the funnel/pyramid series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +104,10 @@ It provides the data label smart arrangement of the funnel and pyramid series. T
 Individual points can be customized using the `pointRender` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/funnel-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/funnel-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

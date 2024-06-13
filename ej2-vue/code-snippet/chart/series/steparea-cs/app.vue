@@ -1,21 +1,24 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='StepArea' xName='x' yName='y' name='India' fill="blue" :border="border" dashArray="5" opacity=0.6 :marker='marker' width=2 step="Right"> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='StepArea' xName='x' yName='y' name='India' fill="blue" :border="border"
+          dashArray="5" opacity=0.6 :marker='marker' width=2 step="Right"> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, StepAreaSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, StepAreaSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -48,9 +51,7 @@ export default {
 };
 </script>
 <style>
-  #container {
-    height: 350px;
-  }
+#container {
+  height: 350px;
+}
 </style>
-
-

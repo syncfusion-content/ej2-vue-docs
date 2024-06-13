@@ -1,24 +1,28 @@
-
-
 <template>
-    <div id="app">
-        <ejs-accumulationchart id="container" ref="pie" style='display:block;' :legendSettings="legendSettings" :tooltip="tooltip" :enableAnimation='enableAnimation' :enableSmartLabels='enableSmartLabels' >
-            <e-accumulation-series-collection>
-                <e-accumulation-series  :dataSource='data' xName='x' yName='y' :radius='radius' innerRadius="20%" :dataLabel="dataLabel"> </e-accumulation-series>
-            </e-accumulation-series-collection>
-        </ejs-accumulationchart>
-    </div>
+  <div id="app">
+    <ejs-accumulationchart id="container" ref="pie" style='display:block;' :legendSettings="legendSettings"
+      :tooltip="tooltip" :enableAnimation='enableAnimation' :enableSmartLabels='enableSmartLabels'>
+      <e-accumulation-series-collection>
+        <e-accumulation-series :dataSource='data' xName='x' yName='y' :radius='radius' innerRadius="20%"
+          :dataLabel="dataLabel"> </e-accumulation-series>
+      </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, AccumulationDataLabel, PieSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, AccumulationDataLabel, PieSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-accumulationchart': AccumulationChartComponent,
+    'e-accumulation-series-collection': AccumulationSeriesCollectionDirective,
+    'e-accumulation-series': AccumulationSeriesDirective
+  },
   data() {
     return {
-      data:[
+      data: [
         { x: 'Argentina', y: 505370, r: '100' },
         { x: 'Belgium', y: 551500, r: '118.7' },
         { x: 'Cuba', y: 312685, r: '124.6' },
@@ -27,25 +31,23 @@ export default {
         { x: 'Kazakhstan', y: 300000, r: '155.5' },
         { x: 'Somalia', y: 357022, r: '160.6' }
       ],
-     radius: 'r',
-     legendSettings: { visible: true },
-     dataLabel: { visible: true, position: 'Outside', name: 'x'},
-     tooltip: {
+      radius: 'r',
+      legendSettings: { visible: true },
+      dataLabel: { visible: true, position: 'Outside', name: 'x' },
+      tooltip: {
         enable: true, header: '<b>${point.x}</b>', format: 'Composition: <b>${point.y}</b>'
-     },
-     enableAnimation: true,
-     enableSmartLabels: true
+      },
+      enableAnimation: true,
+      enableSmartLabels: true
     };
   },
   provide: {
-     accumulationchart: [PieSeries, AccumulationDataLabel]
+    accumulationchart: [PieSeries, AccumulationDataLabel]
   }
 };
 </script>
 <style>
- #container {
-     height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

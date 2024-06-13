@@ -31,7 +31,10 @@ We have different type of selection mode for selecting the data. They are,
  You can select a point, by setting `selectionMode` to point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +48,10 @@ We have different type of selection mode for selecting the data. They are,
  You can select a series, by setting `selectionMode` to series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +64,10 @@ You can select the points that corresponds to the same index in all the series, 
 cluster.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -79,7 +88,10 @@ The selected data’s are returned as an array collection in the [`dragComplete`
 event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/drag-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/drag-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +103,10 @@ event.
 To select a region by drawing freehand shapes to fetch a collection of data use `selectionMode` as `Lasso`. You can also select multiple regions on the chart through this mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/drag-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/drag-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +118,10 @@ To select a region by drawing freehand shapes to fetch a collection of data use 
 To select multiple region on the chart, set the `allowMultiSelection` property to true.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/drag-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/drag-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -115,7 +133,10 @@ To select multiple region on the chart, set the `allowMultiSelection` property t
 You can select multiple points or series, by enabling the [`isMultiSelect`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#ismultiselect) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -127,7 +148,10 @@ You can select multiple points or series, by enabling the [`isMultiSelect`](http
 You can able to select a point or series programmatically on a chart using [`selectedDataIndexes`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartModel/#selecteddataindexes) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +163,10 @@ You can able to select a point or series programmatically on a chart using [`sel
 You can able to select a point or series through on legend using [`toggleVisibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel/#toggleVisibility) property. Also, use [`enableHighlight`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettings/#enableHighlight) property for highlighting the series through legend.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -151,7 +178,10 @@ You can able to select a point or series through on legend using [`toggleVisibil
 You can apply custom style to selected points or series with [`selectionStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#selectionstyle) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/selection-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/selection-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

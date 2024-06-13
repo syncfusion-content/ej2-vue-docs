@@ -19,7 +19,10 @@ You can customize the cell by using the [cellSettings](https://ej2.syncfusion.co
 Change the width, color, and radius of the heat map cells by using the [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#border) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ Enable or disable the cell highlighting while hovering over the heat map cells b
 >Note: The cell highlighting only works in a SVG rendering mode.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ Three types of color gradient modes are available.
 >Note: The default value of `colorGradientMode` is **Table**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ Three types of color gradient modes are available.
 The background color of the HeatMap can be customized using the [backgroundColor](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#backgroundcolor) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -77,7 +89,10 @@ The background color of the HeatMap can be customized using the [backgroundColor
 Set the margin for the HeatMap from its container by using the [margin](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#margin) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -89,7 +104,10 @@ Set the margin for the HeatMap from its container by using the [margin](https://
 The title is used to provide a quick information about the data plotted in heatmap. The [text](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#text) property is used to set the title for the heatmap. The text style of the title can be customized by using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/title/#textstyle) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -101,7 +119,10 @@ The title is used to provide a quick information about the data plotted in heatm
 The visibility of data labels can be toggled using the [showLabel](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#showlabel) property. By default, the data labels will be visible.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -113,7 +134,10 @@ The visibility of data labels can be toggled using the [showLabel](https://ej2.s
 The label displayed in the HeatMap cell can be changed using the [cellRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellrender) event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -125,7 +149,10 @@ The label displayed in the HeatMap cell can be changed using the [cellRender](ht
 The text attributes of the data label such as font-family, font-size, and color can be customized using the [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#textstyle) in the [cellSettings](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#cellsettings) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -137,7 +164,10 @@ The text attributes of the data label such as font-family, font-size, and color 
 The format of the data label, such as currency, decimal, percent etc. can be changed using [format](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#format) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +189,10 @@ By including `${value}` in the template content, the value from the data source 
 The following example demonstrates how to add a data label template for array table binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,7 +204,10 @@ The following example demonstrates how to add a data label template for array ta
 The following example demonstrates how to add a data label template for array cell binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -187,7 +223,10 @@ By including the desired field name in the template content, such as **${value}*
 The following example demonstrates how to add a data label template for JSON table binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -199,7 +238,10 @@ The following example demonstrates how to add a data label template for JSON tab
 The following example demonstrates how to add a data label template for JSON cell binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/appearance-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/appearance-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}

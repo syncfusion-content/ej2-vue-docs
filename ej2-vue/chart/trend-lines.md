@@ -22,7 +22,10 @@ Chart supports 6 types of trendlines.
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline, use trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) as `Linear` and inject `TrendLines` module using `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/linear-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/linear-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -36,7 +39,10 @@ An exponential trendline is a curved line that is most useful when data values r
 To render a exponential trendline, use trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) as `Exponential` and inject `TrendLines` module using `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/exponential-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/exponential-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +58,10 @@ A logarithmic trendline can use negative and/or positive values.
 To render a logarithmic trendline, use trendline [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#type) as `Logarithmic` and inject `TrendLines` module using `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/logarithmic-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/logarithmic-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -68,7 +77,10 @@ To render a polynomial trendline, use trendline [`type`](https://ej2.syncfusion.
 `polynomialOrder` used to define the polynomial value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/polynomial-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/polynomial-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -83,7 +95,10 @@ To render a power trendline, use trendline [`type`](https://ej2.syncfusion.com/v
 `TrendLines`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/power-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/power-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +114,10 @@ To render a moving average trendline, use trendline [`type`](https://ej2.syncfus
 `period` property defines the period to find the moving average.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/power-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/power-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +129,10 @@ To render a moving average trendline, use trendline [`type`](https://ej2.syncfus
 The [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#fill) and [`width`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#width) properties are used to customize the appearance of the trendline.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/power-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/power-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -132,7 +153,10 @@ Backward Forecasting
 The value set for forwardForecast is used to determine the distance moving towards the future trend.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/power-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/power-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -144,7 +168,10 @@ The value set for forwardForecast is used to determine the distance moving towar
 The value set for the backwardForecast is used to determine the past trends.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/power-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/power-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -156,7 +183,10 @@ The value set for the backwardForecast is used to determine the past trends.
 You can show or hide the trendline by setting trendline `visible` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/trendlines/linear-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/trendlines/linear-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

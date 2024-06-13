@@ -15,14 +15,15 @@ import {
   Chart3DSeriesCollectionDirective,
   Chart3DSeriesDirective,
   ColumnSeries3D,
-  Category3D,
+  Category3D
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   },
   data() {
     return {
@@ -31,10 +32,10 @@ export default {
         { x: 'Feb', y: 8.9, color: 'blue' },
         { x: 'Mar', y: 12, color: 'orange' },
         { x: 'Apr', y: 17.5, color: 'aqua' },
-        { x: 'May', y: 22.1, color: 'grey' },
+        { x: 'May', y: 22.1, color: 'grey' }
       ],
       primaryXAxis: {
-        valueType: 'Category',
+        valueType: 'Category'
       },
       primaryYAxis: {
         labelFormat: '{value}°C',
@@ -43,7 +44,7 @@ export default {
     };
   },
   provide: {
-    chart3d: [ColumnSeries3D, Category3D],
+    chart3d: [ColumnSeries3D, Category3D]
   },
 };
 </script>

@@ -1,32 +1,33 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Line' xName='x' yName='y' name='Sales'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Line' xName='x' yName='y' name='Sales'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, LineSeries, DateTime } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries, DateTime } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    "ejs-chart": ChartComponent,
+    "e-series-collection": SeriesCollectionDirective,
+    "e-series": SeriesDirective
+  },
   data() {
     return {
-    seriesData:[
-                 { x: new Date(2000, 6, 11), y: 10 }, { x: new Date(2002, 3, 7), y: 30 },
-                 { x: new Date(2004, 3, 6), y: 15 }, { x: new Date(2006, 3, 30), y: 65 },
-                 { x: new Date(2008, 3, 8), y: 90 }, { x: new Date(2010, 3, 8), y: 85 }
-        ],
+      seriesData: [
+        { x: new Date(2000, 6, 11), y: 10 }, { x: new Date(2002, 3, 7), y: 30 },
+        { x: new Date(2004, 3, 6), y: 15 }, { x: new Date(2006, 3, 30), y: 65 },
+        { x: new Date(2008, 3, 8), y: 90 }, { x: new Date(2010, 3, 8), y: 85 }
+      ],
       primaryXAxis: {
-           valueType: 'DateTime',
-           intervalType: 'Years'
-        },
+        valueType: 'DateTime',
+        intervalType: 'Years'
+      },
       title: "Average Sales Comparison"
     };
   },
@@ -36,9 +37,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

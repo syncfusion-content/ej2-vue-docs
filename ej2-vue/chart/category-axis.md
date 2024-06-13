@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Category axis are used to represent, the string values instead of numbers.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ Category axis are used to represent, the string values instead of numbers.
 By default, category labels are placed between the ticks in an axis, this can also be placed on ticks using [`labelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#labelplacement) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -46,7 +52,10 @@ Range of the category axis can be customized using `minimum`,
 `maximum` and `interval` property of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -58,7 +67,10 @@ Range of the category axis can be customized using `minimum`,
 Category axis also can be rendered based on the index values of data source. This can be achieved by defining the `isIndexed` property to `true` in the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}

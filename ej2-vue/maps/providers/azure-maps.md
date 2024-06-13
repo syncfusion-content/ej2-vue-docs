@@ -79,7 +79,11 @@ data () {
     return{
        zoomSettings: {
            enable: true,
-           toolBars: ["Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset"]
+           toolbarSettings:{
+               buttonSettings: {
+                   toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+               }
+            }
        },
        urlTemplate: 'https://atlas.microsoft.com/map/imagery/png?subscription-key=Your-Key &api-version=1.0&style=satellite&zoom=level&x=tileX&y=tileY'
     }

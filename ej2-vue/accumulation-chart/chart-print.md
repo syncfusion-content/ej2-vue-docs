@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The rendered chart can be printed directly from the browser by calling the public method print.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/radius-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/radius-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -28,7 +31,10 @@ The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` for
 Input parameters for this method are `Export` Type for `format` and `fileName` of result.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/radius-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/radius-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

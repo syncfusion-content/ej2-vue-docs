@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
@@ -12,12 +10,12 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, Category, CandleSeries, Tooltip, DateTime, Zoom, Crosshair, LineSeries, Logarithmic, StripLine, MomentumIndicator } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Category, CandleSeries, Tooltip, DateTime, Zoom, Crosshair, LineSeries, Logarithmic, StripLine, MomentumIndicator } from "@syncfusion/ej2-vue-charts";
 
-let series1: Object[] = [
+
+
+let series1= [
     {x: new Date('2012-10-15'), open: 90.3357, high: 93.2557, low: 87.0885,close: 87.12,volume: 646996264},
     {x: new Date('2012-10-22'), open: 87.4885, high: 90.7685, low: 84.4285,close: 86.2857,volume: 866040680 },
     {x: new Date('2012-10-29'), open: 84.9828, high: 86.1428, low: 82.1071,close: 82.4,volume: 367371310},
@@ -78,6 +76,12 @@ let series1: Object[] = [
 ];
 
 export default {
+name: "App",
+components: {
+        'ejs-chart': ChartComponent,
+        'e-series-collection': SeriesCollectionDirective,
+        'e-series': SeriesDirective
+    },
   data() {
     return {
       seriesData1: series1,
@@ -155,5 +159,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-accumulationchart id="container" :annotations='annotations'>
@@ -10,12 +8,17 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, PieSeries, AccumulationAnnotation } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationAnnotation } from "@syncfusion/ej2-vue-charts";
+
 
 export default {
+name: "App",
+components: {
+    "ejs-accumulationchart": AccumulationChartComponent,
+    "e-accumulation-series-collection": AccumulationSeriesCollectionDirective,
+    "e-accumulation-series": AccumulationSeriesDirective
+  },
   data() {
     return {
       seriesData: [{ x: 'Jan', y: 3 }, { x: 'Feb', y: 3.5 }, { x: 'Mar', y: 7 }, { x: 'Apr', y: 13.5 },{ x: 'May', y: 19 }, { x: 'Jun', y: 23.5 }, { x: 'Jul', y: 26 }, { x: 'Aug', y: 25 },
@@ -39,5 +42,3 @@ export default {
      height: 350px;
  }
 </style>
-
-

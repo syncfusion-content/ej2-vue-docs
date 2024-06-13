@@ -17,7 +17,10 @@ Tooltip is used to provide the details of the heatmap cell, and this can be disp
 You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#showtooltip) property to **true** and injecting the `Tooltip` module into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/tooltip-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ You can enable the tooltip by setting the [showTooltip](https://ej2.syncfusion.c
 In heatmap, you can customize the tooltip using the [tooltipRender](https://ej2.syncfusion.com/vue/documentation/api/heatmap/#tooltiprender) client side event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/tooltip-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/tooltip-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ In heatmap, you can customize the tooltip using the [tooltipRender](https://ej2.
 The [fill](https://ej2.syncfusion.com/vue/documentation/api/heatmap/tooltipSettings/#fill) and [border](https://ej2.syncfusion.com/vue/documentation/api/heatmap/tooltipSettings/#border) properties are used to customize the background color and border of the Tooltip respectively. The [textStyle](https://ej2.syncfusion.com/vue/documentation/api/heatmap/tooltipSettings/#textstyle) property in the Tooltip is used to customize the font of the tooltip text.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/tooltip-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/tooltip-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

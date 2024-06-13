@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The 3D Circular Chart will display details about the points through a tooltip, when the mouse is moved over a specific point. By default, the tooltip is not visible. It can be enabled by using the `enable` property in `tooltip` to **true**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The 3D Circular Chart will display details about the points through a tooltip, w
 You can specify a header for the tooltip by using the `header` property in `tooltip`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/header/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/header/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ You can specify a header for the tooltip by using the `header` property in `tool
 By default, the tooltip shows information about the x and y values in points. Additionally, more information can be displayed in the tooltip by using the `format` property. For example, the format `${series.name} : ${point.x}` shows the series name and the point's x value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/tooltip-format/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-format/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ By default, the tooltip shows information about the x and y values in points. Ad
 Any HTML elements can be displayed in the tooltip by using the `template` property in the tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/circular-chart/user-interaction/template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +75,10 @@ Any HTML elements can be displayed in the tooltip by using the `template` proper
 By default, the tooltip tracks the mouse movement, but it can be set to a fixed position using the `location` property in `tooltip`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/fixed-tooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/circular-chart/user-interaction/fixed-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +90,10 @@ By default, the tooltip tracks the mouse movement, but it can be set to a fixed 
 The `fill` and `border` properties are used to customize the background color and border of the tooltip, respectively. The `textStyle` property in the tooltip is used to customize the font of the tooltip text. Additionally, the `highlightColor` property can be used to change the color of the data point when hovering.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/tooltip-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +105,10 @@ The `fill` and `border` properties are used to customize the background color an
 Using the `tooltipRender` event, you can customize tooltip values for a particular point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/tooltip-event/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue) %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-event/app.vue %}
 {% endhighlight %}
 {% endtabs %}

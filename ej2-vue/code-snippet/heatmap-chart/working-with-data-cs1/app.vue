@@ -1,18 +1,21 @@
-
-
-
 <template>
     <div id="app">
-        <ejs-heatmap id="heatmap" :titleSettings='titleSettings' :xAxis='xAxis' :yAxis='yAxis' :paletteSettings='paletteSettings' :legendSettings='legendSettings' :tooltipRender='tooltipRender' :dataSource='dataSource'></ejs-heatmap>
+        <ejs-heatmap id="heatmap" :titleSettings='titleSettings' :xAxis='xAxis' :yAxis='yAxis'
+            :paletteSettings='paletteSettings' :legendSettings='legendSettings' :tooltipRender='tooltipRender'
+            :dataSource='dataSource'></ejs-heatmap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { HeatMapPlugin, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
-Vue.use(HeatMapPlugin);
+
+import { HeatMapComponent, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
+
 
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-heatmap": HeatMapComponent
+    },
+    data: function () {
         return {
             dataSource: [
                 [9.5, 2.2, 4.2, 8.2, -0.5, 3.2, 5.4, 7.4, 6.2, 1.4],
@@ -61,21 +64,13 @@ export default {
             }
         }
     },
-    provide:{
-        heatmap:[Tooltip, Legend]
+    provide: {
+        heatmap: [Tooltip, Legend]
     },
     methods: {
-        tooltipRender: function(args)
-        {
+        tooltipRender: function (args) {
             args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];
         }
     }
 }
 </script>
-
-<style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-heatmap/styles/material.css';
-</style>
-
-
-

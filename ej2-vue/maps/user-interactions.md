@@ -727,3 +727,15 @@ The HTML element can be rendered in the tooltip of the Maps using the [`template
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs99" %}
+
+### Changing duration in mobile devices
+
+To change the duration of the tooltips and tooltip templates in mobile devices, you can use the [duration](https://ej2.syncfusion.com/vue/documentation/api/maps/tooltipSettingsModel/#duration) property in [tooltipSettings](https://ej2.syncfusion.com/vue/documentation/api/maps/tooltipSettingsModel/). By default, this property is set to **2000** milliseconds. Setting the value to **0** will keep the tooltip visible indefinitely. If it is greater than **0**, the tooltip will be removed after the specified time.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/maps/getting-started-cs108/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/maps/getting-started-cs108" %}

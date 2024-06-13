@@ -22,7 +22,10 @@ each data point.
 Markers can be added to points by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/markerSettings/#visible) option of the marker property. By default, distinct markers will be enabled for each series in the chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/data-marker/marker-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/marker-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,7 +37,10 @@ Markers can be added to points by enabling the [`visible`](https://ej2.syncfusi
 Markers can be assigned with different shapes such as Rectangle, Circle, Diamond, etc. using the [`shape`](https://ej2.syncfusion.com/vue/documentation/api/chart/markerSettings/#shape) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/data-marker/marker-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/marker-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ Apart from the shapes, you can also add custom images to mark the data point usi
 [`imageUrl`](https://ej2.syncfusion.com/vue/documentation/api/chart/markerSettings/#imageurl) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/data-marker/marker-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/marker-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ Apart from the shapes, you can also add custom images to mark the data point usi
 Marker's color and border can be customized using `fill` and `border` properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/data-marker/marker-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/marker-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -73,7 +85,10 @@ Marker's color and border can be customized using `fill` and `border` properties
 You can also customize the specific marker and label using [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart/#pointrender-emittypeipointrendereventargs) event. The `pointRender` event allows you to change the shape, color and border for a point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/data-marker/marker-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/marker-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -85,7 +100,10 @@ You can also customize the specific marker and label using [`pointRender`](https
 Marker can be filled with the series color by setting the [`isFilled`](https://ej2.syncfusion.com/vue/documentation/api/chart/markerSettingsModel/#isFilled-boolean) property to <b>true</b>.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/data-marker/marker-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/data-marker/marker-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

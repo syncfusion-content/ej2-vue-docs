@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The 3D Circular Chart can be given a title by using the `title` property to display information about the plotted data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/title/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/title/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The 3D Circular Chart can be given a title by using the `title` property to disp
 The title of the 3D Circular Chart can be customized using the `titleStyle` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/title-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/title-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ The title of the 3D Circular Chart can be customized using the `titleStyle` prop
 The 3D Circular Chart can be given a subtitle by using the `subTitle` property to display information about the plotted data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/subtitle/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/subtitle/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ The 3D Circular Chart can be given a subtitle by using the `subTitle` property t
 The subtitle of the 3D Circular Chart can be customized using the `subTitleStyle` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/subtitle-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/subtitle-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}

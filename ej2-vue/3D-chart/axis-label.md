@@ -19,7 +19,10 @@ When the axis labels overlap with each other, [`labelIntersectAction`](https://e
 Case 1: When setting `labelIntersectAction` as `Hide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis-label/axis-label1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis-label/axis-label1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ Case 1: When setting `labelIntersectAction` as `Hide`.
 Case 2: When setting `labelIntersectAction` as `Rotate45`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis-label/axis-label2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis-label/axis-label2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ Case 2: When setting `labelIntersectAction` as `Rotate45`.
 Case 3: When setting `labelIntersectAction` as `Rotate90`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis-label/axis-label3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis-label/axis-label3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -52,7 +61,10 @@ Labels with long text at the edges of an axis may appear partially in the 3D cha
 use the [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis-label/axis-label4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis-label/axis-label4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +76,10 @@ use the [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/
 The labels will be rendered based on the count in the [`maximumLabels`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3D/#maximumlabels) property per 100 pixel. If the range (minimum, maximum, interval) and `maximumLabels` are set, then the priority goes to range. If the range is not set, then the priority goes to `maximumLabels` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis-label/axis-label5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis-label/axis-label5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

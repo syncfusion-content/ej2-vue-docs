@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-accumulationchart id="container">
@@ -11,12 +9,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, FunnelSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
+import {  AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, FunnelSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+name: "App",
+components: {
+    "ejs-accumulationchart": AccumulationChartComponent,
+    "e-accumulation-series-collection": AccumulationSeriesCollectionDirective,
+    "e-accumulation-series": AccumulationSeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -39,5 +41,3 @@ export default {
      height: 350px;
  }
 </style>
-
-

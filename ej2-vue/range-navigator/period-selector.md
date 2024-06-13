@@ -27,7 +27,10 @@ An array of objects that allows the users to specify pre-defined time intervals.
 * Seconds
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs20/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs20/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +44,10 @@ An array of objects that allows the users to specify pre-defined time intervals.
 The [`position`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/periodSelectorSettingsModel/#position) property allows the users to position the period selector at the **Top** or **Bottom**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs21/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs21/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +59,10 @@ The [`position`](https://ej2.syncfusion.com/vue/documentation/api/range-navigato
 The [`height`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/periodSelectorSettingsModel/#height) property allows the users to specify the height of the period selector. The default value of the height property is **43px**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs22/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs22/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +74,10 @@ The [`height`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/
 The [`disableRangeSelector`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#disablerangeselector) property allows the users to display only the period selector and not the Range Selector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}

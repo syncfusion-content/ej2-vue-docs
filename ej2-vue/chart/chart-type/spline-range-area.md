@@ -16,7 +16,10 @@ The Spline Range Area Chart is used to display continuous data points as a set o
 To render a spline range area series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `SplineRangeArea` and inject `SplineRangeAreaSeries`  into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/area-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/area-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The following properties can be used to customize the `spline range area` series
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/splinerangearea-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/splinerangearea-cs/app.vue %}
 {% endhighlight %}
 {% endtabs %}

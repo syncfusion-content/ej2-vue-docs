@@ -23,7 +23,10 @@ Initialize the tooltip template div as shown in the following html page.
 Set the element id to the `template` property in `tooltipSettings` to show the tooltip template.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/how-to-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/how-to-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

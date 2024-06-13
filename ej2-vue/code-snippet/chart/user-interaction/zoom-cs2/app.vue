@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom' :legendSettings='legend'>
@@ -11,15 +9,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
 
-let series1: Object[] = [];
-let point1: Object;
-let value: number = 40;
-let i: number;
+
+
+let series1 = [];
+let point1;
+let value = 40;
+let i;
 for (i = 1; i < 500; i++) {
     if (Math.random() > .5) {
         value += Math.random();
@@ -31,6 +29,12 @@ for (i = 1; i < 500; i++) {
 }
 
 export default {
+name: "App",
+components: {
+    "ejs-chart": ChartComponent,
+    "e-series-collection": SeriesCollectionDirective,
+    "e-series": SeriesDirective
+  },
   data() {
     return {
       seriesData1: series1,
@@ -60,5 +64,3 @@ export default {
     height: 350px;
  }
 </style>
-
-

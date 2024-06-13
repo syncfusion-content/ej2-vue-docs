@@ -18,14 +18,15 @@ import {
   Chart3DSeriesCollectionDirective,
   Chart3DSeriesDirective,
   ColumnSeries3D,
-  Category3D,
+  Category3D
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
-    'ejs-chart3d': Chart3DComponent,
-    'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective,
+    "ejs-chart3d": Chart3DComponent,
+    "e-chart3d-series-collection": Chart3DSeriesCollectionDirective,
+    "e-chart3d-series": Chart3DSeriesDirective
   },
   data() {
     return {
@@ -37,19 +38,19 @@ export default {
         { country: 'France', gold: 50, silver: 45, bronze: 35 },
         { country: 'Germany', gold: 40, silver: 30, bronze: 22 },
         { country: 'Italy', gold: 40, silver: 35, bronze: 37 },
-        { country: 'Sweden', gold: 30, silver: 25, bronze: 27 },
+        { country: 'Sweden', gold: 30, silver: 25, bronze: 27 }
       ],
       primaryXAxis: {
-        valueType: 'Category',
+        valueType: 'Category'
       },
       primaryYAxis: {
-        maximum: 80,
+        maximum: 80
       },
-      pallets: ['#E94649', '#F6B53F', '#6FAAB0', '#C4C24A'],
+      pallets: ['#E94649', '#F6B53F', '#6FAAB0', '#C4C24A']
     };
   },
   provide: {
-    chart3d: [ColumnSeries3D, Category3D],
+    chart3d: [ColumnSeries3D, Category3D]
   },
 };
 </script>

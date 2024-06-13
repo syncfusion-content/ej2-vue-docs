@@ -23,68 +23,8 @@ To integrate custom headers into your `DataManager` requests, follow these steps
 3. Trigger the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method to send the request to the server with the custom headers.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% raw %}
-
-<template>
-  <div id="app">
-    <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th></tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-      </tr>
-    </table>  
-  </div>
-</template>
-
-<script setup>
-import { onMounted, ref } from "vue";
-import { DataManager, Query, ODataAdaptor } from '@syncfusion/ej2-data';
-
-const items = ref([]);
-
-onMounted(() => {
-  let SERVICE_URI = "https://services.syncfusion.com/vue/production/api/Orders";
-  let dataManager = new DataManager({ 
-      url: SERVICE_URI, 
-      adaptor: new ODataAdaptor, 
-      headers:[{ 'syncfusion-data-manager': 'true' }]  
-  });
-  dataManager.executeQuery(new Query()).then((e) => {
-    this.items = e.result;
-  });
-})
-</script>
-
-<style>
-  .e-table {
-    border: solid 1px #e0e0e0;
-    border-collapse: collapse;
-    font-family: Roboto;
-  }
-
-  .e-table td, .e-table th {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e0e0e0;
-    display: table-cell;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    padding: 8px 21px;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-</style>
-
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Option API (~/src/App.vue)" %}
-{% raw %}
-
 <template>
   <div id="app">
     <table class='e-table'>
@@ -142,7 +82,6 @@ export default {
     width: auto;
   }
 </style>
-
 {% endraw %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,24 +1,26 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container">
-            <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Bubble' size='size' xName='x' yName='y' name='pound'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container">
+      <e-series-collection>
+        <e-series :dataSource='seriesData1' type='Bubble' size='size' xName='x' yName='y' name='pound'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, BubbleSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, BubbleSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
-      seriesData1:  [
+      seriesData1: [
         { x: 92.2, y: 7.8, size: 1.347, text: 'China' },
         { x: 74, y: 6.5, size: 1.241, text: 'India' },
         { x: 90.4, y: 6.0, size: 0.238, text: 'Indonesia' },
@@ -39,9 +41,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

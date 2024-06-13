@@ -26,7 +26,10 @@ Tooltip can be customized using the following properties:
 * textStyle - Customizes the font size, color, family, style, weight, alignment, and overflow of the tooltip.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -38,7 +41,10 @@ Tooltip can be customized using the following properties:
 You can format and parse the date to all globalize format using [`labelFormat`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/rangeNavigatorAxis/) property in an axis. The `labelFormat` property in the tooltip is used to format and parse the date to all globalize formats.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs30/app.vue %}
 {% endhighlight %}
 {% endtabs %}

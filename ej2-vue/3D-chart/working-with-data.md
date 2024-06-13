@@ -17,7 +17,10 @@ domainurl: ##DomainURL##
 A simple JSON data can be bound to the 3D chart using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#datasource) property in series. Now map the fields in JSON to [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#yname) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/local-data/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/local-data/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ A simple JSON data can be bound to the 3D chart using [`dataSource`](https://ej2
 The remote data can be bound to the 3D chart using the `DataManager`. The `DataManager` requires minimal information like web service URL, adaptor and cross domain to interact with service endpoint properly. Assign the instance of the `DataManager` to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#datasource) property in series and map the fields of data to [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#yname) properties. You can also use the [`query`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3DModel/#query) property of the series to filter the data.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/remote-data/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/remote-data/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -41,7 +47,10 @@ The remote data can be bound to the 3D chart using the `DataManager`. The `DataM
 `OData` is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the `DataManager`. Refer to the following code example for remote data binding using OData service.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/binding-data/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/binding-data/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -53,7 +62,10 @@ The remote data can be bound to the 3D chart using the `DataManager`. The `DataM
 The data points that uses the `null` or `undefined` as value are considered as empty points. The empty data points are ignored and is not plotted in the chart. When the data is provided by using the points property, by using [`emptyPointSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/threeDimensionalEmptyPointSettingsModel/) property in series, the empty can be customized. The default [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/threeDimensionalEmptyPointSettingsModel/#mode) of the empty point is **Gap**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/empty-points/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/empty-points/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -65,7 +77,10 @@ The data points that uses the `null` or `undefined` as value are considered as e
 The specific color for empty point can be set by the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/threeDimensionalEmptyPointSettingsModel/#fill) property in [`emptyPointSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/threeDimensionalEmptyPointSettingsModel/).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/empty-points-custom/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/empty-points-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}

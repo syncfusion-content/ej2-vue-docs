@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <div align="center">
@@ -56,22 +54,29 @@
 <style scoped>
 </style>
 <script>
-import Vue from "vue";
+
 import { Browser } from "@syncfusion/ej2-base";
 import {
-  ChartPlugin,
+  ChartComponent,
   ColumnSeries,
   Category,
   DataLabel,
   Tooltip,
   Legend,
+  SeriesCollectionDirective,
+  SeriesDirective,
 } from "@syncfusion/ej2-vue-charts";
-
-Vue.use(ChartPlugin);
 
 let total = [];
 
 export default {
+name: "App",
+components: {
+"ejs-chart":ChartComponent,
+"e-series-collection":SeriesCollectionDirective,
+"e-series":SeriesDirective,
+},
+
   data: function () {
     return {
       seriesData: [
@@ -142,5 +147,3 @@ export default {
   },
 };
 </script>
-
-

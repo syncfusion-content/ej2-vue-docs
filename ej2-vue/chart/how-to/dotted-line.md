@@ -23,7 +23,10 @@ Initialize the custom elements by using the `annotation` property.
 By setting `coordinateUnits` value as `point` in annotation object you can placed dotted lines in the chart based on point x and y values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs28/app.vue %}
 {% endhighlight %}
 {% endtabs %}

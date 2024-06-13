@@ -20,7 +20,10 @@ In the `showTooltip` method, specify the following parameters programmatically t
 * `y` - Data point y-value or y-coordinate value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +40,10 @@ In the `showCrosshair` method, specify the following parameters programmatically
 * `y` - Specifies the y-value of the point or y-coordinate.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +55,10 @@ In the `showCrosshair` method, specify the following parameters programmatically
 You can maintain constant zoom levels across multiple charts using the [`zoomComplete`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs/) event. In the `zoomComplete` event, obtain the [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs/#currentzoomfactor) and [`zoomPosition`](https://ej2.syncfusion.com/vue/documentation/api/chart/iZoomCompleteEventArgs/#currentzoomposition) values of the particular chart, and then apply those values to the other charts.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -61,7 +70,10 @@ You can maintain constant zoom levels across multiple charts using the [`zoomCom
 You can select the data across multiple charts using the [`selectionComplete`](https://ej2.syncfusion.com/vue/documentation/api/chart/iSelectionCompleteEventArgs/) event. In the `selectionComplete` event, obtain the selected values of the particular chart, and then apply those values to the other charts.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/synchronized-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/synchronized-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

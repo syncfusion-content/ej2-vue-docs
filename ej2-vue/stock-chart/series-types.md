@@ -41,7 +41,10 @@ To render a hollowcandle series, use series [`type`](https://ej2.syncfusion.com/
 To render a candle series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeriesModel/#type-string) as `Candle` and inject `CandleSeries` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/series-types-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/series-types-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

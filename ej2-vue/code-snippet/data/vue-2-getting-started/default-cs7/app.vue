@@ -4,7 +4,7 @@
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' width=90></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
-        <e-column field='Freight' headerText='Freight' format='C2' width=90></e-column>
+        <e-column field='Freight' headerText='Freight' format='C2'  width=90></e-column>
         <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
       </e-columns>
     </ejs-grid>
@@ -12,22 +12,19 @@
 </template>
 
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
+import Vue from 'vue';
+import { GridPlugin } from '@syncfusion/ej2-vue-grids';
 import { DataManager } from '@syncfusion/ej2-data';
 
+Vue.use(GridPlugin);
+
 export default {
-  name: "App",
-  components: {
-    "ejs-grid": GridComponent,
-    "e-columns": ColumnsDirective,
-    "e-column": ColumnDirective
-  },
   data() {
     const SERVICE_URI = 'https://services.syncfusion.com/vue/production/';
     return {
-      data: new DataManager({ url: SERVICE_URI + 'api/Orders' })
+      data: new DataManager({ url: SERVICE_URI+ 'api/Orders' })
     };
-  },
+  },   
 }
 </script>
 

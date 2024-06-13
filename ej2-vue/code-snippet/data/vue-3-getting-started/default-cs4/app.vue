@@ -12,23 +12,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-export default {
-  name: "App",
-  components: {
-    'ejs-grid': GridComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  },
-  data() {
-    return {
-      items: new DataManager(data).executeLocal(new Query().sortBy('EmployeeID').take(8))
-    }
-  }
-}
+const items= new DataManager(data).executeLocal(new Query().sortBy('EmployeeID').take(8))
 </script>
 
 <style>

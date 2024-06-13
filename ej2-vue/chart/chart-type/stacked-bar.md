@@ -16,7 +16,10 @@ To render a 100% stacked bar series, use series [`type`](https://ej2.syncfusion.
 inject `StackingBarSeries` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/bar-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/bar-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -28,7 +31,10 @@ inject `StackingBarSeries` into the `provide`.
 To render a 100% cylindrical stacked bar chart, set the [`columnFacet`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#columnfacet) property to `Cylinder` in the chart series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/bar-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/bar-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ The following properties can be used to customize the `100% stacked bar` series.
 * [border](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#properties) – Specifies the [Color](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#color) and [Width](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#width) of series border.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/stackedbar-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/stackedbar-cs/app.vue %}
 {% endhighlight %}
 {% endtabs %}

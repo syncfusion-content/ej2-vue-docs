@@ -1,40 +1,32 @@
-
-
 <template>
   <div id="app">
-    <ejs-chart
-      id="container"
-      :title="title"
-      :primaryXAxis="primaryXAxis"
-      :tooltip="tooltip"
-      :highlightColor="highlightColor"
-    >
+    <ejs-chart id="container" :title="title" :primaryXAxis="primaryXAxis" :tooltip="tooltip"
+      :highlightColor="highlightColor">
       <e-series-collection>
-        <e-series
-          :dataSource="seriesData"
-          type="Column"
-          xName="x"
-          yName="y"
-          name="China"
-          :marker="marker"
-        >
+        <e-series :dataSource="seriesData" type="Column" xName="x" yName="y" name="China" :marker="marker">
         </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script>
-import Vue from "vue";
+
 import {
-  ChartPlugin,
+  ChartComponent, SeriesDirective, SeriesCollectionDirective,
   ColumnSeries,
   DateTime,
   Tooltip,
 } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+
 
 export default {
+  name: "App",
+  components: {
+    "ejs-chart": ChartComponent,
+    "e-series-collection": SeriesCollectionDirective,
+    "e-series": SeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -78,5 +70,3 @@ export default {
   height: 350px;
 }
 </style>
-
-

@@ -17,7 +17,10 @@ When the axis labels overlap with each other, you can use [`labelIntersectActio
 When setting `labelIntersectAction` as `Hide`
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ When setting `labelIntersectAction` as `Hide`
 When setting `labelIntersectAction` as `Rotate45`
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -37,7 +43,10 @@ When setting `labelIntersectAction` as `Rotate45`
 When setting `labelIntersectAction` as `Rotate90`
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -50,7 +59,10 @@ By default, the axis labels can be placed at `outside` the axis line and this al
 the axis line using the `labelPosition` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -74,7 +86,10 @@ Any number of levels of labels can be added to an axis using the `multiLevelLabe
 Using the categories property, you can configure the `start`, `end`, `text`, and `maximumTextWidth` of multilevel labels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -86,7 +101,10 @@ Using the categories property, you can configure the `start`, `end`, `text`, and
 Using the `overflow` property, you can `trim` or `wrap` the multilevel labels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -98,7 +116,10 @@ Using the `overflow` property, you can `trim` or `wrap` the multilevel labels.
 The `alignment` property provides option to position the multilevel labels at `far`, `center`, or `near`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +132,10 @@ The `textStyle` property of multilevel labels provides options to customize the 
 `fontWeight`, `fontStyle`, `opacity`, `textAlignment` and `textOverflow`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -124,7 +148,10 @@ Using the `border` property, you can customize the `width`, `color`, and `type`.
 are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBottomBorder` and `CurlyBrace`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs15/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs15/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -136,7 +163,10 @@ are `Rectangle`, `Brace`, `WithoutBorder`, `WithoutTopBorder`, `WithoutTopandBot
 Labels with long text at the edges of an axis may appear partially in the chart. To avoid this, use [`edgeLabelPlacement`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#edgelabelplacement) property in axis, which moves the label inside the chart area for better appearance or hides it.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/datetime-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/datetime-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -149,7 +179,10 @@ The [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/
 `color`, `font-family`, `font-size` and `font-weight` of the axis labels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs16/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs16/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -161,7 +194,10 @@ The [`labelStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/
 You can customize the specific text in the axis labels using `axisLabelRender` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs17/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs17/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -173,7 +209,10 @@ You can customize the specific text in the axis labels using `axisLabelRender` e
 You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#enabletrim) property and width of the labels can also be customized using [`maximumLabelWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#maximumlabelwidth) property in the axis, the value maximum label width is `34` by default.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs18/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs18/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -185,7 +224,10 @@ You can trim the label using [`enableTrim`](https://ej2.syncfusion.com/vue/docum
 Line break feature used to customize the long axis label text into multiple lines by using tag. Refer the below example in that dataSource x value contains long text, it breaks into two lines by using  `<br>` tag.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs19/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs19/app.vue %}
 {% endhighlight %}
 {% endtabs %}

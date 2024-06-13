@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Accumulation Chart can be given a title using [`title`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#title) property, to show the information about the data plotted.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/chart-title-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/chart-title-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Accumulation Chart can be given a title using [`title`](https://ej2.syncfusion.c
 Accumulation Chart can be customizing a title using [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#titlestyle) property, to show the information about the data plotted.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/chart-title-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/chart-title-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ Accumulation Chart can be customizing a title using [`titleStyle`](https://ej2.s
 Accumulation Chart can be given a subtitle using [`subTitle`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#subtitle) property, to show the information about the data plotted.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/chart-title-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/chart-title-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ Accumulation Chart can be given a subtitle using [`subTitle`](https://ej2.syncfu
 Accumulation Chart can be customizing a subtitle using [`subTitleStyle`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#subtitlestyle) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/chart-title-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/chart-title-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

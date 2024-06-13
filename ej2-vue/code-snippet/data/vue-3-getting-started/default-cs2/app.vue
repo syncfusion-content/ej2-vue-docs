@@ -12,28 +12,20 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
 
-let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
+let items = ref([]);
+let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders"
+const dataManager = new DataManager({
+  url: SERVICE_URI,
+  adaptor: new ODataV4Adaptor()
+});
 
-export default {
-  name: "App",
-  data() {
-    return {
-      items: [],
-      dataManager: new DataManager({
-        url: SERVICE_URI,
-        adaptor: new ODataV4Adaptor()
-      }),
-    }
-  },
-  mounted() {
-    this.dataManager.executeQuery(new Query().take(12)).then((e) => {
-      this.items = e.result;
-    });
-  }
-}
+dataManager.executeQuery(new Query().take(12)).then((e) => {
+  items.value = e.result;
+});
 </script>
 
 <style>

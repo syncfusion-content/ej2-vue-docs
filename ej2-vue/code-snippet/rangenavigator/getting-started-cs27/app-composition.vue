@@ -1,0 +1,25 @@
+<template>
+  <div id="app">
+    <ejs-rangenavigator :valueType='valueType' :value='value' :labelFormat='labelFormat' :tooltip='tooltip'>
+      <e-rangenavigator-series-collection>
+        <e-rangenavigator-series :dataSource='data' type='Area' xName='x' yName='y' width=2>
+        </e-rangenavigator-series>
+      </e-rangenavigator-series-collection>
+    </ejs-rangenavigator>
+  </div>
+</template>
+<script setup>
+import { provide } from "vue";
+
+import { RangeNavigatorComponent as EjsRangenavigator, RangenavigatorSeriesDirective as ERangenavigatorSeries, RangenavigatorSeriesCollectionDirective as ERangenavigatorSeriesCollection, AreaSeries, DateTime, RangeTooltip } from "@syncfusion/ej2-vue-charts";
+import { bitCoinData } from "./default_data.js";
+
+const valueType = 'DateTime';
+const value = [new Date('2017-09-01'), new Date('2018-02-01')];
+const tooltip = { enable: true };
+const labelFormat = 'MMM-yy';
+const data = bitCoinData;
+
+provide('rangeNavigator', [DateTime, AreaSeries, RangeTooltip]);
+
+</script>

@@ -20,7 +20,11 @@ const urlTemplate = 'https://tile.openstreetmap.org/level/tileX/tileY.png';
 
 const zoomSettings = {
     enable: true,
-    toolBars: ["Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset"]
+    toolbarSettings:{
+      buttonSettings: {
+        toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+      }
+    }
 };
 
 provide('maps',  [ Zoom ]);

@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement. To render the error bar for the series, set [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#visible) as `true` in error bar object and inject `ErrorBar` module into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Error bars are graphical representations of the variability of data and used on 
 To change the error bar rendering type using [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#visible) option of error bar. To change the error bar line length you can use [`verticalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ To change the error bar rendering type using [`type`](https://ej2.syncfusion.com
 To customize the error bar type, set error bar [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#type) as `Custom` and  then change the horizontal/vertical positive and negative error of error bar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ To customize the error bar type, set error bar [`type`](https://ej2.syncfusion.c
 Error bar mode is used to define whether the error bar line has to be drawn horizontally, vertically or in both side. To change the error bar mode use [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#mode) option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +75,10 @@ Error bar mode is used to define whether the error bar line has to be drawn hori
 To change the error bar direction to plus, minus or both side using [`direction`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#direction) option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +90,10 @@ To change the error bar direction to plus, minus or both side using [`direction`
 To customize the error bar cap length, width and fill color, you can use [`errorBarCap`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#errorbarcap) option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +105,10 @@ To customize the error bar cap length, width and fill color, you can use [`error
 To customize the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error and vertical negative and positive error for an individual point using [`verticalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalerror), [`horizontalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalnegativeerror) and [`verticalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalpositiveerror) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/errorbar-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

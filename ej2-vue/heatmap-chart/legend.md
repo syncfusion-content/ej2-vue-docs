@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The legend is used to provide the information about the heat map cell. You can enable the legend by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#visible) property to **true** and injecting the `Legend` module into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ Heat map supports two legend types: Gradient and list type.
 You can change the legend type by using the [type](https://ej2.syncfusion.com/vue/documentation/api/heatmap/paletteSettings/#type) property in the `paletteSettings` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +48,10 @@ You can change the legend type by using the [type](https://ej2.syncfusion.com/vu
 You can place the legend at left, right, top, or bottom to the heat map layout by using the [position](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#position) property. The legend is positioned at the right to the heat map by default.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +63,10 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 You can align the legend as center, far, or near to the heat map using the [alignment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#alignment) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -66,7 +78,10 @@ You can align the legend as center, far, or near to the heat map using the [alig
 You can change the legend dimensions with values in pixels or percentage by using the[width](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#width) and [height](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#height) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +93,10 @@ You can change the legend dimensions with values in pixels or percentage by usin
 Paging is available only for the list type legend in the heat map, and it can be enabled by default,when the legend items exceed the legend bounds. You can view each legend items by navigating between the pages using navigation buttons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +115,10 @@ The following are the legend label display types:
 * None: None of the labels are displayed. The tooltip will appear for this type of label display when hovering over the legend item.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -109,7 +130,10 @@ The following are the legend label display types:
 In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the [toggleVisibility](https://ej2.syncfusion.com/vue/documentation/api/heatmap/legendSettings/#togglevisibility) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -121,7 +145,10 @@ The legend title displays a specific information about the legend. You can enabl
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/legend-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/legend-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}

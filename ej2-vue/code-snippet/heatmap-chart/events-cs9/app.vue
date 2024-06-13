@@ -4,11 +4,15 @@
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { HeatMapPlugin, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
-Vue.use(HeatMapPlugin);
+
+import { HeatMapComponent, Tooltip, Legend } from '@syncfusion/ej2-vue-heatmap';
+
 
 export default {
+name: "App",
+components: {
+    "ejs-heatmap": HeatMapComponent
+  },
   data: function() {
     return {
         dataSource: [
@@ -44,7 +48,7 @@ export default {
     }
   },
   methods: {
-    resized: function (args) {
+    resized: function () {
       console.log("The resized event has been triggered!!!");
     }
   },

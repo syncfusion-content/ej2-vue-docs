@@ -1,14 +1,15 @@
 <template>
-    <ejs-heatmap id="heatmap" :dataSource='dataSource'></ejs-heatmap>
+  <ejs-heatmap id="heatmap" :dataSource='dataSource'></ejs-heatmap>
 </template>
 <script>
 import { HeatMapComponent } from "@syncfusion/ej2-vue-heatmap";
 
 export default {
+  name: "App",
   components: {
-    'ejs-heatmap' : HeatMapComponent
+    'ejs-heatmap': HeatMapComponent
   },
-  data: function() {
+  data: function () {
     return {
       dataSource: [
         [73, 39, 26, 39, 94, 0],
@@ -28,4 +29,3 @@ export default {
   }
 }
 </script>
-

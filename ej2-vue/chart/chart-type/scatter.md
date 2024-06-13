@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 To render a scatter series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Scatter` and inject `ScatterSeries` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/scatter-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/scatter-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The following properties can be used to customize the `scatter` series.
 * [shape](https://ej2.syncfusion.com/vue/documentation/api/chart/chartShape/) - Specifies the shape of the scatter series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/scatter-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/scatter-cs/app.vue %}
 {% endhighlight %}
 {% endtabs %}

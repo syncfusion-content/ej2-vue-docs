@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
@@ -10,12 +8,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, BoxAndWhiskerSeries, Category } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, BoxAndWhiskerSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 export default {
+name: "App",
+components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -32,7 +34,6 @@ export default {
         primaryXAxis: {
            valueType: 'Category'
         },
-      boxPlotMode: 'Normal',
       marker: { visible: true },
       title: "Company Revenue and Profit"
     };
@@ -47,5 +48,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

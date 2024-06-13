@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" ref="chart" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :tooltip='tooltip' :chartArea='chartArea'
@@ -11,15 +9,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import {  ChartPlugin,
+
+import {  ChartComponent, SeriesCollectionDirective, SeriesDirective,
   ColumnSeries,
   Category,
   DataLabel,
   Tooltip,
   Legend } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+
 let count = 0;
 let datasource1 = [
   { x: 'Egg', y: 206 },
@@ -45,6 +43,12 @@ let datasource3 = [
 
 ];
 export default {
+name: "App",
+components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -125,5 +129,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

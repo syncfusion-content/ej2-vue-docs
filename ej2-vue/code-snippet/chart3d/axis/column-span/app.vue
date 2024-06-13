@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <ejs-chart3d id="container" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :axes="axes" :columns="columns"
-      :title='title' :wallColor='wallColor' :enableRotation='enableRotation' :rotation='rotation' :tilt='tilt' :depth='depth'>
+      :title='title' :wallColor='wallColor' :enableRotation='enableRotation' :rotation='rotation' :tilt='tilt'
+      :depth='depth'>
       <e-chart3d-series-collection>
         <e-chart3d-series :dataSource="seriesData" type="Column" xName="x" yName="y" name="Germany"></e-chart3d-series>
-        <e-chart3d-series :dataSource="seriesData" type="Column" xName="x" yName="y1" name="Japan" xAxisName="xAxis"></e-chart3d-series>
+        <e-chart3d-series :dataSource="seriesData" type="Column" xName="x" yName="y1" name="Japan"
+          xAxisName="xAxis"></e-chart3d-series>
       </e-chart3d-series-collection>
     </ejs-chart3d>
   </div>
@@ -15,16 +17,16 @@ import {
   Chart3DSeriesCollectionDirective,
   Chart3DSeriesDirective,
   ColumnSeries3D,
-  Category3D,
+  Category3D
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   },
-
   data() {
     return {
       seriesData: [
@@ -43,7 +45,7 @@ export default {
         title: 'Temperature (Fahrenheit)',
         labelFormat: '{value}°F'
       },
-      columns:[
+      columns: [
         {
           height: '50%'
         },
@@ -51,7 +53,7 @@ export default {
           height: '50%'
         }
       ],
-      axes:[
+      axes: [
         {
           majorGridLines: { width: 0 },
           columnIndex: 1,
@@ -68,8 +70,8 @@ export default {
     };
   },
   provide: {
-    chart3d: [ColumnSeries3D, Category3D],
-  },
+    chart3d: [ColumnSeries3D, Category3D]
+  }
 };
 </script>
 <style>

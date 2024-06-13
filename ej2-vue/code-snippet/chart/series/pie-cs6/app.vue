@@ -1,21 +1,18 @@
-
-
 <template>
   <div id="app">
-   <ejs-accumulationchart id="container" ref="pie" :title="title" :loaded="loaded">
-        <e-accumulation-series-collection>
-            <e-accumulation-series name="Revenue" :dataSource="data" xName="x" yName="y" :startAngle="startAngle"
-                      :endAngle="endAngle" innerRadius="40%" :dataLabel="dataLabel">
-             </e-accumulation-series>
-        </e-accumulation-series-collection>
+    <ejs-accumulationchart id="container" ref="pie" :title="title" :loaded="loaded">
+      <e-accumulation-series-collection>
+        <e-accumulation-series name="Revenue" :dataSource="data" xName="x" yName="y" :startAngle="startAngle"
+          :endAngle="endAngle" innerRadius="40%" :dataLabel="dataLabel">
+        </e-accumulation-series>
+      </e-accumulation-series-collection>
     </ejs-accumulationchart>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, PieSeries,AccumulationDataLabel } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationDataLabel } from "@syncfusion/ej2-vue-charts";
+
 let count = 0;
 let datasource1 = [
   { x: "Net-tution and Fees", y: 10 },
@@ -63,6 +60,12 @@ let datasource5 = [
   { x: "Federal Revenue", y: 60 }
 ];
 export default {
+  name: "App",
+  components: {
+    "ejs-accumulationchart": AccumulationChartComponent,
+    "e-accumulation-series-collection": AccumulationSeriesCollectionDirective,
+    "e-accumulation-series": AccumulationSeriesDirective
+  },
   data() {
     return {
       data: [
@@ -74,7 +77,7 @@ export default {
         { x: "State Revenue", y: 21, text: "21%" },
         { x: "Federal Revenue", y: 16, text: "16%" }
       ],
-        dataLabel: {
+      dataLabel: {
         visible: true,
         position: "Inside",
         font: {
@@ -88,8 +91,8 @@ export default {
       title: "Education Institutional Revenue"
     };
   },
-    methods: {
-    loaded: function(args) {
+  methods: {
+    loaded: function () {
       this.$refs.pie.ej2Instances.loaded = null;
       setInterval(() => {
         if (count === 0) {
@@ -117,9 +120,7 @@ export default {
     }
   },
   provide: {
-      accumulationchart: [ PieSeries, AccumulationDataLabel]
+    accumulationchart: [PieSeries, AccumulationDataLabel]
   }
 };
 </script>
-
-

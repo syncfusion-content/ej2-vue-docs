@@ -14,7 +14,10 @@ The data points those uses the `null` or `undefined` as value are considered as 
 series. The default mode of the empty point is `Gap`. Other supported modes are `Average` and `Zero`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/radius-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/radius-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Specific color for an empty point can be set by using the `fill` property in `em
 border for an empty point can be set by using the `border` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/radius-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/radius-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -18,7 +18,10 @@ Stock Chart can visualise data bound from local or remote data.
 You can bind a simple JSON data to the chart using [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/stockSeriesModel/#datasource) property in series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/working-with-data-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/working-with-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

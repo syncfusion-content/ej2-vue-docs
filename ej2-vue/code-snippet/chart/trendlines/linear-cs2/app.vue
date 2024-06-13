@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
@@ -15,10 +13,8 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ScatterSeries, Trendlines, LineSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, TrendlinesDirective, TrendlineDirective, ScatterSeries, Trendlines, LineSeries } from "@syncfusion/ej2-vue-charts";
 
 let series1 = [];
 let yValue = [7.66, 8.03, 8.41, 8.97, 8.77, 8.20, 8.16, 7.89, 8.68, 9.48, 10.11, 11.36, 12.34, 12.60, 12.95,
@@ -31,6 +27,14 @@ for (i = 1973; i <= 2013; i++) {
 }
 
 export default {
+name: "App",
+components: {
+    "ejs-chart": ChartComponent,
+    "e-series-collection": SeriesCollectionDirective,
+    "e-series": SeriesDirective,
+    "e-trendlines": TrendlinesDirective,
+    "e-trendline": TrendlineDirective
+  },
   data() {
     return {
         seriesData: series1,
@@ -54,5 +58,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

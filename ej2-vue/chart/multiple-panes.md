@@ -22,7 +22,10 @@ To split the chart area vertically into number of rows, use [`rows`](https://ej2
 * To customize each row’s bottom line, use [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#border) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-panes-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-panes-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -32,7 +35,10 @@ To split the chart area vertically into number of rows, use [`rows`](https://ej2
 For spanning the vertical axis along multiple row, you can use [`span`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#span) property of an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-panes-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-panes-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -54,7 +60,10 @@ To split the chart area horizontally into number of columns, use [`columns`](htt
 property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-panes-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-panes-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +73,10 @@ property.
 For spanning the horizontal axis along multiple column, you can use [`span`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#span) property of an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/multiple-panes-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/multiple-panes-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container">
@@ -11,17 +9,15 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ScatterSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ScatterSeries } from "@syncfusion/ej2-vue-charts";
 
-let series1: Object[] = [];
-let series2: Object[] = [];
-let point1: Object;
-let value: number = 80;
-let value1: number = 70;
-let i: number;
+let series1 = [];
+let series2 = [];
+let point1;
+let value = 80;
+let value1 = 70;
+let i;
 for (i = 1; i < 50; i++) {
     if (Math.random() > 0.5) {
         value += Math.random();
@@ -44,6 +40,12 @@ for (i = 1; i < 50; i++) {
 }
 
 export default {
+name: "App",
+components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData1: series1,
@@ -60,5 +62,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 Data label can be added to a chart series by enabling the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#visible) option in the dataLabel property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ Data label can be added to a chart series by enabling the [`visible`](https://e
 Accumulation chart provides support for placing the data label either `inside` or `outside` the chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ Accumulation chart provides support for placing the data label either `inside` o
 Using `angle` property, you can rotate the data label by its given angle.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ Using `angle` property, you can rotate the data label by its given angle.
 Data labels will be arranged smartly without overlapping with each other. You can enable or disable this feature using the [`enableSmartLabels`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#enablesmartlabels) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -64,7 +76,10 @@ Label content can be formatted by using the template option. Inside the template
 template in chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -76,7 +91,10 @@ template in chart.
 Connector line will be visible when the data label is placed `outside` the chart. The connector line can be customized using the `type`, `color`, `width`, `length` and `dashArray` properties
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +106,10 @@ Connector line will be visible when the data label is placed `outside` the chart
 The fill color and the text in the data source can be mapped to the chart using `pointColorMapping` in series and `name` in datalabel respectively.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/pie-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +121,10 @@ The fill color and the text in the data source can be mapped to the chart using 
 Data label for the accumulation chart can be formatted using [`format`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#format) property. You can use the global formatting options, such as 'n', 'p', and 'c'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/pie-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -168,7 +192,10 @@ Data label for the accumulation chart can be formatted using [`format`](https://
 Individual text can be customized using the `textRender` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -180,7 +207,10 @@ Individual text can be customized using the `textRender` event.
 When the data label text exceeds the container, the text can be wrapped by using [`textWrap`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#textwrap) property. End user can also wrap the data label text based on [`maxWidth`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationDataLabelSettings/#maxwidth) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -196,7 +226,10 @@ You can show the percentages in data labels of pie chart using `textRender` even
 You can customize the data label of pie chart using [textRender](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart#textrender) event as follows to show percentage.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -208,7 +241,10 @@ You can customize the data label of pie chart using [textRender](https://ej2.syn
 You can display the percentage values in data label of pie chart using `template` option.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/smartlabel-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/smartlabel-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

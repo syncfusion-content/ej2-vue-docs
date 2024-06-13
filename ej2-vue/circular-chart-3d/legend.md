@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The legend provides information about the data points rendered in the 3D Circular Chart. It can be added by enabling the `visible` option in the `legendSettings` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/legend/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/legend/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The legend provides information about the data points rendered in the 3D Circula
 By using the `position` property, the legend can be positioned at the `left`, `right`, `top` or `bottom` of the 3D Circular Chart. By default, the legend will be positioned to the right of the 3D Circular Chart. Additionally, you can align the legend to the `center`, `far` or `near` of the chart using the `alignment` property. 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/position/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/position/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +45,10 @@ By using the `position` property, the legend can be positioned at the `left`,
 You can reverse the order of the legend items by using the `reverse` property in `legendSettings`. By default, the legend for the first series in the collection will be placed first.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/reverse/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/reverse/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +60,10 @@ You can reverse the order of the legend items by using the `reverse` property in
 To change the legend shape, use the `legendShape` property in the `series`. By default, the legend shape is set to `seriesType`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/legend-shape/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/legend-shape/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +75,10 @@ To change the legend shape, use the `legendShape` property in the `series`. By
 The legend size can be changed by using the `width` and `height` properties in `legendSettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/legend-size/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/legend-size/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +90,10 @@ The legend size can be changed by using the `width` and `height` properties in `
 The size of the legend items can be customized by using the `shapeHeight` and `shapeWidth` properties in `legendSettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/item-size/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/item-size/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +105,10 @@ The size of the legend items can be customized by using the `shapeHeight` and `s
 Paging will be enabled by default when the legend items exceed the legend bounds. Each legend item can be viewed by navigating between the pages using navigation buttons.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/paging/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/paging/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -99,7 +120,10 @@ Paging will be enabled by default when the legend items exceed the legend bounds
 When the legend text exceeds the container, the text can be wrapped using the `textWrap` property in `legendSettings`. End users can also wrap the legend text based on the `maximumLabelWidth` property in `legendSettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/text-wrap/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/text-wrap/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -111,7 +135,10 @@ When the legend text exceeds the container, the text can be wrapped using the `t
 You can set a title for the legend using the `title` property in `legendSettings`. The `size`, `color`, `opacity`, `fontStyle`, `fontWeight`, `fontFamily`, `textAlignment`, and `textOverflow` of the legend title can be customized using the `titleStyle` property in `legendSettings`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/legend-title/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/legend-title/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -123,7 +150,10 @@ You can set a title for the legend using the `title` property in `legendSettings
 The page number will always be visible when using legend paging. However, it is now possible to disable the page number and enable page navigation with the left and right arrows. To render the arrow page navigation, set the `enablePages` property to **false**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/arrow-page/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/arrow-page/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -135,7 +165,10 @@ The page number will always be visible when using legend paging. However, it is 
 The `itemPadding` property can be used to adjust the space between the legend items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-chart/user-interaction/item-padding/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/item-padding/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 To render a area series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Area` and inject `AreaSeries` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/area-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/area-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ To render a area series, use series [`type`](https://ej2.syncfusion.com/vue/docu
 To render a multicolored area series, use the series type as `MultiColoredArea`, and inject the `MultiColoredAreaSeries` into the `provide`. The required `segments` of the series can be customized using the `value`, `color`, and `dashArray`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/area-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/area-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -44,7 +50,10 @@ The following properties can be used to customize the `area` series.
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/area-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/area-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -59,7 +68,10 @@ The following properties in the `border` can be used to customize the border of 
 * [`color`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/borderModel/#color) - Specifies the Color for the border of the Area Chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/area-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/area-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

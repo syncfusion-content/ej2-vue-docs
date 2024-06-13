@@ -249,10 +249,9 @@ To bind [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamana
 
 The following example demonstrates how to bind JSON data using the [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of `DataManager`.
 
-
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 <template>
   <div id="app">
     <table class='e-table'>
@@ -271,7 +270,7 @@ The following example demonstrates how to bind JSON data using the [executeLocal
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-const items = new DataManager(data).executeLocal(new Query())
+const items= new DataManager(data).executeLocal(new Query())
 </script>
 
 <style>
@@ -295,68 +294,10 @@ const items = new DataManager(data).executeLocal(new Query())
     width: auto;
   }
 </style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <table class='e-table'>
-      <tr><th>Order ID</th><th>Customer ID</th><th>Employee ID</th><th>Ship Country</th></tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>  
-  </div>
-</template>
-
-<script>
-import data from './datasource.js';
-import { DataManager, Query } from '@syncfusion/ej2-data';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-grid': GridComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  },
-  data() {
-    return {
-      items: new DataManager(data).executeLocal(new Query())
-    }
-  }
-}
-</script>
-
-<style>
-  .e-table {
-    border: solid 1px #e0e0e0;
-    border-collapse: collapse;
-    font-family: Roboto;
-  }
-
-  .e-table td, .e-table th {
-    border-style: solid;
-    border-width: 1px 0 0;
-    border-color: #e0e0e0;
-    display: table-cell;
-    font-size: 14px;
-    line-height: 20px;
-    overflow: hidden;
-    padding: 8px 21px;
-    vertical-align: middle;
-    white-space: nowrap;
-    width: auto;
-  }
-</style>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+        
 {% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs1" %}
 
 ### Binding to ODataV4
@@ -368,8 +309,8 @@ OData (Open Data Protocol) is a standardized protocol for creating and consuming
 The following example demonstrates how to bind data to an OData service using the [executeQuery](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executequery) method of `DataManager`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 <template>
   <div id="app">
     <table class='e-table'>
@@ -421,81 +362,10 @@ dataManager.executeQuery(new Query().take(12)).then((e) => {
     width: auto;
   }
 </style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <table class='e-table'>
-      <tr>
-        <th>Order ID</th>
-        <th>Customer ID</th>
-        <th>Employee ID</th>
-        <th>Ship Country</th>
-      </tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>
-  </div>
-</template>
-
-<script>
-import { ref } from 'vue';
-import { DataManager, Query, ODataV4Adaptor } from '@syncfusion/ej2-data';
-
-let SERVICE_URI = "https://services.odata.org/V4/Northwind/Northwind.svc/Orders";
-
-export default {
-  name: "App",
-  data() {
-    return {
-      items: [],
-      dataManager: new DataManager({
-        url: SERVICE_URI,
-        adaptor: new ODataV4Adaptor()
-      })
-    }
-  },
-  mounted() {
-    this.dataManager.executeQuery(new Query().take(12)).then((e) => {
-      this.items = e.result;
-    });
-  }
-}
-
-</script>
-
-<style>
-.e-table {
-  border: solid 1px #e0e0e0;
-  border-collapse: collapse;
-  font-family: Roboto;
-}
-
-.e-table td,
-.e-table th {
-  border-style: solid;
-  border-width: 1px 0 0;
-  border-color: #e0e0e0;
-  display: table-cell;
-  font-size: 14px;
-  line-height: 20px;
-  overflow: hidden;
-  padding: 8px 21px;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: auto;
-}
-</style>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
-
+        
 {% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs2" %}
 
 ## Filter
@@ -507,8 +377,8 @@ The filter expression can be easily constructed using the [where](https://ej2.sy
 The following example demonstrates how to filter data based on the **EmployeeID** field equal to **4** using the `where` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 <template>
   <div id="app">
     <table class='e-table'>
@@ -551,74 +421,10 @@ const items= new DataManager(data).executeLocal(new Query().where('EmployeeID', 
     width: auto;
   }
 </style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <table class='e-table'>
-      <tr>
-        <th>Order ID</th>
-        <th>Customer ID</th>
-        <th>Employee ID</th>
-        <th>Ship Country</th>
-      </tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>
-  </div>
-</template>
-
-<script>
-import data from './datasource.js';
-import { DataManager, Query } from '@syncfusion/ej2-data';
-
-export default {
-  name: "App",
-  components: {
-    'ejs-grid': GridComponent,
-    'e-columns': ColumnsDirective,
-    'e-column': ColumnDirective
-  },
-  data() {
-    return {
-      items: new DataManager(data).executeLocal(new Query().where('EmployeeID', 'equal', 4))
-    }
-  }
-}
-</script>
-
-<style>
-.e-table {
-  border: solid 1px #e0e0e0;
-  border-collapse: collapse;
-  font-family: Roboto;
-}
-
-.e-table td,
-.e-table th {
-  border-style: solid;
-  border-width: 1px 0 0;
-  border-color: #e0e0e0;
-  display: table-cell;
-  font-size: 14px;
-  line-height: 20px;
-  overflow: hidden;
-  padding: 8px 21px;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: auto;
-}
-</style>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
- 
+        
 {% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs3" %}
 
 ## Sort
@@ -630,8 +436,8 @@ This can be achieved using the [sortBy](https://ej2.syncfusion.com/documentation
 The following example demonstrates how to sort data based on the **EmployeeID** field in **ascending** order using the `sortBy` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
+{% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 <template>
   <div id="app">
     <table class='e-table'>
@@ -674,10 +480,23 @@ const items= new DataManager(data).executeLocal(new Query().sortBy('EmployeeID')
     width: auto;
   }
 </style>
-
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs4" %}
 
+## Page
+
+Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive datasets.
+
+The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
+
+The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% raw %}
 <template>
   <div id="app">
     <table class='e-table'>
@@ -692,18 +511,11 @@ const items= new DataManager(data).executeLocal(new Query().sortBy('EmployeeID')
   </div>
 </template>
 
-<script>
+<script setup>
 import data from './datasource.js';
 import { DataManager, Query } from '@syncfusion/ej2-data';
 
-export default {
-  name: "App",
-  data() {
-    return {
-      items: new DataManager(data).executeLocal(new Query().sortBy('EmployeeID').take(8))
-    }
-  }
-}
+const items= new DataManager(data).executeLocal(new Query().page(1, 8))
 </script>
 
 <style>
@@ -727,131 +539,7 @@ export default {
     width: auto;
   }
 </style>
-
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/data/vue-3-getting-started/default-cs4" %}
-
-## Page
-
-Paging provides an option to display data in segmented pages, making it easier to navigate through large datasets. This feature is particularly useful when dealing with extensive datasets.
-
-The [page](https://ej2.syncfusion.com/documentation/api/data/query/#page) method of the [query](https://ej2.syncfusion.com/documentation/api/data/query) class enables pagination of data by retrieving a specific range of data based on the page index and the page size.
-
-The following example demonstrates how to apply paging to the data using the `page` method of `query` class and [executeLocal](https://ej2.syncfusion.com/documentation/api/data/dataManager/#executelocal) method of [DataManager](https://ej2.syncfusion.com/documentation/api/data/datamanager). 
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <table class='e-table'>
-      <tr>
-        <th>Order ID</th>
-        <th>Customer ID</th>
-        <th>Employee ID</th>
-        <th>Ship Country</th>
-      </tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>
-  </div>
-</template>
-
-<script setup>
-import data from './datasource.js';
-import { DataManager, Query } from '@syncfusion/ej2-data';
-
-const items = new DataManager(data).executeLocal(new Query().page(1, 8))
-</script>
-
-<style>
-.e-table {
-  border: solid 1px #e0e0e0;
-  border-collapse: collapse;
-  font-family: Roboto;
-}
-
-.e-table td,
-.e-table th {
-  border-style: solid;
-  border-width: 1px 0 0;
-  border-color: #e0e0e0;
-  display: table-cell;
-  font-size: 14px;
-  line-height: 20px;
-  overflow: hidden;
-  padding: 8px 21px;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: auto;
-}
-</style>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-  <div id="app">
-    <table class='e-table'>
-      <tr>
-        <th>Order ID</th>
-        <th>Customer ID</th>
-        <th>Employee ID</th>
-        <th>Ship Country</th>
-      </tr>
-      <tr v-for="(item, index) in items" :key="index">
-        <td>{{ item.OrderID }}</td>
-        <td>{{ item.CustomerID }}</td>
-        <td>{{ item.EmployeeID }}</td>
-        <td>{{ item.ShipCountry }}</td>
-      </tr>
-    </table>
-  </div>
-</template>
-
-<script>
-import data from './datasource.js';
-import { DataManager, Query } from '@syncfusion/ej2-data';
-
-export default {
-  name: "App",
-  data() {
-    return {
-      items: new DataManager(data).executeLocal(new Query().page(1, 8))
-    }
-  }
-}
-</script>
-
-<style>
-.e-table {
-  border: solid 1px #e0e0e0;
-  border-collapse: collapse;
-  font-family: Roboto;
-}
-
-.e-table td,
-.e-table th {
-  border-style: solid;
-  border-width: 1px 0 0;
-  border-color: #e0e0e0;
-  display: table-cell;
-  font-size: 14px;
-  line-height: 20px;
-  overflow: hidden;
-  padding: 8px 21px;
-  vertical-align: middle;
-  white-space: nowrap;
-  width: auto;
-}
-</style>
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -879,10 +567,56 @@ The following example shows how to bind local data to the grid component using `
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/data/vue-3-getting-started/default-cs6/app-composition.vue %}
+{% include code-snippet/data/vue-3-getting-started/default-cs6/app.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/data/vue-3-getting-started/default-cs6/app.vue %}
+{% raw%}
+<template>
+  <ejs-grid :dataSource='data'>
+    <e-columns>
+        <e-column field='OrderID' headerText='Order ID' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='Freight' headerText='Freight' format='C2'  width=90></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
+    </e-columns>
+  </ejs-grid>
+</template>
+
+<script>
+  import { DataManager } from "@syncfusion/ej2-data";
+  import gridData from './datasource.js';
+  import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
+  // Component registration
+  export default {
+    name: "App",
+    // Declaring component and its directives
+    components: {
+      'ejs-grid': GridComponent,
+      'e-columns': ColumnsDirective,
+      'e-column': ColumnDirective
+    },
+    // Bound properties declarations
+    data() {
+      return {
+        data:new DataManager(gridData)
+          
+      };
+    }
+  };
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -902,10 +636,57 @@ The following example demonstrates how to bind remote data to the grid component
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/data/vue-3-getting-started/default-cs7/app-composition.vue %}
+{% include code-snippet/data/vue-3-getting-started/default-cs7/app.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/data/vue-3-getting-started/default-cs7/app.vue %}
+{% raw%}
+<template>
+  <ejs-grid :dataSource='data'>
+    <e-columns>
+        <e-column field='OrderID' headerText='Order ID' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+        <e-column field='Freight' headerText='Freight' format='C2'  width=90></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=100></e-column>
+    </e-columns>
+  </ejs-grid>
+</template>
+
+<script>
+  import { DataManager } from "@syncfusion/ej2-data";
+  import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
+  // Component registration
+  export default {
+    name: "App",
+    // Declaring component and its directives
+    components: {
+      'ejs-grid': GridComponent,
+      'e-columns': ColumnsDirective,
+      'e-column': ColumnDirective
+    },
+    // Bound properties declarations
+    data() {
+      let SERVICE_URI =
+      "https://services.syncfusion.com/vue/production/";
+      return {
+        data:new DataManager({ url: SERVICE_URI+ 'api/Orders' })
+          
+      };
+    }
+  };
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         

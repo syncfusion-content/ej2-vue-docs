@@ -1,0 +1,32 @@
+<template>
+  <div id="app">
+    <ejs-button id='print' @click='print'>Print</ejs-button>
+    <ejs-rangenavigator ref="chart" :valueType='valueType' :value='value' :labelFormat='labelFormat'>
+      <e-rangenavigator-series-collection>
+        <e-rangenavigator-series :dataSource='data' type='Area' xName='x' yName='y' width=2>
+        </e-rangenavigator-series>
+      </e-rangenavigator-series-collection>
+    </ejs-rangenavigator>
+  </div>
+</template>
+<script setup>
+import { provide } from "vue";
+
+import { RangeNavigatorComponent as EjsRangenavigator, RangenavigatorSeriesDirective as ERangenavigatorSeries, RangenavigatorSeriesCollectionDirective as ERangenavigatorSeriesCollection, AreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { bitCoinData } from "./default_data.js";
+import { ref } from 'vue';
+
+const chart = ref(null);
+const valueType = 'DateTime';
+const value = [new Date('2017-09-01'), new Date('2018-02-01')];
+const labelFormat = 'MMM-yy';
+const data = bitCoinData;
+
+provide('rangeNavigator', [DateTime, AreaSeries]);
+
+const print = function () {
+  chart.value.print();
+};
+
+</script>

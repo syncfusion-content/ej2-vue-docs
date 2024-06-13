@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="control-section">
     <div>
@@ -21,17 +19,21 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { chartData } from "./datasource.js";
 import {
-  StockChartPlugin, DateTime, CandleSeries, RangeTooltip, LineSeries,SplineSeries,
+  StockChartComponent, StockChartSeriesCollectionDirective, StockChartSeriesDirective, DateTime, CandleSeries, RangeTooltip, LineSeries,SplineSeries,
   HiloOpenCloseSeries, HiloSeries, RangeAreaSeries, Trendlines, EmaIndicator, RsiIndicator,BollingerBands,  TmaIndicator, MomentumIndicator, SmaIndicator, AtrIndicator,Tooltip,
   Crosshair,AccumulationDistributionIndicator, MacdIndicator, StochasticIndicator, Export, StockLegend
 } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(StockChartPlugin);
-
 export default {
+name: "App",
+components: {
+    'ejs-stockchart': StockChartComponent,
+    'e-stockchart-series-collection': StockChartSeriesCollectionDirective,
+    'e-stockchart-series': StockChartSeriesDirective
+  },
   data() {
     return {
         seriesData:chartData,
@@ -65,5 +67,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

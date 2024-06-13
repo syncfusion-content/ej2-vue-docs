@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 You can change the legend label using the ‘legendRender’ client-side event. You can also hide the legend label using this client-side event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/how-to-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/how-to-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

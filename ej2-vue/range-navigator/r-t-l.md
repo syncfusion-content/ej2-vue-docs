@@ -13,7 +13,10 @@ domainurl: ##DomainURL##
 The Range Selector supports right-to-left (RTL), which can be enabled with the [`enableRtl`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#enablertl) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs24/app.vue %}
 {% endhighlight %}
 {% endtabs %}
