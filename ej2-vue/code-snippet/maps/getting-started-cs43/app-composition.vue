@@ -19,7 +19,6 @@ const maps = ref(null);
 
 const layers = [
     {
-        layerType: 'Geometry',
         shapeData: world_map,
         shapePropertyPath: 'continent',
         shapeDataPath: 'continent',
@@ -38,7 +37,6 @@ const layers = [
         }]
     },
     {
-        layerType: 'Geometry',
         shapeData: africa,
         shapeSettings: {
             fill: '#80306A'

@@ -1,30 +1,22 @@
-
-
-
 <template>
   <div id="app">
-    <ejs-heatmap
-      id="heatmap"
-      :titleSettings="titleSettings"
-      :xAxis="xAxis"
-      :yAxis="yAxis"
-      :legendSettings="legendSettings"
-      :cellSettings="cellSettings"
-      height="280px"
-      :paletteSettings="paletteSettings"
-      :dataSource="dataSource"
-      :tooltipRender="tooltipRender"
-    ></ejs-heatmap>
+    <ejs-heatmap id="heatmap" :titleSettings="titleSettings" :xAxis="xAxis" :yAxis="yAxis"
+      :legendSettings="legendSettings" :cellSettings="cellSettings" height="280px" :paletteSettings="paletteSettings"
+      :dataSource="dataSource" :tooltipRender="tooltipRender"></ejs-heatmap>
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { HeatMapPlugin, Tooltip, Legend } from "@syncfusion/ej2-vue-heatmap";
+
+import { HeatMapComponent, Tooltip, Legend } from "@syncfusion/ej2-vue-heatmap";
 import { Internationalization } from "@syncfusion/ej2-base";
-Vue.use(HeatMapPlugin);
+
 
 export default {
-  data: function() {
+  name: "App",
+  components: {
+    "ejs-heatmap": HeatMapComponent
+  },
+  data: function () {
     return {
       dataSource: [
         [null, null, null, null, 16, 48, 0],
@@ -143,7 +135,7 @@ export default {
         labelDisplayType: "None",
         enableSmartLegend: true
       },
-      tooltipRender: function(args) {
+      tooltipRender: function (args) {
         let intl = new Internationalization();
         let format = intl.getDateFormat({ format: "EEE MMM dd, yyyy" });
         let newDate = new Date(args.xValue);
@@ -154,10 +146,10 @@ export default {
         let value = format(date);
         args.content = [
           (args.value === 0 ? "No" : args.value) +
-            " " +
-            "contributions" +
-            "<br>" +
-            value
+          " " +
+          "contributions" +
+          "<br>" +
+          value
         ];
       }
     };
@@ -167,5 +159,3 @@ export default {
   }
 };
 </script>
-
-

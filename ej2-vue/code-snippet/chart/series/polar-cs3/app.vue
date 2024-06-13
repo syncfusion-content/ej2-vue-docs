@@ -1,36 +1,38 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Line'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Line'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, Tooltip, Legend, PolarSeries, Category, LineSeries, RadarSeries} from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Tooltip, Legend, PolarSeries, Category, LineSeries, RadarSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
-    seriesData:[
-     { x: 2005, y: 28 }, { x: 2006, y: 25 },{ x: 2007, y: 26 },
-     { x: 2008, y: 27 }, { x: 2009, y: 32 }, { x: 2010, y: 35 },
-     { x: 2011, y: 30 }],
+      seriesData: [
+        { x: 2005, y: 28 }, { x: 2006, y: 25 }, { x: 2007, y: 26 },
+        { x: 2008, y: 27 }, { x: 2009, y: 32 }, { x: 2010, y: 35 },
+        { x: 2011, y: 30 }],
       primaryXAxis: {
-          title: 'Year',
-          minimum: 2004, maximum: 2012, interval: 1
-        },
-         primaryYAxis: {
-            minimum: 20, maximum: 40, interval: 5,
-            title: 'Efficiency',
-            labelFormat: '{value}%'
-        },
+        title: 'Year',
+        minimum: 2004, maximum: 2012, interval: 1
+      },
+      primaryYAxis: {
+        minimum: 20, maximum: 40, interval: 5,
+        title: 'Efficiency',
+        labelFormat: '{value}%'
+      },
       title: "Efficiency of oil-fired power production"
     };
   },
@@ -40,9 +42,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

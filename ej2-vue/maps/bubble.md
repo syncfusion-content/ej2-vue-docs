@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bubble in Vue Maps component | Syncfusion
-description: Learn here all about Bubble in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Bubble feature in Syncfusion Vue Maps component of Syncfusion Essential JS 2 and more.
 control: Bubble 
 platform: ej2-vue
 documentation: ug
@@ -121,7 +121,7 @@ The tooltip for the bubbles can be enabled by setting the [`visible`](https://ej
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs12/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/maps/getting-started-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}

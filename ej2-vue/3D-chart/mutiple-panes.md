@@ -20,7 +20,10 @@ To split the chart area vertically into number of rows, use [`rows`](https://ej2
 * To associate a vertical axis to a particular row, specify its index to [`rowIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3DModel/#rowindex) property of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/row/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/row/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ To split the chart area vertically into number of rows, use [`rows`](https://ej2
 For spanning the vertical axis along multiple rows, use [`span`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3DModel/#span) property of an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/row-span/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/row-span/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ To split the chart area horizontally into number of columns, use [`columns`](htt
 * To associate a horizontal axis to a particular column, specify its index to [`columnIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3DModel/#columnindex) property of the axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/column/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/column/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +64,10 @@ To split the chart area horizontally into number of columns, use [`columns`](htt
 For spanning the vertical axis along multiple column, you can use [`span`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/axis3DModel/#span) property of an axis.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/axis/column-span/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/axis/column-span/app.vue %}
 {% endhighlight %}
 {% endtabs %}

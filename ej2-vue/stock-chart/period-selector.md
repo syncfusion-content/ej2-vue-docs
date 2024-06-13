@@ -27,7 +27,10 @@ Periods is an array of objects that allows users to specify the range of [`perio
 * Seconds
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/period-selector-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/period-selector-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ Periods is an array of objects that allows users to specify the range of [`perio
 The [`enablePeriodSelector`](https://ej2.syncfusion.com/vue/documentation/api/stock-chart/periodSelector/) property allows users to toggle the visibility of period selector.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/period-selector-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/period-selector-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

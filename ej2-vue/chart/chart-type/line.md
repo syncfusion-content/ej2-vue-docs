@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 To render a line series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Line` and inject `LineSeries` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/line-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/line-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -28,7 +31,10 @@ To render a multicolored line series, use the series type as `MultiColoredLine`,
 `MultiColoredLineSeries` into the `provide`. Here, the individual colors to the data can be mapped by using `pointColorMapping`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/line-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/line-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ The following properties can be used to customize the `line` series.
 * [width](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#width) – Specifies the width for series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/line-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/line-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

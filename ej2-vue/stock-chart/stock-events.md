@@ -14,7 +14,10 @@ domainurl: ##DomainURL##
 Stock Events visualizes stock events in stock chart. 'SplineSeries' is used to represent selected data value. You can customize the specific data value using `stockEvents` event.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/stock-events-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/stock-events-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -26,7 +29,10 @@ Stock Events visualizes stock events in stock chart. 'SplineSeries' is used to r
 By default, stock events will be showed for all series. Now, you can set the stock events for particular series using `seriesIndexes` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/stock-events-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/stock-events-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

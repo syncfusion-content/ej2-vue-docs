@@ -23,7 +23,6 @@ data () {
     return {
         layers: [
         {
-            layerType: 'Geometry',
             shapeData: world_map,
             shapePropertyPath: 'continent',
             shapeDataPath: 'continent',
@@ -42,7 +41,6 @@ data () {
             }]
         },
         {
-            layerType: 'Geometry',
             shapeData: africa,
             shapeSettings: {
                 fill: '#80306A'

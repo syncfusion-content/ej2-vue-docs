@@ -143,3 +143,26 @@ In the Gantt component, you can enable or disable the mouse hover tooltip of tim
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs2" %}
+
+## Timeline template
+
+In the Gantt component, you can customize timeline cells using the [timelineTemplate](https://ej2.syncfusion.com/vue/documentation/api/gantt/#timelineTemplate) property, allowing for the customization of HTML content within timeline cells. This feature enhances the visual appeal and enables personalized functionality.
+
+When designing the timeline cells, you can utilize the following context properties within the template:
+
+* `date`: Defines the date of the timeline cells.
+* `value`: Defines the formatted date value that will be displayed in the timeline cells.
+* `tier`: Defines whether the cell is part of the top or bottom tier.
+
+The following code example how to customize the top tier to display the week's weather details and the bottom tier to highlight working and non-working days, with formatted text for holidays.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/tooltip-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/tooltip-cs8/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs8" %}

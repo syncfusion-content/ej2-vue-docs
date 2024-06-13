@@ -25,7 +25,10 @@ Then create chart inside of button `onClick` function. Now click the button char
 The following code sample demonstrates the output.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs29/app.vue %}
 {% endhighlight %}
 {% endtabs %}

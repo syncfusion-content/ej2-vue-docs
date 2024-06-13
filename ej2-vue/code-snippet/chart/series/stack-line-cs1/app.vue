@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="chartcontainer"
@@ -20,12 +18,16 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import {   ChartPlugin,StackingLineSeries,Legend,Tooltip,Category } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import {  ChartComponent, SeriesCollectionDirective, SeriesDirective,StackingLineSeries,Legend,Tooltip,Category } from "@syncfusion/ej2-vue-charts";
 
 export default {
+name: "App",
+components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -84,5 +86,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

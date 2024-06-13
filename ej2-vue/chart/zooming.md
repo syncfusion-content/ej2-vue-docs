@@ -23,7 +23,10 @@ Chart can be zoomed in three ways.
  browsers support multi-touch in desktop devices.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +51,10 @@ There are three types of mode.
 * XY - Allows us to zoom the chart both vertically and horizontally.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -60,7 +66,10 @@ There are three types of mode.
 By default, zoomin, zoomout, pan and reset buttons will be displayed for zoomed chart. You can customize to show the desired options in the toolbar using the [`toolbarItems`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#toolbaritems) property. Also using the [`showToolbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#showtoolbar) property, you can show toolkit for zooming and panning the chart during initial rendering itself.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -72,7 +81,10 @@ By default, zoomin, zoomout, pan and reset buttons will be displayed for zoomed 
 Using [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings/#enablepan) property you can able to pan the zoomed chart without help of toolbar items.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -84,7 +96,10 @@ Using [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomS
 Using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enablescrollbar) property, you can add a scrollbar to a zoomed chart. This scrollbar allows you to zoom or pan the chart. The appearance of the scrollbar can be customized using properties in [`scrollbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/). For example, you can use [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#trackcolor) and [`trackRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#trackradius) properties to customize the track of the scrollbar, and [`scrollbarRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#scrollbarradius) and [`scrollbarColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#scrollbarcolor) properties to customize the scroller. The ability to zoom through the scrollbar can be enabled or disabled using the [`enableZoom`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#enablezoom) property in [`scrollbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/). Additionally, you can change the color of the grip and height of the scrollbar using the [`gripColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#gripcolor) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#height) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -97,7 +112,10 @@ By using [`enableAutoIntervalOnZooming`](https://ej2.syncfusion.com/vue/document
 the axis interval will get calculated automatically with respect to the zoomed range.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/user-interaction/zoom-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}

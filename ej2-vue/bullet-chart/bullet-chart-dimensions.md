@@ -25,10 +25,10 @@ The size of the Bullet Chart is determined by the container size, and it can be 
       <ejs-bulletchart id="bulletChart"> </ejs-bulletchart>
   </div>
 </template>
-<script>
-import Vue from 'vue';
-import { BulletChartPlugin } from '@syncfusion/ej2-vue-charts';
-Vue.use(BulletChartPlugin);
+<script setup>
+
+import { BulletChartComponent } from '@syncfusion/ej2-vue-charts';
+
 
 export default {
        data() { /*
@@ -39,7 +39,10 @@ export default {
 ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -51,7 +54,10 @@ export default {
 The [`width`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#height) properties are used to adjust the size of the Bullet Chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +69,10 @@ The [`width`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#wid
 Can set the size of the Bullet Chart in pixels as shown below.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -75,7 +84,10 @@ Can set the size of the Bullet Chart in pixels as shown below.
 By setting a value in percentage, the Bullet Chart gets its dimension with respect to its container. For example, when the height is **50%**, the Bullet Chart renders to half of the container’s height.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}

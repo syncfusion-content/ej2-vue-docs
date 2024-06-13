@@ -17,7 +17,10 @@ When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays i
 The tooltip is not visible by default. To make it visible, set the [`enable`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/bulletTooltipSettingsModel/#enable) property in the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/bullet-chart/#tooltip) to **true** and injecting `BulletTooltip` module using `BulletChart.Inject(BulletTooltip)` and injecting `BulletTooltip` module using `BulletChart.Inject(BulletTooltip)`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/bullet-chart/bullet-chart-dimensions/container-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}

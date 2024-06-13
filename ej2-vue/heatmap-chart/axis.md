@@ -21,7 +21,10 @@ There are three different axis types available in the HeatMap, which defines the
 Category axis type is used to represent the string values in axis labels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ Category axis type is used to represent the string values in axis labels.
 Numeric axis type is used to represent the numeric values in axis labels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ Numeric axis type is used to represent the numeric values in axis labels.
 Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the [minimum](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#minimum) and [maximum](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#maximum) properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 HeatMap supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the [isInversed](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#isinversed) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -69,7 +81,10 @@ HeatMap supports inversing the axis origin for both axes, where the axis labels 
 In HeatMap, you can place the axis label in an opposite position of its default axis label position by using the [opposedPosition](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#opposedposition) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -91,7 +106,10 @@ The text style of the axis labels can be customized using the following options 
 * [textOverflow](https://ej2.syncfusion.com/vue/documentation/api/heatmap/fontModel/#textoverflow) - When the axis label exceeds the intended space, this property is used to trim or wrap it. This property takes values such as **None**, **Trim**, and **Wrap**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -103,7 +121,10 @@ The text style of the axis labels can be customized using the following options 
 Axis labels with line breaks improve the readability of the HeatMap by splitting the text on an axis into multiple lines. The **"\<br>"** character is used to add line breaks to the axis labels.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -122,7 +143,10 @@ When the axis labels intersect, [labelIntersectAction](https://ej2.syncfusion.co
 The below example demonstrates to trim the axis labels by using the `labelIntersectAction` property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs12/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -134,7 +158,10 @@ The below example demonstrates to trim the axis labels by using the `labelInters
 The axis labels can be rotated to the desired angles by using the [labelRotation](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axisModel/#labelrotation) property.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs13/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +173,10 @@ The axis labels can be rotated to the desired angles by using the [labelRotation
 HeatMap supports formatting the axis labels by using the [labelFormat](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#labelformat) property. Using this property, you can customize the axis label by global string format ('P', 'C', etc) or customized format like '{value}°C'.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -164,7 +194,10 @@ In HeatMap, you can define an interval between the axis labels using the [interv
 * Minutes
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -176,7 +209,10 @@ In HeatMap, you can define an interval between the axis labels using the [interv
 Axis label increment in the HeatMap is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the [increment](https://ej2.syncfusion.com/vue/documentation/api/heatmap/axis/#increment) property and the default value of this property is **1**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -194,7 +230,10 @@ You can display the axis labels at specific time intervals along with the date-t
 * Minutes: Displays the axis labels on every minute between given date-time range.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -216,7 +255,10 @@ The multilevel labels can be customized by using the following properties.
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/axis-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/axis-cs10/app.vue %}
 {% endhighlight %}
 {% endtabs %}

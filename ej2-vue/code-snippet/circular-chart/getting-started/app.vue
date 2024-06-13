@@ -1,18 +1,18 @@
-
-
 <template>
-    <div id="app">
-        <ejs-circularchart3d id="container" :title='title' :tilt='tilt' :legendSettings='legendSettings'>
-            <e-circularchart3d-series-collection>
-                <e-circularchart3d-series :dataSource='seriesData' xName='x' yName='y' :dataLabel='dataLabel'></e-circularchart3d-series>
-            </e-circularchart3d-series-collection>
-        </ejs-circularchart3d>
-    </div>
+  <div id="app">
+    <ejs-circularchart3d id="container" :title='title' :tilt='tilt' :legendSettings='legendSettings'>
+      <e-circularchart3d-series-collection>
+        <e-circularchart3d-series :dataSource='seriesData' xName='x' yName='y'
+          :dataLabel='dataLabel'></e-circularchart3d-series>
+      </e-circularchart3d-series-collection>
+    </ejs-circularchart3d>
+  </div>
 </template>
 <script>
 import { CircularChart3DComponent, CircularChart3DSeriesCollectionDirective, CircularChart3DSeriesDirective, PieSeries3D, CircularChartDataLabel3D, CircularChartLegend3D } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
   components: {
     'ejs-circularchart3d': CircularChart3DComponent,
     'e-circularchart3d-series-collection': CircularChart3DSeriesCollectionDirective,
@@ -21,13 +21,13 @@ export default {
   data() {
     return {
       seriesData: [
-          { x: 'Chrome', y: 62.92 },
-          { x: 'Internet Explorer', y: 6.12 },
-          { x: 'Opera', y: 3.15 },
-          { x: 'Edge', y: 5.5 },
-          { x: 'Safari', y: 19.97 },
-          { x: 'Others', y: 2.34 }
-      ],     
+        { x: 'Chrome', y: 62.92 },
+        { x: 'Internet Explorer', y: 6.12 },
+        { x: 'Opera', y: 3.15 },
+        { x: 'Edge', y: 5.5 },
+        { x: 'Safari', y: 19.97 },
+        { x: 'Others', y: 2.34 }
+      ],
       title: "Browser Market Shares in November 2023",
       tilt: -45,
       legendSettings: {
@@ -51,9 +51,7 @@ export default {
 };
 </script>
 <style>
-  #container {
-    height: 350px;
-  }
+#container {
+  height: 350px;
+}
 </style>
-
-

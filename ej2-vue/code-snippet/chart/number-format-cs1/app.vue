@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :zoomSettings='zoom' :tooltip='tooltip'>
@@ -11,14 +9,20 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category, Tooltip, Zoom, DataLabel } from "@syncfusion/ej2-vue-charts";
-import { loadCldr, L10n, setCulture, setCurrencyCode } from '@syncfusion/ej2-base';
+
+import { ChartComponent, ColumnSeries, Category, Tooltip, Zoom, DataLabel, SeriesCollectionDirective, SeriesDirective } from "@syncfusion/ej2-vue-charts";
+import { setCurrencyCode } from '@syncfusion/ej2-base';
 setCurrencyCode('EUR');
 
-Vue.use(ChartPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-chart":ChartComponent,
+"e-series-collection":SeriesCollectionDirective,
+"e-series":SeriesDirective,
+
+},
+
   data() {
     return {
       seriesData: [
@@ -61,5 +65,3 @@ export default {
      height: 350px;
  }
 </style>
-
-

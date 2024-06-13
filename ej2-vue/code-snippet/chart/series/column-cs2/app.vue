@@ -1,18 +1,20 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :annotations='annotations'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
+      :annotations='annotations'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category, ChartAnnotation } from "@syncfusion/ej2-vue-charts";
-let contentVue = Vue.component("contentTemplate", {
+
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, Category, ChartAnnotation } from "@syncfusion/ej2-vue-charts";
+import { createApp } from "vue";
+
+const app = createApp();
+let contentVue = app.component("contentTemplate", {
   template: '<div>Highest Medal Count</div>',
   data() {
     return {
@@ -20,40 +22,46 @@ let contentVue = Vue.component("contentTemplate", {
     };
   }
 });
-let contentTemplate = function() {
+let contentTemplate = function () {
   return { template: contentVue };
 };
-Vue.use(ChartPlugin);
+
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
-             { country: "USA", gold: 50 },
-             { country: "China", gold: 40 },
-             { country: "Japan", gold: 70 },
-             { country: "Australia", gold: 60 },
-             { country: "France", gold: 50 },
-             { country: "Germany", gold: 40 },
-             { country: "Italy", gold: 40 },
-             { country: "Sweden", gold: 30 }
-              ],
-        annotations:[{
+        { country: "USA", gold: 50 },
+        { country: "China", gold: 40 },
+        { country: "Japan", gold: 70 },
+        { country: "Australia", gold: 60 },
+        { country: "France", gold: 50 },
+        { country: "Germany", gold: 40 },
+        { country: "Italy", gold: 40 },
+        { country: "Sweden", gold: 30 }
+      ],
+      annotations: [{
         content: contentTemplate,
         region: 'Series',
         coordinateUnits: 'Point',
         x: 'France',
         y: 50
-       }],
-        primaryXAxis: {
-           valueType: 'Category',
-           title: 'Countries'
-        },
-          primaryYAxis:
-        {
-            minimum: 0, maximum: 80,
-            interval: 20, title: 'Medals'
-        },
+      }],
+      primaryXAxis: {
+        valueType: 'Category',
+        title: 'Countries'
+      },
+      primaryYAxis:
+      {
+        minimum: 0, maximum: 80,
+        interval: 20, title: 'Medals'
+      },
       title: "Olympic Medals"
     };
   },
@@ -63,9 +71,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

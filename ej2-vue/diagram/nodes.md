@@ -59,6 +59,23 @@ The following code illustrates how to add a node.
         
 {% previewsample "page.domainurl/code-snippet/diagram/nodes/run-cs1" %}
 
+## Add collection of nodes at runtime
+
+* The collection of nodes can be dynamically added using 'addElements' method.Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
+
+The following code illustrates how to add a nodes collection at runtime.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/nodecollection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/nodes/nodecollection-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/nodes/nodecollection-cs1" %}
+
 ## Add node from palette
 
 Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information

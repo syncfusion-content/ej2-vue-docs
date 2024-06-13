@@ -28,6 +28,7 @@ import {
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,

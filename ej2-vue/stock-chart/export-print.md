@@ -15,7 +15,10 @@ The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` forma
 The rendered stock chart can be printed directly using print button in period selector toolbar.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/export-print-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/export-print-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The rendered stock chart can be printed directly using print button in period se
 To empty the value of `exportType` for to disable the Export button.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stockchart/export-print-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/stockchart/export-print-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

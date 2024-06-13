@@ -1,43 +1,51 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'  selectionMode='Point' isMultiSelect='true' :selectedDataIndexes='selectedData'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'  :animation='animation' selectionStyle='chartSelection1'> </e-series>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='silver' name='Silver' :animation='animation' selectionStyle='chartSelection1'> </e-series>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='bronze' name='Bronze' :animation='animation' selectionStyle='chartSelection1'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' selectionMode='Point' isMultiSelect='true'
+      :selectedDataIndexes='selectedData'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold' :animation='animation'
+          selectionStyle='chartSelection1'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='silver' name='Silver'
+          :animation='animation' selectionStyle='chartSelection1'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='bronze' name='Bronze'
+          :animation='animation' selectionStyle='chartSelection1'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category, Legend, Selection } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, ColumnSeries, Category, Legend, Selection } from "@syncfusion/ej2-vue-charts";
+
+
 
 export default {
+  name: "App",
+  components: {
+    "ejs-chart": ChartComponent,
+    "e-series-collection": SeriesCollectionDirective,
+    "e-series": SeriesDirective
+  },
   data() {
     return {
       seriesData: [
-                { country: "USA", gold: 50, silver: 70, bronze: 45 },
-                { country: "China", gold: 40, silver: 60, bronze: 55 },
-                { country: "Japan", gold: 70, silver: 60, bronze: 50 },
-                { country: "Australia", gold: 60, silver: 56, bronze: 40 },
-                { country: "France", gold: 50, silver: 45, bronze: 35 },
-                { country: "Germany", gold: 40, silver: 30, bronze: 22 },
-                { country: "Italy", gold: 40, silver: 35, bronze: 37 },
-                { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
-              ],
-        primaryXAxis: {
-           valueType: 'Category',
-           title: 'Countries'
-        },
-        selectedData:[
-        { series: 0, point: 1}, { series: 2, point: 3}
-       ],
-      animation:{ enable: false},
+        { country: "USA", gold: 50, silver: 70, bronze: 45 },
+        { country: "China", gold: 40, silver: 60, bronze: 55 },
+        { country: "Japan", gold: 70, silver: 60, bronze: 50 },
+        { country: "Australia", gold: 60, silver: 56, bronze: 40 },
+        { country: "France", gold: 50, silver: 45, bronze: 35 },
+        { country: "Germany", gold: 40, silver: 30, bronze: 22 },
+        { country: "Italy", gold: 40, silver: 35, bronze: 37 },
+        { country: "Sweden", gold: 30, silver: 25, bronze: 27 }
+      ],
+      primaryXAxis: {
+        valueType: 'Category',
+        title: 'Countries'
+      },
+      selectedData: [
+        { series: 0, point: 1 }, { series: 2, point: 3 }
+      ],
+      animation: { enable: false },
       title: "Olympic Medals"
     };
   },
@@ -47,22 +55,20 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
-  .chartSelection1 {
-    fill: red
+#container {
+  height: 350px;
+}
+
+.chartSelection1 {
+  fill: red
 }
 
 .chartSelection2 {
 
-    fill: green
-
+  fill: green
 }
 
 .chartSelection3 {
-    fill: blue
+  fill: blue
 }
 </style>
-
-

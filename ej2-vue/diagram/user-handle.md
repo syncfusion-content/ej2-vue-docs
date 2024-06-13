@@ -89,7 +89,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 * The fixed user handle's `iconStrokeColor` and `iconStrokeWidth` property used to change the stroke color and stroke width of the given `pathData`.
 
-* The fixed user handle `handleStrokeColor` and, `fill` properties are used to define the background color and border color of the userhandle and the `handleStrokeWidth` property is used to define the border width of the fixed user handle.
+* The fixed user handle `handleStrokeColor` and, `fill` properties are used to define the background color and border color of the user handle and the `handleStrokeWidth` property is used to define the border width of the fixed user handle.
 
 * The `visible` property of the fixed user handle enables or disables the visibility of fixed user handle.
 
@@ -109,7 +109,7 @@ The following code explains how to customize the appearance of the fixed user ha
 
 ## Customizing the node fixed user handle
 
-* The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed userhandle and used together and gives you more control over the node fixed user handle positioning.
+* The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
 
 ### Margin for the node fixed user handle
 
@@ -163,9 +163,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![fixed user handle for node](images/0before.png)|
-| 0.5 | Center |![fixed user handle for node](images/0.5center.png)|
-| 1 | After |![fixed user handle for node](images/1after.png)|
+| 0 | Before |![fixed user handle for node](images/before.png)|
+| 0.5 | Center |![fixed user handle for node](images/center.png)|
+| 1 | After |![fixed user handle for node](images/after.png)|
 
 ### Displacement
 
@@ -173,7 +173,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
-| Displacment | Alignment | Output |
+| Displacement | Alignment | Output |
 | -------- | -------- | -------- |
 | x=10 | Before |![fixed user handle for node](images/xbefore.png)|
 | x=10 | After |![fixed user handle for node](images/xafter.png)|
@@ -210,3 +210,18 @@ To show tooltip on mouse over, the [`tooltip`](https://ej2.syncfusion.com/vue/do
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/interaction/UserHandle-cs3" %}
+
+### Tooltip support for Fixed User Handle
+
+The diagram provides support to show tooltip when the mouse hovers over any fixed user handle. To show the tooltip on mouse over, the [`tooltip`](../api/diagram#tooltip) property of diagram model needs to be set with the tooltip [`content`](../api/diagram/diagramTooltip/#content) and [`position`](../api/diagram/diagramTooltip/#position) as shown in the following example.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/FixedUserHandle-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/FixedUserHandle-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/interaction/FixedUserHandle-cs2" %}

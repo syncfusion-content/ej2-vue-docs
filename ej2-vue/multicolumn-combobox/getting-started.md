@@ -1,0 +1,258 @@
+---
+layout: post
+title: Getting started with Vue MultiColumn ComboBox component | Syncfusion
+description:  Checkout and learn about Getting started with Vue MultiColumn ComboBox component of Syncfusion Essential JS 2 and more details.
+control: Getting started 
+platform: ej2-vue
+documentation: ug
+domainurl: ##DomainURL##
+---
+
+# Getting Started with the Vue MultiColumn ComboBox Component in Vue 2
+
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue MultiColumn ComboBox component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+## Prerequisites
+
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+
+## Setting up the Vue 2 project
+
+To generate a Vue 2 project using Vue-CLI, use the [vue create](https://cli.vuejs.org/#getting-started) command. Follow these steps to install Vue CLI and create a new project:
+
+```bash
+npm install -g @vue/cli
+vue create quickstart
+cd quickstart
+npm run serve
+```
+
+or
+
+```bash
+yarn global add @vue/cli
+vue create quickstart
+cd quickstart
+yarn run serve
+```
+
+When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
+
+<img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Vue 2 project">
+
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project
+
+## Add Syncfusion Vue packages
+
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+
+This article uses the `Vue MultiColumn ComboBox component` as an example. Install the `@syncfusion/ej2-vue-multicolumn-combobox` package by running the following command:
+
+```bash
+npm install @syncfusion/ej2-vue-multicolumn-combobox --save
+```
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-multicolumn-combobox
+```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the MultiColumn ComboBox component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Add Syncfusion Vue component
+
+Follow the below steps to add the Vue MultiColumn ComboBox component using `Composition API` or `Options API`:
+
+1\. First, import and register the MultiColumn ComboBox component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+  import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+import { MultiColumnComboBoxComponent } from "@syncfusion/ej2-vue-multicolumn-combobox";
+
+export default {
+  components: {
+    'ejs-multicolumncombobox': MultiColumnComboBoxComponent
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2\. In the `template` section, define the MultiColumn ComboBox component with the `dataSource` and `placeholder` property.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
+<template>
+  <div id="app">
+    <div id='container' style="margin:50px auto 0; width:250px;">
+        <br>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' placeholder='Select a employee'></ejs-multicolumncombobox>
+    </div>
+  </div>
+</template>
+
+{% endhighlight %}
+{% endtabs %}
+
+## Binding data source with fields and columns
+
+After initializing, populate the MultiColumn ComboBox with data by using the `dataSource` property, to map the data for each specified columns use the `<e-column>` selector and the `fields` property to map the data fields from the dataSource.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div id='container' style="margin:50px auto 0; width:250px;">
+        <br>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='employeeData' :fields='fields' placeholder='Select a employee'>
+            <e-columns>
+                <e-column field='EmpID' header='Employee ID' width='70'></e-column>
+                <e-column field='Name' header='Name' width='80'></e-column>
+                <e-column field='Designation' header='Designation' width='60'></e-column>
+                <e-column field='Country' header='Country' width='80'></e-column>
+            </e-columns>
+        </ejs-multicolumncombobox>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { ColumnsDirective as EColumnsDirective, ColumnDirective as EColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+const employeeData = [ 
+  { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
+  { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
+  { "EmpID": 1003, "Name": "John", "Designation": "Tester", "Country": "Germany" },
+  { "EmpID": 1004, "Name": "Robert King", "Designation": "Product Manager", "Country": "India" },
+  { "EmpID": 1005, "Name": "Steven Buchanan", "Designation": "Developer", "Country": "Italy" },
+  { "EmpID": 1006, "Name": "Jane Smith", "Designation": "Developer", "Country": "Europe" },
+  { "EmpID": 1007, "Name": "James Brown", "Designation": "Developer", "Country": "Australia" },
+  { "EmpID": 1008, "Name": "Laura Callahan", "Designation": "Developer", "Country": "Africa" },
+  { "EmpID": 1009, "Name": "Mario Pontes", "Designation": "Developer", "Country": "Russia" }
+];
+const fields = { text: 'Name', value: 'EmpID' };
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<template>
+  <div id="app">
+    <div id='container' style="margin:50px auto 0; width:250px;">
+        <br>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='employeeData' :fields='fields' placeholder='Select a employee'>
+            <e-columns>
+                <e-column field='EmpID' header='Employee ID' width='70'></e-column>
+                <e-column field='Name' header='Name' width='80'></e-column>
+                <e-column field='Designation' header='Designation' width='60'></e-column>
+                <e-column field='Country' header='Country' width='80'></e-column>
+            </e-columns>
+        </ejs-multicolumncombobox>
+    </div>
+  </div>
+</template>
+<script>
+import { MultiColumnComboBoxComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+export default {
+  components: {
+    'ejs-multicolumncombobox': MultiColumnComboBoxComponent,
+    'e-columns': ColumnsDirective,
+    'e-column': ColumnDirective,
+  },
+  data () {
+    return {
+      employeeData: [ 
+        { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
+        { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
+        { "EmpID": 1003, "Name": "John", "Designation": "Tester", "Country": "Germany" },
+        { "EmpID": 1004, "Name": "Robert King", "Designation": "Product Manager", "Country": "India" },
+        { "EmpID": 1005, "Name": "Steven Buchanan", "Designation": "Developer", "Country": "Italy" },
+        { "EmpID": 1006, "Name": "Jane Smith", "Designation": "Developer", "Country": "Europe" },
+        { "EmpID": 1007, "Name": "James Brown", "Designation": "Developer", "Country": "Australia" },
+        { "EmpID": 1008, "Name": "Laura Callahan", "Designation": "Developer", "Country": "Africa" },
+        { "EmpID": 1009, "Name": "Mario Pontes", "Designation": "Developer", "Country": "Russia" }
+      ],
+      fields: { text: 'Name', value: 'EmpID' };
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+Here is the summarized code for the above steps in the **src/App.vue** file:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multicolumn-combobox/getting-started/getting-started-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/multicolumn-combobox/getting-started/getting-started-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+## Run the application
+
+To run the application, use the following command:
+
+```bash
+npm run serve
+```
+
+or
+
+```bash
+yarn run serve
+```
+        
+{% previewsample "page.domainurl/code-snippet/multicolumn-combobox/getting-started/getting-started-cs1" %}
+
+## Configure the popup list
+
+By default, the width of the popup list automatically adjusts according to the MultiColumn ComboBox input element's width, and the height of the popup list has '300px'.
+
+The height and width of the popup list can also be customized using the `popupHeight` and `popupWidth` properties respectively.
+
+In the following sample, popup list's width and height are configured.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/multicolumn-combobox/getting-started/popup-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/multicolumn-combobox/getting-started/popup-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/multicolumn-combobox/getting-started/popup-cs1" %}

@@ -40,10 +40,10 @@ const fileManagerSettingsData = {
   enable: true,
   path: '/Pictures/Food',
   ajaxSettings: {
-      url: 'https://services.syncfusion.com/vue/production/api/FileManager/FileOperations',
-      getImageUrl: 'https://services.syncfusion.com/vue/production/api/FileManager/GetImage',
-      uploadUrl: 'https://services.syncfusion.com/vue/production/api/FileManager/Upload',
-      downloadUrl: 'https://services.syncfusion.com/vue/production/api/FileManager/Download'
+      url: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations',
+      getImageUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage',
+      uploadUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload',
+      downloadUrl: 'https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download'
   }
 };
 provide('richtexteditor',  [Toolbar, Link, Image, HtmlEditor, QuickToolbar, FileManager]);

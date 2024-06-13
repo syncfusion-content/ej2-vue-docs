@@ -1,16 +1,20 @@
 <template>
     <div id="app">
-        <ejs-heatmap id="heatmap" :xAxis='xAxis' :yAxis='yAxis' :dataSource='dataSource'
-        :titleSettings='titleSettings' :paletteSettings='paletteSettings' :legendSettings='legendSettings'></ejs-heatmap>
+        <ejs-heatmap id="heatmap" :xAxis='xAxis' :yAxis='yAxis' :dataSource='dataSource' :titleSettings='titleSettings'
+            :paletteSettings='paletteSettings' :legendSettings='legendSettings'></ejs-heatmap>
     </div>
 </template>
 <script>
-import Vue from 'vue';
-import { HeatMapPlugin, Tooltip } from '@syncfusion/ej2-vue-heatmap';
-Vue.use(HeatMapPlugin);
+
+import { HeatMapComponent, Tooltip } from '@syncfusion/ej2-vue-heatmap';
+
 
 export default {
-    data: function() {
+    name: "App",
+    components: {
+        "ejs-heatmap": HeatMapComponent
+    },
+    data: function () {
         return {
             dataSource: [
                 [52, 65, 67, 45, 37, 52, 32],
@@ -41,7 +45,7 @@ export default {
                     fontWeight: '650',
                     fontStyle: 'Normal',
                     fontFamily: 'Segoe UI',
-                    textAlignment:'Center',
+                    textAlignment: 'Center',
                     textOverflow: 'Wrap'
                 },
                 opposedPosition: true,
@@ -56,8 +60,8 @@ export default {
                     'Month of September 2023',
                     'Month of October 2023',
                     'Month of November 2023',
-                    'Month of December 2023' 
-                ] 
+                    'Month of December 2023'
+                ]
             },
             yAxis: {
                 textStyle: {
@@ -70,7 +74,7 @@ export default {
                     textOverflow: 'Wrap',
                 },
                 maxLabelLength: 70,
-                labels: [ 
+                labels: [
                     'Ace Apparels',
                     'Alpha Apparels',
                     'RL Garments',
@@ -88,11 +92,11 @@ export default {
                     { color: '#F0C27B' },
                     { color: '#4B1248' }
                 ],
-            } 
+            }
         }
     },
     provide: {
-       heatmap:[Tooltip]
+        heatmap: [Tooltip]
     }
 }
 </script>

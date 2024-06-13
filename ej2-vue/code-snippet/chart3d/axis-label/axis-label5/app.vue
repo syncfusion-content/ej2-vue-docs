@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <ejs-chart3d id="container" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :title='title' 
-            :wallColor='wallColor' :enableRotation='enableRotation' :rotation='rotation' :tilt='tilt' :depth='depth'>
+    <ejs-chart3d id="container" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :title='title'
+      :wallColor='wallColor' :enableRotation='enableRotation' :rotation='rotation' :tilt='tilt' :depth='depth'>
       <e-chart3d-series-collection>
         <e-chart3d-series :dataSource="seriesData" type="Column" xName="x" yName="y" name="Product X">
           <e-chart3d-series-animation enable="false"></e-chart3d-series-animation>
@@ -19,33 +19,33 @@ import {
   Category3D,
 } from '@syncfusion/ej2-vue-charts';
 
-let series1: Object[] = [];
-let point1: Object;
-let value: number = 80;
-let i: number;
+let series1 = [];
+let point1;
+let value = 80;
+let i;
 for (i = 1; i < 50; i++) {
-    if (Math.random() > 0.5) {
-        value += Math.random();
-    } else {
-        value -= Math.random();
-    }
-    point1 = { x: i, y: value.toFixed(1) };
-    series1.push(point1);
+  if (Math.random() > 0.5) {
+    value += Math.random();
+  } else {
+    value -= Math.random();
+  }
+  point1 = { x: i, y: value.toFixed(1) };
+  series1.push(point1);
 }
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   },
-
   data() {
     return {
       seriesData: series1,
       primaryXAxis: {
         title: 'Years',
-        edgeLabelPlacement: 'Shift',       
+        edgeLabelPlacement: 'Shift',
         majorGridLines: { width: 0 },
         maximumLabels: 1
       },
@@ -63,8 +63,8 @@ export default {
     };
   },
   provide: {
-    chart3d: [ColumnSeries3D, Category3D],
-  },
+    chart3d: [ColumnSeries3D, Category3D]
+  }
 };
 </script>
 <style>
@@ -72,4 +72,3 @@ export default {
   height: 350px;
 }
 </style>
-  

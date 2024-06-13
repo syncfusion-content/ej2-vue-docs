@@ -1,22 +1,25 @@
-
-
 <template>
-    <div id="app">
-        <ejs-accumulationchart id='chartcontainer' :title='title'
-             :legendSettings='legendSettings' :tooltip='tooltip' enableSmartLables='true' :enableAnimation='enableAnimation' :center='center'>
-            <e-accumulation-series-collection>
-                <e-accumulation-series :dataSource='seriesData' :startAngle='startAngle' :endAngle='endAngle'  :radius='radius'  xName='x' yName='y' :dataLabel='dataLabel' name='Browser' innerRadius='0%'> </e-accumulation-series>
-            </e-accumulation-series-collection>
-        </ejs-accumulationchart>
-    </div>
+  <div id="app">
+    <ejs-accumulationchart id='chartcontainer' :title='title' :legendSettings='legendSettings' :tooltip='tooltip'
+      enableSmartLables='true' :enableAnimation='enableAnimation' :center='center'>
+      <e-accumulation-series-collection>
+        <e-accumulation-series :dataSource='seriesData' :startAngle='startAngle' :endAngle='endAngle' :radius='radius'
+          xName='x' yName='y' :dataLabel='dataLabel' name='Browser' innerRadius='0%'> </e-accumulation-series>
+      </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { AccumulationChartPlugin, AccumulationTooltip, PieSeries, AccumulationDataLabel, AccumulationLegend  } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationDataLabel } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-accumulationchart': AccumulationChartComponent,
+    'e-accumulation-series-collection': AccumulationSeriesCollectionDirective,
+    'e-accumulation-series': AccumulationSeriesDirective
+  },
   data() {
     return {
       seriesData: [
@@ -32,7 +35,6 @@ export default {
           fontWeight: '600'
         }
       },
-      enableSmartLabels: true,
       enableAnimation: false,
       legendSettings: {
         visible: false,
@@ -41,21 +43,17 @@ export default {
       startAngle: '0',
       endAngle: '360',
       radius: '70%',
-      explodeOffset: '10%',
-      explodeIndex : 0,
-      center: {x: '50%', y: '50%'},
+      center: { x: '50%', y: '50%' },
       title: "Mobile Browser Statistics"
     };
   },
   provide: {
-     accumulationchart: [PieSeries, AccumulationDataLabel]
+    accumulationchart: [PieSeries, AccumulationDataLabel]
   }
 };
 </script>
 <style>
- #container {
-     height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

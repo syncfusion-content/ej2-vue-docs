@@ -1,5 +1,3 @@
-
-
 <template>
   <ejs-accumulationchart
     id="container"
@@ -24,18 +22,24 @@
   </ejs-accumulationchart>
 </template>
 <script>
-import Vue from "vue";
+
 import {
-  AccumulationChartPlugin,
+  AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective,
   AccumulationLegend,
   PieSeries,
   AccumulationDataLabel,
   AccumulationTooltip,
 } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(AccumulationChartPlugin);
 
-export default Vue.extend({
+
+export default{
+  name: "App",
+  components: {
+    "ejs-accumulationchart": AccumulationChartComponent,
+    "e-accumulation-series-collection": AccumulationSeriesCollectionDirective,
+    "e-accumulation-series": AccumulationSeriesDirective
+  },
   data: function () {
     return {
       data: [
@@ -64,10 +68,8 @@ export default Vue.extend({
       AccumulationLegend,
       PieSeries,
       AccumulationDataLabel,
-      AccumulationTooltip,
-    ],
+      AccumulationTooltip
+    ]
   },
-});
+};
 </script>
-
-

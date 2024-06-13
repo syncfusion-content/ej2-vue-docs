@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Hilo Series illustrates the price movements in stock using the high and low values. To render a Hilo series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Hilo` and inject `HiloSeries` into the `provide`. Hilo series requires 3 fields (x, high and low) to show the high and low price in the stock.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/hilo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/hilo-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ The following properties can be used to customize the `hilo` series.
 * [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#opacity) – Specifies the opacity of [fill](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#fill).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/hilo-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/hilo-cs/app.vue %}
 {% endhighlight %}
 {% endtabs %}

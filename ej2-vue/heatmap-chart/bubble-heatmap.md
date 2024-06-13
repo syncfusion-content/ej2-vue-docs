@@ -35,7 +35,10 @@ By default, the bubble with small size denotes the data value with small magnitu
 To render a bubble HeatMap with size series, set the [bubbleType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#bubbletype) property to **Size**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -49,7 +52,10 @@ In HeatMap, defined with this tile type, the data points will be represented wit
 To represent the data points with variations in bubble colors, set the [bubbleType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#bubbletype) property to **Color**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +69,10 @@ In this bubble HeatMap type, the sector of the bubble decides the magnitude of d
 To render the data points with bubble sector, set the [bubbleType](https://ej2.syncfusion.com/vue/documentation/api/heatmap/cellSettings/#bubbletype) property to **Sector**.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -87,7 +96,10 @@ When an array of numbers is specified as the data source, the bubble HeatMap can
 The following example illustrates how to render a bubble HeatMap with different sizes and colors using array table binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -100,7 +112,10 @@ The following example illustrates how to render a bubble HeatMap with different 
 The following example illustrates how to render a bubble HeatMap with different sizes and colors using array cell binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -118,7 +133,10 @@ When a list of JSON objects are specified as data source, the bubble HeatMap can
 The following example illustrates how to render a bubble HeatMap with different sizes and colors using JSON table binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs6/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -131,7 +149,10 @@ The following example illustrates how to render a bubble HeatMap with different 
 The following example illustrates how to render a bubble HeatMap with different sizes and colors using JSON cell binding.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +167,10 @@ The size and color of the bubbles in the **SizeAndColor** bubble HeatMap type ca
 >The `bubbleDataMapping` supports only for the JSON data with cell adaptor type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/heatmap-chart/bubble-heatmap-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/heatmap-chart/bubble-heatmap-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

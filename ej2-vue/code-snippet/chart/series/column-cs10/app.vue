@@ -1,49 +1,52 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' background='skyblue'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'
-                :border='border' :animation='animation'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
+      background='skyblue'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold' :border='border'
+          :animation='animation'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
       seriesData: [
-             { country: "USA", gold: 50 },
-             { country: "China", gold: 40 },
-             { country: "Japan", gold: 70 },
-             { country: "Australia", gold: 60 },
-             { country: "France", gold: 50 },
-             { country: "Germany", gold: 40 },
-             { country: "Italy", gold: 40 },
-             { country: "Sweden", gold: 30 }
-              ],
-        primaryXAxis: {
-           valueType: 'Category',
-           title: 'Countries'
-        },
-          primaryYAxis: {
-            minimum: 0, maximum: 80,
-            interval: 20, title: 'Medals'
-        },
-        border:{ width: 2, color: 'grey'},
-        //Animation for chart series
-        animation:{
-            enable: true,
-            duration: 2000,
-            delay: 200
-        },
+        { country: "USA", gold: 50 },
+        { country: "China", gold: 40 },
+        { country: "Japan", gold: 70 },
+        { country: "Australia", gold: 60 },
+        { country: "France", gold: 50 },
+        { country: "Germany", gold: 40 },
+        { country: "Italy", gold: 40 },
+        { country: "Sweden", gold: 30 }
+      ],
+      primaryXAxis: {
+        valueType: 'Category',
+        title: 'Countries'
+      },
+      primaryYAxis: {
+        minimum: 0, maximum: 80,
+        interval: 20, title: 'Medals'
+      },
+      border: { width: 2, color: 'grey' },
+      //Animation for chart series
+      animation: {
+        enable: true,
+        duration: 2000,
+        delay: 200
+      },
       title: "Olympic Medals"
     };
   },
@@ -53,9 +56,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

@@ -1,28 +1,30 @@
-
-
 <template>
-    <div id="app">
-         <ejs-chart id="container" :title='title'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' name='USA'  width=2> </e-series>
-            </e-series-collection>
-        </ejs-chart>
-    </div>
+  <div id="app">
+    <ejs-chart id="container" :title='title'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' name='USA' width=2> </e-series>
+      </e-series-collection>
+    </ejs-chart>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, StepLineSeries } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, StepLineSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data() {
     return {
-      seriesData:[
-             { x: 2006, y: 378 }, { x: 2007, y: 416 },
-             { x: 2008, y: 404 }, { x: 2009, y: 390 },
-             { x: 2010, y: 376 }, { x: 2011, y: 365 }
-        ],
+      seriesData: [
+        { x: 2006, y: 378 }, { x: 2007, y: 416 },
+        { x: 2008, y: 404 }, { x: 2009, y: 390 },
+        { x: 2010, y: 376 }, { x: 2011, y: 365 }
+      ],
       title: "CO2 - Intensity Analysis"
     };
   },
@@ -32,9 +34,7 @@ export default {
 };
 </script>
 <style>
- #container {
-   height: 350px;
- }
+#container {
+  height: 350px;
+}
 </style>
-
-

@@ -1,5 +1,3 @@
-
-
 <template>
   <ejs-chart style="display: block" align="center" id="container" :title="title" :primaryXAxis="primaryXAxis"
     :primaryYAxis="primaryYAxis" :chartArea="chartArea" :tooltip="tooltip">
@@ -16,8 +14,8 @@
       <e-series :dataSource="seriesData3" type="Column" xName="x" yName="y" name="UK Gold" width="2" :marker="marker"
         groupName="UK" columnWidth="0.5" columnSpacing="0.1">
       </e-series>
-      <e-series :dataSource="seriesData4" type="Column" xName="x" yName="y" name="China Total" width="2" :marker="marker"
-        groupName="China" columnWidth="0.7" columnSpacing="0.1">
+      <e-series :dataSource="seriesData4" type="Column" xName="x" yName="y" name="China Total" width="2"
+        :marker="marker" groupName="China" columnWidth="0.7" columnSpacing="0.1">
       </e-series>
       <e-series :dataSource="seriesData5" type="Column" xName="x" yName="y" name="China Gold" width="2" :marker="marker"
         groupName="China" columnWidth="0.5" columnSpacing="0.1">
@@ -26,13 +24,16 @@
   </ejs-chart>
 </template>
 <script>
-import Vue from "vue";
-import { Browser } from "@syncfusion/ej2-base";
-import { ChartPlugin, ColumnSeries, Category, DataLabel, Tooltip, Legend } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, Category, DataLabel, Tooltip, Legend } from "@syncfusion/ej2-vue-charts";
 
-export default Vue.extend({
+export default {
+  name: "App",
+  components: {
+    'ejs-chart': ChartComponent,
+    'e-series-collection': SeriesCollectionDirective,
+    'e-series': SeriesDirective
+  },
   data: function () {
     return {
       seriesData: [
@@ -96,7 +97,5 @@ export default Vue.extend({
   provide: {
     chart: [ColumnSeries, Legend, DataLabel, Category, Tooltip],
   },
-});
+};
 </script>
-
-

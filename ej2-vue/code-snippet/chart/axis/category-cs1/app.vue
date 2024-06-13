@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
     <div>
@@ -19,18 +17,27 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { extend } from '@syncfusion/ej2-base';
-import { getElement, indexFinder, AccumulationLegend, PieSeries, AccumulationTooltip, AccumulationDataLabel, AccumulationChartPlugin } from "@syncfusion/ej2-vue-charts";
-Vue.use(AccumulationChartPlugin);
+import { getElement, indexFinder, AccumulationLegend, PieSeries, AccumulationTooltip, AccumulationDataLabel, AccumulationChartComponent,
+    AccumulationSeriesCollectionDirective, AccumulationSeriesDirective
+ } from "@syncfusion/ej2-vue-charts";
+
 
 export default {
+name: "App",
+components: {
+"ejs-accumulationchart":AccumulationChartComponent,
+"e-accumulation-series-collection":AccumulationSeriesCollectionDirective,
+"e-accumulation-series":AccumulationSeriesDirective,
+
+},
+
   data() {
     return {
       innerRadius: '0%',
     innerChart: false,
     enableSmartLabels: false,
-    initialContent: null,
     data: [
         { x: 'SUV', y: 25 }, { x: 'Car', y: 37 }, { x: 'Pickup', y: 15 },
         { x: 'Minivan', y: 23 }
@@ -147,12 +154,7 @@ export default {
         document.getElementById('text').style.visibility = 'hidden';
         this.innerChart = false;
     },
-  },
-    updated: function() {
-      this.$nextTick(function() {
-        this.$refs.pie.ej2Instances.refresh();
-      });
-    }
+  }
   };
 
 </script>
@@ -162,5 +164,3 @@ export default {
     cursor: pointer;
 }
 </style>
-
-

@@ -16,7 +16,10 @@ You can add multiple series to the chart by using [`series`](https://ej2.syncfus
 The series are rendered in the order as it is added to the series array.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/axis/category-cs27/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -30,7 +33,10 @@ Combination of different types like Line, column etc, can be rendered in a chart
 >Bar series cannot be combined with any other series as the axis orientation is different from other series.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/combination-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/combination-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -42,7 +48,10 @@ Combination of different types like Line, column etc, can be rendered in a chart
 By setting `enableComplexProperty` value as `true` in series you can bind complex data to the chart.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/combination-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/combination-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

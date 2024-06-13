@@ -1,16 +1,20 @@
-
-
 <template>
   <div id="app">
       <ejs-chart id="container"> </ejs-chart>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ChartPlugin } from '@syncfusion/ej2-vue-charts';
 
-Vue.use(ChartPlugin);
+import { ChartComponent } from '@syncfusion/ej2-vue-charts';
+
+
 export default {
+name: "App",
+components: {
+"ejs-chart":ChartComponent,
+
+},
+
   data () {
     return {
     }
@@ -22,5 +26,3 @@ export default {
    height: 350px;
  }
 </style>
-
-

@@ -19,7 +19,10 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
 * **Orientation** - To specify the orientation type. This is applicable only for PDF export type.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs7/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
 The rendered Range Selector can be printed directly from the browser by calling the public method [`print`](https://ej2.syncfusion.com/vue/documentation/api/range-navigator/#print).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rangenavigator/getting-started-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/rangenavigator/getting-started-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}

@@ -1,40 +1,41 @@
-
-
 <template>
-    <div id="app">       
-        <ejs-chart3d ref="chart" id="container" :primaryXAxis='primaryXAxis' :title='title' 
-            :wallColor='wallColor' :enableRotation='enableRotation' :rotation='rotation' :tilt='tilt' :depth='depth'>
-            <e-chart3d-series-collection>
-                <e-chart3d-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'></e-chart3d-series>
-            </e-chart3d-series-collection>
-        </ejs-chart3d>
-        <ejs-button id='print' @click.native='print'>Print</ejs-button>
-    </div>
+  <div id="app">
+    <ejs-chart3d ref="chart" id="container" :primaryXAxis='primaryXAxis' :title='title' :wallColor='wallColor'
+      :enableRotation='enableRotation' :rotation='rotation' :tilt='tilt' :depth='depth'>
+      <e-chart3d-series-collection>
+        <e-chart3d-series :dataSource='seriesData' type='Column' xName='country' yName='gold'
+          name='Gold'></e-chart3d-series>
+      </e-chart3d-series-collection>
+    </ejs-chart3d>
+    <ejs-button id='print' @click='print'>Print</ejs-button>
+  </div>
 </template>
 <script>
 import { Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, ColumnSeries3D, Category3D } from "@syncfusion/ej2-vue-charts";
-import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective
+    'e-chart3d-series': Chart3DSeriesDirective,
+    'ejs-button': ButtonComponent
   },
   data() {
     return {
       seriesData: [
-          { country: "USA",       gold: 50 },
-          { country: "China",     gold: 40 },
-          { country: "Japan",     gold: 70 },
-          { country: "Australia", gold: 60 },
-          { country: "France",    gold: 50 },
-          { country: "Germany",   gold: 40 },
-          { country: "Italy",     gold: 40 },
-          { country: "Sweden",    gold: 30 }
+        { country: "USA", gold: 50 },
+        { country: "China", gold: 40 },
+        { country: "Japan", gold: 70 },
+        { country: "Australia", gold: 60 },
+        { country: "France", gold: 50 },
+        { country: "Germany", gold: 40 },
+        { country: "Italy", gold: 40 },
+        { country: "Sweden", gold: 30 }
       ],
       primaryXAxis: {
-          valueType: 'Category'
+        valueType: 'Category'
       },
       title: 'Olympic Medals',
       wallColor: 'transparent',
@@ -48,16 +49,14 @@ export default {
     chart3d: [ColumnSeries3D, Category3D]
   },
   methods: {
-    print: function() {
-        this.$refs.chart.print();
+    print: function () {
+      this.$refs.chart.print();
     }
   }
 };
 </script>
 <style>
-  #container {
-    height: 350px;
-  }
+#container {
+  height: 350px;
+}
 </style>
-
-

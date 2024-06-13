@@ -21,7 +21,10 @@ To render a Accumulation Distribution Indicator, use indicator [`type`](https://
 To calculate the signal line [`volume`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#volume) field is additionally added with `dataSource`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/ad-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/ad-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ To calculate the signal line [`volume`](https://ej2.syncfusion.com/vue/documenta
 ATR measures the stock volatility by comparing the current value with the previous value. To render a Average True Range (ATR) Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `Atr` and inject `AtrIndicator` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/atr-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/atr-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -45,7 +51,10 @@ ATR measures the stock volatility by comparing the current value with the previo
 A chart overlay that shows the upper and lower limits of normal price movements based on the standard deviation of prices. To render a Bollinger Band, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `BollingerBand` and inject `BollingerBands` into the `provide`. Bollinger band will be represented by three lines (upperLine, lowerLine, signalLine).Bollinger Band default values of the [`period`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#period) is 14 and [`standardDeviations`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#standarddeviation) is 2.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/bollinger-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/bollinger-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -57,7 +66,10 @@ A chart overlay that shows the upper and lower limits of normal price movements 
 `stroke`, `stroke-width`, and `color` of upperLine can be customized by using,[`upperLine`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#upperline), and the lowerLine can be customized by using [`lowerLine`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#lowerline) properties of indicator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/bollinger-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/bollinger-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -70,7 +82,10 @@ Moving average Indicators are used to define the direction of the trend. To rend
 use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `Ema` and inject `EMAIndicator` into the `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/ema-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/ema-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -82,7 +97,10 @@ use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/te
 Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `Momentum`and inject `MomentumIndicator` into the `provide`. Momentum indicator will be represented by two lines (upperLine, signalLine).In momentum indicator the upperBand value is always render at the value 100.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/momentum-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/momentum-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -95,7 +113,10 @@ Momentum shows the speed at which the price of the stock is changing. To render 
 property of indicator.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/momentum-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/momentum-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +128,10 @@ property of indicator.
 MACD is based on the difference between two EMA's. To render a MACD Indicator, use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `MACD` and inject `MACDIndicator` into the `provide`.MACD indicator will be represented by MACD line,signal line, MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/macd-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/macd-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,7 +144,10 @@ MACD is based on the difference between two EMA's. To render a MACD Indicator, u
 properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/macd-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/macd-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -133,7 +160,10 @@ RSI shows how strongly a stock is moving in its current direction. To render a R
 indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as`Rsi` and inject `RsiIndicator` into the `.provide`.RSI indicator will be represented by three lines (upperBand, lowerBand, signalLine). The upperBand and lowerBand values are customized by [`overBought`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#overbought) and [`overSold`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#oversold) properties of indicator and the signalLine is calculated by RSI formula.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/rsi-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/rsi-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -146,7 +176,10 @@ Moving average Indicators are used to define the direction of the trend. To rend
 use indicator [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#type) as `Sma` and inject `SmaIndicator` module using `provide`.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/sma-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/sma-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -159,7 +192,10 @@ It shows how a stock is, when compared to previous state. To render a Stochastic
 signalLine is render based on stochastic formula.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/stochastic-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/stochastic-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -171,7 +207,10 @@ signalLine is render based on stochastic formula.
 `stroke`, `stroke-width`, and `color` of upperLine can be customized by using,[`upperLine`](./api-technicalIndicatorModel.html), the lowerLine can be customized by using [`lowerLine`](https://ej2.syncfusion.com/vue/documentation/api-technicalIndicatorModel.html) and the periodLine can be customized by using [`periodLine`](https://ej2.syncfusion.com/vue/documentation/api-technicalIndicatorModel.html) properties of indicator. To customize the period to find the properties.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/technical-indicators/stochastic-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/technical-indicators/stochastic-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

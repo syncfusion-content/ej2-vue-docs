@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 Waterfall chart helps to understand the cumulative effect of the sequentially introduced positive and negative values. To render a Waterfall series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Waterfall` and inject `WaterfallSeries` into the `provide`. [`intermediateSumIndexes`](https://ej2.syncfusion.com/vue/documentation/api-seriesDirective.html#intermediateSumIndexes-any) property of waterfall is used is used to represent the cumulative sum values.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/waterfall-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/waterfall-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -29,7 +32,10 @@ The negative changes of waterfall charts is represented by using [`negativeFillC
 By default, the negativeFillColor as ‘#E94649’ and the summaryFillColor as ‘#4E81BC’.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/waterfall-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/waterfall-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

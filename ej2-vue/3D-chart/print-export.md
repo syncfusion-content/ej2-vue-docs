@@ -15,7 +15,10 @@ domainurl: ##DomainURL##
 The rendered 3D chart can be printed directly from the browser by calling the public method print. The ID of the 3D chart's div element must be passed as the input parameter to that method.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/print/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/print/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -27,7 +30,10 @@ The rendered 3D chart can be printed directly from the browser by calling the pu
 The rendered 3D chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the export method. The input parameters for this method are `type` for format and `fileName` for result.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart3d/user-interaction/export/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/user-interaction/export/app.vue %}
 {% endhighlight %}
 {% endtabs %}

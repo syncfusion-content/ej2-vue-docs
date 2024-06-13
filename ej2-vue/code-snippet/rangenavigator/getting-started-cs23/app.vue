@@ -1,24 +1,23 @@
-
-
 <template>
-    <div id="app">
-    <ejs-rangenavigator valueType='DateTime'
-        labelPosition='Outside' :dataSource='data' xName='x' yName='Close'
-        :periodSelectorSettings='periodSelectorSettingsTop' disableRangeSelector=true>
-       </ejs-rangenavigator>
-    </div>
+  <div id="app">
+    <ejs-rangenavigator :valueType='valueType' labelPosition='Outside' :dataSource='data' xName='x' yName='Close'
+      :periodSelectorSettings='periodSelectorSettingsTop' disableRangeSelector=true>
+    </ejs-rangenavigator>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { RangeNavigatorPlugin, AreaSeries, PeriodSelector, DateTime } from "@syncfusion/ej2-vue-charts";
+
+import { RangeNavigatorComponent, AreaSeries, PeriodSelector, DateTime } from "@syncfusion/ej2-vue-charts";
 import { chartData } from "./default_data.js";
 
-Vue.use(RangeNavigatorPlugin);
-
 export default {
+  name: "App",
+  components: {
+    "ejs-rangenavigator": RangeNavigatorComponent
+  },
   data() {
     return {
-     valueType: 'DateTime',
+      valueType: 'DateTime',
       periodSelectorSettingsTop: {
         periods: [
           { text: "1M", interval: 1, intervalType: "Months" },
@@ -30,7 +29,7 @@ export default {
         ],
         position: "Top"
       },
-     data: chartData
+      data: chartData
     };
   },
   provide: {
@@ -38,5 +37,3 @@ export default {
   }
 };
 </script>
-
-

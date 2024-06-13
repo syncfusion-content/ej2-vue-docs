@@ -14,16 +14,16 @@ import {
   Chart3DSeriesCollectionDirective,
   Chart3DSeriesDirective,
   ColumnSeries3D,
-  Category3D,
+  Category3D
 } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   },
-
   data() {
     return {
       seriesData: [
@@ -34,22 +34,22 @@ export default {
         { country: 'France', gold: 50 },
         { country: 'Germany', gold: 40 },
         { country: 'Italy', gold: 40 },
-        { country: 'Sweden', gold: 30 },
+        { country: 'Sweden', gold: 30 }
       ],
       primaryXAxis: {
-        valueType: 'Category',
+        valueType: 'Category'
       },
       primaryYAxis: {
         lineStyle: { width: 0 },
         majorTickLines: { width: 0 },
         minorTickLines: { width: 0 },
         labelFormat: '{value}°C',
-        interval: 10,
+        interval: 10
       }
     };
   },
   provide: {
-    chart3d: [ColumnSeries3D, Category3D],
+    chart3d: [ColumnSeries3D, Category3D]
   },
 };
 </script>

@@ -54,6 +54,22 @@ The following code example illustrates how to add connector at runtime.
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/Connectorsatruntime-cs1" %}
 
+## Add collection of connectors at runtime
+
+* The collection of connectors can be dynamically added using 'addElements' method.Each time an element is added to the diagram canvas, the 'collectionChange' event will be triggered.
+
+The following code illustrates how to add a connectors collection at runtime.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/connectorCollection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/connectors/connectorCollection-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/connectors/connectorCollection-cs1" %}
+
 ## Connectors from palette
 
 * Connectors can be predefined and added to the symbol palette. You can drop those connectors into the Diagram, when required.

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <ejs-chart3d id="container" :primaryXAxis="primaryXAxis" :wallColor='wallColor' :enableRotation='enableRotation' 
+    <ejs-chart3d id="container" :primaryXAxis="primaryXAxis" :wallColor='wallColor' :enableRotation='enableRotation'
       :rotation='rotation' :tilt='tilt' :depth='depth'>
       <e-chart3d-series-collection>
-        <e-chart3d-series :dataSource="seriesData" type="Column" xName="x" yName="y" columnSpacing= 0.1></e-chart3d-series>
+        <e-chart3d-series :dataSource="seriesData" type="Column" xName="x" yName="y" columnSpacing=0.1></e-chart3d-series>
       </e-chart3d-series-collection>
     </ejs-chart3d>
   </div>
@@ -12,12 +12,12 @@
 import { Chart3DComponent, Chart3DSeriesCollectionDirective, Chart3DSeriesDirective, ColumnSeries3D } from '@syncfusion/ej2-vue-charts';
 
 export default {
+  name: "App",
   components: {
     'ejs-chart3d': Chart3DComponent,
     'e-chart3d-series-collection': Chart3DSeriesCollectionDirective,
-    'e-chart3d-series': Chart3DSeriesDirective,
+    'e-chart3d-series': Chart3DSeriesDirective
   },
-
   data() {
     return {
       seriesData: [
@@ -37,8 +37,8 @@ export default {
     };
   },
   provide: {
-    chart3d: [ColumnSeries3D],
-  },
+    chart3d: [ColumnSeries3D]
+  }
 };
 </script>
 <style>

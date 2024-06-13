@@ -1,5 +1,3 @@
-
-
 <template>
   <div>
       <ejs-bulletchart id="bulletChart"
@@ -20,11 +18,17 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { BulletChartPlugin } from '@syncfusion/ej2-vue-charts';
-Vue.use(BulletChartPlugin);
+
+import { BulletChartComponent, BulletRangeCollectionDirective, BulletRangeDirective } from '@syncfusion/ej2-vue-charts';
+
 
 export default {
+name: "App",
+components: {
+    "ejs-bulletchart": BulletChartComponent,
+    "e-bullet-range-collection": BulletRangeCollectionDirective,
+    "e-bullet-range": BulletRangeDirective
+  },
   data () {
     return {
         localData: [{ value: 5, comparativeMeasureValue: 7.5, category: '2001' },
@@ -39,5 +43,3 @@ export default {
   }
 }
 </script>
-
-

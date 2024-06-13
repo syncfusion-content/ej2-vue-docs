@@ -1,24 +1,23 @@
-
-
 <template>
-    <div id="app">
-      <ejs-rangenavigator :valueType='valueType' :intervalType='intervalType'
-        :value='value' :labelFormat='labelFormat' :dataSource='dataSource'
-        xName='x' yName='y'>
-      </ejs-rangenavigator>
-    </div>
+  <div id="app">
+    <ejs-rangenavigator :valueType='valueType' :intervalType='intervalType' :value='value' :labelFormat='labelFormat'
+      :dataSource='dataSource' xName='x' yName='y'>
+    </ejs-rangenavigator>
+  </div>
 </template>
 <script>
-import Vue from "vue";
-import { RangeNavigatorPlugin, AreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
-import { GetDateTimeData  } from "./default_data.js";
 
-Vue.use(RangeNavigatorPlugin);
+import { RangeNavigatorComponent, AreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
+import { GetDateTimeData } from "./default_data.js";
 
 export default {
+  name: "App",
+  components: {
+    "ejs-rangenavigator": RangeNavigatorComponent
+  },
   data() {
     return {
-     valueType: "DateTime",
+      valueType: "DateTime",
       intervalType: "Months",
       labelFormat: "MMM",
       value: [new Date('2018-06-01'), new Date('2018-07-01')],
@@ -30,5 +29,3 @@ export default {
   }
 };
 </script>
-
-

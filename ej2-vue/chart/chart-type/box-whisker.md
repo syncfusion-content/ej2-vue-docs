@@ -16,7 +16,10 @@ To render a box and whisker chart, use series[`type`](https://ej2.syncfusion.com
 `BoxAndWhiskerSeries` into the `provide`. The field y requires n number of data or it should contains minimum of five values to plot a segment.
 >
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/box-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/box-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -31,7 +34,10 @@ To render a box and whisker chart, use series[`type`](https://ej2.syncfusion.com
 should contains minimum of five values to plot a segment.
 >
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/box-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/box-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -43,7 +49,10 @@ should contains minimum of five values to plot a segment.
 In Box and Whisker series `showMean` property is used to show the box and whisker average value. The default value of `showMean` is false.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/box-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/box-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

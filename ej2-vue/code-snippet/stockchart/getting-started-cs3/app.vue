@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-stockchart :title='title'  :crosshair="crosshair">
@@ -18,6 +16,7 @@ import {
 } from "@syncfusion/ej2-vue-charts";
 
 export default {
+name: "App",
   components: {
     'ejs-stockchart': StockChartComponent,
     'e-stockchart-series-collection': StockChartSeriesCollectionDirective,
@@ -40,5 +39,3 @@ export default {
   }
 };
 </script>
-
-

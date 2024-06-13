@@ -1,27 +1,28 @@
-
-
 <template>
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' selectionMode='DragXY'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
+            selectionMode='DragXY'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Scatter' xName='x' yName='y' name='Male' opacity=0.7> </e-series>
-                <e-series :dataSource='seriesData2' type='Scatter' xName='x' yName='y' name='Female' opacity=0.7> </e-series>
+                <e-series :dataSource='seriesData1' type='Scatter' xName='x' yName='y' name='Male' opacity=0.7>
+                </e-series>
+                <e-series :dataSource='seriesData2' type='Scatter' xName='x' yName='y' name='Female' opacity=0.7>
+                </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
 </template>
 <script>
-import Vue from "vue";
-import { ChartPlugin, ScatterSeries, Legend, Selection } from "@syncfusion/ej2-vue-charts";
 
-Vue.use(ChartPlugin);
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, ScatterSeries, Legend, Selection } from "@syncfusion/ej2-vue-charts";
 
-let series1: Object[] = [];
-let series2: Object[] = [];
-let point1: Object;
-let value: number = 80;
-let value1: number = 70;
-let i: number;
+
+
+let series1 = [];
+let series2 = [];
+let point1;
+let value = 80;
+let value1 = 70;
+let i;
 for (i = 1; i < 50; i++) {
     if (Math.random() > 0.5) {
         value += Math.random();
@@ -44,34 +45,38 @@ for (i = 1; i < 50; i++) {
 }
 
 export default {
-  data() {
-    return {
-      seriesData1: series1,
-      seriesData2: series2,
-      primaryXAxis: {
-            title: 'Height (cm)',
-            minimum: 120, maximum: 180,
-            edgeLabelPlacement: 'Shift',
-            labelFormat: '{value}cm'
-        },
-        primaryYAxis: {
-            title: 'Weight (kg)',
-            minimum: 60, maximum: 90,
-            labelFormat: '{value}kg',
-            rangePadding: 'None'
-        },
-        title: 'Height Vs Weight'
-    };
-  },
-  provide: {
-    chart: [ScatterSeries, Legend, Selection]
-  },
+    name: "App",
+    components: {
+        "ejs-chart": ChartComponent,
+        "e-series-collection": SeriesCollectionDirective,
+        "e-series": SeriesDirective
+    },
+    data() {
+        return {
+            seriesData1: series1,
+            seriesData2: series2,
+            primaryXAxis: {
+                title: 'Height (cm)',
+                minimum: 120, maximum: 180,
+                edgeLabelPlacement: 'Shift',
+                labelFormat: '{value}cm'
+            },
+            primaryYAxis: {
+                title: 'Weight (kg)',
+                minimum: 60, maximum: 90,
+                labelFormat: '{value}kg',
+                rangePadding: 'None'
+            },
+            title: 'Height Vs Weight'
+        };
+    },
+    provide: {
+        chart: [ScatterSeries, Legend, Selection]
+    },
 };
 </script>
 <style>
-  #container {
-   height: 350px;
- }
+#container {
+    height: 350px;
+}
 </style>
-
-
