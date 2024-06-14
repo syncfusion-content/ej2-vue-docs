@@ -29,7 +29,7 @@ new Vue({
     { text: 'McLaren P1', id: 'list-09' },
     { text: 'Ferrari LaFerrari', id: 'list-10' },
 ];
-selectionSettings: { mode: "Multiple" }
+selectionSettings: { showCheckbox: true, mode: "Multiple" }
     }
   }
 

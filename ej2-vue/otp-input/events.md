@@ -3,7 +3,7 @@ layout: post
 title: Events in Vue OTP Input component | Syncfusion
 description:  Learn here all about Events in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
-component: Events
+control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -14,7 +14,7 @@ This section describes the OTP Input events that will be triggered when appropri
 
 ## created
 
-The OTP Input component triggers the `created` event when the component rendering is completed.
+The OTP Input component triggers the [created](https://ej2.syncfusion.com/vue/documentation/api/otp-input#created) event when the component rendering is completed.
 
 ```
 <template>
@@ -53,7 +53,7 @@ export default {
 
 ## focus 
 
-The OTP Input component triggers the `focus ` event when the Otp input is focused. The `OtpFocusEventArgs ` passed as an event argument provides the details of the focus event.
+The OTP Input component triggers the [focus](https://ej2.syncfusion.com/vue/documentation/api/otp-input#focus) event when the OTP Input is focused. The `OtpFocusEventArgs ` passed as an event argument provides the details of the focus event.
 
 ```
 <template>
@@ -92,7 +92,7 @@ export default {
 
 ## blur
 
-The OTP Input component triggers the `blur` event when the Otp input is focused out. The `OtpFocusEventArgs ` passed as an event argument provides the details of the blur event.
+The OTP Input component triggers the [blur](https://ej2.syncfusion.com/vue/documentation/api/otp-input#blur) event when the OTP Input is focused out. The `OtpFocusEventArgs ` passed as an event argument provides the details of the blur event.
 
 ```
 <template>
@@ -131,7 +131,7 @@ export default {
 
 ## input
 
-The OTP Input component triggers the `input` event when the value of each Otp input is changed. The `OtpInputEventArgs` passed as an event argument provides the details of the each value is changed.
+The OTP Input component triggers the [input](https://ej2.syncfusion.com/vue/documentation/api/otp-input#input) event when the value of each OTP Input is changed. The `OtpInputEventArgs` passed as an event argument provides the details of the each value is changed.
 
 ```
 <template>
@@ -170,7 +170,7 @@ export default {
 
 ## valueChanged
 
-The OTP Input component triggers the `valueChanged` event when the value of the Otp input is changed and matching the Otp input length. The `OtpChangedEventArgs` passed as an event argument provides the details when value is changed.
+The OTP Input component triggers the [valueChanged](https://ej2.syncfusion.com/vue/documentation/api/otp-input#valuechanged) event when the value of the OTP Input is changed and matching the OTP Input length. The `OtpChangedEventArgs` passed as an event argument provides the details when value is changed.
 
 ```
 <template>

@@ -6,12 +6,16 @@
   </div>
 </template>
 <script>
-import { ListBoxComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { ListBoxComponent, CheckBoxSelection } from "@syncfusion/ej2-vue-dropdowns";
 
 export default {
   name: "App",
   components: {
     "ejs-listbox": ListBoxComponent
+  },
+  provide: {
+    // Injecting CheckBoxSelection module
+    listbox: [CheckBoxSelection]
   },
   data() {
     return {
@@ -27,7 +31,7 @@ export default {
         { text: 'McLaren P1', id: 'list-09' },
         { text: 'Ferrari LaFerrari', id: 'list-10' },
       ],
-      selectionSettings: { mode: "Single" }
+      selectionSettings: { showCheckbox: true, mode: "Single" }
     }
   }
 }

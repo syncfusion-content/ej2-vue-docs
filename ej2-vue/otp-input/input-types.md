@@ -3,7 +3,7 @@ layout: post
 title: Input Types in Vue OTP Input component | Syncfusion
 description:  Learn here all about Input Types in Syncfusion Vue OTP Input component of Syncfusion Essential JS 2 and more.
 platform: ej2-vue
-control: Input Types
+control: OTP Input
 documentation: ug
 domainurl: ##DomainURL##
 ---
@@ -16,7 +16,7 @@ This section explains the the various types of OTP (One-Time Password) input con
 
 ### Number type
 
-You can set the `type` property to `number` to use this input type as number. This is ideal for OTP input scenarios with numeric-only codes. By default `type` property is `number`.
+You can set the [type](https://ej2.syncfusion.com/vue/documentation/api/otp-input#type) property to [number](https://ej2.syncfusion.com/vue/documentation/api/otp-input/otpInputType/) to use this input type as number. This is ideal for OTP input scenarios with numeric-only codes. By default `type` property is `number`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -31,7 +31,7 @@ You can set the `type` property to `number` to use this input type as number. Th
 
 ### Text type
 
-You can set the `type` property to `text` to use this input type as text. This is suitable when the OTP input need to include both letters and numbers.
+You can set the [type](https://ej2.syncfusion.com/vue/documentation/api/otp-input#type) property to [text](https://ej2.syncfusion.com/vue/documentation/api/otp-input/otpInputType/) to use this input type as text. This is suitable when the OTP input need to include both letters and numbers.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -47,7 +47,7 @@ You can set the `type` property to `text` to use this input type as text. This i
 
 ### Password type
 
-You can set the `type` property to `password` to use this input type as password in the otp Input.
+You can set the [type](https://ej2.syncfusion.com/vue/documentation/api/otp-input#type) property to [password](https://ej2.syncfusion.com/vue/documentation/api/otp-input/otpInputType/) to use this input type as password in the OTP Input.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -62,7 +62,7 @@ You can set the `type` property to `password` to use this input type as password
 
 ## Value
 
-You can specify the value of OTP Input by using the `value` property.
+You can specify the value of OTP Input by using the [value](https://ej2.syncfusion.com/vue/documentation/api/otp-input#value) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
