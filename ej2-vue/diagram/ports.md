@@ -129,7 +129,7 @@ The constraints property allows to enable/disable certain behaviors of ports. Fo
 
 ## Specify connection direction to port
 
-The [connectionDirection] property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port (incoming) or from the port (outgoing).
+The [`connectionDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/port#connectionDirection) property of a port allows users to specify the direction in which a connector should establish a connection. This can be either to the port (incoming) or from the port (outgoing).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -142,4 +142,4 @@ The [connectionDirection] property of a port allows users to specify the directi
           
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-cs3" %}
 
-![maxSegmentThumb](images\connectioDirection.png)
+![maxSegmentThumb](images/connectioDirection.png)
