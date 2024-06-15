@@ -375,6 +375,38 @@ npm run dev
         
 {% previewsample "page.domainurl/code-snippet/treegrid/getting-started/default-cs4" %}
 
+## Handling errors
+
+Error handling in Tree Grid identifies exceptions and notifies them through the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionfailure) event. When configuring the Tree Grid or enabling specific features through its API, mistakes can occur. The `actionFailure` event can be used to manage these errors. This event triggers when such mistakes happen. The `actionFailure` event handles various scenarios, including:
+
+* For CRUD operations, row drag and drop, and persisiting the selection, ensure the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/treegrid/column/#isprimarykey) property is mapped to a unique data column. Failure to do so will cause an error.
+* [Paging](https://ej2.syncfusion.com/vue/documentation/treegrid/paging) is not supported with [virtualization](https://ej2.syncfusion.com/vue/documentation/treegrid/virtual-scroll). Enabling `paging` with `virtualization` will result in an error.
+* To render the Tree Grid, map either the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#datasource) or [columns](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#columns) property. Failure to do so will result in an error.
+* Freeze columns by mapping either [isFrozen](https://helpej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel/#isfrozen) or [frozenColumns](https://ej2.syncfusion.com/vue/documentation/api/treegrid#frozencolumns). Enabling both properties simultaneously will result in an error.
+* The [detailTemplate](https://ej2.syncfusion.com/vue/documentation/api/treegrid#detailtemplate) is not supported with `virtualization` and `stacked header`. Enabling them with these features will result in an error.
+* The [frozenRows](https://ej2.syncfusion.com/vue/documentation/api/treegrid#frozenrows) and `frozenColumns` are not supported with [rowtemplate](https://ej2.syncfusion.com/vue/documentation/api/treegrid#rowtemplate), `detailTemplate`, and [cell editing](https://ej2.syncfusion.com/vue/documentation/treegrid/editing/cell-editing). Enabling them with these features will result in an error.
+* In `stacked header`, the [freeze](https://ej2.syncfusion.com/vue/documentation/api/treegrid/columnDirective/#freeze) direction is incompatible with [column reordering](https://ej2.syncfusion.com/vue/documentation/treegrid/columns/column-reorder).
+* [Selection](https://ej2.syncfusion.com/vue/documentation/treegrid/selection/selection) functionality is not supported when using `rowTemplate`. Enabling both properties simultaneously will result in an error.
+* Set the [treeColumnIndex](https://ej2.syncfusion.com/vue/documentation/api/treegrid#treecolumnindex) value to display the tree structure. Make sure the value does not exceed the total column count, or it will result in an error.
+* For `virtualization`, do not specify height and width in percentages. Using percentages will result in an error.
+* When using the default filter ([filterbar](https://ej2.syncfusion.com/vue/documentation/treegrid/filtering/filter-bar)) type, do not apply the other [filterType](https://ej2.syncfusion.com/vue/documentation/api/treegrid/filterType/) to columns  within the same tree grid, as this will result in an error.
+* In Tree Grid, avoid enabling [idMapping](https://ej2.syncfusion.com/vue/documentation/api/treegrid#idmapping) and [childMapping](https://ej2.syncfusion.com/vue/documentation/api/treegrid#childmapping) simultaneously. Enabling both properties at the same time will result in an error.
+* The [showCheckbox](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel/#showcheckbox) column should only be defined in the tree column. Defining it elsewhere will result in an error.
+* The [textAlign](https://ej2.syncfusion.com/vue/documentation/api/treegrid/treeGridColumnModel/#textalign) right is not applicable for tree columns in the Tree Grid. Enabling right alignment for tree columns will result in an error.
+
+The following code example shows how to use the [actionFailure](https://ej2.syncfusion.com/vue/documentation/api/treegrid/#actionfailure) event in the Tree Grid control to display an exception when `isPrimaryKey`are not configured properly in the Tree Grid.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/treegrid/getting-started/default-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/treegrid/getting-started/default-cs5" %}
+
 ## See Also
 
 * [Getting Started with Syncfusion JavaScript documentation](https://ej2.syncfusion.com/documentation/treegrid/getting-started)
