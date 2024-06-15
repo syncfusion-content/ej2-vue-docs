@@ -29,7 +29,7 @@ new Vue({
         return {
             values: ['Mr.', 'Mrs.'],
             data: new DataManager({
-            url: "https://services.syncfusion.com/js/production/api/Employees/";
+            url: "https://services.syncfusion.com/vue/production/api/Employees/";
             adaptor: new ODataAdaptor(),
             crossDomain: true
           }),

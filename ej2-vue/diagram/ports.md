@@ -142,4 +142,4 @@ The [`connectionDirection`](https://ej2.syncfusion.com/vue/documentation/api/dia
           
 {% previewsample "page.domainurl/code-snippet/diagram/ports/ports-cs3" %}
 
-![maxSegmentThumb](images\connectioDirection.png)
+![maxSegmentThumb](images/connectioDirection.png)

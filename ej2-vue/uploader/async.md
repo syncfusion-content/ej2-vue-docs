@@ -208,6 +208,19 @@ public IActionResult Save()
 
 ```
 
+### Client-side configuration for saving and returning responses
+
+The following example demonstrates the client-side action for saving files on the server and returning responses in JSON, String, and File formats.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/uploader/asynchronous-cs7/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Remove Action
 
 The remove action is optional. Specify the URL to handle remove process from server. The remove handler receives the posted files and handle the remove operation in server.
