@@ -39,4 +39,4 @@ The [disableItem](https://ej2.syncfusion.com/vue/documentation/api/auto-complete
 
 If you want to disabled the overall component to set the [enabled](https://ej2.syncfusion.com/vue/documentation/api/auto-complete/#enabled) property to false.
 
-{% [Disabled AutoComplete Component](././images/autocomplete-disable.png)" %}
+![Disabled AutoComplete Component](../images/autocomplete-disable.png)
