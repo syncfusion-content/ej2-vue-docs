@@ -45,7 +45,7 @@ The following example displays the Calendar in `decade` view, and allows you to 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs3/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/calendar/min-max-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
