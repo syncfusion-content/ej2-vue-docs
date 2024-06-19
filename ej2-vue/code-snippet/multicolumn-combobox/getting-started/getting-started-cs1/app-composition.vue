@@ -2,7 +2,7 @@
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:500px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' placeholder='Select a employee'>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' placeholder='Select an employee'>
             <e-columns>
                 <e-column field='EmpID' header='Employee ID' width='70'></e-column>
                 <e-column field='Name' header='Name' width='60'></e-column>
@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
-import { ColumnsDirective as EColumnsDirective, ColumnDirective as EColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
 const empData = [ 
     { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
     { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
@@ -49,5 +49,3 @@ const fields = { text: 'Name', value: 'EmpID' };
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
 </style>
-
-

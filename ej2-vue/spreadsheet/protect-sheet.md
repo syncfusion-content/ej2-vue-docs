@@ -134,6 +134,19 @@ You can make the cells read-only in the cell data binding by setting the `isRead
 </ejs-spreadsheet>
 ```
 
+The following example demonstrates how to make rows, columns, and cells read-only without protecting the sheet:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/readonly-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/readonly-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/spreadsheet/readonly-cs1" %}
+
 ## Protect Workbook
 
 Protect workbook feature helps you to protect the workbook so that users cannot insert, delete, rename, hide the sheets in the spreadsheet.

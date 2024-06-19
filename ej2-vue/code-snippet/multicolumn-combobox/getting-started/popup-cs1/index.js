@@ -1,8 +1,6 @@
-
 import Vue from 'vue';
 import { MultiColumnComboBoxPlugin } from "@syncfusion/ej2-vue-multicolumn-combobox";
 Vue.use(MultiColumnComboBoxPlugin);
-
 
 new Vue({
 	el: '#app',
@@ -10,7 +8,7 @@ new Vue({
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:380px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' popupWidth='500px' popupHeight='250px' placeholder='Select a employee'>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' popupWidth='500px' popupHeight='250px' placeholder='Select an employee'>
             <e-columns>
                 <e-column field='EmpID' header='Employee ID' width='70'></e-column>
                 <e-column field='Name' header='Name' width='60'></e-column>

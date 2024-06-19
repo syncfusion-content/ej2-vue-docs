@@ -2,7 +2,7 @@
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:380px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' popupWidth='500px' popupHeight='250px' placeholder='Select a employee'>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' popupWidth='500px' popupHeight='250px' placeholder='Select an employee'>
             <e-columns>
                 <e-column field='EmpID' header='Employee ID' width='70'></e-column>
                 <e-column field='Name' header='Name' width='60'></e-column>
@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
-import { ColumnsDirective as EColumnsDirective, ColumnDirective as EColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { MultiColumnComboBoxComponent as EjsMulticolumnombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
 const empData = [ 
     { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
     { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
