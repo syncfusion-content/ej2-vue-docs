@@ -393,5 +393,5 @@ The [`rotationReference`](https://helpej2.syncfusion.com/vue/documentation/api/d
 
 | Value | Description | Image |
 | -------- | -------- | -------- |
-| Page | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![No_Rotation](images\page_rotationreference.gif) |
-| Parent | In this case, the annotation rotates along with its parent node. | ![Rotation](images\parent_rotationreference.gif)|
+| Page | When this option is set, the annotation remains fixed in its original orientation even if its parent node is rotated. | ![No_Rotation](images/page_rotationreference.gif) |
+| Parent | In this case, the annotation rotates along with its parent node. | ![Rotation](images/parent_rotationreference.gif)|

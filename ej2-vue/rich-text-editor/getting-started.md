@@ -58,7 +58,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -94,11 +94,26 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-filemanager/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
 
 {% endhighlight %}
 {% endtabs %}
+
+## Module injection
+
+To create Rich Text Editor with additional features, inject the required modules. The following modules are used to extend Rich Text Editor's basic functionality.
+
+* `Toolbar` - Inject this module to use Toolbar feature.
+* `Link` - Inject this module to use link feature in Rich Text Editor.
+* `Image`- Inject this module to use image feature in Rich Text Editor.
+* `HtmlEditor` - Inject this module to use Rich Text Editor as html editor.
+* `QuickToolbar` - Inject this module to use quick toolbar feature for the target element.
+
+These modules should be injected into the Rich Text Editor through `provide` option.
+
+> Additional feature modules are available [here](./module.md)
 
 ## Add Syncfusion Vue component
 
@@ -149,9 +164,6 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-
-### Initialize from `<div>` element
-
 Rich Text Editor can be initialized on div element.
 
 {% tabs %}
@@ -164,43 +176,6 @@ Rich Text Editor can be initialized on div element.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs5" %}
-
-### Initialize from `<IFRAME>` element
-
-The Rich Text Editor’s content is placed in an iframe and isolated from the rest of the page.
-
-Initialize the Rich Text Editor on div element and set the `enable` field of `iframeSettings` property as true.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs6/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs6/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs6" %}
-
-## Module injection
-
-To create Rich Text Editor with additional features, inject the required modules. The following modules are used to extend Rich Text Editor's basic functionality.
-
-* `Toolbar` - Inject this module to use Toolbar feature.
-* `Link` - Inject this module to use link feature in Rich Text Editor.
-* `Image`- Inject this module to use image feature in Rich Text Editor.
-* `Table`- Inject this module to use table feature in Rich Text Editor.
-* `Count` - Inject this module to use character count in Rich Text Editor.
-* `HtmlEditor` - Inject this module to use Rich Text Editor as html editor.
-* `MarkdownEditor`-Inject this module to use Rich Text Editor as markdown editor.
-* `QuickToolbar` - Inject this module to use quick toolbar feature for the target element.
-* `Resize` - Inject this module to use resize feature in Rich Text Editor.
-* `FileManager` - Inject this module to use file browser feature in Rich Text Editor.
-* `PasteCleanup` - Inject this module to use paste cleanup feature in Rich Text Editor.
-* `FormatPainter` - Inject this module to use format painter feature in Rich Text Editor.
-* `EmojiPicker` - Inject this module to use emoji picker feature in Rich Text Editor.
-
-These modules should be injected into the Rich Text Editor through `provide` option.
 
 ## Configure the toolbar
 
@@ -218,45 +193,6 @@ Configure the toolbar with the tools using items field of the [`toolbarSettings`
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs7" %}
 
 > `|` and `-` can insert a vertical and horizontal separator lines in the toolbar.
-
-## Insert images and links
-
-The [`image`](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/image) module inserts an image into Rich Text Editor’s content area, and the [`link`](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/link) module links external resources such as website URLs, to selected text in the Rich Text Editor’s content, respectively.
-
-The link inject module adds a link icon to the toolbar and the image inject module adds an image icon to the toolbar.
-
-Specifies the items to be rendered in the quick toolbar based on the target element such image, link and text element. The quick toolbar opens to customize the element by clicking the target element.
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs8/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs8/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs8" %}
-
-## Retrieve the formatted content
-
-To retrieve the editor contents, use [`value`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#value) property of Rich Text Editor.
-
-```ts
-  var rteValue = this.$refs.rteObj.ej2Instances.value;
-```
-
-Or, you can use the public method, [`getHtml`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#gethtml) to retrieve the Rich Text Editor content.
-
-```ts
-  var rteValue = this.$refs.rteObj.ej2Instances.getHtml();
-```
-
-To fetch the Rich Text Editor's text content, use [`getText`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#gettext) method of Rich Text Editor.
-
-```ts
-  var rteValue = this.$refs.rteObj.ej2Instances.getText();
-```
 
 ## Run the project
 
@@ -283,25 +219,13 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs9" %}
 
-## Add content using valueTemplate property
-
-Rich Text Editor content can be added using valueTemplate property as given below
-
-{% tabs %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs10/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="~/src/App.vue" %}
-{% include code-snippet/rich-text-editor/getting-started-cs10/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs10" %}
-
 ## See Also
 
 * [How to change the editor type](./editor-modes/)
 * [How to render the iframe](./iframe/)
 * [How to render the toolbar in inline mode](./inline-mode/)
+* [Accessibility in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/accessibility)
+* [Keyboard support in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support)
+* [Globalization in Rich text editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/globalization)
 
 > You can refer to our [Vue Rich Text Editor](https://www.syncfusion.com/vue-ui-components/vue-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Rich Text Editor example](https://ej2.syncfusion.com/vue/demos/#/material/rich-text-editor/default.html) that shows how to render and configure the rich text editor tools.
