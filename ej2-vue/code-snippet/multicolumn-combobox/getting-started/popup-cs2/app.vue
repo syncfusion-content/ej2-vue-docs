@@ -2,7 +2,7 @@
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:380px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' popupWidth='500px' popupHeight='250px' placeholder='Select a employee'>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' popupWidth='500px' popupHeight='250px' placeholder='Select an employee'>
             <e-columns>
                 <e-column field='EmpID' header='Employee ID' width='70'></e-column>
                 <e-column field='Name' header='Name' width='60'></e-column>
@@ -58,5 +58,3 @@ export default {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
 </style>
-
-
