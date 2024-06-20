@@ -39,4 +39,4 @@ The [disableItem](https://ej2.syncfusion.com/vue/documentation/api/drop-down-lis
 
 If you want to disabled the overall component to set the [enabled](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#enabled) property to false.
 
-{% [Disabled DropDownList Component](././images/dropdownlist-disable.png)" %}
+![Disabled DropDownList Component](../images/dropdownlist-disable.png)
