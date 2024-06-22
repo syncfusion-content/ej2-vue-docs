@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Override the keyboard shortcuts in Vue Document editor component | Syncfusion
-description: Learn here all about Override the keyboard shortcuts in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Keyboard Shortcuts in Vue Document Editor Component | Syncfusion
+description: Learn here all about override the keyboard shortcuts in Syncfusion Essential Vue Document Editor component, it's elements and more.
 control: Override the keyboard shortcuts 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Override the keyboard shortcuts in Vue Document editor component
+# Override the Keyboard Shortcuts in Vue Document Editor Component
 
-Document Editor triggers the [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/document-editor#keydown) event every time when any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorKeyDownEventArgs/). You can use the [`isHandled`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorKeyDownEventArgs#ishandled) property to override the keyboard shortcut behavior.
+Document Editor triggers the [`keyDown`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/#keydown) event every time when any key is entered and provides an instance of [`DocumentEditorKeyDownEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorKeyDownEventArgs/). You can use the [`isHandled`](https://ej2.syncfusion.com/vue/documentation/api/document-editor/documentEditorKeyDownEventArgs/#ishandled) property to override the keyboard shortcut behavior.
 
 ## Preventing default keyboard shortcut
 

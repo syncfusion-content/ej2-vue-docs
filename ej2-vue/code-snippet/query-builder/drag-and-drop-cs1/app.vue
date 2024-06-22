@@ -1,7 +1,7 @@
 <template>
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource" :rule="importRules" allowDragAndDrop="true">
+            <ejs-querybuilder ref="querybuilder" width="70%" :dataSource="dataSource" :rule="importRules" :allowDragAndDrop="true">
                 <e-columns>
                     <e-column field='EmployeeID' label='Employee ID' type='number' />
                     <e-column field='FirstName' label='First Name' type='string' />
@@ -39,8 +39,7 @@ components: {
                     field: "FirstName", 
                     type: "string", 
                     operator: "startswith", 
-                    value: "Andre", 
-                    condition: "and" 
+                    value: "Andre",
                 },
                 { 
                     label: "Last Name", 
@@ -48,15 +47,13 @@ components: {
                     type: "string", 
                     operator: "in", 
                     value: ['Davolio', 'Buchanan'], 
-                    condition: "or" 
                 },
                 { 
                     label: "Age", 
                     field: "Age", 
                     type: "number", 
                     operator: "greaterthan", 
-                    value: 29, 
-                    condition: "and" 
+                    value: 29
                 },
                 {
                     condition: "or", rules: [
@@ -64,8 +61,7 @@ components: {
                         field: "IsDeveloper", 
                         type: "boolean", 
                         operator: "equal", 
-                        value: true, 
-                        condition: "and" 
+                        value: true
                     },
                     { 
                     label: "Primary Framework", 
