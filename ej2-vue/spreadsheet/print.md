@@ -30,6 +30,16 @@ The `printOptions` contain three properties, as described below.
 
 > When the `print` method is called without any parameters, the default printing will be performed.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/print-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/print-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/print-cs2" %}
 
 ## Disable printing
 

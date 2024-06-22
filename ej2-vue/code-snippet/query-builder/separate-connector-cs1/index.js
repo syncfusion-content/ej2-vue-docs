@@ -8,15 +8,17 @@ new Vue({
 	template: `
     <div class="control-section">
         <div class="col-lg-12 querybuilder-control">
-            <ejs-querybuilder ref="querybuilder" width="100%" :dataSource="dataSource" :rule="importRules" enableSeparateConnector="true">
-                <e-column field='EmployeeID' label='Employee ID' type='number' />
-                <e-column field='FirstName' label='First Name' type='string' />
-                <e-column field='LastName' label='Last Name' type='string' />
-                <e-column field='Age' label='Age' type='number' />
-                <e-column field='IsDeveloper' label='Is Developer' type='boolean' />
-                <e-column field='PrimaryFramework' label='Primary Framework' type='string' />
-                <e-column field='HireDate' label='Hire Date' type='date' format='MM/dd/yyyy' />
-                <e-column field='Country' label='Country' type='string' />
+            <ejs-querybuilder ref="querybuilder" width="100%" :dataSource="dataSource" :rule="importRules" :enableSeparateConnector="true">
+                <e-columns> 
+                    <e-column field='EmployeeID' label='Employee ID' type='number' />
+                    <e-column field='FirstName' label='First Name' type='string' />
+                    <e-column field='LastName' label='Last Name' type='string' />
+                    <e-column field='Age' label='Age' type='number' />
+                    <e-column field='IsDeveloper' label='Is Developer' type='boolean' />
+                    <e-column field='PrimaryFramework' label='Primary Framework' type='string' />
+                    <e-column field='HireDate' label='Hire Date' type='date' format='MM/dd/yyyy' />
+                    <e-column field='Country' label='Country' type='string' />
+                </e-columns>
             </ejs-querybuilder>
         </div>
     </div>

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Open document by address in Vue Document editor component | Syncfusion
-description: Learn here all about Open document by address in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
+title: Open Document by Address in Vue Document Editor Component | Syncfusion
+description: Learn here all about open document by address in Syncfusion Essential Vue Document Editor component, it's elements and more.
 control: Open document by address 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Open document by address in Vue Document editor component
+# Open Document by Address in Vue Document Editor Component
 
 ## How to open a document from URL in DocumentEditor
 
