@@ -138,7 +138,7 @@ data () {
             enable: true,
             toolbarSettings:{
                buttonSettings: {
-                   toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+                   toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
                }
             }
         },
