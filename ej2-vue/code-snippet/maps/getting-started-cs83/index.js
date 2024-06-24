@@ -21,12 +21,12 @@ new Vue({
 data () {
     return{
        zoomSettings: {
-           enable: true,
-           toolbarSettings:{
-            buttonSettings: {
-                toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
-            }
-         }
+        enable: true,
+        toolbarSettings: {
+          buttonSettings: {
+            toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+          }
+        }
        },
        urlTemplate: 'https://tile.openstreetmap.org/level/tileX/tileY.png'
     }

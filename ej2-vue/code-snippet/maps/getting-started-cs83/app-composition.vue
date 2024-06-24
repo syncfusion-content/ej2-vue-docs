@@ -19,11 +19,11 @@ import { MapsComponent as EjsMaps, Zoom, LayerDirective as ELayer, LayersDirecti
 const urlTemplate = 'https://tile.openstreetmap.org/level/tileX/tileY.png';
 
 const zoomSettings = {
-    enable: true,
-    toolbarSettings:{
-      buttonSettings: {
-        toolBarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
-      }
+        enable: true,
+        toolbarSettings: {
+          buttonSettings: {
+            toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']
+          }
     }
 };
 
