@@ -9,7 +9,7 @@
 </template>
 <script>
 import Vue from "vue";
-import { ChartPlugin, LineSeries, DataLabel, Tooltip} from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, LineSeries, DataLabel, Tooltip } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 

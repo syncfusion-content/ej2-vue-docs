@@ -15,7 +15,7 @@
       <input type="checkbox" id="note"><label for="note">Ignore Note</label>
       <button id="save" @click="saveFile()">Save with JSON Serialization</button>
     </div>
-    <ejs-spreadsheet id="spreadsheet" ref="spreadsheet">
+    <ejs-spreadsheet id="spreadsheet" ref="spreadsheet" :openUrl="openUrl" :allowOpen="true">
     </ejs-spreadsheet>
 </div>
 </template>
@@ -26,6 +26,7 @@ import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spre
 import { createElement } from "@syncfusion/ej2-base";
 
 const spreadsheet = ref(null);
+const openUrl = 'https://services.syncfusion.com/vue/production/api/spreadsheet/open';
 
 const saveFile = () => {
   var spreadsheet = this.$refs.spreadsheet;

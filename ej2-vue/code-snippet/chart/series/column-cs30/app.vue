@@ -25,7 +25,7 @@ class SerialNoAdaptor extends ODataAdaptor {
 }
 
 let dataManager = new DataManager({
-  url: 'https://services.syncfusion.com/js/production/api/orders',
+  url: 'https://services.syncfusion.com/vue/production/api/orders',
   adaptor: new SerialNoAdaptor()
 });
 let query = new Query();
