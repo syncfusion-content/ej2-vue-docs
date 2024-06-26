@@ -67,7 +67,7 @@ Background image of a signature can be specified by using [`backgroundImage`](ht
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs5/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/signature/default-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}

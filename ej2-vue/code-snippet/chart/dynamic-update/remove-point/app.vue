@@ -68,7 +68,7 @@ export default {
   },
   methods: {
       onClick: function() {     
-        this.$refs.chart.ej2Instances.series[0].removePoint(0)
+        this.$refs.chart.ej2Instances.series[0].removePoint(0);
       }
   }
 };

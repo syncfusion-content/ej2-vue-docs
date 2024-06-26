@@ -18,7 +18,10 @@ The `addPoint` method is used to dynamically add a new data point to the chart s
 * The optional second parameter specifies the animation duration for adding the new data point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/dynamic-update/add-point/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/dynamic-update/add-point/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -33,7 +36,10 @@ The `removePoint` method is used to dynamically remove a data point from the cha
 * The optional second parameter specifies the animation duration for removing the data point.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/dynamic-update/remove-point/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/dynamic-update/remove-point/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -48,7 +54,10 @@ To replace the existing data source in the chart with a new data source, you can
 * The optional second parameter specifies the animation duration for updating the new data source.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/dynamic-update/set-data/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/dynamic-update/set-data/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -62,7 +71,10 @@ You can use mouse or touch events to dynamically add or remove data points from 
 To remove a data point from the existing data source, simply click on the desired data point. To achieve this, first, verify whether the clicked data point obtained from `chartMouseClick` already exists in the data source. If it does, remove it by utilizing the `removePoint` method based on its index.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/dynamic-update/click-add-point/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart/dynamic-update/click-add-point/app.vue %}
 {% endhighlight %}
 {% endtabs %}

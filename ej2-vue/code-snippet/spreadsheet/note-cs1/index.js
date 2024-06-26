@@ -17,8 +17,6 @@ new Vue({
           <e-column :width="width1"></e-column>
           <e-column :width="width2"></e-column>
           <e-column :width="width2"></e-column>
-          <e-column :width="width1"></e-column>
-          <e-column :width="width2"></e-column>
           <e-column :width="width3"></e-column>
         </e-columns>
       </e-sheet>
