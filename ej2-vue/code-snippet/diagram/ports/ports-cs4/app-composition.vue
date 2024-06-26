@@ -5,43 +5,44 @@
     </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram, PortVisibility,connectionDirection } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, PortVisibility,PortConnectionDirection } from '@syncfusion/ej2-vue-diagrams';
 
 let port1 = {
     style: {
-        strokeColor: '#366F8C',
-        fill: '#366F8C'
+        strokeColor: 'black',
+        fill: 'yellow'
     }
 }
 port1.shape = 'Square';
 port1.visibility = PortVisibility.Visible
-port1.connectionDirection='Right',
-port1.id = 'port1';
+//specify the direction Of the port
+port1.connectionDirection="Right"
+port1.id = 'port';
 port1.offset = {
     x: 0.5,
     y: 0.5
 };
 let port2 = {
     style: {
-        strokeColor: '#366F8C',
-        fill: '#366F8C'
+        strokeColor: 'black',
+        fill: 'yellow'
     }
 };
 port2.offset = {
     x: 0,
     y: 0
 };
-port2.id = 'port2';
+port2.id = 'port1';
 port2.visibility = PortVisibility.Visible
-port1.connectionDirection='Left',
+//specify the direction Of the port
+port2.connectionDirection="Left"
 port2.shape = 'Square';
-
 let nodes = [{
     id: 'node',
     width: 100,
     height: 100,
     offsetX: 100,
-    offsetY: 100,
+    offsetY: 200,
     ports: [port1]
 },
 {
@@ -66,8 +67,8 @@ let connectors = [{
     },
     sourceID: 'node',
     targetID: 'node1',
-    sourcePortID: 'port1',
-    targetPortID: 'port2'
+    sourcePortID: 'port',
+    targetPortID: 'port1'
 }]
 
 const width = "100%";

@@ -23,14 +23,14 @@ new Vue({
       <input type="checkbox" id="note"><label for="note">Ignore Note</label>
       <button id="save" @click="saveFile()">Save with JSON Serialization</button>
     </div>
-    <ejs-spreadsheet id="spreadsheet" ref="spreadsheet">
+    <ejs-spreadsheet id="spreadsheet" ref="spreadsheet" :openUrl="openUrl" :allowOpen="true">
     </ejs-spreadsheet>
 </div>
 `,
 
 data: () => {
   return {
-    
+    openUrl: 'https://services.syncfusion.com/vue/production/api/spreadsheet/open'
   }
 },
 methods: {

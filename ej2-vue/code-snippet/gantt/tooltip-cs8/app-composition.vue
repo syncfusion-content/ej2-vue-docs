@@ -7,7 +7,7 @@
                 <div v-if="data.tier == 'topTier'" class="e-header-cell-label e-gantt-top-cell-text"
                     style="width:100%;background-color: #FBF9F1 ;  font-weight: bold;height: 100%;display: flex; justify-content: center ; align-items: center;   "
                     title={{data.date}}>
-                    <div> {{ value }}</div>
+                    <div> {{data.value }}</div>
                     <div style="width:20px; height: 20px; line-height: normal; padding-left: 10px; ">
                         <img :style="{ width: '100%', height: '100%' }" :src="imagedate()">
                     </div>

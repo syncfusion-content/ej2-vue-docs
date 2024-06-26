@@ -33,7 +33,7 @@ components: {
             dataSource: employeeData,
             values: ['Mr.', 'Mrs.'],
             importRules: {
-                condition: "",
+                condition: "and",
                 rules: [{ 
                     label: "First Name", 
                     field: "FirstName", 

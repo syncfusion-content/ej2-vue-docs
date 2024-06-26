@@ -16,7 +16,7 @@ import { DataManager, Query, WebApiAdaptor } from '@syncfusion/ej2-data';
 
 
 let dataManager = new DataManager({
-  url: 'https://services.syncfusion.com/js/production/api/orders',
+  url: 'https://services.syncfusion.com/vue/production/api/orders',
   adaptor: new WebApiAdaptor()
 });
 let query = new Query();

@@ -5,7 +5,7 @@ import { DataManager, Query, ODataAdaptor } from '@syncfusion/ej2-data';
 Vue.use(ChartPlugin);
 
 let dataManager = new DataManager({
-  url: 'https://services.syncfusion.com/js/production/api/orders',
+  url: 'https://services.syncfusion.com/vue/production/api/orders',
   adaptor: new ODataAdaptor(),
   offline: true
 });

@@ -82,7 +82,7 @@ new Vue({
         var value = getRandomInt(10, 90);
         return { x: item.x, y: value };
       });
-      if (this.$refs.chart.ej2Instances.series[0].length > 0) {
+      if (this.$refs.chart.ej2Instances.series[0]) {
           this.$refs.chart.ej2Instances.series[0].setData(newData, 500);
       }
     }
