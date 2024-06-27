@@ -1,7 +1,7 @@
 
 
 import Vue from "vue";
-import { GridPlugin, Toolbar, Print } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Toolbar} from "@syncfusion/ej2-vue-grids";
 import { customerData, data } from "./datasource.js";
 
 Vue.use(GridPlugin);
@@ -10,8 +10,8 @@ Vue.use(GridPlugin);
 new Vue({
 	el: '#app',
 	template: `
-  <div id="app">
-    <ejs-grid :dataSource="data" :selectedRowIndex="1" :toolbar="toolbar" :rowSelected="rowSelected" :beforePrint="beforePrint">
+    <div id="app">
+    <ejs-grid :dataSource="masterdata" :selectedRowIndex="1" :toolbar="toolbar" :rowSelected="rowSelected" :beforePrint="beforePrint">
         <e-columns>
             <e-column field="ContactName" headerText="Customer Name" width="150"></e-column>
             <e-column field="CompanyName" headerText="Company Name" width="150"></e-column>
@@ -32,32 +32,32 @@ new Vue({
   </div>
 `,
 
-    data() {
-        var names = ["AROUT", "BERGS", "BLONP", "CHOPS", "ERNSH"];
-        return {
-            toolbar: ["Print"],
-            data: customerData.filter(function (e) {
-                return names.indexOf(e.CustomerID) !== -1;
-            })
-        };
+data() {
+    var names = ["AROUT", "BERGS", "BLONP", "CHOPS", "ERNSH"];
+    return {
+        toolbar: ["Print"],
+       masterdata: customerData.filter(function (e) {
+            return names.indexOf(e.CustomerID) !== -1;
+        })
+    };
+},
+methods: {
+    rowSelected: function (args) {
+        let selectedRecord = args.data;
+        this.$refs.grid.ej2Instances.dataSource = data.filter((record) => record.CustomerName === selectedRecord.ContactName).slice(0, 5);
+        document.getElementById("key").innerHTML = selectedRecord.ContactName;
     },
-    methods: {
-        rowSelected: function (args) {
-            let selectedRecord = args.data;
-            this.$refs.grid.ej2Instances.dataSource = data.filter((record) => record.CustomerName === selectedRecord.ContactName).slice(0, 5);
-            document.getElementById("key").innerHTML = selectedRecord.ContactName;
-        },
-        beforePrint: function (args) {
-            let customEle = document.createElement("div");
-            customEle.innerHTML =
-            document.getElementsByClassName("e-statustext")[0].innerHTML +
-            this.$refs.grid.ej2Instances.element.innerHTML;
-            customEle.appendChild(document.createElement("br"));
-            args.element.append(customEle);
-        },
+    beforePrint: function (args) {
+        let customEle = document.createElement("div");
+        customEle.innerHTML =
+        document.getElementsByClassName("e-statustext")[0].innerHTML +
+        this.$refs.grid.ej2Instances.element.innerHTML;
+        customEle.appendChild(document.createElement("br"));
+        args.element.append(customEle);
     },
-    provide: {
-        grid: [Toolbar, Print],
-    }
+},
+provide: {
+    grid: [Toolbar],
+}
 
 });

@@ -1,17 +1,22 @@
+
+
+
 <template>
-  <div class="result" ref="result"></div>
+  <div class="result"></div>
 </template>
-  
-<script setup>
+<script>
 import { Internationalization } from '@syncfusion/ej2-base';
-import { onMounted, ref } from 'vue';
-
-const result = ref(null);
-
-onMounted(() => {
-  var intl = new Internationalization();
-  var dFormatter = intl.getDateFormat({ skeleton: 'full', type: 'dateTime' });
-  var formattedString = dFormatter(new Date('1/12/2014 10:20:33'));
-  result.value.innerHTML = formattedString;
-});
+export default {
+  mounted:function(){
+var intl = new Internationalization();
+var dFormatter = intl.getDateFormat({ skeleton: 'full', type: 'dateTime' });
+var formattedString = dFormatter(new Date('1/12/2014 10:20:33'));
+document.querySelector('.result').innerHTML = formattedString;
+  }
+}
 </script>
+<style>
+</style>
+
+
+

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict editing in Vue Document editor component | Syncfusion
+title: Restrict editing in Vue Document Editor Component | Syncfusion
 description: Learn here all about Restrict editing in Syncfusion Vue Document editor component of Syncfusion Essential JS 2 and more.
 control: Restrict editing 
 platform: ej2-vue
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Restrict editing in Vue Document editor component
+# Restrict Editing in Vue Document Editor Component
 
 Document Editor provides support to restrict editing. When the protected document includes range permission, then unique user or user group only authorized to edit separate text area.
 
-# Set current user
+## Set current user
 
 You can use the `currentUser` property to authorize the current document user by name, email, or user group name.
 
@@ -22,7 +22,7 @@ The following code shows how to set currentUser
 this.$refs.doceditcontainer.ej2Instances.documentEditor.currentUser = 'engineer@mycompany.com';
 ```
 
-# Highlighting the text area
+## Highlighting the text area
 
 You can highlight the editable region of the current user using the `userColor` property.
 
@@ -34,13 +34,13 @@ this.$refs.doceditcontainer.ej2Instances.documentEditor..userColor = '#fff000';
 
 You can toggle the highlight the editable region value using the "highlightEditableRanges" property.
 
-The folowing code shows how to toggle the highlight editable region value.
+The following code shows how to toggle the highlight editable region value.
 
 ```javascript
 this.$refs.doceditcontainer.ej2Instances.documentEditor.documentEditorSettings.highlightEditableRanges = true; 
 ```
 
-# Restrict Editing Pane
+## Restrict Editing Pane
 
 Restrict Editing Pane provides the following options to manage the document:
 * To apply formatting restrictions to the current document, select the allow formatting check box.

@@ -29,11 +29,30 @@ const grid = ref(null);
     const excelExportComplete = (args) => {
       // execute the promise to get the blob data
       args.promise.then((e) => {
-        console.log(e.blobData);
+        exportBlob(e.blobData);
       });
+    };
+    const exportBlob = (blob) => {
+      const a = document.createElement('a');
+      document.body.appendChild(a);
+      a.style.display = 'none';
+      const url = window.URL.createObjectURL(blob); // Fix typo here
+      a.href = url;
+      a.download = 'Export';
+      a.click();
+      window.URL.revokeObjectURL(url); // Fix typo here
+      document.body.removeChild(a);
     }
   provide('grid',  [Toolbar, ExcelExport, Page]);
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

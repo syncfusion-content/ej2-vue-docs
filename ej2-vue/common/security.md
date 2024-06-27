@@ -118,7 +118,10 @@ When `enableHtmlSanitizer` is `false` or not included this property, the malicio
 ![Without sanitizer property](images/without-sanitizer-property.png)
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/enable-sanitizer-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/enable-sanitizer-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

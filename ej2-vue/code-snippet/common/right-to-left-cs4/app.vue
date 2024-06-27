@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="app">
         <ejs-grid :dataSource='data'  locale='ar-AE' :allowPaging='true' :pageSettings='pageOptions'>
@@ -13,9 +11,9 @@
     </div>
 </template>
 <script>
-import Vue from "vue";
+
 import { L10n, setCulture, enableRtl } from '@syncfusion/ej2-base';
-import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 setCulture('ar-AE');
@@ -39,10 +37,13 @@ L10n.load({
         }
     }
 });
-
-Vue.use(GridPlugin);
-
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data() {
     return {
       data: data,
@@ -57,6 +58,3 @@ export default {
 <style>
  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-
-

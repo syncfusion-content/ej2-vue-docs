@@ -1,7 +1,7 @@
 <template>
     <div id="app">
       <div>
-        <label style="padding: 30px 17px 0 0">Enter the width: </label>
+        <label style="padding: 30px 17px 0 0">Enter file name: </label>
         <ejs-textbox ref='textbox' type="textbox" placeholder="Enter file name" width="120"></ejs-textbox>
       </div> 
       <ejs-grid ref='grid' id='Grid' style="margin-top: 5px" :dataSource='data' :allowPdfExport='true' :toolbar='toolbarOptions' :toolbarClick='toolbarClick' height='258px'>

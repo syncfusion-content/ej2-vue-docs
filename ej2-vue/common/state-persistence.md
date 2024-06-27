@@ -14,7 +14,10 @@ Syncfusion Vue UI components support persisting their state across page refreshe
 
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/right-to-left-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/right-to-left-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

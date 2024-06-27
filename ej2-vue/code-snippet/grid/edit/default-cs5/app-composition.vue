@@ -1,15 +1,12 @@
 <template>
     <div id="app">
-        <ejs-grid ref="grid" id="grid" :dataSource='data' :allowPaging='true' :enableHover='false' :created='created'
-            :load='load' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
+        <ejs-grid ref="grid" id="grid" :dataSource='data' :allowPaging='true' :enableHover='false' :created='created' :load='load' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
             <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' width=100></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-                <e-column field='Freight' headerText='Freight' textAlign='Right' editType='numericedit' width=120
-                    format='C2'></e-column>
-                <e-column field='OrderDate' headerText='Order Date' textAlign='Right' editType='datepickeredit' width=120
-                    format='yMd'></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
+                <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' width=100 :validationRules='orderIDRules'></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=120 :validationRules='customerIDRules'></e-column>
+                <e-column field='Freight' headerText='Freight' textAlign= 'Right' editType= 'numericedit' width=120 :validationRules='freightIDRules' format= 'C2'></e-column>
+                <e-column field='OrderDate' headerText='Order Date'  type="date" textAlign= 'Right' :validationRules='orderDateRules' editType= 'datepickeredit' width=120 format= 'yMd'></e-column>
+                <e-column field='ShipCountry' headerText='Ship Country' width=150 :validationRules='shipCountryRules'></e-column>
             </e-columns>
         </ejs-grid>
     </div>
@@ -20,6 +17,11 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { data } from './datasource.js';
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 var grid = ref(null);
+const orderIDRules = { required: true };
+const orderDateRules = { required: true };
+const shipCountryRules = { required: true };
+const customerIDRules = { required: true, minLength: 5 };
+const freightIDRules  = { required: true, min: 1, max: 1000 };
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Batch' };
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
 const created = function () {
@@ -64,4 +66,13 @@ const load = function () {
 provide('grid', [Page, Edit, Toolbar]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";</style>
+ @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

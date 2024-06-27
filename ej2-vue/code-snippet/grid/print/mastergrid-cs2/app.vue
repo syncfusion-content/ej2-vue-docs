@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid :dataSource="data" :selectedRowIndex="1" :toolbar="toolbar" :rowSelected="rowSelected" :beforePrint="beforePrint">
+    <ejs-grid :dataSource="masterdata" :selectedRowIndex="1" :toolbar="toolbar" :rowSelected="rowSelected" :beforePrint="beforePrint">
         <e-columns>
             <e-column field="ContactName" headerText="Customer Name" width="150"></e-column>
             <e-column field="CompanyName" headerText="Company Name" width="150"></e-column>
@@ -21,44 +21,54 @@
   </div>
 </template>
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Print } from "@syncfusion/ej2-vue-grids";
+import { GridComponent,ColumnsDirective, ColumnDirective, Toolbar } from "@syncfusion/ej2-vue-grids";
 import { customerData, data } from "./datasource.js";
 export default {
-name: "App",
-components: {
-"ejs-grid":GridComponent,
-"e-columns":ColumnsDirective,
-"e-column":ColumnDirective
-},
-    data() {
-        var names = ["AROUT", "BERGS", "BLONP", "CHOPS", "ERNSH"];
-        return {
-            toolbar: ["Print"],
-            data: customerData.filter(function (e) {
-                return names.indexOf(e.CustomerID) !== -1;
-            })
-        };
+  name: "App",
+  components: {
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective,
+  },
+  data() {
+    var names = ["AROUT", "BERGS", "BLONP", "CHOPS", "ERNSH"];
+    return {
+      toolbar: ["Print"],
+      masterdata: customerData.filter(function (e) {
+        return names.indexOf(e.CustomerID) !== -1;
+      }),
+    };
+  },
+  methods: {
+    rowSelected: function (args) {
+      let selectedRecord = args.data;
+      this.$refs.grid.ej2Instances.dataSource = data.filter((record) => record.CustomerName === selectedRecord.ContactName).slice(0, 5);
+      document.getElementById("key").innerHTML = selectedRecord.ContactName;
     },
-    methods: {
-        rowSelected: function (args) {
-            let selectedRecord = args.data;
-            this.$refs.grid.ej2Instances.dataSource = data.filter((record) => record.CustomerName === selectedRecord.ContactName).slice(0, 5);
-            document.getElementById("key").innerHTML = selectedRecord.ContactName;
-        },
-        beforePrint: function (args) {
-            let customEle = document.createElement("div");
-            customEle.innerHTML =
-            document.getElementsByClassName("e-statustext")[0].innerHTML +
-            this.$refs.grid.ej2Instances.element.innerHTML;
-            customEle.appendChild(document.createElement("br"));
-            args.element.append(customEle);
-        },
+    beforePrint: function (args) {
+      let customEle = document.createElement("div");
+      customEle.innerHTML =document.getElementsByClassName("e-statustext")[0].innerHTML + this.$refs.grid.ej2Instances.element.innerHTML;
+      customEle.appendChild(document.createElement("br"));
+      args.element.append(customEle);
     },
-    provide: {
-        grid: [Toolbar, Print],
-    }
+  },
+  provide: {
+    grid: [Toolbar],
+  },
 };
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+.e-statustext{
+  padding: 8px 0px 10px 0px;
+}
 </style>

@@ -12,7 +12,7 @@ System.config({
     paths: {
         "syncfusion:": "https://cdn.syncfusion.com/ej2/24.2.3/"
     },
-    map: {
+    map: { 
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
 vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",

@@ -98,7 +98,10 @@ The following steps explain the direct rendering of the Syncfusion icon in the H
    The below code snippet represents a complete example of icon usage.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/animation-multiple-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/animation-multiple-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -107,7 +110,7 @@ The following steps explain the direct rendering of the Syncfusion icon in the H
 
 ### Icon size
 
-The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interactable, or add the `e-small` or `e-medium` class in mouse mode.
+The `ej2-icons` package offers options to display icons in different size modes. A user can use different icon sizes in their application based on touch or mouse mode. If the user is using touch mode, add `e-large` class to the element to make the icon easily interactive, or add the `e-small` or `e-medium` class in mouse mode.
 
 The pre-defined icon size is present in the available classes listed below.
 * `e-small` - Sets the icon size as `8px`.
@@ -123,7 +126,10 @@ The pre-defined icon size is present in the available classes listed below.
     ```
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/animation-multiple-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/animation-multiple-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -135,7 +141,10 @@ The pre-defined icon size is present in the available classes listed below.
 The Syncfusion Vue icons can be customized with custom color and size by overriding the `e-icons` class. Customizing the icons in the library can be useful for making the icons more visually appealing and fitting to the design of the application. For example, a user can change the color of an icon to match the color scheme of their application, or increase the size of an icon to make it more visible on smaller screens. It may also be useful for creating a consistent look and feel across different parts of the application. Overall, customizing the icons in the library can improve the overall user experience of the application.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/animation-multiple-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/animation-multiple-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}

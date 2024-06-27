@@ -193,6 +193,9 @@ Now, run the `npm run dev` command in the console to build your application and 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/common/sass-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/sass-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

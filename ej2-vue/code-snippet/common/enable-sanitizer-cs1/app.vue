@@ -8,12 +8,19 @@
     </ejs-tooltip>
   </div>
 </template>
-
-<script setup>
-import { TooltipComponent as EjsTooltip } from "@syncfusion/ej2-vue-popups";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+  
+<script>
+import { TooltipComponent } from "@syncfusion/ej2-vue-popups";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+export default {
+  name: "App",
+  components: {
+    "ejs-tooltip": TooltipComponent,
+    "ejs-button": ButtonComponent
+  }
+}
 </script>
-
+  
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
