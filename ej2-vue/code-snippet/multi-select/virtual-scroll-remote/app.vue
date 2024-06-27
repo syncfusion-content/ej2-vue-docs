@@ -8,11 +8,11 @@
 </template>
 <script>
 import { MultiSelectComponent, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
-import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
+import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
 
 let remoteData = new DataManager({
-    url: 'https://services.syncfusion.com/vue/production/api/Orders',
-    adaptor: new WebApiAdaptor,
+    url: 'https://services.syncfusion.com/vue/production/api/VirtualDropdownData',
+    adaptor: new UrlAdaptor,
     crossDomain: true
 });
 

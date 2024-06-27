@@ -1,15 +1,15 @@
 <template>
     <div id="app">
         <div id="wrapper1">
-            <ejs-multiselect id='multiselect' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields'
-                :enableVirtualization='true' :query='query' :allowFiltering='false' :actionBegin='actionBegin'
-                popupHeight="200px"></ejs-multiselect>
+            <ejs-autocomplete id='autocomplete' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields'
+                :enableVirtualization='true' :query='query' :actionBegin='actionBegin'
+                popupHeight="200px"></ejs-autocomplete>
         </div>
     </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { MultiSelectComponent as EjsMultiselect, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
+import { AutoCompleteComponent as EjsAutocomplete, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
 
 let records = [];
 function dataSource() {
@@ -24,11 +24,11 @@ function dataSource() {
 dataSource();
 
 const itemData = records;
-const fields = { value: 'id', text: 'text' };
+const fields = { value: 'text' };
 const allowFiltering = true;
 const query = new Query().take(40);
 
-provide('multiselect', [VirtualScroll]);
+provide('autocomplete', [VirtualScroll]);
 
 const actionBegin = function (e) {
     e.query = new Query().take(45);
