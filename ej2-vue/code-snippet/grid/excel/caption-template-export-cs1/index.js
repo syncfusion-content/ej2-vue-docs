@@ -9,15 +9,15 @@ Vue.use(GridPlugin);
 new Vue({
   el: '#app',
   template: `
-      <ejs-grid id="CaptionTemplateGrid" ref="grid" :dataSource="data" :allowGrouping="true" :groupSettings="groupOptions"
-      :allowExcelExport="true" :toolbar="toolbar" :toolbarClick="toolbarClick" :exportGroupCaption="exportGroupCaption" height=315>
-          <e-columns>
-              <e-column field="EmployeeID" headerText="Employee ID" width="120"></e-column>
-              <e-column field="FirstName" headerText="Name" width="120"></e-column>
-              <e-column field="City" headerText="City"></e-column>
-              <e-column field="Title" headerText="Title" width="170"></e-column>
-          </e-columns>
-      </ejs-grid>
+    <ejs-grid id="CaptionTemplateGrid" ref="grid" :dataSource="data" :allowGrouping="true" :groupSettings="groupOptions"
+    :allowExcelExport="true" :toolbar="toolbar" :toolbarClick="toolbarClick" :exportGroupCaption="exportGroupCaption" height=315>
+      <e-columns>
+        <e-column field="EmployeeID" headerText="Employee ID" width="120"></e-column>
+        <e-column field="FirstName" headerText="Name" width="120"></e-column>
+        <e-column field="City" headerText="City"></e-column>
+        <e-column field="Title" headerText="Title" width="170"></e-column>
+      </e-columns>
+    </ejs-grid>
 `,
 
   data() {

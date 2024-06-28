@@ -41,9 +41,20 @@ new Vue({
     excelExportComplete(args) {
       // execute the promise to get the blob data
       args.promise.then((e) => {
-        console.log(e.blobData);
+        this.exportBlob(e.blobData);
       });
     },
+    exportBlob(blob){
+      const a = document.createElement('a');
+      document.body.appendChild(a);
+      a.style.display = 'none';
+      const url = window.URL.createObjectURL(blob); // Fix typo here
+      a.href = url;
+      a.download = 'Export';
+      a.click();
+      window.URL.revokeObjectURL(url); // Fix typo here
+      document.body.removeChild(a);
+    }
   },
   provide: {
     grid: [Toolbar, ExcelExport, Page]

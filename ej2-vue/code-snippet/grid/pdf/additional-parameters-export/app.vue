@@ -33,18 +33,18 @@ components: {
   methods: {
     toolbarClick(args) {
       if (args.item.id === 'Grid_pdfexport') {
-        this.queryClone = this.$refs.grid.query;
-        this.$refs.grid.query = new Query().addParams('recordcount', '15');
+        this.queryClone = this.$refs.grid.ej2Instances.query;
+        this.$refs.grid.ej2Instances.query = new Query().addParams('recordcount', '15');
         this.message =
             'Key: ' +
-            this.$refs.grid.query.params[0].key +
+            this.$refs.grid.ej2Instances.query.params[0].key +
             ' and Value: ' +
-            this.$refs.grid.query.params[0].value + ' on ' + args.item.text;
+            this.$refs.grid.ej2Instances.query.params[0].value + ' on ' + args.item.text;
         this.$refs.grid.pdfExport();
       }  
     },
-    pdfExportComplete(args) {
-      this.$refs.grid.query = this.queryClone;
+    pdfExportComplete() {
+      this.$refs.grid.ej2Instances.query = this.queryClone;
     }
   },
   provide: {

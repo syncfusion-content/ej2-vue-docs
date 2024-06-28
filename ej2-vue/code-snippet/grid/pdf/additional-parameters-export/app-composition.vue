@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <div style="margin-left:180px"><p style="color:red;" id="message">{{message}}</p></div>
+      <div style="margin-left:180px"><p style="color:red;" id="message"></p></div>
       <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowPdfExport='true' :pdfExportComplete='pdfExportComplete' :toolbarClick='toolbarClick'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -18,22 +18,22 @@ import { Query } from '@syncfusion/ej2-data';
 import { data } from './datasource.js';
 const grid = ref(null);
       const toolbarOptions = ['PdfExport'];
-      const queryClone = '';
-      const message = '';
+      const queryClone = ref(null);
+      const message = ref(null);
       const toolbarClick = (args) => {
       if (args.item.id === 'Grid_pdfexport') {
-        queryClone = grid.value.query;
-        grid.value.query = new Query().addParams('recordcount', '15');
-        message =
+        queryClone.value = grid.value.ej2Instances.query;
+        grid.value.ej2Instances.query = new Query().addParams('recordcount', '15');
+        message.value =
             'Key: ' +
-            grid.value.query.params[0].key +
+            grid.value.ej2Instances.query.params[0].key +
             ' and Value: ' +
-            grid.value.query.params[0].value + ' on ' + args.item.text;
+            grid.value.ej2Instances.query.params[0].value + ' on ' + args.item.text;
         grid.value.pdfExport();
       }  
     }
-    const pdfExportComplete = (args) => {
-      grid.value.query = queryClone;
+    const pdfExportComplete = () => {
+      grid.value.ej2Instances.query = queryClone.value;
     }
   provide('grid',  [Toolbar, PdfExport]);
 </script>

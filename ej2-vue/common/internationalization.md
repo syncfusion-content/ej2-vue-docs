@@ -127,7 +127,10 @@ If group two properties are defined, then the  group one properties will be igno
 The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getnumberparser) method, which will return a function that parses a given string based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) specified.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-parseNumber1-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-parseNumber1-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -139,7 +142,10 @@ The [`getNumberParser`](https://ej2.syncfusion.com/documentation/api/base/intern
 The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization#parsenumber) method, which takes two arguments, the string value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) and returns the numeric value.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-parseNumber-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-parseNumber-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -153,7 +159,10 @@ The [`parseNumber`](https://ej2.syncfusion.com/documentation/api/base/internatio
 The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getnumberformat) method will return a function that formats a given number based on the [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) specified.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-getNumber-format-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-getNumber-format-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -165,7 +174,10 @@ The [`getNumberFormat`](https://ej2.syncfusion.com/documentation/api/base/intern
  The [`formatNumber`](https://ej2.syncfusion.com/documentation/api/base/internationalization)  method, which takes two arguments, a numeric value and [`NumberFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/numberFormatOptions) and returns the formatted string.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-getNumber-format-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-getNumber-format-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -295,7 +307,10 @@ var formattedString =  intl.formatDate(new Date('1/12/2014 10:20:33'), { format:
 The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getdateParser) method will return a function that parses a given string based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions) specified.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-parseDate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-parseDate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -307,7 +322,10 @@ The [`getDateParser`](https://ej2.syncfusion.com/documentation/api/base/internat
 The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization#parsedate) method, which takes two arguments, a string value and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions).
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-parseDate1-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-parseDate1-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -321,7 +339,10 @@ The date object is returned by the [`parseDate`](https://ej2.syncfusion.com/docu
 The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internationalization#getdateformat) method, which will return a function that formats a given date object based on the [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions) specified.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-formatDate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-formatDate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -333,7 +354,10 @@ The [`getDateFormat`](https://ej2.syncfusion.com/documentation/api/base/internat
  The [`formatDate`](https://ej2.syncfusion.com/documentation/api/base/internationalization) method, which takes two arguments, the date object and [`DateFormatOptions`](https://ej2.syncfusion.com/documentation/api/base/dateFormatOptions), returns the formatted string.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/intl-formatDate-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/intl-formatDate-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}

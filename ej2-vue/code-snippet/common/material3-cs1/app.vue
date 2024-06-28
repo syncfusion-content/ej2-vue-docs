@@ -10,17 +10,18 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+
+import { ButtonComponent, CheckBoxComponent } from '@syncfusion/ej2-vue-buttons';
 import { enableRipple } from '@syncfusion/ej2-base';
-
 enableRipple(true);
-Vue.use(CheckBoxPlugin);
-Vue.use(ButtonPlugin);
-
-export default {}
+export default {
+name: "App",
+components: {
+"ejs-checkbox":CheckBoxComponent,
+"ejs-button":ButtonComponent
+},
+}
 </script>
-
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material3.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material3.css';

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <p><b>First Grid:</b></p>
-        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions' :allowExcelExport='true' :exportGrids='exportGrids' :toolbarClick='toolbarClick'>
+        <ejs-grid ref='firstGrid' id='FirstGrid' :dataSource='firstData' :toolbar='toolbarOptions' :allowExcelExport='true' :exportGrids='exportGrids' :toolbarClick='toolbarClick'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
@@ -10,7 +10,7 @@
             </e-columns>
         </ejs-grid>
         <p><b>Second Grid:</b></p>
-        <ejs-grid ref='grid2' id='SecondGrid' :dataSource='sData' :allowExcelExport='true'>
+        <ejs-grid ref='secondGrid' id='SecondGrid' :dataSource='secondData' :allowExcelExport='true'>
             <e-columns>
                 <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120></e-column>
                 <e-column field='FirstName' headerText='FirstName' width=150></e-column>
@@ -24,9 +24,9 @@
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
 import { data, employeeData } from './datasource.js';
-const grid1 = ref(null);
-      const fData = data.slice(0, 5);
-      const sData = employeeData.slice(0, 5);
+const firstGrid = ref(null);
+      const firstData = data;
+      const secondData = employeeData;
       const toolbarOptions = ['ExcelExport'];
       const exportGrids = ['FirstGrid', 'SecondGrid'];
       const toolbarClick = function (args) {
@@ -34,11 +34,19 @@ const grid1 = ref(null);
             let appendExcelExportProperties = {
                 multipleExport: { type: 'NewSheet' }
             };
-            grid1.value.excelExport(appendExcelExportProperties, true);
+            firstGrid.value.excelExport(appendExcelExportProperties, true);
         }
       }
   provide('grid',  [Toolbar, ExcelExport]);
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

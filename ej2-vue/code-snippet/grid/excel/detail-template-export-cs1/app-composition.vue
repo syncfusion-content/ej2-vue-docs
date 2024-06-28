@@ -1,26 +1,13 @@
 <template>
-  <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="detailTemplate" :toolbar="toolbar"
+  <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="'detailTemplate'" :toolbar="toolbar"
   :toolbarClick="toolbarClick" :exportDetailTemplate="exportDetailTemplate" height=315 :allowExcelExport="true">
     <e-columns>
       <e-column field="Category" headerText="Category" width="140" textAlign="Right"></e-column>
       <e-column field="ProductID" headerText="Product ID" width="140"></e-column>
       <e-column field="Status" headerText="Status" width="200"></e-column>
     </e-columns>
-  </ejs-grid>
-</template>
-
-<script setup>
-import { provide, ref, createApp } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DetailRow, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
-import { employeeData } from './datasource.js';
-const app = createApp();
-const grid = ref(null);
-      const data = employeeData;
-      const toolbar = ['ExcelExport'];
-      const detailTemplate = function () {
-        return {
-          template: app.component('detailTemplate', {
-            template: `<table class="detailtable" width="100%">
+    <template v-slot:detailTemplate="{ data }">
+        <table class="detailtable" width="100%">
             <colgroup>
                 <col width="40%" />
                 <col width="60%" />
@@ -83,15 +70,18 @@ const grid = ref(null);
                     </td>
                 </tr>
             </tbody>
-        </table>`,
-            data: function () {
-              return {
-                data: {},
-              }
-            },
-          }),
-        }
-      }
+        </table>
+    </template>
+  </ejs-grid>
+</template>
+
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DetailRow, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
+import { employeeData } from './datasource.js';
+const grid = ref(null);
+      const data = employeeData;
+      const toolbar = ['ExcelExport'];
       const toolbarClick = function (args) {
       if (args.item.id === 'DetailTemplateGrid_excelexport') {
           grid.value.excelExport({ hierarchyExportMode: "Expanded" });
@@ -185,7 +175,16 @@ const grid = ref(null);
   provide('grid',  [DetailRow, ExcelExport, Toolbar]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  
    .detailtable td {
         font-size: 13px;
         padding: 4px;

@@ -168,6 +168,9 @@ The output will appear as follows:
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/common/default-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/default-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

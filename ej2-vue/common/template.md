@@ -87,6 +87,9 @@ The slot template can also be used to insert content into `nested tags` within a
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/common/slot-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/slot-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -120,6 +123,9 @@ const cTemplate = () => {
 Now, the template function is assigned to the `template` property of the Grid component. Refer to the below example for the inline template.
 
 {% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/common/template-cs1/app-composition.vue %}
+{% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/template-cs1/app.vue %}
 {% endhighlight %}
