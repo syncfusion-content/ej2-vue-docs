@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="app">
     <ejs-grid :dataSource="data">
@@ -12,11 +10,15 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { GridPlugin } from '@syncfusion/ej2-vue-grids';
 
-Vue.use(GridPlugin);
+import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
 export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
   data () {
     return {
       data: [
@@ -46,5 +48,3 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
 </style>
-
-

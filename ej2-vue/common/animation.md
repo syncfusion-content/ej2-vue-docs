@@ -21,7 +21,10 @@ An animation effect refers to the visual change that occurs over a period of tim
 Here is an example code snippet using the `FadeOut` and `ZoomOut` animation effects:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/animation-multiple-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/animation-multiple-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -39,7 +42,10 @@ The value of the animation duration can be adjusted to change the speed of the a
 Here is an example code snippet using the animation effects with a duration of `5000` milliseconds:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/animation-multiple1-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/animation-multiple1-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -55,7 +61,10 @@ For example, if an animation has a delay of 2 seconds, it will wait for 2 second
 Here is an example code snippet using the animation effects with a delay of `2000` milliseconds:
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/animation-multiple2-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/animation-multiple2-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

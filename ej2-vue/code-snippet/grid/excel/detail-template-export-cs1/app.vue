@@ -1,19 +1,83 @@
 <template>
-  <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="detailTemplate" :toolbar="toolbar"
-  :toolbarClick="toolbarClick" :exportDetailTemplate="exportDetailTemplate" height=315 :allowExcelExport="true">
-    <e-columns>
-      <e-column field="Category" headerText="Category" width="140" textAlign="Right"></e-column>
-      <e-column field="ProductID" headerText="Product ID" width="140"></e-column>
-      <e-column field="Status" headerText="Status" width="200"></e-column>
-    </e-columns>
+    <ejs-grid id="DetailTemplateGrid" ref="grid" :dataSource="data" :detailTemplate="'detailTemplate'" :toolbar="toolbar"
+    :toolbarClick="toolbarClick" :exportDetailTemplate="exportDetailTemplate" height=315 :allowExcelExport="true">
+        <e-columns>
+            <e-column field="Category" headerText="Category" width="140" textAlign="Right"></e-column>
+            <e-column field="ProductID" headerText="Product ID" width="140"></e-column>
+            <e-column field="Status" headerText="Status" width="200"></e-column>
+        </e-columns>
+        <template v-slot:detailTemplate="{ data }">
+            <table class="detailtable" width="100%">
+                <colgroup>
+                    <col width="40%" />
+                    <col width="60%" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th colspan="2" style="font-weight: 500;text-align: center;background-color: #ADD8E6;">
+                            Product Details
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4" style="text-align: center;">
+                            <img class='photo' :src="'data:image/jpeg;base64,'+data.ProductImg" alt="data.EmployeeID" />
+                        </td>
+                        <td>
+                            <span style="font-weight: 500;color: #0a76ff;">Offers: {{data.Offers}} </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>Available: {{data.Available}} </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="link">
+                                Contact: <a :href="'mailto:'+data.Contact">{{data.Contact}}</a>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span style="font-weight: 500;color: #0a76ff;"> Ratings: {{data.Ratings}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span> {{data.productDesc}}</span>
+                        </td>
+                        <td>
+                            <span>{{data.ReturnPolicy}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span style="font-weight: 500;" > {{data.Cost}}</span>
+                        </td>
+                        <td>
+                            <span>{{data.Cancellation}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <span :class="data.Status" style="font-weight: 500;" > {{data.Status}}</span>
+                        </td>
+                        <td>
+                            <span style="font-weight: 500;color: #0a76ff;">{{data.Delivery}}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </template>
   </ejs-grid>
 </template>
 
 <script>
 import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow, ExcelExport, Toolbar } from '@syncfusion/ej2-vue-grids';
 import { employeeData } from './datasource.js';
-import { createApp } from "vue";
-const app = createApp();
 export default {
 name: "App",
 components: {
@@ -25,81 +89,6 @@ components: {
     return {
       data: employeeData,
       toolbar: ['ExcelExport'],
-      detailTemplate: function () {
-        return {
-          template: app.component('detailTemplate', {
-            template: `<table class="detailtable" width="100%">
-            <colgroup>
-                <col width="40%" />
-                <col width="60%" />
-            </colgroup>
-            <thead>
-                <tr>
-                    <th colspan="2" style="font-weight: 500;text-align: center;background-color: #ADD8E6;">
-                        Product Details
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td rowspan="4" style="text-align: center;">
-                        <img class='photo' :src="'data:image/jpeg;base64,'+data.ProductImg" alt="data.EmployeeID" />
-                    </td>
-                    <td>
-                        <span style="font-weight: 500;color: #0a76ff;">Offers: {{data.Offers}} </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span>Available: {{data.Available}} </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="link">
-                            Contact: <a :href="'mailto:'+data.Contact">{{data.Contact}}</a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span style="font-weight: 500;color: #0a76ff;"> Ratings: {{data.Ratings}}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">
-                        <span> {{data.productDesc}}</span>
-                    </td>
-                    <td>
-                        <span>{{data.ReturnPolicy}}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">
-                        <span style="font-weight: 500;" > {{data.Cost}}</span>
-                    </td>
-                    <td>
-                        <span>{{data.Cancellation}}</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="text-align: center;">
-                        <span :class="data.Status" style="font-weight: 500;" > {{data.Status}}</span>
-                    </td>
-                    <td>
-                        <span style="font-weight: 500;color: #0a76ff;">{{data.Delivery}}</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>`,
-            data: function () {
-              return {
-                data: {},
-              }
-            },
-          }),
-        }
-      },
     };
   },
   methods: {
@@ -200,7 +189,16 @@ components: {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  
    .detailtable td {
         font-size: 13px;
         padding: 4px;

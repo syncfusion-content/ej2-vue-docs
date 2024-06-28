@@ -7,11 +7,12 @@ Vue.use(GridPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
         <p><b>First Grid:</b></p>
-        <ejs-grid ref='grid1' id='FirstGrid' :dataSource='fData' :toolbar='toolbarOptions' :allowExcelExport='true' :toolbarClick='toolbarClick'>
+        <ejs-grid ref='firstGrid' id='FirstGrid' :dataSource='firstData' :toolbar='toolbarOptions' 
+        :allowExcelExport='true' :toolbarClick='toolbarClick' :exportGrids='exportGrids'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
@@ -20,7 +21,7 @@ new Vue({
             </e-columns>
         </ejs-grid>
         <p><b>Second Grid:</b></p>
-        <ejs-grid ref='grid2' id='SecondGrid' :dataSource='sData' :allowExcelExport='true'>
+        <ejs-grid ref='secondGrid' id='SecondGrid' :dataSource='secondData' :allowExcelExport='true'>
             <e-columns>
                 <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120></e-column>
                 <e-column field='FirstName' headerText='FirstName' width=150></e-column>
@@ -33,24 +34,21 @@ new Vue({
 
   data() {
     return {
-      fData: data.slice(0, 5),
-      sData: employeeData.slice(0, 5),
-      toolbarOptions: ['ExcelExport']
+      firstData: data,
+      secondData: employeeData,
+      toolbarOptions: ['ExcelExport'],
+      exportGrids: ['FirstGrid', 'SecondGrid'],
     };
   },
   methods: {
-      toolbarClick : function (args) {
-          if (args.item.id === 'FirstGrid_excelexport') { // 'Grid_excelexport' -> Grid component id + _ + toolbar item name
-            let appendExcelExportProperties = {
-                multipleExport: { type: 'NewSheet' }
-            };
-
-            let firstGridExport = this.$refs.grid1.excelExport(appendExcelExportProperties, true);
-            firstGridExport.then((fData) => {
-                this.$refs.grid2.excelExport(appendExcelExportProperties, false, fData);
-            });
-        }
+    toolbarClick: function (args) {
+      if (args.item.id === 'FirstGrid_excelexport') { // 'Grid_excelexport' -> Grid component id + _ + toolbar item name
+        let appendExcelExportProperties = {
+          multipleExport: { type: 'NewSheet' }
+        };
+        this.$refs.firstGrid.excelExport(appendExcelExportProperties, true);
       }
+    }
   },
   provide: {
     grid: [Toolbar, ExcelExport]

@@ -1,21 +1,18 @@
 <template>
     <div id='container'>
-        <div ref='element1' id='element1'></div>
-        <div ref='element2' id='element2'></div>
+        <div id='element1'></div>
+        <div id='element2'></div>
     </div>
 </template>
-<script setup>
-import { onMounted, ref } from 'vue';
+<script>
 import { Animation } from '@syncfusion/ej2-base';
-
-const element1 = ref(null);
-const element2 = ref(null);
-
-onMounted(() => {
-    var animation = new Animation({ duration: 5000 });
-    animation.animate(element1.value, { name: 'FadeOut' });
-    animation.animate(element2.value, { name: 'ZoomOut' });
-})
+export default {
+    mounted: function () {
+        var animation = new Animation({ duration: 5000 });
+        animation.animate('#element1', { name: 'FadeOut' });
+        animation.animate('#element2', { name: 'ZoomOut' });
+    }
+}
 </script>
 <style>
 #element1,

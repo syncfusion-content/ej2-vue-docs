@@ -66,7 +66,10 @@ CSS variables allows you to dynamically change color values in real-time using J
 Here you can find the example for Material 3 customization using Css class.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/material3-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/material3-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -88,7 +91,10 @@ With this CSS variable support, you can effortlessly customize the color variabl
 Syncfusion has implemented the Material 3 theme, offering both Light and Dark variants. In the Material 3 light theme, there are distinct class variables for both light and dark modes, providing flexibility for seamless switching between the two modes within your application.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/material3-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/material3-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

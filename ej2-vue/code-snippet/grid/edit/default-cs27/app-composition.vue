@@ -1,86 +1,56 @@
 <template>
   <div id="app">
-    <ejs-grid id="grid" :dataSource="data" :editSettings="editSettings" :toolbar="toolbar" height="273px">
+    <ejs-grid ref="grid" :dataSource="data" :editSettings="editSettings" :toolbar="toolbar">
       <e-columns>
-        <e-column field="ProductID" headerText="Product ID" textAlign="Right" :isPrimaryKey="true" width="100"></e-column>
-        <e-column field="ProductName" headerText="Product Name" width="120"></e-column>
-        <e-column field="UnitPrice" headerText="Unit Price" editType="numericedit" :edit="priceParams" width="150"
-          format="C2" textAlign="Right"></e-column>
-        <e-column field="UnitsInStock" headerText="Units In Stock" editType="numericedit" :edit="stockParams" width="150"
-          textAlign="Right"></e-column>
-        <e-column field="TotalCost" headerText="Total Cost" width="150" :allowEditing="false" format="C2"
-          textAlign="Right"></e-column>
+        <e-column field="ProductID" headerText="Product ID" textAlign="Right" isPrimaryKey="true" :validationRules="orderIDRules" width="100"></e-column>
+        <e-column field="ProductName" headerText="Product Name" width="120" :validationRules="productNameRules"></e-column>
+        <e-column field="UnitPrice" headerText="Unit Price" editType="numericedit" :edit="priceParams" width="150" :validationRules="unitIDRules" format="C2" textAlign="Right"></e-column>
+        <e-column field="UnitsInStock" headerText="Units In Stock" editType="numericedit" :edit="stockParams" :validationRules="stockIDRules" width="150" textAlign="Right"></e-column>
+        <e-column field="TotalCost" headerText="Total Cost" width="150" :allowEditing="false" format="C2" textAlign="Right"></e-column>
       </e-columns>
     </ejs-grid>
   </div>
 </template>
+
 <script setup>
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { NumericTextBox } from "@syncfusion/ej2-inputs";
 import { productData } from "./datasource.js";
-const grid = ref(null);
-let priceElem, stockElem, priceObj, stockObj;
 const data = productData;
-const toolbar = ["Add", "Edit", "Delete", "Update", "Cancel"];
 const editSettings = {
   allowEditing: true,
   allowAdding: true,
   allowDeleting: true,
 };
-const priceParams = {
-  create: () => {
-    priceElem = document.createElement("input");
-    return priceElem;
-  },
-  read: () => {
-    return priceObj.value;
-  },
-  destroy: () => {
-    priceObj.destroy();
-  },
-  write: (args) => {
-    priceObj = new NumericTextBox({
-      value: args.rowData[args.column.field],
-      change: function (args) {
-        let formEle = document
-          .getElementById("grid")
-          .querySelector("form").ej2_instances[0];
-        var totalCostFieldEle = formEle.getInputElement("TotalCost");
-        totalCostFieldEle.value = priceObj.value * stockObj.value;
-      },
-    });
-    priceObj.appendTo(priceElem);
-  },
-}
-const stockParams = {
-  create: () => {
-    stockElem = document.createElement("input");
-    return stockElem;
-  },
-  read: () => {
-    return stockObj.value;
-  },
-  destroy: () => {
-    stockObj.destroy();
-  },
-  write: (args) => {
-    stockObj = new NumericTextBox({
-      value: args.rowData[args.column.field],
-      change: function (args) {
-        let formEle = document
-          .getElementById("grid")
-          .querySelector("form").ej2_instances[0];
-        var totalCostFieldEle = formEle.getInputElement("TotalCost");
-        totalCostFieldEle.value = priceObj.value * stockObj.value;
-      },
-    });
-    stockObj.appendTo(stockElem);
-  },
-}
-provide('grid', [Edit, Toolbar],);
+
+const stockIDRules = { required: true };
+const orderIDRules = { required: true };
+const productNameRules = { required: true };
+const unitIDRules = { required: true, min: 1 };
+const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+const grid = ref(null);
+
+const calculateTotalCost = function() {
+  const formEle = grid.value.ej2Instances.element.querySelector('form').ej2_instances[0];
+  const unitPrice = parseFloat(formEle.getInputElement('UnitPrice').value);
+  const unitsInStock = parseFloat(formEle.getInputElement('UnitsInStock').value);
+  formEle.getInputElement('TotalCost').value = (unitPrice * unitsInStock).toFixed(2);
+};
+
+const priceParams = { params: { change: calculateTotalCost } };
+const stockParams = { params: { change: calculateTotalCost } };
+
+provide('grid', [Edit, Toolbar]);
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

@@ -19,7 +19,10 @@ Syncfusion Vue UI components support model binding through the `v-model` directi
 Refer to the following code snippet.
 
 {% tabs %}
-{% highlight html tabtitle="app.vue" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/common/model-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/common/model-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

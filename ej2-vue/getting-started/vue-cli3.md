@@ -153,6 +153,9 @@ Now, run the `npm run serve` command in the console to build your application an
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
+{% include code-snippet/common/cli3-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/common/cli3-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}

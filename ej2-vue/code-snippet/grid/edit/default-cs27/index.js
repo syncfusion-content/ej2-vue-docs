@@ -1,93 +1,52 @@
-
 import Vue from "vue";
-import { GridPlugin, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { NumericTextBox } from "@syncfusion/ej2-inputs";
-import { productData } from "./datasource.js";
+import { GridPlugin, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { productData } from './datasource.js'
 
-let priceElem, stockElem, priceObj, stockObj;
 Vue.use(GridPlugin);
 ;
 new Vue({
 	el: '#app',
 	template: `
   <div id="app">
-    <ejs-grid id="grid" :dataSource="data" :editSettings="editSettings" :toolbar="toolbar" height="273px">
+    <ejs-grid ref="grid"  :dataSource="data" :editSettings="editSettings" :toolbar="toolbar" >
       <e-columns>
-        <e-column field="ProductID" headerText="Product ID" textAlign="Right" :isPrimaryKey="true" width="100"></e-column>
-        <e-column field="ProductName" headerText="Product Name" width="120"></e-column>
-        <e-column field="UnitPrice" headerText="Unit Price" editType="numericedit" :edit="priceParams"
-          width="150" format="C2" textAlign="Right" ></e-column>
-        <e-column field="UnitsInStock" headerText="Units In Stock" editType="numericedit"
-          :edit="stockParams" width="150" textAlign="Right"></e-column>
-        <e-column field="TotalCost" headerText="Total Cost" width="150" :allowEditing="false" format="C2" textAlign="Right" ></e-column>
-      </e-columns>
+        <e-column field="ProductID" headerText="Product ID" textAlign="Right" isPrimaryKey="true" :validationRules='orderIDRules' width="100"></e-column>
+            <e-column field="ProductName" headerText="Product Name" width="120" :validationRules=' productNameRules'></e-column>
+            <e-column field="UnitPrice" headerText="Unit Price" editType="numericedit" :edit="priceParams" width="150" :validationRules='unitIDRules' format="C2" 
+            textAlign="Right"></e-column>
+            <e-column field="UnitsInStock" headerText="Units In Stock" editType="numericedit" :edit="stockParams" :validationRules='stockIDRules'  width="150" 
+            textAlign="Right"></e-column>
+            <e-column field="TotalCost" headerText="Total Cost" width="150" :allowEditing='false' format="C2" textAlign="Right"></e-column>
+          </e-columns>
     </ejs-grid>
   </div>
 `,
 
-  data: () => {
-    return {
-      data: productData,
-      toolbar: ["Add", "Edit", "Delete", "Update", "Cancel"],
-      editSettings: {
-        allowEditing: true,
-        allowAdding: true,
-        allowDeleting: true,
-      },
-      priceParams: {
-        create: () => {
-          priceElem = document.createElement("input");
-          return priceElem;
-        },
-        read: () => {
-          return priceObj.value;
-        },
-        destroy: () => {
-          priceObj.destroy();
-        },
-        write: (args) => {
-          priceObj = new NumericTextBox({
-            value: args.rowData[args.column.field],
-            change: function (args) {
-              let formEle = document
-                .getElementById("grid")
-                .querySelector("form").ej2_instances[0];
-              var totalCostFieldEle = formEle.getInputElement("TotalCost");
-              totalCostFieldEle.value = priceObj.value * stockObj.value;
-            },
-          });
-          priceObj.appendTo(priceElem);
-        },
-      },
-      stockParams: {
-        create: () => {
-          stockElem = document.createElement("input");
-          return stockElem;
-        },
-        read: () => {
-          return stockObj.value;
-        },
-        destroy: () => {
-          stockObj.destroy();
-        },
-        write: (args) => {
-          stockObj = new NumericTextBox({
-            value: args.rowData[args.column.field],
-            change: function (args) {
-              let formEle = document
-                .getElementById("grid")
-                .querySelector("form").ej2_instances[0];
-              var totalCostFieldEle = formEle.getInputElement("TotalCost");
-              totalCostFieldEle.value = priceObj.value * stockObj.value;
-            },
-          });
-          stockObj.appendTo(stockElem);
-        },
-      },
-    };
+data() {
+  return {
+    data: productData,
+    editSettings : {
+    allowEditing: true,
+    allowAdding: true,
+    allowDeleting: true
   },
+  stockIDRules : { required: true },
+  orderIDRules : { required: true },
+  productNameRules :{ required: true },
+  unitIDRules:{ required: true, min: 1 },
+  toolbar : ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+  priceParams :{ params: { change: this.calculateTotalCost.bind(this) } },
+  stockParams : { params: { change: this.calculateTotalCost.bind(this) } }
+  };
+},
+methods: {
+  calculateTotalCost() {
+    const formEle = this.$refs.grid.$el.ej2_instances['0'].element.querySelector('form')['ej2_instances'][0];
+    formEle.getInputElement('TotalCost').value = formEle.getInputElement('UnitPrice').value * formEle.getInputElement('UnitsInStock').value;
+  }
+},
   provide: {
-    grid: [Edit, Toolbar],
-  },
+  grid: [Page, Edit, Toolbar]
+}
 
 });

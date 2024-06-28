@@ -1,6 +1,3 @@
-
-
-
 <template>
   <div id='container'>
     <div>
@@ -13,12 +10,14 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { CalendarPlugin } from '@syncfusion/ej2-vue-calendars';
-Vue.use(ButtonPlugin);
-Vue.use(CalendarPlugin);
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { CalendarComponent } from '@syncfusion/ej2-vue-calendars';
 export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-calendar":CalendarComponent
+},
   methods : {
     touchClick: function(event) {
      document.body.classList.add('e-bigger');
@@ -34,6 +33,3 @@ export default {
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-calendars/styles/material.css";
 </style>
-
-
-

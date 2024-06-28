@@ -40,7 +40,7 @@ new Vue({
                 }
             }
         }
-    }
+    },
     actionComplete(args) {
         if ((args.requestType === 'save')) {
             for (var i = 0; i < this.$refs.grid.getColumns().length; i++) {
