@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <ejs-grid :dataSource="data" id="gridcomp" :allowPaging='true' :allowGrouping='true' :allowSorting='true'
-            :showColumnMenu='true' :groupSettings='groupOptions' :allowFiltering='true' :filterSettings='filterSettings'
-            :columnMenuClick='columnMenuClick' :columnMenuItems='columnMenuItems'>
+        <ejs-grid :dataSource="data" id="gridcomp" :allowPaging='true' :allowGrouping='true' :allowResizing="true"
+            :allowSorting='true' :showColumnMenu='true' :groupSettings='groupOptions' :allowFiltering='true'
+            :filterSettings='filterSettings' :columnMenuClick='columnMenuClick' :columnMenuItems='columnMenuItems'>
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right'></e-column>
                 <e-column field='Freight' headerText='Freight' format='C2' textAlign='Right' width='120'></e-column>

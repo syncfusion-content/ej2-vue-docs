@@ -279,7 +279,7 @@ import { provide } from "vue";
     </div>
 </template>
 <script>
-import { GridComponent, Aggregate, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Aggregate, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 export default {
 name: "App",
@@ -369,6 +369,7 @@ Here's an example of how to use multiple aggregates in the Syncfusion Vue Grid:
     </div>
 </template>
 <script setup>
+import { provide } from "vue";
 import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, Aggregate, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
       const aggregates = [

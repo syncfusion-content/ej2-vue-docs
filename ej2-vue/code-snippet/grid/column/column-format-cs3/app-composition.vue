@@ -4,7 +4,7 @@
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
         <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
-        <e-column field='OrderDate' :format='formatOptions' headerText='Order Date' format='yMd' textAlign='Right'
+        <e-column field='OrderDate' :format='formatOptions' headerText='Order Date' textAlign='Right'
           width=120></e-column>
         <e-column field='OrderDate' :format='shipFormat' headerText='Ship Date' textAlign='Right' width=150></e-column>
       </e-columns>
@@ -21,5 +21,13 @@ const shipFormat = { type: 'dateTime', format: 'dd/MM/yyyy hh:mm a' };
 provide('grid', [Page]);
 </script>
 <style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

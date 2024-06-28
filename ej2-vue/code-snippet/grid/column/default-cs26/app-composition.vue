@@ -12,22 +12,54 @@
     </ejs-grid>
   </div>
 </template>
-<script setup>
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
-import { ref } from "vue";
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
-const grid = ref(null);
-const updateColumns = function () {
-  let grid = grid.value.ej2Instances;
-  grid.value.ej2Instances.columns[0].textAlign = 'Center';
-  grid.value.ej2Instances.columns[0].width = '100';
-  grid.value.ej2Instances.columns[2].visible = false;
-  grid.value.ej2Instances.columns[1].customAttributes = { class: 'customcss' };
-  // Applying changes to the grid
-  grid.value.ej2Instances.refreshColumns();
+export default {
+  name: "App",
+  components: {
+    "ejs-button": ButtonComponent,
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
+  data() {
+    return {
+      data: data
+    };
+  },
+  methods: {
+    updateColumns: function () {
+      let grid = this.$refs.grid.$el.ej2_instances[0];
+      grid.columns[0].textAlign = 'Center';
+      grid.columns[0].width = '100';
+      grid.columns[2].visible = false;
+      grid.columns[1].customAttributes = { class: 'customcss' };
+      // Applying changes to the grid
+      grid.refreshColumns();
+    },
+  }
 }
 </script>
 <style>
+#btnId {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.customcss {
+  background-color: rgb(43, 195, 226);
+}
+
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

@@ -16,7 +16,7 @@ import { provide } from "vue";
 
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, ForeignKey } from "@syncfusion/ej2-vue-grids";
 import { data, employeeData } from './datasource.js';
-const employeeData = employeeData;
+
 provide('grid', [ForeignKey]);
 </script>
 <style>
