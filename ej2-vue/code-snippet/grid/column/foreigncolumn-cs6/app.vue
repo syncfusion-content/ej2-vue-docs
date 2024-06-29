@@ -1,61 +1,46 @@
 <template>
     <div id="app">
-        <ejs-grid id='grid' ref='grid' :dataSource='data' :allowFiltering='true' height='270px' >
+        <ejs-grid ref='grid' :dataSource='data' :allowFiltering='true'  height='260px' >
             <e-columns>
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
-               <e-column field='EmployeeID' headerText='Employee Name' :dataSource='employeeData' foreignKeyValue='FirstName' :filterBarTemplate='templateOptions' width=120></e-column>
+               <e-column field='EmployeeID' headerText='Employee Name' :dataSource='employeeData' foreignKeyValue='FirstName' width=120></e-column>
                 <e-column field='Freight' headerText='Freight' textAlign='Center' format='C2' width=80></e-column>
                  <e-column field='ShipCity' headerText='Ship City' width=130></e-column>
             </e-columns>
+             <e-aggregates>
+              <e-aggregate>
+                <e-columns>
+                    <e-column field="EmployeeID" type="Custom" :customAggregate='customAggregateFn' :footerTemplate='footerTemplate'></e-column>
+                </e-columns>
+             </e-aggregate>
+          </e-aggregates>
         </ejs-grid>
     </div>
 </template>
-<script>
-
-import { GridComponent, ColumnsDirective, ColumnDirective, Filter,ForeignKey } from "@syncfusion/ej2-vue-grids";
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { data, employeeData } from './datasource.js'
-export default {
-name: "App",
-components: {
-"ejs-grid":GridComponent,
-"e-columns":ColumnsDirective,
-"e-column":ColumnDirective
-},
-  data() {
-return {
-      data: data,
-      employeeData: employeeData,
-      templateOptions: {
-        create: function () {
-          const dropdown = document.createElement('input');
-          dropdown.id = 'EmployeeID';
-          return dropdown;
-        },
-        write: function () {
-          let DropDownListObj = new DropDownList({
-            dataSource: employeeData,
-            fields: { text: 'FirstName', value: 'FirstName' },
-            placeholder: 'Select a value',
-            popupHeight: '200px',
-            change: function (e) {
-              var gridObj = (document.getElementsByClassName('e-grid')[0]).ej2_instances[0];
-              if (e.value == 'All') {
-                gridObj.removeFilteredColsByField('FirstName');
-              } else {
-                gridObj.filterByColumn('EmployeeID', 'equal', e.value);
-              }
-            }
-          });
-          DropDownListObj.appendTo('#EmployeeID');
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Aggregate ,ForeignKey, Filter } from "@syncfusion/ej2-vue-grids";
+import { getValue } from "@syncfusion/ej2-base";
+import { getForeignData } from "@syncfusion/ej2-grids";
+import { data, employeeData } from './datasource.js';
+import { createApp } from "vue";
+const app = createApp();
+const grid = ref(null);
+      const employeeData = employeeData;
+      const footerTemplate = function () {
+        return {
+          template: app.component('customTemplate', {
+            template: `<span>Count of Margaret:  </span>`,
+            data() { return { data: { data: {} } }; }
+          })
         }
       }
-    };
-  },
-  provide: {
-    grid: [Filter, ForeignKey]
-  }
-}
+      const customAggregateFn = function (data, column) {
+      return data.result.filter((obj) => {
+        return getValue('FirstName', getForeignData(grid.value.getColumnByField(column.field), obj)[0]) === 'Margaret';
+      }).length;
+    }
+      provide('grid',  [Aggregate, ForeignKey, Filter]);
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";

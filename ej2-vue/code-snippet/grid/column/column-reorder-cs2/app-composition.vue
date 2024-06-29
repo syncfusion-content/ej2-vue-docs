@@ -16,7 +16,7 @@ import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Reorder } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
-
+var grid = ref(null);
 const reorderByIndex = function () {
   grid.value.reorderColumnByIndex(1, 3); // move column from index 1 to index 3
 }

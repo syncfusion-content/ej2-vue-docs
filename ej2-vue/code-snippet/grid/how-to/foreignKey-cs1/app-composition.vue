@@ -18,9 +18,9 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { AutoComplete } from "@syncfusion/ej2-dropdowns";
 import { DataManager, Query } from '@syncfusion/ej2-data';
 import { data, employeeData } from './datasource.js';
-const employeeData = employeeData;
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
 const editoption = { allowEditing: true };
+var autoComplete;
 const edit = {
   create: () => { // to create input element
     return createElement('input');

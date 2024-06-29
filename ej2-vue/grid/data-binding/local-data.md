@@ -25,6 +25,25 @@ To bind local data to the grid, you can assign a JavaScript object array to the 
 
 > By default, `DataManager` uses `JsonAdaptor` for local data-binding.
 
+## Managing spinner visibility during data loading
+
+Showing a spinner during data loading in the Syncfusion Vue Grid enhances the experience by providing a visual indication of the loading progress. This feature helps to understand that data is being fetched or processed.
+
+To show or hide a spinner during data loading in the grid, you can utilize the [showSpinner](https://ej2.syncfusion.com/vue/documentation/api/grid/#showspinner) and [hideSpinner](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidespinner) methods provided by the Grid component.
+
+The following example demonstrates how to show and hide the spinner during data loading using external buttons in a grid:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/show-hide-spinner-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/show-hide-spinner-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/databind/show-hide-spinner-cs1" %}
+
 ## Refresh the data source
 
 You can add/delete the datasource records through an external button. To reflect the datasource changes in grid, you need to invoke the [`refresh`](https://ej2.syncfusion.com/vue/documentation/api/grid/#refresh) method.
