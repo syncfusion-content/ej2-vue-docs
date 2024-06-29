@@ -6,7 +6,8 @@
                 <e-column field='Protein' headerText='Protein' textAlign='Right' width=120></e-column>
                 <e-column field='Fat' headerText='Fat' textAlign='Right' width=80></e-column>
                 <e-column field='Carbohydrate' headerText='Carbohydrate' textAlign='Right' width=120></e-column>
-                <e-column headerText='Calories Intake' textAlign='Right' :valueAccessor='totalCalories' width=150></e-column>
+                <e-column headerText='Calories Intake' textAlign='Right' :valueAccessor='totalCalories'
+                    width=150></e-column>
             </e-columns>
         </ejs-grid>
     </div>
@@ -15,10 +16,18 @@
 
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-    const totalCalories = function(field, data, column) {
-        return data.Protein * 4 + data.Fat * 9 + data.Carbohydrate * 4;
-    }
+const totalCalories = function (field, data) {
+    return data.Protein * 4 + data.Fat * 9 + data.Carbohydrate * 4;
+}
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

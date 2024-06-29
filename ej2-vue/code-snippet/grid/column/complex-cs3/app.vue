@@ -1,14 +1,14 @@
 <template>
-    <div id="app">
-        <ejs-grid :dataSource="data" :query='query' allowPaging=true>
-        <e-columns>
-          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
-          <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-          <e-column field='ShipCity' headerText='Ship City' width=130 ></e-column>
-          <e-column field='Employee.City' headerText='City' width=130  ></e-column>
-        </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+    <ejs-grid :dataSource="data" :query='query' allowPaging=true>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=130></e-column>
+        <e-column field='Employee.City' headerText='City' width=130></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
 <script>
 
@@ -16,12 +16,12 @@ import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej
 import { DataManager, ODataV4Adaptor, Query } from "@syncfusion/ej2-data";
 
 export default {
-name: "App",
-components: {
-"ejs-grid":GridComponent,
-"e-columns":ColumnsDirective,
-"e-column":ColumnDirective,
-},
+  name: "App",
+  components: {
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective,
+  },
   data() {
     let query = new Query().expand('Employee');
     let SERVICE_URI =
@@ -38,5 +38,13 @@ components: {
 }
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

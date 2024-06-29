@@ -17,7 +17,6 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { DropDownList } from '@syncfusion/ej2-dropdowns';
 import { data, employeeData } from './datasource.js'
 const grid = ref(null);
-      const employeeData = employeeData;
       const templateOptions = {
         create: function () {
           const dropdown = document.createElement('input');

@@ -15,18 +15,18 @@
     </div>
 </template>
 <script setup>
-import { provide } from "vue";
+import { provide, ref} from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group, Sort, Resize, ColumnMenu, Page,Filter } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
       const groupOptions = { showGroupedColumn: true };
       const filterSettings = { type: "CheckBox" };
-      const message = '';
+      var message = ref(null);
   provide('grid',  [Group, Sort, Resize, ColumnMenu, Page, Filter]);
       const columnMenuOpen = function(){
-        message = 'columnMenuOpen event is Triggered';
+        message.value = 'columnMenuOpen event is Triggered';
       }
       const columnMenuClick = function(){
-        message = 'columnMenuClick event is Triggered';
+        message.value = 'columnMenuClick event is Triggered';
       }
 </script>
 <style>

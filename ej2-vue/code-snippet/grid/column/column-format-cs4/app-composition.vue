@@ -5,7 +5,8 @@
                 <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
                 <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
                 <e-column field='Freight' headerText='Freight' textAlign='Right' width=150></e-column>
-                <e-column field='OrderDate' headerText='Order Date' :format='dateFormatOptions' textAlign='Right' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' :format='dateFormatOptions' textAlign='Right'
+                    width=150></e-column>
                 <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
             </e-columns>
         </ejs-grid>
@@ -35,7 +36,7 @@ L10n.load({
             'Item': 'Artikel',
             'Items': 'Artikel'
         },
-        'pager':{
+        'pager': {
             'currentPageInfo': '{0} von {1} Seiten',
             'totalItemsInfo': '({0} Beiträge)',
             'firstPageTooltip': 'Zur ersten Seite',
@@ -47,8 +48,16 @@ L10n.load({
         }
     }
 });
-const dateFormatOptions = {type: 'date', format: 'dd-MMM-yy'};
+const dateFormatOptions = { type: 'date', format: 'dd-MMM-yy' };
 </script>
 <style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

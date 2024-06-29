@@ -55,12 +55,17 @@ new Vue({
     },
     methods: {
         nodeDragStop: function (args) {
+            args.cancel = true;
             var ganttChart = document.getElementById('GanttContainer').ej2_instances[0];
             var chartEle = closest(args.target, '.e-chart-row');
             var gridEle = closest(args.target, '.e-row');
             if(gridEle) {
             var index = ganttChart.treeGrid.getRows().indexOf(gridEle);
             ganttChart.selectRow(index);
+            }
+            if(chartEle){
+                var index = chartEle.rowIndex;
+                ganttChart.selectRow(index);
             }
             var record= args.draggedNodeData;
             var selectedData = ganttChart.flatData[ganttChart.selectedRowIndex];
@@ -78,10 +83,6 @@ new Vue({
                     resources: resources
                 };
                 ganttChart.updateRecordByID(data);
-                var elements = document.querySelectorAll('.e-drag-item');
-                while (elements.length > 0 && elements[0].parentNode) {
-                    elements[0].parentNode.removeChild(elements[0]);
-                }  
             }
         }
     }
