@@ -128,7 +128,24 @@ By customizing sort comparer, you can define the sort action as desired.
 
 > * The `sortComparer` is an optional property of `sortDescriptor`.
 
-For custom sort comparer example, refer to the [`Sort a range by custom list`](./how-to/sort-a-range-by-custom-list) in the `how-to` section.
+For custom sort comparer example, refer to the [`Sort a range by custom list`] below section.
+
+### Sort a range by custom list
+
+You can also define the sorting of cell values based on your own customized personal list. In this article, custom list is achieved using `custom sort comparer`.
+
+In the following demo, the `Trustworthiness` column is sorted based on the custom lists `Perfect`, `Sufficient`, and `Insufficient`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/custom-sort-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/custom-sort-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/custom-sort-cs1" %}
 
 ## Known error validations
 
@@ -149,7 +166,6 @@ You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-compone
 
 ## See Also
 
-* [Sort a range by custom list](./how-to/sort-a-range-by-custom-list)
 * [Hyperlink](./link)
 * [Filtering](./filter)
 * [Undo Redo](./undo-redo)
