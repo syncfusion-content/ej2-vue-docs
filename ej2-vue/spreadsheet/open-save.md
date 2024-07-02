@@ -89,6 +89,23 @@ You can open excel file into a read-only mode by using the [`openComplete`](../a
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/open-readonly-cs1" %}
 
+### Open an excel file using a file uploader
+
+If you explore your machine to select and upload an excel document using the file uploader, you will receive the uploaded document as a raw file in the [success](https://ej2.syncfusion.com/vue/documentation/api/uploader/#success) event of the file uploader. In this `success` event, you should pass the received raw file as an argument to the Spreadsheet's [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method to see the appropriate output.
+
+The following code example shows how to import an excel document using file uploader in spreadsheet.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-uploader-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/open-uploader-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/open-uploader-cs1" %}
+
 ### Configure JSON deserialization options
 
 Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](../api/spreadsheet/#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
@@ -125,6 +142,23 @@ The following code snippet demonstrates how to configure the deserialization opt
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/open-from-json" %}
+
+### Open an excel file from Base64 string data
+
+In the Syncfusion Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](../api/spreadsheet/#open) method in the spreadsheet.
+
+The following code example shows how to save the spreadsheet data as base64 string.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/base-64-string/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/base-64-string/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/base-64-string" %}
 
 ### External workbook confirmation dialog
 
@@ -289,6 +323,25 @@ The following code snippet demonstrates how to configure the serialization optio
 
 {% previewsample "page.domainurl/code-snippet/spreadsheet/save-as-json" %}
 
+### To save data as a Base64 string
+
+In the Spreadsheet component, there is currently no direct option to save data as a `Base64` string. You can achieve this by saving the Spreadsheet data as blob data and then converting that saved blob data to a `Base64` string using `FileReader`. 
+
+> You can get the Spreadsheet data as blob in the [saveComplete](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#savecomplete) event when you set the  `needBlobData` as **true** and `isFullPost` as **false** in the [beforeSave](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#beforesave) event.
+
+The following code example shows how to save the spreadsheet data as base64 string.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/base-64-string/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/base-64-string/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/base-64-string" %}
+
 ### Supported file formats
 
 The following list of Excel file formats are supported in Spreadsheet:
@@ -356,6 +409,7 @@ Open and save helper functions are shipped in the Syncfusion.EJ2.Spreadsheet pac
 * Syncfusion.XlsIO.Base
 
 And also refer [this](https://ej2.syncfusion.com/aspnetcore/documentation/spreadsheet/open-save/#server-dependencies) for more information.
+
 
 ## Note
 
