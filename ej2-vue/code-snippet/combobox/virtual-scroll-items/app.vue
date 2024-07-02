@@ -1,14 +1,14 @@
 <template>
     <div id="app">
         <div id="wrapper1">
-            <ejs-multiselect id='multiselect' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields'
+            <ejs-combobox id='combobox' :dataSource='itemData' placeholder='e.g Item 1' :fields='fields'
                 :enableVirtualization='true' :query='query' :allowFiltering='false' :actionBegin='actionBegin'
-                popupHeight="200px"></ejs-multiselect>
+                popupHeight="200px"></ejs-combobox>
         </div>
     </div>
 </template>
 <script>
-import { MultiSelectComponent, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
+import { ComboBoxComponent, VirtualScroll } from "@syncfusion/ej2-vue-dropdowns";
 
 let records = [];
 function dataSource() {
@@ -26,7 +26,7 @@ dataSource();
 export default {
     name: "App",
     components: {
-        "ejs-multiselect": MultiSelectComponent
+        "ejs-combobox": ComboBoxComponent
     },
     data() {
         return {
@@ -37,7 +37,7 @@ export default {
         }
     },
     provide: {
-        multiselect: [VirtualScroll]
+        combobox: [VirtualScroll]
     },
     methods: {
         actionBegin: function (e) {

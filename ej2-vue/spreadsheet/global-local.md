@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Localization
 
-The [`Localization`](../common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
+The [`Localization`](https://ej2.syncfusion.com/vue/documentation/common/localization) library allows you to localize the default text content of the Spreadsheet. The Spreadsheet has static text on some features (cell formatting, Merge, Data validation, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the
 [`locale`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#locale) value and translation object.
 
 The following list of properties and their values are used in the Spreadsheet.
@@ -378,7 +378,7 @@ IsProtected | is protected
 
 ### Loading translations
 
-To load translation object in an application, use [`load`](../common/internationalization/#load) function of the [`L10n`](../common/internationalization) class.
+To load translation object in an application, use [`load`](https://ej2.syncfusion.com/vue/documentation/common/localization#loading-translations) function of the [`L10n`](https://ej2.syncfusion.com/vue/documentation/common/internationalization) class.
 
 The following example demonstrates the Spreadsheet in `French` culture. In the below sample we have translated the ribbon tab names and Home tab content (clipboard, cell style).
 
@@ -627,4 +627,4 @@ You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-compone
 
 ## See Also
 
-* [Localization](../common/localization)
+* [Localization](https://ej2.syncfusion.com/vue/documentation/common/localization)

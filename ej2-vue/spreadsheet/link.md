@@ -25,7 +25,7 @@ In the active spreadsheet, click the cell where you want to create a hyperlink. 
 * Select the INSERT tab in the Ribbon toolbar and choose the `Link` item.
 * Right-click the cell and then click Hyperlink item in the context menu.
 * Use `Ctrl + K` keyboard shortcut to apply the hyperlink.
-* Use the [`addHyperlink`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#hyperlink) method programmatically.
+* Use the [`addHyperlink`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#addhyperlink) method programmatically.
 
 ## Edit Hyperlink
 
@@ -48,7 +48,7 @@ Performing this operation remove a single hyperlink without losing the display t
 
 In the active spreadsheet, click the cell where you want to remove a hyperlink. remove hyperlink can be done by any of the following ways:
 * Right-click the cell and then click Remove Hyperlink item in the context menu.
-* Use the [`removeHyperlink()`](../api/spreadsheet/#hyperlink) method programmatically.
+* Use the [`removeHyperlink()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#removehyperlink) method programmatically.
 
 ## How to change target attribute
 
