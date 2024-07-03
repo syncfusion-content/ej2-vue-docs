@@ -76,7 +76,7 @@ You can add your own custom header to the open action in the Spreadsheet. For pr
 
 ### Open excel file into a read-only mode
 
-You can open excel file into a read-only mode by using the [`openComplete`](../api/spreadsheet/#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#lockcells) methods
+You can open excel file into a read-only mode by using the [`openComplete`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#opencomplete) event. In this event, you must protect all the sheets and lock its used range cells by using [`protectSheet`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#protectsheet) and [`lockCells`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#lockcells) methods
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -108,7 +108,7 @@ The following code example shows how to import an excel document using file uplo
 
 ### Configure JSON deserialization options
 
-Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](../api/spreadsheet/#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
+Previously, when opening a workbook JSON object into the Spreadsheet using the [openFromJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#openfromjson) method, the entire workbook, including all features specified in the JSON object, was processed and loaded into the Spreadsheet. 
 
 Now, you have the option to selectively ignore some features during the opening of the JSON object by configuring deserialization options and passing them as arguments to the `openFromJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be loaded without ignoring any features.
 
@@ -145,7 +145,7 @@ The following code snippet demonstrates how to configure the deserialization opt
 
 ### Open an excel file from Base64 string data
 
-In the Syncfusion Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](../api/spreadsheet/#open) method in the spreadsheet.
+In the Syncfusion Spreadsheet component, there is no direct option to open data as a `Base64` string. To achieve this, the `import()` function fetches the `Base64` string, converts it to a Blob, creates a File object from the Blob, and then opens it using the [open](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#open) method in the spreadsheet.
 
 The following code example shows how to save the spreadsheet data as base64 string.
 
@@ -288,7 +288,7 @@ The possible values are:
 
 ### Configure JSON serialization options
 
-Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](../api/spreadsheet/#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
+Previously, when saving the Spreadsheet as a workbook JSON object using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#saveasjson) method, the entire workbook with all loaded features were processed and saved as a JSON object. 
 
 Now, you have the option to selectively ignore some features while saving the Spreadsheet as a JSON object by configuring serialization options and passing them as arguments to the `saveAsJson` method. This argument is optional, and if not configured, the entire workbook JSON object will be saved without ignoring any features.
 
