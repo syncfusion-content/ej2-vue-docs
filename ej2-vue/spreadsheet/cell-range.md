@@ -94,7 +94,7 @@ You can apply data validation to restrict the type of data or the values that us
 You can apply data validation by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Data Validation item.
-* Use the [`addDataValidation()`](../api/spreadsheet/#adddatavalidation) method programmatically.
+* Use the [`addDataValidation()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#adddatavalidation) method programmatically.
 
 ### Clear Validation
 
@@ -103,7 +103,7 @@ Clear validation feature is used to remove data validations from the specified r
 You can clear data validation rule by one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Validation item.
-* Use the [`removeDataValidation()`](../api/spreadsheet/#removedatavalidation) method programmatically.
+* Use the [`removeDataValidation()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#removedatavalidation) method programmatically.
 
 ### Highlight Invalid Data
 
@@ -112,7 +112,7 @@ Highlight invalid data feature is used to highlight the previously entered inval
 You can highlight an invalid data by using one of the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Highlight Invalid Data item.
-* Use the [`addInvalidHighlight()`](../api/spreadsheet/#addinvalidhighlight) method programmatically.
+* Use the [`addInvalidHighlight()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#addinvalidhighlight) method programmatically.
 
 ### Clear Highlighted Invalid Data
 
@@ -121,7 +121,7 @@ Clear highlight feature is used to remove the highlight from invalid cells.
 You can clear the highlighted invalid data by using the following ways,
 
 * Select the Data tab in the Ribbon toolbar, and then choose the Clear Highlight item.
-* Use the [`removeInvalidHighlight()`](../api/spreadsheet/#removeinvalidhighlight) method programmatically.
+* Use the [`removeInvalidHighlight()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#removeinvalidhighlight) method programmatically.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -152,7 +152,7 @@ Clear feature helps you to clear the cell contents (formulas and data), formats 
 You can apply clear feature by using one of the following ways,
 
 * Select the clear icon in the Ribbon toolbar under the Home Tab.
-* Using the [`clear()`](../api/spreadsheet/#clear) method to clear the values.
+* Using the [`clear()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#clear) method to clear the values.
 
 Clear has the following types in the spreadsheet,
 
