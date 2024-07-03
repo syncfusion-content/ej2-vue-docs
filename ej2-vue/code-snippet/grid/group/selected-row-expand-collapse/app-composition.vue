@@ -1,16 +1,12 @@
 <template>
   <div id="app">
     <div style="display: inline-block;">
-      <ejs-numerictextbox id='textbox' floatLabelType="Auto" format="##" width='250px'
-        placeholder="Enter Grouped Row Index"></ejs-numerictextbox>
-      <ejs-button style="margin-top:25px" ref='button' cssClass='e-outline'
-        v-on:click="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
+      <ejs-numerictextbox ref='textbox' id='textbox' floatLabelType="Auto" format="##"  width='240px' 
+      placeholder="Enter Grouped Row Index" ></ejs-numerictextbox>
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="onExpandCollapseButtonClick" style='margin-top:25px; margin-left:5px'>Collapse or Expand Row</ejs-button> 
     </div>
-    <div style="padding-top:5px">
-      <p style="color:red;" id="message">{{ message }}</p>
-    </div>
-    <ejs-grid ref='grid' style="padding-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions'
-      height='267px'>
+    <div style="padding-top:5px"><p style="color:red;" id="message">{{ message }}</p></div>
+    <ejs-grid ref='grid' style="margin-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' :allowGrouping='false' width=90></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
@@ -27,19 +23,20 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { NumericTextBoxComponent as EjsNumerictextbox } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
 const grid = ref(null);
+const textbox =ref(null);
 const groupOptions = { columns: ['CustomerID'] };
-const message = '';
-const onExpandCollapseButtonClick = function (args) {
-  const groupedRowIndex = parseInt(textbox.value);
+const message = ref(null);
+const onExpandCollapseButtonClick = function () {
+  const groupedRowIndex = parseInt(textbox.value.ej2Instances.value);
   const groupedRows = Array.from(
     grid.value.ej2Instances.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse')
   );
   if (groupedRows.length >= 0 && groupedRowIndex < groupedRows.length) {
-    this.message = '';
+    message.value = '';
     const groupCaptionElement = groupedRows[groupedRowIndex];
     grid.value.ej2Instances.groupModule.expandCollapseRows(groupCaptionElement);
   } else {
-    this.message =
+    message.value =
       'The entered index exceeds the total number of grouped rows. Please enter a valid grouped index.';
   }
 }
@@ -54,4 +51,5 @@ provide('grid', [Group]);
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";</style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

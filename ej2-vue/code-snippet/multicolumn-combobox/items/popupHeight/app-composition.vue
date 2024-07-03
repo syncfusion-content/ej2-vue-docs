@@ -2,7 +2,7 @@
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:500px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' text='Micheal' popupHeight='400px'>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' text='Michael' popupHeight='400px'>
           <e-columns>
               <e-column field='EmpID' header='Employee ID' width='90'></e-column>
               <e-column field='Name' header='Name' width='90'></e-column>

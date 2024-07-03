@@ -17,12 +17,19 @@
   </div>
 </template>
 <script setup>
-import { provide } from "vue";
-
+import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
+import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js'
 const toolbarOptions = ['Search'];
-const searchOptions = { fields: ['CustomerID'], operator: 'contains', key: 'Ha', ignoreCase: true, ignoreAccent: true };
+const grid = ref(null);
+const change = function(args){
+  if (args.checked) {
+    grid.value.ej2Instances.searchSettings.ignoreAccent = true;
+  } else {
+    grid.value.ej2Instances.searchSettings.ignoreAccent = false;
+  }
+}
 provide('grid', [Toolbar, Search]);
 </script>
 <style>

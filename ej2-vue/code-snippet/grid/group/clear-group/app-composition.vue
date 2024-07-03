@@ -22,8 +22,8 @@ import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
 const grid = ref(null);
 const groupOptions = { columns: ['CustomerID', 'ShipCity'] }
-const clearGroup = function (args) {
-  grid.value.$el.ej2_instances[0].clearGrouping()
+const clearGroup = function () {
+  grid.value.ej2Instances.clearGrouping();
 }
 provide('grid', [Group]);
 </script>

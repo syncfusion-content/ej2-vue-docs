@@ -22,7 +22,7 @@ const grid = ref(null);
           grid.value.pdfExport();
         }
     }
-    const pdfExportComplete = (args) => {
+    const pdfExportComplete = () => {
         grid.value.hideSpinner();
     }
   provide('grid',  [Toolbar, PdfExport, Page]);

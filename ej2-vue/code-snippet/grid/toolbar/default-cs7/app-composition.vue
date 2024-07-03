@@ -33,4 +33,5 @@ provide('grid', [Toolbar]);
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";</style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

@@ -15,6 +15,7 @@
 <script setup>
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
+import { Query, Predicate } from '@syncfusion/ej2-data';
 import { data } from './datasource.js'
 const grid = ref(null);
 const toolbarOptions = ['Search'];

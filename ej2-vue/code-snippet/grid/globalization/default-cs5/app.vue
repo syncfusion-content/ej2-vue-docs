@@ -46,10 +46,10 @@ components: {
   methods: {
     onSwitchChange: function(args) {
       if(args.checked){
-        this.$refs.grid.enableRtl = false;
+        this.$refs.grid.ej2Instances.enableRtl = false;
       }
       else{
-        this.$refs.grid.enableRtl = true;
+        this.$refs.grid.ej2Instances.enableRtl = true;
       }
     }
   },

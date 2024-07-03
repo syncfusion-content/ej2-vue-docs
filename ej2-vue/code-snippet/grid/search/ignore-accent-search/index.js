@@ -8,8 +8,8 @@ Vue.use(SwitchPlugin);
 
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
       <div style="display: flex;">
         <label style="margin-right:5px">
@@ -32,18 +32,17 @@ new Vue({
     return {
       data: data,
       toolbarOptions: ['Search'],
-      searchOptions: { ignoreAccent:true }
     };
   },
   methods: {
-    change: function(args) {
+    change: function (args) {
       let grid = this.$refs.grid.$el.ej2_instances[0];
       if (args.checked) {
         grid.searchSettings.ignoreAccent = true;
-    } else {
+      } else {
         grid.searchSettings.ignoreAccent = false;
+      }
     }
-  }
   },
   provide: {
     grid: [Toolbar, Search]

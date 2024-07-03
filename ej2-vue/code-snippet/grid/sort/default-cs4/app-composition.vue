@@ -15,14 +15,15 @@
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-    const message = '';
+    const message = ref(null);
     const actionBegin = (args) => {
       if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
         args.cancel = true;
+        message.value = args.requestType + ' action cancelled for ' + args.columnName + ' column';
       }
     }
     const actionComplete = (args) => {
-      message = args.requestType + ' action completed for ' + args.columnName + ' column';
+      message.value = args.requestType + ' action completed for ' + args.columnName + ' column';
     }
   provide('grid',  [Sort]);
 </script>

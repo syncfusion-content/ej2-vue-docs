@@ -7,7 +7,7 @@
         <e-column field='City' headerText='City' width=100></e-column>
         <e-column headerText='Change the color of row' width='120' :template="'colorPickerTemplate'" textAlign='Center'></e-column>
       </e-columns>
-      <template v-slot:colorPickerTemplate="{ data }">
+      <template v-slot:colorPickerTemplate>
         <div><ejs-colorpicker mode="Palette" :change="change"></ejs-colorpicker></div>
       </template>
     </ejs-grid>

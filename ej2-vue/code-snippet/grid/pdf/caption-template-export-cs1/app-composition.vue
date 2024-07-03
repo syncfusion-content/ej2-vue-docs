@@ -19,11 +19,11 @@ const grid = ref(null);
             const toolbar = ['PdfExport'];
             const groupOptions = { 
                 columns: ['EmployeeID'],
-                captionTemplate: '$;{field} - ${key}'
+                captionTemplate: '${field} - ${key}'
             }
             const toolbarClick = function (args) {
             if (args.item.id === 'CaptionTemplateGrid_pdfexport') {
-                grid.value.grid.pdfExport();
+                grid.value.pdfExport();
             }
         }
         const exportGroupCaption = function(args) {

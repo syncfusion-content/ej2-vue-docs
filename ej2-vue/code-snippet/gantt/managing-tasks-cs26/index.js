@@ -81,6 +81,20 @@ new Vue({
                     ]
                 },
         ],
+        addDialogFields: [
+            { type: 'General', headerText: 'General add',fields:["newinput"]},
+            { type: 'Dependency', params: {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}},
+            { type: 'Resources'} , 
+            { type: 'Notes' },
+            {type:"Segments", params:{columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}}
+        ],
+        editDialogFields: [
+            { type: 'General', headerText: 'General edit', fields: ["TaskID", "TaskName", "newinput"] },
+            {type: 'Dependency', params: {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}},
+            { type: 'Resources', params: { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newdata" }]}},
+            {type: 'Notes', params: {inlineMode: { enable: true,onSelection: true }}},
+            {type: "Segments", params: {columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }],}}
+        ],
             height: '450px',
             taskFields: {
                 id: 'TaskID',
@@ -120,20 +134,6 @@ new Vue({
 
             toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
 
-            addDialogFields: [
-                { type: 'General', headerText: 'General add',fields:["newinput"]},
-                { type: 'Dependency', params: {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}},
-                { type: 'Resources'} , 
-                { type: 'Notes' },
-                {type:"Segments", params:{columns:[{field:"segmenttask",width:"170px" ,headerText:"Segment Task"}],}}
-            ],
-            editDialogFields: [
-                { type: 'General', headerText: 'General edit', fields: ["TaskID", "TaskName", "newinput"] },
-                {type: 'Dependency', params: {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}},
-                { type: 'Resources', params: { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newdata" }]}},
-                {type: 'Notes', params: {inlineMode: { enable: true,onSelection: true }}},
-                {type: "Segments", params: {columns: [{ field: "segmenttask", width: "170px", headerText: "Segment Task" }],}}
-            ],
       };
   },
   provide: {

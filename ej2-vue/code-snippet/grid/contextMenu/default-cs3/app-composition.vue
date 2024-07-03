@@ -17,6 +17,7 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { data } from './datasource.js';
 const grid = ref(null);
       const values = "";
+      const pageSettings = { pageSize: 8 };
       const contextMenuItems = [
         'SortAscending',
         'SortDescending',
@@ -27,12 +28,7 @@ const grid = ref(null);
         'PdfExport',
         'ExcelExport',
       ];
-      const editOptions = {
-        allowDeleting: true,
-        allowEditing: true,
-        allowAdding: true,
-      };
-    const created = function(args) {
+    const created = function() {
       grid.value.ej2Instances.contextMenuModule.contextMenu.beforeOpen = (
         args
       ) => {

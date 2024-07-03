@@ -14,11 +14,12 @@ new Vue({
 	template: `
   <div id="app">
     <div style="display: inline-block;">
-      <ejs-numerictextbox id='textbox' floatLabelType="Auto" format="##"  width='250px' placeholder="Enter Grouped Row Index"></ejs-numerictextbox>
-      <ejs-button style="margin-top:25px"ref='button' cssClass='e-outline' v-on:click="onExpandCollapseButtonClick">Collapse or Expand Row</ejs-button>
-    </div> 
+      <ejs-numerictextbox ref='textbox' id='textbox' floatLabelType="Auto" format="##"  width='240px' 
+      placeholder="Enter Grouped Row Index" ></ejs-numerictextbox>
+      <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExpandCollapseButtonClick" style='margin-top:25px; margin-left:5px'>Collapse or Expand Row</ejs-button> 
+    </div>
     <div style="padding-top:5px"><p style="color:red;" id="message">{{ message }}</p></div>
-    <ejs-grid ref='grid' style="padding-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
+    <ejs-grid ref='grid' style="margin-top: 5px" :dataSource='data' :allowGrouping='true' :groupSettings='groupOptions' height='267px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' :allowGrouping='false' width=90></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
@@ -37,9 +38,9 @@ new Vue({
     };
   },
   methods: {
-    onExpandCollapseButtonClick: function(args) {
+    onExpandCollapseButtonClick: function() {
       let grid = this.$refs.grid.$el.ej2_instances[0];
-      const groupedRowIndex = parseInt(textbox.value);
+      const groupedRowIndex = parseInt(this.$refs.textbox.$el.value);
       const groupedRows = Array.from(
         grid.getContentTable().querySelectorAll('.e-recordplusexpand, .e-recordpluscollapse')
       );

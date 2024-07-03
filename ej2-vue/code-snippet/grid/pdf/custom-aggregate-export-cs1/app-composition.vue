@@ -21,7 +21,8 @@
 </template>
 <script setup>
 import { provide, ref, createApp } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, 
+AggregatesDirective as EAggregates, Toolbar, PdfExport, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 const grid = ref(null);
 const app = createApp();
@@ -55,4 +56,5 @@ provide('grid', [Toolbar, PdfExport, Aggregate]);
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";</style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

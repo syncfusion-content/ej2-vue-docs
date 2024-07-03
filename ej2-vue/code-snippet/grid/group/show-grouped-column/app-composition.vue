@@ -22,6 +22,7 @@ import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group } from "@syncfusion/ej2-vue-grids";
 import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
+const grid=ref(null);
 const groupOptions = { showGroupedColumn: true, columns: ['CustomerID', 'ShipCity'] };
 const change = function (args) {
   if (args.checked) {

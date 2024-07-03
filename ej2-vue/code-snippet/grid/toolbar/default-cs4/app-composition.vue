@@ -16,10 +16,10 @@
   </div>
 </template>
 <script setup>
-import { provide } from "vue";
+import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-let message = '';
+const message = ref(null);
 const orderIDRules = { required: true };
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
 const toolbar = [
@@ -28,7 +28,7 @@ const toolbar = [
 ];
 const clickHandler = function (args) {
   if (args.item.id === 'Click') {
-    this.message = `Custom Toolbar Clicked`;
+    message.value = `Custom Toolbar Clicked`;
   }
 }
 provide('grid', [Toolbar, Edit]);
@@ -42,4 +42,5 @@ provide('grid', [Toolbar, Edit]);
 @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";</style>
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

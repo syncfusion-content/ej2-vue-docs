@@ -1,6 +1,6 @@
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :resources= "resourceCollection" :resourceFields= "resourceFields" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"  :editDialogFields="editDialogFields" :addDialogFields= "addDialogFields"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :editDialogFields="editDialogFields" :addDialogFields= "addDialogFields" :dataSource="data"  :resources= "resourceCollection" :resourceFields= "resourceFields" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings" ></ejs-gantt>
     </div>
 </template>
 <script>
@@ -15,6 +15,20 @@ components: {
   data: function() {
       return{
         data: projectData,
+            addDialogFields: [
+                { type: 'General'},
+                { type: 'Dependency'},
+                { type: 'Resources'} , 
+                {type: 'Notes', additionalParams: {inlineMode: { enable: true,onSelection: true }}},
+                {type:"Segments"}
+            ],
+            editDialogFields: [
+                { type: 'General' },
+                {type: 'Dependency'},
+                { type: 'Resources'},
+                {type: 'Notes', additionalParams: {inlineMode: { enable: true,onSelection: true }}},
+                {type: "Segments"}
+            ],
             height: '450px',
             taskFields: {
                 id: 'TaskID',
@@ -47,20 +61,6 @@ components: {
 
             toolbar: ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'],
 
-            addDialogFields: [
-                { type: 'General'},
-                { type: 'Dependency'},
-                { type: 'Resources'} , 
-                {type: 'Notes', additionalParams: {inlineMode: { enable: true,onSelection: true }}},
-                {type:"Segments"}
-            ],
-            editDialogFields: [
-                { type: 'General' },
-                {type: 'Dependency'},
-                { type: 'Resources'},
-                {type: 'Notes', additionalParams: {inlineMode: { enable: true,onSelection: true }}},
-                {type: "Segments"}
-            ],
       };
   },
   provide: {

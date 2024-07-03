@@ -20,8 +20,7 @@ import { data } from './datasource.js';
 import { Predicate, Query } from "@syncfusion/ej2-data";
 const grid = ref(null);
 let values = "";
-const key = "";
-let refresh = false;
+let refresh = ref(false);
 let removeQuery = false;
 let valueAssign = false;
 const toolbarOptions = ["Search"];
@@ -57,7 +56,7 @@ const actionBegin = (args) => {
         });
         grid.value.ej2Instances.query = new Query().where(predicate);
         grid.value.ej2Instances.searchSettings.key = "";
-        refresh = true;
+        refresh.value = true;
         valueAssign = true;
         removeQuery = true;
         grid.value.ej2Instances.refresh();
@@ -95,5 +94,4 @@ provide('grid', [Toolbar, Search]);
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-;
 </style>

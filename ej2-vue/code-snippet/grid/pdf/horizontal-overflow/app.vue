@@ -43,7 +43,7 @@ components: {
     toolbarClick(args) {
       if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
         let pdfExportProperties = {
-          allowHorizontalOverflow: !this.$refs.switch.$el.checked
+          allowHorizontalOverflow: !this.$refs.switch.ej2Instances.checked
         };
         this.$refs.grid.pdfExport(pdfExportProperties);
       }
