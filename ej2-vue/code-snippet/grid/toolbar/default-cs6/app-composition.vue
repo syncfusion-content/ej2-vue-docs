@@ -21,6 +21,7 @@ import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Group } from "@syncfusion/ej2-vue-grids";
 import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
+const grid=ref(null);
       const toolbar = ['Expand', 'Collapse'];
       const groupOptions = { columns: ['CustomerID'] };
       const clickHandler = function(args) {

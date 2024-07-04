@@ -36,7 +36,7 @@ components: {
   },
   methods: {
     change: function(args) {
-      let grid = this.$refs.grid.$el.ej2_instances[0];
+      let grid = this.$refs.grid.ej2Instances;
       if(args.checked){
         grid.groupSettings.showGroupedColumn = false;
       }

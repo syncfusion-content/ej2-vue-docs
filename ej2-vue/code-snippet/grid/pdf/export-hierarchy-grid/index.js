@@ -19,7 +19,7 @@ new Vue({
         ></ejs-dropdownlist>
       </div>
       <ejs-grid style="margin-top: 10px" ref='grid' id='Grid' :dataSource='data'  :toolbar='toolbarOptions' height='272px'
-       :allowPdfExport='true' :toolbarClick='toolbarClick' :childGrid='childGrid'>
+       :allowPdfExport='true' :toolbarClick='toolbarClick' :childGrid='childGrid' style='margin-top:10px'>
         <e-columns>
           <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=90></e-column>
           <e-column field='FirstName' headerText='FirstName' width=100></e-column>

@@ -2,9 +2,9 @@
   <div id="app">
     <div style="display: inline-block;">
       <ejs-textbox ref='textbox' placeholder="Search" width='250px'></ejs-textbox>
-      <ejs-button id='search' v-on:click='search'>Search</ejs-button>
+      <ejs-button style="margin-left:5px" id='search' v-on:click='search'>Search</ejs-button>
     </div>
-    <ejs-grid ref='grid' :dataSource='data' height='262px'>
+    <ejs-grid style="margin-top: 5px" ref='grid' :dataSource='data' height='262px'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=100></e-column>
         <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
@@ -16,7 +16,7 @@
 </template>
 <script setup>
 import { provide, ref } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Search } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { TextBoxComponent as EjsTextbox } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js'

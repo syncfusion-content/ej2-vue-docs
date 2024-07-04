@@ -274,7 +274,7 @@ The accessibility compliance of the Grid component is shown in the following sam
     <div id="app">
       <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings='pageSettings' :allowSorting='true' :sortSettings='sortSettings' :showColumnChooser='true' 
       :toolbar="toolbar" :editSettings='editSettings' :allowFiltering='true' :filterSettings='filterSettings' :searchSettings='searchSettings' :selectedRowIndex='6' 
-      :allowGrouping='true' :groupSettings='groupSettings' :allowRowDragAndDrop="true" :allowReordering='true'>
+      :selectionSettings='selectionSettings' :allowGrouping='true' :groupSettings='groupSettings' :allowRowDragAndDrop="true" :allowReordering='true'>
         <e-columns>
           <e-column type="checkbox" width=50></e-column>
           <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -335,7 +335,7 @@ const app = createApp();
             })
           }
       }
-      const groupCaptionTemplate: function () {
+      const groupCaptionTemplate= function () {
         return  { template : app.component('sumTemplate', {
             template: `<span>Max: {{data.Max}}</span>`,
             data () {return { data: {}};}
@@ -363,7 +363,7 @@ const app = createApp();
     <div id="app">
       <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings='pageSettings' :allowSorting='true' :sortSettings='sortSettings' :showColumnChooser='true' 
       :toolbar="toolbar" :editSettings='editSettings' :allowFiltering='true' :filterSettings='filterSettings' :searchSettings='searchSettings' :selectedRowIndex='6' 
-      :allowGrouping='true' :groupSettings='groupSettings' :allowRowDragAndDrop="true" :allowReordering='true'>
+      :selectionSettings='selectionSettings' :allowGrouping='true' :groupSettings='groupSettings' :allowRowDragAndDrop="true" :allowReordering='true'>
         <e-columns>
           <e-column type="checkbox" width=50></e-column>
           <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>

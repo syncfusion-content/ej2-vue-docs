@@ -34,7 +34,7 @@ components: {
   },
   methods: {
     clearGroup: function(args) {
-      let grid = this.$refs.grid.$el.ej2_instances[0];
+      let grid = this.$refs.grid.ej2Instances;
       grid.clearGrouping()
     }
   },

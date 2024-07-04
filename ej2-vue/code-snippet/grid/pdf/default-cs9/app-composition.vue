@@ -24,7 +24,7 @@ const grid = ref(null);
         grid.value.pdfExport();
       }
     }
-    const pdfExportComplete = (args) => {
+    const pdfExportComplete = () => {
       grid.value.getColumns()[1].visible = false;
       grid.value.getColumns()[3].visible = true;
     }

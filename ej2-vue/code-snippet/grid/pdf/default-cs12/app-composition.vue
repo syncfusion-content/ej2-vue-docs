@@ -17,7 +17,7 @@
 <script setup>
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
-import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
+import { TextBoxComponent as EjsTextbox } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
 const grid = ref(null);
 const textbox = ref(null);
@@ -26,7 +26,7 @@ const textbox = ref(null);
       if (args.item.id === "Grid_pdfexport") {
         if (textbox.value.$el.value) {
           const pdfExportProperties = {
-            fileName: textbox.value.$el.value + '.pdf',
+            fileName: textbox.value.ej2Instances.value + '.pdf',
           };
           grid.value.pdfExport(pdfExportProperties);
         } else {

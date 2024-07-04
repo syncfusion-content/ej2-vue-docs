@@ -13,7 +13,8 @@
 <script>
 
 import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js'
+import { Query, Predicate } from '@syncfusion/ej2-data';
+import { data } from './datasource.js';
 export default {
 name: "App",
 components: {

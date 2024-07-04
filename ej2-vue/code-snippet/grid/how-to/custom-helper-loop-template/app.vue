@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
 export default {
 name: "App",

@@ -2,12 +2,12 @@
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:500px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' placeholder='Select an employee' :actionBegin='actionBegin'>
-            <e-columns>
-                <e-column field='EmpID' header='Employee ID' width='70'></e-column>
-                <e-column field='Name' header='Name' width='60'></e-column>
-                <e-column field='Designation' header='Designation' width='70'></e-column>
-                <e-column field='Country' header='Country' width='60'></e-column>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' text='Michael' :actionBegin='actionBegin'>
+          <e-columns>
+                <e-column field='EmpID' header='Employee ID' width='90'></e-column>
+                <e-column field='Name' header='Name' width='90'></e-column>
+                <e-column field='Designation' header='Designation' width='90'></e-column>
+                <e-column field='Country' header='Country' width='70'></e-column>
             </e-columns>
         </ejs-multicolumncombobox>
     </div>

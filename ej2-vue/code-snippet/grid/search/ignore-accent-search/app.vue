@@ -19,6 +19,7 @@
 <script>
 
 import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
+import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js'
 export default {
 name: "App",
@@ -32,8 +33,17 @@ components: {
     return {
       data: data,
       toolbarOptions: ['Search'],
-      searchOptions: { fields: ['CustomerID'], operator: 'contains', key: 'Ha', ignoreCase: true, ignoreAccent:true }
     };
+  },
+  methods: {
+    change: function (args) {
+      let grid = this.$refs.grid.ej2Instances;
+      if (args.checked) {
+        grid.searchSettings.ignoreAccent = true;
+      } else {
+        grid.searchSettings.ignoreAccent = false;
+      }
+    }
   },
   provide: {
     grid: [Toolbar, Search]

@@ -23,7 +23,7 @@ import { data } from './datasource.js';
 export default {
 name: "App",
 components: {
-"ejs-dropdownlist":DropdownlistComponent,
+"ejs-dropdownlist":DropDownListComponent,
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective,
@@ -43,7 +43,7 @@ components: {
       toolbarClick(args) {
         if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
             let pdfExportProperties = {
-              pageOrientation: this.$refs.dropdown.$el.value,
+              pageOrientation: this.$refs.dropdown.ej2Instances.value,
             };
             this.$refs.grid.pdfExport(pdfExportProperties);
         }

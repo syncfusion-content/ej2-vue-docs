@@ -26,7 +26,7 @@ import { data, employeeData } from './datasource.js';
           { field: 'ShipName', headerText: 'Ship Name', width: 120 }
         ],
         created: function () {
-          var parentRowData = parentDetails.parentRowData; // 'this' refers to the instance of the child grid.
+          var parentRowData = this.parentDetails.parentRowData; // 'this' refers to the instance of the child grid.
           document.getElementById('message').innerHTML = `EmployeeID: ${parentRowData.EmployeeID}, FirstName: ${parentRowData.FirstName}, Title: ${parentRowData.Title}`;
         }
       }

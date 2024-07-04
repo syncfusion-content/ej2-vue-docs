@@ -1,6 +1,6 @@
 <template>
      <div>
-        <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data"  :resources= "resourceCollection" :resourceFields= "resourceFields" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings"  :editDialogFields="editDialogFields" :addDialogFields= "addDialogFields"></ejs-gantt>
+        <ejs-gantt ref='gantt' id="GanttContainer" :editDialogFields="editDialogFields" :addDialogFields= "addDialogFields" :dataSource="data"  :resources= "resourceCollection" :resourceFields= "resourceFields" :taskFields = "taskFields" :height = "height" :toolbar="toolbar" :editSettings= "editSettings" ></ejs-gantt>
     </div>
 </template>
 <script setup>
@@ -9,6 +9,20 @@ import { provide } from "vue";
 import { GanttComponent as EjsGantt, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
 import {projectData ,editingResources} from "./data-source"
 const data = projectData;
+const addDialogFields = [
+    { type: 'General', headerText: 'General add',fields:["TaskID", "TaskName","newInput"]},
+    { type: 'Dependency'},
+    { type: 'Resources'} , 
+    { type: 'Notes' },
+    {type:"Segments"}
+];
+const editDialogFields = [
+    { type: 'General', headerText: 'General edit', fields: ["TaskID", "TaskName", "newinput"] },
+    { type: 'Dependency'},
+    { type: 'Resources'},
+    { type: 'Notes'},
+    { type: "Segments"}
+];
 const height = '450px';
 const taskFields = {
     id: 'TaskID',
@@ -39,19 +53,5 @@ const editSettings = {
     showDeleteConfirmDialog: true
 };
 const toolbar = ['Add', 'Edit', 'Update', 'Delete', 'Cancel', 'ExpandAll', 'CollapseAll'];
-const addDialogFields = [
-    { type: 'General', headerText: 'General add',fields:["TaskID", "TaskName","newInput"]},
-    { type: 'Dependency'},
-    { type: 'Resources'} , 
-    { type: 'Notes' },
-    {type:"Segments"}
-];
-const editDialogFields = [
-    { type: 'General', headerText: 'General edit', fields: ["TaskID", "TaskName", "newinput"] },
-    { type: 'Dependency'},
-    { type: 'Resources'},
-    { type: 'Notes'},
-    { type: "Segments"}
-];
 provide('gantt',  [ Edit, Toolbar ]);
 </script>
