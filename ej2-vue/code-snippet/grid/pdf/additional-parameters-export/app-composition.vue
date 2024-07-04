@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-      <div style="margin-left:180px"><p style="color:red;" id="message"></p></div>
+      <div style="margin-left:180px"><p style="color:red;" id="message">{{message}}</p></div>
       <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowPdfExport='true' :pdfExportComplete='pdfExportComplete' :toolbarClick='toolbarClick'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>

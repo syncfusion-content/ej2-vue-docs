@@ -5,11 +5,11 @@
       <ejs-dropdownlist ref='dropdown' id='dropdownlist' index="0" width="150" :dataSource="ddlData" :fields='fields'
         :change="change"></ejs-dropdownlist>
     </div>
-    <ejs-grid ref='grid' id="grid" style="padding: 5px 5px" :dataSource='data' :allowPaging='true' :allowTextWrap='true'
+    <ejs-grid ref='grid' id="grid" style="margin-top: 5px" :dataSource='data' :allowTextWrap='true'
       :textWrapSettings='wrapSettings' height='310' width='800'>
       <e-columns>
         <e-column field='Inventor' headerText='Inventor Name' width='150' textAlign="Right"></e-column>
-        <e-column field='NumberofPatentFamilies' headerText="Number of Patent Families" width='180'
+        <e-column field='NumberofPatentFamilies' headerText="Number of Patent Families" width='150'
           textAlign="Right"></e-column>
         <e-column field='Country' headerText='Country' width='140'></e-column>
         <e-column field='Active' width='120'></e-column>

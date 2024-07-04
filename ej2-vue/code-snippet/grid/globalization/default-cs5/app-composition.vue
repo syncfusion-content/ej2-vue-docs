@@ -32,10 +32,10 @@ setCulture('ar-AE');
       const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'ColumnChooser'];
       const onSwitchChange = function(args) {
       if(args.checked){
-        grid.value.enableRtl = false;
+        grid.value.ej2Instances.enableRtl = false;
       }
       else{
-        grid.value.enableRtl = true;
+        grid.value.ej2Instances.enableRtl = true;
       }
     }
   provide('grid',  [Page, Group, Edit, Toolbar, Sort, Reorder, ColumnMenu, ColumnChooser]);

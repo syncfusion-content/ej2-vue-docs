@@ -12,8 +12,7 @@
     </div>
 </template>
 <script>
-
-import { GridComponent, ColumnsDirective, ColumnDirective, Sort } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnDirective, ColumnsDirective, Sort } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 export default {
 name: "App",
@@ -25,13 +24,14 @@ components: {
   data() {
     return {
       data: data,
-      message: ''
+      message:''
     };
   },
   methods: {
     actionBegin(args) {
       if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
         args.cancel = true;
+        this.message = args.requestType + ' action cancelled for ' + args.columnName + ' column';
       }
     },
     actionComplete(args) {

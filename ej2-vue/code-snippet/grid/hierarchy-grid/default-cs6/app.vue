@@ -13,7 +13,7 @@
 <script>
 
 import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
-import { data, employeeData, childdata } from './datasource.js';
+import { employeeData, childdata } from './datasource.js';
 export default {
 name: "App",
 components: {

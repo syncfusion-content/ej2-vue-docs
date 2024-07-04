@@ -6,8 +6,8 @@
       width="150" :dataSource="ddlData" :fields='fields'
       ></ejs-dropdownlist>
     </div>
-    <ejs-grid ref='grid' id='Grid' :dataSource='data'  :toolbar='toolbarOptions' height='272px'
-      :allowPdfExport='true' :toolbarClick='toolbarClick' :childGrid='childGrid'>
+    <ejs-grid ref='grid' id='Grid' :dataSource='employeeData'  :toolbar='toolbarOptions' height='272px'
+      :allowPdfExport='true' :toolbarClick='toolbarClick' :childGrid='childGrid' style='margin-top:10px'>
       <e-columns>
         <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=90></e-column>
         <e-column field='FirstName' headerText='FirstName' width=100></e-column>
@@ -19,8 +19,10 @@
 </template>
 <script setup>
 import { provide, ref } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, PdfExport, DetailRow } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+import { data, employeeData } from './datasource.js';
+const dropdown = ref(null);
 const grid = ref(null);
       const toolbarOptions = ['PdfExport'];
       const fields = { text: 'text', value: 'value' };
@@ -42,12 +44,12 @@ const grid = ref(null);
     const toolbarClick = (args) => {
       if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
         var exportProperties = {
-          hierarchyExportMode: this.$refs.dropdown.$el.value,
+          hierarchyExportMode: dropdown.value.ej2Instances.value,
         };
         grid.value.pdfExport(exportProperties);
       }
     }
-  provide('grid',  [Toolbar, PdfExport]);
+  provide('grid',  [Toolbar, PdfExport, DetailRow]);
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";

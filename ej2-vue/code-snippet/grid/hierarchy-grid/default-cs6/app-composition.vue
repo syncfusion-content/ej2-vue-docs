@@ -13,7 +13,7 @@
 <script setup>
 import { provide } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DetailRow } from "@syncfusion/ej2-vue-grids";
-import { data, employeeData, childdata } from './datasource.js';
+import { employeeData, childdata } from './datasource.js';
 const parentData = employeeData;
 const childGrid = {
   dataSource: childdata,
@@ -25,7 +25,7 @@ const childGrid = {
     { field: 'ShipName', headerText: 'Ship Name', width: 120 }
   ],
   load: function () {
-    parentDetails.parentKeyFieldValue = parentDetails.parentRowData['EmployeeID'];
+    this.parentDetails.parentKeyFieldValue = this.parentDetails.parentRowData['EmployeeID'];
   }
 }
 provide('grid', [DetailRow]);

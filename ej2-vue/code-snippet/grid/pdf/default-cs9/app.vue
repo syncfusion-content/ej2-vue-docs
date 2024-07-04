@@ -36,7 +36,7 @@ components: {
         this.$refs.grid.pdfExport();
       }
     },
-    pdfExportComplete(args) {
+    pdfExportComplete() {
       this.$refs.grid.getColumns()[1].visible = false;
       this.$refs.grid.getColumns()[3].visible = true;
     }

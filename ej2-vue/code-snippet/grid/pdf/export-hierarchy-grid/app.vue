@@ -7,7 +7,7 @@
       ></ejs-dropdownlist>
     </div>
     <ejs-grid ref='grid' id='Grid' :dataSource='data'  :toolbar='toolbarOptions' height='272px'
-      :allowPdfExport='true' :toolbarClick='toolbarClick' :childGrid='childGrid'>
+      :allowPdfExport='true' :toolbarClick='toolbarClick' :childGrid='childGrid' style='margin-top:10px'>
       <e-columns>
         <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=90></e-column>
         <e-column field='FirstName' headerText='FirstName' width=100></e-column>
@@ -19,12 +19,13 @@
 </template>
 <script>
 
-import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
-import { data } from './datasource.js';
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, PdfExport, DetailRow } from "@syncfusion/ej2-vue-grids";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
+import { data, employeeData } from './datasource.js';
 export default {
 name: "App",
 components: {
-"ejs-dropdownlist":DropdownlistComponent,
+"ejs-dropdownlist":DropDownListComponent,
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective
@@ -55,14 +56,14 @@ components: {
     toolbarClick(args) {
       if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
         var exportProperties = {
-          hierarchyExportMode: this.$refs.dropdown.$el.value,
+          hierarchyExportMode: this.$refs.dropdown.ej2Instances.value,
         };
         this.$refs.grid.pdfExport(exportProperties);
       }
     }
   },
   provide: {
-    grid: [Toolbar, PdfExport]
+    grid: [Toolbar, PdfExport, DetailRow]
   }
 }
 </script>

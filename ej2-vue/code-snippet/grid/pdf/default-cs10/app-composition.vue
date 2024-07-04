@@ -18,7 +18,7 @@
 <script setup>
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
-import { DropDownListComponent  } from "@syncfusion/ej2-vue-dropdowns";
+import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from './datasource.js';
 const grid = ref(null);
 const dropdown = ref(null);
@@ -31,7 +31,7 @@ const dropdown = ref(null);
       const toolbarClick = (args) => {
         if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
             let pdfExportProperties = {
-              pageOrientation: dropdown.value.$el.value,
+              pageOrientation: dropdown.value.ej2Instances.value,
             };
             grid.value.pdfExport(pdfExportProperties);
         }

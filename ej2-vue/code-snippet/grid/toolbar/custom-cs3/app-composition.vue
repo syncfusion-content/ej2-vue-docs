@@ -68,14 +68,4 @@ provide('grid', [Toolbar, Edit]);
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
-
-.button {
-  margin: 0px 10px 3px;
-}
-
-#addImage,
-#deleteImage {
-  height: 30px;
-  width: 30px;
-}
 </style>

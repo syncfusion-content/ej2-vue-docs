@@ -25,6 +25,7 @@ components: {
     return {
       values: "",
       data: data,
+      pageSettings : { pageSize: 8 },
       contextMenuItems: [
         'SortAscending',
         'SortDescending',
@@ -35,15 +36,10 @@ components: {
         'PdfExport',
         'ExcelExport',
       ],
-      editOptions: {
-        allowDeleting: true,
-        allowEditing: true,
-        allowAdding: true,
-      },
     };
   },
   methods: {
-    created:function(args) {
+    created:function() {
       this.$refs.grid.ej2Instances.contextMenuModule.contextMenu.beforeOpen = (
         args
       ) => {

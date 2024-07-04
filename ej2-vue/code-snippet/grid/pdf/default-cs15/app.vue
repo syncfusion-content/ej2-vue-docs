@@ -34,7 +34,7 @@ components: {
           this.$refs.grid.pdfExport();
         }
     },
-    pdfExportComplete(args) {
+    pdfExportComplete() {
         this.$refs.grid.hideSpinner();
     },
   },

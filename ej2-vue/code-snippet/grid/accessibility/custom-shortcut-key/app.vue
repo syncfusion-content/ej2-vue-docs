@@ -12,7 +12,7 @@
 
 <script>
 
-import { GridComponent, Toolbar, Edit, Group } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, Edit, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 
 export default {

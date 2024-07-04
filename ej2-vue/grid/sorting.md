@@ -363,17 +363,19 @@ The following example demonstrates how the [actionBegin](https://ej2.syncfusion.
     </div>
 </template>
 <script setup>
-import { provide } from "vue";
+import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-    const actionBegin = (args) => {
-      if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
-        args.cancel = true;
-      }
-    },
-    const actionComplete = (args) => {
-      this.message = args.requestType + ' action completed for ' + args.columnName + ' column';
-    }
+const message = ref(null);
+const actionBegin = (args) => {
+  if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
+    args.cancel = true;
+    message.value = args.requestType + ' action cancelled for ' + args.columnName + ' column';
+  }
+}
+const actionComplete = (args) => {
+  message.value = args.requestType + ' action completed for ' + args.columnName + ' column';
+}
   provide('grid',  [Sort]);
 </script>
 <style>
@@ -416,13 +418,15 @@ components: {
 },
   data() {
     return {
-      data: data
+      data: data,
+      message:''
     };
   },
   methods: {
     actionBegin(args) {
       if (args.requestType === 'sorting' && args.columnName === 'OrderID') {
         args.cancel = true;
+        this.message = args.requestType + ' action cancelled for ' + args.columnName + ' column';
       }
     },
     actionComplete(args) {

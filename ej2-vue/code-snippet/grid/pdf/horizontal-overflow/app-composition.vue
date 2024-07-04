@@ -4,7 +4,7 @@
       <label style="margin-right:5px">
         Enable or disable Horizontal Overflow property
       </label>
-      <ejs-switch ref='switch1' id="switch"></ejs-switch>
+      <ejs-switch ref='switchref' id="switch"></ejs-switch>
     </div>
     <ejs-grid ref='grid' id='Grid' style="margin-top: 5px" :dataSource='data' :allowPdfExport='true'
       :toolbar='toolbarOptions' :toolbarClick='toolbarClick' height='258px'>
@@ -27,12 +27,12 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
 const grid = ref(null);
-const switch1 = ref(null);
+const switchref = ref(null);
 const toolbarOptions = ["PdfExport"];
 const toolbarClick = (args) => {
   if (args.item.id === 'Grid_pdfexport') { // 'Grid_pdfexport' -> Grid component id + _ + toolbar item name
     let pdfExportProperties = {
-      allowHorizontalOverflow: !switch1.$el.checked
+      allowHorizontalOverflow: !switchref.value.ej2Instances.checked
     };
     grid.value.pdfExport(pdfExportProperties);
   }

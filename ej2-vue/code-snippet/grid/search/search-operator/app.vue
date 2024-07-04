@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     change: function (args) {
-      let grid = this.$refs.grid.$el.ej2_instances[0];
+      let grid = this.$refs.grid.ej2Instances;
       grid.searchSettings.operator = args.value;
     }
   },

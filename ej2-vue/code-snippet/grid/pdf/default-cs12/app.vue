@@ -22,7 +22,7 @@ import { data } from './datasource.js';
 export default {
 name: "App",
 components: {
-"ejs-textbox":TextboxComponent,
+"ejs-textbox":TextBoxComponent,
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective
@@ -38,7 +38,7 @@ components: {
       if (args.item.id === "Grid_pdfexport") {
         if (this.$refs.textbox.$el.value) {
           const pdfExportProperties = {
-            fileName: this.$refs.textbox.$el.value + '.pdf',
+            fileName: this.$refs.textbox.ej2Instances.value + '.pdf',
           };
           this.$refs.grid.pdfExport(pdfExportProperties);
         } else {

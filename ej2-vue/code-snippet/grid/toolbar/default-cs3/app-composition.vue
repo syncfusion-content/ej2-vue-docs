@@ -18,7 +18,7 @@ import { data } from './datasource.js';
 const grid = ref(null);
 const toolbar = [
   { text: 'Expand All', tooltipText: 'Expand All', prefixIcon: 'e-expand', id: 'expandall' },
-  { text: 'Collapse All', tooltipText: 'collection All', prefixIcon: 'e-collapse', id: 'collapseall', align: 'Right' }
+  { text: 'Collapse All', tooltipText: 'collection All', prefixIcon: 'e-collapse-2', id: 'collapseall', align: 'Right' }
 ];
 const groupOptions = { columns: ['CustomerID'] };
 const clickHandler = function (args) {
