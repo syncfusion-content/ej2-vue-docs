@@ -1,9 +1,9 @@
 
 import Vue from 'vue';
-import { OTPInputPlugin } from "@syncfusion/ej2-vue-inputs";
+import { OtpInputPlugin } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
-Vue.use(OTPInputPlugin);
+Vue.use(OtpInputPlugin);
 
 
 new Vue({
