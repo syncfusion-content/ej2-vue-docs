@@ -1155,7 +1155,4 @@ For batch editing, you can specify a custom batch URL as follows:
 	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 {% endhighlight %}
-
-{% endtabs %}
-{% endhighlight %}
 {% endtabs %}
