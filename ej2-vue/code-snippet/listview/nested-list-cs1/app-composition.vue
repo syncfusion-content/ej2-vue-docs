@@ -2,7 +2,7 @@
     <div class="control-section">
       <!-- ListView element -->
       <ejs-listview id='listview' :dataSource='continent' :fields='fields' :headerTitle='headerTitle'
-        showHeader='true'></ejs-listview>
+        showHeader='true' :animation='animation' ></ejs-listview>
     </div>
   </template>
   <script setup>
@@ -239,6 +239,7 @@
   ];
   const fields = { tooltip: 'text' };
   const headerTitle = 'Continent';
+  const animation: { duration:0 };
   
   </script>
   <style>
