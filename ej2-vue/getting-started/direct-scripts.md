@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Syncfusion Vue UI Components in a quickstart application
+# Getting Started with Syncfusion Vue UI in a quickstart application
 
 
 Vue provides native script support, allowing users to directly include the Vue.js library in an HTML file without the need for a build process or module bundler. This feature is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js without setting up a complex build workflow.
