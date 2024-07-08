@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Syncfusion Vue UI Components using direct scripts in a quickstart application
+# Getting Started with Syncfusion Vue UI Components in a quickstart application
 
 
 Vue provides native script support, allowing users to directly include the Vue.js library in an HTML file without the need for a build process or module bundler. This feature is useful for simpler projects or prototypes, enabling quick and easy implementation of Vue.js without setting up a complex build workflow.
@@ -30,7 +30,7 @@ To demonstrate the usage of the `Grid` component through direct scripting, follo
 
 2\. Inside the `quickstart` folder, create an HTML file named `index.html`.
 
-Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://unpkg.com/vue@3/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
+Include the appropriate version of the Vue.js library in the **index.html** file based on whether to use [Vue 2](https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.min.js) or [Vue 3](https://unpkg.com/vue@3.4.31/dist/vue.global.js) in the project. Then, create a new Vue instance with the required configuration options.
 
 > The [Vue class component](https://class-component.vuejs.org) package is required before the 2023 Volume 1 (v21.1.35) release. So, add the [Vue class component](<https://cdn.jsdelivr.net/npm/vue-class-component@8.0.0-rc.1/dist/vue-class-component.global.min.js>) script to the head section of the **index.html** file for Vue 3 direct script.
 
