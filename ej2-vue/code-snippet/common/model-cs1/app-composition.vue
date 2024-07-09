@@ -8,7 +8,8 @@
 </template>
 <script setup>
 import { CheckBoxComponent as EjsCheckbox } from '@syncfusion/ej2-vue-buttons';
-const checked = true;
+import { ref } from 'vue';  
+const checked = ref(true);
 </script>
 <style>
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
