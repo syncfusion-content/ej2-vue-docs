@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Cell customization in Vue Schedule component
 
-The cells of the Scheduler can be easily customized either using the cell template or `RenderCell` event.
+The cells of the Scheduler can be easily customized either using the cell template or [`RenderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell) event.
 
 ## Setting cell dimensions in all views
 
-The height and width of the Scheduler cells can be customized either to increase or reduce its size through the `cssClass` property, which overrides the default CSS applied on cells.
+The height and width of the Scheduler cells can be customized either to increase or reduce its size through the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/schedule#cssclass) property, which overrides the default CSS applied on cells.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ The height and width of the Scheduler cells can be customized either to increase
 
 ## Check for cell availability
 
-You can check whether the given time range slots are available for event creation or already occupied by other events using the `isSlotAvailable` method. In the following code example, if a specific time slot already contains an appointment, then no more appointments can be added to that cell.
+You can check whether the given time range slots are available for event creation or already occupied by other events using the [`isSlotAvailable`](https://ej2.syncfusion.com/vue/documentation/api/schedule#isslotavailable) method. In the following code example, if a specific time slot already contains an appointment, then no more appointments can be added to that cell.
 
 >Note: The **isSlotAvailable** is centered around verifying appointments within the present view's date range. Yet, it does not encompass an evaluation of availability for recurrence occurrences that fall beyond this particular date range.
 
@@ -46,7 +46,7 @@ You can check whether the given time range slots are available for event creatio
 
 ## Customizing cells in all the views
 
-It is possible to customize the appearance of the cells using both template options and `renderCell` event on all the views.
+It is possible to customize the appearance of the cells using both template options and [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell) event on all the views.
 
 ### Using template
 
@@ -65,7 +65,7 @@ The [`cellTemplate`](../api/schedule/#celltemplate) option accepts the template 
 
 ### Using renderCell event
 
-An alternative to [`cellTemplate`](../api/schedule/#celltemplate) is the `renderCell` event, which can also be used to customize the cells with appropriate images or formatted text values.
+An alternative to [`cellTemplate`](../api/schedule/#celltemplate) is the [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell) event, which can also be used to customize the cells with appropriate images or formatted text values.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +78,7 @@ An alternative to [`cellTemplate`](../api/schedule/#celltemplate) is the `render
         
 {% previewsample "page.domainurl/code-snippet/schedule/cell-dimension-cs4" %}
 
-You can customize cells such as work cells, month cells, all-day cells, header cells, resource header cells using `renderCell` event by checking the `elementType` option within the event. You can check elementType with any of the following.
+You can customize cells such as work cells, month cells, all-day cells, header cells, resource header cells using [`renderCell`](https://ej2.syncfusion.com/vue/documentation/api/schedule#rendercell) event by checking the [`elementType`](https://ej2.syncfusion.com/vue/documentation/api/schedule/renderCellEventArgs/#elementtype) option within the event. You can check elementType with any of the following.
 
 | Element type | Description |
 |-------|---------|

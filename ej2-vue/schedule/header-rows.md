@@ -69,7 +69,7 @@ The week number can be displayed in a separate header row of the timeline Schedu
 
 ## Timeline view displaying dates of a complete year
 
-It is possible to display a complete year in a timeline view by setting `interval` value as 12 and defining **TimelineMonth** view option within the [`views`](../api/schedule/views/) property of Scheduler.
+It is possible to display a complete year in a timeline view by setting `interval`[`interval`](https://ej2.syncfusion.com/vue/documentation/api/schedule/views/#interval) value as 12 and defining **TimelineMonth** view option within the [`views`](../api/schedule/views/) property of Scheduler.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
