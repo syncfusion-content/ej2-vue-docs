@@ -122,14 +122,15 @@ Follow the below steps to add the Vue Pivotview component:
 1\. First, import and register the Pivotview component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
 
 <script setup>
   import { PivotViewComponent, FieldList, GroupingBar, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
 </script>
 
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
 
 <script>
 import { PivotViewComponent } from "@syncfusion/ej2-vue-pivotview";
@@ -140,7 +141,7 @@ export default {
 }
 </script>
 
-
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
 
@@ -247,11 +248,17 @@ In-order to define each field in the respective axis, the following basic proper
 In this illustration, "Year" and "Quarter" are added in column, "Country" and "Products" in row, and "Sold" and "Amount" in value section respectively.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs88/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs88/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -264,11 +271,17 @@ Formatting defines a way in which values should be displayed. For example, forma
 > Only fields from value section, which is in the form of numeric data values are applicable for formatting.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs89/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs89/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -299,11 +312,17 @@ The field list allows to add or remove fields and also rearrange the fields betw
 > If the `FieldList` module is not injected, the Field List will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs90/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs90/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -316,11 +335,17 @@ The grouping bar feature automatically populates fields from the bound data sour
 > If the `GroupingBar` module is not injected, the grouping bar will not be rendered with the pivot table component.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs91/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs91/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -331,11 +356,17 @@ The grouping bar feature automatically populates fields from the bound data sour
 The filter axis contains collection of fields that would act as master filter over the data bound in row, column and value axes of the pivot table. The fields along with filter members could be set to filter axis either through report via code behind or by dragging and dropping fields from other axes to filter axis via grouping bar or field list at runtime.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs92/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs92/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -348,11 +379,17 @@ The calculated field feature allows user to insert or add a new calculated field
 > If the `CalculatedField` module is not injected, the calculated field popup will not be rendered with the pivot table component. By default, the calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display the calculated field in the pivot table UI, it must be added to the [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) property, as shown in the code below. Additionally, calculated fields can only be added to the value axis.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue) %}
+{% highlight html tabtitle="Composition API (~/src/App.vue) %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs93/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs93/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -373,11 +410,17 @@ yarn run serve
 Output will be displayed as follows.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs94/app-composition.vue %}
+
+{% endraw %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}{% raw %}
+
 {% include code-snippet/pivot-grid/default-cs94/app.vue %}
+
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
