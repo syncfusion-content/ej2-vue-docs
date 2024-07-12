@@ -12,23 +12,22 @@
   </div>
 </template>
 <script setup>
-import { provide } from "vue";
-
+import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-      const message = '';
-      const actionBegin = function (args) {
+    const message = ref("")
+    const actionBegin = function (args) {
       if (args.requestType === 'grouping' && args.columnName === 'OrderID') {
         args.cancel = true
-        this.message = args.requestType + ' action is cancelled for ' + args.columnName + ' column';
+        message.value = args.requestType + ' action is cancelled for ' + args.columnName + ' column';
       }
     }
     const actionComplete = function (args) {
       if (args.requestType === 'grouping') {
-        this.message = args.requestType + ' action completed for ' + args.columnName + ' column';
+        message.value = args.requestType + ' action completed for ' + args.columnName + ' column';
       }
       else {
-        this.message = ''
+        message.value = '';
       }
     }
   provide('grid',  [Group]);

@@ -378,6 +378,7 @@ const app = createApp();
 <script>
 import { GridComponent, ColumnDirective, ColumnsDirective, AggregateDirective, AggregatesDirective, Group, Page, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
+import { createApp } from "vue";
 export default {
 name: "App",
 components: {

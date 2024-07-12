@@ -26,7 +26,8 @@ components: {
   data() {
     return {
       data: data,
-      toolbarOptions: ['Search']
+      toolbarOptions: ['Search'],
+      key: ''
     };
   },
   methods: {

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid :dataSource="data" :query="query" :allowPaging="true">
+    <ejs-grid :dataSource="data" :query="query">
       <e-columns>
         <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="100"></e-column>
         <e-column field="CustomerID" headerText="Customer ID" width="120"></e-column>

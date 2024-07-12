@@ -19,18 +19,19 @@ import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Resize } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 const grid = ref(null);
+const message = ref("")
   provide('grid',  [Resize]);
     const resizeStart = function (args) {
-      this.message = `resizeStart event triggered`;
+      message.value = `resizeStart event triggered`;
       if (args.column.field === 'OrderID') {
         args.cancel = true;
       }
     }
     const resizing = function (args) {
-      this.message = `resizing event triggered`;
+      message.value = `resizing event triggered`;
     }
     const resizeStop = function (args) {
-      this.message = `resizeStop event triggered`;
+      message.value = `resizeStop event triggered`;
       const headerCell = grid.value.getColumnHeaderByField(args.column.field);
       headerCell.classList.add('customcss');
       const columnCells = grid.value.getContentTable()

@@ -15,7 +15,7 @@ import { provide } from "vue";
 
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
-const groupOptions = { columns: ['CustomerID'] };
+const groupOptions = { columns: ['CustomerID'], captionTemplate: captionTemplate };
 const captionTemplate = '<span class="groupItems"> ${key } - ${count } Records : ${headerText} </span>';
 provide('grid', [Group]);
 </script>

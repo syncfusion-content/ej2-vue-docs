@@ -12,10 +12,10 @@
 </template>
 
 <script setup>
-import { provide } from "vue";
-
+import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit, Group } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
+const grid = ref(null)
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
 const selectionSettings = { type: 'Multiple' };
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
@@ -25,36 +25,36 @@ const keyPressed = function (e) {
   switch (key) {
     case 'n':
       e.preventDefault();
-      this.$refs.grid.addRecord();
+      grid.value.addRecord();
       break;
     case 's':
       if (e.ctrlKey) {
         e.preventDefault();
-        this.$refs.grid.endEdit();
+        grid.value.endEdit();
       }
       break;
     case 'd':
       if (e.ctrlKey) {
         e.preventDefault();
-        this.$refs.grid.deleteRecord();
+        grid.value.deleteRecord();
       }
       break;
     case 'a':
       if (e.ctrlKey) {
         e.preventDefault();
-        this.$refs.grid.selectRowsByRange(0);
+        grid.value.selectRowsByRange(0);
       }
       break;
     case 'g':
       if (e.ctrlKey) {
         e.preventDefault();
-        this.$refs.grid.groupColumn('CustomerID');
+        grid.value.groupColumn('CustomerID');
       }
       break;
     case 'enter':
       e.preventDefault();
       e.cancel = true;
-      this.$refs.grid.refreshColumns();
+      grid.value.refreshColumns();
       break;
     case 'insert':
       e.preventDefault();

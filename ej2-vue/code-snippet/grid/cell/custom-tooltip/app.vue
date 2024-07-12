@@ -33,7 +33,7 @@ export default {
   methods: {
     beforeRender: function (args) {
       if (args.target.classList.contains('e-rowcell')) {
-        this.$refs.tooltip.content = 'The value is "' + args.target.innerText + '" ';
+        this.$refs.tooltip.ej2Instances.content = 'The value is "' + args.target.innerText + '" ';
       }
     }
   }
