@@ -44,7 +44,7 @@ Apart from the default date navigation and view options available on the header 
 
 ## Customizing header bar using events
 
-Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the `actionBegin` event. Here, an employee image is added to the header bar, clicking on which will open the popup showing that person's short profile information.
+Apart from the default date navigation and view options available on the header bar, you can add custom items into the Scheduler header bar by making use of the [`actionBegin`](https://ej2.syncfusion.com/vue/documentation/api/schedule#actionbegin) event. Here, an employee image is added to the header bar, clicking on which will open the popup showing that person's short profile information.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -127,7 +127,7 @@ The [`dateRangeTemplate`](https://ej2.syncfusion.com/vue/documentation/api/sched
 
 ## Customizing header indent cells
 
-It is possible to customize the header indent cells using the `headerIndentTemplate` option and change the look and appearance in both the vertical and timeline views. In vertical views, You can customize the header indent cells at the hierarchy level and you can customize the resource header left indent cell in timeline views using the template option.
+It is possible to customize the header indent cells using the [`headerIndentTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule#headerindenttemplate) option and change the look and appearance in both the vertical and timeline views. In vertical views, You can customize the header indent cells at the hierarchy level and you can customize the resource header left indent cell in timeline views using the template option.
 
 **Example:** To customize the header left indent cell to display resources text, refer to the below code example.
 
