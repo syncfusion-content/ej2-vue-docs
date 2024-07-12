@@ -99,7 +99,7 @@ The above problem occurs when missing CSS references for the scheduler in a proj
 
 ## QuickInfoTemplate at bottom
 
-When using the `quickInfoTemplate` in scheduler, sometimes quickinfo popup not shown fully at the bottom area of scheduler. You can resolve this by using `cellClick` and `eventClick` events and below code snippet.
+When using the [`quickInfoTemplate`](https://ej2.syncfusion.com/vue/documentation/api/schedule#quickinfotemplates) in scheduler, sometimes quickinfo popup not shown fully at the bottom area of scheduler. You can resolve this by using [`cellClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#cellclick) and [`eventClick`](https://ej2.syncfusion.com/vue/documentation/api/schedule#eventclick) events and below code snippet.
 
 ```
 <template>
@@ -117,13 +117,14 @@ When using the `quickInfoTemplate` in scheduler, sometimes quickinfo popup not s
 var eventAdded = false;
 
 methods: {
- onClick: function () {
-  if (!this.eventAdded) {
-    let popupInstance = document.querySelector('.e-quick-popup-wrapper').ej2_instances[0];
-    popupInstance.open = () => {
-      popupInstance.refreshPosition();
-    };
-    this.eventAdded = true;
+  onClick: function () {
+    if (!this.eventAdded) {
+      let popupInstance = document.querySelector('.e-quick-popup-wrapper').ej2_instances[0];
+      popupInstance.open = () => {
+        popupInstance.refreshPosition();
+      };
+      this.eventAdded = true;
+    }
   }
 }
 ```
