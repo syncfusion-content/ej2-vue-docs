@@ -32,7 +32,7 @@ const ddlData = [
   { text: 'None', value: 'None' },
 ];
 const change = function (args) {
-  grid.value.gridLines = args.value
+  grid.value.ej2Instances.gridLines = args.value
 }
 </script>
 <style>

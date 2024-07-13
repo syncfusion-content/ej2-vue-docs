@@ -40,7 +40,7 @@ components: {
   },
   methods: {
     change: function(args) {
-      this.$refs.grid.resizeSettings = {mode: args.value}
+      this.$refs.grid.ej2Instances.resizeSettings = {mode: args.value}
     }
   },
   provide: {

@@ -23,13 +23,15 @@ import { DialogComponent as EjsDialog } from '@syncfusion/ej2-vue-popups';
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { ref } from "vue";
 const dialog = ref(null);
+const selectedRecord = ref(null)
+const header = "Selected Row Details"
     const data = employeeData;
     const showDetails = function(rowData) {
-      this.selectedRecord = rowData;
+      selectedRecord.value = rowData;
       dialog.value.show();
     }
     const contentShow = function() {
-      if (this.selectedRecord) {
+      if (selectedRecord.value) {
         const dialogContent = `
           <p><b>EmployeeID:</b>${this.selectedRecord.EmployeeID}</p>
           <p><b>FirstName:</b>${this.selectedRecord.FirstName}</p>

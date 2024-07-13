@@ -30,7 +30,7 @@ const alignmentData = [
   { text: 'Justify', value: 'Justify' },
 ];
 const change = function (args) {
-  grid.value.columns.forEach(col => {
+  grid.value.ej2Instances.columns.forEach(col => {
     col.textAlign = args.value;
   });
   grid.value.refreshColumns();

@@ -27,7 +27,8 @@ components: {
 },
   data() {
     return {
-      data: data
+      data: data,
+      message:""
     };
   },
   provide: {

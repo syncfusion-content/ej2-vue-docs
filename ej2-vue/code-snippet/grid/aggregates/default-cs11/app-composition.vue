@@ -31,7 +31,7 @@ const app = createApp();
           }
       }
     const customAggregateFn = function () {
-      const distinct = DataUtil.distinct(this.data, 'ShipCountry', true);
+      const distinct = DataUtil.distinct(data, 'ShipCountry', true);
       return distinct.length;
     }
   provide('grid',  [Aggregate]);

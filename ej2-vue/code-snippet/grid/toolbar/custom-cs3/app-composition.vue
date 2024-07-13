@@ -14,21 +14,24 @@
 <script setup>
 import { provide, ref, createApp } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { ToolbarComponent as EjsToolbar } from "@syncfusion/ej2-vue-navigations";
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+import { ToolbarComponent } from "@syncfusion/ej2-vue-navigations";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from './datasource.js';
 const grid = ref(null);
 const app = createApp();
-const dropDown = ref(null);
 const orderIDRules = { required: true };
 const editSettings = { allowAdding: true, allowEditing: true, allowDeleting: true };
 const toolbar = function () {
   return {
     template: app.component('custom-toolbar', {
+      components:{
+        "ejs-toolbar":ToolbarComponent,
+        "ejs-dropdownlist":DropDownListComponent
+      },
       template: `<ejs-toolbar>
                         <div style="display: inline-block;">
                           <label style="padding:  10px 10px 12px 0"> Change the value: </label> 
-                          <ejs-dropdownlist id='dropdownlist' :dataSource='dropDownData' :change="onChange" placeholder='Select a value' width="150"></ejs-dropdownlist>
+                          <ejs-dropdownlist ref="dropDown" id='dropdownlist' :dataSource='dropDownData' :change="onChange" placeholder='Select a value' width="150"></ejs-dropdownlist>
                         </div>
                       </ejs-toolbar>`,
       data: function () {
@@ -48,9 +51,8 @@ const toolbar = function () {
           if (args.itemData.text === 'Delete') {
             grid.value.ej2Instances.deleteRecord(selectedRow);
           }
-          dropDown.value.$el.value = '';
-          dropDown.value.$el.placeholder = args.itemData.text;
-
+          this.$refs.dropDown.ej2Instances.value = '';
+          this.$refs.dropDown.ej2Instances.placeholder = args.itemData.text;
         }
       }
     })
@@ -68,4 +70,14 @@ provide('grid', [Toolbar, Edit]);
 @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+
+.button {
+  margin: 0px 10px 3px;
+}
+
+#addImage,
+#deleteImage {
+  height: 30px;
+  width: 30px;
+}
 </style>

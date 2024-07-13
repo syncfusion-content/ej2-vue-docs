@@ -21,6 +21,10 @@ const app = createApp();
       const toolbar = function () {
         return {
           template: app.component('custom-toolbar', {
+            components:{
+              "ejs-toolbar":ToolbarComponent,
+              "ejs-button":ButtonComponent
+            },
             template: `<ejs-toolbar>
                         <div>
                           <ejs-button id="excelButton" cssClass='e-outline' v-on:click="exportAction">Excel Export</ejs-button>

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref='grid' :dataSource="data" height='315px' :rowDataBound='rowDataBound' allowPaging="true"
-      :pageSettings="pageSettings">
+    <ejs-grid ref='grid' :dataSource="data" height='315px' :rowDataBound='rowDataBound' allowPaging="true">
       <e-columns>
         <e-column headerText='S.No' width=90 textAlign='Center'></e-column>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>

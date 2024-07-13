@@ -13,14 +13,12 @@
 </template>
 <script setup>
 import { provide } from "vue";
-
 import { createElement } from '@syncfusion/ej2-base';
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Edit, Toolbar, ForeignKey, Filter } from "@syncfusion/ej2-vue-grids";
 import { DropDownList } from "@syncfusion/ej2-dropdowns";
 import { DataManager } from '@syncfusion/ej2-data';
 import { data, employeeData } from './datasource.js';
 let dropInstance;
-const employeeData = employeeData;
 const filteroption = { type: 'Menu' };
 const filter = {
   ui: {

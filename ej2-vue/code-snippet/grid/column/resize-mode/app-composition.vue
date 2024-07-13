@@ -27,7 +27,7 @@ const grid = ref(null);
         { text: 'Auto', value: 'Auto' },
       ]
     const change = function(args) {
-      grid.value.resizeSettings = {mode: args.value}
+      grid.value.ej2Instances.resizeSettings = {mode: args.value}
     }
   provide('grid',  [Resize]);
 </script>

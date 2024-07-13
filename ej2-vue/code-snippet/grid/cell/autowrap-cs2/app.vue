@@ -44,7 +44,7 @@ components: {
   },
   methods: {
     change: function(args) {
-      this.$refs.grid.gridLines= args.value
+      this.$refs.grid.ej2Instances.gridLines= args.value
     }
   },
 }
