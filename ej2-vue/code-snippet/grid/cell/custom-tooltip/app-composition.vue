@@ -21,7 +21,7 @@ import { ref } from 'vue';
 const tooltip = ref(null);
 const beforeRender = function (args) {
   if (args.target.classList.contains('e-rowcell')) {
-    tooltip.value.content = 'The value is "' + args.target.innerText + '" ';
+    tooltip.value.ej2Instances.content = 'The value is "' + args.target.innerText + '" ';
   }
 }
 </script>

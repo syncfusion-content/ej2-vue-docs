@@ -21,7 +21,7 @@
 <script setup>
 
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
+import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
 import { ref } from 'vue';
 const grid = ref(null);

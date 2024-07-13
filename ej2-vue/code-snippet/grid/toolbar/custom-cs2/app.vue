@@ -25,9 +25,7 @@ name: "App",
 components: {
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
-"e-column":ColumnDirective,
-"ejs-toolbar":ToolbarComponent,
-"ejs-button":ButtonComponent
+"e-column":ColumnDirective
 },
   data() {
     return {
@@ -39,6 +37,10 @@ components: {
         var deleteImageSource = `data:image/png;base64, ${deleteImage}`;
         return {
           template: app.component('custom-toolbar', {
+            components:{
+              "ejs-toolbar":ToolbarComponent,
+              "ejs-button":ButtonComponent
+            },
             template: `<ejs-toolbar>
                         <div>
                           <img :src="addImageSource" id="addImage" />

@@ -13,8 +13,8 @@
 <script setup>
 import { provide, createApp, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { ToolbarComponent as EjsToolbar } from "@syncfusion/ej2-vue-navigations";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { ToolbarComponent } from "@syncfusion/ej2-vue-navigations";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { addImage } from "./add.ts";
 import { deleteImage } from "./delete.ts";
 import { data } from './datasource.js';
@@ -27,6 +27,10 @@ const app = createApp();
         var deleteImageSource = `data:image/png;base64, ${deleteImage}`;
         return {
           template: app.component('custom-toolbar', {
+            components:{
+              "ejs-toolbar":ToolbarComponent,
+              "ejs-button":ButtonComponent
+            },
             template: `<ejs-toolbar>
                         <div>
                           <img :src="addImageSource" id="addImage" />
@@ -46,7 +50,7 @@ const app = createApp();
                 if (args.currentTarget.id === 'addButton') {
                   grid.value.ej2Instances.addRecord();
                 } else {
-                    var selectedRecord = grid.getSelectedRecords()[0];
+                    var selectedRecord = grid.value.ej2Instances.getSelectedRecords()[0];
                     grid.value.ej2Instances.deleteRecord(selectedRecord);
                 }
               } 

@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref='grid' :dataSource="data" height='315px' :rowDataBound='rowDataBound' allowPaging="true"
-      :pageSettings="pageSettings">
+    <ejs-grid ref='grid' :dataSource="data" height='315px' :rowDataBound='rowDataBound' allowPaging="true">
       <e-columns>
         <e-column headerText='S.No' width=90 textAlign='Center'></e-column>
         <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
@@ -14,16 +13,14 @@
 </template>
 <script setup>
 import { provide, ref } from "vue";
-
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 const grid = ref(null);
 const rowDataBound = function (args) {
   if (args.row) {
-    let grid = grid.value.ej2Instances;
     var rowIndex = parseInt(args.row.getAttribute('aria-rowIndex'));
-    var currentPageNumber = grid.pageSettings.currentPage;
-    var pageSize = grid.pageSettings.pageSize;
+    var currentPageNumber = grid.value.ej2Instances.pageSettings.currentPage;
+    var pageSize = grid.value.ej2Instances.pageSettings.pageSize;
     var startIndex = (currentPageNumber - 1) * pageSize;
     args.row.querySelector('.e-rowcell').innerHTML = (
       startIndex + rowIndex

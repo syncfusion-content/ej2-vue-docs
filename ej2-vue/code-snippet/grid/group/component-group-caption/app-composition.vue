@@ -17,7 +17,7 @@ import { provide } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Group } from "@syncfusion/ej2-vue-grids";
 import { ChipList } from '@syncfusion/ej2-buttons';
 import { data } from './datasource.js';
-const groupOptions = { columns: ['CustomerID'] };
+const groupOptions = { columns: ['CustomerID'], captionTemplate: captionTemplate };
 const captionTemplate = '<div class="groupChip">${key}</div>';
 const dataBound = () => {
   var groupCaptions = document.getElementsByClassName('groupChip');

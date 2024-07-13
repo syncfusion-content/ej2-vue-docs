@@ -22,6 +22,7 @@
 
 import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Group, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
+import { createApp } from "vue";
 const app = createApp();
 
 export default {

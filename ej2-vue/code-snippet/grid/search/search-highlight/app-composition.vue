@@ -18,8 +18,8 @@ import { provide } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Search } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js'
 const toolbarOptions = ['Search'];
+let key = '';
 const actionBegin = function (args) {
-  let key = '';
   if (args.requestType === 'searching') {
   key = args.searchString.toLowerCase();
 }

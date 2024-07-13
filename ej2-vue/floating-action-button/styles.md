@@ -54,7 +54,7 @@ To modify the Floating Action Button appearance, you need to override the defaul
 
 By using [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#cssclass), you can customize the Floating Action Button to show text on hover with applied transition effect. For detailed information, refer `app.vue` file below.
 
-The content will behave the same , when the `enableHtmlSantiizer` is enabled. Since we are adding only the valid tags in content, sanitizing the content will not affect it.
+The content will behave the same , when the `enableHtmlSanitizer` is enabled. Since we are adding only the valid tags in content, sanitizing the content will not affect it.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -66,3 +66,15 @@ The content will behave the same , when the `enableHtmlSantiizer` is enabled. Si
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/floating-action-button/styles-cs2" %}
+
+## Outline customization
+
+By using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/floating-action-button/fab/#cssclass) property, you can customize the outline color of the Floating Action Button.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/floating-action-button/styles-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/floating-action-button/styles-cs3" %}
