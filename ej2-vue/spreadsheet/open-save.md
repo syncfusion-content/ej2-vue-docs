@@ -414,7 +414,6 @@ The following code example shows how to save the spreadsheet data as base64 stri
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/base-64-string" %}
 
-
 ### To save an Excel file to a server
 
 By default, the Spreadsheet component saves the Excel file and downloads it to the local file system. If you want to save an Excel file to a server location, you need to configure the server endpoint to convert the spreadsheet data into a file stream and save it to the server location. To do this, first, on the client side, you must convert the spreadsheet data into `JSON` format using the [saveAsJson](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#saveasjson) method and send it to the server endpoint. On the server endpoint, you should convert the received spreadsheet `JSON` data into a file stream using `Syncfusion.EJ2.Spreadsheet.AspNet.Core`, then convert the stream into an Excel file, and finally save it to the server location.
@@ -499,7 +498,6 @@ Please find below the code to retrieve blob data from the Spreadsheet component 
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/save-as-blobdata-cs1" %}
 
-
 ### Supported file formats
 
 The following list of Excel file formats are supported in Spreadsheet:
@@ -578,3 +576,4 @@ You can refer to our [Vue Spreadsheet](https://www.syncfusion.com/vue-ui-compone
 * [Filtering](./filter)
 * [Sorting](./sort)
 * [Hyperlink](./link)
+* [Docker Image](./docker-deployment)

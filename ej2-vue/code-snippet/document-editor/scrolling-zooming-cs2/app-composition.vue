@@ -1,16 +1,16 @@
 <template>
     <div id="app">
-        <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly=false height="370px"
+        <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly=false height="370px" :enableEditor='true'
             style="width: 100%;"></ejs-documenteditor>
     </div>
 </template>
 <script setup>
 import { provide, onMounted, ref } from "vue";
-import { DocumentEditorComponent as EjsDocumenteditor, Selection } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor } from '@syncfusion/ej2-vue-documenteditor';
 
 const documenteditor = ref(null);
 
-provide('DocumentEditor ', [Selection]);
+provide('DocumentEditor ', [Selection, Editor]);
 
 onMounted(function () {
     let defaultDocument = {

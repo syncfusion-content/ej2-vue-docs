@@ -1,14 +1,14 @@
 <template>
     <div id="app">
-        <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false'
+        <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
             v-bind:requestNavigate="onRequestNavigate" height="370px" style="width: 100%;"></ejs-documenteditor>
     </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, RequestNavigateEventArgs } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor } from '@syncfusion/ej2-vue-documenteditor';
 
-provide('DocumentEditor ', [Selection]);
+provide('DocumentEditor ', [Selection, Editor]);
 
 const onRequestNavigate = function (args) {
     if (args.linkType !== 'Bookmark') {
