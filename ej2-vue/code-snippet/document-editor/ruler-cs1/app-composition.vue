@@ -8,7 +8,7 @@
       :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true'
       :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true'
       :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true'
-      :enableTableOptionsDialog='true'></ejs-documenteditor>
+      :enableTableOptionsDialog='true' :documentEditorSettings='documentEditorSettings'></ejs-documenteditor>
   </div>
 </template>
 
@@ -18,8 +18,6 @@ import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordEx
 
 const container = ref(null);
 const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
-const height = '370px';
-const isReadOnly = false;
 const documentEditorSettings = { showRuler: true };
 
 provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]);

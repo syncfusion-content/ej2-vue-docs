@@ -1,11 +1,11 @@
 <template>
     <div id="app">
-        <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false'
+        <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
             v-bind:requestNavigate="onRequestNavigate" height="370px" style="width: 100%;"></ejs-documenteditor>
     </div>
 </template>
 <script>
-import { DocumentEditorComponent, Selection, RequestNavigateEventArgs } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, Selection, Editor } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
     name: "App",
@@ -17,7 +17,7 @@ export default {
         };
     },
     provide: {
-        DocumentEditor: [Selection]
+        DocumentEditor: [Selection, Editor]
     },
     methods: {
         onRequestNavigate: function (args) {

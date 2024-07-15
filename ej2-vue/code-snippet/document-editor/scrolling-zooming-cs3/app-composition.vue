@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <ejs-documenteditor ref="documenteditor" v-bind:selectionChange='onSelectionChange'
-            v-bind:viewChange='onViewChange' v-bind:documentChange='onDocumentChange' :enableSelection='true'
+            v-bind:viewChange='onViewChange' v-bind:documentChange='onDocumentChange' :enableSelection='true' :enableEditor='true'
             :isReadOnly=false height="370px" style="width: 100%;"></ejs-documenteditor>
         <div id="documenteditor_statusbar">
             <label style="margin-top: 6px;margin-right: 2px">Page </label>
@@ -22,7 +22,7 @@
 </template>
 <script setup>
 import { onMounted, ref, provide } from "vue";
-import { DocumentEditorComponent as EjsDocumenteditor, Selection } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor } from '@syncfusion/ej2-vue-documenteditor';
 import { DropDownButtonComponent as EjsDropdownbutton } from '@syncfusion/ej2-vue-splitbuttons';
 
 const documenteditor = ref(null);
@@ -58,7 +58,7 @@ const onViewChange = function (args) {
     //Update page number on view change.
     currentPage.value = args.startPage;
 }
-const onSelectionChange = function (args) {
+const onSelectionChange = function () {
     //Get current page number.
     currentPage.value = documenteditor.value.ej2Instances.selection.startPage;
 }
@@ -183,7 +183,7 @@ onMounted(function () {
     document.getElementById('editablePageNumber').addEventListener('blur', pageBlurEvent);
 });
 
-provide('DocumentEditor', [Selection]);
+provide('DocumentEditor', [Selection, Editor]);
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";

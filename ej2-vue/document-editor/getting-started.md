@@ -74,7 +74,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Reference](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -262,3 +262,4 @@ DocumentEditorContainer output will be displayed as follows.
 * [How to load the document by default](../document-editor/how-to/open-default-document).
 * [How to customize tool bar](../document-editor/how-to/customize-tool-bar).
 * [How to resize Document editor component](../document-editor/how-to/resize-document-editor).
+* [How to add a save button to the DocumentEditorContainer component toolbar](../document-editor/how-to/add-save-button-in-toolbar)
