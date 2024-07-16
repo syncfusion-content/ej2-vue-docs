@@ -8,7 +8,7 @@
     <div style="padding: 20px 0px 0px 0px">
       <ejs-grid ref="grid" :dataSource="data" :selectionSettings="selectionOptions">
         <e-columns>
-          <e-column field="OrderID" headerText="Order ID" textAlign="Right" 
+          <e-column field="OrderID" headerText="Order ID" textAlign="Right"
           width="120"></e-column>
           <e-column field="CustomerID" headerText="Customer ID" width="120">
           </e-column>
@@ -29,11 +29,11 @@ import { data } from "./datasource.js";
 import { ref } from "vue";
 const textbox = ref(null);
 const grid = ref(null);
-const selectionOptions = { type: "Multiple", mode: "Cell" };
+const selectionOptions = { allowColumnSelection: true, mode: "Cell" };
 const onClick = function () {
-  const startIndex = parseInt(textbox.value.value, 10);
+  const startIndex = parseInt(textbox.value.ej2Instances.value, 10);
   if (!isNaN(startIndex))
-    grid.value.selectColumnWithExisting(startIndex);
+    grid.value.ej2Instances.selectionModule.selectColumnWithExisting(startIndex);
 };
 </script>
 <style>
