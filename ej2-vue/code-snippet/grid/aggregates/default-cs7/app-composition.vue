@@ -26,7 +26,11 @@ const grid = ref(null);
 const app = createApp();
 
 let selectedRecord = {};
-      const numericParams = { params: { change: this.changeFn } };
+const changeFn = function(args){
+        selectedRecord['Freight'] = args.value;
+        grid.value.ej2Instances.aggregateModule.refresh(selectedRecord);
+    }
+      const numericParams = { params: { change: changeFn } };
       const toolbarOptions = ['Delete', 'Update', 'Cancel'];
       const editSettings = { allowEditing: true, allowDeleting: true, mode: 'Inline' };
       const footerSum = function () {
@@ -42,11 +46,7 @@ let selectedRecord = {};
            selectedRecord = args.rowData;
         };
       }
-    const changeFn = function(args){
-        selectedRecord['Freight'] = args.value;
-        let gridObj = grid.value;
-        gridObj.aggregateModule.refresh(selectedRecord);
-    }
+
   
   provide('grid', [Page, Aggregate, Edit, Toolbar]);
 </script>

@@ -379,7 +379,7 @@ The calculated field feature allows user to insert or add a new calculated field
 > If the `CalculatedField` module is not injected, the calculated field popup will not be rendered with the pivot table component. By default, the calculated fields created through code-behind are only added to the field list and calculated field dialog UI. To display the calculated field in the pivot table UI, it must be added to the [`values`](https://ej2.syncfusion.com/vue/documentation/api/pivotview/dataSourceSettings/#values) property, as shown in the code below. Additionally, calculated fields can only be added to the value axis.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue) %}{% raw %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}{% raw %}
 
 {% include code-snippet/pivot-grid/default-cs93/app-composition.vue %}
 
