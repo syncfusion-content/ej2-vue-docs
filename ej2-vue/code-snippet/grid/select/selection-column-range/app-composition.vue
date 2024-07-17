@@ -37,10 +37,10 @@ import { ref } from 'vue';
 const textbox = ref(null);
 const textbox1 = ref(null);
 const grid = ref(null);
-const selectionOptions = { type: 'Multiple', mode: 'Cell' };
+const selectionOptions = { allowColumnSelection: true, type: 'Multiple', mode: 'Cell' };
 const onClick = function () {
-  const startIndex = parseInt(textbox.$el.value, 10);
-  const endIndex = parseInt(textbox1.$el.value, 10);
+  const startIndex = parseInt(textbox.value.ej2Instances.value, 10);
+  const endIndex = parseInt(textbox1.value.ej2Instances.value, 10);
   grid.value.ej2Instances.selectionModule.selectColumnsByRange(startIndex, endIndex);
 };
 </script>
