@@ -10,6 +10,95 @@ domainurl: ##DomainURL##
 
 # Open PDF file from AWS S3
 
+PDF Viewer allows to load PDF file from AWS S3 using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to open a PDF from AWS S3.
+
+## Using Standalone PDF Viewer
+
+To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below.
+
+**Step 1:** Create a PDF Viewer sample in Vue
+
+Follow the instructions provided in this [link](https://ej2.syncfusion.com/vue/documentation/pdfviewer/getting-started) to create a simple PDF Viewer sample in Vue. This will set up the basic structure of your PDF Viewer application.
+
+**Step 2:** Modify the `src/App.vue` File in the Vue Project
+
+1. Import the required namespaces at the top of the file:
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  import AWS from 'aws-sdk';
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+2. Configures AWS SDK with the region, access key, and secret access key. This configuration allows the application to interact with AWS services like S3.
+
+N> Replace **Your Region** with the actual Region of your AWS S3 account and **Your Access Key** with the actual Access Key of your AWS S3 account and **Your Security Access Key** with the actual Security Access Key of your AWS S3 account.
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  AWS.config.update({
+    region: '**Your Region**', // Update this your region
+    accessKeyId: '*Your Access Key*', // Update this with your access key id
+    secretAccessKey: '*Your Security Access Key*', // Update this with your secret access key
+  }); 
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+3. Sets the parameters for fetching the PDF document from S3, including the bucket name and file key. Then Uses the getObject method of the S3 instance to retrieve the document. Converts the document data to a Base64 string and loads it into the Syncfusion PDF Viewer then load Base64 string generated into the viewer.load method.
+
+N> Replace **Your Bucket Name** with the actual Bucket name of your AWS S3 account and **Your Key** with the actual File Key of your AWS S3 account.
+
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+export default {
+  methods: {
+    loadPdfDocument: function () {
+      const getObjectParams = {
+        Bucket: '**Your Bucket Name**',
+        Key: '**Your Key**',
+      };
+      var s3= new AWS.S3();
+      s3.getObject(getObjectParams, (err, data) => {
+        if (err) {
+          console.error('Error fetching document:', err);
+        } else {
+          if (data && data.Body) {
+            const bytes = new Uint8Array(data.Body);
+            let binary = '';
+            bytes.forEach((byte) => (binary += String.fromCharCode(byte)));
+            const base64String = window.btoa(binary);
+            setTimeout(() => {
+              var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+              viewer.load("data:application/pdf;base64,"+base64String);
+            }, 2000);
+          }
+        }
+      });
+    },
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+N> The **npm install aws-sdk** package must be installed in your application to use the previous code example.
+
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Standalone).
+
+## Using Server-Backed PDF Viewer
+
 To load a PDF file from AWS S3 in a PDF Viewer, you can follow the steps below
 
 **Step 1:** Create a Simple PDF Viewer Sample in Vue
@@ -97,7 +186,7 @@ public async Task<IActionResult> Load([FromBody] Dictionary<string, string> json
 }
 ```
 
-6. Open the `appsettings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
+6. Open the `app settings.json` file in your web service project, Add the following lines below the existing `"AllowedHosts"` configuration
 
 ```json
 {
@@ -186,4 +275,4 @@ export default {
 
 N> The **AWSSDK.S3** NuGet package must be installed in your application to use the previous code example.
 
-[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3)
+[View sample in GitHub](https://github.com/SyncfusionExamples/open-save-pdf-documents-in-aws-s3/tree/master/Open%20and%20Save%20PDF%20in%20AWS%20S3%20using%20Server-Backend)
