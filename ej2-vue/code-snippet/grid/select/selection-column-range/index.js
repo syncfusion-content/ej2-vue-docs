@@ -47,13 +47,13 @@ new Vue({
   },
   methods: {
     onClick: function () {
-      this.startIndex = parseInt(this.$refs.textbox.$el.value, 10);
-      this.endIndex = parseInt(this.$refs.textbox1.$el.value, 10);
-      this.$refs.grid.$el.ej2_instances[0].selectionModule.clearColumnSelection();
-      if (!isNaN(this.startIndex) && !isNaN(this.endIndex)) {
-        this.$refs.grid.$el.ej2_instances[0].selectionModule.selectColumnsByRange(this.startIndex, this.endIndex);
-      }
+        this.startIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10);
+        this.endIndex = parseInt(this.$refs.textbox1.ej2Instances.value, 10);
+        this.$refs.grid.ej2Instances.selectionModule.clearColumnSelection();
+        if (!isNaN(this.startIndex) && !isNaN(this.endIndex)) {
+        this.$refs.grid.ej2Instances.selectionModule.selectColumnsByRange(this.startIndex, this.endIndex);
+        }      
     }
-  }
+ }
 
 });

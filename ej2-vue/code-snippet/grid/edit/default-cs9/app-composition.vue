@@ -1,21 +1,19 @@
 <template>
-    <div id="app">
-        <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px'
-            :actionComplete='actionComplete'>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' width=100></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-                <e-column field='Freight' headerText='Freight' textAlign='Right' editType='numericedit' width=120
-                    format='C2'></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' editType='dropdownedit' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+    <ejs-grid :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px' :actionComplete="actionComplete">
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' width='140' textAlign='Right' isPrimaryKey='true' :validationRules='orderIDRules'></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width='140' :validationRules='customerIDRules'></e-column>
+        <e-column field='Freight' headerText='Freight' width='140' format='C2' textAlign='Right' editType='numericedit' :validationRules='freightRules' ></e-column>
+        <e-column field='ShipCountry' headerText='Ship Country' width='150' :validationRules='shipCountryRules' editType='dropdownedit' ></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
 <script setup>
 import { provide } from "vue";
 import { L10n } from '@syncfusion/ej2-base';
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 L10n.load({
     'en-US': {
@@ -27,16 +25,29 @@ L10n.load({
 });
 const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true, mode: 'Dialog' };
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
+const orderIDRules = { required: true, number: true };
+const shipCountryRules = { required: true };
+const freightRules = { required: true };
+const customerIDRules = { required: true };
 const actionComplete = (args) => {
     if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
         let dialog = args.dialog;
         dialog.showCloseIcon = false;
-        dialog.height = 400;
-        // change the header of the dialog
+        dialog.height = 300;
+        dialog.width = 300;
         dialog.header = args.requestType === 'beginEdit' ? 'Edit Record of ' + args.rowData['CustomerID'] : 'New Customer';
     }
 }
-provide('grid', [Page, Edit, Toolbar]);
+provide('grid', [Edit, Toolbar]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";</style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>

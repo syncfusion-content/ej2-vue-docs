@@ -41,28 +41,32 @@ new Vue({
       </ejs-grid>
     </div>
   </di`,
-
+  
   data() {
     return {
       data: data,
       dropdownData: [
-        { text: 'OrderID', value: 'OrderID' },
-        { text: 'CustomerID', value: 'CustomerID' },
-        { text: 'Freight', value: 'Freight' },
-        { text: 'OrderDate', value: 'OrderDate' },
+        { text: "OrderID", value: "OrderID" },
+        { text: "CustomerID", value: "CustomerID" },
+        { text: "Freight", value: "Freight" },
+        { text: "OrderDate", value: "OrderDate" },
       ],
-      field: { text: 'text', value: 'value' },
+      field: { text: "text", value: "value" },
       headerValueAccessor: (field, columns) => {
-        if (this.$refs.textbox && this.$refs.textbox.$el.value && this.$refs.textbox.$el.value.trim() !== ''
-          && columns.field === this.$refs.dropdown.$el.value) {
-          columns.headerText = this.$refs.textbox.$el.value;
+        if (
+          this.$refs.textbox &&
+          this.$refs.textbox.ej2Instances.value &&
+          this.$refs.textbox.ej2Instances.value.trim() !== "" &&
+          columns.field === this.$refs.dropdown.ej2Instances.value
+        ) {
+          columns.headerText = this.$refs.textbox.ej2Instances.value;
         }
-      }
+      },
     };
   },
   methods: {
     changeHeaderText: function () {
-      this.$refs.grid.refreshHeader();
-    }
+      this.$refs.grid.ej2Instances.refreshHeader();
+    },
   }
 });

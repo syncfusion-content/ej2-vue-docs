@@ -26,30 +26,30 @@ let data = (count) => {
 new Vue({
 	el: '#app',
 	template: `
-    <div id="app">
-        <ejs-grid :dataSource='data' height=300 :enableVirtualization=true :pageSettings='options' :editSettings='editSettings' :toolbar='toolbar'>
-            <e-columns>
-                <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=100 :isPrimaryKey='true' :validationRules='rules'></e-column>
-                <e-column field='Engineer' width=100></e-column>
-                <e-column field='Designation' width=140 editType='dropdownedit' :validationRules='rules'></e-column>
-                <e-column field='Estimation' textAlign='Right' width=110 editType='numericedit' :validationRules='rules'></e-column>
-                <e-column field='Status' width=140 editType='dropdownedit'></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+  <ejs-grid :dataSource='data' height=300 :enableVirtualization='true' :pageSettings='options' :editSettings='editSettings' :toolbar='toolbar'>
+      <e-columns>
+          <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=100 :isPrimaryKey='true' :validationRules='rules'></e-column>
+          <e-column field='Engineer' width=100></e-column>
+          <e-column field='Designation' width=140 editType='dropdownedit' :validationRules='rules'></e-column>
+          <e-column field='Estimation' textAlign='Right' width=110 editType='numericedit' :validationRules='rules'></e-column>
+          <e-column field='Status' width=140 editType='dropdownedit'></e-column>
+      </e-columns>
+  </ejs-grid>
+</div>
 `,
 
-  data() {
-    return {
-      data: data(1000),
-      options: { pageSize: 50 },
-      editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
-      toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-      rules: { required: true },
-    };
-  },
-  provide: {
-      grid: [VirtualScroll, Toolbar, Edit]
-  }
+data() {
+  return {
+    data: data(1000),
+    options: { pageSize: 50 },
+    editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
+    toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
+    rules: { required: true },
+  };
+},
+provide: {
+    grid: [VirtualScroll, Toolbar, Edit]
+}
 
 });

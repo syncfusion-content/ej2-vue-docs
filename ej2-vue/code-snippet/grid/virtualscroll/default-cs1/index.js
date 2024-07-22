@@ -26,27 +26,27 @@ let data = (count) => {
 new Vue({
 	el: '#app',
 	template: `
-    <div id="app">
-        <ejs-grid :dataSource='data' height=300 :enableInfiniteScrolling='true' :pageSettings='options'>
-            <e-columns>
-                <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
-                <e-column field='Engineer' width=100></e-column>
-                <e-column field='Designation' width=100></e-column>
-                <e-column field='Estimation' textAlign='Right' width=100></e-column>
-                <e-column field='Status' width=100></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+  <ejs-grid :dataSource='data' height=300 :enableInfiniteScrolling='true' :pageSettings='options'>
+      <e-columns>
+          <e-column field='TaskID' headerText='Task ID' textAlign='Right' width=70></e-column>
+          <e-column field='Engineer' width=100></e-column>
+          <e-column field='Designation' width=100></e-column>
+          <e-column field='Estimation' textAlign='Right' width=100></e-column>
+          <e-column field='Status' width=100></e-column>
+      </e-columns>
+  </ejs-grid>
+</div>
 `,
 
-  data() {
-    return {
-      data: data(1000),
-      options: { pageSize: 50 }
-    };
-  },
-  provide: {
-      grid: [InfiniteScroll]
-  }
+data() {
+  return {
+    data: data(1000),
+    options: { pageSize: 50 }
+  };
+},
+provide: {
+    grid: [InfiniteScroll]
+}
 
 });

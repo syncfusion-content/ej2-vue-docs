@@ -43,7 +43,7 @@ data() {
 },
 methods: {
   frozenRowsFn: function(){
-     this.$refs.grid.frozenRows = parseInt(this.$refs.frozen.$el.value);
+    this.$refs.grid.ej2Instances.frozenRows = parseInt(this.$refs.frozen.ej2Instances.value);
   }
 },
 provide: { grid: [Freeze] }

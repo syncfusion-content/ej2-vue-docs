@@ -44,12 +44,12 @@ components: {
   },
   methods: {
     changeAlignment: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].columnModel.forEach((col) => {
+      this.$refs.grid.ej2Instances.columnModel.forEach((col) => {
         col.headerTextAlign = args.value;
       });
-      this.$refs.grid.refreshHeader();
+      this.$refs.grid.ej2Instances.refreshHeader();
     },
-  },
+  }
 };
 </script>
 <style>

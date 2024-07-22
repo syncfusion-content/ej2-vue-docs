@@ -36,7 +36,6 @@ components: {
       data: data,
       message:"",
       selectionOptions : { mode: 'Row', type: 'Multiple' },
-      pageOptions : { pageSize: 5 }
     };
   },
   methods: {

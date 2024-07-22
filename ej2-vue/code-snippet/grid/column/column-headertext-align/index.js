@@ -27,23 +27,23 @@ new Vue({
       </ejs-grid>
     </div>
 `,
-  data() {
-    return {
-      data: data,
-      alignmentData: [
-        { text: "Left", value: "Left" },
-        { text: "Right", value: "Right" },
-        { text: "Center", value: "Center" },
-        { text: "Justify", value: "Justify" },
-      ],
-    };
+data() {
+  return {
+    data: data,
+    alignmentData: [
+      { text: "Left", value: "Left" },
+      { text: "Right", value: "Right" },
+      { text: "Center", value: "Center" },
+      { text: "Justify", value: "Justify" },
+    ],
+  };
+},
+methods: {
+  changeAlignment: function (args) {
+    this.$refs.grid.ej2Instances.columnModel.forEach((col) => {
+      col.headerTextAlign = args.value;
+    });
+    this.$refs.grid.ej2Instances.refreshHeader();
   },
-  methods: {
-    changeAlignment: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].columnModel.forEach((col) => {
-        col.headerTextAlign = args.value;
-      });
-      this.$refs.grid.refreshHeader();
-    },
-  },
+}
 });

@@ -39,8 +39,8 @@ data() {
 methods:{
     rowselecting: function (args) {  
       if (args.target && args.target.classList.contains('e-icons'))
-         this.$refs.grid.clearSelection();
-   }
+        this.$refs.grid.ej2Instances.clearSelection();
+    }
 }
 
 });

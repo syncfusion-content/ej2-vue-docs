@@ -33,32 +33,32 @@ new Vue({
     </div>
 `,
 
-  data() {
-    return {
-      data: employeeData,
-      selectionOptions: { type: 'Multiple' },
-      srcDropOptions: { targetID: 'TreeGrid' },
-      gridEditSettings: { allowDeleting: true },
-      treeGridEditSettings: { allowAdding: true, allowEditing: true }
-    };
-  },
-  methods: {
-    onRowDrop(args) {
-      if (args.target.closest('.e-treegrid')) {
-        args.cancel = true;
-        var rowIndex = !isNullOrUndefined(args.target.closest('.e-row'))
-          ? args.target.closest('.e-row').rowIndex
-          : 0;
-        for (var i = 0; i < args.data.length; i++) {
-          this.$refs.treegrid.addRecord(args.data[i], rowIndex);
-          this.$refs.grid.deleteRecord('taskID', args.data[i]);
-        }
+data() {
+  return {
+    data: employeeData,
+    selectionOptions: { type: 'Multiple' },
+    srcDropOptions: { targetID: 'TreeGrid' },
+    gridEditSettings: { allowDeleting: true },
+    treeGridEditSettings: { allowAdding: true, allowEditing: true }
+  };
+},
+methods: {
+  onRowDrop(args) {
+    if (args.target.closest('.e-treegrid')) {
+      args.cancel = true;
+      var rowIndex = !isNullOrUndefined(args.target.closest('.e-row'))
+        ? args.target.closest('.e-row').rowIndex
+        : 0;
+      for (var i = 0; i < args.data.length; i++) {
+        this.$refs.treegrid.ej2Instances.addRecord(args.data[i], rowIndex);
+        this.$refs.grid.ej2Instances.deleteRecord('taskID', args.data[i]);
       }
     }
-  },
-  provide: {
-    grid: [RowDD, Page, GridEdit],
-    treegrid: [RowDD, Page, TreeGridEdit]
   }
+},
+provide: {
+  grid: [RowDD, Page,  GridEdit],
+  treegrid: [RowDD, Page, TreeGridEdit]
+}
 
 });

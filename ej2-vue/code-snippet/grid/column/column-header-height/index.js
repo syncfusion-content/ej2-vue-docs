@@ -40,7 +40,7 @@ new Vue({
         medium: '42px',
         big: '60px'
       };
-      const headerCells = this.$refs.grid.getHeaderContent().querySelectorAll('.e-headercell');
+      const headerCells = this.$refs.grid.ej2Instances.getHeaderContent().querySelectorAll('.e-headercell');
       headerCells.forEach((headerCell) => {
         headerCell.style.height = (heightMap)[args.target.id];
       });

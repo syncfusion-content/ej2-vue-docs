@@ -21,7 +21,7 @@ import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
 const grid = ref(null);
 const toggleRowHover = function (args) {
-  grid.value.$el.ej2_instances[0].enableHover = args.checked
+  grid.value.ej2Instances.enableHover = args.checked
 }
 </script>
 <style>

@@ -22,11 +22,9 @@
     </ejs-treegrid>
   </div>
 </template>
-
 <script>
-
 import { GridComponent, ColumnsDirective, ColumnDirective,Edit as GridEdit,RowDD, Page } from "@syncfusion/ej2-vue-grids";
-import { TreeGridComponent, ColumnsDirective, ColumnDirective,Edit as TreeGridEdit   } from "@syncfusion/ej2-vue-treegrid";
+import { TreeGridComponent,Edit as TreeGridEdit   } from "@syncfusion/ej2-vue-treegrid";
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { employeeData } from "./datasource.js";
 export default {
@@ -54,8 +52,8 @@ components: {
           ? args.target.closest('.e-row').rowIndex
           : 0;
         for (var i = 0; i < args.data.length; i++) {
-          this.$refs.treegrid.addRecord(args.data[i], rowIndex);
-          this.$refs.grid.deleteRecord('taskID', args.data[i]);
+          this.$refs.treegrid.ej2Instances.addRecord(args.data[i], rowIndex);
+          this.$refs.grid.ej2Instances.deleteRecord('taskID', args.data[i]);
         }
       }
     }

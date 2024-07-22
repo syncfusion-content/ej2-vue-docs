@@ -30,7 +30,7 @@ data() {
 methods: {
   rowDataBound: function(args){
     args.row.addEventListener('mouseover', (e) => {
-    const rowInformation = this.$refs.grid.getRowInfo(e.target);
+    const rowInformation = this.$refs.grid.ej2Instances.getRowInfo(e.target);
     document.getElementById('show').innerHTML = `
       <table style="border-collapse: collapse; width: 600px;">
         <tr style="border: 2px solid;">

@@ -1,32 +1,66 @@
 <template>
-    <div id="app">
-    <ejs-numerictextbox ref='numeric' format='N' min='0' placeholder='Enter index to select a row' width=200 :showSpinButton='false' :change='onchange'></ejs-numerictextbox>
-        <ejs-grid ref='grid' :dataSource='data' height='280' width='100%' :rowSelected='rowSelected'>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' width=150></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
+  <div id="app">
+    <div style="display: inline-block">
+      <label style="padding: 30px 20px 0 0" > Select row index :</label>
+      <ejs-dropdownlist ref="dropdown" id='value'  index='0' 
+        width='220' :dataSource='dropDownData' :change='valueChange' >
+      </ejs-dropdownlist>
     </div>
+    <div style="padding: 20px 17px 0 0">
+      <ejs-grid ref="grid" :dataSource='gridData' height='315' width='100%' :rowSelected='rowSelected'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+          <e-column field='Frieght' headerText='Employee ID' textAlign='Right' width=120></e-column>
+          <e-column field='ShipAddress' headerText='Ship Address' width=150></e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+  </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import {ref} from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-import { NumericTextBoxComponent as EjsNumerictextbox} from "@syncfusion/ej2-vue-inputs";
+import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from "./datasource.js";
-const grid = ref(null);
-const numeric = ref(null);
-    const onchange = function(){
-      grid.value.selectRow(parseInt(numeric.value.getText(), 10));
-    }
-    const rowSelected = function (args) {
-        let rowHeight = grid.value.getRows()[grid.value.getSelectedRowIndexes()[0]].scrollHeight;
-        grid.value.getContent().children[0].scrollTop = rowHeight * grid.value.getSelectedRowIndexes()[0];
-    }
+const gridData= data;
+const grid=ref(null);
+const dropDownData= [
+        { text: 'Select count' },
+        { text: '10', value: '10' },
+        { text: '20', value: '20' },
+        { text: '30', value: '30' },
+        { text: '80', value: '80' },
+        { text: '100', value: '100' },
+        { text: '200', value: '200' },
+        { text: '232', value: '232' },
+        { text: '300', value: '300' },
+        { text: '500', value: '500' },
+        { text: '800', value: '800' },
+        { text: '820', value: '850' },
+        { text: '920', value: '920' },
+        { text: '2020', value: '2020' },
+        { text: '3000', value: '3000' },
+        { text: '4000', value: '4000' },
+        { text: '4999', value: '4999' }
+
+      ];
+const valueChange=function(args){
+        grid.value.ej2Instances.selectionModule.selectRow(parseInt(args.value, 10));   
+    };
+const rowSelected=function(){
+        const rowHeight = grid.value.ej2Instances.getRows()[grid.value.ej2Instances.getSelectedRowIndexes()[0]].scrollHeight;
+       grid.value.ej2Instances.getContent().children[0].scrollTop = rowHeight * grid.value.ej2Instances.getSelectedRowIndexes()[0];
+    };
 </script>
 <style>
-  @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

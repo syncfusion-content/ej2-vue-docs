@@ -15,11 +15,7 @@
       </template>
       <template v-slot:freightTemplate>
         <div>
-          <ejs-dropdownlist
-            index="0"
-            width="130"
-            :dataSource="dropdownData"
-          ></ejs-dropdownlist>
+          <ejs-dropdownlist index="0" width="130" :dataSource="dropdownData"></ejs-dropdownlist>
         </div>
       </template>
       <template v-slot:dateTemplate>
@@ -34,7 +30,7 @@
 <script>
 import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { SwitchComponent } from "@syncfusion/ej2-vue-buttons";
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from "./datasource.js";
 export default {
 name: "App",
@@ -42,7 +38,7 @@ components: {
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective,
-"ejs-dropdownlist":DropdownlistComponent,
+"ejs-dropdownlist":DropDownListComponent,
 "ejs-switch":SwitchComponent
 },
   data() {

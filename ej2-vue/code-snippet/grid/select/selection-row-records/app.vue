@@ -6,7 +6,7 @@
     <p id="message" > {{ showMessage }}</p>
     <div class="control-section">
       <ejs-grid ref="grid" :dataSource="data" allowPaging="true" :allowSelection="true" 
-        :selectionSettings="selectionOptions">
+      :selectionSettings="selectionOptions">
         <e-columns>
           <e-column field="OrderID" isPrimaryKey="true" headerText="Order ID" width="120" 
           textAlign="Right"></e-column>
@@ -23,11 +23,9 @@
 </template>
 <script>
 
-import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective,Page } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
-
-
 
 export default {
 name: "App",
@@ -43,7 +41,7 @@ components: {
     return {
       data: data,
       showMessage :"",
-      selectionOptions : { type: 'Multiple' }
+      selectionOptions : { type: 'Multiple',persistSelection: true  }
     };
   },
   methods: {
@@ -51,6 +49,9 @@ components: {
       var selectedRecordscount = this.$refs.grid.getSelectedRecords().length;
       this.showMessage = "Selected record count:" + selectedRecordscount ;
     }
+  },
+  provide:{
+    grid:[Page]
   }
 }
 </script>

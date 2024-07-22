@@ -35,10 +35,6 @@ import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { TextBoxComponent } from "@syncfusion/ej2-vue-inputs";
 import { data } from "./datasource.js";
 
-
-
-
-
 export default {
 name: "App",
 components: {
@@ -62,20 +58,20 @@ components: {
       headerValueAccessor: (field, columns) => {
         if (
           this.$refs.textbox &&
-          this.$refs.textbox.$el.value &&
-          this.$refs.textbox.$el.value.trim() !== "" &&
-          columns.field === this.$refs.dropdown.$el.value
+          this.$refs.textbox.ej2Instances.value &&
+          this.$refs.textbox.ej2Instances.value.trim() !== "" &&
+          columns.field === this.$refs.dropdown.ej2Instances.value
         ) {
-          columns.headerText = this.$refs.textbox.$el.value;
+          columns.headerText = this.$refs.textbox.ej2Instances.value;
         }
       },
     };
   },
   methods: {
     changeHeaderText: function () {
-      this.$refs.grid.refreshHeader();
+      this.$refs.grid.ej2Instances.refreshHeader();
     },
-  },
+  }
 };
 </script>
 <style>

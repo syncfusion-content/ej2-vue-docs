@@ -64,9 +64,9 @@ new Vue({
   },
   methods: {
     selectColumns: function (columns) {
-      this.$refs.grid.$el.ej2_instances[0].selectionModule.clearColumnSelection();
-      this.$refs.grid.$el.ej2_instances[0].selectionModule.selectColumns(columns);
-    }
+      this.$refs.grid.ej2Instances.selectionModule.clearColumnSelection();
+      this.$refs.grid.ej2Instances.selectionModule.selectColumns(columns);
+    },
   }
 
 });

@@ -22,10 +22,10 @@
 </template>
 
 <script setup>
+import{ref} from"vue"
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns} from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 const selectionOptions = { mode: 'Row', type: 'Multiple' };
-const pageOptions = { pageSize: 5 };
 const message = ref("");
 const rowselecting = function(args) {
   message.value = `Trigger rowSelecting`;

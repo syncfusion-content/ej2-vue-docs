@@ -33,13 +33,12 @@ const grid = ref(null);
 const textbox = ref(null);
 const textbox1 = ref(null);
 const selectionOptions = { type: 'Multiple', mode: 'Row' };
-const pageOptions = { pageSize: 5 };
 const onClick = function () {
-  let startIndex = parseInt(textbox.value.value, 10); 
-  let endIndex = parseInt(textbox1.value.value, 10); 
+  let startIndex = parseInt(textbox.value.ej2Instances.value, 10); 
+  let endIndex = parseInt(textbox1.value.ej2Instances.value, 10); 
   grid.value.clearRowSelection();
   if (!isNaN(startIndex) && !isNaN(endIndex)) {
-    grid.value.ej2Instances.selectionModule.selectRowsByRange(startIndex, endIndex);
+    grid.value.selectRowsByRange(startIndex, endIndex);
   }
 }
 </script>

@@ -31,7 +31,6 @@
   </div>
 </template>
 <script setup>
-
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { TextBoxComponent as EjsTextbox } from "@syncfusion/ej2-vue-inputs";
@@ -42,19 +41,16 @@ const textbox = ref(null);
 const textbox1 = ref(null);
 const textbox2 = ref(null);
 const textbox3 = ref(null);
+
+
 const selectionOptions = { type: "Multiple", mode: "Cell" };
 const onClick = function () {
-  startRowIndex = parseInt(textbox.value.$el.value, 10);
-  startColumnIndex = parseInt(textbox1.value.$el.value, 10);
-  endRowIndex = parseInt(textbox2.value.$el.value, 10);
-  endColumnIndex = parseInt(textbox3.value.$el.value, 10);
+  let startRowIndex = parseInt(textbox.value.ej2Instances.value, 10);
+  let startColumnIndex = parseInt(textbox1.value.ej2Instances.value, 10);
+  let endRowIndex = parseInt(textbox2.value.ej2Instances.value, 10);
+  let endColumnIndex = parseInt(textbox3.value.ej2Instances.value, 10);
   grid.value.clearCellSelection();
-  if (
-    !isNaN(startRowIndex) &&
-    !isNaN(startColumnIndex) &&
-    !isNaN(endRowIndex) &&
-    !isNaN(endColumnIndex)
-  )
+  if (!isNaN(startRowIndex) &&!isNaN(startColumnIndex) && !isNaN(endRowIndex) && !isNaN(endColumnIndex))
     grid.value.selectCellsByRange(
       { rowIndex: startRowIndex, cellIndex: startColumnIndex },
       { rowIndex: endRowIndex, cellIndex: endColumnIndex }

@@ -38,7 +38,7 @@ const clickHandler = function (args) {
     medium: 40,
     big: 60,
   }
-  grid.value.rowHeight = heightRow[args.target.id];
+  grid.value.ej2Instances.rowHeight = heightRow[args.target.id];
 }
 </script>
 <style>

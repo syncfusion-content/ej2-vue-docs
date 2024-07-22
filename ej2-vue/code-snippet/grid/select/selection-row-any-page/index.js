@@ -37,50 +37,49 @@ new Vue({
   </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      dropdownData: [
-        { text: 'Select row index' },
-        { text: '1', value: '1' },
-        { text: '2', value: '2' },
-        { text: '30', value: '30' },
-        { text: '80', value: '80' },
-        { text: '110', value: '110' },
-        { text: '120', value: '120' },
-        { text: '210', value: '210' },
-        { text: '310', value: '310' },
-        { text: '410', value: '410' },
-        { text: '230', value: '230' }
-      ],
-      initialPage: { pageSize: 10 }
-    };
+data() {
+  return {
+    data: data,
+    dropdownData: [
+      { text: "Select row index" },
+      { text: "1", value: "1" },
+      { text: "2", value: "2" },
+      { text: "30", value: "30" },
+      { text: "80", value: "80" },
+      { text: "110", value: "110" },
+      { text: "120", value: "120" },
+      { text: "210", value: "210" },
+      { text: "310", value: "310" },
+      { text: "410", value: "410" },
+      { text: "230", value: "230" },
+    ],
+    initialPage: { pageSize: 10 },
+  };
+},
+methods: {
+  actioncomplete: function () {
+    this.$refs.grid.ej2Instances.selectRow(this.mod);
   },
-  methods: {
-    actioncomplete: function () {
-      this.$refs.grid.$el.ej2_instances[0].selectRow(this.mod)
-    },
-    valueChange: function (args) {
-      this.value = +args.value;
-      this.mod = (this.value - 1) % 10;
-      const page = Math.ceil(this.value / 10);
+  valueChange: function (args) {
+    this.value = +args.value;
+    this.mod = (this.value - 1) % 10;
+    const page = Math.ceil(this.value / 10);
 
-      if (page === 1) {
-        if (this.$refs.grid.$el.ej2_instances[0].pagerModule.pagerObj.currentPage != 1) {
-          this.$refs.grid.$el.ej2_instances[0].pagerModule.goToPage(1);
-        }
-        this.$refs.grid.$el.ej2_instances[0].selectRow(this.mod);
+    if (page === 1) {
+      if (this.$refs.grid.ej2Instances.pagerModule.pagerObj.currentPage != 1 ) {
+        this.$refs.grid.ej2Instances.pagerModule.goToPage(1);
       }
-      else {
-        this.$refs.grid.$el.ej2_instances[0].pagerModule.goToPage(page);
-        if (this.$refs.grid.$el.ej2_instances[0].pagerModule.pagerObj.currentPage == page) {
-          this.$refs.grid.$el.ej2_instances[0].selectRow(this.mod);
-        }
+      this.$refs.grid.ej2Instances.selectRow(this.mod);
+    } else {
+      this.$refs.grid.ej2Instances.pagerModule.goToPage(page);
+      if ( this.$refs.grid.ej2Instances.pagerModule.pagerObj.currentPage == page) {
+        this.$refs.grid.ej2Instances.selectRow(this.mod);
       }
     }
-  },
-  provide: {
-    grid: [Page]
   }
+},
+provide: {
+  grid: [Page]
+}
 
 });

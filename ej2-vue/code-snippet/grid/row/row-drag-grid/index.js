@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { GridPlugin, RowDD, Selection, Page } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, RowDD, Page } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
 
 Vue.use(GridPlugin);
@@ -40,7 +40,7 @@ new Vue({
     };
   },
   provide: {
-    grid: [RowDD, Page, Selection]
+    grid: [RowDD, Page]
   }
 
 });

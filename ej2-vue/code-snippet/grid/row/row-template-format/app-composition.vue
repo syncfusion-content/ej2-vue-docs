@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource="data" height="335" :rowTemplate="'rowTemplate'" width="auto">
+    <ejs-grid :dataSource="data" height="335" :rowTemplate="'rowTemplate'" width="auto">
       <e-columns>
         <e-column headerText="Employee Image" width="150" textAlign="Center"></e-column>
         <e-column headerText="Employee Details" width="300" textAlign="Center"></e-column>

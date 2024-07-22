@@ -47,11 +47,11 @@ var dropdown = ref(null);
       const field = { text: "text", value: "value" };
       const headerValueAccessor = (field, columns) => {
         if (textbox.value &&
-          textbox.value.$el.value &&
-          textbox.value.$el.value.trim() !== "" &&
-          columns.field === dropdown.value.$el.value
+          textbox.value.ej2Instances.value &&
+          textbox.value.ej2Instances.value.trim() !== "" &&
+          columns.field === dropdown.value.ej2Instances.value
         ) {
-          columns.headerText = textbox.value.$el.value;
+          columns.headerText = textbox.value.ej2Instances.value;
         }
       }
     const changeHeaderText = function () {

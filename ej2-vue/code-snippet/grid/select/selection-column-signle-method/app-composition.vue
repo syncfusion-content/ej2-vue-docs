@@ -28,11 +28,11 @@ import { data } from './datasource.js';
 import { ref } from 'vue';
 const textbox1 = ref(null);
 const grid = ref(null);
-const selectionOptions = { type: 'Single' };
+const selectionOptions = { allowColumnSelection: true,type: 'Single' };
 const onClick = function () {
-  const columnIndex = parseInt(textbox1.$el.value, 10); 
+  const columnIndex = parseInt(textbox1.value.ej2Instances.value, 10); 
   if (!isNaN(columnIndex)) 
-  grid.value.ej2Instances.selectionModule.selectColumn(this.columnIndex);
+     grid.value.ej2Instances.selectionModule.selectColumn(columnIndex);
 }
 </script>
 

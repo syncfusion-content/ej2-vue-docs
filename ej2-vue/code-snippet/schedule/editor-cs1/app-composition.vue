@@ -2,7 +2,7 @@
   <div id='app'>
     <div id='container'>
       <ejs-schedule :height='height' :width='width' :views='views' :selectedDate='selectedDate'
-        :eventSettings='eventSettings' :editorTemplate="'editorTemplate'" :popupOpen='onPopupOpen'>
+        :eventSettings='eventSettings' :editorTemplate="'editorTemplate'">
         <template v-slot:editorTemplate>
           <table class="custom-event-editor" width="100%" cellpadding="5">
             <tbody>
@@ -14,18 +14,18 @@
               </tr>
               <tr>
                 <td class="e-textlabel">Status</td>
-                <td colspan="4"><input type="text" id="EventType" name="EventType" class="e-field"
-                    style="width: 100%" />
+                <td colspan="4"><ejs-dropdownlist id='EventType' name="EventType" class="e-field" placeholder= 'Choose status' :dataSource='statusData' >
+                    </ejs-dropdownlist>
                 </td>
               </tr>
               <tr>
                 <td class="e-textlabel">From</td>
-                <td colspan="4"><input id="StartTime" class="e-field" type="text" name="StartTime" />
+                <td colspan="4"><ejs-datetimepicker id="StartTime" class="e-field" name="StartTime"></ejs-datetimepicker>
                 </td>
               </tr>
               <tr>
                 <td class="e-textlabel">To</td>
-                <td colspan="4"><input id="EndTime" class="e-field" type="text" name="EndTime" />
+                <td colspan="4"><ejs-datetimepicker id="EndTime" class="e-field" name="EndTime" ></ejs-datetimepicker>
                 </td>
               </tr>
               <tr>
@@ -46,8 +46,8 @@
 <script setup>
 import { provide } from "vue";
 import { ScheduleComponent as EjsSchedule, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
-import { DropDownList } from '@syncfusion/ej2-dropdowns';
-import { DateTimePicker } from '@syncfusion/ej2-calendars';
+import { DropDownListComponent as EjsDropdownlist } from '@syncfusion/ej2-vue-dropdowns';
+import { DateTimePickerComponent as EjsDatetimepicker } from '@syncfusion/ej2-vue-calendars';
 import { eventData } from './datasource.js';
 
 
@@ -60,35 +60,7 @@ const eventSettings = {
 };
 const selectedDate = new Date(2018, 1, 15);
 const showQuickInfo = false;
-
-const onPopupOpen = function (args) {
-  if (args.type === 'Editor') {
-    let statusElement = args.element.querySelector('#EventType');
-    if (!statusElement.classList.contains('e-dropdownlist')) {
-      let dropDownListObject = new DropDownList({
-        placeholder: 'Choose status',
-        value: statusElement.value,
-        dataSource: ['New', 'Requested', 'Confirmed']
-      });
-      dropDownListObject.appendTo(statusElement);
-      statusElement.setAttribute('name', 'EventType');
-    }
-    let startElement = args.element.querySelector('#StartTime');
-    if (!startElement.classList.contains('e-datetimepicker')) {
-      new DateTimePicker(
-        { value: new Date(startElement.value) || new Date() },
-        startElement
-      );
-    }
-    let endElement = args.element.querySelector('#EndTime');
-    if (!endElement.classList.contains('e-datetimepicker')) {
-      new DateTimePicker(
-        { value: new Date(endElement.value) || new Date() },
-        endElement
-      );
-    }
-  }
-}
+const statusData = ['New', 'Requested', 'Confirmed'];
 
 provide('schedule', [Day, Week, WorkWeek, Month]);
 

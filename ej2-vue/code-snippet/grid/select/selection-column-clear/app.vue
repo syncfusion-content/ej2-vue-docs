@@ -40,9 +40,9 @@ components: {
   },
  methods: {
     onClick: function () {
-        this.$refs.grid.$el.ej2_instances[0].selectionModule.clearColumnSelection()
+      this.$refs.grid.ej2Instances.selectionModule.clearColumnSelection()    
     }
- }
+  }
 }
 </script>
 <style>

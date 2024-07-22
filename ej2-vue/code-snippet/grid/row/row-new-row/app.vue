@@ -48,7 +48,7 @@ components: {
         ShipName: this.generateShipName(),
       };
 
-      this.$refs.grid.addRecord(newRecord, 0);
+      this.$refs.grid.ej2Instances.addRecord(newRecord, 0);
     },
     generateOrderId: function () {
       return Math.floor(10000 + Math.random() * 90000);

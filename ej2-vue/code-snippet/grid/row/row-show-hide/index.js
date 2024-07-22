@@ -27,34 +27,43 @@ new Vue({
       </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      hiddenRows: [], // Initialize hiddenRows as an empty array
-      message: "", // Initialize message as an empty string
-    };
-  },
-  methods: {
-    onCheckBoxChange(args) {
-      if (args.checked) {
-        for (let i = 0; i < this.$refs.grid.$el.ej2_instances[0].getRowsObject().length; i++) {
-          if (this.$refs.grid.$el.ej2_instances[0].getRowsObject()[i].data.CustomerID === "VINET") {
-            this.rowIndex = this.$refs.grid.$el.ej2_instances[0].getRowsObject()[i].index;
-            this.$refs.grid.getRowByIndex(this.rowIndex).style.display = "none";
-            this.hiddenRows.push(this.rowIndex);
-          }
+data() {
+  return {
+    data: data,
+    hiddenRows: [],
+    message: "", 
+    rowIndex:0
+  };
+},
+methods: {
+  onCheckBoxChange(args) {
+    if (args.checked) {
+      for (
+        let i = 0;
+        i < this.$refs.grid.ej2Instances.getRowsObject().length;
+        i++
+      ) {
+        if (
+          this.$refs.grid.ej2Instances.getRowsObject()[i].data
+            .CustomerID === "VINET"
+        ) {
+          this.rowIndex =
+            this.$refs.grid.ej2Instances.getRowsObject()[i].index;
+          this.$refs.grid.ej2Instances.getRowByIndex(this.rowIndex).style.display = "none";
+          this.hiddenRows.push(this.rowIndex);
         }
-        if (this.hiddenRows.length > 0) {
-          this.message = `Rows with a customer name column value of VINET have been hidden`;
-        }
-      } else {
-        this.hiddenRows.forEach((rowIndex) => {
-          this.$refs.grid.getRowByIndex(rowIndex).style.display = "";
-        });
-        this.hiddenRows = [];
-        this.message = "Show all hidden rows";
       }
+      if (this.hiddenRows.length > 0) {
+        this.message = `Rows with a customer name column value of VINET have been hidden`;
+      }
+    } else {
+      this.hiddenRows.forEach((rowIndex) => {
+        this.$refs.grid.ej2Instances.getRowByIndex(rowIndex).style.display = "";
+      });
+      this.hiddenRows = [];
+      this.message = "Show all hidden rows";
     }
   },
+}
 
 });

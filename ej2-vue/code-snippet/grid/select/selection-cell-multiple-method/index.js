@@ -60,7 +60,7 @@ data() {
 },
 methods: {
   buttonClick: function (rowIndex, columnIndex) {
-      this.$refs.grid.selectCells([{ rowIndex: rowIndex, cellIndexes: [columnIndex] }]);
+      this.$refs.grid.ej2Instances.selectCells([{ rowIndex: rowIndex, cellIndexes: [columnIndex] }]);
   }
 }
 

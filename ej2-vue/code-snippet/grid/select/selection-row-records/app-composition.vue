@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div style="padding: 20px 0px">
-      <ejs-button @click="Onclick">Selected Records count</ejs-button>
+      <ejs-button @click="onClick">Selected Records count</ejs-button>
     </div>
-    <p id="message" > {{ showMessage }}</p>
+    <p id="message">{{ showMessage }}</p>
     <div class="control-section">
       <ejs-grid ref="grid" :dataSource="data" allowPaging="true" :allowSelection="true" 
         :selectionSettings="selectionOptions">
@@ -19,20 +19,25 @@
         </e-columns>
       </ejs-grid>
     </div>
-    </div>
+  </div>
 </template>
+
 <script setup>
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+import { ref, provide } from 'vue';
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
-import { ref } from 'vue';
+
 const grid = ref(null);
-let showMessage = '';
-const selectionOptions = { type: 'Multiple' };
-const Onclick = function () {
-  var selectedRecordscount = grid.value.getSelectedRecords().length;
-  showMessage = "Selected record count:" + selectedRecordscount ;
-}
+const showMessage = ref('');
+const selectionOptions = { type: 'Multiple', persistSelection: true };
+
+const onClick = () => {
+  const selectedRecordscount = grid.value.getSelectedRecords().length;
+  showMessage.value = "Selected record count: " + selectedRecordscount;
+};
+
+provide('grid', [Page]);
 </script>
 
 <style>

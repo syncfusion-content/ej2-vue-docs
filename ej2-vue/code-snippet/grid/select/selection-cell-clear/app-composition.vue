@@ -18,7 +18,6 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';

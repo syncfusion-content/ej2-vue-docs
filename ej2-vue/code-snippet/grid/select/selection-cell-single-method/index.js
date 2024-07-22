@@ -35,19 +35,20 @@ new Vue({
     </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      selectionOptions: { mode: 'Cell', type: 'Single' },
-    };
-  },
-  methods: {
-    onClick: function () {
+data() {
+  return {
+    data: data,
+    selectionOptions :{ mode: 'Cell', type: 'Single' },
+    rowIndex:0
+  };
+},
+methods: {
+  onClick: function () {
       this.rowIndex = parseInt(this.$refs.textbox.$el.value, 10);
       this.cellIndex = parseInt(this.$refs.textbox1.$el.value, 10);
       if (!isNaN(this.rowIndex) && !isNaN(this.cellIndex))
-        this.$refs.grid.$el.ej2_instances[0].selectCell({ rowIndex: this.rowIndex, cellIndex: this.cellIndex });
-    }
+         this.$refs.grid.$el.ej2_instances[0].selectCell({ rowIndex: this.rowIndex, cellIndex: this.cellIndex });
   }
+}
 
 });

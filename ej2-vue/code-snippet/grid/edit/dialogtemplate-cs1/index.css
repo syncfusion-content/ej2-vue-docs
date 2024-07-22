@@ -13,3 +13,7 @@
     resize: vertical;
 }
 
+.e-input-group.e-multi-line-input.e-auto-width
+  {
+    width:100%
+  }

@@ -12,8 +12,7 @@
       </ejs-switch>
     </div>
     <div style="padding: 20px 0px 0px 0px">
-      <ejs-grid ref="grid" :dataSource="data"  :selectionSettings="selectionOptions" 
-        height="315px">
+      <ejs-grid ref="grid" :dataSource="data"  :selectionSettings="selectionOptions" height="315px">
         <e-columns>
           <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
           <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
@@ -24,7 +23,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { DropDownListComponent } from '@syncfusion/ej2-vue-dropdowns';
@@ -42,7 +40,6 @@ components: {
   data() {
     return {
       data: data,
-      enableToggleSelection: true,
       selectionOptions: { type: 'Multiple' },
       dropdownData: [
         { text: 'Row', value: 'Row' },
@@ -53,10 +50,10 @@ components: {
   },
   methods: {
     valueChange(args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.mode = args.value;
+      this.$refs.grid.ej2Instances.selectionSettings.mode = args.value;
     },
     toggleSelection(args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.enableToggle = args.checked;
+      this.$refs.grid.ej2Instances.selectionSettings.enableToggle = args.checked;
     }
   }
 };

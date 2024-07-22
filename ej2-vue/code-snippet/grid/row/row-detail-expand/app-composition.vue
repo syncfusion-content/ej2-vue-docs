@@ -83,8 +83,8 @@ const grid = ref(null);
 const textbox = ref(null);
 const data = employeeData;
 const clickHandler = function () {
-  grid.value.ej2Instance.detailRowModule.expand(
-    textbox.value.$el.value
+  grid.value.ej2Instances.detailRowModule.expand(
+    textbox.value.ej2Instances.value
   );
 }
 provide('grid', [DetailRow]);

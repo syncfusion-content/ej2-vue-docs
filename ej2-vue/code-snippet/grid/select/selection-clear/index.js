@@ -36,7 +36,7 @@ new Vue({
   },
   methods: {
     onClick: function () {
-      this.$refs.grid.clearSelection();
+      this.$refs.grid.ej2Instances.clearSelection();
     }
   },
   provide: {

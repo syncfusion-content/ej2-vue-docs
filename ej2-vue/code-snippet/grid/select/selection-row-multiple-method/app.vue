@@ -25,14 +25,10 @@
         <div style="padding: 20px 0px 0px 0px">
           <ejs-grid ref="grid" :dataSource="data" :selectionSettings="selectionOptions">
             <e-columns>
-              <e-column field="OrderID" headerText="Order ID" textAlign="Right" 
-              width="120"></e-column>
-              <e-column field="CustomerID" headerText="Customer ID" width="120">
-              </e-column>
-              <e-column field="ShipCountry" headerText="Ship Country" width="130">
-              </e-column>
-              <e-column field="Freight" headerText="Freight" format="C2" width="100">
-              </e-column>
+              <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
+              <e-column field="CustomerID" headerText="Customer ID" width="120"></e-column>
+              <e-column field="ShipCountry" headerText="Ship Country" width="130"></e-column>
+              <e-column field="Freight" headerText="Freight" format="C2" width="100"></e-column>
             </e-columns>
           </ejs-grid>
         </div>
@@ -40,7 +36,7 @@
 </template>
 <script>
 
-import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
 export default {
@@ -55,18 +51,14 @@ components: {
     return {
       data: data,
       selectionOptions:{ type: 'Multiple', mode: 'Row' },
-      pageOptions : { pageSize: 5 }
     };
   },
    methods: {
      selectRows: function (rowIndexes) {
-        this.$refs.grid.clearRowSelection();        
-        this.$refs.grid.selectRows(rowIndexes);
+        this.$refs.grid.ej2Instances.clearRowSelection();        
+        this.$refs.grid.ej2Instances.selectRows(rowIndexes);
      }
-   },
-  provide: {
-    grid: [Page]
-  }
+   }
 }
 </script>
 <style>
