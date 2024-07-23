@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective,Page } from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
 export default {
 name: "App",
@@ -32,7 +32,7 @@ components: {
   },
   methods: {
     rowDataBound: function (args) {
-      if (args.data["EmployeeID"] > 3) {
+      if (args.data.CustomerID > 3) {
         this.selIndex.push(
           parseInt(args.row.getAttribute("data-rowindex"), 10)
         );
@@ -40,11 +40,15 @@ components: {
     },
     dataBound: function () {
       if (this.selIndex.length) {
-        this.$refs.grid.selectRows(this.selIndex);
+        this.$refs.grid.ej2Instances.selectRows(this.selIndex);
         this.selIndex = [];
       }
     },
   },
+
+  provide:{
+    grid:[Page]
+  }
 };
 </script>
 <style>

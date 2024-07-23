@@ -14,15 +14,14 @@
 </template>
 <script setup>
 
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns,Page } from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
-import { ref } from "vue";
+import { provide, ref } from "vue";
 const grid = ref(null);
 const selectionOptions = { type: "Multiple", mode: "Row" };
-const pageOptions = { pageSize: 5 };
 let selIndex = [];
 const rowDataBound = function (args) {
-  if (args.data["EmployeeID"] > 3) {
+  if (args.data.CustomerID > 3) {
     selIndex.push(parseInt(args.row.getAttribute("data-rowindex"), 10));
   }
 };
@@ -32,6 +31,7 @@ const dataBound = function () {
     selIndex = [];
   }
 };
+provide('grid', [Page]);
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";

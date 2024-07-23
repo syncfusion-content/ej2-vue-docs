@@ -25,9 +25,9 @@ import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
 import { ref } from 'vue';
 const grid = ref(null);
-const selectionOptions = { type: 'Multiple', mode: 'Cell' };
+const selectionOptions = { allowColumnSelection: true };
 const onClick = function () {
-  grid.value.clearColumnSelection();
+  grid.value.ej2Instances.selectionModule.clearColumnSelection();
 }
 </script>
 <style>

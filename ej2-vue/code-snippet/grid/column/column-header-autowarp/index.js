@@ -43,7 +43,7 @@ new Vue({
   },
   methods: {
     valueChange: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].textWrapSettings.wrapMode = args.value;
+      this.$refs.grid.ej2Instances.textWrapSettings.wrapMode =args.value;
     },
   },
   provide: {

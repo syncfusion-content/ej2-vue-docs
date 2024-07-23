@@ -35,17 +35,17 @@ new Vue({
 data() {
   return {
     data: data,
-    selectionOptions : { mode: 'Row', type: 'Multiple' },
-    pageOptions : { pageSize: 5 }
+    selectionOptions: { mode: "Row", type: "Multiple" },
+    pageOptions: { pageSize: 5 },
   };
 },
 methods: {
- onClick() {
-   this.$refs.grid.clearRowSelection()
-  }
+  onClick() {
+    this.$refs.grid.ej2Instances.clearRowSelection();
+  },
 },
-  provide: {
-  grid: [Page]
+provide: {
+  grid: [Page],
 }
 
 });

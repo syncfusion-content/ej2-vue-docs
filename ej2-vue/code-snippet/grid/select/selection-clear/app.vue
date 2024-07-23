@@ -15,7 +15,6 @@
   </div>
 </template>
 <script>
-
 import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
@@ -30,17 +29,13 @@ components: {
   data() {
     return {
       data: data,
-      selectionOptions: {
-        mode: "Both",
-        allowColumnSelection: true,
-        type: "Multiple",
-      },
+      selectionOptions: { mode: "Both", allowColumnSelection: true, type: "Multiple"},
       pageOptions: { pageSize: 5 },
     };
   },
   methods: {
     onClick: function () {
-      this.$refs.grid.clearSelection();
+      this.$refs.grid.ej2Instances.clearSelection();
     },
   },
   provide: {

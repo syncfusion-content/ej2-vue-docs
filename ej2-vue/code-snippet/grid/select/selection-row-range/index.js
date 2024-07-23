@@ -38,22 +38,22 @@ new Vue({
   </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      selectionOptions: { type: 'Multiple', mode: 'Row' },
-      pageOptions: { pageSize: 5 }
-    };
-  },
-  methods: {
-    onClick: function () {
-      this.startIndex = parseInt(this.$refs.textbox.$el.value, 10);
-      this.endIndex = parseInt(this.$refs.textbox1.$el.value, 10);
-      this.$refs.grid.clearRowSelection();
-      if (!isNaN(this.startIndex) && !isNaN(this.endIndex)) {
-        this.$refs.grid.$el.ej2_instances[0].selectionModule.selectRowsByRange(this.startIndex, this.endIndex);
+data() {
+  return {
+    data: data,
+    selectionOptions:{ type: 'Multiple', mode: 'Row' },
+    pageOptions : { pageSize: 5 },
+  };
+},
+ methods: {
+  onClick: function () {
+      let startIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10); 
+      let endIndex = parseInt(this.$refs.textbox1.ej2Instances.value, 10); 
+      this.$refs.grid.ej2Instances.clearRowSelection();
+      if (!isNaN(startIndex) && !isNaN(endIndex)) {
+        this.$refs.grid.ej2Instances.selectRowsByRange(startIndex, endIndex);
       }
-    }
-  }
+   }
+ }
 
 });

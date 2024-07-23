@@ -34,7 +34,7 @@ components: {
   },
   methods: {
     toggleRowHover: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].enableHover = args.checked
+      this.$refs.grid.ej2Instances.enableHover = args.checked
     },
   },
 };

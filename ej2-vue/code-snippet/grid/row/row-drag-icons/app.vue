@@ -14,7 +14,7 @@
   </div>
 </template>
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective, RowDD, Selection, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, RowDD, Page } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
 export default {
 name: "App",
@@ -37,11 +37,11 @@ components: {
       for (var r = 0; r < args.rows.length; r++) {
         value.push(args.fromIndex + r);
       }
-      this.$refs.grid.reorderRows(value, args.dropIndex);
+      this.$refs.grid.ej2Instances.reorderRows(value, args.dropIndex);
     },
   },
   provide: {
-    grid: [RowDD, Page, Selection],
+    grid: [RowDD, Page],
   },
 };
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource='data' height='315' width='auto' :detailDataBound='detailDataBound' :detailTemplate="'detailTemplate'">
+    <ejs-grid ref="grid" :dataSource='employeeDataParent' height='315' width='auto' :detailDataBound='detailDataBound' :detailTemplate="'detailTemplate'">
       <e-columns>
         <e-column field='FirstName' headerText='First Name' width='140'></e-column>
         <e-column field='LastName' headerText='Last Name' width='140'></e-column>
@@ -17,7 +17,7 @@
 import { provide } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns,DetailRow,Grid } from "@syncfusion/ej2-vue-grids";
 import { data, employeeData } from "./datasource.js";
-      const data = employeeData;
+      const employeeDataParent = employeeData;
     const detailDataBound = function (args) {
               let detail = new Grid({
             dataSource: data.filter((item) => item['EmployeeID'] === args.data['EmployeeID']),

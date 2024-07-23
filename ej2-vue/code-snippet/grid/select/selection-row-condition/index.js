@@ -23,25 +23,31 @@ new Vue({
 `,
 
 data() {
-  return {
-    data: data,
-    selectionOptions:{ type: 'Multiple', mode: 'Row' },
-    pageOptions : { pageSize: 5 },
-    selIndex:[],
-  };
-},
- methods: {
-  rowDataBound: function (args) {
-      if (args.data['EmployeeID']> 3) {
-          this.selIndex.push(parseInt(args.row.getAttribute('data-rowindex'), 10));
-      }
+    return {
+      data: data,
+      selectionOptions: { type: "Multiple", mode: "Row" },
+      pageOptions: { pageSize: 5 },
+      selIndex: [],
+    };
   },
-  dataBound: function () {
-      if (this.selIndex.length) {
-          this.$refs.grid.selectRows(this.selIndex);
-          this.selIndex = [];
+  methods: {
+    rowDataBound: function (args) {
+      if (args.data.CustomerID > 3) {
+        this.selIndex.push(
+          parseInt(args.row.getAttribute("data-rowindex"), 10)
+        );
       }
+    },
+    dataBound: function () {
+      if (this.selIndex.length) {
+        this.$refs.grid.ej2Instances.selectRows(this.selIndex);
+        this.selIndex = [];
+      }
+    },
+  },
+
+  provide:{
+    grid:[Page]
   }
- }
 
 });

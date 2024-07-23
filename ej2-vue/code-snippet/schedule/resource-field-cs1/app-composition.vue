@@ -2,7 +2,7 @@
   <div id='app'>
     <div id='container'>
       <ejs-schedule :height='height' :width='width' :views='views' :selectedDate='selectedDate'
-        :eventSettings='eventSettings' :editorTemplate="'editorTemplate'" :popupOpen='onPopupOpen' :group='group'>
+        :eventSettings='eventSettings' :editorTemplate="'editorTemplate'" :group='group'>
         <e-resources>
           <e-resource field='OwnerId' title='Owner' name='Owners' :dataSource='ownerDataSource' textField='text'
             idField='id' colorField='color'>
@@ -20,26 +20,25 @@
               <tr>
                 <td class="e-textlabel">From</td>
                 <td colspan="4">
-                  <input id="StartTime" class="e-field" type="text" name="StartTime" />
+                  <ejs-datetimepicker id="StartTime" class="e-field" name="StartTime"></ejs-datetimepicker>
                 </td>
               </tr>
               <tr>
                 <td class="e-textlabel">To</td>
                 <td colspan="4">
-                  <input id="EndTime" class="e-field" type="text" name="EndTime" />
+                  <ejs-datetimepicker id="EndTime" class="e-field" name="EndTime" ></ejs-datetimepicker>
                 </td>
               </tr>
               <tr>
                 <td class="e-textlabel">Owner</td>
                 <td colspan="4">
-                  <input type="text" id="OwnerId" name="OwnerId" class="e-field" style="width: 100%" />
+                  <ejs-multiselect  id='OwnerId' name="OwnerId" class="e-field" placeholder= 'Choose owner' :dataSource='ownerDataSource' :fields='fields'></ejs-multiselect>
                 </td>
               </tr>
               <tr>
                 <td class="e-textlabel">Reason</td>
                 <td colspan="4">
-                  <textarea id="Description" class="e-field e-input" name="Description" rows="3" cols="50"
-                    style="width: 100%; height: 60px !important; resize: vertical"></textarea>
+                  <textarea id="Description" class="e-field e-input" name="Description" rows="3" cols="50" style="width: 100%; height: 60px !important; resize: vertical"></textarea>
                 </td>
               </tr>
             </tbody>
@@ -52,8 +51,8 @@
 <script setup>
 import { provide } from "vue";
 import { ScheduleComponent as EjsSchedule, ResourcesDirective as EResources, ResourceDirective as EResource, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
-import { MultiSelect } from '@syncfusion/ej2-dropdowns';
-import { DateTimePicker } from '@syncfusion/ej2-calendars';
+import { MultiSelectComponent as EjsMultiselect } from '@syncfusion/ej2-vue-dropdowns';
+import { DateTimePickerComponent as EjsDatetimepicker } from '@syncfusion/ej2-vue-calendars';
 import { eventData } from './datasource.js';
 
 
@@ -70,35 +69,7 @@ const ownerDataSource = [
   { text: 'Smith', id: 2, color: '#7fa900' },
   { text: 'Paul', id: 3, color: '#357cd2' }
 ];
-
-const onPopupOpen = function (args) {
-  if (args.type === 'Editor') {
-    let startElement = args.element.querySelector('#StartTime');
-    if (!startElement.classList.contains('e-datetimepicker')) {
-      new DateTimePicker(
-        { value: new Date(startElement.value) || new Date() },
-        startElement
-      );
-    }
-    let endElement = args.element.querySelector('#EndTime');
-    if (!endElement.classList.contains('e-datetimepicker')) {
-      new DateTimePicker(
-        { value: new Date(endElement.value) || new Date() },
-        endElement
-      );
-    }
-    let processElement = args.element.querySelector('#OwnerId');
-    if (!processElement.classList.contains('e-multiselect')) {
-      let multiSelectObject = new MultiSelect({
-        placeholder: 'Choose a owner',
-        fields: { text: 'text', value: 'id' },
-        dataSource: ownerDataSource,
-        value: [args.data.OwnerId],
-      });
-      multiSelectObject.appendTo(processElement);
-    }
-  }
-}
+const fields = { text: 'text', value: 'id' };
 
 provide('schedule', [Day, Week, WorkWeek, Month]); 
 </script>

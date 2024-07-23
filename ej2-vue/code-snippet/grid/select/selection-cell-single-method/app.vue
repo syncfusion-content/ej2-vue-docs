@@ -24,7 +24,6 @@
   </div>
 </template>
 <script>
-
 import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
@@ -42,14 +41,16 @@ components: {
     return {
       data: data,
       selectionOptions :{ mode: 'Cell', type: 'Single' },
+      rowIndex:0,
+      cellIndex:0
     };
   },
  methods: {
     onClick: function () {
-        this.rowIndex = parseInt(this.$refs.textbox.$el.value, 10);
-        this.cellIndex = parseInt(this.$refs.textbox1.$el.value, 10);
+        this.rowIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10);
+        this.cellIndex = parseInt(this.$refs.textbox1.ej2Instances.value, 10);
         if (!isNaN(this.rowIndex) && !isNaN(this.cellIndex))
-           this.$refs.grid.$el.ej2_instances[0].selectCell({ rowIndex: this.rowIndex, cellIndex: this.cellIndex });
+           this.$refs.grid.ej2Instances.selectCell({ rowIndex: this.rowIndex, cellIndex: this.cellIndex });
     }
  }
 }

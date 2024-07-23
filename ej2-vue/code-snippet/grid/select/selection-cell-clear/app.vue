@@ -40,7 +40,7 @@ components: {
   },
  methods: {
     onClick: function () {
-        this.$refs.grid.clearCellSelection();
+        this.$refs.grid.ej2Instances.clearCellSelection();
     }
  }
 }

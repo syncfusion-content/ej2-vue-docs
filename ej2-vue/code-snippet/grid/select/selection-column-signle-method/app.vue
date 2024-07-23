@@ -42,9 +42,9 @@ components: {
   },
  methods: {
     onClick: function () {
-        this.columnIndex = parseInt(this.$refs.textbox1.$el.value, 10); 
-        if (!isNaN(this.columnIndex)) 
-           this.$refs.grid.$el.ej2_instances[0].selectionModule.selectColumn(this.columnIndex);        
+        const columnIndex = parseInt(this.$refs.textbox1.ej2Instances.value, 10); 
+        if (!isNaN(columnIndex)) 
+          this.$refs.grid.ej2Instances.selectionModule.selectColumn(columnIndex);        
     }
  }
 }

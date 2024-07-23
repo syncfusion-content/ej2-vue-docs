@@ -21,7 +21,6 @@
 </template>
 <script>
 import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
-import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
 export default {
 name: "App",

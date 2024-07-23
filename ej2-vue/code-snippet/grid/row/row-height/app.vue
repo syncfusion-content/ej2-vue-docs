@@ -51,7 +51,7 @@ components: {
         medium: 40,
         big: 60,
       };
-      this.$refs.grid.rowHeight = heightRow[args.target.id];
+      this.$refs.grid.ej2Instances.rowHeight = heightRow[args.target.id];
     },
   },
 };

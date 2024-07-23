@@ -48,25 +48,20 @@ components: {
   data() {
     return {
       data: data,
-      selectionOptions: { type: "Multiple", mode: "Cell" },
+      selectionOptions: { type: "Multiple", mode: "Cell" }
     };
   },
   methods: {
     onClick: function () {
-      this.startRowIndex = parseInt(this.$refs.textbox.$el.value, 10);
-      this.startColumnIndex = parseInt(this.$refs.textbox1.$el.value, 10);
-      this.endRowIndex = parseInt(this.$refs.textbox2.$el.value, 10);
-      this.endColumnIndex = parseInt(this.$refs.textbox3.$el.value, 10);
-      this.$refs.grid.clearCellSelection();
-      if (
-        !isNaN(this.startRowIndex) &&
-        !isNaN(this.startColumnIndex) &&
-        !isNaN(this.endRowIndex) &&
-        !isNaN(this.endColumnIndex)
-      )
-        this.$refs.grid.selectCellsByRange(
-          { rowIndex: this.startRowIndex, cellIndex: this.startColumnIndex },
-          { rowIndex: this.endRowIndex, cellIndex: this.endColumnIndex }
+      let startRowIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10);
+      let startColumnIndex = parseInt(this.$refs.textbox1.ej2Instances.value, 10);
+      let endRowIndex = parseInt(this.$refs.textbox2.ej2Instances.value, 10);
+      let endColumnIndex = parseInt(this.$refs.textbox3.ej2Instances.value, 10);
+      this.$refs.grid.ej2Instances.clearCellSelection();
+      if (!isNaN(startRowIndex) &&!isNaN(startColumnIndex) &&!isNaN(endRowIndex) && !isNaN(endColumnIndex))
+        this.$refs.grid.ej2Instances.selectCellsByRange(
+          { rowIndex: startRowIndex, cellIndex: startColumnIndex },
+          { rowIndex: endRowIndex, cellIndex: endColumnIndex }
         );
     },
   },

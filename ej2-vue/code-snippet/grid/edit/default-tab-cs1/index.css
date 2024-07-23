@@ -1,0 +1,15 @@
+
+ 
+ @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+
+.form-group.col-md-6 {
+    width: 250px;
+    height: 54px;
+}
+.form-group.col-md-12 {
+    height: 72px;
+}
+#ShipAddress {
+    resize: vertical;
+}
+

@@ -45,25 +45,27 @@ new Vue({
       </div>
     </div>`,
 
-  data() {
-    return {
-      data: data,
-      dropdownData: [
-        { text: 'OrderID', value: 'OrderID' },
-        { text: 'CustomerID', value: 'CustomerID' },
-        { text: 'Freight', value: 'Freight' },
-        { text: 'OrderDate', value: 'OrderDate' },
-      ],
-      field: { text: 'text', value: 'value' }
-    };
-  },
-  methods: {
-    changeHeaderText: function () {
-      if (this.$refs.textbox.$el.value!== '') {
-        const column = this.$refs.grid.getColumnByField(this.$refs.dropdown.$el.value);
-        column.headerText = this.$refs.textbox.$el.value;
-        this.$refs.grid.refreshHeader();
-      }
+    data() {
+      return {
+        data: data,
+        dropdownData: [
+          { text: "OrderID", value: "OrderID" },
+          { text: "CustomerID", value: "CustomerID" },
+          { text: "Freight", value: "Freight" },
+          { text: "OrderDate", value: "OrderDate" },
+        ],
+        field: { text: "text", value: "value" },
+      };
+    },
+    methods: {
+      changeHeaderText: function () {
+        if (this.$refs.textbox.$el.value !== "") {
+          const column = this.$refs.grid.ej2Instances.getColumnByField(
+            this.$refs.dropdown.ej2Instances.value
+          );
+          column.headerText = this.$refs.textbox.ej2Instances.value;
+          this.$refs.grid.ej2Instances.refreshHeader();
+        }
+      },
     }
-  }
 });

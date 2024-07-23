@@ -14,7 +14,7 @@ The Syncfusion Vue Grid component provides built-in support for row drag and dro
 
 To use the row drag and drop feature in Grid component, you need to inject the **RowDD** in the provider section. The **RowDD** is responsible for handling the row drag and drop functionality in the grid component. Once you have injected the ****RowDD****, you can then use the [allowRowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowrowdraganddrop) and [targetID](https://ej2.syncfusion.com/vue/documentation/api/grid/rowDropSettings/#targetid) properties to enable and configure the row drag and drop feature in the Grid.
 
-## Drag and drop within grid 
+## Drag and drop within grid  
 
 The drag and drop feature allows you to rearrange rows within the grid by dragging them using a drag icon. This feature can be enabled by setting the [allowRowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowrowdraganddrop) property to **true**. This property is a boolean value that determines whether row drag and drop is enabled or not. By default, it is set to **false**, which means that row drag and drop is disabled.
 

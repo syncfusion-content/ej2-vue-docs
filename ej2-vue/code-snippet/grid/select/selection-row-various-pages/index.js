@@ -41,7 +41,7 @@ data() {
 },
 methods: {
   showSelectedRecords() {
-    this.selectedRecords = this.$refs.grid.getSelectedRecords();
+    this.selectedRecords = this.$refs.grid.ej2Instances.getSelectedRecords();
     if (this.selectedRecords.length > 0) {
       let content = ""; 
       this.selectedRecords.forEach((index) => {

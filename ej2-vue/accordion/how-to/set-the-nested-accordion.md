@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Set the nested accordion in Vue Accordion component
 
-Accordion supports to render `nested` level of Accordion by using content property. You can give nested Accordion content inside the parent Accordion content property by using `id` of nested element. The nested Accordion can be rendered with the use of provided events, such as `clicked` and `expanding`.
+Accordion supports to render `nested` level of Accordion by using content property. You can give nested Accordion content inside the parent Accordion content property by using [`v-slot`](https://ej2.syncfusion.com/vue/documentation/common/template#slot-template) template. In the Vue component, the v-slot directive is used to define a slot template in the component’s template where users can insert custom content.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

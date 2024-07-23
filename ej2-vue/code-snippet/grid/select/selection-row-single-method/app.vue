@@ -11,13 +11,10 @@
     <div style="padding: 20px 0px 0px 0px">
       <ejs-grid ref="grid" :dataSource="data"  :selectionSettings="selectionOptions" >
         <e-columns>
-          <e-column field="OrderID" headerText="Order ID" textAlign="Right" 
-            width="120"></e-column>
+          <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
           <e-column field="CustomerID" headerText="Customer ID" width="120"></e-column>
-          <e-column field="ShipCountry" headerText="Ship Country" width="130">
-          </e-column>
-          <e-column field="Freight" headerText="Freight" format="C2" width="100">
-          </e-column>
+          <e-column field="ShipCountry" headerText="Ship Country" width="130"></e-column>
+          <e-column field="Freight" headerText="Freight" format="C2" width="100"></e-column>
         </e-columns>
       </ejs-grid>
     </div>
@@ -41,17 +38,16 @@ components: {
     return {
       data: data,
       selectionOptions: { mode: "Row", type: "Single" },
-      pageOptions: { pageSize: 5 },
     };
   },
   methods: {
     onClick: function () {
-      this.rowIndex = parseInt(this.$refs.textbox.$el.value, 10);
-      if (!isNaN(this.rowIndex)) {
-        this.$refs.grid.selectRow(this.rowIndex);
+      const rowIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10);
+      if (!isNaN(rowIndex)) {
+        this.$refs.grid.ej2Instances.selectRow(rowIndex);
       }
     },
-  },
+  }
 };
 </script>
 <style>

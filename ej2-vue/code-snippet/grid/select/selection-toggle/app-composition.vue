@@ -12,8 +12,7 @@
       </ejs-switch>
     </div>
     <div style="padding: 20px 0px 0px 0px">
-      <ejs-grid ref="grid" :dataSource="data"  :selectionSettings="selectionOptions" 
-        height="315px">
+      <ejs-grid ref="grid" :dataSource="data"  :selectionSettings="selectionOptions" height="315px">
         <e-columns>
           <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
           <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
@@ -31,7 +30,6 @@ import { SwitchComponent as EjsSwitch } from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
 import { ref } from 'vue';
 const grid = ref(null);
-const enableToggleSelection = true;
 const selectionOptions = { type: 'Multiple' };
 const dropdownData = [
   { text: 'Row', value: 'Row' },

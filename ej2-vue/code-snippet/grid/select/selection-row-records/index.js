@@ -32,18 +32,21 @@ new Vue({
       </div>
     </div>
 `,
-  data() {
-    return {
-      data: data,
-      showMessage: "",
-      selectionOptions: { type: 'Multiple' }
-    };
-  },
-  methods: {
-    Onclick() {
-      var selectedRecordscount = this.$refs.grid.getSelectedRecords().length;
-      this.showMessage = "Selected record count:" + selectedRecordscount;
-    }
+data() {
+  return {
+    data: data,
+    showMessage :"",
+    selectionOptions : { type: 'Multiple',persistSelection: true  }
+  };
+},
+methods: {
+  Onclick() {
+    var selectedRecordscount = this.$refs.grid.getSelectedRecords().length;
+    this.showMessage = "Selected record count:" + selectedRecordscount ;
   }
+},
+provide:{
+  grid:[Page]
+}
 
 });

@@ -33,7 +33,7 @@ import { data } from "./datasource.js";
 const grid = ref(null);
 const frozen = ref(2);
 const frozenRowsFn = function () {
-  grid.value.frozenRows = parseInt(frozen.value.$el.value);
+  grid.value.ej2Instances.frozenRows = parseInt(frozen.value.ej2Instances.value);
 }
 provide('grid', [Freeze]);
 </script>

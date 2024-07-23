@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource="data" allowPaging="true" :selectionSettings="selectionOptions">
+    <ejs-grid ref="grid" :dataSource="data"  :selectionSettings="selectionOptions">
       <e-columns>
         <e-column type="checkbox" :headerTemplate="'cTemplate'" width="120">
         </e-column>

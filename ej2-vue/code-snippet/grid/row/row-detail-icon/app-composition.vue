@@ -70,7 +70,6 @@
 import { provide } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DetailRow } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { Internationalization } from "@syncfusion/ej2-base";
 let instance = new Internationalization();
 const data = employeeData;

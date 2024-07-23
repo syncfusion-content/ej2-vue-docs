@@ -19,7 +19,7 @@ Cell selection in the Grid component allows you to interactively select specific
 Single cell selection allows you to select a single cell within a Grid. This feature is useful when you want to focus on a specific cell or perform actions on individual cells within the grid.
 
 To enable single cell selection, set the [selectionSettings.mode](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#mode) property to **Cell** and the [selectionSettings.type](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#type) property to **Single**. This configuration allows you to select a single cell at a time within the grid.
-
+ 
 In the following example demonstrates how to enable single cell selection using property:
 
 {% tabs %}

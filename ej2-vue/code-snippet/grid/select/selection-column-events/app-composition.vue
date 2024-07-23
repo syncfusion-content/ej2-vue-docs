@@ -20,10 +20,10 @@
   </div>
 </template>
 <script setup>
+import {ref} from 'vue'
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
-const selectionOptions = { type: 'Multiple', mode: 'Cell' };
+const selectionOptions = { allowColumnSelection: true};
 const message = ref("");
 const columnSelected = function (args) {
   message.value = `Trigger columnSelected`;

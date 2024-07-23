@@ -40,7 +40,7 @@ components: {
   },
   methods: {
     toggleColumnSelection(args) {
-      this.$refs.grid.ej2Instance.selectionSettings.allowColumnSelection = args.checked ? true : false;
+      this.$refs.grid.ej2Instances.selectionSettings.allowColumnSelection = args.checked ? true : false;
     },
   },
 };

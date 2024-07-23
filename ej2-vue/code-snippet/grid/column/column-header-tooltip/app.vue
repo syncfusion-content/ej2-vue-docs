@@ -48,7 +48,7 @@ components: {
     beforeRender: function (args) {
       const description = this.columnDescriptions[args.target.innerText];
       if (description) {
-        this.$refs.tooltip.$el.ej2_instances[0].content =
+        this.$refs.tooltip.ej2Instances.content =
           args.target.innerText + ": " + description;
       }
     },

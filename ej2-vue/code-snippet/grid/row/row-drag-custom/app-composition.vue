@@ -26,7 +26,7 @@
 <script setup>
 import { provide, ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns,Edit as GridEdit,RowDD, Page } from "@syncfusion/ej2-vue-grids";
-import { TreeGridComponent as EjsTreegrid, ColumnDirective as EColumn, ColumnsDirective as EColumns,Edit as TreeGridEdit   } from "@syncfusion/ej2-vue-treegrid";
+import { TreeGridComponent as EjsTreegrid,Edit as TreeGridEdit   } from "@syncfusion/ej2-vue-treegrid";
 import { isNullOrUndefined } from '@syncfusion/ej2-base';
 import { employeeData } from "./datasource.js";
 const grid = ref(null);

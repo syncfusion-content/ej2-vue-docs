@@ -31,8 +31,9 @@ components: {
   data() {
     return {
       data: data,
-      hiddenRows: [], // Initialize hiddenRows as an empty array
-      message: "", // Initialize message as an empty string
+      hiddenRows: [],
+      message: "", 
+      rowIndex:0
     };
   },
   methods: {
@@ -40,16 +41,16 @@ components: {
       if (args.checked) {
         for (
           let i = 0;
-          i < this.$refs.grid.$el.ej2_instances[0].getRowsObject().length;
+          i < this.$refs.grid.ej2Instances.getRowsObject().length;
           i++
         ) {
           if (
-            this.$refs.grid.$el.ej2_instances[0].getRowsObject()[i].data
+            this.$refs.grid.ej2Instances.getRowsObject()[i].data
               .CustomerID === "VINET"
           ) {
             this.rowIndex =
-              this.$refs.grid.$el.ej2_instances[0].getRowsObject()[i].index;
-            this.$refs.grid.getRowByIndex(this.rowIndex).style.display = "none";
+              this.$refs.grid.ej2Instances.getRowsObject()[i].index;
+            this.$refs.grid.ej2Instances.getRowByIndex(this.rowIndex).style.display = "none";
             this.hiddenRows.push(this.rowIndex);
           }
         }
@@ -58,13 +59,13 @@ components: {
         }
       } else {
         this.hiddenRows.forEach((rowIndex) => {
-          this.$refs.grid.getRowByIndex(rowIndex).style.display = "";
+          this.$refs.grid.ej2Instances.getRowByIndex(rowIndex).style.display = "";
         });
         this.hiddenRows = [];
         this.message = "Show all hidden rows";
       }
     },
-  },
+  }
 };
 </script>
 

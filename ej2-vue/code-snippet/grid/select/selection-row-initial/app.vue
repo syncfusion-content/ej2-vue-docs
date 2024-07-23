@@ -2,10 +2,8 @@
   <div id="app">
     <ejs-grid :dataSource='data' :selectedRowIndex=1 :selectionSettings='selectionOptions' height='315px'>
       <e-columns>
-        <e-column field='OrderID' headerText='Order ID' textAlign='Right' 
-        width=120></e-column>
-        <e-column field='CustomerID' headerText='Customer ID' width=150>
-        </e-column>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
         <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
         <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
       </e-columns>
@@ -16,12 +14,12 @@
 import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
 import { data } from "./datasource.js";
 export default {
-name: "App",
-components: {
-"ejs-grid":GridComponent,
-"e-columns":ColumnsDirective,
-"e-column":ColumnDirective
-},
+  name: "App",
+  components: {
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective,
+  },
   data() {
     return {
       data: data,
@@ -29,7 +27,7 @@ components: {
     };
   },
   provide: {
-    grid: [Page],
+    grid: [Page]
   },
 };
 </script>

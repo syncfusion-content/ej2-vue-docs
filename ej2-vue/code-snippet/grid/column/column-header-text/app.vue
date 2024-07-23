@@ -59,14 +59,14 @@ components: {
   methods: {
     changeHeaderText: function () {
       if (this.$refs.textbox.$el.value !== "") {
-        const column = this.$refs.grid.getColumnByField(
-          this.$refs.dropdown.$el.value
+        const column = this.$refs.grid.ej2Instances.getColumnByField(
+          this.$refs.dropdown.ej2Instances.value
         );
-        column.headerText = this.$refs.textbox.$el.value;
-        this.$refs.grid.refreshHeader();
+        column.headerText = this.$refs.textbox.ej2Instances.value;
+        this.$refs.grid.ej2Instances.refreshHeader();
       }
     },
-  },
+  }
 };
 </script>
 <style>

@@ -32,12 +32,14 @@ import { ref } from 'vue';
 const grid = ref(null);
 const textbox = ref(null);
 const textbox1 = ref(null);
+let rowIndex;
+let cellIndex;
 const selectionOptions = { mode: 'Cell', type: 'Single' };
 const onClick = function () {
-  this.rowIndex = parseInt(textbox.value.$el.value, 10);
-  this.cellIndex = parseInt(textbox1.value.$el.value, 10);
-  if (!isNaN(this.rowIndex) && !isNaN(this.cellIndex))
-    grid.value.ej2Instances.selectCell({ rowIndex: this.rowIndex, cellIndex: this.cellIndex });
+  rowIndex = parseInt(textbox.value.$el.value, 10);
+  cellIndex = parseInt(textbox1.value.$el.value, 10);
+  if (!isNaN(rowIndex) && !isNaN(cellIndex))
+    grid.value.selectCell({ rowIndex: rowIndex, cellIndex: cellIndex });
 }
 </script>
 <style>

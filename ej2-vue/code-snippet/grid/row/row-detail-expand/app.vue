@@ -100,8 +100,8 @@ components: {
   },
   methods: {
     clickHandler: function () {
-      this.$refs.grid.ej2Instance.detailRowModule.expand(
-        this.$refs.textbox.$el.value
+      this.$refs.grid.ej2Instances.detailRowModule.expand(
+        this.$refs.textbox.ej2Instances.value
       );
     },
   },

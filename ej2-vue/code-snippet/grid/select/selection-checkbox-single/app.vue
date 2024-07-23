@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource="data" 
-    :rowSelecting="rowselecting" :selectionSettings="selectionOptions" >
+    <ejs-grid ref="grid" :dataSource="data" :rowSelecting="rowselecting" :selectionSettings="selectionOptions" >
       <e-columns>
         <e-column type="checkbox" width="100"></e-column>
         <e-column field="OrderID" headerText="Order ID" width="120" textAlign="Right">
@@ -39,7 +38,7 @@ components: {
   methods: {
     rowselecting: function (args) {
       if (args.target && args.target.classList.contains("e-icons"))
-        this.$refs.grid.clearSelection();
+        this.$refs.grid.ej2Instances.clearSelection();
     },
   },
 };

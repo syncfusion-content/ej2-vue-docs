@@ -22,38 +22,30 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { CheckBoxComponent as EjsCheckbox} from "@syncfusion/ej2-vue-buttons";
 import { data } from "./datasource.js";
 const grid = ref(null);
-      const hiddenRows = []; // Initialize hiddenRows as an empty array
-      let message = ""; // Initialize message as an empty string
+      let hiddenRows = []; 
+      let message = ref(null); 
+      let rowIndex=0;
     const onCheckBoxChange = (args) => {
       if (args.checked) {
-        for (
-          let i = 0;
-          i < grid.value.$el.ej2_instances[0].getRowsObject().length;
-          i++
-        ) {
-          if (
-            grid.value.$el.ej2_instances[0].getRowsObject()[i].data
-              .CustomerID === "VINET"
-          ) {
-            rowIndex =
-              grid.value.$el.ej2_instances[0].getRowsObject()[i].index;
+        for ( let i = 0;i < grid.value.ej2Instances.getRowsObject().length;i++) {
+          if ( grid.value.ej2Instances.getRowsObject()[i].data.CustomerID === "VINET") {
+            rowIndex =grid.value.ej2Instances.getRowsObject()[i].index;
             grid.value.getRowByIndex(rowIndex).style.display = "none";
             hiddenRows.push(rowIndex);
           }
         }
         if (hiddenRows.length > 0) {
-          message = `Rows with a customer name column value of VINET have been hidden`;
+          message.value = `Rows with a customer name column value of VINET have been hidden`;
         }
       } else {
         hiddenRows.forEach((rowIndex) => {
           grid.value.getRowByIndex(rowIndex).style.display = "";
         });
         hiddenRows = [];
-        message = "Show all hidden rows";
+        message.value = "Show all hidden rows";
       }
     }
 </script>
-
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";

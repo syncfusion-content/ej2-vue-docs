@@ -14,7 +14,7 @@
           <e-column field='CustomerID' headerText='Customer Name' width='150'>
           </e-column>
           <e-column field='OrderDate' headerText='Order Date' width='130' 
-          format="yMd" textAlign='Right'></e-column>
+          format="yMd" type="date" textAlign='Right'></e-column>
           <e-column field='Freight' headerText='Freight' width='120' 
           format='C2' textAlign='Right'></e-column>
           <e-column field='ShipCountry' headerText='Ship Country' width='170'>
@@ -58,11 +58,11 @@ const valueChange = function (args) {
     if (grid.value.ej2Instances.pagerModule.pagerObj.currentPage != 1) {
       grid.value.ej2Instances.pagerModule.goToPage(1);
     }
-    grid.value.ej2Instances.selectRow(mod.value);
+    grid.value.selectRow(mod.value);
   } else {
     grid.value.ej2Instances.pagerModule.goToPage(page);
     if (grid.value.ej2Instances.pagerModule.pagerObj.currentPage == page) {
-      grid.value.ej2Instances.selectRow(mod.value);
+      grid.value.selectRow(mod.value);
     }
   }
 };
