@@ -38,23 +38,23 @@ new Vue({
       </div>
     </div>`,
 
-  data() {
-    return {
-      data: data,
-      selectionOptions: { type: 'Multiple' },
-      dropdownData: [
-        { text: 'Row', value: 'Row' },
-        { text: 'Cell', value: 'Cell' },
-        { text: 'Both', value: 'Both' }
-      ]
-    };
-  },
-  methods: {
-    valueChange: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.mode = args.value;
+    data() {
+      return {
+        data: data,
+        selectionOptions: { type: 'Multiple' },
+        dropdownData: [
+          { text: 'Row', value: 'Row' },
+          { text: 'Cell', value: 'Cell' },
+          { text: 'Both', value: 'Both' }
+        ]
+      };
     },
-    toggleSelection: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.enableToggle = args.checked;
+    methods: {
+      valueChange(args) {
+        this.$refs.grid.ej2Instances.selectionSettings.mode = args.value;
+      },
+      toggleSelection(args) {
+        this.$refs.grid.ej2Instances.selectionSettings.enableToggle = args.checked;
+      }
     }
-  }
 });

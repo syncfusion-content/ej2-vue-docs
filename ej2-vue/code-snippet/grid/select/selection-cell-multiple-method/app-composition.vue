@@ -41,12 +41,14 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
 const selectionOptions = { type: 'Multiple', mode: 'Cell' };
+const grid=ref(null);
 const buttonClick = function (rowIndex, columnIndex) {
-  this.$refs.grid.selectCells([{ rowIndex: rowIndex, cellIndexes: [columnIndex] }]);
+  grid.value.selectCells([{ rowIndex: rowIndex, cellIndexes: [columnIndex] }]);
 }
 </script>
 <style>

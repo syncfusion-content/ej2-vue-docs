@@ -41,6 +41,7 @@ const selectionOptions = { allowColumnSelection: true, type: 'Multiple', mode: '
 const onClick = function () {
   const startIndex = parseInt(textbox.value.ej2Instances.value, 10);
   const endIndex = parseInt(textbox1.value.ej2Instances.value, 10);
+  grid.value.ej2Instances.selectionModule.clearColumnSelection();
   grid.value.ej2Instances.selectionModule.selectColumnsByRange(startIndex, endIndex);
 };
 </script>

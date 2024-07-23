@@ -1,87 +1,49 @@
 <template>
     <div id="app">
-        <ejs-accordion ref="Accordion_Nested" :expanding="expanding">
+         <ejs-accordion>
             <e-accordionitems>
-                <e-accordionitem expanded='true' header='Video' content='<div id="nested_video"></div>'>
-                </e-accordionitem>
-                <e-accordionitem header='Music' content='<div id="nested_music"></div>'></e-accordionitem>
-                <e-accordionitem header='Images' content='<div id="nested_images"></div>'></e-accordionitem>
+                <e-accordionitem expanded='true' header='Video' :content="'NestedVideo'"></e-accordionitem>
+                <template v-slot:NestedVideo>
+                    <ejs-accordion>
+                        <e-accordionitems>
+                            <e-accordionitem header='Video Track1' ></e-accordionitem>
+                            <e-accordionitem header='Video Track2' ></e-accordionitem>
+                        </e-accordionitems>
+                    </ejs-accordion>
+                </template>
+                <e-accordionitem header='Music' :content="'NestedMusic'"></e-accordionitem>
+                <template v-slot:NestedMusic>
+                    <ejs-accordion>
+                        <e-accordionitems>
+                            <e-accordionitem header='Music  Track1' ></e-accordionitem>
+                            <e-accordionitem header='Music  Track2' ></e-accordionitem>
+                            <e-accordionitem header='Music  New' :content="'NestedMusicNew'"></e-accordionitem>
+                            <template v-slot:NestedMusicNew>
+                                <ejs-accordion>
+                                    <e-accordionitems>
+                                        <e-accordionitem header='New  Track1' ></e-accordionitem>
+                                        <e-accordionitem header='New  Track2' ></e-accordionitem>
+                                    </e-accordionitems>
+                                </ejs-accordion>
+                            </template>
+                        </e-accordionitems>
+                    </ejs-accordion>
+                </template>
+                <e-accordionitem header='Images' :content="'NestedImages'"></e-accordionitem>
+                <template v-slot:NestedImages>
+                    <ejs-accordion>
+                        <e-accordionitems>
+                            <e-accordionitem header='Image Track1' ></e-accordionitem>
+                            <e-accordionitem header='Image Track2' ></e-accordionitem>
+                        </e-accordionitems>
+                    </ejs-accordion>
+                </template>
             </e-accordionitems>
         </ejs-accordion>
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
 import { AccordionComponent as EjsAccordion, AccordionItemDirective as EAccordionitem, AccordionItemsDirective as EAccordionitems } from "@syncfusion/ej2-vue-navigations";
-import { Accordion } from '@syncfusion/ej2-vue-navigations';
-
-const Accordion_Nested = ref(null);
-const clicked = (e) => {
-    var ele = e.originalEvent.target;
-    if (ele.querySelectorAll('.e-accordion').length > 0) {
-        return;
-    }
-    new Accordion({
-        items: [{
-            header: 'New Track1'
-        },
-        {
-            header: 'New Track2'
-        }
-        ]
-    }, '#nested_musicNew');
-};
-
-const expanding = (e) => {
-    var obj = Accordion_Nested.value.ej2Instances;
-    if (e.isExpanded && [].indexOf.call(obj.items, e.item) === 0) {
-        if (e.element.querySelectorAll('.e-accordion').length > 0) {
-            return;
-        }
-        new Accordion({
-            items: [{
-                header: 'Video Track1'
-            },
-            {
-                header: 'Video Track2'
-            }
-            ]
-        }, '#nested_video');
-    }
-    if (e.isExpanded && [].indexOf.call(obj.items, e.item) === 1) {
-        if (e.element.querySelectorAll('.e-accordion').length > 0) {
-            return;
-        }
-        new Accordion({
-            clicked: clicked,
-            items: [{
-                header: 'Music Track1'
-            },
-            {
-                header: 'Music Track2'
-            },
-            {
-                header: 'Music New',
-                content: '<div id="nested_musicNew"></div>'
-            }
-            ]
-        }, '#nested_music');
-    }
-    if (e.isExpanded && [].indexOf.call(obj.items, e.item) === 2) {
-        if (e.element.querySelectorAll('.e-accordion').length > 0) {
-            return;
-        }
-        new Accordion({
-            items: [{
-                header: 'Track1'
-            },
-            {
-                header: 'Track2'
-            },
-            ]
-        }, '#nested_images');
-    }
-};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

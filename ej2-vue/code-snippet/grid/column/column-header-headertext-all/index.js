@@ -35,10 +35,10 @@ new Vue({
   },
   methods: {
     changeHeaderText: function () {
-      this.$refs.grid.$el.ej2_instances[0].columnModel.forEach((column) => {
+      this.$refs.grid.ej2Instances.columnModel.forEach((column) => {
         column.headerText = this.headerTextMap[column.field];
       })
-      this.$refs.grid.refreshHeader();
+      this.$refs.grid.ej2Instances.refreshHeader();
     }
   }
 });

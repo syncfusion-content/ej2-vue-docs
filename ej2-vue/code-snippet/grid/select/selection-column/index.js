@@ -37,7 +37,7 @@ new Vue({
   },
   methods: {
     toggleColumnSelection(args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.allowColumnSelection = args.checked ? true : false;
+      this.$refs.grid.ej2Instances.selectionSettings.allowColumnSelection = args.checked ? true : false;
     }
   }
 

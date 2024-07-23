@@ -29,7 +29,7 @@ data() {
 },
  methods: {
   customizeRows: function () {
-    this.$refs.grid.getRowByIndex(2).style.background = 'rgb(193, 228, 234)';
+    this.$refs.grid.ej2Instances.getRowByIndex(2).style.background = "rgb(193, 228, 234)";
   }
  },
 

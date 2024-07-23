@@ -9,16 +9,12 @@
       <ejs-grid ref="grid" :dataSource='data' :actionComplete='actioncomplete' allowPaging='true' 
         height=365 :pageSettings='initialPage'>
         <e-columns>
-          <e-column field='OrderID' headerText='Order ID' width='120' 
+          <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right'></e-column>
+          <e-column field='CustomerID' headerText='Customer Name' width='150'></e-column>
+          <e-column field='OrderDate' type="date" headerText='Order Date' width='130' format="yMd" 
           textAlign='Right'></e-column>
-          <e-column field='CustomerID' headerText='Customer Name' width='150'>
-          </e-column>
-          <e-column field='OrderDate' headerText='Order Date' width='130' 
-          format="yMd" textAlign='Right'></e-column>
-          <e-column field='Freight' headerText='Freight' width='120' 
-          format='C2' textAlign='Right'></e-column>
-          <e-column field='ShipCountry' headerText='Ship Country' width='170'>
-          </e-column>
+          <e-column field='Freight' headerText='Freight' width='120' format='C2' textAlign='Right'></e-column>
+          <e-column field='ShipCountry' headerText='Ship Country' width='170'></e-column>
         </e-columns>
       </ejs-grid>
     </div>
@@ -27,12 +23,12 @@
 <script>
 
 import { GridComponent, ColumnsDirective, ColumnDirective, Page } from "@syncfusion/ej2-vue-grids";
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from "./datasource.js";
 export default {
 name: "App",
 components: {
-"ejs-dropdownlist":DropdownlistComponent,
+"ejs-dropdownlist":DropDownListComponent,
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective
@@ -58,7 +54,7 @@ components: {
   },
   methods: {
     actioncomplete: function () {
-      this.$refs.grid.$el.ej2_instances[0].selectRow(this.mod);
+      this.$refs.grid.ej2Instances.selectRow(this.mod);
     },
     valueChange: function (args) {
       this.value = +args.value;
@@ -66,27 +62,21 @@ components: {
       const page = Math.ceil(this.value / 10);
 
       if (page === 1) {
-        if (
-          this.$refs.grid.$el.ej2_instances[0].pagerModule.pagerObj
-            .currentPage != 1
-        ) {
-          this.$refs.grid.$el.ej2_instances[0].pagerModule.goToPage(1);
+        if (this.$refs.grid.ej2Instances.pagerModule.pagerObj.currentPage != 1 ) {
+          this.$refs.grid.ej2Instances.pagerModule.goToPage(1);
         }
-        this.$refs.grid.$el.ej2_instances[0].selectRow(this.mod);
+        this.$refs.grid.ej2Instances.selectRow(this.mod);
       } else {
-        this.$refs.grid.$el.ej2_instances[0].pagerModule.goToPage(page);
-        if (
-          this.$refs.grid.$el.ej2_instances[0].pagerModule.pagerObj
-            .currentPage == page
-        ) {
-          this.$refs.grid.$el.ej2_instances[0].selectRow(this.mod);
+        this.$refs.grid.ej2Instances.pagerModule.goToPage(page);
+        if ( this.$refs.grid.ej2Instances.pagerModule.pagerObj.currentPage == page) {
+          this.$refs.grid.ej2Instances.selectRow(this.mod);
         }
       }
-    },
+    }
   },
   provide: {
-    grid: [Page],
-  },
+    grid: [Page]
+  }
 };
 </script>
 <style>

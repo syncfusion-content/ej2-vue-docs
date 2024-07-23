@@ -41,11 +41,11 @@ components: {
   },
   methods: {
     onClick() {
-      this.$refs.grid.clearRowSelection();
+      this.$refs.grid.ej2Instances.clearRowSelection();
     },
   },
   provide: {
-    grid: [Page],
+    grid: [Page]
   },
 };
 </script>

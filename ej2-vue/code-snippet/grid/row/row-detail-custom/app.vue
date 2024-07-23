@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource='data' height='315' width='auto' :detailDataBound='detailDataBound' :detailTemplate="'detailTemplate'">
+    <ejs-grid ref="grid" :dataSource='employeeDataParent' height='315' width='auto' :detailDataBound='detailDataBound' :detailTemplate="'detailTemplate'">
       <e-columns>
         <e-column field='FirstName' headerText='First Name' width='140'></e-column>
         <e-column field='LastName' headerText='Last Name' width='140'></e-column>
@@ -25,7 +25,7 @@ components: {
 },
   data() {
     return {
-      data : employeeData
+     employeeDataParent : employeeData
     };
   },
   methods: {

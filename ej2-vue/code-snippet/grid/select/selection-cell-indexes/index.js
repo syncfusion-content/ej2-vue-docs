@@ -35,29 +35,32 @@ new Vue({
       </ejs-dialog>
     </div>`,
 
-  data() {
-    return {
-      data: data,
-      selectedCellIndexes: [],
-      dialogContent: "",
-      selectionOptions: { mode: 'Cell', type: 'Multiple', persistSelection: true },
-    };
-  },
-  methods: {
-
-    showSelectedIndexes() {
-      this.selectedCellIndexes = this.$refs.grid.getSelectedRowCellIndexes();
-      if (this.selectedCellIndexes.length > 0) {
-        let content = "";
-        this.selectedCellIndexes.forEach((index) => {
-          content += `Row: ${index.rowIndex}, CellIndex: ${index.cellIndexes}<br>`;
-        });
-        this.dialogContent = content;
-        this.$refs.dialogComponent.show();
-      }
+    data() {
+      return {
+        data: data,
+        selectedCellIndexes: [],
+        dialogContent: "",
+        selectionOptions: {
+          mode: "Cell",
+          type: "Multiple",
+          persistSelection: true,
+        },
+      };
     },
-    dialogClose() {
-      this.$refs.dialogComponent.hide();
-    }
-  }
+    methods: {
+      showSelectedIndexes() {
+        this.selectedCellIndexes = this.$refs.grid.ej2Instances.getSelectedRowCellIndexes();
+        if (this.selectedCellIndexes.length > 0) {
+          let content = "";
+          this.selectedCellIndexes.forEach((index) => {
+            content += `Row: ${index.rowIndex}, CellIndex: ${index.cellIndexes}<br>`;
+          });
+          this.dialogContent = content;
+          this.$refs.dialogComponent.show();
+        }
+      },
+      dialogClose() {
+        this.$refs.dialogComponent.hide();
+      },
+    },
 });

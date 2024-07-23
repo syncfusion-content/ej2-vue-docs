@@ -45,22 +45,34 @@ new Vue({
     </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      selectionOptions: { type: 'Multiple', mode: 'Cell' },
-    };
+data() {
+  return {
+    data: data,
+    selectionOptions: { type: "Multiple", mode: "Cell" },
+    startRowIndex:0,
+    startColumnIndex:0,
+    endColumnIndex:0,
+    
+  };
+},
+methods: {
+  onClick: function () {
+    this.startRowIndex = parseInt(this.$refs.textbox.$el.value, 10);
+    this.startColumnIndex = parseInt(this.$refs.textbox1.$el.value, 10);
+    this.endRowIndex = parseInt(this.$refs.textbox2.$el.value, 10);
+    this.endColumnIndex = parseInt(this.$refs.textbox3.$el.value, 10);
+    this.$refs.grid.clearCellSelection();
+    if (
+      !isNaN(this.startRowIndex) &&
+      !isNaN(this.startColumnIndex) &&
+      !isNaN(this.endRowIndex) &&
+      !isNaN(this.endColumnIndex)
+    )
+      this.$refs.grid.selectCellsByRange(
+        { rowIndex: this.startRowIndex, cellIndex: this.startColumnIndex },
+        { rowIndex: this.endRowIndex, cellIndex: this.endColumnIndex }
+      );
   },
-  methods: {
-    onClick: function () {
-      this.startRowIndex = parseInt(this.$refs.textbox.$el.value, 10);
-      this.startColumnIndex = parseInt(this.$refs.textbox1.$el.value, 10);
-      this.endRowIndex = parseInt(this.$refs.textbox2.$el.value, 10);
-      this.endColumnIndex = parseInt(this.$refs.textbox3.$el.value, 10);
-      this.$refs.grid.clearCellSelection();
-      if (!isNaN(this.startRowIndex) && !isNaN(this.startColumnIndex) && !isNaN(this.endRowIndex) && !isNaN(this.endColumnIndex))
-        this.$refs.grid.selectCellsByRange({ rowIndex: this.startRowIndex, cellIndex: this.startColumnIndex }, { rowIndex: this.endRowIndex, cellIndex: this.endColumnIndex });
-    }
-  }
+}
 
 });

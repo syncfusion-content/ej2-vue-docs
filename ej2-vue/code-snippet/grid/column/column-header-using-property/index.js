@@ -19,7 +19,7 @@ new Vue({
         <e-column field="OrderDate" type="Date" headerText="Order Date" format="yMd"
         :customAttributes="{class:'customcss'}" textAlign="Center">
         </e-column>
-        <e-column field="ShippedDate" type="Date" headerText="Shipped Date" textAlign="Center" 
+        <e-column field="ShippedDate" type="date" headerText="Shipped Date" textAlign="Center" 
         format="yMd"></e-column>
       </e-columns>
     </ejs-grid>

@@ -23,9 +23,6 @@ import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { DialogComponent } from '@syncfusion/ej2-vue-popups';
 import { data } from './datasource.js';
 
-
-
-
 export default {
 name: "App",
 components: {
@@ -46,7 +43,7 @@ components: {
   },
   methods: {
     showSelectedRecords() {
-      this.selectedRecords = this.$refs.grid.getSelectedRecords();
+      this.selectedRecords = this.$refs.grid.ej2Instances.getSelectedRecords();
       if (this.selectedRecords.length > 0) {
         let content = ""; 
         this.selectedRecords.forEach((index) => {

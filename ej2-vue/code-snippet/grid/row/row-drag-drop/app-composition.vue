@@ -18,11 +18,11 @@
 
 <script setup>
 import { provide } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, RowDD, Selection, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, RowDD, Page } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
 const data = employeeData;
 const selectionOptions = { type: 'Multiple' };
-provide('grid', [RowDD, Page, Selection]);
+provide('grid', [RowDD, Page]);
 </script>
 
 <style>

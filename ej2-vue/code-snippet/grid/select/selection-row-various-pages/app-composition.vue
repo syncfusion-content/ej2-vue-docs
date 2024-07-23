@@ -25,9 +25,9 @@ import { data } from './datasource.js';
 import { ref } from 'vue';
 const grid = ref(null);
 const dialogComponent = ref(null);
-let dialogContent = "";
+const dialogContent = ref("");
 let selectedRecords = [];
-const pageOptions = { pageSize: 5 };
+const pageSettings = { pageSize: 5 };
 const selectionOptions = { type: 'Multiple', persistSelection: true };
 const showSelectedRecords = () => {
   selectedRecords = grid.value.getSelectedRecords();
@@ -36,7 +36,7 @@ const showSelectedRecords = () => {
     selectedRecords.forEach((index) => {
       content += "<b>Order ID:</b>" + index.OrderID + "<br>";
     });
-    dialogContent = content;
+    dialogContent.value = content;
     dialogComponent.value.show();
   }
 }

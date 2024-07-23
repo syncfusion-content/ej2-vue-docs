@@ -15,7 +15,7 @@
 </template>
 <script setup>
 import { provide, ref } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, RowDD, Selection, Page } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, RowDD, Page } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
 const grid = ref(null);
 const data = employeeData;
@@ -29,7 +29,7 @@ const rowDrop = function (args) {
   }
   grid.value.reorderRows(value, args.dropIndex);
 }
-provide('grid', [RowDD, Page, Selection]);
+provide('grid', [RowDD, Page]);
 </script>
 
 <style>

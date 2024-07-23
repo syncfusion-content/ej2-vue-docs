@@ -31,17 +31,17 @@ components: {
   },
   methods: {
     dataBound: function () {
-    this.$refs.grid.getColumnHeaderByIndex(0).style.color = 'green';
-    this.$refs.grid.getColumnHeaderByField('CustomerID').style.background = 'rgb(217, 244, 235)';
-    this.$refs.grid.getColumnHeaderByField('OrderID').style.background = 'rgb(217, 244, 235)';
-    this.$refs.grid.getColumnHeaderByField('ShipCountry').style.background = 'rgb(217, 244, 235)';
-    this.$refs.grid.getColumnHeaderByField('CustomerID').style.color = 'green';
-    this.$refs.grid.getColumnHeaderByUid('grid-column2').style.background = 'rgb(217, 244, 235)';
-    const columnIndex = this.$refs.grid.getColumnIndexByField('ShipCountry');
-    this.$refs.grid.getColumnHeaderByIndex(columnIndex).style.color = 'green';
-    const index =  this.$refs.grid.getColumnIndexByUid('grid-column2');
-    this.$refs.grid.getColumnHeaderByIndex(index).style.color = 'green';
-      }
+      this.$refs.grid.ej2Instances.getColumnHeaderByIndex(0).style.color = 'green';
+      this.$refs.grid.ej2Instances.getColumnHeaderByField('CustomerID').style.background = 'rgb(217, 244, 235)';
+      this.$refs.grid.ej2Instances.getColumnHeaderByField('OrderID').style.background = 'rgb(217, 244, 235)';
+      this.$refs.grid.ej2Instances.getColumnHeaderByField('ShipCountry').style.background = 'rgb(217, 244, 235)';
+      this.$refs.grid.ej2Instances.getColumnHeaderByField('CustomerID').style.color = 'green';
+      this.$refs.grid.ej2Instances.getColumnHeaderByUid('grid-column2').style.background = 'rgb(217, 244, 235)';
+      const columnIndex = this.$refs.grid.ej2Instances.getColumnIndexByField('ShipCountry');
+      this.$refs.grid.ej2Instances.getColumnHeaderByIndex(columnIndex).style.color = 'green';
+      const index =  this.$refs.grid.ej2Instances.getColumnIndexByUid('grid-column2');
+      this.$refs.grid.ej2Instances.getColumnHeaderByIndex(index).style.color = 'green';
+    }
   }
 };
 </script>

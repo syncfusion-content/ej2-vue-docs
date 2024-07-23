@@ -33,20 +33,20 @@ new Vue({
     </div>
 `,
 
-  data() {
-    return {
-      data: data,
-      dropdownData: [
-        { text: 'Flow', value: 'Flow' },
-        { text: 'Box', value: 'Box' },
-        { text: 'BoxWithBorder', value: 'BoxWithBorder' },
-      ],
-      selectionOptions: { mode: 'Cell', type: 'Multiple' },
-    };
-  },
-  methods: {
-    valueChange: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.cellSelectionMode = args.value;
-    }
+data() {
+  return {
+    data: data,
+    dropdownData:[
+      { text: 'Flow', value: 'Flow' },
+      { text: 'Box', value: 'Box' },
+      { text: 'BoxWithBorder', value: 'BoxWithBorder' },
+    ],
+    selectionOptions :{ mode: 'Cell', type: 'Multiple' },
+  };
+},
+methods: {
+  valueChange: function (args) {
+      this.$refs.grid.ej2Instances.selectionSettings.cellSelectionMode= args.value;
   }
+}
 });

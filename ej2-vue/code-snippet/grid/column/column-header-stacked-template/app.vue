@@ -32,7 +32,7 @@
 <script>
 
 import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+import { DropDownListComponent  } from "@syncfusion/ej2-vue-dropdowns";
 import { data } from "./datasource.js";
 export default {
 name: "App",
@@ -40,7 +40,7 @@ components: {
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
 "e-column":ColumnDirective,
-"ejs-dropdownlist":DropdownlistComponent
+"ejs-dropdownlist": DropDownListComponent
 },
   data() {
     return {

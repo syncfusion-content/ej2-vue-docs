@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { GridComponent, ColumnsDirective, ColumnDirective, RowDD, Selection, Page} from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, RowDD,Page} from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
 export default {
 name: "App",
@@ -40,7 +40,7 @@ components: {
     };
   },
   provide: {
-    grid: [RowDD, Page, Selection]
+    grid: [RowDD, Page]
   }
 };
 </script>

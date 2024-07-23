@@ -75,7 +75,6 @@
 
 import { GridComponent, ColumnsDirective, ColumnDirective, DetailRow } from "@syncfusion/ej2-vue-grids";
 import { employeeData } from "./datasource.js";
-import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { Internationalization } from "@syncfusion/ej2-base";
 let instance = new Internationalization();
 export default {

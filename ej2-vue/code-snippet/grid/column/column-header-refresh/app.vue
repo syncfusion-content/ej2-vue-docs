@@ -34,7 +34,7 @@ components: {
   },
   methods: {
     refreshHeader: function () {
-      const column = this.$refs.grid.getColumnByField("CustomerID");
+      const column = this.$refs.grid.ej2Instances.getColumnByField("CustomerID");
       column.headerText = "New Header Text"; // update the header text of the column object
       this.$refs.grid.refreshHeader(); // refresh the grid header
     },

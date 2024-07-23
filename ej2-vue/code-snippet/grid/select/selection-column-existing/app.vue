@@ -43,11 +43,11 @@ components: {
   },
   methods: {
     onClick: function () {
-      this.startIndex = parseInt(this.$refs.textbox.$el.value, 10);
+      this.startIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10);
       if (!isNaN(this.startIndex))
-        this.$refs.grid.$el.ej2_instances[0].selectionModule.selectColumnWithExisting(this.startIndex);
+        this.$refs.grid.ej2Instances.selectionModule.selectColumnWithExisting(this.startIndex);
     },
-  },
+  }
 };
 </script>
 <style>

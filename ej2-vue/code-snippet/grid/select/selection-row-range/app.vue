@@ -27,12 +27,12 @@
 
 import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { TextBoxComponent as EjsTextbox } from '@syncfusion/ej2-vue-inputs';
+import { TextBoxComponent } from '@syncfusion/ej2-vue-inputs';
 import { data } from './datasource.js';
 export default {
 name: "App",
 components: {
-"ejs-textbox":TextboxComponent,
+"ejs-textbox":TextBoxComponent,
 "ejs-button":ButtonComponent,
 "ejs-grid":GridComponent,
 "e-columns":ColumnsDirective,
@@ -42,16 +42,16 @@ components: {
     return {
       data: data,
       selectionOptions:{ type: 'Multiple', mode: 'Row' },
-      pageOptions : { pageSize: 5 }
+      pageOptions : { pageSize: 5 },
     };
   },
    methods: {
     onClick: function () {
-        this.startIndex = parseInt(this.$refs.textbox.$el.value, 10); 
-        this.endIndex = parseInt(this.$refs.textbox1.$el.value, 10); 
-        this.$refs.grid.clearRowSelection();
-        if (!isNaN(this.startIndex) && !isNaN(this.endIndex)) {
-          this.$refs.grid.$el.ej2_instances[0].selectionModule.selectRowsByRange(this.startIndex, this.endIndex);
+        let startIndex = parseInt(this.$refs.textbox.ej2Instances.value, 10); 
+        let endIndex = parseInt(this.$refs.textbox1.ej2Instances.value, 10); 
+        this.$refs.grid.ej2Instances.clearRowSelection();
+        if (!isNaN(startIndex) && !isNaN(endIndex)) {
+          this.$refs.grid.ej2Instances.selectRowsByRange(startIndex, endIndex);
         }
      }
    }

@@ -12,7 +12,7 @@ new Vue({
   template: `
     <div id="app">
       <div style="display: inline-block">
-        <label style="padding: 30px 17px 0 0" >Choose checkbox selection mode:
+        <label style="padding: 30px 17px 0 0 ;font-weight: bold" >Choose checkbox selection mode:
         </label>
         <ejs-dropdownlist  index="0" width="150" 
         :dataSource=" dropdownData" :change="valueChange">
@@ -47,7 +47,7 @@ new Vue({
   },
   methods: {
     valueChange: function (args) {
-      this.$refs.grid.$el.ej2_instances[0].selectionSettings.checkboxMode = args.value;
+      this.$refs.grid.ej2Instances.selectionSettings.checkboxMode = args.value;
     }
   }
 

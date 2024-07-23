@@ -46,7 +46,7 @@ components: {
   },
  methods: {
     valueChange: function (args) {
-        this.$refs.grid.$el.ej2_instances[0].selectionSettings.cellSelectionMode= args.value;
+        this.$refs.grid.ej2Instances.selectionSettings.cellSelectionMode= args.value;
     }
  }
 }

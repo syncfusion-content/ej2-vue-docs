@@ -1,16 +1,14 @@
 <template>
-    <div id="app">
-        <ejs-grid :dataSource='data' :allowPaging='true' height='315px' 
-               :selectionSettings='selectionOptions'>
-           <e-columns>
-                <e-column field='OrderID' headerText='Order ID' isPrimaryKey='true' 
-                    textAlign='Right' width=120></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
-                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
-                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
+  <div id="app">
+    <ejs-grid :dataSource='data' :allowPaging='true' height='315px' :selectionSettings='selectionOptions'>
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' isPrimaryKey='true' textAlign='Right' width=120></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
 </template>
 <script setup>
 import { provide } from "vue";
@@ -18,7 +16,6 @@ import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective 
 import { data } from './datasource.js';
 
 const selectionOptions = { type: 'Multiple', mode: 'Both', persistSelection: true, allowColumnSelection: true };
-const pageOptions = { pageSize: 5 };
 provide('grid', [Page]);
 </script>
 <style>

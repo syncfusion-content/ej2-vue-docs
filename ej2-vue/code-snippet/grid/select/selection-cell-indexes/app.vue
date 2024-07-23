@@ -40,16 +40,12 @@ components: {
       data: data,
       selectedCellIndexes: [],
       dialogContent: "",
-      selectionOptions: {
-        mode: "Cell",
-        type: "Multiple",
-        persistSelection: true,
-      },
+      selectionOptions: { mode: "Cell", type: "Multiple", persistSelection: true }
     };
   },
   methods: {
     showSelectedIndexes() {
-      this.selectedCellIndexes = this.$refs.grid.getSelectedRowCellIndexes();
+      this.selectedCellIndexes = this.$refs.grid.ej2Instances.getSelectedRowCellIndexes();
       if (this.selectedCellIndexes.length > 0) {
         let content = "";
         this.selectedCellIndexes.forEach((index) => {

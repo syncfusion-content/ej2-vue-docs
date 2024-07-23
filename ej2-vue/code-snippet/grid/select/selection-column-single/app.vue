@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <ejs-grid ref="grid" :dataSource="data" allowPaging="true" 
-     :selectionSettings="selectionOptions">
+    <ejs-grid ref="grid" :dataSource="data" :selectionSettings="selectionOptions">
       <e-columns>
         <e-column field="OrderID" headerText="Order ID" width="120" textAlign="Right">
         </e-column>

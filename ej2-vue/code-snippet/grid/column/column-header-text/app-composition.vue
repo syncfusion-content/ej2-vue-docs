@@ -45,11 +45,11 @@ const dropdown = ref(null);
       ];
       const field = { text: "text", value: "value" };
     const changeHeaderText = function () {
-      if (textbox.value.$el.value !== "") {
+      if (textbox.value.ej2Instances.value !== "") {
         const column = grid.value.getColumnByField(
-          dropdown.value.$el.value
+          dropdown.value.ej2Instances.value
         );
-        column.headerText = textbox.value.$el.value;
+        column.headerText = textbox.value.ej2Instances.value;
         grid.value.refreshHeader();
       }
     }

@@ -28,13 +28,9 @@ import { data } from "./datasource.js";
 import { ref } from "vue";
 const grid = ref(null);
 const dialogComponent = ref(null);
-const selectedCellIndexes = [];
-const dialogContent = "";
-const selectionOptions = {
-  mode: "Cell",
-  type: "Multiple",
-  persistSelection: true,
-};
+let selectedCellIndexes = [];
+const dialogContent = ref("");
+const selectionOptions = { mode: "Cell", type: "Multiple",persistSelection: true };
 const showSelectedIndexes = () => {
   selectedCellIndexes = grid.value.getSelectedRowCellIndexes();
   if (selectedCellIndexes.length > 0) {
@@ -42,7 +38,7 @@ const showSelectedIndexes = () => {
     selectedCellIndexes.forEach((index) => {
       content += `Row: ${index.rowIndex}, CellIndex: ${index.cellIndexes}<br>`;
     });
-    dialogContent = content;
+    dialogContent.value = content;
     dialogComponent.value.show();
   }
 }
