@@ -6,7 +6,7 @@
 </template>
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
-const nodes = [
+const group = [
     { id: "rectangle1", offsetX: 100, offsetY: 100, width: 100, height: 100, annotations: [{ content: 'node1' }] },
     { id: "rectangle2", offsetX: 200, offsetY: 200, width: 100, height: 100, annotations: [{ content: 'node2' }] },
     { id: 'group', children: ['rectangle1', 'rectangle2'] },
@@ -23,6 +23,7 @@ export default {
         return {
             width: "100%",
             height: "350px",
+            nodes: nodes,
             getNodeDefaults: (node) => {
                 node.height = 100;
                 node.width = 100;
@@ -34,8 +35,9 @@ export default {
     },
     mounted: function () {
         const diagramInstance = this.$refs.diagram.ej2Instances;
+        diagramInstance.selectAll();
         // Add collection of group nodes into the diagram
-        diagramInstance.addElements(nodes);
+        diagramInstance.addElements(group);
     }
 }
 </script>

@@ -15,9 +15,9 @@ let port1 = {
 }
 port1.shape = 'Square';
 port1.visibility = PortVisibility.Visible
-//specify the direction Of the port
-port1.connectionDirection="Right"
-port1.id = 'port';
+ // Specify the connection Direction
+port1.connectionDirection='Right',
+port1.id = 'port1';
 port1.offset = {
     x: 0.5,
     y: 0.5
@@ -32,43 +32,37 @@ port2.offset = {
     x: 0,
     y: 0
 };
-port2.id = 'port1';
+port2.id = 'port2';
 port2.visibility = PortVisibility.Visible
-//specify the direction Of the port
-port2.connectionDirection="Left"
+
+ // Specify the connection Direction
+port1.connectionDirection='Left',
 port2.shape = 'Square';
+
 let nodes = [{
     id: 'node',
     width: 100,
     height: 100,
-    offsetX: 100,
-    offsetY: 200,
+    offsetX: 600,
+    offsetY: 300,
     ports: [port1]
 },
 {
     id: 'node1',
     width: 100,
     height: 100,
-    offsetX: 300,
-    offsetY: 100,
+    offsetX: 800,
+    offsetY: 200,
     ports: [port2]
 },
 ];
 let connectors = [{
     id: "connector1",
-    sourcePoint: {
-        x: 100,
-        y: 100
-    },
     type: 'Orthogonal',
-    targetPoint: {
-        x: 200,
-        y: 200
-    },
     sourceID: 'node',
     targetID: 'node1',
-    sourcePortID: 'port',
-    targetPortID: 'port1'
+    sourcePortID: 'port1',
+    targetPortID: 'port2'
 }]
 
 const width = "100%";

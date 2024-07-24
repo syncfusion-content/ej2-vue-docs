@@ -1,0 +1,5 @@
+ /* Outline customization of fab */
+ .custom-css.e-fab.e-btn {
+    border-color: darkgrey;
+    border-width: 4px;
+}

@@ -33,7 +33,7 @@ components: {
   },
   methods: {
       databind: function(e){
-        let ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/GanttData","GET");
+        let ajax = new Ajax("https://services.syncfusion.com/vue/production/api/GanttData","GET");
         this.showSpinner();
         ajax.send();
         ajax.onSuccess = function (data) {
