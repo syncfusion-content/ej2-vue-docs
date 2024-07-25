@@ -114,6 +114,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
   @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-filemanager/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>
 

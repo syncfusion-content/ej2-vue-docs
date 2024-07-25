@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { DiagramPlugin,NodeModel } from '@syncfusion/ej2-vue-diagrams';
 Vue.use(DiagramPlugin);
-const nodes= [
+const group:NodeModel = [
     { id: "rectangle1", offsetX: 100, offsetY: 100, width: 100, height: 100, annotations: [{ content: 'node1' }] },
     { id: "rectangle2", offsetX: 200, offsetY: 200, width: 100, height: 100, annotations: [{ content: 'node2' }] },
     { id: 'group', children: ['rectangle1', 'rectangle2'] },
@@ -22,6 +22,7 @@ new Vue({
         return {
             width: "100%",
             height: "350px",
+            nodes: nodes,
             getNodeDefaults: (node) => {
                 node.height = 100;
                 node.width = 100;
@@ -35,8 +36,9 @@ new Vue({
         let diagramInstance: Diagram;
         let diagramObj: any = document.getElementById("diagram");
         diagramInstance = diagramObj.ej2_instances[0];
+        diagramInstance.selectAll();
         // Add collection of group nodes into the diagram
-        diagramInstance.addElements(nodes);
+        diagramInstance.addElements(group);
     }
 
 });
