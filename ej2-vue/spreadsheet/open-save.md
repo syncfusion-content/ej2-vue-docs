@@ -126,7 +126,7 @@ By default, the Spreadsheet component provides an option to browse files from th
 ```js
 
     // Fetch call to server to load the Excel file.
-    fetch('https://localhost:{{Your port number}}/Home/Open', {
+    fetch('https://localhost:{Your port number}/Home/Open', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -536,7 +536,7 @@ By default, the Spreadsheet component saves the Excel file and downloads it to t
         formData.append('JSONData', JSON.stringify(json.jsonObject.Workbook));
         formData.append('PdfLayoutSettings', JSON.stringify({ FitSheetOnOnePage: false }));
         // Using fetch to invoke the save process.
-        fetch('https://localhost:{{Your port number}}/Home/Save', {
+        fetch('https://localhost:{Your port number}/Home/Save', {
             method: 'POST',
             body: formData
         }).then((response) => {
