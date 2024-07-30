@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Qrcodegenerator in Vue Barcode component
+# QrCodeGenerator in Vue Barcode component
 
 ## QR Code
 
@@ -27,7 +27,7 @@ A QR Code is a two-dimensional barcode that consists of a grid of dark and light
 
 ## Customizing the Barcode color
 
-A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using for forecolor property .
+A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using for fore color property .
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 ## Customizing the Barcode dimension
 
-The dimension of the barcode can be changed using the height and width properties of the barcodegenerator.
+The dimension of the barcode can be changed using the height and width properties of the barcodeGenerator.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -69,3 +69,37 @@ In barcode generators You can customize the barcode text by using display text p
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/barcode/qrcode/text-cs1" %}
+
+## Enhancing QR Codes with Icons
+
+
+The EJ2 Barcode Generator now lets you add a [`logo`](https://ej2.syncfusion.com/vue/documentation/api/barcode/qRCodeLogo/) or icon to your QR codes, boosting their visual appeal, clarity, and even security. Adding a recognizable icon can make it easier for users to identify the source and can help prevent tampering .
+
+### Supported Image Sources
+ 
+The [`imageSource`](https://ej2.syncfusion.com/vue/documentation/api/barcode/qRCodeLogo/#imagesource) property of the `QRCodeLogo` class supports the following image sources:
+ 
+- **Local image path**: Specify the path to the image file relative to your project's root directory (e.g., `images/syncfusion.png`) or as an absolute path (e.g., `/assets/icons/logo.svg`).
+- **Remote image URL**: Provide the web address of the image file (e.g., `https://example.com/image.jpg`).
+- **Base64 encoded image data**: Embed the image data directly in the code using a Base64-encoded string (e.g., `data:image/png;base64,iVBORw0KGgoAAAANSUhEUg...`).
+
+### Logo Dimensions
+ 
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/barcode/qRCodeLogo/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/barcode/qRCodeLogo/#height) properties of the `QRCodeLogo` class define the dimensions of the logo in pixels. If not specified, both default to 30% of the QR code’s size. The maximum allowed size is 30% of the QR code’s dimensions to ensure optimal readability.
+
+**Note:** Always test the readability of your QR code after adding a logo. Depending on the logo size and QR code content, you might need to adjust the [`errorCorrectionLevel`](https://ej2.syncfusion.com/vue/documentation/api/barcode/errorCorrectionLevel/) property of the `QRCodeGenerator` to `"Medium"` or `"High"` for better reliability.
+
+The following image illustrates QR code with logo:
+
+![logo](images/logo.png)
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/barcode/qrcode/logo-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/barcode/qrcode/logo-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/barcode/qrcode/logo-cs1" %}
