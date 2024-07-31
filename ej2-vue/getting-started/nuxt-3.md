@@ -51,7 +51,7 @@ Syncfusion packages utilize the ESM syntax, while Nuxt apps operate with the com
 
 export default defineNuxtConfig({
   build: {
-    transpile: ['@syncfusion']
+    transpile: [/@syncfusion/]
   }
 })
 
