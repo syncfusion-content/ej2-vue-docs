@@ -38,7 +38,7 @@ In the following example, CheckBox component is placed inside each `li` element 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs9/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/context-menu/default-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
