@@ -10,6 +10,8 @@ domainurl: ##DomainURL##
 
 # Save PDF file to Azure Blob Storage
 
+PDF Viewer allows to save PDF file to Azure Blob Storage using either the Standalone or Server-backed PDF Viewer. Below are the steps and a sample to demonstrate how to save PDF to Azure Blob Storage.
+
 ## Using Standalone PDF Viewer
 
 To save a PDF file to Azure Blob Storage, you can follow the steps below
