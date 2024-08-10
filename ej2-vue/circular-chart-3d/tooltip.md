@@ -48,7 +48,7 @@ By default, the tooltip shows information about the x and y values in points. Ad
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-format/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-format/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -63,7 +63,7 @@ Any HTML elements can be displayed in the tooltip by using the `template` proper
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/template/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -78,7 +78,7 @@ By default, the tooltip tracks the mouse movement, but it can be set to a fixed 
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/fixed-tooltip/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/fixed-tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -93,7 +93,7 @@ The `fill` and `border` properties are used to customize the background color an
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-custom/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-custom/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -108,7 +108,7 @@ Using the `tooltipRender` event, you can customize tooltip values for a particu
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-event/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue) %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/circular-chart/user-interaction/tooltip-event/app.vue %}
 {% endhighlight %}
 {% endtabs %}
