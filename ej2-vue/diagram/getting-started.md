@@ -168,7 +168,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Diagram component with [height](https://ej2.syncfusion.com/vue/documentation/api/diagram#height) and [width](https://ej2.syncfusion.com/vue/documentation/api/diagram#width) property. 
+2\. In the `template` section, define the Diagram component with [height](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#height) and [width](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#width) property. 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
