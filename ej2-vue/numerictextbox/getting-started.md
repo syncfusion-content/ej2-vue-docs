@@ -18,7 +18,7 @@ To get start quickly with Vue Numerictextbox component, you can check on this vi
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setting up the Vue 2 project
 
