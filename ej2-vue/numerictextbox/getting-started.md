@@ -113,7 +113,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Numerictextbox component with the [value](https://ej2.syncfusion.com/staging/vue/documentation/api/numerictextbox#value) property.
+2\. In the `template` section, define the Numerictextbox component with the [value](https://ej2.syncfusion.com/staging/vue/documentation/api/numerictextbox/#value) property. 
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -230,9 +230,9 @@ The below example demonstrates model binding functionality with the NumericTextB
 
 ## See Also
 
-* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator/)
-* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control/)
-* [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow/)
-* [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons/)
-* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox/)
-* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox/)
+* [How to perform custom validation using FormValidator](./how-to/perform-custom-validation-using-form-validator)
+* [How to customize the UI appearance of the control](./how-to/customize-the-ui-appearance-of-the-control)
+* [How to customize the spin button’s up and down arrow](./how-to/customize-the-spin-buttons-up-and-down-arrow)
+* [How to customize the step value and hide spin buttons](./how-to/customize-the-step-value-and-hide-spin-buttons)
+* [How to prevent nullable input in NumericTextBox](./how-to/prevent-nullable-input-in-numerictextbox)
+* [How to maintain trailing zeros in NumericTextBox](./how-to/maintain-trailing-zeros-in-numerictextbox)
