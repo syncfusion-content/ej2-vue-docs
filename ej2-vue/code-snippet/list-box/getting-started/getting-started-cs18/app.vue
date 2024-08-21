@@ -13,10 +13,6 @@ export default {
   components: {
     "ejs-listbox": ListBoxComponent
   },
-  provide: {
-    // Injecting CheckBoxSelection module
-    listbox: [CheckBoxSelection]
-  },
   data() {
     return {
       data: [
@@ -31,7 +27,7 @@ export default {
         { text: 'McLaren P1', id: 'list-09' },
         { text: 'Ferrari LaFerrari', id: 'list-10' },
       ];
-      selectionSettings: { showCheckbox: true, mode: "Multiple" }
+      selectionSettings: { mode: "Multiple" }
     }
   }
 }
