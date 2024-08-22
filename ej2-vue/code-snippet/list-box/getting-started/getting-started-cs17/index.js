@@ -29,7 +29,7 @@ new Vue({
     { text: 'McLaren P1', id: 'list-09' },
     { text: 'Ferrari LaFerrari', id: 'list-10' },
 ];
-selectionSettings: { showCheckbox: true, mode: "Single" }
+selectionSettings: { mode: "Single" }
     }
   }
 
