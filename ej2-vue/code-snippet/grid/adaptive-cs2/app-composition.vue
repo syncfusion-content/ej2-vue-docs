@@ -1,9 +1,14 @@
 <template>
   <div id="app">
+    <div style="display:inline-block; padding: 0px 0px 20px 200px">
+      <label style="padding: 30px 17px 0 0;font-weight: bold;"> Select row rendering mode :</label>
+      <ejs-dropdownlist ref="dropdown" index="0" width="150" :dataSource="dropDownData"  :change="changeAlignment">
+      </ejs-dropdownlist>
+    </div>
     <div class="e-adaptive-demo e-bigger">
       <div class="e-mobile-layout">
         <div class="e-mobile-content">
-          <ejs-grid ref='grid' id='adaptivebrowser' :dataSource="data" height='100%' :enableAdaptiveUI='true'
+          <ejs-grid ref='grid' :dataSource="data" height='100%' :enableAdaptiveUI='true'
             :allowPaging='true' :allowSorting='true' :allowFiltering='true' :editSettings='editSettings'
             :toolbar='toolbar' :filterSettings='filterSettings' :load='load'>
             <e-columns>
@@ -21,8 +26,9 @@
             <e-aggregates>
               <e-aggregate>
                 <e-columns>
-                  <e-column type="Count" field="Model" :footerTemplate="sumTemplate">
+                  <e-column type="Count" field="Model" :footerTemplate="'sumTemplate'">
                   </e-column>
+                  <template v-slot:sumTemplate="{data}"><span>Total Models: {{data.Count}}</span></template>
                 </e-columns>
               </e-aggregate>
             </e-aggregates>
@@ -38,51 +44,47 @@
   </div>
 </template>
 <script setup>
-import { provide, ref, createApp } from "vue";
-
+import { provide, ref } from "vue";
+import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
 import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Filter, Sort, Edit, Toolbar, Page, Aggregate } from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js'
-const grid = ref(null);
-var app = createApp();
 
+const grid=ref(null);
 const orderidrules = { required: true, number: true };
 const customeridrules = { required: true };
 const editSettings = { allowAdding: true, allowEditing: true, allowDeleting: true, mode: 'Dialog' };
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel', 'Search'];
 const filterSettings = { type: 'Excel' };
-const rowMode = 'Vertical';
+
+const dropDownData= [
+        { text: 'Horizontal', value: 'Horizontal' },
+        { text: 'Vertical', value: 'Vertical' },
+      ];
 const menuFilter = {
   type: 'Menu'
 };
 const checkboxFilter = {
   type: 'CheckBox'
 };
-const sumTemplate = function () {
-  return {
-    template: app.component('sumTemplate', {
-      template: `<span>Total Models: {{data.Count}}</span>`,
-      data: function () { return { data: { data: {} } }; }
-    })
-  }
-}
+
 const load = function () {
-  grid.value.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
+  grid.value.ej2Instances.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
+}
+const changeAlignment=function(args){
+  grid.value.ej2Instances.rowRenderingMode = args.value;
 }
 provide('grid', [Filter, Sort, Edit, Toolbar, Page, Aggregate]);
-</script>
+</script> 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-
-.e-grid .custom {
-  background-color: #f48fb1 !important;
-  /* csslint allow: important */
-  color: white;
-}
-
-.e-grid .custom {
-  background-color: #fce4ec;
-  color: white;
-}
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
 
 /* The device with borders */
 .e-mobile-layout {
@@ -90,11 +92,11 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page, Aggregate]);
   width: 360px;
   height: 640px;
   margin: auto;
-  border: 16px #f4f4f4 solid;
+  border: 16px solid #f4f4f4;
   border-top-width: 60px;
   border-bottom-width: 60px;
   border-radius: 36px;
-  box-shadow: 0 0px 2px rgb(144 144 144), 0 0px 10px rgb(0 0 0 / 16%);
+  box-shadow: 0 0px 2px rgb(144, 144, 144), 0 0px 10px rgb(0 0 0 / 16%);
 }
 
 /* The horizontal line on the top of the device */
@@ -133,13 +135,6 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page, Aggregate]);
   border: 0px solid #dddddd;
 }
 
-.highcontrast .e-mobile-layout {
-  border: 16px #000000 solid;
-  border-top-width: 60px;
-  border-bottom-width: 60px;
-  box-shadow: -1px 2px white, -2px -2px white, 2px -2px white, 2px 1px white;
-}
-
 .e-responsive-dialog {
   box-shadow: none;
   border: 1px solid #dddddd;
@@ -155,22 +150,14 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page, Aggregate]);
     box-sizing: border-box;
     display: inline-block;
     float: initial;
-    padding-bottom: 0;
-    padding-right: 0;
-    padding-top: 0;
+    padding: 0;
     text-align: center;
     vertical-align: top;
     width: calc(60% - 48px);
   }
 
-  .e-adaptive-demo .e-pager .e-pagesizes {
-    display: none;
-  }
-
-  .e-adaptive-demo .e-pager .e-pagecountmsg {
-    display: none;
-  }
-
+  .e-adaptive-demo .e-pager .e-pagesizes,
+  .e-adaptive-demo .e-pager .e-pagecountmsg,
   .e-adaptive-demo .e-pager .e-pagercontainer {
     display: none;
   }
@@ -195,16 +182,18 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page, Aggregate]);
     width: calc(10% + 11px);
   }
 
-  .e-adaptive-demo .e-pager .e-mprev {
+  .e-adaptive-demo .e-pager .e-mprev,
+  .e-adaptive-demo .e-pager .e-mnext {
     margin: 0 4px;
-    text-align: right;
     width: 10%;
   }
 
+  .e-adaptive-demo .e-pager .e-mprev {
+    text-align: right;
+  }
+
   .e-adaptive-demo .e-pager .e-mnext {
-    margin: 0 4px;
     text-align: left;
-    width: 10%;
   }
 
   .e-adaptive-demo .e-pager .e-mlast {
@@ -231,4 +220,5 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page, Aggregate]);
 
 .e-dlg-target.e-scroll-disabled {
   overflow: auto !important;
-}</style>
+}
+</style>

@@ -47,38 +47,33 @@ const checkboxFilter = {
   type: 'CheckBox'
 }
 const load = function () {
-  grid.value.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
+  grid.value.ej2Instances.adaptiveDlgTarget = document.getElementsByClassName('e-mobile-content')[0];
 }
 provide('grid', [Filter, Sort, Edit, Toolbar, Page]);
-</script>
+</script> 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-
-.e-grid .custom {
-  background-color: #f48fb1 !important;
-  /* csslint allow: important */
-  color: white;
-}
-
-.e-grid .custom {
-  background-color: #fce4ec;
-  color: white;
-}
-
-/* The device with borders */
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+/* Mobile Layout Styles */
 .e-mobile-layout {
   position: relative;
   width: 360px;
   height: 640px;
   margin: auto;
-  border: 16px #f4f4f4 solid;
+  border: 16px solid #f4f4f4;
   border-top-width: 60px;
   border-bottom-width: 60px;
   border-radius: 36px;
-  box-shadow: 0 0px 2px rgb(144 144 144), 0 0px 10px rgb(0 0 0 / 16%);
+  box-shadow: 0 0px 2px rgb(144, 144, 144), 0 0px 10px rgb(0, 0, 0 / 16%);
 }
 
-/* The horizontal line on the top of the device */
 .e-mobile-layout:before {
   content: '';
   display: block;
@@ -92,7 +87,6 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page]);
   border-radius: 10px;
 }
 
-/* The circle on the bottom of the device */
 .e-mobile-layout:after {
   content: '';
   display: block;
@@ -106,7 +100,6 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page]);
   border-radius: 50%;
 }
 
-/* The screen (or content) of the device */
 .e-mobile-layout .e-mobile-content {
   overflow-x: hidden;
   height: 100%;
@@ -114,102 +107,75 @@ provide('grid', [Filter, Sort, Edit, Toolbar, Page]);
   border: 0px solid #dddddd;
 }
 
-.highcontrast .e-mobile-layout {
-  border: 16px #000000 solid;
-  border-top-width: 60px;
-  border-bottom-width: 60px;
-  box-shadow: -1px 2px white, -2px -2px white, 2px -2px white, 2px 1px white;
+/* Adaptive Pager Styles */
+.e-adaptive-demo .e-pager {
+  padding: 13px 0;
 }
 
+.e-adaptive-demo .e-pager div.e-parentmsgbar {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+  vertical-align: top;
+  width: calc(60% - 48px);
+}
+
+.e-adaptive-demo .e-pager .e-pagesizes,
+.e-adaptive-demo .e-pager .e-pagecountmsg,
+.e-adaptive-demo .e-pager .e-pagercontainer {
+  display: none;
+}
+
+.e-adaptive-demo .e-pager .e-icons {
+  font-size: 11px;
+}
+
+.e-adaptive-demo .e-pager .e-mfirst,
+.e-adaptive-demo .e-pager .e-mprev,
+.e-adaptive-demo .e-pager .e-mnext,
+.e-adaptive-demo .e-pager .e-mlast {
+  border: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 1% 5%;
+}
+
+.e-adaptive-demo .e-pager .e-mfirst {
+  margin-right: 4px;
+  text-align: right;
+  width: calc(10% + 11px);
+}
+
+.e-adaptive-demo .e-pager .e-mprev {
+  margin: 0 4px;
+  text-align: right;
+  width: 10%;
+}
+
+.e-adaptive-demo .e-pager .e-mnext {
+  margin: 0 4px;
+  text-align: left;
+  width: 10%;
+}
+
+.e-adaptive-demo .e-pager .e-mlast {
+  margin-left: 4px;
+  text-align: left;
+  width: calc(10% + 11px);
+}
+
+.e-adaptive-demo .e-bigger .e-pager {
+  padding: 19px 0;
+}
+
+/* Responsive Dialog */
 .e-responsive-dialog {
   box-shadow: none;
   border: 1px solid #dddddd;
 }
 
-/* Render the mobile pager by default */
-@media (max-width: 3840px) {
-  .e-adaptive-demo .e-pager {
-    padding: 13px 0;
-  }
-
-  .e-adaptive-demo .e-pager div.e-parentmsgbar {
-    box-sizing: border-box;
-    display: inline-block;
-    float: initial;
-    padding-bottom: 0;
-    padding-right: 0;
-    padding-top: 0;
-    text-align: center;
-    vertical-align: top;
-    width: calc(60% - 48px);
-  }
-
-  .e-adaptive-demo .e-pager .e-pagesizes {
-    display: none;
-  }
-
-  .e-adaptive-demo .e-pager .e-pagecountmsg {
-    display: none;
-  }
-
-  .e-adaptive-demo .e-pager .e-pagercontainer {
-    display: none;
-  }
-
-  .e-adaptive-demo .e-pager .e-icons {
-    font-size: 11px;
-  }
-
-  .e-adaptive-demo .e-pager .e-mfirst,
-  .e-adaptive-demo .e-pager .e-mprev,
-  .e-adaptive-demo .e-pager .e-mnext,
-  .e-adaptive-demo .e-pager .e-mlast {
-    border: 0;
-    box-sizing: border-box;
-    display: inline-block;
-    padding: 1% 5%;
-  }
-
-  .e-adaptive-demo .e-pager .e-mfirst {
-    margin-right: 4px;
-    text-align: right;
-    width: calc(10% + 11px);
-  }
-
-  .e-adaptive-demo .e-pager .e-mprev {
-    margin: 0 4px;
-    text-align: right;
-    width: 10%;
-  }
-
-  .e-adaptive-demo .e-pager .e-mnext {
-    margin: 0 4px;
-    text-align: left;
-    width: 10%;
-  }
-
-  .e-adaptive-demo .e-pager .e-mlast {
-    margin-left: 4px;
-    text-align: left;
-    width: calc(10% + 11px);
-  }
-
-  .e-adaptive-demo .e-bigger .e-pager,
-  .e-adaptive-demo .e-pager.e-bigger {
-    padding: 19px 0;
-  }
-
-  .e-adaptive-demo .e-bigger .e-pager.e-rtl div.e-parentmsgbar,
-  .e-adaptive-demo .e-pager.e-bigger.e-rtl div.e-parentmsgbar {
-    margin-right: 0;
-  }
-
-  .e-adaptive-demo .e-bigger .e-pager div.e-parentmsgbar,
-  .e-adaptive-demo .e-pager.e-bigger div.e-parentmsgbar {
-    padding: 0;
-  }
-}
-
 .e-dlg-target.e-scroll-disabled {
   overflow: auto !important;
-}</style>
+}
+</style>
