@@ -10,340 +10,177 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Grid component
 
-The Grid uses `DataManager` which supports both RESTful JSON data services binding and local JavaScript object array binding. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property can be assigned either with the instance of `DataManager` or JavaScript object array collection. It supports two kinds of data binding methods:
+Data binding is a fundamental technique that empowers the Grid component to integrate data into its interface, enabling the creation of dynamic and interactive grid views. This feature is particularly valuable when working with large datasets or when data needs to be fetched remotely. 
+
+The Syncfusion Grid utilizes the **DataManager**, which supports both local binding with JavaScript object arrays and remote binding with RESTful JSON data services. The key property, [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource), can be assigned to a DataManager instance or a collection of JavaScript object arrays.
+
+It supports two kinds of data binding methods:
 
 * Local data
 * Remote data
 
-To learn about Grid data binding quickly, you can check on this video:
+To learn about how to bind local, remote or observables data to Vue Grid, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=Vos7RCR6-uw" %}
 
-## Sending additional parameters to the server
+## Loading indicator
 
-To add a custom parameter to the data request, use the `addParams` method of `Query` class. Assign the `Query` object with additional parameters to the grid [`query`](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property.
+The Syncfusion Vue Grid offers a loading animation feature, which makes it easy to identify when data is being loaded or refreshed. This feature provides a clear understanding of the grid's current state and actions, such as sorting, filtering, grouping, and more.
 
+To achieve this, you can utilize the [loadingIndicator.indicatorType](https://ej2.syncfusion.com/vue/documentation/api/grid/loadingIndicatorModel/) property of the grid, which supports two types of indicators:
+
+* Spinner (default indicator)
+* Shimmer
+
+The following example demonstrates how to set the `loadingIndicator.indicatorType` property based on changing the dropdown value using the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list/#change) event of the `DropDownList` component. The [refreshColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#refreshcolumns) method is used to apply the changes and display the updated loading indicator type. 
+W
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/databind/remote-cs1/app-composition.vue %}
+{% include code-snippet/grid/databind/local-data-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/databind/remote-cs1/app.vue %}
+{% include code-snippet/grid/databind/local-data-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/databind/remote-cs1" %}
+{% previewsample "page.domainurl/code-snippet/grid/databind/local-data-cs1" %}
 
-> The parameters added using the [`query`](https://ej2.syncfusion.com/vue/documentation/api/grid/#query) property will be sent along with the data request for every grid action.
+## Refresh the datasource using property
 
-## Handling HTTP error
+Refreshing the data source in a Syncfusion Grid involves updating the data that the grid displays dynamically. This operation is essential when you need to reflect changes in the underlying data without reloading the entire page or component.
 
-During server interaction from the grid, some server-side exceptions may occur, and you can acquire those error messages or exception details in client-side using the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionfailure) event.
+To achieve this, you can make use of the [datasource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property in conjunction with the [setProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/#refresh) method. This ensures that the grid reflects the changes in the data source without requiring a complete page or component reload.
 
-The argument passed to the [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionfailure) Grid event contains the error details returned from the server.
+For example, if you add or delete data source records, follow these steps:
 
-```
-<template>
-    <div id="app">
-        <ejs-grid :dataSource="data" :actionFailure='actionFailure'>
-          <e-columns>
-            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
-            <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-            <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
-            <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' type='date' width=120></e-column>
-          </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-import { DataManager, ODataAdaptor } from "@syncfusion/ej2-data";
-const data = new DataManager({
-  url: 'http://some.com/invalidUrl',    
-  adaptor: new ODataAdaptor()
-  });
-  const actionFailure = function() {
-     alert('Server exception: 404 Not found');
-  }
-</script>
-<style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>
+**Step 1**: Add/delete the datasource record by using the following code.
+
+```typescript
+this.$refs.grid.ej2Instances.dataSource.unshift(data); // Add a new record.
+this.$refs.grid.ej2Instances.dataSource.splice(selectedRow, 1); // Delete a record.
 ```
 
-> The [`actionFailure`](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionfailure) event will be triggered not only for the server errors, but also when there is an exception while processing the grid actions.
+**Step 2**:  Refresh the datasource after changes by invoking the `setProperties` method.
 
-## Binding with ajax
-
-You can use Grid [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property to bind the datasource to Grid from external ajax request. In the below code we have fetched the datasource from the server with the help of ajax request and provided that to [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property by using `onSuccess` event of the ajax.
-
-```
-<template>
-    <div id="app">
-        <ejs-button v-on:click.native="btnClick">Play</ejs-button>
-        <ejs-grid>
-            <e-columns>
-                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120 ></e-column>
-                <e-column field='CustomerID' headerText='Customer ID' textAlign='Right' width=120 ></e-column>
-                <e-column field='EmployeeID' headerText='Employee ID' textAlign='Right' width=120 ></e-column>
-                <e-column field='ShipCountry' headerText='Ship Country' textAlign='Right' width=120 ></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
-import { ref } from "vue";
-import { Ajax } from '@syncfusion/ej2-base';
-   const btnClick = function (args){
-        var ajax = new Ajax("https://ej2services.syncfusion.com/production/web-services/api/Orders", "GET");
-        ajax.send();
-        ajax.onSuccess = function (result) {
-        grid.value.ej2Instances.dataSource = JSON.parse(result);
-        };
-      }
-</script>
-<style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>
-```
-
-## Custom binding
-
-It is possible to handle data processing externally and bind the result to the grid. This help you to provide your own custom data logic. Grid expects an object as the result of the custom logic and the emitted value should be an object with properties `result` and `count`.
-
-> In this context, we are going to use `Ajax` from our `@syncfusion/ej2-base` library for handling remote interaction, you can choose any HTTP client as per your choice.
+```typescript
+ this.$refs.grid.ej2Instances.setProperties({ dataSource:  this.$refs.grid.ej2Instances..dataSource});
 
 ```
-<template>
-    <div id="app">
-        <ejs-grid :dataSource='data' :allowPaging='true' :pageSettings='pageOptions' :allowSorting='true' :allowGrouping='true' :dataStateChange='dataStateChange'>
-            <e-columns>
-                <e-column field= "OrderID" headerText="Order ID" width="130" textAlign='Right' ></e-column>
-                <e-column field= "CustomerID" headerText="Customer Name" width="150"></e-column>
-                <e-column field= "ShipName" headerText="Ship Name" width="200"></e-column>
-                <e-column field= "ShipCity" headerText="Ship City" width="150"></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-import { provide, onmounted } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult } from "@syncfusion/ej2-vue-grids";
-import { Ajax } from '@syncfusion/ej2-base';
-      const pageOptions = { pageSize: 10, pageCount: 4 };
-      const orderService = new OrderService();
-  onmounted() {
-    let state = { skip: 0, take: 10 };
-    dataStateChange(state);
-  },
-    const dataStateChange = function (state) {
-        orderService.execute(state).then(( gridData ) => this.data = gridData );
-    }
-  provide('grid',  [Sort, Group, Page]);
-export class OrderService {
-    public ajax: Ajax = new Ajax({
-        type: 'GET', mode: true,
-        onFailure: (e: Error) => { return false; }
-    });
-    private BASE_URL: string = 'https://services.syncfusion.com/js/production/api/Orders';
+The following example demonstrates adding a new record to the data source through an external button:
 
-    public execute(state: DataStateChangeEventArgs): Promise<DataResult> {
-        return this.getData(state);
-    }
 
-    private getData(state: DataStateChangeEventArgs): Promise<DataResult> {
-        const pageQuery = `$skip=${state.skip}&$top=${state.take}`;
-        let sortQuery: string = '';
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/local-data-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/local-data-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/databind/local-data-cs2" %}
 
-        if ((state.sorted || []).length) {
-            sortQuery = `&$orderby=` + (<any> state).sorted.map((obj: Sorts) => {
-                return obj.direction === 'descending' ? `${obj.name} desc` : obj.name;
-            }).reverse().join(',');
-        }
+## Dynamically change the datasource or columns or both
 
-        this.ajax.url = `${this.BASE_URL}?${pageQuery}${sortQuery}&$inlinecount=allpages&$format=json`;
+The Grid component in Syncfusion allows dynamic modification of the data source, columns, or both . This feature is particularly valuable when you need to refresh the grid's content and structure without requiring a complete page reload.
 
-        return this.ajax.send().then((response: any) => {
-            let data: any = JSON.parse(response);
-            return <DataResult> { result: data['d']['results'], count: parseInt(data['d']['__count'], 10) };
-        });
-    }
-}
-</script>
-<style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>
+To achieve dynamic changes, you can utilize the [changeDataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#changedatasource) method. This method enables you to update the data source, columns, or both, based on your application's requirements. However, it is important to note that during the changing process for the data source and columns, the grid's existing actions such as sorting, filtering, grouping, aggregation, and searching will be reset.The `changeDataSource` method has two optional arguments: the first argument represents the data source, and the second argument represents the columns. The various uses of the `changeDataSource` method are explained in the following topic.
+
+**1. Change both data source and columns:**
+
+To modify both the existing columns and the data source, you need to pass the both arguments to the `changeDataSource` method. The following example demonstrates how to change both the data source and columns.
+
+You can assign a JavaScript object array to the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property to bind local data to the grid. The code below provides an example of how to create a data source for the grid.
+
+```typescript
+    export let data= [
+    {
+        OrderID: 10248, CustomerID: 'VINET', Freight: 32.38,
+        ShipCity: 'Reims'
+    },
+    {
+        OrderID: 10249, CustomerID: 'TOMSP', Freight: 11.61,
+        ShipCity: 'Münster'
+    },
+    {
+        OrderID: 10250, CustomerID: 'HANAR', Freight: 61.34,
+        ShipCity: 'Rio de Janeiro'
+    }];
 ```
 
-## Handling Grid actions
+The following code demonstrates how to create the [columns](https://ej2.syncfusion.com/vue/documentation/grid/columns/columns) for the grid, which are based on the provided grid data source.
 
-For grid actions such as `paging`, `grouping`, `sorting` etc, the `dataStateChange` event will be invoked. You have to query and resolve data using `AJAX` in this event based on the state arguments.
-
-```
-<template>
-    <div id="app">
-        <ejs-grid :dataSource='data' :allowPaging='true' :pageSettings='pageOptions' :allowSorting='true' :allowGrouping='true' :dataStateChange='dataStateChange'>
-            <e-columns>
-                <e-column field= "OrderID" headerText="Order ID" width="130" textAlign='Right' ></e-column>
-                <e-column field= "CustomerID" headerText="Customer Name" width="150"></e-column>
-                <e-column field= "ShipName" headerText="Ship Name" width="200"></e-column>
-                <e-column field= "ShipCity" headerText="Ship City" width="150"></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-import { provide, onmounted } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult } from "@syncfusion/ej2-vue-grids";
-import { Ajax } from '@syncfusion/ej2-base';
-      const pageOptions = { pageSize: 10, pageCount: 4 };
-      const orderService = new OrderService();
-  onmounted() {
-    let state = { skip: 0, take: 10 };
-    dataStateChange(state);
-  },
-    const dataStateChange = function (state) {
-        orderService.execute(state).then(( gridData ) => data = gridData );
-    }
-  provide('grid',  [Sort, Group, Page]);
-export class OrderService {
-    public ajax: Ajax = new Ajax({
-        type: 'GET', mode: true,
-        onFailure: (e: Error) => { return false; }
-    });
-    private BASE_URL: string = 'https://services.syncfusion.com/js/production/api/Orders';
-    public execute(state: DataStateChangeEventArgs): Promise<DataResult> {
-        return this.getData(state);
-    }
-    private getData(state: DataStateChangeEventArgs): Promise<DataResult> {
-        const pageQuery = `$skip=${state.skip}&$top=${state.take}`;
-        let sortQuery: string = '';
-        if ((state.sorted || []).length) {
-            sortQuery = `&$orderby=` + (state).sorted.map((obj: Sorts) => {
-                return obj.direction === 'descending' ? `${obj.name} desc` : obj.name;
-            }).reverse().join(',');
-        }
-        this.ajax.url = `${this.BASE_URL}?${pageQuery}${sortQuery}&$inlinecount=allpages&$format=json`;
-        return this.ajax.send().then((response: any) => {
-            let data: any = JSON.parse(response);
-            return { result: data['d']['results'], count: parseInt(data['d']['__count'], 10) };
-        });
-    }
-  }
-</script>
-<style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>
+```typescript
+    newColumn= [
+        { field: 'OrderID', headerText: 'Order ID', textAlign: 'Right', width: 125 },
+        { field: 'CustomerID', headerText: 'Customer ID', width: 125 },
+    ];
 ```
 
-## Perform CRUD operations
+The following code demonstrates updating the data source and columns defined above using the `changeDataSource` method.
 
-The `dataSourceChanged` event will be triggered for updating the grid data. You can perform the save operation based on the event arguments and you need to call the `endEdit` method to indicate the completion of save operation.
-
-```
-<template>
-    <div id="app">
-        <ejs-grid :dataSource='data' :allowPaging='true' :pageSettings='pageOptions' :allowSorting='true' :allowGrouping='true' :dataStateChange='dataStateChange'  :editSettings='editSettings' :toolbar='toolbar'>
-            <e-columns>
-                <e-column field= "OrderID" headerText="Order ID" :isPrimaryKey='true' width="130" textAlign='Right' ></e-column>
-                <e-column field= "CustomerID" headerText="Customer Name" width="150"></e-column>
-                <e-column field= "ShipName" headerText="Ship Name" width="200"></e-column>
-                <e-column field= "ShipCity" headerText="Ship City" width="150"></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-import { provide } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
-import { OrderService } from "./order-service";
-      const editSettings = { allowEditing: true, allowAdding: true, allowDeleting: true };
-      const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-      const pageOptions = { pageSize: 10, pageCount: 4 };
-      const orderService = new OrderService();
-  onmounted() {
-    let state = { skip: 0, take: 10 };
-    dataStateChange(state);
-  }
-    comst dataStateChange = function (state) {
-        orderService.execute(state).then(( gridData ) => data = gridData );
-    }
-    const dataSourceChanged = function (state) {
-    if (state.action === 'add') {
-      orderService.addRecord(state).subscribe(() => state.endEdit());
-    } else if (state.action === 'edit') {
-      orderService.updateRecord(state).subscribe(() => state.endEdit());
-    } else if (state.requestType === 'delete') {
-      orderService.deleteRecord(state).subscribe(() => state.endEdit());
-    }
-  }
-  provide('grid',  [Sort, Group, Page, Edit, Toolbar]);
-</script>
-<style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>
+```typescript
+    this.$refs.grid.ej2Instances.changeDataSource(data, newColumn);
 ```
 
-## Calculate aggregates
+**2. Modify only the existing columns:**
 
-The footer aggregate values should be calculated and send along with the `dataSource` property as follows. The aggregate property of the data source should contain the aggregate value assigned to the property named in the `field – type` format. For example, the `Sum` aggregate value for the `Freight` field should be assigned to the property named as `Freight - sum`.
+To modify the existing columns in a grid, you can either add or remove columns or change the entire set of columns using the [changeDataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#changedatasource) method. To use this method, you should set the first parameter to null and provide the new columns as the second parameter. However, please note that if a column field is not specified in the data source, its corresponding column values will be empty. The following example illustrates how to modify existing columns.
 
-```
-{
-    result: [{..}, {..}, {..}, ...],
-    count: 830,
-    aggregates: { 'Freight - sum' : 450,'EmployeeID - min': 1 }
-}
-```
+The following code demonstrates how to add new columns with existing grid columns ('newColumn') by using `changeDataSource` method.
 
-> The group footer and caption aggregate values will be calculated by the grid itself.
-
-## Provide excel filter data source
-
-The `dataStateChange` event will be triggered with appropriate arguments when the excel filter requests the filter choice data source. You need to resolve the excel filter data source using the `dataSource` resolver function from the state argument as follows.
-
-```
-<template>
-    <div id="app">
-        <ejs-grid :dataSource='data' :allowPaging='true' :pageSettings='pageOptions' :allowSorting='true' :allowGrouping='true' :dataStateChange='dataStateChange' :filterSettings='filterOptions'>
-            <e-columns>
-                <e-column field= "OrderID" headerText="Order ID" width="130" textAlign='Right' ></e-column>
-                <e-column field= "CustomerID" headerText="Customer Name" width="150"></e-column>
-                <e-column field= "ShipName" headerText="Ship Name" width="200"></e-column>
-                <e-column field= "ShipCity" headerText="Ship City" width="150"></e-column>
-            </e-columns>
-        </ejs-grid>
-    </div>
-</template>
-<script setup>
-import { provide } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, DataStateChangeEventArgs, Sorts, Sort, Group, Page, DataResult, Filter } from "@syncfusion/ej2-vue-grids";
-import { Ajax } from '@syncfusion/ej2-base';
-      const filterOptions = { type: 'Excel' };
-      const pageOptions = { pageSize: 10, pageCount: 4 };
-      const orderService = new OrderService();
-  onmounted() {
-    let state = { skip: 0, take: 10 };
-    dataStateChange(state);
-  }
-    const dataStateChange = function (state) {
-        if (state.action.requestType === "filterchoicerequest" || state.action.requestType ==="filtersearchbegin") {
-      orderService.execute(state).then((e) => state.dataSource(e));
-    } else {
-      orderService.execute(state).then(( gridData ) => {grid.dataSource = gridData} );
-    }
-    }
-  provide('grid',  [Sort, Group, Page, Filter]);
-</script>
-<style>
- @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-</style>
+```typescript
+    newColumn1= [
+        { field: 'Freight', headerText: 'Freight', textAlign: 'Right', width: 125 },
+        { field: 'ShipCity', headerText: 'ShipCity', width: 125 },
+    ];
+    let column: any = this.newColumn.push(...this.newColumn1);
+    this.$refs.grid.ej2Instances..changeDataSource(null, column);
 ```
 
-> You can find the code at our [`GitHub repository`](https://github.com/SyncfusionExamples)
+**3. Modify only the data source:**
 
-## See Also
+You can change the entire data source in the grid using the `changeDataSource` method. To use this method, you should provide the data source as the first argument, and  the second argument which is optional can be used to specify new columns for the grid. If you are not specifying the columns, the grid will generate the columns automatically based on the data source. The following example demonstrates how to modify the data source.
 
-* [How to bind SQL Server data in Vue DataGrid using SqlClient data provider](https://support.syncfusion.com/kb/article/11781/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
+You can assign a JavaScript object array to the `dataSource` property to bind local data to the grid. The code below provides an example of how to create a new data source for the grid.
+
+```typescript
+     export let employeeData = [
+    {
+        FirstName: 'Nancy', City: 'Seattle', Region: 'WA',
+        Country: 'USA'
+    },
+    {
+        FirstName: 'Andrew', City: 'London', Region: null,
+        Country: 'UK',
+    },
+    {
+        FirstName: 'Janet', City: 'Kirkland', Region: 'WA',
+        Country: 'USA'
+    }];
+```
+
+The following code demonstrates, how to use the `changeDataSource` method to bind the new **employeeData** to the grid.
+
+```typescript
+    this.$refs.gridInstance.ej2Instances.changeDataSource(employeeData);
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/local-data-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/local-data-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/databind/local-data-cs3" %}
+
+>* The Grid state persistence feature does not support the  `changeDataSource` method.
+>* In this document, the above sample uses the local data for `changeDataSource` method. For those using a remote data source, refer to the [FlexibleData](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/flexible-data) resource.
+
+## See also
+
+* [Binding a firebase data source to Grid using vueFire2](https://www.syncfusion.com/blogs/post/binding-a-firebase-data-source-to-grid-using-vuefire2.aspx)
+* [How to bind SQL Server data in vue DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11453/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
