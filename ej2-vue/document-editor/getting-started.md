@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue DcoumentEditor Component in Vue 2
+# Getting Started with the Vue DoCumentEditor Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Document Editor component
 
@@ -45,7 +45,7 @@ The Document Editor component requires server-side interactions for the followin
 * [Open file formats other than SFDT](../document-editor/import#convert-word-documents-into-sfdt)
 * [Paste with formatting](../document-editor/clipboard#paste-with-formatting)
 * [Restrict editing](../document-editor/document-management)
-* [Spellcheck](../document-editor/spell-check)
+* [SpellCheck](../document-editor/spell-check)
 * [Save as file formats other than SFDT and DOCX](../document-editor/server-side-export)
 
 >Note: If you don't require the above functionalities then you can deploy as pure client-side component without any server-side interactions.
