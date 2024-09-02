@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue DoCumentEditor Component in Vue 2
+# Getting Started with the Vue DocumentEditor Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Document Editor component
 
