@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in Vue Grid component | Syncfusion
-description: Learn here all about Cell in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Cell and its customization in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
 control: Cell 
 platform: ej2-vue
 documentation: ug
@@ -233,7 +233,9 @@ Vue.use(IconsPlugin)
 
 Step 2: The following code demonstrates how to render Bootstrap tooltip for the **CustomerID** field with [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template)
 
-```
+{% tabs %}
+{% highlight ts tabtitle="app-composition.vue" %}
+{% raw %}
 <template>
   <div id="app">
     <ejs-grid :dataSource="data" :allowPaging="true" >
@@ -275,7 +277,9 @@ import { data } from './datasource.js';
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-```
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
 
 You can get the reference GitHub sample [here](https://github.com/SyncfusionExamples/how-to-show-bootstrap-tooltip-while-hovering-on-vue-datagrid-cells). 
 

@@ -87,10 +87,146 @@ The following example shows how to export the grid with a custom aggregate that 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/excel/excel-export-cs4/app-composition.vue %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowExcelExport='true' :toolbarClick='toolbarClick'>
+            <e-columns>
+            <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+            <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+            <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+            <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
+            </e-columns>
+            <e-aggregates>
+            <e-aggregate>
+                <e-columns>
+                <e-column columnName="ShipCountry" type="Custom" :customAggregate="customAggregateFn" :footerTemplate='footerTemplate'></e-column>
+                </e-columns>
+            </e-aggregate>
+            </e-aggregates>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide, ref, createApp } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, AggregateDirective as EAggregate, AggregatesDirective as EAggregates, Aggregate, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+const grid = ref(null);
+const toolbarOptions = ['ExcelExport'];
+var app = createApp();
+const footerTemp = function () {
+  return {
+    template: app.component('footerTemplate', {
+      template: `<span>{{data.Custom}}</span>`,
+      data() { return { data: {} }; }
+    })
+  }
+}
+const toolbarClick = function(args) {
+  if (args.item.id === 'Grid_excelexport') { // 'Grid_excelexport' -> Grid component id + _ + toolbar item name
+    grid.value.excelExport();
+  }
+};
+const customAggregateFn = function (data) {
+  const brazilCount = data.result ? data.result.filter((item) => item['ShipCountry'] === 'Brazil').length
+  : data.filter((item) => item['ShipCountry'] === 'Brazil').length;
+  return `Brazil count: ${brazilCount}`;
+}
+  provide('grid',  [Toolbar, ExcelExport, Aggregate]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/excel/excel-export-cs4/app.vue %}
+{% raw %}
+<template>
+    <div id="app">
+      <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowExcelExport='true' :toolbarClick='toolbarClick'>
+        <e-columns>
+          <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+          <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
+          <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+          <e-column field='ShipCountry' headerText='Ship Country' width=100></e-column>
+        </e-columns>
+        <e-aggregates>
+          <e-aggregate>
+            <e-columns>
+              <e-column columnName="ShipCountry" type="Custom" :customAggregate="customAggregateFn" :footerTemplate='footerTemplate'></e-column>
+            </e-columns>
+          </e-aggregate>
+        </e-aggregates>
+      </ejs-grid>
+    </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregateDirective, AggregatesDirective, Toolbar, ExcelExport, Aggregate } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { createApp } from "vue";
+
+var app = createApp();
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+"e-aggregates":AggregatesDirective,
+"e-aggregate":AggregateDirective
+},
+  data() {
+    return {
+      data: data,
+      toolbarOptions: ['ExcelExport'],
+      footerTemplate: function () {
+        return {
+          template: app.component('footerTemplate', {
+            template: `<span> {{data.Custom}} </span>`,
+            data() { return { data: {} }; }
+          })
+        }
+      }
+    };
+  },
+  methods: {
+    toolbarClick(args) {
+      if (args.item.id === 'Grid_excelexport') { // 'Grid_excelexport' -> Grid component id + _ + toolbar item name
+        this.$refs.grid.excelExport();
+      }
+    },
+    customAggregateFn: function (data) {
+      const brazilCount = data.result ? data.result.filter((item) => item['ShipCountry'] === 'Brazil').length
+      : data.filter((item) => item['ShipCountry'] === 'Brazil').length;
+      return `Brazil count: ${brazilCount}`;
+    }
+  },
+  provide: {
+    grid: [Toolbar, ExcelExport, Aggregate]
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -267,10 +403,130 @@ The following example demonstrates how to pass additional parameters to the serv
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/excel/additional-parameters-export/app-composition.vue %}
+{% raw %}
+<template>
+    <div id="app">
+        <div style="margin-left:180px"><p style="color:red;" id="message">{{message}}</p></div>
+        <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px'
+        :allowExcelExport='true' :excelExportComplete='excelExportComplete' :toolbarClick='toolbarClick'>
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' :visible='false' width=150></e-column>
+                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
+                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
+import { Query } from "@syncfusion/ej2-data";
+import { data } from './datasource.js';
+const grid = ref(null);
+const toolbarOptions = ['ExcelExport'];
+const queryClone = ref(null);
+const message = ref(null);
+const toolbarClick = (args) => {
+    if (args.item.id === 'Grid_excelexport') {
+        queryClone.value = grid.value.ej2Instances.query;
+        grid.value.ej2Instances.query = new Query().addParams('recordcount', '15');
+        message.value =
+            'Key: ' +
+            grid.value.ej2Instances.query.params[0].key +
+            ' and Value: ' +
+            grid.value.ej2Instances.query.params[0].value + ' on ' + args.item.text;
+        grid.value.excelExport();
+    }
+}
+const excelExportComplete = () => {
+    grid.value.ej2Instances.query = queryClone.value;
+}
+  provide('grid',  [Toolbar, ExcelExport]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/excel/additional-parameters-export/app.vue %}
+{% raw %}
+<template>
+    <div id="app">
+      <div style="margin-left:180px"><p style="color:red;" id="message">{{message}}</p></div>
+        <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px'
+        :allowExcelExport='true' :excelExportComplete='excelExportComplete' :toolbarClick='toolbarClick'>
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' :visible='false' width=150></e-column>
+                <e-column field='ShipCity' headerText='Ship City' width=150></e-column>
+                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Toolbar, ExcelExport } from "@syncfusion/ej2-vue-grids";
+import { Query } from "@syncfusion/ej2-data";
+import { data } from './datasource.js';
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
+  data() {
+    return {
+      data: data,
+      toolbarOptions: ['ExcelExport'],
+      queryClone: "",
+      message:''
+    };
+  },
+  methods: {
+    toolbarClick(args) {
+      if (args.item.id === 'Grid_excelexport') {
+        this.queryClone = this.$refs.grid.ej2Instances.query;
+        this.$refs.grid.ej2Instances.query = new Query().addParams('recordcount', '15');
+        this.message =
+          'Key: ' +
+          this.$refs.grid.ej2Instances.query.params[0].key +
+          ' and Value: ' +
+          this.$refs.grid.ej2Instances.query.params[0].value + ' on ' + args.item.text;
+        this.$refs.grid.excelExport();
+      }
+    },
+    excelExportComplete() {
+      this.$refs.grid.ej2Instances.query = this.queryClone;
+    }
+  },
+  provide: {
+    grid: [Toolbar, ExcelExport]
+  }
+}
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         

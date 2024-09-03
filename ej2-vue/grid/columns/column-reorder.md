@@ -6,7 +6,7 @@ control: Column reorder
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
----
+--- 
 
 # Column reorder in Vue Grid component
 
@@ -82,7 +82,7 @@ You can also use the [reorderColumnByTargetIndex](https://ej2.syncfusion.com/vue
 * **fieldName**: Field name of the column to be reordered
 * **toIndex**: New index of the column after the reordering
 
-Here is an example of how to use the `reorderColumnByTargetIndex` method to reorder single column and multiple columns based on target index:
+Here is an example of how to use the `reorderColumnByTargetIndex` method to reorder single column and multiple columns based on target index: 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -129,10 +129,139 @@ In the following example, we have implemented the `columnDragStart`, `columnDrag
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/default-cs14/app-composition.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <p id='message' style="color:red;text-align:center">{{ message }}</p>
+    <ejs-grid ref='grid' :dataSource="data" :allowReordering='true' height='315px' :enableHover='false'
+      :columnDragStart="columnDragStart" :columnDrag="columnDrag" :columnDrop="columnDrop">
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+        <e-column field='ShipRegion' headerText='Ship Region' width=80></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=80></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { provide, ref } from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Reorder } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+var message = ref(null);
+var grid = ref(null);
+provide('grid', [Reorder]);
+const columnDrop = function (args) {
+  message.value = `columnDrop event triggered`;
+  if (args.column.allowReordering == true) {
+    grid.value.getColumnByField(args.column.field).customAttributes = {
+      class: 'customcss',
+    };
+  }
+}
+const columnDragStart = function (args) {
+
+  message.value = `columnDragStart event triggered`;
+  if (args.column.field == 'OrderID') {
+    grid.value.getColumnByField(args.column.field).allowReordering = false;
+  }
+}
+const columnDrag = function (args) {
+  var index = args.target.getAttribute('data-colIndex');
+  if (index) {
+    message.value = `columnDrag event is triggered. ` + args.column.headerText + ` column is dragged to index ` + index;
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/default-cs14/app.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <p id='message' style="color:red; text-align:center">{{ message }}</p>
+    <ejs-grid ref='grid' :dataSource="data" :allowReordering='true' height='315px' :enableHover='false'
+      :columnDragStart="columnDragStart" :columnDrag="columnDrag" :columnDrop="columnDrop">
+      <e-columns>
+        <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+        <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+        <e-column field='ShipCity' headerText='Ship City' width=100></e-column>
+        <e-column field='ShipRegion' headerText='Ship Region' width=80></e-column>
+        <e-column field='ShipName' headerText='Ship Name' width=80></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective, Reorder } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+export default {
+  name: "App",
+  components: {
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
+  data() {
+    return {
+      data: data,
+      message: ''
+    };
+  },
+  provide: {
+    grid: [Reorder]
+  },
+  methods: {
+    columnDrop: function (args) {
+      this.message = `columnDrop event triggered`;
+      if (args.column.allowReordering == true) {
+        this.$refs.grid.getColumnByField(args.column.field).customAttributes = {
+          class: 'customcss',
+        };
+      }
+    },
+    columnDragStart: function (args) {
+      this.message = `columnDragStart event triggered`;
+      if (args.column.field == 'OrderID') {
+        this.$refs.grid.getColumnByField(args.column.field).allowReordering = false;
+      }
+    },
+    columnDrag: function (args) {
+      var index = args.target.getAttribute('data-colIndex');
+      if (index) {
+        this.message = `columnDrag event is triggered. ` + args.column.headerText + ` column is dragged to index ` + index;
+      }
+    },
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
