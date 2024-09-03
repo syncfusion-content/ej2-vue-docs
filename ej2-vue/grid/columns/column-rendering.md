@@ -65,7 +65,7 @@ Here is an example code snippet that shows how to set a primary key for an auto-
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/default-cs3/app-composition.vue %}
+{% include code-snippet/grid/column/default-cs3/app-composition.vue %} 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs3/app.vue %}
@@ -128,7 +128,7 @@ Here is an example for dynamically generate columns in the grid using v-for dire
 
 ### Using valueAccessor property
 
-Dynamic column generation using value accessor allows you to access and manipulate the display data values in a grid column. By using the [valueAccessor](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#valueaccessor) property of a grid column, you can customize the display value of the column based on the data.
+Dynamic column generation using valueAccessor allows you to access and manipulate the display data values in a grid column. By using the [valueAccessor](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#valueaccessor) property of a grid column, you can customize the display value of the column based on the data.
 
 To use `valueAccessor` property, define the column with the property and provide a function that will return the formatted value. The function receives two arguments:
 * **field**: represents the data field of the column.
@@ -189,7 +189,7 @@ In this example, we have a grid with columns **Food Name**, **Protein**, **Fat**
 
 To display serial number in the grid for every rows, you can use the [rowDataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#rowdatabound) event. The `rowDataBound` event is triggered for each row in the grid when the data is bound to the grid.
 
-Within the event handler, the [pagesize](https://helpej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#pagesize) and [currentPage](https://helpej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#currentpage) index can be obtained from the grid's [pageSettings](https://helpej2.syncfusion.com/vue/documentation/api/grid/#pagesettings) property. Using these values, the serial number can be calculated based on the page size, current page, and row index. Finally, the calculated serial number can be set as the innerHTML of the corresponding row cell.
+Within the event handler, the [pageSize](https://helpej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#pagesize) and [currentPage](https://helpej2.syncfusion.com/vue/documentation/api/grid/pageSettingsModel/#currentpage) index can be obtained from the grid's [pageSettings](https://helpej2.syncfusion.com/vue/documentation/api/grid/#pagesettings) property. Using these values, the serial number can be calculated based on the page size, current page, and row index. Finally, the calculated serial number can be set as the innerHTML of the corresponding row cell.
 
 Here is an example code snippet that demonstrates how to display serial numbers in a Syncfusion Grid using `rowDataBound` event:
 

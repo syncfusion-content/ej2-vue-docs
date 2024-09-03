@@ -92,7 +92,7 @@ The following example demonstrates how to select rows in any page based on index
 
 ## Multiple row selection by single click on row 
 
-The Grid component allows you to perform multiple row selection by simply clicking on rows one by one without pressing CTRL or SHIFT keys. This means that when you click on a row, it will be selected, and clicking on another row will add it to the selection without deselecting the previously selected rows. To deselect a previously selected row, you can click on the row again, and it will be unselected.
+The Grid component allows you to perform multiple row selection by simply clicking on rows one by one without pressing CTRL or SHIFT keys. This means that when you click on a row, it will be selected, and clicking on another row will add it to the selection without  unselecting the previously selected rows. To deselect a previously selected row, you can click on the row again, and it will be unselected.
 
 To enable the simple multiple row selection, you need to set the [selectionSettings.enableSimpleMultiRowSelection](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#enablesimplemultirowselection) property to **true**. 
 
@@ -197,10 +197,120 @@ The following example demonstrates how to get selected row indexes using  `getSe
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/select/selection-row-indexes/app-composition.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="padding: 10px 0px 20px 0px">
+      <ejs-button class="btn" @click="onClick">Get selected row indexes</ejs-button >
+    </div>
+    <p  id="message">{{showMessage}}</p>
+    <ejs-grid ref="grid" :dataSource="data" height="315px" :selectionSettings="selectionOptions">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
+        <e-column field="ShipCity" headerText="Ship City" width="150"></e-column>
+        <e-column field="ShipName" headerText="Ship Name" width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script setup>
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+import { data } from "./datasource.js";
+import { ref } from "vue";
+const grid = ref(null);
+const showMessage = ref("");
+const selectionOptions = { type: "Multiple", mode: "Row" };
+const onClick = function () {
+  const selectedRowIndexes = grid.value.getSelectedRowIndexes();
+  if (selectedRowIndexes.length > 0)
+    showMessage.value = "Selected row indexes:" + selectedRowIndexes.join(", ");
+};
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+
+#message {
+  color: red;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/select/selection-row-indexes/app.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="padding: 10px 0px 20px 0px">
+      <ejs-button class="btn" @click="onClick">Get selected row indexes</ejs-button >
+    </div>
+    <p  id="message">{{showMessage}}</p>
+    <ejs-grid ref="grid" :dataSource="data" height="315px" :selectionSettings="selectionOptions">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
+        <e-column field="ShipCity" headerText="Ship City" width="150"></e-column>
+        <e-column field="ShipName" headerText="Ship Name" width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+<script>
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
+import { data } from "./datasource.js";
+export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
+  data() {
+    return {
+      data: data,
+      showMessage: "",
+      selectedRowIndexes: [],
+      selectionOptions: { type: "Multiple" },
+    };
+  },
+  methods: {
+    onClick: function () {
+      this.selectedRowIndexes = this.$refs.grid.ej2Instances.getSelectedRowIndexes();
+      if (this.selectedRowIndexes.length > 0)
+        this.showMessage ="Selected row indexes:" + this.selectedRowIndexes.join(", ");
+    },
+  }
+};
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+#message {
+  color: red;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -210,7 +320,7 @@ The following example demonstrates how to get selected row indexes using  `getSe
 
 The Grid component allows you to retrieve the selected records even when navigating to different pages. This feature is useful when working with large data sets and allows you to perform actions on the selected records across multiple pages. 
 
-To persist the selection across pages, you need to enable the [persistselection](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid component.
+To persist the selection across pages, you need to enable the [persistSelection](https://ej2.syncfusion.com/vue/documentation/api/grid/selectionSettings/#persistselection) property. By default, this property is set to **false**. To enable it, set the value to **true** in the `selectionSettings` property of the Grid component.
 
 To retrieve the selected records from different pages, you can use the  [getSelectedRecords](https://ej2.syncfusion.com/vue/documentation/api/grid/#getselectedrecords) method. This method returns an array of the selected records.
 
@@ -239,10 +349,146 @@ Here's an example that displays the selected row count using the `getSelectedRec
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/select/selection-row-records/app-composition.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="padding: 20px 0px">
+      <ejs-button @click="onClick">Selected Records count</ejs-button>
+    </div>
+    <p id="message">{{ showMessage }}</p>
+    <div class="control-section">
+      <ejs-grid ref="grid" :dataSource="data" allowPaging="true" :allowSelection="true" 
+        :selectionSettings="selectionOptions">
+        <e-columns>
+          <e-column field="OrderID" isPrimaryKey="true" headerText="Order ID" width="120" 
+          textAlign="Right"></e-column>
+          <e-column field="CustomerID" headerText="Customer ID" width="100"></e-column>
+          <e-column type="date" field="OrderDate" headerText="Order Date" width="130" format="yMd" 
+          textAlign="Right"></e-column>
+          <e-column field="Freight" headerText="Freight" width="100" format="C2" 
+          textAlign="Right"></e-column>
+          <e-column field="ShipCountry" headerText="Ship Country" width="130" format="yMd" ></e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, provide } from 'vue';
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
+import { data } from './datasource.js';
+
+const grid = ref(null);
+const showMessage = ref('');
+const selectionOptions = { type: 'Multiple', persistSelection: true };
+
+const onClick = () => {
+  const selectedRecordscount = grid.value.getSelectedRecords().length;
+  showMessage.value = "Selected record count: " + selectedRecordscount;
+};
+
+provide('grid', [Page]);
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+
+#message {
+  color: red;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/select/selection-row-records/app.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="padding: 20px 0px">
+      <ejs-button @click="Onclick">Selected Records count</ejs-button>
+    </div>
+    <p id="message" > {{ showMessage }}</p>
+    <div class="control-section">
+      <ejs-grid ref="grid" :dataSource="data" allowPaging="true" :allowSelection="true" 
+      :selectionSettings="selectionOptions">
+        <e-columns>
+          <e-column field="OrderID" isPrimaryKey="true" headerText="Order ID" width="120" 
+          textAlign="Right"></e-column>
+          <e-column field="CustomerID" headerText="Customer ID" width="100"></e-column>
+          <e-column type="date" field="OrderDate" headerText="Order Date" width="130" format="yMd" 
+          textAlign="Right"></e-column>
+          <e-column field="Freight" headerText="Freight" width="100" format="C2" 
+          textAlign="Right"></e-column>
+          <e-column field="ShipCountry" headerText="Ship Country" width="130" format="yMd" ></e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+    </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective,Page } from "@syncfusion/ej2-vue-grids";
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { data } from './datasource.js';
+
+export default {
+name: "App",
+components: {
+"ejs-button":ButtonComponent,
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective,
+
+},
+
+  data() {
+    return {
+      data: data,
+      showMessage :"",
+      selectionOptions : { type: 'Multiple',persistSelection: true  }
+    };
+  },
+  methods: {
+    Onclick() {
+      var selectedRecordscount = this.$refs.grid.getSelectedRecords().length;
+      this.showMessage = "Selected record count:" + selectedRecordscount ;
+    }
+  },
+  provide:{
+    grid:[Page]
+  }
+}
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+
+#message {
+  color: red;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -283,10 +529,159 @@ In the following example, row selection is canceled when the value of **Customer
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/select/selection-row-events/app-composition.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <p id="message">{{message}}</p>
+    <div style="padding: 20px 0px 0px 0px">
+      <ejs-grid ref="grid" :enableHover='false' :dataSource="data"
+       :selectionSettings="selectionOptions" :rowSelected="rowSelected"
+       :rowSelecting="rowselecting" :rowDeselected="rowDeselected"
+       :rowDeselecting="rowDeselecting">
+        <e-columns>
+          <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120">
+          </e-column>
+          <e-column field="CustomerID" headerText="Customer ID" width="120">
+          </e-column>
+          <e-column field="ShipCountry" headerText="Ship Country" width="130">
+          </e-column>
+          <e-column field="Freight" headerText="Freight" format="C2" width="100">
+          </e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import{ref} from"vue"
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns} from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+const selectionOptions = { mode: 'Row', type: 'Multiple' };
+const message = ref("");
+const rowselecting = function(args) {
+  message.value = `Trigger rowSelecting`;
+  if (args.data.CustomerID == 'VINET')
+    args.cancel = true;
+}
+const rowSelected = function(args) {
+  message.value = ` Trigger rowSelected`;
+  if (args.data.Freight > 10 || args.data.Freight <= 140)
+    args.row.style.backgroundColor = 'rgb(96, 158, 101)';
+}
+const rowDeselecting = function(args) {
+  message.value = `Trigger rowDeselecting`;
+  if (args.data.Freight > 140)
+    args.row.style.backgroundColor = 'yellow';
+}
+const rowDeselected = function(args) {
+  message.value = `Trigger rowDeselected`;
+  if (args.data.Freight <= 10)
+    args.row.style.backgroundColor = 'red';
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+#message {
+  color: red;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/select/selection-row-events/app.vue %}
+{% raw %}
+<template>
+  <div id="app">
+    <p id="message">{{message}}</p>
+    <div style="padding: 20px 0px 0px 0px">
+      <ejs-grid ref="grid" :enableHover='false' :dataSource="data"
+       :selectionSettings="selectionOptions" :rowSelected="rowSelected"
+       :rowSelecting="rowselecting" :rowDeselected="rowDeselected"
+       :rowDeselecting="rowDeselecting">
+        <e-columns>
+          <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="120">
+          </e-column>
+          <e-column field="CustomerID" headerText="Customer ID" width="120">
+          </e-column>
+          <e-column field="ShipCountry" headerText="Ship Country" width="130">
+          </e-column>
+          <e-column field="Freight" headerText="Freight" format="C2" width="100">
+          </e-column>
+        </e-columns>
+      </ejs-grid>
+    </div>
+  </div>
+</template>
+
+<script>
+import { GridComponent, ColumnsDirective, ColumnDirective} from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+export default {
+name: "App",
+components: {
+"ejs-grid":GridComponent,
+"e-columns":ColumnsDirective,
+"e-column":ColumnDirective
+},
+  data() {
+    return {
+      data: data,
+      message:"",
+      selectionOptions : { mode: 'Row', type: 'Multiple' },
+    };
+  },
+  methods: {
+   rowselecting(args) {
+        this.message = `Trigger rowSelecting`;
+        if (args.data.CustomerID == 'VINET')
+        args.cancel = true;
+    },
+    rowSelected(args) {
+        this.message = ` Trigger rowSelected`;
+        if (args.data.Freight > 10 || args.data.Freight <= 140)
+            args.row.style.backgroundColor = 'rgb(96, 158, 101)'; 
+    },
+    rowDeselecting(args) {
+       this.message = `Trigger rowDeselecting`;
+        if (args.data.Freight > 140)
+            args.row.style.backgroundColor = 'yellow';
+        },
+    rowDeselected(args) {
+        this.message = `Trigger rowDeselected`;
+        if (args.data.Freight <= 10)
+           args.row.style.backgroundColor = 'red';
+    }
+  }
+}
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+#message {
+  color: red;
+  text-align: center;
+  padding: 0px 0px 10px 0px;
+}
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         

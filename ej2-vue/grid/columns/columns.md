@@ -39,7 +39,7 @@ Here is an example of how to specify column types in a grid using the types ment
 {% previewsample "page.domainurl/code-snippet/grid/column/column-type-cs1" %}
 
 >* If the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#type) is not defined, then it will be determined from the first record of the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource).
->* Incase if the first record of the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) is null/blank value for a column then it is necessary to define the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#type) for that column. This is because the grid uses the column type to determine which filter dialog to display for that column.
+>* If the first record in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) contains a null or blank value for a specific column, it is essential to define the [type](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#type) for that column. This is because the grid uses the column type to determine which filter dialog to display for that column.
 
 ### Difference between boolean type and checkbox type column 
 
@@ -117,8 +117,8 @@ You can use the [columns.format](https://ej2.syncfusion.com/vue/documentation/ap
         
 {% previewsample "page.domainurl/code-snippet/grid/column/column-format-cs1" %}
 
->* The grid uses the [Internalization](https://ej2.syncfusion.com/vue/documentation/common/globalization/internationalization) library to format values based on the specified format and culture.
->* By default, the [number](https://ej2.syncfusion.com/vue/documentation/common/globalization/internationalization#number-formatting) and [date](https://ej2.syncfusion.com/vue/documentation/common/globalization/internationalization#date-formatting) values are formatted in **en-US** locale. You can localize the currency and date in different locale as explained [here](https://ej2.syncfusion.com/vue/documentation/common/globalization/localization).
+>* The grid uses the [Internalization](https://ej2.syncfusion.com/vue/documentation/common/internationalization) library to format values based on the specified format and culture.
+>* By default, the [number](https://ej2.syncfusion.com/vue/documentation/common/internationalization#number-formatting) and [date](https://ej2.syncfusion.com/vue/documentation/common/internationalization#date-formatting) values are formatted in **en-US** locale. You can localize the currency and date in different locale as explained [here](https://ej2.syncfusion.com/vue/documentation/common/localization).
 >* The available format codes may vary depending on the data type of the column.
 >* You can also customize the formatting further by providing a custom function to the `format` property, instead of a format string.
 >* Make sure that the format string is valid and compatible with the data type of the column, to avoid unexpected results.
@@ -146,7 +146,7 @@ The following example code demonstrates the formatting of data for **Mark 1** an
         
 {% previewsample "page.domainurl/code-snippet/grid/column/column-format-cs2" %}
 
->To learn more about number formatting, you can refer to the [number](https://ej2.syncfusion.com/vue/documentation/common/globalization/internationalization#number-formatting) section.
+>To learn more about number formatting, you can refer to the [number](https://ej2.syncfusion.com/vue/documentation/common/internationalization#number-formatting) section.
 
 ### Date formatting
 
@@ -173,7 +173,7 @@ Format | Formatted value
         
 {% previewsample "page.domainurl/code-snippet/grid/column/column-format-cs3" %}
 
->To learn more about date formatting, you can refer to [Date formatting](https://ej2.syncfusion.com/vue/documentation/common/globalization/internationalization#date-formatting). 
+>To learn more about date formatting, you can refer to [Date formatting](https://ej2.syncfusion.com/vue/documentation/common/internationalization#date-formatting). 
 
 ### Format the date column based on localization 
 
@@ -200,10 +200,113 @@ To illustrate how to format a template column value, consider the following exam
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/column-format-cs5/app-composition.vue %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='315px'>
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='Freight' headerText='Freight' textAlign='Right' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' :template='columnTemplate' textAlign='Right'
+                    width=150></e-column>
+                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script setup>
+
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { createApp } from "vue";
+const app = createApp();
+const columnTemplate = function () {
+    return {
+        template: app.component('columnTemplate', {
+            template: `<div> {{formatDate(data.OrderDate)}} </div>`,
+            methods: {
+                formatDate(date) {
+                    return new Date(date).toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" });
+                },
+            },
+        })
+    }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/column-format-cs5/app.vue %}
+{% raw %}
+<template>
+    <div id="app">
+        <ejs-grid :dataSource='data' height='315px'>
+            <e-columns>
+                <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=120></e-column>
+                <e-column field='CustomerID' headerText='Customer ID' width=150></e-column>
+                <e-column field='Freight' headerText='Freight' textAlign='Right' width=150></e-column>
+                <e-column field='OrderDate' headerText='Order Date' :template='columnTemplate' textAlign='Right'
+                    width=150></e-column>
+                <e-column field='ShipName' headerText='Ship Name' width=150></e-column>
+            </e-columns>
+        </ejs-grid>
+    </div>
+</template>
+<script>
+
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
+import { data } from './datasource.js';
+import { createApp } from "vue";
+const app = createApp();
+export default {
+    name: "App",
+    components: {
+        "ejs-grid": GridComponent,
+        "e-columns": ColumnsDirective,
+        "e-column": ColumnDirective
+    },
+    data() {
+        return {
+            data: data,
+            columnTemplate: function () {
+                return {
+                    template: app.component('columnTemplate', {
+                        template: `<div> {{formatDate(data.OrderDate)}} </div>`,
+                        methods: {
+                            formatDate(date) {
+                                return new Date(date).toLocaleDateString("en-US", { day: "2-digit", month: "short", year: "numeric" });
+                            },
+                        },
+                    })
+                }
+            }
+        };
+    }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
 {% endhighlight %}
 {% endtabs %}
         
@@ -293,7 +396,7 @@ Here is an example of how you can prevent a checkbox from being displayed in a b
 
 The Grid has a feature that allows it to automatically adjust column widths based on the maximum content width of each column when you double-click on the resizer symbol located in a specific column header. This feature ensures that all data in the grid rows is displayed without wrapping. To use this feature, you need to inject the **Resize** module in the provide section and enable the resizer symbol in the column header by setting the [allowResizing](https://ej2.syncfusion.com/vue/documentation/api/grid/#allowresizing) property to true in the grid.
 
-### Resizing a column to fit its content using autoFit method
+### Resizing a column to fit its content using AutoFit method
 
 The [autoFitColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#autofitcolumns) method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the `autoFitColumns` method in [dataBound](https://ej2.syncfusion.com/vue/documentation/api/grid/#databound) event.
 
@@ -520,7 +623,7 @@ let visibleColumns = grid.getVisibleColumns();
 
 * **[getForeignKeyColumns](https://ej2.syncfusion.com/vue/documentation/api/grid/#getforeignkeycolumns)**:
 
-This method returns the array of foreignkey columns.
+This method returns the array of foreign key columns.
 
 ```ts
 let foreignKeyColumns = grid.getForeignKeyColumns();
@@ -598,7 +701,7 @@ In this example, we have a Grid that displays data with three columns: **Order I
 ## See also
 
 * [Group Column by Format](../grouping/group-by-format)
-* [How to set complex column as Foreignkey column](../how-to/complex-column-as-foreign-key-column)
+* [How to set complex column as foreign key column](../how-to/complex-column-as-foreign-key-column)
 * [Complex Data Binding with list of Array Of Objects](../how-to/list-of-array-of-objects)
 * [Custom tooltip for the header in Vue Grid](https://www.syncfusion.com/forums/144654/custom-tooltip-for-the-header-in-vue-grid)
 * [Display only multiple field name in one column in Vue Grid](https://www.syncfusion.com/forums/162397/display-only-multiple-field-name-in-one-column-in-vue-grid)
