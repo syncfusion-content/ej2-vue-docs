@@ -56,7 +56,7 @@ npm install @syncfusion/ej2-data --save
 npm install express body-parser cors
 ```
 
-**Step 4:** Install Axios for making HTTP requests in your Vue.js project:
+**Step 4:** Install axios for making HTTP requests in your Vue.js project:
 
 ```bash
 npm install axios
@@ -237,7 +237,6 @@ const state = { skip: 0, take: 12 };
 const dataStateChange = function (state) {
   const query = grid.value.getDataModule().generateQuery();
   getOrders(state, query).then(gridData => {
-    console.log(gridData)
     data.value = gridData.result; // Assign the result to the data property
   });
 }
@@ -1207,7 +1206,6 @@ The following example demonstrates how to send additional parameters to the serv
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
 <script setup>
 import { ref, onMounted, provide } from "vue";
 import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, Page } from '@syncfusion/ej2-vue-grids';
@@ -1255,10 +1253,8 @@ provide('grid', [Page]);
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-{% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
-{% raw %}
 <script>
 import { GridComponent, ColumnDirective, ColumnsDirective, Page } from '@syncfusion/ej2-vue-grids';
 import { getOrders } from './orderService';
@@ -1319,7 +1315,6 @@ export default {
   @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
   @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
-{% endraw %}
 {% endhighlight %}
 {% highlight js tabtitle="server.js" %}
 {% raw %}
@@ -1383,20 +1378,21 @@ export function getOrders(state, action) {
   //addParams
   query.addParams('Syncfusion_Vue_Grid', 'true');
   query.isCountRequired = true
+
   // Request the data from server using fetch
   return fetch(baseUrl)
-  .then(res => res.json())
-  .then(data => {      
-    // Create a DataManager instance with your fetched data
-    gridData = new DataManager(data.result);
-    // Execute local data operations using the provided query
-    const result = gridData.executeLocal(query);
-    // Return the result along with the count of total records
-    return {
-      result: result, // Result of the data
-      count: (result as any).count // Total record count based on fetched data length
-    };
-  });
+    .then(res => res.json())
+    .then(data => {      
+      // Create a DataManager instance with your fetched data
+      gridData = new DataManager(data.result);
+      // Execute local data operations using the provided query
+      const result = gridData.executeLocal(query);
+      // Return the result along with the count of total records
+      return {
+        result: result, // Result of the data
+        count: (result as any).count // Total record count based on fetched data length
+      };
+    });
 }
 {% endraw %}
 {% endhighlight %}
@@ -1444,17 +1440,17 @@ function createLazyLoadData() {
 
     let OrderID = 10248;
     for (let i = 0; i < 20000; i++) {
-    lazyLoadData.push({
-      'OrderID': OrderID + i,
-      'CustomerID': customerid[Math.floor(Math.random() * customerid.length)],
-      'CustomerName': customername[Math.floor(Math.random() * customername.length)],
-      'CustomerAddress': customeraddress[Math.floor(Math.random() * customeraddress.length)],
-      'ProductName': product[Math.floor(Math.random() * product.length)],
-      'ProductID': i,
-      'Quantity': quantityperunit[Math.floor(Math.random() * quantityperunit.length)]
-    })
-  }
-  return lazyLoadData;
+        lazyLoadData.push({
+            'OrderID': OrderID + i,
+            'CustomerID': customerid[Math.floor(Math.random() * customerid.length)],
+            'CustomerName': customername[Math.floor(Math.random() * customername.length)],
+            'CustomerAddress': customeraddress[Math.floor(Math.random() * customeraddress.length)],
+            'ProductName': product[Math.floor(Math.random() * product.length)],
+            'ProductID': i,
+            'Quantity': quantityperunit[Math.floor(Math.random() * quantityperunit.length)]
+        })
+    }
+    return lazyLoadData;
 }
 
 export default data;

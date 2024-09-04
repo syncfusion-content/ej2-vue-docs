@@ -101,7 +101,6 @@ You can import themes for the Syncfusion Vue component in various ways, such as 
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Grid component and its dependents were imported into the `<style>` section of **src/App.vue** file. Vite app generates a default `styles.css` file which we do not need for this example. Before running the sample, delete the content of `src/style.css` or remove the file if it's unused.
 
-
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
