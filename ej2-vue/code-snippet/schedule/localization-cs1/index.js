@@ -3,13 +3,13 @@
     import { scheduleData } from './datasource.js';
     import { loadCldr } from '@syncfusion/ej2-base';
     import { SchedulePlugin, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
-    import * as numberingSystems from './numberingSystems.json';
-    import * as gregorian from './ca-gregorian.json';
-    import * as numbers from './numbers.json';
-    import * as timeZoneNames from './timeZoneNames.json';
+    import frNumberData from "@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json";
+    import frtimeZoneData from "@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json";
+    import frGregorian from "@syncfusion/ej2-cldr-data/main/fr-CH/ca-gregorian.json";
+    import frNumberingSystem from "@syncfusion/ej2-cldr-data/supplemental/numberingSystems.json";
 
     Vue.use(SchedulePlugin);
-    loadCldr(numberingSystems, gregorian, numbers, timeZoneNames);
+    loadCldr(frNumberData, frtimeZoneData, frGregorian, frNumberingSystem);
     
 new Vue({
 	el: '#app',
