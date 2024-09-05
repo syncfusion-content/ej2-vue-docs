@@ -143,7 +143,7 @@ import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
 
     data () {
       return {
-        resourceUrl:'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib',
+        resourceUrl:'https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib',
         documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
@@ -184,7 +184,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
     data() {
       return {
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib',
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
@@ -251,7 +251,7 @@ export default {
   data () {
     return {
       documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl:"https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib",
+      resourceUrl:"https://cdn.syncfusion.com/ej2/26.2.11/dist/ej2-pdfviewer-lib",
     };
   },
 
