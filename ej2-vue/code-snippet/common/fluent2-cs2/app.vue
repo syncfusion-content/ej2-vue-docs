@@ -23,6 +23,6 @@ button {
   margin: 25px 5px 20px 20px;
 }
 :root {
-	--color-sf-primary: 104, 134, 164;
+	--color-sf-primary: #6886a4;
 }
 </style>
