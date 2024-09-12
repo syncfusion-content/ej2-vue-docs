@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Get selected items from listview in Vue Listview component | Syncfusion
-description: Learn here all about Get selected items from listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Get selected items in Vue ListView Component | Syncfusion
+description: Learn here all about get selected items support in Syncfusion Essential Vue ListView component, it's elements and more.
 control: Get selected items from listview 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Get selected items from listview in Vue Listview component
+# Get selected items in Vue ListView Component
 
 Single or many items can be selected by users in the ListView component. An API is used to get selected items from the list items. This is called as the [`getSelectedItems`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#getselecteditems) method.
 
