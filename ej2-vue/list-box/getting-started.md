@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setting up the Vue 2 project
 
@@ -103,7 +103,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the List box component with the [dataSource](https://ej2.syncfusion.com/staging/vue/documentation/api/list-box#datasource) property.
+2\. In the `template` section, define the List box component with the [dataSource](https://ej2.syncfusion.com/staging/vue/documentation/api/list-box/#datasource) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
