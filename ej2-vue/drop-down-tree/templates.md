@@ -31,6 +31,25 @@ The template expression should be provided inside the {% raw %}`{{...}}`{% endra
         
 {% previewsample "page.domainurl/code-snippet/drop-down-tree/templates/item-template-cs1" %}
 
+## Value template
+
+The currently selected value that is displayed by default on the DropDownTree input element can be customized using the [valueTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#valuetemplate) property.
+
+In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the DropDownTree input, which is separated by a hyphen.
+
+The template expression should be provided inside the {% raw %}`{{...}}`{% endraw %} interpolation syntax.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/value-template-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/drop-down-tree/templates/value-template-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/drop-down-tree/templates/value-template-cs1" %}
+
 ## Header template
 
 The header element is shown statically at the top of the popup list items within the Dropdown Tree. A custom element can be placed as a header element using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#headertemplate) property.
