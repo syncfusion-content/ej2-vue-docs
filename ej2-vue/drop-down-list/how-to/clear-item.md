@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Clear item in Vue Drop down list component | Syncfusion
-description: Learn here all about Clear item in Syncfusion Vue Drop down list component of Syncfusion Essential JS 2 and more.
+title: Clear item in Vue Drop Down List Component | Syncfusion
+description: Learn here all about Clear item in Syncfusion Essential Vue Drop down list component, it's elements and more.
 control: Clear item 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Clear item in Vue Drop down list component
+# Clear item in Vue Drop Down List Component
 
 You can clear the selected item in the below two different ways.
 
