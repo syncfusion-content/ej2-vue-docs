@@ -65,7 +65,7 @@ To use the icons from the CDN, refer to the icons by URLs in the application. Th
 
 Let's create a Vue application using the following command:
 
-For an introduction and configuration of the common specifications, see [getting started with the Syncfusion Vue application](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial/).
+For an introduction and configuration of the common specifications, see [getting started with the Syncfusion Vue application](https://ej2.syncfusion.com/vue/documentation/getting-started/tutorial).
 
 ### Using icons directly in HTML element
 
