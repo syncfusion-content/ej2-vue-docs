@@ -3,7 +3,7 @@ layout: post
 title: Getting started with Vue AI AssistView component | Syncfusion
 description:  Checkout and learn about Getting started with Vue AI AssistView component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
-control: Getting started 
+control: AI AssistView
 documentation: ug
 domainurl: ##DomainURL##
 ---
