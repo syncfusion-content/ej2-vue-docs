@@ -46,6 +46,21 @@ The following properties can be used to customize the `range step area` series.
         
 {% previewsample "page.domainurl/code-snippet/chart/series/area-cs12" %}
 
+**No risers**
+
+The [`noRisers`] feature allows the range step area series to appear as a continuous flow, eliminating the vertical lines between points. This approach is useful for highlighting trends without the distraction of risers.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/rangestepriser-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/rangestepriser-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/rangestepriser-cs" %}
+
 ## See also
 
 * [Data label](../data-labels/)

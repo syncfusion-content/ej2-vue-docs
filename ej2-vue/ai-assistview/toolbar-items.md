@@ -24,14 +24,14 @@ You can customize the toolbar icons by using the `iconCss` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/align/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/align/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/align" %}
 
 #### Setting item type
 
@@ -41,14 +41,14 @@ In the following example, toolbar item type is set as `Button`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/item-type/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/item-type/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-  
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/item-type" %}
 
 #### Setting text
 
@@ -56,14 +56,14 @@ You can use the [text](../api/toolbar/itemModel/#text) property to set the text 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/toolbar-text/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/toolbar-text/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/toolbar-text" %}
 
 #### Show or hide toolbar item
 
@@ -71,14 +71,14 @@ You can use the [visible](../api/toolbar/itemModel/#visible) property to specify
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/visible/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/visible/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/visible" %}
 
 #### Setting disabled
 
@@ -86,14 +86,14 @@ You can use the [disabled](../api/itemModel/#disabled) property to disable the t
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/disabled/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/disabled/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/disabled" %}
 
 #### Setting tooltip text
 
@@ -101,14 +101,14 @@ You can use the [tooltip](../api/itemModel/#tooltiptext) property to specify the
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/tooltip/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/tooltip/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/tooltip" %}
 
 #### Setting cssClass
 
@@ -116,14 +116,14 @@ You can use the [cssClass](../api/itemModel/#cssclass) property to customize the
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/cssClass/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/cssClass/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/cssClass" %}
 
 #### Setting alignment
 
@@ -133,14 +133,14 @@ In the following example, toolbar item type is set with `Right`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/align/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/align/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/align" %}
 
 #### Enabling tab key navigation in toolbar
 
@@ -150,14 +150,98 @@ To use the `tabIndex` property, set it for each Toolbar item which you want to e
 
 For example, to enable tab key navigation for two Toolbar items you can use the following code:
 
-```ts
+```html
+
+<template>
+  <div id='container' style="height: 350px; width: 650px;">
+    <br>
+    <ejs-aiassistview id='aiAssistView' :toolbar-settings="toolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
+  </div>
+</template>
+<script>
+import { AIAssistViewComponent } from "@syncfusion/ej2-vue-interactive-chat";
+
+export default {
+  components: {
+    'ejs-aiassistview': AIAssistViewComponent
+  },
+  data: function () {
+    return {
+      toolbarSettings: {
+        items: [
+            { text: "Item 1", tabIndex: 1 },
+            { text: "Item 2", tabIndex: 2 }
+        ]
+      }
+    }
+  },
+  methods: {
+    onPromptRequest: (args) => {
+      setTimeout(() => {
+        let defaultAiassist = this.$refs.aiassist.ej2Instances;
+        let defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
+        defaultAiassist.addPromptResponse(defaultResponse);
+      }, 1000);
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+</style>
+
 ```
 
 With the above code, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, in addition to using the arrow keys. The items will be navigated in the order specified by the `tabIndex` values.
 
 If you set the `tabIndex` value to 0 for all Toolbar items, tab key navigation will be based on the element order rather than the `tabIndex` values. For example:
 
-```ts
+```html
+
+<template>
+  <div id='container' style="height: 350px; width: 650px;">
+    <br>
+    <ejs-aiassistview id='aiAssistView' :toolbar-settings="toolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
+  </div>
+</template>
+<script>
+import { AIAssistViewComponent } from "@syncfusion/ej2-vue-interactive-chat";
+
+export default {
+  components: {
+    'ejs-aiassistview': AIAssistViewComponent
+  },
+  data: function () {
+    return {
+      toolbarSettings: {
+        items: [
+            { text: "Item 1", tabIndex: 0 },
+            { text: "Item 2", tabIndex: 0 }
+        ]
+      }
+    }
+  },
+  methods: {
+    onPromptRequest: (args) => {
+      setTimeout(() => {
+        let defaultAiassist = this.$refs.aiassist.ej2Instances;
+        let defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
+        defaultAiassist.addPromptResponse(defaultResponse);
+      }, 1000);
+    }
+  }
+}
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+</style>
+
 ```
 
 In this case, the user can switch between the two Toolbar items using the Tab and Shift+Tab keys, and the items will be navigated in the order in which they appear in the DOM.
@@ -168,14 +252,14 @@ You can use the [template](../api/toolbar/itemModel/#template) property to add c
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/template/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/template/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/template" %}
 
 ### Item clicked
 
@@ -183,14 +267,14 @@ The `itemClicked` event is triggered when the header toolbar item is clicked.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/itemclick/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/itemclick/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/itemclick" %}
 
 ## Built-in toolbar items
 
@@ -202,14 +286,14 @@ In the following example, AI AssistView component rendered with built-in toolbar
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/assist-view/prompts/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/assist-view/prompts/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/prompts" %}
 
 #### Setting width
 
@@ -221,14 +305,14 @@ The `itemClicked` event is triggered when the prompt toolbar item is clicked.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/prompt-itemclick/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/prompt-itemclick/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/prompt-itemclick" %}
 
 ### Response
 
@@ -238,14 +322,14 @@ In the following example, AI AssistView renders with built-in toolbar items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/assist-view/prompts/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/assist-view/prompts/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/prompts" %}
 
 #### Setting width
 
@@ -257,14 +341,14 @@ The `itemClicked` event is triggered when the response toolbar item is clicked.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/response-itemclick/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/response-itemclick/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/response-itemclick" %}
 
 ## Adding custom toolbar items
 
@@ -278,14 +362,14 @@ You can use the `promptToolbarSettings` property to add custom items for the pro
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/prompt-settings/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/prompt-settings/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/prompt-settings" %}
 
 ### Response
 
@@ -295,14 +379,14 @@ You can use the `responseToolbarSettings` property to add custom response toolba
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app-composition.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/response-settings/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/ai-assistview/defaultprompts/app.vue %}
+{% include code-snippet/ai-assistview/toolbar-items/response-settings/app.vue %}
 {% endhighlight %}
 {% endtabs %}
   
-{% previewsample "page.domainurl/code-snippet/ai-assistview/defaultprompts" %}
+{% previewsample "page.domainurl/code-snippet/ai-assistview/toolbar-items/response-settings" %}
 
 #### Item clicked
 

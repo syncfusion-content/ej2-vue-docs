@@ -46,6 +46,21 @@ The following properties can be used to customize the `stacked step area` series
         
 {% previewsample "page.domainurl/code-snippet/chart/series/stackedsteparea-cs" %}
 
+**No risers**
+
+The [`noRisers`] feature allows the stacked step area series to appear as a continuous flow, eliminating the vertical lines between points. This approach is useful for highlighting trends without the distraction of risers.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/stackedstepareariser-cs/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/stackedstepareariser-cs/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedstepareariser-cs" %}
+
 ## See also
 
 * [Data label](../data-labels/)
