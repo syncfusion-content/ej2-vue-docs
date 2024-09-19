@@ -32,7 +32,8 @@ components: {
   methods: {
     rectangleClick: function() {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x,dimension.y);
+      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x, dimension.y, 200, 100);
+      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x + 300, dimension.y, 200, 100, null, '', '', null, null, 8);
     },
     ellipseClick: function() {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();

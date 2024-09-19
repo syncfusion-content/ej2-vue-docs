@@ -186,3 +186,20 @@ To animate the tooltip, a set of specific animation effects are available, and i
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/tooltip/tooltip-cs6" %}
+
+## Tooltip for Annotation
+
+Tooltips can be added to annotations to display additional information on mouseover. 
+To display tooltips on mouseover, set the desired tooltip text to the [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram#tooltip) property of the annotation.
+Tooltips for Annotations can be enabled or disabled by setting the [`AnnotationConstraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationConstraints) property as [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/annotationConstraints/). 
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/AnnotationTooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/labels/AnnotationTooltip-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/labels/AnnotationTooltip-cs1" %}

@@ -14,9 +14,15 @@ To import an image into the canvas, it must first be converted into a blob objec
 
 To save an edited image in the Image Editor component, use the toBlob method to convert it to a blob object. This will save the image with any annotations or filters that have been applied during the editing process. The saved image can be stored as raw image data or as an image file.
 
-## Open
+## Supported image formats
 
-The [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method in the Image Editor component offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open) method, and it will load the specified image into the image editor component. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor component.
+The Image Editor control supports three common image formats: PNG, JPEG, and SVG. These formats allow you to work with a wide range of image files within the Image Editor.
+
+When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences.
+
+## Open an image
+
+The [`open`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#open) method in the Image Editor control offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#open) method, and it will load the specified image into the Image Editor control. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor control.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,10 +35,99 @@ The [`open`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#open
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs9" %}
 
-## Supported image formats
+### Open an image from Base64 format 
 
-The Image Editor component supports three common image formats: PNG, JPEG, and SVG. These formats allow you to work with a wide range of image files within the Image Editor.
-When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences. 
+Users can easily open images in the Image Editor using a Base64-encoded string. This method allows you to load images directly from their Base64 representation, ensuring seamless integration and flexibility in your application. Simply pass the Base64 string to the open method, and the image will be loaded into the editor. 
+
+`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method. This process will be explained in the upcoming section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs48/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs48/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs48" %}
+
+### Open an image from Blob storage
+
+User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the open method, and the image will be loaded into the editor. 
+
+`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method. This process will be explained in the upcoming section. 
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs49/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs49/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs49" %}
+
+### Open an image from file uploader
+
+User can easily open images in the Image Editor using a file uploader. This method allows users to upload an image file from their device and load it directly into the editor. Once the image is selected through the file uploader, pass the file to the open method, and the image will be seamlessly loaded into the editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs60/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs60/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs60" %}
+
+### Open and image from File Manager 
+
+User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the open method, and the image will be seamlessly loaded into the editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs62/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs62/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs62" %}
+
+### Open an image from Treeview 
+
+Users can easily open images in the Syncfusion Image Editor by dragging and dropping nodes from a tree view. This feature allows users to select an image from a tile view interface and load it into the editor. When a node is dropped into the image editor, you can pass the file to the editor’s open method to seamlessly load the image.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs61/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs61/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs61" %}
+
+### Add Watermarks while opening an image 
+
+You can utilize the ‘[`fileOpened`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#fileopened)’ event, which triggers once the image is loaded into the image editor. After this event, you can use the ‘[`drawText`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#drawtext)’ method to add a watermark. This approach allows the watermark to be automatically drawn on the canvas every time an image is opened in the editor, making it useful for handling copyright-related content.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs53/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs53/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs53" %}
 
 ## Save
 
@@ -62,6 +157,67 @@ In the following example, the [`export`](https://ej2.syncfusion.com/vue/document
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs10" %}
+
+### Save the image as base64 format. 
+
+To save an image as a base64 format, use the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method of the editor to retrieve the image data and convert it into a Data URL, which contains the base64-encoded string. By invoking the open method on the Syncfusion Image Editor instance, you can load this Data URL into the editor. The resulting base64 string can then be embedded directly in HTML or CSS or transmitted over data channels without requiring an external file.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs59/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs59/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs59" %}
+
+### Save the image as byte[]
+
+To save an image as a byte array, use the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method of the editor to retrieve the image data and convert it into a byte array. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+
+### Save the image as blob
+
+To save an image as a blob, use the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method of the editor to retrieve the image data and convert it into a blob. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs50/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs50/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs50" %}
+
+### Add Watermarks while saving the image 
+
+User can utilize the ‘[`beforeSave`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#beforesave)’ event, which triggers just before the image is downloaded, to apply a text annotation as a watermark. After the image is downloaded, the ‘[`saved`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#saved)’ event is triggered, allowing you to remove the watermark using the ‘[`deleteShape`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#deleteshape)’ method. This ensures that the watermark is only visible in the downloaded image and not in the editor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs51/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs51/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs51" %}
+
+### Remove default Save button and add custom button to save the image to server 
+
+User can leverage the ‘[`toolbar`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#toolbar)’ property to replace the default save button with a custom one. By doing so, you can use the '[`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata)' method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process.
+
+### Prevent default save option and save the image to specific location 
+
+User can make use of the ‘[`beforeSave`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#beforesave)’ event, which triggers just before the image is downloaded, to override the default save option by setting `args.cancel` to true. Afterward, you can utilize the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method to retrieve the current image data and convert it into a format like `byte[]`, `blob`, or `base64` for further processing. This gives you greater flexibility in handling the image data. 
+
+## Events to handle Save Actions 
+
+The Image Editor provides several events related to opening and saving images. These events offer detailed control over the image handling process. For comprehensive information about these events, including their triggers and usage, please refer to the dedicated section on open and save support. This section will provide you with the specifics needed to effectively utilize these events in your application.
 
 ## File opened event 
 
