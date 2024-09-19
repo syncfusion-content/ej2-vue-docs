@@ -204,7 +204,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
   @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-pdfviewer/styles/material.css';
 </style>
 
 {% endhighlight %}

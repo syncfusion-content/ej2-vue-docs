@@ -24,3 +24,22 @@ The file manager allows you to select multiple files by enabling the [allowMulti
 {% previewsample "page.domainurl/code-snippet/file-manager/multiselect-cs1" %}
 
 >Note: The File Manager has support to select files and folders initially or dynamically by specifying their names in [selectedItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#selecteditems) property.
+
+## Range Selection
+
+The File Manager supports for selecting files and folders in specific ranges through mouse drag as like File Explorer. This is particularly useful in scenarios where users need to select a large group of files quickly without manually clicking each one. 
+
+### Enabling Range Selection
+
+To enable range selection, you need to set the [enableRangeSelection](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#enableRangeSelection) property to `true` and ensure that multi-selection is allowed using the [allowMultiSelection](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowmultiselection) property.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/rangeselection-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/rangeselection-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/rangeselection-cs1" %}

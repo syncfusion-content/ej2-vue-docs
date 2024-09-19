@@ -29,7 +29,8 @@ const created = () => {
 
 const rectangleClick = () => {
     let dimension = imageEditorObj.value.ej2Instances.getImageDimension();
-    imageEditorObj.value.ej2Instances.drawRectangle(dimension.x,dimension.y);
+    imageEditorObj.value.ej2Instances.drawRectangle(dimension.x, dimension.y, 200, 100);
+    imageEditorObj.value.ej2Instances.drawRectangle(dimension.x + 300, dimension.y, 200, 100, null, '', '', null, null, 8);
 };
 
 const ellipseClick = () => {
