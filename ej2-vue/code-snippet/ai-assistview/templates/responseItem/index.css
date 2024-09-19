@@ -1,0 +1,22 @@
+
+.e-assistview-icon:before {
+    margin-right: 10px;
+}
+
+.responseItemContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px
+}
+
+.responseItemContent .response-header {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.responseItemContent .content {
+    margin-left: 35px;
+}

@@ -1,0 +1,5 @@
+
+.e-custom .e-user::before {
+    color: blue;
+    font-size: 15px;
+}
