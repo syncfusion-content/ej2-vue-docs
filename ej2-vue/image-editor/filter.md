@@ -29,7 +29,7 @@ In the following example, you can using the applyImageFilter method in the butto
 {% include code-snippet/image-editor/getting-started-cs26/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs26" %}
 
 ## Image filtering event 

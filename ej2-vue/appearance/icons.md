@@ -32,14 +32,18 @@ Icons can be used from the npm package `ej2-icons`. To use the icons, install th
 
 Refer to the following syntax to use icons in a Vue application:
 
+`[src/App.vue]`
+
 ```
-@import "../node_modules/@syncfusion/ej2-icons/<theme_name>.css";
+<style>
+@import "../node_modules/@syncfusion/ej2-icons/styles/<theme_name>.css";
+</style>
 ```
 
 **Example:**
 
 ```
-@import "../node_modules/@syncfusion/ej2-icons/material.css";
+@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
 ```
 
 ### CDN reference

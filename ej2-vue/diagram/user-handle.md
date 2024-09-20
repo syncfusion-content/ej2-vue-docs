@@ -225,3 +225,18 @@ The diagram provides support to show tooltip when the mouse hovers over any fixe
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/interaction/FixedUserHandle-cs2" %}
+
+### Customizing Fixed User Handles with HTML Templates
+
+Fixed user handles are interactive elements added to nodes and connectors. Their appearance can be customized using HTML templates. To render fixed user handle with HTML templates, we need to create an HTML element inside a `template` tag then add the template reference using the [`fixedUserHandleTemplate`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-fixeduserhandletemplate) property in the diagram model.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/FixedUserHandleTemplate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/interaction/FixedUserHandleTemplate-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/interaction/FixedUserHandleTemplate-cs1" %}
