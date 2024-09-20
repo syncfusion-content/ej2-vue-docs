@@ -18,7 +18,7 @@ You can use the `addPromptResponse` public method to add the prompts and respons
 
 You can add string response, by passing it as argument for the `addPromptResponse('Response')` method which adds as the response of last added prompt.
 
-{% tabs %}{% tabs %}
+{% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/ai-assistview/methods/response-string/app-composition.vue %}
 {% endhighlight %}
