@@ -12,7 +12,7 @@ import { ref } from "vue";
 let aiassist = ref(null);
 
 const toolbarSettings = {
-  items: [ { text: 'Get intelligent responses tailored to your needs', align: 'Center' } ]
+  items: [ { text: 'Welcome User !', align: 'Right' } ]
 };
 
 const onPromptRequest = (args) => {

@@ -11,7 +11,7 @@ import { ref } from "vue";
 
 let aiassist = ref(null);
 
-const cssClass = 'e-custom';
+const cssClass = 'custom-container';
 
 const onPromptRequest = (args) => {
   setTimeout(() => {

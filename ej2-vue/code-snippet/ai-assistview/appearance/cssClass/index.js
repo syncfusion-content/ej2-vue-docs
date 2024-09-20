@@ -12,7 +12,7 @@ new Vue({
 
   data: function () {
     return {
-      cssClass: 'e-custom'
+      cssClass: 'custom-container'
     }
   },
   methods: {

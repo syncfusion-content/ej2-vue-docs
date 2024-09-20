@@ -16,7 +16,7 @@ By using the `e-views` tag directive you can define the collection of different 
 
 ### Setting view type
 
-You can set the type of view by using the `type` property within the `e-view` tag directive. It accepts two values such as `Assist`, and `Custom`.
+You can set the type of view by using the [type](../api/ai-assist-view/assistViewType) property within the `e-view` tag directive. It accepts two values such as `Assist`, and `Custom`.
 
 ```html
 
@@ -66,7 +66,7 @@ export default {
 
 ### Setting name
 
-You can use the `name` property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
+You can use the [name](../api/ai-assist-view/assistViewModel/#name) property to specifies the header name of the `Assist` or `Custom` views in the AI AssistView.
 
 ```html
 
@@ -114,9 +114,9 @@ export default {
 
 ```
 
-### Setting iconCSS
+### Setting iconCss
 
-You can customize the view icons by using the `iconCss` property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
+You can customize the view icons by using the [iconCss](../api/ai-assist-view/assistViewModel/#iconcss) property. By default the `e-assistview-icon` class is added as built-in header icon for the AI AssistView.
 
 ```html
 
@@ -179,7 +179,7 @@ The following example illustrates how types, name, and iconCss are used in a AI 
 
 ### Setting view template 
 
-You can use the `viewTemplate` property to add the view content of the multiple views added in the AI AssistView.
+You can use the [viewTemplate](../api/ai-assist-view/assistViewModel/#viewtemplate) property to add the view content of the multiple views added in the AI AssistView.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -194,7 +194,7 @@ You can use the `viewTemplate` property to add the view content of the multiple 
 
 ## Setting active view
 
-You can use the `activeView` property to set the active view in the AI AssistView. By default, the value is `0`.
+You can use the [activeView](../api/ai-assist-view#activeview) property to set the active view in the AI AssistView. By default, the value is `0`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -4,7 +4,11 @@
     <ejs-aiassistview id='aiAssistView' :prompt-request="onPromptRequest" ref="aiassist">
       <ejs-views>
         <ejs-view type="Assist" name="Prompt"></ejs-view>
-        <ejs-view type="Custom" name="Response" icon-css="e-icons e-comment-show"></ejs-view>
+        <ejs-view type="Custom" name="Response" icon-css="e-icons e-comment-show" view-template="viewTemplate2">
+          <template v-slot:viewTemplate2="">
+            <div class="view-container"><h3>Response view content</h3></div>
+          </template>
+        </ejs-view>
       </ejs-views>
     </ejs-aiassistview>
   </div>

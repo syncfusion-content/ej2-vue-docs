@@ -12,7 +12,10 @@ import { ref } from "vue";
 let aiassist = ref(null);
 
 const toolbarSettings = {
-  items: [ { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', disabled: true } ]
+  items: [
+    { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', disabled: true },
+    { type: 'Button', iconCss: 'e-icons e-user', align: 'Right' }
+  ]
 };
 
 const onPromptRequest = (args) => {

@@ -1,5 +1,5 @@
 <template>
-  <div id='container' style="height: 450px; width: 650px;">
+  <div id='container' style="width: 650px;">
     <br>
     <ejs-aiassistview id='aiAssistView' ref="aiassist" height="350px" :prompt-request="onPromptRequest"></ejs-aiassistview>
   </div>
