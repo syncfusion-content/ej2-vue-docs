@@ -91,7 +91,7 @@ Using [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomS
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs5" %}
 
-## Eanble scrollbar
+## Enable scrollbar
 
 Using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enablescrollbar) property, you can add a scrollbar to a zoomed chart. This scrollbar allows you to zoom or pan the chart. The appearance of the scrollbar can be customized using properties in [`scrollbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/). For example, you can use [`trackColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#trackcolor) and [`trackRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#trackradius) properties to customize the track of the scrollbar, and [`scrollbarRadius`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#scrollbarradius) and [`scrollbarColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#scrollbarcolor) properties to customize the scroller. The ability to zoom through the scrollbar can be enabled or disabled using the [`enableZoom`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#enablezoom) property in [`scrollbarSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/). Additionally, you can change the color of the grip and height of the scrollbar using the [`gripColor`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#gripcolor) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#height) properties.
 
@@ -105,6 +105,21 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/c
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs6" %}
+
+## Enable animation
+
+Use the [`enableAnimation`] property to create smooth transitions when zooming in on the chart.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs10/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs10" %}
 
 ## Auto interval on zooming
 

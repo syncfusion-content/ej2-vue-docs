@@ -234,7 +234,7 @@ Vue.use(IconsPlugin)
 Step 2: The following code demonstrates how to render Bootstrap tooltip for the **CustomerID** field with [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template)
 
 {% tabs %}
-{% highlight ts tabtitle="app.component.ts" %}
+{% highlight ts tabtitle="app-composition.vue" %}
 {% raw %}
 <template>
   <div id="app">

@@ -56,7 +56,7 @@ npm install @syncfusion/ej2-data --save
 npm install express body-parser cors
 ```
 
-**Step 4:** Install Axios for making HTTP requests in your Vue.js project:
+**Step 4:** Install axios for making HTTP requests in your Vue.js project:
 
 ```bash
 npm install axios

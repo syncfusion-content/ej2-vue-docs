@@ -117,6 +117,36 @@ The fill color and the text in the data source can be mapped to the chart using 
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs26" %}
 
+## Border Radius
+
+You can create rounded corners for each slice using the [`borderRadius`] option, giving the chart a modern and polished look.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs39/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs39/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs39" %}
+
+## Patterns
+
+You can apply different patterns to the pie slices using the [`applyPattern`] property in the series and the [`pointRender`](https://ej2.syncfusion.com/angular/documentation/api/accumulation-chart/iAccPointRenderEventArgs/) event.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs40/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs40" %}
+
 ## Multi-level pie chart
 
 You can achieve a multi-level drill down in pie and doughnut charts using [pointClick](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationChartModel/#pointclick) event. If user clicks any point in the chart, that corresponding data will be shown in the next level and so on based on point clicked.

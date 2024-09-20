@@ -65,7 +65,7 @@ Here is an example code snippet that shows how to set a primary key for an auto-
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/default-cs3/app-composition.vue %} 
+{% include code-snippet/grid/column/default-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 {% include code-snippet/grid/column/default-cs3/app.vue %}

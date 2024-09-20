@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Scroll settings in Vue Diagram component
 
-The diagram can be scrolled by using the vertical and horizontal scrollbars. In addition to the scrollbars,mousewheel can be used to scroll the diagram.
+The diagram can be scrolled by using the vertical and horizontal scrollbars. In addition to the scrollbars,mouse wheel can be used to scroll the diagram.
 
 Diagram’s [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#scrollsettings) enable you to read the current scroll status, view port size, current zoom, and zoom factor. It also allows you to scroll the diagram programmatically.
 
@@ -88,6 +88,12 @@ The autoscroll border is used to specify the maximum distance between the object
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/scroll-settings/autoScroll-cs1" %}
+
+## Controlling Autoscroll Speed
+
+You can control how often the scrolling needs to be performed automatically in the Diagram component during the auto-scrolling behavior. You can now adjust the frequency, ranging from slow and smooth to quick and rapid, to suit their preferences. To configure, set the value in milliseconds to the [`autoScrollFrequency`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettings/#autoscrollfrequency) property within the scrollSettings class, allowing precise control over how often auto-scrolling occurs. 
+
+![AutoscrollFrequency](./images/AutoscrollFrequency.gif)
 
 ## Scroll limit
 

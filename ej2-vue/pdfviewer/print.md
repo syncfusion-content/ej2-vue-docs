@@ -207,6 +207,181 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+## Customizing Print Quality using printScaleFactor API
+
+The PDF Viewer allows you to adjust the print quality using the [printScaleFactor](https://ej2.syncfusion.com/vue/documentation/api/pdfviewer/#printScaleFactor) API. The quality of the print improves as the printScaleFactor value increases from 0.5 to 5.
+
+When the value is less than 0.5, the PDF is printed at a standard quality. When the value exceeds 5, the PDF is still printed at the standard quality. In standard quality, printScaleFactor value is set to 1 as default value.
+The effective range for printScaleFactor is between 0.5 and 5. Higher values within this range will result in better print quality, but also increase the print time. 
+
+By default, the printScaleFactor is set to 1.
+
+* **The following code snippet demonstrates how to customize print quality using the printScaleFactor API in the PDF Viewer.**
+
+You can invoke print action using the following code snippet.,
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="printClicked">Print</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :documentPath="documentPath" :resourceUrl="resourceUrl" 
+    {/*By changing the printScaleFactor value we can adjust the quality of the PDF file*/}
+    :printScaleFactor=0.5>
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+const resourceUrl = "https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const printClicked = function (args) {
+  pdfviewer.value.ej2Instances.print.print();
+}
+
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Standalone)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="printClicked">Print</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" 
+    :documentPath="documentPath" :resourceUrl="resourceUrl"
+     {/*By changing the printScaleFactor value we can adjust the quality of the PDF file*/}
+     :printScaleFactor=0.5 >
+    </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: "https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
+  methods: {
+    printClicked: function (args) {
+      this.$refs.pdfviewer.ej2Instances.print.print();
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="printClicked">Print</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
+     {/*By changing the printScaleFactor value we can adjust the quality of the PDF file*/}
+    :printScaleFactor=0.5>
+    </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script setup>
+import {
+  PdfViewerComponent as EjsPdfviewer, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+import { provide, ref } from 'vue';
+
+const pdfviewer = ref(null);
+const serviceUrl = "https://services.syncfusion.com/vue/production/api/pdfviewer";
+const documentPath = "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf";
+
+provide('PdfViewer', [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+  ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner])
+
+const printClicked = function (args) {
+  pdfviewer.value.ej2Instances.print.print();
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (Server-Backed)" %}
+
+<template>
+  <div id="app">
+    <button v-on:click="printClicked">Print</button>
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath" 
+     {/*By changing the printScaleFactor value we can adjust the quality of the PDF file*/}
+    :printScaleFactor=0.5>
+    </ejs-pdfviewer>
+
+  </div>
+</template>
+
+<script>
+import {
+  PdfViewerComponent, Toolbar, Magnification, Navigation,
+  LinkAnnotation, BookmarkView, Annotation, ThumbnailView,
+  Print, TextSelection, TextSearch, FormFields, FormDesigner
+} from '@syncfusion/ej2-vue-pdfviewer';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
+  data() {
+    return {
+      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },
+  provide: {
+    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Annotation,
+      ThumbnailView, Print, TextSelection, TextSearch, FormFields, FormDesigner]
+  },
+
+  methods: {
+    printClicked: function (args) {
+      this.$refs.pdfviewer.ej2Instances.print.print();
+    }
+  }
+}
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+```
 ## See also
 
 * [Toolbar items](./toolbar)
