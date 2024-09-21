@@ -13,7 +13,7 @@ export default {
   },
   data: function () {
     return {
-      cssClass: 'e-custom'
+      cssClass: 'custom-container'
     }
   },
   methods: {

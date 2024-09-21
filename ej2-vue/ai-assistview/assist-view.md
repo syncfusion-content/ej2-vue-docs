@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Setting prompt text
 
-You can use the `prompt` property to define the prompt text for the AI AssistView component.
+You can use the [prompt](../api/ai-assist-view#prompt) property to define the prompt text for the AI AssistView component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ You can use the `prompt` property to define the prompt text for the AI AssistVie
 
 ## Setting prompt placeholder
 
-You can use the `promptPlaceholder` property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
+You can use the [promptPlaceholder](../api/ai-assist-view#promptplaceholder) property to set the placeholder text for the prompt textarea. The default value is `Type prompt for assistance...`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,9 +42,9 @@ You can use the `promptPlaceholder` property to set the placeholder text for the
 
 ## Prompt-response collection
 
-By using the `prompts` property, you can specify the collection of prompts and responses, allowing you to load pre-defined pairs or individual entries ensuring the AI AssistView component is initialized with the configured data.
+You can use the [prompts](../api/ai-assist-view#prompts) property to initialize the component with the configured data as a collection of prompts and responses or individual entries.
 
-> The `prompts` collection stores all the prompts and responses generated.
+> The [prompts](../api/ai-assist-view#prompts) collection stores all the prompts and responses generated.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -59,7 +59,7 @@ By using the `prompts` property, you can specify the collection of prompts and r
 
 ## Adding prompt suggestions
 
-By using the `promptSuggestions` property, you can configure the list of suggested prompts in the AI AssistView. Users can choose from these suggestions to use as their prompts.
+You can use the [promptSuggestions](../api/ai-assist-view#promptsuggestions) property, to add the suggestions in both initial and on-demand which help users to refine their prompts. Additionally, custom header can be set for suggestions further enhancing the user experience.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -74,7 +74,7 @@ By using the `promptSuggestions` property, you can configure the list of suggest
 
 ### Adding suggestions header
 
-You can use the `promptSuggestionsHeader` property to set the header text for the prompt suggestions in the AI AssistView.
+You can use the [promptSuggestionsHeader](../api/ai-assist-view#promptsuggestionsheader) property to set the header text for the prompt suggestions in the AI AssistView.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -87,9 +87,9 @@ You can use the `promptSuggestionsHeader` property to set the header text for th
   
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/suggestions-header" %}
 
-## Adding prompt iconCSS
+## Adding prompt iconCss
 
-You can customize the appearance of the prompter avatar by using the `promptIconCss` property.
+You can customize the appearance of the prompter avatar by using the [promptIconCss](../api/ai-assist-view#prompticoncss) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -102,9 +102,9 @@ You can customize the appearance of the prompter avatar by using the `promptIcon
   
 {% previewsample "page.domainurl/code-snippet/ai-assistview/assist-view/prompt-icon" %}
 
-## Adding response iconCSS
+## Adding response iconCss
 
-You can use the `responseIconCss` property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
+You can use the [responseIconCss](../api/ai-assist-view#responseiconcss) property to customize the appearance of the responder avatar. By default, the `e-assistview-icon` class is added as the built-in AI AssistView response icon.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -119,7 +119,7 @@ You can use the `responseIconCss` property to customize the appearance of the re
 
 ## Show or hide clear button
 
-You can use the `showClearButton` property to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
+You can use the [showClearButton](../api/ai-assist-view#showclearbutton) property to show or hide the clear button. By default, its value is `false`, when the clear button is clicked, the prompt text entered will be cleared.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

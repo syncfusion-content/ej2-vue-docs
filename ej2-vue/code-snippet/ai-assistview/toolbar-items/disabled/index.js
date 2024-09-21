@@ -14,7 +14,10 @@ new Vue({
   data: function () {
     return {
       toolbarSettings: {
-        items: [ { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', disabled: true } ]
+        items: [
+          { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', disabled: true },
+          { type: 'Button', iconCss: 'e-icons e-user', align: 'Right' }
+        ]
       }
     }
   },

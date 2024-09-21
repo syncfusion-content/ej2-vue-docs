@@ -1,7 +1,7 @@
 <template>
   <div id='container' style="height: 350px; width: 650px;">
     <br>
-    <ejs-aiassistview id='aiAssistView' responseIconCss="e-icons e-star-filled" :prompts="promptsData" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
+    <ejs-aiassistview id='aiAssistView' responseIconCss="e-icons e-bullet-4" :prompts="promptsData" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
   </div>
 </template>
 

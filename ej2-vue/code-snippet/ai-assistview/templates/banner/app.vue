@@ -4,7 +4,9 @@
     <ejs-aiassistview id='aiAssistView' bannerTemplate="bannerTemplate" ref="aiassist" :prompt-request="onPromptRequest">
       <template v-slot:bannerTemplate="">
         <div class="banner-content">
-          <h1><span class="e-icons e-assistview-icon"></span>AI Assistance</h1>
+          <div class="e-icons e-assistview-icon"></div>
+          <h3>AI Assistance</h3>
+          <div>Your everyday AI companion.</div>
         </div>
       </template>
     </ejs-aiassistview>

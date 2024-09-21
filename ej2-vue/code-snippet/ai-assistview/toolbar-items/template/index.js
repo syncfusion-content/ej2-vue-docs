@@ -9,13 +9,29 @@ new Vue({
     <br>
     <ejs-aiassistview id='aiAssistView' :toolbar-settings="toolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
   </div>
+  <div id="dropdownTemplate">
+    <ejs-dropdownbutton cssClass="custom-dropdown" iconCss="e-icons e-translate" content="English" :items='dropdownItems'></ejs-dropdownbutton>
+  </div>
 `,
 
   data: function () {
     return {
       toolbarSettings: {
-        items: [ { type: 'Input', template: 'Your personalized assistant for smarter prompts and responses.', align: 'Center' } ]
-      }
+        items: [
+          { type: 'Input', align: 'Right', template: '#dropdownTemplate' }
+        ]
+      },
+      dropdownItems: [
+        {
+          text: 'हिंदी'
+        },
+        {
+          text: 'தமிழ்'
+        },
+        {
+          text: 'తెలుగు'
+        }
+      ]
     }
   },
   methods: {
