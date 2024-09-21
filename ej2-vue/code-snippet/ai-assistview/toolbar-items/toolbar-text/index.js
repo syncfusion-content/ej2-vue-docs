@@ -14,7 +14,7 @@ new Vue({
   data: function () {
     return {
       toolbarSettings: {
-        items: [ { text: 'Get intelligent responses tailored to your needs', align: 'Center' } ]
+        items: [ { text: 'Welcome User !', align: 'Right' } ]
       }
     }
   },

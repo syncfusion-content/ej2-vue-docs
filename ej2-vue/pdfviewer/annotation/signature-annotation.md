@@ -205,35 +205,69 @@ The following code snippet describes how to enable the handwritten signature in 
 
 <template>
   <div id="app">
-    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath"
-      :documentLoad="documentLoad">
+    <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :resourceUrl="resourceUrl":documentPath="documentPath"
+      :documentLoad="documentLoad"  :enableHandwrittenSignature=true>
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 import {
   PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation,
   BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
   TextSearch, FormFields, FormDesigner, PageOrganizer
 } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
 
 export default {
   name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
   data() {
     return {
-      serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      enableHandwrittenSignature : false    
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib'
     };
   },
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
       Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer]
-  }
+  },
+}
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Server-Backed" %}
+<template>
+  <div id="app">
+      <ejs-pdfviewer
+          id="pdfViewer"
+          ref="pdfviewer"
+          :serviceUrl="serviceUrl"
+          :documentPath="documentPath"
+          :enableHandwrittenSignature=true>
+      </ejs-pdfviewer>
+  </div>
+</template>
+
+<script>
+import Vue from 'vue';
+import {  PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation,
+          BookmarkView, Annotation, ThumbnailView, Print, TextSelection,
+          TextSearch, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
+Vue.use(PdfViewerPlugin);
+
+export default {
+  name: 'app',
+  data () {
+    return {
+      serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+    };
+  },  
+  provide: {
+    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
+      Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer ]
+    },
 }
 </script>
 

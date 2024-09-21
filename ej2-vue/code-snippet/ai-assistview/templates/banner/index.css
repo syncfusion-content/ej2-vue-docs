@@ -1,4 +1,13 @@
 
+#aiAssistView .e-view-container {
+    margin: auto;
+}
+#aiAssistView .e-banner-view {
+    margin-left: 0;
+}
+.banner-content .e-assistview-icon:before {
+    font-size: 35px;
+}
 .banner-content {
     text-align: center;
 }

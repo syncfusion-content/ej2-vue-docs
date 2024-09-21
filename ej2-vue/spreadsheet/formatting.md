@@ -19,19 +19,19 @@ Formatting options make your data easier to view and understand. The different t
 
 Number formatting provides a type for your data in the Spreadsheet. Use the [`allowNumberFormatting`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#allownumberformatting) property to enable or disable the number formatting option in the Spreadsheet. The different types of number formatting supported in Spreadsheet are,
 
-| Types | Format |
-|-------|---------|
-| General(default) | NA |
-| Number | `0.00` |
-| Currency | `$#,##0.00` |
-| Accounting | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)` |
-| ShortDate | `mm-dd-yyyy` |
-| LongDate | `dddd, mmmm dd, yyyy` |
-| Time | `h:mm:ss AM/PM` |
-| Percentage | `0.00%` |
-| Fraction | `# ?/?` |
-| Scientific |`0.00E+00`  |
-| Text | `@` |
+| Types | Format Code | Format ID |
+|---------|---------|---------|
+| General(default) | NA | 0 |
+| Number | `0.00` | 2 |
+| Currency | `$#,##0.00` | NA |
+| Accounting | `_($* #,##0.00_);_($* (#,##0.00);_($* "-"??_);_(@_)` | 44 |
+| ShortDate | `m/d/yyyy` | 14 |
+| LongDate | `dddd, mmmm dd, yyyy` | NA |
+| Time | `h:mm:ss AM/PM` | NA |
+| Percentage | `0.00%` | 10 |
+| Fraction | `# ?/?` | 12 |
+| Scientific |`0.00E+00`  | 11 |
+| Text | `@` | 49 |
 
 Number formatting can be applied in following ways,
 * Using the `format` property in `cell`, you can set the desired format to each cell at initial load.
@@ -54,6 +54,16 @@ The following code example shows the number formatting in cell data.
 ### Limitations of Number Formatting
 
 * Custom number formatting is not supported.
+
+## Configure culture-based custom format
+
+Previously, the custom format dialog always displayed formats using the English settings (group separator, decimal separator, and currency symbol were not updated based on the applied culture). Starting from version `27.1.*`, the custom format dialog will now display formats according to the applied culture. You can select a culture-based number format from the dialog or enter your own format using the culture-specific decimal separator, group separator, and currency symbol. Then, click "Apply" to apply the culture-specific custom format to the selected cells.
+
+The spreadsheet allows customization of formats in the custom format dialog using the `configureLocalizedFormat` method. In this method, you need to pass a collection containing the default number format IDs and their corresponding format codes as arguments. Based on this collection, the custom format dialog will display the customized formats. You can refer to the [default number format IDs](https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.spreadsheet.numberingformat?view=openxml-2.8.1) from the Excel built-in number format reference.
+
+Compared to Excel, the date, time, currency, and accounting formats vary across different cultures. For example, when an Excel file with the date format `'m/d/yyyy'` is imported in the `en-US` culture, the spreadsheet displays the date in that format. However, when the same file is imported in the German culture, the date format changes to `'dd.MM.yyyy'`, which is the default for that region. The default number format ID for the date is 14. To customize the date format based on the culture, you should map the default number format ID to the appropriate culture-specific format code, like this: `{ id: 14, code: 'dd.MM.yyyy' }` in the `configureLocalizedFormat` method.
+
+> The format code should use the default decimal separator (.) and group separator (,).
 
 ## Text and cell formatting
 

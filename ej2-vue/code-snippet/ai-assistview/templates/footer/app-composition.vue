@@ -5,7 +5,7 @@
       <template v-slot:footerTemplate="">
         <div class="custom-footer">
           <textarea id="promptTextArea" class="e-input" rows="2" placeholder="Enter your prompt here"></textarea>
-          <button id="sendPrompt" class="e-btn e-primary" @click="buttonClick">Send</button>
+          <button id="sendPrompt" class="e-btn e-primary" @click="buttonClick">Generate</button>
         </div>
       </template>
     </ejs-aiassistview>

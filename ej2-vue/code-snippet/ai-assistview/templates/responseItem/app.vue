@@ -6,7 +6,7 @@
         <div class="responseItemContent">
           <div class="response-header">
             <span class="e-icons e-assistview-icon"></span>
-            AI AssistView
+            AI Assist
           </div>
           <div class="assist-response-content" v-html="data.response"></div>
         </div>

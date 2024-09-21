@@ -12,13 +12,13 @@ domainurl: ##DomainURL##
 
 ## Adding prompt response
 
-You can use the `addPromptResponse` public method to add the prompts and responses to the AI AssistView. You can add the it either as a `string` or `object` collection.
+You can use the [addPromptResponse](../api/ai-assist-view#addpromptresponse) public method to add the prompts and responses to the AI AssistView. You can add the it either as a `string` or `object` collection.
 
 ### Adding responses as string.
 
 You can add string response, by passing it as argument for the `addPromptResponse('Response')` method which adds as the response of last added prompt.
 
-{% tabs %}{% tabs %}
+{% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/ai-assistview/methods/response-string/app-composition.vue %}
 {% endhighlight %}
@@ -46,7 +46,7 @@ You can add object response, by passing the prompt and response as a collection 
 
 ## Executing prompt
 
-You can use the `executePrompt` method to execute the prompts dynamically in the AI AssistView. It accepts prompts as string values, which triggers the `promptRequest` event and performs the callback actions.
+You can use the [executePrompt](../api/ai-assist-view#executeprompt) method to execute the prompts dynamically in the AI AssistView. It accepts prompts as string values, which triggers the [promptRequest](../api/ai-assist-view#promptrequest) event and performs the callback actions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

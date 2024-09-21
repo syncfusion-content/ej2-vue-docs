@@ -14,7 +14,10 @@ export default {
   data: function () {
     return {
       toolbarSettings: {
-        items: [ { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', visible: false } ]
+        items: [
+          { type: 'Button', iconCss: 'e-icons e-refresh', align: 'Right', visible: false },
+          { type: 'Button', iconCss: 'e-icons e-user', align: 'Right' }
+        ]
       }
     }
   },
