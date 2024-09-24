@@ -119,7 +119,7 @@ The fill color and the text in the data source can be mapped to the chart using 
 
 ## Border Radius
 
-You can create rounded corners for each slice using the [`borderRadius`] option, giving the chart a modern and polished look.
+You can create rounded corners for each slice using the [`borderRadius`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeriesModel/#borderradius) option, giving the chart a modern and polished look.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -134,7 +134,7 @@ You can create rounded corners for each slice using the [`borderRadius`] option,
 
 ## Patterns
 
-You can apply different patterns to the pie slices using the [`applyPattern`] property in the series and the [`pointRender`](https://ej2.syncfusion.com/angular/documentation/api/accumulation-chart/iAccPointRenderEventArgs/) event.
+You can apply different patterns to the pie slices using the [`applyPattern`](https://ej2.syncfusion.com/vue/documentation/api/accumulation-chart/accumulationSeriesModel/#applypattern) property in the series and the [`pointRender`](https://ej2.syncfusion.com/angular/documentation/api/accumulation-chart/iAccPointRenderEventArgs/) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

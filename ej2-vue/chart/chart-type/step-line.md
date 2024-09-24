@@ -49,7 +49,7 @@ The following properties can be used to customize the `step line` series.
 
 **No risers**
 
-The [`noRisers`] feature allows the step line series to appear as a continuous flow, eliminating the vertical lines between points. This approach is useful for highlighting trends without the distraction of risers.
+You can eliminate the vertical lines between points by using the [`noRisers`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#norisers) property in a series. This approach is useful for highlighting trends without the distraction of risers.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
