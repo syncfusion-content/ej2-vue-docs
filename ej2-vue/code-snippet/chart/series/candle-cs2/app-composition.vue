@@ -2,18 +2,14 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Candle' xName='x' high='high' low='low' open='open' close='close'
-          name='SHIRPUR-G' bearFillColor='#e56590' bullFillColor='#f8b883' :enableSolidCandles='enableSolidCandles'>
-        </e-series>
+        <e-series :dataSource='seriesData' type='Candle' xName='x' high='high' low='low' open='open' close='close' bearFillColor='#e56590' bullFillColor='#f8b883'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, CandleSeries, Category } from "@syncfusion/ej2-vue-charts";
-
 
 const seriesData = [
   { x: 'Jan', open: 120, high: 160, low: 100, close: 140 },
@@ -23,20 +19,23 @@ const seriesData = [
   { x: 'May', open: 150, high: 170, low: 110, close: 130 }
 ];
 const primaryXAxis = {
-  title: 'Date',
   valueType: 'Category',
+  title: 'Date',
+  majorGridLines: { width: 0 }
 };
 const primaryYAxis = {
-  title: 'Price in Dollar', minimum: 100, maximum: 200, interval: 20,
+  title: 'Price',
+  minimum: 80,
+  maximum: 200,
+  interval: 20
 };
-const enableSolidCandles = true;
-const title = "Financial Analysis";
+const title = "Shirpur Gold Refinery Share Price";
 
 provide('chart', [CandleSeries, Category]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

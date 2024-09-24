@@ -1,17 +1,16 @@
-
 import Vue from "vue";
-import { ChartPlugin, PolarSeries, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, PolarSeries, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
 ;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Line'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='country' yName='gold' drawType='Column'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -19,24 +18,25 @@ new Vue({
 
   data() {
     return {
-    seriesData:[
-     { x: 2005, y: 28 }, { x: 2006, y: 25 },{ x: 2007, y: 26 },
-     { x: 2008, y: 27 }, { x: 2009, y: 32 }, { x: 2010, y: 35 },
-     { x: 2011, y: 30 }],
+      seriesData: [
+        { country: "USA",       gold: 50 },
+        { country: "China",     gold: 40 },
+        { country: "Japan",     gold: 70 },
+        { country: "Australia", gold: 60 },
+        { country: "France",    gold: 50 },
+        { country: "Germany",   gold: 40 },
+        { country: "Italy",     gold: 40 },
+        { country: "Sweden",    gold: 30 }
+      ],
       primaryXAxis: {
-          title: 'Year',
-          minimum: 2004, maximum: 2012, interval: 1, coefficient: 50
-        },
-         primaryYAxis: {
-            minimum: 20, maximum: 40, interval: 5,
-            title: 'Efficiency', 
-            labelFormat: '{value}%'
-        },
-      title: "Efficiency of oil-fired power production"
+        valueType: 'Category',
+        coefficient: 80
+      },
+      title: "Olympic Medals"
     };
   },
   provide: {
-    chart: [PolarSeries, LineSeries]
-  },
+    chart: [PolarSeries, ColumnSeries, Category]
+  }
 
 });

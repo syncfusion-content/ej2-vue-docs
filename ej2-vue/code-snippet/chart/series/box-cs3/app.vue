@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+    <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='BoxAndWhisker' xName='x' yName='y' :showMean='showMean'
-          :marker='marker'> </e-series>
+        <e-series :dataSource='seriesData' type='BoxAndWhisker' xName='x' yName='y' showMean=false> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -34,10 +33,7 @@ export default {
       ],
       primaryXAxis: {
         valueType: 'Category'
-      },
-      showMean: false,
-      marker: { visible: true },
-      title: "Company Revenue and Profit"
+      }
     };
   },
   provide: {
@@ -46,7 +42,7 @@ export default {
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

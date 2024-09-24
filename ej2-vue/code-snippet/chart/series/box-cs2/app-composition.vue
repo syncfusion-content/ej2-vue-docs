@@ -1,18 +1,15 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+    <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='BoxAndWhisker' xName='x' yName='y' boxPlotMode='boxPlotMode'
-          :marker='marker'> </e-series>
+        <e-series :dataSource='seriesData' type='BoxAndWhisker' xName='x' yName='y' :marker='marker' boxPlotMode='Normal'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, BoxAndWhiskerSeries, Category } from "@syncfusion/ej2-vue-charts";
-
 
 const seriesData = [
   { x: 'Development', y: [22, 22, 23, 25, 25, 25, 26, 27, 27, 28, 28, 29, 30, 32, 34, 32, 34, 36, 35, 38] },
@@ -28,14 +25,17 @@ const seriesData = [
 const primaryXAxis = {
   valueType: 'Category'
 };
-const marker = { visible: true };
-const title = "Company Revenue and Profit";
+const marker = { 
+  visible: true,
+  width: 10,
+  height: 10
+};
 
 provide('chart', [BoxAndWhiskerSeries, Category]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

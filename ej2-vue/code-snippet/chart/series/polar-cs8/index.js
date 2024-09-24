@@ -1,19 +1,19 @@
-
 import Vue from "vue";
-import { ChartPlugin, PolarSeries, Category, StackingColumnSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, PolarSeries, StackingColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
 ;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+        <ejs-chart id="container">
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='StackingColumn' name='Organic'></e-series>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y1' drawType='StackingColumn' name='Fair-trade'></e-series>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='StackingColumn' name='veg-Alternatives'></e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='StackingColumn'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y1' drawType='StackingColumn'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y2' drawType='StackingColumn'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y3' drawType='StackingColumn'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -21,23 +21,22 @@ new Vue({
 
   data() {
     return {
-    seriesData:[
-     { x: '2014', y: 111.1, y1: 76.9, y2: 66.1, y3: 34.1 },
-    { x: '2015', y: 127.3, y1: 99.5, y2: 79.3, y3: 38.2 },
-    { x: '2016', y: 143.4, y1: 121.7, y2: 91.3, y3: 44.0 },
-    { x: '2017', y: 159.9, y1: 142.5, y2: 102.4, y3: 51.6 },
-    { x: '2018', y: 175.4, y1: 166.7, y2: 112.9, y3: 61.9 },
-    { x: '2019', y: 189.0, y1: 182.9, y2: 122.4, y3: 71.5 },
-    { x: '2020', y: 202.7, y1: 197.3, y2: 120.9, y3: 82.0 }
-     ],
-      primaryXAxis: {
-          valueType: 'Category'
-        },
-      title: "Trend in Sales of Ethical Produce"
+      seriesData: [
+        { x: 2000, y: 0.61, y1: 0.03, y2: 0.48},
+        { x: 2001, y: 0.81, y1: 0.05, y2: 0.53 },
+        { x: 2002, y: 0.91, y1: 0.06, y2: 0.57 },
+        { x: 2003, y: 1,    y1: 0.09, y2: 0.61 }, 
+        { x: 2004, y: 1.19, y1: 0.14, y2: 0.63 },
+        { x: 2005, y: 1.47, y1: 0.20, y2: 0.64 },
+        { x: 2006, y: 1.74, y1: 0.29, y2: 0.66 }, 
+        { x: 2007, y: 1.98, y1: 0.46, y2: 0.76 },
+        { x: 2008, y: 1.99, y1: 0.64, y2: 0.77 },
+        { x: 2009, y: 1.70, y1: 0.75, y2: 0.55 }
+      ]
     };
   },
   provide: {
-    chart: [PolarSeries, Category, StackingColumnSeries]
+    chart: [PolarSeries, StackingColumnSeries, Category]
   }
 
 });

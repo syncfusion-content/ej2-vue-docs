@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title'>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StepLine' dashArray='2.5' :marker="marker" xName='x' yName='y'
-          name='USA' width=2 fill="blue" :border='border' opacity=0.5 step="Left"> </e-series>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' fill='green'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -22,24 +21,37 @@ export default {
   data() {
     return {
       seriesData: [
-        { x: 2006, y: 378 }, { x: 2007, y: 416 },
-        { x: 2008, y: 404 }, { x: 2009, y: 390 },
-        { x: 2010, y: 376 }, { x: 2011, y: 365 }
+        { x: 2005, y: 370 },
+        { x: 2006, y: 378 },
+        { x: 2007, y: 416 },
+        { x: 2008, y: 404 },
+        { x: 2009, y: 390 },
+        { x: 2010, y: 376 },
+        { x: 2011, y: 365 },
+        { x: 2012, y: 350 }
       ],
-      border: { width: 1.5, color: 'brown' },
-      title: "CO2 - Intensity Analysis",
-      marker: {
-        visible: true
-      }
+      primaryXAxis: {
+        minimum: 2004, 
+        maximum: 2013, 
+        interval: 1,
+        title: 'Year'
+      },
+      primaryYAxis: {
+        minimum: 330, 
+        maximum: 450, 
+        interval: 30,
+        title: 'Intensity (g/kWh)'
+      },
+      title: 'CO2 - Intensity Analysis'
     };
   },
   provide: {
     chart: [StepLineSeries]
-  },
+  }
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Polar' xName='country' yName='gold' drawType='Column' name='Gold'>
-        </e-series>
+        <e-series :dataSource='seriesData' type='Polar' xName='country' yName='gold' drawType='Column'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script>
 
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, PolarSeries, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, PolarSeries, Category, ColumnSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -22,29 +21,33 @@ export default {
   data() {
     return {
       seriesData: [
-        { country: "USA", gold: 50 },
-        { country: "China", gold: 40 },
-        { country: "Japan", gold: 70 },
+        { country: "USA",       gold: 50 },
+        { country: "China",     gold: 40 },
+        { country: "Japan",     gold: 70 },
         { country: "Australia", gold: 60 },
-        { country: "France", gold: 50 },
-        { country: "Germany", gold: 40 },
-        { country: "Italy", gold: 40 },
-        { country: "Sweden", gold: 30 }
+        { country: "France",    gold: 50 },
+        { country: "Germany",   gold: 40 },
+        { country: "Italy",     gold: 40 },
+        { country: "Sweden",    gold: 30 }
       ],
       primaryXAxis: {
         valueType: 'Category',
         title: 'Countries'
       },
+      primaryYAxis: {
+        minimum: 0, maximum: 80,
+        interval: 20, title: 'Medals'
+      },
       title: "Olympic Medals"
     };
   },
   provide: {
-    chart: [ColumnSeries, Category, PolarSeries]
+    chart: [PolarSeries, Category, ColumnSeries]
   }
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

@@ -1,23 +1,18 @@
 <template>
   <div id="app">
-    <ejs-chart id="chartcontainer" :title="title" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis"
-      :tooltip="tooltip" :chartArea="chartArea">
+    <ejs-chart id="chartcontainer" :title="title" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea">
       <e-series-collection>
-        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y" name="John" width="2" dashArray="5,1"
-          :marker="marker" fill="red"></e-series>
-        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y1" name="Peter" width="2"
-          dashArray="5,1" :marker="marker" fill="yellow"></e-series>
-        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y2" name="Steve" width="2"
-          dashArray="5,1" :marker="marker" fill="green"></e-series>
-        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y3" name="Charle" width="2"
-          dashArray="5,1" :marker="marker" fill="blue"></e-series>
+        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y" name="John" :marker="marker" fill='#ff4251'></e-series>
+        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y1" name="Peter" :marker="marker" fill='#4C4C4C'></e-series>
+        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y2" name="Steve" :marker="marker" fill='#794F1B'></e-series>
+        <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y3" name="Charle" :marker="marker" fill='#1a9a6f'></e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingLineSeries, Legend, Tooltip, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, Category, Legend, Tooltip, StackingLineSeries } from "@syncfusion/ej2-vue-charts";
 
 
 const seriesData = [
@@ -35,22 +30,13 @@ const seriesData = [
   { x: "Entertainment", y: 75, y1: 45, y2: 65, y3: 115 }
 ];
 const primaryXAxis = {
-  majorGridLines: { width: 0 },
-  minorGridLines: { width: 0 },
-  majorTickLines: { width: 0 },
-  minorTickLines: { width: 0 },
-  interval: 1,
-  lineStyle: { width: 0 },
-  valueType: "Category"
+  interval: 1, 
+  valueType: 'Category'
 };
 const primaryYAxis = {
-  title: "Expense",
-  lineStyle: { width: 0 },
-  interval: 50,
-  minorTickLines: { width: 0 },
-  majorTickLines: { width: 0 },
-  majorGridLines: { width: 1 },
-  minorGridLines: { width: 1 }
+  title: 'Expense',
+  interval: 100,
+  labelFormat: '${value}'
 };
 const chartArea = {
   border: {
@@ -61,16 +47,14 @@ const marker = {
   visible: true
 };
 const tooltip = {
-  enable: true,
-  format: "${point.x} : <b>${point.y} (${point.percentage}%)</b>"
+  enable: true
 };
-const title = "Family Expense for Month";
 
-provide('chart', [StackingLineSeries, Legend, Tooltip, Category]);
+provide('chart', [Category, Legend, Tooltip, StackingLineSeries]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

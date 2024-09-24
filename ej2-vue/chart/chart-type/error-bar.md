@@ -8,11 +8,17 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Error Bar in Vue Chart Component
+# Error bar Chart in Vue Component
 
 ## Error bar
 
-Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement. To render the error bar for the series, set [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#visible) as `true` in error bar object and inject `ErrorBar` module into the `provide`.
+Error bars are graphical representations of the variability of data and are used on graphs to indicate the error or uncertainty in a reported measurement.
+
+To render error bars for the series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+ 
+* **Set visibility**: Set the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#visible) property to **true** for the error bars to be displayed.
+
+* **Inject the ErrorBar module**: Use the `provide: { chart: [ErrorBar]}` method to inject the `ErrorBar` module into your chart. This step is essential, as it ensures that the necessary functionalities for rendering error bar series are available in your chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -24,6 +30,21 @@ Error bars are graphical representations of the variability of data and used on 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs1" %}
+
+## Customizing error bar
+
+To customize the error bar type, set the error bar [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#type) to `Custom`, and then change the horizontal or vertical positive and negative error values for the error bar.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs8/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs8/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs8" %}
 
 ## Error bar type
 
@@ -57,7 +78,7 @@ To customize the error bar type, set error bar [`type`](https://ej2.syncfusion.c
 
 ## Error bar mode
 
-Error bar mode is used to define whether the error bar line has to be drawn horizontally, vertically or in both side. To change the error bar mode use [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#mode) option.
+The error bar mode is used to define whether the error bar line is drawn horizontally, vertically or on both sides. To change the error bar mode, use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#mode) option.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -72,7 +93,7 @@ Error bar mode is used to define whether the error bar line has to be drawn hori
 
 ## Error bar direction
 
-To change the error bar direction to plus, minus or both side using [`direction`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#direction) option.
+To change the direction of the error bars to plus, minus, or both sides, use the [`direction`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#direction) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -87,7 +108,7 @@ To change the error bar direction to plus, minus or both side using [`direction`
 
 ## Customizing error bar cap
 
-To customize the error bar cap length, width and fill color, you can use [`errorBarCap`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#errorbarcap) option.
+To customize the length, width, opacity, and fill color of the error bar caps, you can use the [`errorBarCap`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#errorbarcap) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -100,9 +121,9 @@ To customize the error bar cap length, width and fill color, you can use [`error
         
 {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs6" %}
 
-## Customizing Error Bar Color
+## Customizing error bar color
 
-To customize the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error and vertical negative and positive error for an individual point using [`verticalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalerror), [`horizontalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalnegativeerror) and [`verticalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettingsModel/#verticalpositiveerror) properties.
+To customise the error bar color for individual errors, use the [`errorBarColorMapping`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#errorbarcolormapping) property. You can also customize the vertical error, horizontal error, horizontal negative and positive error, and vertical negative and positive error for an individual point using the [`verticalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#verticalerror), [`horizontalError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#horizontalerror), [`horizontalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#horizontalnegativeerror), [`horizontalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#horizontalpositiveerror), [`verticalNegativeError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#verticalnegativeerror), and [`verticalPositiveError`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#verticalpositiveerror) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -115,7 +136,39 @@ To customize the error bar color for individual errors, use the [`errorBarColorM
 
 {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs7" %}
 
-## See Also
+## Events
+
+### Series render
+
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs9/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs9" %}
+
+### Point render
+
+The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs10/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/errorbar-cs10/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs10" %}
+
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)

@@ -1,32 +1,31 @@
-
 import Vue from "vue";
-import { ChartPlugin, StackingAreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingAreaSeries, DateTime, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
 ;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-        <ejs-chart :title='title' :primaryXAxis='primaryXAxis'>
-          <e-series-collection>
-            <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y' name='Organic' fill="red" :border="border" dashArray="5" opacity=0.7> </e-series>
-            <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y1' name='Fair-trade' fill="yellow" :border="border" dashArray="5" opacity=0.7> </e-series>
-            <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y2' name='Veg Alternatives' fill="green" :border="border" dashArray="5" opacity=0.7> </e-series>
-            <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y3' name='Others' fill="blue" :border="border" dashArray="5" opacity=0.7> </e-series>
-        </e-series-collection>
+         <ejs-chart :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+            <e-series-collection>
+                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y' name='Organic' fill='#ff4251'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y1' name='Fair-trade' fill='#4C4C4C'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y2' name='Veg Alternatives' fill='#794F1B'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y3' name='Others' fill='#1a9a6f'> </e-series>
+            </e-series-collection>
         </ejs-chart>
     </div>
 `,
 
   data() {
     return {
-      seriesData:[
+      seriesData: [
         { x: new Date(2000, 0, 1), y: 0.61, y1: 0.03, y2: 0.48, y3: 0.23 },
         { x: new Date(2001, 0, 1), y: 0.81, y1: 0.05, y2: 0.53, y3: 0.17 },
         { x: new Date(2002, 0, 1), y: 0.91, y1: 0.06, y2: 0.57, y3: 0.17 },
-        { x: new Date(2003, 0, 1), y: 1, y1: 0.09, y2: 0.61, y3: 0.20 },
+        { x: new Date(2003, 0, 1), y: 1,    y1: 0.09, y2: 0.61, y3: 0.20 },
         { x: new Date(2004, 0, 1), y: 1.19, y1: 0.14, y2: 0.63, y3: 0.23 },
         { x: new Date(2005, 0, 1), y: 1.47, y1: 0.20, y2: 0.64, y3: 0.36 },
         { x: new Date(2006, 0, 1), y: 1.74, y1: 0.29, y2: 0.66, y3: 0.43 },
@@ -38,18 +37,28 @@ new Vue({
         { x: new Date(2012, 0, 1), y: 1.66, y1: 1.55, y2: 0.61, y3: 2.16 },
         { x: new Date(2013, 0, 1), y: 1.66, y1: 1.55, y2: 0.67, y3: 2.51 },
         { x: new Date(2014, 0, 1), y: 1.67, y1: 1.65, y2: 0.67, y3: 2.61 }
-        ],
-        primaryXAxis: {
-            valueType: 'DateTime'
-        },
-        border:{
-          width: 2, color: 'white'
-        },
-        title: "Trend in Sales of Ethical Produce"
+      ],
+      primaryXAxis: {
+        title: 'Years',
+        valueType: 'DateTime',
+        intervalType: 'Years',
+        labelFormat: 'y',
+        edgeLabelPlacement: 'Shift',
+        majorTickLines: { width: 0 }
+      },
+      primaryYAxis: {
+        title: 'Spend in Billions',
+        minimum: 0,
+        maximum: 7,
+        interval: 1,
+        labelFormat: '{value}B',
+        majorTickLines: { width: 0 }
+      },
+      title: 'Trend in Sales of Ethical Produce'
     };
   },
   provide: {
-    chart: [StackingAreaSeries, DateTime]
-  },
+    chart: [StackingAreaSeries, DateTime, Legend]
+  }
 
 });

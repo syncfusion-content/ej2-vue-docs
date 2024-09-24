@@ -2,45 +2,43 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y' name='Apple' fill="red"
-          dashArray="5" :border="border" opacity='0.8'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y1' name='Orange' fill="green"
-          dashArray="5" :border="border" opacity='0.8'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y2' name='Wastage' fill="blue"
-          dashArray="5" :border="border" opacity='0.8'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y' name='Apple' fill='#483D8B'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y1' name='Orange' fill='#556B2F'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y2' name='Wastage' fill='#8B0000'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingBarSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingBarSeries } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
-  { x: 'May', y: 20, y1: 21, y2: -3 }, { x: 'Jun', y: 24, y1: 25, y2: -3.5 },
-  { x: 'Jul', y: 28, y1: 27, y2: -4 }, { x: 'Aug', y: 32, y1: 31, y2: -4.5 },
-  { x: 'Sep', y: 33, y1: 34, y2: -5 }, { x: 'Oct', y: 35, y1: 34, y2: -5.5 },
-  { x: 'Nov', y: 40, y1: 41, y2: -6 }, { x: 'Dec', y: 42, y1: 42, y2: -6.5 }
+  { x: 2000, y: 0.61, y1: 0.03, y2: 0.48 },
+  { x: 2001, y: 0.81, y1: 0.05, y2: 0.53 },
+  { x: 2002, y: 0.91, y1: 0.06, y2: 0.57 },
+  { x: 2003, y: 1,    y1: 0.09, y2: 0.61 }, 
+  { x: 2004, y: 1.19, y1: 0.14, y2: 0.63 },
+  { x: 2005, y: 1.47, y1: 0.20, y2: 0.64 },
+  { x: 2006, y: 1.74, y1: 0.29, y2: 0.66 }, 
+  { x: 2007, y: 1.98, y1: 0.46, y2: 0.76 },
+  { x: 2008, y: 1.99, y1: 0.64, y2: 0.77 },
+  { x: 2009, y: 1.70, y1: 0.75, y2: 0.55 }
 ];
 const primaryXAxis = {
-  valueType: 'Category',
   title: 'Months'
 };
 const primaryYAxis = {
-  minimum: 0
+  title: 'Percentage (%)',
+  labelFormat: '{value}%'
 };
-const title = "Sales Comparison";
-const border = {
-  width: 2,
-  color: 'black'
-};
+const title = 'Sales Comparison';
 
-provide('chart', [StackingBarSeries, Category]);
+provide('chart', [StackingBarSeries]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

@@ -1,17 +1,16 @@
-
 import Vue from "vue";
-import { ChartPlugin, PolarSeries, Category, AreaSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, PolarSeries, AreaSeries } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
 ;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Area'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Area' fill='#69D2E7'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -19,25 +18,29 @@ new Vue({
 
   data() {
     return {
-    seriesData:[
-     { x: 'Jan', y: -1 }, { x: 'Feb', y: -1 }, { x: 'Mar', y: 2 },
-    { x: 'Apr', y: 8 }, { x: 'May', y: 13 }, { x: 'Jun', y: 18 },
-    { x: 'Jul', y: 21 }, { x: 'Aug', y: 20 }, { x: 'Sep', y: 16 },
-    { x: 'Oct', y: 10 }, { x: 'Nov', y: 4 }, { x: 'Dec', y: 0 }
-     ],
+      seriesData: [
+        { x: 1900, y: 4 }, 
+        { x: 1920, y: 3.0 },
+        { x: 1940, y: 3.8 },
+        { x: 1960, y: 3.4 }, 
+        { x: 1980, y: 3.2 }, 
+        { x: 2000, y: 3.9 }
+      ],
       primaryXAxis: {
-          valueType: 'Category'
-        },
-         primaryYAxis: {
-            minimum: -5, maximum: 35, interval: 10,
-            title: 'Temperature in Celsius',
-            labelFormat: '{value}C'
-        },
-      title: "Climate Graph-2012"
+        title: 'Year',
+        minimum: 1900, 
+        maximum: 2000, 
+        interval: 10
+      },
+      primaryYAxis: {
+        minimum: 2, maximum: 5, interval: 0.5,
+        title: 'Sales Amount in Millions'
+      },
+      title: "Average Sales Comparison"
     };
   },
   provide: {
-    chart: [PolarSeries, Category, AreaSeries]
+    chart: [PolarSeries, AreaSeries]
   }
 
 });
