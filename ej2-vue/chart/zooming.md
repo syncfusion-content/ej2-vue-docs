@@ -108,7 +108,7 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/c
 
 ## Enable animation
 
-Use the [`enableAnimation`] property to create smooth transitions when zooming in on the chart.
+Use the [`enableAnimation`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enableanimation) property to create smooth transitions when zooming in on the chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

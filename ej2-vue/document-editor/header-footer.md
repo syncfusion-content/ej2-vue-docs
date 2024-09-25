@@ -87,4 +87,4 @@ this.$refs.documenteditor.ej2Instances.selection.closeHeaderFooter()
 
 ## See Also
 
-* [Working with Section Formatting](../document-editor/section-format/)
+* [Working with Section Formatting](../document-editor/section-format)
