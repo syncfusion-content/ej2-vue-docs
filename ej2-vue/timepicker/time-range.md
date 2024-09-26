@@ -14,7 +14,7 @@ TimePicker provides an option to select a time value within a specified range by
 
 When the min and max properties are configured and the selected time value is out-of-range or invalid, then the model value will be set to `out of range` time value or `null` respectively with highlighted `error` class to indicates the time is out of range or invalid.
 
-The value property depends on the min/max with respect to [`strictMode`](./strict-mode/) property.
+The value property depends on the min/max with respect to [`strictMode`](./strict-mode) property.
 
 The following example allows you to select a time value within a range of `9:00 AM` to `11:30 AM`.
 
