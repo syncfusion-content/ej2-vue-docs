@@ -59,6 +59,9 @@ letter-spacing: 0.7px;
 </tbody>
 <tr>
     <td>
+        <div><p class="controlcategory">SMART COMPONENTS</p></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/smart-paste-button/vue-3-getting-started/">Smart Paste</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/smart-textarea/getting-started/">Smart TextArea</a></div>
         <div><p class="control-category">GRIDS</p></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/grid/getting-started/">DataGrid</a></div>
         <div class="control-anchor-link"><a target="_self" href="https://ej2.syncfusion.com/vue/documentation/pivotview/getting-started/">Pivot Table</a></div>

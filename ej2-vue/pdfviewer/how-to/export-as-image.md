@@ -102,6 +102,9 @@ export default {
 }
 </script>
 
+{% endhighlight %}
+{% endtabs %}
+
 Similarly, to code snippet for exports the specified page as a Base64-encoded image string, allowing for custom image size:
 
 {% tabs %}
@@ -190,6 +193,9 @@ export default {
 }
 </script>
 
+{% endhighlight %}
+{% endtabs %}
+
 Similarly, to code snippet for exports the range of pages as Base64-encoded image strings:
 
 {% tabs %}
@@ -275,6 +281,9 @@ export default {
   }
 }
 </script>
+
+{% endhighlight %}
+{% endtabs %}
 
 Similarly, to code snippet for exports the range of pages as Base64-encoded image strings, allowing for custom image size:
 
@@ -364,5 +373,7 @@ export default {
 }
 </script>
 
+{% endhighlight %}
+{% endtabs %}
 
 By following these steps, you can successfully integrate and use the export as image API in the EJ2 PDF Viewer.
