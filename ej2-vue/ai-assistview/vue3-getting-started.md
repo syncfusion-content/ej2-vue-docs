@@ -110,6 +110,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
 </style>
 
@@ -184,6 +185,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
 </style>
 
@@ -213,6 +215,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
 </style>
 
