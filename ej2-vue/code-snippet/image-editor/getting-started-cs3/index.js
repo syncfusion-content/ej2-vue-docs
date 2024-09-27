@@ -11,7 +11,7 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="rectangleClick">Rectangle</ejs-button>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="ellipseClick">Ellipse</ejs-button>
  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="lineClick">Line</ejs-button>
@@ -28,16 +28,16 @@ new Vue({
   methods: {
     rectangleClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x, dimension.y, 200, 100);
-      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x + 300, dimension.y, 200, 100, null, '', '', null, null, 8);
+      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x + 10, dimension.y + 60, 150, 70);
+      this.$refs.imageEditorObj.ej2Instances.drawRectangle(dimension.x + 250, dimension.y + 60, 150, 700, null, '', '', null, null, 8);
     },
     ellipseClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawEllipse(dimension.x,dimension.y);
+      this.$refs.imageEditorObj.ej2Instances.drawEllipse(dimension.x, dimension.y+200);
     },
     lineClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawLine(dimension.x,dimension.y);
+      this.$refs.imageEditorObj.ej2Instances.drawLine(dimension.x+300, dimension.y+300);
     },
     pathClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
@@ -45,7 +45,7 @@ new Vue({
     },
     arrowClick: function(event) {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawArrow(dimension.x, dimension.y+10, dimension.x+50, dimension.y+10, 10,);
+      this.$refs.imageEditorObj.ej2Instances.drawArrow(dimension.x + 100, dimension.y + 30, dimension.x + 100, dimension.y + 10, 10);
     }
   }
 

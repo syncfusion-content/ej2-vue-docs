@@ -24,10 +24,10 @@ You can set the type of view by using the [type](../api/ai-assist-view/assistVie
   <div id='container' style="height: 350px; width: 650px;">
     <br>
     <ejs-aiassistview id='aiAssistView' :prompt-request="onPromptRequest" ref="aiassist">
-      <ejs-views>
-        <ejs-view type="Assist"></ejs-view>
-        <ejs-view type="Custom"></ejs-view>
-      </ejs-views>
+      <e-views>
+        <e-view type="Assist"></e-view>
+        <e-view type="Custom"></e-view>
+      </e-views>
     </ejs-aiassistview>
   </div>
 </template>
@@ -37,8 +37,8 @@ import { AIAssistViewComponent, ViewDirective, ViewsDirective } from "@syncfusio
 export default {
   components: {
     'ejs-aiassistview': AIAssistViewComponent,
-    'ejs-views': ViewsDirective,
-    'ejs-view': ViewDirective
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective
   },
   data: function () {
     return {
@@ -75,10 +75,10 @@ You can use the [name](../api/ai-assist-view/assistViewModel/#name) property to 
   <div id='container' style="height: 350px; width: 650px;">
     <br>
     <ejs-aiassistview id='aiAssistView' :prompt-request="onPromptRequest" ref="aiassist">
-      <ejs-views>
-        <ejs-view name="Prompt"></ejs-view>
-        <ejs-view name="Response"></ejs-view>
-      </ejs-views>
+      <e-views>
+        <e-view name="Prompt"></e-view>
+        <e-view name="Response"></e-view>
+      </e-views>
     </ejs-aiassistview>
   </div>
 </template>
@@ -88,8 +88,8 @@ import { AIAssistViewComponent, ViewDirective, ViewsDirective } from "@syncfusio
 export default {
   components: {
     'ejs-aiassistview': AIAssistViewComponent,
-    'ejs-views': ViewsDirective,
-    'ejs-view': ViewDirective
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective
   },
   data: function () {
     return {
@@ -126,10 +126,10 @@ You can customize the view icons by using the [iconCss](../api/ai-assist-view/as
   <div id='container' style="height: 350px; width: 650px;">
     <br>
     <ejs-aiassistview id='aiAssistView' :prompt-request="onPromptRequest" ref="aiassist">
-      <ejs-views>
-        <ejs-view icon-css="e-icons e-assistview-icon"></ejs-view>
-        <ejs-view icon-css="e-icons e-comment-show" type="Custom"></ejs-view>
-      </ejs-views>
+      <e-views>
+        <e-view icon-css="e-icons e-assistview-icon"></e-view>
+        <e-view icon-css="e-icons e-comment-show" type="Custom"></e-view>
+      </e-views>
     </ejs-aiassistview>
   </div>
 </template>
@@ -139,8 +139,8 @@ import { AIAssistViewComponent, ViewDirective, ViewsDirective } from "@syncfusio
 export default {
   components: {
     'ejs-aiassistview': AIAssistViewComponent,
-    'ejs-views': ViewsDirective,
-    'ejs-view': ViewDirective
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective
   },
   data: function () {
     return {

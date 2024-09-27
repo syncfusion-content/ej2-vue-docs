@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import { AIAssistViewPlugin } from "@syncfusion/ej2-vue-interactive-chat";
+import { DropDownButton } from '@syncfusion/ej2-vue-splitbuttons';
+
 Vue.use(AIAssistViewPlugin);
 
 new Vue({
@@ -7,10 +9,7 @@ new Vue({
 	template: `
   <div id='container' style="height: 350px; width: 650px;">
     <br>
-    <ejs-aiassistview id='aiAssistView' :toolbar-settings="toolbarSettings" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
-  </div>
-  <div id="dropdownTemplate">
-    <ejs-dropdownbutton cssClass="custom-dropdown" iconCss="e-icons e-translate" content="English" :items='dropdownItems'></ejs-dropdownbutton>
+    <ejs-aiassistview id='aiAssistView' :toolbar-settings="toolbarSettings" :prompt-request="onPromptRequest" :created="onCreated" ref="aiassist"></ejs-aiassistview>
   </div>
 `,
 
@@ -18,7 +17,7 @@ new Vue({
     return {
       toolbarSettings: {
         items: [
-          { type: 'Input', align: 'Right', template: '#dropdownTemplate' }
+          { type: 'Input', align: 'Right', template: '<button id="ddMenu"></button>' }
         ]
       },
       dropdownItems: [
@@ -35,12 +34,20 @@ new Vue({
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest(args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
         let defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
         defaultAiassist.addPromptResponse(defaultResponse);
       }, 1000);
+    },
+    onCreated() {
+      new DropDownButton({
+        items: this.dropdownItems,
+        iconCss: 'e-icons e-translate',
+        cssClass: 'custom-dropdown',
+        content: 'English'
+      }, '#ddMenu');
     }
   }
 

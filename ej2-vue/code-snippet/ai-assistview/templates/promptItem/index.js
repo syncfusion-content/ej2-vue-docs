@@ -31,15 +31,15 @@ new Vue({
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest(args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
-        let foundPrompt = promptsData.find((promptObj) => promptObj.prompt === args.prompt);
+        let foundPrompt = this.prompts.find((promptObj) => promptObj.prompt === args.prompt);
         let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
         defaultAiassist.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
       }, 1000);
     },
-    cleanPrompt: (prompt) => {
+    cleanPrompt(prompt) {
       return prompt.replace('<span class="e-icons e-circle-info"></span>', '');
     }
   }

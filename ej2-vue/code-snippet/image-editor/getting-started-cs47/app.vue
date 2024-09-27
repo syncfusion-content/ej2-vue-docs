@@ -10,7 +10,7 @@
 
 <script>
 
-import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ImageEditorComponent,  RedactType } from "@syncfusion/ej2-vue-image-editor";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
