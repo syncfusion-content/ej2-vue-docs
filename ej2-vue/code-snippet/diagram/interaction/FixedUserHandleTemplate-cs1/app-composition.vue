@@ -4,6 +4,7 @@
     </div>
 </template>
 <script setup>
+import { createApp } from "vue";
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 import { onMounted, ref } from "vue";
 const nodes = [{
@@ -66,11 +67,22 @@ const itemVue = createApp({}).component("fixedUserHandleTemplate", {
   }
 })
 
-document.getElementById("colorPicker").onchange = function () {
-    const currentColor = document.getElementById('colorPicker').value;
-    diagram.nodes[0].style.fill = currentColor;
-};
+const fixedUserHandleTemplate = function()
+{
+    return { template: itemVue };
+}
 
+
+onMounted(function () {
+    const diagramInstance = diagram.value.ej2Instances;
+    const colorPickerInstance = 
+    document.getElementById("colorPicker");
+     colorPickerInstance.onchange = (args) => {
+     const currentColor = colorPickerInstance.value;
+      diagramInstance.nodes[0].style.fill = currentColor;
+    }
+
+})
 
 </script>
 <style>
