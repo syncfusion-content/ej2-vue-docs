@@ -23,7 +23,7 @@ new Vue({
     }
   },
   methods: {
-    buttonClick: () => {
+    buttonClick() {
       let defaultAiassist = this.$refs.aiassist.ej2Instances;
       const textArea = document.getElementById('promptTextArea');
       if (textArea) {

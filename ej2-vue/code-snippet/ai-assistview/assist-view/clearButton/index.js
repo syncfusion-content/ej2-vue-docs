@@ -16,7 +16,7 @@ new Vue({
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest(args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
         let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
