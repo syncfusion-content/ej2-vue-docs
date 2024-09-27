@@ -2,20 +2,20 @@
   <div id='container' style="height: 350px; width: 650px;">
     <br>
     <ejs-aiassistview id='aiAssistView' active-view="1" :prompt-request="onPromptRequest" ref="aiassist">
-      <ejs-views>
-        <ejs-view type="Assist" name="Prompt"></ejs-view>
-        <ejs-view type="Custom" name="Response" icon-css="e-icons e-comment-show" view-template="viewTemplate2">
+      <e-views>
+        <e-view type="Assist" name="Prompt"></e-view>
+        <e-view type="Custom" name="Response" icon-css="e-icons e-comment-show" view-template="viewTemplate2">
           <template v-slot:viewTemplate2="">
             <div class="view-container"><h3>Response view content</h3></div>
           </template>
-        </ejs-view>
-      </ejs-views>
+        </e-view>
+      </e-views>
     </ejs-aiassistview>
   </div>
 </template>
 
 <script setup>
-import { AIAssistViewComponent as EjsAiassistview, ViewDirective as EjsView, ViewsDirective as EjsViews } from "@syncfusion/ej2-vue-interactive-chat";
+import { AIAssistViewComponent as EjsAiassistview, ViewDirective as EView, ViewsDirective as EViews } from "@syncfusion/ej2-vue-interactive-chat";
 import { ref } from "vue";
 
 let aiassist = ref(null);

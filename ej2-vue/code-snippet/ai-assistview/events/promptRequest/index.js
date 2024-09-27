@@ -16,7 +16,7 @@ new Vue({
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest(args) {
       // Your required action here
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;

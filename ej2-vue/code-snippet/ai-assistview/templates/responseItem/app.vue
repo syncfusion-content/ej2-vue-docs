@@ -23,7 +23,7 @@ export default {
   },
   data: function () {
     return {
-      prompts: [
+      promptsData: [
         {
           prompt: "What is AI?",
           response: `<div>AI stands for Artificial Intelligence, enabling machines to mimic human intelligence for tasks such as learning, problem-solving, and decision-making.</div>`

@@ -2,14 +2,14 @@
   <div id='container' style="height: 350px; width: 650px;">
     <br>
     <ejs-aiassistview id='aiAssistView' active-view="1" :prompt-request="onPromptRequest" ref="aiassist">
-      <ejs-views>
-        <ejs-view type="Assist" name="Prompt"></ejs-view>
-        <ejs-view type="Custom" name="Response" icon-css="e-icons e-comment-show" view-template="viewTemplate2">
+      <e-views>
+        <e-view type="Assist" name="Prompt"></e-view>
+        <e-view type="Custom" name="Response" icon-css="e-icons e-comment-show" view-template="viewTemplate2">
           <template v-slot:viewTemplate2="">
             <div class="view-container"><h3>Response view content</h3></div>
           </template>
-        </ejs-view>
-      </ejs-views>
+        </e-view>
+      </e-views>
     </ejs-aiassistview>
   </div>
 </template>
@@ -19,8 +19,8 @@ import { AIAssistViewComponent, ViewDirective, ViewsDirective } from "@syncfusio
 export default {
   components: {
     'ejs-aiassistview': AIAssistViewComponent,
-    'ejs-views': ViewsDirective,
-    'ejs-view': ViewDirective
+    'e-views': ViewsDirective,
+    'e-view': ViewDirective
   },
   data: function () {
     return {

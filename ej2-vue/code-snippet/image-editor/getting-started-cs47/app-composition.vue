@@ -10,7 +10,7 @@
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
+import { ImageEditorComponent as EjsImageeditor,  RedactType} from "@syncfusion/ej2-vue-image-editor";
 import { ButtonComponent as EjsButton} from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
