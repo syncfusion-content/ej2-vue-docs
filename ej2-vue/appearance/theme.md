@@ -32,6 +32,24 @@ The Syncfusion Vue library has provided the below list of in-built themes,
 
 > The Syncfusion Bootstrap theme is designed based on `Bootstrap v3`, however, it can be compatible with `Bootstrap v4` applications. In addition to these four built-in themes, [ThemeStudio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/) provides support for the Fusion Theme that can only be downloaded from [ThemeStudio](https://ej2.syncfusion.com/themestudio/?theme=fusion).
 
+## Optimized CSS files
+
+Syncfusion components provide two size modes for each theme: **normal** and **bigger**. By default, the **normal size mode** is applied, offering a standard appearance that is suitable for all devices. The **bigger size mode** provides an enlarged interface for enhanced interactions, visibility, and an overall improved user experience by increasing the size of the UI components.
+
+The bigger size mode is ideal when an enlarged appearance is needed, while the normal size mode works best for maintaining the default appearance of components.
+
+Below is a comparison of the Button component in normal and bigger size modes:
+
+![bigger-sized-button](./images/bigger-theme-button.png)
+
+Each theme includes both normal and bigger size modes, which increases the overall file size. To optimize performance, Syncfusion offers additional theme files (e.g., `fluent2-lite.css`), which only include the normal size mode styles. This results in a significant reduction in file size, improving load times and overall application performance, especially when the bigger size mode is unnecessary.
+
+Refer to the comparison below for the default and optimized theme file sizes:
+
+| Theme Name | Default Theme Size | Optimized Theme Size |
+| -- | -- | -- |
+| Fluent 2 | 3.97 MB | 2.96 MB |
+
 Themes are shipped as individual and combined CSS files. Combined CSS file can be referred from the npm package `@syncfusion/ej2` and individual CSS files are available within same component repository’s `style` folder. In ej2 npm packages, we have shipped both CSS and SCSS files for all components.
 
 Referring All components CSS
@@ -81,6 +99,42 @@ Referring individual control from ej2 package
 ```
 
 > The individual control theme will not include its dependent control styles. I.e. The dependent controls theme should be added before adding the individual control themes.
+
+### Referring all components optimized CSS file
+
+To refer to all component's optimized CSS files from the `@syncfusion/ej2` package, follow the below syntax:
+
+```css
+@import "@syncfusion/ej2/<theme_name>-lite.css";
+/* or */
+@import "@syncfusion/ej2/<theme_name>-lite.scss";
+```
+
+**Example:**
+
+```css
+@import "@syncfusion/ej2/fluent2-lite.css";
+/* or */
+@import "@syncfusion/ej2/fluent2-lite.scss";
+```
+
+### Referring individual component optimized CSS file
+
+To refer to individual component's optimized CSS files from an individual packages, follow the below syntax:
+
+```css
+@import "<dependent-package>/styles/<theme_name>-lite.css";
+/* or */
+@import "<dependent-package>/styles/<theme_name>-lite.scss";
+```
+
+**Example:**
+
+```css
+@import "@syncfusion/ej2-buttons/styles/fluent2-lite.css";
+/* or */
+@import "@syncfusion/ej2-buttons/styles/fluent2-lite.scss";
+```
 
 ### Advantages of using the individual components theme
 

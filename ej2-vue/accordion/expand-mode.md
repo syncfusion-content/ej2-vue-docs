@@ -49,4 +49,4 @@ can also be toggled by clicking on it again. For example, expanded item is colla
 
 ## See Also
 
-* [How to keep single pane open always](./how-to/to-keep-single-pane-open-always/)
+* [How to keep single pane open always](./how-to/to-keep-single-pane-open-always)

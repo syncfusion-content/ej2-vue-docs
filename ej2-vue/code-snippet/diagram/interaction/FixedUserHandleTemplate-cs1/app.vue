@@ -1,9 +1,11 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors' :fixedUserHandleTemplate="fixedUserHandleTemplate"></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagramObj" :width='width' :height='height' :nodes='nodes' :connectors='connectors' :fixedUserHandleTemplate="fixedUserHandleTemplate"></ejs-diagram>
     </div>
 </template>
 <script>
+
+import { createApp } from "vue";
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [{
@@ -64,10 +66,8 @@ let itemVue = createApp({}).component("fixedUserHandleTemplate", {
   }
 });
 
-document.getElementById("colorPicker").onchange = function () {
-    let currentColor = document.getElementById('colorPicker').value;
-    diagram.nodes[0].style.fill = currentColor;
-};
+let diagramInstance;
+let colorPickerInstance;
 
 export default {
     name: "App",
@@ -85,6 +85,15 @@ export default {
                 return { template: itemVue };
             }
             
+        }
+    },
+
+    mounted: function () {
+        diagramInstance = this.$refs.diagramObj.ej2Instances;
+        colorPickerInstance = document.getElementById("colorPicker")
+        colorPickerInstance.onchange = (args) => {
+            let currentColor = colorPickerInstance.value;
+            diagramInstance.nodes[0].style.fill = currentColor;
         }
     },
     
