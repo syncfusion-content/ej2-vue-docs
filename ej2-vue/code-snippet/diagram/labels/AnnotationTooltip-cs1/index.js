@@ -6,7 +6,7 @@ let nodes = [{
     id: 'node1',
     // Position of the node
     offsetX: 250,
-    offsetY: 250,
+    offsetY: 150,
     // Size of the node
     width: 100,
     height: 100,
