@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-accumulationchart id="container" :legendSettings='legendSettings'>
+    <ejs-accumulationchart ref="chart" id="container" :legendSettings='legendSettings'>
       <e-accumulation-series-collection>
         <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' legendShape='Rectangle'>
         </e-accumulation-series>
@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-
+import Vue from "vue";
 import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationDataLabel, AccumulationLegend } from "@syncfusion/ej2-vue-charts";
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
 Vue.use(ButtonPlugin);

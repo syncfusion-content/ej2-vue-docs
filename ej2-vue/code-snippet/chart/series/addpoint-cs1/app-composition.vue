@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-accumulationchart id="container" :legendSettings='legendSettings'>
+    <ejs-accumulationchart ref="chart" id="container" :legendSettings='legendSettings'>
       <e-accumulation-series-collection>
         <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' legendShape='Rectangle'>
         </e-accumulation-series>
