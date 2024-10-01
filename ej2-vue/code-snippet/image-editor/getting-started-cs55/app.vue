@@ -1,21 +1,18 @@
 <template>
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :selectionChanging="selectionChanging"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Text</ejs-button>
 </div>
 </template>
 
 <script>
 
 import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
 name: "App",
 components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent
+"ejs-imageeditor":ImageEditorComponent
 },
   data: function() {
       return {

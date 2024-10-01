@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging"></ejs-imageeditor>
 </div>
 </template>
 
@@ -18,7 +18,6 @@ components: {
 },
   data: function() {
       return {
-        toolbar: []
       };
   },
   methods: {
