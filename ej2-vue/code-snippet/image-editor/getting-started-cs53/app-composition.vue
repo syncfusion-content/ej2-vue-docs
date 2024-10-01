@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :fileOpened="fileOpened" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :fileOpened="fileOpened"></ejs-imageeditor>
 </div>
 </template>
 
@@ -12,7 +12,6 @@ import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-const toolbar = [];
 const created = () => {
     if (Browser.isDevice) {
         imageEditorObj.value.open('flower.jpeg');

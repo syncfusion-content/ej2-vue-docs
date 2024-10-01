@@ -375,3 +375,18 @@ In the following example, you can use the [`drawImage`](https://ej2.syncfusion.c
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs43" %}
+
+### Customize Default Stroke Color for Shapes 
+
+We provide default settings for stroke color, stroke width, fill color, and other customizations. If users wish to modify only the default options while preserving their previously selected customizations, they can do so by utilizing the [`shapeChanging`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#shapechanging) event. Within this event, users can update the values in the `currentShapeSettings` object to apply their own preferences instead of the defaults. This approach allows conditional updates to the `currentShapeSettings`, ensuring that only the desired defaults are changed while maintaining the other settings.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs54/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs54/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs54" %}

@@ -11,8 +11,8 @@ new Vue({
 	template: `
 <div>
 <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" ></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="setImage">Save Blob</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="setBlob">Open Image</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="saveBlob">Save Blob</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="setImage">Open Image</ejs-button>
 </div>
 `,
 

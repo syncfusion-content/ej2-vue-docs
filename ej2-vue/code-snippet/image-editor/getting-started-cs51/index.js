@@ -11,14 +11,12 @@ new Vue({
 	el: '#app',
 	template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :beforeSave="beforeSaved" :saved="saved" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :beforeSave="beforeSaved" :saved="saved"></ejs-imageeditor>
 </div>
 `,
 
   data: function() {
-      return {
-        toolbar: []
-      };
+      return { };
   },
   methods: {
     beforeSaved: function(event) {

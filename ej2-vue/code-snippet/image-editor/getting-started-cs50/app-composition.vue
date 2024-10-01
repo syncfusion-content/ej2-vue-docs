@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"></ejs-imageeditor>
 <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="getBlob">Get blob</ejs-button>
 </div>
 </template>
@@ -13,7 +13,6 @@ import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-const toolbar = [];
 const blobUrl;
 const created = () => {
     if (Browser.isDevice) {
