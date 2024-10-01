@@ -1,6 +1,6 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :created="created" :toolbar="toolbar"></ejs-imageeditor>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :created="created"></ejs-imageeditor>
 </div>
 </template>
 
@@ -12,7 +12,6 @@ import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-const toolbar = [];
 const changeColor = true;
 const created = () => {
     if (Browser.isDevice) {
