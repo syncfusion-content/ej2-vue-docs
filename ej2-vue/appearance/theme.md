@@ -14,14 +14,16 @@ The Syncfusion Vue library has provided the below list of in-built themes,
 
 |Theme |Style Sheet Name|
 |--------|--------|
+|Bootstrap 5.3 | bootstrap5.3.css |
+|Bootstrap 5.3 Dark | bootstrap5.3-dark.css |
 |Fluent 2 | fluent2.css |
 |Fluent 2 Dark | fluent2-dark.css |
 |Material 3 | material3.css |
 |Material 3 Dark | material3-dark.css |
 |Bootstrap 5 | bootstrap5.css |
 |Bootstrap 5 Dark | bootstrap5-dark.css |
-| Fluent | fluent.css |
-| Fluent Dark | fluent-dark.css |
+|Fluent | fluent.css |
+|Fluent Dark | fluent-dark.css |
 |Google’s Material | material.css |
 |Google’s Material-Dark | material-dark.css |
 |Tailwind CSS | tailwind.css |
@@ -145,6 +147,251 @@ To refer to individual component's optimized CSS files from an individual packag
 ## Common variables
 
 The below list of common variables used in the Syncfusion Vue library themes for all components. You can change these variables to customize the corresponding theme.
+
+### Syncfusion Bootstrap 5.3 theme
+
+<table>
+    <style>
+        .circle-color-indicator {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, .08);
+            vertical-align: middle;
+        }
+        th, td {
+        text-align: left;
+        padding: 5px 15px;
+        vertical-align: top;
+        }
+    </style>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value (Default Theme) </th>
+            <th>Value (Dark Theme) </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>--color-sf-black</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgb(0,0,0)"></span> rgb(0,0,0)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgb(0,0,0)"></span> rgb(0,0,0)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-white</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgb(255,255,255)"></span> rgb(255,255,255)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgb(255,255,255)"></span> rgb(255,255,255)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-primary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(13,110,253,1)"></span> rgba(13,110,253,1)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(13,110,253,1)"></span> rgba(13,110,253,1)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-primary-text-color</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-primary-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #86b7fe"></span> #86b7fe
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #86b7fe"></span> #86b7fe
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-primary-lighter</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #cfe2ff"></span> #cfe2ff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #031633"></span> #031633
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-primary-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #3367d1"></span> #3367d1
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #073ba6"></span> #073ba6
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-primary-darker</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #052c65"></span> #052c65
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6ea8fe"></span> #6ea8fe
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-success</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(25,135,84,1)"></span> rgba(25,135,84,1)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(25,135,84,1)"></span> rgba(25,135,84,1)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-info</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(13,202,240,1)"></span> rgba(13,202,240,1)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(13,202,240,1)"></span> rgba(13,202,240,1)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-warning</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(255,193,7,1)"></span> rgba(255,193,7,1)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(255,193,7,1)"></span> rgba(255,193,7,1)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-danger</td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(220,53,69,1)"></span> rgba(220,53,69,1)
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: rgba(220,53,69,1)"></span> rgba(220,53,69,1)
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-success-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d1e7dd"></span> #d1e7dd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #75b798"></span> #75b798
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-info-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #cff4fc"></span> #cff4fc
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6edff6"></span> #6edff6
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-warning-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff3cd"></span> #fff3cd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffda6a"></span> #ffda6a
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-danger-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8d7da"></span> #f8d7da
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ea868f"></span> #ea868f
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-success-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0a3622"></span> #0a3622
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #75b798"></span> #75b798
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-info-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #055160"></span> #055160
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6edff6"></span> #6edff6
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-warning-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #664d03"></span> #664d03
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffda6a"></span> #ffda6a
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-danger-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #58151c"></span> #58151c
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ea868f"></span> #ea868f
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-success-light-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d1e7dd"></span> #d1e7dd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #051b11"></span> #051b11
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-info-light-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #cff4fc"></span> #cff4fc
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #032830"></span> #032830
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-warning-light-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff3cd"></span> #fff3cd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #332701"></span> #332701
+            </td>
+        </tr>
+        <tr>
+            <td>--color-sf-danger-light-alt</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8d7da"></span> #f8d7da
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #2c0b0e"></span> #2c0b0e
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ### Syncfusion Fluent 2 theme
 
