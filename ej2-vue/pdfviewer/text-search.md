@@ -175,7 +175,7 @@ Searches for the specified text or an array of strings within the document and r
 Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for all pages in the document where the text was found. The below code snippet shows how to get the bounds of the given text:
 
 {% tabs %}
-{% highlight vue tabtitle="Standalone" %}
+{% highlight html tabtitle="Standalone" %}
 
 ```html
 <template>
@@ -211,7 +211,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 ```
 
 {% endhighlight %}
-{% highlight vue tabtitle="Server-backed" %}
+{% highlight html tabtitle="Server-backed" %}
 
 ```html
 <template>
@@ -253,7 +253,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 Searches for the specified text within the document and returns the bounding rectangles of the matched text. The search can be case-sensitive based on the provided parameter. It returns the bounding rectangles for that page in the document where the text was found. The below code snippet shows how to get the bounds of the given text from the desired page:
 
 {% tabs %}
-{% highlight vue tabtitle="Standalone" %}
+{% highlight html tabtitle="Standalone" %}
 
 ```html
 <template>
@@ -289,7 +289,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 ```
 
 {% endhighlight %}
-{% highlight vue tabtitle="Server-backed" %}
+{% highlight html tabtitle="Server-backed" %}
 
 ```html
 <template>
@@ -331,7 +331,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for all pages in the document where the strings were found.
 
 {% tabs %}
-{% highlight vue tabtitle="Standalone" %}
+{% highlight html tabtitle="Standalone" %}
 
 ```html
 <template>
@@ -367,7 +367,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 ```
 
 {% endhighlight %}
-{% highlight vue tabtitle="Server-backed" %}
+{% highlight html tabtitle="Server-backed" %}
 
 ```html
 <template>
@@ -409,7 +409,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 Searches for an array of strings within the document and returns the bounding rectangles for each occurrence. The search can be case-sensitive based on the provided parameters. It returns the bounding rectangles for these search strings on that particular page where the strings were found.
 
 {% tabs %}
-{% highlight vue tabtitle="Standalone" %}
+{% highlight html tabtitle="Standalone" %}
 
 ```html
 <template>
@@ -445,7 +445,7 @@ PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, Th
 ```
 
 {% endhighlight %}
-{% highlight vue tabtitle="Server-backed" %}
+{% highlight html tabtitle="Server-backed" %}
 
 ```html
 <template>
