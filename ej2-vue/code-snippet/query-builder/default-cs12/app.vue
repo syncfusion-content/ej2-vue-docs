@@ -27,6 +27,7 @@ L10n.load({
         'querybuilder': {
             'AddGroup': 'Gruppe hinzufügen',
             'AddCondition': 'Bedingung hinzufügen',
+            'AddButton': 'Gruppe/Bedingung hinzufügen',
             'DeleteRule': 'Entfernen Sie diesen Zustand',
             'DeleteGroup': 'Gruppe löschen',
             'Edit': 'BEARBEITEN',
@@ -39,6 +40,10 @@ L10n.load({
             'DoesNotStartWith': 'Beginnt nicht mit',
             'DoesNotEndWith': 'Endet nicht mit',
             'DoesNotContain': 'Beinhaltet nicht',
+            'IsEmpty': 'Ist leer',
+            'IsNotEmpty': 'Ist nicht leer',
+            'IsNull': 'Ist Null',
+            'IsNotNull': 'Ist nicht Null',
             'Contains': 'Enthält',
             'Equal': 'Gleich',
             'NotEqual': 'Nicht gleich',
