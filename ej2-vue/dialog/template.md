@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 In Dialog the template support is provided to the header, content and footer sections. So any text or HTML content can be appending in these sections.
 
+To quickly get started with customizing the appearance of the Vue Dialog using templates, check out this video:
+
+{% youtube "https://www.youtube.com/watch?v=iM-v90VmmHo" %}
+
 ## Header
 
 The Dialog header content can be provided through the [header](https://ej2.syncfusion.com/vue/documentation/api/dialog/#header) property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the [showCloseIcon](https://ej2.syncfusion.com/vue/documentation/api/dialog/#showcloseicon) property.
