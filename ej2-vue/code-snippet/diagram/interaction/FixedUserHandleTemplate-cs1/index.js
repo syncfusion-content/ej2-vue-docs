@@ -42,27 +42,20 @@ let connectors = [{
 
 let itemVue = Vue.component("fixedUserHandleTemplate", {
 template: ` 
- <div v-if="data.id == 'usercon1'">
- <div style="width:100%;height:100%">
-      <input id="colorPicker" type="color"  value="#008000"
-      style="width:${width}"/>
-  </div>
- </div>
- <div v-else-if="data.id=='usercon2'">
-  <div style="width:100%;height:100%">
-      <input type="button" value="FixedUserHandleTemplate" 
-  style="width:${width};color:red; "/>
-  </div>
-  </div> `,
+    <div v-if="data.id == 'usercon1'">
+        <div style="width:100%;height:100%">
+            <input id="colorPicker" type="color" value="#008000"/>
+        </div>
+    </div>
+    <div v-else-if="data.id=='usercon2'">
+        <div style="width:100%;height:100%">
+            <input type="button" value="FixedUserHandleTemplate" style="color:red; "/>
+        </div>
+    </div> `,
 data() {
   return {};
 }
 });
-
-document.getElementById("colorPicker").onchange = function () {
-var currentColor = document.getElementById('colorPicker').value;
-diagram.nodes[0].style.fill = currentColor;
-};
 
 new Vue({
 el: '#app',
@@ -89,14 +82,11 @@ template: `
         let diagramInstance: Diagram;
         let diagramObj: any = document.getElementById("diagram");
         diagramInstance = diagramObj.ej2_instances[0];
-        let colorPickerInstance: any =  document.getElementById("colorPicker");
-        colorPickerInstance.onchange = (args) => {
-            let currentColor = colorPickerInstance.value;
-            diagramInstance.nodes[0].style.fill = currentColor;
-        }
+        colorPicker.addEventListener('change', (event) => {
+            let currentColor  = event.target.value;
+            diagramInstance.nodes[0].style.fill = currentColor; 
+        });
         
     }
-
-
 
 });

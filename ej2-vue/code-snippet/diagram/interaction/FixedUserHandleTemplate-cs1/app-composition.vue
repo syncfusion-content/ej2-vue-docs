@@ -4,9 +4,10 @@
     </div>
 </template>
 <script setup>
-import { createApp } from "vue";
+import { createApp,ref } from "vue";
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 import { onMounted, ref } from "vue";
+const diagram = ref(null);
 const nodes = [{
     id:"node1",
     offsetX: 250,
@@ -50,17 +51,15 @@ const height = "350px";
 
 const itemVue = createApp({}).component("fixedUserHandleTemplate", {
   template: ` 
-   <div v-if="data.id == 'usercon1'">
-   <div style="width:100%;height:100%">
-        <input id="colorPicker" ref="colorTemplate" @input="handleColorChange" type="color"  value="#008000"
-        style="width:${width}"/>
+    <div v-if="data.id == 'usercon1'">
+        <div style="width:100%;height:100%">
+            <input id="colorPicker" type="color" value="#008000"/>
+        </div>
     </div>
-   </div>
-   <div v-else-if="data.id=='usercon2'">
-    <div style="width:100%;height:100%">
-        <input type="button" value="FixedUserHandleTemplate" 
-    style="width:${width};color:red; "/>
-    </div>
+    <div v-else-if="data.id=='usercon2'">
+        <div style="width:100%;height:100%">
+            <input type="button" value="FixedUserHandleTemplate" style="color:red; "/>
+        </div>
     </div> `,
   data() {
     return {};
@@ -75,12 +74,10 @@ const fixedUserHandleTemplate = function()
 
 onMounted(function () {
     const diagramInstance = diagram.value.ej2Instances;
-    const colorPickerInstance = 
-    document.getElementById("colorPicker");
-     colorPickerInstance.onchange = (args) => {
-     const currentColor = colorPickerInstance.value;
-      diagramInstance.nodes[0].style.fill = currentColor;
-    }
+    colorPicker.addEventListener('change', (event) => {
+    const currentColor  = event.target.value;
+    diagramInstance.nodes[0].style.fill = currentColor; 
+    });
 
 })
 

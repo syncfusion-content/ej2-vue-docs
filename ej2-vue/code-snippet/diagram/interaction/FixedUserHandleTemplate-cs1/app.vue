@@ -48,18 +48,16 @@ let connectors = [{
 }];
 
 let itemVue = createApp({}).component("fixedUserHandleTemplate", {
-  template: ` 
-   <div v-if="data.id == 'usercon1'">
-   <div style="width:100%;height:100%">
-        <input id="colorPicker" ref="colorTemplate"  @input="handleColorChange" type="color"  value="#008000"
-        style="width:${width}"/>
+    template: ` 
+    <div v-if="data.id == 'usercon1'">
+        <div style="width:100%;height:100%">
+            <input id="colorPicker" type="color" value="#008000"/>
+        </div>
     </div>
-   </div>
-   <div v-else-if="data.id=='usercon2'">
-    <div style="width:100%;height:100%">
-        <input type="button" value="FixedUserHandleTemplate" 
-    style="width:${width};color:red; "/>
-    </div>
+    <div v-else-if="data.id=='usercon2'">
+        <div style="width:100%;height:100%">
+            <input type="button" value="FixedUserHandleTemplate" style="color:red; "/>
+        </div>
     </div> `,
   data() {
     return {};
@@ -67,7 +65,6 @@ let itemVue = createApp({}).component("fixedUserHandleTemplate", {
 });
 
 let diagramInstance;
-let colorPickerInstance;
 
 export default {
     name: "App",
@@ -90,11 +87,10 @@ export default {
 
     mounted: function () {
         diagramInstance = this.$refs.diagramObj.ej2Instances;
-        colorPickerInstance = document.getElementById("colorPicker")
-        colorPickerInstance.onchange = (args) => {
-            let currentColor = colorPickerInstance.value;
-            diagramInstance.nodes[0].style.fill = currentColor;
-        }
+        colorPicker.addEventListener('change', (event) => {
+        let currentColor  = event.target.value;
+        diagramInstance.nodes[0].style.fill = currentColor; 
+        });
     },
     
 }

@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 By default, gauge will be displayed with an axis. Each axis contains its own ranges, pointers and annotation.
 
+The video below demonstrates how to customize the axis, labels, and ranges in the Circular Gauge component.
+
+{% youtube "https://www.youtube.com/watch?v=udXqs5APcts" %}
 
 ## Axis Customization
 
