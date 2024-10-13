@@ -84,6 +84,23 @@ The following sample shows the column selection in the spreadsheet, here selecti
         
 {% previewsample "page.domainurl/code-snippet/spreadsheet/selection-cs2" %}
 
+## Get selected cell values
+
+You can select single or multiple cells, rows, or columns using mouse and keyboard interactions. You can also programmatically perform selections using the [selectRange](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#selectrange) method. This selection behavior is controlled by the [selectionSettings](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#selectionsettings) property. Finally, you can retrieve the selected cell values as a collection using the [getData](https://helpej2.syncfusion.com/vue/documentation/api/spreadsheet/#getdata) method.
+
+Below is a code example demonstrating how to retrieve the selected cell values as a collection programmatically:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/selected-cell-values/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/spreadsheet/selected-cell-values/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/spreadsheet/selected-cell-values" %}
+
 ## How to remove selection in the spreadsheet
 
 The following sample shows, how to remove the selection in the spreadsheet. Here changing the `mode` as `None` in [`selectionSettings`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#selectionsettings) to disable's the UI selection.
