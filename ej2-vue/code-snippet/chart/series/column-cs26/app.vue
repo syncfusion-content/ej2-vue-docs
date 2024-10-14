@@ -2,21 +2,17 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y'
-          name='UK'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y1'
-          name='Germany'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y2'
-          name='France'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y3'
-          name='Italy'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y' name='UK' columnFacet='Cylinder'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y1' name='Germany' columnFacet='Cylinder'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y2' name='France' columnFacet='Cylinder'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y3' name='Italy' columnFacet='Cylinder'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script>
 
-import {  ChartComponent, SeriesCollectionDirective, SeriesDirective, StackingColumnSeries, DateTime } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, StackingColumnSeries, DateTime, Legend } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -37,10 +33,9 @@ export default {
         { x: new Date(2012, 0, 1), y: 770, y1: 128, y2: 152, y3: 110 }
       ],
       primaryXAxis: {
+        valueType: 'DateTime',
         title: 'Years',
         interval: 1,
-        valueType: 'DateTime',
-        labelPlacement: 'BetweenTicks',
         labelFormat: 'y'
       },
       primaryYAxis: {
@@ -48,16 +43,16 @@ export default {
         rangePadding: 'None',
         labelFormat: '{value}%'
       },
-      title: "Gross Domestic Product Growth"
+      title: 'Gross Domestic Product Growth'
     };
   },
   provide: {
-    chart: [StackingColumnSeries, DateTime]
-  },
+    chart: [StackingColumnSeries, DateTime, Legend]
+  }
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

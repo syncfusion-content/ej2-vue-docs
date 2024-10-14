@@ -2,8 +2,7 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='HiloOpenClose' xName='x' high='high' low='low' open='open'
-          close='close' name='SHIRPUR-G' bearFillColor='green' bullFillColor='red'> </e-series>
+        <e-series :dataSource='seriesData' type='HiloOpenClose' xName='x' high='high' low='low' open='open' close='close' bearFillColor='red' bullFillColor='green'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -11,7 +10,6 @@
 <script setup>
 import { provide } from "vue";
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, HiloOpenCloseSeries, Category } from "@syncfusion/ej2-vue-charts";
-
 
 const seriesData = [
   { x: 'Jan', open: 120, high: 160, low: 100, close: 140 },
@@ -21,11 +19,15 @@ const seriesData = [
   { x: 'May', open: 150, high: 170, low: 110, close: 130 }
 ];
 const primaryXAxis = {
-  title: 'Date',
-  valueType: 'Category',
+  title: 'Month',
+  valueType: 'Category'
 };
 const primaryYAxis = {
-  title: 'Price in Dollar', minimum: 100, maximum: 200, interval: 20,
+  title: 'Price in Dollar', 
+  minimum: 60, 
+  maximum: 200, 
+  interval: 20,
+  labelFormat: '${value}'
 };
 const title = "Financial Analysis";
 
@@ -33,7 +35,7 @@ provide('chart', [HiloOpenCloseSeries, Category]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

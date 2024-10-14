@@ -1,22 +1,18 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y' name='USA' opacity=0.7 fill="red"
-          :border="border" dashArray="5"> </e-series>
-        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y1' name='UK' opacity=0.7
-          fill="yellow" :border="border" dashArray="5"> </e-series>
-        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y2' name='Canada' opacity=0.7
-          fill="green" :border="border" dashArray="5"> </e-series>
-        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y3' name='China' opacity=0.7
-          fill="blue" :border="border" dashArray="5"> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y' name='USA' fill='#ff4251'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y1' name='UK' fill='#4C4C4C'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y2' name='Canada' fill='#794F1B'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea100' xName='x' yName='y3' name='China' fill='#1a9a6f'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingAreaSeries, DateTime } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingAreaSeries, DateTime, Legend } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
   { x: new Date(2006, 0, 1), y: 34, y1: 51, y2: 14, y3: 37 },
@@ -30,19 +26,24 @@ const seriesData = [
   { x: new Date(2014, 0, 1), y: 48, y1: 55, y2: 34, y3: 23 }
 ];
 const primaryXAxis = {
-  valueType: 'DateTime'
+  valueType: 'DateTime',
+  title: 'Years',
+  intervalType: 'Years',
+  labelFormat: 'y',
+  edgeLabelPlacement: 'Shift'
 };
-const title = "Annual Temperature Comparisone";
-const border = {
-  width: 2,
-  color: 'white'
+const primaryYAxis = {
+  title: 'Temperature (%)',
+  labelFormat: '{value}%',
+  rangePadding: 'None'
 };
+const title = 'Annual Temperature Comparison';
 
-provide('chart', [StackingAreaSeries, DateTime]);
+provide('chart', [StackingAreaSeries, DateTime, Legend]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

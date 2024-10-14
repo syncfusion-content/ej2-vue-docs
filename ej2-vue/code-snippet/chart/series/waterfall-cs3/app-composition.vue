@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :legendSettings='legendSettings' :primaryYAxis='primaryYAxis' :title='title'
-      :tooltip='tooltip'>
+    <ejs-chart id="container" :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series type='Histogram' width=2 yName='y' name='Score' :dataSource='dataSource' :binInterval='binInterval'
-          :marker='marker' :showNormalDistribution='showNormalDistribution' :columnWidth='columnWidth'> </e-series>
+        <e-series type='Histogram' width=2 yName='y' :dataSource='dataSource' :binInterval='binInterval' :showNormalDistribution='showNormalDistribution' :columnWidth='columnWidth'> 
+        </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, HistogramSeries, DataLabel, Tooltip } from "@syncfusion/ej2-vue-charts";
-
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, HistogramSeries } from "@syncfusion/ej2-vue-charts";
 
 let chartData = [];
 let points = [5.250, 7.750, 0, 8.275, 9.750, 7.750, 8.275, 6.250, 5.750,
@@ -32,25 +30,25 @@ points.map((value) => {
   });
 });
 
-const legendSettings = { visible: false };
-const primaryYAxis = {
-  title: 'Number of Students',
-  minimum: 0, maximum: 50, interval: 10,
-  majorTickLines: { width: 0 }, lineStyle: { width: 0 }
+const primaryXAxis = {
+  minimum: 0, 
+  maximum: 100
 };
-const marker = { dataLabel: { visible: true, position: 'Top', font: { fontWeight: '600', color: '#ffffff' } } };
-const title = 'Examination Result';
+const primaryYAxis = {
+  minimum: 0, 
+  maximum: 50, 
+  interval: 10
+};
 const dataSource = chartData;
-const tooltip = { enable: true };
 const binInterval = 20;
 const columnWidth = 0.99;
 const showNormalDistribution = true;
 
-provide('chart', [HistogramSeries, DataLabel, Tooltip]);
+provide('chart', [HistogramSeries]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

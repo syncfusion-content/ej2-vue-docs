@@ -8,12 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Radar in Vue Chart Component
+# Radar Chart in Vue Component
 
-## Radar Chart
+## Radar chart
 
-To render a radar series, use series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#drawtype) as `Radar` and to render a line draw type, use series [`drawType`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#drawtype) as `Line` and inject
-`LineSeries` inject `LineSeries`  into the `provide`. [`isClosed`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesModel/#isclosed) property specifies whether to join start and end point of a line series used in polar chart to form a closed path. Default value of isClosed is true.
+To render a [radar](https://www.syncfusion.com/vue-components/vue-charts/chart-types/radar-chart) series in your chart, you need to follow a few steps to configure it correctly. Here's a concise guide on how to do this:
+ 
+* **Set the series type**: Define the series [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#type) as `Radar` in your chart configuration. This indicates that the data should be represented as a radar chart, which is ideal for plotting data points on a circular grid.
+
+* **Inject the RadarSeries module**: Use the `provide: { chart: [RadarSeries]}` method to inject the `RadarSeries` module into your chart. This step is essential, as it ensures that the necessary functionalities for rendering radar series are available in your chart.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -26,11 +29,41 @@ To render a radar series, use series [`type`](https://ej2.syncfusion.com/vue/doc
         
 {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs11" %}
 
-## Series customization
+### Draw type
 
-### Start Angle
+Similar to the polar chart, use the [`drawType`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#drawtype) property to change the series plotting type in a Radar chart to line, column, area, range column, spline, scatter, stacking area, spline area, or stacking column. The default value of `drawType` is `Line`.
 
-You can customize the start angle of the radar series using [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#startangle-number) property. By default, `startAngle` is 0 degree.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs24/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs24/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs24" %}
+
+## Binding data with series
+
+You can bind data to the chart using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#datasource) property within the series configuration. This allows you to connect a JSON dataset or remote data to your chart. To display the data correctly, map the fields from the data to the chart series [`xName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#xname) and [`yName`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#yname) properties.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs25/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs25/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs25" %}
+
+## Customization
+
+### Start angle
+
+You can customize the start angle of the radar series using [`startAngle`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#startangle) property. By default, `startAngle` is 0 degree.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -43,9 +76,9 @@ You can customize the start angle of the radar series using [`startAngle`](https
         
 {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs12" %}
 
-### Coefficient in axis
+### Radius
 
-You can customize the radius of the radar series using [`coefficient`](https://ej2.syncfusion.com/vue/documentation/api/chart/axisModel/#coefficient) property. By default, `coefficient` is 100.
+You can customize the radius of the radar series using [`coefficient`](https://ej2.syncfusion.com/vue/documentation/api/chart/axis/#coefficient) property. By default, `coefficient` is 100.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -58,7 +91,88 @@ You can customize the radius of the radar series using [`coefficient`](https://e
         
 {% previewsample "page.domainurl/code-snippet/chart/series/polar-cs13" %}
 
-## See Also
+## Empty points
+
+Data points with `null` or `undefined` values are considered empty. Empty data points are ignored and not plotted on the chart.
+
+**Mode**
+
+Use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#mode) property to define how empty or missing data points are handled in the series. The default mode for empty points is `Gap`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs26/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs26/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs26" %}
+
+**Fill**
+
+Use the [`fill`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#fill) property to customize the fill color of empty points in the series.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs27/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs27/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs27" %}
+
+**Border**
+
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyPointSettings/#border) property to customize the width and color of the border for empty points.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs28/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs28/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs28" %}
+
+## Events
+
+### Series render
+
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs29/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs29/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs29" %}
+
+### Point render
+
+The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs30/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/polar-cs30/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/polar-cs30" %}
+
+## See also
 
 * [Data label](../data-labels/)
 * [Tooltip](../tool-tip/)
