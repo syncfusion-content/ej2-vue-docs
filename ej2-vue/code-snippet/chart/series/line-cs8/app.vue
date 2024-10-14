@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title'>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Line' xName='x' yName='y' name='India' fill='green' width=3
-          dashArray='5,5' :marker='marker'> </e-series>
+        <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' fill='red'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script>
 
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -22,16 +21,32 @@ export default {
   data() {
     return {
       seriesData: [
-        { x: 2005, y: 28 }, { x: 2006, y: 25 }, { x: 2007, y: 26 }, { x: 2008, y: 27 },
-        { x: 2009, y: 32 }, { x: 2010, y: 35 }, { x: 2011, y: 30 }
+        { month: 'Jan', sales: 35 },
+        { month: 'Feb', sales: 28 },
+        { month: 'Mar', sales: 34 },
+        { month: 'Apr', sales: 32 },
+        { month: 'May', sales: 40 },
+        { month: 'Jun', sales: 32 },
+        { month: 'Jul', sales: 35 },
+        { month: 'Aug', sales: 55 },
+        { month: 'Sep', sales: 38 },
+        { month: 'Oct', sales: 30 },
+        { month: 'Nov', sales: 25 },
+        { month: 'Dec', sales: 32 }
       ],
-      title: "Efficiency of oil-fired power production",
-      marker: { visible: true },
+      primaryXAxis: {
+        valueType: 'Category',
+        title: 'Month'
+      },
+      primaryYAxis: {
+        title: 'Sales count'
+      },
+      title: "Monthly Sales Comparison"
     };
   },
   provide: {
-    chart: [LineSeries]
-  },
+    chart: [Category, LineSeries]
+  }
 };
 </script>
 <style>

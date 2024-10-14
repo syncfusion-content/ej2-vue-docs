@@ -93,6 +93,7 @@ The following table lists the tools available in the toolbar.
 | Format | An object with the options that will appear in the paragraph format drop-down from the toolbar. | toolbarSettings: { <br /> items: ['Formats'] <br /> } |
 | Blockquote | Blockquotes visually highlight important text within an editor, emphasizing key information or quotations. | toobarSettings: { <br /> items: ['Blockquote'] <br /> } |
 | StrikeThrough | Apply double line strike through formatting for the selected text. | toolbarSettings: { <br /> items: ['StrikeThrough'] <br /> } |
+| InlineCode | Adds code-specific styling to selected text by highlighting it with a background color and using a monospace font for easy readability. | toolbarSettings: { <br /> items: ['InlineCode'] <br />}|
 | ClearFormat | The clear format tool is used to remove all formatting styles (such as bold, italic, underline, color, superscript, subscript, and more) from currently selected text. As a result, all the formatting text will be cleared and return to its default formatting styles. | toolbarSettings: { <br /> items: ['ClearFormat'] <br /> } |
 | FullScreen | Stretches the editor to the maximum width and height of the browser window. | toolbarSettings: { <br /> items: ['FullScreen'] <br /> } |
 | SourceCode | The RichTextBox includes the ability for users to directly edit the HTML code via Source View. If you made any modification in source view directly, synchronize with design view. | toolbarSettings: { <br /> items: ['SourceCode'] <br /> } |

@@ -1,17 +1,16 @@
-
 import Vue from "vue";
-import { ChartPlugin, PolarSeries, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, PolarSeries, Category, ColumnSeries } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
 ;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Polar' xName='country' yName='gold' drawType='Column' name='Gold'> </e-series>
+                <e-series :dataSource='seriesData' type='Polar' xName='country' yName='gold' drawType='Column'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -20,24 +19,28 @@ new Vue({
   data() {
     return {
       seriesData: [
-             { country: "USA", gold: 50 },
-             { country: "China", gold: 40 },
-             { country: "Japan", gold: 70 },
-             { country: "Australia", gold: 60 },
-             { country: "France", gold: 50 },
-             { country: "Germany", gold: 40 },
-             { country: "Italy", gold: 40 },
-             { country: "Sweden", gold: 30 }
-              ],
-        primaryXAxis: {
-           valueType: 'Category',
-           title: 'Countries'
-        },
+        { country: "USA",       gold: 50 },
+        { country: "China",     gold: 40 },
+        { country: "Japan",     gold: 70 },
+        { country: "Australia", gold: 60 },
+        { country: "France",    gold: 50 },
+        { country: "Germany",   gold: 40 },
+        { country: "Italy",     gold: 40 },
+        { country: "Sweden",    gold: 30 }
+      ],
+      primaryXAxis: {
+        valueType: 'Category',
+        title: 'Countries'
+      },
+      primaryYAxis: {
+        minimum: 0, maximum: 80,
+        interval: 20, title: 'Medals'
+      },
       title: "Olympic Medals"
     };
   },
   provide: {
-    chart: [ColumnSeries, Category, PolarSeries]
+    chart: [PolarSeries, Category, ColumnSeries]
   }
 
 });

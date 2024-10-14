@@ -2,22 +2,17 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y'
-          name='UK'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y1'
-          name='Germany'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y2'
-          name='France'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingColumn100' columnFacet='Cylinder' xName='x' yName='y3'
-          name='Italy'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y' name='UK' columnFacet='Cylinder'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y1' name='Germany' columnFacet='Cylinder'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y2' name='France' columnFacet='Cylinder'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y3' name='Italy' columnFacet='Cylinder'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingColumnSeries, DateTime } from "@syncfusion/ej2-vue-charts";
-
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, StackingColumnSeries, DateTime, Legend } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
   { x: new Date(2006, 0, 1), y: 900, y1: 190, y2: 250, y3: 150 },
@@ -29,10 +24,9 @@ const seriesData = [
   { x: new Date(2012, 0, 1), y: 770, y1: 128, y2: 152, y3: 110 }
 ];
 const primaryXAxis = {
+  valueType: 'DateTime',
   title: 'Years',
   interval: 1,
-  valueType: 'DateTime',
-  labelPlacement: 'BetweenTicks',
   labelFormat: 'y'
 };
 const primaryYAxis = {
@@ -40,13 +34,13 @@ const primaryYAxis = {
   rangePadding: 'None',
   labelFormat: '{value}%'
 };
-const title = "Gross Domestic Product Growth";
+const title = 'Gross Domestic Product Growth';
 
-provide('chart', [StackingColumnSeries, DateTime]);
+provide('chart', [StackingColumnSeries, DateTime, Legend]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

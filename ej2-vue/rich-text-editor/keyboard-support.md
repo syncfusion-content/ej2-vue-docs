@@ -33,6 +33,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Italic| <kbd>Ctrl</kbd> + <kbd>i</kbd> |
 | Underline| <kbd>Ctrl</kbd> + <kbd>u</kbd> |
 | Strikethrough| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>s</kbd> |
+| Inline Code | <kbd>Ctrl</kbd> + <kbd>`</kbd> |
 | Uppercase| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>u</kbd> |
 | Lowercase| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> |
 | Superscript| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>=</kbd> |
@@ -85,7 +86,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Lowercase| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> |
 | Superscript| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>=</kbd> |
 | Subscript| <kbd>Ctrl</kbd> + <kbd>=</kbd> |
-| Fullscreen| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> |
+| Full screen| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> |
 | Ordered list| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> |
 | Unordered list| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>o</kbd> |
 

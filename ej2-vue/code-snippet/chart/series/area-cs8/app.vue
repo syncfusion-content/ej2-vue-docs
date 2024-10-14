@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <ejs-chart :title='title'>
+    <ejs-chart>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='MultiColoredArea' xName='x' yName='y' name='England' segmentAxis='X'
-          :segments='segments'> </e-series>
+        <e-series :dataSource='seriesData' type='MultiColoredArea' xName='x' yName='y' :segments='segments' segmentAxis='X'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -11,8 +10,6 @@
 <script>
 
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, MultiColoredAreaSeries } from "@syncfusion/ej2-vue-charts";
-
-
 
 export default {
   name: "App",
@@ -24,21 +21,27 @@ export default {
   data() {
     return {
       seriesData: [
-        { x: 2005, y: 28 }, { x: 2006, y: 25 },
-        { x: 2007, y: 26 }, { x: 2008, y: 27 },
-        { x: 2009, y: 32 }, { x: 2010, y: 35 },
+        { x: 2005, y: 28 }, 
+        { x: 2006, y: 25 }, 
+        { x: 2007, y: 26 }, 
+        { x: 2008, y: 27 },
+        { x: 2009, y: 32}, 
+        { x: 2010, y: 35 }, 
         { x: 2011, y: 25 }
       ],
-      title: 'England - Run Rate',
-      segments: [{
-        value: 2007,
-        color: 'blue'
-      }, {
-        value: 2009,
-        color: 'lightgreen'
-      }, {
-        color: 'orange'
-      }],
+      segments: [
+        {
+          value: 2007,
+          color: 'blue'
+        },
+        {
+          value: 2009,
+          color: 'lightgreen'
+        },
+        {
+          color: 'orange'
+        }
+      ]
     };
   },
   provide: {
@@ -47,7 +50,7 @@ export default {
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>
