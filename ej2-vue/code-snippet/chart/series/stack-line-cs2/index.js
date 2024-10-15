@@ -8,7 +8,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-        <ejs-chart id="chartcontainer" :title="title" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea">
+        <ejs-chart id="chartcontainer" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea">
             <e-series-collection>
                 <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y" name="John" :marker="marker" fill='#ff4251'></e-series>
                 <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y1" name="Peter" :marker="marker" fill='#4C4C4C'></e-series>

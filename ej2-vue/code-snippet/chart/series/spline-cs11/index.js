@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Spline' xName='x' yName='y'> </e-series>
+                <e-series :dataSource='seriesData' type='Spline' xName='x' yName='y' :marker='marker'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -43,7 +43,8 @@ new Vue({
         title: 'Temperature in Celsius',
         labelFormat: '{value}°C'
       },
-      title: 'Climate Graph-2012'
+      title: 'Climate Graph-2012',
+      marker: { visible: true }
     };
   },
   provide: {

@@ -9,7 +9,7 @@
 </template>
 <script>
 
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Category, MultiColoredLineSeries } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -45,7 +45,7 @@ export default {
     };
   },
   provide: {
-    chart: [Category, LineSeries]
+    chart: [Category, MultiColoredLineSeries]
   }
 };
 </script>

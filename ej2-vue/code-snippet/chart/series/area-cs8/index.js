@@ -8,9 +8,9 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-         <ejs-chart>
+        <ejs-chart>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' :segments='segments' segmentAxis='X'> </e-series>
+                <e-series :dataSource='seriesData' type='MultiColoredArea' xName='x' yName='y' :segments='segments' segmentAxis='X'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

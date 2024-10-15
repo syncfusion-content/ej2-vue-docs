@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' width=2> </e-series>
+        <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales' width=2 :marker='marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -41,7 +41,8 @@ export default {
       primaryYAxis: {
         title: 'Sales count'
       },
-      title: "Monthly Sales Comparison"
+      title: "Monthly Sales Comparison",
+      marker: { visible: true }
     };
   },
   provide: {

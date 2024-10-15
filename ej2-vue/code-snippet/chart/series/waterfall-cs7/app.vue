@@ -2,7 +2,7 @@
     <div id="app">
          <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Waterfall' xName='x' yName='y' :intermediateSumIndexes:='intermediate' :sumIndexes='sum' :emptyPointSettings='emptyPointSettings'> </e-series>
+                <e-series :dataSource='seriesData' type='Waterfall' xName='x' yName='y' :intermediateSumIndexes='intermediate' :sumIndexes='sum' :emptyPointSettings='emptyPointSettings'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

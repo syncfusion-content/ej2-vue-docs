@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Radar' xName='x' yName='y' drawType='Line' width=2> </e-series>
+        <e-series :dataSource='seriesData' type='Radar' xName='x' yName='y' drawType='Line' width=2 :marker='marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -28,6 +28,7 @@ const primaryYAxis = {
   labelFormat: '{value}%'
 };
 const title = "Efficiency of oil-fired power production";
+const marker = { visible: true };
 
 provide('chart', [RadarSeries, LineSeries]);
 const pointRender = function (args) {

@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, ColumnSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -47,7 +47,7 @@ new Vue({
     };
   },
   provide: {
-    chart: [ColumnSeries, Category]
+    chart: [ColumnSeries, Category, Legend]
   }
 
 });

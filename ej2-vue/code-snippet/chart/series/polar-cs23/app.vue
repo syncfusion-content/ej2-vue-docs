@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Line' width=2> </e-series>
+        <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Line' width=2 :marker='marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -42,7 +42,8 @@ export default {
         title: 'Efficiency',
         labelFormat: '{value}%'
       },
-      title: "Efficiency of oil-fired power production"
+      title: "Efficiency of oil-fired power production",
+      marker: { visible: true }
     };
   },
   provide: {

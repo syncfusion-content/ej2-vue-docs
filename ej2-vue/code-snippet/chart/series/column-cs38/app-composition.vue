@@ -11,7 +11,7 @@
 <script setup>
 import { provide } from "vue";
 
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, ColumnSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
   { country: 'USA',       gold: 50, silver: 40 },
@@ -39,7 +39,7 @@ const border = {
   color: '#FFA500' 
 };
 
-provide('chart', [ColumnSeries, Category]);
+provide('chart', [ColumnSeries, Category, Legend]);
 
 </script>
 <style>

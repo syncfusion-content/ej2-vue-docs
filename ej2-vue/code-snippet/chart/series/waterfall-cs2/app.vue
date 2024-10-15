@@ -2,7 +2,7 @@
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Waterfall' xName='x' yName='y' :intermediateSumIndexes:='intermediate' :sumIndexes='sum' summaryFillColor='black' negativeFillColor='green'
+                <e-series :dataSource='seriesData' type='Waterfall' xName='x' yName='y' :intermediateSumIndexes='intermediate' :sumIndexes='sum' summaryFillColor='black' negativeFillColor='green'
                   :connector='connector' :marker='marker'> </e-series>
             </e-series-collection>
         </ejs-chart>

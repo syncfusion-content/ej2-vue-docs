@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Area' xName='x' yName='y'> </e-series>
+        <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' :marker='marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -33,6 +33,7 @@ const primaryYAxis = {
   title: 'Sales Amount in Millions'
 };
 const title = 'Average Sales Comparison';
+const marker = { visible: true };
 
 provide('chart', [AreaSeries]);
 

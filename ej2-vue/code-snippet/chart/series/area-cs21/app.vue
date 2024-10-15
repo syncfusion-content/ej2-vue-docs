@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Area' xName='x' yName='y'> </e-series>
+        <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' :marker='marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -41,7 +41,8 @@ export default {
         interval: 0.5,
         title: 'Sales Amount in Millions'
       },
-      title: 'Average Sales Comparison'
+      title: 'Average Sales Comparison',
+      marker: { visible: true }
     };
   },
   provide: {

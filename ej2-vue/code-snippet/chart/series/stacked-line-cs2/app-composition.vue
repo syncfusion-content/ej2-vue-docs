@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-chart id="chartcontainer" :title="title" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea">
+    <ejs-chart id="chartcontainer" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea">
       <e-series-collection>
         <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y" name="John" :marker="marker" fill='url(#gradient1)'></e-series>
         <e-series :dataSource="seriesData" type="StackingLine100" xName="x" yName="y1" name="Peter" :marker="marker" fill='url(#gradient2)'></e-series>

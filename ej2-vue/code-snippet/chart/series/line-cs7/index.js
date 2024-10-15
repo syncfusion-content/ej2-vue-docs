@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, Category, MultiColoredLineSeries } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -43,7 +43,7 @@ new Vue({
     };
   },
   provide: {
-    chart: [Category, LineSeries]
+    chart: [Category, MultiColoredLineSeries]
   }
 
 });

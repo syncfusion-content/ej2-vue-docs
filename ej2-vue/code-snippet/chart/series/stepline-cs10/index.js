@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :seriesRender='seriesRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y'> </e-series>
+                <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' width=2> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>

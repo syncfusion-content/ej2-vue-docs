@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y'> </e-series>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' width=2 :marker='marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -34,6 +34,7 @@ const primaryYAxis = {
   title: 'Intensity (g/kWh)'
 };
 const title = 'CO2 - Intensity Analysis';
+const marker = { visible: true };
 
 provide('chart', [StepLineSeries]);
 

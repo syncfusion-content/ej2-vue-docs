@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-chart id="container" :primaryXAxis='primaryXAxis'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='BoxAndWhisker' xName='x' yName='y' showMean=false> </e-series>
+        <e-series :dataSource='seriesData' type='BoxAndWhisker' xName='x' yName='y' :showMean='showMean'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -25,6 +25,7 @@ const seriesData = [
 const primaryXAxis = {
   valueType: 'Category'
 };
+const showMean = false;
 
 provide('chart', [BoxAndWhiskerSeries, Category]);
 

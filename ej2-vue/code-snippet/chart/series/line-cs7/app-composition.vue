@@ -9,7 +9,7 @@
 </template>
 <script setup>
 import { provide } from "vue";
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, Category, MultiColoredLineSeries } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
   { month: 'Jan', sales: 35, color: '#1f77b4' },
@@ -34,7 +34,7 @@ const primaryYAxis = {
 };
 const title = "Monthly Sales Comparison";
 
-provide('chart', [Category, LineSeries]);
+provide('chart', [Category, MultiColoredLineSeries]);
 
 </script>
 <style>

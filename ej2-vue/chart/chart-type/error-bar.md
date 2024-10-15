@@ -61,21 +61,6 @@ To change the error bar rendering type using [`type`](https://ej2.syncfusion.com
         
 {% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs2" %}
 
-## Error bar type
-
-To customize the error bar type, set error bar [`type`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#type) as `Custom` and  then change the horizontal/vertical positive and negative error of error bar.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/errorbar-cs3/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/errorbar-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart/series/errorbar-cs3" %}
-
 ## Error bar mode
 
 The error bar mode is used to define whether the error bar line is drawn horizontally, vertically or on both sides. To change the error bar mode, use the [`mode`](https://ej2.syncfusion.com/vue/documentation/api/chart/errorBarSettings/#mode) option.

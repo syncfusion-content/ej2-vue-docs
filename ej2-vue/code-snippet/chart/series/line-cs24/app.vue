@@ -10,6 +10,7 @@
 <script>
 
 import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ParetoSeries, LineSeries, ColumnSeries, Category, Legend, Tooltip, Highlight } from "@syncfusion/ej2-vue-charts";
+import { Browser } from '@syncfusion/ej2-base';
 
 export default {
   name: "App",

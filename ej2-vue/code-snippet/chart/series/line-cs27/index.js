@@ -1,5 +1,6 @@
 import Vue from "vue";
 import { ChartPlugin, ParetoSeries, LineSeries, ColumnSeries, Category, Legend, Tooltip, Highlight } from "@syncfusion/ej2-vue-charts";
+import { Browser } from '@syncfusion/ej2-base';
 
 Vue.use(ChartPlugin);
 

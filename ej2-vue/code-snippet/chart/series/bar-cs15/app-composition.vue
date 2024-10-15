@@ -3,7 +3,7 @@
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
       <e-series-collection>
         <e-series :dataSource='seriesData' type='Bar' xName='x' yName='y'> </e-series>
-        <e-series :dataSource='seriesData' type='Bar' xName='x' yName='y1' columnWidthInPixel=5> </e-series>
+        <e-series :dataSource='seriesData' type='Bar' xName='x' yName='y1' :columnWidthInPixel='columnWidthInPixel'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -36,6 +36,7 @@ const primaryYAxis = {
   labelFormat: '{value}%'
 };
 const title = 'Unemployment rate (%)';
+const columnWidthInPixel = 5;
 
 provide('chart', [BarSeries]);
 
