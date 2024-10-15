@@ -19,7 +19,7 @@ new Vue({
     :actionComplete="actionComplete">
       <e-columns>
         <e-column field="OrderID" headerText="Order ID" textAlign="Right" isPrimaryKey="true" :validationRules="orderIDRules" width="100"></e-column>
-        <e-column field="CustomerID" headerText="Customer ID" width="120" ></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="120"></e-column>
         <e-column field="Freight" headerText="Freight" textAlign="Right" :validationRules="freightRules" editType="numericedit" width="120" format="C2"></e-column>
         <e-column field="ShipCountry" headerText="Ship Country" editType="dropdownedit" width="150" :validationRules="shipCountryRules">
        </e-column>
