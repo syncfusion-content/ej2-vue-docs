@@ -2,7 +2,7 @@
   <div id="app">
     <ejs-button id='delete' @click.native='clickDelete'>Delete Multiple</ejs-button>
     <div class="control-section" style="padding-top:20px">
-      <ejs-grid ref="grid" :dataSource='data' :editSettings='editSettings' :selectionSettings="selectOptions" >
+      <ejs-grid ref="grid" :dataSource='data' :editSettings='editSettings' :selectionSettings="selectOptions">
         <e-columns>
           <e-column field='OrderID' headerText='Order ID' textAlign='Right' isPrimaryKey='true' :validationRules='orderIDRules' width=100>
           </e-column>

@@ -27,7 +27,7 @@ const customerIDRules= { required: true, minLength: 5 };
 const freightRules= { required: true, min: 1 };
 const shipCountryRules= { required: true };
 const orderDateRules= { required: true };
-const fieldName= "";
+const fieldName= ref("");
 const editSettings= {
         allowEditing: true,
         allowAdding: true,
@@ -42,11 +42,11 @@ const params= {
 const grid = ref(null);
 const actionComplete= function (e) { 
       if (e.requestType === "beginEdit") {
-        e.form.elements[grid.value.ej2Instances.element.getAttribute("id") +this.fieldName].focus();
+        e.form.elements[grid.value.ej2Instances.element.getAttribute("id") +fieldName.value].focus();
       }
     };
 const recordDoubleClick= function (args)  {
-      this.fieldName =grid.value.ej2Instances.getColumnByIndex(args.cellIndex).field;
+      fieldName.value =grid.value.ej2Instances.getColumnByIndex(args.cellIndex).field;
     };
 provide('grid', [Page,Edit, Toolbar]);
 </script>

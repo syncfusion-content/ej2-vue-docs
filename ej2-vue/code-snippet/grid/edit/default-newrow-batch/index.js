@@ -19,7 +19,7 @@ new Vue({
       </ejs-dropdownlist>
     </div>
     <div style="padding-top:20px">
-      <ejs-grid ref="batchgrid" :dataSource='data' allowPaging='true' :pageSettings='pageSettings' :editSettings='editSettings' :toolbar='toolbar' >
+      <ejs-grid ref="batchgrid" :dataSource='data' allowPaging='true' :pageSettings='pageSettings' :editSettings='editSettings' :toolbar='toolbar'>
         <e-columns>
           <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right' isPrimaryKey='true' :validationRules='orderIDRules'></e-column>
           <e-column field='CustomerID' headerText='Customer ID' width='120' :validationRules='customerIDRules'></e-column>

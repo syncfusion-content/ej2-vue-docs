@@ -116,17 +116,17 @@ To open this dialog, refer to the following example.
       <button v-on:click='showTableOfContentsDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableTableOfContentsDialog='true' :enableSfdtExport='true' height="370px"
+      :enableTableOfContentsDialog='true' :enableSfdtExport='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, TableOfContentsDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, TableOfContentsDialog, SfdtExport, EditorHistory } from '@syncfusion/ej2-vue-documenteditor';
 import { provide, ref } from 'vue';
 
 const documenteditor = ref(null);
 //Inject require modules
-provide('DocumentEditor', [Selection, Editor, TableOfContentsDialog, SfdtExport])
+provide('DocumentEditor', [Selection, Editor, TableOfContentsDialog, EditorHistory, SfdtExport])
 
 const showTableOfContentsDialog = function () {
   //Open the table of contents dialog.
@@ -135,6 +135,14 @@ const showTableOfContentsDialog = function () {
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -147,12 +155,12 @@ const showTableOfContentsDialog = function () {
       <button v-on:click='showTableOfContentsDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableTableOfContentsDialog='true' :enableSfdtExport='true' height="370px"
+      :enableTableOfContentsDialog='true' :enableEditorHistory="true" :enableSfdtExport='true' height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script>
-import { DocumentEditorComponent, Selection, Editor, TableOfContentsDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, Selection, Editor, TableOfContentsDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
@@ -164,7 +172,7 @@ export default {
   },
   provide: {
     //Inject require modules
-    DocumentEditor: [Selection, Editor, TableOfContentsDialog, SfdtExport]
+    DocumentEditor: [Selection, Editor, TableOfContentsDialog, EditorHistory, SfdtExport]
   },
   methods: {
     showTableOfContentsDialog: function () {
@@ -175,6 +183,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -194,17 +210,17 @@ This dialog allows managing the styles in a document. It will display all the st
       <button v-on:click='showStylesDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableStylesDialog='true' :enableSfdtExport='true' :enableStyleDialog='true' height="370px"
+      :enableStylesDialog='true' :enableSfdtExport='true' :enableStyleDialog='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, StylesDialog, StyleDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, StylesDialog, StyleDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 import { provide, ref } from 'vue';
 
 const documenteditor = ref(null);
 //Inject require modules
-provide('DocumentEditor', [Selection, Editor, StylesDialog, StyleDialog, SfdtExport]);
+provide('DocumentEditor', [Selection, Editor, StylesDialog, StyleDialog, EditorHistory, SfdtExport]);
 
 const showStylesDialog = function () {
   //Open the styles dialog.
@@ -213,6 +229,14 @@ const showStylesDialog = function () {
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -225,12 +249,12 @@ const showStylesDialog = function () {
       <button v-on:click='showStylesDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableStylesDialog='true' :enableSfdtExport='true' :enableStyleDialog='true' height="370px"
+      :enableStylesDialog='true' :enableSfdtExport='true' :enableStyleDialog='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script>
-import { DocumentEditorComponent, Selection, Editor, StylesDialog, StyleDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, Selection, Editor, StylesDialog, StyleDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
@@ -242,7 +266,7 @@ export default {
   },
   provide: {
     //Inject require modules
-    DocumentEditor: [Selection, Editor, StylesDialog, StyleDialog, SfdtExport]
+    DocumentEditor: [Selection, Editor, StylesDialog, StyleDialog, EditorHistory, SfdtExport]
   },
   methods: {
     showStylesDialog: function () {
@@ -253,6 +277,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -274,15 +306,15 @@ To open this dialog, refer to the following example.
       <button v-on:click='showStyleDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableStyleDialog='true' height="370px" style="width: 100%;"></ejs-documenteditor>
+      :enableSfdtExport='true' :enableStyleDialog='true' :enableEditorHistory="true" height="370px" style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, StyleDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, StyleDialog, StylesDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 import { provide, ref } from 'vue';
 
 const documenteditor = ref(null);
-provide('DocumentEditor', [Selection, Editor, StyleDialog, SfdtExport])
+provide('DocumentEditor', [Selection, Editor, StyleDialog, StylesDialog, EditorHistory, SfdtExport])
 
 const showStyleDialog = function () {
   //Open styles dialog.
@@ -291,6 +323,14 @@ const showStyleDialog = function () {
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -303,11 +343,11 @@ const showStyleDialog = function () {
       <button v-on:click='showStyleDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableStyleDialog='true' height="370px" style="width: 100%;"></ejs-documenteditor>
+      :enableSfdtExport='true' :enableStyleDialog='true' :enableEditorHistory="true" height="370px" style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script>
-import { DocumentEditorComponent, Selection, Editor, StyleDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, Selection, Editor, StyleDialog, StylesDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
@@ -319,7 +359,7 @@ export default {
   },
   provide: {
     //Inject require modules
-    DocumentEditor: [Selection, Editor, StyleDialog, SfdtExport]
+    DocumentEditor: [Selection, Editor, StyleDialog, StylesDialog, EditorHistory, SfdtExport]
   },
   methods: {
     showStyleDialog: function () {
@@ -330,6 +370,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -368,6 +416,14 @@ const showListDialog = function () {
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -407,6 +463,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -428,23 +492,31 @@ To open this dialog, refer to the following example.
       <button v-on:click='showBordersAndShadingDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableBordersAndShadingDialog='true' height="370px"
-      style="width: 100%;"></ejs-documenteditor>
+      :enableSfdtExport='true' :enableBordersAndShadingDialog='true' height="370px" style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
 import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, BordersAndShadingDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
-import { provide } from 'vue';
+import { provide, ref } from 'vue';
 
+const documenteditor = ref(null);
 provide('DocumentEditor', [Selection, Editor, BordersAndShadingDialog, SfdtExport]);
 
 const showBordersAndShadingDialog = function () {
   //Open borders and shading dialog.
-  this.$refs.documenteditor.showDialog('BordersAndShading');
+  documenteditor.value.showDialog('BordersAndShading');
 }
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -485,6 +557,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -506,16 +586,16 @@ To open this dialog, refer to the following example.
       <button v-on:click='showTableOptionsDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableTableOptionsDialog='true' height="370px"
+      :enableSfdtExport='true' :enableTableOptionsDialog='true' :enableTablePropertiesDialog='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, TableOptionsDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 import { onMounted, provide, ref } from 'vue';
 
 const documenteditor = ref(null);
-provide('DocumentEditor', [Selection, Editor, TableOptionsDialog, SfdtExport]);
+provide('DocumentEditor', [Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory, SfdtExport]);
 
 const showTableOptionsDialog = function () {
   //Open table options dialog.
@@ -527,6 +607,14 @@ onMounted(function () {
 })
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -539,16 +627,16 @@ onMounted(function () {
       <button v-on:click='showTableOptionsDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableTableOptionsDialog='true' height="370px"
+      :enableSfdtExport='true' :enableTableOptionsDialog='true' :enableTablePropertiesDialog='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script>
-import { DocumentEditorComponent, Selection, Editor, TableOptionsDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
-    'ejs-documenreditor': DocumentEditorComponent
+    'ejs-documenteditor': DocumentEditorComponent
   },
   data: function () {
     return {
@@ -556,7 +644,7 @@ export default {
   },
   provide: {
     //Inject require modules
-    DocumentEditor: [Selection, Editor, TableOptionsDialog, SfdtExport]
+    DocumentEditor: [Selection, Editor, TableOptionsDialog, TablePropertiesDialog, EditorHistory, SfdtExport]
   },
   methods: {
     showTableOptionsDialog: function () {
@@ -570,6 +658,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -591,26 +687,34 @@ To open this dialog, refer to the following example.
       <button v-on:click='showTablePropertiesDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableTablePropertiesDialog='true' height="370px"
+      :enableSfdtExport='true' :enableTablePropertiesDialog='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script setup>
-import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, TablePropertiesDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent as EjsDocumenteditor, Selection, Editor, TablePropertiesDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 import { onMounted, provide, ref } from 'vue';
 
 const documenteditor = ref(null);
-provide('DocumentEditor', [Selection, Editor, TablePropertiesDialog, SfdtExport]);
+provide('DocumentEditor', [Selection, Editor, TablePropertiesDialog, EditorHistory, SfdtExport]);
 const showTablePropertiesDialog = function () {
   //Open table properties dialog.
-  documenteditor.showDialog('TableProperties');
+  documenteditor.value.showDialog('TableProperties');
 }
 
 onMounted(function () {
-  documenteditor.ej2Instances.editor.insertTable(2, 2);
+  documenteditor.value.ej2Instances.editor.insertTable(2, 2);
 })
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -623,12 +727,12 @@ onMounted(function () {
       <button v-on:click='showTablePropertiesDialog'>Open dialog</button>
     </div>
     <ejs-documenteditor ref="documenteditor" :enableSelection='true' :isReadOnly='false' :enableEditor='true'
-      :enableSfdtExport='true' :enableTablePropertiesDialog='true' height="370px"
+      :enableSfdtExport='true' :enableTablePropertiesDialog='true' :enableEditorHistory="true" height="370px"
       style="width: 100%;"></ejs-documenteditor>
   </div>
 </template>
 <script>
-import { DocumentEditorComponent, Selection, Editor, TablePropertiesDialog, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorComponent, Selection, Editor, TablePropertiesDialog, EditorHistory, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   components: {
@@ -639,7 +743,7 @@ export default {
     };
   },
   provide: {
-    DocumentEditor: [Selection, Editor, TablePropertiesDialog, SfdtExport]
+    DocumentEditor: [Selection, Editor, TablePropertiesDialog, EditorHistory, SfdtExport]
   },
   methods: {
     showTablePropertiesDialog: function () {
@@ -653,6 +757,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
