@@ -38,7 +38,10 @@ export default {
         title: 'Runs'
       },
       title: "England - Run Rate",
-      border: { width: 1.5 }
+      border: { width: 1.5 },
+      tooltip: {
+        enable: true
+      }
     };
   },
   provide: {

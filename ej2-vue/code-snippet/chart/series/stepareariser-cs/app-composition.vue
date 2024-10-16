@@ -31,6 +31,7 @@ const primaryYAxis = {
 };
 const title = "England - Run Rate";
 const border = { width: 1.5 };
+const tooltip = { enable: true };
 
 provide('chart', [StepAreaSeries, Tooltip]);
 </script>
