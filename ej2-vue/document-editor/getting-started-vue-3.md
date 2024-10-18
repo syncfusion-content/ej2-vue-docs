@@ -10,53 +10,102 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion Document Editor Component in Vue 3
 
-This section explains how to use Document Editor component in Vue 3 application.
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Document Editor component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+
+The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
+
+The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
-## Creating Vue application using Vue CLI
+## Set up the Vite project
 
-The easiest way to create a Vue application is to use the [`Vue CLI`](https://github.com/vuejs/vue-cli). Vue CLI versions above [`4.5.0`](https://v3.vuejs.org/guide/migration/introduction.html#vue-cli) are mandatory for creating applications using Vue 3. Use the following command to uninstall older versions of the Vue CLI.
-
-```bash
-npm uninstall vue-cli -g
-```
-
-Use the following commands to install the latest version of Vue CLI.
+A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
-npm install -g @vue/cli
-npm install -g @vue/cli-init
+npm create vite@latest
 ```
 
-Create a new project using the command below.
+or
 
 ```bash
-vue create quickstart
+yarn create vite
 ```
 
-Initiating a new project prompts us to choose the type of project to be used for the current application. Select the option `Default (Vue 3)` from the menu.
+Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-![Reference](./images/vue3-terminal.png)
-
-## Adding Syncfusion DocumentEditor package in the application
-
- Syncfusion Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
-The Document Editor component will be used in this example. To install it use the following command.
+1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
-npm install @syncfusion/ej2-vue-documenteditor --save
+? Project name: » my-project
 ```
 
-> The **--save** will instruct NPM to include the Document Editor package inside the `dependencies` section of the `package.json`.
+2.Select `Vue` as the framework. It will create a Vue 3 project.
 
-## Adding CSS reference
-
-Add Document editor component’s styles as given below in `<style>` section of the `src/App.vue` file.
-
+```bash
+? Select a framework: » - Use arrow-keys. Return to submit.
+Vanilla
+> Vue
+  React
+  Preact
+  Lit
+  Svelte
+  Others
 ```
+
+3.Choose `JavaScript` as the framework variant to build this Vite project using JavaScript and Vue.
+
+```bash
+? Select a variant: » - Use arrow-keys. Return to submit.
+> JavaScript
+  TypeScript
+  Customize with create-vue ↗
+  Nuxt ↗
+```
+
+4.Upon completing the steps to create the `my-project`, run the following command to install its dependencies:
+
+```bash
+cd my-project
+npm install
+```
+
+or
+
+```bash
+cd my-project
+yarn install
+```
+
+Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+
+## Add Syncfusion Vue packages
+
+Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+
+This article uses the [Vue Document Editor component](https://www.syncfusion.com/vue-components/vue-word-processor) as an example. To use the Vue Document Editor component in the project, the `@syncfusion/ej2-vue-documenteditor` package needs to be installed using the following command:
+
+```bash
+  npm install @syncfusion/ej2-vue-documenteditor --save
+```
+
+or
+
+```bash
+yarn add @syncfusion/ej2-vue-documenteditor
+```
+
+## Import Syncfusion CSS styles
+
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+
+In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Document Editor component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
@@ -68,7 +117,9 @@ Add Document editor component’s styles as given below in `<style>` section of 
 @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 > Document editor has different themes, please refer to [supported themes](../appearance/theme) section.
 
@@ -82,53 +133,115 @@ Document Editor Component is used to create, view and edit word documents. In th
 
 You have completed all the necessary configurations needed for rendering the Syncfusion Vue component. Now, you are going to add the Document Editor component using following steps.
 
-**Step 1:** Import the Document Editor component in the `<script>` section of the `src/App.vue` file.
+Follow the below steps to add the Vue Document Editor component using `Composition API` or `Options API`:
 
-```
-<script>
-  import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+**Step 1:** First, import and register the DocumentEditor component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
 </script>
-```
 
-**Step 2:** Register the Document Editor Container component in your application.
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
-```js
-import { DocumentEditorComponent } from '@syncfusion/ej2-vue-documenteditor';
-//Component registeration
-export default {
-    name: "App",
-    components: {
-      'ejs-documenteditor' : DocumentEditorComponent
-    }
-}
-```
+<script>
+import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+</script>
 
-In the above code snippet, you have registered DocumentEditorContainer.
+{% endhighlight %}
+{% endtabs %}
 
-**Step 3:** Add the component definition in template section.
+**Step 2:** Add the component definition in `template` section.
 
-```
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
+
 <template>
   <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
 </template>
-```
 
-**Step 4:** Declare the bound properties `serviceUrl` in the `script` section.
+{% endhighlight %}
+{% endtabs %}
 
-```js
-data () {
-  return {
-    serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+**Step 3:** Declare the bound properties `serviceUrl` in the `script` section.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script>
+  import { provide } from 'vue';
+  import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+
+  const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+  const documenteditor = null;
+
+  provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]);
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  import { DocumentEditorComponent, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+
+  //Component registeration
+  export default {
+    name: 'App',
+    components: {
+      // Declaring component
+      'ejs-documenteditor' : DocumentEditorComponent
+    },
+    data () {
+      return {
+        serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+      };
+    },
+    provide: {
+        DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
+    }
   }
-},
-provide: {
-  DocumentEditor: [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]
-}
-```
+</script>
 
-**Step 5:** Summarizing the above steps, update the `src/App.vue` file with following code.
+{% endhighlight %}
+{% endtabs %}
 
-```
+**Step 4:** Summarizing the above steps, update the `src/App.vue` file with following code.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
+</template>
+
+<script setup>
+  import { provide } from 'vue';
+  import { DocumentEditorComponent as EjsDocumenteditor, Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog } from '@syncfusion/ej2-vue-documenteditor';
+
+  const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+  const documenteditor = null;
+
+  provide('DocumentEditor', [Print, SfdtExport, WordExport, TextExport, Selection, Search, Editor, ImageResizer, EditorHistory, ContextMenu, OptionsPane, HyperlinkDialog, TableDialog, BookmarkDialog, TableOfContentsDialog, PageSetupDialog, StyleDialog, ListDialog, ParagraphDialog, BulletsAndNumberingDialog, FontDialog, TablePropertiesDialog, BordersAndShadingDialog, TableOptionsDialog, CellOptionsDialog, StylesDialog]);
+</script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <template>
   <ejs-documenteditor :serviceUrl='serviceUrl' :isReadOnly='false' :enablePrint='true' :enableSfdtExport='true' :enableSelection='true' :enableContextMenu='true' :enableSearch='true' :enableOptionsPane='true' :enableWordExport='true' :enableTextExport='true' :enableEditor='true' :enableImageResizer='true' :enableEditorHistory='true' :enableHyperlinkDialog='true' :enableTableDialog='true' :enableBookmarkDialog='true' :enableTableOfContentsDialog='true' :enablePageSetupDialog='true' :enableStyleDialog='true' :enableListDialog='true' :enableParagraphDialog='true' :enableFontDialog='true' :enableTablePropertiesDialog='true' :enableBordersAndShadingDialog='true' :enableTableOptionsDialog='true'> </ejs-documenteditor>
 </template>
@@ -165,17 +278,25 @@ provide: {
   @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
   @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 #### Running the DocumentEditor application
 
 Run the application using the following command.
 
 ```bash
-npm run serve
+npm run dev
 ```
 
-Web server will be initiated, Open the quick start app in the browser at port `localhost:8080`.
+or
+
+```bash
+yarn run dev
+```
+
+The output will appear as follows:
 
 ![Output](./images/vue3-documenteditor-demo.png)
 
@@ -185,53 +306,115 @@ Document Editor Container Component is also used to create, view and edit word d
 
 You have completed all the necessary configurations needed  for rendering the Syncfusion Vue component. Now, you are going to add the DocumentEditorContainer component using following steps.
 
-**Step 1:** Import the DocumentEditorContainer component in the `<script>` section of the `src/App.vue` file.
+Follow the below steps to add the Vue DocumentEditorContainer component using `Composition API` or `Options API`:
 
-```
+**Step 1:** First, import and register the DocumentEditorContainer component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<script setup>
+  import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <script>
   import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 </script>
-```
 
-**Step 2:** Register the DocumentEditorContainer component in your application.
+{% endhighlight %}
+{% endtabs %}
 
-```js
-import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
-//Component registeration
-export default {
-    name: "App",
-    components: {
-      'ejs-documenteditorcontainer' : DocumentEditorContainerComponent
-    }
-}
-```
+**Step 2:** Add the component definition in `template` section.
 
-  In the above code snippet, you have registered DocumentEditorContainer.
+{% tabs %}
+{% highlight html tabtitle="~/src/App.vue" %}
 
-**Step 3:** Add the component definition in template section.
-
-```
 <template>
   <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
 </template>
-```
 
-**Step 4:** Declare the bound properties `serviceUrl` in the `script` section.
+{% endhighlight %}
+{% endtabs %}
 
-```js
-data () {
-  return {
-    serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
-  };
-},
-provide: {
-  DocumentEditorContainer: [Toolbar]
-}
-```
+**Step 3:** Declare the bound properties `serviceUrl` in the `script` section.
 
-**Step 5:** Summarizing the above steps, update the `src/App.vue` file with following code.
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
-```
+<script setup>
+  import { provide } from 'vue';
+  import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+  const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+  const documentEditorContainer = null;
+
+  provide('DocumentEditorContainer', [Toolbar]);
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+<script>
+  import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+  //Component registeration
+  export default {
+    name: 'App',
+    components: {
+      // Declaring component
+      "ejs-documenteditorcontainer": DocumentEditorContainerComponent
+    },
+    data () {
+      return {
+        serviceUrl:'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/'
+      };
+    },
+    provide: {
+        DocumentEditorContainer: [Toolbar]
+    }
+  }
+</script>
+
+{% endhighlight %}
+{% endtabs %}
+
+**Step 4:** Summarizing the above steps, update the `src/App.vue` file with following code.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+
+<template>
+  <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
+</template>
+
+<script setup>
+  import { provide, ref } from 'vue';
+  import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+
+  const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
+  const documentEditorContainer = ref(null);
+
+  provide('DocumentEditorContainer', [Toolbar]);
+</script>
+
+<style>
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
+</style>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
 <template>
   <ejs-documenteditorcontainer :serviceUrl='serviceUrl' :enableToolbar='true'> </ejs-documenteditorcontainer>
 </template>
@@ -268,16 +451,24 @@ provide: {
   @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
   @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
-```
+
+{% endhighlight %}
+{% endtabs %}
 
 #### Running the DocumentEditorContainer application
 
 Run the application using the following command.
 
 ```bash
-npm run serve
+npm run dev
 ```
 
-Web server will be initiated, Open the quick start app in the browser at port [`localhost:8080`](http://localhost:8080/).
+or
+
+```bash
+yarn run dev
+```
+
+The output will appear as follows:
 
 ![Output](./images/vue3-documenteditorcontainer-demo.png)
