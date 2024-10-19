@@ -564,5 +564,5 @@ components: {
 
 ## See Also
 
-* [Exporting grouped records](../excel-export/excel-export-options/#exporting-grouped-records)
+* [Exporting grouped records](../excel-export/excel-export-options#exporting-grouped-records)
 * [How to customize the group caption row text in Vue Grid](https://www.syncfusion.com/forums/154055/how-to-customize-the-group-caption-row-text-in-vue-grid)
