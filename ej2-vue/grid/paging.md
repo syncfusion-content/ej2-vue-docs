@@ -482,5 +482,5 @@ export default {
 
 ## See Also
 
-* [Group with Paging](./grouping/grouping/#group-with-paging)
+* [Group with Paging](./grouping/grouping#group-with-paging)
 * [How to change loading indicator in vue Grid](./data-binding/data-binding#loading-animation)
