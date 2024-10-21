@@ -150,6 +150,23 @@ Here's a code example that demonstrates how to show a hidden column (CustomerID)
         
 {% previewsample "page.domainurl/code-snippet/grid/print/default-cs5" %}
 
+## Add a title when using Grid print function
+
+You can add a title to the header when printing the Syncfusion Grid by utilizing the [beforePrint](https://ej2.syncfusion.com/vue/documentation/api/grid/#beforeprint) event. This event allows you to customize the print layout, including the addition of a title element, ensuring that the printed document is informative and visually appealing.
+
+Here’s an example of how to add a title to your Grid when using the print function:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/default-print/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/default-print/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/print/default-print" %}
+
 ## Limitations of printing large data
 
 Printing a large volume of data all at once in the grid can have certain limitations due to potential browser performance issues. Rendering numerous DOM elements on a single page can lead to browser slowdowns or even hang the browser. The grid offers a solution to manage extensive datasets through virtualization. However, it's important to note that virtualization for both rows and columns is not feasible during the printing process.

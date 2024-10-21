@@ -227,6 +227,162 @@ export default {
         
 {% previewsample "page.domainurl/code-snippet/grid/page/default-page7" %}
 
+## Pager template
+
+The pager template in Syncfusion Grid allows you to customize the appearance and behavior of the pager element, which is used for navigation through different pages of grid data. This feature is particularly useful when you want to use custom elements inside the pager instead of the default elements.
+
+To use the pager template, you need to specify the [pagerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#template) property in your Syncfusion Grid configuration. The `pagerTemplate` property allows you to define a custom template for the pager. Within the template, you can access the [currentPage](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#currentpage), [pageSize](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagesize), [pageCount](https://ej2.syncfusion.com/vue/documentation/api/grid/pageSettings/#pagecount), **totalPage** and **totalRecordCount** values.
+
+The following example demonstrates how to render a **NumericTextBox** component in the pager using the `pagerTemplate` property:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings="initialPage" :pagerTemplate="'pagerTemplate'">
+      <template  v-slot:pagerTemplate="{ data}">
+        <div class="e-pagertemplate">
+          <div class="col-lg-12 control-section">
+            <div class="content-wrapper">
+              <ejs-numerictextbox
+                format="###.##"
+                :step="1"
+                :min="1"
+                :max="3"
+                :value="data.currentPage"
+                :change="onPageChange"
+                :width="200"
+              ></ejs-numerictextbox>
+            </div>
+          </div>
+          <div id="totalPages" class="e-pagertemplatemessage" style="margin-top:5px;margin-left:30px;border:none;display:inline-block">
+            <span class="e-pagenomsg">{{ data.currentPage }} of {{ data.totalPages }} pages ({{ data.totalRecordsCount }} items)</span>
+          </div>
+        </div>
+      </template>
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" :width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" :width="150"></e-column>
+        <e-column field="ShipCity" headerText="Ship City" :width="150"></e-column>
+        <e-column field="ShipName" headerText="Ship Name" :width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+
+<script setup>
+import { provide,ref} from "vue";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids";
+import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+import { data } from "./datasource.js";
+
+const initialPage = ref({
+  pageSize: 5,
+});
+
+const onPageChange=(args)=> {
+  initialPage.value = { currentPage: args.value };
+}
+provide('grid',  [Page]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <ejs-grid :dataSource="data" :allowPaging="true" :pageSettings="initialPage" :pagerTemplate="'pagerTemplate'">
+      <template  v-slot:pagerTemplate="{ data}">
+        <div class="e-pagertemplate">
+          <div class="col-lg-12 control-section">
+            <div class="content-wrapper">
+              <ejs-numerictextbox
+                format="###.##"
+                :step="1"
+                :min="1"
+                :max="3"
+                :value="data.currentPage"
+                :change="onPageChange"
+                :width="200"
+              ></ejs-numerictextbox>
+            </div>
+          </div>
+          <div id="totalPages" class="e-pagertemplatemessage" style="margin-top:5px;margin-left:30px;border:none;display:inline-block">
+            <span class="e-pagenomsg">{{ data.currentPage }} of {{ data.totalPages }} pages ({{ data.totalRecordsCount }} items)</span>
+          </div>
+        </div>
+      </template>
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" :width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" :width="150"></e-column>
+        <e-column field="ShipCity" headerText="Ship City" :width="150"></e-column>
+        <e-column field="ShipName" headerText="Ship Name" :width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+
+<script>
+import { GridComponent, ColumnsDirective, ColumnDirective, Page} from "@syncfusion/ej2-vue-grids";
+import { NumericTextBoxComponent} from '@syncfusion/ej2-vue-inputs';
+import { data } from './datasource.js';
+
+export default {
+  name: "App",
+  components: {
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective,
+    "ejs-numerictextbox":NumericTextBoxComponent
+  },
+  data() {
+    return {
+      data: data,
+      initialPage : { pageSize: 5 }
+    };
+  },
+  methods: {
+    onPageChange(args) {
+      this.initialPage = { currentPage: args.value };
+    }
+  },
+  provide() {
+    return {
+      grid: [Page],
+    };
+  }
+};
+</script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/page/template-cs1" %}
+
 ## Pager with page size dropdown
 
 The pager with a page size dropdown in Syncfusion Grid allows you to dynamically change the number of records displayed in the grid. This feature is useful when you want to easily customize the number of records to be shown per page.

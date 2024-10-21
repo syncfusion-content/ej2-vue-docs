@@ -105,3 +105,28 @@ In the following sample, using the `dialog` argument of the `actionComplete` eve
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/edit/default-cs11" %}
+
+## Edit dialog template from another vue page
+
+The Syncfusion Vue Grid allows you to customize the edit dialog by loading a template from another Vue page. This provides flexibility in creating custom forms and layouts for editing data within the grid.
+
+To enable the dialog template from another Vue page, use the [editSettings.template](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#template) property of the Syncfusion Grid. This property allows you to specify the template for the edit dialog, which can be defined in a separate Vue component or file.
+
+The following example demonstrates how to implement a custom edit dialog template from another Vue page.
+
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/edit-template/app.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="dialogtemp-edit (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/edit-template/dialogtemp-edit.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/edit-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="dialogtemp-composition (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/edit-template/dialogtemp-composition.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+![dialog template](../images/edit-dialog-template.png)
