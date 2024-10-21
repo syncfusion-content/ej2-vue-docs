@@ -68,5 +68,5 @@ The rest of the overflowing items for which there is no space to fit within the 
 
 ## See Also
 
-* [How to prevent content swipe selection](./how-to/prevent-content-swipe-selection/)
-* [Collapsible Tab](./how-to/create-collapsible-tabs/)
+* [How to prevent content swipe selection](./how-to/prevent-content-swipe-selection)
+* [Collapsible Tab](./how-to/create-collapsible-tabs)
