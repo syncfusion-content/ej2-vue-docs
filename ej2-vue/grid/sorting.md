@@ -112,6 +112,23 @@ The following example demonstrates how to define custom sort comparer function f
         
 {% previewsample "page.domainurl/code-snippet/grid/sort/default-cs5" %}
 
+### Display null values always at bottom 
+
+By default, null values in a Syncfusion Grid are displayed at the top when sorting in descending order and at the bottom when sorting in ascending order. However, there may be scenarios where you want to always display null values at the bottom of the grid regardless of the sort direction. This can be achieved by utilizing the [column.sortComparer](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#sortcomparer)  method. This feature is particularly useful when working with data sets where null values might need to be clearly separated from actual data entries.
+
+The example below demonstrates how to display null values at the bottom of the grid while sorting the **OrderDate** column in both ascending and descending order.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/null-date-value-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/how-to/null-date-value-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/how-to/null-date-value-cs1" %}
+
 > The customSortComparer function takes two parameters: a and b. The a and b parameters are the values to be compared. The function returns -1, 0, or 1, depending on the comparison result.
 
 ## Touch interaction

@@ -162,6 +162,31 @@ You can prevent autofill feature by setting the [autofill](https://ej2.syncfusio
         
 {% previewsample "page.domainurl/code-snippet/grid/filter/filter-menu-cs7" %}
 
+## Hide default filter icons while perform filtering through method
+
+When performing filtering programmatically using methods in the Syncfusion Vue Grid component, you may want to hide the default filter icons to provide a simpler interface.
+
+To customize the filter icon in the Grid, use the **display** property of the **filtermenu** as mentioned below
+
+```css
+.e-filtermenudiv.e-icons.e-icon-filter {
+    display: none;
+}
+```
+
+The following example demonstrate how to hide the default filter icons while filtering the **CustomerID** column programmatically using a method.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-default-filter/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/default-default-filter/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/filter/default-default-filter" %}
+
 ## Filter menu events
 
 The Syncfusion Vue Grid offers the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid#actionbegin) and [actionComplete](https://ej2.syncfusion.com/vue/documentation/api/grid#actioncomplete) events, which provide information about the actions being performed. Within the event handlers, you receive an argument named `requestType`. This argument specifies the [action](https://ej2.syncfusion.com/vue/documentation/api/grid/action/) that is being executed, such as `filterbeforeopen`, `filterafteropen`, or `filtering`. By analyzing this action type, you can implement custom logic or showcase messages.

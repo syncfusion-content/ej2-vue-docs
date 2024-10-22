@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div>
-      <ejs-button iconCss="e-icons e-play-icon" cssClass="e-flat" :isPrimary="true" :isToggle="true"
-        v-on:click="btnClick">Enable/Disable Grid</ejs-button>
+      <ejs-button iconCss="e-icons e-play-icon" :isPrimary="true" :isToggle="true"
+        @click="btnClick">Enable/Disable Grid</ejs-button>
       <div id="GridParent">
         <ejs-grid ref='Grid' :dataSource='data' :editSettings='editSettings' :toolbar='toolbar' height='273px'>
           <e-columns>
@@ -19,13 +19,13 @@
 </template>
 <script setup>
 import { provide, ref } from "vue";
-import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
+import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar, Edit } from "@syncfusion/ej2-vue-grids";
 import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { data } from './datasource.js';
 const Grid = ref(null);
 const editSettings = { allowAdding: true, allowDeleting: true, allowEditing: true };
 const toolbar = ['Add', 'Edit', 'Delete', 'Update', 'Cancel'];
-const btnClick = (args) => {
+const btnClick = () => {
   if (Grid.value.$el.classList.contains('disablegrid')) {
     Grid.value.$el.classList.remove('disablegrid');
     document.getElementById("GridParent").classList.remove('wrapper');
@@ -35,17 +35,27 @@ const btnClick = (args) => {
     document.getElementById("GridParent").classList.add('wrapper');
   }
 }
-provide('grid', [Page, Edit, Toolbar]);
+provide('grid', [ Edit, Toolbar]);
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
-
+@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 .disablegrid {
   pointer-events: none;
   opacity: 0.4;
 }
-
 .wrapper {
   cursor: not-allowed;
+}
+#GridParent
+{
+  padding-top:20px;
 }
 </style>

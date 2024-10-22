@@ -73,6 +73,25 @@ This is demonstrated in the following sample:
         
 {% previewsample "page.domainurl/code-snippet/grid/toolbar/default-cs2" %}
 
+### Customize the built-in toolbar items
+
+The Syncfusion Vue Grid component allows you to customize the built-in toolbar items to meet your specific requirements. This can include adding, removing, or modifying toolbar items, as well as handling custom actions when toolbar buttons are clicked.
+
+To customize the built-in toolbar items, you can use the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event of the grid.
+
+The following example demonstrate how to customize the toolbar by disabling and canceling the **Add** button functionlity and showing a custom message when the **Add** button of toolbar is clicked.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-toolbar/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/toolbar/default-toolbar/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/toolbar/default-toolbar" %}
+
 ## Custom toolbar items
 
 Adding custom toolbar items to the Syncfusion Vue Grid involves incorporating personalized functionality into the toolbar.
