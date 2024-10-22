@@ -509,6 +509,8 @@ The following example demonstrates how to render a Upload component in the **Emp
         
 {% previewsample "page.domainurl/code-snippet/grid/edit/default-template-upload" %}
 
+> By default, the grid saves the cell when clicking outside the editor component. If your components, like multiple popups, are dynamically rendered, the grid may not recognize them, causing the editor to close when the popup is clicked. To prevent this, apply the `edit-custom-template` class to both your main component and sub-components. If you are using Syncfusion components, set their `cssClass` property to include the 
+
 ## Render custom cell editors using external function 
 
 The Syncfusion Grid provides the ability to render custom cell editors, allowing you to add custom components to specific columns in your grid using the cell edit template feature. This feature is useful when you need to edit cell values using custom input elements or controls.

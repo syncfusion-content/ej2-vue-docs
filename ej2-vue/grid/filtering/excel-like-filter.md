@@ -398,7 +398,7 @@ The following example demonstrates how to remove the context menu option in the 
 
 ## Hide sorting option in filter dialog
 
-The Excel-like filter dialog in the Syncfusion Angular Grid includes built-in sorting options (ascending and descending) by default. To hide these options, set the **display** property of the following CSS classes to **none**, which will prevent the sorting options from appearing in the filter dialog:
+The Excel-like filter dialog in the Syncfusion Vue Grid includes built-in sorting options (ascending and descending) by default. To hide these options, set the **display** property of the following CSS classes to **none**, which will prevent the sorting options from appearing in the filter dialog:
 
 ```
 .e-excel-ascending,
