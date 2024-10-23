@@ -10,18 +10,9 @@ domainurl: ##DomainURL##
 
 # Access grid instance in Vue Grid component
 
-You can access the instance of the Vue Grid in the following way.
+The Syncfusion Vue Grid component allows you to programmatically access the grid instance, enabling you to manipulate its properties and methods. This capability is particularly useful for customizing functionalities such as filtering, sorting, and more, directly from the grid instance.
 
-```ts
-dataBound: function (args) {
-    var gridObj = this.$refs.grid1.$el.ej2_instances[0]; // get the instance of the Grid.
-    Object.assign(gridObj.filterModule.filterOperators, {
-        startsWith: "contains", // change the default operator as contains for string type column.
-    });
-}
-```
-
-In the following sample, the filter operation is performed by getting the instance of the Vue Grid component.
+The following example demonstrates how to access the grid instance and change the default filter operator for string-type columns from "startsWith" to "contains":
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

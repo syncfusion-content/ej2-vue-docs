@@ -8,10 +8,10 @@
           <e-view option='WorkWeek'></e-view>
         </e-views>
         <template v-slot:majorTemplateVue="{ data }">
-          <div>{{ majorSlotTemplate(data.date) }}</div>
+          <div>\{{ majorSlotTemplate(data.date) }}</div>
         </template>
         <template v-slot:minorTemplateVue="{ data }">
-          <div style="text-align: right; margin-right: 15px">{{ minorSlotTemplate(data.date) }}</div>
+          <div style="text-align: right; margin-right: 15px">\{{ minorSlotTemplate(data.date) }}</div>
         </template>
       </ejs-schedule>
     </div>

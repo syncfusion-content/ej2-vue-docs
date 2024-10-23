@@ -10,9 +10,7 @@ domainurl: ##DomainURL##
 
 # Enable disable grid and its actions in Vue Grid component
 
-You can enable/disable the Grid and its actions by applying/removing corresponding CSS styles.
-
-To enable/disable the grid and its actions, follow the given steps:
+You can enable or disable the Syncfusion Vue Grid and its actions by applying or removing specific CSS styles. This functionality is particularly useful in scenarios where interactions need to be restricted. Follow the steps below to implement this feature.
 
 **Step 1**: Create CSS class with custom style to override the default style of Grid.
 
@@ -26,10 +24,11 @@ To enable/disable the grid and its actions, follow the given steps:
 }
 ```
 
-**Step 2**: Add/Remove the CSS class to the Grid in the click event handler of Button.
+**Step 2**: Add/Remove the CSS class to the Grid in the [click](https://ej2.syncfusion.com/vue/documentation/api/button#click) event handler of Button.
 
-```ts
-btnClick(args) {
+{% tabs %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+btnClick() {
     if (this.$refs.Grid.$el.classList.contains('disablegrid')) {
         this.$refs.Grid.$el.classList.remove('disablegrid');
         document.getElementById("GridParent").classList.remove('wrapper');
@@ -39,9 +38,21 @@ btnClick(args) {
         document.getElementById("GridParent").classList.add('wrapper');
     }
 }
-```
+{% endhighlight %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+const btnClick = () => {
+  if (Grid.value.$el.classList.contains('disablegrid')) {
+    Grid.value.$el.classList.remove('disablegrid');
+    document.getElementById("GridParent").classList.remove('wrapper');
+  }
+  else {
+    Grid.value.$el.classList.add('disablegrid');
+    document.getElementById("GridParent").classList.add('wrapper');
+  }
+{% endhighlight %}
+{% endtabs %}
 
-In the below demo, the button click will enable/disable the Grid and its actions.
+In the example below, clicking the button will toggle the enable/disable state of the Grid and its actions:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

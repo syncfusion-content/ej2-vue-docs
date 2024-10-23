@@ -1,18 +1,22 @@
 <template>
-  <div class="col-lg-12 control-section">
-      <div>
-          <ejs-grid :dataSource='data' :emptyRecordTemplate='emptyRecordTemplate' :editSettings='editSettings' :toolbar='toolbar' :allowPaging='true'
+      <div id="app">
+          <ejs-grid :dataSource='data' :emptyRecordTemplate="'emptyRecordTemplate'" :editSettings='editSettings' :toolbar='toolbar' :allowPaging='true'
               :pageSettings='pageSettings'>
               <e-columns>
-                  <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right' :isPrimaryKey='true' :validationRules='orderidrules'></e-column>
-                  <e-column field='CustomerID' headerText='Customer ID' width='120' :validationRules='customeridrules'></e-column>
-                  <e-column field='Freight' headerText='Freight' width='180' format='C2' textAlign='Right' editType='numericedit' :validationRules='freightrules'></e-column>
+                  <e-column field='OrderID' headerText='Order ID' width='120' textAlign='Right' :isPrimaryKey='true' :validationRules='orderIDRrules'></e-column>
+                  <e-column field='CustomerID' headerText='Customer ID' width='120' :validationRules='customerIDRules'></e-column>
+                  <e-column field='Freight' headerText='Freight' width='180' format='C2' textAlign='Right' editType='numericedit' :validationRules='freightRules'></e-column>
                   <e-column field='OrderDate' headerText='Order Date' width='130' editType='datetimepickeredit' :format='formatoptions' textAlign='Right'></e-column>
-                  <e-column field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' :edit='editparams'></e-column>
+                  <e-column field='ShipCountry' headerText='Ship Country' width='150' editType='dropdownedit' :edit='editParams'></e-column>
               </e-columns>
+              <template v-slot:emptyRecordTemplate>
+                <div class='emptyRecordTemplate'>
+                    <img src="./emptyRecordTemplate.svg" class="e-emptyRecord" alt="No record">
+                    <span>There is no data available to display at the moment.</span>
+                    </div>
+             </template>
           </ejs-grid>
       </div>
-  </div>
 </template>
 
 <script>
@@ -31,16 +35,11 @@ name: "App",
           pageSettings: { pageCount: 5 },
           editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
           toolbar: ['Add', 'Edit', 'Delete', 'Update', 'Cancel'],
-          orderidrules: { required: true, number: true },
+          orderIDRrules: { required: true, number: true },
           formatoptions: { type: 'dateTime', format: 'M/d/y hh:mm a' },
-          freightrules:  { required: true, number: true },
-          editparams: { params: { dataSource: cascadeData, fields: {text:"ShipCountry",value:"ShipCountry"}}},
-          customeridrules: { required: true },
-          emptyRecordTemplate: `
-            <div class='emptyRecordTemplate'>
-                <img src="./emptyRecordTemplate.svg" class="e-emptyRecord" alt="No record">
-                <span>There is no data available to display at the moment.</span>
-            </div>`,
+          freightRules:  { required: true, number: true },
+          editParams: { params: { dataSource: cascadeData, fields: {text:"ShipCountry",value:"ShipCountry"}}},
+          customerIDRules: { required: true }
       };
   },
   provide: {
@@ -51,7 +50,15 @@ name: "App",
 </script>
 
 <style>
-  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
   .emptyRecordTemplate {
       text-align: center;
   }

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-grid ref="grid1" :dataSource="data" :allowPaging="true" :allowFiltering="true" :filterSettings="filterOptions" :dataBound="dataBound">
+        <ejs-grid ref="grid" :dataSource="data" :allowPaging="true" :allowFiltering="true" :filterSettings="filterOptions" :dataBound="dataBound">
             <e-columns>
                 <e-column field="InternalDocumentNo" headerText="InternalDocumentNo" width="180" isPrimaryKey="true" headerTextAlign="center">
                 </e-column>
@@ -63,8 +63,8 @@ components: {
         };
     },
     methods: {
-        dataBound: function (args) {
-            var gridObj = this.$refs.grid1.$el.ej2_instances[0];
+        dataBound: function () {
+            var gridObj = this.$refs.grid.ej2Instances;
             Object.assign(gridObj.filterModule.filterOperators, {
                 startsWith: "contains", // change the default operator as contains for string type column
             });
@@ -76,5 +76,13 @@ components: {
 };
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-grids/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>

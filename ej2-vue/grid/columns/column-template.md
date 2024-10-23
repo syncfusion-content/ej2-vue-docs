@@ -228,6 +228,29 @@ In the following code, we rendered the Chips component in the Grid **First Name*
         
 {% previewsample "page.domainurl/code-snippet/grid/column/template-chip" %}
 
+### Render ProgressBar component in a column
+
+The Syncfusion Grid component supports rendering the [Progress Bar](https://ej2.syncfusion.com/vue/documentation/progressbar/getting-started) component within a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. Displaying the `Progress Bar` component in a grid column allows users to visually track the progress of tasks or operations associated with specific records. This feature is particularly useful for applications involving processes such as data loading, task completion, or other progressive activities.
+
+In the following code, the `Progress Bar` component render in the Grid **Freight** column by defining the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property.
+
+```
+<div>
+  <ejs-progressbar id='data.OrderID' type='Linear' height='60' :value='data.Freight' trackThickness=24 progressThickness='20'></ejs-progressbar>
+</div>
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-template-progress/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-template-progress/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/default-template-progress" %}
+
 ## Using condition template
 
 The conditional column [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) allows you to display template elements based on specific conditions.
@@ -378,3 +401,23 @@ components: {
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/column/custom-helper-template" %}
+
+## Dynamically adding template column
+
+The Syncfusion Grid component allows you to dynamically add template columns at runtime. This capability is particularly useful when the structure of the grid needs to be modified based on individual interactions or other dynamic conditions.
+
+Dynamically adding template columns involves creating and inserting columns with custom templates after the grid has been initialized. This approach provides flexibility in presenting data in a highly customizable manner.
+
+The following example demonstrates how to add template column using external button click. In this example, the **ShipCountry** column with a [Dropdownlist](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) is added in column [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template), and an icon is displayed using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertemplate) for the **ShipCountry** column. 
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-dynamically/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/default-dynamically/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/default-dynamically" %}
