@@ -73,7 +73,7 @@ When working with large datasets, it's beneficial to set a display limit for mem
 
 Using the pivot table's built-in grouping feature to group date, number, and string data type fields is not often recommended.
 
-Here is an example below of how the [groupSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/iGroupSettings/#igroupsettings) tag has been used to configure grouping for the available fields using code-behind. The date and number grouping have been set to the fields "Date" and "Id", respectively.
+Here is an example below of how the [groupSettings](https://ej2.syncfusion.com/vue/documentation/api/pivotview/groupSettings/) tag has been used to configure grouping for the available fields using code-behind. The date and number grouping have been set to the fields "Date" and "Id", respectively.
 
 It obviously impacts the overall performance during pivot table rendering because it always consumes the input raw data, splits, redefines, and provides modified input raw data based on the fields in the report that will be used for further pivot calculations.
 
