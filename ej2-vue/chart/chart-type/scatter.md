@@ -19,7 +19,7 @@ To render a [scatter](https://www.syncfusion.com/vue-components/vue-charts/chart
 * **Inject the ScatterSeries module**: Use the `provide: { chart: [ScatterSeries]}` method to inject the `ScatterSeries` module into your chart. This step is essential, as it ensures that the necessary functionalities for rendering the scatter series are available in your chart.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chart/series/scatter-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
