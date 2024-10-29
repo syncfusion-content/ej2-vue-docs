@@ -18,7 +18,7 @@ The default color of series or points can be customized by providing a custom co
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/apperance/appear1/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtle="Options API (~/src/App.vue)" %}
 {% include code-snippet/chart3d/apperance/appear1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
@@ -34,10 +34,10 @@ The color of an individual data point can be customized using the below options.
 The color for the points can be bound from the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#datasource) for the series by utilizing the [`pointColorMapping`](https://ej2.syncfusion.com/vue/documentation/api/chart3d/series3D/#pointcolormapping) property.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %} 
 {% include code-snippet/chart3d/apperance/appear2/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" }
 {% include code-snippet/chart3d/apperance/appear2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
