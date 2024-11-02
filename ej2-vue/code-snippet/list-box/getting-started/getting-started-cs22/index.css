@@ -1,0 +1,21 @@
+
+
+
+
+
+/* Custom css for horizontal listbox */
+.e-horizontal-listbox .e-list-parent {
+  display: inline-flex;
+  align-items: center;
+}
+
+.e-horizontal-listbox {
+  overflow-y: hidden;
+  height: 100px;
+}
+
+.e-horizontal-listbox .e-list-parent .e-list-item {
+  width: max-content;
+  line-height: 100px;
+  height: 100px;
+}
