@@ -222,15 +222,19 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings" :showFieldList="showFieldList" :showGroupingBar="showGroupingBar" :allowCalculatedField="allowCalculatedField"></ejs-pivotview>
+    <div id="app">
+        <ejs-pivotview :height="height" :width="width" :dataSourceSettings="dataSourceSettings"
+            :showFieldList="showFieldList" :showGroupingBar="showGroupingBar"
+            :allowCalculatedField="allowCalculatedField"></ejs-pivotview>
+    </div>
 </template>
 
 <script setup>
-  export default {
-    data() {
-      return {
-        dataSourceSettings: {
-          dataSource: [
+    import { provide } from "vue";
+    import { PivotViewComponent as EjsPivotview, GroupingBar, FieldList, CalculatedField } from "@syncfusion/ej2-vue-pivotview";
+
+    const dataSourceSettings = {
+        dataSource: [
             { Amount: 5100, Country: "Canada", Date: "FY 2006", Product: "Car", Quantity: 21, State: "Alberta" },
             { Amount: 1900, Country: "France", Date: "FY 2007", Product: "Car", Quantity: 23, State: "Alberta" },
             { Amount: 1000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 29, State: "Alberta" },
@@ -239,34 +243,33 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
             { Amount: 2000, Country: "Germany", Date: "FY 2008", Product: "Car", Quantity: 31, State: "British Columbia" },
             { Amount: 1300, Country: "Canada", Date: "FY 2005", Product: "Car", Quantity: 45, State: "Brunswick" },
             { Amount: 3400, Country: "France", Date: "FY 2006", Product: "Car", Quantity: 47, State: "Brunswick" },
-            { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" },
-          ],
-          rows: [{ name: 'Country' }],
-          columns: [{ name: 'Date' }],
-          values: [{ name: 'Amount' }, { name: 'Total', type: 'CalculatedField' }],
-          formatSettings: [{ name: 'Amount', format: 'C1' }],
-          calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
-        },
-        showFieldList: true,
-        showGroupingBar: true,
-        allowCalculatedField: true,
-        height: '350px',
-        width: '100%'
-      };
-    }
-  };
-</script>
+            { Amount: 2300, Country: "Germany", Date: "FY 2007", Product: "Car", Quantity: 43, State: "Brunswick" }
+        ],
+        rows: [{ name: 'Country' }],
+        columns: [{ name: 'Date' }],
+        values: [{ name: 'Amount' }, { name: 'Total', type: 'CalculatedField' }],
+        formatSettings: [{ name: 'Amount', format: 'C1' }],
+        calculatedFieldSettings: [{ name: 'Total', formula: '"Sum(Amount)"+"Sum(Quantity)"' }]
+    };
+    const showFieldList = true;
+    const showGroupingBar = true;
+    const allowCalculatedField = true;
+    const height = 350;
+    const width = '100%';
 
+    provide('pivotview', [GroupingBar, FieldList, CalculatedField]);
+
+</script>
 <style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-pivotview/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -315,7 +318,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
       };
     },
     // Injecting the required modules for additional features.
-    pivotview: [GroupingBar, FieldList, CalculatedField]
+    provide: { pivotview: [ FieldList, GroupingBar, CalculatedField] }
   };
 </script>
 
