@@ -16,6 +16,10 @@ The `Composition API` is a new feature introduced in Vue.js 3 that provides an a
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, lifecycle hooks, and more.
 
+To get start quickly with Vue Uploader component, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=4ntudYHuCNU" %}
+
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
