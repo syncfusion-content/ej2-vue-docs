@@ -17,6 +17,10 @@ The uploader component allows you to upload the files asynchronously. The upload
 
 The File can be uploaded automatically or manually. For more information, you can refer to the [Auto Upload](https://ej2.syncfusion.com/vue/documentation/api/uploader/#autoupload) section from the documentation.
 
+To get start quickly with Async in Vue Uploader component, you can check on this video:
+
+{% youtube "https://www.youtube.com/watch?v=wi8AxEeZJLA" %}
+
 ## Multiple file upload
 
 By Default, the uploader component allows you to select and upload multiple files simultaneously. The selected files are organized in a list for every file selection until you clear it by clicking clear button that is shown in footer.
