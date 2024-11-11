@@ -5,17 +5,6 @@
     let connectors = [{
      // Name of the connector
      id: "connector1",
-     style: {
-         strokeColor: '#6BA5D7',
-         fill: '#6BA5D7',
-         strokeWidth: 2
-     },
-     targetDecorator: {
-         style: {
-             fill: '#6BA5D7',
-             strokeColor: '#6BA5D7'
-         }
-     },
      // Sets source and target points
      sourcePoint: {
          x: 100,
@@ -35,7 +24,7 @@ new Vue({
     </div>
 `,
 
-     name: 'app'
+     name: 'app',
      data() {
          return {
              width: "100%",

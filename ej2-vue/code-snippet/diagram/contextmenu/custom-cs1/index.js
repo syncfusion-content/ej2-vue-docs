@@ -1,120 +1,122 @@
 
-    import Vue from 'vue';
-    import { DiagramPlugin,DiagramContextMenu,Diagram ,DiagramBeforeMenuOpenEventArgs,
-    MenuEventArgs,} from '@syncfusion/ej2-vue-diagrams';
-    Diagram.Inject(DiagramContextMenu);
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node1',
-        width: 100,
-        height: 100,
-        offsetX: 100,
-        offsetY: 100,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-        annotations: [{
-            id: 'label1',
-            content: 'Rectangle1',
-            offset: {
-                x: 0.5,
-                y: 0.5
-            },
-            style: {
-                color: 'white'
-            }
-        }]
-    },
-    {
-        id: 'node2',
-        width: 100,
-        height: 100,
-        offsetX: 300,
-        offsetY: 100,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-        annotations: [{
-            id: 'label2',
-            content: 'Rectangle2',
-            offset: {
-                x: 0.5,
-                y: 0.5
-            },
-            style: {
-                color: 'white'
-            }
-        }]
-    }
-    ];
-    let connectors = [{
-        id: 'connector1',
-        sourceID: 'node1',
-        targetID: 'node2',
-        type: 'Straight',
-        style: {
-            strokeColor : '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth :  2,
-            targetDecorator: {
-                style: {
-                    fill : '#6BA5D7',
-                    strokeColor :   '#6BA5D7'
-                }
-            }
-        }
-    } ]
-    
+import Vue from 'vue';
+import {
+    DiagramPlugin, DiagramContextMenu, Diagram, DiagramBeforeMenuOpenEventArgs,
+    MenuEventArgs,
+} from '@syncfusion/ej2-vue-diagrams';
+Diagram.Inject(DiagramContextMenu);
+Vue.use(DiagramPlugin);
+
+let nodes = [{
+    id: 'node1',
+    width: 100,
+    height: 100,
+    offsetX: 100,
+    offsetY: 100,
+    annotations: [{
+        id: 'label1',
+        content: 'Rectangle1',
+    }]
+},
+{
+    id: 'node2',
+    width: 100,
+    height: 100,
+    offsetX: 300,
+    offsetY: 100,
+    annotations: [{
+        id: 'label2',
+        content: 'Rectangle2',
+    }]
+}
+];
+
 new Vue({
-	el: '#app',
-	template: `
+    el: '#app',
+    template: `
     <div id="app">
-        <ejs-diagram id="diagram" ref="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :contextMenuSettings='contextMenuSettings':contextMenuOpen="contextMenuOpen" :contextMenuClick="contextMenuClick" ></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagram"  :width='width' :height='height' :nodes='nodes' :contextMenuSettings='contextMenuSettings' :contextMenuClick="contextMenuClick" ></ejs-diagram>
     </div>
 `,
 
-        name: 'app'
+    name: 'app',
         data() {
-            return {
-                width: "100%",
-                height: "350px",
-                nodes: nodes,
-                connectors: connectors,
-                contextMenuSettings: {
-            //Enables the context menu
-                    show: true,
-                items: [{
-                    text: 'delete',
-                    id: 'delete',
-                }],
-            // Hides the default context menu items
-            showCustomMenuOnly: false,
-        },
-        contextMenuOpen: (args) => {
-            var diagram = this.$refs.diagram.ej2Instances;
-                //do your custom action here.
-                for (let item of args.items) {
-                    if (item.text === 'delete') {
-                        if (!diagram.selectedItems.nodes.length && !diagram.selectedItems.connectors.length) {
-                            args.hiddenItems.push(item.text);
-                        }
-                    }
-                }
+        return {
+            width: "100%",
+            height: "350px",
+            nodes: nodes,
+            contextMenuSettings: {
+                //Enables the context menu
+                show: true,
+                items: [
+                    {
+                        // Text to be displayed
+                        text: "Fill",
+                        items: [
+                            { id: "red", text: "Red" },
+                            { id: "yellow", text: "Yellow" },
+                            { id: "green", text: "Green" },
+                            { id: "blue", text: "Blue" },
+                        ],
+                        //Sets the id for the item
+                        id: "fill",
+                        target: ".e-elementcontent",
+                        // Sets the css icons for the item
+                        iconCss: "e-icons e-paint-bucket",
+                    },
+                    {
+                        text: "Annotation color",
+                        id: "annotationColor",
+                        items: [
+                            { id: "pink", text: "Pink" },
+                            { id: "orange", text: "Orange" },
+                            { id: "violet", text: "Violet" },
+                            { id: "brown", text: "Brown" },
+                        ],
+                        target: ".e-elementcontent",
+                        iconCss: "e-icons e-font-color",
+                    },
+                    {
+                        text: "Clone",
+                        id: "clone",
+                        target: ".e-elementcontent",
+                        iconCss: "e-icons e-copy",
+                    },
+                ],
+                // Hides the default context menu items
+                showCustomMenuOnly: true,
             },
             contextMenuClick: (args) => {
                 var diagram = this.$refs.diagram.ej2Instances;
-                //do your custom action here.
-                if (args.item.id === 'delete') {
-                    if ((diagram.selectedItems.nodes.length + diagram.selectedItems.connectors.length) > 0) {
-                        diagram.cut();
+                let selectedNode = diagram.selectedItems.nodes[0];
+                if (
+                    selectedNode &&
+                    args.item.id !== "fill" &&
+                    args.item.id !== "annotationColor"
+                ) {
+                    if (
+                        args.item.text === "Red" ||
+                        args.item.text === "Blue" ||
+                        args.item.text === "Yellow" ||
+                        args.item.text === "Green"
+                    ) {
+                        selectedNode.style.fill = args.item.text;
+                        diagram.dataBind();
+                    } else if (
+                        args.item.text === "Pink" ||
+                        args.item.text === "Violet" ||
+                        args.item.text === "Orange" ||
+                        args.item.text === "Brown"
+                    ) {
+                        selectedNode.annotations[0].style.fill = args.item.text;
+                        diagram.dataBind();
+                    } else {
+                        diagram.copy();
+                        diagram.paste();
                     }
                 }
             }
-            }
         }
-    
+    }
+
 });

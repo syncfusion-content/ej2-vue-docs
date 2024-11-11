@@ -10,10 +10,6 @@
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the connector
         annotations: [{
             content: 'Task1',
@@ -29,12 +25,26 @@
             }
         }]
     }]
+
+    let connectors = [{
+        sourcePoint: { x: 200, y: 100 },
+        targetPoint: { x: 500, y: 300 },
+        type: 'Orthogonal',
+        //Path annotation offset
+        annotations: [
+            {
+            content: 'annotation',
+            offset: 0.2,
+            margin: { left: 40 },
+          },
+        ],
+    }]
     
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' ></ejs-diagram>
     </div>
 `,
 
@@ -44,6 +54,7 @@ new Vue({
                 width: "100%",
                 height: "350px",
                 nodes: nodes,
+                connectors: connectors
             }
         }
     

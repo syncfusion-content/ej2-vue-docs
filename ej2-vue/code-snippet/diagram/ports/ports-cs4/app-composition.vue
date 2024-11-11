@@ -1,79 +1,104 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
-            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-button v-on:click="getInEdges">Get InEdges</ejs-button>
+    <ejs-button v-on:click="getOutEdges">Get OutEdges</ejs-button>
+    <ejs-diagram
+      id="diagram"
+      ref="diagram"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+      :connectors="connectors"
+    ></ejs-diagram>
+  </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram, PortVisibility,PortConnectionDirection } from '@syncfusion/ej2-vue-diagrams';
+import { onMounted, ref } from "vue";
+import {
+  DiagramComponent as EjsDiagram,
+  PortVisibility,
+} from "@syncfusion/ej2-vue-diagrams";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
-let port1 = {
-    style: {
-        strokeColor: 'black',
-        fill: 'yellow'
-    }
-}
-port1.shape = 'Square';
-port1.visibility = PortVisibility.Visible
- // Specify the connection Direction
-port1.connectionDirection='Right',
-port1.id = 'port1';
-port1.offset = {
-    x: 0.5,
-    y: 0.5
-};
-let port2 = {
-    style: {
-        strokeColor: 'black',
-        fill: 'yellow'
-    }
-};
-port2.offset = {
-    x: 0,
-    y: 0
-};
-port2.id = 'port2';
-port2.visibility = PortVisibility.Visible
-
- // Specify the connection Direction
-port1.connectionDirection='Left',
-port2.shape = 'Square';
-
-let nodes = [{
-    id: 'node',
+let diagramInstance;
+const diagram = ref(null);
+const nodes = [
+  {
+    id: "node1",
+    offsetX: 250,
+    offsetY: 250,
     width: 100,
     height: 100,
-    offsetX: 600,
-    offsetY: 300,
-    ports: [port1]
-},
-{
-    id: 'node1',
+    ports: [
+      {
+        id: "port1",
+        offset: { x: 0, y: 0.5 },
+        visibility: PortVisibility.Visible,
+      },
+      {
+        id: "port2",
+        offset: { x: 0.5, y: 0 },
+        visibility: PortVisibility.Visible,
+      }
+    ],
+  },
+  {
+    id: "node2",
+    offsetX: 250,
+    offsetY: 400,
     width: 100,
     height: 100,
-    offsetX: 800,
-    offsetY: 200,
-    ports: [port2]
-},
+    ports: [
+      {
+        id: "port3",
+        offset: { x: 0, y: 0.5},
+        visibility: PortVisibility.Visible,
+      },
+      {
+        id: "port4",
+        offset: { x: 0.5, y: 1},
+        visibility: PortVisibility.Visible,
+      }
+    ],
+  },
 ];
-let connectors = [{
-    id: "connector1",
-    type: 'Orthogonal',
-    sourceID: 'node',
-    targetID: 'node1',
-    sourcePortID: 'port1',
-    targetPortID: 'port2'
-}]
+const connectors = [
+  {
+      id: 'connector1',
+      sourceID: 'node1',
+      targetID: 'node2',
+      type: 'Orthogonal',
+      sourcePortID: 'port1',
+      targetPortID: 'port3',
+      annotations: [{ content: 'connector1' }],
+    },
+    {
+      id: 'connector2',
+      sourceID: 'node2',
+      targetID: 'node1',
+      type: 'Orthogonal',
+      sourcePortID: 'port4',
+      targetPortID: 'port2',
+      annotations: [{ content: 'connector2' }],
+    },
+];
 
 const width = "100%";
-const height = "350px";
-const getNodeDefaults = (node) => {
-    node.height = 100;
-    node.width = 100;
-    node.style.fill = '#6BA5D7';
-    node.style.strokeColor = 'white';
-    return node;
-}
+const height = "600px";
+
+onMounted(function () {
+  diagramInstance = diagram.value.ej2Instances;
+});
+
+const getInEdges = function () {
+    let port1 = diagramInstance.nodes[0].ports[1];
+    console.log(port1.inEdges[0]);
+};
+
+const getOutEdges = function () {
+    let port1 = diagramInstance.nodes[0].ports[0];
+    console.log(port1.outEdges[0]);
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

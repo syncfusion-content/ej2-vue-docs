@@ -19,7 +19,7 @@ let connectors = [{
 }];
 
 const width = "100%";
-const height = "350px";
+const height = "450px";
 const enableConnectorSplit = true;
 </script>
 <style>

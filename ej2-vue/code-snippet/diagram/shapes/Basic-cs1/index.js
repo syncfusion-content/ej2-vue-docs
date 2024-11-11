@@ -15,11 +15,6 @@
             shape: 'Rectangle',
             cornerRadius: 10
         },
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
-    // Text(label) added to the node
 }]
 
 new Vue({
@@ -34,7 +29,7 @@ new Vue({
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
         }
     }

@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <button @click="add">add</button>
+        <button @click="remove">remove</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'></ejs-diagram>
     </div>
 </template>
@@ -11,17 +13,19 @@ const diagram = ref(null);
 const connector = {
     // Name of the connector
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
+    // Sets source and target points
+    sourcePoint: {
+        x: 100,
+        y: 100
     },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
+    targetPoint: {
+        x: 200,
+        y: 200
+    }
+}
+const connectoradd = {
+    // Name of the connector
+    id: "connector",
     // Sets source and target points
     sourcePoint: {
         x: 100,
@@ -40,6 +44,13 @@ onMounted(function () {
     // Adds to the diagram
     diagramInstance.add(connector)
 })
+
+const add = function () {
+diagram.value.ej2Instances.add(connectoradd)
+}
+const remove = function () {
+diagram.value.ej2Instances.remove(connectoradd)
+}
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

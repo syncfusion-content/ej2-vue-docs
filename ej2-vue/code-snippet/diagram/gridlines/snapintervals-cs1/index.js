@@ -1,6 +1,6 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin,SnapSettingsModel,SnapConstraints,Snapping,Diagram } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,SnapConstraints,Snapping,Diagram } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     Diagram.Inject(Snapping);
     let nodes = [{
@@ -11,7 +11,7 @@
         offsetX: 100,
         offsetY: 100
     }]
-    let snapSettings: SnapSettingsModel = {
+    let snapSettings = {
     horizontalGridlines: {
         // Defines the snap interval for object
         snapIntervals: [10]
@@ -31,7 +31,7 @@ new Vue({
     </div>
 `,
 
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",

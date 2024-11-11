@@ -9,15 +9,11 @@ import { DiagramComponent as EjsDiagram, AnnotationConstraints } from '@syncfusi
 const nodes = [{
     id: 'node1',
     // Position of the node
-    offsetX: 100,
-    offsetY: 100,
+    offsetX: 250,
+    offsetY: 250,
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the annotation for the node
     annotations: [{
         content: 'Annotation Text',
@@ -26,8 +22,8 @@ const nodes = [{
     }]
 }];
 
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "600px";
 
 </script>
 <style>

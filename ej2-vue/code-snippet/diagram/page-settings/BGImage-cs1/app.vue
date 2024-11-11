@@ -14,7 +14,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             pageSettings: {
                 orientation: 'Landscape',
                 showPageBreaks: true,
@@ -22,17 +22,12 @@ export default {
                 background: {
                     source: 'https://www.w3schools.com/images/w3schools_green.jpg',
                     // Defines the scale values for the background image
-                    scale: 'Meet',
+                    scale: 'Slice',
                     // Defines the align values for the background image
                     align: 'XMinYMin'
                 },
                 width: 300,
                 height: 300,
-                margin: {
-                    left: 10,
-                    top: 10,
-                    bottom: 10
-                },
             }
         }
     }

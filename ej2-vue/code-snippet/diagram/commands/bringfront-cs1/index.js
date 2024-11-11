@@ -1,71 +1,58 @@
 
-    import Vue from 'vue';
-    import { DiagramPlugin ,NodeModel,ConnectorModel} from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node1',
-        width: 90,
-        height: 60,
-        offsetX: 100,
-        offsetY: 100,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    },
-    {
-        id: 'node2',
-        width: 90,
-        height: 60,
-        offsetX: 240,
-        offsetY: 100,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    },
-    {
-        id: 'node3',
-        width: 90,
-        height: 60,
-        offsetX: 160,
-        offsetY: 90,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    }
+import Vue from 'vue';
+import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+Vue.use(DiagramPlugin);
+
+let diagramInstance;
+
+let nodes = [{
+    id: "node1",
+    width: 90,
+    height: 70,
+    offsetX: 120,
+    offsetY: 100,
+},
+{
+    id: "node2",
+    width: 90,
+    height: 70,
+    offsetX: 150,
+    offsetY: 120,
+},
+{
+    id: "node3",
+    width: 90,
+    height: 70,
+    offsetX: 170,
+    offsetY: 150,
+},
 ];
-    
+
 new Vue({
-	el: '#app',
-	template: `
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
-    </div>
+    el: '#app',
+    template: `
+<div id="app">
+     <button @click="bringToFront"> Bring To Front</button>
+    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+</div>
 `,
 
-        name: 'app'
-        data() {
-            return {
-                width: "100%",
-                height: "350px",
-                nodes: nodes,
-            }
+    name: 'app'
+    data() {
+        return {
+            width: "100%",
+            height: "350px",
+            nodes: nodes,
         }
-        mounted: function() {
-            let diagramInstance: Diagram;
-            let diagramObj: any = document.getElementById("diagram");
-            diagramInstance = diagramObj.ej2_instances[0];
-            let selArray: (NodeModel)[] = [];
-            selArray.push(diagramInstance.nodes[2]);
-            //Selects the nodes
-            diagramInstance.select(selArray);
-            //Brings to front
+    },
+    methods: {
+        bringToFront: function () {
             diagramInstance.bringToFront();
-        }
-    
+        },
+    },
+    mounted() {
+        let diagramObj = document.getElementById("diagram");
+        diagramInstance = diagramObj.ej2_instances[0];
+    }
+
 });

@@ -23,8 +23,8 @@ const nodes = [{
         fill: 'none'
     }
 }];
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "500px";
 
 </script>
 <style>

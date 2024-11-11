@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :rulerSettings='rulerSettings'
             :scrollSettings='scrollSettings'></ejs-diagram>
     </div>
 </template>
@@ -10,11 +10,7 @@ import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 let nodes = [{
     id: 'Start',
     width: 100, height: 100,
-    offsetX: 350, offsetY: 350,
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    }
+    offsetX: 250, offsetY: 250,
 }];
 
 export default {
@@ -25,14 +21,15 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
+            rulerSettings: { showRulers: true },
             // set the autoScrollBorder
             scrollSettings: {
                 canAutoScroll: true,
                 scrollLimit: 'Infinity',
-                //Sets the scroll limit
-                padding: { right: 50, bottom: 50 }
+                //Sets the scroll padding
+                padding: { left: 100, top: 100 }
             },
         }
     }

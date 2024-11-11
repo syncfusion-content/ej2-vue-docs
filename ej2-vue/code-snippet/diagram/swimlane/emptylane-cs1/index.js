@@ -7,7 +7,7 @@
                 type: 'SwimLane',
                 orientation: 'Horizontal',
                 header: {
-                    annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: '#111111' } },
+                    annotation: { content: 'ONLINE PURCHASE STATUS' },
                     height: 50, style: { fontSize: 11 },
                 },
                 // initialize the lane of swimlane

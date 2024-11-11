@@ -50,6 +50,7 @@ let connectors = [{
     }, {
         id: 'connector2',
         type: 'Straight',
+        bridgeSpace: 20,
         sourcePoint: {
             x: 200,
             y: 130
@@ -62,6 +63,7 @@ let connectors = [{
     {
         id: 'connector3',
         type: 'Straight',
+        bridgeSpace: 20,
         sourcePoint: {
             x: 200,
             y: 170
@@ -77,11 +79,11 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :constraints='constraints' :getNodeDefaults='getNodeDefaults' :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' :constraints='constraints' :getNodeDefaults='getNodeDefaults' ></ejs-diagram>
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",
@@ -96,15 +98,6 @@ new Vue({
                 node.style.strokeColor = 'white';
                 return node;
             },
-            getConnectorDefaults: (obj) => {
-                obj.style.strokeColor = '#6BA5D7';
-                obj.style.fill = '#6BA5D7';
-                obj.style.strokeWidth = 2;
-                obj.targetDecorator.style.fill = '#6BA5D7';
-                obj.targetDecorator.style.strokeColor = '#6BA5D7';
-                return obj;
-            },
-
         }
     }
 

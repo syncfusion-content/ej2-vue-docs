@@ -18,10 +18,6 @@ const nodes = [{
         type: 'Flow',
         shape: 'Document'
     },
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
 }];
 
 export default {
@@ -32,7 +28,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
         }
     }

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <ejs-diagram id="diagram" :width='width' :height='height' :connectors='connectors'
-            :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+          ></ejs-diagram>
     </div>
 </template>
 <script>
@@ -45,15 +45,7 @@ export default {
         return {
             width: "100%",
             height: "350px",
-            connectors: connectors,
-            getConnectorDefaults: (obj) => {
-                obj.style.strokeColor = '#6BA5D7';
-                obj.style.fill = '#6BA5D7';
-                obj.style.strokeWidth = 2;
-                obj.targetDecorator.style.fill = '#6BA5D7';
-                obj.targetDecorator.style.strokeColor = '#6BA5D7';
-                return obj;
-            }
+            connectors: connectors, 
         }
     }
 }

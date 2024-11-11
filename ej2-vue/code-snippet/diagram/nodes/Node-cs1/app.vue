@@ -28,7 +28,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "700px",
             nodes: nodes,
         }
     }

@@ -9,16 +9,13 @@
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
     }]
     
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
+        <button @click="addAnnotation">Add Annotation</button>
         <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
     </div>
 `,
@@ -31,17 +28,18 @@ new Vue({
                 nodes: nodes,
             }
         }
-        mounted: function() {
-            let diagramInstance: Diagram;
-            let diagramObj: any = document.getElementById("diagram");
-            diagramInstance = diagramObj.ej2_instances[0];
-            let annotation: ShapeAnnotationModel[] = [{
-                id: 'label1',
-                content: 'Annotation'
-            }]
-            //Method to add labels at run time
-            diagramInstance.addLabels(diagramInstance.nodes[0], annotation);
-            diagramInstance.dataBind();
-        }
+        methods: {
+            addAnnotation: function() {
+                let diagramInstance;
+                let diagramObj = document.getElementById("diagram");
+                diagramInstance = diagramObj.ej2_instances[0];
+                let annotation = [{
+                    id: 'label1',
+                    content: 'Annotation'
+                }]
+                diagramInstance.addLabels(diagramInstance.nodes[0], annotation);
+                diagramInstance.dataBind();
+            }
+        },
     
 });

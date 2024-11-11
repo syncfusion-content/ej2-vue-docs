@@ -2,7 +2,7 @@
     <div id="app">
         <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
             :constraints='constraints' :getNodeDefaults='getNodeDefaults'
-            :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+            ></ejs-diagram>
     </div>
 </template>
 <script setup>
@@ -56,6 +56,7 @@ const connectors = [{
 }, {
     id: 'connector2',
     type: 'Straight',
+    bridgeSpace: 20,
     sourcePoint: {
         x: 200,
         y: 130
@@ -68,6 +69,7 @@ const connectors = [{
 {
     id: 'connector3',
     type: 'Straight',
+    bridgeSpace: 20,
     sourcePoint: {
         x: 200,
         y: 170
@@ -89,15 +91,6 @@ const getNodeDefaults = (node) => {
     node.style.strokeColor = 'white';
     return node;
 }
-const getConnectorDefaults = (obj) => {
-    obj.style.strokeColor = '#6BA5D7';
-    obj.style.fill = '#6BA5D7';
-    obj.style.strokeWidth = 2;
-    obj.targetDecorator.style.fill = '#6BA5D7';
-    obj.targetDecorator.style.strokeColor = '#6BA5D7';
-    return obj;
-}
-
 provide('diagram', [ConnectorBridging]);
 </script>
 <style>

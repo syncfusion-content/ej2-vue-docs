@@ -1,74 +1,95 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
-    </div>
+  <div id="app">
+    <label>Ctrl + X</label><ejs-button v-on:click="cut">Cut </ejs-button>
+    <label>Ctrl + C</label><ejs-button v-on:click="copy">Copy </ejs-button>
+    <label>Ctrl + V</label><ejs-button v-on:click="paste">Paste </ejs-button>
+    <ejs-button v-on:click="pasteDefinedObject">Paste defined Object </ejs-button>
+    <ejs-diagram
+      id="diagram"
+      ref="diagram"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+      :connectors="connectors"
+    ></ejs-diagram>
+  </div>
 </template>
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
-let nodes = [{
+let nodes = [
+  {
     id: 'node1',
-    width: 90,
-    height: 60,
-    offsetX: 100,
+    width: 100,
+    height: 80,
+    offsetX: 140,
     offsetY: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white',
-        strokeWidth: 1
-    },
-},
-{
+    annotations: [{ content: 'Node1' }],
+  },
+  {
     id: 'node2',
-    width: 90,
+    width: 100,
     height: 60,
-    offsetX: 240,
-    offsetY: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white',
-        strokeWidth: 1
-    },
-}
+    offsetX: 140,
+    offsetY: 200,
+    annotations: [{ content: 'Node2' }],
+  },
+  {
+    id: 'node3',
+    width: 200,
+    height: 30,
+    offsetX: 140,
+    offsetY: 300,
+    annotations: [{ content: 'Node3' }],
+  },
 ];
-let connectors = [{
-    id: 'connector1',
-    sourceID: 'node1',
-    targetID: 'node2',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2,
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        }
-    }
-}]
 export default {
-    name: "App",
-    components: {
-        "ejs-diagram": DiagramComponent
+  name: 'App',
+  components: {
+    'ejs-diagram': DiagramComponent,
+    'ejs-button': ButtonComponent,
+  },
+  data() {
+    return {
+      width: '100%',
+      height: '600px',
+      nodes: nodes,
+    };
+  },
+  methods: {
+    cut: function () {
+      var diagramInstance = this.$refs.diagram.ej2Instances;
+      diagramInstance.cut();
     },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            nodes: nodes,
-            connectors: connectors
-        }
+    copy: function () {
+      var diagramInstance = this.$refs.diagram.ej2Instances;
+      diagramInstance.copy();
     },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        diagramInstance.select([diagramInstance.nodes[0], diagramInstance.nodes[1], diagramInstance.connectors[0]]);
-        //copies the selected nodes
-        diagramInstance.copy();
-        //pastes the copied objects
-        diagramInstance.paste(diagramInstance.copy());
-    }
-}
+    paste: function () {
+      var diagramInstance = this.$refs.diagram.ej2Instances;
+      diagramInstance.paste();
+    },
+    pasteDefinedObject: function () {
+      var diagramInstance = this.$refs.diagram.ej2Instances;
+      let nodes = [
+        {
+          id: 'n1',
+          offsetX: 400,
+          offsetY: 100,
+          width: 100,
+        },
+        {
+          id: 'n2',
+          offsetX: 400,
+          offsetY: 200,
+          width: 100,
+        },
+      ];
+      diagramInstance.paste(nodes);
+    },
+  },
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

@@ -7,18 +7,22 @@
 import { DiagramComponent, BpmnDiagrams } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [{
-    // Position of the node
-    offsetX: 250,
-    offsetY: 250,
-    // Size of the node
-    width: 100,
-    height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
-    // Text(label) added to the node
-}]
+  // Position of the node
+  offsetX: 250,
+  offsetY: 250,
+  // Size of the node
+  width: 100,
+  height: 100,
+  //Sets type as Bpmn and shape as Event
+  shape: {
+      type: 'Bpmn',
+      shape: 'Event',
+      // set the event type as End
+      event: {
+          event: 'End'
+      }
+  },
+},]
 export default {
     name: "App",
     components: {

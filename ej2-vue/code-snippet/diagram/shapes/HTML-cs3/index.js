@@ -50,7 +50,7 @@ new Vue({
   data() {
     return {
       width: "100%",
-      height: "350px",
+      height: "500px",
       nodes: nodes,
       nodeTemplate: function () {
         return { template: itemVue };

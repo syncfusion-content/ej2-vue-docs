@@ -1,9 +1,9 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin,Diagram,NodeModel,ConnectorModel,ConnectorEditing,ConnectorConstraints,PortVisibility,ControlPointsVisibility } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,Diagram,ConnectorEditing,ConnectorConstraints,PortVisibility,ControlPointsVisibility } from '@syncfusion/ej2-vue-diagrams';
     Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
-let nodes: NodeModel[] = [{
+let nodes= [{
     id: 'Start',
     offsetX: 250,
     offsetY: 150,
@@ -29,7 +29,7 @@ let nodes: NodeModel[] = [{
         style: { strokeColor: '#366F8C', fill: '#366F8C' }
     }]
 }];
-let connectors: ConnectorModel[] = [{
+let connectors = [{
     id: "connector1",
     style: {
         strokeColor: '#6BA5D7',

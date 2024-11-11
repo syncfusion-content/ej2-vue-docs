@@ -1,44 +1,85 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-button v-on:click="updateConnectionDirection">updateConnectionDirection</ejs-button>
+    <ejs-diagram
+      id="diagram"
+      ref="diagram"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+      :connectors="connectors"
+    ></ejs-diagram>
+  </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram, PortVisibility } from '@syncfusion/ej2-vue-diagrams';
+import { onMounted, ref } from "vue";
+import {
+  DiagramComponent as EjsDiagram,
+  PortVisibility,
+} from "@syncfusion/ej2-vue-diagrams";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
-const nodes = [{
-    // Position of the node
-    offsetX: 250,
-    offsetY: 250,
-    // Size of the node
+let diagramInstance;
+const diagram = ref(null);
+const nodes = [
+  {
+    id: "node1",
+    offsetX: 450,
+    offsetY: 200,
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
-    // Initialize port collection
-    ports: [{
+    ports: [
+      {
+        id: "port1",
         offset: {
-            x: 1,
-            y: 0.5
+          x: 0,
+          y: 0,
         },
         visibility: PortVisibility.Visible,
-        //Set the style for the port
-        style: {
-            fill: 'red',
-            strokeWidth: 2,
-            strokeColor: 'black'
-        },
-        width: 12,
-        height: 12,
-        // Sets the shape of the port as Circle
-        shape: 'Circle'
-    }]
-}];
+      },
+    ],
+  },
+  {
+    id: "node2",
+    offsetX: 270,
+    offsetY: 300,
+    width: 100,
+    height: 100,
+    ports: [
+      {
+        id: "port3",
+        offset: { x: 0.5, y: 0.5 },
+        visibility: PortVisibility.Visible,
+        //Sets the connection direction as Left
+        connectionDirection: "Left",
+      },
+    ],
+  },
+];
+
+const connectors = [
+  {
+    id: "connector1",
+    sourceID: "node2",
+    targetID: "node1",
+    type: "Orthogonal",
+    sourcePortID: "port3",
+    targetPortID: "port1",
+  },
+];
 
 const width = "100%";
-const height = "350px";
+const height = "600px";
+
+onMounted(function () {
+  diagramInstance = diagram.value.ej2Instances;
+});
+
+const updateConnectionDirection = function () {
+    let port1 = diagramInstance.nodes[0].ports[0];
+    port1.connectionDirection = "Top";
+    diagramInstance.dataBind();
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

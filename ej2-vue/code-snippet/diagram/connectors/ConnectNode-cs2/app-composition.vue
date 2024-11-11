@@ -24,17 +24,6 @@ const nodes = [{
 ];
 const connectors = [{
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     sourceID: "node",
     targetID: "node1",
     // Set Source Padding value

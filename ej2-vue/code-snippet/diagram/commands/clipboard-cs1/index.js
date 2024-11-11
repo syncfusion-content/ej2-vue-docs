@@ -1,75 +1,91 @@
 
-    import Vue from 'vue';
-    import { DiagramPlugin ,NodeModel,ConnectorModel} from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [{
-        id: 'node1',
-        width: 90,
-        height: 60,
-        offsetX: 100,
-        offsetY: 100,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    },
-    {
-        id: 'node2',
-        width: 90,
-        height: 60,
-        offsetX: 240,
-        offsetY: 100,
-        style: {
-            fill:   '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    }
+import Vue from 'vue';
+import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+Vue.use(DiagramPlugin);
+
+let diagramInstance;
+
+let nodes = [{
+    id: "node1",
+    width: 100,
+    height: 80,
+    offsetX: 140,
+    offsetY: 100,
+    annotations: [{ content: "Node1" }],
+},
+{
+    id: "node2",
+    width: 100,
+    height: 60,
+    offsetX: 140,
+    offsetY: 200,
+    annotations: [{ content: "Node2" }],
+},
+{
+    id: "node3",
+    width: 200,
+    height: 30,
+    offsetX: 140,
+    offsetY: 300,
+    annotations: [{ content: "Node3" }],
+},
 ];
-    let connectors = [{
-        id: 'connector1',
-        sourceID: 'node1',
-        targetID: 'node2',
-        style: {
-            strokeColor : '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth :  2,
-            targetDecorator: {
-                style: {
-                    fill : '#6BA5D7',
-                    strokeColor :   '#6BA5D7'
-                }
-            }
-        }
-    }]
-    
+
 new Vue({
-	el: '#app',
-	template: `
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors='connectors' ></ejs-diagram>
-    </div>
+    el: '#app',
+    template: `
+<div id="app">
+    <label>Ctrl + X</label><button @click="cut">Cut</button>
+    <label>Ctrl + C</label><button @click="copy">Copy</button>
+    <label>Ctrl + V</label><button @click="paste">Paste</button>
+    <button @click="pasteObject">Paste Defined Object</button>
+    <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+</div>
 `,
 
-        name: 'app'
-        data() {
-            return {
-                width: "100%",
-                height: "350px",
-                nodes: nodes,
-                connectors: connectors
-            }
+    name: 'app'
+    data() {
+        return {
+            width: "100%",
+            height: "600px",
+            nodes: nodes,
         }
-        mounted: function() {
-            let diagramInstance: Diagram;
-            let diagramObj: any = document.getElementById("diagram");
-            diagramInstance = diagramObj.ej2_instances[0];
-            diagramInstance.select([diagramInstance.nodes[0], diagramInstance.nodes[1], diagramInstance.connectors[0]]);
-            //copies the selected nodes
+    },
+
+    methods: {
+        cut: function () {
+            diagramInstance.cut();
+        },
+        copy: function () {
             diagramInstance.copy();
-            //pastes the copied objects
-            diagramInstance.paste(diagramInstance.copy() as(NodeModel | ConnectorModel)[]);
-        }
-    
+        },
+        paste: function () {
+            diagramInstance.paste();
+        },
+        pasteObject: function () {
+            let nodes = [
+                {
+                    id: "n1",
+                    offsetX: 400,
+                    offsetY: 100,
+                    width: 100,
+                },
+                {
+                    id: "n2",
+                    offsetX: 400,
+                    offsetY: 200,
+                    width: 100,
+                },
+            ];
+            diagramInstance.paste(nodes);
+        },
+
+    },
+    mounted() {
+        let diagramObj = document.getElementById("diagram");
+        diagramInstance = diagramObj.ej2_instances[0];
+
+    }
+
+
 });
