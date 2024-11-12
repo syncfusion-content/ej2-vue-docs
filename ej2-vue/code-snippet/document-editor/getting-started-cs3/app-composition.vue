@@ -6,7 +6,7 @@
 </template>
 <script setup>
 import { provide } from "vue";
-import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
 

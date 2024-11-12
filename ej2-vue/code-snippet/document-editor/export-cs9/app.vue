@@ -1,5 +1,3 @@
-
-
 <template>
         <div id="app">
             <div>
@@ -9,12 +7,13 @@
         </div>
 </template>
 <script>
-        import Vue from 'vue'
-        import { DocumentEditorPlugin, Selection, Editor, SfdtExport, WordExport } from '@syncfusion/ej2-vue-documenteditor';
-
-        Vue.use(DocumentEditorPlugin);
+        import { DocumentEditorComponent, Selection, WordExport, Editor, SfdtExport } from '@syncfusion/ej2-vue-documenteditor';
 
         export default {
+            name: "App",
+            components: {
+                "ejs-documenteditor": DocumentEditorComponent
+            },
             data: function() {
                 return {
                 };
@@ -22,7 +21,7 @@
             provide: {
                 //Inject require modules.
                 DocumentEditor : [SfdtExport, WordExport, Selection, Editor]
-            }
+            },
             methods: {
                 saveAsDotx: function() {
                     //Download the document in docx format.

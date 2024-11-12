@@ -5,12 +5,12 @@
   </div>
 </template>
 <script>
-import { DocumentEditorContainerComponent, DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   name: "App",
   components: {
-    "ejs-documenteditorcontainer": DocumenteditorcontainerComponent
+    "ejs-documenteditorcontainer": DocumentEditorContainerComponent
   },
   data() {
     return { serviceUrl: 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/' };

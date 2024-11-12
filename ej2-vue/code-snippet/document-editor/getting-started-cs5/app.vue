@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { DocumentEditorContainerComponent, DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 export default {
   name: "App",
@@ -28,7 +28,7 @@ export default {
     },
     onDocumentChange: function () {
       //Enable read only mode.
-      this.$refs.documentEditorContainer.restrictEditing = true;
+      this.$refs.documentEditorContainer.ej2Instances.restrictEditing = true;
     }
   },
 }
