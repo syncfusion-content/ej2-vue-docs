@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paging in Vue Grid component | Syncfusion
-description: Learn here all about Paging in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Paging in  Vue Grid component of Syncfusion Essentials, it's elements, and more.
 control: Paging 
 platform: ej2-vue
 documentation: ug
