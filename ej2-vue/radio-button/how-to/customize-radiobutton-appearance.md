@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize radiobutton appearance in Vue Radio button component | Syncfusion
-description: Learn here all about Customize radiobutton appearance in Syncfusion Vue Radio button component of Syncfusion Essential JS 2 and more.
+title: Customize radiobutton appearance in Vue Radio button | Syncfusion
+description: Learn here all about Customize radio button appearance in Vue Radio button component of Syncfusion Essential, it's elements, and more.
 control: Customize radiobutton appearance 
 platform: ej2-vue
 documentation: ug
