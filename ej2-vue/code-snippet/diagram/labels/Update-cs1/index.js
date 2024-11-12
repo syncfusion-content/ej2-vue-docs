@@ -9,10 +9,6 @@
         // Size of the node
         width: 100,
         height: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
         // Sets the annotation for the node
         annotations: [{
             id: 'label1',
@@ -25,6 +21,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
+        <button @click="removeAnnotation">Remove Annotation</button>
         <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
     </div>
 `,
@@ -37,15 +34,17 @@ new Vue({
                 nodes: nodes,
             }
         }
-        mounted: function() {
-            let diagramInstance: Diagram;
-            let diagramObj: any = document.getElementById("diagram");
-            diagramInstance = diagramObj.ej2_instances[0];
-            let annotation: shapeAnnotationModel[] = [{
-                id: 'label1',
-                content: 'Annotation'
-            }];
-            diagramInstance.removeLabels(diagramInstance.nodes[0], annotation);
-        }
+        methods: {
+            removeAnnotation: function() {
+                let annotation = [{
+                    id: 'label1',
+                    content: 'Annotation'
+                }];
+                let diagramInstance;
+                let diagramObj = document.getElementById("diagram");
+                diagramInstance = diagramObj.ej2_instances[0];
+                diagramInstance.removeLabels(diagramInstance.nodes[0], annotation);
+            }
+        },
     
 });

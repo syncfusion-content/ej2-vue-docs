@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults'
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' 
             :connectors='connectors' :pageSettings='pageSettings'></ejs-diagram>
     </div>
 </template>
@@ -10,8 +10,6 @@ import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 
 const connectors = [{
     id: 'connector1',
-    style: { strokeColor: '#6BA5D7', fill: '#6BA5D7', strokeWidth: 2 },
-    targetDecorator: { style: { fill: '#6BA5D7', strokeColor: '#6BA5D7' } },
     sourceID: 'node1',
     targetID: 'node2',
 }];
@@ -36,18 +34,9 @@ const nodes = [{
         content: 'Node3'
     }]
 }];
-const width = "100%";
-const height = "350px";
-const getNodeDefaults = (node) => {
-    node.height = 100;
-    node.width = 100;
-    node.style.fill = '#6BA5D7';
-    node.style.strokeColor = 'white';
-    return node;
-}
+const width = "750px";
+const height = "500px";
 const pageSettings = {
-    // Sets the PageOrientation for the diagram to page
-    orientation: 'Landscape',
     // Sets the Page Break for diagram
     showPageBreaks: true,
     // Defines the background color and image  of diagram
@@ -64,7 +53,6 @@ const pageSettings = {
         top: 10,
         bottom: 10
     }
-}
 }
 </script>
 <style>

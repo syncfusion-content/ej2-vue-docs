@@ -1,72 +1,64 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-button v-on:click="bringToFront">Bring To Front </ejs-button>
+    <ejs-diagram
+      id="diagram"
+      ref="diagram"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+    ></ejs-diagram>
+  </div>
 </template>
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
-let nodes = [{
+let nodes = [
+  {
     id: 'node1',
     width: 90,
-    height: 60,
-    offsetX: 100,
+    height: 70,
+    offsetX: 120,
     offsetY: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white',
-        strokeWidth: 1
-    },
-},
-{
+  },
+  {
     id: 'node2',
     width: 90,
-    height: 60,
-    offsetX: 240,
-    offsetY: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white',
-        strokeWidth: 1
-    },
-},
-{
+    height: 70,
+    offsetX: 150,
+    offsetY: 120,
+  },
+  {
     id: 'node3',
     width: 90,
-    height: 60,
-    offsetX: 160,
-    offsetY: 90,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white',
-        strokeWidth: 1
-    },
-}
+    height: 70,
+    offsetX: 170,
+    offsetY: 150,
+  },
 ];
 
 export default {
-    name: "App",
-    components: {
-        "ejs-diagram": DiagramComponent
+  name: 'App',
+  components: {
+    'ejs-diagram': DiagramComponent,
+    'ejs-button': ButtonComponent,
+  },
+  data() {
+    return {
+      width: '100%',
+      height: '600px',
+      nodes: nodes,
+    };
+  },
+  methods: {
+    bringToFront: function () {
+      var diagramInstance = this.$refs.diagram.ej2Instances;
+      diagramInstance.bringToFront();
     },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            nodes: nodes,
-        }
-    },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        let selArray = [];
-        selArray.push(diagramInstance.nodes[2]);
-        //Selects the nodes
-        diagramInstance.select(selArray);
-        //Brings to front
-        diagramInstance.bringToFront();
-    }
-}
+  },
+};
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css';
 </style>

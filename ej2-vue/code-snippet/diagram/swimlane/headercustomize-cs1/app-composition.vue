@@ -12,7 +12,7 @@ const nodes = [{
         orientation: 'Horizontal',
         // customize the swimlane header
         header: {
-            annotation: { content: 'SALES PROCESS FLOW CHART', },
+            annotation: { content: 'SALES PROCESS FLOW CHART' },
             height: 70, style: { fontSize: 11 }, style: { fill: 'pink' },
         },
         lanes: [

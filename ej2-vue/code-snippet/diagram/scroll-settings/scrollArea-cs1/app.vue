@@ -1,60 +1,68 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings'
-            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <label style="margin-right: 10px;">Scrollable Area</label>
+          <ejs-dropdownlist id='scrollableArea' ref='scrollableArea' :enabled=true :value='scrollableAreaValue' :dataSource='scrollableArea' @change="onScrollableAreaChange"/>
+        </div>
+        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'
+         ></ejs-diagram>
     </div>
 </template>
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 
 let nodes = [{
     id: 'Start',
-    width: 140,
-    height: 50,
+    width: 100,
+    height: 100,
     offsetX: 300,
-    offsetY: 50,
-    annotations: [{
-        id: 'label1',
-        content: 'Start'
-    }],
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    }
+    offsetY: 100,
 }];
+let data = [
+  { shape: 'Limited', text: 'Limited' },
+  { shape: 'Infinity', text: 'Infinity' },
+  { shape: 'Diagram', text: 'Diagram' },
+];
 
 export default {
     name: "App",
     components: {
-        "ejs-diagram": DiagramComponent
+        "ejs-diagram": DiagramComponent,
+        'ejs-dropdownlist': DropDownListComponent,
     },
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
+            scrollableAreaValue: 'Limited',
+            scrollableArea: data,
+            //scrollableAreaChange: onScrollableAreaChange,
+            rulerSettings: { showRulers: true },
             // set the autoScrollBorder
             scrollSettings: {
                 canAutoScroll: true,
                 //Sets the scroll limit
-                scrollLimit: 'infinity',
+                scrollLimit: 'Limited',
                 //Sets the scrollable Area
                 scrollableArea: {
                     x: 0,
                     y: 0,
-                    width: 500,
-                    height: 500
+                    width: 1000,
+                    height: 1000
                 }
             },
-            getNodeDefaults: (node) => {
-                node.height = 100;
-                node.width = 100;
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
-            }
         }
-    }
+    },
+    methods: {
+      // Method to update scroll limit based on dropdown selection
+      onScrollableAreaChange(args) {
+          const diagramInstance = this.$refs.diagram.ej2Instances;
+          diagramInstance.scrollSettings.scrollLimit = args.itemData.shape;
+          diagramInstance.dataBind();
+      }
+  },
 }
 </script>
 <style>

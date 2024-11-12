@@ -6,7 +6,7 @@
 <script setup>
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 
-const width = "100%";
+const width = "600px";
 const height = "600px";
 const rulerSettings = {
     showRulers: true

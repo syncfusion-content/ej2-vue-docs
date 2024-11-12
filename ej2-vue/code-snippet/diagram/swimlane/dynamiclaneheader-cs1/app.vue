@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <button @click="updateLane">updateLane</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -12,7 +13,7 @@ const nodes = [{
         orientation: 'Horizontal',
         //Intialize header to swimlane
         header: {
-            annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: '#111111' } },
+            annotation: { content: 'ONLINE PURCHASE STATUS' },
             height: 50, style: { fontSize: 11 },
         },
         lanes: [
@@ -51,12 +52,15 @@ export default {
             nodes: nodes,
         }
     },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        let lane = diagramInstance.nodes[0];
-        lane.shape.lanes[0].header.style.fill = 'red';
-        diagramInstance.dataBind();
-    }
+    methods: {
+        updateLane() {
+            const diagramInstance = this.$refs.diagram.ej2Instances;
+            const swimlane = diagramInstance.nodes[0];
+            swimlane.shape.lanes[0].header.style.fill = 'blue';
+            swimlane.shape.lanes[0].header.annotation.style.color = 'white';
+            diagramInstance.dataBind();
+        }
+    },
 }
 </script>
 <style>

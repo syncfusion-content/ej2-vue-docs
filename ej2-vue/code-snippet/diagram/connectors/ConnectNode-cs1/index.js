@@ -34,20 +34,8 @@
 ];
 let connectors = [{
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     sourceID: "Start",
     targetID: "Init",
-    connectorSpacing: 7,
     type: 'Orthogonal'
 }, ]
 
@@ -59,7 +47,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

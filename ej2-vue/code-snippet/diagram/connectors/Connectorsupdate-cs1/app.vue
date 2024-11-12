@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <button @click="update">update</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
@@ -32,7 +33,8 @@ export default {
             connectors: connectors
         }
     },
-    mounted: function () {
+    methods: {
+    update: function () {
         const diagramInstance = this.$refs.diagram.ej2Instances;
         diagramInstance.connectors[0].style.strokeColor = '#6BA5D7';
         diagramInstance.connectors[0].style.fill = '#6BA5D7';
@@ -42,6 +44,7 @@ export default {
         diagramInstance.connectors[0].sourcePoint.x = 150;
         diagramInstance.connectors[0].targetPoint.x = 150;
         diagramInstance.dataBind();
+    }
     }
 }
 </script>

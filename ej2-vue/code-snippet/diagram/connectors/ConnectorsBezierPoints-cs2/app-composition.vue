@@ -4,22 +4,11 @@
     </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
-
+import { DiagramComponent as EjsDiagram ,ConnectorEditing} from '@syncfusion/ej2-vue-diagrams';
+import { provide } from "vue";
 let connectors = [{
     id: 'connector3',
     type: 'Bezier',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     segments: [{
         type: 'Bezier',
         // First control point: an absolute position from the page origin
@@ -42,7 +31,7 @@ let connectors = [{
         y: 100
     },
 },]
-
+provide('diagram', [ConnectorEditing]);
 const width = "100%"
 const height = "350px"
 </script>

@@ -1,17 +1,23 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :tooltip='tooltip'
-            :constraints='constraints'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
-import { DiagramComponent, DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent, NodeConstraints } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [{
     id: "node1",
     height: 60,
     offsetX: 300,
     offsetY: 80,
+    constraints: NodeConstraints.Default | NodeConstraints.Tooltip,
+    //Defines mouse over tooltip for a node
+        tooltip: {
+            content: 'Node1',
+            //Sets to show tooltip at mouse position
+            relativeMode: 'Mouse',
+        },
     annotations: [{
         content: "start"
     }]
@@ -26,14 +32,9 @@ export default {
         return {
             width: "100%",
             height: "350px",
-            constraints: DiagramConstraints.Default | DiagramConstraints.Tooltip,
+          
             nodes: nodes,
-            //Defines mouse over tooltip for a node
-            tooltip: {
-                content: 'Node1',
-                //Sets to show tooltip at mouse position
-                relativeMode: 'Mouse',
-            },
+           
         }
     }
 }

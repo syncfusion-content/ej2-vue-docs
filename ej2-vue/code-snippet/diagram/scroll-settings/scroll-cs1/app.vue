@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' scrollSettings='scrollSettings'></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'></ejs-diagram>
     </div>
 </template>
 <script>
@@ -14,13 +14,22 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             scrollSettings: {
-                horizontalOffset: 100,
-                verticalOffset: 50
+              //To scroll the diagram infinitely
+              scrollLimit: 'Infinity',
+            },
+            rulerSettings: {
+              showRulers: true
             }
         }
-    }
+    },
+    mounted: function () {
+      const diagramInstance = this.$refs.diagram.ej2Instances;
+      diagramInstance.scrollSettings.horizontalOffset = 100;
+      diagramInstance.scrollSettings.verticalOffset = 100;
+      diagramInstance.dataBind();
+  }
 }
 </script>
 <style>

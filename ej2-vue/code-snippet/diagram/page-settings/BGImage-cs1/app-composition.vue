@@ -7,8 +7,8 @@
 
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "500px";
 const pageSettings = {
     orientation: 'Landscape',
     showPageBreaks: true,
@@ -16,17 +16,12 @@ const pageSettings = {
     background: {
         source: 'https://www.w3schools.com/images/w3schools_green.jpg',
         // Defines the scale values for the background image
-        scale: 'Meet',
+        scale: 'Slice',
         // Defines the align values for the background image
         align: 'XMinYMin'
     },
     width: 300,
     height: 300,
-    margin: {
-        left: 10,
-        top: 10,
-        bottom: 10
-    },
 }
 </script>
 <style>

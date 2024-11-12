@@ -24,8 +24,8 @@ const nodes = [{
     }
 }];
 
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "500px";
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

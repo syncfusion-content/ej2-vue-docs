@@ -9,15 +9,11 @@ import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [{
     // Position of the node
-    offsetX: 100,
-    offsetY: 100,
+    offsetX: 250,
+    offsetY: 250,
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the Annotation for the Node
     annotations: [{
         // Sets the text to be displayed
@@ -36,7 +32,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "600px",
             nodes: nodes,
         }
     }

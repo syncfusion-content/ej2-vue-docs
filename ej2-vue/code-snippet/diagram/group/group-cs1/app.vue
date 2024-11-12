@@ -1,80 +1,78 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'
-            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
-    </div>
+  <div id="app">
+    <ejs-diagram ref="diagramRef" id="diagram" width="100%" height="600px" :getNodeDefaults="getNodeDefaults"
+      :nodes="nodes" />
+  </div>
 </template>
-<script>
-import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 
-let nodes = [{
-    id: "rectangle1",
-    offsetX: 100,
-    offsetY: 100,
-    width: 100,
-    height: 100,
-    annotations: [{
-        content: 'rectangle1'
-    }]
-},
-{
-    id: "rectangle2",
-    offsetX: 200,
-    offsetY: 200,
-    width: 100,
-    height: 100,
-    annotations: [{
-        content: 'rectangle2'
-    }]
-},
-{
-    id: "rectangle3",
-    offsetX: 400,
-    offsetY: 300,
-    width: 100,
-    height: 100,
-    style: {
-        fill: 'darkCyan',
-        strokeWidth: 2
-    },
-    annotations: [{
-        content: 'rectangle2'
-    }]
-},
-// Grouping node 1 and node 2 into a single group
-{
-    id: 'group',
-    children: ['rectangle1', 'rectangle2'],
-    padding: { left: 10, right: 10, top: 10, bottom: 10 }
-}
-]
+<script>
+import { DiagramComponent } from "@syncfusion/ej2-vue-diagrams";
+
 export default {
-    name: "App",
-    components: {
-        "ejs-diagram": DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            nodes: nodes,
-            getNodeDefaults: (node) => {
-                node.height = 100;
-                node.width = 100;
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
+  name: "App",
+  components: {
+    "ejs-diagram": DiagramComponent,
+  },
+  data() {
+    return {
+      nodes: [
+        {
+          id: "rectangle1",
+          offsetX: 100,
+          offsetY: 100,
+          width: 100,
+          height: 100,
+          style: {
+            strokeColor: "#6BA5D7",
+            fill: "#6BA5D7",
+          },
+          annotations: [
+            {
+              content: "rectangle1",
             },
-        }
+          ],
+        },
+        {
+          id: "rectangle2",
+          offsetX: 200,
+          offsetY: 200,
+          width: 100,
+          height: 100,
+          style: {
+            strokeColor: "#6BA5D7",
+            fill: "#6BA5D7",
+          },
+          annotations: [
+            {
+              content: "rectangle2",
+            },
+          ],
+        },
+        {
+          id: "group",
+          children: ["rectangle1", "rectangle2"],
+        },
+      ],
+    };
+  },
+  methods: {
+    getNodeDefaults(node) {
+      node.height = 100;
+      node.width = 100;
+      node.style.strokeColor = "White";
+      return node;
     },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        diagramInstance.selectAll();
-        // Adding the third node into the existing group
-        diagramInstance.group();
-    }
-}
+  },
+  mounted() {
+    // Retrieve the diagram instance
+    const diagramInstance = this.$refs.diagramRef.ej2Instances;
+    diagramInstance.select([diagramInstance.getObject("group")]);
+  },
+};
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 </style>

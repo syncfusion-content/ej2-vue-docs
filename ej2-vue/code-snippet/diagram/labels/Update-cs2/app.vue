@@ -1,10 +1,12 @@
 <template>
     <div id="app">
+        <ejs-button ref="updateAnnotation" id="updateAnnotation" >Update Annotation</ejs-button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 let nodes = [{
     // Position of the node
@@ -13,10 +15,6 @@ let nodes = [{
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the annotation for the node
     annotations: [{
         content: 'Annotation'
@@ -26,7 +24,8 @@ let nodes = [{
 export default {
     name: "App",
     components: {
-        "ejs-diagram": DiagramComponent
+        "ejs-diagram": DiagramComponent,
+        'ejs-button': ButtonComponent,
     },
     data() {
         return {
@@ -37,10 +36,13 @@ export default {
     },
     mounted: function () {
         const diagramInstance = this.$refs.diagram.ej2Instances;
-        // Adds to the Diagram
-        diagramInstance.nodes[0].annotations[0].content = 'Updated Annotation';
-        //Method to update the annotation at run time
-        diagramInstance.dataBind();
+        const updateAnnotation = this.$refs.updateAnnotation.ej2Instances;
+        updateAnnotation.element.onclick = () => {
+            // Adds to the Diagram
+            diagramInstance.nodes[0].annotations[0].content = 'Updated Annotation';
+            //Method to update the annotation at run time
+            diagramInstance.dataBind();
+        }
     }
 }
 </script>

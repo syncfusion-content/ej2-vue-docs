@@ -1,31 +1,24 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :constraints='constraints'
-            :selectedItems='selectedItems'></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes' :selectedItems='selectedItems' @onUserHandleMouseDown="onUserHandleMouseDown"></ejs-diagram>
     </div>
 </template>
 <script>
-import { DiagramComponent, NodeConstraints, DiagramConstraints, SelectorConstraints } from '@syncfusion/ej2-vue-diagrams';
-
-let nodes = [{
-    id: 'node',
-    // Position of the node
-    offsetX: 250,
-    offsetY: 250,
-    // Size of the node
-    width: 100,
+import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+const nodes = [{
+    id: 'node1',
+    offsetX: 200,
+    offsetY: 200,
     height: 100,
-    style: { fill: '#6BA5D7', strokeColor: 'white' },
-    tooltip: { content: 'node1', position: 'BottomRight', relativeMode: 'Object' },
-    constraints: NodeConstraints.Default | NodeConstraints.Tooltip,
+    width: 100,
 }];
-
-let handles = [{
-    name: 'clone', pathData: 'M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,' +
-        '0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z ' +
-        'M68.5,72.5h-30V34.4h30V72.5z',
-    visible: true, offset: 0, side: 'Bottom', margin: { top: 0, bottom: 0, left: 0, right: 0 },
-    tooltip: { content: 'handle1', position: 'BottomRight', relativeMode: 'Object' }
+const handles = [{
+  name: 'clone',
+  pathData:
+    'M0,3.42 L1.36,3.42 L1.36,12.39 L9.62,12.39 L9.62,13.75 L1.36,13.75 C0.97,13.75,0.65,13.62,0.39,13.36 C0.13,13.1,0,12.78,0,12.39 Z M4.13,0 L12.39,0 C12.78,0,13.1,0.13,13.36,0.39 C13.62,0.65,13.75,0.97,13.75,1.36 L13.75,9.62 C13.75,10.01,13.62,10.33,13.36,10.6 C13.1,10.87,12.78,11.01,12.39,11.01 L4.13,11.01 C3.72,11.01,3.39,10.87,3.13,10.6 C2.87,10.33,2.74,10.01,2.74,9.62 L2.74,1.36 C2.74,0.97,2.87,0.65,3.13,0.39 C3.39,0.13,3.72,0,4.13,0 Z ',
+  offset: 1,
+  //Sets tooltip for user handle
+  tooltip: { content: 'Clone Node' },
 }];
 
 export default {
@@ -38,12 +31,23 @@ export default {
             width: "100%",
             height: "350px",
             nodes: nodes,
-            constraints: DiagramConstraints.Default | DiagramConstraints.Tooltip,
+            //Define user handles in selectedItems property
             selectedItems: {
-                constraints: SelectorConstraints.All, userHandles: handles
-            }
+            userHandles: handles
+            },
+        
         }
-    }
+    },
+    methods: {
+    onUserHandleMouseDown(event) {
+        const diagramInstance = this.$refs.diagram.ej2Instances;
+        if (event && event.element) {
+            //To clone the selected node
+            diagramInstance.copy();
+            diagramInstance.paste();
+        }
+    },
+    },
 }
 </script>
 <style>

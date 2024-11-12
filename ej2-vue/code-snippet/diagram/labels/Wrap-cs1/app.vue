@@ -7,25 +7,61 @@
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [{
-    id: 'node1',
-    // Position of the node
-    offsetX: 100,
-    offsetY: 100,
-    // Size of the node
-    width: 100,
-    height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
+  id: 'node1',
+  // Position of the node
+  offsetX: 100,
+  offsetY: 100,
+  // Size of the node
+  width: 100,
+  height: 100,
+  //Sets the annotation for the node
+  annotations: [
+    {
+      content: 'Annotation Text WrapWithOverflow',
+      // Sets the style for the text wrapping
+      style: {
+        textWrapping: 'WrapWithOverflow',
+      },
     },
-    //Sets the annotation for the node
-    annotations: [{
-        content: 'Annotation Text Wrapping',
-        // Sets the style for the text wrapping
-        style: {
-            textWrapping: 'Wrap'
-        }
-    }]
+  ],
+},
+{
+  id: 'node2',
+  // Position of the node
+  offsetX: 300,
+  offsetY: 100,
+  // Size of the node
+  width: 100,
+  height: 100,
+  //Sets the annotation for the node
+  annotations: [
+    {
+      content: 'Annotation Text Wrap',
+      // Sets the style for the text wrapping
+      style: {
+        textWrapping: 'Wrap',
+      },
+    },
+  ],
+},
+{
+  id: 'node3',
+  // Position of the node
+  offsetX: 500,
+  offsetY: 100,
+  // Size of the node
+  width: 100,
+  height: 100,
+  //Sets the annotation for the node
+  annotations: [
+    {
+      content: 'Annotation Text NoWrap',
+      // Sets the style for the text wrapping
+      style: {
+        textWrapping: 'NoWrap',
+      },
+    },
+  ],
 }];
 
 export default {

@@ -10,8 +10,8 @@ let connectors = [
     {
         id: 'connector2',
         type: 'Orthogonal',
-        sourcePoint: { x: 300, y: 300 },
-        targetPoint: { x: 400, y: 400 },
+        sourcePoint: { x: 200, y: 200 },
+        targetPoint: { x: 300, y: 300 },
         annotations: [
             {
                 content: 'connector1', offset: 0.5,
@@ -24,8 +24,8 @@ let connectors = [
     }
 ];
 
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "600px";
 
 </script>
 <style>

@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <button @click="updateHeaderStyle">updateHeaderStyle</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -47,11 +48,13 @@ export default {
             nodes: nodes,
         }
     },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        diagramInstance.nodes[0].shape.header.style.fill = 'red'
-        diagramInstance.dataBind();
-    }
+    methods: {
+        updateHeaderStyle() {
+            const diagramInstance = this.$refs.diagram.ej2Instances;
+            diagramInstance.nodes[0].shape.header.style.fill = 'red';
+            diagramInstance.dataBind();
+        }
+    },
 }
 </script>
 <style>

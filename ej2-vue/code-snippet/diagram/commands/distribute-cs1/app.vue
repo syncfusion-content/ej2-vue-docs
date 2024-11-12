@@ -7,42 +7,33 @@
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [
-    {
-        id: 'node1',
-        width: 90,
-        height: 60,
-        offsetX: 100,
-        offsetY: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    },
-    {
-        id: 'node2',
-        width: 90,
-        height: 60,
-        offsetX: 240,
-        offsetY: 100,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    },
-    {
-        id: 'node3',
-        width: 90,
-        height: 60,
-        offsetX: 170,
-        offsetY: 150,
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white',
-            strokeWidth: 1
-        },
-    }
+     {
+    id: 'node1',
+    width: 100,
+    height: 60,
+    offsetX: 140,
+    offsetY: 100,
+    style: { fill: '#6BA5D7', strokeColor: 'white', strokeWidth: 1 },
+    annotations: [{ content: 'Node1' }],
+  },
+  {
+    id: 'node2',
+    width: 100,
+    height: 60,
+    offsetX: 200,
+    offsetY: 170,
+    style: { fill: '#6BA5D7', strokeColor: 'white', strokeWidth: 1 },
+    annotations: [{ content: 'Node2' }],
+  },
+  {
+    id: 'node3',
+    width: 100,
+    height: 60,
+    offsetX: 400,
+    offsetY: 240,
+    style: { fill: '#6BA5D7', strokeColor: 'white', strokeWidth: 1 },
+    annotations: [{ content: 'Node3' }],
+  }
 ];
 export default {
     name: "App",
@@ -52,7 +43,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "600px",
             nodes: nodes
         }
     },

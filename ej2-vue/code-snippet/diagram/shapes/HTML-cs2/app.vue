@@ -13,10 +13,6 @@ const nodes = [{
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     //sets the type of the shape as HTML
     shape: {
         type: 'HTML',
@@ -32,7 +28,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
         }
     }

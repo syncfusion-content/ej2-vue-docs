@@ -14,10 +14,6 @@
             type: 'Flow',
             shape: 'Document'
         },
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: 'white'
-        },
 }]
 
 new Vue({
@@ -32,7 +28,7 @@ new Vue({
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
         }
     }

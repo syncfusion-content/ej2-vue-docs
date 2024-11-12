@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'
-            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagramRef" :width='width' :height='height' :nodes='nodes'>
+        </ejs-diagram>
     </div>
 </template>
 <script>
@@ -13,6 +13,10 @@ let nodes = [{
     offsetY: 100,
     width: 100,
     height: 100,
+    style: {
+        strokeColor: '#6BA5D7',
+        fill: '#6BA5D7',
+    },
     annotations: [{
         content: 'rectangle1'
     }]
@@ -23,6 +27,10 @@ let nodes = [{
     offsetY: 200,
     width: 100,
     height: 100,
+    style: {
+        strokeColor: '#6BA5D7',
+        fill: '#6BA5D7',
+    },
     annotations: [{
         content: 'rectangle2'
     }]
@@ -41,17 +49,10 @@ export default {
             width: "100%",
             height: "350px",
             nodes: nodes,
-            getNodeDefaults: (node) => {
-                node.height = 100;
-                node.width = 100;
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
-            },
         }
     },
     mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
+        const diagramInstance = this.$refs.diagramRef.ej2Instances;
         diagramInstance.selectAll();
         // Add the group into the diagram
         diagramInstance.add(group);
@@ -60,4 +61,6 @@ export default {
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 </style>

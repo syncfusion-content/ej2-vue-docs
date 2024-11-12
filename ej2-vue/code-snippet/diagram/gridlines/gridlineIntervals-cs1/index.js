@@ -1,9 +1,9 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin,SnapSettingsModel,SnapConstraints,Snapping,Diagram } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,SnapConstraints,Snapping,Diagram } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     Diagram.Inject(Snapping);
-    let snapSettings: SnapSettingsModel = {
+    let snapSettings = {
     constraints: SnapConstraints.ShowLines,
     horizontalGridlines: {
         // Sets the lineIntervals of Gridlines
@@ -26,7 +26,7 @@ new Vue({
     </div>
 `,
 
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",

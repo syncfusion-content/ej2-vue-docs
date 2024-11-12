@@ -9,17 +9,6 @@ import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 const connectors = [{
     // Name of the connector
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     // Sets source and target points
     sourcePoint: {
         x: 100,

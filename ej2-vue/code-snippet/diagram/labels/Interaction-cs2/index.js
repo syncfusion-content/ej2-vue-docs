@@ -6,8 +6,8 @@
          {
             id: 'connector2',
             type: 'Orthogonal',
-            sourcePoint: { x: 300, y: 300 },
-            targetPoint: { x: 400, y: 400 },
+            sourcePoint: { x: 200, y: 200 },
+            targetPoint: { x: 300, y: 300 },
             annotations: [
               {
                 content: 'connector1', offset:0.5,
@@ -32,7 +32,7 @@ new Vue({
         data() {
             return {
                 width: "100%",
-                height: "350px",
+                height: "600px",
                 connectors: connectors,
             }
         }

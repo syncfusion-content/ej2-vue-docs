@@ -32,7 +32,7 @@ let connectors = [{
 
 const width = "900px";
 const height = "500px";
-const segmentThumbShape = 'Square';
+const segmentThumbShape = 'Arrow';
 const getConnectorDefaults = (connector) => {
     connector.constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb;
 }

@@ -18,13 +18,9 @@ const nodes = [{
         type: 'Flow',
         shape: 'Document'
     },
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
 }];
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "500px";
 
 </script>
 <style>

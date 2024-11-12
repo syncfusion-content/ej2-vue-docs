@@ -1,20 +1,9 @@
-
     import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,Diagram,ConnectorEditing} from '@syncfusion/ej2-vue-diagrams';
+    Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
     let connectors = [{
     id: 'connector2',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     // Defines the type of the segment
     type: 'Bezier',
     segments: [{
@@ -48,7 +37,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

@@ -32,7 +32,7 @@ const nodes = [
   },
 ];
 
-const width = "100%";
+const width = "750px";
 const height = "350px";
 const nodeTemplate = function () {
   return { template: itemVue };

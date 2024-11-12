@@ -1,66 +1,57 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'
-            :scrollSettings='scrollSettings' :getNodeDefaults='getNodeDefaults'></ejs-diagram>
+        <ejs-button ref="zoomIn" id="zoomIn" >Zoom In</ejs-button>
+        <ejs-button ref="zoomOut" id="zoomOut" >Zoom Out</ejs-button>
+        <ejs-diagram ref="diagram" id="diagram" :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'></ejs-diagram>
     </div>
 </template>
 <script>
 import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
+import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
 let nodes = [{
-    id: 'Start',
-    width: 140,
-    height: 50,
     offsetX: 300,
-    offsetY: 50,
-    annotations: [{
-        id: 'label1',
-        content: 'Start'
-    }],
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    }
-}];
-
-let connectors = [{
-    id: 'connector1', sourcePoint: { x: 300, y: 100 }, targetPoint: { x: 450, y: 200 },
-    style: {
-        strokeColor: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    }
+    offsetY: 300,
 }];
 
 export default {
     name: "App",
     components: {
-        "ejs-diagram": DiagramComponent
+        "ejs-diagram": DiagramComponent,
+        'ejs-button': ButtonComponent,
     },
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "700px",
             nodes: nodes,
-            connectors: connectors,
-            scrollSettings: {
-                canAutoScroll: true,
-                scrollLimit: 'Infinity',
-            },
-            getNodeDefaults: (node) => {
-                node.height = 100;
-                node.width = 100;
-                node.style.fill = '#6BA5D7';
-                node.style.strokeColor = 'white';
-                return node;
-            }
+            rulerSettings: { showRulers: true },
+            scrollSettings: { scrollLimit: 'Infinity' },
         }
-    }
+    },
+    mounted: function () {
+      const diagramInstance = this.$refs.diagram.ej2Instances;
+      const zoomIn = this.$refs.zoomIn.ej2Instances;
+      const zoomOut = this.$refs.zoomOut.ej2Instances;
+      zoomIn.element.onclick = () => {
+        let zoomOptions = {
+          type: 'ZoomIn',
+          zoomFactor: 0.2,
+          focusPoint: { x: 0.5, y: 0.5 },
+        };
+        diagramInstance.zoomTo(zoomOptions);
+        diagramInstance.dataBind();
+      }
+      zoomOut.element.onclick = () => {
+        let zoomOptions = {
+          type: 'ZoomOut',
+          zoomFactor: 0.2,
+          focusPoint: { x: 0.5, y: 0.5 },
+        };
+        diagramInstance.zoomTo(zoomOptions);
+        diagramInstance.dataBind();
+      }
+  }
 }
 </script>
 <style>

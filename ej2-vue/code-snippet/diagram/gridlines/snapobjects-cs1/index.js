@@ -1,6 +1,6 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin,SnapSettingsModel,SnapConstraints,Snapping,Diagram } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,SnapConstraints,Snapping,Diagram } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     Diagram.Inject(Snapping);
     let nodes = [{
@@ -19,7 +19,7 @@
         offsetX: 300,
         offsetY: 100
     }]
-    let snapSettings: SnapSettingsModel = {
+    let snapSettings = {
     // Enable snap to object constraint
     constraints: SnapConstraints.SnapToObject|SnapConstraints.ShowLines,
     // Sets the Snap object distance
@@ -39,7 +39,7 @@ new Vue({
     </div>
 `,
 
-        name: 'app'
+        name: 'app',
         data() {
             return {
                 width: "100%",

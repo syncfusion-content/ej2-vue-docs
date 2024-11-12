@@ -11,21 +11,22 @@ const nodes = [{
     offsetX: 250,
     offsetY: 250,
     // Size of the node
-    width: 100,
+    width: 300,
     height: 100,
     //sets the type of the shape as Image
     shape: {
-        type: 'Image',
-        source: 'https://ej2.syncfusion.com/demos/src/diagram/employees/image16.png',
-        scale: 'None'
-    },
+      type: 'Image',
+      source: 'https://ej2.syncfusion.com/demos/src/diagram/employees/image16.png',
+      scale: 'Stretch',
+      align: 'None',
+    }, 
     //Customizes the appearances such as text, font, fill, and stroke.
     style: {
         fill: 'none'
     }
 }]
-const width = "100%";
-const height = "350px";
+const width = "750px";
+const height = "500px";
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

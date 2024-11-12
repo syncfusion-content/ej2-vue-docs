@@ -13,7 +13,7 @@
   import { ExpandMode } from "@syncfusion/ej2-vue-navigations";
   Vue.use(DiagramPlugin);
   Vue.use(SymbolPalettePlugin);
- let swimlaneShapes : NodeModel[]= [
+ let swimlaneShapes = [
             {
                 id: 'stackCanvas1',
                 shape: {
@@ -70,9 +70,6 @@
                 width: 140
             }
     ];
-let palette: any;
-let size: any;
-let expand: any;
 
 new Vue({
 	el: '#app',
@@ -84,7 +81,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             //Defines how many palettes can be at expanded mode at a time
@@ -103,12 +100,12 @@ new Vue({
                 top: 15,
                 bottom: 15
             },
-            palettegetNodeDefaults: (node: NodeModel): void => {
+            palettegetNodeDefaults: (node) => {
                 node.width = 100;
                 node.height = 100;
                 node.style.strokeColor = '#3A3A3A';
             },
-            getSymbolInfo: (symbol: NodeModel): SymbolInfo => {
+            getSymbolInfo: (symbol) => {
                 return {
                     fit: true
                 };
