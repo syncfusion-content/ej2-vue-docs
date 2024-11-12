@@ -5,18 +5,14 @@
     let nodes = [{
         id: 'Start',
         width: 100, height: 100,
-        offsetX: 350, offsetY: 350,
-        shape: {
-            type: 'Flow',
-            shape: 'Terminator'
-        }
+        offsetX: 250, offsetY: 250,
     }]
     
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings' ></ejs-diagram>
+        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'></ejs-diagram>
     </div>
 `,
 
@@ -24,14 +20,15 @@ new Vue({
         data() {
             return {
                 width: "100%",
-                height: "350px",
+                height: "500px",
                 nodes: nodes,
+                rulerSettings: { showRulers: true },
                 // set the autoScrollBorder
                 scrollSettings: {
                     canAutoScroll: true,
                     scrollLimit: 'Infinity',
                     //Sets the scroll limit
-                    padding: { right: 50, bottom: 50 }
+                    padding: { left: 100, top: 100 }
                 },
             }
         }

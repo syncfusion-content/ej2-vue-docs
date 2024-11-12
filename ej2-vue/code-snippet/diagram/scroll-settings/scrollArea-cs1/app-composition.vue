@@ -1,50 +1,56 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings'
-            :getNodeDefaults='getNodeDefaults'></ejs-diagram>
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <label style="margin-right: 10px;">Scrollable Area</label>
+          <ejs-dropdownlist id='scrollableArea' ref='scrollableArea' :enabled=true :value='scrollableAreaValue' :dataSource='scrollableArea' @change="onScrollableAreaChange"/>
+        </div>
+        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'
+         ></ejs-diagram>
     </div>
 </template>
 <script setup>
+import { onMounted, ref } from "vue";
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
 
 let nodes = [{
     id: 'Start',
-    width: 140,
-    height: 50,
+    width: 100,
+    height: 100,
     offsetX: 300,
-    offsetY: 50,
-    annotations: [{
-        id: 'label1',
-        content: 'Start'
-    }],
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    }
+    offsetY: 100,
 }];
-
-const width = "100%";
+const diagram = ref(null);
+const width = "750px";
 const height = "350px";
 // set the autoScrollBorder
 const scrollSettings = {
     canAutoScroll: true,
     //Sets the scroll limit
-    scrollLimit: 'infinity',
+    scrollLimit: 'Limited',
     //Sets the scrollable Area
     scrollableArea: {
         x: 0,
         y: 0,
-        width: 500,
-        height: 500
+        width: 1000,
+        height: 1000
     }
 }
-const getNodeDefaults = (node) => {
-    node.height = 100;
-    node.width = 100;
-    node.style.fill = '#6BA5D7';
-    node.style.strokeColor = 'white';
-    return node;
+const rulerSettings = { showRulers: true };
+const scrollableArea = [
+  { shape: 'Limited', text: 'Limited' },
+  { shape: 'Infinity', text: 'Infinity' },
+  { shape: 'Diagram', text: 'Diagram' },
+];
+
+
+function onScrollableAreaChange(args) {
+    const diagramInstance = diagram.value.ej2Instances;
+    diagramInstance.scrollSettings.scrollLimit = args.itemData.shape;
+    diagramInstance.dataBind();
 }
+
+const scrollableAreaValue = 'Limited';
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

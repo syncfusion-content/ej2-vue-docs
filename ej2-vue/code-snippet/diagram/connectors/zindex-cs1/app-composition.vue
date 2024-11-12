@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <ejs-diagram id="diagram" :width='width' :height='height' :connectors='connectors'
-            :getConnectorDefaults='getConnectorDefaults'></ejs-diagram>
+            ></ejs-diagram>
     </div>
 </template>
 <script setup>
@@ -39,14 +39,6 @@ const connectors = [{
 
 const width = "100%";
 const height = "350px";
-const getConnectorDefaults = (obj) => {
-    obj.style.strokeColor = '#6BA5D7';
-    obj.style.fill = '#6BA5D7';
-    obj.style.strokeWidth = 2;
-    obj.targetDecorator.style.fill = '#6BA5D7';
-    obj.targetDecorator.style.strokeColor = '#6BA5D7';
-    return obj;
-}
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

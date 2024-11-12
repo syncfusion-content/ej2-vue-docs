@@ -1,72 +1,69 @@
 
-    import Vue from 'vue';
-    import { DiagramPlugin ,NodeModel,ConnectorModel} from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
-    let nodes = [
-        {
-            id: 'node1',
-            width: 90,
-            height: 60,
-            offsetX: 100,
-            offsetY: 100,
-            style: {
-                fill:   '#6BA5D7',
-                strokeColor: 'white',
-                strokeWidth: 1
-            },
-        }
-        {
-            id: 'node2',
-            width: 100,
-            height: 60,
-            offsetX: 100,
-            offsetY: 170,
-            style: {
-                fill:   '#6BA5D7',
-                strokeColor: 'white',
-                strokeWidth: 1
-            },
-        },
-        {
-            id: 'node3',
-            width: 130,
-            height: 60,
-            offsetX: 100,
-            offsetY: 230,
-            style: {
-                fill:   '#6BA5D7',
-                strokeColor: 'white',
-                strokeWidth: 1
-            },
-        }
-    ];
-    
+import Vue from 'vue';
+import { DiagramPlugin} from '@syncfusion/ej2-vue-diagrams';
+Vue.use(DiagramPlugin);
+
+let diagramInstance;
+
+let nodes = [
+    {
+        id: "node1",
+        width: 100,
+        height: 80,
+        offsetX: 140,
+        offsetY: 100,
+        annotations: [{ content: "Node1" }],
+      },
+      {
+        id: "node2",
+        width: 100,
+        height: 60,
+        offsetX: 140,
+        offsetY: 200,
+        annotations: [{ content: "Node2" }],
+      },
+      {
+        id: "node3",
+        width: 200,
+        height: 30,
+        offsetX: 140,
+        offsetY: 300,
+        annotations: [{ content: "Node3" }],
+      },
+];
+
 new Vue({
-	el: '#app',
-	template: `
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes'></ejs-diagram>
-    </div>
+el: '#app',
+template: `
+<div id="app">
+        <label> Size Option :  </label>
+        <select id="sizeChange" ref="sizeChange" v-on:change="sizeChangeFunction">
+            <option value="Width">Width</option>
+            <option value="Height">Height</option>
+            <option value="Size">Size</option>
+        </select>
+    <ejs-diagram id="diagram"  ref='diagramObj'  :width='width' :height='height' :nodes='nodes'></ejs-diagram>
+</div>
 `,
 
-        name: 'app'
-        data() {
-            return {
-                width: "100%",
-                height: "350px",
-                nodes: nodes
+    name: 'app',
+    data() {
+        return {
+            width: "100%",
+            height: "590px",
+            nodes: nodes,
+
+ 
+            // Function to handle the export button click
+            sizeChangeFunction: () => {
+               
+                let objects = diagramInstance.nodes;
+                let size = this.$refs.sizeChange.value;
+                diagramInstance.sameSize(size, objects);
             }
         }
-        mounted: function() {
-            let diagramInstance: Diagram;
-            let diagramObj: any = document.getElementById("diagram");
-            diagramInstance = diagramObj.ej2_instances[0];
-            let selArray: (NodeModel | ConnectorModel)[] = [];
-            selArray.push(diagramInstance.nodes[0], diagramInstance.nodes[1], diagramInstance.nodes[2]);
-            //Selects the nodes
-            diagramInstance.select(selArray);
-            //Resizes the selected nodes with the same width
-            diagramInstance.sameSize('Width', diagramInstance.selectedItems.nodes);
-        }
-    
+    },
+    mounted: function () {
+        diagramInstance = this.$refs.diagramObj.ej2Instances;
+    }
 });

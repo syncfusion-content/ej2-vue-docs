@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script>
@@ -14,10 +14,6 @@ const nodes = [{
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the annotation for the connector
     annotations: [{
         content: 'Task1',
@@ -34,6 +30,20 @@ const nodes = [{
     }]
 }];
 
+const connectors = [{
+    sourcePoint: { x: 200, y: 100 },
+    targetPoint: { x: 500, y: 300 },
+    type: 'Orthogonal',
+    //Path annotation offset
+    annotations: [
+        {
+        content: 'annotation',
+        offset: 0.2,
+        margin: { left: 40 },
+      },
+    ],
+}]
+
 export default {
     name: "App",
     components: {
@@ -44,6 +54,7 @@ export default {
             width: "100%",
             height: "350px",
             nodes: nodes,
+            connectors: connectors
         }
     }
 }

@@ -14,10 +14,7 @@ let nodes = [{
     offsetY: 250,
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
+    style: { strokeColor: '#64Abbb', strokeWidth: 3 },
     // A fixed user handle is created and stored in fixed user handle collection of Node.
      fixedUserHandles: [{ offset: { x: 0, y: 0 }, margin: { right: 20 }, width: 50, height: 20, id: 'usercon1' }]
 }];
@@ -25,17 +22,7 @@ let nodes = [{
 
 let connectors = [{
      id: "connector1",
-        style: {
-            strokeColor: '#6BA5D7',
-            fill: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        },
+        style: { strokeColor: '#64Abbb', strokeWidth: 3 },
         sourcePoint: {
             x: 400,
             y: 200

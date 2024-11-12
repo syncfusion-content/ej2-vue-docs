@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
 <script setup>
@@ -9,15 +9,11 @@ import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 const nodes = [{
     id: 'node1',
     // Position of the node
-    offsetX: 100,
-    offsetY: 100,
+    offsetX: 450,
+    offsetY: 250,
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the multiple annotation for the node
     annotations: [{
         content: 'Left',
@@ -43,8 +39,30 @@ const nodes = [{
     ]
 }];
 
-const width = "100%";
-const height = "350px";
+const connectors = [{
+  id: 'connector',
+  type: 'Orthogonal',
+  sourcePoint: { x: 200, y: 200 },
+  targetPoint: { x: 300, y: 300 },
+  // Sets the multiple annotation for the node
+  annotations: [
+    {
+      content: 'Top',
+      offset: 0.2,
+    },
+    {
+      content: 'Center',
+      offset: 0.6,
+    },
+    {
+      content: 'Bottom',
+      offset: 0.8,
+    },
+  ],
+}]
+
+const width = "750px";
+const height = "600px";
 
 </script>
 <style>

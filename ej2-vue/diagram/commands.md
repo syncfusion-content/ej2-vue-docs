@@ -12,10 +12,10 @@ domainurl: ##DomainURL##
 
 <!-- markdownlint-disable MD010 -->
 
-There are several commands available in the diagram as follows.
+The commands in diagram control are used to perform various interactions within the diagram when called. Several commands are available in the diagram, as follows:
 
 * Alignment commands
-* Spacing commands
+* Distribute commands
 * Sizing commands
 * Clipboard commands
 * Grouping commands
@@ -25,17 +25,42 @@ There are several commands available in the diagram as follows.
 * FitToPage commands
 * Undo/Redo commands
 
-## Align
+## Align commands
 
-Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Refer to [`align`](https://ej2.syncfusion.com/vue/documentation/api/diagram#align) commands which shows how to use align methods in the diagram.
+The alignment command enables you to align selected or defined objects, such as nodes and connectors, with respect to the selection boundary or the first selected object. The [`align`](https://ej2.syncfusion.com/vue/documentation/api/diagram#align)method parameters are explained below.
+
+### Alignment Options
+
+The [`Alignment Options`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentOptions/) defines the alignment position of objects to be aligned.
+
+|Alignment|Description|
+|----|----|
+|Left| Aligns all the selected objects at the left of the selection boundary|
+|Right| Aligns all the selected objects at the right of the selection boundary|
+|Center| Aligns all the selected objects at the center of the selection boundary|
+|Top| Aligns all the selected objects at the top of the selection boundary|
+|Bottom| Aligns all the selected objects at the bottom of the selection boundary|
+|Middle| Aligns all the selected objects at the middle of the selection boundary|
 
 <!-- markdownlint-disable MD033 -->
 
-| Parameters                                                                                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| :---------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [`Alignment Options`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentOptions#AlignmentOptions) | <p align="left">Defines the specific direction, with respect to which the objects to be aligned. <br> The accepted values of the argument "alignment options" are as follows.</p> <table><tr><td> Left </td><td align="left"> Aligns all the selected objects at the left of the selection boundary. </td></tr><tr><td> Right </td><td align="left"> Aligns all the selected objects at the right of the selection boundary. </td></tr><tr><td> Center </td><td align="left"> Aligns all the selected objects at the center of the selection boundary. </td></tr><tr><td>Top </td><td align="left"> Aligns all the selected objects at the top of the selection boundary. </td></tr><tr><td> Bottom </td><td align="left"> Aligns all the selected objects at the bottom of the selection boundary. </td></tr><tr><td> Middle </td><td align="left"> Aligns all the selected objects at the middle of the selection boundary. </td></tr></table> |
-| Objects                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                <p align="left">Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned.</p>                                                                                                                                                                                                                                                                                                                                                                                |
-| [`Alignment Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentMode#AlignmentMode)          |                                                                                                                                                                                                                            <p align="left">Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`.<br> The accepted values of the argument "alignment mode" are as follows.</p> <table><tr><td> Object </td><td align="left"> Aligns the objects based on the first object in the selected list. </td></tr><tr><td> Selector </td><td align="left"> Aligns the objects based on the selection boundary. </td></tr></table>                                                                                                                                                                                                                            |
+### Objects 
+
+Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned.
+
+### Alignment Mode
+
+[`Alignment Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/alignmentMode/) defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. The accepted values of the argument "alignment mode" are as follows.
+
+The below table shows the alignment as `Left` for different alignment modes.
+
+|Nodes before alignment|Alignment mode|Description|Output image|
+|----|----|----|----|
+|![Align original](images/alignOrginal.png)|Object (Default)|Aligns the objects based on the bounds of first object in the selected list.|![Align Object](images/alignObject.png)|
+|![Align original](images/alignOrginal.png)|Selector|Aligns the objects based on the selection boundary.|![Align Selector](images/alignSelector.png)|
+
+
+The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -50,22 +75,30 @@ Alignment commands enable you to align the selected or defined objects such as n
 
 ![Align Sample](images/Commands_img1.png)
 
-## Distribute
+## Distribute commands
 
-The [`Distribute`](https://ej2.syncfusion.com/vue/documentation/api/diagram#distribute) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
+The [`Distribute`](https://ej2.syncfusion.com/vue/documentation/api/diagram#distribute) method enable you to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary. The [`distribute`](https://ej2.syncfusion.com/vue/documentation/api/diagram#distribute) method parameters are explained below.
 
-The factor to distribute the shapes [`DistributeOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/distributeOptions#DistributeOptions) are listed as follows:
+### Distribute options
 
-* RightToLeft: Distributes the objects based on the distance between the right and left sides of the adjacent objects.
-* Left: Distributes the objects based on the distance between the left sides of the adjacent objects.
-* Right: Distributes the objects based on the distance between the right sides of the adjacent objects.
-* Center: Distributes the objects based on the distance between the center of the adjacent objects.
-* BottomToTop: Distributes the objects based on the distance between the bottom and top sides of the adjacent objects.
-* Top: Distributes the objects based on the distance between the top sides of the adjacent objects.
-* Bottom: Distributes the objects based on the distance between the bottom sides of the adjacent objects.
-* Middle: Distributes the objects based on the distance between the vertical center of the adjacent objects.
+The factor to distribute the shapes  using [`DistributeOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/distributeOptions#DistributeOptions) are listed as follows:
 
-The following code example illustrates how to execute the space commands.
+|Distribute option| Description|
+|----|----|
+| RightToLeft | Distributes the objects based on the distance between the right and left sides of the adjacent objects. |
+| Left | Distributes the objects based on the distance between the left sides of the adjacent objects. |
+| Right | Distributes the objects based on the distance between the right sides of the adjacent objects. |
+| Center | Distributes the objects based on the distance between the center of the adjacent objects. |
+| BottomToTop | Distributes the objects based on the distance between the bottom and top sides of the adjacent objects. |
+| Top | Distributes the objects based on the distance between the top sides of the adjacent objects. |
+| Bottom | Distributes the objects based on the distance between the bottom sides of the adjacent objects. |
+| Middle | Distributes the objects based on the distance between the vertical center of the adjacent objects. |
+
+### Objects 
+
+Defines the objects to be distributed. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets distributed.
+
+The following code example illustrates how the nodes are distributed using the `RightToLeft` option.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,15 +113,23 @@ The following code example illustrates how to execute the space commands.
 
 ![DistributeImage](images/Commands_img2.png)
 
-## Sizing
+## Sizing commands
 
-Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sameSize) commands enable to equally size the selected nodes with respect to the first selected object.
+Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sameSize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](ttps://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) method are explained below.
 
-[`SizingOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/sizingOptions) are as follows:
+### Sizing options
 
-* Width: Scales the width of the selected objects.
-* Height: Scales the height of the selected objects.
-* Size: Scales the selected objects both vertically and horizontally.
+[`SizingOptions`](ttps://ej2.syncfusion.com/vue/documentation/api/diagram/sizingOptions) include:
+
+|Sizing options|Description|
+|----|----|
+| Width | Adjusts the width of all objects to match the width of the first node in the objects collection. |
+| Height | Adjusts the height of all objects to match the height of the first node in the objects collection. |
+| Size | Adjusts both the width and height of all objects to match the size of the first node in the objects collection. |
+
+### Objects
+
+This optional parameter defines which objects should be scaled. By default, all nodes and connectors within the selected region of the diagram are scaled.
 
 The following code example illustrates how to execute the size commands.
 
@@ -105,15 +146,19 @@ The following code example illustrates how to execute the size commands.
 
 ![Sizing Sample](images/Commands_img3.png)
 
-## Clipboard
+## Clipboard commands
 
-Clipboard commands are used to cut, copy, or paste the selected elements. Refer to the following link which shows how to use clipboard methods in the diagram.
+Clipboard commands are used to cut, copy, or paste selected elements in the diagram using the [`cut`](https://ej2.syncfusion.com/vue/documentation/api/diagram#cut), [`copy`](https://ej2.syncfusion.com/vue/documentation/api/diagram#copy), [`paste`](https://ej2.syncfusion.com/vue/documentation/api/diagram#paste) methods. You can also use keyboard shortcuts for these actions. For detailed information on using these methods refer the below table.
 
-* Cuts the selected elements from the diagram to the diagram’s clipboard, [`cut`](https://ej2.syncfusion.com/vue/documentation/api/diagram#cut).
+| Command (Shortcut key) | Description |
+|---------|-------------|
+| `Cut` (CTRL+X)  | Removes the selected elements from the diagram and places them onto the diagram’s clipboard. This operation is performed using the [`cut`](https://ej2.syncfusion.com/vue/documentation/api/diagram#cut).  method. |
+| `Copy`(CTRL+C)  | Duplicates the selected elements and places them onto the diagram’s clipboard without removing them from their original location. Use the [`copy`](https://ej2.syncfusion.com/vue/documentation/api/diagram#copy) method for this operation. |
+| `Paste`(CTRL+V) | Inserts the elements stored on the diagram’s clipboard (nodes and connectors) into the diagram. This can be done using the [`paste`](https://ej2.syncfusion.com/vue/documentation/api/diagram#paste) method. |
 
-* Copies the selected elements from the diagram to the diagram’s clipboard, [`copy`](https://ej2.syncfusion.com/vue/documentation/api/diagram#copy).
+The [`paste`](https://ej2.syncfusion.com/vue/documentation/api/diagram#paste) method optionally accepts a collection of nodes or connectors to be added to the diagram.
 
-* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram, [`paste`](https://ej2.syncfusion.com/vue/documentation/api/diagram#paste).
+The following code illustrates how to execute the clipboard commands.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -126,15 +171,16 @@ Clipboard commands are used to cut, copy, or paste the selected elements. Refer 
         
 {% previewsample "page.domainurl/code-snippet/diagram/commands/clipboard-cs1" %}
 
-## Grouping
+## Grouping commands
 
-**Grouping commands** are used to group/ungroup the selected elements on the diagram. Refer to the following link which shows how to use grouping commands in the diagram.
+Grouping Commands are used to group or ungroup selected elements in the diagram. Grouping commands help in managing and organizing multiple elements by combining them into a single group or separating them into individual elements. You can also use keyboard shortcuts for these actions. The following table provides more details on these commands:
 
-[`Group`](https://ej2.syncfusion.com/vue/documentation/api/diagram#group) the selected nodes and connectors in the diagram.
+| Commands (Shortcut key) | Description|
+|----|----|
+| [`Group`](https://ej2.syncfusion.com/vue/documentation/api/diagram#group) (CTRL+G) | Combines the selected nodes and connectors into a single group, allowing you to move, resize, or apply other operations to all grouped elements as a unit. |
+| [`Ungroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram#ungroup) (CTRL+Shift+U) | Splits a previously grouped set of nodes and connectors into individual elements, enabling you to modify or manipulate them separately.            |
 
-[`Ungroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram#ungroup) the selected nodes and connectors in the diagram.
-
-The following code illustrates how to execute the grouping commands.
+The following code examples demonstrate how to use the grouping commands in diagram:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -147,13 +193,38 @@ The following code illustrates how to execute the grouping commands.
         
 {% previewsample "page.domainurl/code-snippet/diagram/commands/grouping-cs1" %}
 
+## Rotate commands
+
+The [`rotate`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#rotate) commands in the diagram allow users to rotate selected elements by specified angles. These commands are useful for adjusting the rotate angle of nodes or shapes within the diagram.
+
+| Parameter | Type | Description |
+|----------|-------|-------------|
+| obj | NodeModel / ConnectorModel/ SelectorModel | The objects to be rotated. |
+| angle | number | The angle by which the objects should be rotated (in degrees). |
+| pivot (optional)   | PointModel| The reference point with respect to which the objects will be rotated. |
+| rotateUsingHandle (optional) | boolean | Whether to rotate using the handle. |
+
+You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise. The following example shows how to rotate nodes in clockwise and anti-clockwise direction.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/commands/rotate-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/commands/rotate-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/rotate-cs1" %}
+
+
 ## Z-Order command
 
-**Z-Order commands** enable you to visually arrange the selected objects such as nodes and connectors on the page.
+**Z-Order commands** allow you to control the stacking order of selected objects, such as nodes and connectors, on the diagram page.
 
-### bringToFront command
+### Bring to front command
 
-The [`bringToFront`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToFront) command visually brings the selected element to front over all the other overlapped elements. The following code illustrates how to execute the `bringToFront` command.
+The [`bringToFront`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToFront)  command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -166,9 +237,9 @@ The [`bringToFront`](https://ej2.syncfusion.com/vue/documentation/api/diagram#br
         
 {% previewsample "page.domainurl/code-snippet/diagram/commands/bringfront-cs1" %}
 
-### sendToBack command
+### Send to back command
 
-The [`sendToBack`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendToBack) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `sendToBack` command.
+The [`sendToBack`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendToBack)command moves the selected element to the back, placing it behind all other elements in the diagram. The following code illustrates how to use the `sendToBack` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -181,9 +252,9 @@ The [`sendToBack`](https://ej2.syncfusion.com/vue/documentation/api/diagram#send
         
 {% previewsample "page.domainurl/code-snippet/diagram/commands/sendback-cs1" %}
 
-### moveForward command
+### Move forward command
 
-The [`moveForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#moveForward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `moveForward` command.
+The [`moveForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#moveForward) command moves the selected element one step forward in the stack, placing it above the nearest overlapping element. The following code illustrates how to use the `moveForward` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -196,9 +267,9 @@ The [`moveForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#mov
         
 {% previewsample "page.domainurl/code-snippet/diagram/commands/moveforward-cs1" %}
 
-### sendBackward command
+### send backward command
 
-The [`sendBackward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendBackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `sendBackward` command.
+The [`sendBackward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendBackward) command moves the selected element one step backward in the stack, placing it behind the underlying element. The following code illustrates how to use the `sendBackward` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -284,325 +355,123 @@ export default {
 
 ## Nudge command
 
-The [`nudge`](https://ej2.syncfusion.com/vue/documentation/api/diagram#nudge) commands move the selected elements towards up, down, left, or right by 1 pixel.
+The [`nudge`](https://ej2.syncfusion.com/vue/documentation/api/diagram#nudge) command moves the selected elements up, down, left, or right by 1 pixel. The parameters of [`nudge`](https://ej2.syncfusion.com/vue/documentation/api/diagram#nudge) method is explained below.
 
-[`NudgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nudgeDirection) nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
+| Parameter    | Type           | Description                                                      |
+|--------------|-----------|-----------|
+| direction    |[`NudgeDirection`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nudgeDirection) | Defines the direction in which the objects should be moved.      |
+| x (optional) | number         | The horizontal distance by which the selected objects should be moved. |
+| y (optional) | number         | The vertical distance by which the selected objects should be moved.   |
+| type (optional) | string      | A string that defines the type of nudge action.                           |
 
-The accepted values of the argument "direction" are as follows:
+The accepted values for the "direction" argument are as follows:
 
-* Up: Moves the selected elements towards up by the specified delta value.
-* Down: Moves the selected elements towards down by the specified delta value.
-* Left: Moves the selected elements towards left by the specified delta value.
-* Right: Moves the selected elements towards right by the specified delta value.
+* Up: Moves the selected elements up by the specified delta value.
+* Down: Moves the selected elements down by the specified delta value.
+* Left: Moves the selected elements left by the specified delta value.
+* Right: Moves the selected elements right by the specified delta value.
 
-The following code illustrates how to execute nudge command.
+The following code illustrates how to execute the nudge command.
+
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { onMounted, ref } from "vue";
-import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
-
-const diagram = ref(null);
-const width = "100%";
-const height = "350px";
-
-onMounted(function() {
-    const diagramInstanse = diagram.value.ej2Instances;
-    diagramInstance.nudge('Right');
-})
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/nudge-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'></ejs-diagram>
-    </div>
-</template>
-<script>
-import { DiagramComponent } from '@syncfusion/ej2-vue-diagrams';
-
-export default {
-    name: 'App',
-    components: {
-    'ejs-diagram': DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-        }
-    },
-    mounted: function() {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        diagramInstance.nudge('Right');
-    }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/nudge-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/nudge-cs1" %}
 
 ## Nudge by using arrow keys
 
-The corresponding arrow keys are used to move the selected elements towards up, down, left, or right direction by 1 pixel.
+The arrow keys can be used to move the selected elements up, down, left, or right by 1 pixel.
 
 ![Nudge Command](images/Commands_img4.png)
 
-Nudge commands are particularly useful for accurate placement of elements.
+Nudge commands are particularly useful for accurate placement of elements.
+
+N> The position change event will not trigger when using keyboard keys to move a node or connector.
 
 ## BringIntoView
 
-The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringIntoView) command brings the specified rectangular region into the viewport of the diagram.
+The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringIntoView) command brings the specified rectangular region into the viewport of the diagram, ensuring that it is visible within the current view.
 
-The following code illustrates how to execute the `bringIntoView` command.
+The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringIntoView) method takes a single parameter, an object that defines the rectangular region to bring into view. This object should include properties such as x, y, width, and height to specify the exact region to be made visible.
+
+The following code illustrates how to execute the bringIntoView command:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { onMounted, ref } from "vue";
-import { DiagramComponent as EjsDiagram, Rect } from "@syncfusion/ej2-vue-diagrams";
-
-const diagram = ref(null);
-const width = "100%";
-const height = "350px";
-
-onMounted(function() {
-    const diagramInstance = diagram.value.ej2Instance;
-    //Brings the specified rectangular region of the Diagram content to the viewport of the page.
-    let bound = new Rect(200, 400, 500, 400);
-    diagramInstance.bringIntoView(bound);
-});
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/bringView-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'  ></ejs-diagram>
-    </div>
-</template>
-<script>
-import { DiagramComponent, Rect } from '@syncfusion/ej2-vue-diagrams';
-
-export default {
-    name: 'App',
-    components: {
-        'ejs-diagram': DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px"
-        }
-    },
-    mounted: function() {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        //Brings the specified rectangular region of the Diagram content to the viewport of the page.
-        let bound = new Rect(200, 400, 500, 400);
-        diagramInstance.bringIntoView(bound);
-    }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/bringView-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/bringView-cs1" %}
 
 ## BringToCenter
 
-The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToCenter) command brings the specified rectangular region of the diagram content to the center of the viewport.
+The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToCenter) command centers the specified rectangular region of the diagram content within the viewport.
 
-The following code illustrates how to execute the `bringToCenter` command.
+The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToCenter)  method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
+
+The following code illustrates how to execute the bringToCenter command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'  ></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { onMounted, ref } from "vue";
-import { DiagramComponent as EjsDiagram, Rect } from '@syncfusion/ej2-vue-diagrams';
-
-const diagram = ref(null);
-const width = "100%";
-const height = "350px";
-
-onMounted(function() {
-    const diagramInstance = diagram.value.ej2Instances;
-    //Brings the specified rectangular region of the Diagram content to the center of the viewport.
-    let bound = new Rect(200, 400, 500, 400);
-    diagramInstance.bringToCenter(bound);
-})
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/bringCenter-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height'  ></ejs-diagram>
-    </div>
-</template>
-<script>
-import { DiagramComponent, Rect } from '@syncfusion/ej2-vue-diagrams';
-
-export default {
-    name: 'App',
-    components: {
-        'ejs-diagram': DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-        }
-    },
-    mounted: function() {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        //Brings the specified rectangular region of the Diagram content to the center of the viewport.
-        let bound = new Rect(200, 400, 500, 400);
-        diagramInstance.bringToCenter(bound);
-    }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/bringCenter-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/bringCenter-cs1" %}
 
-## FitToPage command
+## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#fitToPage) command helps to fit the diagram content into the view with respect to either width, height, or at the whole.
+The [`fitToPage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#fitToPage) command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter, [`fitOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions/), which specifies the options for fitting the diagram to the page.
 
-The [`mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/fitModes#modes) parameter defines whether the diagram has to be horizontally/vertically fit into the viewport with respect to width, height, or entire bounds of the diagram.
+### FitOptions
 
-The [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramRegions#region) parameter defines the region that has to be drawn as an image.
+The [`mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/fitModes#modes) parameter defines how the diagram should fit into the viewport—horizontally, vertically, or based on the entire bounds of the diagram.
 
-The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#margin) parameter defines the region/bounds of the diagram content that is to be fit into the view.
+The [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramRegions#region) parameter specifies the region of the diagram that should be fit within viewport.
 
-The [`canZoomIn`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
+The [`margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#margin) parameter sets the margin around the diagram content that should be included in the view.
 
-The [`customBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#customBounds) parameter the custom region that has to be fit into the viewport.
+The [`canZoomIn`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#canZoomIn) parameter enables or disables zooming in to fit smaller content into a larger viewport.
+
+The [`canZoomOut`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions/#canzoomout) parameter enables or disables zooming out to fit larger content into a smaller viewport.
+
+The [`customBounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions#customBounds) parameter defines a custom region that should be fit into the viewport.
+
 
 The following code illustrates how to execute `FitToPage` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'  ></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { onMounted, ref } from "vue";
-import { DiagramComponent as EjsDiagram, Rect } from '@syncfusion/ej2-vue-diagrams';
-
-const diagram = ref(null);
-const width = "100%";
-const height = "350px";
-
-onMounted(function() {
-    const diagramInstance = diagram.value.ej2Instances;
-    //fit the diagram to the page with respect to mode and region
-    diagramInstance.fitToPage({
-        mode: 'Page',
-        region: 'Content',
-        margin: {
-            bottom: 50
-        },
-        canZoomIn: false
-    });
-})
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/fitToPage-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height'  ></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { DiagramComponent, Rect } from '@syncfusion/ej2-vue-diagrams';
-
-export default {
-    name: 'App',
-    components: {
-        'ejs-diagram': DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-        }
-    }
-    mounted: function() {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        //fit the diagram to the page with respect to mode and region
-        diagramInstance.fitToPage({
-            mode: 'Page',
-            region: 'Content',
-            margin: {
-                bottom: 50
-            },
-            canZoomIn: false
-        });
-    }
-}
-</script>
-<style>
-    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/fitToPage-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/fitToPage-cs1" %}
+
 
 ## Command manager
 
-Diagram provides support to map/bind command execution with desired combination of key gestures. Diagram provides some built-in commands.
-[`CommandManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/commandManager#commandManager) provides support to define custom commands. The custom commands are executed, when the specified key gesture is recognized.
+The Diagram provides support for mapping or binding command execution to specific key gestures. It includes built-in commands and allows for the definition of custom commands through the
+[`CommandManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/commandManager#commandManager). Custom commands are executed when the specified key gesture is recognized.
 
-## Custom command
+### Custom command
 
 To define a custom command, specify the following properties:
 * [`execute`](https://ej2.syncfusion.com/vue/documentation/api/diagram/command#execute): A method to be executed.
@@ -613,238 +482,40 @@ To define a custom command, specify the following properties:
 
 To explore the properties of custom commands, refer to [`Commands`](https://ej2.syncfusion.com/vue/documentation/api/diagram/command#commands).
 
-The following code example illustrates how to define a custom command.
+The following code example illustrates how to use the command manager to clone a node and change the fill color of a node while pressing `G` and `Shift+G` or `Alt+G`, respectively:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :commandManager='commandManager' >
-        </ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { onMounted, ref } from "vue";
-import { DiagramComponent as EjsDiagram, Keys, KeyModifiers } from '@syncfusion/ej2-vue-diagrams';
-
-const diagram = ref(null);
-let diagramInstance;
-const width = "100%";
-const height = "350px";
-const commandManager = {
-    commands: [{
-        name: 'customCopy',
-        parameter: 'node',
-        //Method to define whether the command can be executed at the current moment
-        canExecute: function() {
-            //Defines that the clone command can be executed, if and only if the selection list is not empty.
-            if (diagramInstance.selectedItems.nodes.length > 0 || diagramInstance.selectedItems.connectors.length > 0) {
-                return true;
-            }
-            return false;
-        },
-        //Command handler
-        execute: function() {
-            //Logic to clone the selected element
-            diagramInstance.copy();
-            diagramInstance.paste();
-            diagramInstance.dataBind();
-        },
-        //Defines that the clone command has to be executed on the recognition of key press.
-        gesture: {
-            key: Keys.G,
-            keyModifiers: KeyModifiers.Shift | KeyModifiers.Alt
-        }
-    }]
-}
-onMounted(function() {
-    diagramInstance = diagram.value.ej2Instances;
-})
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/customCommand-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :commandManager='commandManager' ></ejs-diagram>
-    </div>
-</template>
-<script>
-import { DiagramComponent, Keys, KeyModifiers } from '@syncfusion/ej2-vue-diagrams';
-
-let diagramInstance;
-
-export default {
-    name: 'App',
-    components: {
-        'ejs-diagram': DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            commandManager: {
-                commands: [{
-                    name: 'customCopy',
-                    parameter: 'node',
-                    //Method to define whether the command can be executed at the current moment
-                    canExecute: function() {
-                        //Defines that the clone command can be executed, if and only if the selection list is not empty.
-                        if (diagramInstance.selectedItems.nodes.length > 0 || diagramInstance.selectedItems.connectors.length > 0) {
-                            return true;
-                        }
-                        return false;
-                    },
-                    //Command handler
-                    execute: function() {
-                        //Logic to clone the selected element
-                        diagramInstance.copy();
-                        diagramInstance.paste();
-                        diagramInstance.dataBind();
-                    },
-                    //Defines that the clone command has to be executed on the recognition of key press.
-                    gesture: {
-                        key: Keys.G,
-                        keyModifiers: KeyModifiers.Shift | KeyModifiers.Alt
-                    }
-                }]
-            },
-        }
-    }
-    mounted: function() {
-        diagramInstance = this.$refs.diagram.ej2Instances;
-    }
-}
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/customCommand-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/customCommand-cs1" %}
 
-## Modify the existing command
+### Disable/Modify the existing command
 
-When any one of the default commands is not desired, they can be disabled. To change the functionality of a specific command, the command can be completely modified.
 
-The following code example illustrates how to disable a command and how to modify the built-in commands.
+When any of the default commands are not desired, they can be disabled. Additionally, if you need to change the functionality of a specific command, it can be completely modified.
+
+The following code example illustrates how to disable the default cut and delete commands using CTRL+X and Delete keys, and how to modify the copy command to clone a node using CTRL+C:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :commandManager='commandManager' ></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { DiagramComponent as EjsDiagram, Keys, KeyModifiers } from '@syncfusion/ej2-vue-diagrams';
-
-const width = "100%";
-const height = "350px";
-const commandManager = {
-    commands: [
-        {
-            name: 'nudgeUp',
-            canExecute: function () {
-                return false;
-            },
-            gesture: {
-                key:Keys.Up,  
-            }
-        },
-        {
-            name: 'nudgeDown',
-            canExecute: function () {
-                return false;
-            },
-            gesture: {
-                key: Keys.Down,
-            }
-        },
-        {
-        name: 'nudgeRight',
-            canExecute: function () {
-                return false;
-            },
-            gesture: {
-                key: Keys.Right,
-            }
-        }
-    ]
-}
-
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/modifyCommand-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :commandManager='commandManager' ></ejs-diagram>
-    </div>
-</template>
-<script setup>
-import { DiagramComponent, Keys, KeyModifiers } from '@syncfusion/ej2-vue-diagrams';
-
-export default {
-    name: 'App',
-    components: {
-        'ejs-diagram': DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            commandManager: {
-                commands: [
-                    {
-                        name: 'nudgeUp',
-                        canExecute: function () {
-                            return false;
-                        },
-                        gesture: {
-                            key:Keys.Up,  
-                        }
-                    },
-                    {
-                        name: 'nudgeDown',
-                        canExecute: function () {
-                            return false;
-                        },
-                        gesture: {
-                            key: Keys.Down,
-                        }
-                    },
-                    {
-                    name: 'nudgeRight',
-                        canExecute: function () {
-                            return false;
-                        },
-                        gesture: {
-                            key: Keys.Right,
-                        }
-                    }
-                ]
-            }
-        }
-    }
-}
-</script>
-<style>
-    @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
-</style>
-
+{% include code-snippet/diagram/commands/modifyCommand-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/commands/modifyCommand-cs1" %}
+
+## Undo-redo
+
+Undo/redo commands can be executed through shortcut keys. Shortcut key for undo is **`Ctrl+z`** and shortcut key for redo is **`Ctrl+y`**. For more information refer to the [`undo-redo`](./undo-redo)
 
 ## See Also
 

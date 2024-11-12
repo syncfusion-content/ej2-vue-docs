@@ -1,21 +1,12 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin ,ConnectorEditing ,Diagram} from '@syncfusion/ej2-vue-diagrams';
+    Diagram.Inject(ConnectorEditing);
     Vue.use(DiagramPlugin);
     let connectors = [{
     id: 'connector3',
     type: 'Bezier',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
+    
     segments: [{
         type: 'Bezier',
         // First control point: an absolute position from the page origin
@@ -47,7 +38,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

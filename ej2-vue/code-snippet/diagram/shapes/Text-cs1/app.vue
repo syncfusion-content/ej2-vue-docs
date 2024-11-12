@@ -18,12 +18,8 @@ let nodes = [{
         type: 'Text',
         content: 'Text Element'
     },
-    //Customizes the appearances such as text, font, fill, and stroke.
     style: {
-        strokeColor: 'none',
         fill: 'none',
-        color: 'black',
-        textAlign: 'Center'
     }
 }];
 
@@ -35,7 +31,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
         }
     }

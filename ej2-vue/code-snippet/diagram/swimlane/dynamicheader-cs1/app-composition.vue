@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <button @click="updateHeaderStyle">updateHeaderStyle</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -40,11 +41,11 @@ const nodes = [{
 const width = "100%";
 const height = "350px";
 
-onMounted(function () {
+const updateHeaderStyle = () => {
     const diagramInstance = diagram.value.ej2Instances;
-    diagramInstance.nodes[0].shape.header.style.fill = 'red'
-    diagramInstance.dataBind();
-});
+    diagramInstance.nodes[0].shape.header.style.fill = 'red';
+    diagramInstance.dataBind(); 
+};
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

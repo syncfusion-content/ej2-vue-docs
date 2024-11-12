@@ -14,10 +14,6 @@ let nodes = [{
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the annotation for the Node
     annotations: [{
         // Set an template for annotation
@@ -35,9 +31,6 @@ let connectors = [{
         y: 300
     },
     type: 'Orthogonal',
-    style: {
-        strokeColor: '#6BA5D7'
-    },
     // Sets the Annotation for the Connector
     annotations: [{
         // Set an template for annotation

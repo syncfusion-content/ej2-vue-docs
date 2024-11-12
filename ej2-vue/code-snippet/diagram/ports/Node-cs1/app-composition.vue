@@ -1,24 +1,21 @@
 <template>
     <div id="app">
+        <ejs-button v-on:click='addPorts'>Add Ports</ejs-button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
 <script setup>
 import { onMounted, ref } from "vue";
 import { DiagramComponent as EjsDiagram, PortVisibility } from '@syncfusion/ej2-vue-diagrams';
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 
+let diagramInstance;
 const diagram = ref(null);
 const nodes = [{
-    // Position of the node
     offsetX: 250,
     offsetY: 250,
-    // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
 }];
 
 const port = [{
@@ -56,13 +53,21 @@ const port = [{
 ];
 
 const width = "100%";
-const height = "350px";
+const height = "600px";
 
 onMounted(function () {
-    const diagramInstance = diagram.value.ej2Instances;
-    // Adds to the Diagram
+    diagramInstance = diagram.value.ej2Instances;
+});
+
+const addPorts = function() {
+
+    // Method to add ports to a node at runtime
+    // Parameters:
+    // - node: The node to which the port will be added.
+    // - port: The port collection to be added to the node.
     diagramInstance.addPorts(diagramInstance.nodes[0], port);
-})
+}
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

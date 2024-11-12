@@ -20,17 +20,6 @@
 let connectors = [{
     id: "connector1",
     type: 'Orthogonal',
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     // Sets the radius for the rounded corner
     cornerRadius: 10,
     sourceID: 'node1',
@@ -50,7 +39,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

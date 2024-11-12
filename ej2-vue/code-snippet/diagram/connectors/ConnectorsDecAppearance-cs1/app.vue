@@ -14,7 +14,6 @@ let connectors = [{
         fill: '#6BA5D7',
         strokeWidth: 2
     },
-    bridgeSpace: 20,
     // Cutomize the target decorator
     targetDecorator: {
         style: {

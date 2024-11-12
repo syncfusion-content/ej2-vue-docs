@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Export in Vue Diagram component
 
-Diagram provides support to export its content as image/svg files. The client-side method [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram#exportDiagram) helps to export the diagram. The following code illustrates how to export the diagram as image.
+Diagram provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
 
 >Note: To use Print and Export, you need to inject `PrintAndExport` in the diagram.
 
@@ -23,62 +23,90 @@ export default {
         return {
             width: "100%",
             height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        diagramInstance.exportDiagram(options);
+    },
+    methods: {
+        // Function to handle the export button click
+        exportItems() {
+            const exportOptions = {};
+            exportOptions.mode = 'Download';
+            diagramInstance.exportDiagram(exportOptions);
+        },
+    },
+    mounted: function () {
+        diagramInstance = this.$refs.diagramObj.ej2Instances;
     }
 }
 ```
 
 ## Exporting options
 
-Diagram provides support to export the desired region of the diagram to desired formats.
+The diagram provides support to export the desired region of the diagram to various formats. The following table shows the list of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions) in diagram.
+
+| Name | Type | Description|
+|-------- | -------- | -------- |
+| bounds | object | Sets the bounds that has to be exported |
+| region | enum | Sets the region of the diagram to be exported. |
+| fileName | string | Sets the file name of the exported image. |
+| format | string | Sets the export image format. |
+| mode | string | Sets the Mode for the file to be downloaded. |
+| margin | object | Sets the margin of the page to be exported. |
+| stretch| enum | Sets the aspect ratio of the exported image.|
+| multiplePage | boolean | exports the diagram into multiple pages. |
+| pageWidth | number | Sets the page width of the diagram while exporting the diagram into multiple pages. |
+| pageHeight| number | Sets the page height of the diagram while exporting the diagram into multiple pages.|
+| pageOrientation | enum | Sets the orientation of the page. |
 
 ## File Name
 
-[`FileName`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#fileName-string) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
+[`FileName`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#filename) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
 
 ## Format
 
-[`Format`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#format-fileformat) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
+[`Format`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#format) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
 
 * JPG
 * PNG
 * BMP
 * SVG
 
-```javascript
-export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
-        }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        options.format = 'SVG';
-        diagramInstance.exportDiagram(options);
-    }
-}
-```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/export/export-cs1" %}
 
 ## Margin
 
-[`Margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#margin-marginmodel) specifies the amount of space that has to be left around the diagram.
+[`Margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#margin) specifies the amount of space that has to be left around the diagram.
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/export/export-cs2" %}
+
+
+## Mode
+
+[`Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#mode) specifies whether to export the diagram as an image or to return the base64 data of the diagram. The available export modes are:
+
+* Download: Exports and downloads the diagram as an image or SVG file.
+* Data: Returns a base64 string representation of the diagram.
+
+The following code example illustrates how to export the diagram as raw data.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -89,194 +117,108 @@ export default {
         return {
             width: "100%",
             height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        options.margin = {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10
-        };
-        options.fileName = 'format';
-        options.format = 'SVG';
-        diagramInstance.exportDiagram(options);
-    }
-}
-```
-
-## Mode
-
-[`Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#mode-exportmodes) specifies whether the diagram will be exported as files or get base64 data (ImageURL/SVG). The export options are as follows:
-
-* Download: Exports and downloads the diagram as image/SVG.
-* Data: return a base64 string.
-
-The following code example illustrates how to export the diagram as raw data.
-
-```javascript
-export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
-        }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Data';
-        options.margin = {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10
-        };
-        options.fileName = 'format';
-        options.format = 'SVG';
-        let base64data = diagramInstance.exportDiagram(options);
+    },
+    methods: {
+        // Function to handle the export button click
+        exportItems() {
+            const exportOptions = {};
+            exportOptions.mode = 'Data';
+            exportOptions.margin = { left: 10, right: 10, top: 10, bottom: 10 };
+            exportOptions.fileName = 'format';
+            exportOptions.format = 'SVG';
+            let base64data = diagramInstance.exportDiagram(exportOptions);
+        },
+    },
+    mounted: function () {
+        diagramInstance = this.$refs.diagramObj.ej2Instances;
     }
 }
 ```
 
 ## Region
 
-You can export any particular [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#region-diagramregions) of the diagram and it is categorized into three types as follows.
+You can export any particular [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#region) of the diagram and it is categorized into three types as follows.
 
-* PageSettings
-* Content
-* CustomBounds
+| Region | Description |
+|-------- | -------- |
+| PageSettings | The region to be exported will be based on the given page settings |
+| Content | Only the content of the diagram control will be exported | 
+| CustomBounds | The region to be exported will be explicitly defined |
 
-## PageSettings
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/export/export-cs3" %}
 
-Diagram is exported based on the given PageSettings width and height. The Properties available in page settings are as follows.
-* width
-* height
-* margin
-* orientation
-* boundaryConstraints
-* background
-* multiplePage
-* showPageBreaks
-* fitOptions
 
-### boundaryConstraints
+>Note: The [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#bounds) property of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions) should be defined to export the diagram with CustomBounds region.
 
-Defines the editable region of the diagram.
-* Infinity - Allow the interactions to take place at  infinite height and width.
-* Diagram - Allow the interactions to take place around the diagram’s height and width.
-* Page - Allow the interactions to take place around the page’s height and width.
 
-### multiplePage
+### MultiplePage
 
-While setting multiple pages as false, the diagram is exported as a single image and while setting multiple pages as true, the diagram is exported as a separate image based on width and height.
+When the [`multiplePage`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#multiplepage) option is set to false, the diagram is exported as a single image. When it set to true, the diagram is exported as multiple images based on its width and height.
 
-The following code example illustrates how to export the region occupied by the diagram elements.
+The following code example demonstrates how to export the diagram as multiple images.
 
-```javascript
-export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
-        }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        options.margin = {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10
-        };
-        options.fileName = 'format';
-        options.format = 'SVG';
-        options.region = 'Content';
-        diagram.exportDiagram(options);
-    }
-}
-```
 
-## Content
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs4/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/export/export-cs4" %}
 
-The diagram content alone will be exported as an image.
 
-The following code example illustrates how to export the region occupied by the diagram elements.
+### Export image
 
-```javascript
-var diagram = new ej.diagrams.Diagram({
-    width: 1500, height: 1500
-},'#element');
-var options = {};
-options.mode = 'Download';
-options.margin = { left: 10, right: 10, top: 10, bottom: 10};
-options.fileName = 'format';
-options.format = 'SVG';
-options.region = 'PageSettings';
-diagram.exportDiagram(options);
-```
+You can pass the base64 data of an image to the [`exportImage`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#exportimage) method to export it directly. The following example shows how to export base64 data using the `exportImage` method.
 
-## Custom bounds
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/export/export-cs5" %}
 
-Diagram provides support to export any specific region of the diagram by using [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#bounds-rect).
 
-The following code example illustrates how to export the region occupied by the diagram elements.
+### Get diagram content
 
-```javascript
-export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
-        }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        options.margin = {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10
-        };
-        options.fileName = 'region';
-        options.format = 'SVG';
-        options.region = 'CustomBounds';
-        options.bounds.x = 10;
-        options.bounds.y = 10;
-        options.bounds.height = 100;
-        options.bounds.width = 100;
-        diagramInstance.exportDiagram(options);
-    }
-}
-```
+To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#getdiagramcontent) method is used. the following example shows how to get the diagram content at runtime.
+
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs6/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/export/export-cs6/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/export/export-cs6" %}
+
 
 ## Export diagram with stretch option
 
-Diagram provides support to export the diagram as image for [`stretch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions#stretch-stretch) option. The exported images will be clearer but larger in file size.
+Diagram provides support to export the diagram as image for [`stretch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#stretch) option. The exported images will be clearer but larger in file size.
 
 The following code example illustrates how to export the region occupied by the diagram elements.
+
 
 ```javascript
 export default {
@@ -285,72 +227,27 @@ export default {
         return {
             width: "100%",
             height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        options.margin = {
-            left: 10,
-            right: 10,
-            top: 10,
-            bottom: 10
-        };
-        options.fileName = 'region';
-        options.format = 'SVG';
-        options.region = 'Content';
-        options.stretch = 'Stretch';
-        diagram.exportDiagram(options);
-    }
-}
-```
-
-## Print
-
-The client-side method [`print`](https://ej2.syncfusion.com/vue/documentation/api/diagram#print) helps to print the diagram as image.
-
-| Name | Type | Description|
-|-------- | -------- | -------- |
-| region | enum | Sets the region of the diagram to be printed. |
-| bounds | object | Prints any custom region of diagram. |
-| stretch| enum | Resizes the diagram content to fill its allocated space and printed.|
-| multiplePage | boolean | Prints the diagram into multiple pages. |
-| pageWidth | number | Sets the page width of the diagram while printing the diagram into multiple pages. |
-| pageHeight| number | Sets the page height of the diagram while printing the diagram into multiple pages.|
-| pageOrientation | enum | Sets the orientation of the page. |
-
-The following code example illustrates how to export the region occupied by the diagram elements.
-
-```javascript
-export default {
-    name: 'app'
-    data() {
-        return {
-            width: "100%",
-            height: "350px",
-            tool: DiagramTools.DrawOnce || DiagramTools.ZoomPan,
-        }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        let options: IExportOptions = {};
-        options.mode = 'Download';
-        options.region = 'PageSettings';
-        options.multiplePage = true;
-        options.pageHeight = 300;
-        options.pageWidth = 300;
-        diagram.print(options);
+    },
+    methods: {
+        // Function to handle the export button click
+        exportItems() {
+            const exportOptions = {};
+            exportOptions.mode = 'Download';
+            exportOptions.margin = { left: 10, right: 10, top: 10, bottom: 10 };
+            exportOptions.fileName = 'region';
+            exportOptions.format = 'SVG';
+            exportOptions.region = 'Content';
+            exportOptions.stretch = 'Stretch';
+            diagramInstance.exportDiagram(exportOptions);
+        },
+    },
+    mounted: function () {
+        diagramInstance = this.$refs.diagramObj.ej2Instances;
     }
 }
 ```
 
 ## Limitations
 
-We have a limitation in exporting the image with HTML and Native node. So, Syncfusion Essential PDF library is used, which supports HTML Content to Image conversion by using the advanced Qt WebKit rendering engine. You can refer to the following KB link for more details.
-[`https://www.syncfusion.com/kb/13298/how-to-print-or-export-the-html-and-native-node-into-image-format`]
+Currently, printing diagram with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential PDF library. This library incorporates the Syncfusion Essential HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15531/how-to-print-or-export-the-html-and-native-node-into-image-format-using-vue-diagram) kb for more information.

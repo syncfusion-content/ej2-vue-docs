@@ -105,7 +105,7 @@ template: `
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "550px",
             nodes:nodes,
             connectors: connectors,
             segmentThumbSize : 15

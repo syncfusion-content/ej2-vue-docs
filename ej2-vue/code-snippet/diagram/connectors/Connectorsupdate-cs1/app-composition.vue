@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+        <button @click="update">update</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :connectors='connectors'></ejs-diagram>
     </div>
 </template>
@@ -25,7 +26,7 @@ let connectors = [{
 const width = "100%";
 const height = "350px";
 
-onMounted(function () {
+const update = function () {
     const diagramInstance = diagram.value.ej2Instances;
     diagramInstance.connectors[0].style.strokeColor = '#6BA5D7';
     diagramInstance.connectors[0].style.fill = '#6BA5D7';
@@ -35,7 +36,7 @@ onMounted(function () {
     diagramInstance.connectors[0].sourcePoint.x = 150;
     diagramInstance.connectors[0].targetPoint.x = 150;
     diagramInstance.dataBind();
-})
+}
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";

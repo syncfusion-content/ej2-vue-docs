@@ -1,8 +1,8 @@
 <template>
 <div id="app">
   <div id="container" style="margin:10px auto 0; width:250px;">
-    <label for="filter">Enter Text: </label>
-    <input type="text" id="filterTextBox" @input="handleFilterChange" placeholder="Enter text to filter"/>
+    <label>Enter Text: </label>
+    <input type="text" id="filterTextBox" @input="handleFilterChange" placeholder="Enter text to filter" />
     <h4>Select your favorite car:</h4>
     <ejs-listbox id="listbox" :dataSource="data"></ejs-listbox>
   </div>

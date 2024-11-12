@@ -13,10 +13,6 @@ const nodes = [{
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
     // Sets the Annotation for the Node
     annotations: [{
         // Sets the text to be displayed
@@ -34,9 +30,6 @@ const connectors = [{
         y: 300
     },
     type: 'Orthogonal',
-    style: {
-        strokeColor: '#6BA5D7'
-    },
     // Sets the Annotation for the Connector
     annotations: [{
         // Sets the text to be diaplayed
@@ -44,7 +37,7 @@ const connectors = [{
     }]
 }];
 
-const width = "100%";
+const width = "750px";
 const height = "350px";
 
 </script>

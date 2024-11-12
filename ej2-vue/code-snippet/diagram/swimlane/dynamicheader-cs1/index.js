@@ -1,7 +1,6 @@
-
-    import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
-    Vue.use(DiagramPlugin);
+import Vue from 'vue';
+import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+Vue.use(DiagramPlugin);
     let nodes = [{
       shape: {
                 type: 'SwimLane',
@@ -35,24 +34,27 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
+        <button @click="updateHeaderStyle">updateHeaderStyle</button>
         <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",
             height: "350px",
             nodes: nodes,
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
-        diagramInstance = diagramObj.ej2_instances[0];
-        diagramInstance.nodes[0].shape.header.style.fill = 'red'
-       diagramInstance.dataBind();
-    }
+    },
+    methods: {
+        updateHeaderStyle: function() {
+            let diagramInstance;
+            let diagramObj = document.getElementById("diagram");
+            diagramInstance = diagramObj.ej2_instances[0];
+            diagramInstance.nodes[0].shape.header.style.fill = 'red';
+            diagramInstance.dataBind(); 
+        }
+    },
 
 });

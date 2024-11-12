@@ -20,21 +20,23 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
+        <button @click="update">update</button>
         <ejs-diagram id="diagram"  :width='width' :height='height' :connectors='connectors' ></ejs-diagram>
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",
             height: "350px",
             connectors: connectors
         }
-    }
-    mounted: function() {
-        let diagramInstance: Diagram;
-        let diagramObj: any = document.getElementById("diagram");
+    },
+    methods: {
+        update: function() {
+        let diagramInstance;
+        let diagramObj = document.getElementById("diagram");
         diagramInstance = diagramObj.ej2_instances[0];
         diagramInstance.connectors[0].style.strokeColor = '#6BA5D7';
         diagramInstance.connectors[0].style.fill = '#6BA5D7';
@@ -44,6 +46,7 @@ new Vue({
         diagramInstance.connectors[0].sourcePoint.x = 150;
         diagramInstance.connectors[0].targetPoint.x = 150;
         diagramInstance.dataBind();
+        }
     }
 
 });

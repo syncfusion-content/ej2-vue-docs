@@ -12,7 +12,7 @@ let nodes = [{
         orientation: 'Horizontal',
         //Intialize header to swimlane
         header: {
-            annotation: { content: 'ONLINE PURCHASE STATUS', style: { fill: '#111111' } },
+            annotation: { content: 'ONLINE PURCHASE STATUS' },
             height: 50, style: { fontSize: 11 },
         },
         lanes: [
@@ -21,9 +21,10 @@ let nodes = [{
                 height: 100,
                 // customization of lane header
                 header: {
-                    annotation: { content: 'Online Consumer' }, width: 30,
+                    annotation: { content: 'Online Consumer', style: { fill: 'white', color: 'red' }, }, width: 30,
                     style: { fontSize: 11 }, style: { fill: 'red' }
                 },
+                style: { fill: 'violet' },
             },
         ],
         phases: [

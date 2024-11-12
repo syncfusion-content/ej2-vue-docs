@@ -7,7 +7,7 @@
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 
 const connectors = [{
-    id: "connector",
+    id: "connector1",
     //Define connector start and end points
     sourcePoint: { x: 100, y: 100 },
     targetPoint: { x: 300, y: 300 },
@@ -18,10 +18,22 @@ const connectors = [{
         //Define type of association
         association: "BiDirectional"
     }
-}]
+},
+{
+    id: 'connector2',
+    //Define connector start and end points
+    sourcePoint: { x: 200, y: 100 },
+    targetPoint: { x: 400, y: 300 },
+    type: 'Straight',
+    shape: {
+      type: 'UmlClassifier',
+      relationship: 'Association',
+      associationType: 'BiDirectional',
+    },
+  }]
 
 const width = "100%";
-const height = "350px";
+const height = "600px";
 
 </script>
 <style>

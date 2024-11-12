@@ -93,7 +93,7 @@ const connectors =[
 ];
 
 const width = "100%";
-const height = "350px";
+const height = "550px";
 const segmentThumbSize = 15;
 
 provide('diagram', [ConnectorEditing]);

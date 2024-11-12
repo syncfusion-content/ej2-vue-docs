@@ -7,7 +7,8 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' scrollSettings='scrollSettings'></ejs-diagram>
+        <button @click="updateScrollsettings">Update Scrollsettings</button>
+        <ejs-diagram id="diagram"  :width='width' :height='height' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'></ejs-diagram>
     </div>
 `,
 
@@ -15,17 +16,20 @@ new Vue({
         data() {
             return {
                 width: "100%",
-                height: "350px",
+                height: "500px",
+                rulerSettings: { showRulers: true },
+                scrollSettings: { scrollLimit: 'Infinity' },
             }
         }
-        mounted: function() {
-            let diagramInstance: Diagram;
-            let diagramObj: any = document.getElementById("diagram");
-            diagramInstance = diagramObj.ej2_instances[0];
-            //Updates scroll settings
-            diagramInstance.scrollSettings.horizontalOffset = 200;
-            diagramInstance.scrollSettings.verticalOffset = 30
-            diagramInstance.dataBind();
-        }
+        methods: {
+            updateScrollsettings: function() {
+                let diagramInstance;
+                let diagramObj = document.getElementById("diagram");
+                diagramInstance = diagramObj.ej2_instances[0];
+                diagramInstance.scrollSettings.horizontalOffset = 200;
+                diagramInstance.scrollSettings.verticalOffset = 200
+                diagramInstance.dataBind();
+            }
+        },
     
 });

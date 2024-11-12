@@ -2,7 +2,7 @@
     import Vue from 'vue';
     import { DiagramPlugin,PointPortModel,PortVisibility } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
-    let nodeport: PointPortModel = {
+    let nodeport = {
     style: {
         strokeColor: '#366F8C',
         fill: '#366F8C'
@@ -15,7 +15,7 @@
         x: 0,
         y: 0.5
     };
-    let port2: PointPortModel = {
+    let port2 = {
         style: {
             strokeColor: '#366F8C',
             fill: '#366F8C'
@@ -47,17 +47,6 @@ let nodes = [{
 ];
 let connectors = {
     id: "connector1",
-    style: {
-        strokeColor: '#6BA5D7',
-        fill: '#6BA5D7',
-        strokeWidth: 2
-    },
-    targetDecorator: {
-        style: {
-            fill: '#6BA5D7',
-            strokeColor: '#6BA5D7'
-        }
-    },
     type: 'Orthogonal',
     sourcePoint: {
         x: 100,
@@ -81,7 +70,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

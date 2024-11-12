@@ -19,11 +19,6 @@ const nodes = [{
         shape: 'Rectangle',
         cornerRadius: 10
     },
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
-    // Text(label) added to the node
 }];
 
 export default {
@@ -34,7 +29,7 @@ export default {
     data() {
         return {
             width: "100%",
-            height: "350px",
+            height: "500px",
             nodes: nodes,
         }
     }

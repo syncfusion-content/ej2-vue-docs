@@ -2,7 +2,7 @@
     import Vue from 'vue';
     import { DiagramPlugin,PointPortModel,PortVisibility } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
-    let port1: PointPortModel = {
+    let port1 = {
     style: {
         strokeColor: '#366F8C',
         fill: '#366F8C'
@@ -16,7 +16,7 @@
         x: 1,
         y: 1
     };
-    let port2: PointPortModel = {
+    let port2 = {
         style: {
             strokeColor: '#366F8C',
             fill: '#366F8C'
@@ -29,7 +29,7 @@
     port2.id = 'port1';
     port2.visibility = PortVisibility.Visible
     port2.shape = 'Circle';
-    let port3: PointPortModel = {
+    let port3 = {
         style: {
             strokeColor: '#366F8C',
             fill: '#366F8C'
@@ -84,7 +84,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
             width: "100%",

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :getNodeDefaults='getNodeDefaults'>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :historyManager='historyManager'>
         </ejs-diagram>
     </div>
 </template>
@@ -10,29 +10,18 @@ import { DiagramComponent as EjsDiagram, UndoRedo } from '@syncfusion/ej2-vue-di
 
 const nodes = [{
     id: 'Start',
-    width: 140,
-    height: 50,
+    width: 100,
+    height: 100,
     offsetX: 300,
-    offsetY: 50,
+    offsetY: 100,
     annotations: [{
         id: 'label1',
-        content: 'Start'
+        content: 'Annotation'
     }],
-    shape: {
-        type: 'Flow',
-        shape: 'Terminator'
-    }
 }]
 
-const width = "100%";
+const width = "750px";
 const height = "350px";
-const getNodeDefaults = (node) => {
-    node.height = 100;
-    node.width = 100;
-    node.style.fill = '#6BA5D7';
-    node.style.strokeColor = 'white';
-    return node;
-}
 const historyManager = {
     stackLimit: 2
 }

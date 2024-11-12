@@ -3,39 +3,17 @@
     import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     let nodes = [{
-        id: 'Start',
-        width: 140,
-        height: 50,
         offsetX: 300,
-        offsetY: 50,
-        annotations: [{
-            id: 'label1',
-            content: 'Start'
-        }],
-        shape: {
-            type: 'Flow',
-            shape: 'Terminator'
-        }
-    }];
-    let connectors: ConnectorModel[] = [{
-        id: 'connector1', sourcePoint: { x: 300, y: 100 }, targetPoint: { x: 450, y: 200 },
-        style: {
-            strokeColor: '#6BA5D7',
-            strokeWidth: 2
-        },
-        targetDecorator: {
-            style: {
-                fill: '#6BA5D7',
-                strokeColor: '#6BA5D7'
-            }
-        }
+        offsetY: 300,
     }];
     
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :connectors= 'connectors' :scrollSettings='scrollSettings' :getNodeDefaults='getNodeDefaults'></ejs-diagram>
+        <button @click="zoomIn">Zoom In</button>
+        <button @click="zoomOut">Zoom Out</button>
+        <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' :scrollSettings='scrollSettings' :rulerSettings='rulerSettings'></ejs-diagram>
     </div>
 `,
 
@@ -43,21 +21,37 @@ new Vue({
         data() {
             return {
                 width: "100%",
-                height: "350px",
+                height: "700px",
                 nodes: nodes,
-                connectors:connectors,
-                scrollSettings: {
-                    canAutoScroll: true,
-                    scrollLimit: 'Infinity',
-                },
-                getNodeDefaults: (node) => {
-                    node.height =  100;
-                    node.width =  100;
-                    node.style.fill =  '#6BA5D7';
-                    node.style.strokeColor =  'white';
-                    return  node;
-                }
+                rulerSettings: { showRulers: true },
+                scrollSettings: { scrollLimit: 'Infinity' },
             }
-        }
+        },
+        methods: {
+            zoomIn: function() {
+                let diagramInstance;
+                let diagramObj = document.getElementById("diagram");
+                diagramInstance = diagramObj.ej2_instances[0];
+                let zoomOptions = {
+                    type: 'ZoomIn',
+                    zoomFactor: 0.2,
+                    focusPoint: { x: 0.5, y: 0.5 },
+                };
+                diagramInstance.zoomTo(zoomOptions);
+                diagramInstance.dataBind();
+            },
+            zoomOut: function() {
+                let diagramInstance;
+                let diagramObj = document.getElementById("diagram");
+                diagramInstance = diagramObj.ej2_instances[0];
+                let zoomOptions = {
+                    type: 'ZoomOut',
+                    zoomFactor: 0.2,
+                    focusPoint: { x: 0.5, y: 0.5 },
+                };
+                diagramInstance.zoomTo(zoomOptions);
+                diagramInstance.dataBind();
+            }
+        },
     
 });

@@ -36,10 +36,9 @@ new Vue({
   },
   methods: {
     handleFilterChange(event) {
-      const input = event.target.value;
       const listbox = document.getElementById('listbox').ej2_instances[0];
       if (listbox) {
-        listbox.filter(this.data, new Query().where('text', 'contains', input, true));
+        listbox.filter(this.data, new Query().where('text', 'contains', event.target.value, true));
       }
     }
   }
