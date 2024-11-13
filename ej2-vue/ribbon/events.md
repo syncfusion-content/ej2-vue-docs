@@ -342,6 +342,7 @@ The following code example demonstrates the ribbon rendered with `overflowPopupO
   
   import { RibbonComponent } from "@syncfusion/ej2-vue-ribbon";
   
+
   export default {
     data: function () {
       return {

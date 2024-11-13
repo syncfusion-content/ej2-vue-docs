@@ -16,10 +16,8 @@
   </template>
   
   <script>
-  import Vue from "vue";
-  import { DocumentEditorContainerPlugin, DocumentEditorContainerComponent, Toolbar, SfdtExport, Selection, Editor } from "@syncfusion/ej2-vue-documenteditor";
-  
-  Vue.use(DocumentEditorContainerPlugin);
+  import { DocumentEditorContainerComponent, Toolbar, SfdtExport, Selection, Editor } from "@syncfusion/ej2-vue-documenteditor";
+
   
   export default {
     name: "App",

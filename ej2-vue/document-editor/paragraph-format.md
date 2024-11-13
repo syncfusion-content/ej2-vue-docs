@@ -160,14 +160,14 @@ The following sample demonstrates the paragraph formatting options using a toolb
     <div>
       <ejs-toolbar v-bind:clicked='toolbarButtonClick'>
         <e-items>
-          <e-item prefixIcon='e-de-icon-AlignLeft' id='AlignLeft' tooltipText='Align Left'></e-item>
-          <e-item prefixIcon='e-de-icon-AlignCenter' id='Align Center' tooltipText='AlignCenter'></e-item>
-          <e-item prefixIcon='e-de-icon-AlignRight' id='Align Right' tooltipText='AlignRight'></e-item>
-          <e-item prefixIcon='e-de-icon-Justify' id='Justify' tooltipText='Justify'></e-item>
-          <e-item prefixIcon='e-de-icon-IncreaseIndent' id='IncreaseIndent' tooltipText='Increase Indent'></e-item>
-          <e-item prefixIcon='e-de-icon-DecreaseIndent' id='DecreaseIndent' tooltipText='Decrease Indent'></e-item>
+          <e-item prefixIcon='e-de-ctnr-alignleft e-icons' id='AlignLeft' tooltipText='Align Left'></e-item>
+          <e-item prefixIcon='e-de-ctnr-aligncenter e-icons' id='AlignCenter' tooltipText='Align Center'></e-item>
+          <e-item prefixIcon='e-de-ctnr-alignright e-icons' id='AlignRight' tooltipText='Align Right'></e-item>
+          <e-item prefixIcon='e-de-ctnr-justify e-icons' id='Justify' tooltipText='Justify'></e-item>
+          <e-item prefixIcon='e-de-ctnr-increaseindent e-icons' id='IncreaseIndent' tooltipText='Increase Indent'></e-item>
+          <e-item prefixIcon='e-de-ctnr-decreaseindent e-icons' id='DecreaseIndent' tooltipText='Decrease Indent'></e-item>
           <e-item type='Separator'></e-item>
-          <e-item prefixIcon='e-de-icon-ClearAll' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
+          <e-item prefixIcon='e-de-ctnr-clearall e-icons' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
           <e-item type='Separator'></e-item>
           <e-item prefixIcon='e-de-e-paragraph-mark e-icons' id='ShowParagraphMark'
             tooltipText='Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)'></e-item>
@@ -249,6 +249,14 @@ const onSelectionChange = function () {
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -260,14 +268,14 @@ const onSelectionChange = function () {
     <div>
       <ejs-toolbar v-bind:clicked='toolbarButtonClick'>
         <e-items>
-          <e-item prefixIcon='e-de-icon-AlignLeft' id='AlignLeft' tooltipText='Align Left'></e-item>
-          <e-item prefixIcon='e-de-icon-AlignCenter' id='Align Center' tooltipText='AlignCenter'></e-item>
-          <e-item prefixIcon='e-de-icon-AlignRight' id='Align Right' tooltipText='AlignRight'></e-item>
-          <e-item prefixIcon='e-de-icon-Justify' id='Justify' tooltipText='Justify'></e-item>
-          <e-item prefixIcon='e-de-icon-IncreaseIndent' id='IncreaseIndent' tooltipText='Increase Indent'></e-item>
-          <e-item prefixIcon='e-de-icon-DecreaseIndent' id='DecreaseIndent' tooltipText='Decrease Indent'></e-item>
+          <e-item prefixIcon='e-de-ctnr-alignleft e-icons' id='AlignLeft' tooltipText='Align Left'></e-item>
+          <e-item prefixIcon='e-de-ctnr-aligncenter e-icons' id='AlignCenter' tooltipText='Align Center'></e-item>
+          <e-item prefixIcon='e-de-ctnr-alignright e-icons' id='AlignRight' tooltipText='Align Right'></e-item>
+          <e-item prefixIcon='e-de-ctnr-justify e-icons' id='Justify' tooltipText='Justify'></e-item>
+          <e-item prefixIcon='e-de-ctnr-increaseindent e-icons' id='IncreaseIndent' tooltipText='Increase Indent'></e-item>
+          <e-item prefixIcon='e-de-ctnr-decreaseindent e-icons' id='DecreaseIndent' tooltipText='Decrease Indent'></e-item>
           <e-item type='Separator'></e-item>
-          <e-item prefixIcon='e-de-icon-ClearAll' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
+          <e-item prefixIcon='e-de-ctnr-clearall e-icons' id='ClearFormat' tooltipText='ClearFormatting'></e-item>
           <e-item type='Separator'></e-item>
           <e-item prefixIcon='e-de-e-paragraph-mark e-icons' id='ShowParagraphMark'
             tooltipText='Show the hidden characters like spaces, tab, paragraph marks, and breaks.(Ctrl + *)'></e-item>
@@ -361,6 +369,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 

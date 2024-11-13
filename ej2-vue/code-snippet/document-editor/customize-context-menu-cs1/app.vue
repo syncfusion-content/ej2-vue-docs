@@ -11,7 +11,7 @@ import { DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-d
 export default {
   name: "App",
   components: {
-    "ejs-documenteditorcontainer": DocumentEditorcontainerComponent
+    "ejs-documenteditorcontainer": DocumentEditorContainerComponent
   },
   data() {
     return {

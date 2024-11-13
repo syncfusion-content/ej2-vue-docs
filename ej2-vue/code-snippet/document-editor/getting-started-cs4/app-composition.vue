@@ -28,7 +28,7 @@ const onCreated = function () {
 }
 const onDocumentChange = function () {
   //Enable read only mode.
-  documenteditor.value.isReadOnly = true;
+  documenteditor.value.ej2Instances.isReadOnly = true;
 }
 
 </script>
