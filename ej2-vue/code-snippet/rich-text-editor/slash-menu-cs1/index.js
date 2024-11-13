@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { RichTextEditorPlugin, Toolbar, Link, Image, Table, Audio, Video, QuickToolbar, HtmlEditor, EmojiPicker, PasteCleanup, FormatPainter, SlashMenu } from "@syncfusion/ej2-vue-richtexteditor";
 
@@ -54,7 +53,7 @@ new Vue({
       }
     };
   },
-  
+
   provide: {
     richtexteditor: [SlashMenu, Toolbar, Link, Image, Audio, Table, Video, QuickToolbar, HtmlEditor, EmojiPicker, PasteCleanup, FormatPainter]
   }

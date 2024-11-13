@@ -1,11 +1,10 @@
-
-  import Vue from 'vue';
+import Vue from 'vue';
   import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from "@syncfusion/ej2-vue-richtexteditor";
 
 
   Vue.use(RichTextEditorPlugin);
 
-  
+
 new Vue({
 	el: '#app',
 	template: `
@@ -39,5 +38,5 @@ data: function () {
     provide: {
       richtexteditor: [Toolbar, Image, Link, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport]
     }
-  
+
 });

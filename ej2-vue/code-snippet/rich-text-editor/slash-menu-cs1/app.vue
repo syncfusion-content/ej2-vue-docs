@@ -5,7 +5,6 @@
 
 <script>
 import { RichTextEditorComponent, Toolbar, Link, Image, Table, Audio, Video, QuickToolbar, HtmlEditor, EmojiPicker, PasteCleanup, FormatPainter, SlashMenu } from "@syncfusion/ej2-vue-richtexteditor";
-
 export default {
     components: {
         'ejs-richtexteditor': RichTextEditorComponent
@@ -48,7 +47,6 @@ export default {
     provide:{
         richtexteditor:[SlashMenu, Toolbar, Link, Image, Audio, Table, Video, QuickToolbar, HtmlEditor, EmojiPicker, PasteCleanup, FormatPainter]
     },
-
     methods: {
         onSlashMenuItemSelect: function (args) {
             if (args.itemData.command === 'MeetingNotes') {

@@ -3,7 +3,6 @@
 </template>
 <script>
 import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from "@syncfusion/ej2-vue-richtexteditor";
-
 export default {
     components: {
         'ejs-richtexteditor': RichTextEditorComponent

@@ -89,7 +89,7 @@ The following example illustrates how to set up the `ImportWord` in the Rich Tex
 {% include code-snippet/rich-text-editor/import-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/import-cs1" %}
 
 ## Export to PDF / Microsoft Word
@@ -188,6 +188,5 @@ The following example demonstrates how to configure the `ExportWord` and `Export
 {% include code-snippet/rich-text-editor/export-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs1" %}
 
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/export-cs1" %}

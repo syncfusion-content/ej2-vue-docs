@@ -29,7 +29,6 @@
           }
       `
         },
-
         exportPdf: {
           serviceUrl: this.hostUrl + 'api/RichTextEditor/ExportToPdf',
           fileName: 'RichTextEditor.pdf',
