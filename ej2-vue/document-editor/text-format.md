@@ -176,17 +176,17 @@ Refer to the following example.
 <template>
   <div id="app">
     <div>
-      <ejs-toolbar v-on:click="toolbarButtonClick">
+      <ejs-toolbar v-on:clicked="toolbarButtonClick">
         <e-items>
-          <e-item prefixIcon="e-de-icon-Bold" tooltipText="Bold" id="bold"></e-item>
-          <e-item prefixIcon="e-de-icon-Italic" tooltipText="Italic" id="italic"></e-item>
-          <e-item prefixIcon="e-de-icon-Underline" tooltipText="Underline" id="underline"></e-item>
-          <e-item prefixIcon="e-de-icon-Strikethrough" tooltipText="Strikethrough" id="strikethrough"></e-item>
-          <e-item prefixIcon="e-de-icon-Subscript" tooltipText="Subscript" id="subscript"></e-item>
-          <e-item prefixIcon="e-de-icon-Superscript" tooltipText="Superscript" id="superscript"></e-item>
-          <e-item type="Seperator"></e-item>
+          <e-item prefixIcon="e-de-ctnr-bold e-icons" tooltipText="Bold" id="bold"></e-item>
+          <e-item prefixIcon="e-de-ctnr-italic e-icons" tooltipText="Italic" id="italic"></e-item>
+          <e-item prefixIcon="e-de-ctnr-underline e-icons" tooltipText="Underline" id="underline"></e-item>
+          <e-item prefixIcon="e-de-ctnr-strikethrough e-icons" tooltipText="Strikethrough" id="strikethrough"></e-item>
+          <e-item prefixIcon="e-de-ctnr-subscript e-icons" tooltipText="Subscript" id="subscript"></e-item>
+          <e-item prefixIcon="e-de-ctnr-superscript e-icons" tooltipText="Superscript" id="superscript"></e-item>
+          <e-item type="Separator"></e-item>
           <e-item type="Input" template="fontColorTemplate"></e-item>
-          <e-item type="Seperator"></e-item>
+          <e-item type="Separator"></e-item>
           <e-item type="Input" template="fontFamilyTemplate"></e-item>
           <e-item type="Input" template="fontSizeTemplate"></e-item>
         </e-items>
@@ -282,6 +282,14 @@ onMounted(function () {
 
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 
@@ -291,17 +299,17 @@ onMounted(function () {
 <template>
   <div id="app">
     <div>
-      <ejs-toolbar v-on:click="toolbarButtonClick">
+      <ejs-toolbar v-on:clicked="toolbarButtonClick">
         <e-items>
-          <e-item prefixIcon="e-de-icon-Bold" tooltipText="Bold" id="bold"></e-item>
-          <e-item prefixIcon="e-de-icon-Italic" tooltipText="Italic" id="italic"></e-item>
-          <e-item prefixIcon="e-de-icon-Underline" tooltipText="Underline" id="underline"></e-item>
-          <e-item prefixIcon="e-de-icon-Strikethrough" tooltipText="Strikethrough" id="strikethrough"></e-item>
-          <e-item prefixIcon="e-de-icon-Subscript" tooltipText="Subscript" id="subscript"></e-item>
-          <e-item prefixIcon="e-de-icon-Superscript" tooltipText="Superscript" id="superscript"></e-item>
-          <e-item type="Seperator"></e-item>
+          <e-item prefixIcon="e-de-ctnr-bold e-icons" tooltipText="Bold" id="bold"></e-item>
+          <e-item prefixIcon="e-de-ctnr-italic e-icons" tooltipText="Italic" id="italic"></e-item>
+          <e-item prefixIcon="e-de-ctnr-underline e-icons" tooltipText="Underline" id="underline"></e-item>
+          <e-item prefixIcon="e-de-ctnr-strikethrough e-icons" tooltipText="Strikethrough" id="strikethrough"></e-item>
+          <e-item prefixIcon="e-de-ctnr-subscript e-icons" tooltipText="Subscript" id="subscript"></e-item>
+          <e-item prefixIcon="e-de-ctnr-superscript e-icons" tooltipText="Superscript" id="superscript"></e-item>
+          <e-item type="Separator"></e-item>
           <e-item type="Input" template="fontColorTemplate"></e-item>
-          <e-item type="Seperator"></e-item>
+          <e-item type="Separator"></e-item>
           <e-item type="Input" template="fontFamilyTemplate"></e-item>
           <e-item type="Input" template="fontSizeTemplate"></e-item>
         </e-items>
@@ -409,6 +417,14 @@ export default {
 }
 </script>
 <style>
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
 @import "../node_modules/@syncfusion/ej2-vue-documenteditor/styles/material.css";
 </style>
 

@@ -5,9 +5,9 @@
         </div>
         <ejs-documenteditor ref="documenteditor" :isReadOnly='false' :enablePrint='true' :enableEditor='true'
             :enableSelection='true' :enableEditorHistory='true' :enableSfdtExport='true' height="370px"
-            style="width: 100%;""></ejs-documenteditor>
+            style="width: 100%;"></ejs-documenteditor>
 
-            <ejs-documenteditor ref=" pagesetup_documenteditor" :isReadOnly='false' :enablePrint='true'
+            <ejs-documenteditor ref="pagesetup_documenteditor" :isReadOnly='false' :enablePrint='true'
             :enableEditor='true' :enableSelection='true' :enableEditorHistory='true' :enableSfdtExport='true'
             height="370px" style="width: 100%;"></ejs-documenteditor>
     </div>

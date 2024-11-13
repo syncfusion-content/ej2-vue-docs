@@ -7,7 +7,7 @@
 
 <script setup>
 import { provide, ref } from "vue";
-import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, DocumentEditorContainerComponent, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
+import { DocumentEditorContainerComponent as EjsDocumenteditorcontainer, Toolbar } from '@syncfusion/ej2-vue-documenteditor';
 
 const documentEditorContainer = ref(null);
 const serviceUrl = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
@@ -21,7 +21,7 @@ const onCreated = function () {
 }
 const onDocumentChange = function () {
   //Enable read only mode.
-  documentEditorContainer.value.restrictEditing = true;
+  documentEditorContainer.value.ej2Instances.restrictEditing = true;
 }
 </script>
 
