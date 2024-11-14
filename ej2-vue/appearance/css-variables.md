@@ -144,7 +144,7 @@ Similar to `Material 3`, we offer both Light and Dark variants with `Fluent 2`. 
 
 ### Mode switching in Bootstrap 5.3 theme
 
-Similar to `Fluent 2`, we offer both Light and Dark variants with `Bootstrap 5.3`. In the Fluent 2 theme, there are distinct class variables for light and dark modes, as shown in the preview below.
+Similar to `Fluent 2`, we offer both Light and Dark variants with `Bootstrap 5.3`. In the Bootstrap 5.3 theme, there are distinct class variables for light and dark modes, as shown in the preview below.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
