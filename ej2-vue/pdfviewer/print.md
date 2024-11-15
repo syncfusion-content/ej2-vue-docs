@@ -264,7 +264,7 @@ const printClicked = function (args) {
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" 
     :documentPath="documentPath" :resourceUrl="resourceUrl"
      {/*By changing the printScaleFactor value we can adjust the quality of the PDF file*/}
-     :printScaleFactor=0.5 >
+     :printScaleFactor=printScaleFactor >
     </ejs-pdfviewer>
   </div>
 </template>
@@ -284,7 +284,9 @@ export default {
   data() {
     return {
       documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-      resourceUrl: "https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib"
+      resourceUrl: "https://cdn.syncfusion.com/ej2/27.1.48/dist/ej2-pdfviewer-lib",
+      //By Changing the printScaleFactor value we can adjust the quality of the PDF file.
+      printScaleFactor: 0.5,
     };
   },
   provide: {
@@ -341,7 +343,7 @@ const printClicked = function (args) {
     <button v-on:click="printClicked">Print</button>
     <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath" 
      {/*By changing the printScaleFactor value we can adjust the quality of the PDF file*/}
-    :printScaleFactor=0.5>
+    :printScaleFactor=printScaleFactor>
     </ejs-pdfviewer>
 
   </div>
@@ -362,7 +364,9 @@ export default {
   data() {
     return {
       serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+      documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      //By Changing the printScaleFactor value we can adjust the quality of the PDF file.
+      printScaleFactor: 0.5,
     };
   },
   provide: {
@@ -381,7 +385,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-```
+[View sample in GitHub](https://github.com/SyncfusionExamples/vue-pdf-viewer-examples/tree/master/How%20to/Customization%20of%20PrintQuality)
+
 ## See also
 
 * [Toolbar items](./toolbar)

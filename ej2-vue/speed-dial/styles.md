@@ -159,3 +159,15 @@ You can use [`opensOnHover`](https://ej2.syncfusion.com/vue/documentation/api/sp
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs6" %}
+
+ ## Customized icon
+
+You can use the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/speed-dial#cssclass) property to customize the appearance of the speedDial component in its default primary state. Below example demonstrates the `cssClass` property usage in speedDial.
+
+{% tabs %}
+{% highlight html tabtitle="app.vue" %}
+{% include code-snippet/speed-dial/styles-cs7/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/speed-dial/styles-cs7" %}
