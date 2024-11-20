@@ -17,21 +17,21 @@ To explore layout properties, refer to [`Layout Properties`](https://ej2.syncfus
 ## Layout bounds
 
 
-Diagram provides support to align the layout within any custom rectvue area. 
+Diagram provides support to align the layout within any custom rectangular area. 
 
 The following example shows how to align the layout within the given layout bounds.
 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-bounds-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-bounds-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-bounds-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-bounds-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-bounds-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-bounds-cs1" %}
 
 
 For more information about bounds, refer to [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layoutModel/#bounds).
@@ -46,14 +46,14 @@ The following code illustrates how to align the layout and how to change layout 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-alignment-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-alignment-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-alignment-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-alignment-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-alignment-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-alignment-cs1" %}
 
 
 ## Layout spacing
@@ -65,14 +65,14 @@ The following code illustrates how to set the initial horizontal and vertical sp
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-spacing-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-spacing-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-spacing-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-spacing-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-spacing-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-spacing-cs1" %}
 
 
 ## Layout margin
@@ -84,14 +84,14 @@ The following code demonstrates how to set the initial layout margin and how to 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-margin-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-margin-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-margin-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-margin-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-margin-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-margin-cs1" %}
 
 
 ## Layout orientation
@@ -114,14 +114,14 @@ The following code demonstrates how to set the initial orientation for the layou
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-orientation-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-orientation-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-orientation-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-orientation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-orientation-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-orientation-cs1" %}
 
 
 ## Exclude from layout
@@ -133,14 +133,14 @@ The following code example demonstrates how to exclude a node from the layout an
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-exclude-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-exclude-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-exclude-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-exclude-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-exclude-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-exclude-cs1" %}
 
 
 ## Fixed node
@@ -150,14 +150,14 @@ Layout provides support to arrange the nodes with reference to the position of a
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-fixed-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-fixed-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-fixed-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-fixed-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-fixed-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-fixed-cs1" %}
 
 
 ## Expand and collapse
@@ -167,14 +167,14 @@ Diagram allows to expand/collapse the subtrees of a layout. The node’s isExpan
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-expandandcollapse-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-expandandcollapse-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-expandandcollapse-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-expandandcollapse-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-expandandcollapse-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-expandandcollapse-cs1" %}
 
 
 For more details about customizing the expand and collapse icon refer [`expand Collapse`](./nodes-expandAndCollapse)
@@ -188,14 +188,14 @@ In the following example, the enableAnimation property ensures that the layout c
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-animation-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-animation-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-animation-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-animation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-animation-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-animation-cs1" %}
 
 
 >Note: To enable layout animation, you need to inject LayoutAnimation module in diagram.
@@ -209,14 +209,14 @@ Find the code example to create parent - child relation between source and targe
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-parentChildren-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-parentChildren-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-parentChildren-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-parentChildren-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-parentChildren-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-parentChildren-cs1" %}
 
 
 ![Layout drag and drop](images/drag-drop-layout.gif)
@@ -228,14 +228,14 @@ Find the code example to create parent - child relation between source and targe
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-setNodeTemplete-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-setNodeTemplete-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/layout-setNodeTemplete-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/layout-setNodeTemplete-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/layout-setNodeTemplete-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layout-setNodeTemplete-cs1" %}
 
 
 ## Refresh layout
