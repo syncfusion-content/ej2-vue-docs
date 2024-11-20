@@ -8,6 +8,8 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
+# Ports appearance in Vue Diagram component
+
 ## Appearance
 
 The appearance of ports can be customized by using [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokecolor), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokewidth),[`fill`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#fill) and [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#opacity) properties of the port. Customize the port size by using the [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/pointPortModel/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/pointPortModel/#height) properties of port. The ports [`visibility`](https://ej2.syncfusion.com/vue/documentation/api/diagram/portVisibility/) property allows you to define, when the port should be visible. 
@@ -75,14 +77,14 @@ The following code illustrates how to set custom shape to the port.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/ports/ports-shape/app-composition.vue %}
+{% include code-snippet/diagram/ports/ports-app3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/ports/ports-shape/app.vue %}
+{% include code-snippet/diagram/ports/ports-app3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/ports/ports-shape" %}
+{% previewsample "page.domainurl/code-snippet/diagram/ports/ports-app3" %}
 
 ## Constraints
 

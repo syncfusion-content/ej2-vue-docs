@@ -92,14 +92,14 @@ The following example shows how to render connectors in the symbol palette:
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/symbol-palette/palettes/palette-con/app-composition.vue %}
+{% include code-snippet/diagram/symbol-palette/palettes/palettes-con/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/symbol-palette/palettes/palette-con/app.vue %}
+{% include code-snippet/diagram/symbol-palette/palettes/palettes-con/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palette-con" %}
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palettes-con" %}
 
 ## Add group nodes in symbol palette
 
@@ -107,18 +107,18 @@ The symbol palette supports adding group nodes. To add group nodes to the palett
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/symbol-palette/palettes/palette-grp/app-composition.vue %}
+{% include code-snippet/diagram/symbol-palette/palettes/palettes-grp/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/symbol-palette/palettes/palette-grp/app.vue %}
+{% include code-snippet/diagram/symbol-palette/palettes/palettes-grp/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palette-grp"%}
+{% previewsample "page.domainurl/code-snippet/diagram/symbol-palette/palettes/palettes-grp"%}
 
 ## Drag and drop symbols from palette to diagram
 
-To drag and drop symbols from the palette to the diagram canvas, mousedown on the desired symbol in the palette, drag it to the desired location on the diagram canvas, and release the mouse button to drop it.
+To drag and drop symbols from the palette to the diagram canvas, press and hold the mouse button on the desired symbol in the palette, drag it to the desired location on the diagram canvas, and release the mouse button to drop it.
 
 ![Drag and drop symbols](images/symbol-palette-drag-drop.gif)
 

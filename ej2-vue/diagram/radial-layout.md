@@ -22,14 +22,14 @@ You can create a radial tree layout with DataSource. The following code example 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/radiallayout-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/radiallayout-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/radiallayout-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/radiallayout-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/radiallayout-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/radiallayout-cs1" %}
 
 >Note: If you want to convert the data source into layout, you need to inject DataBinding along with RadialTree module in the diagram.
 
@@ -41,14 +41,14 @@ You can render a radial tree layout without using DataSource. The following code
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/radiallayout-cs2/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/radiallayout-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/radiallayout-cs2/app.vue %}
+{% include code-snippet/diagram/automatic-layout/radiallayout-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/radiallayout-cs2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/radiallayout-cs2" %}
 
 
 >Note: If you want to use radial tree layout in diagram, you need to inject RadialTree in the diagram.
