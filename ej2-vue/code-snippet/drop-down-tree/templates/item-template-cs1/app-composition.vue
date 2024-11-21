@@ -22,7 +22,8 @@ let data = [
   { "id": 11, "pid": 6, "name": "Mary", "job": "Developer " },
   { "id": 9, "pid": 1, "name": "Janet Leverling", "job": "HR" }
 ];
-let itemVue = createApp().component("itemTemplate", {
+const app = createApp();
+var demoVue = app.component("itemTemplate", {
   template: `<span><span  class="ename">{{data.name}} - </span><span class="ejob">{{data.job}}</span></span>`,
   data() {
     return { data: {} };
@@ -30,7 +31,7 @@ let itemVue = createApp().component("itemTemplate", {
 });
 
 const itemTemplate = function () {
-  return { template: itemVue };
+  return { template: demoVue };
 };
 const fields = { dataSource: data, value: 'id', text: 'name', parentValue: "pid", hasChildren: 'hasChild' };
 
