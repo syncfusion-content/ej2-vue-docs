@@ -15,7 +15,7 @@
 <script>
 import { scheduleData } from './datasource.js';
 import { L10n, loadCldr, setCulture } from '@syncfusion/ej2-base';
-import { ScheduleComponent, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
 import * as localeText from './locale.json';
 import frNumberData from '@syncfusion/ej2-cldr-data/main/fr-CH/numbers.json';
 import frtimeZoneData from '@syncfusion/ej2-cldr-data/main/fr-CH/timeZoneNames.json';

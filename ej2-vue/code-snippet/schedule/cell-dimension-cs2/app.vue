@@ -13,7 +13,7 @@
 </template>
 <script>
 import { scheduleData } from './datasource.js';
-import { ScheduleComponent, Week, WorkWeek } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Week, WorkWeek } from '@syncfusion/ej2-vue-schedule';
 
 export default {
     name: "App",

@@ -10,7 +10,7 @@
     </div>
 </template>
 <script>
-import { Scheduleomponent, TimelineViews } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, TimelineViews } from '@syncfusion/ej2-vue-schedule';
 import { scheduleData } from './datasource.js';
 
 export default {

@@ -17,7 +17,7 @@
 <script>
 import { fifaEventsData } from './datasource.js';
 import { extend } from '@syncfusion/ej2-base';
-import { ScheduleComponent, Day, Week, Month } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, Month } from '@syncfusion/ej2-vue-schedule';
 import { Timezone } from '@syncfusion/ej2-schedule';
 
 let timezone = new Timezone();
