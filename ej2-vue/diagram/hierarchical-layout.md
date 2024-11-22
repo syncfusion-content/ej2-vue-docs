@@ -18,14 +18,14 @@ To arrange the nodes in a hierarchical structure, specify the layout [`type`](ht
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/hierarchicallayout-cs-1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/hierarchicallayout-cs-1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/hierarchicallayout-cs-1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/hierarchicallayout-cs-1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/hierarchicallayout-cs-1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/hierarchicallayout-cs-1" %}
 
 >Note: If you want to use hierarchical tree layout in diagram, you need to inject HierarchicalTree in the diagram.
 
@@ -35,14 +35,14 @@ You can create a hierarchical layout with data Source. The following code demons
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/hierarchicallayout-cs-2/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/hierarchicallayout-cs-2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/hierarchicallayout-cs-2/app.vue %}
+{% include code-snippet/diagram/automatic-layout/hierarchicallayout-cs-2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/hierarchicallayout-cs-2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/hierarchicallayout-cs-2" %}
 
 >Note: If you want to convert the data source into layout, you need to inject DataBinding along with HierarchicalTree module in the diagram.
 

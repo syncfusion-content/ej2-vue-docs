@@ -26,6 +26,7 @@ export default {
   },
   mounted() {
     diagramInstance = this.$refs.diagramRef.ej2Instances;
+    diagramInstance.select([diagramInstance.getObject('group1')]);
   },
   methods: {
     addChild() {

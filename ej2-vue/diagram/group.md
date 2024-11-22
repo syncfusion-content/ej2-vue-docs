@@ -63,7 +63,7 @@ The following code illustrates how to group at runtime.
 
 ## UnGroup nodes at runtime
 
-Group node can be unGrouped dynamically, by using the [`diagram.unGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#ungroup) method. The following code example shows how to unGroup group node at runtime.
+Group node can be ungrouped dynamically, by using the [`diagram.unGroup`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#ungroup) method. The following code example shows how to ungroup a group node at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

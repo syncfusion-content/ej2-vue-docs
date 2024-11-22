@@ -15,19 +15,19 @@ An organizational chart is a diagram that displays the structure of an organizat
 
 ## Organizational chart with DataSource
 
-The following code example illustrates how to create an organizational chart with DataScource.
+The following code example illustrates how to create an organizational chart with DataSource.
 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/organizational-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/organizational-cs1" %}
 
 >Note: If you want to use Organizational chart layout in diagram, you need to inject HierarchicalTree module along with DataBinding module in the diagram.
 
@@ -38,14 +38,14 @@ You can render an org-chart layout without using DataSource. The following code 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs2/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs2/app.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/organizational-cs2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/organizational-cs2" %}
 
 ![Organizational chart](images/org-chart.png)
 
@@ -93,14 +93,14 @@ The following example shows how to utilize the `getLayoutInfo` function to custo
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs3/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs3/app.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/organizational-cs3" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/organizational-cs3" %}
 
 
 ### SubTree vertical orientation 
@@ -110,14 +110,14 @@ The following code example illustrates how to set the vertical arrangement to th
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs4/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs4/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs4/app.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs4/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/organizational-cs4" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/organizational-cs4" %}
 
 
 ### Assistant
@@ -129,14 +129,14 @@ The following code example illustrates how to add assistants to layout.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs5/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs5/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/organizational-cs5/app.vue %}
+{% include code-snippet/diagram/automatic-layout/organizational-cs5/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/organizational-cs5" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/organizational-cs5" %}
 
 ![Assistant](images/assistant.png)
 

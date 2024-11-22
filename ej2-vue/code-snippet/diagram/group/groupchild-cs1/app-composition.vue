@@ -22,6 +22,7 @@ let diagramInstance = null;
 
 onMounted(() => {
     diagramInstance = diagramRef.value.ej2Instances;
+    diagramInstance.select([diagramInstance.getObject('group1')]);
 });
 
 const addChild = () => {

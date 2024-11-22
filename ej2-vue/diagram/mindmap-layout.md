@@ -17,19 +17,19 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
 
 An [`Orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/layoutModel/#orientation) of a `MindMapTreeLayout` is used to arrange the tree layout according to a specific direction. By default, the orientation is set to Horizontal. 
 
-The following code example illustrates how to create an mindmap layout.
+The following code example illustrates how to create an MindMap layout.
 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/mindmap-cs1/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/mindmap-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/mindmap-cs1/app.vue %}
+{% include code-snippet/diagram/automatic-layout/mindmap-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/mindmap-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/mindmap-cs1" %}
 
 
 The following table outlines the various orientation types available:
@@ -48,13 +48,13 @@ You can also decide the branch for mind map using [`getBranch`](https://ej2.sync
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/mindmap-cs2/app-composition.vue %}
+{% include code-snippet/diagram/automatic-layout/mindmap-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/automaticlayout/mindmap-cs2/app.vue %}
+{% include code-snippet/diagram/automatic-layout/mindmap-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/automaticlayout/mindmap-cs2" %}
+{% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/mindmap-cs2" %}
 
 ![Mind map layout](images/mindmap.png)
