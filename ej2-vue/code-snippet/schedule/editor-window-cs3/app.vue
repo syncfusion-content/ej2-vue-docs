@@ -10,7 +10,7 @@
 import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 import { scheduleData } from './datasource.js';
 
-let minValidation: (args) =>  = (args) => {
+let minValidation = (args) => {
   return args['value'].length >= 5;
 };
 

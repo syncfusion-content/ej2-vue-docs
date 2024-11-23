@@ -15,7 +15,7 @@ export default {
   },
   mounted: function () {
     let recObject = this.$refs.EditorObj;
-    recObject.endTypes = ["until", "count"];
+    recObject.setProperties({ endTypes: ["until", "count"] });
   }
 };
 </script>

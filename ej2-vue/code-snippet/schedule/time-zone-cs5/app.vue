@@ -15,7 +15,7 @@
 import { ScheduleComponent, ViewDirective, ViewsDirective, Day, Week, Month, timezoneData } from '@syncfusion/ej2-vue-schedule';
 import { scheduleData } from './datasource.js';
 
-let DataManager = [
+let data = [
     { Value: 'America/New_York', Text: '(UTC-05:00) Eastern Time' },
     { Value: 'UTC', Text: 'UTC' },
     { Value: 'Asia/Kolkata', Text: '(UTC+05:30) India Standard Time' }

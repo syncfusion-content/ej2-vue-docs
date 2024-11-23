@@ -15,7 +15,7 @@
 </template>
 <script>
 import { Internationalization } from '@syncfusion/ej2-base';
-import { ScheduleComponent, Month } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Month } from '@syncfusion/ej2-vue-schedule';
 
 const instance = new Internationalization();
 

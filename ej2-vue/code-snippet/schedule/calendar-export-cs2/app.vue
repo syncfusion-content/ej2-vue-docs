@@ -18,7 +18,7 @@
     </div>
 </template>
 <script>
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop, ICalendarExport, ICalendarImport } from "@syncfusion/ej2-vue-schedule";
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop, ICalendarExport, ICalendarImport } from "@syncfusion/ej2-vue-schedule";
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { scheduleData } from './datasource.js';
 

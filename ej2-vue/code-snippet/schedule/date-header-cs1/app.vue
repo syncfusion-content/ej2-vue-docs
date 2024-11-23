@@ -23,7 +23,7 @@
 <script>
 import { Internationalization } from '@syncfusion/ej2-base';
 import { scheduleData } from './datasource.js';
-import { ScheduleComponent, Day, Week, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, Agenda, TimelineViews, TimelineMonth } from '@syncfusion/ej2-vue-schedule';
 
 var instance = new Internationalization();
 

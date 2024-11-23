@@ -32,7 +32,7 @@
 
 <script>
 import { resourceData } from "./datasource.js";
-import { ScheduleComponent, Year, TimelineYear, Resize, DragAndDrop } from "@syncfusion/ej2-vue-schedule";
+import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Year, TimelineYear, Resize, DragAndDrop } from "@syncfusion/ej2-vue-schedule";
 
 export default {
   name: "App",

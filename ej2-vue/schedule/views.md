@@ -216,7 +216,7 @@ The following code example shows how to hide the weekend days on `MonthAgenda` v
 
 Similar to the day view, timeline day view shows a single day with all its appointments where the time slots are displayed horizontally. By default, the cell height adjusts as per the height set to Scheduler. When the number of appointments exceeds the visible area of the cells, the `+ more` text indicator will be displayed at the bottom to denote the presence of few more appointments in that time range.
 
-To make use of the timeline views (Timeline Day, Timeline Week and Timeline Work Week) on Scheduler, import and inject the module `TimelineViews` from the `ej2-schedule` package.
+To make use of the timeline views (Timeline Day, Timeline Week and Timeline Work Week) on Scheduler, import and inject the module `TimelineViews` from the `ej2-vue-schedule` package.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -259,7 +259,7 @@ The following code example depicts how to display the timeline work week view on
 
 ### Timeline Month view
 
-A Timeline Month view displays the current month days along with its appointments. To make use of the timeline Month view on Scheduler, import and inject `TimelineMonth` module from the `ej2-schedule` package.
+A Timeline Month view displays the current month days along with its appointments. To make use of the timeline Month view on Scheduler, import and inject `TimelineMonth` module from the `ej2-vue-schedule` package.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -278,7 +278,7 @@ A Timeline Month view displays the current month days along with its appointment
 
 In Timeline Year view, each row depicts a single resource. Whereas in the vertical view, each resource is grouped parallelly as columns. Here, the resource grouping follows the tree-view like hierarchical grouping structure and can contain any level of child resources.
 
-To make use of the timeline Year view on Scheduler, import and inject `TimelineYear` module from the `ej2-schedule` package.
+To make use of the timeline Year view on Scheduler, import and inject `TimelineYear` module from the `ej2-vue-schedule` package.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -303,9 +303,9 @@ The following code example depicts how to group the multiple resources on Timeli
     <div id='app'>
       <div id='container'>
         <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
-          :selectedDate='selectedDate' :currentView='currentView'>
+          :selectedDate='selectedDate' :currentView='currentView' :group='group'>
           <e-views>
-            <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected: true></e-view>
+            <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected=true></e-view>
             <e-view option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical'></e-view>
           </e-views>
           <e-resources>
@@ -336,6 +336,7 @@ const resourceDataSource = [
   { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
 ];
 const eventSettings = { dataSource: resourceData };
+const group = { resources: ['Owners'] };
 
 provide('schedule', [TimelineYear]);
 
@@ -359,9 +360,9 @@ provide('schedule', [TimelineYear]);
     <div id='app'>
       <div id='container'>
         <ejs-schedule id='Schedule' width='100%' height='550px' :eventSettings='eventSettings'
-          :selectedDate='selectedDate' :currentView='currentView'>
+          :selectedDate='selectedDate' :currentView='currentView' :group='group'>
           <e-views>
-            <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected: true></e-view>
+            <e-view option='TimelineYear' displayName='Horizontal Timeline Year' isSelected=true></e-view>
             <e-view option='TimelineYear' displayName='Vertical Timeline Year' orientation='Vertical'></e-view>
           </e-views>
           <e-resources>
@@ -400,7 +401,10 @@ export default {
         { OwnerText: 'Steven', Id: 2, OwnerColor: '#f8a398' },
         { OwnerText: 'Michael', Id: 3, OwnerColor: '#7499e1' }
       ],
-      eventSettings: { dataSource: resourceData }
+      eventSettings: { dataSource: resourceData },
+      group: {
+        resources: ['Owners']
+      },
     }
   },
   provide: {
