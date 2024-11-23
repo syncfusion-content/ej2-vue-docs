@@ -22,7 +22,7 @@
 
 <script>
 import { resourceData } from './datasource.js';
-import { ScheduleComponent, Week, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, ResourcesDirective, ResourceDirective, Week, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 
 export default {
     name: "App",

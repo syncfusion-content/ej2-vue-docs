@@ -24,7 +24,7 @@
     </div>
 </template>
 <script>
-import { ScheduleComponent, Day, Week, TimelineViews, Month } from '@syncfusion/ej2-vue-schedule';
+import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, TimelineViews, Month } from '@syncfusion/ej2-vue-schedule';
 
 export default {
     name: "App",
