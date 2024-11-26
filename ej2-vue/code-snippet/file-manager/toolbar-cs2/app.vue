@@ -14,7 +14,9 @@
                     <e-toolbaritem name="Rename"></e-toolbaritem>
                     <e-toolbaritem name="Select" :template="'checkboxTemplate'">
                         <template v-slot:checkboxTemplate>
-                            <div><ejs-checkbox ref="checkBoxInstance" :label='Select All' :checked=false :change="onChange"></ejs-checkbox></div>
+                            <div>
+                                <ejs-checkbox ref="checkBoxInstance" :label="chkLabel" :checked="false" :change="onChange" ></ejs-checkbox>
+                            </div>
                         </template>
                     </e-toolbaritem>
                     <e-toolbaritem name="Selection"></e-toolbaritem>
@@ -45,23 +47,34 @@ export default {
                 getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            }
+            },
+            label: 'Select All'
         };
+    },
+    computed: {
+        chkLabel: {
+            get: function () {
+                return this.label;
+            },
+            set: function (label) {
+                this.label = label;
+            },
+        },
     },
     provide: {
             filemanager: [DetailsView, NavigationPane, Toolbar]
     },
     methods: {
-        onChange: function(args){
+        onChange: function (args) {
+            var fileObj = this.$refs.filemanagerInstance;
             if (args.checked) {
-                this.$refs.fileManagerInstance.selectAll(); 
-                this.$refs.checkBoxInstance.label = 'Unselect All';
+                fileObj.selectAll();
+                this.label = 'Unselect All';
+            } else {
+                fileObj.clearSelection();
+                this.label = 'Select All';
             }
-            else {
-                this.$refs.fileManagerInstance.clearSelection();
-                this.$refs.checkBoxInstance.label = 'Select All';
-            }
-        }
+        },
     }
 }
 </script>
