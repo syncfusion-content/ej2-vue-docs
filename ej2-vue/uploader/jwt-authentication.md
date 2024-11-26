@@ -28,7 +28,7 @@ Using the `uploading` and `removing` event argument's, `currentRequest` property
 
 The following code snippet provides the client-side logic for adding a JWT token during the save and remove actions.
 
-```vue
+```
 <template>
   <div class="container">
     <ejs-uploader :asyncSettings="asyncSettings" :removing="onFileRemoving" 
