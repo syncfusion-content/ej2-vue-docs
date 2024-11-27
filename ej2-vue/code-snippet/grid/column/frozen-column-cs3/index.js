@@ -19,7 +19,7 @@ new Vue({
       <label> Change freeze direction: </label> 
       <ejs-dropdownlist ref='directionDropdown' id='directionDropdown' :dataSource='directionData' index="0" :fields='fields' width="150"></ejs-dropdownlist>
     </div>
-    <ejs-button ref='button' cssClass='e-outline' v-on:click="freezeDirectionFn">Update</ejs-button>
+    <ejs-button ref='button' cssClass='e-outline' v-on:click.native="freezeDirectionFn">Update</ejs-button>
     <ejs-grid ref='grid' style="padding: 5px 5px"  :dataSource="data" height='315px'  :enableHover='false'>
       <e-columns>
         <e-column field='OrderID' headerText='Order ID' width='90' textAlign='Right'></e-column>
@@ -57,9 +57,8 @@ new Vue({
   },
   methods: {
     freezeDirectionFn: function () {
-      const grid = this.$refs.grid.$el.ej2_instances[0]
-      grid.getColumnByField(this.$refs.columnDropdown.$el.ej2_instances[0].value).freeze = this.$refs.directionDropdown.$el.ej2_instances[0].value
-      grid.refreshColumns();
+      this.$refs.grid.getColumnByField(this.$refs.columnDropdown.$el.ej2_instances[0].value).freeze = this.$refs.directionDropdown.$el.ej2_instances[0].value
+      this.$refs.grid.refreshColumns();
     }
   },
   provide: {
