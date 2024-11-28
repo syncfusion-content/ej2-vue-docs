@@ -23,7 +23,7 @@ new Vue({
         <div>
         <label style="padding: 30px 17px 0 0">Enter the width: </label>
         <ejs-textbox ref='textbox' type="textbox" placeholder="Enter new width" width="120"></ejs-textbox>
-        <ejs-button ref='button' cssClass='e-outline' v-on:click="onExternalResize">Resize</ejs-button>
+        <ejs-button ref='button' cssClass='e-outline' v-on:click.native="onExternalResize">Resize</ejs-button>
         </div> 
         <ejs-grid ref='grid' style="padding: 5px 5px" :dataSource='data' height='315' :allowResizing='true'>
           <e-columns>
