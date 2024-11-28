@@ -36,14 +36,14 @@
         </div>
     </div>
 </template>
-
+ 
 <script>
 import { RichTextEditorComponent, Toolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
-import { CheckBoxComponent as EjsCheckbox } from "@syncfusion/ej2-vue-buttons";
+import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
 name: "App",
 components: {
-"ejs-checkbox":CheckboxComponent,
+"ejs-checkbox":CheckBoxComponent,
 "ejs-richtexteditor":RichTextEditorComponent
 },
     data: function() {

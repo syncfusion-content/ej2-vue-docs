@@ -2,6 +2,7 @@
 import Vue from "vue";
 import { Browser, addClass, removeClass, isNullOrUndefined } from "@syncfusion/ej2-base";
 import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { marked } from 'marked';
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-vue-base';
 import { L10n } from '@syncfusion/ej2-base';
 L10n.load({

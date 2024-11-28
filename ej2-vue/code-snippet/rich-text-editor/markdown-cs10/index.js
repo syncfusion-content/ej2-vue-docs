@@ -2,6 +2,7 @@
   import Vue from 'vue';
   import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
   import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
+  import { marked } from 'marked';
 
   Vue.use(RichTextEditorPlugin);
 
