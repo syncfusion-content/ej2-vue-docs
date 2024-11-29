@@ -29,7 +29,6 @@ export default {
   mounted: function () {
     let recObject = this.$refs.EditorObj;
     this.dates = recObject.getRecurrenceDates(new Date(2018, 0, 7, 10, 0), 'FREQ=DAILY;INTERVAL=1; COUNT=30', '20180108T114224Z,20180110T114224Z', 10, new Date(2018, 0, 7));
-    this.dates = dates;
   }
 }
 </script>
