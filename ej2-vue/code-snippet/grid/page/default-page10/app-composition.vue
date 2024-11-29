@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <label style="padding: 30px 17px 0 0;font-weight: bold">Enter page count:</label>
+      <label style="padding: 30px 17px 0 0;font-weight: bold">Enter page size:</label>
       <ejs-textbox ref="textbox" width="120"></ejs-textbox>
       <ejs-button id="button" v-on:click="clickHandler">click button</ejs-button>
     </div>

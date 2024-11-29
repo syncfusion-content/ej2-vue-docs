@@ -15,7 +15,7 @@ new Vue({
         <div>
           <label style="padding: 30px 17px 0 0;font-weight: bold">Enter page index:</label>
           <ejs-textbox ref="textbox" width="120"></ejs-textbox>
-          <ejs-button  id="button"  v-on:click="clickHandler">click button</ejs-button>
+          <ejs-button  id="button"  v-on:click.native="clickHandler">click button</ejs-button>
         </div>
         <div style="padding:20px 0 0 0">
           <ejs-grid ref="grid" id="PagingGrid" :dataSource="data" :allowPaging="true" height="325">
