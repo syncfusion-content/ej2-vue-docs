@@ -165,7 +165,7 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-const  items:[
+const  items = [
 {
     text: 'Cut'
 },
