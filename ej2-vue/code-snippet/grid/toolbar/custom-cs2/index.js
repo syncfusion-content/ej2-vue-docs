@@ -39,9 +39,9 @@ new Vue({
             template: `<ejs-toolbar>
                         <div>
                           <img :src="addImageSource" id="addImage" />
-                          <ejs-button ref='button' id="addButton" class="button" cssClass='e-outline' v-on:click="editAction">Add</ejs-button>
+                          <ejs-button ref='button' id="addButton" class="button" cssClass='e-outline' v-on:click.native="editAction">Add</ejs-button>
                           <img :src="deleteImageSource" id="deleteImage" />
-                          <ejs-button ref='button'  id="deleteButton" class="button" cssClass='e-outline' v-on:click="editAction">Delete</ejs-button>
+                          <ejs-button ref='button'  id="deleteButton" class="button" cssClass='e-outline' v-on:click.native="editAction">Delete</ejs-button>
                         </div>
                       </ejs-toolbar>`,
             data: function () {

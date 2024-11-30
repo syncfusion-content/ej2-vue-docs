@@ -10,6 +10,7 @@
 </template>
 <script>
 </script>
+export default {}
 <style>
   
 .icon-bar {

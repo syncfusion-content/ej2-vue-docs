@@ -11,7 +11,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
- <ejs-button ref='button' cssClass='e-outline' v-on:click="reorderByIndex">Reorder column by index</ejs-button>
+ <ejs-button ref='button' cssClass='e-outline' v-on:click.native="reorderByIndex">Reorder column by index</ejs-button>
         <ejs-grid ref='grid' :dataSource="data" :allowReordering='true' height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>

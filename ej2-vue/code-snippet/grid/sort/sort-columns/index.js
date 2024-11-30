@@ -24,7 +24,7 @@ new Vue({
       <ejs-dropdownlist ref='directionDropDown' id='directionDropDown' index="0" width="150" :dataSource="directionData"
         :fields='fields'></ejs-dropdownlist>
     </div>
-    <ejs-button style="margin: 5px" ref='button' cssClass='e-outline' v-on:click="addSortColumn">Add sort
+    <ejs-button style="margin: 5px" ref='button' cssClass='e-outline' v-on:click.native="addSortColumn">Add sort
       column</ejs-button>
     <ejs-grid ref='grid' style="margin-top: 10px" :dataSource='data' :allowSorting='true' :sortSettings='initialSort'
       height='315px'>

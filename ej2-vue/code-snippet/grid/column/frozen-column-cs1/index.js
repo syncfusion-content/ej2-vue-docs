@@ -16,7 +16,7 @@ new Vue({
     <div style="display: inline-block;">
       <label> Change the frozen columns: </label> 
       <ejs-numerictextbox ref='textbox' id='textbox' :min="0" :max="3" :validateDecimalOnType="true" floatLabelType="Auto" format="n"  width='100px' :value=2></ejs-numerictextbox>
-      <ejs-button ref='button' cssClass='e-outline' v-on:click="frozenColumnFn">Update</ejs-button>
+      <ejs-button ref='button' cssClass='e-outline' v-on:click.native="frozenColumnFn">Update</ejs-button>
     </div>
     <ejs-grid ref='grid' style="padding: 5px 5px"  :dataSource="data" height='315px' :frozenColumns='2'  :enableHover='false'>
       <e-columns>
