@@ -12,8 +12,8 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-    <ejs-button id='show' cssClass="e-info" v-on:click='show'> Show </ejs-button>
-    <ejs-button id='hide' cssClass="e-info" v-on:click='hide'> Hide </ejs-button>
+    <ejs-button id='show' cssClass="e-info" v-on:click.native='show'> Show </ejs-button>
+    <ejs-button id='hide' cssClass="e-info" v-on:click.native='hide'> Hide </ejs-button>
         <ejs-grid ref='grid' id='grid' :dataSource="data"  height='315px'>
           <e-columns>
             <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>

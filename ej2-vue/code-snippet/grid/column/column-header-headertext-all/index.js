@@ -9,7 +9,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-      <ejs-button cssClass="e-success" v-on:click='changeHeaderText'>Change Header Text</ejs-button>
+      <ejs-button cssClass="e-success" v-on:click.native='changeHeaderText'>Change Header Text</ejs-button>
       <div style="padding: 20px 17px 0 0">
         <ejs-grid ref="grid" :dataSource='data' height='280'>
           <e-columns>

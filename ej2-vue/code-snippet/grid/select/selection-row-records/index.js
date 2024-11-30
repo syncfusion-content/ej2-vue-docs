@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { GridPlugin } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Page } from "@syncfusion/ej2-vue-grids";
 import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 import { data } from './datasource.js';
 
