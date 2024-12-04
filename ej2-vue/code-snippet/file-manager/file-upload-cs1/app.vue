@@ -7,10 +7,20 @@
                 <ejs-button id="openBtn" v-on:click="btnClick">Browse...</ejs-button>
             </div>
             <div id='target' class="control-section">
-                <ejs-dialog ref="uploadDialog" id="dialog" v-bind:visible="false" :header='dialogHeader' :animationSettings='animationSettings' :showCloseIcon='showCloseIcon' :open="dialogOpen" :close="dialogClose" :target='target'
-                :width='dialogWidth'>
-                    <ejs-filemanager ref="filemanagerObj" id="filemanager" :ajaxSettings='ajaxSettings' v-bind:allowMultiSelection="false" :fileOpen="onFileOpen" >
-                    </ejs-filemanager>
+                <ejs-dialog
+                    ref="uploadDialog"
+                    id="dialog"
+                    v-bind:visible="false"
+                    :header="dialogHeader"
+                    :animationSettings="animationSettings"
+                    :showCloseIcon="showCloseIcon"
+                    :open="dialogOpen"
+                    :close="dialogClose"
+                    :target="target"
+                    :width="dialogWidth">
+                    <div>
+                        <ejs-filemanager ref="filemanagerObj" id="filemanager" :ajaxSettings='ajaxSettings' v-bind:allowMultiSelection="false" :fileOpen="onFileOpen" ></ejs-filemanager>
+                    <div>
                 </ejs-dialog>
             </div>
         </div>
@@ -21,7 +31,7 @@
 import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
 import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { DialogComponent } from '@syncfusion/ej2-vue-popups';
-import { FileManagerComponent, NavigationPane, Toolbar, DetailsView, FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+import { FileManagerComponent, NavigationPane, Toolbar, DetailsView } from "@syncfusion/ej2-vue-filemanager";
 
 let hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
 
@@ -107,5 +117,8 @@ components: {
         top: 20px !important;
         max-height: 500px !important;
         left: 30px !important;
+    }
+    .fileupload .e-upload .e-file-select-wrap .e-css.e-btn {
+        visibility:hidden;
     }
 </style>

@@ -28,6 +28,10 @@ let failureVue = createApp().component("failureTemplate", {
 });
 
 export default {
+  name: "App",
+  components: {
+    "ejs-dropdowntree": DropDownTreeComponent
+  },
   data () {
     return {
       actionFailureTemplate: function (e) {
