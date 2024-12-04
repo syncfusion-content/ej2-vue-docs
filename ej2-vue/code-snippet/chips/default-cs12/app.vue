@@ -15,7 +15,7 @@ import { ChipListComponent, ChipsDirective, ChipDirective } from '@syncfusion/ej
 export default {
 name: "App",
 components: {
-"ejs-chiplist":ChiplistComponent,
+"ejs-chiplist":ChipListComponent,
 "e-chips":ChipsDirective,
 "e-chip":ChipDirective
 },
