@@ -156,7 +156,7 @@ constraints property of the node. The following code illustrates how to drop sha
 
 ### Customizing shadow effect of the node
 
-The angle, distance, and opacity of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
+The [`angle`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shadowModel/#angle), [`distance`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shadowModel/#distance), and [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shadowModel/#opacity) of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

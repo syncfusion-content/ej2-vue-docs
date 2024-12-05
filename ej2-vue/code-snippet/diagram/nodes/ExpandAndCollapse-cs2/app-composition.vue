@@ -65,7 +65,7 @@ const getNodeDefaults = (obj) => {
           bottom: 5,
         };
         obj.expandIcon = {
-          shape: 'ArrowDown',
+          shape: 'ArrowUp',
           width: 20,
           height: 20,
           fill: 'red',

@@ -47,9 +47,7 @@ export default {
         this.$refs.diagram.ej2Instances.selectedItems.nodes.length > 0
           ? this.$refs.diagram.ej2Instances.selectedItems.nodes[0]
           : this.$refs.diagram.ej2Instances.nodes[0];
-      this.$refs.diagram.ej2Instances.select([
-        this.$refs.diagram.ej2Instances.nodes[0],
-      ]);
+      this.$refs.diagram.ej2Instances.select([selectedNode]);
       this.$refs.diagram.ej2Instances.copy();
       this.$refs.diagram.ej2Instances.paste();
     },

@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <button @click="select">Select</button>
+        <button @click="unSelect">UnSelect</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -31,10 +33,17 @@ export default {
             nodes: nodes,
         }
     },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2Instances;
-        diagramInstance.select([diagramInstance.nodes[0]]);
+    methods: {
+        select() {
+            const diagramInstance = this.$refs.diagram.ej2Instances;
+            diagramInstance.select([diagramInstance.nodes[0]]);
+        },
+        unSelect() {
+            const diagramInstance = this.$refs.diagram.ej2Instances;
+            diagramInstance.clearSelection();
+        }
     }
+    
 }
 </script>
 <style>

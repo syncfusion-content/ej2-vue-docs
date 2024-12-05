@@ -33,9 +33,9 @@ new Vue({
     el: '#app',
     template: `
 <div id="app">
-
+        <button @click="exportNodes">export</button>
         <label for="Region"> Region: </label>
-        <select id="region" ref="regionSelect" v-on:change="exportItems">
+        <select id="region" ref="regionSelect" >
             <option value="Content">Content</option>
             <option value="PageSettings">PageSettings</option>
             <option value="CustomBounds">Custom Bounds</option>
@@ -57,7 +57,7 @@ new Vue({
             snapSettings: { constraints: SnapConstraints.None },
 
             // Function to handle the export button click
-            exportItems: () => {
+            exportNodes: () => {
                 const exportOptions = {};
                 exportOptions.region = this.$refs.regionSelect.value;
                 if (region === 'CustomBounds') {

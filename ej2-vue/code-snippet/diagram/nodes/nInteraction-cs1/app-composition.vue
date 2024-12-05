@@ -1,5 +1,7 @@
 <template>
     <div id="app">
+        <button @click="select">Select</button>
+        <button @click="unSelect">UnSelect</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -24,11 +26,17 @@ const nodes = [{
 
 const width = "100%";
 const height = "700px";
-
-onMounted(function () {
+const select = function()
+{
     const diagramInstance = diagram.value.ej2Instances;
     diagramInstance.select([diagramInstance.nodes[0]]);
-})
+};
+const unSelect = function()
+{
+    const diagramInstance = diagram.value.ej2Instances;
+    diagramInstance.clearSelection();
+}
+
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
