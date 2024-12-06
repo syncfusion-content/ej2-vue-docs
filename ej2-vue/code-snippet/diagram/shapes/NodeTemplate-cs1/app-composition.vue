@@ -4,8 +4,15 @@
     </div>
 </template>
 <script setup>
+import { createApp } from "vue";
 import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
 
+const itemVue = createApp({}).component("nodeTemplate", {
+    template: `<div style="background:#6BA5D7;height:100%;width:100%;"><button type="button" style="width:100px"> Button</button></div> `,
+    data() {
+      return {};
+    }
+});
 const nodes = [{
     // Position of the node
     offsetX: 250,
@@ -16,7 +23,9 @@ const nodes = [{
     //sets the type of the shape as HTML
     shape: {
         type: 'HTML',
-        content: '<div style="background:#6BA5D7;height:100%;width:100%;"><button type="button" style="width:100px"> Button</button></div>'
+        content: function () {
+            return { template: itemVue };
+        },
     }
 }];
 const width = "750px";

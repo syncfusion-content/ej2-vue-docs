@@ -1,40 +1,55 @@
 <template>
     <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
+        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes' :connectors='connectors' :annotationTemplate='annotationTemplate'></ejs-diagram>
     </div>
 </template>
 <script setup>
-import { DiagramComponent as EjsDiagram,AnnotationConstraints} from '@syncfusion/ej2-vue-diagrams';
+import { createApp } from "vue";
+import { DiagramComponent as EjsDiagram } from '@syncfusion/ej2-vue-diagrams';
+
+const itemVue = createApp({}).component("nodeTemplate", {
+  template: `<div><input type="button" value="Submit"></div>`,
+  data() {
+    return {};
+  }
+});
 
 const nodes = [{
     id: 'node1',
     // Position of the node
-    offsetX: 250,
-    offsetY: 150,
+    offsetX: 100,
+    offsetY: 100,
     // Size of the node
     width: 100,
     height: 100,
-    style: {
-        fill: '#6BA5D7',
-        strokeColor: 'white'
-    },
-    // Sets the Annotation for the Node
+    // Sets the annotation for the Node
     annotations: [{
-        id: 'label1',
-                content: 'Rectangle',
-                tooltip: {
-                    content: 'Rectangle',
-                    position: 'TopRight',
-                    relativeMode: 'Object',
-                },
-                constraints: AnnotationConstraints.Tooltip,
+
     }]
 }];
 
+const connectors = [{
+    sourcePoint: {
+        x: 300,
+        y: 100
+    },
+    targetPoint: {
+        x: 400,
+        y: 300
+    },
+    type: 'Orthogonal',
+    // Sets the Annotation for the Connector
+    annotations: [{
+        height: 20
+    }]
+}];
 
-
-const width = "100%";
+const width = "750px";
 const height = "350px";
+
+const annotationTemplate = function () {
+    return { template: itemVue };
+};
 
 </script>
 <style>

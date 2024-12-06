@@ -27,7 +27,7 @@ new Vue({
     </div>
 `,
 
-    name: 'app'
+    name: 'app',
     data() {
         return {
           width: '100%',
@@ -65,12 +65,12 @@ new Vue({
               bottom: 5,
             };
             obj.expandIcon = {
-              shape: 'ArrowDown',
+              shape: 'ArrowUp',
               width: 10,
               height: 10,
             };
             obj.collapseIcon = {
-              shape: 'ArrowUp',
+              shape: 'ArrowDown',
               width: 10,
               height: 10,
             };

@@ -20,7 +20,7 @@
 }
 
 .e-avatar {
-    background-image: url(./pic01.png);
+    background-image: url(https://ej2.syncfusion.com/demos/src/grid/images/2.png);
     margin: 2px;
 }
 </style>

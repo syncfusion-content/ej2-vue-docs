@@ -43,21 +43,6 @@ The tooltip can be customized for each node and connector. Remove the **InheritT
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/tooltip/inheritTooltip-cs1/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/tooltip/inheritTooltip-cs1/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/tooltip/inheritTooltip-cs1" %}
-
-## Inherit diagram tooltip
-
-The diagram supports inheriting the diagram tooltip when the mouse hovers over any node or connector. To show a tooltip on mouse over, set the diagram's [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tooltip) property with the tooltip [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#content) and [`position`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#position). Ensure that the nodes and connectors have their constraints set to **InheritTooltip**, as shown in the following example.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/diagram/tooltip/tooltip-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
@@ -66,6 +51,21 @@ The diagram supports inheriting the diagram tooltip when the mouse hovers over a
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/tooltip/tooltip-cs2" %}
+
+## Inherit diagram tooltip
+
+The diagram supports inheriting the diagram tooltip when the mouse hovers over any node or connector. To show a tooltip on mouse over, set the diagram's [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#tooltip) property with the tooltip [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#content) and [`position`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltip/#position). Ensure that the nodes and connectors have their constraints set to **InheritTooltip**, as shown in the following example.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/inheritTooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/tooltip/inheritTooltip-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/tooltip/inheritTooltip-cs1" %}
 
 ### Disable tooltip at runtime
 

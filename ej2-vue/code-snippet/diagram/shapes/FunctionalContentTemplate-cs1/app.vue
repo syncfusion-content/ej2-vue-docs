@@ -1,46 +1,77 @@
 <template>
-    <div id="app">
-        <ejs-diagram id="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
-    </div>
+<div id="app">
+  <!-- Diagram Component -->
+  <ejs-diagram
+    id="diagram"
+    :width="width"
+    :height="height"
+    :nodes="nodes"
+  ></ejs-diagram>
+</div>
 </template>
+
 <script>
-import { createApp } from "vue";
-import { DiagramComponent, NodeModel } from '@syncfusion/ej2-vue-diagrams';
+// Import the necessary components from Syncfusion Vue Diagrams
+import { DiagramComponent } from "@syncfusion/ej2-vue-diagrams";
 
-let itemVue = createApp({}).component("nodeTemplate", {
-    template: `<div style="background:#6BA5D7;height:100%;width:100%;"><button type="button" style="width:100px"> Button</button></div> `,
-    data() {
-      return {};
-    }
-  });
+// Define the template method separately
+function template(nodeId) {
+let background = "#6BA5D7";
+let name = "button";
+if (nodeId === "node1") {
+  background = "yellow";
+  name = "YELLOW";
+} else {
+  name = "BLUE";
+}
+return `<div style="background:${background};height:100%;width:100%;">
+          <button type="button" style="width:100px"> ${name}</button>
+        </div>`;
+}
 
-const nodes = [{
-    // Position of the node
-    offsetX: 250,
-    offsetY: 250,
-    // Size of the node
-    width: 100,
-    height: 100,
-    //sets the type of the shape as HTML
-    shape: {
-        type: 'HTML',
-        content: function () {
-            return { template: itemVue };
-          },
-    }
-}];
+// Define the nodes outside the Vue component
+const nodes = [
+{
+  id: "node1",
+  offsetX: 250,
+  offsetY: 250,
+  width: 100,
+  height: 100,
+  style: { fill: "#6BA5D7", strokeColor: "white" },
+  shape: {
+    type: "HTML",
+    content: template("node1"), // Generate dynamic content
+  },
+},
+{
+  id: "node2",
+  offsetX: 450,
+  offsetY: 250,
+  width: 100,
+  height: 100,
+  style: { fill: "#6BA5D7", strokeColor: "white" },
+  shape: {
+    type: "HTML",
+    content: template("node2"), // Generate dynamic content
+  },
+},
+];
 
 export default {
-    name: "App",
-    components: {
-        "ejs-diagram": DiagramComponent
-    },
-    data() {
-        return {
-            width: "100%",
-            height: "500px",
-            nodes: nodes,
-        }
-    }
-}
+name: "App",
+components: {
+  "ejs-diagram": DiagramComponent, 
+},
+data() {
+  return {
+    width: "100%",
+    height: "500px",
+    nodes: nodes, 
+  };
+},
+};
 </script>
+
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+</style>

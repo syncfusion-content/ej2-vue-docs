@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-
+        <button @click="exportNodes">export</button>
         <label for="Region"> Region: </label>
         <select id="region" ref="regionSelect" v-on:change="exportItems">
             <option value="Content">Content</option>
@@ -55,7 +55,8 @@ onMounted(function () {
 })
 
 // Function to handle the export button click
-const exportItems = () => {
+const exportNodes = () => {
+    const diagramInstance = diagram.value.ej2Instances;
     const exportOptions = {};
     exportOptions.region = regionSelect.value.value;
     if (region === 'CustomBounds') {

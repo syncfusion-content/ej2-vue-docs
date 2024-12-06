@@ -10,6 +10,12 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue TreeMap Component in Vue 2
 
+This section explains how to customize the TreeMap component and demonstrates its basic usage.
+
+You can explore some useful features of the TreeMap component in the following video.
+
+{% youtube "https://www.youtube.com/watch?v=fFSUhC9SAoQ" %}
+
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue TreeMap component
 
 ## Prerequisites
@@ -52,7 +58,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 

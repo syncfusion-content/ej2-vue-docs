@@ -1,6 +1,5 @@
-
 import Vue from 'vue';
-import { DiagramPlugin ,DiagramTools,BasicShapeModel,NodeModel} from '@syncfusion/ej2-vue-diagrams';
+import { DiagramPlugin} from '@syncfusion/ej2-vue-diagrams';
 Vue.use(DiagramPlugin);
 let nodes = [{
   // Position of the node
