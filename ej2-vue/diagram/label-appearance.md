@@ -30,7 +30,7 @@ The [`visible`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/ann
         
 {% previewsample "page.domainurl/code-snippet/diagram/labels/Appear-cs1" %}
 
- ## Horizontal and vertical alignment
+## Horizontal and vertical alignment
 
 The following tables illustrates all the possible alignments visually with 'offset (0, 0)'.
 

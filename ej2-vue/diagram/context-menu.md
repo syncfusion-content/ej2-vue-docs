@@ -77,16 +77,100 @@ In certain situations, you may want to hide specific menu items based on the sel
 
 [`url`](https://ej2.syncfusion.com/vue/documentation/api/diagram/contextMenuItemModel/#url) property of the menu item is used to set the url of any website which will be opened upon clicking on them. The following example shows the context menu with url for three websites.
 
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/contextmenu/custom-cs3/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/contextmenu/custom-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/diagram/contextmenu/custom-cs3" %}
+```javascript
+<template>
+  <div id="app">
+    <ejs-diagram
+      id="diagram"
+      ref="diagram"
+      :width="width"
+      :height="height"
+      :nodes="nodes"
+      :contextMenuSettings="contextMenuSettings"
+    ></ejs-diagram>
+  </div>
+</template>
+<script>
+import {
+  DiagramComponent,
+  DiagramContextMenu,
+} from "@syncfusion/ej2-vue-diagrams";
+
+let nodes = [
+  {
+    id: "node1",
+    width: 100,
+    height: 100,
+    offsetX: 100,
+    offsetY: 100,
+    annotations: [
+      {
+        id: "label1",
+        content: "Rectangle1",
+      },
+    ],
+  },
+  {
+    id: "node2",
+    width: 100,
+    height: 100,
+    offsetX: 300,
+    offsetY: 100,
+    annotations: [
+      {
+        id: "label2",
+        content: "Rectangle2",
+      },
+    ],
+  },
+];
+
+
+export default {
+  name: "App",
+  components: {
+    "ejs-diagram": DiagramComponent,
+  },
+  data() {
+    return {
+      width: "100%",
+      height: "350px",
+      nodes: nodes,
+      contextMenuSettings: {
+        show: true,
+        items: [
+          {
+            text: "Google.com",
+            id: "google",
+            target: ".e-diagramcontent",
+            url: "https://www.google.co.in/",
+          },
+          {
+            text: "w3schools.com",
+            id: "W3Schools",
+            target: ".e-diagramcontent",
+            url: "https://www.w3schools.com/",
+          },
+          {
+            text: "stackoverflow.com",
+            id: "stackoverflow",
+            target: ".e-diagramcontent",
+            url: "https://stackoverflow.com/",
+          },
+        ],
+        showCustomMenuOnly: true,
+      },
+    };
+  },
+  provide: {
+    diagram: [DiagramContextMenu],
+  },
+};
+</script>
+<style>
+@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+</style>
+```
 
 ## Template Support for Context menu
 
@@ -126,3 +210,7 @@ The following example shows how to get these events.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/contextmenu/events-cs1" %}
+
+## See Also
+ 
+* [How to open context menu on left click](https://support.syncfusion.com/kb/article/15103/how-to-perform-clipboard-operation-with-custom-context-menu-on-left-click-using-vue-diagram)

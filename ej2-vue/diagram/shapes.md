@@ -149,14 +149,14 @@ To render html node with nodeTemplate we need to define the nodeTemplate in the 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/NodeTemplate-cs1/app-composition.vue %}
+{% include code-snippet/diagram/shapes/HTML-cs3/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/NodeTemplate-cs1/app.vue %}
+{% include code-snippet/diagram/shapes/HTML-cs3/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/shapes/NodeTemplate-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/shapes/HTML-cs3" %}
 
 #### Functional nodeTemplate
 
@@ -166,14 +166,14 @@ Refer the code example below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/HTML-cs3/app-composition.vue %}
+{% include code-snippet/diagram/shapes/NodeTemplate-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/shapes/HTML-cs3/app.vue %}
+{% include code-snippet/diagram/shapes/NodeTemplate-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/shapes/HTML-cs3" %}
+{% previewsample "page.domainurl/code-snippet/diagram/shapes/NodeTemplate-cs1" %}
 
 ## Native
 

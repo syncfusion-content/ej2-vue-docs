@@ -57,11 +57,11 @@ The diagram provides support to export the desired region of the diagram to vari
 | pageHeight| number | Sets the page height of the diagram while exporting the diagram into multiple pages.|
 | pageOrientation | enum | Sets the orientation of the page. |
 
-## File Name
+### File Name
 
 [`FileName`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#filename) is the name of the file to be downloaded. By default, the file name is set to **Diagram**.
 
-## Format
+### Format
 
 [`Format`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#format) is to specify the type/format of the exported file. By default, the diagram is exported as .jpg format. You can export diagram to the following formats:
 
@@ -82,7 +82,7 @@ The diagram provides support to export the desired region of the diagram to vari
         
 {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs1" %}
 
-## Margin
+### Margin
 
 [`Margin`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#margin) specifies the amount of space that has to be left around the diagram.
 
@@ -99,7 +99,7 @@ The diagram provides support to export the desired region of the diagram to vari
 {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs2" %}
 
 
-## Mode
+### Mode
 
 [`Mode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#mode) specifies whether to export the diagram as an image or to return the base64 data of the diagram. The available export modes are:
 
@@ -136,15 +136,17 @@ export default {
 }
 ```
 
-## Region
+### Region
 
-You can export any particular [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#region) of the diagram and it is categorized into three types as follows.
+Exporting particular region of diagram is possible by using the [`region`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#region) property of the [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions). The available export regions are listed in the table below.
 
 | Region | Description |
 |-------- | -------- |
 | PageSettings | The region to be exported will be based on the given page settings |
 | Content | Only the content of the diagram control will be exported | 
 | CustomBounds | The region to be exported will be explicitly defined |
+
+The following example shows how to export diagram with different regions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -213,7 +215,7 @@ To get the html diagram content, the [`getDiagramContent`](https://ej2.syncfusio
 {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs6" %}
 
 
-## Export diagram with stretch option
+### Export diagram with stretch option
 
 Diagram provides support to export the diagram as image for [`stretch`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#stretch) option. The exported images will be clearer but larger in file size.
 

@@ -1,18 +1,23 @@
 <template>
     <div id="app">
+        <button @click="exportNodes">export</button>
         <label for="Region"> Region: </label>
-        <select id="region" ref="regionSelect" v-on:change="exportItems">
+        <select id="region" ref="regionSelect">
             <option value="Content">Content</option>
             <option value="PageSettings">PageSettings</option>
             <option value="CustomBounds">Custom Bounds</option>
         </select>
-        <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes="nodes"
-            :snapSettings="snapSettings"></ejs-diagram>
+        <ejs-diagram id="diagram" ref="diagramObj" :width="width" :height="height" :nodes="nodes" :snapSettings="snapSettings"></ejs-diagram>
     </div>
 </template>
 
 <script>
-import { DiagramComponent, SnapConstraints, PrintAndExport, Rect } from '@syncfusion/ej2-vue-diagrams';
+import {
+  DiagramComponent,
+  SnapConstraints,
+  PrintAndExport,
+  Rect,
+} from '@syncfusion/ej2-vue-diagrams';
 
 var diagramInstance;
 var nodes = [
@@ -44,15 +49,15 @@ export default {
     },
     data() {
         return {
-            width: '1000px',
-            height: '650px',
-            nodes: nodes,
-            snapSettings: { constraints: SnapConstraints.None }
+        width: '1000px',
+        height: '650px',
+        nodes: nodes,
+        snapSettings: { constraints: SnapConstraints.None },
         };
     },
     methods: {
         // Function to handle the export button click
-        exportItems() {
+        exportNodes() {
             const exportOptions = {};
             exportOptions.region = this.$refs.regionSelect.value;
             if (region === 'CustomBounds') {
@@ -73,5 +78,5 @@ export default {
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css";
+@import '../node_modules/@syncfusion/ej2-vue-diagrams/styles/material.css';
 </style>
