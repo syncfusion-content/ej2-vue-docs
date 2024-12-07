@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data binding in Vue Diagram component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Data binding in Vue Diagram component | Syncfusion®
+description: Learn here all about Data binding in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Data binding 
 platform: ej2-vue
 documentation: ug

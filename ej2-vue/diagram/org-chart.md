@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Org-chart layout in Vue Diagram component | Syncfusion
-description: Learn here all about Org-chart layout in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Org-chart layout in Vue Diagram component | Syncfusion®
+description: Learn here all about Org-chart layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Org-chart layout 
 documentation: ug

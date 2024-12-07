@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Serialization in Vue Diagram component | Syncfusion
-description: Learn here all about Serialization in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Serialization in Vue Diagram component | Syncfusion®
+description: Learn here all about Serialization in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Serialization 
 platform: ej2-vue
 documentation: ug

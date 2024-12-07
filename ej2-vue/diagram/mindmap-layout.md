@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Mind-map layout in Vue Diagram component | Syncfusion
-description: Learn here all about Mind-map layout in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Mind-map layout in Vue Diagram component | Syncfusion®
+description: Learn here all about Mind-map layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Mind-map layout 
 documentation: ug

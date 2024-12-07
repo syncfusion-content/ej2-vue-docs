@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector Interaction in Vue Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Connector Interaction in Vue Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Connector Interaction 
 platform: ej2-vue
 documentation: ug

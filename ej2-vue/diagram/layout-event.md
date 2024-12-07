@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Layout events in Vue Diagram component | Syncfusion
-description: Learn here all about Layout events in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Layout events in Vue Diagram component | Syncfusion®
+description: Learn here all about Layout events in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Layout events
 documentation: ug

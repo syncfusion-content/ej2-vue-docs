@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Vue Diagram component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Diagram component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Diagram component | Syncfusion®
+description:  Checkout and learn about Getting started with Vue Diagram component of Syncfusion Essential® JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Diagram Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Diagram component
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion® Vue Diagram component
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -58,11 +58,11 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 ![Vue 2 project](./images/vue2-terminal.png)
 
-Once the `my-diagram-app` project is set up with default settings, proceed to add Syncfusion components to the project.
+Once the `my-diagram-app` project is set up with default settings, proceed to add Syncfusion® components to the project.
 
-## Add Syncfusion Vue packages
+## Add Syncfusion® Vue packages
 
-Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion® packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
 This article uses the [Vue Diagram component](https://www.syncfusion.com/vue-components/vue-diagram) as an example. Install the `@syncfusion/ej2-vue-diagrams` package by running the following command:
 
@@ -75,9 +75,9 @@ or
 yarn add @syncfusion/ej2-vue-diagrams
 ```
 
-## Import Syncfusion CSS styles
+## Import Syncfusion® CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion® Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Diagram component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -95,7 +95,7 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
- > Diagram components use other Syncfusion components as well, so CSS references for the dependent component must be added in order to use all diagram functionalities. Use this same order to display the Syncfusion Diagram component’s predefined appearance.
+ > Diagram components use other Syncfusion® components as well, so CSS references for the dependent component must be added in order to use all diagram functionalities. Use this same order to display the Syncfusion® Diagram component’s predefined appearance.
 
 
 ## Module Injection
@@ -149,7 +149,7 @@ export default {
 
 ```
 
-## Add Syncfusion Vue component
+## Add Syncfusion® Vue component
 
 Follow the below steps to add the Vue Diagram component:
 
@@ -266,7 +266,7 @@ Create and add a `node` (JSON data) with specific position, size, label, and sha
 
 ### Apply shape and style to node
 
-Syncfusion diagram control provides support to render many built-in shapes in diagram.
+Syncfusion® diagram control provides support to render many built-in shapes in diagram.
 Please refer to [`Shapes`](shapes) to know about built-in Shapes.
 
 The appearance of a node can be customized by changing its [`fill`](../api/diagram/shapeStyleModel#fill-string) color, [`strokeColor`](../api/diagram/shapeStyleModel#strokecolor-string), [`strokeWidth`](../api/diagram/shapeStyleModel#strokewidth-number), [`borderColor`](../api/diagram/node#borderColor-string), [`borderWidth`](../api/diagram/node#borderWidth-number), [`strokeDashArray`](../api/diagram/shapeStyleModel#strokeDashArray-number),  [`opacity`](../api/diagram/shapeStyleModel#opacity-number), and [`shadow`](../api/diagram/shapeStyleModel#shadow-number).

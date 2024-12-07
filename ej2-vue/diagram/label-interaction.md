@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Label Interaction in Vue Diagram component | Syncfusion
-description: Learn here all about Labels in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Label Interaction in Vue Diagram component | Syncfusion®
+description: Learn here all about Labels in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Label Interaction
 platform: ej2-vue
 documentation: ug

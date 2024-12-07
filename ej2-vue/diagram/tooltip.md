@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tooltip in Vue Diagram component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Tooltip in Vue Diagram component | Syncfusion®
+description: Learn here all about Tooltip in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Tooltip 
 platform: ej2-vue
 documentation: ug

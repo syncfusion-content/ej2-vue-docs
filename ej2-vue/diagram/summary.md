@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Summary in Vue Diagram component | Syncfusion
-description: Learn here all about Summary in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Summary in Vue Diagram component | Syncfusion®
+description: Learn here all about Summary in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Summary 
 platform: ej2-vue
 documentation: ug
