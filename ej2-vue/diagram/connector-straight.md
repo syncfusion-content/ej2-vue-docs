@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Straight connector in Vue Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Straight connector in Vue Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Straight 
 platform: ej2-vue
 documentation: ug

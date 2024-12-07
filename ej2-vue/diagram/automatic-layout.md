@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Automatic layout in Vue Diagram component | Syncfusion
-description: Learn here all about Automatic layout in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Automatic layout in Vue Diagram component | Syncfusion®
+description: Learn here all about Automatic layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Automatic layout 
 platform: ej2-vue
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Umldiagram in Vue Diagram component | Syncfusion
-description: Learn here all about Umldiagram in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Umldiagram in Vue Diagram component | Syncfusion®
+description: Learn here all about Umldiagram in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Umldiagram 
 platform: ej2-vue
 documentation: ug

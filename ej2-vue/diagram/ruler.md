@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ruler in Vue Diagram component | Syncfusion
-description: Learn here all about Ruler in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Ruler in Vue Diagram component | Syncfusion®
+description: Learn here all about Ruler in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Ruler 
 platform: ej2-vue
 documentation: ug

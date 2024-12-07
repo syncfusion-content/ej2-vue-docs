@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Complex hierarchical tree layout in Vue Diagram component | Syncfusion
-description: Learn here all about Automatic layout in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Complex hierarchical tree layout in Vue Diagram component | Syncfusion®
+description: Learn here all about Automatic layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Complex hierarchical tree layout
 documentation: ug

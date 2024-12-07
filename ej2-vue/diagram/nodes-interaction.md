@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction of nodes in Vue Diagram component | Syncfusion
-description: Learn here all about Nodes in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Interaction of nodes in Vue Diagram component | Syncfusion®
+description: Learn here all about Nodes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Nodes interaction
 platform: ej2-vue
 documentation: ug

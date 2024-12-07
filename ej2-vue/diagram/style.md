@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Style in Vue Diagram component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Diagram component | Syncfusion®
+description: Learn here all about Style in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Style 
 platform: ej2-vue
 documentation: ug

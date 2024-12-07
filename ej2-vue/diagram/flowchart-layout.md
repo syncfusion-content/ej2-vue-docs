@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Flowchart layout in Vue Diagram component | Syncfusion
-description: Learn here all about Flowchart layout in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Flowchart layout in Vue Diagram component | Syncfusion®
+description: Learn here all about Flowchart layout in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Flowchart layout 
 documentation: ug

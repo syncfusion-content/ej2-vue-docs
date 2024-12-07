@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Virtualization in Vue Diagram component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Virtualization in Vue Diagram component | Syncfusion®
+description: Learn here all about Virtualization in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Virtualization 
 platform: ej2-vue
 documentation: ug

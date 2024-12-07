@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node Labels in Vue Diagram component | Syncfusion
-description: Learn here all about Labels in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Node Labels in Vue Diagram component | Syncfusion®
+description: Learn here all about Labels in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Node Labels 
 platform: ej2-vue
 documentation: ug

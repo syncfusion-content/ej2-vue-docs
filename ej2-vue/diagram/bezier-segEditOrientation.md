@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Bezier Segment edit orientation in Vue Diagram component | Syncfusion
-description: Learn here all about Connectors in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Bezier Segment edit orientation in Vue Diagram component | Syncfusion®
+description: Learn here all about Connectors in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Bezier Segment edit orientation 
 platform: ej2-vue
 documentation: ug
