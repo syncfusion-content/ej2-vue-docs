@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Vue 3 getting started with the Diagram component | Syncfusion
-description: Check out and learn about Vue 3 getting started with the Vue Diagram component of Syncfusion Essential JS 2 and more details.
+title: Vue 3 getting started with the Diagram component | Syncfusion®
+description: Check out and learn about Vue 3 getting started with the Vue Diagram component of Syncfusion Essential® JS 2 and more details.
 control: Vue 3 getting started
 platform: ej2-vue
 documentation: ug
@@ -10,19 +10,19 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Diagram Component in Vue 3
 
-This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion Vue Diagram component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a [Vite](https://vitejs.dev/) project with a JavaScript environment and integrating the Syncfusion® Vue Diagram component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 The `Composition API` is a new feature introduced in Vue.js 3 that provides an alternative way to organize and reuse component logic. It allows developers to write components as functions that use smaller, reusable functions called composition functions to manage their properties and behavior.
 
 The `Options API` is the traditional way of writing Vue.js components, where the component logic is organized into a series of options that define the component's properties and behavior. These options include data, methods, computed properties, watchers, life cycle hooks, and more.
 
-To create, edit, and view interactive diagrams using the Syncfusion Vue Diagram component, refer to the below video link.
+To create, edit, and view interactive diagrams using the Syncfusion® Vue Diagram component, refer to the below video link.
 
 {% youtube "youtube:https://www.youtube.com/watch?v=y11FMmfoqCg" %}
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Set up the Vite project
 
@@ -83,11 +83,11 @@ cd my-project
 yarn install
 ```
 
-Now that `my-project` is ready to run with default settings, let's add Syncfusion components to the project.
+Now that `my-project` is ready to run with default settings, let's add Syncfusion® components to the project.
 
-## Add Syncfusion Vue packages
+## Add Syncfusion® Vue packages
 
-Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
+Syncfusion® Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion® Vue components in the project, install the corresponding npm package.
 
 This article uses the [Vue Diagram component](https://www.syncfusion.com/vue-components/vue-diagram) as an example. To use the Vue Diagram component in the project, the `@syncfusion/ej2-vue-diagrams` package needs to be installed using the following command:
 
@@ -101,9 +101,9 @@ or
 yarn add @syncfusion/ej2-vue-diagrams
 ```
 
-## Import Syncfusion CSS styles
+## Import Syncfusion® CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion® Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Diagram component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -124,7 +124,7 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
-## Add Syncfusion Vue component
+## Add Syncfusion® Vue component
 
 Follow the below steps to add the Vue Diagram component using `Composition API` or `Options API`:
 

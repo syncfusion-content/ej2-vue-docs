@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Group in Vue Diagram component | Syncfusion
-description: Learn here all about Group in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Group in Vue Diagram component | Syncfusion®
+description: Learn here all about Group in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Group 
 platform: ej2-vue
 documentation: ug

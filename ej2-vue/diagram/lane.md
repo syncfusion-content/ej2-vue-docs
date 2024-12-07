@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Lane in Vue Diagram component | Syncfusion
-description: Learn here all about Swim lane in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Lane in Vue Diagram component | Syncfusion®
+description: Learn here all about Swim lane in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Lane 
 platform: ej2-vue
 documentation: ug

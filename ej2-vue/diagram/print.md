@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Print in Vue Diagram component | Syncfusion
-description: Learn here all about Print in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Print in Vue Diagram component | Syncfusion®
+description: Learn here all about Print in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
@@ -128,7 +128,7 @@ The following example shows how to set pageOrientation for the printOptions.
 ## Limitations
 
 
-Currently, printing diagram with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential PDF library. This library incorporates the Syncfusion Essential HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15531/how-to-print-or-export-the-html-and-native-node-into-image-format-using-vue-diagram) kb for more information.
+Currently, printing diagram with native and HTML nodes is not supported. To overcome this limitation, we make use of the Syncfusion Essential® PDF library. This library incorporates the Syncfusion Essential® HTML converter, which employs the advanced Blink rendering engine. This converter seamlessly transforms HTML content into images. Refer to [`export Html-and-Native node`](https://support.syncfusion.com/kb/article/15531/how-to-print-or-export-the-html-and-native-node-into-image-format-using-vue-diagram) kb for more information.
 
 ## See Also
 

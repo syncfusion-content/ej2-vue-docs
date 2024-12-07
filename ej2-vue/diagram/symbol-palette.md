@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Symbol palette in Vue Diagram component | Syncfusion
-description: Learn here all about Symbol palette in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Symbol palette in Vue Diagram component | Syncfusion®
+description: Learn here all about Symbol palette in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Symbol palette 
 platform: ej2-vue
 documentation: ug

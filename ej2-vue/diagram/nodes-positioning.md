@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Positioning of nodes in Vue Diagram component | Syncfusion
-description: Learn here all about Nodes in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Positioning of nodes in Vue Diagram component | Syncfusion®
+description: Learn here all about Nodes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Positioning of nodes
 platform: ej2-vue
 documentation: ug

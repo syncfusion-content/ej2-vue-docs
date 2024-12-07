@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Swim lane in symbol palette Vue Diagram component | Syncfusion
-description: Learn here all about Swim lane in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title:  Swim lane in symbol palette Vue Diagram component | Syncfusion®
+description: Learn here all about Swim lane in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Swim lane in symbol palette 
 platform: ej2-vue
 documentation: ug

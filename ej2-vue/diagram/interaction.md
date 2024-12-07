@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Interaction in Vue Diagram component | Syncfusion
-description: Learn here all about Interaction in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Interaction in Vue Diagram component | Syncfusion®
+description: Learn here all about Interaction in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Interaction 
 platform: ej2-vue
 documentation: ug

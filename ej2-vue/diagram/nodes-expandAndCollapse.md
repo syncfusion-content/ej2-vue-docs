@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Expand and collapse of nodes in Vue Diagram component | Syncfusion
-description: Learn here all about Nodes in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Expand and collapse of nodes in Vue Diagram component | Syncfusion®
+description: Learn here all about Nodes in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: NExpand and collapse pf nodes
 platform: ej2-vue
 documentation: ug

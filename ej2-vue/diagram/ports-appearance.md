@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Ports appearance in Vue Diagram component | Syncfusion
-description: Learn here all about Ports in Syncfusion Vue Diagram component of Syncfusion Essential JS 2 and more.
+title: Ports appearance in Vue Diagram component | Syncfusion®
+description: Learn here all about Ports in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 control: Ports 
 platform: ej2-vue
 documentation: ug
