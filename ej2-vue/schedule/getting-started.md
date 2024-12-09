@@ -337,6 +337,9 @@ The output will display the Scheduler with the specified view configuration.
 {% highlight html tabtitle="~/src/App.vue" %}
 {% include code-snippet/schedule/view-cs1/app.vue %}
 {% endhighlight %}
+{% highlight html tabtitle="~/src/datasource.js" %}
+{% include code-snippet/schedule/view-cs1/datasource.js %}
+{% endhighlight %}
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/view-cs1" %}
