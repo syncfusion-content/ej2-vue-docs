@@ -233,8 +233,8 @@ const ownerDataSource = [
 <script>
 data: function () {
     return {
-      selectedDate = new Date(2023, 7, 8),
-      eventSettings = {
+      selectedDate: new Date(2023, 7, 8),
+      eventSettings: {
         dataSource: [
           {
             Id: 1,
@@ -262,7 +262,7 @@ data: function () {
           }
         ]
       },
-      ownerDataSource =[
+      ownerDataSource: [
         { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
         { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
         { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }
@@ -391,8 +391,8 @@ export default {
   },
   data: function () {
     return {
-      selectedDate = new Date(2023, 7, 8),
-      eventSettings = {
+      selectedDate: new Date(2023, 7, 8),
+      eventSettings: {
         dataSource: [
           {
             Id: 1,
@@ -420,7 +420,7 @@ export default {
           }
         ]
       },
-      ownerDataSource =[
+      ownerDataSource: [
         { OwnerText: "Nancy", Id: 1, OwnerColor: "#ffaa00" },
         { OwnerText: "Steven", Id: 2, OwnerColor: "#f8a398" },
         { OwnerText: "Michael", Id: 3, OwnerColor: "#7499e1" }

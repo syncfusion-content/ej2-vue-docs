@@ -57,7 +57,7 @@ new Vue({
   },
   methods: {
     freezeDirectionFn: function () {
-      this.$refs.grid.getColumnByField(this.$refs.columnDropdown.$el.ej2_instances[0].value).freeze = this.$refs.directionDropdown.$el.ej2_instances[0].value;
+      this.$refs.grid.getColumnByField(this.$refs.columnDropdown.$el.ej2_instances[0].value).freeze = this.$refs.directionDropdown.$el.ej2_instances[0].value
       this.$refs.grid.refreshColumns();
     }
   },
