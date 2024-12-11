@@ -212,7 +212,7 @@ pnpm dev
 
 The output will appear as follows:
 
-![vue3-js-composition](../appearance/images/vue3-js-composition.png)
+![vue3-js-composition](../appearance/images/vue-3-js-composition.png)
 
 ## See also
 

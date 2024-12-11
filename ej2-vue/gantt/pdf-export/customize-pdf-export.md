@@ -232,3 +232,20 @@ To customize the Gantt style in exported PDF, define the 'ganttStyle' in `pdfExp
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs12" %}
+
+## Customize Split Taskbar Segment Colors in PDF
+
+The PDF export feature in the Gantt Chart allows you to customize the colors of split taskbar segments using the [`taskSegmentStyles`](https://ej2.syncfusion.com/vue/documentation/api/gantt/iTaskbarStyle/#taskSegmentStyles) property inside the [`pdfQueryTaskbarInfo`](https://ej2.syncfusion.com/vue/documentation/api/gantt/#pdfquerytaskbarinfo) event.
+
+The [`taskSegmentStyles`](https://ej2.syncfusion.com/vue/documentation/api/gantt/iTaskbarStyle/#taskSegmentStyles) property contains a collection of style properties for task segments. By specifying the index of corresponding segment index in this collection you can customize that segment taskbar color, progress color, and its border color.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-customize-segment-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-customize-segment-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-customize-segment-cs1" %}
