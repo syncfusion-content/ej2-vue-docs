@@ -13,7 +13,10 @@
   
   <script>
   import Vue from 'vue';
-  import { ButtonPlugin, CheckBoxPlugin } from '@syncfusion/ej2-vue-buttons';
+import {
+  ButtonComponent,
+  CheckBoxComponent,
+} from '@syncfusion/ej2-vue-buttons';
   import { enableRipple } from '@syncfusion/ej2-base';
   
   enableRipple(true);
@@ -21,20 +24,25 @@
   Vue.use(ButtonPlugin);
   
   export default {
-    data() {
-      return {
-        isCheckboxChecked: false,
-      };
+    name: 'App',
+      components: {
+        'ejs-button': ButtonComponent,
+        'ejs-checkbox': CheckBoxComponent,
+      },
+  data() {
+    return {
+      isCheckboxChecked: false,
+    };
+  },
+  methods: {
+    toggleBodyClass() {
+      if (this.isCheckboxChecked) {
+        document.body.classList.add('e-dark-mode', 'dark'); // Add your desired classes here
+      } else {
+        document.body.classList.remove('e-dark-mode', 'dark'); // Remove your desired classes here
+      }
     },
-    methods: {
-        toggleBodyClass() {
-            if (this.isCheckboxChecked) {
-              document.body.classList.add('e-dark-mode', 'dark'); // Add your desired classes here
-            } else {
-              document.body.classList.remove('e-dark-mode', 'dark'); // Remove your desired classes here
-            }
-          },
-        },
+  },
   }
   </script>
   

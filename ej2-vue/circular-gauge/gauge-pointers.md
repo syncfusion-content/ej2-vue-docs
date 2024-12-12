@@ -165,7 +165,7 @@ The marker can be customized in terms of color, border, width and height by usin
 
 ## Dragging pointer
 
-The pointers can be dragged over the axis line by clicking and dragging the same. To enable or disable the pointer drag, use the [`enablePointerDrag`](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/circularGaugeModel/#enablepointerdrag) property.
+The pointers can be dragged along the axis line by clicking and dragging them. To enable or disable the drag functionality for all pointers across all axes, use the [enablePointerDrag](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/circularGaugeModel/#enablepointerdrag) property. When this property is set to **true**, all pointers can be dynamically adjusted by dragging. Setting it to **false** keeps all pointers fixed in their specified positions.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -177,6 +177,24 @@ The pointers can be dragged over the axis line by clicking and dragging the same
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/circular-gauge/getting-started-cs44" %}
+
+### Enabling drag functionality for a specific pointer
+
+To enable or disable the drag functionality for specific pointers along the axis line, use the `enableDrag` property in the required pointer model.
+
+>When the `enableDrag` property is enabled for any individual pointer model, the `enablePointerDrag` property becomes ineffective.
+The following example demonstrates how to enable the drag functionality for multiple pointers individually.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/gauge-pointers-drag-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/circular-gauge/gauge-pointers-drag-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/circular-gauge/gauge-pointers-drag-cs1" %}
 
 ## Multiple Pointers
 

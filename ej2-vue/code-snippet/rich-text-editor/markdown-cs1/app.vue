@@ -19,7 +19,7 @@
 }
 
 .e-md-preview::before {
-  content: '\e345';
+  content: '\\e345';
 }
 
 .e-rte-content .e-content.e-pre-source {
@@ -27,13 +27,14 @@
 }
 
 .e-icon-btn.e-active .e-md-preview.e-icons::before {
-  content: '\e350';
+  content: '\\e350';
 }
 </style>
 
 <script>
 import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor } from '@syncfusion/ej2-vue-richtexteditor';
+import { marked } from 'marked';
 export default {
   name: "App",
   components: {
@@ -94,14 +95,14 @@ export default {
     },
     markDownConversion: function () {
       if (document.getElementById('preview-code').classList.contains('e-active')) {
-        var id = this.$refs.rteInstance.ej2Instance.getID() + 'html-view';
+        var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
         var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id);
         htmlPreview.innerHTML = marked.parse(this.textArea.value);
       }
     },
     fullPreview: function (event) {
       var mdSource = document.getElementById('preview-code');
-      var id = this.$refs.rteInstance.ej2Instance.getID() + 'html-view';
+      var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
       var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id);
       if ((mdSource.classList.contains('e-active')) && event.mode) {
         mdSource.classList.remove('e-active');

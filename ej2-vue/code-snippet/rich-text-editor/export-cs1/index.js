@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { RichTextEditorPlugin, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-vue-richtexteditor';
 
 Vue.use(RichTextEditorPlugin);
 

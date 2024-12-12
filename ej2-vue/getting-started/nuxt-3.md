@@ -199,4 +199,4 @@ npm run dev
 
 The output will appear as follows:
 
-![Nuxt sample output](../appearance/images/Vue3-grid-demo.PNG)
+![Nuxt sample output](../appearance/images/nuxt-3.png)

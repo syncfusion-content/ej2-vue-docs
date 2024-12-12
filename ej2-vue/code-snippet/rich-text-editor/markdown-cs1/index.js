@@ -2,6 +2,7 @@
   import Vue from 'vue';
   import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
   import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor } from '@syncfusion/ej2-vue-richtexteditor';
+  import { marked } from 'marked';
 
   Vue.use(RichTextEditorPlugin);
 
@@ -68,14 +69,14 @@ new Vue({
       },
       markDownConversion: function() {
         if (document.getElementById('preview-code').classList.contains('e-active')) {
-          var id = this.$refs.rteInstance.ej2Instance.getID() + 'html-view';
+          var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
           var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id);
           htmlPreview.innerHTML = marked.parse(this.textArea.value);
         }
       },
       fullPreview: function(event){
         var mdSource = document.getElementById('preview-code');
-        var id = this.$refs.rteInstance.ej2Instance.getID() + 'html-view';
+        var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
         var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id); 
         if ((mdSource.classList.contains('e-active')) && event.mode) {
           mdSource.classList.remove('e-active');

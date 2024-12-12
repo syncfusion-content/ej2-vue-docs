@@ -19,7 +19,7 @@
 }
 
 .e-md-preview::before {
-  content: '\e345';
+  content: '\\e345';
 }
 
 .e-rte-content .e-content.e-pre-source {
@@ -27,13 +27,14 @@
 }
 
 .e-icon-btn.e-active .e-md-preview.e-icons::before {
-  content: '\e350';
+  content: '\\e350';
 }
 </style>
 
 <script>
 import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
+import { marked } from 'marked';
 export default {
   name: "App",
   components: {

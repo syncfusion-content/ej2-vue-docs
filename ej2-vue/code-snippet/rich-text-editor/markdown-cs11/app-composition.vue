@@ -109,7 +109,6 @@ provide('richtexteditor', [Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
-@import "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css";
 
 .e-code-mirror::before {
   content: '\e345';

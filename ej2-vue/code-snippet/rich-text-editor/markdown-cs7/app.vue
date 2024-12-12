@@ -24,20 +24,21 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
         overflow: hidden;
     }
     .e-md-preview::before {
-        content: '\e345';
+        content: '\\e345';
     }
 
     .e-rte-content .e-content.e-pre-source {
         width: 100%;
     }
     .e-icon-btn.e-active .e-md-preview.e-icons::before {
-        content: '\e350';
+        content: '\\e350';
     }
 </style>
 <script>
 
 import { Browser, addClass, removeClass, isNullOrUndefined } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { marked } from 'marked';
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-vue-base';
 export default {
 name: "App",
@@ -72,11 +73,13 @@ components: {
                  if (event.target.parentElement.classList.contains('e-active')) {
                     this.$refs.rteInstance.ej2Instances.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
                      'UnorderedList', 'CreateLink', 'Image']);
-                     event.target.parentElement.parentElement.nextElementSibling.classList.add('e-overlay');
+                     this.$refs.rteInstance.ej2Instances.element.querySelector('preview-code');
+                     //event.target.parentElement.parentElement.nextElementSibling.classList.add('e-overlay');
                 } else {
                     this.$refs.rteInstance.ej2Instances.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
                      'UnorderedList', 'CreateLink', 'Image']);
-                      event.target.parentElement.parentElement.nextElementSibling.classList.remove('e-overlay');
+                      this.$refs.rteInstance.ej2Instances.element.querySelector('MD_Preview');
+                      //event.target.parentElement.parentElement.nextElementSibling.classList.remove('e-overlay');
                 }
             };
             document.getElementById('MD_Preview').onclick = () => {

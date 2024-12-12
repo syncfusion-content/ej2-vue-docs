@@ -16,7 +16,7 @@
 <script>
 
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { GridComponent } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective } from "@syncfusion/ej2-vue-grids";
 var empData = [
   { OrderID: 10248, ShipCountry: "France", CustomerName: "Paul Henriot" },
   { OrderID: 10249, ShipCountry: "Germany", CustomerName: "Karin Josephs" },

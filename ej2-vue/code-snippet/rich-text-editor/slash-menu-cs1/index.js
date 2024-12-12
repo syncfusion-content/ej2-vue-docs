@@ -56,6 +56,16 @@ new Vue({
 
   provide: {
     richtexteditor: [SlashMenu, Toolbar, Link, Image, Audio, Table, Video, QuickToolbar, HtmlEditor, EmojiPicker, PasteCleanup, FormatPainter]
+  },
+  methods: {
+    onSlashMenuItemSelect: function (args) {
+        if (args.itemData.command === 'MeetingNotes') {
+            this.$refs.smartEditor.ej2Instances.executeCommand('insertHTML', this.meetingNotes, { undo: true });
+        }
+        if (args.itemData.command === 'Signature') {
+            this.$refs.smartEditor.ej2Instances.executeCommand('insertHTML', this.signature, { undo: true });
+        }
+    }
   }
 
 });
