@@ -173,9 +173,9 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-    <div class="control_wrapper">
-        <ejs-chatui></ejs-chatui>
-    </div>
+  <div class="control_wrapper">
+    <ejs-chatui></ejs-chatui>
+  </div>
 </template>
 
 <script setup>
@@ -195,31 +195,31 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-    <div class="control_wrapper">
-        <ejs-chatui></ejs-chatui>
-    </div>
+  <div class="control_wrapper">
+    <ejs-chatui></ejs-chatui>
+  </div>
 </template>
 <script>
-    import { ChatUIComponent } from "@syncfusion/ej2-vue-interactive-chat";
-    //Component registeration
-    export default {
-        name: "App",
-        components: {
-            'ejs-chatui': ChatUIComponent
-        }, 
-        data () {
-            return {
-            }
-        }
+  import { ChatUIComponent } from "@syncfusion/ej2-vue-interactive-chat";
+  //Component registeration
+  export default {
+    name: "App",
+    components: {
+      'ejs-chatui': ChatUIComponent
+    }, 
+    data () {
+      return {
+      }
     }
+  }
 </script>
 <style>
-    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-    @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -241,7 +241,7 @@ yarn run dev
 
 ## Configure messages and user
 
-You can use the `messages` property to add messages and the `user` property to map each message to the respective user.
+You can use the `<e-messages>` tag directive to group all the messages and `<e-message>` tag to define each message and the `user` property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

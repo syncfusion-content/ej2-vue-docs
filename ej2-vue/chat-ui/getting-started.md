@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Chat UI Component in Vue 2
+# Getting Started with the Vue Chat UI component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Chat UI component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -119,7 +119,6 @@ export default {
 <template>
   <div id="app">
     <div id='container' style="height: 400px; width: 400px;">
-      <br>
       <ejs-chatui></ejs-chatui>
     </div>
   </div>
@@ -146,7 +145,7 @@ yarn run serve
 
 ## Configure messages and user
 
-You can use the `messages` property to add messages and the `user` property to configure the current user for the chat.
+You can use the `<e-messages>` tag directive to group all the messages and `<e-message>` tag to define each message and the `user` property to configure the current user for the chat.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
