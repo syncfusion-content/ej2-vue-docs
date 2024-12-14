@@ -121,7 +121,7 @@ The following code illustrates how to draw a polyline connector.
         
 {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs6" %}
 
- The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
+ The segments of a polyline connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorConstraints/) constraint for the connector.
 
 ![Polyline connector drawing](images/polyline-draw.gif)
 
@@ -146,7 +146,7 @@ The following code illustrates how to draw a freehand drawing.
         
 {% previewsample "page.domainurl/code-snippet/diagram/Tools/tools-cs7" %}
 
-The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](d:\JS restructuring\ej2-diagrams-docs\ej2-javascript\diagram\images\polyline-draw.gif) constraint for the connector.
+The segments of a freehand connector can be adjusted at runtime by dragging the segment thumb, as shown in the image below. To enable segment editing, you should set the [`DragSegmentThumb`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorConstraints/) constraint for the connector.
 
 ![Freehand connector drawing](images/freehand-draw.gif)
 
@@ -190,7 +190,7 @@ N> Please note that panning the diagram is not possible when 'multiplePage' is s
 
 ## Events
 
-[`elementDraw`](https://ej2.syncfusion.com/vue/documentation/api/diagram)  event is triggered when node or connector is drawn using drawing tool.
+[`elementDraw`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iElementDrawEventArgs/) event is triggered when node or connector is drawn using drawing tool.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

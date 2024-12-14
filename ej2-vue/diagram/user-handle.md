@@ -221,7 +221,7 @@ The following code example demonstrates how to create fixed user handles for nod
         
 {% previewsample "page.domainurl/code-snippet/diagram/interaction/FixedUserHandle-cs1" %}
 
->Note: The fixed user handle id need to be unique.
+N> The fixed user handle id need to be unique.
 
 ### Alignment
 
@@ -265,7 +265,7 @@ The following table shows all the possible alignments of fixed user handle aroun
 | (0.5,1) | Top = 20 |![fixed user handle for node](images/bottomcenter.png)|
 | (1,1) | Left = 20 |![fixed user handle for node](images/bottomright.png)|
 
->Note: Both `displacement` and `alignment` are applicable only to connector fixed user handles.
+N> Both `displacement` and `alignment` are applicable only to connector fixed user handles.
 
 #### Customizing the connector fixed user handle
 
@@ -273,7 +273,7 @@ The connector fixed user handle can be aligned relative to the connector boundar
 
 ##### Offset
 
-The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorFixedUserHandleModel/#offset), property of fixed user handle aligns the fixed user handle based on fractions. For example, 0 represents the left or top corner, 1 represents the bottom or right corner, and 0.5 represents the center.
+The [`offset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorFixedUserHandleModel/#offset) property of fixed user handle aligns the fixed user handle based on fractions. For example, 0 represents the left or top corner, 1 represents the bottom or right corner, and 0.5 represents the center.
 
 ##### Alignment
 
@@ -306,7 +306,7 @@ The following table shows all the possible alignment and displacement combinatio
 | y=10 | Before |![fixed user handle for node](images/ybefore.png)|
 | y=10 | After |![fixed user handle for node](images/yafter.png)|
 
->Note: Displacement will not be done if the alignment is set to be center.
+N> Displacement will not be done if the alignment is set to be center.
 
 The following code explains how to customize the alignment of connector fixed user handle.
 

@@ -25,7 +25,7 @@ N> If you want to use BPMN shapes in diagram, you need to inject BpmnDiagrams in
         
 {% previewsample "page.domainurl/code-snippet/diagram/bpmn-shapes/bpmn-cs1" %}
 
->Note : The default value for the property `shape` is “event”.
+N> The default value for the property `shape` is “event”.
 
 The list of BPMN shapes are as follows:
 

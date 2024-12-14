@@ -179,6 +179,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
+<div id='element'>
   <ejs-dashboardlayout id="defaultLayout" :columns="6" :cellSpacing='cellSpacing' :cellAspectRaito='aspectRatio'>
     <e-panels>
       <e-panel :row="0" :col="0" :sizeX="1" :sizeY="1" content="<div class='panel-content'>0</div>"></e-panel>
@@ -190,6 +191,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
       <e-panel :row="2" :col="3" :sizeX="1" :sizeY="1" content="<div class='panel-content'>6</div>"></e-panel>  
     </e-panels>
   </ejs-dashboardlayout>
+  </div>
 </template>
 
 <script setup>
@@ -216,12 +218,20 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
   #defaultLayout .e-panel {
     transition:none !important;
   }
+  #element {
+    display: block;
+    width: 300px;
+    margin: 130px auto;
+    border-radius: 3px;
+    justify-content: center;
+}
 </style>
 
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
+<div id='element'>
   <ejs-dashboardlayout id="defaultLayout" :columns="6" :cellSpacing='cellSpacing' :cellAspectRaito='aspectRatio'>
     <e-panels>
       <e-panel :row="0" :col="0" :sizeX="1" :sizeY="1" content="<div class='panel-content'>0</div>"></e-panel>
@@ -233,6 +243,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
       <e-panel :row="2" :col="3" :sizeX="1" :sizeY="1" content="<div class='panel-content'>6</div>"></e-panel>  
     </e-panels>
   </ejs-dashboardlayout>
+  </div>
 </template>
 
 <script>
@@ -270,6 +281,13 @@ export default {
   #defaultLayout .e-panel {
     transition:none !important;
   }
+  #element {
+    display: block;
+    width: 300px;
+    margin: 130px auto;
+    border-radius: 3px;
+    justify-content: center;
+}
 </style>
 
 

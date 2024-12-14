@@ -197,7 +197,7 @@ A subprocess is defined as an event subprocess, when it is triggered by an event
 
 ## Transaction Subprocess
 
-* [`transaction`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The [`events`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#events) property of subprocess allows to represent these results as an event attached to the subprocess.
+* [`transaction`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#transaction) is a set of activities that logically belong together, in which all contained activities must complete their parts of the transaction; otherwise the process is undone. The execution result of a transaction is one of Successful Completion, Unsuccessful Completion (Cancel), and Hazard (Exception). The [`events`](https://ej2.syncfusion.com/vue/documentation/api/diagram/bpmnSubProcess/#events) property of subprocess allows to represent these results as an event attached to the subprocess.
 
 * The event object allows you to define the type of event by which the subprocess will be triggered. The name of the event can be defined to identify the event at runtime.
 

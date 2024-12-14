@@ -14,7 +14,7 @@ The [`symbolPalette`](https://ej2.syncfusion.com/vue/documentation/api/symbol-p
 
 ## Create symbol palette
 
-The [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#width-number) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/palette#height-number) property of the symbol palette allows to define the size of the symbol palette.
+The [`width`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#height) property of the symbol palette allows to define the size of the symbol palette.
 To create Symbol Palette easily and to add nodes and connectors in it, refer to the below video,
 
 {% youtube "youtube:https://www.youtube.com/embed/htUHPgJ31XE" %}

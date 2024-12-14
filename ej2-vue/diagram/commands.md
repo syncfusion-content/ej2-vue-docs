@@ -115,11 +115,11 @@ The following code example illustrates how the nodes are distributed using the `
 
 ## Sizing commands
 
-Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sameSize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](ttps://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) method are explained below.
+Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sameSize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) method are explained below.
 
 ### Sizing options
 
-[`SizingOptions`](ttps://ej2.syncfusion.com/vue/documentation/api/diagram/sizingOptions) include:
+[`SizingOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/sizingOptions) include:
 
 |Sizing options|Description|
 |----|----|
@@ -224,7 +224,7 @@ You can also use CTRL+R to rotate clockwise and CTRL+L to rotate anti-clockwise.
 
 ### Bring to front command
 
-The [`bringToFront`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToFront)  command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
+The [`bringToFront`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringtofront)  command moves the selected element to the front, placing it above all other elements in the diagram. The following code illustrates how to use the `bringToFront` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -239,7 +239,7 @@ The [`bringToFront`](https://ej2.syncfusion.com/vue/documentation/api/diagram#br
 
 ### Send to back command
 
-The [`sendToBack`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendToBack)command moves the selected element to the back, placing it behind all other elements in the diagram. The following code illustrates how to use the `sendToBack` command.
+The [`sendToBack`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendtoback)command moves the selected element to the back, placing it behind all other elements in the diagram. The following code illustrates how to use the `sendToBack` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -254,7 +254,7 @@ The [`sendToBack`](https://ej2.syncfusion.com/vue/documentation/api/diagram#send
 
 ### Move forward command
 
-The [`moveForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#moveForward) command moves the selected element one step forward in the stack, placing it above the nearest overlapping element. The following code illustrates how to use the `moveForward` command.
+The [`moveForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#moveforward) command moves the selected element one step forward in the stack, placing it above the nearest overlapping element. The following code illustrates how to use the `moveForward` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -269,7 +269,7 @@ The [`moveForward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#mov
 
 ### send backward command
 
-The [`sendBackward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendBackward) command moves the selected element one step backward in the stack, placing it behind the underlying element. The following code illustrates how to use the `sendBackward` command.
+The [`sendBackward`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sendbackward) command moves the selected element one step backward in the stack, placing it behind the underlying element. The following code illustrates how to use the `sendBackward` command.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -397,9 +397,9 @@ N> The position change event will not trigger when using keyboard keys to move a
 
 ## BringIntoView
 
-The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringIntoView) command brings the specified rectangular region into the viewport of the diagram, ensuring that it is visible within the current view.
+The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringintoview) command brings the specified rectangular region into the viewport of the diagram, ensuring that it is visible within the current view.
 
-The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringIntoView) method takes a single parameter, an object that defines the rectangular region to bring into view. This object should include properties such as x, y, width, and height to specify the exact region to be made visible.
+The [`bringIntoView`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringintoview) method takes a single parameter, an object that defines the rectangular region to bring into view. This object should include properties such as x, y, width, and height to specify the exact region to be made visible.
 
 The following code illustrates how to execute the bringIntoView command:
 
@@ -416,9 +416,9 @@ The following code illustrates how to execute the bringIntoView command:
 
 ## BringToCenter
 
-The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToCenter) command centers the specified rectangular region of the diagram content within the viewport.
+The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringtocenter) command centers the specified rectangular region of the diagram content within the viewport.
 
-The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringToCenter)  method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
+The [`bringToCenter`](https://ej2.syncfusion.com/vue/documentation/api/diagram#bringtocenter)  method takes a single parameter, an object that defines the rectangular region to be centered. This object should include properties such as x, y, width, and height to specify the exact region to be brought to the center.
 
 The following code illustrates how to execute the bringToCenter command.
 
@@ -435,7 +435,7 @@ The following code illustrates how to execute the bringToCenter command.
 
 ## FitToPage
 
-The [`fitToPage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#fitToPage) command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter, [`fitOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions/), which specifies the options for fitting the diagram to the page.
+The [`fitToPage`](https://ej2.syncfusion.com/vue/documentation/api/diagram#fittopage) command adjusts the diagram content to fit within the viewport, considering either width, height, or the entire content. The fitToPage method takes one parameter, [`fitOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iFitOptions/), which specifies the options for fitting the diagram to the page.
 
 ### FitOptions
 

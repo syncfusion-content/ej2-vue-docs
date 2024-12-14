@@ -165,7 +165,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 
  /* Add your custom avatar image. */
  .e-avatar {
-     background-image: url(https://ej2.syncfusion.com/vue/documentation/samples/avatar/media-formats-cs1/pic01.png);
+     background-image: url(https://ej2.syncfusion.com/demos/src/grid/images/2.png);
      margin: 2px;
  }
  </style>

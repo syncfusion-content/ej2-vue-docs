@@ -18,7 +18,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Dependencies
 
-The following list of dependencies are required to use the Spreadsheet control in your application:
+The following list of dependencies are required to use the Spreadsheet component in your application:
 
 ```js
 |-- @syncfusion/ej2-vue-spreadsheet
@@ -51,7 +51,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -69,8 +69,6 @@ or
 ```bash
 yarn add @syncfusion/ej2-vue-spreadsheet
 ```
-
-> The **--save** will instruct NPM to include the spreadsheet package inside of the **dependencies** section of the **package.json**.
 
 ## Import Syncfusion CSS styles
 
@@ -103,13 +101,6 @@ Follow the below steps to add the Vue Spreadsheet component using `Composition A
 1\. First, import and register the Spreadsheet component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-
-<script setup>
-  import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spreadsheet";
-</script>
-
-{% endhighlight %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 

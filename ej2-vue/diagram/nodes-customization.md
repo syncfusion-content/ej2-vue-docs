@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Appearence of a nodes in Vue Diagram control
+# Appearance of a nodes in Vue Diagram control
 
 ## Common values to the node.
 
@@ -33,7 +33,7 @@ N> The value we set in the getNodeDefaults has the higher priority in rendering.
 
 ### Apply style to the node
 
-The appearance of a node can be customized by changing its [`fill`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#fill) color, [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokedasharray), ['strokeWidth'](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokewidth), ['strokeColor'](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokecolor) and [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#opacity). The [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#visible) property of the node enables or disables the visibility of the node.
+The appearance of a node can be customized by changing its [`fill`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#fill) color, [`strokeDashArray`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokedasharray), [`strokeWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokewidth), [`strokeColor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#strokecolor) and [`opacity`](https://ej2.syncfusion.com/vue/documentation/api/diagram/shapeStyleModel/#opacity). The [`visible`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#visible) property of the node enables or disables the visibility of the node.
 
 The following code illustrates how to customize the appearance of the shape.
 
@@ -196,7 +196,7 @@ var nodes = [
 
 ## Constraints
 
-The [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#constraints) property of the node allows you to enable/disable certain behaviors of the node. For more information about node constraints refer to the [`Node Constraints`](./constraints)
+The [`constraints`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#constraints) property of the node allows you to enable/disable certain behaviors of the node. For more information about node constraints refer to the [`Node Constraints`](https://ej2.syncfusion.com/vue/documentation/diagram/constraints#node-constraints)
 
 ## Stack order
 
@@ -217,7 +217,7 @@ N> By default, the zIndex will be generated automatically based on the order of 
 
 ## Pivot
 
-Node rotation angle will be based on [`Pivot`](.https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#pivot) values which range from 0 to 1 like offset values. By default, the Pivot values are set to X= 0.5 and Y=0.5.
+Node rotation angle will be based on [`Pivot`](https://ej2.syncfusion.com/vue/documentation/api/diagram/pointModel/) values which range from 0 to 1 like offset values. By default, the Pivot values are set to X= 0.5 and Y=0.5.
 
 The following table illustrates how pivot relates offset values with node boundaries.
 

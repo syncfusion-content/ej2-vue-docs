@@ -129,3 +129,18 @@ By default, tooltip shows information of x and y value in points. You can show m
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/pie-cs33" %}
+
+## Enable highlight
+
+By setting the `enableHighlight` property to **true**, the hovered pie slice is highlighted, while the remaining slices are dimmed, enhancing focus and clarity.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs42/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/pie-cs42/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/pie-cs42" %}
