@@ -123,6 +123,8 @@ In this article, `Material` theme is applied using CSS styles, which are availab
 
 > The order of importing CSS styles should be in line with its dependency graph.
 
+> For an enhanced UI experience with the Vue spreadsheet component, kindly remove the basic styles provided in the `scr/styles.css` file. This will help avoid potential styling conflicts and ensure a cleaner design layout.
+
 ## Add Syncfusion Vue component
 
 Follow the below steps to add the Vue Spreadsheet component using `Composition API` or `Options API`:
@@ -350,5 +352,5 @@ The output will appear as follows:
 
 ![Output](images/Vue3-spreadsheet-demo.png)
 
-For Migrating from Vue 2 to Vue 3 refer the Migration [`documentation`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3)
+For Migrating from Vue 2 to Vue 3 refer the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation
 

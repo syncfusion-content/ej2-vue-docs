@@ -1,0 +1,8 @@
+
+.custom-btn .e-user::before {
+    color: white;
+    font-size: 15px;
+}
+.custom-btn.e-toolbar-item button.e-tbar-btn {
+    border: 2px solid white;
+}

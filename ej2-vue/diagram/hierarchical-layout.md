@@ -27,7 +27,7 @@ To arrange the nodes in a hierarchical structure, specify the layout [`type`](ht
         
 {% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/hierarchicallayout-cs-1" %}
 
->Note: If you want to use hierarchical tree layout in diagram, you need to inject HierarchicalTree in the diagram.
+N> If you want to use hierarchical tree layout in diagram, you need to inject HierarchicalTree in the diagram.
 
 ## Hierarchical layout with DataSource
 
@@ -44,6 +44,6 @@ You can create a hierarchical layout with data Source. The following code demons
         
 {% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/hierarchicallayout-cs-2" %}
 
->Note: If you want to convert the data source into layout, you need to inject DataBinding along with HierarchicalTree module in the diagram.
+N> If you want to convert the data source into layout, you need to inject DataBinding along with HierarchicalTree module in the diagram.
 
 ![Hierarchical tree](images/hierarchicalTree.png)

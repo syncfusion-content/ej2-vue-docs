@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Symbol Palette customization in EJ2 Vue Diagram component | Syncfusion®
+title: Symbol Palette customization in Vue Diagram component | Syncfusion®
 description: Learn here all about Symbol palette customization in Syncfusion® Vue Diagram component of Syncfusion Essential® JS 2 and more.
 platform: ej2-vue
 control: Symbol palette 
@@ -203,7 +203,7 @@ Refer to the image below for an illustration of the tooltip behavior in the symb
 
 ### Custom tooltip for symbols
 
-To customize the tooltips for symbols in the symbol palette, assign a custom tooltip to the [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltipModel/#content) property of ['tooltip'](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeModel/#tooltip) for each symbol. Once you define the custom tooltip, enable the [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeConstraints/) constraints for each symbol, ensuring that the tooltips are displayed when users hover over them.
+To customize the tooltips for symbols in the symbol palette, assign a custom tooltip to the [`content`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTooltipModel/#content) property of [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeModel/#tooltip) for each symbol. Once you define the custom tooltip, enable the [`Tooltip`](https://ej2.syncfusion.com/vue/documentation/api/diagram/nodeConstraints/) constraints for each symbol, ensuring that the tooltips are displayed when users hover over them.
 
 The code provided below demonstrates how to define tooltip content to symbols within a symbol palette.
 
@@ -246,7 +246,7 @@ The following code snippet will demonstrate how to define two different tooltip 
 
 ## Localization
 
-To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE**', which is the locale code for German as used in Germany.
+To localize the symbol palette search box, we need to define the [`locale`](https://ej2.syncfusion.com/vue/documentation/api/symbol-palette/#locale) property of the symbol palette with our preferred culture. In the example below, we use **'de-DE'**, which is the locale code for German as used in Germany.
 
 The following code shows how to localize symbol palette.
 

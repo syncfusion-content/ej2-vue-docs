@@ -76,6 +76,21 @@ By default, zoomin, zoomout, pan and reset buttons will be displayed for zoomed 
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs4" %}
 
+### Toolbar customization
+
+The zoom toolbar in the chart can be repositioned using the `toolbarPosition` property, allowing flexible alignment and placement. It supports horizontal alignments (**Near**, **Center**, and **Far**) and vertical alignments (**Top**, **Middle**, and **Bottom**), with default values set to **Far** and **Top**, respectively. For precise placement, the `x` and `y` properties can be used to adjust the toolbar's position within the chart area. Additionally, enabling the `draggable` property allows users to freely move the toolbar within the chart area, ensuring optimal usability.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs11/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs11/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs11" %}
+
 ## Enable pan
 
 Using [`enablePan`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettings/#enablepan) property you can able to pan the zoomed chart without help of toolbar items.

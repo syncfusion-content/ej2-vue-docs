@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :gridLines="Both" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryTaskbarInfo="pdfQueryTaskbarInfo" 
+    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :gridLines="gridLines" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryTaskbarInfo="pdfQueryTaskbarInfo" 
     :height="height" :editSettings= "editSettings" :queryTaskbarInfo="queryTaskbarInfo">
    
       <e-columns>
@@ -37,6 +37,7 @@ const editSettings = {
   allowTaskbarEditing: true,
   showDeleteConfirmDialog: true
 };
+const gridLines = 'Both';
 const toolbar = ['PdfExport'];
 const toolbarClick = (args) => {
   if (args.item.id === 'GanttContainer_pdfexport') {

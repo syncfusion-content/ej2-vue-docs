@@ -246,8 +246,6 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
 <script setup>
 import { TreeViewComponent as EjsTreeview } from "@syncfusion/ej2-vue-navigations";
 
-const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
-
 const data =  [
   {
       nodeId: '01', nodeText: 'Music',
@@ -273,6 +271,8 @@ const data =  [
       ]
   },
 ];
+const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
+
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 <template>
-  <div id='container' style="height: 400px; width: 400px;">
+  <div id='container' style="height: 380px; width: 450px;">
     <br>
     <ejs-chatui></ejs-chatui>
   </div>

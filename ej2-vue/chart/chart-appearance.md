@@ -129,6 +129,21 @@ Using [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/char
         
 {% previewsample "page.domainurl/code-snippet/chart/series/column-cs9" %}
 
+**Chart area margin**
+
+You can customize the space between the chart area from its chart container through `margin` property.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/column-cs44/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/column-cs44/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/column-cs44" %}
+
 ## Animation
 
 You can customize animation for a particular series using [`animation`](https://ej2.syncfusion.com/vue/documentation/api/chart/animationModel/) property. You can enable or disable animation of the series using `enable` property, `duration` specifies the duration of an animation and `delay` allows us to start the animation at desire time.

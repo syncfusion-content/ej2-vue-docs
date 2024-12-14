@@ -10,17 +10,17 @@ domainurl: ##DomainURL##
 
 # Scroll settings in ##Platform_Name## Diagram control
 
-The diagram can be scrolled using both the vertical and horizontal scrollbars. Additionally, the mouse wheel can be used to scroll the diagram. The diagram's [`scrollSettings`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/) allow you to read the current scroll status, view port size, current zoom level, and zoom factor. These settings also provide the capability to programmatically control the scrolling of the diagram.
+The diagram can be scrolled using both the vertical and horizontal scrollbars. Additionally, the mouse wheel can be used to scroll the diagram. The diagram's [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/) allow you to read the current scroll status, view port size, current zoom level, and zoom factor. These settings also provide the capability to programmatically control the scrolling of the diagram.
 
 ## Access and Customize Scroll Settings
 
-Scroll settings in a diagram allow you to access and customize various properties such as [`horizontalOffset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset), [`verticalOffset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset), [`viewPortWidth`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportwidth), [`viewPortHeight`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportheight), [`currentZoom`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#currentzoom), [`zoomFactor`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#zoomfactor), [`maxZoom`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#maxzoom), [`minZoom`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#minzoom), [`scrollLimit`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrolllimit), [`canAutoScroll`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#canautoscroll), [`autoScrollBorder`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/marginModel/), [`padding`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/marginModel/), [`scrollableArea`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/rect/).
+Scroll settings in a diagram allow you to access and customize various properties such as [`horizontalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset), [`verticalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset), [`viewPortWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportwidth), [`viewPortHeight`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportheight), [`currentZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#currentzoom), [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#zoomfactor), [`maxZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#maxzoom), [`minZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#minzoom), [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrolllimit), [`canAutoScroll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#canautoscroll), [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/), [`padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/), [`scrollableArea`](https://ej2.syncfusion.com/vue/documentation/api/diagram/rect/).
 
-These properties enable you to read and adjust the scroll status, scroll offset, zoom levels, and more. For a comprehensive overview of these properties, refer to the [`Scroll Settings`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/)
+These properties enable you to read and adjust the scroll status, scroll offset, zoom levels, and more. For a comprehensive overview of these properties, refer to the [`Scroll Settings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/)
 
 ## Define scroll offset
 
-The diagram allows you to pan before loading, ensuring that any desired region of a large diagram is visible. You can programmatically pan the diagram using the [`horizontalOffset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset) and [`verticalOffset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset) properties of the scroll settings. The following code illustrates how to programmatically pan the diagram upon initialization also defined scrollLimit as 'Infinity' to scroll infinitely in diagram. To learn more about scrollLimit refer to [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/diagram/scroll-settings#scroll-limit)
+The diagram allows you to pan before loading, ensuring that any desired region of a large diagram is visible. You can programmatically pan the diagram using the [`horizontalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset) and [`verticalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset) properties of the scroll settings. The following code illustrates how to programmatically pan the diagram upon initialization also defined scrollLimit as 'Infinity' to scroll infinitely in diagram. To learn more about scrollLimit refer to [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/diagram/scroll-settings#scroll-limit)
 
 In the example below, the vertical scrollbar is scrolled down by 100 px, and the horizontal scrollbar is scrolled to the right by 100 px.
 
@@ -41,12 +41,12 @@ There are several ways to update the scroll offset at runtime:
 
 * `Scrollbar`: Use the horizontal and vertical scrollbars of the diagram.
 * `Mousewheel`: Scroll vertically with the mouse wheel. Hold the Shift key while scrolling to scroll horizontally.
-* `Pan Tool`: Activate the ZoomPan [`tool`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/diagramTools/) in the diagram to scroll by panning.
+* `Pan Tool`: Activate the ZoomPan [`tool`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramTools/) in the diagram to scroll by panning.
 * `Touch`: Use touch pad gestures for scrolling.
 
 ### Programmatically update Scroll Offset
 
-You can programmatically change the scroll offsets of diagram by customizing the [`horizontalOffset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset) and [`verticalOffset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset) of [`Scroll Settings`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/) at runtime. The following code illustrates how to change the scroll offsets at runtime.
+You can programmatically change the scroll offsets of diagram by customizing the [`horizontalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset) and [`verticalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset) of [`Scroll Settings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/) at runtime. The following code illustrates how to change the scroll offsets at runtime.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,11 +79,11 @@ Using keyboard shortcuts is a quick and easy way to zoom the diagram without hav
 
 ### Programmatically update zoom
 
-You can programmatically change the current zoom of diagram by utilizing the [`zoomTo`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#zoomto) public method.
+You can programmatically change the current zoom of diagram by utilizing the [`zoomTo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#zoomto) public method.
 
 #### ZoomOptions
 
-The [`zoomTo`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#zoomto) method takes one parameter [`zoomOptions`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/zoomOptions/). In that zoomOptions we can specify the [`focusPoint`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/pointModel/), [`type`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/zoomTypes/) and [`zoomFactor`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/zoomOptions/#zoomfactor)
+The [`zoomTo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#zoomto) method takes one parameter [`zoomOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/zoomOptions/). In that zoomOptions we can specify the [`focusPoint`](https://ej2.syncfusion.com/vue/documentation/api/diagram/pointModel/), [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/zoomTypes/) and [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/zoomOptions/#zoomfactor)
 
 The following example shows how to zoom-in and zoom-out the diagram using zoomTo method
 
@@ -110,13 +110,13 @@ The autoscroll behavior triggers automatically when any of the following actions
 - Connector control point editing
 - Rubber band selection
 
-The client-side event [`ScrollChange`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/iScrollChangeEventArgs/) is triggered when autoscroll occurs, allowing for customizations. Refer [`scrollChange-event`](https://ej2.syncfusion.com/vue/documentation/diagram/scroll-settings#scroll-change-event) for more information.
+The client-side event [`ScrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iScrollChangeEventArgs/) is triggered when autoscroll occurs, allowing for customizations. Refer [`scrollChange-event`](https://ej2.syncfusion.com/vue/documentation/diagram/scroll-settings#scroll-change-event) for more information.
 
-Autoscroll behavior can be enabled or disabled using the  [`canAutoScroll`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#canautoscroll) property of the diagram.
+Autoscroll behavior can be enabled or disabled using the  [`canAutoScroll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#canautoscroll) property of the diagram.
 
 ### Autoscroll border
 
-The autoscroll border defines the maximum distance from the mouse pointer to the diagram edge that triggers autoscroll. By default, this distance is set to 15 pixels for all sides (left, right, top, and bottom). You can adjust this using the [`autoScrollBorder`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/marginModel/) property of the scroll settings.
+The autoscroll border defines the maximum distance from the mouse pointer to the diagram edge that triggers autoscroll. By default, this distance is set to 15 pixels for all sides (left, right, top, and bottom). You can adjust this using the [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/) property of the scroll settings.
 
 The following example demonstrates how to configure autoscroll:
 
@@ -135,13 +135,13 @@ N> To use auto scroll the scrollLimit should be set as 'Infinity'
 
 ### Controlling Autoscroll Speed
 
-You can control how often the scrolling needs to be performed automatically in the Diagram component during the auto-scrolling behavior. You can now adjust the frequency, ranging from slow and smooth to quick and rapid, to suit their preferences. To configure, set the value in milliseconds to the [`autoScrollFrequency`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#autoscrollfrequency) property within the scrollSettings class, allowing precise control over how often auto-scrolling occurs.
+You can control how often the scrolling needs to be performed automatically in the Diagram component during the auto-scrolling behavior. You can now adjust the frequency, ranging from slow and smooth to quick and rapid, to suit their preferences. To configure, set the value in milliseconds to the [`autoScrollFrequency`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#autoscrollfrequency) property within the scrollSettings class, allowing precise control over how often auto-scrolling occurs.
 
 ![AutoscrollFrequency GIF](images/AutoscrollFrequency.gif)
 
 ## Scroll limit
 
-The [`scrollLimit`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrolllimit) allows you to define the scrollable region of the diagram. It includes the following options:
+The [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrolllimit) allows you to define the scrollable region of the diagram. It includes the following options:
 
 * `Infinity`: Allows scrolling in all directions without any restriction.
 * `Diagram`: Allows scrolling within the diagram region.
@@ -151,7 +151,7 @@ The `scrollLimit` property in scroll settings helps to define these limits.
 
 ### Scrollable Area
 
-Scrolling beyond a particular rectangular area can be restricted by using the [`scrollableArea`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/rect/) property in [`scrollSettings`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/). To restrict scrolling beyond a custom region, set the scrollLimit to "limited" and define the desired bounds in `scrollableArea` property.
+Scrolling beyond a particular rectangular area can be restricted by using the [`scrollableArea`](https://ej2.syncfusion.com/vue/documentation/api/diagram/rect/) property in [`scrollSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/). To restrict scrolling beyond a custom region, set the scrollLimit to "limited" and define the desired bounds in `scrollableArea` property.
 
 The following code example illustrates how to specify the scroll limit and customize the scrollable area.
 
@@ -168,7 +168,7 @@ The following code example illustrates how to specify the scroll limit and custo
 
 ## Scroll Padding
 
-The [`padding`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/marginModel/) property of the scroll settings allows you to extend the scrollable region based on the scroll limit. This property is useful for adding extra space around the diagram content, making it easier to navigate and interact with elements near the edges.
+The [`padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/) property of the scroll settings allows you to extend the scrollable region based on the scroll limit. This property is useful for adding extra space around the diagram content, making it easier to navigate and interact with elements near the edges.
 
 The following code example illustrates how to set scroll padding for the diagram region:
 
@@ -185,7 +185,7 @@ The following code example illustrates how to set scroll padding for the diagram
 
 ## Reset scroll
 
-The [`reset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#reset) method resets the zoom and scroller offsets to their default values.
+The [`reset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#reset) method resets the zoom and scroller offsets to their default values.
 
 ``` javascript
 //Resets the scroll and zoom to default values
@@ -195,7 +195,7 @@ The [`reset`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#rese
 
 ## UpdateViewport
 
-The [`updateViewPort`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/#updateviewport) method is used to update the dimensions of the diagram viewport.
+The [`updateViewPort`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#updateviewport) method is used to update the dimensions of the diagram viewport.
 
 ```javascript
 //Updates diagram viewport
@@ -207,7 +207,7 @@ diagramInstance.updateViewPort();
 
 ### Scroll change event
 
-The [`scrollChange`](https://helpej2.syncfusion.com/vue/documentation/api/diagram/iScrollChangeEventArgs/) event is triggered whenever the scrollbar is updated. This can occur during actions such as zooming in, zooming out, using the mouse wheel, or panning. The following example shows how to capture the `scrollChange` event.
+The [`scrollChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iScrollChangeEventArgs/) event is triggered whenever the scrollbar is updated. This can occur during actions such as zooming in, zooming out, using the mouse wheel, or panning. The following example shows how to capture the `scrollChange` event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -20,7 +20,7 @@ Nodes are graphical objects used to visually represent the geometrical informati
 
 A node can be created and added to the diagram either programmatically or interactively. The [`id`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#id) property of a node is used to define its unique identifier and can later be used to find the node at runtime for customization. Nodes are stacked on the diagram area from bottom to top in the order they are added.
 
-N> Note: There should not be any white-spaces in the ID string while setting the ID.
+N> There should not be any white-spaces in the ID string while setting the ID.
 
 ### Add node through nodes collection
 

@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div>
-    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :gridLines="Both" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryTaskbarInfo="pdfQueryTaskbarInfo" 
+    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :gridLines="gridLines" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryTaskbarInfo="pdfQueryTaskbarInfo" 
     :height="height" :editSettings= "editSettings" :queryTaskbarInfo="queryTaskbarInfo">
       <e-columns>
         <e-column field='TaskID' headerText='Task ID'></e-column>
@@ -40,6 +40,7 @@ new Vue({
         allowTaskbarEditing: true,
         showDeleteConfirmDialog: true
       },
+      gridLines : 'Both',
       toolbar: ['PdfExport'],
       toolbarClick: (args) => {
         if (args.item.id === 'GanttContainer_pdfexport') {

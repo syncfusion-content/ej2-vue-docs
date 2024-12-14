@@ -58,6 +58,21 @@ property of the `crosshairTooltip` is used to customize the background color and
 
 >Note: To use crosshair feature, we need to inject `Crosshair` into the `provide`.
 
+**Snap to data**
+
+Enabling the `snapToData` property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs4/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs4" %}
+
 ## Trackball
 
 Trackball is used to track a data point closest to the mouse or touch position. Trackball marker indicates the
