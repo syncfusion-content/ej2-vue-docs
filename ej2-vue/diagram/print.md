@@ -18,7 +18,7 @@ The [`print`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#print) m
 
 ```
 
->Note: To Print diagram you need to inject `PrintAndExport` in the diagram.
+N> To Print diagram you need to inject `PrintAndExport` in the diagram.
 
 ## Print Options
 

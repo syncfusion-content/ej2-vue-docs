@@ -90,16 +90,16 @@ Now that `my-project` is ready to run with default settings, let's add Syncfusio
 
 Syncfusion Vue component packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Syncfusion Vue components in the project, install the corresponding npm package.
 
-This article uses the [Vue File Manager component](https://www.syncfusion.com/vue-components/vue-file-manager) as an example. To use the Vue File Manager component in the project, the `@syncfusion/ej2-vue-navigations` package needs to be installed using the following command:
+This article uses the [Vue File Manager component](https://www.syncfusion.com/vue-components/vue-file-manager) as an example. To use the Vue File Manager component in the project, the `@syncfusion/ej2-vue-filemanager` package needs to be installed using the following command:
 
 ```bash
-npm install @syncfusion/ej2-vue-navigations --save
+npm install @syncfusion/ej2-vue-filemanager --save
 ```
 
 or
 
 ```bash
-yarn add @syncfusion/ej2-vue-navigations
+yarn add @syncfusion/ej2-vue-filemanager
 ```
 
 ## Import Syncfusion CSS styles

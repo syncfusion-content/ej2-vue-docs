@@ -35,7 +35,7 @@ The following code example illustrates how to define a swimlane object.
 
 Header was the primary element for swimlanes. The [`header`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/) property of swimlane allows you to define its textual description and customize its appearance.
 
->Note: By using this header, the swimlane interaction will be performed,like selection, dragging,etc.
+N> By using this header, the swimlane interaction will be performed,like selection, dragging,etc.
 
 The following code example illustrates how to define a swimlane header.
 
@@ -54,7 +54,7 @@ The following code example illustrates how to define a swimlane header.
 
 The height and width of swimlane header can be customized with [`width`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#height) properties of swimlane header. set fill color of header by using the [`style`](https://ej2.syncfusion.com/vue/documentation/api/diagram/headerModel/#style)property. The orientation of the swimlane can be customized with the [`orientation`](https://ej2.syncfusion.com/vue/documentation/api/diagram/swimLaneModel/#orientation) property of the header.
 
->Note: By default, the swimlane orientation is horizontal.
+N> By default, the swimlane orientation is horizontal.
 
 The following code example illustrates how to customize the swimlane header.
 

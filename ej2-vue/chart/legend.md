@@ -243,3 +243,18 @@ The [`itemPadding`](https://ej2.syncfusion.com/vue/documentation/api/chart/legen
 {% previewsample "page.domainurl/code-snippet/chart/axis/category-cs42" %}
 
 >Note: To use legend feature, we need to inject `Legend` into the `Provide`.
+
+## Legend layout
+
+The `layout` property in `legendSettings` allows you to display the legend either horizontally or vertically. By default, the `layout` is set to **Auto**. The `maximumColumns` property in `legendSettings` defines the maximum number of columns that can be displayed within the available space when using the auto layout. Additionally, enabling the `fixedWidth` property in `legendSettings` ensures that all legend items are displayed with equal widths. The width of each item is determined by the maximum width among the legend items.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs45/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/axis/category-cs45/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/axis/category-cs45" %}

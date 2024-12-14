@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :gridLines="Both" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryTaskbarInfo="pdfQueryTaskbarInfo" 
+    <ejs-gantt ref='gantt' id="GanttContainer" :dataSource="data" :taskFields="taskFields" :gridLines="gridLines" :toolbar="toolbar" :toolbarClick="toolbarClick" :allowPdfExport='true' :pdfQueryTaskbarInfo="pdfQueryTaskbarInfo" 
     :height="height" :editSettings= "editSettings" :queryTaskbarInfo="queryTaskbarInfo">
    
       <e-columns>
@@ -39,6 +39,7 @@ components: {
         child: "subtasks",
         segments: "Segments"
       },
+      gridLines: 'Both',
       editSettings: {
         allowEditing: true,
         allowDeleting: true,

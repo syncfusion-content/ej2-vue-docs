@@ -16,9 +16,7 @@ Selector provides a visual representation of selected elements. It behaves like 
 
 ## Single selection
 
-An element can be selected by clicking that element. During single click, all previously selected items are cleared. The following image shows how the selected elements are visually represented.
-
-![Single Selection](images/single-select.gif)
+An element can be selected by clicking that element. During single click, all previously selected items are cleared.
 
 When selecting/unselecting the diagram elements, the [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectionchange) event and [`click`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#click) gets triggered. 
 These events enable you to customize the selected elements as needed.
@@ -45,8 +43,6 @@ In rubber band selection, you can set the selection of items by region using the
 - PartialIntersect: Selects items that are partially covered within the rectangular selection region.
 
 This can be configured with the [`rubberBandSelectionMode`](https://ej2.syncfusion.com/vue/documentation/api/diagram/rubberBandSelectionMode/).
-
-![Multiple Rubberband Selection](images/multiselect_Highlight.gif)
 
 ## Select/Unselect elements using program
 
@@ -143,15 +139,11 @@ The client-side method [`selectAll`](https://ej2.syncfusion.com/vue/documentatio
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
 * When you drag the elements in the diagram, the [`positionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#positionchange) event gets triggered and to do customization in this event.
 
-![Drag](images/drag.gif)
-
 ## Resize
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
 * When one corner of the selector is dragged, opposite corner is in a static position.
 * When a node is resized, the [`sizeChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sizechange) event gets triggered.
-
-![Resize](images/resize.gif)
 
 N>  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments.
 
@@ -185,8 +177,6 @@ You can change the size of the node resize thumb and the connector end point han
         
 {% previewsample "page.domainurl/code-snippet/diagram/interaction/interaction-cs3" %}
 
-![handleSize](images/handleSize.gif)
-
 The appearance such as fill, stroke, and stroke width of the node resize thumb and connector end point handle can be customized by overriding the e-diagram-resize-handle and e-diagram-endpoint-handle classes respectively.
 
 ## Rotate
@@ -194,8 +184,6 @@ The appearance such as fill, stroke, and stroke width of the node resize thumb a
 * A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction lead to rotate the node.
 * The node is rotated with reference to the static pivot point.
 * Pivot thumb (thumb at the middle of the node) appears while rotating the node to represent the static point.
-
-![Rotate](images/rotate.gif)
 
 ### Customize rotate handle position
 
@@ -218,13 +206,11 @@ The position of the rotate handle can be adjusted by modifying the pivot point o
 
 Each segment of a selected connector is editable with some specific handles/thumbs.
 
->Note: For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing) module.
+N> For connector editing, you have to inject the [`ConnectorEditing`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectorEditing) module.
 
 ### Drag connector end points
 
 Source and target points of the selected connectors are represented with two handles. Clicking and dragging those handles help you to adjust the source and target points.
-
-![Drag End Point Handles](images/connector-end-point.gif)
 
 * If you drag the connector end points, then the following events can be used to do your customization.
 * When the connector source point is changed, the [`sourcePointChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#sourcepointchange) event gets triggered.
@@ -235,22 +221,17 @@ Source and target points of the selected connectors are represented with two han
 
 The end point of each straight segment is represented by a thumb that allows you to edit the segment. You can insert any number of new segments into a straight line by clicking while holding the Shift and Ctrl keys (Ctrl+Shift+Click).
 
-![Straight Segment Editing Addition](images/straight-segment-add.gif)
-
 * Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
-
-![Straight Segment Editing Remove](images/straight-segment-remove.gif)
 
 ### Orthogonal segment editing
 
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
 
-![orthogonal Segment Edit](images/orthogonal-segment-edit.gif)
-
 ### Bezier segment editing
 
 Bezier segment thumbs allow you to adjust the segments by clicking and dragging them.
+
 #### Bezier Control Points
 
 Bezier segments are annotated with two thumbs representing the control points. These control points can be adjusted by clicking and dragging the control thumbs. Dragging the control point changes the angle and distance of the points from the segment point, modifying the curve.

@@ -25,7 +25,7 @@ var connector = {
                   targetPoint: { x: 200,y: 200}
                 }
 ```
-N> Note: There should not be any white-spaces in the ID string while setting the ID.
+N> There should not be any white-spaces in the ID string while setting the ID.
 
 To create and customize the connectors easily in the EJ2 Vue Diagram component, refer to the below video link.
 

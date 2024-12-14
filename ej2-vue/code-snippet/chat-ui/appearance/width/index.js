@@ -5,12 +5,12 @@ Vue.use(ChatUIPlugin);
 new Vue({
 	el: '#app',
 	template: `
-  <div id='container' style="height: 400px;">
-    <ejs-chatui width="400px" :user="currentUser">
+  <div id='container' style="height: 380px;">
+    <ejs-chatui width="450px" :user="currentUser">
       <ejs-messages>
-        <ejs-message :author="currentUser" text="Hi, thinking of painting this weekend"></ejs-message>
-        <ejs-message :author="michaleUser" text="That’s fun! What will you paint?"></ejs-message>
-        <ejs-message :author="currentUser" text="Maybe landscapes."></ejs-message>
+        <ejs-message :author="currentUser" text="Hi Michale, are we on track for the deadline?"></ejs-message>
+        <ejs-message :author="michaleUser" text="Yes, the design phase is complete."></ejs-message>
+        <ejs-message :author="currentUser" text="I’ll review it and send feedback by today."></ejs-message>
       </ejs-messages>
     </ejs-chatui>
   </div>

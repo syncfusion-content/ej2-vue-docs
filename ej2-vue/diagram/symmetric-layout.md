@@ -31,6 +31,6 @@ The following code illustrates how to arrange the nodes in a radial tree structu
         
 {% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/symmetric-cs1" %}
 
->Note: If you want to use symmetric layout in diagram, you need to inject SymmetricLayout in the diagram.
+N> If you want to use symmetric layout in diagram, you need to inject SymmetricLayout in the diagram.
 
 ![Symmetric layout](images/symmetric.png)

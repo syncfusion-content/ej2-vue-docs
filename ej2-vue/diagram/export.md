@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 Diagram provides support to export its content as image/svg files. The  [`exportDiagram`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#exportdiagram) method of diagrams helps to export the diagram. The following code illustrates how to export the diagram as image.
 
->Note: To use Print and Export, you need to inject `PrintAndExport` in the diagram.
+N> To use Print and Export, you need to inject `PrintAndExport` in the diagram.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -160,7 +160,7 @@ The following example shows how to export diagram with different regions.
 {% previewsample "page.domainurl/code-snippet/diagram/export/export-cs3" %}
 
 
->Note: The [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#bounds) property of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions) should be defined to export the diagram with CustomBounds region.
+N> The [`bounds`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#bounds) property of [`exportOptions`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iExportOptions/#iexportoptions) should be defined to export the diagram with CustomBounds region.
 
 
 ### MultiplePage
