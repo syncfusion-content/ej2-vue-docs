@@ -38,10 +38,10 @@ const primaryYAxis = {
   rangePadding: 'None'
 };
 const title = 'Annual Temperature Comparison';
-const border = { width: 2, color: '#ff4251' };
-const border1 = { width: 2, color: '#4C4C4C' };
-const border2 = { width: 2, color: '#794F1B' };
-const border3 = { width: 2, color: '#1a9a6f' };
+const border = { width: 2, color: '#ff4251', dashArray: "5,5" };
+const border1 = { width: 2, color: '#4C4C4C', dashArray: "5,5" };
+const border2 = { width: 2, color: '#794F1B', dashArray: "5,5" };
+const border3 = { width: 2, color: '#1a9a6f', dashArray: "5,5" };
 
 provide('chart', [StackingAreaSeries, DateTime, Legend]);
 

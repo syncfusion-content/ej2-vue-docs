@@ -93,24 +93,9 @@ The [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#opa
         
 {% previewsample "page.domainurl/code-snippet/chart/series/box-cs7" %}
 
-**Dash array**
-
-The [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#dasharray) property determines the pattern of dashes and gaps in the series.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/box-cs8/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/box-cs8/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart/series/box-cs8" %}
-
 **Border**
 
-Use the [border](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#border) property to customize the width and color of the series border.
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#border) property to customize the width, color and dash array of the series border.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

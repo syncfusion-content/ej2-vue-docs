@@ -16,6 +16,17 @@ You can use the `typingUsers` property to display the current user’s who are t
 
 The typing users are the `UserModel[]` collection, where you can update the user’s dynamically to display the current typing user.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/typingUsers/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chat-ui/typingUsers/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+  
+{% previewsample "page.domainurl/code-snippet/chat-ui/typingUsers" %}
+
 ## Typing indicator template
 
 > Refer to the [Templates](./templates#typing-users-template) section for more details about the Typing indicator template.

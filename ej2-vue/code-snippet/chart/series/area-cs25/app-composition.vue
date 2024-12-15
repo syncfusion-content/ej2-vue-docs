@@ -43,7 +43,8 @@ const primaryYAxis = {
 const title = 'Monthly Temperature Range';
 const border = { 
   width: 2, 
-  color: '#ff4251' 
+  color: '#ff4251',
+  dashArray: "5,5"
 };
 
 provide('chart', [RangeStepAreaSeries, Category]);

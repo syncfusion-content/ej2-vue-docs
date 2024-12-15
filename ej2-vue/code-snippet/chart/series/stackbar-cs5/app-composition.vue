@@ -39,9 +39,9 @@ const primaryYAxis = {
   edgeLabelPlacement: 'Shift'
 };
 const title = 'Sales Comparison';
-const border = { width: 2, color: '#ff4251' };
-const border1 = { width: 2, color: '#66BDB7' };
-const border2 = { width: 2, color: '#794F1B' };
+const border = { width: 2, color: '#ff4251', dashArray: "5,5" };
+const border1 = { width: 2, color: '#66BDB7', dashArray: "5,5" };
+const border2 = { width: 2, color: '#794F1B', dashArray: "5,5" };
 
 provide('chart', [StackingBarSeries, Category, Legend]);
 

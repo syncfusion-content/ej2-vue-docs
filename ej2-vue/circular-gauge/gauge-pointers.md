@@ -180,9 +180,10 @@ The pointers can be dragged along the axis line by clicking and dragging them. T
 
 ### Enabling drag functionality for a specific pointer
 
-To enable or disable the drag functionality for specific pointers along the axis line, use the `enableDrag` property in the required pointer model.
+To enable or disable the drag functionality for specific pointers along the axis line, use the [enableDrag](https://ej2.syncfusion.com/vue/documentation/api/circular-gauge/pointerModel/#enabledrag) property in the required pointer model.
 
 >When the `enableDrag` property is enabled for any individual pointer model, the `enablePointerDrag` property becomes ineffective.
+
 The following example demonstrates how to enable the drag functionality for multiple pointers individually.
 
 {% tabs %}

@@ -1,6 +1,6 @@
 <template>
   <div id='container' style="height: 380px; width: 450px;">
-    <ejs-chatui :user="currentUser" headerText="Albert">
+    <ejs-chatui :user="currentUser" headerText="Michale">
       <ejs-messages>
         <ejs-message :author="currentUser" text="Hi Michale, are we on track for the deadline?"></ejs-message>
         <ejs-message :author="michaleUser" text="Yes, the design phase is complete."></ejs-message>

@@ -43,7 +43,8 @@ export default {
       title: 'Olympic Medals',
       border: { 
         width: 2, 
-        color: '#FFA500' 
+        color: '#FFA500',
+        dashArray: "5,5"
       }
     };
   },
