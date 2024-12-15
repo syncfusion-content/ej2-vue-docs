@@ -42,7 +42,7 @@ export default {
         title: 'Sales Amount in Millions'
       },
       title: 'Average Sales Comparison',
-      border: { width: 2, color: '#962D18' }
+      border: { width: 2, color: '#962D18', dashArray: "5,5" }
     };
   },
   provide: {

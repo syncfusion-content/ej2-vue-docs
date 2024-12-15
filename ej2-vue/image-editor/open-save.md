@@ -16,9 +16,9 @@ To save an edited image in the Image Editor component, use the toBlob method to 
 
 ## Supported image formats
 
-The Image Editor control supports three common image formats: PNG, JPEG, and SVG. These formats allow you to work with a wide range of image files within the Image Editor.
+The Image Editor control supports four common image formats: PNG, JPEG, SVG and WEBP. These formats allow you to work with a wide range of image files within the Image Editor.
 
-When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG or SVG, based on your specific requirements or preferences.
+When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG or WEBP, based on your specific requirements or preferences.
 
 ## Open an image
 
@@ -35,7 +35,7 @@ The [`open`](https://ej2.syncfusion.com/javascript/documentation/api/image-edito
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs9" %}
 
-### Open an image from Base64 format 
+### Open an image from base64 format 
 
 Users can easily open images in the Image Editor using a Base64-encoded string. This method allows you to load images directly from their Base64 representation, ensuring seamless integration and flexibility in your application. Simply pass the Base64 string to the open method, and the image will be loaded into the editor. 
 
@@ -52,7 +52,7 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs48" %}
 
-### Open an image from Blob storage
+### Open an image from blob storage
 
 User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the open method, and the image will be loaded into the editor. 
 
@@ -84,7 +84,7 @@ User can easily open images in the Image Editor using a file uploader. This meth
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs60" %}
 
-### Open and image from File Manager 
+### Open and image from file manager 
 
 User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the open method, and the image will be seamlessly loaded into the editor.
 
@@ -99,7 +99,7 @@ User can easily open images in the Image Editor using the File Manager. This met
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs62" %}
 
-### Open an image from Treeview 
+### Open an image from treeview 
 
 Users can easily open images in the Syncfusion Image Editor by dragging and dropping nodes from a tree view. This feature allows users to select an image from a tile view interface and load it into the editor. When a node is dropped into the image editor, you can pass the file to the editor’s open method to seamlessly load the image.
 
@@ -114,7 +114,7 @@ Users can easily open images in the Syncfusion Image Editor by dragging and drop
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs61" %}
 
-### Add Watermarks while opening an image 
+### Add watermarks while opening an image 
 
 You can utilize the ‘[`fileOpened`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#fileopened)’ event, which triggers once the image is loaded into the image editor. After this event, you can use the ‘[`drawText`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#drawtext)’ method to add a watermark. This approach allows the watermark to be automatically drawn on the canvas every time an image is opened in the editor, making it useful for handling copyright-related content.
 
@@ -133,7 +133,7 @@ You can utilize the ‘[`fileOpened`](https://ej2.syncfusion.com/javascript/docu
 
 The Image Editor component saves the edited image as Image Data or images like PNG, JPEG, and SVG.
 
-### Save as ImageData
+### Save as image data
 
 The [`getImageData`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#getimagedata) method is used to get the image as ImageData and this can be loaded to our Image Editor component using the open method.
 
@@ -141,7 +141,7 @@ The [`getImageData`](https://ej2.syncfusion.com/vue/documentation/api/image-edit
 
 The [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method in the Image Editor component enables you to save the modified image as a file on the local device. This method accepts two parameters: the file name and the file type.
 
-By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, or SVG. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
+By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, SVG and WEBP. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
 
 By utilizing the [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method with the appropriate file name and file type, you can conveniently save the modified image as a file on the local device, ensuring that it is easily accessible and shareable
 
@@ -192,7 +192,7 @@ To save an image as a blob, use the [`getImageData`](https://ej2.syncfusion.com/
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs50" %}
 
-### Add Watermarks while saving the image 
+### Add watermarks while saving the image 
 
 User can utilize the ‘[`beforeSave`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#beforesave)’ event, which triggers just before the image is downloaded, to apply a text annotation as a watermark. After the image is downloaded, the ‘[`saved`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#saved)’ event is triggered, allowing you to remove the watermark using the ‘[`deleteShape`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#deleteshape)’ method. This ensures that the watermark is only visible in the downloaded image and not in the editor.
 
@@ -207,7 +207,7 @@ User can utilize the ‘[`beforeSave`](https://ej2.syncfusion.com/javascript/doc
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs51" %}
 
-### Remove default Save button and add custom button to save the image to server 
+### Remove default save button and add custom button to save the image to server 
 
 User can leverage the ‘[`toolbar`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#toolbar)’ property to replace the default save button with a custom one. By doing so, you can use the '[`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata)' method to retrieve the image data, convert it to base64 format, and then save it to the server. This approach gives you more control over the image-saving process.
 

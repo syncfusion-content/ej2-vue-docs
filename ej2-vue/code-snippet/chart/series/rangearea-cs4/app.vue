@@ -51,7 +51,8 @@ export default {
       title: 'Monthly Temperature Range',
       border: { 
         width: 2, 
-        color: 'red' 
+        color: 'red',
+        dashArray: "5,5"
       }
     };
   },

@@ -33,7 +33,7 @@ const primaryYAxis = {
   title: 'Sales Amount in Millions'
 };
 const title = 'Average Sales Comparison';
-const border = { width: 2, color: '#962D18' };
+const border = { width: 2, color: '#962D18', dashArray: "5,5" };
 
 provide('chart', [AreaSeries]);
 

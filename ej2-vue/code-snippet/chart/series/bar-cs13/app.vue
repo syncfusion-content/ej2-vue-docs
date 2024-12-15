@@ -42,7 +42,7 @@ export default {
         labelFormat: '{value}%'
       },
       title: 'Unemployment rate (%)',
-      border: { width: 2, color: '#ff4251' }
+      border: { width: 2, color: '#ff4251', dashArray: "5,5" }
     };
   },
   provide: {

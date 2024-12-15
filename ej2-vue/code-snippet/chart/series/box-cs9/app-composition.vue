@@ -32,7 +32,8 @@ const marker = {
 };
 const border = { 
   width: 2, 
-  color: '#bd0032' 
+  color: '#bd0032',
+  dashArray: "5,5"
 };
 
 provide('chart', [BoxAndWhiskerSeries, Category]);

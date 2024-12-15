@@ -35,7 +35,8 @@ const primaryYAxis = {
 const title = 'Olympic Medals';
 const border = { 
   width: 2, 
-  color: '#FFA500' 
+  color: '#FFA500',
+  dashArray: "5,5"
 };
 
 provide('chart', [ColumnSeries, Category]);

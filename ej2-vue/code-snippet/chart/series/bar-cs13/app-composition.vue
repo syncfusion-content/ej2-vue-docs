@@ -34,7 +34,7 @@ const primaryYAxis = {
   labelFormat: '{value}%'
 };
 const title = 'Unemployment rate (%)';
-const border = { width: 2, color: '#ff4251' };
+const border = { width: 2, color: '#ff4251', dashArray: "5,5" };
 
 provide('chart', [BarSeries]);
 

@@ -45,7 +45,7 @@ data () {
             },
             shape: 'Image',
             height: 40, width: 40,
-            imageUrl: './cluster-france.svg'
+            imageUrl: 'https://ej2.syncfusion.com/vue/demos/src/maps/images/cluster-france.svg'
         },
         visible: true,
         dataSource: [
@@ -80,7 +80,7 @@ data () {
                 color: 'white',
                 size: '10px'
             },
-            imageUrl: './cluster-usa.svg'
+            imageUrl: 'https://ej2.syncfusion.com/vue/demos/src/maps/images/cluster-usa.svg'
         },
         visible: true,
         shape: 'Circle',
@@ -116,7 +116,7 @@ data () {
                 size: '10px',
                 color: 'white'
             },
-            imageUrl: './cluster-india.svg'
+            imageUrl: 'https://ej2.syncfusion.com/vue/demos/src/maps/images/cluster-india.svg'
         },
         dataSource: [
             { latitude: 26.985901, longitude: 75.850700, name: 'Amber Fort, Amer', state: 'Rajastan', country: 'India' },
@@ -140,10 +140,9 @@ data () {
             valuePath: 'name'
         },
         animationDuration: 0
-    }];
+    }],
         zoomSettings: {
             enable: true,
-            zoomFactor: 2,
             toolbarSettings: {
                 buttonSettings: {
                     toolbarItems: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset']

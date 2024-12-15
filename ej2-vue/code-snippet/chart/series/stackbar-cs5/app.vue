@@ -48,9 +48,9 @@ export default {
         edgeLabelPlacement: 'Shift'
       },
       title: 'Sales Comparison',
-      border: { width: 2, color: '#ff4251' },
-      border1: { width: 2, color: '#66BDB7' },
-      border2: { width: 2, color: '#794F1B' }
+      border: { width: 2, color: '#ff4251', dashArray: "5,5" },
+      border1: { width: 2, color: '#66BDB7', dashArray: "5,5" },
+      border2: { width: 2, color: '#794F1B', dashArray: "5,5" }
     };
   },
   provide: {

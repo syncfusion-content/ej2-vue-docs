@@ -35,7 +35,8 @@ const primaryYAxis = {
 const title = 'Maximum and Minimum Temperature';
 const border = { 
   width: 2, 
-  color: '#ff4251' 
+  color: '#ff4251',
+  dashArray: "5,5"
 };
 const border1 = { 
   width: 2, 
