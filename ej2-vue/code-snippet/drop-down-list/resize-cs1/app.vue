@@ -37,7 +37,7 @@ export default {
         { "Status": "In Development", "State": false }
       ],
       fields: { value: 'Status' },
-      allowResize : 'true'
+      allowResize : true
     }
   }
 }

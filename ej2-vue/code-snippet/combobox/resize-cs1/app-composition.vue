@@ -30,7 +30,7 @@ const statusData = [
     { "Status": "In Development", "State": false }
 ];
 const fields = { value: 'Status'};
-const allowResize = 'true' ;
+const allowResize = true ;
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

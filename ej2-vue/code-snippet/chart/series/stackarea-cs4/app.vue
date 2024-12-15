@@ -57,10 +57,10 @@ export default {
         majorTickLines: { width: 0 }
       },
       title: 'Trend in Sales of Ethical Produce',
-      border: { width: 2, color: '#ff4251' },
-      border1: { width: 2, color: '#4C4C4C' },
-      border2: { width: 2, color: '#794F1B' },
-      border3: { width: 2, color: '#1a9a6f' }
+      border: { width: 2, color: '#ff4251', dashArray: "5,5" },
+      border1: { width: 2, color: '#4C4C4C', dashArray: "5,5" },
+      border2: { width: 2, color: '#794F1B', dashArray: "5,5" },
+      border3: { width: 2, color: '#1a9a6f', dashArray: "5,5" }
     };
   },
   provide: {

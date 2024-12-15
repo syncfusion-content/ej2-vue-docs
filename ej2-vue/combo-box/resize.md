@@ -24,4 +24,4 @@ The following sample illustrates the implementation of the Popup Resize feature.
 {% endtabs %}
         
 
-![Disabled ComboBox Component](../images/combobox-resize.gif)
+![Resizing in ComboBox Component](../images/combobox-resize.gif)

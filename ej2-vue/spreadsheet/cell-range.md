@@ -149,6 +149,8 @@ You can apply custom data validation using two methods.
 * The first is through the Data Validation dialog in the Ribbon toolbar. Navigate to the Data tab, select the Data Validation option, and choose the Custom type from the Allow dropdown menu.
 * The second method is programmatically, using the [`addDataValidation()`](https://ej2.syncfusion.com/vue/documentation/api/spreadsheet/#adddatavalidation) method, which allows developers to set custom rules dynamically via code.
 
+The following code example demonstrates how to add custom data validation with a formula in a Spreadsheet.
+
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/spreadsheet/data-validation-cs1/app-composition.vue %}

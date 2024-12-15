@@ -45,10 +45,10 @@ components: {
         labelFormat: '{value}B'
       },
       title: 'Mobile Game Market by Country',
-      border: { width: 2, color: '#ff4251'},
-      border1: { width: 2, color: '#66BDB7'},
-      border2: { width: 2, color: '#794F1B'},
-      border3: { width: 2, color: '#1a9a6f'}
+      border: { width: 2, color: '#ff4251', dashArray: "5,5" },
+      border1: { width: 2, color: '#66BDB7', dashArray: "5,5" },
+      border2: { width: 2, color: '#794F1B', dashArray: "5,5" },
+      border3: { width: 2, color: '#1a9a6f', dashArray: "5,5" }
     };
   },
   provide: {

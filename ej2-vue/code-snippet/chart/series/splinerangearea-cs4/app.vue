@@ -52,8 +52,8 @@ export default {
         majorTickLines: { width: 0 }
       },
       title: 'Monthly Temperature Range',
-      border: { width: 2, color: '#ff4251' },
-      border1: { width: 2, color: '#4C4C4C' }
+      border: { width: 2, color: '#ff4251', dashArray: "5,5" },
+      border1: { width: 2, color: '#4C4C4C', dashArray: "5,5" }
     };
   },
   provide: {

@@ -25,4 +25,4 @@ The following sample illustrates the implementation of the Popup Resize feature.
         
 
 
-![Disabled MultiSelect Component](../images/multiselect-resize.gif)
+![Resizing in MultiSelect Component](../images/multiselect-resize.gif)

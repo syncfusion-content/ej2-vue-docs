@@ -41,7 +41,8 @@ export default {
       },
       border: { 
         width: 2, 
-        color: '#bd0032'
+        color: '#bd0032',
+        dashArray: "5,5"
       }
     };
   },

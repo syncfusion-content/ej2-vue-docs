@@ -92,9 +92,9 @@ The [opacity](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#opa
 
 {% previewsample "page.domainurl/code-snippet/chart/series/splinerangearea-cs3" %}
 
-**Dash array**
+**Border**
 
-The [dashArray](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#dasharray) property determines the pattern of dashes and gaps in the series.
+Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/series/#border) property to customize the width, color and dash array of the series border.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

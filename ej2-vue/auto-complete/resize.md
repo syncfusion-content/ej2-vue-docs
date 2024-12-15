@@ -24,4 +24,4 @@ The following sample illustrates the implementation of the Popup Resize feature.
 {% endtabs %}
         
 
-![Disabled AutoComplete Component](../images/autocomplete-resize.gif)
+![Resizing in AutoComplete Component](../images/autocomplete-resize.gif)

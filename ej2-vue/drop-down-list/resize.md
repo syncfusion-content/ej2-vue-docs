@@ -24,4 +24,4 @@ The following sample illustrates the implementation of the Popup Resize feature.
 {% endtabs %}
         
 
-![Disabled DropDownList Component](../images/dropdownlist-resize.gif)
+![Resizing in DropDownList Component](../images/dropdownlist-resize.gif)

@@ -21,7 +21,7 @@ const tagData = [
     { "Text": "Mobile Issue", "State": false }
 ];
 const fields = { value: 'Text' };
-const allowResize = 'true' ;
+const allowResize = true ;
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
