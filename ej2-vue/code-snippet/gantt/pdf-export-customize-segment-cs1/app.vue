@@ -39,6 +39,7 @@ components: {
         child: "subtasks",
         segments: "Segments"
       },
+      height: '450px',
       gridLines: 'Both',
       editSettings: {
         allowEditing: true,

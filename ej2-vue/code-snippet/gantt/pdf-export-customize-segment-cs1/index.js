@@ -40,6 +40,7 @@ new Vue({
         allowTaskbarEditing: true,
         showDeleteConfirmDialog: true
       },
+      height: '450px',
       gridLines : 'Both',
       toolbar: ['PdfExport'],
       toolbarClick: (args) => {

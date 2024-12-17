@@ -195,14 +195,16 @@ export default {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <template>
-  <ejs-timeline id="timeline">
+  <div class="container" style="height: 330px;margin-top: 30px;">
+    <ejs-timeline id="timeline">
       <e-items>
-        <e-item></e-item>
-        <e-item></e-item>
-        <e-item></e-item>
-        <e-item></e-item>
+        <e-item content='Shipped' />
+        <e-item content='Departed' />
+        <e-item content='Arrived' />
+        <e-item content='Out for Delivery' />
       </e-items>
-  </ejs-timeline>
+    </ejs-timeline>
+  </div>
 </template>
 
 <script setup>
@@ -218,14 +220,16 @@ export default {
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <template>
-  <ejs-timeline id="timeline">
+  <div class="container" style="height: 330px;margin-top: 30px;">
+    <ejs-timeline id="timeline">
       <e-items>
-        <e-item></e-item>
-        <e-item></e-item>
-        <e-item></e-item>
-        <e-item></e-item>
+        <e-item content='Shipped' />
+        <e-item content='Departed' />
+        <e-item content='Arrived' />
+        <e-item content='Out for Delivery' />
       </e-items>
-  </ejs-timeline>
+    </ejs-timeline>
+  </div>
 </template>
 
 <script>
@@ -262,7 +266,7 @@ yarn run dev
 
 The output will appear as follows:
 
-![Output](./images/default.png)
+![Output](./images/defaultVue3.png)
 
 
 For migrating from Vue 2 to Vue 3, refer to the [migration](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
