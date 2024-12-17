@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' background='skyblue' :chartArea='chartArea'>
+         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :border='chartBorder' :chartArea='chartArea'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
+                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' :border='border'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -30,6 +30,9 @@ components: {
              { country: "Italy", gold: 40 },
              { country: "Sweden", gold: 30 }
               ],
+      border: {
+        width: 2, color: 'grey'
+      },
         primaryXAxis: {
            valueType: 'Category',
            title: 'Countries'
@@ -38,7 +41,9 @@ components: {
             minimum: 0, maximum: 80,
             interval: 20, title: 'Medals'
         },
+      chartBorder: { width: 2, color: 'green' },
       chartArea: {
+        border: { width: 2, color: 'blue' },
         margin: {
           left: 50,
           right: 50,

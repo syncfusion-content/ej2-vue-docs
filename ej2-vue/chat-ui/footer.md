@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Show or hide footer
 
-You can use showFooter property to enable or disable the chat footer.
+You can use [showFooter](../api/chat-ui/chatUIModel/#showfooter) property to enable or disable the chat footer.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -22,7 +22,7 @@ You can use showFooter property to enable or disable the chat footer.
 {% include code-snippet/chat-ui/footer/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-  
+
 {% previewsample "page.domainurl/code-snippet/chat-ui/footer" %}
 
 ## Footer template

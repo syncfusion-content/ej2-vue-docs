@@ -13,7 +13,7 @@ In real-time cases, the data being presented within the dashboard should be upda
 
 ## Add or remove panels dynamically
 
-Panels can be added dynamically by using the `addPanel` public method by passing the `panel` property as parameter. Also, they can be removed dynamically by using the `removePanel` public method by passing the `panel id` value as a parameter.
+Panels can be added dynamically by using the [`addPanel`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#addpanel) public method by passing the [`panel`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout#panels) property as parameter. Also, they can be removed dynamically by using the [`removePanel`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#removepanel) public method by passing the [`panel id`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#id) value as a parameter.
 
 It is also possible to remove all the panels in a Dashboard Layout by calling [removeAll](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#removeall) method.
 
