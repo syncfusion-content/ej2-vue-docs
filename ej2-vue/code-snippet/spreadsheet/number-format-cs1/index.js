@@ -35,10 +35,10 @@ new Vue({
                       <e-row>
                        <e-cells>
                           <e-cell value="John"></e-cell>
-                          <e-cell value="1" validation="validation"></e-cell>
+                          <e-cell value="1" :validation="validation"></e-cell>
                           <e-cell value="Nash"></e-cell>
-                          <e-cell value="Digger" validation="listValidation"></e-cell>
-                          <e-cell value="50000" validation="listValidation1"></e-cell>
+                          <e-cell value="Digger" :validation="listValidation"></e-cell>
+                          <e-cell value="50000" :validation="listValidation1"></e-cell>
                           <e-cell value="04/11/2019"></e-cell>
                           <e-cell value="11:34:32 AM"></e-cell>
                           <e-cell value="1,45,000.00"></e-cell>
@@ -47,10 +47,10 @@ new Vue({
                       <e-row>
                        <e-cells>
                           <e-cell value="Mike"></e-cell>
-                          <e-cell value="2" validation="validation"></e-cell>
+                          <e-cell value="2" :validation="validation"></e-cell>
                           <e-cell value="Jim"></e-cell>
-                          <e-cell value="Cherrypicker" validation="validation1"></e-cell>
-                          <e-cell value="45000" validation="listValidation2"></e-cell>
+                          <e-cell value="Cherrypicker" :validation="validation1"></e-cell>
+                          <e-cell value="45000" :validation="validation"></e-cell>
                           <e-cell value="04/11/2019"></e-cell>
                           <e-cell value="10:15:00 AM"></e-cell>
                           <e-cell value="1,40,040.00"></e-cell>
@@ -59,10 +59,10 @@ new Vue({
                       <e-row>
                        <e-cells>
                           <e-cell value="shane"></e-cell>
-                          <e-cell value="3" validation="validation"></e-cell>
+                          <e-cell value="3" :validation="validation"></e-cell>
                           <e-cell value="Sean"></e-cell>
-                          <e-cell value="Kango" validation="listValidation3"></e-cell>
-                          <e-cell value="450" validation="listValidation4"></e-cell>
+                          <e-cell value="Kango" :validation="listValidation3"></e-cell>
+                          <e-cell value="450" :validation="listValidation4"></e-cell>
                           <e-cell value="06/25/2019"></e-cell>
                           <e-cell value="01:30:11 PM"></e-cell>
                           <e-cell value="545.00"></e-cell>
@@ -71,10 +71,10 @@ new Vue({
                       <e-row>
                        <e-cells>
                           <e-cell value="John"></e-cell>
-                          <e-cell value="1" validation="validation"></e-cell>
+                          <e-cell value="1" :validation="validation"></e-cell>
                           <e-cell value="Nash"></e-cell>
-                          <e-cell value="JCB" validation="listValidation5"></e-cell>
-                          <e-cell value="90000" validation="listValidation6"></e-cell>
+                          <e-cell value="JCB" :validation="listValidation5"></e-cell>
+                          <e-cell value="90000" :validation="listValidation6"></e-cell>
                           <e-cell value="09/22/2019"></e-cell>
                           <e-cell value="12:30:02 PM"></e-cell>
                           <e-cell value="1,00,095.00"></e-cell>

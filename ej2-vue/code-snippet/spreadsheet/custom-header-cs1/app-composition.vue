@@ -8,7 +8,7 @@ import { SpreadsheetComponent as EjsSpreadsheet } from "@syncfusion/ej2-vue-spre
 const openUrl = "https://services.syncfusion.com/vue/production/api/spreadsheet/open";
 
 const beforeOpen = function (args) {
-  args.requestData["headers"] = {
+  args.requestData = {
     ...args.requestData,
     headers: { Authorization: "YOUR TEXT" }
   };

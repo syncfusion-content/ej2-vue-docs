@@ -43,7 +43,7 @@
               <e-cell value="2" :validation="validation"></e-cell>
               <e-cell value="Jim"></e-cell>
               <e-cell value="Cherrypicker" :validation="validation1"></e-cell>
-              <e-cell value="45000" :validation="listValidation2"></e-cell>
+              <e-cell value="45000" :validation="validation"></e-cell>
               <e-cell value="04/11/2019"></e-cell>
               <e-cell value="10:15:00 AM"></e-cell>
               <e-cell value="1,40,040.00"></e-cell>

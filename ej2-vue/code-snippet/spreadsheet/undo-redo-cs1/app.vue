@@ -48,7 +48,7 @@ export default {
       let spreadsheet = this.$refs.spreadsheet;
       if (actionEvents.eventArgs.action == "customCSS") {
         let Element = spreadsheet.ej2Instances.getCell(actionEvents.eventArgs.rowIdx, actionEvents.eventArgs.colIdx);
-        if (actionEvents.eventArgs.requestType == "undo") {
+        if (actionEvents.isUndoRedo && actionEvents.isUndo) {
           removeClass([Element], 'customClass'); // To remove the custom class in undo action
         }
         else {

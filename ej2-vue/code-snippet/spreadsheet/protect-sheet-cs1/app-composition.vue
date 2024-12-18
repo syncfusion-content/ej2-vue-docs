@@ -40,7 +40,7 @@ const created = function () {
   spreadsheet.value.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
   spreadsheet.value.cellFormat({ fontWeight: 'bold' }, 'A11:D11');
   spreadsheet.value.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Salary!A1:D1');
-  spreadsheet.value.protectSheet(1, { selectCells: false });
+  spreadsheet.value.protectSheet(1, { selectCells: true });
 }
 </script>
 <style>
