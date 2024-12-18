@@ -2,6 +2,7 @@
 import Vue from "vue";
 import { SpreadsheetPlugin } from "@syncfusion/ej2-vue-spreadsheet";
 import { UploaderPlugin } from "@syncfusion/ej2-vue-inputs";
+import { getComponent } from "@syncfusion/ej2-base";
 Vue.use(SpreadsheetPlugin);
 Vue.use(UploaderPlugin);
 

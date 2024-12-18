@@ -22,7 +22,7 @@ new Vue({
   },
   methods: {
     beforeOpen: function (args) {
-      args.requestData["headers"] = {
+      args.requestData = {
         ...args.requestData,
         headers: { Authorization: "YOUR TEXT" },
       };

@@ -47,7 +47,7 @@ new Vue({
      spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'A1:D1');
         spreadsheet.cellFormat({ fontWeight: 'bold'}, 'A11:D11');
         spreadsheet.cellFormat({ fontWeight: 'bold', textAlign: 'center' }, 'Salary!A1:D1');
-        spreadsheet.protectSheet(1, { selectCells: false});
+        spreadsheet.protectSheet(1, { selectCells: true});
       }
     }
 
