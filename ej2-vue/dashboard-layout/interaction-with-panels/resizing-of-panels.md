@@ -32,9 +32,9 @@ The following sample demonstrates how to enable and disable the resizing of pane
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/resizing-cs1" %}
 
-## Resizing panels programatically
+## Resizing panels programmatically
 
-The Dashboard Layout panels can also be resized programatically by using [resizePanel](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizepanel) method. The method is invoked as follows,
+The Dashboard Layout panels can also be resized programmatically by using [resizePanel](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#resizepanel) method. The method is invoked as follows,
 
 ```js
 resizePanel(id, sizeX, sizeY)
@@ -42,11 +42,11 @@ resizePanel(id, sizeX, sizeY)
 ```
 
 Where,
-* id - ID of the panel which needs to be resized.
-* sizeX - New panel width in cells count for resizing the panel.
-* sizeY - New panel height in cells count for resizing the panel.
+* [`id`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#id) - ID of the panel which needs to be resized.
+* [`sizeX`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizex) - New panel width in cells count for resizing the panel.
+* [`sizeY`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizey) - New panel height in cells count for resizing the panel.
 
-The following sample demonstrates resizing panels programatically in the Dashboard Layout's [created](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#created) event.
+The following sample demonstrates resizing panels programmatically in the Dashboard Layout's [created](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#created) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

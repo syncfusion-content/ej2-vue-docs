@@ -24,14 +24,14 @@ The chart control has a number of characteristics that enable accessibility feat
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/accessibility/pie-chart/app-composition.vue %}
+{% include code-snippet/chart/accessibility/line-chart/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/accessibility/pie-chart/app.vue %}
+{% include code-snippet/chart/accessibility/line-chart/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/accessibility/pie-chart" %}
+{% previewsample "page.domainurl/code-snippet/chart/accessibility/line-chart" %}
 
 ## Series
 
@@ -45,14 +45,14 @@ The `series` supports the customization of accessibility for data points, allowi
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/accessibility/line-chart/app-composition.vue %}
+{% include code-snippet/chart/accessibility/column-series/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/accessibility/line-chart/app.vue %}
+{% include code-snippet/chart/accessibility/column-series/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/accessibility/line-chart" %}
+{% previewsample "page.domainurl/code-snippet/chart/accessibility/column-series" %}
 
 ## Title and subtitle
 
@@ -145,14 +145,14 @@ The `indicators` property allows you to analyze the trends and patterns in the d
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/accessibility/trendline/app-composition.vue %}
+{% include code-snippet/chart/accessibility/indicator/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/accessibility/trendline/app.vue %}
+{% include code-snippet/chart/accessibility/indicator/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/accessibility/trendline" %}
+{% previewsample "page.domainurl/code-snippet/chart/accessibility/indicator" %}
 
 ## Legend
 

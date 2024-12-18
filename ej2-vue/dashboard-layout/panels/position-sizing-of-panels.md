@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Position sizing of panels in Vue Dashboard layout component | Syncfusion
+title: Position sizing in Vue Dashboard layout component | Syncfusion
 description: Learn here all about Position sizing of panels in Syncfusion Vue Dashboard layout component of Syncfusion Essential JS 2 and more.
 control: Position sizing of panels 
 platform: ej2-vue
@@ -31,9 +31,9 @@ The following table represents all the available panel properties and the corres
 
 ## Positioning of panels
 
-The panels within the layout can be easily positioned or ordered using the `row` and `col` properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
+The panels within the layout can be easily positioned or ordered using the [`row`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#row) and [`col`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#col) properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
 
-The following sample demonstrates the positioning of panels within the dashboard layout using the row, and,column properties of the panels.
+The following sample demonstrates the positioning of panels within the dashboard layout using the row and,column properties of the panels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -48,9 +48,9 @@ The following sample demonstrates the positioning of panels within the dashboard
 
 ## Sizing of panels
 
-A panel's size can be varied easily by defining the `sizeX` and `sizeY` properties. The `sizeX` property defines the width and the `sizeY` property defines height of a panel in cells count. These properties will be helpful in designing a dashboard, where the content of each panel may vary in size.
+A panel's size can be varied easily by defining the [`sizeX`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizex) and [`sizeY`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizey) properties. The [`sizeX`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizex) property defines the width and the [`sizeY`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizey) property defines height of a panel in cells count. These properties will be helpful in designing a dashboard, where the content of each panel may vary in size.
 
-The following sample demonstrates the sizing of panels within the dashboard layout using the sizeX and sizeY properties of the panels.
+The following sample demonstrates the sizing of panels within the dashboard layout using the **sizeX** and **sizeY** properties of the panels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

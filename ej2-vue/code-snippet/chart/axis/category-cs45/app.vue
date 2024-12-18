@@ -5,6 +5,9 @@
         <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
         <e-series :dataSource='seriesData' type='Column' xName='country' yName='silver' name='Silver'> </e-series>
         <e-series :dataSource='seriesData' type='Column' xName='country' yName='bronze' name='Bronze'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Diamond'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='silver' name='Ruby'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='bronze' name='Platinum'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -37,6 +40,7 @@ export default {
       },
       legendSettings: {
         visible: true,
+        position: "Bottom",
         layout: "Auto",
         maximumColumns: 3,
         fixedWidth: true

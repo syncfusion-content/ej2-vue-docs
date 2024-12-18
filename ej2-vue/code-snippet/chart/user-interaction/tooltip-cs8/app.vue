@@ -4,6 +4,10 @@
       <e-series-collection>
         <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' name='China' :marker='marker'>
         </e-series>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y1' name='Australia' :marker='marker'>
+        </e-series>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y2' name='Japan' :marker='marker'>
+        </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -41,7 +45,7 @@ export default {
       marker: {
         visible: true, width: 10, height: 10
       },
-      tooltip: { enable: true, enbaleHighlight: true },
+      tooltip: { enable: true, enableHighlight: true },
       title: "Unemployment Rates 1975-2010"
     };
   },
