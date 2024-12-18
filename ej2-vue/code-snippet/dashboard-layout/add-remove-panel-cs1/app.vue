@@ -4,7 +4,7 @@
         <div className="content-wrapper">
           <div id="dashboardElement">
             <!--  DashboardLayout element declaration -->
-            <ejs-dashboardlayout id='dashboard_default' :columns="5">
+            <ejs-dashboardlayout ref="dashboard" id='dashboard_default' :columns="5">
               <e-panels>
                 <e-panel id="Panel0" :sizeX="1" :sizeY="1" :row="0" :col="0"
                   content="<div class='content'>0</div>"></e-panel>
@@ -38,28 +38,28 @@
                   <tr>
                     <td>SizeX</td>
                     <td>
-                      <ejs-numerictextbox id="sizex" placeholder="Ex: 1" :value="value" :min="min" :max="max"
+                      <ejs-numerictextbox ref="sizex" id="sizex" placeholder="Ex: 1" :value="value" :min="min" :max="max"
                         :floatLabelType="floatLabelType"></ejs-numerictextbox>
                     </td>
                   </tr>
                   <tr>
                     <td>SizeX</td>
                     <td>
-                      <ejs-numerictextbox id="sizey" placeholder="Ex: 1" :value="value" :min="min" :max="max"
+                      <ejs-numerictextbox ref="sizey" id="sizey" placeholder="Ex: 1" :value="value" :min="min" :max="max"
                         :floatLabelType="floatLabelType"></ejs-numerictextbox>
                     </td>
                   </tr>
                   <tr>
                     <td>Row</td>
                     <td>
-                      <ejs-numerictextbox id="row" placeholder="Ex: 1" :value="value" :min="rowmin" :max="rowmax"
+                      <ejs-numerictextbox ref="row" id="row" placeholder="Ex: 1" :value="value" :min="rowmin" :max="rowmax"
                         :floatLabelType="floatLabelType"></ejs-numerictextbox>
                     </td>
                   </tr>
                   <tr>
                     <td>Column</td>
                     <td>
-                      <ejs-numerictextbox id="column" placeholder="Ex: 1" :value="value" :min="colmin" :max="colmax"
+                      <ejs-numerictextbox ref="column" id="column" placeholder="Ex: 1" :value="value" :min="colmin" :max="colmax"
                         :floatLabelType="floatLabelType"></ejs-numerictextbox>
                     </td>
                   </tr>
@@ -78,7 +78,7 @@
                   <tr>
                     <td> Panel Id </td>
                     <td>
-                      <ejs-dropdownlist id='dropdown' placeholder='Select a id value'
+                      <ejs-dropdownlist ref="dropdown" id='dropdown' placeholder='Select a id value'
                         :dataSource='data'></ejs-dropdownlist>
                     </td>
                   </tr>
@@ -136,12 +136,12 @@
     },
     methods: {
       onAdd: function () {
-        var sizeX = document.getElementById("sizex").ej2_instances[0];
-        var sizeY = document.getElementById("sizey").ej2_instances[0];
-        var row = document.getElementById("row").ej2_instances[0];
-        var column = document.getElementById("column").ej2_instances[0];
-        var dropdownObject = document.getElementById("dropdown").ej2_instances[0];
-        var dashboardObj = document.getElementById("dashboard_default").ej2_instances[0];
+        var sizeX = this.$refs.sizex.$el.ej2_instances[0];
+        var sizeY = this.$refs.sizey.$el.ej2_instances[0];
+        var row = this.$refs.row.$el.ej2_instances[0];
+        var column = this.$refs.column.$el.ej2_instances[0];
+        var dropdownObject = this.$refs.dropdown.$el.ej2_instances[0];
+        var dashboardObj = this.$refs.dashboard.$el.ej2_instances[0];
         var panel = [{
           'id': "Panel" + this.count.toString(),
           'sizeX': sizeX.value,
@@ -157,8 +157,8 @@
       },
   
       onRemove: function () {
-        var dashboardObj = document.getElementById("dashboard_default").ej2_instances[0];
-        var dropdownObject = document.getElementById("dropdown").ej2_instances[0];
+        var dropdownObject = this.$refs.dropdown.$el.ej2_instances[0];
+        var dashboardObj = this.$refs.dashboard.$el.ej2_instances[0];
         dashboardObj.removePanel(dropdownObject.value);
         dropdownObject.dataSource.splice(dropdownObject.dataSource.indexOf(dropdownObject.value), 1);
         dropdownObject.value = null;

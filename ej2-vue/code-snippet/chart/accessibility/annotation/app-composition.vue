@@ -25,10 +25,10 @@ const seriesData = [
   { country: "Sweden", gold: 30 }
 ];
 const annotations = [{
-  content: '70 Gold Medals',
+  content: '<div style="border: 1px solid #000; background-color: #f8f8f8; padding: 5px; border-radius: 4px; font-size: 12px; font-weight: bold;">70 Gold Medals</div>',
   coordinateUnits: 'Point',
   x: 'France',
-  y: 50,
+  y: 55,
   accessibility: {
     accessibilityDescription: 'Annotation indicating that France has won 70 Gold Medals.',
     accessibilityRole: 'note',

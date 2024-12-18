@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
-      background='skyblue' :chartArea='chartArea'>
+      :chartArea='chartArea' :border='chartBorder'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' :border='border'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
@@ -31,7 +31,11 @@ const primaryYAxis = {
   minimum: 0, maximum: 80,
   interval: 20, title: 'Medals'
 };
+const border = {
+  width: 2, color: 'grey'
+};
 const chartArea = {
+  border: { width: 2, color: 'blue' },
   margin: {
           left: 50,
           right: 50,
@@ -40,7 +44,7 @@ const chartArea = {
         }
 };
 const title = "Olympic Medals";
-
+const chartBorder = { width: 2, color: 'green' };
 provide('chart', [ColumnSeries, Category]);
 
 </script>

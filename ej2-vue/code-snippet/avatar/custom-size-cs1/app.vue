@@ -18,6 +18,9 @@
     border-radius: 3px;
 }
 
+.e-avatar {
+    margin: 2px;
+}
 #element :nth-child(5) {
     font-size: 18px;
 }

@@ -16,5 +16,7 @@
       margin: 100px auto;
       border-radius: 3px;
   }
-
+  .e-avatar {
+    margin: 2px;
+  }
 </style>

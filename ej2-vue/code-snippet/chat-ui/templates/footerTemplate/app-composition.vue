@@ -2,8 +2,8 @@
   <div id='container' style="height: 380px; width: 450px;">
     <ejs-chatui ref="chatInstance" id="footerTemplate" footerTemplate="footerTemplate" :user="currentUser">
       <template v-slot:footerTemplate="">
-        <div className="custom-footer">
-          <input id="chatTextArea" className="e-input" placeholder="Type your message..."></input>
+        <div class="custom-footer">
+          <input id="chatTextArea" class="e-input" placeholder="Type your message..."></input>
           <button id="sendMessage" class="e-btn e-primary"@click="buttonClick">
             <span class="e-icons e-send-1"></span>
           </button>

@@ -4,6 +4,10 @@
       <e-series-collection>
         <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y' name='China' :marker='marker'>
         </e-series>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y1' name='Australia' :marker='marker'>
+        </e-series>
+        <e-series :dataSource='seriesData' type='StepLine' xName='x' yName='y2' name='Japan' :marker='marker'>
+        </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>

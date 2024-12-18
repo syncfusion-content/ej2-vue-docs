@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 ## Setting placeholder
 
-You can use the `placeholder` property to display the placeholder text that appears in the message input field to guide users on what to type. The default is `Type your message…`.
+You can use the [placeholder](../api/chat-ui/chatUIModel/#placeholder) property to display the placeholder text that appears in the message input field to guide users on what to type. The default is `Type your message…`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,7 +27,7 @@ You can use the `placeholder` property to display the placeholder text that appe
 
 ## Setting width
 
-You can use the `width` property to specify the dimensions of the Chat UI within the application layout. By default, the value is `100%`.
+You can use the [width](../api/chat-ui/chatUIModel/#width) property to specify the dimensions of the Chat UI within the application layout. By default, the value is `100%`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -42,7 +42,7 @@ You can use the `width` property to specify the dimensions of the Chat UI within
 
 ## Setting height
 
-You can use the `height` property to specify the dimensions of the Chat UI within the application layout. By default, the value is `100%`.
+You can use the [height](../api/chat-ui/chatUIModel/#height) property to specify the dimensions of the Chat UI within the application layout. By default, the value is `100%`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -57,7 +57,7 @@ You can use the `height` property to specify the dimensions of the Chat UI withi
 
 ## CssClass
 
-You can use the `cssClass` property to customize the appearance of the chat UI component.
+You can use the [cssClass](../api/chat-ui/chatUIModel/#cssclass) property to customize the appearance of the chat UI component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
