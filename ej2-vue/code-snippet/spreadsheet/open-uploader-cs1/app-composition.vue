@@ -23,7 +23,7 @@ const onSuccess = (args) => {
     "spreadsheet"
   );
   if (args.operation === "upload")
-    spreadsheet.open({ file: args.file.rawFile });
+    spreadsheet.value.open({ file: args.file.rawFile });
 }
 </script>
 <style>

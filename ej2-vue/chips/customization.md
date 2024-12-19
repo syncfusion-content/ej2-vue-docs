@@ -109,3 +109,18 @@ Outline chip has the border with the background transparent. It can be set using
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chips/default-cs7" %}
+
+## Template
+
+The [`template`](https://helpej2.syncfusion.com/vue/documentation/api/chips/#template) property of the Chips component allows users to fully customize the layout and design of each chip. By using the `template` property, users can include custom HTML elements, such as links, icons, or additional content.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs14/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chips/default-cs14/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chips/default-cs14" %}

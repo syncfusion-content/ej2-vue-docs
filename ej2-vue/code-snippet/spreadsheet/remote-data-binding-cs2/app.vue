@@ -1,7 +1,7 @@
 <template>
-    <ejs-spreadsheet ref="spreadsheet">
+    <ejs-spreadsheet ref="spreadsheet" :created="created">
         <e-sheets>
-            <e-sheet name="Order Details" :columns="columns" :created="created">
+            <e-sheet name="Order Details" :columns="columns">
                 <e-ranges>
                     <e-range :dataSource="dataSource"></e-range>
                 </e-ranges>
