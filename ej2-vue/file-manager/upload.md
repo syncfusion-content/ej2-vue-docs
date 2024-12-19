@@ -85,7 +85,7 @@ export default {
 
 With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
-![Vue File Manager with chunkUpload](./images/filemanager-chunkupload.png "File Manager chunkUpload")
+![Vue File Manager with chunkUpload](./images/filemanager-chunkupload.png)
 
 >Note: 
 >1. Chunk upload will work when the selected file size is greater than the specified chunk size. Otherwise, it upload the files normally. 
@@ -264,7 +264,7 @@ export default {
 
 The File Manager component provides support for external drag-and-drop functionality for uploading files by dragging it from local file system to File Manager.
 
-Setting [allowDragAndDrop](https://ej2.syncfusion.com/vue/angular/documentation/api/file-manager#allowdraganddrop) property to false will not prevent the file upload operation through external drag and drop. It will only prevent drag and drop action within the File Manager component
+Setting [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager#allowdraganddrop) property to false will not prevent the file upload operation through external drag and drop. It will only prevent drag and drop action within the File Manager component
 
 To completely prevent the external drag-and-drop upload functionality (i.e., disallowing users from dragging and dropping files from outside into the File Manager), you can set the [dropArea](https://ej2.syncfusion.com/vue/documentation/api/uploader#droparea) property to null. This can be done by accessing the File Manager instance via its class methods.
 

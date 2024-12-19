@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in Vue File manager component
 
-The file manager component allows customizing its functionalities like, context menu, searching, uploading, toolbar using APIs. Given below are some of the functionalities that can be customized in the File Manager,
+The File manager component allows customization of its functionalities, such as the context menu, searching, uploading, and toolbar, using APIs. Given below are some of the functionalities that can be customized in the File Manager,
 
 * [Context menu customization](#context-menu-customization)
 * [Details view customization](#details-view-customization)
@@ -24,7 +24,7 @@ The file manager component allows customizing its functionalities like, context 
 
 ## Context menu customization
 
-The context menu settings like, items to be displayed on files, folders and layout click and visibility can be customized using [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings) property.
+The context menu settings, such as the items to be displayed on files, folders, and layout clicks, can be customized using [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -39,7 +39,7 @@ The context menu settings like, items to be displayed on files, folders and layo
 
 ## Details view customization
 
-The details view settings like, column width, header text, template for each field can be customized using [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#detailsviewsettings) property.
+The details view settings, including column width, header text, and templates for each field, can be customized using [detailsViewSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#detailsviewsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,7 +116,7 @@ The thumbnail images are displayed in the File Manager's large icons view by def
 
 ## Toolbar customization
 
-The toolbar settings like, items to be displayed in toolbar and visibility can be customized using [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#toolbarsettings) property.
+The toolbar settings, including the items to be displayed and their visibility, can be customized using [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#toolbarsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -131,7 +131,7 @@ The toolbar settings like, items to be displayed in toolbar and visibility can b
 
 ### See Also
 
-* [How to add new items or customize default items](../file-manager/how-to/adding-custom-item-to-toolbar.md)
+* [How to add new items or customize default items](https://ej2.syncfusion.com/vue/documentation/file-manager/how-to/adding-custom-item-to-toolbar)
 
 ## Upload customization
 
@@ -150,7 +150,7 @@ The upload settings like, minimum and maximum file size and enabling auto upload
 
 ## Tooltip customization
 
-The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the file manager element.
+The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the File manager element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
