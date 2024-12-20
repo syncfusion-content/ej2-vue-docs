@@ -19,7 +19,7 @@
 </template>
 <script>
 
-import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
+import { GridComponent, ColumnsDirective, ColumnDirective, AggregatesDirective, AggregateDirective, Toolbar, PdfExport, Aggregate} from "@syncfusion/ej2-vue-grids";
 import { data } from './datasource.js';
 import { createApp } from "vue";
 const app = createApp();

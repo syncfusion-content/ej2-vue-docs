@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      data: data,
+      dataGrid: data,
       editSettings: { allowEditing: true, allowAdding: true, allowDeleting: true },
       toolbar: ["Add", "Edit", "Delete", "Update", "Cancel"],
       orderIDRules: { required: true, number: true },
