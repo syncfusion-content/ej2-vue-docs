@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Access control in Vue File manager component
 
-The [Vue FileManager](https://www.syncfusion.com/vue-ui-components/vue-file-manager) allows you to define access permissions for folders and files using a set of access rules to user(s).
+The [Vue FileManager](https://www.syncfusion.com/vue-ui-components/vue-file-manager) allows you to define access permissions for folders and files using a set of access rules for user(s).
 
 * [Access Rules](#access-rules)
 * [Permissions](#permissions)
@@ -26,7 +26,7 @@ To set up access rules for folders (including their files and sub-folders) and i
 | Copy | Yes | Yes | Allows access to copy a file or folder. |
 | Read | Yes | Yes | Allows access to read a file or folder. |
 | Write | Yes | Yes | Allows permission to write a file or folder. |
-| WriteContents | No | Yes | Allows permission to write the content of folder. |
+| WriteContents | No | Yes | Allows permission to modify the contents of a folder. |
 | Download | Yes | Yes | Allows permission to download a file or folder. |
 | Upload | No | Yes | Allows permission to upload to the folder. |
 | Path | Yes | Yes | Specifies the path to apply the rules, which are defined. |
@@ -36,7 +36,7 @@ To set up access rules for folders (including their files and sub-folders) and i
 The following syntax represents the access Rules for Administrator using file or folder.
 
 ```ts
-//Adminstrator
+//Administrator
 //Access Rules for File
     new AccessRule { Path = "/*.*", Role = "Administrator", Read = Permission.Allow, Write = Permission.Allow, Copy = Permission.Allow, Download = Permission.Allow, IsFile = true },
 
@@ -45,7 +45,7 @@ The following syntax represents the access Rules for Administrator using file or
 
 ```
 
-The following syntax represent the access Rules for Default user using file or folder.
+The following syntax represents the access rules for a Default User for files or folders.
 
 ```ts
 //Default User
@@ -59,16 +59,16 @@ The following syntax represent the access Rules for Default user using file or f
 
 ## Permissions
 
-It helps to explain how to apply security permission to file manager file or folder using access rules. The following table represent the value that determines the permission.
+This section explains how to apply security permissions to files or folders in the File Manager using access rules. The following table represents the values that determine permissions.
 
 | **Value** | **Description** |
 | --- | ---|
 | Allow | Allows you to do read, write, copy, and download operations. |
 | Deny | Denies you to do read, write, copy, and download operations. |
 
-Use the `Role` property to apply created roles to the file manager. After that, the file manager displays folder or file and allow permisssion based on assigned roles.
+Use the `Role` property to apply created roles to the File Manager. Afterward, the File Manager displays folders or files and allows permissions based on assigned roles.
 
-The following syntax represent how to apply permission based on assigned roles
+The following syntax demonstrates how to apply permissions based on assigned roles.
 
 Permission denied for administrator to write a file or folder.
 
@@ -83,7 +83,7 @@ Permission denied for administrator to write a file or folder.
 
 The following syntax represent how to allow or deny permission based on file or folder access rule.
 
-"Examples"
+"Examples:"
 
 Permission denied for writing except for particular file or folder.
 

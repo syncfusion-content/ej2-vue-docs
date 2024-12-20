@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { GridPlugin, Toolbar, PdfExport, Page } from "@syncfusion/ej2-vue-grids";
+import { GridPlugin, Toolbar, PdfExport } from "@syncfusion/ej2-vue-grids";
 import { data, changedData } from './datasource.js';
 
 Vue.use(GridPlugin);
@@ -10,7 +10,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-      <ejs-grid ref='grid' id='Grid' :dataSource='data'  :allowPaging='true' :toolbar='toolbarOptions' height='272px' :allowPaging='true' :allowPdfExport='true' :toolbarClick='toolbarClick'>
+      <ejs-grid ref='grid' id='Grid' :dataSource='data' :toolbar='toolbarOptions' height='272px' :allowPdfExport='true' :toolbarClick='toolbarClick'>
         <e-columns>
           <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
           <e-column field='CustomerID' headerText='Customer ID' width=100></e-column>
@@ -38,7 +38,7 @@ new Vue({
     }
   },
   provide: {
-    grid: [Toolbar, PdfExport, Page]
+    grid: [Toolbar, PdfExport]
   }
 
 });

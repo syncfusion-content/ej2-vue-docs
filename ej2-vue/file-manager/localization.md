@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Localization in Vue File manager component
 
-The file manager can be localized to any culture by defining the texts and messages of the file manager in the corresponding culture. The default locale of the file manager is `en` (English). The following table represents the default texts and messages of the file manager in `en` culture.
+The File manager can be localized to any culture by defining the corresponding texts and messages for that culture. The default locale of the File manager is `en` (English). The following table lists the default texts and messages of the File Manager in the `en` culture.
 
 |KEY|Text/Message|
 |----|----|
@@ -107,7 +107,7 @@ The file manager can be localized to any culture by defining the texts and messa
 |Network-Error|Network Error: Failed to send on XMLHTTPRequest: Failed to load|
 |Server-Error|Server Error: Invalid response from|
 
-The below example shows adding the German culture locale(`de-DE`)
+The example below demonstrates adding the German culture locale (`de-DE`).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
