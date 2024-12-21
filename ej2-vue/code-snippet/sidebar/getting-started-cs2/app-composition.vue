@@ -36,14 +36,6 @@ const mediaQuery = window.matchMedia('(max-width: 400px)');
     padding: 10px;
 }
 
-.center {
-    text-align: center;
-    display: none;
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
 #default-sidebar {
     background-color: rgb(25, 118, 210);
     color: #ffffff;

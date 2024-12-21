@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Nested items in Vue File manager component
 
-FileManager can be rendered inside the other components like Tab, Dialog, and more.
+File manager can be rendered inside the other components like Tab, Dialog, and more.
 
-* [Adding file manager inside the dialog](#adding-file-manager-inside-the-dialog)
-* [Adding  file manager inside the tab](#adding-file-manager-inside-the-tab)
+* [Adding File manager inside the dialog](#adding-file-manager-inside-the-dialog)
+* [Adding  File manager inside the tab](#adding-file-manager-inside-the-tab)
 
-## Adding file manager inside the dialog
+## Adding File manager inside the dialog
 
-The following example shows the file manager component rendered inside the dialog. Click the browse button in the Uploader element to open the File Manager inside the Dialog control.
+The following example shows the File manager component rendered inside the dialog. Click the browse button in the Upload element to open the File manager inside the Dialog component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -30,9 +30,9 @@ The following example shows the file manager component rendered inside the dialo
         
 {% previewsample "page.domainurl/code-snippet/file-manager/file-upload-cs1" %}
 
-## Adding file manager inside the tab
+## Adding File manager inside the tab
 
-The following example demonstrate that the file manager component is placed inside the content area of tab element.
+The following example demonstrates that the File manager component is placed inside the content area of tab element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

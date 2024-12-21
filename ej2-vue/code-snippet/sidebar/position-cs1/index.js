@@ -21,7 +21,7 @@ new Vue({
         </div>
     </ejs-sidebar>
         <div id="head">
-          <ejs-button id="toggle"  ref="togglebtn" cssClass="e-flat" iconCss="e-icons burg-icon" isToggle="true" v-on:click.native="btnClick">Open</ejs-button>
+          <ejs-button id="toggle" ref="togglebtn" cssClass="e-flat" iconCss="e-icons e-menu" isToggle="true" v-on:click.native="btnClick">Open</ejs-button>
         </div>
         <div>
         <div id="maincontent" class="content">

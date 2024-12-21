@@ -8,8 +8,18 @@ Vue.use(DropDownButtonPlugin);
 new Vue({
   el: '#app',
   template: `
-    <ejs-dropdownbutton :items='items' :itemTemplate='itemTemplate'>
+    <ejs-dropdownbutton :items="items" :itemTemplate="'itemTemplate'">
       DropDownButton
+      <template v-slot:itemTemplate="{ data }">
+        <div>
+          <span class="e-menu-icon" :class="data.iconCss"></span>
+          <span class="custom-class">
+            <a v-if="data.url" :href="data.url" target="_blank" rel="noopener noreferrer">{{ data.text }}</a>
+            <span v-else>{{ data.text }}</span>
+            <span v-if="data.description" class="description">{{ data.description }}</span>
+          </span>
+        </div>
+      </template>
     </ejs-dropdownbutton>
   `,
   data() {
@@ -42,22 +52,5 @@ new Vue({
         }
       ]
     };
-  },
-  methods: {
-    itemTemplate(data) {
-      if (data.url) {
-        return `
-          <div>
-            <span class="e-menu-icon ${data.iconCss}"></span>
-            <span class="custom-class" ><a href="${data.url}" target="_blank" rel="noopener noreferrer">${data.text}</a></span>
-          </div>`;
-      } else {
-        return `
-          <div>
-            <span class="e-menu-icon ${data.iconCss}"></span>
-            <span class="custom-class" >${data.text}</span>
-          </div>`;
-      }
-    }
   }
 });

@@ -131,7 +131,7 @@ Using [`background`](https://ej2.syncfusion.com/vue/documentation/api/chart/char
 
 **Chart area margin**
 
-You can customize the space between the chart area from its chart container through `margin` property.
+You can customize the space between the chart area from its chart container through [`margin`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartAreaModel/#margin) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
