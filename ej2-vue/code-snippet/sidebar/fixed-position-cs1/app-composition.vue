@@ -420,6 +420,10 @@ span.sf-icon-down.icon {
   padding: 18px 0 0 16px;
 }
 
+#default-sidebar{
+  margin-top: 100px;
+}
+
 .sidebar-image {
   background: url(https://ej2.syncfusion.com/showcase/angular/expensetracker/assets/images/user.svg) no-repeat scroll 0 0 transparent;
   background-position-x: left;

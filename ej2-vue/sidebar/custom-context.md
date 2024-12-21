@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Custom context in Vue Sidebar component
 
-Sidebar has a flexible option to make it initialize, target to any HTML element alongside of the main content of a web page.
+Sidebar has a flexible option to initialize and target any HTML element alongside the main content of a web page.
 
-By default, Sidebar initializes target to the body element. Using the [target](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#target) property, set target element to initialize the Sidebar inside any HTML element apart from the body element.
+By default, Sidebar initializes target to the body element. Using the [target](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#target) property, you can set a target element to initialize the Sidebar inside any HTML element apart from the body element.
 
-> If required , `zIndex` can be set when sidebar act as overlay type.
+> If required , `zIndex` can be set when the sidebar acts as an overlay type.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

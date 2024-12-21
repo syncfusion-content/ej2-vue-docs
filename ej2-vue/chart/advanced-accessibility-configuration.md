@@ -8,19 +8,19 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility customization in ##Platform_Name## Chart control
+# Accessibility customization in Vue Chart component
 
-The Syncfusion® ##Platform_Name## Chart control is structured to visualize data in a graphical manner. It provides robust customization options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the ##Platform_Name## Chart control's accessibility customization are briefly explained in this section.
+The Syncfusion® Vue Chart component is structured to visualize data in a graphical manner. It provides robust customization options for accessibility, allowing you to enhance the user experience for those with disabilities. The main attributes of the Vue Chart component's accessibility customization are briefly explained in this section.
 
-The chart control has a number of characteristics that enable accessibility features to be customized, including:
+The chart component has a number of characteristics that enable accessibility features to be customized, including:
 
-* `accessibilityDescription` - Provides a text description for the chart, improving support for screen readers.
-* `accessibilityRole` - Specifies the role of the chart, helping screen readers to identify the element appropriately.
-* `focusable` - Allows the chart to receive focus, making it accessible via keyboard navigation.
-* `focusBorderColor` - Sets the color of the focus border, enhancing visibility when the chart is focused.
-* `focusBorderMargin` - Defines the margin around the focus border.
-* `focusBorderWidth` - Specifies the width of the focus border.
-* `tabIndex` - Specifies the tab order of the chart element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the chart, improving support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the chart, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Allows the chart to receive focus, making it accessible via keyboard navigation.
+* [`focusBorderColor`](https://ej2.syncfusion.com/vue/documentation/api/chart#focusbordercolor) - Sets the color of the focus border, enhancing visibility when the chart is focused.
+* [`focusBorderMargin`](https://ej2.syncfusion.com/vue/documentation/api/chart#focusbordermargin) - Defines the margin around the focus border.
+* [`focusBorderWidth`](https://ej2.syncfusion.com/vue/documentation/api/chart#focusborderwidth) - Specifies the width of the focus border.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the chart element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -35,13 +35,13 @@ The chart control has a number of characteristics that enable accessibility feat
 
 ## Series
 
-The `series` supports the customization of accessibility for data points, allowing key characteristics to be adjusted for enhanced accessibility, such as:
+The [`series`](https://ej2.syncfusion.com/vue/documentation/api/chart#series) supports the customization of accessibility for data points, allowing key characteristics to be adjusted for enhanced accessibility, such as:
 
-* `accessibilityDescription` - Provides a text description for the series root element, enhancing support for screen readers.
-* `accessibilityDescriptionFormat` - Specifies a format for the accessibility description of each point in the series, allowing dynamic content. The format string can include the placeholders such as ${series.name}, ${point.x}, ${point.y}, ${point.high}, etc. For example, the format "${series.name} : ${point.x}" displays the series name and x-value of the point in the accessibility description. Data point's values like high, low, open, and close are applicable based on the series types.
-* `accessibilityRole` - Specifies the role of the series, helping screen readers to identify the element appropriately.
-* `focusable` - Allows the series to receive focus, making it accessible via keyboard navigation.
-* `tabIndex` - Specifies the tab order of the series element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesAccessibilityModel/#accessibilitydescription) - Provides a text description for the series root element, enhancing support for screen readers.
+* [`accessibilityDescriptionFormat`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesAccessibilityModel/#accessibilitydescriptionformat) - Specifies a format for the accessibility description of each point in the series, allowing dynamic content. The format string can include the placeholders such as ${series.name}, ${point.x}, ${point.y}, ${point.high}, etc. For example, the format "${series.name} : ${point.x}" displays the series name and x-value of the point in the accessibility description. Data point's values like high, low, open, and close are applicable based on the series types.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesAccessibilityModel/#accessibilityrole) - Specifies the role of the series, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesAccessibilityModel/#focusable) - Allows the series to receive focus, making it accessible via keyboard navigation.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/seriesAccessibilityModel/#tabindex) - Specifies the tab order of the series element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,12 +56,12 @@ The `series` supports the customization of accessibility for data points, allowi
 
 ## Title and subtitle
 
-In the ##Platform_Name## chart control, the `titleStyle` and `subTitleStyle` attributes allow you to customize the accessibility of the chart's title and subtitle. The following `accessibility` properties in `titleStyle` and `subTitleStyle` can be customized for accessibility:
+In the Vue chart component, the [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart#titlestyle) and [`subTitleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart#subtitlestyle) attributes allow you to customize the accessibility of the chart's title and subtitle. The following [`accessibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/titleSettingsModel/#accessibility) properties in [`titleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart#titlestyle) and [`subTitleStyle`](https://ej2.syncfusion.com/vue/documentation/api/chart#subtitlestyle) can be customized for accessibility:
 
-* `accessibilityDescription` - Provides a text description for the chart title and subtitle, enhancing support for screen readers.
-* `accessibilityRole` - Specifies the role of the chart title and subtitle, helping screen readers to identify the element appropriately.
-* `focusable` - Enables or disables the keyboard navigation focus for the title and subtitle.
-* `tabIndex` - Specifies the tab order of the title and subtitle element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the chart title and subtitle, enhancing support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the chart title and subtitle, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Enables or disables the keyboard navigation focus for the title and subtitle.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the title and subtitle element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -76,12 +76,12 @@ In the ##Platform_Name## chart control, the `titleStyle` and `subTitleStyle` att
 
 ## Annotations
 
-The `annotations` property allows you to add annotations to the chart in specific regions. The following `accessibility` properties in `annotations` can be customized for accessibility:
+The [`annotations`](https://ej2.syncfusion.com/vue/documentation/api/chart#annotations) property allows you to add annotations to the chart in specific regions. The following [`accessibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/chartAnnotationSettingsModel/#accessibility) properties in [`annotations`](https://ej2.syncfusion.com/vue/documentation/api/chart#annotations) can be customized for accessibility:
 
-* `accessibilityDescription` - Provides a text description for the annotation, enhancing support for screen readers.
-* `accessibilityRole` - Specifies the role of the annotation, helping screen readers to identify the element appropriately.
-* `focusable` - Specifies whether annotations are focusable via keyboard navigation.
-* `tabIndex` - Specifies the tab order of the annotation element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the annotation, enhancing support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the annotation, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Specifies whether annotations are focusable via keyboard navigation.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the annotation element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -96,12 +96,12 @@ The `annotations` property allows you to add annotations to the chart in specifi
 
 ## Trendline
 
-The `trendlines` property allows you to display trends in the data. The following `accessibility` properties in `trendlines` can be customized for accessibility:
+The [`trendlines`](https://ej2.syncfusion.com/vue/documentation/api/chart#trendlinemodule) property allows you to display trends in the data. The following [`accessibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/trendlineModel/#accessibility) properties in [`trendlines`](https://ej2.syncfusion.com/vue/documentation/api/chart#trendlinemodule) can be customized for accessibility:
 
-* `accessibilityDescription` - Provides a text description for the trendline, enhancing support for screen readers.
-* `accessibilityRole` - Specifies the role of the trendline, helping screen readers to identify the element appropriately.
-* `focusable` - Specifies whether trendlines are focusable via keyboard navigation.
-* `tabIndex` - Specifies the tab order of the trendline element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the trendline, enhancing support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the trendline, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Specifies whether trendlines are focusable via keyboard navigation.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the trendline element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -116,12 +116,12 @@ The `trendlines` property allows you to display trends in the data. The followin
 
 ## Zooming
 
-The `zoomSettings` attributes allow you to adjust the chart's zooming capability. The following `accessibility` properties in `zoomSettings` offer the parameters for accessibility customization:
+The [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#zoomsettings) attributes allow you to adjust the chart's zooming capability. The following [`accessibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#accessibility) properties in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#zoomsettings) offer the parameters for accessibility customization:
 
-* `accessibilityDescription` - Provides a text description for the zoom toolkit items, enhancing support for screen readers.
-* `accessibilityRole` - Specifies the role of the zoom toolkit items, helping screen readers to identify the element appropriately.
-* `focusable` - Specifies whether zoom toolkit items are focusable via keyboard navigation.
-* `tabIndex` - Specifies the tab order of the zooming element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the zoom toolkit items, enhancing support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the zoom toolkit items, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Specifies whether zoom toolkit items are focusable via keyboard navigation.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the zooming element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -136,12 +136,12 @@ The `zoomSettings` attributes allow you to adjust the chart's zooming capability
 
 ## Technical indicators
 
-The `indicators` property allows you to analyze the trends and patterns in the data. The following `accessibility` properties in `indicators` can be customized for accessibility:
+The [`indicators`](https://ej2.syncfusion.com/vue/documentation/api/chart#indicators) property allows you to analyze the trends and patterns in the data. The following [`accessibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/technicalIndicatorModel/#accessibility) properties in [`indicators`](https://ej2.syncfusion.com/vue/documentation/api/chart#indicators) can be customized for accessibility:
 
-* `accessibilityDescription` - Provides a text description for the indicators, enhancing support for screen readers.
-* `accessibilityRole` - Specifies the role of the indicators, helping screen readers to identify the element appropriately.
-* `focusable` - Specifies whether indicators are focusable via keyboard navigation.
-* `tabIndex` - Specifies the tab order of the indicators element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the indicators, enhancing support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the indicators, helping screen readers to identify the element appropriately.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Specifies whether indicators are focusable via keyboard navigation.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the indicators element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -156,12 +156,12 @@ The `indicators` property allows you to analyze the trends and patterns in the d
 
 ## Legend
 
-The `legendSettings` provide information about the series shown in the chart. The following `accessibility` properties in `legendSettings` can be used to alter the accessibility of the chart's legend:
+The [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#legendsettings) provide information about the series shown in the chart. The following [`accessibility`](https://ej2.syncfusion.com/vue/documentation/api/chart/legendSettingsModel/#accessibility) properties in [`legendSettings`](https://ej2.syncfusion.com/vue/documentation/api/chart#legendsettings) can be used to alter the accessibility of the chart's legend:
 
-* `accessibilityDescription` - Provides a text description for the legend root element, enhancing support for screen readers.
-* `accessibilityRole` - Specifies the role of the legend items to screen readers, providing appropriate context.
-* `focusable` - Specifies whether legend items are focusable via keyboard navigation.
-* `tabIndex` - Specifies the tab order of the legend element, enabling efficient keyboard navigation.
+* [`accessibilityDescription`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilitydescription) - Provides a text description for the legend root element, enhancing support for screen readers.
+* [`accessibilityRole`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#accessibilityrole) - Specifies the role of the legend items to screen readers, providing appropriate context.
+* [`focusable`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#focusable) - Specifies whether legend items are focusable via keyboard navigation.
+* [`tabIndex`](https://ej2.syncfusion.com/vue/documentation/api/chart/accessibilityModel/#tabindex) - Specifies the tab order of the legend element, enabling efficient keyboard navigation.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -406,6 +406,10 @@ a.sidebar-brand {
   background-color: #eee;
 }
 
+#default-sidebar{
+  margin-top: 100px;
+}
+
 span.sf-icon-down.icon {
   font-size: 12px;
 }

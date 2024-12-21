@@ -60,7 +60,7 @@ property of the `crosshairTooltip` is used to customize the background color and
 
 **Snap to data**
 
-Enabling the `snapToData` property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
+Enabling the [`snapToData`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettingsModel/#snaptodata) property in the crosshair aligns it with the nearest data point instead of following the exact mouse position.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
