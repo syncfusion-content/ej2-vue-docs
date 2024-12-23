@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in Vue Timeline component
 
-You can customize the Timeline items dot size, connectors, dot borders, dot outer space and more to personalize its appearance. This section explains the different ways for styling the items.
+You can customize the Timeline items' dot size, connectors, dot borders, dot outer space, and more to personalize their appearance. This section explains the different ways for styling the items.
 
 ## Connector styling
 
@@ -48,7 +48,7 @@ You can also apply unique styles to individual connectors, to differentiate spec
 
 ### Dot color
 
-You can modify the color of the dots to highlight the specific Timeline items.
+You can modify the color of the dots to highlight specific Timeline items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -78,7 +78,7 @@ You can adjust the size of the dot to make it larger or smaller by using the `--
 
 ### Dot shadow
 
-You can add shadow effects to the Timeline dots to make it feel visually engaging by using the `--dot-outer-space` & `--dot-border` variables.
+You can add shadow effects to the Timeline dots to make them visually engaging by using the `--dot-outer-space` & `--dot-border` variables.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -108,7 +108,7 @@ You can achieve the desired dot variant by customizing the border, outline and b
 
 ### Dot outline
 
-By adding the `e-outline` class to the Timeline `cssClass` property it enables the dots to have an outline state.
+By adding the `e-outline` class to the Timeline [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/timeline/#cssclass) property, you enable the dots to have an outline state.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

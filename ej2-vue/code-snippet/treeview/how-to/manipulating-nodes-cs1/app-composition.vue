@@ -1,10 +1,11 @@
 <template>
     <div id="app">
         <div class="control_wrapper">
-            <ejs-treeview id='treeview' ref="treeViewInstance" :fields="fields">
-            </ejs-treeview>
-            <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Add parent"></ejs-button>
-            <ejs-button id="button2" cssClass="e-primary inline-element right" v-on:click="btnClick2" content="Add child"></ejs-button>
+            <ejs-treeview id='treeview' ref="treeview"  :fields="fields"></ejs-treeview>
+        </div>
+        <div id="btn">
+            <ejs-button id="button1" ref="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Add parent"></ejs-button>
+            <ejs-button id="button2" ref="button2" cssClass="e-primary inline-element right" v-on:click="btnClick2" content="Add child"></ejs-button>        
         </div>
     </div>
 </template>
@@ -25,7 +26,7 @@ var dataSource = [
     { id: 10, pid: 7, name: 'Child 3' },
 ];
 
-const fields = { dataSource: dataSource, id: 'id', text: 'name', child: 'subChild', htmlAttributes: 'hasAttribute' };
+const fields = { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' };
 
 const btnClick1 = () => {
     treeViewInstance.addNodes([
@@ -56,5 +57,8 @@ const btnClick2 = () => {
     width: 350px;
     margin: 0 auto;
 }
-
+#btn{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
 </style>

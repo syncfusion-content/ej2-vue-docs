@@ -9,20 +9,15 @@ new Vue({
 	template: `
   <div id="app">
     <div class="control_wrapper">
-        <ejs-treeview id='treeview' ref="treeview" :fields="fields"></ejs-treeview>
-            <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Refresh node"></ejs-button>        
+        <ejs-treeview id='treeview' ref="treeview" :fields="fields"></ejs-treeview></div>
+        <div id="btn">
+            <ejs-button id="button1" cssClass="e-primary inline-element right" content="Refresh node" v-on:click.native='btnClick'></ejs-button>        
     </div>
   </div>
 `,
 
   data () {
-    var demoVue = createApp().component("demo", {
-        data() {
-            return {
-                data: {}
-            };
-        }
-    });
+    
       var dataSource =  [
         { id: 1, name: 'Parent 1', hasChild: true, expanded: true },
             { id: 2, pid: 1, name: 'Child 1' },
@@ -34,14 +29,14 @@ new Vue({
             { id: 10, pid: 7, name: 'Child 3' },
     ];
     return {
-        fields : { dataSource: dataSource, id: 'id', text: 'name', child: 'subChild' },        
+      fields : { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' },       
     }
   },
-   methods: {
-        btnClick1: function () {
-            var nodeData = this.$refs.treeview.getTreeData('4');
-            nodeData[0].name = 'Node refreshed';
-            this.$refs.treeview.refreshNode('4', nodeData);
-        },
+  methods: {
+    btnClick: function (event) {
+      var nodeData = this.$refs.treeview.getTreeData('4');
+      nodeData[0].name = 'Node refreshed';
+      this.$refs.treeview.refreshNode('4', nodeData);
     }
+  }
 });

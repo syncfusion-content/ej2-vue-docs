@@ -1,12 +1,12 @@
 <template>
-  <div id='container' style="height: 380px; width: 450px;">
+  <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <button id="updateMessage" style="margin-bottom: 10px;" @click="buttonClick" class="e-btn e-primary">Update Message</button>
     <ejs-chatui height="360px" ref="chatInstance" :user="currentUser">
-      <ejs-messages>
-        <ejs-message :author="currentUser" text="Hi Michale, are we on track for the deadline?" id="msg1"></ejs-message>
-        <ejs-message :author="michaleUser" text="Yes, the design phase is complete." id="msg2"></ejs-message>
-        <ejs-message :author="currentUser" text="I’ll review it and send feedback by today." id="msg3"></ejs-message>
-      </ejs-messages>
+      <e-messages>
+        <e-message :author="currentUser" text="Hi Michale, are we on track for the deadline?" id="msg1"></e-message>
+        <e-message :author="michaleUser" text="Yes, the design phase is complete." id="msg2"></e-message>
+        <e-message :author="currentUser" text="I’ll review it and send feedback by today." id="msg3"></e-message>
+      </e-messages>
     </ejs-chatui>
   </div>
 </template>
@@ -17,8 +17,8 @@ import { ChatUIComponent, MessagesDirective, MessageDirective } from "@syncfusio
 export default {
   components: {
     'ejs-chatui': ChatUIComponent,
-    'ejs-messages': MessagesDirective,
-    'ejs-message': MessageDirective
+    'e-messages': MessagesDirective,
+    'e-message': MessageDirective
   },
   data() {
     return {

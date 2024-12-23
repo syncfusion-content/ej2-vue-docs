@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Check uncheck the checkbox on clicking the tree node text in Vue Treeview component | Syncfusion
+title: Toggle Checkbox on text click in Vue Treeview Component | Syncfusion
 description: Learn here all about Check uncheck the checkbox on clicking the tree node text in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
 control: Check uncheck the checkbox on clicking the tree node text 
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Check uncheck the checkbox on clicking the tree node text in Vue Treeview component
 
-You can check and uncheck the checkboxes of tree view by clicking the tree node using the `nodeClicked` event of TreeView.
+You can toggle the checkboxes in the TreeView by clicking on the tree node text. This can be achieved using the [`nodeClicked`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodeclicked) event of the TreeView.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

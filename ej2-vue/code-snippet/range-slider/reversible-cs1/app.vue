@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-slider id='reverse' :orientation="orientation" :type="type" :min="min" :max="max" :tooltip="tooltip"
+    <ejs-slider id='reverse' :orientation="orientation"  :value="value" :type="type" :min="min" :max="max" :tooltip="tooltip"
       :ticks="ticks"></ejs-slider>
   </div>
 </template>

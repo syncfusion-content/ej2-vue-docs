@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize slider limits in Vue Range slider component
 
-Slider appearance can be customized via CSS. By overriding the slider CSS classes, the slider limit bar can be customized. Here, the limit bar is customized with different background color. By default, the slider has class `e-limits` for limits bar. You can override the class with our own color values as given in the following code snippet.
+The slider's appearance can be customized via CSS. By overriding the slider's CSS classes, the slider limit bar can be customized. Here, the limit bar is customized with a different background color. By default, the slider has a class `e-limits` for the limits bar. You can override this class with your own color values as shown in the following code snippet:
 
 ```
 .e-slider-container.e-horizontal .e-limits {

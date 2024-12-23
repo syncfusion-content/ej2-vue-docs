@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customize slider thumb in Vue Range slider component
 
-Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the thumb. By default, slider has unique class `e-handle` for slider thumb. You can override the following class as per your requirement. Here, in the sample, the slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
+The slider's appearance can be customized through CSS. By overriding the slider's CSS classes, you can customize the thumb. By default, the slider has a unique class `e-handle` for the slider thumb. You can override this class as per your requirement. In the sample, the slider thumb has been customized to square, circle, and oval shapes, and its background image has also been customized.
 
 ```ts
 .e-control.e-slider .e-handle {

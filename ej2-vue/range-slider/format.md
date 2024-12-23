@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Format in Vue Range slider component
 
-The `format` feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
+The [`format`](https://ej2.syncfusion.com/vue/documentation/api/slider/tooltipDataModel/#format) feature is used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
 
-* Use the [format](https://ej2.syncfusion.com/vue/documentation/api/slider/tooltipDataModel/#format) API of slider which utilizes our [Internationalization](../common/internationalization/) to format values.
+* Use the [`format`](https://ej2.syncfusion.com/vue/documentation/api/slider/tooltipDataModel/#format) API of slider which utilizes our [`Internationalization`](../common/internationalization/) to format values.
 
-* Customize using the events namely `renderingTicks` and `tooltipChange`.
+* Customize using the events namely [`renderingTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider#renderingticks) and [`tooltipChange`](https://ej2.syncfusion.com/vue/documentation/api/slider#tooltipchange).
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ The `format` feature used to customize the units of Slider values to desired for
 
 ## Using format API
 
-In this method, we have different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and `#` specifiers. In this below example, we have formatted the `ticks` and `tooltip` values into percentage.
+This method offers different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and `#` specifiers. In the example below, we have formatted the [`ticks`](https://ej2.syncfusion.com/vue/documentation/api/slider#ticks) and [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/slider#tooltip) values into percentage.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -44,7 +44,7 @@ In this method, we have different predefined formatting styles like Numeric (N),
 
 ## Using Events
 
-In this method, we will be retrieving the values from the slider events then process them to desired formatted the values. In this sample we have customized the `ticks` values into weekdays as one formatting and `tooltip` values into day of the week as another formatting.
+In this method, we retrieve the values from the slider events then process them to achieve the desired formatted values. In this sample, we have customized the [`ticks`](https://ej2.syncfusion.com/vue/documentation/api/slider#ticks) values into weekdays as one formatting and [`tooltip`](https://ej2.syncfusion.com/vue/documentation/api/slider#tooltip) values into day of the week as another formatting.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

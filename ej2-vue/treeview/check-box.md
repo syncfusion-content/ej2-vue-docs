@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Check box in Vue Treeview component
 
-The TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the [showCheckBox](https://ej2.syncfusion.com/vue/documentation/api/treeview/#showcheckbox) property. When this property is enabled, checkboxappears before each TreeView node text.
+The TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the [showCheckBox](https://ej2.syncfusion.com/vue/documentation/api/treeview/#showcheckbox) property. When this property is enabled, checkbox appears before each TreeView node text.
 
 * If one of the child nodes is not in a checked state, then the parent node will be in an intermediate state.
 
@@ -18,7 +18,7 @@ The TreeView component allows you to check more than one node in TreeView withou
 
 * If a parent node is checked, then all the child nodes' state will also be checked.
 
-By default, the checkbox state of parent and child nodes are dependent on each other. If you need independent checked state, you can achieve it using the [`autoCheck`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#autocheck) property.
+By default, the checkbox state of parent and child nodes are dependent on each other. If you need an independent checked state, you can achieve it using the [`autoCheck`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#autocheck) property.
 
 Using the [`checkedNodes`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#checkednodes) property, you can set the nodes that need to be checked or get the ID of nodes that are currently checked in the TreeView component.
 
