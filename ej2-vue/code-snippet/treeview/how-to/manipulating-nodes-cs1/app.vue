@@ -1,10 +1,11 @@
 <template>
     <div id="app">
         <div class="control_wrapper">
-            <ejs-treeview id='treeview' ref="treeview"  :fields="fields" :nodeClicked='nodeclicked'>
-                <ejs-button id="button1" ref="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Add parent"></ejs-button>
-                <ejs-button id="button2" ref="button2" cssClass="e-primary inline-element right" v-on:click="btnClick2" content="Add child"></ejs-button>        
-            </ejs-treeview>
+            <ejs-treeview id='treeview' ref="treeview"  :fields="fields"></ejs-treeview>
+        </div>
+        <div id="btn">
+            <ejs-button id="button1" ref="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Add parent"></ejs-button>
+            <ejs-button id="button2" ref="button2" cssClass="e-primary inline-element right" v-on:click="btnClick2" content="Add child"></ejs-button>        
         </div>
     </div>
 </template>
@@ -45,13 +46,7 @@ export default {
             { id: 24, pid: 21, name: 'Band T-Shirts' },
         ];
         return {
-            fields: {
-                dataSource: dataSource,
-                id: 'id',
-                parentID: 'pid',
-                text: 'name',
-                hasChildren: 'hasChild',
-            },
+            fields: { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' },
         };
     },
     methods: {
@@ -86,4 +81,8 @@ export default {
     width: 350px;
     margin: 0 auto;
 }
+#btn{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
 </style>

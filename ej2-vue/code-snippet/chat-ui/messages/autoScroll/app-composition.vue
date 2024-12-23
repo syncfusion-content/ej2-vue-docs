@@ -1,20 +1,20 @@
 <template>
-  <div id='container' style="height: 380px; width: 450px;">
+  <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui ref="aiassist" :user="currentUser" :auto-scroll-to-bottom="true">
-      <ejs-messages>
-        <ejs-message :author="currentUser" text="Want to get coffee tomorrow?"></ejs-message>
-        <ejs-message :author="michaleUser" text="Sure! What time?"></ejs-message>
-        <ejs-message :author="currentUser" text="How about 10 AM?"></ejs-message>
-        <ejs-message :author="michaleUser" text="Perfect"></ejs-message>
-        <ejs-message :author="currentUser" text="See you!"></ejs-message>
-        <ejs-message :author="michaleUser" text="Bye!"></ejs-message>
-      </ejs-messages>
+      <e-messages>
+        <e-message :author="currentUser" text="Want to get coffee tomorrow?"></e-message>
+        <e-message :author="michaleUser" text="Sure! What time?"></e-message>
+        <e-message :author="currentUser" text="How about 10 AM?"></e-message>
+        <e-message :author="michaleUser" text="Perfect"></e-message>
+        <e-message :author="currentUser" text="See you!"></e-message>
+        <e-message :author="michaleUser" text="Bye!"></e-message>
+      </e-messages>
     </ejs-chatui>
   </div>
 </template>
 
 <script setup>
-import { ChatUIComponent as EjsChatui, MessagesDirective as EjsMessages, MessageDirective as EjsMessage } from "@syncfusion/ej2-vue-interactive-chat";
+import { ChatUIComponent as EjsChatui, MessagesDirective as EMessages, MessageDirective as EMessage } from "@syncfusion/ej2-vue-interactive-chat";
 
 const currentUser = {
   id: "user1",

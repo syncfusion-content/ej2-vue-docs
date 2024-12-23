@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Template in Vue Treeview component
 
-The TreeView component allows you to customize the look of TreeView nodes by using the [nodeTemplate](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodetemplate)
-property. This property accepts either `template string` or HTML element ID.
+The TreeView component allows you to customize the look of the TreeView nodes by using the [nodeTemplate](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodetemplate) property. This property accepts an HTML element ID or `template string`.
 
 In the following sample, employee information such as employee photo, name, and designation have been included using the `nodeTemplate` property.
 

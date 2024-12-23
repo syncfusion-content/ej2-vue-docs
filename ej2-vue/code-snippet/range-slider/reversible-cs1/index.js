@@ -8,23 +8,32 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-    <ejs-slider id='reverse' :orientation="orientation" :type="type" :min="max" :max="min" :tooltip="tooltip" :ticks="ticks" ></ejs-slider>
+    <ejs-slider id="reverse"
+                    ref="reverseSlider"
+                    :min="min"
+                    :max="max"
+                    :tooltip="tooltip"
+                    v-model="reversevalue"
+                    :type="rangetype"
+                    :orientation="orientation"
+                    :ticks="ticks" ></ejs-slider>
   </div>
 `,
 
   data() {
     return {
-      ticks: { placement: 'Before', largeStep: 20, smallStep: 5, showSmallTicks: true },
-      tooltip: { placement: 'Before', isVisible: true, showOn: 'Always' },
-      type: 'Range',
-      // vertical orientation
-      orientation: 'Vertical',
-      // Set maximum value to min
+      reversevalue: [30, 70],
       min: 100,
-      // Set minimum value to max
       max: 0,
-      // Slider current value
-      value: [30, 70]        
+      rangetype: 'Range',
+      orientation: 'Vertical',
+      ticks: {
+        placement: 'Before',
+        largeStep: 20,
+        smallStep: 5,
+        showSmallTicks: true,
+      },
+      tooltip: { isVisible: true, placement: 'Before' },      
     };
   }
 

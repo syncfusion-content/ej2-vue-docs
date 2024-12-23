@@ -24,4 +24,4 @@ You can create a Range Slider rendered with values in reverse order by setting t
 {% previewsample "page.domainurl/code-snippet/range-slider/reversible-cs1" %}
 
 
-> Reversible order can be achieved with [Horizontal](https://helpej2.syncfusion.com/vue/documentation/api/slider/sliderOrientation/) orientation Range Slider by setting [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/slider/#enablertl) as true.
+> Reversible order can be achieved with [Horizontal](https://ej2.syncfusion.com/vue/documentation/api/slider/sliderOrientation/) orientation Range Slider by setting [enableRtl](https://ej2.syncfusion.com/vue/documentation/api/slider/#enablertl) as true.

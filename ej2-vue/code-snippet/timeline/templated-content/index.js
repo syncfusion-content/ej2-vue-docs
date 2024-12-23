@@ -13,7 +13,7 @@ new Vue({
       <e-item :content="'contentTemplate'" />
       <e-item :content="'contentTemplate'" />
       <e-item :content="'contentTemplate'" />
-      <e-item content='order id' />
+      <e-item content='Out for Delivery' />
     </e-items>
     <template v-slot:contentTemplate="{ data }">
       <div class="content-container">

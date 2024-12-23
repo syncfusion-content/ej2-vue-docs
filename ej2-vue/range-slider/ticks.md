@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Ticks in Vue Range slider component
 
-The Ticks in Slider supports you to easily identify the current value/values of the Slider. It contains `smallStep` and `largeStep`. The value of the major ticks alone will be displayed in the slider. In order to enable/disable the small ticks, use the `showSmallTicks` property.
+The [`ticks`](https://ej2.syncfusion.com/vue/documentation/api/slider#ticks) in Slider help you easily identify the current value/values of the Slider. It contains [`smallStep`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksDataModel/#smallstep) and [`largeStep`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksDataModel/#largestep). Only the values of major ticks will be displayed on the slider. In order to enable/disable the small ticks, use the [`showSmallTicks`](https://ej2.syncfusion.com/vue/documentation/api/slider/ticksDataModel/#showsmallticks) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -25,7 +25,7 @@ The Ticks in Slider supports you to easily identify the current value/values of 
 
 ## Step
 
-When the Slider is moved, it increases/decreases the value based on the step value. By default, the value is increased/decreased by 1. Use the `step` property to change the increment step value.
+When the Slider is moved, it increases/decreases the value based on the step value. By default, the value increases/decreases by 1. Use the [`step`](https://ej2.syncfusion.com/vue/documentation/api/slider#step) property to change the increment step value.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -40,7 +40,7 @@ When the Slider is moved, it increases/decreases the value based on the step val
 
 ## Min and Max
 
-Enables the minimum/starting and maximum/ending value of the Slider, by using the `min` and `max` property. By default, the minimum value is 1 and maximum value is 100. In the following sample the slider is rendered with the min value as 100 and max value as 1000.
+Enable the minimum/starting and maximum/ending values of the Slider, by using the [`min`](https://ej2.syncfusion.com/vue/documentation/api/slider#min) and [`max`](https://ej2.syncfusion.com/vue/documentation/api/slider#max) property. By default, the minimum value is 1 and maximum value is 100. In the following example, the slider is rendered with a minimum value of 100 and a maximum value of 1000.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

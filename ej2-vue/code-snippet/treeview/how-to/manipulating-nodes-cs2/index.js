@@ -10,11 +10,12 @@ new Vue({
 	template: `
   <div id="app">
     <div class="control_wrapper">
-        <ejs-treeview id='treeview' ref="treeview" :fields="fields" :nodeClicked='nodeclicked'>
-            <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Add parent"></ejs-button>
-            <ejs-button id="button2" cssClass="e-primary inline-element right" v-on:click="btnClick2" content="Add child"></ejs-button>        
-        </ejs-treeview>
+        <ejs-treeview id='treeview' ref="treeview" :fields="fields"></ejs-treeview>
     </div>
+    <div id="btn">
+        <ejs-button id="button1" cssClass="e-primary inline-element right"  content="Remove parent" v-on:click.native='btnClick1'></ejs-button>
+        <ejs-button id="button2" cssClass="e-primary inline-element right" content="Remove child" v-on:click.native='btnClick2'></ejs-button>        
+     </div> 
   </div>
 `,
 
@@ -30,16 +31,15 @@ new Vue({
         { id: 10, pid: 7, name: 'Child 3' },
     ];
     return {
-        fields : { dataSource: dataSource, id: 'id', text: 'name', child: 'subChild'},        
+      fields : { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' },        
     }
   },
-   methods: {
-        btnClick1: function () {
-          this.$refs.treeview.removeNodes(['7']);
-        },
-        btnClick2: function () {
-          this.$refs.treeview.removeNodes(['3','4']);
-        }, 
+  methods: {
+    btnClick1: function (event) {
+      this.$refs.treeview.removeNodes(['7']);
+    },
+    btnClick2: function (event) {
+      this.$refs.treeview.removeNodes(['3', '4']);
     }
-
+  }
 });

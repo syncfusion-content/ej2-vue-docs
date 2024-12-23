@@ -3,8 +3,10 @@
     <div id="app">
         <div class="control_wrapper">
             <ejs-treeview id='treeview' ref="treeview" :fields="fields"></ejs-treeview>
-            <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Refresh node"></ejs-button>
-        </div>
+            </div>
+            <div id="btn">
+                <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Refresh node"></ejs-button>
+            <div>
     </div>
 </template>
 <script>
@@ -30,7 +32,7 @@ export default {
             { id: 10, pid: 7, name: 'Child 3' },
         ];
         return {
-            fields: { dataSource: dataSource, id: 'id', text: 'name', child: 'subChild' },                    
+            fields : { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' },                    
         }
     },
     methods: {
@@ -62,5 +64,9 @@ export default {
     margin: 0 auto;
 }
 
+#btn{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
 </style>
 {% endraw %}

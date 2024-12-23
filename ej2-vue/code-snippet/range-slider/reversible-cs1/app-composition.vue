@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-slider id='reverse' :orientation="orientation" :type="type" :min="min" :max="max" :tooltip="tooltip"
+    <ejs-slider id='reverse' :orientation="orientation"  :value="value" :type="type" :min="min" :max="max" :tooltip="tooltip"
       :ticks="ticks"></ejs-slider>
   </div>
 </template>
@@ -17,6 +17,8 @@ const orientation = 'Vertical';
 const min = 100;
 // Set minimum value to max
 const max = 0;
+// Slider current value
+const value: [30, 70]
 
 </script>
 <style>

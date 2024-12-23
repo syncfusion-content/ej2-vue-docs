@@ -2,8 +2,8 @@
     <div id="app">
         <div class="control_wrapper">
             <ejs-treeview id='treeview' ref="treeViewInstance" :fields="fields" :allowEditing='true'></ejs-treeview> 
-            <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Update node"></ejs-button>
         </div>
+        <div id="btn"><ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Update node"></ejs-button></div>
     </div>
 </template>
 <script setup>
@@ -23,7 +23,7 @@ var dataSource = [
     { id: 10, pid: 7, name: 'Child 3' },
 ];
 
-const fields = { dataSource: dataSource, id: 'id', text: 'name', child: 'subChild' };
+const fields = { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' };
 
 const btnClick1 = () => {
     treeViewInstance.updateNode('4', 'Node updated');
@@ -49,5 +49,8 @@ const btnClick1 = () => {
     width: 350px;
     margin: 0 auto;
 }
-
+#btn{
+        margin-left: 50px;
+        margin-top: 20px;
+    }
 </style>

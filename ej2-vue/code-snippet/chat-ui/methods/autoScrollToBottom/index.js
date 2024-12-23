@@ -5,17 +5,17 @@ Vue.use(ChatUIPlugin);
 new Vue({
 	el: '#app',
 	template: `
-  <div id='container' style="height: 380px; width: 450px;">
+  <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <button id="scrollToBottom" style="margin-bottom: 10px;" @click="buttonClick" class="e-btn e-primary">Scroll To Bottom</button>
     <ejs-chatui height="360px" ref="chatInstance" :user="currentUser">
-      <ejs-messages>
-        <ejs-message :author="currentUser" text="Want to get coffee tomorrow?"></ejs-message>
-        <ejs-message :author="michaleUser" text="Sure! What time?"></ejs-message>
-        <ejs-message :author="currentUser" text="How about 10 AM?"></ejs-message>
-        <ejs-message :author="michaleUser" text="Perfect"></ejs-message>
-        <ejs-message :author="currentUser" text="See you!"></ejs-message>
-        <ejs-message :author="michaleUser" text="Bye!"></ejs-message>
-      </ejs-messages>
+      <e-messages>
+        <e-message :author="currentUser" text="Want to get coffee tomorrow?"></e-message>
+        <e-message :author="michaleUser" text="Sure! What time?"></e-message>
+        <e-message :author="currentUser" text="How about 10 AM?"></e-message>
+        <e-message :author="michaleUser" text="Perfect"></e-message>
+        <e-message :author="currentUser" text="See you!"></e-message>
+        <e-message :author="michaleUser" text="Bye!"></e-message>
+      </e-messages>
     </ejs-chatui>
   </div>
 `,
