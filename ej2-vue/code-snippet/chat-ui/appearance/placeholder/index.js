@@ -5,13 +5,13 @@ Vue.use(ChatUIPlugin);
 new Vue({
 	el: '#app',
 	template: `
-  <div id='container' style="height: 380px; width: 450px;">
+  <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui placeholder="Start typing..." :user="currentUser">
-      <ejs-messages>
-        <ejs-message :author="currentUser" text="Hi Michale, are we on track for the deadline?"></ejs-message>
-        <ejs-message :author="michaleUser" text="Yes, the design phase is complete."></ejs-message>
-        <ejs-message :author="currentUser" text="I’ll review it and send feedback by today."></ejs-message>
-      </ejs-messages>
+      <e-messages>
+        <e-message :author="currentUser" text="Hi Michale, are we on track for the deadline?"></e-message>
+        <e-message :author="michaleUser" text="Yes, the design phase is complete."></e-message>
+        <e-message :author="currentUser" text="I’ll review it and send feedback by today."></e-message>
+      </e-messages>
     </ejs-chatui>
   </div>
 `,

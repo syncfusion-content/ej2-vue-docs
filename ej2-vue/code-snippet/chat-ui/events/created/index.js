@@ -5,7 +5,7 @@ Vue.use(ChatUIPlugin);
 new Vue({
 	el: '#app',
 	template: `
-  <div id='container' style="height: 380px; width: 450px;">
+  <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui :created="created"></ejs-chatui>
   </div>
 `,

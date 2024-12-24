@@ -1,5 +1,5 @@
 <template>
-  <div id='container' style="height: 380px; width: 450px;">
+  <div id='container' style="height: 380px; width: 450px; margin: 0 auto;">
     <ejs-chatui emptyChatTemplate="emptyChatTemplate">
       <template v-slot:emptyChatTemplate="">
         <div class="empty-chat-text">
@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { ChatUIComponent as EjsChatui, MessagesDirective as EjsMessages, MessageDirective as EjsMessage } from "@syncfusion/ej2-vue-interactive-chat";
+import { ChatUIComponent as EjsChatui, MessagesDirective as EMessages, MessageDirective as EMessage } from "@syncfusion/ej2-vue-interactive-chat";
 
 const currentUser = {
   id: "user1",
