@@ -12,8 +12,7 @@ domainurl: ##DomainURL##
 
 ## Height and width
 
-The Tooltip can either be assigned auto height and width values or specific pixel values. The `width` and `height` properties are used to
-set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
+The Tooltip can either be assigned Auto height and width values or specific pixel values. The [`width`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#width) and [`height`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#height) properties are used to set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
 
 The following sample explains how to set dimensions for the Tooltip.
 
@@ -30,7 +29,7 @@ The following sample explains how to set dimensions for the Tooltip.
 
 ## Scroll mode
 
-When `height` is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
+When [`height`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#height) is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode is enabled.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -43,4 +42,4 @@ When `height` is specified with a certain pixel value and the Tooltip content ov
         
 {% previewsample "page.domainurl/code-snippet/tooltip/dimensions/scroll-mode-cs1" %}
 
-> The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the `isSticky` property to true.
+> The scrolling mode is best observed when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the [`isSticky`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#issticky) property to true.

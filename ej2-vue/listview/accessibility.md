@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Accessibility in Vue Listview component
 
-The ListView component followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
+The ListView component has followed the accessibility guidelines and standards, including [ADA](https://www.ada.gov/), [Section 508](https://www.section508.gov/), [WCAG 2.2](https://www.w3.org/TR/WCAG22/) standards, and [WCAG roles](https://www.w3.org/TR/wai-aria/#roles) that are commonly used to evaluate accessibility.
 
 The accessibility compliance for the ListView component is outlined below.
 
@@ -49,7 +49,7 @@ The ListView component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/p
 | `role=presentation` | Specifies the role of non selectable list element. |
 | `role=checkbox` | Indicates checkbox control along with listitem element. |
 | `aria-checked` | Indicates the current checked state of checkbox. |
-| `aria-label` | Provides an accessible name for the ListView Checkbox. |
+| `aria-label` | Provides an accessible name for the ListView checkbox. |
 | `aria-disabled` | Indicates element is perceivable but disabled. |
 
 ## Keyboard interaction

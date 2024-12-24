@@ -10,13 +10,13 @@ domainurl: ##DomainURL##
 
 # Customizing templates in Vue Listview component
 
-The ListView component is designed to customize each list items and group title.
+The ListView component is designed to allow customization of each list item and group title.
 
 ## Header template
 
 The ListView header can be customized with the help of [`headerTemplate`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#headertemplate) property.
 
-To customize header template in your application, set your customized template string to `headerTemplate` property along with [`showHeader`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#showheader) property as `true` to display the ListView header.
+To customize the header template in your application, set your customized template string to `headerTemplate` property along with [`showHeader`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#showheader) property as `true` to display the ListView header.
 
 ```ts
 
@@ -61,7 +61,7 @@ var demoVue = Vue.component("demo", {
 
 ```
 
-We provided the following built-in CSS classes to customize the list-items. Refer to the following table.
+We provide the following built-in CSS classes to customize the list items. Refer to the following table.
 
 | CSS class        | Description           |
 | ------------- |-------------|
@@ -78,7 +78,6 @@ In the following example, we have customized list items like `Contact` app with 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
-{%  raw %}
 
 <template>
   <div class="control-section">
@@ -428,12 +427,11 @@ var tempVue = Vue.component("demo", {
 
 ```
 
-In the below example, we have grouped Listview based on the category. The category of each list item should be mapped with [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have alsodisplayed  grouped list items count in the group list header.
+In the below example, we have grouped Listview based on the category. The category of each list item should be mapped to [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed  grouped list items count in the group list header.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
-{%  raw %}
 
 <template>
   <div class="control-section">

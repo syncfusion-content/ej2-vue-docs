@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display tooltip on svg and canvas elements in Vue Tooltip component | Syncfusion
+title: Tooltip on SVG and canvas in Vue Tooltip component | Syncfusion
 description: Learn here all about Display tooltip on svg and canvas elements in Syncfusion Vue Tooltip component of Syncfusion Essential JS 2 and more.
 control: Display tooltip on svg and canvas elements 
 platform: ej2-vue
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Display tooltip on svg and canvas elements in Vue Tooltip component
 
-Tooltip can be displayed on both SVG and Canvas elements. You can directly attach the `<svg>` or `<canvas>` elements to show tooltips on data visualization elements.
+Tooltip can be displayed on both the SVG and Canvas elements. You can directly attach the `<svg>` or `<canvas>` elements to show tooltips on data visualization elements.
 
 ## SVG
 
-Create the SVG square element and refer to the following code snippet to render the tooltip on SVG square.
+Create an SVG square element and refer to the following code snippet to render the tooltip on the SVG square.
 
 ```ts
 
@@ -28,7 +28,7 @@ Create the SVG square element and refer to the following code snippet to render 
 
 ## Canvas
 
-Create the canvas circle element and refer to the following code snippet to render the tooltip on Canvas circle.
+Create a canvas circle element and refer to the following code snippet to render the tooltip on the Canvas circle.
 
 ```ts
 

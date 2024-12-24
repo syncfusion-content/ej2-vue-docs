@@ -1,29 +1,3 @@
-
-
-
-</style>
-<script>
-import Vue from 'vue';
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-Vue.use(ButtonPlugin);
-import { TooltipPlugin } from '@syncfusion/ej2-vue-popups';
-Vue.use(TooltipPlugin);
-
-export default {
-  data: function() {
-    return {
-      position: 'BottomCenter',
-      opensOn: 'Click',
-      content: '<iframe src="https://ej2.syncfusion.com/showcase/typescript/expensetracker/#/dashboard"></iframe>'
-    };
-  },
-  methods: {
-  }
-}
-</script>
-<style>
-
-
 #tooltipContent {
     position: relative;
     left: 50%;

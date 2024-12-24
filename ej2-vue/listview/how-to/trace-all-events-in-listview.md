@@ -16,11 +16,11 @@ The ListView component triggers events based on its actions. The events can be u
 
 2. Perform custom operations in `actionBegin`, `actionComplete`, and select events.
 
-3. Provide event log details for `actionBegin` and `actionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource bound successfully.
+3. Provide event log details for `actionBegin` and `actionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource is bound successfully.
 
 4. Get the selected item details from the [`SelectEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/list-view/selectEventArgs/) in the select event, and display the selected list item text in the event trace panel while selecting list items.
 
-5. Use clear button to remove event trace information.
+5. Use the clear button to remove event trace information.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

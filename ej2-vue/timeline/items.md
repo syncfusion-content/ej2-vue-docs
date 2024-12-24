@@ -103,3 +103,14 @@ You can use the [`disabled`](https://ej2.syncfusion.com/vue/documentation/api/ti
 ## CSS class
 
 The [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineItem/#cssclass) property allows you to define a custom class to modify the appearance of the Timeline item.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/timeline/css-class/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/timeline/css-class/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/timeline/css-class" %}

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Load html content via ajax in Vue Listview component
 
-We can set external `HTML` page content as [`template`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) for our `ListView` component by making use of `AJAX` call.
+We can set external `HTML` page content as the [`template`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) for our `ListView` component by making use of `AJAX` call.
 
 ```ts
 
@@ -23,7 +23,7 @@ ajax.send();
 
 ```
 
-In the below sample, we have rendered smartphone settings template from external `HTML` file.
+In the sample below, we have rendered a smartphone settings template from an external `HTML` file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render listview with hyper link navigation in Vue Listview component | Syncfusion
+title: Render hyper link navigation in Vue Listview component | Syncfusion
 description: Learn here all about Render listview with hyper link navigation in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
 control: Render listview with hyper link navigation 
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Render listview with hyper link navigation in Vue Listview component
 
-We can use `anchor` tag along with `href` attribute in our ListView [`template`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property for navigation.
+We can use an `anchor` tag along with the `href` attribute in our ListView's [`template`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property for navigation.
 
 ```ts
 
@@ -25,7 +25,7 @@ var listVue = Vue.component("demo", {
 
 ```
 
-In the below sample, we have rendered `ListView` with search engines URL.
+In the below sample, we have rendered a `ListView` with search engines URL.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
