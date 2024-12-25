@@ -9,9 +9,11 @@ new Vue({
 	template: `
   <div id="app">
     <div class="control_wrapper">
-        <ejs-treeview id='treeview' ref="treeview" :fields="fields" :allowEditing='true'></ejs-treeview>
-            <ejs-button id="button1" cssClass="e-primary inline-element right" v-on:click="btnClick1" content="Update node"></ejs-button>        
+      <ejs-treeview id='treeview' ref="treeview" :fields="fields" :allowEditing='true'></ejs-treeview>
     </div>
+    <div id="btn">
+        <ejs-button id="button1" cssClass="e-primary inline-element right"  content="Update parent" v-on:click.native='btnClick'></ejs-button>    
+     </div> 
   </div>
 `,
 
@@ -27,12 +29,13 @@ new Vue({
         { id: 10, pid: 7, name: 'Child 3' },
     ];
     return {
-        fields : { dataSource: dataSource, id: 'id', text: 'name', child: 'subChild' },
+      fields : { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name',  hasChildren: 'hasChild' },
     }
   },
-   methods: {
-        btnClick1: function () {
-          this.$refs.treeview.updateNode('4', 'Node updated');
-        },
+  methods: {
+    btnClick: function (event) {
+      this.$refs.treeview.updateNode('4', 'Node updated');
     }
+
+  }
 });

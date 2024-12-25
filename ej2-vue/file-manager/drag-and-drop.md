@@ -10,14 +10,14 @@ domainurl: ##DomainURL##
 
 # Drag and drop in Vue File manager component
 
-The file manager allows files or folders to be moved from one folder to another by using the  [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property. It also supports uploading a file by dragging it from Windows Explorer to  FileManager control. You can enable or disable this support by using the [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property of file manager.
+The File manager allows files or folders to be moved from one folder to another by using the  [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property. It also supports uploading files by dragging them from Windows Explorer to the File manager control. You can enable or disable this feature by using the [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property.
 
-The event triggered in drag and drop support are
+The events triggered during drag and drop operations are:
 
-* [fileDragStart](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedragstart) - Triggers when the file/folder dragging is started.
-* [fileDragging](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedragging) - Triggers while dragging the file/folder.
-* [fileDragStop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedragstop) - Triggers when the file/folder is about to be dropped at the target.
-* [fileDropped](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedropped) - Triggers when the file/folder is dropped.
+* [fileDragStart](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedragstart) - Triggered when dragging a file or folder begins.
+* [fileDragging](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedragging) - Triggered while a file or folder is being dragged.
+* [fileDragStop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedragstop) - Triggered when a file or folder is about to be dropped on the target..
+* [fileDropped](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#filedropped) - Triggered when a file or folder is dropped.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -10,11 +10,9 @@ domainurl: ##DomainURL##
 
 # Data binding in Vue Listview component
 
-ListView provides an option to load the data either from local dataSource or remote data services.
-This can be done through the dataSource property that supports the data type of array or [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/).
+The ListView component provides an option to load data either from a local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/).
 
-ListView supports different kind of data services such as OData, OData V4, and Web API, and
-data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
+ListView supports different kinds of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -24,13 +22,13 @@ data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 | isVisible | string | Specifies visibility state of list item. |
 | enabled | string | Specifies enabled state of list item. |
 | iconCss | string | Specifies the icon class of each list item that will be added before to the list item text. |
-| child | string | Specifies child dataSource fields. |
+| child | string | Specifies the field for child dataSource items. |
 | tooltip | string | Specifies tooltip title text field. |
 | groupBy | string | Specifies category of each list item. |
 | sortBy | string | Specifies sorting field, that is used to sort the listview data. |
 | htmlAttributes | string | Specifies list item html attributes field. |
 
-> When complex data bind to ListView, you should map the fields properly. Otherwise, the ListView properties remain as undefined or null.
+> When complex data is bound to ListView, you should map the fields properly. Otherwise, the ListView properties remain as undefined or null.
 
 ## Bind to local data
 
@@ -41,7 +39,7 @@ Local data can be represented in two ways, they are as follows:
 
 ### Array of simple data
 
-ListView supports to load the array of primitive data like string and numbers. Here, both value and text field act as same.
+ListView supports loading an array of primitive data like string and numbers. Here, both `value` and [`text`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#text) field act as same.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,7 +54,7 @@ ListView supports to load the array of primitive data like string and numbers. H
 
 ### Array of JSON data
 
-ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
+ListView can generate its list items through an array of complex data. To make it work properly, you should map the appropriate columns to the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/list-view#fields) property.
 
 In the following example, role column is mapped with the text field.
 
@@ -73,8 +71,7 @@ In the following example, role column is mapped with the text field.
 
 ## Bind to remote data
 
-The ListView supports to retrieve the data from remote data services with the help of DataManager component.
-The Query property allows to fetch data and return it to the ListView from the database.
+The ListView supports retrieving data from remote data services with the help of DataManager component. The Query property allows fetching data and returning it to the ListView from the database.
 
 In the following sample, first 10 Employees from the ListView table are displayed.
 

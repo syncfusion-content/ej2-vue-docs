@@ -32,7 +32,7 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
 .e-dot.custom-image {
-  background-image: url("./dot-image.png");
+  background-image: url(https://ej2.syncfusion.com/demos/src/listview/images/margaret.png);
 }
 
 .e-dot.custom-text::before {

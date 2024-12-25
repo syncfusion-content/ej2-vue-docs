@@ -75,8 +75,8 @@
 
     /* content area styles */
     #main-text.main-content {
-        overflow: hidden;
-    }
+        overflow-x: visible !important;
+      }
 
     #main-text .sidebar-content .line {
         width: 100%;

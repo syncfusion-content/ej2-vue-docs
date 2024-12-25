@@ -34,27 +34,19 @@ export default {
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
 .title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
 }
 
 .sub-title {
-    text-align: center;
-    font-size: 12px;
-    padding: 10px;
-}
-
-.center {
-    text-align: center;
-    display: none;
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
 }
 
 #default-sidebar {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
+  background-color: rgb(25, 118, 210);
+  color: #ffffff;
 }
 </style>

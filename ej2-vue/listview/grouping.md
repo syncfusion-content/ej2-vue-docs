@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Grouping in Vue Listview component
 
-The ListView supports to wrap the nested element into a group based on the category. The category of each list item can be mapped with groupBy field in the data table, that also supports single-level navigation.
+The ListView supports grouping nested elements based on their category. The cars are grouped based on their category by using the [`groupBy`](https://helpej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field in the data table, that also supports single-level navigation.
 
-In the following sample, The cars are grouped based on its category by using the groupBy field.
+In the following sample, The cars are grouped based on its category by using the **groupBy** field.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -27,6 +27,6 @@ In the following sample, The cars are grouped based on its category by using the
 
 ## Customization
 
-The grouping header can be customized by using the groupTemplate property for both inline and fixed group header. The complete customization description and explanation with an example is given in the following link.
+The grouping header can be customized by using the [`groupTemplate`](https://helpej2.syncfusion.com/vue/documentation/api/list-view/#grouptemplate) property for both inline and fixed group header. The complete customization description and explanation with an example is given in the following link.
 
 [Group Template](./customizing-templates#group-template).

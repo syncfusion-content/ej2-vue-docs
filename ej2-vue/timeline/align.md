@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Alignment in Vue Timeline component
 
-You can display the Timeline content `Before`, `After`, `Alternate` and `AlternateReverse` by using the [align](https://ej2.syncfusion.com/vue/documentation/api/timeline#align) property. The oppositeContent will be displayed parallel to the content when configured.
+You can display the Timeline content as `Before`, `After`, `Alternate` and `AlternateReverse` by using the [align](https://ej2.syncfusion.com/vue/documentation/api/timeline#align) property. The oppositeContent will be displayed parallel to the content when configured.
 
 ## Before
 
-In [Before](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAlign/) alignment, for `horizontal` orientation the item content is placed at the top and oppositeContent at the bottom whereas in `vertical`, the content to the left and oppositeContent to the right.
+In [Before](https://ej2.syncfusion.com/vue/documentation/api/timeline/timelineAlign/) alignment, for `horizontal` orientation, the item content is placed at the top and oppositeContent at the bottom. For `vertical` orientation, the content is placed to the left and oppositeContent to the right.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

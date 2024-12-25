@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Fixed sidebar in Vue Sidebar component
 
-The Sidebar does not require any specific style to make it as a fixed one. By default, the Sidebar position will be in fixed state. The following example demonstrates that the Sidebar is rendered with a fixed position. The position of the Sidebar will not change when scrolling the main content area.
+The Sidebar does not require any specific style to make it fixed. By default, the Sidebar position is fixed. The following example demonstrates that the Sidebar is rendered with a fixed position. The Sidebar's position remains constant when scrolling the main content area.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

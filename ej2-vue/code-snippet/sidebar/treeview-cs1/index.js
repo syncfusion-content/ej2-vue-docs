@@ -124,7 +124,7 @@ new Vue({
         return {
             fields: { child: 'nodeChild', dataSource: data, iconCss: 'iconCss' , id: 'nodeId', text: 'nodeText'},
             enableDock: true,
-            dockSize : '44px',
+            dockSize : '47px',
             width : '290px',
             target: '.main-content',
             mediaQuery: '(min-width: 600px)',

@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Style in Vue Range slider component
 
-The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
+The following content provides the exact CSS structure that can be used to modify the control's appearance based on user preferences.
 
 ## Customizing the slider track
 

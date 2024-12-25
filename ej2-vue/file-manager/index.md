@@ -46,7 +46,7 @@ Types of navigation support available in File Manager are:
 
 ### Context Menu
 
-The File Manager control is provided with context-menu support to perform list of file operations with the files and folders. It appears when a file or folder is right-clicked, and it appears with varying options based on the target such as a file or a folder. The context menu items can be customized according to user preference.
+The File Manager component is provided with context-menu support to perform list of file operations with the files and folders. It appears when a file or folder is right-clicked, and it appears with varying options based on the target such as a file or a folder. The context menu items can be customized according to user preference.
 
 ### Toolbar
 
@@ -54,7 +54,7 @@ The toolbar contains the list of tools to perform various operations like file u
 
 ### File Manipulations
 
-* `Multi-Selection` - The file manager control is provided with built-in support for multiple files or folder selection. Multiple file selection will be effective when a single operation like download or delete is performed over multiple files in the file system.
+* `Multi-Selection` - The file manager component is provided with built-in support for multiple files or folder selection. Multiple file selection will be effective when a single operation like download or delete is performed over multiple files in the file system.
 
 * `Sorting` - Files and folders in the file system can be sorted either in the ascending or descending order by clicking the column header. Files and folders can be sorted based on the name, date created, size, and more.
 
@@ -62,4 +62,4 @@ The toolbar contains the list of tools to perform various operations like file u
 
 * Supports right-to-left (RTL) direction alignment for users working in right-to-left languages like Hebrew and Arabic.
 
-* The file manager control uses localization library (l10) to localize the text values. The texts and messages displayed in the user interface can be localized to any desired language as needed.
+* The file manager component uses localization library (l10) to localize the text values. The texts and messages displayed in the user interface can be localized to any desired language as needed.

@@ -65,9 +65,7 @@ const closeClick = () => {
     padding: 20px;
 }
 
-.close-btn,
-.e-listview .e-list-item,
-#default-sidebar {
+.close-btn,.e-listview .e-list-item, #default-sidebar {
     background-color: rgb(20, 118, 210);
     color: #ffffff;
 }
@@ -105,14 +103,12 @@ const closeClick = () => {
     padding: 0;
 }
 
-.e-btn.close-btn :hover {
-    /* csslint allow: adjoining-classes*/
+.e-btn.close-btn :hover { /* csslint allow: adjoining-classes*/
     box-shadow: none;
     background: transparent;
 }
 
-.e-icons.close-icon {
-    /* csslint allow: adjoining-classes*/
+.e-icons.close-icon { /* csslint allow: adjoining-classes*/
     line-height: 2.2;
 }
 
@@ -134,21 +130,8 @@ const closeClick = () => {
     padding: 10px;
 }
 
-.center {
-    text-align: center;
-    display: none;
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: 20px;
-}
-
 .close-btn:hover {
     color: #fafafa;
-}
-
-.content-section {
-    /* csslint allow: adjoining-classes */
-    padding: 30px 10px 10px 20px;
 }
 
 @font-face {

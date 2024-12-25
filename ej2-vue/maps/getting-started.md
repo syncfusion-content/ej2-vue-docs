@@ -58,7 +58,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -220,7 +220,7 @@ Elements in the Maps will get rendered in the layers. So add a layer collection 
         
 {% previewsample "page.domainurl/code-snippet/maps/getting-started-cs34" %}
 
->Note: Refer the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-710289613) here.
+>Note: Refer the data values for [`world_map`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/world_map-1580932177) here.
 
 ## Bind data source to map
 

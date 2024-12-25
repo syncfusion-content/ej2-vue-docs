@@ -26,5 +26,4 @@ new Vue({
           mediaQuery: window.matchMedia('(max-width: 400px)'),
         }
     }
-
 });

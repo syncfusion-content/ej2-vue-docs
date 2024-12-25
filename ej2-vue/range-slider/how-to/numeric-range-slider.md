@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Numeric range slider in Vue Range slider component
 
-The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent units. The numeric processing is demonstrated as follows.
+The numeric values can be formatted into different decimal digits, fixed number of whole numbers, or to represent units. The numeric processing is demonstrated in the following example.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

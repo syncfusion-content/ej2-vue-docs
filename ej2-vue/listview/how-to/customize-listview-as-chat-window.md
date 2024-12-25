@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize listview as chat window in Vue Listview component | Syncfusion
+title: Listview as chat window in Vue Listview component | Syncfusion
 description: Learn here all about Customize listview as chat window in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
 control: Customize listview as chat window 
 platform: ej2-vue
@@ -10,12 +10,12 @@ domainurl: ##DomainURL##
 
 # Customize listview as chat window in Vue Listview component
 
-ListView can be customized as chat window. To achieve that, use the ListView [template](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property and [Avatar](https://ej2.syncfusion.com/vue/documentation/avatar/getting-started) component.
+ListView can be customized as a chat window. To achieve that, use the ListView [template](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property and [Avatar](https://ej2.syncfusion.com/vue/documentation/avatar/getting-started) component.
 
-    * The Listview template property is used to showcase the ListView as chat window.
-    * Avatar component is used to design the image of contact person.
+    * The ListView template property is used to showcase the ListView as a chat window.
+    * The Avatar component is used to design the image of the contact person.
 
-Refer the below template code snippet for Template of chat window.
+Refer to the template code snippet below for the chat window template.
 
 ```ts
 var demoVue = Vue.component("demo", {
@@ -45,12 +45,12 @@ var demoVue = Vue.component("demo", {
 
 ## Chat order in template
 
-In ListView template, we have rendered the list items based on receiver and sender information from dataSource of listview.
+In ListView template, we have rendered the list items based on receiver and sender information from the dataSource of the ListView.
 
 ## Adding messages to chat window
 
-    * Use textbox to get message from user.
-    * Add the textbox message to ListView dataSource using [addItem](https://ej2.syncfusion.com/vue/documentation/api/list-view/#additem) method.
+    * Use a textbox to get messages from the user.
+    * Add the textbox message to the ListView dataSource using the [addItem](https://ej2.syncfusion.com/vue/documentation/api/list-view/#additem) method.
 
 ```ts
 

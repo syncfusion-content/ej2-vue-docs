@@ -16,7 +16,7 @@ Opening and closing the Sidebar can be achieved with built-in public methods.
 * [hide()](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#hide): Method to close the Sidebar.
 * [toggle()](https://ej2.syncfusion.com/vue/documentation/api/sidebar/#toggle): Method to toggle between open and close states of the Sidebar.
 
-In the following sample, toggle method has been used to show or hide the Sidebar on button click.
+In the following sample, the `toggle()` method has been used to show or hide the Sidebar on button click.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

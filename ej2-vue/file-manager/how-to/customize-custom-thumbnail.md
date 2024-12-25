@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize custom thumbnail in Vue File manager component | Syncfusion
+title: Customize thumbnails in Vue File manager component | Syncfusion
 description: Learn here all about Customize custom thumbnail in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
 control: Customize custom thumbnail 
 platform: ej2-vue
@@ -8,11 +8,11 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize custom thumbnail in Vue File manager component
+# Customize thumbnail in Vue File manager component
 
-The default appearance of the file manager can customize with your own icon by using [showThumbnail](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showthumbnail) property.
+The default appearance of the file manager be customized with your own icon by using [showThumbnail](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#showthumbnail) property.
 
-The following example demonstrate how to add a custom icon in largeicons view.
+The following example demonstrates how to add a custom icon in large icons view.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

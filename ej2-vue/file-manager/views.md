@@ -10,16 +10,16 @@ domainurl: ##DomainURL##
 
 # Views in Vue File manager component
 
-View is the section where the files and folders are displayed for the user to browse. The [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) API can also be used to change the initial view of the file manager.
+View is the section where the files and folders are displayed for the user to browse. The [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) API can also be used to change the initial view of the File manager.
 
- The file manager has two types of [views](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) to display the files and folders.
+ The File manager has two types of [views](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) to display the files and folders.
 
 * [LargeIcons View](#largeicons-view)
 * [Details View](#details-view)
 
 ## LargeIcons View
 
-By Default, File Manager is rendered with largeicons view. The following example demonstrate this.
+By Default, File manager is rendered with **LargeIcons** view. The following example demonstrates this.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -34,7 +34,7 @@ By Default, File Manager is rendered with largeicons view. The following example
 
 ## Details View
 
-Details view is an injectable module in the file manager so, it should be injected before rendering the file manager to avail its functionality. The default appearance of the file manager can be changed from largeicons to details view by using the [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) property. The following example demonstrate the file manager with details view.
+The **DetailsView** is an injectable module in the File manager so, it should be injected before rendering the File manager to avail its functionality. The default appearance of the File manager can be changed from large icons to details view by using the [view](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#view) property. The following example demonstrates the File manager with the **Details** view.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

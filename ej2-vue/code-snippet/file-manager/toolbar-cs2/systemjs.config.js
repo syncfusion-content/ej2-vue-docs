@@ -10,7 +10,7 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/27.2.3/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/28.1.33/"
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
@@ -35,6 +35,7 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-compression": "syncfusion:ej2-compression/dist/ej2-compression.umd.min.js",
 
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
+        "@syncfusion/ej2-buttons": "syncfusion:ej2-buttons/dist/ej2-vue-buttons.umd.min.js",
         "@syncfusion/ej2-vue-filemanager": "syncfusion:ej2-vue-filemanager/dist/ej2-vue-filemanager.umd.min.js",    
     }
 });

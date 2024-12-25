@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Restrict the drag and drop for particular tree nodes in Vue Treeview component | Syncfusion
+title: Restrict drag and drop for node in Vue Treeview component | Syncfusion
 description: Learn here all about Restrict the drag and drop for particular tree nodes in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
 control: Restrict the drag and drop for particular tree nodes 
 platform: ej2-vue
@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Restrict the drag and drop for particular tree nodes in Vue Treeview component
 
-You can able to restrict to drag and drop files under folder only. These can be achieved by using `nodeDragStop` and `nodeDragging` event of TreeView.
+You can restrict drag and drop operations to allow only dropping files under folders. This can be achieved by using the [`nodeDragStop`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodedragstop) and [`nodeDragging`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodedragging) events of the TreeView.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
