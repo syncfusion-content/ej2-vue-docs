@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Drag and drop list items in Vue Listview component
 
-In ListView component, we don't have drag and drop support. But we can achieve this requirement using [`TreeView`](https://ej2.syncfusion.com/vue/documentation/treeview/getting-started/) component with ListView appearance.
+The ListView component doesn't have built-in drag and drop support. However, we can achieve this functionality using the [`TreeView`](https://ej2.syncfusion.com/vue/documentation/treeview/getting-started/) component with ListView appearance.
 
-Drag and Drop in TreeView component was enabled by setting [`allowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowdraganddrop) to `true`.
+Drag and Drop in the TreeView component is enabled by setting [`allowDragAndDrop`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowdraganddrop) to `true`.
 
 ```ts
 
@@ -20,7 +20,7 @@ Drag and Drop in TreeView component was enabled by setting [`allowDragAndDrop`](
 
 ```
 
-The TreeView component is used to represent hierarchical data in a tree like structure. So, list items in TreeView can be dropped to child of target element. we can prevent this behaviour by cancelling the [`nodeDragStop`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodedragging) events.
+The TreeView component is used to represent hierarchical data in a tree-like structure. As a result, list items in TreeView can be dropped as children of the target element. We can prevent this behavior by cancelling the[`nodeDragStop`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodedragstop) and [`nodeDragging`](https://ej2.syncfusion.com/vue/documentation/api/treeview/#nodedragging) events.
 
 ```ts
 
@@ -29,7 +29,7 @@ The TreeView component is used to represent hierarchical data in a tree like str
 fields: { dataSource: data, id: 'id', text: 'text' },
 
 onDragStop: function(args) {
-    //Block the Child Drop operation in TreeView
+    //Block the Child Drop operation in TreeView.
    let  draggingItem = document.getElementsByClassName("e-drop-in");
     if (draggingItem.length == 1) {
         draggingItem[0].classList.add('e-no-drop');
@@ -39,7 +39,7 @@ onDragStop: function(args) {
 
 ```
 
-In the below sample, we have rendered draggable list items.
+In the sample below, we have rendered draggable list items.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

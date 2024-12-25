@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Nested list in Vue Listview component
 
-The ListView component supports Nested list. For that, the child property should be defined for the nested list in the array of JSON.
+The ListView component supports nested lists. For that, the [`child`](https://helpej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#child) property should be defined for the nested list in the array of JSON.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

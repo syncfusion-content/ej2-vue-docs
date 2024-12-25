@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Create dual list from listview in Vue Listview component
 
-The dual list contains two ListView. This allows you to move list items from one list to another using the client-side
-events. This section explains how to integrate the ListView component to achieve dual list.
+The dual list contains two ListViews. This allows you to move list items from one list to another using client-side events. This section explains how to integrate the ListView component to achieve dual list.
 
 ## Use cases
 
@@ -20,7 +19,7 @@ events. This section explains how to integrate the ListView component to achieve
 
 ### Integration of Dual List
 
-Here, two ListView components have been used to display the list items. An ej2-button is used to transfer data between the ListView, and a textbox is used to achieve the UI of filtering support.
+Here, two ListView components have been used to display the list items. An ej2-button is used to transfer data between the ListViews, and a textbox is used to implement filtering support.
 
 The dual list supports:
 
@@ -34,7 +33,7 @@ In the ListView component, sorting is enabled using the [`sortOrder`](https://ej
 
 ### Moving whole data from the first list to the second list(>>)
 
-* Here, the whole data can be moved from the first ListView to the second by clicking the first button. When clicking the button, the whole list items are sliced, and `concat` with the second ListView. This button is enabled only when the data source of the first ListView is not empty.
+* Here, the whole data can be moved from the first ListView to the second by clicking the first button. When clicking the button, all list items are **sliced** and **concatenated** with the second ListView. This button is enabled only when the data source of the first ListView is not empty.
 
 ### Moving whole data from the second list to the first list(<<)
 
@@ -46,11 +45,11 @@ In the ListView component, sorting is enabled using the [`sortOrder`](https://ej
 
 ### Filtering method
 
-* The filtering method is used to filter list items when typing a character in the text box. In this method, the [`dataManager`](https://ej2.syncfusion.com/documentation/data/getting-started/) has been used to fetch data from the data source and display in ListView.
+* The filtering method is used to filter list items when typing a character in the text box. In this method, the [`dataManager`](https://ej2.syncfusion.com/documentation/data/getting-started/) is used to fetch data from the data source and display it in the ListView.
 
 ### Sorting
 
-* By using the dual list, list items can be sorted in the ListView component using the [`sortOrder`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#sortorder) property. You can enable sorting in one ListView; in the same order, data can be transferred to another ListView.
+* By using the dual list, list items can be sorted in the ListView component using the [`sortOrder`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#sortorder) property. You can enable sorting in one ListView, and the data will be transferred to the other ListView in the same order.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

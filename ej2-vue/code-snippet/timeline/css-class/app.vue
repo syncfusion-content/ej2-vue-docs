@@ -1,11 +1,10 @@
 <template>
   <div class="container" style="height: 330px;margin-top: 30px;">
-    <ejs-timeline id="timeline">
+    <ejs-timeline id="timeline" >
       <e-items>
-        <e-item content='Default' />
-        <e-item content='Icon' dotCss='e-icons e-check' />
-        <e-item content='Image' dotCss='custom-image' />
-        <e-item content='Text' dotCss='custom-text' />
+        <e-item content='Eat' css-class="eat" />
+        <e-item content='Code' css-class="code" />
+        <e-item content='Repeat' css-class="repeat" />
       </e-items>
     </ejs-timeline>
   </div>
@@ -31,11 +30,18 @@ export default {
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
-.e-dot.custom-image {
-  background-image: url(https://ej2.syncfusion.com/demos/src/listview/images/margaret.png);
+.eat .e-dot, .eat.e-timeline-item.e-connector::after {
+  background-color: aqua;
+  border-color: aqua;
 }
 
-.e-dot.custom-text::before {
-  content: 'A';
+.code .e-dot, .code.e-timeline-item.e-connector::after {
+  background-color: blue;
+  border-color: blue;
+}
+
+.repeat .e-dot, .repeat.e-timeline-item.e-connector::after {
+  background-color: yellow;
+  border-color: yellow;
 }
 </style>
