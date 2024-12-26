@@ -1,7 +1,7 @@
 
 import Vue from "vue";
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
-import { enableRipple } from '@syncfusion/ej2-base';
+
 Vue.use(SidebarPlugin);
 
 
@@ -42,7 +42,6 @@ new Vue({
             </div>
       </div>
 </div>
-<!--end of main content declaration -->
 `,
 
     data () {

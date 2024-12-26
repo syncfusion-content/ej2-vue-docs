@@ -2,7 +2,7 @@
 import Vue from "vue";
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
 import { ListViewPlugin, SelectEventArgs } from '@syncfusion/ej2-vue-lists';
-import { enableRipple } from '@syncfusion/ej2-base';
+
 Vue.use(SidebarPlugin);
 Vue.use(ListViewPlugin);
 

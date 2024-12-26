@@ -2,8 +2,6 @@
 import Vue from 'vue';
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
 import { TreeViewPlugin } from '@syncfusion/ej2-vue-navigations';
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
 
 Vue.use(SidebarPlugin);
 Vue.use( TreeViewPlugin);
@@ -20,7 +18,6 @@ new Vue({
                     <li class='header-style float-right support border-left'><b>Support</b></li>
                 </ul>
             </div>
-            <!--Sidebar element declaration-->
             <ejs-sidebar id='sidebar-treeview' :enableDock='enableDock'  :width='width' :dockSize='dockSize' :mediaQuery='mediaQuery' :target='target' ref="sidebarInstance" :close="close">
                 <div class='main-menu'>
                     <div>
@@ -28,7 +25,6 @@ new Vue({
                     </div>
                 </div>
             </ejs-sidebar>
-            <!--End of sidebar declaration-->
         </div>
          <div class='main-content' id='main-text'>
             <div class='sidebar-content'>
@@ -68,7 +64,6 @@ new Vue({
                     occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
         </div>
-        <!--end of main content declaration -->
     </div>
 `,
 
@@ -146,5 +141,4 @@ new Vue({
            this.$refs.treeviewInstance.ej2Instances.collapseAll();
         },
     }
-
 });

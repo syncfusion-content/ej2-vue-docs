@@ -23,14 +23,11 @@
             </div>
         </div>
     </div>
-    <!--end of main content declaration -->
 </template>
 <script>
 
 import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
 
 export default {
     name: "App",

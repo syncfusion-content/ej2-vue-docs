@@ -36,9 +36,6 @@
 <script>
 
 import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
-import { enableRipple } from '@syncfusion/ej2-base';
-
-enableRipple(true);
 
 export default {
   name: "App",
