@@ -10,8 +10,7 @@ domainurl: ##DomainURL##
 
 # Tooltip open or display modes in Vue Tooltip component
 
-The open mode property of tooltip can be defined on a target that is hovering, focusing, or clicking.
-Tooltip component have the following types of open mode:
+The open mode property of the Tooltip can be set to respond to hovering, focusing, or clicking on a target. The Tooltip component has the following types of open modes:
 
 * Auto
 * Hover
@@ -37,7 +36,7 @@ Tooltip appears when you focus (say through tab key) on a target element.
 
 ## Custom
 
-Tooltip is not triggered by any default action. So, bind your own events and use either open or close public methods.
+Tooltip is not triggered by any default action. In this mode, you need to bind your own events and use either the open or close public methods to control the tooltip.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

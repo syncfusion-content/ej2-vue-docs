@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Open mode in Vue Tooltip component
 
-You can decide the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements.
+You can decide the mode in which the Tooltip opens on a page, i.e., on hovering, focusing, or clicking on the target elements.
 
 > On mobile devices, Tooltips appear when you tap and hold the element, even if the `opensOn` option is assigned with `hover`.
-> Tooltips are also displayed as long as you continue to tap and hold the element. On lift, it  disappears in the next 1.5 seconds.
-> If there is another action before that time ends, then the Tooltip disappears.
+> Tooltips are also displayed as long as you continue to tap and hold the element. OOn release, it disappears after 1.5 seconds.
+> If there is another action before this time elapses, the Tooltip disappears.
 
 The `opensOn` property can take either a single or a combination of multiple values, separated by space from the following options. The table  below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `opensOn` property. By default, it takes `auto` value.
 
@@ -45,8 +45,7 @@ The following code example shows how to set the open mode for Tooltips.
 
 ## Custom open mode
 
-Other than the above specified options, the `custom` mode makes the Tooltip appear on screen for user-defined custom actions such as
-`right-click`, `double-click`, and so on. Here, the tooltip is not triggered by any default action, and you have to bind your own events and use either `open` or `close` public methods to show or hide the Tooltips.
+Other than the above specified options, the `custom` mode makes the Tooltip appear on screen for user-defined custom actions, such as `right-click`, `double-click`, and so on. Here, the tooltip is not triggered by any default action, and you have to bind your own events and use either `open` or `close` public methods to show or hide the Tooltips.
 
 The following code example shows how to define custom open mode for the Tooltip.
 
@@ -63,7 +62,7 @@ The following code example shows how to define custom open mode for the Tooltip.
 
 ## Sticky mode
 
-With this mode set to `true`, Tooltips can be made to show up on the screen as long as the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `isSticky` property.
+With this mode set to `true`, Tooltips remain on the screen until the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `isSticky` property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

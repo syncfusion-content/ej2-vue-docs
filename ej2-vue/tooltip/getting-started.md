@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Tooltip Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Tooltip component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for set up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Tooltip component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
-To get start quickly with Vue Tooltip, you can check on this video:
+To get started quickly with Vue Tooltip, you can check out this video:
 
 {% youtube "https://www.youtube.com/watch?v=DufWTRmp30o" %}
 
@@ -61,7 +61,7 @@ yarn add @syncfusion/ej2-vue-popups
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Tooltip component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -106,7 +106,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Tooltip component with the [content](https://ej2.syncfusion.com/vue/documentation/api/tooltip#content) property
+2\. In the `template` section, define the Tooltip component with the [content](https://ej2.syncfusion.com/vue/documentation/api/tooltip#content) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

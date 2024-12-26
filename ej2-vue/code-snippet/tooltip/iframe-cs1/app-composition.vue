@@ -5,7 +5,7 @@
             <div id='container'>
                 <div id="tooltipContent">
                     <div class="content">
-                        <ejs-button cssClass="text" id="iframeContent">Embedded Iframe</ejs-button>
+                        <ejs-button cssClass="text" id="iframeContent" cssClass='e-outline' isPrimary=true>Embedded Iframe</ejs-button>
                     </div>
                 </div>
             </div>

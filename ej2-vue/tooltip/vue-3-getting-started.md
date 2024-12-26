@@ -22,7 +22,7 @@ The `Options API` is the traditional way of writing Vue.js components, where the
 
 ## Set up the Vite project
 
-A recommended approach for beginning with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
+A recommended approach for getting started with Vue is to scaffold a project using [Vite](https://vitejs.dev/). To create a new Vite project, use one of the commands that are specific to either NPM or Yarn.
 
 ```bash
 npm create vite@latest
@@ -36,7 +36,7 @@ yarn create vite
 
 Using one of the above commands will lead you to set up additional configurations for the project as below:
 
-1.Define the project name: We can specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
+1.Define the project name: Specify the name of the project directly. Let's specify the name of the project as `my-project` for this article.
 
 ```bash
 ? Project name: » my-project
@@ -99,7 +99,7 @@ yarn add @syncfusion/ej2-vue-popups
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to the [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to learn more about built-in themes and different ways to reference themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Tooltip component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 

@@ -40,7 +40,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 
 ## Tip pointer positioning
 
-The Tooltip pointer can be attached or detached from the Tooltip by using the `showTipPointer` property. Pointer positions can be adjusted using the `tipPointerPosition` property that can be assigned to one of the following values:
+Consider rephrasing to: "Pointer positions can be adjusted using the [`showTipPointer`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#showtippointer) property. Pointer positions can be adjusted using the [`tipPointerPosition`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#tippointerposition) property that can be assigned to one of the following values:
 
 * `Auto`
 * `Start`
@@ -64,8 +64,7 @@ By default, tip pointers are auto adjusted so that the arrow does not point outs
 
 ## Dynamic positioning
 
-The Tooltip and its tip pointer can be positioned dynamically based on the target's location. This can be achieved by using the `refresh`
-method, which auto adjusts the Tooltip over the target.
+The Tooltip and its tip pointer can be positioned dynamically based on the target's location. This can be achieved by using the [`refresh`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#refresh) method, which auto-adjusts the Tooltip over the target.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -80,7 +79,7 @@ method, which auto adjusts the Tooltip over the target.
 
 ## Mouse trailing
 
-Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the `mouseTrail` property. By default, it is set to `false`.
+Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the [`mouseTrail`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#mousetrail) property. By default, this property is set to `false`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -93,13 +92,11 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
         
 {% previewsample "page.domainurl/code-snippet/tooltip/position/mouse-trail-cs1" %}
 
-> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and
-> other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
+> When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
 
 ## Setting offset values
 
-Offset values are set to specify the distance between the target and tooltip element.
-`offsetX` and `offsetY` properties are used to specify the offset left and top values.
+Offset values are set to specify the distance between the target and Tooltip element. [`offsetX`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#offsetx) and [`offsetY`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#offsety) properties are used to specify the offset left and top values.
 
 * `offsetX` specifies the distance between the target and Tooltip element in X axis.
 * `offsetY` specifies the distance between the target and Tooltip element in Y axis.

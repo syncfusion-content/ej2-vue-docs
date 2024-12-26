@@ -10,9 +10,9 @@ domainurl: ##DomainURL##
 
 # Custom tooltip with dynamic html in Vue Tooltip component
 
-Tooltip loads HTML pages via HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
+Tooltip loads HTML pages via the HTML tags such as iframe, video, and map using the [`content`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#content) property, which supports both string and HTML tags.
 
-To load an `iframe` element in tooltip, set the required iframe in the `content` of tooltip while initializing the tooltip component. Refer to the following code.
+To load an `iframe` element in tooltip, set the required iframe in the `content` property while initializing the tooltip component. Refer to the following code:
 
 ```ts
 

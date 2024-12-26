@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Customization in Vue Tooltip component
 
-The Tooltip can be customized by using the `cssClass` property, which accepts custom CSS class names that define specific user-defined styles and themes to be applied on the Tooltip element.
+The Tooltip can be customized using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#cssclass) property, which accepts custom CSS class names that define specific user-defined styles and themes to be applied to the Tooltip element.
 
 ## Tip pointer customization
 
@@ -29,9 +29,9 @@ Styling the tip pointer's size, background, and border colors can be done using 
 
 ## Tooltip customization
 
-The complete look and feel of the Tooltip can be customized by changing it's background color, opacity, content font, etc.
+The complete look and feel of the Tooltip can be customized by changing its background color, opacity, content font, etc.
 
-The following code example shows the way to achieve it.
+The following code example demonstrates how to achieve this customization.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
