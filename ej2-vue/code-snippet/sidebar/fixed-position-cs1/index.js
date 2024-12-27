@@ -1,17 +1,13 @@
 
 import Vue from 'vue';
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
 
 Vue.use(SidebarPlugin);
-
 
 new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-       <!-- Declaration of sidebar element-->
         <div class="col-lg-8 control-section">
             <ejs-sidebar  id="default-sidebar" :width='width' >
                 <div class="sidebar-header header-cover" style="background-color:#0378d5">
@@ -26,8 +22,6 @@ new Vue({
                         <span class="sf-icon-down icon"></span>
                     </div>
                 </div>
-
-                <!-- Sidebar navigation -->
                 <ul class="nav sidebar-nav">
                     <li>
                         <a href="#">
@@ -67,8 +61,6 @@ new Vue({
                     </li>
                 </ul>
             </ejs-sidebar>
-        <!-- End of sidebar element-->
-        <!-- Main content Declaration-->
             <div class="e-content-animation">
                 <div class="content">
                     <div id="left">
@@ -210,7 +202,6 @@ new Vue({
                     </div>
                 </div>
             </div>
-            <!--end of main content declaration -->
         </div>
     </div>
 `,

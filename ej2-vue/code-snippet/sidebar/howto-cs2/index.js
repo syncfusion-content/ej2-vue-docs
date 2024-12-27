@@ -2,8 +2,6 @@
 import Vue from 'vue';
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
 import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { enableRipple } from '@syncfusion/ej2-base';
-enableRipple(true);
 
 Vue.use(SidebarPlugin);
 Vue.use(ButtonPlugin);

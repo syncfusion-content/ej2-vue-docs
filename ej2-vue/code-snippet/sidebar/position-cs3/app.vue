@@ -39,13 +39,11 @@
             </div>
         </div>
     </div>
-    <!--end of main content declaration -->
 </template>
 <script>
 
 import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 import { ButtonComponent, RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { enableRipple } from '@syncfusion/ej2-base';
 
 export default {
     name: "App",

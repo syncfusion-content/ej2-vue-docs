@@ -2,7 +2,7 @@
 import Vue from 'vue';
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
 import { ButtonPlugin ,RadioButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { enableRipple } from '@syncfusion/ej2-base';
+
 Vue.use(SidebarPlugin);
 Vue.use(ButtonPlugin);
 Vue.use(RadioButtonPlugin);
@@ -39,7 +39,6 @@ new Vue({
         </div>
 </div>
 </div>
-<!--end of main content declaration -->
 `,
 
     data () {
@@ -70,5 +69,4 @@ new Vue({
          this.$refs.togglebtn.Content = 'Open';
         }
     }
-
 });
