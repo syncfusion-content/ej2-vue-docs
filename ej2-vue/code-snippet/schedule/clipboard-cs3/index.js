@@ -16,19 +16,16 @@ new Vue({
             <div class='content-wrapper'>
                 <ejs-schedule id='Schedule' ref='scheduleObj' height='550px' :selectedDate='selectedDate'
                     :eventSettings='eventSettings' :allowClipboard="true" :showQuickInfo="false" :beforePaste="onBeforePaste"></ejs-schedule>
-                
-                <div class="Grid-container">
-                    <ejs-grid id="Grid" ref="GridObj" width="550px" height="400px"
-                        :dataSource="gridData" :cssClass="'drag-grid'" :allowSelection="true">
-                        <e-columns>
-                            <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="90"></e-column>
-                            <e-column field="CustomerID" headerText="Customer ID" width="100"></e-column>
-                            <e-column field="ShipCity" headerText="Ship City" width="100"></e-column>
-                            <e-column field="ShipName" headerText="Ship Name" width="130"></e-column>
-                            <e-column field="OrderDate" headerText="Order Date" type="date" format="yMd" width="100"></e-column>
-                        </e-columns>
-                    </ejs-grid>
-                </div>
+                <ejs-grid id="Grid" ref="GridObj" width="40%" height="400px"
+                    :dataSource="gridData" :cssClass="'drag-grid'" :allowSelection="true">
+                    <e-columns>
+                        <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="90"></e-column>
+                        <e-column field="CustomerID" headerText="Customer ID" width="100"></e-column>
+                        <e-column field="ShipCity" headerText="Ship City" width="100"></e-column>
+                        <e-column field="ShipName" headerText="Ship Name" width="130"></e-column>
+                        <e-column field="OrderDate" headerText="Order Date" type="date" format="yMd" width="100"></e-column>
+                    </e-columns>
+                </ejs-grid>
             </div>
         </div>
     </div>
