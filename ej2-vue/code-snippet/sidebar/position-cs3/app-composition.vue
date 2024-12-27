@@ -39,16 +39,12 @@
             </div>
         </div>
     </div>
-    <!--end of main content declaration -->
 </template>
 <script setup>
 
 import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
 import { ButtonComponent as EjsButton, RadioButtonComponent as EjsRadiobutton } from '@syncfusion/ej2-vue-buttons';
-import { enableRipple } from '@syncfusion/ej2-base';
 import { ref } from 'vue';
-
-enableRipple(true);
 
 const sidebar = ref(null);
 const togglebtn = ref(null);

@@ -21,10 +21,8 @@
 <script setup>
 
 import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { enableRipple } from '@syncfusion/ej2-base';
-import { ref } from 'vue';
 
-enableRipple(true);
+import { ref } from 'vue';
 
 const leftsidebar = ref(null);
 const rightsidebar = ref(null);
