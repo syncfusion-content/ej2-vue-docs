@@ -23,7 +23,7 @@ To get start quickly with Vue File Manager, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
@@ -104,7 +104,7 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -274,7 +274,7 @@ The output will appear as follows:
 
 ![vue-3-js-file-manager](./images/vue3-filemanager-demo.PNG)
 
-For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/#migration-from-vue-2-to-vue-3) documentation.
+For migrating from Vue 2 to Vue 3, refer to the [`migration`](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial#migration-from-vue-2-to-vue-3) documentation.
 
 ## See also
 

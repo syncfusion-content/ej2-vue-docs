@@ -18,7 +18,6 @@ import { ScheduleComponent as EjsSchedule, Day, Week, WorkWeek, Month, Agenda } 
 const scheduleObj = ref(null);
 const eventSettings = { dataSource: extend([], scheduleData, null, true) };
 const selectedDate = new Date(2024, 1, 15);
-const selectedTarget = null;
 
 provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 
@@ -33,5 +32,4 @@ provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
-
 </style>
