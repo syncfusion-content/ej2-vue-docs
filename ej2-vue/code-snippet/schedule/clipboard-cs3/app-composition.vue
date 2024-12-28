@@ -6,19 +6,16 @@
                     :eventSettings='eventSettings' :allowClipboard="true" :showQuickInfo="false"
                     :beforePaste="onBeforePaste"></ejs-schedule>
 
-                <div class="Grid-container">
-                    <ejs-grid id="Grid" ref="GridObj" width="550px" height="400px" :dataSource="gridData"
-                        :cssClass="'drag-grid'" :allowSelection="true">
-                        <e-columns>
-                            <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="90"></e-column>
-                            <e-column field="CustomerID" headerText="Customer ID" width="100"></e-column>
-                            <e-column field="ShipCity" headerText="Ship City" width="100"></e-column>
-                            <e-column field="ShipName" headerText="Ship Name" width="130"></e-column>
-                            <e-column field="OrderDate" headerText="Order Date" type="date" format="yMd"
-                                width="100"></e-column>
-                        </e-columns>
-                    </ejs-grid>
-                </div>
+                <ejs-grid id="Grid" ref="GridObj" width="40%" height="400px" :dataSource="gridData"
+                    :cssClass="'drag-grid'" :allowSelection="true">
+                    <e-columns>
+                        <e-column field="OrderID" headerText="Order ID" textAlign="Right" width="90"></e-column>
+                        <e-column field="CustomerID" headerText="Customer ID" width="100"></e-column>
+                        <e-column field="ShipCity" headerText="Ship City" width="100"></e-column>
+                        <e-column field="ShipName" headerText="Ship Name" width="130"></e-column>
+                        <e-column field="OrderDate" headerText="Order Date" type="date" format="yMd" width="100"></e-column>
+                    </e-columns>
+                </ejs-grid>
             </div>
         </div>
     </div>
@@ -35,7 +32,6 @@ import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective
 const scheduleObj = ref(null);
 const eventSettings = { dataSource: extend([], scheduleData, null, true) };
 const selectedDate = new Date(2024, 1, 15);
-const selectedTarget = null;
 const gridData = [
     {
         OrderID: 10248, CustomerID: 'VINET', Role: 'Admin', EmployeeID: 5,
@@ -114,5 +110,15 @@ provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 .content-wrapper {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 540px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .e-grid {
+        width: 100% !important;
+    }
 }
 </style>

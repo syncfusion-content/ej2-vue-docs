@@ -12,6 +12,9 @@ domainurl: ##DomainURL##
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Skeleton component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
+To get started quickly with Vue Skeleton component, you can check out this video:
+{% youtube "https://www.youtube.com/watch?v=hZ1UdxqFkiI" %}
+
 ## Prerequisites
 
 [System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
@@ -49,7 +52,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+<img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Vue 2 project" />
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 

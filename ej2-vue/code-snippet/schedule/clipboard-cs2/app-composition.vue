@@ -17,7 +17,6 @@
 import { provide, ref } from "vue";
 import { scheduleData } from './datasource.js';
 import { extend, closest, isNullOrUndefined, remove, removeClass } from '@syncfusion/ej2-base';
-import { DataManager, Query } from '@syncfusion/ej2-data';
 import { ScheduleComponent as EjsSchedule, Day, Week, WorkWeek, Month, Agenda } from '@syncfusion/ej2-vue-schedule';
 import { ContextMenuComponent as EjsContextmenu } from '@syncfusion/ej2-vue-navigations';
 
@@ -71,7 +70,7 @@ const onMenuItemSelect = function (args) {
             break;
     }
 }
-}
+
 provide('schedule', [Day, Week, WorkWeek, Month, Agenda]);
 
 </script>
