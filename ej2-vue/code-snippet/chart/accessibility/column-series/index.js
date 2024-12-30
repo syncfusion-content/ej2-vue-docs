@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold'> </e-series>
+                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' :accessibility='accessibility'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -37,6 +37,11 @@ new Vue({
         maximum: 80,
         interval: 20, 
         title: 'Medals'
+      },
+      accessibility: {
+        accessibilityDescription: 'This series displays the number of gold medals won by each country in the Olympics.',
+        accessibilityRole: 'series',
+        accessibilityDescriptionFormat: 'The country ${point.x} won ${point.y} gold medals.'
       },
       title: 'Olympic Medals'
     };

@@ -1,17 +1,16 @@
-
 import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, ColumnSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
 ;
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' background='skyblue' :chartArea='chartArea'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :border='chartBorder' :chartArea='chartArea' :legendSettings='legendSettings'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
+                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold' :border='border'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -20,33 +19,42 @@ new Vue({
   data() {
     return {
       seriesData: [
-             { country: "USA", gold: 50 },
-             { country: "China", gold: 40 },
-             { country: "Japan", gold: 70 },
-             { country: "Australia", gold: 60 },
-             { country: "France", gold: 50 },
-             { country: "Germany", gold: 40 },
-             { country: "Italy", gold: 40 },
-             { country: "Sweden", gold: 30 }
-              ],
-        primaryXAxis: {
-           valueType: 'Category',
-           title: 'Countries'
-        },
-          primaryYAxis: {
-            minimum: 0, maximum: 80,
-            interval: 20, title: 'Medals'
-        },
+        { country: "USA",       gold: 50 },
+        { country: "China",     gold: 40 },
+        { country: "Japan",     gold: 70 },
+        { country: "Australia", gold: 60 },
+        { country: "France",    gold: 50 },
+        { country: "Germany",   gold: 40 },
+        { country: "Italy",     gold: 40 },
+        { country: "Sweden",    gold: 30 }
+      ],
+      primaryXAxis: {
+        valueType: 'Category',
+        title: 'Countries'
+      },
+      primaryYAxis: {
+        minimum: 0,
+        maximum: 80,
+        interval: 20,
+        title: 'Medals'
+      },
+      chartBorder: { width: 2, color: 'green' },
       chartArea: {
-        //background for Chart area
-        background: "skyblue",
-        width: '90%'
-    },
-      title: "Olympic Medals"
+        border: { width: 2, color: 'blue' },
+        margin: {
+          left: 50,
+          right: 50,
+          top: 50,
+          bottom: 50
+        }
+      },
+      title: "Olympic Medals",
+      legendSettings: { visible: false },
+      border: { width: 2, color: 'grey' }
     };
   },
   provide: {
-    chart: [ColumnSeries, Category]
+    chart: [ColumnSeries, Category, Legend]
   }
 
 });

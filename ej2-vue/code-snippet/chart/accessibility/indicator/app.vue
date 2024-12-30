@@ -1,22 +1,19 @@
 <template>
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
-      :tooltip='tooltip' :chartArea='chartArea' :crosshair='crosshair' :indicators='indicators'
-      :legendSettings='legendSettings' :axes='axes'
-      :axisLabelRender='axisLabelRender'>
+            :tooltip='tooltip' :chartArea='chartArea' :crosshair='crosshair' :indicators='indicators' :legendSettings='legendSettings'
+            :axes='axes' :axisLabelRender='axisLabelRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData1' :animation='animation' type='Candle' xName='x' yName='y' name='Apple Inc'
-          width=2 low='low' high='high' close='close' open='open' volume='volume'> </e-series>
+        <e-series :dataSource='seriesData' :animation='animation' type='Candle' xName='x' yName='y' name='Apple Inc' width=2 low='low' high='high' close='close' open='open' volume='volume'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script>
 
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, CandleSeries, Category, Tooltip, DateTime, Zoom, Logarithmic, Crosshair, LineSeries, AccumulationDistributionIndicator, StripLine } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, CandleSeries, Tooltip, DateTime, Legend, Crosshair, LineSeries, AccumulationDistributionIndicator } from "@syncfusion/ej2-vue-charts";
 
-
-let series1 = [
+let series = [
   { x: new Date('2012-10-15'), open: 90.3357, high: 93.2557, low: 87.0885, close: 87.12, volume: 646996264 },
   { x: new Date('2012-10-22'), open: 87.4885, high: 90.7685, low: 84.4285, close: 86.2857, volume: 866040680 },
   { x: new Date('2012-10-29'), open: 84.9828, high: 86.1428, low: 82.1071, close: 82.4, volume: 367371310 },
@@ -85,23 +82,21 @@ export default {
   },
   data() {
     return {
-      seriesData1: series1,
+      seriesData: series,
       primaryXAxis: {
         title: 'Months',
         valueType: 'DateTime',
         intervalType: 'Months',
         majorGridLines: { width: 0 },
-        crosshairTooltip: { enable: true },
+        crosshairTooltip: { enable: true }
       },
-
       //Initializing Primary Y Axis
       primaryYAxis: {
         title: 'Price (Million Dollars)',
         minimum: 30,
         maximum: 180,
-        interval: 30,
+        interval: 30
       },
-
       axes: [{
         name: 'secondary',
         minimum: -7000000000, maximum: 5000000000,
@@ -109,11 +104,9 @@ export default {
         majorGridLines: { width: 0 },
         opposedPosition: true
       }],
-
       animation: { enable: true },
-
       indicators: [{
-        type: 'AccumulationDistribution', field: 'Close', 
+        type: 'AccumulationDistribution', field: 'Close',
         seriesName: 'Apple Inc', yAxisName: 'secondary', fill: 'blue',
         period: 3, animation: { enable: true },
         accessibility: {
@@ -124,21 +117,17 @@ export default {
       legendSettings: {
         visible: false
       },
-
       crosshair: { enable: true, lineType: 'Vertical' },
-
       chartArea: { border: { width: 0 } },
-
       tooltip: {
         enable: true,
         shared: true
       },
-
-      title: "AAPL 2012-2017"
+      title: "AAPL - 2016/2017"
     };
   },
   provide: {
-    chart: [CandleSeries, Category, LineSeries, Tooltip, DateTime, StripLine, Zoom, Logarithmic, Crosshair, AccumulationDistributionIndicator]
+    chart: [CandleSeries, Tooltip, DateTime, Legend, Crosshair, LineSeries, AccumulationDistributionIndicator]
   },
   methods: {
     axisLabelRender: function (args) {
@@ -146,13 +135,12 @@ export default {
         let value = Number(args.text) / 1000000000;
         args.text = String(value) + 'bn';
       }
-
     }
   }
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :focusBorderColor="focusBorderColor" :focusBorderWidth="focusBorderWidth" :focusBorderMargin="focusBorderMargin"  :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :accessibility='accessibility'>
+    <ejs-chart id="container" :title='title' :focusBorderColor="focusBorderColor" :focusBorderWidth="focusBorderWidth" :focusBorderMargin="focusBorderMargin"  :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :accessibility='accessibility' :tooltip='tooltip' :legendSettings='legendSettings'>
       <e-series-collection>
         <e-series :dataSource='seriesData' name='Sales' type='Line' xName='month' yName='sales' :marker='marker'> </e-series>
       </e-series-collection>
@@ -9,7 +9,7 @@
 </template>
 <script>
 
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Category, LineSeries, Tooltip, Legend, DataLabel } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -35,8 +35,7 @@ export default {
         { month: 'Dec', sales: 32 }
       ],
       primaryXAxis: {
-        valueType: 'Category',
-        title: 'Month'
+        valueType: 'Category'
       },
       primaryYAxis: {
         labelFormat: '${value}K'
@@ -47,23 +46,25 @@ export default {
           visible: true
         }
       },
-      title: "Monthly Sales Comparison",
+      title: "Sales Analysis",
       accessibility: {
         accessibilityDescription: 'A line chart displaying the sales analysis for each month.',
         accessibilityRole: 'chart'
       },
       focusBorderColor: '#FF0000',
       focusBorderWidth: 3,
-      focusBorderMargin: 5
+      focusBorderMargin: 5,
+      tooltip: { enable: true },
+      legendSettings: { visible: true }
     };
   },
   provide: {
-    chart: [Category, LineSeries]
+    chart: [Category, LineSeries, Tooltip, Legend, DataLabel]
   }
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

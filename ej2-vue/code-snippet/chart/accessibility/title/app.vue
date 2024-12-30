@@ -11,7 +11,7 @@
 </template>
 <script>
 
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, ColumnSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -44,23 +44,23 @@ export default {
         title: 'Medals'
       },
       title: 'Olympic Medals Comparison by Country',
-     subTitle= "Medal Comparison",
-     titleStyle = {
-      accessibility: {
-        accessibilityDescription: 'This chart shows the number of gold, silver, and bronze medals won by different countries in the Olympics.',
-        accessibilityRole: 'heading'
-      }
-    },
-    subTitleStyle = {
+      subTitle: 'Medal Comparison',
+      titleStyle: {
+        accessibility: {
+          accessibilityDescription: 'This chart shows the number of gold, silver, and bronze medals won by different countries in the Olympics.',
+          accessibilityRole: 'heading'
+        }
+      },
+      subTitleStyle: {
         accessibility: {
             accessibilityDescription: 'The subtitle provides additional context for the Olympic medal distribution chart.',
             accessibilityRole: 'heading'
         }
-    }
+      }
     };
   },
   provide: {
-    chart: [ColumnSeries, Category]
+    chart: [ColumnSeries, Category, Legend]
   }
 };
 </script>

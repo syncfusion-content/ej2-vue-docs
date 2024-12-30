@@ -11,8 +11,7 @@
 </template>
 <script setup>
 import { provide } from "vue";
-
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, ColumnSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
     { country: "USA",       gold: 50, silver: 70, bronze: 45 },
@@ -36,7 +35,7 @@ const primaryYAxis = {
   title: 'Medals'
 };
 const title = 'Olympic Medals Comparison by Country';
-const subTitle= "Medal Comparison";
+const subTitle= 'Medal Comparison';
 const titleStyle = {
   accessibility: {
     accessibilityDescription: 'This chart shows the number of gold, silver, and bronze medals won by different countries in the Olympics.',
@@ -44,12 +43,12 @@ const titleStyle = {
   }
 };
 const subTitleStyle = {
-        accessibility: {
-            accessibilityDescription: 'The subtitle provides additional context for the Olympic medal distribution chart.',
-            accessibilityRole: 'heading'
-        }
-    };
-provide('chart', [ColumnSeries, Category]);
+  accessibility: {
+    accessibilityDescription: 'The subtitle provides additional context for the Olympic medal distribution chart.',
+    accessibilityRole: 'heading'
+  }
+};
+provide('chart', [ColumnSeries, Category, Legend]);
 
 </script>
 <style>
