@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <ejs-accumulationchart id="container" :tooltip='tooltip'>
+    <ejs-accumulationchart id="container" :tooltip='tooltip' :legendSettings='legendSettings'>
       <e-accumulation-series-collection>
-        <e-accumulation-series :dataSource='seriesData' xName='x' yName='y' tooltipMappingName='text' radius='70%'>
+        <e-accumulation-series :dataSource='seriesData' xName='x' yName='y'>
         </e-accumulation-series>
       </e-accumulation-series-collection>
     </ejs-accumulationchart>
@@ -10,7 +10,7 @@
 </template>
 <script>
 
-import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationTooltip } from "@syncfusion/ej2-vue-charts";
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, PieSeries, AccumulationTooltip, AccumulationLegend } from "@syncfusion/ej2-vue-charts";
 
 export default {
   name: "App",
@@ -22,21 +22,25 @@ export default {
   data() {
     return {
       seriesData: [
-        { x: 'Jan', y: 13, text: 'Jan: 13' }, { x: 'Feb', y: 13, text: 'Feb: 13' },
-        { x: 'Mar', y: 17, text: 'Mar: 17' }, { x: 'Apr', y: 13.5, text: 'Apr: 13.5' }
+        { x: 'Jan', y: 13 },
+        { x: 'Feb', y: 13 },
+        { x: 'Mar', y: 17 },
+        { x: 'Apr', y: 13.5 }
       ],
       tooltip: {
-        enable: true, enableHighlight: true
-      }
+        enable: true, 
+        enableHighlight: true
+      },
+      legendSettings: { visible: false }
     };
   },
   provide: {
-    accumulationchart: [PieSeries, AccumulationTooltip]
-  },
+    accumulationchart: [PieSeries, AccumulationTooltip, AccumulationLegend]
+  }
 };
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

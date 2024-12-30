@@ -1,13 +1,12 @@
-
 import Vue from "vue";
-import { ChartPlugin, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, AreaSeries, DateTime, Zoom, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
-let series1: Object[] = [];
-let point1: Object;
-let value: number = 40;
-let i: number;
+let series1 = [];
+let point1;
+let value = 40;
+let i;
 for (i = 1; i < 500; i++) {
     if (Math.random() > .5) {
         value += Math.random();
@@ -23,10 +22,9 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom' :legendSettings='legend'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom' :legendSettings='legend'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'
-                opacity=0.3> </e-series>
+                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -34,16 +32,18 @@ new Vue({
 
   data() {
     return {
-      seriesData1: series1,
-      primaryXAxis: {
-           valueType: 'DateTime',
-           labelFormat: 'yMMM'
+        seriesData: series1,
+        primaryXAxis: {
+            valueType: 'DateTime'
         },
-        zoom:
-        {
+        zoom: {
             enableMouseWheelZooming: true,
             enablePinchZooming: true,
-            enableSelectionZooming: true
+            enableSelectionZooming: true,
+            accessibility: {
+                accessibilityDescription: 'This allows users to zoom in and out of the chart using mouse wheel, pinch gestures, or selection box.',
+                accessibilityRole: 'zoom'
+            }
         },
         title: 'Sales History of Product X',
         legend: { visible: false },
@@ -52,7 +52,7 @@ new Vue({
     };
   },
   provide: {
-    chart: [AreaSeries,  DateTime, Zoom]
-  },
+    chart: [AreaSeries, DateTime, Zoom, Legend]
+  }
 
 });

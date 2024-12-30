@@ -1,23 +1,19 @@
 <template>
   <div id="app">
     <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
-      :tooltip='tooltip' :chartArea='chartArea' :crosshair='crosshair' :indicators='indicators'
-      :legendSettings='legendSettings' :axes='axes'
-      :axisLabelRender='axisLabelRender'>
+            :tooltip='tooltip' :chartArea='chartArea' :crosshair='crosshair' :indicators='indicators' :legendSettings='legendSettings'
+            :axes='axes' :axisLabelRender='axisLabelRender'>
       <e-series-collection>
-        <e-series :dataSource='seriesData1' :animation='animation' type='Candle' xName='x' yName='y' name='Apple Inc'
-          width=2 low='low' high='high' close='close' open='open' volume='volume'> </e-series>
+        <e-series :dataSource='seriesData' :animation='animation' type='Candle' xName='x' yName='y' name='Apple Inc' width=2 low='low' high='high' close='close' open='open' volume='volume'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>
 </template>
 <script setup>
 import { provide } from "vue";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, CandleSeries, Tooltip, DateTime, Legend, Crosshair, LineSeries, AccumulationDistributionIndicator } from "@syncfusion/ej2-vue-charts";
 
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, CandleSeries, Category, Tooltip, DateTime, Zoom, Logarithmic, Crosshair, LineSeries, AccumulationDistributionIndicator, StripLine } from "@syncfusion/ej2-vue-charts";
-
-
-let series1 = [
+let series = [
   { x: new Date('2012-10-15'), open: 90.3357, high: 93.2557, low: 87.0885, close: 87.12, volume: 646996264 },
   { x: new Date('2012-10-22'), open: 87.4885, high: 90.7685, low: 84.4285, close: 86.2857, volume: 866040680 },
   { x: new Date('2012-10-29'), open: 84.9828, high: 86.1428, low: 82.1071, close: 82.4, volume: 367371310 },
@@ -74,26 +70,24 @@ let series1 = [
   { x: new Date('2013-10-28'), open: 75.5771, high: 77.0357, low: 73.5057, close: 74.29, volume: 508130174 },
   { x: new Date('2013-11-04'), open: 74.4428, high: 75.555, low: 73.1971, close: 74.3657, volume: 318132218 },
   { x: new Date('2013-11-11'), open: 74.2843, high: 75.6114, low: 73.4871, close: 74.9987, volume: 306711021 },
-  { x: new Date('2013-11-18'), open: 74.9985, high: 75.3128, low: 73.3814, close: 74.2571, volume: 282778778 },
+  { x: new Date('2013-11-18'), open: 74.9985, high: 75.3128, low: 73.3814, close: 74.2571, volume: 282778778 }
 ];
 
-const seriesData1= series1;
+const seriesData= series;
 const primaryXAxis = {
   title: 'Months',
   valueType: 'DateTime',
   intervalType: 'Months',
   majorGridLines: { width: 0 },
-  crosshairTooltip: { enable: true },
+  crosshairTooltip: { enable: true }
 };
-
 //Initializing Primary Y Axis
 const primaryYAxis = {
   title: 'Price (Million Dollars)',
   minimum: 30,
   maximum: 180,
-  interval: 30,
+  interval: 30
 };
-
 const axes = [{
   name: 'secondary',
   minimum: -7000000000, maximum: 5000000000,
@@ -101,10 +95,7 @@ const axes = [{
   majorGridLines: { width: 0 },
   opposedPosition: true
 }];
-
-
 const animation = { enable: true };
-
 const indicators = [{
   type: 'AccumulationDistribution', field: 'Close', 
   seriesName: 'Apple Inc', yAxisName: 'secondary', fill: 'blue',
@@ -114,34 +105,29 @@ const indicators = [{
     accessibilityRole: 'indicator'
   }
 }];
-
 const legendSettings = {
   visible: false
 };
 const crosshair = { enable: true, lineType: 'Vertical' };
-
 const chartArea = { border: { width: 0 } };
-
 const tooltip = {
   enable: true,
   shared: true
 };
+const title = "AAPL - 2016/2017";
 
-const title = "AAPL 2012-2017";
-
-provide('chart', [CandleSeries, Category, LineSeries, Tooltip, DateTime, StripLine, Zoom, Logarithmic, Crosshair, AccumulationDistributionIndicator]);
+provide('chart', [CandleSeries, Tooltip, DateTime, Legend, Crosshair, LineSeries, AccumulationDistributionIndicator]);
 
 const axisLabelRender = (args) => {
   if (args.axis.name === 'secondary') {
     let value = Number(args.text) / 1000000000;
     args.text = String(value) + 'bn';
   }
-
 };
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>

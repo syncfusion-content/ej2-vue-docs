@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :focusBorderColor="focusBorderColor" :focusBorderWidth="focusBorderWidth" :focusBorderMargin="focusBorderMargin"  :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :accessibility='accessibility'>
+    <ejs-chart id="container" :title='title' :focusBorderColor="focusBorderColor" :focusBorderWidth="focusBorderWidth" :focusBorderMargin="focusBorderMargin"  :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :accessibility='accessibility' :tooltip='tooltip' :legendSettings='legendSettings'>
       <e-series-collection>
         <e-series :dataSource='seriesData' name='Sales' type='Line' xName='month' yName='sales' :marker='marker'> </e-series>
       </e-series-collection>
@@ -9,7 +9,7 @@
 </template>
 <script setup>
 import { provide } from "vue";
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, Category, LineSeries, Tooltip, Legend, DataLabel } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [
   { month: 'Jan', sales: 35 },
@@ -26,8 +26,7 @@ const seriesData = [
   { month: 'Dec', sales: 32 }
 ];
 const primaryXAxis = {
-  valueType: 'Category',
-  title: 'Month'
+  valueType: 'Category'
 };
 const primaryYAxis = {
   labelFormat: '${value}K'
@@ -38,19 +37,22 @@ const marker = {
     visible: true
   }
 };
-const title = "Monthly Sales Comparison";
+const title = "Sales Analysis";
 const accessibility = {
-        accessibilityDescription: 'A line chart displaying the sales analysis for each month.',
-        accessibilityRole: 'chart'
-      };
+  accessibilityDescription: 'A line chart displaying the sales analysis for each month.',
+  accessibilityRole: 'chart'
+};
 const focusBorderColor='#FF0000';
 const focusBorderWidth=3;
 const focusBorderMargin=5;
-provide('chart', [Category, LineSeries]);
+const tooltip = { enable: true };
+const legendSettings = { visible: true };
+
+provide('chart', [Category, LineSeries, Tooltip, Legend, DataLabel]);
 
 </script>
 <style>
-#container {
-  height: 350px;
-}
+  #container {
+    height: 350px;
+  }
 </style>
