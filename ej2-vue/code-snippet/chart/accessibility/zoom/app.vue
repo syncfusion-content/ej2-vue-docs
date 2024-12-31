@@ -2,17 +2,14 @@
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom' :legendSettings='legend'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'
-                opacity=0.3> </e-series>
+                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
 </template>
 <script>
 
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
-
-
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, DateTime, Zoom, Legend } from "@syncfusion/ej2-vue-charts";
 
 let series1 = [];
 let point1;
@@ -37,13 +34,11 @@ components: {
   },
   data() {
     return {
-      seriesData1: series1,
-      primaryXAxis: {
-           valueType: 'DateTime',
-           labelFormat: 'yMMM'
+        seriesData: series1,
+        primaryXAxis: {
+            valueType: 'DateTime'
         },
-        zoom:
-        {
+        zoom: {
             enableMouseWheelZooming: true,
             enablePinchZooming: true,
             enableSelectionZooming: true,
@@ -59,12 +54,12 @@ components: {
     };
   },
   provide: {
-    chart: [AreaSeries,  DateTime, Zoom]
-  },
+    chart: [AreaSeries, DateTime, Zoom, Legend]
+  }
 };
 </script>
 <style>
- #container {
+  #container {
     height: 350px;
- }
+  }
 </style>

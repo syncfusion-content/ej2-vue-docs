@@ -9,7 +9,6 @@
 </template>
 <script setup>
 import { provide } from "vue";
-
 import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
 
 const seriesData = [

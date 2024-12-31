@@ -1,20 +1,15 @@
 <template>
     <div id="app">
-        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom'
-            :legendSettings='legend'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom' :legendSettings='legend'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' :border='border'
-                    :animation='animation' opacity=0.3> </e-series>
+                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
 </template>
 <script setup>
 import { provide } from "vue";
-
-import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
-
-
+import { ChartComponent as EjsChart, SeriesCollectionDirective as ESeriesCollection, SeriesDirective as ESeries, AreaSeries, DateTime, Zoom, Legend } from "@syncfusion/ej2-vue-charts";
 
 let series1 = [];
 let point1;
@@ -30,13 +25,11 @@ for (i = 1; i < 500; i++) {
     series1.push(point1);
 }
 
-const seriesData1 = series1;
+const seriesData = series1;
 const primaryXAxis = {
-    valueType: 'DateTime',
-    labelFormat: 'yMMM'
+    valueType: 'DateTime'
 };
-const zoom =
-{
+const zoom = {
     enableMouseWheelZooming: true,
     enablePinchZooming: true,
     enableSelectionZooming: true,
@@ -50,11 +43,11 @@ const legend = { visible: false };
 const border = { width: 0.5, color: '#00bdae' };
 const animation = { enable: false };
 
-provide('chart', [AreaSeries, DateTime, Zoom]);
+provide('chart', [AreaSeries, DateTime, Zoom, Legend]);
 
 </script>
 <style>
-#container {
+  #container {
     height: 350px;
-}
+  }
 </style>

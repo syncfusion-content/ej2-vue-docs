@@ -1,13 +1,12 @@
-
 import Vue from "vue";
-import { ChartPlugin, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, AreaSeries, DateTime, Zoom, Legend } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
-let series1: Object[] = [];
-let point1: Object;
-let value: number = 40;
-let i: number;
+let series1 = [];
+let point1;
+let value = 40;
+let i;
 for (i = 1; i < 500; i++) {
     if (Math.random() > .5) {
         value += Math.random();
@@ -23,9 +22,9 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom'>
+         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :zoomSettings='zoom' :legendSettings='legendSettings' :chartArea='chartArea'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' opacity=0.3> </e-series>
+                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -33,22 +32,40 @@ new Vue({
 
   data() {
     return {
-      seriesData1: series1,
-      primaryXAxis: {
-           valueType: 'DateTime',
-           labelFormat: 'yMMM'
+        seriesData: series1,
+        primaryXAxis: {
+            title: 'Years',
+            valueType: 'DateTime',
+            labelFormat: 'yMMM',
+            edgeLabelPlacement: 'Shift',
+            majorGridLines : { width : 0 }
         },
-        zoom:
-        {
+        primaryYAxis: {
+            title: 'Profit ($)',
+            rangePadding: 'None',
+            lineStyle : { width: 0 },
+            majorTickLines : {width : 0}
+        },
+        zoom: {
             enableSelectionZooming: true,
             toolbarItems: ['Zoom', 'Pan', 'Reset'],
-            showToolbar: true
+            showToolbar: true,
+            toolbarPosition: {
+                y: -10,
+                draggable: true,
+                horizontalAlignment: "Far",
+                verticalAlignment: "Top"
+            }
         },
-        title: 'Sales History of Product X'
+        title: 'Sales History of Product X',
+        legendSettings: { visible: false },
+        chartArea: { border: { width: 0 } },
+        border: { width: 0.5, color: '#00bdae' },
+        animation: { enable: false }
     };
   },
   provide: {
-    chart: [AreaSeries,  DateTime, Zoom]
-  },
+    chart: [AreaSeries, DateTime, Zoom, Legend]
+  }
 
 });

@@ -1,8 +1,8 @@
 <template>
     <div id="app">
-        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :zoomSettings='zoom' :legendSettings='legendSettings' :chartArea='chartArea'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' opacity=0.3>
+                <e-series :dataSource='seriesData' type='Area' xName='x' yName='y' name='Product X' :border='border' :animation='animation'>
                 </e-series>
             </e-series-collection>
         </ejs-chart>
@@ -10,9 +10,7 @@
 </template>
 <script>
 
-import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, DateTime, Zoom } from "@syncfusion/ej2-vue-charts";
-
-
+import { ChartComponent, SeriesDirective, SeriesCollectionDirective, AreaSeries, DateTime, Zoom, Legend } from "@syncfusion/ej2-vue-charts";
 
 let series1 = [];
 let point1;
@@ -37,13 +35,21 @@ export default {
     },
     data() {
         return {
-            seriesData1: series1,
+            seriesData: series1,
             primaryXAxis: {
+                title: 'Years',
                 valueType: 'DateTime',
-                labelFormat: 'yMMM'
+                labelFormat: 'yMMM',
+                edgeLabelPlacement: 'Shift',
+                majorGridLines : { width : 0 }
             },
-            zoom:
-            {
+            primaryYAxis: {
+                title: 'Profit ($)',
+                rangePadding: 'None',
+                lineStyle : { width: 0 },
+                majorTickLines : {width : 0}
+            },
+            zoom: {
                 enableSelectionZooming: true,
                 toolbarItems: ['Zoom', 'Pan', 'Reset'],
                 showToolbar: true,
@@ -54,16 +60,20 @@ export default {
                     verticalAlignment: "Top"
                 }
             },
-            title: 'Sales History of Product X'
+            title: 'Sales History of Product X',
+            legendSettings: { visible: false },
+            chartArea: { border: { width: 0 } },
+            border: { width: 0.5, color: '#00bdae' },
+            animation: { enable: false }
         };
     },
     provide: {
-        chart: [AreaSeries, DateTime, Zoom]
-    },
+        chart: [AreaSeries, DateTime, Zoom, Legend]
+    }
 };
 </script>
 <style>
-#container {
+  #container {
     height: 350px;
-}
+  }
 </style>

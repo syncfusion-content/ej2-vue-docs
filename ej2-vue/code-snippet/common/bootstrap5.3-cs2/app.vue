@@ -5,7 +5,6 @@
   </template>
   
   <script>
-  import Vue from 'vue';
   import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
   import { enableRipple } from '@syncfusion/ej2-base';
   
@@ -27,6 +26,6 @@
     margin: 25px 5px 20px 20px;
   }
   :root {
-    --color-sf-primary: #6886a4;
+    --color-sf-primary: rgba(104, 134, 164, 1);
   }
   </style>

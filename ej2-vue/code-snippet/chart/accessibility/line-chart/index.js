@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, Category, LineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, Category, LineSeries, Tooltip, Legend, DataLabel } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -8,9 +8,9 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+        <ejs-chart id="container" :title='title' :focusBorderColor="focusBorderColor" :focusBorderWidth="focusBorderWidth" :focusBorderMargin="focusBorderMargin"  :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :accessibility='accessibility' :tooltip='tooltip' :legendSettings='legendSettings'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Line' xName='month' yName='sales'> </e-series>
+                <e-series :dataSource='seriesData' name='Sales' type='Line' xName='month' yName='sales' :marker='marker'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -33,17 +33,31 @@ new Vue({
         { month: 'Dec', sales: 32 }
       ],
       primaryXAxis: {
-        valueType: 'Category',
-        title: 'Month'
+        valueType: 'Category'
       },
       primaryYAxis: {
-        title: 'Sales count'
+        labelFormat: '${value}K'
       },
-      title: "Monthly Sales Comparison"
+      marker: {
+        visible: true,
+        dataLabel: {
+          visible: true
+        }
+      },
+      title: "Sales Analysis",
+      accessibility: {
+        accessibilityDescription: 'A line chart displaying the sales analysis for each month.',
+        accessibilityRole: 'chart'
+      },
+      focusBorderColor: '#FF0000',
+      focusBorderWidth: 3,
+      focusBorderMargin: 5,
+      tooltip: { enable: true },
+      legendSettings: { visible: true }
     };
   },
   provide: {
-    chart: [Category, LineSeries]
+    chart: [Category, LineSeries, Tooltip, Legend, DataLabel]
   }
 
 });

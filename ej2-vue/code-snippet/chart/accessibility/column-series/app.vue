@@ -34,16 +34,16 @@ export default {
         valueType: 'Category',
         title: 'Countries'
       },
-      accessibility: {
-        accessibilityDescription: 'This series displays the number of gold medals won by each country in the Olympics.',
-        accessibilityRole: 'series',
-        accessibilityDescriptionFormat: 'The country ${point.x} won ${point.y} gold medals.'
-      },
       primaryYAxis: {
         minimum: 0, 
         maximum: 80,
         interval: 20, 
         title: 'Medals'
+      },
+      accessibility: {
+        accessibilityDescription: 'This series displays the number of gold medals won by each country in the Olympics.',
+        accessibilityRole: 'series',
+        accessibilityDescriptionFormat: 'The country ${point.x} won ${point.y} gold medals.'
       },
       title: 'Olympic Medals'
     };
