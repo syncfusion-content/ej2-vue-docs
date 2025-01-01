@@ -126,6 +126,23 @@ export default {
 
 ```
 
+## canUndo and canRedo 
+
+The [`canUndo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/history/#canundo) property returns true if there are actions in the undo history stack; otherwise, it returns false. This property helps identify whether any actions are present in the undo stack.The [`canRedo`](https://ej2.syncfusion.com/vue/documentation/api/diagram/history/#canredo) property returns true if there are actions in the redo history stack; otherwise, it returns false. This property helps identify whether any actions are present in the redo stack.
+
+The following code demonstrates how to use these properties:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/diagram/undo-redo/undo-redo-cs4/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/diagram/undo-redo/undo-redo-cs4/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/diagram/undo-redo/undo-redo-cs4" %}
+
 ## Current entry
 
 While performing interactions with a node or connector, the current history entry is added to the [`currentEntry`](https://ej2.syncfusion.com/vue/documentation/api/diagram/history/#currententry) property of the [`historyManager`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#historymanager).

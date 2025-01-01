@@ -206,7 +206,7 @@ this.$refs.container.ej2instances.documentEditor.search.findAll('works');
 
 let searchLength: number = container.documentEditor.search.searchResults.length;
 
-for (let i = 0; i < searchLength; i++) {
+for (let i = searchLength - 1; i >= 0; i--) {
   // It will move selection to specific searched index,move to each occurrence one by one
   this.$refs.container.ej2instances.documentEditor.search.searchResults.index = i;
   // Replace it with some text
