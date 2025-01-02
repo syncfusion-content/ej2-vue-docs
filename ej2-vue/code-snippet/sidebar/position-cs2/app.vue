@@ -11,7 +11,7 @@
             </div>
         </ejs-sidebar>
         <div id="head">
-            <ejs-button id="toggle" ref="togglebtn" class="e-btn e-info" cssClass="e-flat" iconCss="e-icons burg-icon"
+            <ejs-button id="toggle" ref="togglebtn" class="e-btn e-info" cssClass="e-flat" iconCss="e-icons e-menu"
                 isToggle="true" v-on:click.native="btnClick">Open</ejs-button>
         </div>
         <div>
@@ -93,11 +93,6 @@ export default {
 .center-align {
     text-align: center;
     padding: 20px;
-}
-
-.burg-icon:before {
-    content: '\e10d';
-    font-size: 16px;
 }
 
 .title {
