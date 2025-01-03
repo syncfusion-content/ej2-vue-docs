@@ -120,10 +120,10 @@ const fields = { dataSource: dataSource, id: 'id', text: 'name', child: 'subChil
     font-family: "Customize-icon";
 }
 
-.custom.e-treeview .e-list-item .e-icon-expandable::before,
-.custom.e-treeview .e-list-item .e-icon-collapsible:before {
-    content: '\e700';
-    font-size: 12px;
+.custom.e-treeview   .e-list-item  .e-text-content  .e-icons.e-icon-expandable::before,
+.custom.e-treeview  .e-list-item  .e-text-content  .e-icons.e-icon-collapsible:before {
+  content: '\e700';
+  font-size: 12px;
 }
 
 @font-face {
