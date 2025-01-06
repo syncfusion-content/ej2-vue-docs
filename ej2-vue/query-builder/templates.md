@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 Templates allows users to define customized header and own user interface for columns.
 
+To learn about how to use the template features in Vue Query Builder, you can check on this video
+
+{% youtube "https://www.youtube.com/watch?v=pVP6Cbp70l4" %}
+
 ## Header Template
 
 Header Template allows to define your own user interface for Header, which includes creating or deleting rules and groups and to customize the AND/OR condition and NOT condition options. To implement header template, you can create the user interface as `vue` component and assign the values when requestType is header-template-create in  `actionBegin` event.
