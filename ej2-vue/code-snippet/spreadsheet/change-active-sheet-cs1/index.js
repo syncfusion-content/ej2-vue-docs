@@ -18,7 +18,7 @@ new Vue({
     openComplete: function () {
       var spreadsheet = this.$refs.spreadsheet;
       if (spreadsheet) {
-        spreadsheet.activeSheetIndex = 2;
+        spreadsheet.ej2Instances.activeSheetIndex = 2;
       }
     }
   }
