@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 Importing facilitates the viewing or editing of predefined conditions available in JSON, SQL, and MongoDB query formats, while exporting enables obtaining the created rules in the query builder as JSON, SQL, and MongoDB queries.
 
+To learn about how to improt and export queries in Vue Query Builder, you can check on this video
+
+{% youtube "https://www.youtube.com/watch?v=u2dYpeyhM4A" %}
+
 ## Importing
 
 Importing enables users to bring predefined conditions into the system for viewing or editing, available in formats such as JSON, SQL, and MongoDB query. It facilitates the quick incorporation of pre-defined rules or parameters into workflows, streamlining the setup process by importing directly from external sources or saved configurations.

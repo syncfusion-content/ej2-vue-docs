@@ -12,6 +12,10 @@ domainurl: ##DomainURL##
 
 The Query Builder provides the functionality to lock individual rules or entire groups. When a rule is locked, it prevents users from modifying its field, operator, and value, effectively disabling these components. Similarly, locking a group disables all elements contained within it. This feature offers users greater control over their query configurations, ensuring that specific rules or groups remain unchanged. Additionally, users can manage the visibility of locking buttons through the [`showButtons`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#showbuttons) function, allowing for seamless control over the locking mechanism.
 
+To learn about how to use the lock rule features in Vue Query Builder, you can check on this video
+
+{% youtube "https://www.youtube.com/watch?v=pdPd55wte7k" %}
+
 You can lock groups and rules by interacting through the user interface and methods.
 
 * Use the [`lockGroup`](https://ej2.syncfusion.com/vue/documentation/api/query-builder/#lockgroup) method to lock group.

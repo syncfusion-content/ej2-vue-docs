@@ -170,6 +170,10 @@ npm install @syncfusion/ej2-vue-buttons --save
 
 Complex Data Binding allows you to create subfield for columns. To implement complex data binding, either bind the complex data in nested columns or specify complex data source and separator must be given in querybuilder.
 
+To learn about how to use the complex data binding features in Vue Query Builder, you can check on this video
+
+{% youtube "https://www.youtube.com/watch?v=JQbc_484R1A" %}
+
 In the following sample, complex data was bound in nested columns.
 
 {% tabs %}
