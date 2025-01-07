@@ -13,7 +13,7 @@ const spreadsheet = ref(null);
 
 const openComplete = function () {
   if (spreadsheet.value) {
-    spreadsheet.value.activeSheetIndex = 2;
+    spreadsheet.value.ej2Instances.activeSheetIndex = 2;
   }
 }
 </script>

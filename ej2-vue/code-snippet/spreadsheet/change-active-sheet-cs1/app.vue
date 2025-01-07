@@ -21,7 +21,7 @@ export default {
     openComplete: function () {
       let spreadsheet = this.$refs.spreadsheet;
       if (spreadsheet) {
-        spreadsheet.activeSheetIndex = 2;
+        spreadsheet.ej2Instances.activeSheetIndex = 2;
       }
     }
   }
