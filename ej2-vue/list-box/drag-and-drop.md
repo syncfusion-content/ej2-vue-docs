@@ -53,3 +53,18 @@ In the following sample, the `allowDragAndDrop` property is set as `true` and `s
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/list-box/getting-started/getting-started-cs7" %}
+
+## Dual ListBox with drag and drop
+
+The toolbar and drag and drop actions between two listboxes can be enabled by setting a listbox unique id and the same [`scope`](https://ej2.syncfusion.com/vue/documentation/api/list-box/#scope) property value.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs23/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/list-box/getting-started/getting-started-cs23/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/list-box/getting-started/getting-started-cs23" %}
