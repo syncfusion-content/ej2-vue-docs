@@ -14,7 +14,7 @@
 <script setup>
 import { provide } from "vue";
 
-import { MapsComponent as EjsMaps, Marker, Zoom, MapsTooltip, LayerDirective as ELayer, LayersDirective as ELayers, MarkersDirective as EMarkers, MarkerDirective as EMarker} from '@syncfusion/ej2-vue-maps';
+import { MapsComponent as EjsMaps, Marker, Zoom, MapsTooltip, LayerDirective as ELayer, LayersDirective as ELayers } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
 
 const shapeData = world_map;

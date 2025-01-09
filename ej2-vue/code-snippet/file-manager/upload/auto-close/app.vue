@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-filemanager ref="file_instance" id="file-manager" :ajaxSettings="ajaxSettings" :uploadSettings="uploadSettings" :created="onCreated">
+        <ejs-filemanager ref="file_instance" id="file-manager" :ajaxSettings="ajaxSettings" :uploadSettings="uploadSettings" >
         </ejs-filemanager>
     </div>
 </template>
@@ -21,18 +21,13 @@ export default {
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
-            uploadSettings: { allowedExtensions: '.jpg,.png', autoClose: false, autoUpload: false, chunkSize: 5242880, minFileSize: 120, maxFileSize: 73728000 }    // Additional upload settings can be added here
+            uploadSettings: { autoClose: false }    // Additional upload settings can be added here
         };
     },
     provide: {
         filemanager: [DetailsView, NavigationPane, Toolbar]
     },
-    methods: {
-        onCreated: function(){
-            // this.$refs.file_instance.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
-        }
     }
-}
 </script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

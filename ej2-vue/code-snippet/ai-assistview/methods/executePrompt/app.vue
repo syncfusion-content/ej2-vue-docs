@@ -1,5 +1,5 @@
 <template>
-  <div id='container' style="height: 350px; width: 650px;">
+  <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
     <button id="executePrompt" @click="buttonClick">Execute Prompt</button>
     <ejs-aiassistview id='aiAssistView' ref="aiassist" :prompt-request="onPromptRequest"></ejs-aiassistview>
