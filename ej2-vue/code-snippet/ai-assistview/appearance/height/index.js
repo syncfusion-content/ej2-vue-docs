@@ -5,7 +5,7 @@ Vue.use(AIAssistViewPlugin);
 new Vue({
 	el: '#app',
 	template: `
-  <div id='container' style="width: 650px;">
+  <div id='container' style="width: 650px; margin: 0 auto;">
     <br>
     <ejs-aiassistview id='aiAssistView' ref="aiassist" height="350px" :prompt-request="onPromptRequest"></ejs-aiassistview>
   </div>

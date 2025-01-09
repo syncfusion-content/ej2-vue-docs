@@ -20,6 +20,17 @@ To enable directory upload, set the `directoryUpload` property to `true` in the 
 
 When set to `true`, this property enables directory upload in the File Manager, allowing users to upload entire folders. If set to `false`, only individual files can be uploaded. 
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/directory-upload/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/directory-upload/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/directory-upload" %}
+
 >Note: When `directoryUpload` is set to `true`, only folders can be uploaded. When it is set to `false`, only individual files can be uploaded. Simultaneous uploading of files and folders is not supported.
 
 To learn more about the folder upload actions, refer to this [link](https://ej2.syncfusion.com/vue/documentation/file-manager/file-operations#folder-upload-support)
@@ -36,52 +47,14 @@ In the following example, the chunkSize is set to 5 MB (5,242,880 bytes), and th
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { provide } from "vue";
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
-provide('filemanager', [DetailsView, NavigationPane, Toolbar]);
-const uploadSettings = { chunkSize: 5242880, maxFileSize: 73728000 };
-</script>
-{% endraw %}
+{% include code-snippet/file-manager/upload/chunk-upload/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-export default {
-    name: "App",
-    components: {
-        "ejs-filemanager":FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            uploadSettings: { chunkSize: 5242880, maxFileSize: 73728000 }    // Additional upload settings can be added here
-        };
-    },
-    provide: {
-        filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
-</script>
-
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/chunk-upload/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/chunk-upload" %}
 
 With chunk upload, the pause and resume options gives users enhanced control over the file upload process.
 
@@ -99,52 +72,14 @@ The default value is `true`, the File Manager will automatically upload files as
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { provide } from "vue";
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
-provide('filemanager', [DetailsView, NavigationPane, Toolbar]);
-const uploadSettings = { autoUpload: false };
-</script>
-{% endraw %}
+{% include code-snippet/file-manager/upload/auto-upload/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-export default {
-    name: "App",
-    components: {
-        "ejs-filemanager":FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            uploadSettings: { autoUpload: false }    // Additional upload settings can be added here
-        };
-    },
-    provide: {
-        filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
-</script>
-
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/auto-upload/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/auto-upload" %}
 
 ## Auto Close
 
@@ -154,52 +89,15 @@ The default value is set to `false`, the upload dialog remains open even after t
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { provide } from "vue";
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
-provide('filemanager', [DetailsView, NavigationPane, Toolbar]);
-const uploadSettings = { autoClose: false };
-</script>
-{% endraw %}
+{% include code-snippet/file-manager/upload/auto-close/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-export default {
-    name: "App",
-    components: {
-        "ejs-filemanager":FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            uploadSettings: { autoClose: false }    // Additional upload settings can be added here
-        };
-    },
-    provide: {
-        filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
-</script>
-
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/auto-close/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/auto-close" %}
+
 
 ## Prevent upload based on file extensions
 
@@ -213,52 +111,14 @@ If you want to allow only image files like .jpg and .png, you would set the prop
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { provide } from "vue";
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
-provide('filemanager', [DetailsView, NavigationPane, Toolbar]);
-const uploadSettings = { allowedExtensions: '.jpg,.png'};
-</script>
-{% endraw %}
+{% include code-snippet/file-manager/upload/prevent-upload/app-composition.vue %}
 {% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-export default {
-    name: "App",
-    components: {
-        "ejs-filemanager":FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            uploadSettings: { allowedExtensions: '.jpg,.png' }    // Additional upload settings can be added here
-        };
-    },
-    provide: {
-        filemanager: [DetailsView, NavigationPane, Toolbar]
-    }
-}
-</script>
-
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/file-manager/upload/prevent-upload/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/prevent-upload" %}
 
 ## Restrict drag and drop upload
 
@@ -272,73 +132,14 @@ The following example demonstrates how to prevent the external drag and drop upl
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% raw %}
-<script setup>
-import { provide } from "vue";
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
-provide('filemanager', [DetailsView, NavigationPane, Toolbar]);
-const uploadSettings = { minFileSize: 120 };
-const file_instance = ref(null);
-const onCreated = function () {
-    file_instance.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
-};
-</script>
-{% endraw %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API ~/src/App.vue" %}
-<script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-export default {
-    name: "App",
-    components: {
-        "ejs-filemanager":FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            uploadSettings: { minFileSize: 120 }    // Additional upload settings can be added here
-        };
-    },
-    provide: {
-        filemanager: [DetailsView, NavigationPane, Toolbar]
-    },
-    methods: {
-        onCreated: function(){
-            this.$refs.file_instance.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
-        }
-    }
-}
-</script>
-
-{% endhighlight %}
-{% endtabs %}
-
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/file-manager/upload-feature-cs1/app-composition.vue %}
+{% include code-snippet/file-manager/upload/upload-feature-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/file-manager/upload-feature-cs1/app.vue %}
+{% include code-snippet/file-manager/upload/upload-feature-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/file-manager/upload-feature-cs1" %}
+{% previewsample "page.domainurl/code-snippet/file-manager/upload/upload-feature-cs1" %}
 
 ## See also
 

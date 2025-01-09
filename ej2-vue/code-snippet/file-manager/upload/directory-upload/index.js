@@ -25,7 +25,7 @@ new Vue({
             // Initial view of File Manager is set to details view
             view: "Details",
             // Upload settings customization
-            uploadSettings: { maxFileSize: 233332, minFileSize: 120, autoUpload: true}
+            uploadSettings: { directoryUpload: true }
         };
     },
     provide: {

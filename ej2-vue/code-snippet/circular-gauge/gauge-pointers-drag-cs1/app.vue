@@ -12,16 +12,14 @@
 </template>
 <script>
 
-import { CircularGaugeComponent, AxesDirective, AxisDirective, PointerDirective, PointersDirective } from "@syncfusion/ej2-vue-circulargauge";
+import { CircularGaugeComponent, AxesDirective, AxisDirective } from "@syncfusion/ej2-vue-circulargauge";
 
 export default {
     name: "App",
     components: {
         "ejs-circulargauge": CircularGaugeComponent,
         "e-axes": AxesDirective,
-        "e-axis": AxisDirective,
-        "e-pointers": PointersDirective,
-        "e-pointer": PointerDirective
+        "e-axis": AxisDirective
     },
     data: function () {
         return {

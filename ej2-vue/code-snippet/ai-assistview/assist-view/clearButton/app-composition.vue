@@ -1,5 +1,5 @@
 <template>
-  <div id='container' style="height: 350px; width: 650px;">
+  <div id='container' style="height: 350px; width: 650px; margin: 0 auto;">
     <br>
     <ejs-aiassistview id='aiAssistView' show-clear-button="true" prompt="What tools or apps can help me prioritize tasks?" :prompt-request="onPromptRequest" ref="aiassist"></ejs-aiassistview>
   </div>
