@@ -7,21 +7,19 @@
 import { provide } from "vue";
 
 import { GanttComponent as EjsGantt, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import {projectData ,editingResources} from "./data-source"
-const data = projectData;
+import {projectNewData ,editingResources} from "./data-source"
+const data = projectNewData;
 const addDialogFields = [
-    { type: 'General', headerText: 'General add',fields:["TaskID", "TaskName","newInput"]},
-    { type: 'Dependency'},
-    { type: 'Resources'} , 
-    { type: 'Notes' },
-    {type:"Segments"}
+        { type: 'General'},
+        { type: 'Dependency', additionalParams: {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}},
+        { type: 'Resources', additionalParams: { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}},
+        {type:"Segments", additionalParams:{columns:[{field:"segmentTask",width:"170px" ,headerText:"Segment Task"}],}}
 ];
 const editDialogFields = [
-    { type: 'General', headerText: 'General edit', fields: ["TaskID", "TaskName", "newinput"] },
-    { type: 'Dependency'},
-    { type: 'Resources'},
-    { type: 'Notes'},
-    { type: "Segments"}
+        { type: 'General'},
+        { type: 'Dependency', additionalParams: {allowPaging: true, allowSorting: true, toolbar: ["Search", "Print",]}},
+        { type: 'Resources', additionalParams: { allowSorting: true, allowPaging: true, toolbar: ["Search", "Print"], columns: [{ field: "newData" }]}},
+        {type:"Segments", additionalParams:{columns:[{field:"segmentTask",width:"170px" ,headerText:"Segment Task"}],}}
 ];
 const height = '450px';
 const taskFields = {

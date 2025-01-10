@@ -7,8 +7,8 @@
 import { provide } from "vue";
 
 import { GanttComponent as EjsGantt, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import {projectData,editingResources} from "./data-source"
-const data = projectData;
+import {projectNewData,editingResources} from "./data-source"
+const data = projectNewData;
 const addDialogFields = [
     { type: 'General', headerText: 'General add',fields:["TaskID", "TaskName","newInput"]},
     { type: 'Dependency'},
