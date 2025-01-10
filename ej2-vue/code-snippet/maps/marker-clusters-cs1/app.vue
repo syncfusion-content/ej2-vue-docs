@@ -13,7 +13,7 @@
 
 <script>
 
-import { MapsComponent, Marker, Zoom, MapsTooltip, LayerDirective, LayersDirective, MarkersDirective, MarkerDirective } from '@syncfusion/ej2-vue-maps';
+import { MapsComponent, Marker, Zoom, MapsTooltip, LayerDirective, LayersDirective } from '@syncfusion/ej2-vue-maps';
 import { world_map } from './world-map.js';
 
 export default {
@@ -21,9 +21,7 @@ name: "App",
 components: {
 "ejs-maps":MapsComponent,
 "e-layers":LayersDirective,
-"e-layer":LayerDirective,
-'e-markerSettings': MarkersDirective,
-'e-markerSetting': MarkerDirective
+"e-layer":LayerDirective
 },
 data () {
     return{

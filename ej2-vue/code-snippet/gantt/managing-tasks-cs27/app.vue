@@ -6,7 +6,7 @@
 <script>
 
 import { GanttComponent, Edit, Toolbar } from "@syncfusion/ej2-vue-gantt";
-import {projectData,editingResources} from "./data-source"
+import {projectNewData,editingResources} from "./data-source"
 export default {
 name: "App",
 components: {
@@ -14,7 +14,7 @@ components: {
 },
   data: function() {
       return{
-        data: projectData,
+        data: projectNewData,
             addDialogFields: [
                 { type: 'General'},
                 { type: 'Dependency'},

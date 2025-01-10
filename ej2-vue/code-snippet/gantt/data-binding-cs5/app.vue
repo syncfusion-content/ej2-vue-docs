@@ -8,6 +8,7 @@
 </template>
 <script>
 import { GanttComponent } from "@syncfusion/ej2-vue-gantt";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { Ajax } from '@syncfusion/ej2-base';
 export default {
 name: "App",
@@ -34,12 +35,13 @@ components: {
   methods: {
       databind: function(e){
         let ajax = new Ajax("https://services.syncfusion.com/vue/production/api/GanttData","GET");
-        this.showSpinner();
+        var ganttObj = document.getElementById('GanttContainer').ej2_instances[0]
+        ganttObj.showSpinner();
         ajax.send();
         ajax.onSuccess = function (data) {
-        this.hideSpinner();
-        this.dataSource = (JSON.parse(data)).Items;
-        this.refresh();
+        ganttObj.hideSpinner();
+        ganttObj.dataSource = (JSON.parse(data)).Items;
+        ganttObj.refresh();
     };
       },
   }

@@ -91,7 +91,7 @@ components: {
         if (document.getElementById('MD_Preview').classList.contains('e-active')) {
             var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
             var htmlPreview = this.$refs.rteInstance.$el.parentNode.querySelector('#' + id);
-            htmlPreview.innerHTML = marked(this.textArea.value);
+            htmlPreview.innerHTML = marked.parse(this.textArea.value);
         }
     },
     actionComplete: function(e) {
@@ -140,7 +140,7 @@ components: {
                 this.textArea.style.width = '50%';
             }
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = marked(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = marked.parse(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
             mdsource.parentElement.title = 'Code View';
         }
     }

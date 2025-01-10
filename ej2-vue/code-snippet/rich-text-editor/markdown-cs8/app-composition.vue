@@ -83,7 +83,7 @@ const markDownConversion = () => {
     if (document.getElementById('MD_Preview').classList.contains('e-active')) {
         var id = rteInstance.value.ej2Instances.getID() + 'html-view';
         var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-        htmlPreview.innerHTML = marked(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
+        htmlPreview.innerHTML = marked.parse(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
     }
 };
 const actionComplete = (e) => {
@@ -125,7 +125,7 @@ const actionComplete = (e) => {
             }
             textArea.style.display = 'none';
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = marked(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = marked.parse(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
             mdSource.parentElement.title = 'Code View';
         }
     }

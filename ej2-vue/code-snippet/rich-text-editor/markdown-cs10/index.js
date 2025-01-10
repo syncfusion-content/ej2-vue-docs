@@ -2,8 +2,6 @@
   import Vue from 'vue';
   import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
   import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
-  import { marked } from 'marked';
-
   Vue.use(RichTextEditorPlugin);
 
   
@@ -81,7 +79,7 @@ new Vue({
         if (document.getElementById('MD_Preview').classList.contains('e-active')) {
           var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
           var htmlPreview = this.$refs.rteInstance.$el.querySelector('#' + id);
-          htmlPreview.innerHTML = marked(this.textArea.value);
+          htmlPreview.innerHTML = marked.parse(this.textArea.value);
         }
       },
       fullPreview: function(event){
@@ -109,7 +107,7 @@ new Vue({
             this.textArea.style.width = '50%';
           }
           htmlPreview.style.display = 'block';
-          htmlPreview.innerHTML = marked(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
+          htmlPreview.innerHTML = marked.parse(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
           mdSource.parentElement.title = 'Code View';
         }
       }
