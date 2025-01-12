@@ -122,5 +122,5 @@ The [`template`](https://helpej2.syncfusion.com/vue/documentation/api/chips/#tem
 {% include code-snippet/chips/default-cs14/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/chips/default-cs14" %}
