@@ -159,7 +159,7 @@ The following code example demonstrates how to add custom data validation with a
 {% include code-snippet/spreadsheet/data-validation-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/spreadsheet/data-validation-cs1" %}
 
 ### Limitations of Data validation
