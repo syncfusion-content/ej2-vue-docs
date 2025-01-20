@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Vue Chat UI component | Syncfusion
-description: Learn about the  accessibility of the Syncfusion Chat Ui (SfChart Ui) widget, its features, and more.
+description: Learn about the  accessibility of the Syncfusion Chat UI component widget, its features, and more.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
