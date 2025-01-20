@@ -22,10 +22,10 @@ export default {
             height: "350px",
         }
     },
-    mounted: function () {
-        const diagramInstance = this.$refs.diagram.ej2instances;
+     mounted: function () {
+        const diagramInstance = this.$refs.diagram.ej2Instances;
           //Add collection of nodes
-          diagramInstance.addElements(nodes)
+        diagramInstance.addElements(nodes)
     }
 }
 </script>
