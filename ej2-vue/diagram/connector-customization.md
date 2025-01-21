@@ -124,14 +124,14 @@ Limitation: Bezier segments do not support bridging.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/connectors/ConnectorHitPadding-cs1/app-composition.vue %}
+{% include code-snippet/diagram/connectors/ConnectorHitpadding-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/connectors/ConnectorHitPadding-cs1/app.vue %}
+{% include code-snippet/diagram/connectors/ConnectorHitpadding-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorHitPadding-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/connectors/ConnectorHitpadding-cs1" %}
 
 ## Corner radius
 

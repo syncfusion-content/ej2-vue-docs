@@ -14,7 +14,7 @@ domainurl: ##DomainURL##
 
 A class diagram visually depicts the static structure of an application and is extensively employed in modeling object-oriented systems. It holds a unique position in UML diagrams, as it directly aligns with object-oriented languages. The diagram also facilitates automatic generation of class diagram shapes based on business logic, streamlining the translation from conceptual models to practical implementation.
 
-## Uml Class Diagram Shapes
+## UML Class Diagram Shapes
 
 The UML class diagram shapes are explained as follows.
 
@@ -257,14 +257,14 @@ The following code example showcases the rendering of UML built-in shapes in a s
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/diagram/umldiagramshapes/Umlclass-cs1/app-composition.vue %}
+{% include code-snippet/diagram/umldiagramshapes/UmlClass-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/diagram/umldiagramshapes/Umlclass-cs1/app.vue %}
+{% include code-snippet/diagram/umldiagramshapes/UmlClass-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/Umlclass-cs1" %}
+{% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/UmlClass-cs1" %}
 
 ## Editing in UML nodes
 
@@ -306,7 +306,7 @@ To create a UmlActivity, define the [`type`](https://ej2.syncfusion.com/vue/docu
 | StructuredNode | ![StructuredNode](images/StructuredNode.png) |
 | Note           | ![Note](images/Note.png)           |
 
-The following code illustrates how to create a UmlActivity shapes.
+The following code illustrates how to create a UMLActivity shapes.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -319,11 +319,11 @@ The following code illustrates how to create a UmlActivity shapes.
         
 {% previewsample "page.domainurl/code-snippet/diagram/umldiagramshapes/UmlActivity-cs1" %}
 
-### UmlActivity connector
+### UMLActivity connector
 
-To establish a UML Activity connector, specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#type) of connector shape as "UmlActivity" and define the flow as either "Exception," "Control," or "Object." This configuration delineates the nature of the connection, allowing for a precise representation of the interaction within the activity diagram.
+To establish a UMLActivity connector, specify the [`type`](https://ej2.syncfusion.com/vue/documentation/api/diagram/relationShipModel/#type) of connector shape as "UMLActivity" and define the flow as either "Exception," "Control," or "Object." This configuration delineates the nature of the connection, allowing for a precise representation of the interaction within the activity diagram.
 
-The following code illustrates how to create a UmlActivity connector.
+The following code illustrates how to create a UMLActivity connector.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
