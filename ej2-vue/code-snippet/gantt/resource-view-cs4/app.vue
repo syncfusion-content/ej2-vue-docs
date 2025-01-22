@@ -8,7 +8,7 @@
 </template>
 <script>
 
-import { GanttComponent, Toolbar, Edit, Selection } from "@syncfusion/ej2-vue-gantt";
+import { GanttComponent, Toolbar, Edit, Selection, RowDD } from "@syncfusion/ej2-vue-gantt";
 
 export default {
 name: "App",
@@ -129,7 +129,7 @@ resourceFields: {
       };
   },
   provide: {
-      gantt: [ Toolbar, Edit, Selection ]
+      gantt: [ Toolbar, Edit, Selection, RowDD ]
   }
 };
 </script>
