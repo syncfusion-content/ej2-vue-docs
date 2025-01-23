@@ -26,7 +26,7 @@ import { BarcodeGeneratorComponent } from '@syncfusion/ej2-vue-barcode-generator
 export default {
     name: "App",
     components: {
-        "ejs-barcodegenerator":BarcodegeneratorComponent
+        "ejs-barcodegenerator":BarcodeGeneratorComponent
     },
     data () {
         return {
