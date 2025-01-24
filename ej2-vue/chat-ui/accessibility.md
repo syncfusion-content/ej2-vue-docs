@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Vue Chat UI component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Chat UI component of Syncfusion Essential JS 2 and more.
+description: Learn here about accessibility with Syncfusion Essential Studio Vue Chat UI component, its elements, and more.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
