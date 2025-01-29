@@ -66,5 +66,5 @@ The toolbar and drag and drop actions between two listboxes can be enabled by se
 {% include code-snippet/list-box/getting-started/getting-started-cs23/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-
+        
 {% previewsample "page.domainurl/code-snippet/list-box/getting-started/getting-started-cs23" %}
