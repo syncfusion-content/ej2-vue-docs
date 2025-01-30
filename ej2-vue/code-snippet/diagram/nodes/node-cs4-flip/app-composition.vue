@@ -1,5 +1,9 @@
 <template>
     <div id="app">
+        <button @click="flipHorizontal">flipHorizontal</button>
+        <button @click="flipVertical">flipVertical</button>
+        <button @click="flipBoth">flipBoth</button>
+        <button @click="flipNone">flipNone</button>
         <ejs-diagram id="diagram" ref="diagram" :width='width' :height='height' :nodes='nodes'></ejs-diagram>
     </div>
 </template>
@@ -29,6 +33,26 @@ const nodes = [{
 
 const width = "100%";
 const height = "700px";
+const flipHorizontal = function () {
+    //Flips the node horizontally
+    diagram.value.ej2Instances.nodes[0].flip ^= FlipDirection.Horizontal;
+    diagram.value.ej2Instances.dataBind();
+}
+const flipVertical = function () {
+    //Flips the node vertically
+    diagram.value.ej2Instances.nodes[0].flip ^= FlipDirection.Vertical;
+    diagram.value.ej2Instances.dataBind();
+}
+const flipBoth = function () {
+    //Flips the node horizontally and vertically
+    diagram.value.ej2Instances.nodes[0].flip ^= FlipDirection.Both;
+    diagram.value.ej2Instances.dataBind();
+}
+const flipNone = function () {
+    //Flip for node is none
+    diagram.value.ej2Instances.nodes[0].flip = FlipDirection.None;
+    diagram.value.ej2Instances.dataBind();
+}
 
 onMounted(function () {
     const diagramInstance = diagram.value.ej2Instances;

@@ -1,6 +1,6 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin,FlipDirection } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     let nodes = [{
     // Position of the node
@@ -10,7 +10,7 @@
     width: 100,
     height: 100,
     // Flip the node in Horizontal Direction
-    flip:'Horizontal',
+    flip:FlipDirection.Horizontal,
      shape: {
         type: 'Basic',
         shape: 'RightTriangle',
