@@ -3,8 +3,6 @@ import Vue from "vue";
 import { Browser, addClass, removeClass, isNullOrUndefined } from "@syncfusion/ej2-base";
 import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
 import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-vue-base';
-import { marked } from 'marked';
-
 Vue.use(RichTextEditorPlugin);
 
 
@@ -72,7 +70,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
         if (document.getElementById('MD_Preview').classList.contains('e-active')) {
             var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
             var htmlPreview = this.$refs.rteInstance.$el.parentNode.querySelector('#' + id);
-            htmlPreview.innerHTML = marked(this.textArea.value);
+            htmlPreview.innerHTML = marked.parse(this.textArea.value);
         }
     },
     actionComplete: function(e) {
@@ -121,7 +119,7 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
                 this.textArea.style.width = '50%';
             }
             htmlPreview.style.display = 'block';
-            htmlPreview.innerHTML = marked(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
+            htmlPreview.innerHTML = marked.parse(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
             mdsource.parentElement.title = 'Code View';
         }
     }
