@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-import { DiagramComponent, PortVisibility } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent, PortVisibility, FlipDirection } from '@syncfusion/ej2-vue-diagrams';
 
 let nodes = [
   {
@@ -28,9 +28,9 @@ let nodes = [
         visibility: PortVisibility.Visible,
       },
     ],
-    annotations: [{ content: 'FlipMode as Label' }],
+    annotations: [{ content: 'FlipMode as Label', offset:{x:0,y:0.8} }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     //FlipMode as Label
     flipMode: 'Label',
     shape: {
@@ -44,14 +44,14 @@ let nodes = [
   {
     id: 'node2',
     // Position of the node
-    offsetX: 300,
+    offsetX: 400,
     offsetY: 100,
     // Size of the node
     width: 100,
     height: 100,
-    annotations: [{ content: 'FlipMode as Port' }],
+    annotations: [{ content: 'FlipMode as Port', offset:{x:0,y:0.8} }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     ports: [
       {
         id: 'left',
@@ -77,9 +77,9 @@ let nodes = [
     // Size of the node
     width: 100,
     height: 100,
-    annotations: [{ content: 'FlipMode as All' }],
+    annotations: [{ content: 'FlipMode as All', offset:{x:0,y:0.8} }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     ports: [
       {
         id: 'left',
@@ -100,14 +100,14 @@ let nodes = [
   {
     id: 'node4',
     // Position of the node
-    offsetX: 300,
+    offsetX: 400,
     offsetY: 300,
     // Size of the node
     width: 100,
     height: 100,
-    annotations: [{ content: 'FlipMode as None' }],
+    annotations: [{ content: 'FlipMode as None', offset:{x:0,y:0.8} }],
     // Flip the node in Horizontal Direction
-    flip: 'Horizontal',
+    flip: FlipDirection.Horizontal,
     ports: [
       {
         id: 'left',

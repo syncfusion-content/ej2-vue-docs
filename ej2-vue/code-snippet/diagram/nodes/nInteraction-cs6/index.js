@@ -1,6 +1,6 @@
 
     import Vue from 'vue';
-    import { DiagramPlugin, PortVisibility } from '@syncfusion/ej2-vue-diagrams';
+    import { DiagramPlugin, PortVisibility, FlipDirection } from '@syncfusion/ej2-vue-diagrams';
     Vue.use(DiagramPlugin);
     let nodes = [{
         id: 'node1',
@@ -17,9 +17,9 @@
             visibility: PortVisibility.Visible,
           },
         ],
-        annotations: [{ content: 'FlipMode as Label' }],
+        annotations: [{ content: 'FlipMode as Label', offset:{x:0,y:0.8} }],
         // Flip the node in Horizontal Direction
-        flip: 'Horizontal',
+        flip: FlipDirection.Horizontal,
         //FlipMode as Label
         flipMode: 'Label',
         shape: {
@@ -33,14 +33,14 @@
       {
         id: 'node2',
         // Position of the node
-        offsetX: 300,
+        offsetX: 400,
         offsetY: 100,
         // Size of the node
         width: 100,
         height: 100,
-        annotations: [{ content: 'FlipMode as Port' }],
+        annotations: [{ content: 'FlipMode as Port', offset:{x:0,y:0.8} }],
         // Flip the node in Horizontal Direction
-        flip: 'Horizontal',
+        flip: FlipDirection.Horizontal,
         ports: [
           {
             id: 'left',
@@ -66,9 +66,9 @@
         // Size of the node
         width: 100,
         height: 100,
-        annotations: [{ content: 'FlipMode as All' }],
+        annotations: [{ content: 'FlipMode as All', offset:{x:0,y:0.8} }],
         // Flip the node in Horizontal Direction
-        flip: 'Horizontal',
+        flip: FlipDirection.Horizontal,
         ports: [
           {
             id: 'left',
@@ -89,14 +89,14 @@
       {
         id: 'node4',
         // Position of the node
-        offsetX: 300,
+        offsetX: 400,
         offsetY: 300,
         // Size of the node
         width: 100,
         height: 100,
-        annotations: [{ content: 'FlipMode as None' }],
+        annotations: [{ content: 'FlipMode as None', offset:{x:0,y:0.8} }],
         // Flip the node in Horizontal Direction
-        flip: 'Horizontal',
+        flip: FlipDirection.Horizontal,
         ports: [
           {
             id: 'left',
