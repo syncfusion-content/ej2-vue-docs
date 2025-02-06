@@ -26,6 +26,10 @@ new Vue({
     el: '#app',
     template: `
     <div id="app">
+        <button @click="flipHorizontal">flipHorizontal</button>
+        <button @click="flipVertical">flipVertical</button>
+        <button @click="flipBoth">flipBoth</button>
+        <button @click="flipNone">flipNone</button>
         <ejs-diagram id="diagram"  :width='width' :height='height' :nodes='nodes' ></ejs-diagram>
     </div>
 `,
