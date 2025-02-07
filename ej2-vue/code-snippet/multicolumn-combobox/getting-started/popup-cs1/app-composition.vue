@@ -15,7 +15,7 @@
 </template>
 
 <script setup>
-import { MultiColumnComboBoxComponent as EjsMulticolumnombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
 import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
 const empData = [ 
     { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
