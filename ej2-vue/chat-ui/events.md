@@ -8,7 +8,7 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Chat UI component
+# Events in Vue Chat UI Component
 
 This section describes the Chat UI events that will be triggered when appropriate actions are performed. The following events are available in the Chat UI component.
 
