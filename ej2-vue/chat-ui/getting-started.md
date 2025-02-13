@@ -44,9 +44,9 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 ## Add Syncfusion Vue packages
 
-Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue Components, install the required npm package.
+Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the `Vue Chat UI Component` as an example. Install the `@syncfusion/ej2-vue-interactive-chat` package by running the following command:
+This article uses the `Vue Chat UI component` as an example. Install the `@syncfusion/ej2-vue-interactive-chat` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-interactive-chat --save
