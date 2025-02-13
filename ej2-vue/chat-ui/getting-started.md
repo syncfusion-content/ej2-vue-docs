@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI Components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Setting up the Vue 2 project
 
@@ -40,7 +40,7 @@ When creating a new project, choose the option `Default ([Vue 2] babel, eslint)`
 
 <img src="https://ej2.syncfusion.com/vue/documentation/appearance/images/vue2-terminal.png" alt="Vue 2 project">
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion Components to the project
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project
 
 ## Add Syncfusion Vue packages
 
@@ -59,7 +59,7 @@ yarn add @syncfusion/ej2-vue-interactive-chat
 
 ## Import Syncfusion CSS styles
 
-You can import themes for the Syncfusion Vue Component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
+You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://ej2.syncfusion.com/javascript/documentation/common/custom-resource-generator/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio/). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme/) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Chat UI component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
@@ -78,11 +78,11 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 {% endhighlight %}
 {% endtabs %}
 
-## Add Syncfusion Vue Component
+## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue Chat UI Component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Chat UI component using `Composition API` or `Options API`:
 
-1\. First, import and register the Chat UI Component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the Chat UI component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -111,7 +111,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Chat UI Component.
+2\. In the `template` section, define the Chat UI component.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
