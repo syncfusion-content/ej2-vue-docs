@@ -129,8 +129,8 @@ Follow the below steps to add the Vue MultiColumn ComboBox component using `Comp
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-  import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
-  import { ColumnsDirective as EColumnsDirective, ColumnDirective as EColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+  import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+  import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
 </script>
 
 {% endhighlight %}
@@ -184,8 +184,8 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     </div>
 </template>
 <script setup>
-    import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
-    import { ColumnsDirective as EColumnsDirective, ColumnDirective as EColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+    import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+    import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
     const employeeData = [ 
         { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
         { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
@@ -203,6 +203,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
 </style>
 
@@ -253,6 +254,7 @@ Here is the summarized code for the above steps in the **src/App.vue** file:
     @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
 </style>
 
@@ -283,7 +285,7 @@ In the following sample, popup list's width and height are configured.
 
 {% tabs %}
 {% highlight html tabtitle="app.vue" %}
-{% include code-snippet/combobox/getting-started/popup-cs2/app.vue %}
+{% include code-snippet/multicolumn-combobox/getting-started/popup-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
 
