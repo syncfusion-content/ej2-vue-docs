@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Events in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Events with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Events in Vue Chat UI Component | Syncfusion
+description:  Checkout and learn about Events with Vue Chat UI Component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
