@@ -87,7 +87,7 @@ Follow the below steps to add the Vue MultiColumn ComboBox component using `Comp
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 
 <script setup>
-  import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+  import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
 </script>
 
 {% endhighlight %}
@@ -147,8 +147,8 @@ After initializing, populate the MultiColumn ComboBox with data by using the `da
 </template>
 
 <script setup>
-import { MultiColumnComboBoxComponent as EjsMulticolumnCombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
-import { ColumnsDirective as EColumnsDirective, ColumnDirective as EColumnDirective } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfusion/ej2-vue-multicolumn-combobox";
+import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
 const employeeData = [ 
   { "EmpID": 1001, "Name": "Andrew Fuller", "Designation": "Team Lead", "Country": "England" },
   { "EmpID": 1002, "Name": "Robert", "Designation": "Developer", "Country": "USA" },
