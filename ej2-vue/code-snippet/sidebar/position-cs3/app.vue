@@ -11,7 +11,7 @@
         </ejs-sidebar>
         <div id="head">
             <ejs-button id="toggle" ref="togglebtn" cssClass="e-flat" iconCss="e-icons e-menu" isToggle="true"
-                v-on:click.native="btnClick">Open</ejs-button>
+                v-on:click.native="btnClick" :content ="contentValue">Open</ejs-button>
         </div>
         <div>
             <div id="maincontent" class="content">
@@ -40,84 +40,97 @@
         </div>
     </div>
 </template>
+
 <script>
 
-import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
-import { ButtonComponent, RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
+    import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+    import { ButtonComponent, RadioButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
-export default {
-    name: "App",
-    components: {
-        "ejs-sidebar": SidebarComponent,
-        "ejs-button": ButtonComponent,
-        "ejs-radiobutton": RadioButtonComponent
-    },
-    data() {
-        return {
-            type: 'Push',
-            target: '.content'
-        }
-    },
-    methods: {
-        btnClick: function () {
-            if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
-                this.$refs.togglebtn.Content = 'Open';
+    export default {
+        name: "App",
+        components: {
+            "ejs-sidebar": SidebarComponent,
+            "ejs-button": ButtonComponent,
+            "ejs-radiobutton": RadioButtonComponent
+        },
+        data() {
+            return {
+                type: 'Push',
+                target: '.content',
+                content: "Open",
+            }
+        },
+        computed: {
+            contentValue: {
+            get: function () {
+                return this.content;
+            },
+            set: function (content) {
+                this.content = content
+            }
+            }
+        },
+        methods: {
+            btnClick: function () {
+                if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
+                    this.contentValue='Open';
+                    this.$refs.sidebar.hide();
+                }
+                else {
+                    this.contentValue='Close';
+                    this.$refs.sidebar.show();
+                }
+            },
+            closeClick: function () {
                 this.$refs.sidebar.hide();
-            }
-            else {
-                this.$refs.togglebtn.Content = 'Close';
-                this.$refs.sidebar.show();
-            }
-        },
-        closeClick: function () {
-            this.$refs.sidebar.hide();
-            this.$refs.togglebtn.$el.classList.remove('e-active');
-            this.$refs.togglebtn.Content = 'Open';
-        },
-        changeHandler: function (args) {
-            if (args.event.target.id == 'over') {
-                this.type = 'Over';
-                this.$refs.togglebtn.dataBind();
-            } else if (args.event.target.id == 'push') {
-                this.type = 'Push';
-                this.$refs.togglebtn.dataBind();
-            } else if (args.event.target.id == 'slide') {
-                this.type = 'Slide';
-                this.$refs.togglebtn.dataBind();
-            } else {
-                this.type = 'Auto';
-                this.$refs.togglebtn.dataBind();
+                this.$refs.togglebtn.$el.classList.remove('e-active');
+                this.contentValue='Open';
+            },
+            changeHandler: function (args) {
+                if (args.event.target.id == 'over') {
+                    this.type = 'Over';
+                    this.$refs.togglebtn.dataBind();
+                } else if (args.event.target.id == 'push') {
+                    this.type = 'Push';
+                    this.$refs.togglebtn.dataBind();
+                } else if (args.event.target.id == 'slide') {
+                    this.type = 'Slide';
+                    this.$refs.togglebtn.dataBind();
+                } else {
+                    this.type = 'Auto';
+                    this.$refs.togglebtn.dataBind();
+                }
             }
         }
     }
-}
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.rows{
-    margin:auto;
-    text-align:center;
-}
+    .rows{
+        margin:auto;
+        text-align:center;
+    }
 
-.row{
-    padding:10px;
-    margin:auto;
-}
+    .row{
+        padding:10px;
+        margin:auto;
+    }
 
-.header {
-    width:100%;
-    height: 40px;
-    font-size:20px;
-    line-height: 40px;
-    font-weight: 500;
-    background: #eee;
-    display: inline-block;
-}
+    .header {
+        width:100%;
+        height: 40px;
+        font-size:20px;
+        line-height: 40px;
+        font-weight: 500;
+        background: #eee;
+        display: inline-block;
+    }
 
-.center-align {
+  .center-align {
     text-align: center;
     padding: 20px;
   }

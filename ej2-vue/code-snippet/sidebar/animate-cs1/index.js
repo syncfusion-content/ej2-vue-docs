@@ -1,11 +1,9 @@
-
 import Vue from 'vue';
 import { SidebarPlugin } from '@syncfusion/ej2-vue-navigations';
 import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 
 Vue.use(SidebarPlugin);
 Vue.use(ButtonPlugin);
-
 
 new Vue({
 	el: '#app',

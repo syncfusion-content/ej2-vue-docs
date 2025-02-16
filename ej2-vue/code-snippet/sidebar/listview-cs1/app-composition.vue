@@ -22,113 +22,114 @@
                         <button ejs-button id="toggle" class="e-btn e-info" v-on:click="toggleClick">Toggle
                             Sidebar</button>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 <script setup>
 
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { ListViewComponent as EjsListview } from '@syncfusion/ej2-vue-lists';
-import { ref } from 'vue';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { ListViewComponent as EjsListview } from '@syncfusion/ej2-vue-lists';
+    import { ref } from 'vue';
 
-const sidebar = ref(null);
+    const sidebar = ref(null);
 
-const dataList = [
-    { text: 'Home', id: 'list-02' },
-    { text: 'Offers', id: 'list-03' },
-    { text: 'Support', id: 'list-04' },
-    { text: 'Logout', id: 'list-06' }
-];
+    const dataList = [
+        { text: 'Home', id: 'list-02' },
+        { text: 'Offers', id: 'list-03' },
+        { text: 'Support', id: 'list-04' },
+        { text: 'Logout', id: 'list-06' }
+    ];
 
-const type = 'Over';
-const width = '100%';
+    const type = 'Over';
+    const width = '100%';
 
-const toggleClick = () => {
-    sidebar.value.toggle();
-};
-const closeClick = () => {
-    sidebar.value.hide();
-};
+    const toggleClick = () => {
+        sidebar.value.toggle();
+    };
+    const closeClick = () => {
+        sidebar.value.hide();
+    };  
 
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.center-align {
-    text-align: center;
-    padding: 20px;
-}
+    .center-align {
+        text-align: center;
+        padding: 20px;
+    }
 
-.close-btn,.e-listview .e-list-item, #default-sidebar {
-    background-color: rgb(20, 118, 210);
-    color: #ffffff;
-}
+    .close-btn,.e-listview .e-list-item, #default-sidebar {
+        background-color: rgb(20, 118, 210);
+        color: #ffffff;
+    }
 
-.close-btn {
-    box-shadow: none;
-}
+    .close-btn {
+        box-shadow: none;
+    }
 
-.closebtn {
-    top: 15px;
-    line-height: 36px;
-    height: 42px;
-    color: black;
-    position: absolute;
-    right: 10px;
-}
+    .closebtn {
+        top: 15px;
+        line-height: 36px;
+        height: 42px;
+        color: black;
+        position: absolute;
+        right: 10px;
+    }
 
-#listcontainer {
-    width: 100%;
+    #listcontainer {
+        width: 100%;
 
-}
+    }
 
-#list {
-    margin: 0 auto;
-    width: 30%;
-}
+    #list {
+        margin: 0 auto;
+        width: 30%;
+    }
 
-.close-icon::before {
-    content: "\e109";
-}
+    .close-icon::before {
+        content: "\e109";
+    }
 
-.e-listview .e-list-item {
-    text-align: center;
-    font-size: 14px;
-    padding: 0;
-}
+    .e-listview .e-list-item {
+        text-align: center;
+        font-size: 14px;
+        padding: 0;
+    }
 
-.e-btn.close-btn :hover { /* csslint allow: adjoining-classes*/
-    box-shadow: none;
-    background: transparent;
-}
+    .e-btn.close-btn :hover { /* csslint allow: adjoining-classes*/
+        box-shadow: none;
+        background: transparent;
+    }
 
-.e-icons.close-icon { /* csslint allow: adjoining-classes*/
-    line-height: 2.2;
-}
+    .e-icons.close-icon { /* csslint allow: adjoining-classes*/
+        line-height: 2.2;
+    }
 
-.title1 {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title1 {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-.title2 {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title2 {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-.sub-title {
-    text-align: center;
-    font-size: 12px;
-    padding: 10px;
-}
+    .sub-title {
+        text-align: center;
+        font-size: 12px;
+        padding: 10px;
+    }
 
-.close-btn:hover {
-    color: #fafafa;
-}
+    .close-btn:hover {
+        color: #fafafa;
+    }
 
 </style>

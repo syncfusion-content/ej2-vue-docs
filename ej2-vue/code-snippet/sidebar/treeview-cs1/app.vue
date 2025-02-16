@@ -66,96 +66,98 @@
         </div>
     </div>
 </template>
+
 <script>
 
-import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
-import { TreeViewComponent } from '@syncfusion/ej2-vue-navigations';
+    import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+    import { TreeViewComponent } from '@syncfusion/ej2-vue-navigations';
 
-export default {
-    name: "App",
-    components: {
-        "ejs-sidebar": SidebarComponent,
-        "ejs-treeview": TreeViewComponent
-    },
+    export default {
+        name: "App",
+        components: {
+            "ejs-sidebar": SidebarComponent,
+            "ejs-treeview": TreeViewComponent
+        },
 
-    data() {
-        var data = [
-            {
-                nodeId: '01', nodeText: 'Installation', iconCss: 'icon-microchip icon',
+        data() {
+            var data = [
+                {
+                    nodeId: '01', nodeText: 'Installation', iconCss: 'icon-microchip icon',
+                },
+                {
+                    nodeId: '02', nodeText: 'Deployment', iconCss: 'icon-thumbs-up-alt icon',
+                },
+                {
+                    nodeId: '03', nodeText: 'Quick Start', iconCss: 'icon-docs icon',
+                },
+                {
+                    nodeId: '04', nodeText: 'Components', iconCss: 'icon-th icon',
+                    nodeChild: [
+                        { nodeId: '04-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '04-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '04-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '04-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '04-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '04-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
+                    ]
+                },
+                {
+                    nodeId: '05', nodeText: 'API Reference', iconCss: 'icon-code icon',
+                    nodeChild: [
+                        { nodeId: '05-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '05-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '05-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '05-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '05-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
+                        { nodeId: '05-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
+                    ]
+                },
+                {
+                    nodeId: '06', nodeText: 'Browser Compatibility', iconCss: 'icon-chrome icon'
+                },
+                {
+                    nodeId: '07', nodeText: 'Upgrade Packages', iconCss: 'icon-up-hand icon'
+                },
+                {
+                    nodeId: '08', nodeText: 'Release Notes', iconCss: 'icon-bookmark-empty icon'
+                },
+                {
+                    nodeId: '09', nodeText: 'FAQ', iconCss: 'icon-help-circled icon'
+                },
+                {
+                    nodeId: '10', nodeText: 'License', iconCss: 'icon-doc-text icon'
+                }
+            ];
+            return {
+                fields: { child: 'nodeChild', dataSource: data, iconCss: 'iconCss', id: 'nodeId', text: 'nodeText' },
+                enableDock: true,
+                dockSize : '52px',
+                width: '290px',
+                target: '.main-content',
+                mediaQuery: '(min-width: 600px)',
+            };
+        },
+        methods: {
+            toggleClick: function () {
+                if (this.$refs.sidebarInstance.ej2Instances.isOpen) {
+                    this.$refs.sidebarInstance.hide();
+                    this.$refs.treeviewInstance.ej2Instances.collapseAll();
+                }
+                else {
+                    this.$refs.sidebarInstance.show();
+                    this.$refs.treeviewInstance.ej2Instances.expandAll();
+                }
             },
-            {
-                nodeId: '02', nodeText: 'Deployment', iconCss: 'icon-thumbs-up-alt icon',
-            },
-            {
-                nodeId: '03', nodeText: 'Quick Start', iconCss: 'icon-docs icon',
-            },
-            {
-                nodeId: '04', nodeText: 'Components', iconCss: 'icon-th icon',
-                nodeChild: [
-                    { nodeId: '04-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '04-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '04-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '04-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '04-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '04-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
-                ]
-            },
-            {
-                nodeId: '05', nodeText: 'API Reference', iconCss: 'icon-code icon',
-                nodeChild: [
-                    { nodeId: '05-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '05-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '05-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '05-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '05-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
-                    { nodeId: '05-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
-                ]
-            },
-            {
-                nodeId: '06', nodeText: 'Browser Compatibility', iconCss: 'icon-chrome icon'
-            },
-            {
-                nodeId: '07', nodeText: 'Upgrade Packages', iconCss: 'icon-up-hand icon'
-            },
-            {
-                nodeId: '08', nodeText: 'Release Notes', iconCss: 'icon-bookmark-empty icon'
-            },
-            {
-                nodeId: '09', nodeText: 'FAQ', iconCss: 'icon-help-circled icon'
-            },
-            {
-                nodeId: '10', nodeText: 'License', iconCss: 'icon-doc-text icon'
-            }
-        ];
-        return {
-            fields: { child: 'nodeChild', dataSource: data, iconCss: 'iconCss', id: 'nodeId', text: 'nodeText' },
-            enableDock: true,
-            dockSize : '52px',
-            width: '290px',
-            target: '.main-content',
-            mediaQuery: '(min-width: 600px)',
-        };
-    },
-    methods: {
-        toggleClick: function () {
-            if (this.$refs.sidebarInstance.ej2Instances.isOpen) {
-                this.$refs.sidebarInstance.hide();
+            close: function () {
                 this.$refs.treeviewInstance.ej2Instances.collapseAll();
-            }
-            else {
-                this.$refs.sidebarInstance.show();
-                this.$refs.treeviewInstance.ej2Instances.expandAll();
-            }
-        },
-        close: function () {
-            this.$refs.treeviewInstance.ej2Instances.collapseAll();
-        },
+            },
+        }
     }
-}
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 
     #header-section.main-header {
         border-bottom: 1px solid #d2d6de;

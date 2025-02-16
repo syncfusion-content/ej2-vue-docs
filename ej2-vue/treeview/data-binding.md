@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in Vue Treeview component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
+title: Data binding in Vue TreeView component | Syncfusion
+description: Learn here all about Data binding in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Treeview component
+# Data binding in Vue TreeView component
 
-The TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property, which is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property supports array of JavaScript objects and **DataManager**. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property, which is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property supports array of JavaScript objects and [**DataManager**](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 TreeView has `load on demand` (Lazy load) by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when a parent node is expanded, it loads the child nodes based on the `parentID/child` member.
 
@@ -66,7 +66,7 @@ In the following example, **ID**, **hasChild**, and **name** columns from self-r
 
 ## Remote data
 
-TreeView can also be populated from a remote data service with the help of the `DataManager` component and `Query` property.
+TreeView can also be populated from a remote data service with the help of the [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started) component and [`Query`](https://ej2.syncfusion.com/vue/documentation/data/querying) property.
 
 It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 

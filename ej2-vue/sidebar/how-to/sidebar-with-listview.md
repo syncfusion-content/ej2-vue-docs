@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Sidebar with listview in Vue Sidebar component
 
-Any HTML element can be placed in the Sidebar content area. Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
+Any HTML element can be placed in the Sidebar's content area. The Sidebar supports various HTML structures such as `TreeView`, `ListView`, and others.
 
 In the following example, the Sidebar is rendered with ListView component in its content area.
 

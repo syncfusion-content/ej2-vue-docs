@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Treeview component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
+title: Index in Vue TreeView component | Syncfusion
+description: Learn here all about Index in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Treeview component
+# Index in Vue TreeView component
 
 The **TreeView** component is used to represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more. TreeView can be populated from a data source such as an array of JavaScript objects or
 from DataManager.

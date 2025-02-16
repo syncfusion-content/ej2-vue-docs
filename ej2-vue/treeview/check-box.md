@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check box in Vue Treeview component | Syncfusion
-description: Learn here all about Check box in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
+title: Check box in Vue TreeView component | Syncfusion
+description: Learn here all about Check box in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
 control: Check box 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check box in Vue Treeview component
+# Check box in Vue TreeView component
 
 The TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the [showCheckBox](https://ej2.syncfusion.com/vue/documentation/api/treeview/#showcheckbox) property. When this property is enabled, checkbox appears before each TreeView node text.
 
