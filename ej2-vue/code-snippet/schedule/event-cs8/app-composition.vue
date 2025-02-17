@@ -19,7 +19,18 @@ const data = [{
   Comments: 'Summer vacation planned for outstation.',
   Origin: 'Asia/Yekaterinburg',
   Destination: 'Asia/Yekaterinburg'
-}];
+},{
+    TravelId: 1,
+    TravelSummary: "Tokyo",
+    DepartureTime: new Date(2018, 1, 16, 10, 0, 0),
+    ArrivalTime: new Date(2018, 1, 16, 12, 30, 0),
+    FullDay: false,
+    Source: "Beijing",
+    Comments: "Conference on emerging technologies.",
+    Origin: "Asia/Yekaterinburg",
+    Destination: "Asia/Yekaterinburg",
+    IsDisabled: true
+  }];
 
 
 const height = '550px';
@@ -34,7 +45,8 @@ const eventSettings = {
     startTime: { name: 'DepartureTime' },
     endTime: { name: 'ArrivalTime' },
     startTimezone: { name: 'Origin' },
-    endTimezone: { name: 'Destination' }
+    endTimezone: { name: 'Destination' },
+    isBlock: 'IsDisabled',
   }
 };
 const selectedDate = new Date(2018, 1, 15);
