@@ -15,8 +15,9 @@ new Vue({
 	template: `
   <div id="app">
     <div class="control_wrapper">
-        <ejs-treeview id='treeview' :fields="fields" :nodeClicked='nodeclicked'>
-             <ejs-contextmenu id='contentmenutree' target='#treeview' :items='menuItems' :beforeOpen='beforeopen' :select='menuclick'></ejs-contextmenu>
+        <ejs-treeview id='treeview' ref="treeview" :fields="fields" :nodeClicked='nodeclicked'>
+                <ejs-contextmenu id='contextmenutree' target='#treeview' ref="contextMenu" :items='menuItems' :beforeOpen='beforeopen'
+                    :select='menuclick'></ejs-contextmenu>
         </ejs-treeview>
     </div>
   </div>
@@ -124,12 +125,12 @@ new Vue({
    methods: {
        nodeclicked: function(args) {
             if (args.event.which === 3) {
-                var treeObj = document.getElementById('treeview').ej2_instances[0];
+                var treeObj = this.$refs.treeview.ej2Instances;
                 treeObj.selectedNodes = [args.node.getAttribute('data-uid')];
             }
-        }
+        },
         menuclick: function(args) {
-            var treevalidate = document.getElementById('treeview').ej2_instances[0];
+            var treevalidate = this.$refs.treeview.ej2Instances;
             var targetNodeId = treevalidate.selectedNodes[0];
             if (args.item.text == "Add New Item") {
                 var nodeId = "tree_" + this.index;
@@ -147,21 +148,19 @@ new Vue({
             }
         },
         beforeopen: function(args) {
-            var treevalidate = document.getElementById('treeview').ej2_instances[0];
-            var targetNodeId = treevalidate.selectedNodes[0];
-            var targetNode = document.querySelector('[data-uid="' + targetNodeId + '"]');
-            var contentmenutree = document.getElementById('contentmenutree').ej2_instances[0];
+            var targetNode =args.event.target;
+            var contextMenuTree = this.$refs.contextMenu.ej2Instances;
             if (targetNode.classList.contains('remove')) {
-                contentmenutree.enableItems(['Remove Item'], false);
+                contextMenuTree.enableItems(['Remove Item'], false);
             }
             else {
-                contentmenutree.enableItems(['Remove Item'], true);
+                contextMenuTree.enableItems(['Remove Item'], true);
             }
             if (targetNode.classList.contains('rename')) {
-                contentmenutree.enableItems(['Rename Item'], false);
+                contextMenuTree.enableItems(['Rename Item'], false);
             }
             else {
-                contentmenutree.enableItems(['Rename Item'], true);
+                contextMenuTree.enableItems(['Rename Item'], true);
             }
         }
     }

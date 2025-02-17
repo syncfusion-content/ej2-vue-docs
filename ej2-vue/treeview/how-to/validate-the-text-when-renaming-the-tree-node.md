@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Validate text when rename node in Vue Treeview component | Syncfusion
-description: Learn here all about Validate the text when renaming the tree node in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
+title: Validate text when rename node in Vue TreeView component | Syncfusion
+description: Learn here all about Validate the text when renaming the tree node in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
 control: Validate the text when renaming the tree node 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Validate the text when renaming the tree node in Vue Treeview component
+# Validate the text when renaming the tree node in Vue TreeView component
 
 You can validate the tree node text during editing by using the [`nodeEdited`](https://helpej2.syncfusion.com/vue/documentation/api/treeview#nodeedited) event of the TreeView. The following example demonstrates how to validate and prevent empty values in tree nodes.
 

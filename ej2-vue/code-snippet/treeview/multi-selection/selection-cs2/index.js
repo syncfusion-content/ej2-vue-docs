@@ -9,7 +9,7 @@ new Vue({
 	template: `
   <div id="app">
     <div class="control_wrapper">
-        <ejs-treeview id='treeview' :fields="fields" :allowMultiSelection='true' :selectedNodes="selectedNodes" :nodeSelected="nodeSelected"></ejs-treeview>
+        <ejs-treeview id='treeview' ref="treeview" :fields="fields" :allowMultiSelection='true' :selectedNodes="selectedNodes" :nodeSelected="nodeSelected"></ejs-treeview>
     </div>
   </div>
 `,
@@ -48,8 +48,8 @@ new Vue({
   },
   methods: {
         nodeSelected: function(args) {
-           var treeObj = document.getElementById('treeview').ej2_instances[0];
-            alert("The selected node's id: " + treeObj.selectedNodes); // To alert the selected node's id.
+          var treeObj =this.$refs.treeview.ej2Instances;
+          alert("The selected node's id: " + treeObj.selectedNodes); // To alert the selected node's id.
         }
     }
 

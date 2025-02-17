@@ -64,86 +64,88 @@
         </div>
     </div>
 </template>
+
 <script setup>
 
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { TreeViewComponent as EjsTreeview } from '@syncfusion/ej2-vue-navigations';
-import { ref } from 'vue';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { TreeViewComponent as EjsTreeview } from '@syncfusion/ej2-vue-navigations';
+    import { ref } from 'vue';
 
-const sidebarInstance = ref(null);
-const treeviewInstance = ref(null);
+    const sidebarInstance = ref(null);
+    const treeviewInstance = ref(null);
 
-var data = [
-    {
-        nodeId: '01', nodeText: 'Installation', iconCss: 'icon-microchip icon',
-    },
-    {
-        nodeId: '02', nodeText: 'Deployment', iconCss: 'icon-thumbs-up-alt icon',
-    },
-    {
-        nodeId: '03', nodeText: 'Quick Start', iconCss: 'icon-docs icon',
-    },
-    {
-        nodeId: '04', nodeText: 'Components', iconCss: 'icon-th icon',
-        nodeChild: [
-            { nodeId: '04-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '04-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '04-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '04-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '04-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '04-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
-        ]
-    },
-    {
-        nodeId: '05', nodeText: 'API Reference', iconCss: 'icon-code icon',
-        nodeChild: [
-            { nodeId: '05-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '05-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '05-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '05-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '05-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
-            { nodeId: '05-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
-        ]
-    },
-    {
-        nodeId: '06', nodeText: 'Browser Compatibility', iconCss: 'icon-chrome icon'
-    },
-    {
-        nodeId: '07', nodeText: 'Upgrade Packages', iconCss: 'icon-up-hand icon'
-    },
-    {
-        nodeId: '08', nodeText: 'Release Notes', iconCss: 'icon-bookmark-empty icon'
-    },
-    {
-        nodeId: '09', nodeText: 'FAQ', iconCss: 'icon-help-circled icon'
-    },
-    {
-        nodeId: '10', nodeText: 'License', iconCss: 'icon-doc-text icon'
-    }
-];
+    var data = [
+        {
+            nodeId: '01', nodeText: 'Installation', iconCss: 'icon-microchip icon',
+        },
+        {
+            nodeId: '02', nodeText: 'Deployment', iconCss: 'icon-thumbs-up-alt icon',
+        },
+        {
+            nodeId: '03', nodeText: 'Quick Start', iconCss: 'icon-docs icon',
+        },
+        {
+            nodeId: '04', nodeText: 'Components', iconCss: 'icon-th icon',
+            nodeChild: [
+                { nodeId: '04-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '04-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '04-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '04-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '04-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '04-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
+            ]
+        },
+        {
+            nodeId: '05', nodeText: 'API Reference', iconCss: 'icon-code icon',
+            nodeChild: [
+                { nodeId: '05-01', nodeText: 'Calendar', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '05-02', nodeText: 'DatePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '05-03', nodeText: 'DateTimePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '05-04', nodeText: 'DateRangePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '05-05', nodeText: 'TimePicker', iconCss: 'icon-circle-thin icon' },
+                { nodeId: '05-06', nodeText: 'SideBar', iconCss: 'icon-circle-thin icon' }
+            ]
+        },
+        {
+            nodeId: '06', nodeText: 'Browser Compatibility', iconCss: 'icon-chrome icon'
+        },
+        {
+            nodeId: '07', nodeText: 'Upgrade Packages', iconCss: 'icon-up-hand icon'
+        },
+        {
+            nodeId: '08', nodeText: 'Release Notes', iconCss: 'icon-bookmark-empty icon'
+        },
+        {
+            nodeId: '09', nodeText: 'FAQ', iconCss: 'icon-help-circled icon'
+        },
+        {
+            nodeId: '10', nodeText: 'License', iconCss: 'icon-doc-text icon'
+        }
+    ];
 
-const fields = { child: 'nodeChild', dataSource: data, iconCss: 'iconCss', id: 'nodeId', text: 'nodeText' };
-const enableDock = true;
-const dockSize = '52px',
-const width = '290px';
-const target = '.main-content';
-const mediaQuery = '(min-width: 600px)';
+    const fields = { child: 'nodeChild', dataSource: data, iconCss: 'iconCss', id: 'nodeId', text: 'nodeText' };
+    const enableDock = true;
+    const dockSize = '52px',
+    const width = '290px';
+    const target = '.main-content';
+    const mediaQuery = '(min-width: 600px)';
 
-const toggleClick = () => {
-    if (sidebarInstance.value.ej2Instances.isOpen) {
-        sidebarInstance.value.hide();
+    const toggleClick = () => {
+        if (sidebarInstance.value.ej2Instances.isOpen) {
+            sidebarInstance.value.hide();
+            treeviewInstance.value.ej2Instances.collapseAll();
+        }
+        else {
+            sidebarInstance.value.show();
+            treeviewInstance.value.ej2Instances.expandAll();
+        }
+    };
+    const close = () => {
         treeviewInstance.value.ej2Instances.collapseAll();
-    }
-    else {
-        sidebarInstance.value.show();
-        treeviewInstance.value.ej2Instances.expandAll();
-    }
-};
-const close = () => {
-    treeviewInstance.value.ej2Instances.collapseAll();
-};
+    };
 
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

@@ -22,7 +22,7 @@ new Vue({
     </div>
 </ejs-sidebar>
 <div id="head">
-    <ejs-button id="toggle" ref="togglebtn"  cssClass="e-flat" iconCss="e-icons e-menu" isToggle="true" v-on:click.native="btnClick" >Open</ejs-button>
+    <ejs-button id="toggle" ref="togglebtn"  cssClass="e-flat" iconCss="e-icons e-menu" isToggle="true" v-on:click.native="btnClick" :content ="contentValue">Open</ejs-button>
 </div>
 <div>
 <div id="maincontent" class="content">
@@ -51,39 +51,40 @@ new Vue({
     data () {
         return {
          type :'Push',
-         target : '.content'
+         target : '.content',
+         content: "Open",
         }
     },
     methods: {
-        btnClick: function(){
-        if(this.$refs.togglebtn.$el.classList.contains('e-active')){
-            this.$refs.togglebtn.Content = 'Open';
+        btnClick: function () {
+            if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
+                this.contentValue='Open';
+                this.$refs.sidebar.hide();
+            }
+            else {
+                this.contentValue='Close';
+                this.$refs.sidebar.show();
+            }
+        },
+        closeClick: function () {
             this.$refs.sidebar.hide();
-        }
-        else{
-            this.$refs.togglebtn.Content = 'Close';
-            this.$refs.sidebar.show();
-        }
-    },
-        closeClick: function() {
-         this.$refs.sidebar.hide();
-         this.$refs.togglebtn.$el.classList.remove('e-active');
-         this.$refs.togglebtn.Content = 'Open';
+            this.$refs.togglebtn.$el.classList.remove('e-active');
+            this.contentValue='Open';
         },
         changeHandler:  function(args) {
-        if(args.event.target.id == 'over') {
-            this.type = 'Over';
-            this.dataBind();
-        } else if (args.event.target.id == 'push') {
-             this.type = 'Push';
-             this.dataBind();
-        } else if (args.event.target.id == 'slide') {
-             this.type = 'Slide';
-             this.dataBind();
-        } else {
-             this.type = 'Auto';
-             this.dataBind();
+            if(args.event.target.id == 'over') {
+                this.type = 'Over';
+                this.dataBind();
+            } else if (args.event.target.id == 'push') {
+                this.type = 'Push';
+                this.dataBind();
+            } else if (args.event.target.id == 'slide') {
+                this.type = 'Slide';
+                this.dataBind();
+            } else {
+                this.type = 'Auto';
+                this.dataBind();
+            }
         }
-    }
-    }
+    }    
 });

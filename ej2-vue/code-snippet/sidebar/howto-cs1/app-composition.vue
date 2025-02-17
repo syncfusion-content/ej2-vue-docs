@@ -18,53 +18,55 @@
         </div>
     </div>
 </template>
+
 <script setup>
 
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
 
-import { ref } from 'vue';
+    import { ref } from 'vue';
 
-const leftsidebar = ref(null);
-const rightsidebar = ref(null);
-const leftWidth = '250px';
-const leftType = 'Push';
-const width = '250px';
-const position = 'Right';
-const type = 'Push';
+    const leftsidebar = ref(null);
+    const rightsidebar = ref(null);
+    const leftWidth = '250px';
+    const leftType = 'Push';
+    const width = '250px';
+    const position = 'Right';
+    const type = 'Push';
 
-const leftToggle = () => {
-    leftsidebar.value.toggle();
-};
-const rightToggle = () => {
-    rightsidebar.value.toggle();
-};
+    const leftToggle = () => {
+        leftsidebar.value.toggle();
+    };
+    const rightToggle = () => {
+        rightsidebar.value.toggle();
+    };
 
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.e-main-content {
-    text-align: center;
-    height: 100vh;
-    background: #f5f5f5;
-    font-size: 16px;
-    padding: 100px;
-}
+    .e-main-content {
+        text-align: center;
+        height: 100vh;
+        background: #f5f5f5;
+        font-size: 16px;
+        padding: 100px;
+    }
 
-#button-align {
-    padding: 15px;
-}
+    #button-align {
+        padding: 15px;
+    }
 
-.title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-#default,
-#default1 {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
-    overflow: hidden;
-}
+    #default,
+    #default1 {
+        background-color: rgb(25, 118, 210);
+        color: #ffffff;
+        overflow: hidden;
+    }
 </style>

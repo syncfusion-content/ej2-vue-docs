@@ -29,66 +29,68 @@
         </div>
     </div>
 </template>
+
 <script>
 
-import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+    import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 
-export default {
-    name: "App",
-    components: {
-        "ejs-sidebar": SidebarComponent
-    },
-    data() {
-        return {
-            showBackdrop: false,
-        };
-    },
-    methods: {
-        openClick: function () {
-            this.$refs.sidebar.show();
+    export default {
+        name: "App",
+        components: {
+            "ejs-sidebar": SidebarComponent
         },
-        toggleClick: function () {
-            this.$refs.sidebar.toggle();
+        data() {
+            return {
+                showBackdrop: false,
+            };
         },
-        closeClick: function () {
-            this.$refs.sidebar.hide();
-        },
-        close: function () {
-            console.log("sidebar closed");
-        },
-        open: function () {
-            console.log("sidebar opened");
+        methods: {
+            openClick: function () {
+                this.$refs.sidebar.show();
+            },
+            toggleClick: function () {
+                this.$refs.sidebar.toggle();
+            },
+            closeClick: function () {
+                this.$refs.sidebar.hide();
+            },
+            close: function () {
+                console.log("sidebar closed");
+            },
+            open: function () {
+                console.log("sidebar opened");
+            }
         }
     }
-}
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.center-align {
-    text-align: center;
-    padding: 20px;
-}
+    .center-align {
+        text-align: center;
+        padding: 20px;
+    }
 
-.title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-.sub-title {
-    text-align: center;
-    font-size: 16px;
-    padding: 10px;
-}
+    .sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+    }
 
-#default-sidebar {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
-}
+    #default-sidebar {
+        background-color: rgb(25, 118, 210);
+        color: #ffffff;
+    }
 
-.close-btn:hover {
-    color: rgba(0, 0, 0, .87);
-    background-color: #fafafa;
-}
+    .close-btn:hover {
+        color: rgba(0, 0, 0, .87);
+        background-color: #fafafa;
+    }
 </style>

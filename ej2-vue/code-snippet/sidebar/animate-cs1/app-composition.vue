@@ -21,61 +21,62 @@
         </div>
     </div>
 </template>
+
 <script setup>
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { ref } from 'vue';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { ref } from 'vue';
 
-const sidebar = ref(null);
+    const sidebar = ref(null);
 
-const animate = false;
-const enableRtl = true;
-const width = '280px';
-const type = 'Push';
+    const animate = false;
+    const enableRtl = true;
+    const width = '280px';
+    const type = 'Push';
 
-const toggleClick = () => {
-    sidebar.value.toggle();
-};
-const closeClick = () => {
-    sidebar.value.hide();
-};
+    const toggleClick = () => {
+        sidebar.value.toggle();
+    };
+    const closeClick = () => {
+        sidebar.value.hide();
+    };
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.center-align {
-    text-align: center;
-    padding: 20px;
-}
+    .center-align {
+        text-align: center;
+        padding: 20px;
+    }
 
-.title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-.sub-title {
-    text-align: center;
-    font-size: 16px;
-    padding: 10px;
-}
+    .sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+    }
 
-.center {
-    text-align: center;
-    display: none;
-    font-size: 13px;
-    font-weight: 400;
-    margin-top: 20px;
-}
+    .center {
+        text-align: center;
+        display: none;
+        font-size: 13px;
+        font-weight: 400;
+        margin-top: 20px;
+    }
 
-#default-sidebar {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
-}
+    #default-sidebar {
+        background-color: rgb(25, 118, 210);
+        color: #ffffff;
+    }
 
-.close-btn:hover {
-    color: #fafafa;
-}
+    .close-btn:hover {
+        color: #fafafa;
+    }
 </style>

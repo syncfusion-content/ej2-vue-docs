@@ -1,4 +1,3 @@
-
 import Vue from 'vue';
 import { TreeViewPlugin } from "@syncfusion/ej2-vue-navigations";
 
@@ -9,7 +8,7 @@ new Vue({
 	template: `
   <div id="app">
     <div class="control_wrapper">
-        <ejs-treeview id='treeview' :fields="fields" :showCheckBox='true' :nodeClicked='nodeChecked' :keyPress='nodeChecked'></ejs-treeview>
+        <ejs-treeview id='treeview' ref="treeview" :fields="fields" :showCheckBox='true' :nodeClicked='nodeChecked' :keyPress='nodeChecked'></ejs-treeview>
     </div>
   </div>
 `,
@@ -47,7 +46,7 @@ new Vue({
   },
   methods: {
         nodeChecked: function(args) {
-           var treeObj = document.getElementById('treeview').ej2_instances[0];
+            var treeObj =this.$refs.treeview.ej2Instances;
            var checkedNode = [args.node];
             if (args.event.target.classList.contains('e-fullrow') || args.event.key == "Enter") {
                 var getNodeDetails = treeObj.getNode(args.node);
