@@ -64,16 +64,18 @@ You can import themes for the Syncfusion Vue component in various ways, such as 
 In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the TreeView component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
+
 {% highlight html tabtitle="~/src/app.vue" %}
 
-<style>
-  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-</style>
+  <style>
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  </style>
 
 {% endhighlight %}
+
 {% endtabs %}
 
 ## Add Syncfusion Vue component
@@ -93,13 +95,13 @@ Follow the below steps to add the Vue TreeView component using `Composition API`
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
 
 <script>
-import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+  import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
 
-export default {
-  components: {
-    'ejs-treeview': TreeViewComponent
+  export default {
+    components: {
+      'ejs-treeview': TreeViewComponent
+    }
   }
-}
 </script>
 
 {% endhighlight %}
@@ -107,7 +109,7 @@ export default {
 
 ### Binding data source
 
-TreeView can load data either from local data sources or remote data services. This can be done using the `dataSource` property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The dataSource property supports array of JavaScript objects and `DataManager`. Here, an array of JSON values is passed to the TreeView component.
+TreeView can load data either from local data sources or remote data services. This can be done using the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property that is a member of the [fields](https://ej2.syncfusion.com/vue/documentation/api/treeview/#fields) property. The dataSource property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). Here, an array of JSON values is passed to the TreeView component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -120,46 +122,8 @@ TreeView can load data either from local data sources or remote data services. T
   </div>
 </template>
 <script setup>
-import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
-const data =  [
-  {
-      nodeId: '01', nodeText: 'Music',
-      nodeChild: [
-          { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
-      ]
-  },
-  {
-      nodeId: '02', nodeText: 'Videos', expanded: true,
-      nodeChild: [
-          { nodeId: '02-01', nodeText: 'Naturals.mp4' },
-          { nodeId: '02-02', nodeText: 'Wild.mpeg' },
-      ]
-  },
-  {
-      nodeId: '03', nodeText: 'Documents',
-      nodeChild: [
-          { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
-          { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
-          { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
-          { nodeId: '03-04', nodeText: 'Social Network.pdf' },
-          { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
-      ]
-  },
-];
-const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
-</script>
-
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-
-<template>
-    <div class="control_wrapper">
-       <ejs-treeview id='treeview' :fields='fields'></ejs-treeview>
-    </div>
-</template>
-<script>
-import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
-var dataSource =  [
+  import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+  const data =  [
     {
         nodeId: '01', nodeText: 'Music',
         nodeChild: [
@@ -183,14 +147,52 @@ var dataSource =  [
             { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
         ]
     },
-];
-export default {
-  data: function() {
-    return {
-    fields: { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' },
-    };
+  ];
+  const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
+</script>
+
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+
+  <template>
+      <div class="control_wrapper">
+        <ejs-treeview id='treeview' :fields='fields'></ejs-treeview>
+      </div>
+  </template>
+<script>
+  import { TreeViewComponent } from "@syncfusion/ej2-vue-navigations";
+  var dataSource =  [
+      {
+          nodeId: '01', nodeText: 'Music',
+          nodeChild: [
+              { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
+          ]
+      },
+      {
+          nodeId: '02', nodeText: 'Videos', expanded: true,
+          nodeChild: [
+              { nodeId: '02-01', nodeText: 'Naturals.mp4' },
+              { nodeId: '02-02', nodeText: 'Wild.mpeg' },
+          ]
+      },
+      {
+          nodeId: '03', nodeText: 'Documents',
+          nodeChild: [
+              { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
+              { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
+              { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
+              { nodeId: '03-04', nodeText: 'Social Network.pdf' },
+              { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
+          ]
+      },
+  ];
+  export default {
+    data: function() {
+      return {
+      fields: { dataSource: data, id: 'nodeId', text: 'nodeText', child: 'nodeChild' },
+      };
+    }
   }
-}
 </script>
 
 {% endhighlight %}

@@ -1,17 +1,17 @@
- .control_wrapper {
-        display: block;
-        max-width: 400px;
-        max-height: 320px;
-        margin: auto;
-        overflow: auto;
-        border: 1px solid #dddddd;
-        border-radius: 3px;
-    }
-    #app {
-        width: 350px;
-        margin: 0 auto;
-    }
-    #btn{
-        margin-left: 50px;
-        margin-top: 20px;
-    }
+.control_wrapper {
+    display: block;
+    max-width: 400px;
+    max-height: 320px;
+    margin: auto;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+}
+#app {
+    width: 350px;
+    margin: 0 auto;
+}
+#btn{
+    margin-left: 50px;
+    margin-top: 20px;
+}

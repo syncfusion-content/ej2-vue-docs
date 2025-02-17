@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Multiple selection in Vue Treeview component | Syncfusion
-description: Learn here all about Multiple selection in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
+title: Multiple selection in Vue TreeView component | Syncfusion
+description: Learn here all about Multiple selection in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
 control: Multiple selection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Multiple selection in Vue Treeview component
+# Multiple selection in Vue TreeView component
 
 Selection provides interactive support and highlights the node that you select. Selection can be done through simple mouse down or keyboard interaction.
 

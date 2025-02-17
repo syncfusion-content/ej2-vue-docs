@@ -10,7 +10,7 @@
             </div>
         </ejs-sidebar>
         <div id="head">
-            <ejs-button id="toggle" ref="togglebtn" cssClass="e-flat" iconCss="e-icons e-menu" isToggle="true" v-on:click.native="btnClick">Open</ejs-button>
+            <ejs-button id="toggle" ref="togglebtn" cssClass="e-flat" iconCss="e-icons e-menu" isToggle="true" v-on:click.native="btnClick" :content ="contentValue">Open</ejs-button>
         </div>
         <div>
             <div id="maincontent" class="content">
@@ -24,96 +24,115 @@
         </div>
     </div>
 </template>
+
 <script>
 
-import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+  import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+  import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 
-export default {
-    name: "App",
-    components: {
-        "ejs-sidebar": SidebarComponent,
-        "ejs-button": ButtonComponent
-    },
-    data() {
-        return {
-            type: 'Push',
-            target: '.content'
-        }
-    },
-    methods: {
-        btnClick: function () {
-            if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
-                this.$refs.togglebtn.Content = 'Open';
-                this.$refs.sidebar.hide();
+  export default {
+      name: "App",
+      components: {
+          "ejs-sidebar": SidebarComponent,
+          "ejs-button": ButtonComponent
+      },
+      
+      data() {
+          return {
+              type: 'Push',
+              target: '.content',
+              position: 'Left',
+              enablePersistence: true,            
+              content: "Open",
+          }
+      },
+      computed: {
+          contentValue: {
+            get: function () {
+              return this.content;
+            },
+            set: function (content) {
+              this.content = content
             }
-            else {
-                this.$refs.togglebtn.Content = 'Close';
-                this.$refs.sidebar.show();
-            }
-        },
-        closeClick: function () {
-            this.$refs.sidebar.hide();
-            this.$refs.togglebtn.$el.classList.remove('e-active');
-            this.$refs.togglebtn.Content = 'Open';
-        }
-    }
-}
+          }
+      },
+      methods: {
+          positionChange: function (args) {
+              this.position = args.event.target.id == "left" ? "Left" : "Right";
+          },
+          btnClick: function () {
+              if (this.$refs.togglebtn.$el.classList.contains('e-active')) {
+                  this.contentValue='Open';
+                  this.$refs.sidebar.hide();
+              }
+              else {
+                  this.contentValue='Close';
+                  this.$refs.sidebar.show();
+              }
+          },
+          closeClick: function () {
+              this.$refs.sidebar.hide();
+              this.$refs.togglebtn.$el.classList.remove('e-active');
+              this.contentValue='Open';
+          }
+      }
+  }
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.center-align {
-  text-align: center;
-  padding: 20px;
-}
+  .center-align {
+    text-align: center;
+    padding: 20px;
+  }
 
-.title {
-  text-align: center;
-  font-size: 20px;
-  padding: 15px;
-}
+  .title {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+  }
 
-#head {
-  border: 1px solid #424242;
-  border-bottom-color: transparent;
-  background: #00897b;
-}
+  #head {
+    border: 1px solid #424242;
+    border-bottom-color: transparent;
+    background: #00897b;
+  }
 
-#toggle {
-  /*csslintallow:adjoining-classes*/
-  background: #00695c;
-  box-shadow: none;
-  border-radius: 0;
-  height: 39px;
-  width: 100px;
-}
+  #toggle {
+    /*csslintallow:adjoining-classes*/
+    background: #00695c;
+    box-shadow: none;
+    border-radius: 0;
+    height: 39px;
+    width: 100px;
+  }
 
-#close {
-  /* csslint allow: adjoining-classes*/
-  background: #fafafa;
-  color: black;
-}
+  #close {
+    /* csslint allow: adjoining-classes*/
+    background: #fafafa;
+    color: black;
+  }
 
-.sub-title {
-  text-align: center;
-  font-size: 16px;
-  padding: 10px;
-}
+  .sub-title {
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+  }
 
-#default-sidebar {
-  background-color: #26a69a;
-  color: #ffffff;
-}
+  #default-sidebar {
+    background-color: #26a69a;
+    color: #ffffff;
+  }
 
-.content {
-  height: 305px;
-  border: 1px solid grey;
-}
+  .content {
+    height: 305px;
+    border: 1px solid grey;
+  }
 
-#toggle {
-  color: white;
-}
+  #toggle {
+    color: white;
+  }
 </style>

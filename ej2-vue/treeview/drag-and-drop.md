@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop in Vue Treeview component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion Vue Treeview component of Syncfusion Essential JS 2 and more.
+title: Drag and drop in Vue TreeView component | Syncfusion
+description: Learn here all about Drag and drop in Syncfusion Vue TreeView component of Syncfusion Essential JS 2 and more.
 control: Drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in Vue Treeview component
+# Drag and drop in Vue TreeView component
 
 The TreeView component allows you to drag and drop any node by setting [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowdraganddrop) property to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.
 
@@ -43,7 +43,7 @@ In the following sample, the [allowDragAndDrop](https://ej2.syncfusion.com/vue/d
 
 ## Multiple-node drag and drop
 
-To drag and drop more than one node, you should enable the [allowMultiSelection](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowmultiselection) property along with the `allowDragAndDrop` property.
+To drag and drop more than one node, you should enable the [allowMultiSelection](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowmultiselection) property along with the [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/treeview/#allowdraganddrop) property.
 
 To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 

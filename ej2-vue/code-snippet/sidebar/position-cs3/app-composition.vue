@@ -40,44 +40,46 @@
         </div>
     </div>
 </template>
+
 <script setup>
 
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { ButtonComponent as EjsButton, RadioButtonComponent as EjsRadiobutton } from '@syncfusion/ej2-vue-buttons';
-import { ref } from 'vue';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { ButtonComponent as EjsButton, RadioButtonComponent as EjsRadiobutton } from '@syncfusion/ej2-vue-buttons';
+    import { ref } from 'vue';
 
-const sidebar = ref(null);
-const togglebtn = ref(null);
-const type = ref('Push');
-const target = '.content';
+    const sidebar = ref(null);
+    const togglebtn = ref(null);
+    const type = ref('Push');
+    const target = '.content';
 
-const btnClick = () => {
-    if (togglebtn.value.$el.classList.contains('e-active')) {
-        togglebtn.value.Content = 'Open';
+    const btnClick = () => {
+        if (togglebtn.value.$el.classList.contains('e-active')) {
+            togglebtn.value.content = 'Open';
+            sidebar.value.hide();
+        }
+        else {
+            togglebtn.value.content = 'Close';
+            sidebar.value.show();
+        }
+    };
+    const closeClick = () => {
         sidebar.value.hide();
-    }
-    else {
-        togglebtn.value.Content = 'Close';
-        sidebar.value.show();
-    }
-};
-const closeClick = () => {
-    sidebar.value.hide();
-    togglebtn.value.$el.classList.remove('e-active');
-    togglebtn.value.Content = 'Open';
-};
-const changeHandler = (args) => {
-    if (args.event.target.id == 'over') {
-        type.value = 'Over';
-    } else if (args.event.target.id == 'push') {
-        type.value = 'Push';
-    } else if (args.event.target.id == 'slide') {
-        type.value = 'Slide';
-    } else {
-        type.value = 'Auto';
-    }
-};
+        togglebtn.value.$el.classList.remove('e-active');
+        togglebtn.value.content = 'Open';
+    };
+    const changeHandler = (args) => {
+        if (args.event.target.id == 'over') {
+            type.value = 'Over';
+        } else if (args.event.target.id == 'push') {
+            type.value = 'Push';
+        } else if (args.event.target.id == 'slide') {
+            type.value = 'Slide';
+        } else {
+            type.value = 'Auto';
+        }
+    };
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";

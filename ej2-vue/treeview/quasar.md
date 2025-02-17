@@ -62,10 +62,10 @@ In this article, the `Material 3` theme is applied using CSS styles, which are a
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material3.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material3.css";
 </style>
 
 {% endhighlight %}
@@ -101,38 +101,38 @@ Follow the below steps to add the Vue TreeView component:
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the values for the `dataSource` property in the `script` section.
+3\. Declare the values for the [`dataSource`](https://helpej2.syncfusion.com/vue/documentation/api/treeview/fieldsSettingsModel/#datasource) property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/app.vue" %}
 
 <script setup>
-const data =  [
-  {
-      nodeId: '01', nodeText: 'Music',
-      nodeChild: [
-          { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
-      ]
-  },
-  {
-      nodeId: '02', nodeText: 'Videos', expanded: true,
-      nodeChild: [
-          { nodeId: '02-01', nodeText: 'Naturals.mp4' },
-          { nodeId: '02-02', nodeText: 'Wild.mpeg' },
-      ]
-  },
-  {
-      nodeId: '03', nodeText: 'Documents',
-      nodeChild: [
-          { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
-          { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
-          { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
-          { nodeId: '03-04', nodeText: 'Social Network.pdf' },
-          { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
-      ]
-  },
-];
-const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
+    const data =  [
+    {
+        nodeId: '01', nodeText: 'Music',
+        nodeChild: [
+            { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
+        ]
+    },
+    {
+        nodeId: '02', nodeText: 'Videos', expanded: true,
+        nodeChild: [
+            { nodeId: '02-01', nodeText: 'Naturals.mp4' },
+            { nodeId: '02-02', nodeText: 'Wild.mpeg' },
+        ]
+    },
+    {
+        nodeId: '03', nodeText: 'Documents',
+        nodeChild: [
+            { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
+            { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
+            { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
+            { nodeId: '03-04', nodeText: 'Social Network.pdf' },
+            { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
+        ]
+    },
+    ];
+    const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
 </script>
 
 {% endhighlight %}
@@ -148,40 +148,40 @@ Here is the summarized code for the above steps in the **src/app.vue** file:
 </template>
 
 <script setup>
-import { TreeViewComponent as EjsTreeview } from "@syncfusion/ej2-vue-navigations";
-const data =  [
-  {
-      nodeId: '01', nodeText: 'Music',
-      nodeChild: [
-          { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
-      ]
-  },
-  {
-      nodeId: '02', nodeText: 'Videos', expanded: true,
-      nodeChild: [
-          { nodeId: '02-01', nodeText: 'Naturals.mp4' },
-          { nodeId: '02-02', nodeText: 'Wild.mpeg' },
-      ]
-  },
-  {
-      nodeId: '03', nodeText: 'Documents',
-      nodeChild: [
-          { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
-          { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
-          { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
-          { nodeId: '03-04', nodeText: 'Social Network.pdf' },
-          { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
-      ]
-  },
-];
-const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
+    import { TreeViewComponent as EjsTreeview } from "@syncfusion/ej2-vue-navigations";
+    const data =  [
+    {
+        nodeId: '01', nodeText: 'Music',
+        nodeChild: [
+            { nodeId: '01-01', nodeText: 'Gouttes.mp3' }
+        ]
+    },
+    {
+        nodeId: '02', nodeText: 'Videos', expanded: true,
+        nodeChild: [
+            { nodeId: '02-01', nodeText: 'Naturals.mp4' },
+            { nodeId: '02-02', nodeText: 'Wild.mpeg' },
+        ]
+    },
+    {
+        nodeId: '03', nodeText: 'Documents',
+        nodeChild: [
+            { nodeId: '03-01', nodeText: 'Environment Pollution.docx' },
+            { nodeId: '03-02', nodeText: 'Global Water, Sanitation, & Hygiene.docx' },
+            { nodeId: '03-03', nodeText: 'Global Warming.ppt' },
+            { nodeId: '03-04', nodeText: 'Social Network.pdf' },
+            { nodeId: '03-05', nodeText: 'Youth Empowerment.pdf' },
+        ]
+    },
+    ];
+    const fields = { dataSource: data, id: "nodeId", text: "nodeText", child: "nodeChild" };
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 </style>
 
 {% endhighlight %}

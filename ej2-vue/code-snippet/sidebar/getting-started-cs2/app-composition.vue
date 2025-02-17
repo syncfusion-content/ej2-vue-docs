@@ -11,33 +11,35 @@
         </div>
     </div>
 </template>
+
 <script setup>
 
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
 
-const width = '280px';
-const mediaQuery = window.matchMedia('(max-width: 400px)');
+    const width = '280px';
+    const mediaQuery = window.matchMedia('(max-width: 400px)');
 
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-.sub-title {
-    text-align: center;
-    font-size: 12px;
-    padding: 10px;
-}
+    .sub-title {
+        text-align: center;
+        font-size: 12px;
+        padding: 10px;
+    }
 
-#default-sidebar {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
-}
+    #default-sidebar {
+        background-color: rgb(25, 118, 210);
+        color: #ffffff;
+    }
 </style>

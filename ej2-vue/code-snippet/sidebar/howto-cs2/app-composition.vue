@@ -29,58 +29,60 @@
         </div>
     </div>
 </template>
+
 <script setup>
 
-import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
-import { ref } from 'vue';
+    import { SidebarComponent as EjsSidebar } from '@syncfusion/ej2-vue-navigations';
+    import { ref } from 'vue';
 
-const sidebar = ref(null);
-const showBackdrop = false;
+    const sidebar = ref(null);
+    const showBackdrop = false;
 
-const openClick = () => {
-    sidebar.value.show();
-};
-const toggleClick = () => {
-    sidebar.value.toggle();
-};
-const closeClick = () => {
-    sidebar.value.hide();
-};
-const close = () => {
-    console.log("sidebar closed");
-};
-const open = () => {
-    console.log("sidebar opened");
-};
+    const openClick = () => {
+        sidebar.value.show();
+    };
+    const toggleClick = () => {
+        sidebar.value.toggle();
+    };
+    const closeClick = () => {
+        sidebar.value.hide();
+    };
+    const close = () => {
+        console.log("sidebar closed");
+    };
+    const open = () => {
+        console.log("sidebar opened");
+    };
 
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.center-align {
-    text-align: center;
-    padding: 20px;
-}
+    .center-align {
+        text-align: center;
+        padding: 20px;
+    }
 
-.title {
-    text-align: center;
-    font-size: 20px;
-    padding: 15px;
-}
+    .title {
+        text-align: center;
+        font-size: 20px;
+        padding: 15px;
+    }
 
-.sub-title {
-    text-align: center;
-    font-size: 16px;
-    padding: 10px;
-}
+    .sub-title {
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+    }
 
-#default-sidebar {
-    background-color: rgb(25, 118, 210);
-    color: #ffffff;
-}
+    #default-sidebar {
+        background-color: rgb(25, 118, 210);
+        color: #ffffff;
+    }
 
-.close-btn:hover {
-    color: rgba(0, 0, 0, .87);
-    background-color: #fafafa;
-}
+    .close-btn:hover {
+        color: rgba(0, 0, 0, .87);
+        background-color: #fafafa;
+    }
 </style>

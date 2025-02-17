@@ -14,7 +14,7 @@ The Sidebar component's expand behavior can be modified based on its intended us
 
 ## Expanding types of sidebar
 
-The Sidebar can be set to initialize based on four different types that are consistent with the main component as explained below. When `dataBind` is invoked, it applies the pending property changes immediately to the component.
+The Sidebar can be set to initialize based on four different types that are consistent with the main component as explained below. When [`dataBind`](https://helpej2.syncfusion.com/documentation/api/sidebar/#databind) is invoked, it applies the pending property changes immediately to the component.
 
  | Item | Description |
 |-----|-----|

@@ -5,10 +5,9 @@
         </div>
     </div>
 </template>
+
 <script setup>
-
 import { TreeViewComponent as EjsTreeview } from "@syncfusion/ej2-vue-navigations";
-
 var dataSource = [
     {
         id: 1, name: 'ASP.NET MVC Team', expanded: true,
@@ -55,17 +54,18 @@ var dataSource = [
 const fields = { dataSource: dataSource, id: 'id', text: 'name', child: 'child', selected: 'isSelected' };
 
 </script>
-<style>
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 
-.control_wrapper {
-    display: block;
-    max-width: 350px;
-    max-height: 350px;
-    margin: auto;
-    overflow: auto;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-}
+<style>
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+
+    .control_wrapper {
+        display: block;
+        max-width: 350px;
+        max-height: 350px;
+        margin: auto;
+        overflow: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
 </style>

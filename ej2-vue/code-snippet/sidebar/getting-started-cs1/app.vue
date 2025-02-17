@@ -11,42 +11,44 @@
         </div>
     </div>
 </template>
+
 <script>
 
-import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
+    import { SidebarComponent } from '@syncfusion/ej2-vue-navigations';
 
-export default {
-    name: "App",
-    components: {
-        "ejs-sidebar": SidebarComponent
-    },
-    data() {
-        return {
-            width: '280px',
-            mediaQuery: window.matchMedia('(min-width: 600px)'),
+    export default {
+        name: "App",
+        components: {
+            "ejs-sidebar": SidebarComponent
+        },
+        data() {
+            return {
+                width: '280px',
+                mediaQuery: window.matchMedia('(min-width: 600px)'),
+            }
         }
     }
-}
 </script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
 
-.title {
-  text-align: center;
-  font-size: 20px;
-  padding: 15px;
-}
+    .title {
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    }
 
-.sub-title {
-  text-align: center;
-  font-size: 12px;
-  padding: 10px;
-}
+    .sub-title {
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    }
 
-#default-sidebar {
-  background-color: rgb(25, 118, 210);
-  color: #ffffff;
-}
+    #default-sidebar {
+    background-color: rgb(25, 118, 210);
+    color: #ffffff;
+    }
 </style>

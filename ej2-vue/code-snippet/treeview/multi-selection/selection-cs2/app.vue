@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="control_wrapper">
-      <ejs-treeview id='treeview' :fields="fields" :allowMultiSelection='true' :selectedNodes="selectedNodes"
+      <ejs-treeview id='treeview' ref="treeview" :fields="fields" :allowMultiSelection='true' :selectedNodes="selectedNodes"
         :nodeSelected="nodeSelected"></ejs-treeview>
     </div>
   </div>
@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     nodeSelected: function () {
-      var treeObj = document.getElementById('treeview').ej2_instances[0];
+      var treeObj =this.$refs.treeview.ej2Instances;
       alert("The selected node's id: " + treeObj.selectedNodes); // To alert the selected node's id.
     }
   }
