@@ -19,7 +19,7 @@ var tempVue = Vue.component("demo", {
   template:
   `<div>
     <span class="category">{{data.items[0].category}}</span>
-    <span class="count"> {{data.items.length}} Item(s)</span>
+    <span id="count"> {{data.items.length}} Item(s)</span>
   </div>`,
   data() {
     return {

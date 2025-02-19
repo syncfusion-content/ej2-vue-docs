@@ -29,7 +29,7 @@ export default {
     };
   },
   created: function () {
-    let ajax = new Ajax('./template.html', 'GET', false);
+    let ajax = new Ajax('https://helpej2.syncfusion.com/vue/documentation/code-snippet/listview/ajax-cs1/template', 'GET', false);
     ajax.onSuccess = (e) => {
       this.template = e;
     };

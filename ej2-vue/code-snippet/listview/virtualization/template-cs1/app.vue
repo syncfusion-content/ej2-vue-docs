@@ -52,7 +52,7 @@
         header: true,
         title: "Contacts",
         fields: { text: "name" },
-        height: 500,
+        height: 330,
         cssClass:'e-list-template',
         enableUi: true,
       };
@@ -70,7 +70,6 @@
       color: #008cff;
       height: 40px;
       left: 30%;
-      position: absolute;
   }
   
   #ui-list.e-listview {

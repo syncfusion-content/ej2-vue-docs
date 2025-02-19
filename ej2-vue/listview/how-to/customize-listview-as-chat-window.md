@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Listview as chat window in Vue Listview component | Syncfusion
-description: Learn here all about Customize listview as chat window in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Customize listview as chat window 
+title: ListView as chat window in Vue ListView component | Syncfusion
+description: Learn here all about Customize ListView as chat window in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Customize ListView as chat window 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize listview as chat window in Vue Listview component
+# Customize ListView as chat window in Vue ListView component
 
 ListView can be customized as a chat window. To achieve that, use the ListView [template](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property and [Avatar](https://ej2.syncfusion.com/vue/documentation/avatar/getting-started) component.
 

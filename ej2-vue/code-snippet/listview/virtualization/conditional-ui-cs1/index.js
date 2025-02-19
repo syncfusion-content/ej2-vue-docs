@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div class="control-section">
-     <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi'  :template='gTemplate' :height='height' >
+     <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi' :template='gTemplate' :height='height' >
     </ejs-listview>
   </div>
 `,
@@ -36,8 +36,8 @@ for (let i = 10; i <= 1000; i++) {
   data: function() {
     return {
       listData: listData,
-      gTemplate:  '<div id="list-container" class="${ $id % 2 === 0 ? \'even-list\' : \'odd-list\' }" > ${text} </div>',
-      height: 500,
+      height:'330px',
+      gTemplate: `<div id="list-container" class="class-\${parseInt(data.id) % 2}">\${text}</div>`, // FIXED
       enableUi: true,
     };
   },

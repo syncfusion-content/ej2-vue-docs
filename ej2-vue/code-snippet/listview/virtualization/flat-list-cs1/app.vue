@@ -1,6 +1,6 @@
 <template>
   <div class="control-section">
-    <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi'>
+    <ejs-listview id='ui-list' :dataSource='listData' :height="height" :enableVirtualization='enableUi'>
     </ejs-listview>
   </div>
 </template>
@@ -39,7 +39,8 @@ export default {
   data: function () {
     return {
       listData: listData,
-      enableUi: true
+      enableUi: true,
+      height: "330px"
     };
   },
   provide: {
@@ -52,7 +53,6 @@ export default {
   color: #008cff;
   height: 40px;
   left: 30%;
-  position: absolute;
 }
 
 #ui-list {

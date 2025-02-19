@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" ref="file_instance" :contextMenuSettings="contextMenuSettings" :ajaxSettings="ajaxSettings" :menuOpen="menuOpen" :menuClick="menuClick">
+        <ejs-filemanager id="file-manager" ref="file_instance" :height="height" :contextMenuSettings="contextMenuSettings" :ajaxSettings="ajaxSettings" :menuOpen="menuOpen" :menuClick="menuClick">
         </ejs-filemanager>
     </div>
 `,
@@ -28,7 +28,8 @@ new Vue({
                 folder: ["Custom", "Open", "|", "Delete", "Rename", "|", "Details","Custom"],
                 layout: ["Custom", "SortBy", "View", "Refresh", "|", "NewFolder", "Upload", "|", "Details", "|", "SelectAll"],
                 visible: true
-            }
+            },
+            height: "330px"
         };
     },
     provide: {

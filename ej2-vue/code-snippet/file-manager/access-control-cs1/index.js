@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager"  :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager"  :ajaxSettings="ajaxSettings" :height="height">
         </ejs-filemanager>
     </div>
 `,
@@ -22,6 +22,7 @@ new Vue({
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Download"
             },
+            height: "330px"
         };
     },
     provide: {

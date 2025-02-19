@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customization in Vue File manager component | Syncfusion
-description: Learn here all about Customization in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: Customization in Vue File Manager component | Syncfusion
+description: Learn here all about Customization in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customization in Vue File manager component
+# Customization in Vue File Manager component
 
-The File manager component allows customization of its functionalities, such as the context menu, searching, uploading, and toolbar, using APIs. Given below are some of the functionalities that can be customized in the File Manager,
+The File Manager component allows customization of its functionalities, such as the context menu, searching, uploading, and toolbar, using APIs. Given below are some of the functionalities that can be customized in the File Manager,
 
 * [Context menu customization](#context-menu-customization)
 * [Details view customization](#details-view-customization)
@@ -150,7 +150,7 @@ The upload settings like, minimum and maximum file size and enabling auto upload
 
 ## Tooltip customization
 
-The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the File manager element.
+The tooltip value can be customized by adding extra content to the title of the toolbar, navigation pane, details view and large icons of the File Manager element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

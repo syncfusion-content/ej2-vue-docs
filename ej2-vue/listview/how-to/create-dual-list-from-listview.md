@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create dual list from listview in Vue Listview component | Syncfusion
-description: Learn here all about Create dual list from listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Create dual list from listview 
+title: Create dual list from ListView in Vue ListView component | Syncfusion
+description: Learn here all about Create dual list from ListView in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Create dual list from ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create dual list from listview in Vue Listview component
+# Create dual list from ListView in Vue ListView component
 
 The dual list contains two ListViews. This allows you to move list items from one list to another using client-side events. This section explains how to integrate the ListView component to achieve dual list.
 

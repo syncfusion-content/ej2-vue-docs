@@ -19,7 +19,7 @@ import { FileManagerComponent, DetailsView, NavigationPane, Toolbar,} from '@syn
 import { createApp } from 'vue';
 
 var tabTemp = createApp().component('demoTemplate1', {
-  template: ` <div><div class="cnt-text">Overview</div><div>The file manager component contains a context menu for performing file operations, large-icons view for displaying the files and folders, and a breadcrumb for navigation. However, these basic functionalities can be extended by using the additional feature modules like toolbar, navigation pane, and details view to simplify the navigation and file operations within the file system</div></div>`,
+  template: ` <div><div class="cnt-text">Overview</div><div>The File Manager component contains a context menu for performing file operations, large-icons view for displaying the files and folders, and a breadcrumb for navigation. However, these basic functionalities can be extended by using the additional feature modules like toolbar, navigation pane, and details view to simplify the navigation and file operations within the file system</div></div>`,
   data() {
     return {
       data: {},
@@ -32,7 +32,7 @@ var fileTemp = createApp().component('demoTemplate2', {
     'ejs-filemanager': FileManagerComponent,
   },
   template:
-    '<div><div class="content-title"><div class="cnt-text">File manager with default functionalities</div></div><ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"> </ejs-filemanager></div>',
+    '<div><div class="content-title"><div class="cnt-text">File Manager with default functionalities</div></div><ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings"> </ejs-filemanager></div>',
   data() {
     return {
       ajaxSettings: {

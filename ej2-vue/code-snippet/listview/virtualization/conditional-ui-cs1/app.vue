@@ -39,7 +39,7 @@ export default {
   data: function () {
     return {
       listData: listData,
-      gTemplate: '<div id="list-container" class="${ $id % 2 === 0 ? \'even-list\' : \'odd-list\' }" > ${text} </div>',
+      gTemplate: '<div id="list-container" class="class-${parseInt(id) % 2}" > ${text} </div>',
       height: 500,
       enableUi: true,
     };
@@ -76,11 +76,11 @@ export default {
   padding: 0;
 }
 
-#ui-list .even-list {
+#ui-list .class-0 {
   background-color: lightblue;
 }
 
-#ui-list .odd-list {
+#ui-list .class-1 {
   background-color: lightcoral;
 }
 </style>

@@ -20,7 +20,7 @@ provide('filemanager', [DetailsView, NavigationPane, Toolbar]);
 const uploadSettings = { allowedExtensions: '.jpg,.png', autoClose: false, autoUpload: false, chunkSize: 5242880, minFileSize: 120, maxFileSize: 73728000 };
 const file_instance = ref(null);
 const onCreated = function () {
-    file_instance.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
+    file_instance.value.ej2Instances.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
 };
 </script>
 <style>

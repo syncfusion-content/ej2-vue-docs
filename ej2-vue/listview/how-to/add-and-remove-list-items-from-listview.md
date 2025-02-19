@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add and remove items in Vue Listview component | Syncfusion
-description: Learn here all about Add and remove list items from listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Add and remove list items from listview 
+title: Add and remove items in Vue ListView component | Syncfusion
+description: Learn here all about Add and remove list items from ListView in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Add and remove list items from ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Add and remove list items from listview in Vue Listview component
+# Add and remove list items from ListView in Vue ListView component
 
 You can add or remove list items from the ListView component using the [`addItem`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#additem) and [`removeItem`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#removeitem) methods.
 Refer to the following steps to add or remove a list item.

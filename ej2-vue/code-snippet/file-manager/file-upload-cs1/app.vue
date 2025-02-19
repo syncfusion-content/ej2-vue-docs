@@ -109,6 +109,7 @@ components: {
         position: absolute;
         top: 25px;
         margin-left: 13px;
+        margin-top: 91px;
     }
     #target {
         height: 550px;

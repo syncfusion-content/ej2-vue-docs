@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Checkbox in Vue Drop down tree component | Syncfusion
-description: Learn here all about Checkbox in Syncfusion Vue Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Checkbox in Vue Dropdown Tree component | Syncfusion
+description: Learn here all about Checkbox in Syncfusion Vue Dropdown Tree component of Syncfusion Essential JS 2 and more.
 control: Checkbox 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Checkbox in Vue Drop down tree component
+# Checkbox in Vue Dropdown Tree component
 
 The Dropdown Tree component allows you to check more than one item from the tree without affecting the UI's appearance by enabling the [`showCheckBox`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#showcheckbox) property. When this property is enabled, checkbox appears before each item text in the popup.
 

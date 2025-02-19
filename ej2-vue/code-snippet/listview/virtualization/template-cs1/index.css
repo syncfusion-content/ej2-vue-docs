@@ -6,91 +6,59 @@
     position: absolute;
 }
 
-#ui-list {
-    display: block;
-    max-width: 400px;
+#ui-list.e-listview {
     margin: auto;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-    cursor: pointer;
+    max-width: 325px;
+    line-height: initial;
+    border: 1px solid lightgray;
 }
 
-button {
-    float: right
+/* ListView header alignment */
+
+#ui-list.e-listview .e-list-header {
+    height: 50px
 }
 
-#icon {
-    width: 45px;
-    height: 45px;
-    text-align: center;
-    line-height: 45px;
+#ui-list.e-listview .e-list-header .e-text {
+    line-height: 18px
+}
+
+/* ListView template customization */
+
+#ui-list.e-listview .showUI {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
-    font-size: 20px;
-    font-weight: 500;
-    float: left;
-    margin-top: 17px;
-    margin-right: 35px;
 }
-
-img {
-    border-radius: 50%;
-    border: #ddd;
-    border: 1px solid rgba(40, 40, 40, 0.12);
-}
-
-.R {
-    background: purple;
-}
-
-.M {
-    background: pink;
-}
-
-.A {
-    background: green;
-}
-
-.S {
-    background: lightskyblue;
-}
-
-.J {
-    background: orange;
-}
-
-.N {
-    background: blue;
-}
-
-#ui-list .e-list-item {
-    height: 80px;
-    border: #ddd;
-    border: 1px solid rgba(184, 184, 184, 0.12);
-}
-
-.list-container {
-    width: inherit;
-    height: 100%;
-
-}
-
-.showUI {
-    display: inline;
-}
-
-.hideUI {
+#ui-list.e-listview .hideUI {
     display: none;
 }
 
-.content {
-    height: 100%;
-    float: left;
+#ui-list.e-listview .e-list-item {
+    padding: 3px 0;
 }
 
-.name {
-    height: 100%;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 78px;
+#ui-list.e-listview .R {
+    background: lightgrey;
 }
 
+#ui-list.e-listview .M {
+    background: pink;
+}
+
+#ui-list.e-listview .A {
+    background: lightgreen;
+}
+
+#ui-list.e-listview .S {
+    background: lightskyblue;
+}
+
+#ui-list.e-listview .J {
+    background: orange;
+}
+
+#ui-list.e-listview .N {
+    background: lightblue;
+}

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates based on device in Vue Listview component | Syncfusion
-description: Learn here all about Use dynamic templates in listview based on device in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Use dynamic templates in listview based on device 
+title: Templates based on device in Vue ListView component | Syncfusion
+description: Learn here all about Use dynamic templates in ListView based on device in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Use dynamic templates in ListView based on device 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Use dynamic templates in listview based on device in Vue Listview component
+# Use dynamic templates in ListView based on device in Vue ListView component
 
 The Syncfusion Essential JS2 components are desktop and mobile-friendly. Therefore, you can use Syncfusion components in both modes. The component templates are not always fixed. Applications may need to load different templates depending on the device being used.
 

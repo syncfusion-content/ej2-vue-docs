@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Grouping in Vue Listview component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Grouping in Vue ListView component | Syncfusion
+description: Learn here all about Grouping in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Grouping 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Grouping in Vue Listview component
+# Grouping in Vue ListView component
 
 The ListView supports grouping nested elements based on their category. The cars are grouped based on their category by using the [`groupBy`](https://helpej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field in the data table, that also supports single-level navigation.
 

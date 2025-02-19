@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Data binding in Vue Drop down tree component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Data binding in Vue Dropdown Tree component | Syncfusion
+description: Learn here all about Data binding in Syncfusion Vue Dropdown Tree component of Syncfusion Essential JS 2 and more.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Drop down tree component
+# Data binding in Vue Dropdown Tree component
 
-The Dropdown Tree component provides an option to load the data either from local data sources or from remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#fields) property. The `dataSource` property supports array of JavaScript objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Dropdown Tree component provides an option to load the data either from local data sources or from remote data services. This can be done through [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#fields) property. The `dataSource` property supports array of JavaScript objects and [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
 Dropdown Tree has `load on demand` (Lazy load) option. It reduces the bandwidth size when consuming the huge data. By default, the `loadOnDemand` is set to false. By enabling this property, it loads first level items initially, and when parent item is expanded, loads the child items based on the `parentValue/child` member.
 
@@ -18,7 +18,7 @@ Dropdown Tree has `load on demand` (Lazy load) option. It reduces the bandwidth 
 
 To bind local data to the Dropdown Tree, you can assign a JavaScript object array to the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel/#datasource) property.
 
-The Dropdown Tree component requires three fields (Value, text, and parentValue) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
+The Dropdown Tree component requires three fields (Value, text, and parentValue) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started). It supports two kinds of local data binding methods.
 
 * Hierarchical data
 
@@ -64,7 +64,7 @@ In the following example, **id**, **hasChild**, and **name** columns from self-r
 
 ## Remote data
 
-Dropdown Tree can also be populated from a remote data service with the help of the `DataManager` component and `Query` property.
+Dropdown Tree can also be populated from a remote data service with the help of the [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/vue-2-getting-started) component and [`Query`](https://ej2.syncfusion.com/vue/documentation/data/querying) property.
 
 It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 

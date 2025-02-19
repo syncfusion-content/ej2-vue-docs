@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Templates in Vue Drop down tree component | Syncfusion
-description: Learn here all about Templates in Syncfusion Vue Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Templates in Vue Dropdown Tree component | Syncfusion
+description: Learn here all about Templates in Syncfusion Vue Dropdown Tree component of Syncfusion Essential JS 2 and more.
 control: Templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Templates in Vue Drop down tree component
+# Templates in Vue Dropdown Tree component
 
 The Dropdown Tree provides support to customize each list item, header, and footer elements. It uses the Essential JS 2 Template engine to compile and render the elements properly.
 
@@ -18,7 +18,10 @@ The content of each list item within the Dropdown Tree can be customized with th
 
 In the following sample, the Dropdown Tree list items are customized with employee information such as **name** and **job** using the **itemTemplate** property.
 
-The template expression should be provided inside the {% raw %}`{{...}}`{% endraw %} interpolation syntax.
+The template expression should be provided inside the 
+{% raw %}
+`{{...}}`interpolation syntax.
+{% endraw %}
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -37,7 +40,10 @@ The currently selected value that is displayed by default on the Dropdown Tree i
 
 In the following sample, the selected value is displayed as a combined text of both `Name` and `Job` in the Dropdown Tree input, which is separated by a hyphen.
 
-The template expression should be provided inside the {% raw %}`{{...}}`{% endraw %} interpolation syntax.
+The template expression should be provided inside the
+{% raw %}
+`{{...}}`interpolation syntax.
+{% endraw %}
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

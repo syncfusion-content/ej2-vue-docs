@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Trace all events in listview in Vue Listview component | Syncfusion
-description: Learn here all about Trace all events in listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Trace all events in listview 
+title: Trace all events in ListView in Vue ListView component | Syncfusion
+description: Learn here all about Trace all events in ListView in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Trace all events in ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Trace all events in listview in Vue Listview component
+# Trace all events in ListView in Vue ListView component
 
 The ListView component triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
 

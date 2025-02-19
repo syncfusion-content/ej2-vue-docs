@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Drag and drop list items in Vue Listview component | Syncfusion
-description: Learn here all about Drag and drop list items in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Drag and drop list items in Vue ListView component | Syncfusion
+description: Learn here all about Drag and drop list items in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Drag and drop list items 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop list items in Vue Listview component
+# Drag and drop list items in Vue ListView component
 
 The ListView component doesn't have built-in drag and drop support. However, we can achieve this functionality using the [`TreeView`](https://ej2.syncfusion.com/vue/documentation/treeview/getting-started/) component with ListView appearance.
 
