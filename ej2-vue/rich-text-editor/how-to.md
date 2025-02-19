@@ -51,37 +51,6 @@ By using [`default`](https://ej2.syncfusion.com/vue/documentation/api-richTextEd
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs2" %}
 
-## Customize shortcut keys
-
-It can be achieved by using [`formatter`](./api-richTextEditor.html#formatter) property. We need to create `customformatterModel` to configure the `keyConfig` using `IHtmlFormatterModel` class and assign the same to the formatter property. Here, `ctrl+q` is configured to open the `Insert Hyperlink` dialog.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs3/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs3/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs3" %}
-
-> We need to import `IHtmlFormatterModel` and `HTMLFormatter` to configure the shortcut key.
-
-## Capture ctrl+s to update the value
-
-To achieve this, we need to bind the `keydown` event to the RTE content and capture the `ctrl + s` key press using its keyCode. In the `keydown` event handler, the `updateValue` method is called to update the [`value`](./api-richTextEditor.html#value) property and then we can save the content in the required database using the same.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs4/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/toolbar-cs4/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/toolbar-cs4" %}
 
 ## How to customize the placeholder style
 

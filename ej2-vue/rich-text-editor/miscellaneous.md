@@ -33,31 +33,6 @@ Through the `e-rte-placeholder` class to define our custom font family, font col
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs24" %}
 
-## Character count
-
-The Rich Text Editor automatically counts the number of characters in the content are while typing using the [showCharCount](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#showcharcount) property. The characters count displayed at the bottom of the editor. You can limit the number of characters in your content using the [maxLength](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#maxlength) property. By default, the editor sets the characters limit value is infinity.
-
-The character count color will be modified based on the characters in the Rich Text Editor.
-
-| **Status** | **Description** |
-| --- | --- |
-| Normal | Till 70% of given maxLength value, character count color is black. |
-| Warning | Once the number of character count in the Rich Text Editor reached 70% of given maxLength value, the character count color will be orange, indicating that, the count value going to reach the maximum count. |
-| Error | Once the number of character count in the Rich Text Editor reached 90% of given maxLength value, the character count color will be red, indicating that, the count value reached the maximum count. |
-
-> To create Rich Text Editor with character count feature, inject the Count module to the Rich Text Editor using the `RichTextEditor.Inject(Count)` method.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/getting-started-cs25/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/getting-started-cs25/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs25" %}
-
 ## Code view
 
 Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in Source view directly, the changes will be reflected in the Rich Text Editor's content. So, the users will have more flexibility over the content they have created.
