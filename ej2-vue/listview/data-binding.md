@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Data binding in Vue Listview component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Data binding in Vue ListView component | Syncfusion
+description: Learn here all about Data binding in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Data binding 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Data binding in Vue Listview component
+# Data binding in Vue ListView component
 
 The ListView component provides an option to load data either from a local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or [`DataManager`](https://ej2.syncfusion.com/documentation/api/data/dataManager/).
 
@@ -25,7 +25,7 @@ ListView supports different kinds of data services such as OData, OData V4, and 
 | child | string | Specifies the field for child dataSource items. |
 | tooltip | string | Specifies tooltip title text field. |
 | groupBy | string | Specifies category of each list item. |
-| sortBy | string | Specifies sorting field, that is used to sort the listview data. |
+| sortBy | string | Specifies sorting field, that is used to sort the ListView data. |
 | htmlAttributes | string | Specifies list item html attributes field. |
 
 > When complex data is bound to ListView, you should map the fields properly. Otherwise, the ListView properties remain as undefined or null.

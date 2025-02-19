@@ -13,7 +13,7 @@ new Vue({
 <div id="app">
     <div class="control-section folder-upload">
          <div class="sample-container">
-            <ejs-filemanager id="filemanager" :ajaxSettings='ajaxSettings' :created='onCreated' >
+            <ejs-filemanager id="filemanager" :height="height" :ajaxSettings='ajaxSettings' :created='onCreated' >
             </ejs-filemanager>
         </div>
     </div>
@@ -28,7 +28,8 @@ new Vue({
                 getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            }
+            },
+            height: "330px"
         };
     },
     provide: {

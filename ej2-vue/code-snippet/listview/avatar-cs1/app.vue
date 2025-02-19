@@ -1,6 +1,6 @@
 <template>
   <div id="sample">
-     <ejs-listview id='List' :dataSource='data' :fields='fields' :template='template' width="350px" showHeader='true' headerTitle='Contacts' sortOrder='Ascending'></ejs-listview>
+     <ejs-listview id='List' :dataSource='data' :fields='fields' :template='template' height="330px" width="350px" showHeader='true' headerTitle='Contacts' sortOrder='Ascending'></ejs-listview>
   </div>
 </template>
 <script>

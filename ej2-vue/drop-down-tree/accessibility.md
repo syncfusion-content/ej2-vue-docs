@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Accessibility in Vue Drop down tree component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Vue Drop down tree component of Syncfusion Essential JS 2 and more.
+title: Accessibility in Vue Dropdown Tree component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Vue Dropdown Tree component of Syncfusion Essential JS 2 and more.
 control: Accessibility 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Accessibility in Vue Drop down tree component
+# Accessibility in Vue Dropdown Tree component
 
 The Dropdown Tree component has been designed keeping in mind the `WAI-ARIA` specifications, and applies WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for users who use assistive technologies (AT) and those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
-The Dropdown Tree component uses the `listbox` role. Each tree parent item in the popup has `group` role and each item in the popup has `treeitem` role. The following ARIA attributes are used in the Dropdown Tree component:
+The Dropdown Tree component uses the `listbox` role. Each tree parent item in the popup has `group` role and each item in the popup has **tree item** role. The following ARIA attributes are used in the Dropdown Tree component:
 
 | **Properties** | **Functionalities** |
 | --- | --- |

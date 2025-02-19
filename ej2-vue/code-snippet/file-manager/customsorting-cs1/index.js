@@ -7,7 +7,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" :sortComparer="sortComparer" :detailsViewSettings="detailsViewSettings">
+        <ejs-filemanager id="file-manager" :height="height" :ajaxSettings="ajaxSettings" :sortComparer="sortComparer" :detailsViewSettings="detailsViewSettings">
         </ejs-filemanager>
     </div>
 `,
@@ -28,7 +28,8 @@ new Vue({
                     {field: 'size', headerText: 'File Size',minWidth: 50, width: '110', template: '${size}'},
                     { field: '_fm_modified', headerText: 'Date Modified',minWidth: 50, width: '190'}
                 ]
-            }
+            },
+            height: "330px"
         };
     },
     provide: {

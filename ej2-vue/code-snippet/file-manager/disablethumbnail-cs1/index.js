@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :showThumbnail="showThumbnail" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :height="height" :showThumbnail="showThumbnail" :ajaxSettings="ajaxSettings">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Hides the thumbnail images in File Manager's large icons view
-            showThumbnail: false
+            showThumbnail: false,
+            height: "330px"
         };
     },
     provide: {

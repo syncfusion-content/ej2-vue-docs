@@ -1,9 +1,17 @@
 <template>
   <div class="control-section">
     <div id='flat-list'>
-      <!-- ListView element -->
-      <ejs-listview id='element' :dataSource='data' :headerTemplate='template' showHeader='true'></ejs-listview>
-    </div>
+      <ejs-listview id='element' :dataSource='data' headerTemplate='headtemplate' showHeader='true'>
+        <template v-slot:headtemplate>
+          <div class="headerContainer">
+            <span class="fruitHeader">Fruits</span>
+            <ejs-button id="search" iconCss='e-icons e-search-icon' cssClass='e-small e-round' isPrimary='true'></ejs-button>
+            <ejs-button id="add" iconCss='e-icons e-add-icon' cssClass='e-small e-round' isPrimary='true'></ejs-button>
+            <ejs-button id="sort" iconCss='e-icons e-sort-icon' cssClass='e-small e-round' isPrimary='true'></ejs-button>
+          </div>
+        </template>
+      </ejs-listview>
+      </div>
   </div>
 </template>
 <script>
@@ -14,14 +22,6 @@ import { createApp } from "vue";
 enableRipple(true);
 
 const app=createApp();
-var demoVue =app.component("demo", {
-  template: `<div class="headerContainer"><span class="fruitHeader">Fruits</span><ejs-button id="search" iconCss='e-icons e-search-icon' cssClass='e-small e-round' isPrimary='true'></ejs-button><ejs-button id="add" iconCss='e-icons e-add-icon' cssClass='e-small e-round' isPrimary='true'></ejs-button><ejs-button id="sort" iconCss='e-icons e-sort-icon' cssClass='e-small e-round' isPrimary='true'></ejs-button></div>`,
-  data() {
-    return {
-      data: {}
-    };
-  }
-});
 
 export default {
   name: "App",
@@ -43,9 +43,6 @@ export default {
         { text: 'Lemon', id: '9', imgUrl: './lemon.jpg' },
         { text: 'Cherry', id: '10', imgUrl: './cherry.jpg' },
       ],
-      template: function () {
-        return { template: demoVue }
-      }
     };
   }
 }
@@ -89,8 +86,7 @@ export default {
 }
 
 .headerContainer .e-search-icon::before {
-  content: '\e961';
-  color: lightslategray;
+  content: '\e993';
 }
 
 

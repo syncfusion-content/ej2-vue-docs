@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Display spinner until loaded in Vue Listview component | Syncfusion
-description: Learn here all about Display spinner until list items are loaded in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Display spinner until loaded in Vue ListView component | Syncfusion
+description: Learn here all about Display spinner until list items are loaded in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Display spinner until list items are loaded 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Display spinner until list items are loaded in Vue Listview component
+# Display spinner until list items are loaded in Vue ListView component
 
 Some features of the ListView component, such as remote data-binding, take more time to fetch data from the corresponding dataSource or remote URL. In such cases, you can use the EJ2 `Spinner` component to enhance the appearance of the UI. This section explains how to load a spinner component to improve the appearance.
 

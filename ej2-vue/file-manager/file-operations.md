@@ -1,18 +1,18 @@
 ---
 layout: post
-title: File Operations in Vue File manager component | Syncfusion
-description: Learn here all about File operations in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: File Operations in Vue File Manager component | Syncfusion
+description: Learn here all about File operations in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: File operations 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File Operations in Vue File manager component
+# File Operations in Vue File Manager component
 
-The File manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming the existing files and folders are available in the File manager component.  Additionally, previewing of image files is also provided in the File manager component.
+The File Manager component is used to browse, manage, and organize the files and folders in a file system through a web application. All basic file operations like creating a new folder, uploading and downloading of files in the file system, and deleting and renaming the existing files and folders are available in the File Manager component.  Additionally, previewing of image files is also provided in the File Manager component.
 
-The following table represents the basic operations available in the File manager and their corresponding functions.
+The following table represents the basic operations available in the File Manager and their corresponding functions.
 
 |Operation Name|Function|
 |----|----|
@@ -27,7 +27,7 @@ The following table represents the basic operations available in the File manage
 |upload|Upload files to the current path or directory in the file system.|
 |download|Downloads the file from the server and the multiple files can be downloaded as ZIP files.|
 
->The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the File manager only after the successful response from the server.
+>The *CreateFolder*, *Remove*, and *Rename* actions will be reflected in the File Manager only after the successful response from the server.
 
 ## Folder Upload support
 
@@ -212,7 +212,7 @@ Refer to the [GitHub](https://github.com/SyncfusionExamples/amazon-s3-aspcore-fi
 
 ## File operation request and response Parameters
 
-The default parameters available in file operation request from the File manager and the corresponding response parameters required by the File manager are listed as follows.
+The default parameters available in file operation request from the File Manager and the corresponding response parameters required by the File Manager are listed as follows.
 
 ### Read
 
@@ -844,11 +844,11 @@ The following table represents the request parameters of *GetImage* operations.
 
 Return the image as a file stream in response.
 
-The request from the File manager can be customized using the [beforeSend](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#beforesend) event. Additional information can be passed to the File manager in file operation response and can be used in customization.
+The request from the File Manager can be customized using the [beforeSend](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#beforesend) event. Additional information can be passed to the File Manager in file operation response and can be used in customization.
 
 ## File request and response contents
 
-The following table represents the contents of *data, cwd, and files* in the File manager request and response.
+The following table represents the contents of *data, cwd, and files* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -861,7 +861,7 @@ The following table represents the contents of *data, cwd, and files* in the Fil
 |size|Number|-|File size|
 |type|String|-|File extension|
 
-The following table represents the contents of *error* in the File manager request and response.
+The following table represents the contents of *error* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -869,7 +869,7 @@ The following table represents the contents of *error* in the File manager reque
 |message|String|-|Error message|
 |fileExists|String[]|-|List of duplicate file names|
 
-The following table represents the contents of *details* in the File manager request and response.
+The following table represents the contents of *details* in the File Manager request and response.
 
 |Parameter|Type|Default|Explanation|
 |----|----|----|----|
@@ -885,7 +885,7 @@ The following table represents the contents of *details* in the File manager req
 
 ## Action Buttons
 
-The File manager has several menu buttons to access the file operations. The list of menu buttons available in the File manager is given in the following table.
+The File Manager has several menu buttons to access the file operations. The list of menu buttons available in the File Manager is given in the following table.
 
 |Menu Button|Behaviour|
 |----|----|

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Virtualization in Vue Listview component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Virtualization in Vue ListView component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Virtualization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Virtualization in Vue Listview component
+# Virtualization in Vue ListView component
 
 UI virtualization loads only viewable list items in a view port, which will improve the ListView performance while loading a large number of data.
 

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: File system provider in Vue File manager component | Syncfusion
-description: Learn here all about File system provider in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: File system provider in Vue File Manager component | Syncfusion
+description: Learn here all about File system provider in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: File system provider 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File system provider in Vue File manager component
+# File system provider in Vue File Manager component
 
 The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting uploading, and downloading the files or folders in the file system.
 

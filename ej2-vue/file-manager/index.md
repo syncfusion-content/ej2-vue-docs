@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue File manager component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: Index in Vue File Manager component | Syncfusion
+description: Learn here all about Index in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue File manager component
+# Index in Vue File Manager component
 
 The **File Manager** is a graphical user interface component for managing the file system that allows the users to perform most common file operation like accessing, editing, and sorting the files and folders. Also, this component has easy navigation functionality for browsing the folders to select a file or folder from the file system.
 
@@ -26,7 +26,7 @@ The **File Manager** is a graphical user interface component for managing the fi
 
 ### View preferences
 
-The **Views** property allows you to customize, how the folders or files in the file system should be displayed in the file manager.
+The **Views** property allows you to customize, how the folders or files in the file system should be displayed in the File Manager.
 
 The File Manager provides the following two view options to change the layout of the File Manger window.
 
@@ -54,7 +54,7 @@ The toolbar contains the list of tools to perform various operations like file u
 
 ### File Manipulations
 
-* `Multi-Selection` - The file manager component is provided with built-in support for multiple files or folder selection. Multiple file selection will be effective when a single operation like download or delete is performed over multiple files in the file system.
+* `Multi-Selection` - The File Manager component is provided with built-in support for multiple files or folder selection. Multiple file selection will be effective when a single operation like download or delete is performed over multiple files in the file system.
 
 * `Sorting` - Files and folders in the file system can be sorted either in the ascending or descending order by clicking the column header. Files and folders can be sorted based on the name, date created, size, and more.
 
@@ -62,4 +62,4 @@ The toolbar contains the list of tools to perform various operations like file u
 
 * Supports right-to-left (RTL) direction alignment for users working in right-to-left languages like Hebrew and Arabic.
 
-* The file manager component uses localization library (l10) to localize the text values. The texts and messages displayed in the user interface can be localized to any desired language as needed.
+* The File Manager component uses localization library (l10) to localize the text values. The texts and messages displayed in the user interface can be localized to any desired language as needed.

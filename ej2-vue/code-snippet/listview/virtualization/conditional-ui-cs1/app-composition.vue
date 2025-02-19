@@ -33,7 +33,7 @@ onBeforeMount(() => {
   }
 });
 
-const gTemplate = '<div id="list-container" class="${ $id % 2 === 0 ? \'even-list\' : \'odd-list\' }" > ${text} </div>';
+const gTemplate ='<div id="list-container" class="class-${parseInt(id) % 2}" > ${text} </div>';
 const height = 500;
 const enableUi = true;
 
@@ -68,11 +68,11 @@ provide('listview', [Virtualization]);
   padding: 0;
 }
 
-#ui-list .even-list {
+#ui-list .class-0 {
   background-color: lightblue;
 }
 
-#ui-list .odd-list {
+#ui-list .class-1 {
   background-color: lightcoral;
 }
 </style>

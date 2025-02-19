@@ -1,6 +1,6 @@
 <template>
   <div class="control-section">
-    <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi'>
+    <ejs-listview id='ui-list' :dataSource='listData' :height="height" :enableVirtualization='enableUi'>
     </ejs-listview>
   </div>
 </template>
@@ -33,7 +33,7 @@ onBeforeMount(() => {
 });
 
 const enableUi = true;
-
+const height = "330px";
 provide('listview', [Virtualization]);
 
 </script>
@@ -42,7 +42,6 @@ provide('listview', [Virtualization]);
   color: #008cff;
   height: 40px;
   left: 30%;
-  position: absolute;
 }
 
 #ui-list {

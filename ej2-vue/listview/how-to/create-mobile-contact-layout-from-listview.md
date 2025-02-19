@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Create mobile contact layout in Vue Listview component | Syncfusion
-description: Learn here all about Create mobile contact layout from listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Create mobile contact layout from listview 
+title: Create mobile contact layout in Vue ListView component | Syncfusion
+description: Learn here all about Create mobile contact layout from ListView in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Create mobile contact layout from ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Create mobile contact layout from listview in Vue Listview component
+# Create mobile contact layout from ListView in Vue ListView component
 
 You can customize the ListView using the [template](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property. Refer to the following steps to customize ListView as mobile contact view with our `ej2-avatar`.
 

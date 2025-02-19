@@ -3,7 +3,7 @@
       <div class="headerContainer">
         <div class="e-input-group">
           <input id="search" ref='searchEle' class="e-input" type="text" placeholder="Search fruits" @keyup='onKeyUp' />
-          <span class="e-input-group-icon e-input-search"></span>
+          <span class="e-input-group-icon e-icons e-input-search"></span>
         </div>
         <ejs-button id="sort" class="e-control e-btn e-small e-round e-primary e-icon-btn" v-on:click='sortItems'
           title="Sort fruits" data-ripple="true">
@@ -179,8 +179,7 @@
   }
   
   .headerContainer .e-input-search::before {
-    font-family: 'e-icons';
-    content: '\e961';
+    content: '\\e993';
     margin-top: 3px;
   }
   

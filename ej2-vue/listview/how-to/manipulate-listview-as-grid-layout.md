@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Manipulate as grid layout in Vue Listview component | Syncfusion
-description: Learn here all about Manipulate listview as grid layout in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Manipulate listview as grid layout 
+title: Manipulate as grid layout in Vue ListView component | Syncfusion
+description: Learn here all about Manipulate ListView as grid layout in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Manipulate ListView as grid layout 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Manipulate listview as grid layout in Vue Listview component
+# Manipulate ListView as grid layout in Vue ListView component
 
 In ListView, list items can be rendered in grid layout with the following data manipulations.
 

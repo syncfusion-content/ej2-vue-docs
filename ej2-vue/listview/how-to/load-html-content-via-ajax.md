@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Load html content via ajax in Vue Listview component | Syncfusion
-description: Learn here all about Load html content via ajax in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Load html content via ajax in Vue ListView component | Syncfusion
+description: Learn here all about Load html content via ajax in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Load html content via ajax 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Load html content via ajax in Vue Listview component
+# Load html content via ajax in Vue ListView component
 
 We can set external `HTML` page content as the [`template`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) for our `ListView` component by making use of `AJAX` call.
 

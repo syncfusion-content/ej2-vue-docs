@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Check list in Vue Listview component | Syncfusion
-description: Learn here all about Check list in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Check list in Vue ListView component | Syncfusion
+description: Learn here all about Check list in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Check list 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Check list in Vue Listview component
+# Check list in Vue ListView component
 
 The ListView supports checkbox in default and group lists which is used to select multiple items. The checkbox can be enabled by the [`showCheckBox`](https://helpej2.syncfusion.com/vue/documentation/api/list-view/#showcheckbox) property.
 

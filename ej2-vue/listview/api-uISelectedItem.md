@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api uISelectedItem in Vue Listview component | Syncfusion
-description: Learn here all about Api uISelectedItem in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Api uISelectedItem in Vue ListView component | Syncfusion
+description: Learn here all about Api uISelectedItem in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Api uISelectedItem 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api uISelectedItem in Vue Listview component
+# Api uISelectedItem in Vue ListView component
 
 ## Properties
 

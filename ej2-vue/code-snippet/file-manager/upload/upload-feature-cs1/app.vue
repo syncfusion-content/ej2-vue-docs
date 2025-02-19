@@ -29,7 +29,9 @@ export default {
     },
     methods: {
         onCreated: function(){
-            this.$refs.file_instance.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
+            setTimeout(() => {
+                this.$refs.file_instance.ej2Instances.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
+            }, 0);
         }
     }
 }

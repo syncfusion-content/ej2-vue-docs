@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api selectedCollection in Vue Listview component | Syncfusion
-description: Learn here all about Api selectedCollection in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Api selectedCollection in Vue ListView component | Syncfusion
+description: Learn here all about Api selectedCollection in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Api selectedCollection 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api selectedCollection in Vue Listview component
+# Api selectedCollection in Vue ListView component
 
 ## Properties
 
