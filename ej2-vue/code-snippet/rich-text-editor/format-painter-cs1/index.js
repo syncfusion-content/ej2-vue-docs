@@ -11,8 +11,15 @@ new Vue({
         <div class="control-section">
             <div class="sample-container">
                 <div class="default-section">
-                <ejs-richtexteditor ref="rteObj" :toolbarSettings="toolbarSettings" >
-                    <h3><strong>Format Painter</strong></h3>
+                <ejs-richtexteditor ref="rteObj" :toolbarSettings="toolbarSettings" :value="rteValue"></ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>`,
+
+    data: function() {
+        return {
+            rteValue: `<h3><strong>Format Painter</strong></h3>
                     <p>
                         A Format Painter is a Rich Text Editor feature allowing users to quickly 
                         <span style="background-color: rgb(198, 140, 83);"><strong>copy</strong></span>
@@ -39,15 +46,7 @@ new Vue({
                         copy and apply formatting
                         to <span style="background-color: rgb(198, 140, 83);"><strong>multiple sections</strong></span>. 
                         It's a helpful tool for anyone who works with text editing regularly, such as writers, editors, and content creators.
-                    </p>
-                </ejs-richtexteditor>
-                </div>
-            </div>
-        </div>
-    </div>`,
-
-    data: function() {
-        return {
+                    </p>`,
             toolbarSettings: {
                 items: ['FormatPainter', 'ClearFormat', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments',
                 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']

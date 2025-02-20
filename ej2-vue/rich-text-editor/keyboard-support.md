@@ -239,9 +239,7 @@ These shortcuts provide additional functionalities like fullscreen mode.
 
 ## Custom key config
 
-Customize the key config for the keyboard interaction of Rich Text Editor, using the [`keyConfig`](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#keyconfig) property.
-
-In the following sample, customize the cut, copy, paste toolbar action with `ctrl+1`, `ctrl+2`, `ctrl+3`, respectively.
+You can able to customize the key config for the keyboard interaction of Rich Text Editor, using [keyConfig](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#keyconfig) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
