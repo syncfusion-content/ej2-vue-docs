@@ -45,8 +45,7 @@
 }
 
 .headerContainer .e-input-search::before {
-    font-family: 'e-icons';
-    content: '\e961';
+    content: '\\e993';
     margin-top: 3px;
 }
 

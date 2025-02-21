@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api listViewModel in Vue Listview component | Syncfusion
-description: Learn here all about Api listViewModel in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Api listViewModel in Vue ListView component | Syncfusion
+description: Learn here all about Api listViewModel in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Api listViewModel 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api listViewModel in Vue Listview component
+# Api listViewModel in Vue ListView component
 
 Interface for a class ListView
 

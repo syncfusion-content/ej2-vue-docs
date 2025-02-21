@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Limits in Vue Range slider component | Syncfusion
-description: Learn here all about Limits in Syncfusion Vue Range slider component of Syncfusion Essential JS 2 and more.
+title: Limits in Vue Range Slider component | Syncfusion
+description: Learn here all about Limits in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
 control: Limits 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Limits in Vue Range slider component
+# Limits in Vue Range Slider component
 
-The slider [`limits`](https://ej2.syncfusion.com/vue/documentation/api/slider#limits) restrict the slider thumb to a particular range. This is used when higher or lower values would negatively affect the process or product where the slider is being used.
+The Slider [`limits`](https://ej2.syncfusion.com/vue/documentation/api/slider#limits) restrict the Slider thumb to a particular range. This is used when higher or lower values would negatively affect the process or product where the Slider is being used.
 
-The following are the six options in the slider's limits object. Each API in the limits object is optional.
+The following are the six options in the Slider's limits object. Each API in the limits object is optional.
 
 * [``enabled``](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#enabled): Enables the limits in the Slider.
 * [``minStart``](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#minstart): Sets the minimum limit for the first handle.
@@ -24,7 +24,7 @@ The following are the six options in the slider's limits object. Each API in the
 
 ## Default and MinRange Slider limits
 
-There is only one handle in the Default and MinRange Slider, so [``minStart``](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#minstart), [`minEnd``](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#minend) and [``startHandleFixed``](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#starthandlefixed) options can be used. When the limits are enabled in the Slider, the limited area becomes darkened. So you can differentiate the allowed and restricted area. Refer to the following snippet to enable the limits in the Slider.
+There is only one handle in the Default and MinRange Slider, so [`minStart`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#minstart), [`minEnd`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#minend) and [`startHandleFixed`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#starthandlefixed) options can be used. When the limits are enabled in the Slider, the limited area becomes darkened. So you can differentiate the allowed and restricted area. Refer to the following snippet to enable the limits in the Slider.
 
 ```ts
 
@@ -49,7 +49,7 @@ There is only one handle in the Default and MinRange Slider, so [``minStart``](h
 
 ## Range Slider limits
 
-In the range slider, both handles can be restricted and locked using the limit's object. In this sample, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
+In the range Slider, both handles can be restricted and locked using the limit's object. In this sample, the first handle is limited between 10 and 40, and the second handle is limited between 60 and 90.
 
 ```ts
     ......
@@ -73,8 +73,8 @@ In the range slider, both handles can be restricted and locked using the limit's
 
 ## Handle lock
 
-The movement of slider handles can be locked. This is done by enabling the [`startHandleFixed`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#starthandlefixed) and [`endHandleFixed`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#endhandlefixed) properties in the limit's object.
-In this sample, the movement of both slider handles has been locked.
+The movement of Slider handles can be locked. This is done by enabling the [`startHandleFixed`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#starthandlefixed) and [`endHandleFixed`](https://ej2.syncfusion.com/vue/documentation/api/slider/limitDataModel/#endhandlefixed) properties in the limit's object.
+In this sample, the movement of both Slider handles has been locked.
 
 ```ts
 

@@ -66,7 +66,7 @@ export default {
     },
     methods: {
         onChange: function (args) {
-            var fileObj = this.$refs.filemanagerInstance;
+            var fileObj = this.$refs.fileManagerInstance.ej2Instances;
             if (args.checked) {
                 fileObj.selectAll();
                 this.label = 'Unselect All';

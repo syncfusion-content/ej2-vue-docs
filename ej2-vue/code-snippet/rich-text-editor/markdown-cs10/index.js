@@ -1,16 +1,13 @@
-
-  import Vue from 'vue';
-  import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
-  import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
-  Vue.use(RichTextEditorPlugin);
+import Vue from 'vue';
+import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
+Vue.use(RichTextEditorPlugin);
 
   
 new Vue({
 	el: '#app',
 	template: `
   <ejs-richtexteditor ref="rteInstance" height="350" editorMode="Markdown" :value="value" :toolbarSettings="toolbarConfig" :created="created" :formatter="formatter">
-  </ejs-richtexteditor>
-`,
+  </ejs-richtexteditor>`,
 
     data() {
       return {
@@ -115,5 +112,4 @@ new Vue({
     provide: {
       richtexteditor: [Toolbar, Link, Image, MarkdownEditor]
     }
-  
 });

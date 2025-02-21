@@ -1,29 +1,21 @@
-
-
-
-
-
-
-
-
-
-
-
-
-   .fileupload {
-        max-width: 500px;
-        margin: auto;
-    }
-    #openBtn {
-        position: absolute;
-        top: 25px;
-        margin-left: 13px;
-    }
-    #target {
-        height: 550px;
-    }
-    #dialog {
-        top: 20px !important;
-        max-height: 500px !important;
-        left: 30px !important;
-    }
+#container {
+    margin-top: 100px;
+}
+.fileupload {
+    max-width: 500px;
+    margin: auto;
+}
+#openBtn {
+    position: absolute;
+    top: 25px;
+    margin-left: 13px;
+    margin-top: 91px;
+}
+#target {
+    height: 550px;
+}
+#dialog {
+    top: 20px !important;
+    max-height: 500px !important;
+    left: 30px !important;
+}

@@ -1,10 +1,17 @@
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-        <ejs-richtexteditor ref="rteObj" :toolbarSettings="toolbarSettings" :pasteCleanupSettings="pasteCleanupSettings"><p>Rich Text Editor is a WYSIWYG editing control which will reduce the effort for users while trying to express their formatting word content as HTML or Markdown format.</p>
-        <p><b>Paste Cleanup properties:</b></p>
+    <div>
+        <ejs-richtexteditor ref="rteObj" :value="rteValue" :toolbarSettings="toolbarSettings" :pasteCleanupSettings="pasteCleanupSettings"></ejs-richtexteditor>  
+    </div>
+</div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, HtmlEditor, PasteCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+
+
+const rteValue= `<p>Rich Text Editor is a WYSIWYG editing control which will reduce the effort for users while trying to express their formatting word content as HTML or Markdown format.</p>
+ <p><b>Paste Cleanup properties:</b></p>
         <ul>
             <li>
                 <p>prompt - specifies whether to enable the prompt when pasting in Rich Text Editor.</p>
@@ -24,16 +31,7 @@
             <li>
                 <p>allowedStyleProperties - specifies the allowed style properties when pasting in Rich Text Editor.</p>
             </li>
-        </ul></ejs-richtexteditor>
-        </div>
-    </div>
-</div>
-
-</div>
-</template>
-<script setup>
-import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, HtmlEditor, PasteCleanup } from "@syncfusion/ej2-vue-richtexteditor";
+        </ul>`;
 const toolbarSettings = {
     items: ['Bold', 'Italic', 'Underline', 'StrikeThrough',
     'FontName', 'FontSize', 'FontColor', 'BackgroundColor',
@@ -54,6 +52,7 @@ const pasteCleanupSettings = {
 };
 provide('richtexteditor', [Toolbar, HtmlEditor, PasteCleanup]);
 </script>
+
 <style>
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";

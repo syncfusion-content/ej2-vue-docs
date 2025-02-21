@@ -6,6 +6,7 @@
 import { provide } from "vue";
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
 import { detach } from "@syncfusion/ej2-base";
+
 const value = `<div>Prevention of Cross Sit Scripting (XSS) </div> <script>alert('hi')<\/script>`;
 const beforeSanitizeHtml = (e) => {
   e.helper = (value) => {

@@ -1,6 +1,6 @@
 <template>
     <div id='app'>
-        <ejs-tooltip target='.e-info' position='RightCenter'>
+        <ejs-tooltip ref="tooltip1" target='.e-info' position='RightCenter'>
             <div id="container">
                 <form id="details" role="form">
                     <div id="user">
@@ -97,7 +97,6 @@ const uname = ref(null);
 const pwd = ref(null);
 const cpwd = ref(null);
 const tooltip1 = ref(null);
-const tooltip3 = ref(null);
 
 const onSubmit = () => {
     let name = uname.value.value;
@@ -116,7 +115,7 @@ const onSubmit = () => {
         pwd.value.ej2Instances.title = 'Required Minimum 8 Characters';
         pwd.value.style.backgroundColor = 'red';
         let pwdtarget = pwd.value;
-        tooltip3.open(pwdtarget);
+        tooltip1.open(pwdtarget);
     } else {
         pwd.style.backgroundColor = 'white';
     }
@@ -133,7 +132,7 @@ const onClear = () => {
     tooltip1.close(target);
     uname.value.ej2Instances.title = 'Please enter your name';
     let pwdtarget = pwd.value;
-    tooltip3.close(pwdtarget);
+    tooltip1.close(pwdtarget);
 };
 
 </script>

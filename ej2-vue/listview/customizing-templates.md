@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customizing templates in Vue Listview component | Syncfusion
-description: Learn here all about Customizing templates in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Customizing templates in Vue ListView component | Syncfusion
+description: Learn here all about Customizing templates in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Customizing templates 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customizing templates in Vue Listview component
+# Customizing templates in Vue ListView component
 
 The ListView component is designed to allow customization of each list item and group title.
 
@@ -28,7 +28,7 @@ let listviewInstance: ListView = new ListView({
 
 ```
 
-In the below example, we have rendered Listview with customized header which contains search, add and sort buttons.
+In the below example, we have rendered ListView with customized header which contains search, add and sort buttons.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -427,7 +427,7 @@ var tempVue = Vue.component("demo", {
 
 ```
 
-In the below example, we have grouped Listview based on the category. The category of each list item should be mapped to [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed  grouped list items count in the group list header.
+In the below example, we have grouped ListView based on the category. The category of each list item should be mapped to [`groupBy`](https://ej2.syncfusion.com/vue/documentation/api/list-view/fieldSettingsModel/#groupby) field of the data. We have also displayed  grouped list items count in the group list header.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -468,6 +468,10 @@ In the below example, we have grouped Listview based on the category. The catego
       font-size: 18px;
       line-height: 26px;
   }
+  #count {
+    position: relative;
+    left: 100px;
+  }
 </style>
 <script setup>
 
@@ -490,7 +494,7 @@ var tempVue = Vue.component("demo", {
   template:
   `<div>
     <span class="category">{{data.items[0].category}}</span>
-    <span class="count"> {{data.items.length}} Item(s)</span>
+    <span id="count"> {{data.items.length}} Item(s)</span>
   </div>`,
   data() {
     return {
@@ -562,6 +566,10 @@ export default {
       font-size: 18px;
       line-height: 26px;
   }
+  #count {
+    position: relative;
+    left: 100px;
+  }
 </style>
 <script>
 
@@ -584,7 +592,7 @@ var tempVue = Vue.component("demo", {
   template:
   `<div>
     <span class="category">{{data.items[0].category}}</span>
-    <span class="count"> {{data.items.length}} Item(s)</span>
+    <span id="count"> {{data.items.length}} Item(s)</span>
   </div>`,
   data() {
     return {

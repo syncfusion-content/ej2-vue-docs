@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Access control in Vue File manager component | Syncfusion
-description: Learn here all about Access control in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: Access control in Vue File Manager component | Syncfusion
+description: Learn here all about Access control in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: Access control 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Access control in Vue File manager component
+# Access control in Vue File Manager component
 
 The [Vue FileManager](https://www.syncfusion.com/vue-ui-components/vue-file-manager) allows you to define access permissions for folders and files using a set of access rules for user(s).
 
@@ -103,7 +103,7 @@ Permission denied for writing and uploading in root folder.
  new AccessRule { Path = "/", Role = "Document Manager", Read = Permission.Allow, Write = Permission.Deny, Copy = Permission.Deny, WriteContents = Permission.Deny, Upload = Permission.Deny, Download = Permission.Deny, IsFile = false },
 ```
 
-The following example demonstrate the file manager rendered with access control support.
+The following example demonstrate the File Manager rendered with access control support.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

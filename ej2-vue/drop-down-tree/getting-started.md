@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Getting started with Vue Drop down tree component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Drop down tree component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Dropdown Tree component | Syncfusion
+description:  Checkout and learn about Getting started with Vue Dropdown Tree component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Drop down tree Component in Vue 2
+# Getting Started with the Vue Dropdown Tree Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Drop down tree component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Dropdown Tree component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -46,7 +46,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue Drop down tree component](https://www.syncfusion.com/vue-components/vue-dropdown-tree) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
+This article uses the [Vue Dropdown Tree component](https://www.syncfusion.com/vue-components/vue-dropdown-tree) as an example. Install the `@syncfusion/ej2-vue-dropdowns` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-dropdowns --save
@@ -61,7 +61,7 @@ yarn add @syncfusion/ej2-vue-dropdowns
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Drop down tree component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Dropdown Tree component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -78,9 +78,9 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue Drop down tree component using `Composition API` or `Options API`:
+Follow the below steps to add the Vue Dropdown Tree component using `Composition API` or `Options API`:
 
-1\. First, import and register the Drop down tree component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
+1\. First, import and register the Dropdown Tree component in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,7 +104,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Drop down tree component with the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property.
+2\. In the `template` section, define the Dropdown Tree component with the [fields](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree#fields) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -123,7 +123,7 @@ export default {
 
 ## Binding data source
 
-The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the `dataSource` property that is a member of the `fields` property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
+The Dropdown Tree component can load the data either from local data sources or remote data services. This can be done using the [`dataSource`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/fieldsModel/#datasource) property that is a member of the [`fields`](https://ej2.syncfusion.com/vue/documentation/api/drop-down-tree/#fields) property. The dataSource property supports array of JavaScript objects and DataManager. Here, an array of JSON values is passed to the Dropdown Tree component.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -2,7 +2,7 @@
   <div class="control-section">
     <div id='flat-list'>
       <!-- ListView element -->
-      <ejs-listview id='List' ref='list' :dataSource='data' :fields='fields' :template="demotemplate"
+      <ejs-listview id='List' ref='list' :dataSource='data' :fields='fields' :height="height" :template="demotemplate"
         :groupTemplate="grouptemplate">
       </ejs-listview>
     </div>
@@ -57,6 +57,7 @@ export default {
         { Name: 'Laura', contact: '(206) 555-1189', id: '9', image: 'https://ej2.syncfusion.com/demos/src/grid/images/8.png', category: 'Experience' },
       ],
       fields: { text: 'Name', groupBy: 'category' },
+      height: '350px',
       demotemplate: function () {
         return { template: demoVue }
       },

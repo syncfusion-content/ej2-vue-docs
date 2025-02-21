@@ -3,7 +3,7 @@
         <div className="col-lg-8 control-section" id="control_dash">
             <div className="content-wrapper">
                 <div id="dashboardElement">
-                    <!--  DashboardLayout element declaration -->
+                    <!--  Dashboard Layout component declaration -->
                     <ejs-dashboardlayout ref="dashboard" id='dashboard_default' :columns="5">
                         <e-panels>
                             <e-panel id="Panel0" :sizeX="1" :sizeY="1" :row="0" :col="0"
@@ -22,7 +22,7 @@
                                 content="<div class='content'>6</div>"></e-panel>
                         </e-panels>
                     </ejs-dashboardlayout>
-                    <!-- end of dashboardlayout element -->
+                    <!-- end of Dashboard Layout component -->
                 </div>
             </div>
         </div>
@@ -99,114 +99,114 @@
 
 <script setup>
 
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutComponent as EjsDashboardlayout, PanelDirective as EPanel, PanelsDirective as EPanels } from "@syncfusion/ej2-vue-layouts";
-// Import syncfusion button component from buttons package
-import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
-// Import syncfusion numerictextbox component from inputs package
-import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
-// Import syncfusion dropdownlist component from dropdowns package
-import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
+    // Import syncfusion Dashboard Layout component from layouts package
+    import { DashboardLayoutComponent as EjsDashboardlayout, PanelDirective as EPanel, PanelsDirective as EPanels } from "@syncfusion/ej2-vue-layouts";
+    // Import syncfusion button component from buttons package
+    import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
+    // Import syncfusion numerictextbox component from inputs package
+    import { NumericTextBoxComponent as EjsNumerictextbox } from "@syncfusion/ej2-vue-inputs";
+    // Import syncfusion dropdownlist component from dropdowns package
+    import { DropDownListComponent as EjsDropdownlist } from "@syncfusion/ej2-vue-dropdowns";
 
-const floatLabelType = 'Never';
-const min = 1;
-const max = 5;
-const rowmin = 0;
-const rowmax = 5;
-const colmin = 0;
-const colmax = 4;
-const value = '';
-const data = ['Panel0', 'Panel1', 'Panel2', 'Panel3', 'Panel4', 'Panel5', 'Panel6'];
-let count = 7;
+    const floatLabelType = 'Never';
+    const min = 1;
+    const max = 5;
+    const rowmin = 0;
+    const rowmax = 5;
+    const colmin = 0;
+    const colmax = 4;
+    const value = '';
+    const data = ['Panel0', 'Panel1', 'Panel2', 'Panel3', 'Panel4', 'Panel5', 'Panel6'];
+    let count = 7;
 
-const onAdd = () => {
-    var sizeX = this.$refs.sizex.$el.ej2_instances[0];
-    var sizeY = this.$refs.sizey.$el.ej2_instances[0];
-    var row = this.$refs.row.$el.ej2_instances[0];
-    var column = this.$refs.column.$el.ej2_instances[0];
-    var dropdownObject = this.$refs.dropdown.$el.ej2_instances[0];
-    var dashboardObj = this.$refs.dashboard.$el.ej2_instances[0];
-    var panel = [{
-        'id': "Panel" + count.toString(),
-        'sizeX': sizeX.value,
-        'sizeY': sizeY.value,
-        'row': row.value,
-        'col': column.value,
-        'content': "<div class='content'>" + count + "</div>"
-    }];
-    dropdownObject.dataSource.push("Panel" + count.toString());
-    dropdownObject.refresh();
-    count = count + 1;
-    dashboardObj.addPanel(panel[0]);
-}
+    const onAdd = () => {
+        var sizeX = this.$refs.sizex.$el.ej2_instances[0];
+        var sizeY = this.$refs.sizey.$el.ej2_instances[0];
+        var row = this.$refs.row.$el.ej2_instances[0];
+        var column = this.$refs.column.$el.ej2_instances[0];
+        var dropdownObject = this.$refs.dropdown.$el.ej2_instances[0];
+        var dashboardObj = this.$refs.dashboard.$el.ej2_instances[0];
+        var panel = [{
+            'id': "Panel" + count.toString(),
+            'sizeX': sizeX.value,
+            'sizeY': sizeY.value,
+            'row': row.value,
+            'col': column.value,
+            'content': "<div class='content'>" + count + "</div>"
+        }];
+        dropdownObject.dataSource.push("Panel" + count.toString());
+        dropdownObject.refresh();
+        count = count + 1;
+        dashboardObj.addPanel(panel[0]);
+    }
 
-const onRemove = () => {
-    var dropdownObject = this.$refs.dropdown.$el.ej2_instances[0];
-    var dashboardObj = this.$refs.dashboard.$el.ej2_instances[0];
-    dashboardObj.removePanel(dropdownObject.value);
-    dropdownObject.dataSource.splice(dropdownObject.dataSource.indexOf(dropdownObject.value), 1);
-    dropdownObject.value = null;
-    dropdownObject.refresh();
-}
+    const onRemove = () => {
+        var dropdownObject = this.$refs.dropdown.$el.ej2_instances[0];
+        var dashboardObj = this.$refs.dashboard.$el.ej2_instances[0];
+        dashboardObj.removePanel(dropdownObject.value);
+        dropdownObject.dataSource.splice(dropdownObject.dataSource.indexOf(dropdownObject.value), 1);
+        dropdownObject.value = null;
+        dropdownObject.refresh();
+    }
 
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-dropdowns/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 
-/* DashboardLayout element styles  */
-#dashboard_default .e-panel .e-panel-content {
-    vertical-align: middle;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-    line-height: 100px;
-}
+    /* Dashboard Layout component styles  */
+    #dashboard_default .e-panel .e-panel-content {
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        line-height: 100px;
+    }
 
-#control_dash {
-    display: block;
-    width: 59%;
-    float: left;
-}
+    #control_dash {
+        display: block;
+        width: 59%;
+        float: left;
+    }
 
-#api_property {
-    display: inline-block;
-    margin: 10px;
-}
+    #api_property {
+        display: inline-block;
+        margin: 10px;
+    }
 
-#add {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-}
+    #add {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+    }
 
-#remove {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    width: 377px;
-}
+    #remove {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        width: 377px;
+    }
 
-#property {
-    padding: 10px;
-}
+    #property {
+        padding: 10px;
+    }
 
-#removeButton {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
-    width: 125px;
-}
+    #removeButton {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        width: 125px;
+    }
 
-#dashboardElement {
-    padding-top: 30px;
-}
+    #dashboardElement {
+        padding-top: 30px;
+    }
 
-#dashboard_default .e-panel {
-    transition: none !important;
-}
+    #dashboard_default .e-panel {
+        transition: none !important;
+    }
 </style>

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api fieldSettings in Vue Listview component | Syncfusion
-description: Learn here all about Api fieldSettings in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Api fieldSettings in Vue ListView component | Syncfusion
+description: Learn here all about Api fieldSettings in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Api fieldSettings 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api fieldSettings in Vue Listview component
+# Api fieldSettings in Vue ListView component
 
 ## Properties
 

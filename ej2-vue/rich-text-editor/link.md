@@ -20,9 +20,7 @@ To insert a hyperlink:
 2. Click the "Insert HyperLink" tool on the toolbar.
 3. In the Insert Link Dialog that appears, fill in the following options.
 
-```ts
-To use use image and link tool, inject `ImageService, LinkService` in the provider section of `AppModule`.
-```
+> To use Image and Link feature, inject `Image, Link` in the provider section.
 
 | Options | Description |
 |----------------|--------------------------------------|

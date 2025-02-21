@@ -51,16 +51,15 @@ new Vue({
             this.checkBoxInstance = new CheckBox({ label: 'Select All',checked: false, change: this.onChange  });
             this.checkBoxInstance.appendTo('#checkbox1');
         },
-        onChange: function(args) {
+        onChange: function (args) {
+            var fileObj = this.$refs.fileManagerInstance.ej2Instances;
             if (args.checked) {
-                this.$refs.fileManagerInstance.selectAll();
-                this.checkBoxInstance.label = 'Unselect All';
+                fileObj.selectAll();
+                this.label = 'Unselect All';
+            } else {
+                fileObj.clearSelection();
+                this.label = 'Select All';
             }
-            else{
-                this.$refs.fileManagerInstance.clearSelection();
-                this.checkBoxInstance.label = 'Select All';
-            }
-        }
+        },
     }
-
 });

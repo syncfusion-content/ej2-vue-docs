@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Dashboard layout component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Index in Vue Dashboard Layout component | Syncfusion
+description: Learn here all about Index in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Dashboard layout component
+# Index in Vue Dashboard Layout component
 
 The **DashboardLayout** is a grid structured layout control that helps create a dashboard with panels. Panels hold the UI components and allow resize, reorder, drag-n-drop, remove and add options. This allows users to easily place the components at the desired position within the grid layout.
 

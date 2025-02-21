@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Scrolling in Vue Listview component | Syncfusion
-description: Learn here all about Scrolling in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Scrolling in Vue ListView component | Syncfusion
+description: Learn here all about Scrolling in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Scrolling 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Scrolling in Vue Listview component
+# Scrolling in Vue ListView component
 
 Scrolling is a technique that allows you to load more items as the user scrolls through a list, providing a seamless and dynamic user experience.
 

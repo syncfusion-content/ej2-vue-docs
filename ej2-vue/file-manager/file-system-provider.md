@@ -1,26 +1,23 @@
 ---
 layout: post
-title: File system provider in Vue File manager component | Syncfusion
-description: Learn here all about File system provider in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: File system provider in Vue File Manager component | Syncfusion
+description: Learn here all about File system provider in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: File system provider 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# File system provider in Vue File manager component
+# File system provider in Vue File Manager component
 
 The file system provider allows the File Manager component to manage the files and folders in a physical or cloud-based file system. It provides the methods for performing various file actions like creating a new folder, copying and moving of files or folders, deleting uploading, and downloading the files or folders in the file system.
 
 The following file providers are added in Syncfusion EJ2 File Manager component.
 
-* [ASP.NET Core file system provider](#aspnet-core-file-system-provider)
-* [ASP.NET MVC 5 file system provider](#aspnet-mvc-5-file-system-provider)
-* [ASP.NET Core Azure cloud file system Provider](#aspnet-core-azure-cloud-file-system-provider)
-* [ASP.NET MVC 5 Azure cloud file system Provider](#aspnet-mvc-azure-cloud-file-system-provider)
-* [ASP.NET Core Amazon S3 cloud file provider](#aspnet-core-amazon-s3-cloud-file-provider)
-* [ASP.NET MVC Amazon S3 cloud file provider](#aspnet-mvc-amazon-s3-cloud-file-provider)
-* [ASP.NET Core SharePoint file provider](#aspnet-core-SharePoint-file-provider)
+* [Physical file system provider](#physical-file-system-provider)
+* [Azure cloud file system Provider](#azure-cloud-file-system-provider)
+* [Amazon S3 cloud file provider](#amazon-s3-cloud-file-provider)
+* [SharePoint file provider](#SharePoint-file-provider)
 * [File Transfer Protocol file system provider](#file-transfer-protocol-file-system-provider)
 * [SQL database file system provider](#sql-database-file-system-provider)
 * [NodeJS file system provider](#nodejs-file-system-provider)
@@ -28,9 +25,9 @@ The following file providers are added in Syncfusion EJ2 File Manager component.
 * [Firebase Realtime Database file system provider](#firebase-file-system-provider)
 * [IBM Cloud Object Storage provider](#ibm-cloud-object-storage-file-provider)
 
-## ASP.NET Core file system provider
+## Physical file system provider
 
-The ASP.NET Core file system provider allows the users to access and manage the physical file system. To get started, we need to clone the [ej2-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
+The Physical file system provider allows the users to access and manage the physical file system. To get started, we need to clone the [ej2-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
 
 ```ts
 
@@ -42,7 +39,7 @@ cd ej2-aspcore-file-provider
 
 After cloning,  open the project in Visual Studio and restore the NuGet packages. Now, we need to set the root directory of the physical file system in the FileManager controller.
 
-After setting the root directory of the file system,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
+After setting the root directory of the file system,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
 
 ```
 
@@ -84,68 +81,11 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 ```
 
->Note: To learn more about file actions that can be performed with ASP.NET Core file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider#key-features)
+>Note: To learn more about file actions that can be performed with Physical file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider#key-features)
 
-## ASP.NET MVC 5 file system provider
+## Azure cloud file system Provider
 
-The ASP.NET MVC5 file system provider allows the users to access and manage the physical file system. To get started, we need to clone the [ej2-aspmvc-file-provider](https://github.com/SyncfusionExamples/ej2-aspmvc-file-provider) using the following command.
-
-```ts
-
-git clone https://github.com/SyncfusionExamples/ej2-aspmvc-file-provider ej2-aspmvc-file-provider
-
-cd ej2-aspmvc-file-provider
-
-```
-
-After cloning,  open the project in Visual Studio and restore the NuGet packages. Now, we need to set the root directory of the physical file system in the FileManager controller using the Root Folder method.
-
-After setting the root directory of the file system,  build and run the project. Now, the project will be hosted in `http://localhost:{port}` and  mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
-
-```
-
-<template>
-    <div id="app">
-        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings">
-        </ejs-filemanager>
-    </div>
-</template>
-<script setup>
-import { provide } from "vue";
-
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings = 
-    {
-    // Replace the hosted port number in the place of "{port}"
-    url: "http://localhost:{port}/FileManager/FileOperations",
-    getImageUrl: "http://localhost:{port}/FileManager/GetImage",
-    uploadUrl: "http://localhost:{port}/FileManager/Upload",
-    downloadUrl: "http://localhost:{port}/FileManager/Download"
-    };
-provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
-
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
-</style>
-
-```
-
-> **Note:** To learn more about file actions that can be performed with ASP.NET MVC 5 file system provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-aspmvc-file-provider#key-features)
-
-## ASP.NET Core Azure cloud file system Provider
-
-In ASP.NET Core, Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [azure-aspcore-file-provider](https://github.com/SyncfusionExamples/azure-aspcore-file-provider) using the following command
+The Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [azure-aspcore-file-provider](https://github.com/SyncfusionExamples/azure-aspcore-file-provider) using the following command
 
 ```ts
 
@@ -212,82 +152,11 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 ```
 
-> **Note:** To learn more about file actions that can be performed with ASP.NET Core Azure cloud file system Provider, refer to this [link](https://github.com/SyncfusionExamples/azure-aspcore-file-provider#key-features)
+> **Note:** To learn more about file actions that can be performed with Azure cloud file system Provider, refer to this [link](https://github.com/SyncfusionExamples/azure-aspcore-file-provider#key-features)
 
-## ASP.NET MVC Azure cloud file system Provider
+## Amazon S3 cloud file provider
 
-In ASP.NET MVC, Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [ej2-azure-aspmvc-file-provider](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider) using the following command
-
-```ts
-
-git clone https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider  ej2-azure-aspmvc-file-provider
-
-```
-
-After cloning, open the project in Visual Studio and restore the NuGet packages. Now, we need to register the Azure storage by passing details like name, password, and blob name to the Register Azure method in the FileManager controller.
-
-```ts
-
-void RegisterAzure(string accountName, string accountKey, string blobName)
-
- ```
-
-Then, set the blob container and the root blob directory by passing the corresponding URLs as parameters in the setBlobContainer method as follows.
-
-```ts
-
-void setBlobContainer( Blob-contatiner-url, Root-blob-directory-url)
-
-```
-
-> **Note:** Also, assign the same *blobPath URL* and *filePath URL* in [**AzureFileOperations** and **AzureUpload**](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
-
-After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
-
-```
-
-<template>
-    <div id="app">
-        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings">
-        </ejs-filemanager>
-    </div>
-</template>
-<script setup>
-import { provide } from "vue";
-
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings = 
-{
-    // Replace the hosted port number in the place of "{port}"
-    url: "http://localhost:{port}/AzureProvider/AzureFileOperations",
-    getImageUrl: "http://localhost:{port}/AzureProvider/AzureGetImage",
-    uploadUrl: "http://localhost:{port}/AzureProvider/AzureUpload",
-    downloadUrl: "http://localhost:{port}/AzureProvider/AzureDownload"
-};
-provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
-
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
-</style>
-
-```
-
-> **Note:** To learn more about file actions that can be performed with ASP.NET MVC Azure cloud file system Provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider#key-features)
-
-## ASP.NET Core Amazon S3 cloud file provider
-
-In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [amazon-s3-aspcore-file-provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider) using the following command
+The Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [amazon-s3-aspcore-file-provider](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider) using the following command
 
 ```ts
 
@@ -348,72 +217,9 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 > **Note:** To learn more about the file actions that can be performed with Amazon S3 Cloud File provider, refer to this [link](https://github.com/SyncfusionExamples/amazon-s3-aspcore-file-provider#key-features)
 
-## ASP.NET MVC Amazon S3 cloud file provider
+## SharePoint file provider
 
-In ASP.NET MVC, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted files as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [ej2-amazon-s3-aspmvc-file-provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider) using the following command
-
-```ts
-
-git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider.git  ej2-amazon-s3-aspmvc-file-provider.git
-
-```
-
-> **Note:** To learn more about creating and configuring an Amazon S3 bucket, refer to this [link](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-configure-bucket.html).
-
-After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register Amazon S3 client account details like *awsAccessKeyId*, *awsSecretKeyId* and *awsRegion* details in **RegisterAmazonS3** method in the FileManager controller to perform the file operations.
-
-```ts
-
- void RegisterAmazonS3(string bucketName, string awsAccessKeyId, string awsSecretAccessKey, string bucketRegion)
-
-```
-
-After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
-
-```
-
-<template>
-    <div id="app">
-        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings">
-        </ejs-filemanager>
-    </div>
-</template>
-<script setup>
-import { provide } from "vue";
-
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-
-const ajaxSettings = 
-{
-    // Replace the hosted port number in the place of "{port}"
-    url: "http://localhost:{port}/FileManager/FileOperations",
-    getImageUrl: "http://localhost:{port}/FileManager/GetImage",
-    uploadUrl: "http://localhost:{port}/FileManager/Upload",
-    downloadUrl: "http://localhost:{port}/FileManager/Download"
-};
-provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
-
-</script>
-<style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
-</style>
-
-```
-
-> **Note:** To learn more about the file actions that can be performed with ASP.NET MVC Amazon S3 Cloud File Provider, refer to this [link](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider#key-features)
-
-## ASP.NET Core SharePoint file provider
-
-The ASP.NET Core SharePoint file provider allows users to access and manage files within Microsoft SharePoint. To get started, clone the [SharePoint-aspcore-file-provider](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider) using the following command.
+The SharePoint file provider allows users to access and manage files within Microsoft SharePoint. To get started, clone the [SharePoint-aspcore-file-provider](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider) using the following command.
 
 ```typescript
 
@@ -498,7 +304,7 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 ```
 
-> **Note:** To learn more about the file actions that can be performed with ASP.NET Core SharePoint file provider, refer to this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider#key-features)
+> **Note:** To learn more about the file actions that can be performed with SharePoint file provider, refer to this [link](https://github.com/SyncfusionExamples/sharepoint-aspcore-file-provider#key-features)
 
 ## File Transfer Protocol file system provider
 

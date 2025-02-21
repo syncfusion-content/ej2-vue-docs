@@ -33,7 +33,7 @@ new Vue({
     },
     methods: {
         onCreated: function(args){
-            this.$refs.fileManagerinstance.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
+            this.$refs.fileManagerinstance.ej2Instances.uploadObj.dropArea = null; // Restrict file uploads by dragging them from the local file system to the File Manager.
         },
     }
 

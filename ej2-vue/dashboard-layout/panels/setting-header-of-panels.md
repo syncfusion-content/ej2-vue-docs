@@ -29,7 +29,7 @@ The following sample demonstrates how to add content for each panel using the he
 
 The Dashboard Layout component in Syncfusion's Vue.js suite facilitates dynamic content insertion into panels through the **v-slot directive**. This feature allows for the definition of custom content for each panel in a flexible and maintainable manner. By leveraging v-slot, it becomes straightforward to incorporate complex HTML structures, custom components, or dynamic content into each panel of the Dashboard Layout. 
 
-In the example below, the v-slot directive is employed with a named slot 'panel0Content' to specify the content for 'panel0'. The content is encapsulated within a <template> tag, which corresponds to the :content attribute of the <e-panel> component.
+In the example below, the v-slot directive is employed with a named slot 'panel0Content' to specify the content for 'panel0'. The content is encapsulated within a `<template>` tag, which corresponds to the `:content` attribute of the `<e-panel>`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -49,6 +49,7 @@ In a dashboard, components like the chart, grids, maps, gauge, and more etc. can
 To design a Vue Dashboard Layout with UI components, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=X7NMBiIGkyA" %}
+
 
 The following sample demonstrates how to add EJ2 Chart components as the `content` for each panel in the Dashboard Layout component.
 

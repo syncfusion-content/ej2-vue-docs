@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Form slider with form validator in Vue Range slider component | Syncfusion
-description: Learn here all about Form slider with form validator in Syncfusion Vue Range slider component of Syncfusion Essential JS 2 and more.
-control: Form slider with form validator 
+title: Form validator in Vue Range Slider component | Syncfusion
+description: Learn here all about Form Slider with form validator in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+control: Form Slider with form validator 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Form slider with form validator in Vue Range slider component
+# Form Slider with form validator in Vue Range Slider component
 
-The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through slider validation.
+The Slider component can be validated using our [FormValidator](https://ej2.syncfusion.com/documentation/form-validator/?lang=typescript). The following steps walk-through Slider validation.
 
-* Render slider component inside a form.
-* Bind [changed]../api/slider#changed) event in the slider component to validate the slider value when the value changes.
+* Render Slider component inside a form.
+* Bind [changed](../api/slider#changed) event in the Slider component to validate the Slider value when the value changes.
 * Initialize and render FormValidator for the form using form ID.
 
     ```ts
@@ -24,7 +24,7 @@ The Slider component can be validated using our [FormValidator](https://ej2.sync
 
     ```
 
-* Set the required property in the FormValidator rules collection. Here, the [min](https://ej2.syncfusion.com/vue/documentation/api/slider/#min) property of slider that sets the minimum value in the slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
+* Set the required property in the FormValidator rules collection. Here, the [min](https://ej2.syncfusion.com/vue/documentation/api/slider/#min) property of Slider that sets the minimum value in the Slider component is set, and it has hidden input as enable `validateHidden` property is set to true.
 
     ```ts
 
@@ -43,9 +43,9 @@ The Slider component can be validated using our [FormValidator](https://ej2.sync
 
     ```
 
-> Form validation is done either by ID or name value of the slider component. Above ID of the slider is used to validate it.
+> Form validation is done either by ID or name value of the Slider component. Above ID of the Slider is used to validate it.
 
-Using slider name: Render slider with name attribute. In the following code snippet, name attribute value of ?slider? is used for form validation.
+* **Using Slider name**: Render Slider with name attribute. In the following code snippet, name attribute value of **slider** is used for form validation.
 
     ```ts
 
@@ -64,7 +64,7 @@ Using slider name: Render slider with name attribute. In the following code snip
 
     ```
 
-* Validate the form using [validate](https://ej2.syncfusion.com/documentation/api/form-validator/#validate) method, and it validates the slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
+* Validate the form using [validate](https://ej2.syncfusion.com/documentation/api/form-validator/#validate) method, and it validates the Slider value with the defined rules collection and returns the result. If user selects the value less than the minimum value, form will not submit.
 
 ```ts
 
@@ -72,11 +72,11 @@ formObj.validate();
 
 ```
 
-* Slider validation can be done during value changes in slider. Refer to the following code snippet.
+* Slider validation can be done during value changes in Slider. Refer to the following code snippet.
 
     ```ts
 
-    // change event handler for slider
+    // change event handler for Slider
     onChanged(args) {
       formObj.validate();
     }

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Customize with dynamic tags in Vue Listview component | Syncfusion
-description: Learn here all about Customize listview with dynamic tags in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Customize listview with dynamic tags 
+title: Customize with dynamic tags in Vue ListView component | Syncfusion
+description: Learn here all about Customize ListView with dynamic tags in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Customize ListView with dynamic tags 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize listview with dynamic tags in Vue Listview component
+# Customize ListView with dynamic tags in Vue ListView component
 
 You can customize the ListView items using the [`template`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property. Here, the dynamic tags are added and removed in the list item from another ListView. Refer to the following steps to achieve this.
 

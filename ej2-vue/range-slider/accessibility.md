@@ -45,10 +45,10 @@ The Range Slider component followed the [WAI-ARIA](https://www.w3.org/WAI/ARIA/a
 | Attributes | Purpose |
 | --- | --- |
 | `role=slider` | Used to convey a significant and contextual message to the user. |
-| `aria-valuemin` | Indicates the Minimum value of the slider. |
-| `aria-valuemax` | Indicates the Maximum value of the slider. |
-| `aria-valuenow` | Indicates the current value of the slider. |
-| `aria-valuetext` | Returns the current text of the slider. |
+| `aria-valuemin` | Indicates the Minimum value of the Slider. |
+| `aria-valuemax` | Indicates the Maximum value of the Slider. |
+| `aria-valuenow` | Indicates the current value of the Slider. |
+| `aria-valuetext` | Returns the current text of the Slider. |
 | `aria-orientation` | Indicates whether the Slider is oriented horizontally or vertically. |
 | `aria-label` | Provides an accessible name for the Slider, serving as label text for the Slider's left and right buttons (for increment and decrement). |
 

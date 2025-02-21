@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
+// Import syncfusion Dashboard Layout component from layouts package
 import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 // Import syncfusion button component from buttons package
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
@@ -15,7 +15,7 @@ new Vue({
     <div>
         <div className="col-lg-8 control-section" id="control_dash">
             <div className="content-wrapper">
-                <!--  DashboardLayout element declaration -->
+                <!--  Dashboard Layout component declaration -->
                 <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="5" :created="onSave">
                     <e-panels>
                         <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
@@ -27,7 +27,7 @@ new Vue({
                         <e-panel :sizeX="1" :sizeY="1" :row="2" :col="3" content="<div class='content'>6</div>"></e-panel>  
                     </e-panels>
                 </ejs-dashboardlayout>
-                <!-- end of dashboardlayout element -->
+                <!-- end of Dashboard Layout component -->
             </div>
         </div>
         <div className="col-lg-4 property-section dashboard" id="api_property">
@@ -39,11 +39,11 @@ new Vue({
                                 <tr><td> Properties Panel </td></tr>
                                 <tr>
                                     <td>
-                                        <!--  Button element declaration -->
+                                        <!--  Button component declaration -->
                                         <ejs-button id="save" cssClass="e-primary"  v-on:click.native="onSave" >Save Panel</ejs-button>
                                     </td>
                                     <td>
-                                        <!--  Button element declaration -->
+                                        <!--  Button component declaration -->
                                         <ejs-button id="restore" cssClass="e-flat e-outline" v-on:click.native="onRestore">Restore Panel</ejs-button>
                                     </td>
                                 </tr>
@@ -65,13 +65,13 @@ new Vue({
     methods: {
         // Restore the initial panels
         onRestore: function(args) {
-            // Create instances for dashboardlayout element
+            // Create instances for Dashboard Layout component
              this.$refs.dashboard.$el.ej2_instances[0].panels = this.$refs.restoreModel;
         },
 
         // Save the current panels
         onSave: function(args) {
-            // Create instances for dashboardlayout element
+            // Create instances for Dashboard Layout component
             this.$refs.restoreModel = this.$refs.dashboard.$el.ej2_instances[0].serialize();
             this.$refs.restoreModel[0].content = '<div class="content">0</div>';
             this.$refs.restoreModel[1].content = '<div class="content">1</div>';

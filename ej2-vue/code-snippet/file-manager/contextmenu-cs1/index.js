@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :contextMenuSettings="contextMenuSettings" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :height="height" :contextMenuSettings="contextMenuSettings" :ajaxSettings="ajaxSettings">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Context Menu settings customization
-            contextMenuSettings: { file: ['Open', '|', 'Details'], folder: ['Open', '|', 'Details'], layout: ['SortBy', 'View', 'Refresh', '|', 'Details', '|'], visible: true}
+            contextMenuSettings: { file: ['Open', '|', 'Details'], folder: ['Open', '|', 'Details'], layout: ['SortBy', 'View', 'Refresh', '|', 'Details', '|'], visible: true},
+            height: "330px"
         };
     },
     provide: {

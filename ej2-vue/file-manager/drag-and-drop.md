@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Drag and drop in Vue File manager component | Syncfusion
-description: Learn here all about Drag and drop in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: Drag and drop in Vue File Manager component | Syncfusion
+description: Learn here all about Drag and drop in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: Drag and drop 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Drag and drop in Vue File manager component
+# Drag and drop in Vue File Manager component
 
-The File manager allows files or folders to be moved from one folder to another by using the  [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property. It also supports uploading files by dragging them from Windows Explorer to the File manager control. You can enable or disable this feature by using the [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property.
+The File Manager allows files or folders to be moved from one folder to another by using the  [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property. It also supports uploading files by dragging them from Windows Explorer to the File Manager control. You can enable or disable this feature by using the [allowDragAndDrop](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#allowdraganddrop) property.
 
 The events triggered during drag and drop operations are:
 

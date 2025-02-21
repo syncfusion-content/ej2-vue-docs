@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Filter list items in Vue Listview component | Syncfusion
-description: Learn here all about Filter list items in the listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Filter list items in the listview 
+title: Filter list items in Vue ListView component | Syncfusion
+description: Learn here all about Filter list items in the ListView in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Filter list items in the ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Filter list items in the listview in Vue Listview component
+# Filter list items in the ListView in Vue ListView component
 
 The filtered data can be displayed in the ListView component depending on user inputs using the [`DataManager`](https://ej2.syncfusion.com/vue/documentation/data/getting-started/). Refer to the following steps to render the ListView with filtered data.
 

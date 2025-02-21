@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Index in Vue Listview component | Syncfusion
-description: Learn here all about Index in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Index in Vue ListView component | Syncfusion
+description: Learn here all about Index in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Index 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Index in Vue Listview component
+# Index in Vue ListView component
 
 The ListView component represents the data in interactive hierarchical structure interface across different layouts or views, that also has features such as data-binding, template, grouping and Virtualization.
 

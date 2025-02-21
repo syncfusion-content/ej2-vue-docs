@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Custom context menu item in Vue File manager component | Syncfusion
-description: Learn here all about Adding custom item to context menu in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
-control: File manager
+title: Custom context menu item in Vue File Manager component | Syncfusion
+description: Learn here all about Adding custom item to context menu in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
+control: File Manager
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Adding custom item to context menu in Vue File manager component
+# Adding custom item to context menu in Vue File Manager component
 
 The context menu can be customized using the [contextMenuSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#contextmenusettings), [menuOpen](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#menuopen), and [menuClick](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#menuclick) events.
 

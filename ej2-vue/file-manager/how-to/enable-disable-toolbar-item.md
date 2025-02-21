@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Enable/Disable toolbar item in Vue File manager component | Syncfusion
-description: Learn here all about Enable disable toolbar item in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: Enable/Disable toolbar item in Vue File Manager component | Syncfusion
+description: Learn here all about Enable disable toolbar item in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: Enable disable toolbar item 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Enable/Disable toolbar item in Vue File manager component
+# Enable/Disable toolbar item in Vue File Manager component
 
 The toolbar items can be enabled/disabled by specifying the items in [enableToolbarItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#enabletoolbaritems) or [disableToolbarItems](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#disabletoolbaritems) methods respectively.
 

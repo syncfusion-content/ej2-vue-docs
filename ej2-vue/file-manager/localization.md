@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Localization in Vue File manager component | Syncfusion
-description: Learn here all about Localization in Syncfusion Vue File manager component of Syncfusion Essential JS 2 and more.
+title: Localization in Vue File Manager component | Syncfusion
+description: Learn here all about Localization in Syncfusion Vue File Manager component of Syncfusion Essential JS 2 and more.
 control: Localization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Localization in Vue File manager component
+# Localization in Vue File Manager component
 
-The File manager can be localized to any culture by defining the corresponding texts and messages for that culture. The default locale of the File manager is `en` (English). The following table lists the default texts and messages of the File Manager in the `en` culture.
+The File Manager can be localized to any culture by defining the corresponding texts and messages for that culture. The default locale of the File Manager is `en` (English). The following table lists the default texts and messages of the File Manager in the `en` culture.
 
 |KEY|Text/Message|
 |----|----|

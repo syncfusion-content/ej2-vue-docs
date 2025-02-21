@@ -1,18 +1,10 @@
 <template>
   <div id="defaultRTE">
-    <ejs-richtexteditor id="preview" ref="rteInstance" :toolbarSettings="toolbarSettings" :created="created" :actionComplete='actionComplete' :editorMode="editorMode" :height="height">
-In Rich Text Editor , you click the toolbar buttons to format the words and the changes
-are visible immediately.
-Markdown is not like that. When you format the word in Markdown format, you need to
-add Markdown syntax to the word to indicate which words
-and phrases should look different from each other
-Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
-We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/).
-The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.
-      </ejs-richtexteditor>
+    <ejs-richtexteditor id="preview" ref="rteInstance" :toolbarSettings="toolbarSettings" :created="created" :actionComplete='actionComplete' :editorMode="editorMode" :height="height"></ejs-richtexteditor>
   </div>
 </template>
-    <style>
+
+<style>
     .e-richtexteditor .e-rte-content .e-content{
         min-height: 150px;
     }
@@ -34,11 +26,25 @@ The third-party library <b>Marked</b> is used in this sample to convert markdown
         content: '\e350';
     }
 </style>
+
 <script setup>
-import { provide, ref } from 'vue';
-import { Browser, addClass, removeClass, isNullOrUndefined } from "@syncfusion/ej2-base";
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
-import { createElement, KeyboardEventArgs } from '@syncfusion/ej2-vue-base';
+import { isNullOrUndefined } from "@syncfusion/ej2-base";
+import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { marked } from 'marked';
+
+const rteValue = `***Overview***
+                        The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor used to create and edit the content and return valid HTML markup or markdown (MD) of the content. The editor provides a standard toolbar to format content using its commands. Modular library features to load the necessary functionality on demand. The toolbar contains commands to align the text, insert link, insert image, insert list, undo/redo operation, HTML view, and more.
+
+                        ***Key features***
+                        - *Mode*: Provides IFRAME and DIV mode.
+                        - *Module*: Modular library to load the necessary functionality on demand.
+                        - *Toolbar*: Provide a fully customizable toolbar.
+                        - *Editing*: HTML view to edit the source directly for developers.
+                        - *Third-party Integration*: Supports to integrate third-party library.
+                        - *Preview*: Preview the modified content before saving it.
+                        - *Tools*: Handling images, hyperlinks, video, uploads and more.
+                        - *Undo and Redo*: Undo/redo manager.
+                        - *Lists*: Creates bulleted and numbered list.`;
 const rteInstance = ref(null);
 let textArea = '';
 const  height = '300px';
@@ -79,35 +85,35 @@ const created = () => {
     };
 };
 const markDownConversion = () => {
-if (document.getElementById('MD_Preview').classList.contains('e-active')) {
-    var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-    var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-    htmlPreview.innerHTML = marked.parse(textArea.value);
-}
+    if (document.getElementById('MD_Preview').classList.contains('e-active')) {
+        var id = rteInstance.value.ej2Instances.getID() + 'html-view';
+        var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
+        htmlPreview.innerHTML = marked.parse(textArea.value);
+    }
 };
 const actionComplete = (e) => {
     var mdsource = document.getElementById('preview-code');
     var mdSplit = document.getElementById('MD_Preview');
     var id = rteInstance.value.ej2Instances.getID() + 'html-view';
     var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-        if (e.targetItem === 'Maximize' && isNullOrUndefined(e.args)) {
-            fullPreview({ mode: true, type: '' });
-        } else if (!mdSplit.parentElement.classList.contains('e-overlay')) {
-            if (e.targetItem === 'Minimize') {
+    if (e.targetItem === 'Maximize' && isNullOrUndefined(e.args)) {
+        fullPreview({ mode: true, type: '' });
+    } else if (!mdSplit.parentElement.classList.contains('e-overlay')) {
+        if (e.targetItem === 'Minimize') {
             textArea.style.display = 'block';
             textArea.style.width = '100%';
             if (htmlPreview) { htmlPreview.style.display = 'none'; }
             mdSplit.classList.remove('e-active');
             mdsource.classList.remove('e-active');
-            }
-        markDownConversion();
         }
-    };
-    const fullPreview = (event) => {
-        var mdsource = document.getElementById('preview-code');
-        var mdSplit = document.getElementById('MD_Preview');
-        var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-        var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
+        markDownConversion();
+    }
+};
+const fullPreview = (event) => {
+    var mdsource = document.getElementById('preview-code');
+    var mdSplit = document.getElementById('MD_Preview');
+    var id = rteInstance.value.ej2Instances.getID() + 'html-view';
+    var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
     if ((mdsource.classList.contains('e-active') || mdSplit.classList.contains('e-active')) && event.mode) {
         mdsource.classList.remove('e-active');
         mdSplit.classList.remove('e-active');
@@ -116,7 +122,7 @@ const actionComplete = (e) => {
         htmlPreview.style.display = 'none';
     } else {
         mdsource.classList.add('e-active');
-         mdSplit.classList.add('e-active');
+        mdSplit.classList.add('e-active');
         if (!htmlPreview) {
             htmlPreview = document.createElement('div');
             htmlPreview.id = id;
@@ -137,6 +143,7 @@ const actionComplete = (e) => {
 }
 provide('richtexteditor', [Toolbar, Link, Image, MarkdownEditor]);
 </script>
+
 <style>
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";

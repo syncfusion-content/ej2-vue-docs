@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The arrow of the tooltip can be customized as needed by modifying CSS on the sample side. The EJ2 tooltip component is achieved through CSS3 format and positions the tip arrow according to the tooltip positions like `TopCenter`, `BottomLeft`, `RightTop`, and more.
 
-Here, the tip arrow is customized as Curved tooltip and Bubble tooltip.
+Here, the tip arrow is customized as Curved tooltip and Bubble Tooltip.
 
 ## Curved tip
 
@@ -55,7 +55,7 @@ Two `divs`(inner div and outer div) elements have been added to achieve the bubb
 
 These tip arrow customizations have been achieved through CSS changes at the sample level. The tooltip position can be changed by using the radio button click event.
 
-The arrow tip pointer can also be disabled by using the [`showTipPointer`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#showtippointer) property in a tooltip.
+The arrow tip pointer can also be disabled by using the [`showTipPointer`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/#showtippointer) property in a Tooltip.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

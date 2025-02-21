@@ -1,0 +1,14 @@
+.custom,
+.details {
+ border-color: #e0e0e0;
+ border-style: solid;
+}
+.custom {
+ border-width: 1px 0px 0px 0px;
+}
+.details {
+ border-width: 1px 0px 0px 0px;
+}
+td {
+ padding: 2px 2px 3px 4px;
+}

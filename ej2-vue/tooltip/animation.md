@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Animation in Vue Tooltip component
 
-To animate the Tooltip, a set of specific animation effects is available, which can be controlled using the[`animation`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#animation) property. The `animation` property also allows you to set delay, duration, and various other effects of your choice.
+To animate the Tooltip, a set of specific animation effects is available, which can be controlled using the [`animation`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#animation) property. The `animation` property also allows you to set delay, duration, and various other effects of your choice.
 
 The [`AnimationModel`](https://ej2.syncfusion.com/vue/documentation/api/tooltip/animationModel/) is derived from the base to apply the chosen animation effect, duration, and other properties to Tooltips.
 

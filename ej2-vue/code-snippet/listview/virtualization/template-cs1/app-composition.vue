@@ -49,7 +49,7 @@
   const header = true;
   const title = "Contacts";
   const fields = { text: "name" };
-  const height = 500;
+  const height = 330;
   const cssClass = 'e-list-template';
   const enableUi = true;
   
@@ -65,7 +65,6 @@
     color: #008cff;
     height: 40px;
     left: 30%;
-    position: absolute;
   }
   
   #ui-list.e-listview {

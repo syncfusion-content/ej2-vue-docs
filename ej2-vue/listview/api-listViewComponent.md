@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Api listViewComponent in Vue Listview component | Syncfusion
-description: Learn here all about Api listViewComponent in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
+title: Api listViewComponent in Vue ListView component | Syncfusion
+description: Learn here all about Api listViewComponent in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
 control: Api listViewComponent 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Api listViewComponent in Vue Listview component
+# Api listViewComponent in Vue ListView component
 
 Represents VueJS ListView Component
 ```

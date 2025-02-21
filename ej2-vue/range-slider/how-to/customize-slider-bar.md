@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Customize slider bar in Vue Range slider component | Syncfusion
-description: Learn here all about Customize slider bar in Syncfusion Vue Range slider component of Syncfusion Essential JS 2 and more.
-control: Customize slider bar 
+title: Customize Slider bar in Vue Range Slider component | Syncfusion
+description: Learn here all about Customize Slider bar in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+control: Customize Slider bar 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Customize slider bar in Vue Range slider component
+# Customize Slider bar in Vue Range Slider component
 
-The slider's appearance can be customized through CSS. By overriding the slider's CSS classes, you can customize the slider bar. The slider bar can be customized with different themes. By default, the slider has a class name `e-slider-track` for the bar. The class can be overridden with our own color values, as shown in the following code snippet:
+The Slider's appearance can be customized through CSS. By overriding the Slider's CSS classes, you can customize the Slider bar. The Slider bar can be customized with different themes. By default, the Slider has a class name `e-slider-track` for the bar. The class can be overridden with our own color values, as shown in the following code snippet:
 
 ```
 .e-control.e-slider .e-slider-track .e-range {
@@ -18,7 +18,7 @@ The slider's appearance can be customized through CSS. By overriding the slider'
 }
 ```
 
-You can also apply a background color for a certain range depending on the slider values by using the change event.
+You can also apply a background color for a certain range depending on the Slider values by using the change event.
 
 ```ts
   onChange(args){

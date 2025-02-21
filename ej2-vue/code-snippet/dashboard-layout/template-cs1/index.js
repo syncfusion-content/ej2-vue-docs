@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
+// Import syncfusion Dashboard Layout component from layouts package
 import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 // Import syncfusion chart component from charts package
 import { AccumulationChartPlugin, PieSeries, AccumulationDataLabel, AccumulationTooltip, ChartPlugin, SplineAreaSeries, Legend, DateTime } from "@syncfusion/ej2-vue-charts";
@@ -49,13 +49,13 @@ new Vue({
 	template: `
   <div className="control-section" id="control_dash">
     <div className="content-wrapper">
-      <!--  DashboardLayout element declaration -->
+      <!--  Dashboard Layout component declaration -->
       <ejs-dashboardlayout ref="DashbordInstance" :columns="2" id='edit_dashboard' >
         <e-panels>
           <e-panel :row="0" :col="0" :sizeX="1" :sizeY="1" header="<div>Pie Chart</div>" :content="pie"></e-panel>
         </e-panels>
       </ejs-dashboardlayout>
-      <!-- end of dashboardlayout element -->
+      <!-- end of Dashboard Layout component -->
     </div>
   </div>
 `,

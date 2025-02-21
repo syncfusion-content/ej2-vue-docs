@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Hide checkbox in Vue Listview component | Syncfusion
-description: Learn here all about Hide checkbox in listview in Syncfusion Vue Listview component of Syncfusion Essential JS 2 and more.
-control: Hide checkbox in listview 
+title: Hide checkbox in Vue ListView component | Syncfusion
+description: Learn here all about Hide checkbox in ListView in Syncfusion Vue ListView component of Syncfusion Essential JS 2 and more.
+control: Hide checkbox in ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Hide checkbox in Vue Listview component
+# Hide checkbox in Vue ListView component
 
 The checkbox of a list item can be hidden by using [`htmlAttributes`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#h tmlattributes) of [`fields`](https://ej2.syncfusion.com/vue/documentation/api/list-view/#fields) object. With the help of `htmlAttributes`, we can add a unique class to each list item rendered from the data source. Using this CSS class, we can hide the checkbox of the list item.
 

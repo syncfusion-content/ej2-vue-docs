@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Position sizing in Vue Dashboard layout component | Syncfusion
-description: Learn here all about Position sizing of panels in Syncfusion Vue Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Position sizing in Vue Dashboard Layout component | Syncfusion
+description: Learn here all about Position sizing of panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
 control: Position sizing of panels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Position sizing of panels in Vue Dashboard layout component
+# Position sizing of panels in Vue Dashboard Layout component
 
 Panels are the basic building blocks of the dashboard layout component. They act as a container for the data to be visualized or presented. These panels can be positioned or resized for effective presentation of the data.
 
@@ -33,7 +33,7 @@ The following table represents all the available panel properties and the corres
 
 The panels within the layout can be easily positioned or ordered using the [`row`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#row) and [`col`](https://helpej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#col) properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
 
-The following sample demonstrates the positioning of panels within the dashboard layout using the row and,column properties of the panels.
+The following sample demonstrates the positioning of panels within the dashboard layout using the **row** and **column** properties of the panels.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

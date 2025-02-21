@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Vue File manager component | Syncfusion
-description:  Checkout and learn about Getting started with Vue File manager component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue File Manager component | Syncfusion
+description:  Checkout and learn about Getting started with Vue File Manager component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue File manager Component in Vue 2
+# Getting Started with the Vue File Manager Component in Vue 2
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Filemanager component
 
@@ -70,7 +70,7 @@ Once the `quickstart` project is set up with default settings, proceed to add Sy
 
 Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
-This article uses the [Vue File manager component](https://www.syncfusion.com/vue-components/vue-file-manager) as an example. Install the `@syncfusion/ej2-vue-filemanager` package by running the following command:
+This article uses the [Vue File Manager component](https://www.syncfusion.com/vue-components/vue-file-manager) as an example. Install the `@syncfusion/ej2-vue-filemanager` package by running the following command:
 
 ```bash
 npm install @syncfusion/ej2-vue-filemanager --save
@@ -85,22 +85,22 @@ yarn add @syncfusion/ej2-vue-filemanager
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the File manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the File Manager component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
 
 {% endhighlight %}
@@ -110,15 +110,15 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue File manager component:
+Follow the below steps to add the Vue File Manager component:
 
-1\. First, import and register the File manager component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the File Manager component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <script setup>
-import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+    import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
 
 </script>
 {% endraw %}
@@ -126,20 +126,20 @@ import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-file
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
-import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+    import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
-export default {
-name: "App",
-components: {
-"ejs-filemanager":FilemanagerComponent
-},
-}
+    export default {
+    name: "App",
+    components: {
+    "ejs-filemanager":FilemanagerComponent
+    },
+    }
 </script>
 
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the File manager component with [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) property.
+2\. In the `template` section, define the File Manager component with [ajaxSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager#ajaxsettings) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -160,24 +160,24 @@ components: {
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <script setup>
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-};
+    const ajaxSettings =
+    {
+        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+    };
 </script>
 {% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <script>
-data () {
-    return {
-        ajaxSettings:
-        {
-            url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+    data () {
+        return {
+            ajaxSettings:
+            {
+                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
+            }
         }
     }
-}
 </script>
 
 {% endhighlight %}
@@ -218,36 +218,36 @@ To perform the download operation, initialize the `downloadUrl` property in a [a
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <script setup>
-import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+    import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
 
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
+    const ajaxSettings =
+    {
+        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+        downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+    };
 </script>
 {% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
-import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+    import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
-export default {
-name: "App",
-    components: {
-        'ejs-filemanager': FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+    export default {
+    name: "App",
+        components: {
+            'ejs-filemanager': FileManagerComponent
+        },
+        data () {
+            return {
+            ajaxSettings:
+                {
+                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+                    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                }
             }
         }
     }
-}
 </script>
 
 {% endhighlight %}
@@ -261,36 +261,36 @@ To perform the upload operation, initialize the `uploadUrl` property in a [ajaxS
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% raw %}
 <script setup>
-import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
+    import { FileManagerComponent as EjsFilemanager } from "@syncfusion/ej2-vue-filemanager";
 
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
-};
+    const ajaxSettings =
+    {
+        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+        uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+    };
 </script>
 {% endraw %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API ~/src/App.vue" %}
 
 <script>
-import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
+    import { FileManagerComponent } from "@syncfusion/ej2-vue-filemanager";
 
-export default {
-name: "App",
-components: {
-        'ejs-filemanager': FileManagerComponent
-    },
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+    export default {
+    name: "App",
+    components: {
+            'ejs-filemanager': FileManagerComponent
+        },
+        data () {
+            return {
+            ajaxSettings:
+                {
+                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+                    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload"
+                }
             }
         }
     }
-}
 </script>
 
 {% endhighlight %}
@@ -313,7 +313,7 @@ To perform the image preview support in the File Manager component, need to init
 
 ## Injecting feature modules
 
-Basically, the file manager component contains large-icons view for displaying the files and folders, a breadcrumbbar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like detailsview, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
+Basically, the File Manager component contains large-icons view for displaying the files and folders, a breadcrumbbar for navigation and context menu for performing operations. However, these basic functionalities can be extended by using the additional feature modules like detailsview, toolbar, navigation pane, and context menu to change the layout and to simplify the navigation and file operations within the file system. The above modules can be injected using `provide`.
 
 The following example shows you the File Manager with all feature modules.
 
@@ -365,7 +365,7 @@ For every operation in File Manager, ajax request will be sent to the server whi
         
 {% previewsample "page.domainurl/code-snippet/file-manager/persistence-cs1" %}
 
->**Note:** The files of the current folder opened in the File manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#refreshfiles) method.
+>**Note:** The files of the current folder opened in the File Manager can be refreshed programatically by calling [refreshFiles](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#refreshfiles) method.
 
 ## Rendering component in right-to-left direction
 
@@ -398,34 +398,34 @@ The following code snippet demonstrates specifying the current path in File Mana
     </div>
 </template>
 <script setup>
-import { provide } from "vue";
-import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+    import { provide } from "vue";
+    import { FileManagerComponent as EjsFilemanager, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
 
-const ajaxSettings =
-{
-    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-};
-// Initial view of File Manager is set to details view
-const view = "Details";
-// Specify the required current path
-const path: '/Food';
-provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
+    const ajaxSettings =
+    {
+        url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+        getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
+        uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
+        downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+    };
+    // Initial view of File Manager is set to details view
+    const view = "Details";
+    // Specify the required current path
+    const path: '/Food';
+    provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
 {% endraw %}
 {% endhighlight %}
@@ -438,43 +438,43 @@ provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
     </div>
 </template>
 <script>
-import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
-export default {
-name: "App",
-components: {
-"ejs-filemanager":FilemanagerComponent,
-},
-    data () {
-        return {
-           ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
-            // Initial view of File Manager is set to details view
-            view: "Details",
-            // Specify the required current path
-            path: '/Food'
-        };
+    import { FileManagerComponent, DetailsView, NavigationPane, Toolbar } from "@syncfusion/ej2-vue-filemanager";
+    export default {
+    name: "App",
+    components: {
+    "ejs-filemanager":FilemanagerComponent,
     },
-    provide: {
-            filemanager: [DetailsView, NavigationPane, Toolbar]
+        data () {
+            return {
+            ajaxSettings:
+                {
+                    url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+                    getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
+                    uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
+                    downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+                },
+                // Initial view of File Manager is set to details view
+                view: "Details",
+                // Specify the required current path
+                path: '/Food'
+            };
+        },
+        provide: {
+                filemanager: [DetailsView, NavigationPane, Toolbar]
+        }
     }
-}
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-icons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-filemanager/styles/material.css";
 </style>
 
 {% endhighlight %}

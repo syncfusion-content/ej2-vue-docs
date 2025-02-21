@@ -43,7 +43,7 @@
 </template>
   
 <script>
-  // Import syncfusion dashboardlayout component from layouts package
+  // Import syncfusion Dashboard Layout component from layouts package
   import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
 
   export default {
@@ -77,7 +77,6 @@
   .e-panel-content {
     text-align: center;
     padding: 20px;
-    line-height: 40px;
   }
 
   #defaultLayout .e-panel {

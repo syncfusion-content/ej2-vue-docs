@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
   <div class="control-section">
-     <ejs-listview id='ui-list' :dataSource='listData' :enableVirtualization='enableUi' >
+     <ejs-listview id='ui-list' :dataSource='listData' :height="height" :enableVirtualization='enableUi' >
     </ejs-listview>
   </div>
 `,
@@ -36,7 +36,8 @@ new Vue({
   data: function() {
     return {
       listData: listData,
-      enableUi: true
+      enableUi: true,
+      height: "330px"
     };
   },
   provide: {
