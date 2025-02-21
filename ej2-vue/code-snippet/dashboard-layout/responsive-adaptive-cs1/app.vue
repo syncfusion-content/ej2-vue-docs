@@ -1,6 +1,5 @@
 <template>
     <div className="control-section">
-        <!--  DashboardLayout element declaration -->
         <ejs-dashboardlayout id='dashboard_layout' ref="dashboard" :cellSpacing='cellSpacing' :mediaQuery='mediaQuery'
             :columns="6">
             <e-panels>
@@ -10,47 +9,44 @@
                 <e-panel :sizeX="1" :sizeY="1" :row="1" :col="0" content="<div>3</div>"></e-panel>
             </e-panels>
         </ejs-dashboardlayout>
-        <!-- end of dashboardlayout element -->
     </div>
 </template>
 
 <script>
 
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
+    // Import syncfusion Dashboard Layout component from layouts package
+    import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
 
-
-
-export default {
-    name: "App",
-    components: {
-        "ejs-dashboardlayout": DashboardLayoutComponent,
-        "e-panels": PanelsDirective,
-        "e-panel": PanelDirective
-    },
-    data: function () {
-        return {
-            cellSpacing: [20, 20],
-            mediaQuery: 'max-width: 700px',
-        };
+    export default {
+        name: "App",
+        components: {
+            "ejs-dashboardlayout": DashboardLayoutComponent,
+            "e-panels": PanelsDirective,
+            "e-panel": PanelDirective
+        },
+        data: function () {
+            return {
+                cellSpacing: [20, 20],
+                mediaQuery: 'max-width: 700px',
+            };
+        }
     }
-}
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
-/* DashboardLayout element styles  */
-#dashboard_layout .e-panel .e-panel-container {
-    vertical-align: middle;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-    line-height: 80px;
-}
+    /* Dashboard Layout component styles  */
+    #dashboard_layout .e-panel .e-panel-container {
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        line-height: 80px;
+    }
 
-#dashboard_layout .e-panel {
-    transition: none !important;
-}
+    #dashboard_layout .e-panel {
+        transition: none !important;
+    }
 </style>

@@ -20,6 +20,3 @@
     margin: 2px;
   }
 </style>
-
-
-

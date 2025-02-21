@@ -11,7 +11,6 @@
       cssClass="e-ajax-content"
       :beforeRender="onBeforeRender"
     >
-      <!-- ListView element -->
       <ejs-listview
         id="countrylist"
         :dataSource="listViewData"

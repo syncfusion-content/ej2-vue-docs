@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Style in Vue Dashboard layout component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Style in Vue Dashboard Layout component | Syncfusion
+description: Learn here all about Style in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
 control: Style 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Dashboard layout component
+# Style in Vue Dashboard Layout component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

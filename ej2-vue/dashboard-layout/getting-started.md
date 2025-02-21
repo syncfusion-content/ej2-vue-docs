@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Getting started with Vue Dashboard layout component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Dashboard layout component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Dashboard Layout component | Syncfusion
+description:  Checkout and learn about Getting started with Vue Dashboard Layout component of Syncfusion Essential JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Dashboard layout Component in Vue 2
+# Getting Started with the Vue Dashboard Layout Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Dashboard layout component.
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Dashboard Layout component.
 
-To get start quickly with Vue Dashboard layout, you can check on this video:
+To get start quickly with Vue Dashboard Layout, you can check on this video:
 
 {% youtube "https://www.youtube.com/watch?v=2vjc_E8f9nI" %}
 
@@ -77,7 +77,7 @@ yarn add @syncfusion/ej2-vue-layouts
 
 You can import themes for the Syncfusion Vue component in various ways, such as using CSS or SASS styles from npm packages, CDN, [CRG](https://crg.syncfusion.com/) and [Theme Studio](https://ej2.syncfusion.com/vue/documentation/appearance/theme-studio). Refer to [themes topic](https://ej2.syncfusion.com/vue/documentation/appearance/theme) to know more about built-in themes and different ways to refer to themes in a Vue project.
 
-In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Dashboard layout component and its dependents were imported into the `<style>` section of **src/App.vue** file.
+In this article, the `Material` theme is applied using CSS styles, which are available in installed packages. The necessary `Material` CSS styles for the Dashboard Layout component and its dependents were imported into the `<style>` section of **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -94,9 +94,9 @@ In this article, the `Material` theme is applied using CSS styles, which are ava
 
 ## Add Syncfusion Vue component
 
-Follow the below steps to add the Vue Dashboard layout component:
+Follow the below steps to add the Vue Dashboard Layout component:
 
-1\. First, import and register the Dashboard layout component in the `script` section of the **src/App.vue** file.
+1\. First, import and register the Dashboard Layout component in the `script` section of the **src/App.vue** file.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -115,7 +115,7 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Dashboard layout component with [cellSpacing](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellspacing) property.
+2\. In the `template` section, define the Dashboard Layout component with [cellSpacing](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#cellspacing) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
@@ -233,7 +233,7 @@ yarn run serve
 
 ### Setting the `panels` property using helper
 
-You can render the DashboardLayout component by using the **panels** property through `<e-panels>`.
+You can render the DashboardLayout component by using the [**panels**](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#panels) property through `<e-panels>`.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Integrate badge into listview in Vue Badge component | Syncfusion
-description: Learn here all about Integrate badge into listview in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
-control: Integrate badge into listview 
+title: Integrate Badge into ListView in Vue Badge component | Syncfusion
+description: Learn here all about Integrate Badge into ListView in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
+control: Integrate Badge into ListView 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Integrate badge into listview in Vue Badge component
+# Integrate Badge into ListView in Vue Badge component
 
-The badges can be integrated with the `listview` component to indicate new notification with colour based on priority.
+The badges can be integrated with the `ListView` component to indicate new notification with color based on priority.
 
-In the following sample, `default` badges are used and there is no need to customize the badge size. The component will automatically adjust the size based on the container element.
+In the following sample, `default` badges are used and there is no need to customize the Badge size. The component will automatically adjust the size based on the container element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

@@ -16,7 +16,7 @@ export default {
 }
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
 
     #element {
@@ -30,9 +30,4 @@ export default {
         position: relative;
         top: 130px;
     }
-
-
 </style>
-
-
-

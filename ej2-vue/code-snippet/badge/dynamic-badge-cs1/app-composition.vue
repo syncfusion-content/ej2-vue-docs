@@ -31,76 +31,76 @@ let templateVue = app.component("template", {
 
 const data = [
     {
-    id: "p_01",
-    text: "Primary",
-    messages: 3,
-    badge: "e-badge e-badge-primary",
-    icons: "primary",
-    type: "Primary"
+        id: "p_01",
+        text: "Primary",
+        messages: 3,
+        badge: "e-badge e-badge-primary",
+        icons: "primary",
+        type: "Primary"
     },
     {
-    id: "p_02",
-    text: "Social",
-    messages: 27,
-    badge: "e-badge e-badge-secondary",
-    icons: "social",
-    type: "Primary"
+        id: "p_02",
+        text: "Social",
+        messages: 27,
+        badge: "e-badge e-badge-secondary",
+        icons: "social",
+        type: "Primary"
     },
     {
-    id: "p_03",
-    text: "Promotions",
-    messages: 7,
-    badge: "e-badge e-badge-success",
-    icons: "promotion",
-    type: "Primary"
+        id: "p_03",
+        text: "Promotions",
+        messages: 7,
+        badge: "e-badge e-badge-success",
+        icons: "promotion",
+        type: "Primary"
     },
     {
-    id: "p_04",
-    text: "Updates",
-    messages: 13,
-    badge: "e-badge e-badge-info",
-    icons: "updates",
-    type: "Primary"
+        id: "p_04",
+        text: "Updates",
+        messages: 13,
+        badge: "e-badge e-badge-info",
+        icons: "updates",
+        type: "Primary"
     },
     {
-    id: "p_05",
-    text: "Starred",
-    messages: "",
-    badge: "",
-    icons: "starred",
-    type: "All Labels"
+        id: "p_05",
+        text: "Starred",
+        messages: "",
+        badge: "",
+        icons: "starred",
+        type: "All Labels"
     },
     {
-    id: "p_06",
-    text: "Important",
-    messages: 2,
-    badge: "e-badge e-badge-danger",
-    icons: "important",
-    type: "All Labels"
+        id: "p_06",
+        text: "Important",
+        messages: 2,
+        badge: "e-badge e-badge-danger",
+        icons: "important",
+        type: "All Labels"
     },
     {
-    id: "p_07",
-    text: "Sent",
-    messages: "",
-    badge: "",
-    icons: "sent",
-    type: "All Labels"
+        id: "p_07",
+        text: "Sent",
+        messages: "",
+        badge: "",
+        icons: "sent",
+        type: "All Labels"
     },
     {
-    id: "p_08",
-    text: "Outbox",
-    messages: "",
-    badge: "",
-    icons: "outbox",
-    type: "All Labels"
+        id: "p_08",
+        text: "Outbox",
+        messages: "",
+        badge: "",
+        icons: "outbox",
+        type: "All Labels"
     },
     {
-    id: "p_09",
-    text: "Drafts",
-    messages: 7,
-    badge: "e-badge e-badge-warning",
-    icons: "draft",
-    type: "All Labels"
+        id: "p_09",
+        text: "Drafts",
+        messages: 7,
+        badge: "e-badge e-badge-warning",
+        icons: "draft",
+        type: "All Labels"
     }
 ];
 
@@ -125,94 +125,82 @@ const butonClick = function() {
 
 </script>
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-lists/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-notifications/styles/material.css";
 
-#element {
-    width: 400px;
-    margin: auto;
-    border-radius: 3px;
-    justify-content: center;
-}
+    #element {
+        width: 400px;
+        margin: auto;
+        border-radius: 3px;
+        justify-content: center;
+    }
 
-/* Listview Customization */
+    /* Listview Customization */
 
-#letterAvatarList {
-    max-width: 350px;
-    margin: auto;
-    border: 1px solid #dddddd;
-    border-radius: 3px;
-}
+    #letterAvatarList {
+        max-width: 350px;
+        margin: auto;
+        border: 1px solid #dddddd;
+        border-radius: 3px;
+    }
 
-#letterAvatarList .listWrapper {
-    width: inherit;
-    height: inherit;
-    position: relative;
-}
+    #letterAvatarList .listWrapper {
+        width: inherit;
+        height: inherit;
+        position: relative;
+    }
 
-#letterAvatarList .e-list-header {
-    height: 54px;
-}
+    #letterAvatarList .e-list-header {
+        height: 54px;
+    }
 
-.material #letterAvatarList .e-list-header .e-text {
-    line-height: 22px;
-}
+    #letterAvatarList .e-list-header .e-text {
+        line-height: 22px;
+    }
 
-.fabric #letterAvatarList .e-list-header .e-text {
-    line-height: 22px;
-}
+    #letterAvatarList .e-list-item {
+        cursor: pointer;
+        height: 50px;
+        line-height: 44px;
+        border: 0;
+    }
 
-.bootstrap #letterAvatarList .e-list-header .e-text {
-    line-height: 13px;
-}
+    /* Badge Positioning */
 
-.highcontrast #letterAvatarList .e-list-header .e-text {
-    line-height: 20px;
-}
+    #letterAvatarList .e-badge {
+        margin-top: 12px;
+    }
 
-#letterAvatarList .e-list-item {
-    cursor: pointer;
-    height: 50px;
-    line-height: 44px;
-    border: 0;
-}
+    #letterAvatarList .listWrapper .list-text {
+        width: 60%;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 50px;
+    }
 
-/* Badge Positioning */
+    /* Avatar Positioning */
 
-#letterAvatarList .e-badge {
-    margin-top: 12px;
-}
+    #letterAvatarList .listWrapper .e-avatar {
+        position: absolute;
+        top: calc(100% - 40px);
+        font-size: 10px;
+        left: 5px;
+    }
 
-#letterAvatarList .listWrapper .list-text {
-    width: 60%;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 50px;
-}
+    /* Avatar Background Customization */
 
-/* Avatar Positioning */
+    #letterAvatarList .e-list-item:nth-child(1) .e-avatar {
+        background-color: #039BE5;
+    }
 
-#letterAvatarList .listWrapper .e-avatar {
-    position: absolute;
-    top: calc(100% - 40px);
-    font-size: 10px;
-    left: 5px;
-}
+    #letterAvatarList .e-list-item:nth-child(3) .e-avatar {
+        background-color: #E91E63;
+    }
 
-/* Avatar Background Customization */
-
-#letterAvatarList .e-list-item:nth-child(1) .e-avatar {
-    background-color: #039BE5;
-}
-
-#letterAvatarList .e-list-item:nth-child(3) .e-avatar {
-    background-color: #E91E63;
-}
-
-#letterAvatarList .e-list-item:nth-child(5) .e-avatar {
-    background-color: #009688;
-}
+    #letterAvatarList .e-list-item:nth-child(5) .e-avatar {
+        background-color: #009688;
+    }
 </style>

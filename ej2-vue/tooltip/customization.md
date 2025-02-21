@@ -14,7 +14,7 @@ The Tooltip can be customized using the [`cssClass`](https://ej2.syncfusion.com/
 
 ## Tip pointer customization
 
-Styling the tip pointer's size, background, and border colors can be done using the `cssClass` property, as given below.
+Styling the tip pointer's size, background, and border colors can be done using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#cssclass) property, as given below.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -29,7 +29,7 @@ Styling the tip pointer's size, background, and border colors can be done using 
 
 ## Tooltip customization
 
-The complete look and feel of the Tooltip can be customized by changing its background color, opacity, content font, etc.
+The complete look and feel of the Tooltip can be customized by changing its background color, opacity, content font, etc., with the help of the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#cssclass) property, as shown below.
 
 The following code example demonstrates how to achieve this customization.
 

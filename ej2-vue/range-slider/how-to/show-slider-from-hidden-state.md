@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Show slider from hidden state in Vue Range slider component | Syncfusion
-description: Learn here all about Show slider from hidden state in Syncfusion Vue Range slider component of Syncfusion Essential JS 2 and more.
-control: Show slider from hidden state 
+title: Show hidden state Vue Range Slider component | Syncfusion
+description: Learn here all about Show Slider from hidden state in Syncfusion Vue Range Slider component of Syncfusion Essential JS 2 and more.
+control: Show Slider from hidden state 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Show slider from hidden state in Vue Range slider component
+# Show Slider from hidden state in Vue Range Slider component
 
 This section demonstrates how-to render the Slider component in hidden state and make it visible in button click. We can initialize Slider in hidden state by setting the display as none.
 

@@ -69,22 +69,6 @@ const sortOrder = 'Ascending';
     height: 54px;
 }
 
-.material #letterAvatarList .e-list-header .e-text {
-    line-height: 22px;
-}
-
-.fabric #letterAvatarList .e-list-header .e-text {
-    line-height: 22px;
-}
-
-.bootstrap #letterAvatarList .e-list-header .e-text {
-    line-height: 13px;
-}
-
-.highcontrast #letterAvatarList .e-list-header .e-text {
-    line-height: 20px;
-}
-
 #letterAvatarList .e-list-item {
     cursor: pointer;
     height: 50px;

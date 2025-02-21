@@ -12,11 +12,11 @@ domainurl: ##DomainURL##
 
 You can decide the mode in which the Tooltip opens on a page, i.e., on hovering, focusing, or clicking on the target elements.
 
-> On mobile devices, Tooltips appear when you tap and hold the element, even if the `opensOn` option is assigned with `hover`.
+> On mobile devices, Tooltips appear when you tap and hold the element, even if the [`opensOn`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#openson) option is assigned with `hover`.
 > Tooltips are also displayed as long as you continue to tap and hold the element. OOn release, it disappears after 1.5 seconds.
 > If there is another action before this time elapses, the Tooltip disappears.
 
-The `opensOn` property can take either a single or a combination of multiple values, separated by space from the following options. The table  below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `opensOn` property. By default, it takes `auto` value.
+The [`opensOn`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#openson) property can take either a single or a combination of multiple values, separated by space from the following options. The table  below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `opensOn` property. By default, it takes `auto` value.
 
 | Values | Desktop | Mobile |
 | ------------- | ------------- | ------------- |
@@ -45,7 +45,7 @@ The following code example shows how to set the open mode for Tooltips.
 
 ## Custom open mode
 
-Other than the above specified options, the `custom` mode makes the Tooltip appear on screen for user-defined custom actions, such as `right-click`, `double-click`, and so on. Here, the tooltip is not triggered by any default action, and you have to bind your own events and use either `open` or `close` public methods to show or hide the Tooltips.
+Other than the above specified options, the [`custom`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#openson) mode makes the Tooltip appear on screen for user-defined custom actions, such as `right-click`, `double-click`, and so on. Here, the Tooltip is not triggered by any default action, and you have to bind your own events and use either `open` or `close` public methods to show or hide the Tooltips.
 
 The following code example shows how to define custom open mode for the Tooltip.
 
@@ -62,7 +62,7 @@ The following code example shows how to define custom open mode for the Tooltip.
 
 ## Sticky mode
 
-With this mode set to `true`, Tooltips remain on the screen until the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `isSticky` property.
+With this mode set to `true`, Tooltips remain on the screen until the close icon is pressed. In this mode, close icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the [`isSticky`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#issticky) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -77,7 +77,7 @@ With this mode set to `true`, Tooltips remain on the screen until the close icon
 
 ## Open/Close Tooltip with delay
 
-The Tooltips can be opened or closed after some delay by using the `openDelay` and `closeDelay` properties.
+The Tooltips can be opened or closed after some delay by using the [`openDelay`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#opendelay) and [`closeDelay`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#closedelay) properties.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

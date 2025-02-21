@@ -10,11 +10,11 @@ System.config({
         }
     },
     paths: {
-        "syncfusion:": "https://cdn.syncfusion.com/ej2/25.1.35/"
+        "syncfusion:": "https://cdn.syncfusion.com/ej2/28.2.3/"
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
-vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
+        vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
         "@syncfusion/ej2-inputs": "syncfusion:ej2-inputs/dist/ej2-inputs.umd.min.js",

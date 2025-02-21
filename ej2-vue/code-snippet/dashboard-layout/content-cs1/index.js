@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
+// Import syncfusion Dashboard Layout component from layouts package
 import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 // Import syncfusion chart component from charts package
 import { AccumulationChartPlugin, PieSeries, AccumulationDataLabel, AccumulationTooltip, ChartPlugin, SplineAreaSeries, Legend, DateTime } from "@syncfusion/ej2-vue-charts";
@@ -12,7 +12,7 @@ Vue.use(DashboardLayoutPlugin);
 var splineTemplate = Vue.component("contentTemp1", {
   template: `
     <div id="container" style='display:block;height:100%, width:100%;'>
-      <!--  Chart element declaration -->
+      <!--  Chart component declaration -->
       <ejs-chart class="chart-content" ref="splineInstance" style='display:block;height:100%, width:100%;':primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'
       :chartArea='chartArea' :height='height' :width='width' :border='border'>
         <e-series-collection>
@@ -20,7 +20,7 @@ var splineTemplate = Vue.component("contentTemp1", {
           <e-series :dataSource='seriesData1' type='SplineArea' xName='x' yName='y' name='Feb' width=2 opacity=0.5 :fill="fill1"></e-series>
         </e-series-collection>
       </ejs-chart>
-    <!-- end of chart element -->
+    <!-- end of chart component -->
   </div>`,
 
   data: function() {
@@ -155,7 +155,7 @@ new Vue({
 	template: `
   <div className="control-section" id="control_dash">
     <div className="content-wrapper">
-      <!--  DashboardLayout element declaration -->
+      <!--  Dashboard Layout component declaration -->
       <ejs-dashboardlayout ref="DashbordInstance" :columns="6" id='edit_dashboard' :allowResizing="false" :allowDragging="true" >
         <e-panels>
           <e-panel :row="0" :col="0" :sizeX="3" :sizeY="2" header="<div>Product usage ratio</div>" :content="pie"></e-panel>
@@ -163,7 +163,7 @@ new Vue({
           <e-panel :row="1" :col="0" :sizeX="3" :sizeY="2" header="<div>Spline Chart</div>" :content="spline"></e-panel>
         </e-panels>
       </ejs-dashboardlayout>
-      <!-- end of dashboardlayout element -->
+      <!-- end of Dashboard Layout component -->
     </div>
   </div>
 `,

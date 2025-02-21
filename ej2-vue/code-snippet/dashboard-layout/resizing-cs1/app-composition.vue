@@ -1,6 +1,5 @@
 <template>
   <div class="control-section">
-    <!--  DashboardLayout element declaration -->
     <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :allowResizing='true'
       :resizableHandles='resizableHandles' :columns="6" :resizeStart="onResizeStart" :resize="onResize"
       :resizeStop="onResizeStop">
@@ -14,47 +13,44 @@
         <e-panel :sizeX="1" :sizeY="1" :row="2" :col="3" content="<div class='content'>6</div>"></e-panel>
       </e-panels>
     </ejs-dashboardlayout>
-    <!-- end of dashboardlayout element -->
   </div>
 </template>
 
 <script setup>
 
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutComponent as EjsDashboardlayout, PanelDirective as EPanel, PanelsDirective as EPanels } from "@syncfusion/ej2-vue-layouts";
+  // Import syncfusion Dashboard Layout component from layouts package
+  import { DashboardLayoutComponent as EjsDashboardlayout, PanelDirective as EPanel, PanelsDirective as EPanels } from "@syncfusion/ej2-vue-layouts";
 
-const cellSpacing = [10, 10];
-const resizableHandles = ['e-south-east', 'e-east', 'e-west', 'e-north', 'e-south'];
-//Dashboard Layout's resizestart event function
-const onResizeStart = function () {
-  console.log("Resize Start");
-};
-//Dashboard Layout's resize event function
-const onResize = function () {
-  console.log("Resizing");
-};
-//Dashboard Layout's resizestop event function
-const onResizeStop = function () {
-  console.log("Resize Stop")
-};
-
-
+  const cellSpacing = [10, 10];
+  const resizableHandles = ['e-south-east', 'e-east', 'e-west', 'e-north', 'e-south'];
+  //Dashboard Layout's resizestart event function
+  const onResizeStart = function () {
+    console.log("Resize Start");
+  };
+  //Dashboard Layout's resize event function
+  const onResize = function () {
+    console.log("Resizing");
+  };
+  //Dashboard Layout's resizestop event function
+  const onResizeStop = function () {
+    console.log("Resize Stop")
+  };
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
-/* DashboardLayout element styles  */
-#dashboard_default .e-panel .e-panel-container .content {
-  vertical-align: middle;
-  font-weight: 600;
-  font-size: 20px;
-  text-align: center;
-  line-height: 80px;
-}
+  /* Dashboard Layout component styles  */
+  #dashboard_default .e-panel .e-panel-container .content {
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 80px;
+  }
 
-#dashboard_default .e-panel {
-  transition: none !important;
-}
+  #dashboard_default .e-panel {
+    transition: none !important;
+  }
 </style>

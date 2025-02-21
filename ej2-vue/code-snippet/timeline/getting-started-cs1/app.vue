@@ -2,10 +2,10 @@
   <div class="container" style="height: 330px;margin-top: 30px;">
     <ejs-timeline id="timeline">
       <e-items>
-        <e-item></e-item>
-        <e-item></e-item>
-        <e-item></e-item>
-        <e-item></e-item>
+        <e-item content='Shipped' />
+        <e-item content='Departed' />
+        <e-item content='Arrived' />
+        <e-item content='Out for Delivery' />
       </e-items>
     </ejs-timeline>
   </div>

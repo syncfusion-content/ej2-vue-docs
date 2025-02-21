@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Position in Vue Tooltip component
 
-Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the position property with any one of the following values:
+Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the [`position`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#position) property with any one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -40,7 +40,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 
 ## Tip pointer positioning
 
-Consider rephrasing to: "Pointer positions can be adjusted using the [`showTipPointer`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#showtippointer) property. Pointer positions can be adjusted using the [`tipPointerPosition`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#tippointerposition) property that can be assigned to one of the following values:
+Pointer positions can be adjusted using the [`showTipPointer`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#showtippointer) property. Pointer positions can be adjusted using the [`tipPointerPosition`](https://ej2.syncfusion.com/vue/documentation/api/tooltip#tippointerposition) property that can be assigned to one of the following values:
 
 * `Auto`
 * `Start`

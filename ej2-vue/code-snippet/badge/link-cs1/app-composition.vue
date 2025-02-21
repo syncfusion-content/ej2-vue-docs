@@ -23,6 +23,4 @@
         position: relative;
         top: 130px;
     }
-
-
 </style>
