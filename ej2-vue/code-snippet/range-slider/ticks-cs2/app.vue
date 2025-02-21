@@ -27,7 +27,7 @@ components: {
   @import "../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-inputs/styles/material.css";
-   #app {
+  #app {
     height: 40px;
     left: 30%;
     position: absolute;

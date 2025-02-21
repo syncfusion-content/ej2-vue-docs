@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Template in Vue Dashboard layout component | Syncfusion
-description: Learn here all about Template in Syncfusion Vue Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Template in Vue Dashboard Layout component | Syncfusion
+description: Learn here all about Template in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
 control: Template 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Template in Vue Dashboard layout component
+# Template in Vue Dashboard Layout component
 
 You can customize the default appearance of the dashboard layout using the `content` property.
 

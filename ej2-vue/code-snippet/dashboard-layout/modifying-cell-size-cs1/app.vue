@@ -1,6 +1,6 @@
 <template>
     <div class="control-section">
-        <!--  DashboardLayout element declaration -->
+        <!--  Dashboard Layout component declaration -->
         <ejs-dashboardlayout id='dashboard_layout' :columns="5" :cellSpacing='cellSpacing'
             :cellAspectRatio='cellAspectRatio'>
             <e-panels>
@@ -13,46 +13,46 @@
                 <e-panel :sizeX="1" :sizeY="1" :row="2" :col="3" content="<div class='content'>6</div>"></e-panel>
             </e-panels>
         </ejs-dashboardlayout>
-        <!-- end of dashboardlayout element -->
+        <!-- end of Dashboard Layout component -->
     </div>
 </template>
 
 <script>
 
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
+    // Import syncfusion Dashboard Layout component from layouts package
+    import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
 
-export default {
-    name: "App",
-    components: {
-        "ejs-dashboardlayout": DashboardLayoutComponent,
-        "e-panels": PanelsDirective,
-        "e-panel": PanelDirective
-    },
+    export default {
+        name: "App",
+        components: {
+            "ejs-dashboardlayout": DashboardLayoutComponent,
+            "e-panels": PanelsDirective,
+            "e-panel": PanelDirective
+        },
 
-    data: function () {
-        return {
-            cellSpacing: [10, 10],
-            cellAspectRatio: 100 / 50
-        };
+        data: function () {
+            return {
+                cellSpacing: [10, 10],
+                cellAspectRatio: 100 / 50
+            };
+        }
     }
-}
 </script>
 
 <style>
-@import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+    @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
-/* DashboardLayout element styles  */
-#dashboard_layout .e-panel .e-panel-content {
-    vertical-align: middle;
-    font-weight: 600;
-    font-size: 20px;
-    text-align: center;
-    line-height: 60px;
-}
+    /* Dashboard Layout component styles  */
+    #dashboard_layout .e-panel .e-panel-content {
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        line-height: 60px;
+    }
 
-#dashboard_layout .e-panel {
-    transition: none !important;
-}
+    #dashboard_layout .e-panel {
+        transition: none !important;
+    }
 </style>

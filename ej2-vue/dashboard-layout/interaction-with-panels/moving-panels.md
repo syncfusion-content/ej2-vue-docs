@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Moving panels in Vue Dashboard layout component | Syncfusion
-description: Learn here all about Moving panels in Syncfusion Vue Dashboard layout component of Syncfusion Essential JS 2 and more.
+title: Moving panels in Vue Dashboard Layout component | Syncfusion
+description: Learn here all about Moving panels in Syncfusion Vue Dashboard Layout component of Syncfusion Essential JS 2 and more.
 control: Moving panels 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Moving panels in Vue Dashboard layout component
+# Moving panels in Vue Dashboard Layout component
 
 Other than drag and drop, it is possible to move the panels in Dashboard Layout programmatically. This can be achieved using [movePanel](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#movepanel) method. The method is invoked as follows,
 

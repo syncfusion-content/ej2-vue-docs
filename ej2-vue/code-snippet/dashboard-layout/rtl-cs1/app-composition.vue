@@ -1,6 +1,5 @@
 <template>
     <div class="col-lg-8 control-section">
-        <!--  DashboardLayout element declaration -->
         <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="5" :enableRtl="enableRtl">
             <e-panels>
                 <e-panel id="panel0" :row="0" :col="0" :sizeX="1" :sizeY="1" header="<div>Panel 0</div>"
@@ -19,37 +18,39 @@
                     content='<div class="content">Panel Content<div>'></e-panel>
             </e-panels>
         </ejs-dashboardlayout>
-        <!-- end of dashboardlayout element -->
     </div>
 </template>
 
 <script setup>
 
-// Import syncfusion dashboardlayout component from layouts package
-import { DashboardLayoutComponent as EjsDashboardlayout, PanelDirective as EPanel, PanelsDirective as EPanels } from "@syncfusion/ej2-vue-layouts";
+    // Import syncfusion Dashboard Layout component from layouts package
+    import { DashboardLayoutComponent as EjsDashboardlayout, PanelDirective as EPanel, PanelsDirective as EPanels } from "@syncfusion/ej2-vue-layouts";
 
-const spacing = [10, 10];
+    const spacing = [10, 10];
 const enableRtl = true;
 
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
-/* DashboardLayout element styles  */
-#defaultLayout .e-panel .e-panel-container .e-panel-header {
-    vertical-align: middle;
-    font-weight: 600;
-    font-size: 20px;
-    padding: 10px
-}
+    .control-section {
+        height: 395px;
+    }
+    
+    #defaultLayout .e-panel .e-panel-container .e-panel-header {
+        vertical-align: middle;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 10px
+    }
 
-.e-panel-content {
-    padding: 20px;
-}
+    .e-panel-content {
+        padding: 20px;
+    }
 
-#defaultLayout .e-panel {
-    transition: none !important;
-}
+    #defaultLayout .e-panel {
+        transition: none !important;
+    }
 </style>

@@ -191,6 +191,8 @@ export default {
 
 ### Adding items
 
+You can use the `<e-item>` directive within the `<e-items>` directive to define each item.
+
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 

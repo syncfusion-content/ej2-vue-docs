@@ -1,6 +1,6 @@
 <template>
    <div id='app'>
-        <ejs-tooltip target='.e-info' position='RightCenter'>
+        <ejs-tooltip ref="tooltip1" target='.e-info' position='RightCenter'>
             <div id="container">
                 <form id="details" role="form">
                     <div id="user">
@@ -110,7 +110,7 @@ components: {
         this.$refs.pwd.title = 'Required Minimum 8 Characters';
         this.$refs.pwd.style.backgroundColor = 'red';
         let pwdtarget = this.$refs.pwd;
-        tooltip3.open(pwdtarget);
+        tooltip1.open(pwdtarget);
     } else {
         this.$refs.pwd.style.backgroundColor = 'white';
     }
@@ -127,7 +127,7 @@ components: {
         tooltip1.close(target);
         this.$refs.uname.title = 'Please enter your name';
         let pwdtarget = this.$refs.pwd;
-        tooltip3.close(pwdtarget);
+        tooltip1.close(pwdtarget);
     }
   }
 }

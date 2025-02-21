@@ -1460,6 +1460,374 @@ export default data;
 
 ![AdditionalParameters](../images/additional-parameter.png)
 
+## Export all records in client side
+
+Export all records is especially beneficial when dealing with large datasets that need to be exported for offline analysis or sharing.
+
+By default, the Syncfusion Grid component exports only the records on the current page. However, the Syncfusion ##Platform_Name## Grid component allows you to export all records, including those from multiple pages, by configuring the [pdfExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties) and [excelExportProperties](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties).
+
+To export all records, including those from multiple pages, configure the [pdfExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/pdfExportProperties/#datasource) for PDF exporting and [excelExportProperties.dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/excelExportProperties#datasource) for Excel exporting within the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event handler. Inside this event, set the `dataSource` property of `pdfExportProperties` and `excelExportProperties` for PDF and Excel exporting to include all records.
+
+**Excel Exporting**
+
+To export the complete Grid data to Excel document, utilize the `excelExportProperties.dataSource` when initiating the Excel export. Use the following code snippet to export all records within the Grid:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+  getOrders(state).then((event) => {
+    let excelExportProperties = {
+      dataSource: event.result.result
+    };
+    grid.value.excelExport(excelExportProperties);
+  });
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% raw %}
+  getOrders(state).then((event) => {
+    let excelExportProperties = {
+      dataSource: event.result.result
+    };
+    this.$refs.grid.excelExport(excelExportProperties);
+  });
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**PDF Exporting**
+
+To export the complete Grid data to PDF document, utilize the `pdfExportProperties.dataSource` when initiating the PDF export. Use the following code snippet to export all records within the Grid:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+  getOrders(state).then((event) => {
+    let excelExportProperties = {
+      dataSource: event.result.result
+    };
+    this.$refs.grid.excelExport(excelExportProperties);
+  });
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% raw %}
+  getOrders(state).then((event) => {
+      let pdfExportProperties = {
+        dataSource: event.result.result
+      };
+    this.$refs.grid.pdfExport(pdfExportProperties); // Need to call pdfExport method of Grid when get the entire data.
+  });
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+> For further customization on Grid export, refer to the respective documentation for [PDF exporting](https://ej2.syncfusion.com/vue/documentation/grid/pdf-export/pdf-export-options) and [Excel exporting](https://ej2.syncfusion.com/vue/documentation/grid/excel-export/excel-export-options)
+
+The following code example shows how to export all records in client side:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <ejs-grid ref="grid" :dataSource='data' :allowPaging='true' :toolbar='toolbar' :dataStateChange="dataStateChange" :allowExcelExport="true" :allowPdfExport="true" :excelExportComplete=exportComplete :pdfExportComplete=exportComplete :toolbarClick=toolbarClick>
+    <e-columns>
+      <e-column field='OrderID' headerText='Order ID' width='90' textAlign='Right' isPrimaryKey='true'></e-column>
+      <e-column field="CustomerName" headerText="Customer Name" width="100"></e-column>
+      <e-column field='ProductID' headerText='Product ID' width=100></e-column>
+      <e-column field='ProductName' headerText='Product Name' format='C2' width=100></e-column>
+    </e-columns>
+  </ejs-grid>
+</template>
+<script setup>
+import { ref, onMounted, provide } from "vue";
+import { GridComponent as EjsGrid, ColumnsDirective as EColumns, ColumnDirective as EColumn, Page,Toolbar,ExcelExport,PdfExport} from '@syncfusion/ej2-vue-grids';
+import { getOrders} from './orderService';
+
+const data = ref([]);
+const grid = ref([]);
+const state = { skip: 0, take: 12};
+const toolbar = ["ExcelExport", "PdfExport"];
+const dataStateChange = function (state) {
+    getOrders(state).then(gridData => {
+      data.value = gridData.result; // Assign the result to the data.value property.
+    });
+}
+function exportComplete() {
+  grid.value.hideSpinner(); // Hide the spinner when export completed.
+}
+function toolbarClick(args) {
+  let state= { action: {}, skip: 0, take: grid.value.ej2Instances.pageSettings.totalRecordsCount };
+  switch (args.item.text) {
+    case "PDF Export":
+     grid.value.showSpinner(); // Show the spinner when send the post to service.
+      state.action.isPdfExport = true;
+      // Fetch the entire data while PDF exporting.
+      getOrders(state).then((event) => {
+        let pdfExportProperties = {
+          dataSource: event.result.result
+        };
+        grid.value.pdfExport(pdfExportProperties); // Need to call pdfExport method of Grid when get the entire data.
+      });
+      break;
+    case "Excel Export":
+      // Fetch the entire data while Excel exporting.
+      grid.value.showSpinner();// Show the spinner when send the post to service.
+      state.action.isExcelExport = true;
+      getOrders(state).then((event) => {
+        let excelExportProperties = {
+          dataSource: event.result.result
+        };
+        grid.value.excelExport(excelExportProperties);// Need to call excelExport method of Grid when get the entire data.
+      });
+      break;
+  }
+}
+onMounted(() => {
+  dataStateChange(state);
+});
+provide('grid', [Page,Toolbar,ExcelExport,PdfExport]);
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API ~/src/App.vue" %}
+{% raw %}
+<template>
+  <ejs-grid ref="grid" :dataSource='data' :allowPaging='true' :toolbar='toolbarOptions' :dataStateChange="dataStateChange" :allowExcelExport="true" :allowPdfExport="true" :excelExportComplete=exportComplete :pdfExportComplete=exportComplete :toolbarClick=toolbarClick>
+    <e-columns>
+      <e-column field='OrderID' headerText='Order ID' width='90' textAlign='Right' isPrimaryKey='true'></e-column>
+      <e-column field="CustomerName" headerText="Customer Name" width="100"></e-column>
+      <e-column field='ProductID' headerText='Product ID' width=100></e-column>
+      <e-column field='ProductName' headerText='Product Name' format='C2' width=100></e-column>
+    </e-columns>
+  </ejs-grid>
+</template>
+
+<script>
+  import { GridComponent, ColumnsDirective, ColumnDirective, Page,Toolbar,ExcelExport,PdfExport} from "@syncfusion/ej2-vue-grids";
+  import { getOrders } from './orderService';
+
+  export default {
+  name: "App",
+  components: {
+    "ejs-grid": GridComponent,
+    "e-columns": ColumnsDirective,
+    "e-column": ColumnDirective
+  },
+  data() {
+    return {
+      data: [],
+      toolbarOptions:["ExcelExport", "PdfExport"];
+    };
+  },
+  mounted() {
+    let state= { skip: 0, take: 12};
+    this.dataStateChange(state);
+  },
+  methods: {
+    dataStateChange(state) {
+      getOrders(state).then(gridData => {
+        this.data = gridData.result; // Assign the result to the data property.
+      });
+    },
+    exportComplete() {
+      this.$refs.grid.hideSpinner(); // Hide the spinner when export completed.
+    },
+    toolbarClick(args) {
+      let state= { action: {}, skip: 0, take: this.$refs.grid.pageSettings.totalRecordsCount };
+      switch (args.item.text) {
+        case "PDF Export":
+        this.$refs.grid.showSpinner(); // Show the spinner when send the post to service.
+          state.action.isPdfExport = true;
+          // Fetch the entire data while PDF exporting.
+          getOrders(state).then((event) => {
+            let pdfExportProperties = {
+              dataSource: event.result.result
+            };
+            this.$refs.grid.pdfExport(pdfExportProperties); // Need to call pdfExport method of Grid when get the entire data.
+          });
+          break;
+        case "Excel Export":
+          // Fetch the entire data while Excel exporting.
+          this.$refs.grid.showSpinner();// Show the spinner when send the post to service.
+          state.action.isExcelExport = true;
+          getOrders(state).then((event) => {
+            let excelExportProperties = {
+              dataSource: event.result.result
+            };
+            this.$refs.grid.excelExport(excelExportProperties);// Need to call excelExport method of Grid when get the entire data.
+          });
+          break;
+      }
+    }
+  },
+  provide: {
+    grid: [Page,Toolbar,ExcelExport,PdfExport],
+  }
+  };
+</script>
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="server.js" %}
+{% raw %}
+import express from 'express';
+import data from './src/data-source.js';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+
+const app = express();
+
+app.use(cors({
+    origin: '*', // Update to the correct frontend origin.
+    credentials: true
+}));
+
+app.use(bodyParser.json());
+
+// Root route.
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
+
+// Get all records.
+app.get('/orders', function (req, res) {
+    res.json({ result: data, count:data.length });
+});
+const port = xxxx; // Here xxxx denotes the port number.
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
+});
+{% endraw %}
+{% endhighlight %}
+{% highlight ts tabtitle="orderService.ts" %}
+{% raw %}
+import { DataManager, Query } from "@syncfusion/ej2-data";
+
+export class OrderService {
+}
+export {};
+const baseUrl = "http://localhost:xxxx/orders"; // Here xxxx denotes the port number.
+let gridData:DataManager; 
+// Apply paging.
+const applyPaging = (query, state)=> {
+  // Check if both 'take' and 'skip' values are available.
+  if (state.take && state.skip) {
+    // Calculate pageSkip and pageTake values to get pageIndex and pageSize.
+    const pageSkip = state.skip / state.take + 1;
+    const pageTake = state.take;
+    query.page(pageSkip, pageTake);
+  }
+  // If if only 'take' is available and 'skip' is 0, apply paging for the first page.
+  else if (state.skip === 0 && state.take) {
+    query.page(1, state.take);
+  }
+}
+export function getOrders(state, action) {
+  const query = new Query();
+  applyPaging(query, state)
+  query.isCountRequired = true
+
+  // Request the data from server using fetch.
+  return fetch(baseUrl)
+    .then(res => res.json())
+    .then(data => {      
+      // Create a DataManager instance with your fetched data.
+      gridData = new DataManager(data.result);
+      // Execute local data operations using the provided query.
+      const result = gridData.executeLocal(query);
+      // Return the result along with the count of total records.
+      return {
+        result: result, // Result of the data.
+        count: (result as any).count // Total record count based on fetched data length.
+      };
+    });
+}
+
+{% endraw %}
+{% endhighlight %}
+{% highlight js tabtitle="data-source.js" %}
+{% raw %}
+const data = createLazyLoadData();
+
+function createLazyLoadData() {
+    let lazyLoadData = [];
+    let customerid = ['VINET', 'TOMSP', 'HANAR', 'VICTE', 'SUPRD', 'HANAR', 'CHOPS', 'RICSU', 'WELLI', 'HILAA', 'ERNSH', 'CENTC',
+    'OTTIK', 'QUEDE', 'RATTC', 'ERNSH', 'FOLKO', 'BLONP', 'WARTH', 'FRANK', 'GROSR', 'WHITC', 'WARTH', 'SPLIR', 'RATTC', 'QUICK', 'VINET',
+    'MAGAA', 'TORTU', 'MORGK', 'BERGS', 'LEHMS', 'BERGS', 'ROMEY', 'ROMEY', 'LILAS', 'LEHMS', 'QUICK', 'QUICK', 'RICAR', 'REGGC', 'BSBEV',
+    'COMMI', 'QUEDE', 'TRADH', 'TORTU', 'RATTC', 'VINET', 'LILAS', 'BLONP', 'HUNGO', 'RICAR', 'MAGAA', 'WANDK', 'SUPRD', 'GODOS', 'TORTU',
+    'OLDWO', 'ROMEY', 'LONEP', 'ANATR', 'HUNGO', 'THEBI', 'DUMON', 'WANDK', 'QUICK', 'RATTC', 'ISLAT', 'RATTC', 'LONEP', 'ISLAT', 'TORTU',
+    'WARTH', 'ISLAT', 'PERIC', 'KOENE', 'SAVEA', 'KOENE', 'BOLID', 'FOLKO', 'FURIB', 'SPLIR', 'LILAS', 'BONAP', 'MEREP', 'WARTH', 'VICTE',
+    'HUNGO', 'PRINI', 'FRANK', 'OLDWO', 'MEREP', 'BONAP', 'SIMOB', 'FRANK', 'LEHMS', 'WHITC', 'QUICK', 'RATTC', 'FAMIA'];
+
+    let product = ['Chai', 'Chang', 'Aniseed Syrup', 'Chef Anton\'s Cajun Seasoning', 'Chef Anton\'s Gumbo Mix', 'Grandma\'s Boysenberry Spread',
+    'Uncle Bob\'s Organic Dried Pears', 'Northwoods Cranberry Sauce', 'Mishi Kobe Niku', 'Ikura', 'Queso Cabrales', 'Queso Manchego La Pastora', 'Konbu',
+    'Tofu', 'Genen Shouyu', 'Pavlova', 'Alice Mutton', 'Carnarvon Tigers', 'Teatime Chocolate Biscuits', 'Sir Rodney\'s Marmalade', 'Sir Rodney\'s Scones',
+    'Gustaf\'s Knäckebröd', 'Tunnbröd', 'Guaraná Fantástica', 'NuNuCa Nuß-Nougat-Creme', 'Gumbär Gummibärchen', 'Schoggi Schokolade', 'Rössle Sauerkraut',
+    'Thüringer Rostbratwurst', 'Nord-Ost Matjeshering', 'Gorgonzola Telino', 'Mascarpone Fabioli', 'Geitost', 'Sasquatch Ale', 'Steeleye Stout', 'Inlagd Sill',
+    'Gravad lax', 'Côte de Blaye', 'Chartreuse verte', 'Boston Crab Meat', 'Jack\'s New England Clam Chowder', 'Singaporean Hokkien Fried Mee', 'Ipoh Coffee',
+    'Gula Malacca', 'Rogede sild', 'Spegesild', 'Zaanse koeken', 'Chocolade', 'Maxilaku', 'Valkoinen suklaa', 'Manjimup Dried Apples', 'Filo Mix', 'Perth Pasties',
+    'Tourtière', 'Pâté chinois', 'Gnocchi di nonna Alice', 'Ravioli Angelo', 'Escargots de Bourgogne', 'Raclette Courdavault', 'Camembert Pierrot', 'Sirop d\'érable',
+    'Tarte au sucre', 'Vegie-spread', 'Wimmers gute Semmelknödel', 'Louisiana Fiery Hot Pepper Sauce', 'Louisiana Hot Spiced Okra', 'Laughing Lumberjack Lager', 'Scottish Longbreads',
+    'Gudbrandsdalsost', 'Outback Lager', 'Flotemysost', 'Mozzarella di Giovanni', 'Röd Kaviar', 'Longlife Tofu', 'Rhönbräu Klosterbier', 'Lakkalikööri', 'Original Frankfurter grüne Soße'];
+
+    let customername = ['Maria', 'Ana Trujillo', 'Antonio Moreno', 'Thomas Hardy', 'Christina Berglund', 'Hanna Moos', 'Frédérique Citeaux', 'Martín Sommer', 'Laurence Lebihan', 'Elizabeth Lincoln',
+    'Victoria Ashworth', 'Patricio Simpson', 'Francisco Chang', 'Yang Wang', 'Pedro Afonso', 'Elizabeth Brown', 'Sven Ottlieb', 'Janine Labrune', 'Ann Devon', 'Roland Mendel', 'Aria Cruz', 'Diego Roel',
+    'Martine Rancé', 'Maria Larsson', 'Peter Franken', 'Carine Schmitt', 'Paolo Accorti', 'Lino Rodriguez', 'Eduardo Saavedra', 'José Pedro Freyre', 'André Fonseca', 'Howard Snyder', 'Manuel Pereira',
+    'Mario Pontes', 'Carlos Hernández', 'Yoshi Latimer', 'Patricia McKenna', 'Helen Bennett', 'Philip Cramer', 'Daniel Tonini', 'Annette Roulet', 'Yoshi Tannamuri', 'John Steel', 'Renate Messner', 'Jaime Yorres',
+    'Carlos González', 'Felipe Izquierdo', 'Fran Wilson', 'Giovanni Rovelli', 'Catherine Dewey', 'Jean Fresnière', 'Alexander Feuer', 'Simon Crowther', 'Yvonne Moncada', 'Rene Phillips', 'Henriette Pfalzheim',
+    'Marie Bertrand', 'Guillermo Fernández', 'Georg Pipps', 'Isabel de Castro', 'Bernardo Batista', 'Lúcia Carvalho', 'Horst Kloss', 'Sergio Gutiérrez', 'Paula Wilson', 'Maurizio Moroni', 'Janete Limeira', 'Michael Holz',
+    'Alejandra Camino', 'Jonas Bergulfsen', 'Jose Pavarotti', 'Hari Kumar', 'Jytte Petersen', 'Dominique Perrier', 'Art Braunschweiger', 'Pascale Cartrain', 'Liz Nixon', 'Liu Wong', 'Karin Josephs', 'Miguel Angel Paolino',
+    'Anabela Domingues', 'Helvetius Nagy', 'Palle Ibsen', 'Mary Saveley', 'Paul Henriot', 'Rita Müller', 'Pirkko Koskitalo', 'Paula Parente', 'Karl Jablonski', 'Matti Karttunen', 'Zbyszek Piestrzeniewicz'];
+
+    let customeraddress = ['507 - 20th Ave. E.\r\nApt. 2A', '908 W. Capital Way', '722 Moss Bay Blvd.', '4110 Old Redmond Rd.', '14 Garrett Hill', 'Coventry House\r\nMiner Rd.', 'Edgeham Hollow\r\nWinchester Way',
+    '4726 - 11th Ave. N.E.', '7 Houndstooth Rd.', '59 rue de l\'Abbaye', 'Luisenstr. 48', '908 W. Capital Way', '722 Moss Bay Blvd.', '4110 Old Redmond Rd.', '14 Garrett Hill', 'Coventry House\r\nMiner Rd.', 'Edgeham Hollow\r\nWinchester Way',
+    '7 Houndstooth Rd.', '2817 Milton Dr.', 'Kirchgasse 6', 'Sierras de Granada 9993', 'Mehrheimerstr. 369', 'Rua da Panificadora, 12', '2817 Milton Dr.', 'Mehrheimerstr. 369'];
+
+    let quantityperunit= ['10 boxes x 20 bags', '24 - 12 oz bottles', '12 - 550 ml bottles', '48 - 6 oz jars', '36 boxes', '12 - 8 oz jars', '12 - 1 lb pkgs.', '12 - 12 oz jars', '18 - 500 g pkgs.', '12 - 200 ml jars',
+    '1 kg pkg.', '10 - 500 g pkgs.', '2 kg box', '40 - 100 g pkgs.', '24 - 250 ml bottles', '32 - 500 g boxes', '20 - 1 kg tins', '16 kg pkg.', '10 boxes x 12 pieces', '30 gift boxes', '24 pkgs. x 4 pieces', '24 - 500 g pkgs.', '12 - 250 g pkgs.',
+    '12 - 355 ml cans', '20 - 450 g glasses', '100 - 250 g bags'];
+
+    let OrderID = 10248;
+    for (let i = 0; i < 20000; i++) {
+        lazyLoadData.push({
+            'OrderID': OrderID + i,
+            'CustomerID': customerid[Math.floor(Math.random() * customerid.length)],
+            'CustomerName': customername[Math.floor(Math.random() * customername.length)],
+            'CustomerAddress': customeraddress[Math.floor(Math.random() * customeraddress.length)],
+            'ProductName': product[Math.floor(Math.random() * product.length)],
+            'ProductID': i,
+            'Quantity': quantityperunit[Math.floor(Math.random() * quantityperunit.length)]
+        })
+    }
+    return lazyLoadData;
+}
+export default data;
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
 ## Offline mode
 
 On remote data binding, all grid actions such as paging, sorting, editing, grouping, filtering, etc, will be processed on server-side. To avoid post back for every action, set the grid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the `offline` property of `DataManager`.

@@ -174,7 +174,7 @@ li {
  line-height: 1;
  -webkit-font-smoothing: antialiased;
  -moz-osx-font-smoothing: grayscale;
- content: "\e700";
+ content: "\\e700";
  color: #e86238;
 }
 

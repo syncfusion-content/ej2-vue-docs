@@ -1,16 +1,10 @@
-
-
-    
-
-    #element {
-        display: flex;
-        width: 400px;
-        margin: auto;
-        border: 1px solid #dddddd;
-        border-radius: 3px;
-        justify-content: center;
-        position: relative;
-        top: 130px;
-    }
-
-
+ #element {
+    display: flex;
+    width: 400px;
+    margin: auto;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    justify-content: center;
+    position: relative;
+    top: 130px;
+}

@@ -1,5 +1,5 @@
 import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
+// Import syncfusion Dashboard Layout component from layouts package
 import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 
 Vue.use(DashboardLayoutPlugin);
@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div class="col-lg-8 control-section">
-        <!--  DashboardLayout element declaration -->
+        <!--  Dashboard Layout component declaration -->
         <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="7">
             <e-panels>
                 <e-panel id="panel0" :row="0" :col="0" :sizeX="1" :sizeY="1" header="<div>Panel 0</div>" :content="'panel0Content'">
@@ -48,7 +48,7 @@ new Vue({
                 </e-panel>
             </e-panels>
         </ejs-dashboardlayout>
-        <!-- end of dashboardlayout element -->
+        <!-- end of Dashboard Layout component -->
     </div>
 `,
 

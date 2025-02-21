@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
+// Import syncfusion Dashboard Layout component from layouts package
 import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
 // Import syncfusion button component from buttons package
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
@@ -14,12 +14,12 @@ new Vue({
 	template: `
     <div>
         <div>
-            <!--  Button element declaration -->
+            <!--  Button component declaration -->
                 <ejs-button id="toggle" ref="toggle" class="e-flat e-primary e-outline" :isToggle="true" v-on:click.native="onChange" >Enable Floating</ejs-button>
-            <!-- end of button element -->
+            <!-- end of button component -->
         </div>
         <div  id="control_dash">
-            <!--  DashboardLayout element declaration -->
+            <!--  Dashboard Layout component declaration -->
             <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :allowFloating="false" :cellSpacing='cellSpacing' :columns="6">
                 <e-panels>
                     <e-panel :sizeX="2" :sizeY="2" :row="1" :col="0" content="<div class='content'>0</div>"></e-panel>
@@ -27,7 +27,7 @@ new Vue({
                     <e-panel :sizeX="2" :sizeY="2" :row="3" :col="4" content="<div class='content'>2</div>"></e-panel>
                 </e-panels>
             </ejs-dashboardlayout>
-            <!-- end of dashboardlayout element -->
+            <!-- end of Dashboard Layout component -->
         </div>
     </div>
 `,

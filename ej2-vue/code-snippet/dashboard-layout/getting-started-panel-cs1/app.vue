@@ -1,7 +1,7 @@
 <template>
     <div>
       <div class="control-section">
-        <!--  DashboardLayout element declaration -->
+        <!--  Dashboard Layout component declaration -->
         <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="6">
           <e-panels>
             <e-panel :row="0" :col="0" :sizeX="1" :sizeY="1" content="<div class='panel-content'>0</div>"></e-panel>
@@ -13,13 +13,13 @@
             <e-panel :row="2" :col="3" :sizeX="1" :sizeY="1" content="<div class='panel-content'>6</div>"></e-panel>
           </e-panels>
         </ejs-dashboardlayout>
-        <!-- end of dashboardlayout element -->
+        <!-- end of Dashboard Layout component -->
       </div>
     </div>
   </template>
   
   <script>
-  // Import syncfusion dashboardlayout component from layouts package
+  // Import syncfusion Dashboard Layout component from layouts package
   import { DashboardLayoutComponent, PanelDirective, PanelsDirective } from "@syncfusion/ej2-vue-layouts";
   
   export default {
@@ -41,7 +41,7 @@
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
   @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
   
-  /* DashboardLayout element styles  */
+  /* Dashboard Layout component styles  */
   #defaultLayout .e-panel .e-panel-container {
     vertical-align: middle;
     font-weight: 600;

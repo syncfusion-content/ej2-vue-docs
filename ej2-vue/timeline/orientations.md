@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Orientations in Vue Timeline component
 
-The Timeline component supports the display of items in both the horizontal and vertical direction by using the[orientation](https://ej2.syncfusion.com/vue/documentation/api/timeline#orientation) property.
+The Timeline component supports the display of items in both the horizontal and vertical direction by using the [orientation](https://ej2.syncfusion.com/vue/documentation/api/timeline#orientation) property.
 
 ## Vertical
 

@@ -44,6 +44,3 @@
         background-color: #bc8f8f;
     }
 </style>
-
-
-

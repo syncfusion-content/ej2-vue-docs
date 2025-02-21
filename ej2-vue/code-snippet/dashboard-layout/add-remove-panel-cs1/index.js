@@ -1,12 +1,12 @@
 
 import Vue from "vue";
-// Import syncfusion dashboardlayout component from layouts package
+// Import Syncfusion Dashboard Layout component from layouts package
 import { DashboardLayoutPlugin } from "@syncfusion/ej2-vue-layouts";
-// Import syncfusion button component from buttons package
+// Import Syncfusion Button component from buttons package
 import { ButtonPlugin } from "@syncfusion/ej2-vue-buttons";
-// Import syncfusion numerictextbox component from inputs package
+// Import Syncfusion Numeric Textbox component from inputs package
 import { NumericTextBoxPlugin  } from "@syncfusion/ej2-vue-inputs";
-// Import syncfusion dropdownlist component from dropdowns package
+// Import Syncfusion DropdownList component from dropdowns package
 import { DropDownListPlugin   } from "@syncfusion/ej2-vue-dropdowns";
 
 Vue.use(DashboardLayoutPlugin);
@@ -22,7 +22,7 @@ new Vue({
         <div className="col-lg-8 control-section" id="control_dash">
             <div className="content-wrapper">
                 <div id = "dashboardElement">
-                    <!--  DashboardLayout element declaration -->
+                    <!--  Dashboard Layout component declaration -->
                     <ejs-dashboardlayout id='dashboard_default'  :columns="5">
                        <e-panels>
                           <e-panel id="Panel0" :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
@@ -34,7 +34,7 @@ new Vue({
                           <e-panel id="Panel6" :sizeX="1" :sizeY="1" :row="2" :col="3" content="<div class='content'>6</div>"></e-panel>  
                         </e-panels>
                      </ejs-dashboardlayout>
-                    <!-- end of dashboardlayout element -->
+                    <!-- end of Dashboard Layout component -->
                 </div>
             </div>
         </div>

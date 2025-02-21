@@ -1,15 +1,10 @@
-
-  
-  
-  
-  
-   #app {
-    height: 40px;
-    left: 30%;
-    position: absolute;
-    top: 40%;
-    width: 50%;
-  }
-  .sliderwrapper{
-      padding-top:50px;
-  }
+#app {
+  height: 40px;
+  left: 30%;
+  position: absolute;
+  top: 40%;
+  width: 50%;
+}
+.sliderwrapper{
+    padding-top:50px;
+}

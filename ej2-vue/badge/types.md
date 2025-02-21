@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in Vue Badge component | Syncfusion
-description: Learn here all about Types in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
+description: Learn here all about What are the Types in Syncfusion Vue Badge component of Syncfusion Essential JS 2 and more.
 control: Types 
 platform: ej2-vue
 documentation: ug
@@ -52,7 +52,7 @@ The types of Essential JS 2 badges are as follows:
 
 ### Circle
 
-The circle badge style can be applied by adding the modifier class `.e-badge-circle` to the target element.
+The circle Badge style can be applied by adding the modifier class `.e-badge-circle` to the target element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,7 +67,7 @@ The circle badge style can be applied by adding the modifier class `.e-badge-cir
 
 ### Pill
 
-The pill badge style can be applied by adding the modifier class `.e-badge-pill` to the target element.
+The pill Badge style can be applied by adding the modifier class `.e-badge-pill` to the target element.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,7 +82,7 @@ The pill badge style can be applied by adding the modifier class `.e-badge-pill`
 
 ### Link
 
-When badge modifier classes are applied to the anchor tag, the badge’s appearance will change from normal state to hover state on mouseover.
+When Badge modifier classes are applied to the anchor tag, the badge’s appearance will change from normal state to hover state on mouseover.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -97,7 +97,7 @@ When badge modifier classes are applied to the anchor tag, the badge’s appeara
 
 ### Notification
 
-The notification badge style can be applied by adding the modifier class `.e-badge-notification` to the target element. Notification badges are used when a content or a context needs special attention. While using the notification badge, set the parent element to `position: relative`.
+The notification Badge style can be applied by adding the modifier class `.e-badge-notification` to the target element. Notification badges are used when a content or a context needs special attention. While using the notification badge, set the parent element to `position: relative`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -127,7 +127,7 @@ Dot can be applied by adding the modifier class `.e-badge-dot` to the target ele
 
 ### Overlap
 
-The overlap badge can be used with `notification` or `dot` badge, which overlaps with the target element by adding the modifier class`.e-badge-overlap`. While using the overlap badge, set the parent element to `position: relative`.
+The overlap Badge can be used with `notification` or `dot` badge, which overlaps with the target element by adding the modifier class`.e-badge-overlap`. While using the overlap badge, set the parent element to `position: relative`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -142,7 +142,7 @@ The overlap badge can be used with `notification` or `dot` badge, which overlaps
 
 ### Position
 
-The default position of the `notification` or `dot` badge is top. But, the position can be changed to `bottom` using the modifier class `.e-badge-bottom`. For example, the bottom class modifier is used with dot badge to display the status in the avatar as shown in the following sample.
+The default position of the `notification` or `dot` Badge is top. But, the position can be changed to `bottom` using the modifier class `.e-badge-bottom`. For example, the bottom class modifier is used with dot Badge to display the status in the avatar as shown in the following sample.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
