@@ -10,6 +10,16 @@ domainurl: ##DomainURL##
 
 # Getting Started with Syncfusion Vue UI Components and Vue CLI
 
+This section explains how to use Syncfusion Vue components in Vue 2 application. To get started with Vue 3 application, refer to the [getting started with Vue 3](https://ej2.syncfusion.com/vue/documentation/getting-started/vue3-tutorial/) topic.
+
+## Prerequisites
+
+* Vue supported version >= `2.6+`.
+
+* Required [node](https://nodejs.org/en/) version `^12.0.0` || >= `14.0.0`.
+
+## Create the Vue 2 application
+
 You can use [`Vue CLI`](https://github.com/vuejs/vue-cli) to setup your Vue applications.
 To install Vue CLI, use the following command.
 
