@@ -35,6 +35,7 @@
 import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
 import { marked } from 'marked';
+
 export default {
   name: "App",
   components: {
@@ -145,6 +146,7 @@ export default {
   }
 }
 </script>
+
 <style>
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
@@ -153,4 +155,5 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";</style>
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+</style>

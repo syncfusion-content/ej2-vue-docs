@@ -1,4 +1,3 @@
-
 import Vue from "vue";
 import { RichTextEditorPlugin, Toolbar, Link, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
 import { MentionPlugin } from "@syncfusion/ej2-vue-dropdowns";
@@ -6,14 +5,11 @@ import { MentionPlugin } from "@syncfusion/ej2-vue-dropdowns";
 Vue.use(MentionPlugin);
 Vue.use(RichTextEditorPlugin);
 
-;
 new Vue({
 	el: '#app',
 	template: `
     <div>
         <ejs-richtexteditor id="mention_integration"  placeholder="Type @ and tag the name" :actionBegin="onActionBegin">
-            <p>Hello <span contenteditable="false" class="e-mention-chip"><a title="maria@gmail.com">@Maria</a></span>​</p>
-            <p>Welcome to the mention integration with rich text editor demo. Type <code>@</code> character and tag user from the suggestion list. </p>
         </ejs-richtexteditor>
         <ejs-mention id="mentionEditor" target="#mention_integration_rte-edit-view" :suggestionCount="8" :showMentionChar="false" :allowSpaces="true" :dataSource="data" :fields="fieldsData" popupWidth='250px' popupHeight='200px' :itemTemplate="'iTemplate'" :displayTemplate="'dTemplate'">
             <template v-slot:iTemplate="{data}">
@@ -28,7 +24,8 @@ new Vue({
 
     data: function() {
         return {
-          data: [
+            rteValue: `<p>Hello <span contenteditable=\"false\" class=\"e-mention-chip\"><a href=\"mailto:maria@gmail.com\" title=\"maria@gmail.com\">&#64;Maria</a></span>&#8203;</p><p>Welcome to the mention integration with rich text editor demo. Type <code>&#64;</code> character and tag user from the suggestion list.</p>`,                                
+            data: [
                 { Name: "Selma Rose", Status: "active", EmployeeImage: "./images/2.png", "EmailId": "selma@gmail.com" },
                 { Name: "Maria", Status: "active", EmployeeImage: "./images/1.png", "EmailId": "maria@gmail.com" },
                 { Name: "Russo Kay", Status: "busy", EmployeeImage: "./images/8.png", "EmailId": "russo@gmail.com" },
@@ -43,7 +40,7 @@ new Vue({
                 { Name: "Laura Grace", Status: "away", EmployeeImage: "./images/4.png", "EmailId": "laura@gmail.com" },
                 { Name: "Albert", Status: "active", EmployeeImage: "./images/pic03.png", "EmailId": "albert@gmail.com" },
                 { Name: "William", Status: "away", EmployeeImage: "./images/8.png", "EmailId": "william@gmail.com" }
-            ]
+            ],
             fieldsData: { text: 'Name' },
         };
     },
@@ -57,5 +54,4 @@ new Vue({
             }
         }
     }
-
 });

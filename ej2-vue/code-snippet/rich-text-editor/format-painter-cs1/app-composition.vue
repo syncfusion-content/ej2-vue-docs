@@ -3,8 +3,23 @@
         <div class="control-section">
             <div class="sample-container">
                 <div class="default-section">
-                <ejs-richtexteditor ref="rteObj" :toolbarSettings="toolbarSettings" >
-                    <h3><strong>Format Painter</strong></h3>
+                <ejs-richtexteditor ref="rteObj" :toolbarSettings="toolbarSettings" :value="rteValue"></ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';    
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, HtmlEditor, QuickToolbar, FormatPainter } from "@syncfusion/ej2-vue-richtexteditor";
+
+const toolbarSettings = {
+    items: ['FormatPainter', 'ClearFormat', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments',
+    'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']
+};
+
+const rteValue= `<h3><strong>Format Painter</strong></h3>
                     <p>
                         A Format Painter is a Rich Text Editor feature allowing users to quickly 
                         <span style="background-color: rgb(198, 140, 83);"><strong>copy</strong></span>
@@ -31,22 +46,10 @@
                         copy and apply formatting
                         to <span style="background-color: rgb(198, 140, 83);"><strong>multiple sections</strong></span>. 
                         It's a helpful tool for anyone who works with text editing regularly, such as writers, editors, and content creators.
-                    </p>
-                </ejs-richtexteditor>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-<script setup>
-import { provide } from 'vue';    
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, HtmlEditor, QuickToolbar, FormatPainter } from "@syncfusion/ej2-vue-richtexteditor";
-const toolbarSettings = {
-    items: ['FormatPainter', 'ClearFormat', 'Bold', 'Italic', 'Underline', '|', 'Formats', 'Alignments',
-    'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|', 'SourceCode', 'Undo', 'Redo']
-};
+                    </p>`,
 provide('richtexteditor', [Toolbar, Link, Image, HtmlEditor, QuickToolbar, FormatPainter]);
 </script>
+
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";

@@ -34,9 +34,9 @@
 
 <script setup>
 import { provide, ref } from "vue";
-
 import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, MarkdownEditor, MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
+
 const rteInstance = ref(null);
 const value = `***Overview***
 The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor used to create and edit the content and return valid HTML markup or markdown (MD) of the content. The editor provides a standard toolbar to format content using its commands. Modular library features to load the necessary functionality on demand. The toolbar contains commands to align the text, insert link, insert image, insert list, undo/redo operation, HTML view, and more.
@@ -143,4 +143,5 @@ provide('richtexteditor', [Toolbar, Link, Image, MarkdownEditor]);
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";</style>
+@import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
+</style>

@@ -3,9 +3,9 @@
 </template>
 
 <script>
-
 import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
 import { detach } from "@syncfusion/ej2-base";
+
 export default {
   name: "App",
   components: {

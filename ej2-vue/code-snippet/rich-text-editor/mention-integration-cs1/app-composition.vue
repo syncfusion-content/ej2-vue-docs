@@ -1,10 +1,6 @@
 <template>
     <div>
-        <ejs-richtexteditor id="mention_integration" placeholder="Type @ and tag the name" :actionBegin="onActionBegin">
-            <p>Hello <span contenteditable="false" class="e-mention-chip"><a href="mailto:maria@gmail.com"
-                        title="maria@gmail.com">@Maria</a></span>​</p>
-            <p>Welcome to the mention integration with rich text editor demo. Type <code>@</code> character and tag user
-                from the suggestion list. </p>
+        <ejs-richtexteditor id="mention_integration" :value="rteValue" placeholder="Type @ and tag the name" :actionBegin="onActionBegin">
         </ejs-richtexteditor>
         <ejs-mention ref="mentionObj" id="mentionEditor" target="#mention_integration_rte-edit-view" :suggestionCount="8"
             :showMentionChar="false" :allowSpaces="true" :dataSource="data" :fields="fieldsData" popupWidth='250px'
@@ -29,10 +25,13 @@
         </ejs-mention>
     </div>
 </template>
+
 <script setup>
 import { provide, ref } from 'vue';
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
 import { MentionComponent as EjsMention } from "@syncfusion/ej2-vue-dropdowns";
+
+const rteValue= `<p>Hello <span contenteditable=\"false\" class=\"e-mention-chip\"><a href=\"mailto:maria@gmail.com\" title=\"maria@gmail.com\">&#64;Maria</a></span>&#8203;</p><p>Welcome to the mention integration with rich text editor demo. Type <code>&#64;</code> character and tag user from the suggestion list.</p>`;
 const mentionObj = ref(null);
 const data = [
     { Name: "Selma Rose", Status: "active", EmployeeImage: "https://ej2.syncfusion.com/demos/src/rich-text-editor/images/2.png", EmailId: "selma@gmail.com" },
@@ -58,6 +57,7 @@ const onActionBegin = (args) => {
 };
 provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor]);
 </script>
+
 <style>
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";

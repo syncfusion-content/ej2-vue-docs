@@ -1,34 +1,20 @@
 <template>
-<div>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section" id="rteSection">
-        <ejs-richtexteditor ref="rteObj" :quickToolbarSettings="quickToolbarSettings" :toolbarClick="onToolbarClick">
-        <p>Rich Text Editor allows to insert images from online source as well as local
-            computer where you want to insert the image in your content.</p>
-        <p><b>Get started Quick Toolbar to click on the image</b></p>
-        <p>It is possible to add custom style on the selected image inside the Rich Text Editor through quick toolbar.</p>
-        <img id="rteImageID" style="width:300px; height:300px;transform: rotate(0deg);" alt="Logo" src="https://ej2.syncfusion.com/demos/src/rich-text-editor/images/RTEImage-Feather.png"></ejs-richtexteditor>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section" id="rteSection">
+                <ejs-richtexteditor ref="rteObj" :value="rteValue" :quickToolbarSettings="quickToolbarSettings" :toolbarClick="onToolbarClick"></ejs-richtexteditor>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
-</div>
 </template>
-
-<style>
-.e-rte-quick-popup .e-rte-quick-toolbar .e-rotate-left::before {
-    content: "\e341";
-}
-
-.e-rte-quick-popup .e-rte-quick-toolbar .e-rotate-right::before {
-    content: "\e354";
-}
-</style>
 
 <script setup>
 import { provide, ref } from 'vue';
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Image,  Link, HtmlEditor, QuickToolbar, NodeSelection } from "@syncfusion/ej2-vue-richtexteditor";
+
+const rteValue =`<p style="margin-right:10px">The custom command "insert special character" is configured as the last item of the toolbar. Click on the command and choose the special character you want to include from the popup.</p>`;
 const rteObj = ref(null);
 const quickToolbarSettings = {
     image: [
@@ -61,7 +47,15 @@ const onToolbarClick = function(e) {
 }
 provide('richtexteditor', [Toolbar, Image,  Link, HtmlEditor, QuickToolbar]);
 </script>
+
 <style>
+.e-rte-quick-popup .e-rte-quick-toolbar .e-rotate-left::before {
+    content: "\e341";
+}
+
+.e-rte-quick-popup .e-rte-quick-toolbar .e-rotate-right::before {
+    content: "\e354";
+}
 @import "../../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
