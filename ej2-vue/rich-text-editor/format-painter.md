@@ -76,3 +76,6 @@ You can use the following shortcut keys to copy and paste the format in the Rich
 
 Additionally, You can perform the format painter actions programmatically using the [executeCommand](../exec-command/) public method.
 
+## See Also
+
+[Remove Text Formatting](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/remove-formatting)

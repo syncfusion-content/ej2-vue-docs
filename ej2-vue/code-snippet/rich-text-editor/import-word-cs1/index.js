@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-vue-richtexteditor';
+import { RichTextEditorPlugin, Toolbar, Link, Image, HtmlEditor, QuickToolbar, Table, PasteCleanup, ImportExport } from '@syncfusion/ej2-vue-richtexteditor';
 let hostUrl = 'https://services.syncfusion.com/vue/production/';
 
 Vue.use(RichTextEditorPlugin);

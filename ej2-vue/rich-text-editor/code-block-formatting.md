@@ -61,3 +61,7 @@ To make your code blocks more visually appealing, you can add custom styling. He
 ```
 
 This styling adds a light gray background, sets a monospace font, and includes padding and borders for better visual separation.
+
+## See Also
+
+* [How to customize the format dropdown items](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/headings#customizing-format-dropdown-items)

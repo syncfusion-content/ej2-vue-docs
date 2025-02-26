@@ -1,7 +1,7 @@
 
 import Vue from "vue";
-import { GanttPlugin, Toolbar, PdfExport, Selection, PdfQueryTimelineCellInfoEventArgs } from "@syncfusion/ej2-vue-gantt";
-import { ClickEventArgs } from '@syncfusion/ej2-navigations/src/toolbar/toolbar';
+import { GanttPlugin, Toolbar, PdfExport } from "@syncfusion/ej2-vue-gantt";
+import { PdfColor } from '@syncfusion/ej2-pdf-export';
 import {editingData  } from './data-source.js';
 Vue.use(GanttPlugin);
 ;
@@ -18,15 +18,15 @@ new Vue({
         data:editingData,
         height:'450px',
         taskFields: {
-            id: 'TaskID',
+            id: 'TaskId',
             name: 'TaskName',
             startDate: 'StartDate',
             duration: 'Duration',
             progress: 'Progress',
-            child: 'subtasks'
+            parentID:'ParentId'
         },
         columns: [
-            { field: 'TaskID', headerText:  'Task ID', textAlign: 'Left', width: '100' },
+            { field: 'TaskId', headerText:  'Task ID', textAlign: 'Left', width: '100' },
             { field: 'TaskName', headerText:  'Task Name', width: '150' },
             { field: 'StartDate', headerText: 'Start Date', width: '150'},
             { field: 'Duration',headerText: 'Duration', width: '150', visible: false },
@@ -40,15 +40,15 @@ new Vue({
                 }
             },
         pdfQueryCellInfo: (args) => {
-    if(args.column.field == 'Progress'){
-        if(args.value < 50) {
-            args.style = {backgroundColor: '#F08080'};
-        } else {
-            args.style = {backgroundColor: '#A569BD'};
+            if(args.column.field == 'Progress'){
+                if (args.value < 50) {
+                    args.style.backgroundColor = new PdfColor(240, 128, 128);
+                } else {
+                    args.style.backgroundColor = new PdfColor(165, 105, 189);
+                }   
+            }
         }
-    }
-};
-      };
+    };
   },
   provide: {
       gantt: [Toolbar, PdfExport]

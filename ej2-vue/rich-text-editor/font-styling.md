@@ -119,7 +119,7 @@ The Rich Text Editor supports providing custom fonts along with the existing lis
 
 ### Configuring the Font and Background Color Tool in the Toolbar
 
-You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/react/documentation/api/rich-text-editor/toolbarSettings/#items) property.
+You can add the `FontColor` and `BackgroundColor` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -154,3 +154,4 @@ Both the `FontColor` and `BackgroundColor` properties offer two modes: `Picker` 
 ## See Also
 
 * [Applying Basic Text Formatting in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/basic-text-styling)
+* [Implementing Headings and Text Hierarchy in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/headings)

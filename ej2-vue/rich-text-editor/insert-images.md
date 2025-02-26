@@ -109,8 +109,6 @@ You can add additional data with the image uploaded from the Rich Text Editor on
 {% include code-snippet/rich-text-editor/authentication-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/authentication-cs1" %}
 
 ```csharp
 
@@ -149,7 +147,6 @@ The following sample explains, how to configure `removeUrl` to remove a saved im
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/getting-started-cs18" %}
-
 
 ## Adjusting Image Dimensions
 

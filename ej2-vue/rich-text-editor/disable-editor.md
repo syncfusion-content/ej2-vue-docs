@@ -30,3 +30,7 @@ Below are examples and code snippets demonstrating how to disable the Rich Text 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/disable-editor-cs1" %}
+
+### See Also
+
+[Implementing Read-Only Mode in Rich Text Editor](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/read-only-mode)

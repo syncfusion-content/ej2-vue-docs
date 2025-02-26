@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Integrating Rich Text Editor in Tab Components | Syncfusion
-description: Learn here all about Rich Text Editor Inside Tab in Syncfusion Angular Rich Text Editor component of Syncfusion Essential JS 2 and more.
-platform: ej2-angular
+description: Learn here all about Rich Text Editor Inside Tab in Syncfusion VUe Rich Text Editor component of Syncfusion Essential JS 2 and more.
+platform: ej2-vue
 control: Integrating Rich Text Editor in Tab Components 
 documentation: ug
 domainurl: ##DomainURL##

@@ -241,6 +241,8 @@ These shortcuts provide additional functionalities like fullscreen mode.
 
 You can able to customize the key config for the keyboard interaction of Rich Text Editor, using [keyConfig](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#keyconfig) property.
 
+In the below sample, you have customize the bold, italic, underline toolbar action with ctrl+alt+b, ctrl+alt+i and ctrl+alt+u respectively.
+
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
 {% include code-snippet/rich-text-editor/getting-started-cs23/app-composition.vue %}

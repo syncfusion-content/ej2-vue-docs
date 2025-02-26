@@ -40,8 +40,8 @@ yarn add @webspellchecker/wproofreader-sdk-js
 After installing the package, you can integrate WProofreader with the Vue Rich Text Editor by following these steps:
 
 1. Import the WProofreader module into your Vue component.
-2. Configure the `container` property of WProofreader as the editable element of the Rich Text Editor's inputElement.
-3. Use the `ViewChild` decorator to access the Vue Rich Text Editor instance.
+2. Configure the `container` property of WProofreader as the editable element of the Rich Text Editor's content.
+3. Use the `ref` attribute to access the Vue Rich Text Editor instance.
 4. Set the `lang` property to specify the language of the text to be checked.
 5. Configure the activation key in the `serviceId` property.
 

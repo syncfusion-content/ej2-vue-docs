@@ -18,7 +18,7 @@ The Rich Text Editor supports Markdown editing when the [editorMode](https://ej2
 
 ## Markdown Basic Formatting
 
-The Angular Markdown editor supports various commands to format markdown content. Below are the supported commands and their usage:
+The Vue Markdown editor supports various commands to format markdown content. Below are the supported commands and their usage:
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|
