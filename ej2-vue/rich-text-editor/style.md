@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Style in Vue Rich text editor component | Syncfusion
+title: Style Appearance Customization | Syncfusion
 description: Learn here all about Style in Syncfusion Vue Rich text editor component of Syncfusion Essential JS 2 and more.
-control: Style 
+control: Style Appearance Customization 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Style in Vue Rich text editor component
+# Style Appearance Customization in the Vue Rich Text Editor component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the Rich Text Editor's content
+## Customizing the Rich Text Editor content
 
 Use the following CSS to customize the default Rich Text Editor's content properties like font-family, font-size and color.
 
@@ -62,7 +62,7 @@ Use the following CSS to customize the default color in the Rich Text Editor's t
 }
 ```
 
-## Customizing the Rich Text Editor's character count
+## Customizing Character Count Display
 
 Use the following CSS to customize the default color in the Rich Text Editor's character count.
 
@@ -77,3 +77,32 @@ Use the following CSS to customize the default color in the Rich Text Editor's c
     padding-right: 14px;
 }
 ```
+
+## Customizing Placeholder Text
+
+Use the following CSS to customize the default color in the Rich Text Editor's placeholder.
+
+```CSS
+
+.e-richtexteditor .e-rte-placeholder {
+    color: blue;
+    font-family: monospace;
+}
+
+```
+
+## Customizing Border Color
+
+Use the following CSS to customize the border color in the Rich Text Editor's container.
+
+```CSS
+
+.e-richtexteditor .e-rte-container{
+    border: 2px solid #454bc1;
+    border-radius: 4px;
+}
+
+```
+## See Also
+
+* [Text Styling and Formatting](./font-styling)

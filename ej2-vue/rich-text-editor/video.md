@@ -8,32 +8,15 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Video in Vue Rich text editor component
+# Videos in the Vue Rich Text Editor Component
 
-The Rich Text Editor allows you to insert videos from online sources and local computers and then insert them into your content. You can insert the video with the following list of options in the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertvideosettings) property.
+The Rich Text Editor allows you to insert videos from online sources and local computers into your content.  You can insert the video with the following list of options in the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertvideosettings) property.
 
-| Options | Description |
-|----------------|---------|
-| allowedTypes | Specifies the extensions of the video types allowed to insert on bowering and passing the extensions with comma separators. For example, pass allowedTypes as `.mp4`, `.mov`, `.wmv` and `.avi`.|
-| layoutOption | Sets the default display for a video when it is inserted into the Rich Text Editor. Possible options are: `Inline` and `Break`.|
-| saveFormat | Sets the default save format of the video element when inserted. Possible options are: `Blob` and `Base64`.|
-| width | Sets the default width of the video when it is inserted in the Rich Text Editor.|
-| minWidth | Sets the minWidth of the video element when it is inserted in the Rich Text Editor.|
-| maxWidth | Sets the maxWidth of the video element when it is inserted in the Rich Text Editor.|
-| height | Sets the default height of the video when it is inserted in the Rich Text Editor.|
-| minHeight | Sets the minHeight of the video element when it is inserted in the Rich Text Editor.|
-| maxHeight | Sets the maxHeight of the video element when it is inserted in the Rich Text Editor.|
-| saveUrl | Provides URL to map the action result method to save the video.|
-| removeUrl | Provides URL to map the action result method to remove the video.|
-| path | Specifies the location to store the video.|
-| resize | Sets the resizing action for the video element.|
-| resizeByPercent | Sets the percentage values for the video element with the resizing action.|
+## Configuring the Video Tool in the Toolbar
 
-## Configure the video tool in the toolbar
+You can add the `Video` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) property.
 
-You can add the `video` tool in the Rich Text Editor toolbar using the `toolbarSettings` [items](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#items) property.
-
-> Rich Text Editor features are segregated into individual feature-wise modules. To use the video, inject the `Video` module in `provides` section.
+> To use Video feature, inject `Video` in the provider section.
 
 To configure the `Video` toolbar item, refer to the below code.
 
@@ -48,96 +31,57 @@ To configure the `Video` toolbar item, refer to the below code.
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/video-cs1" %}
 
-## Insert a video from the web
+## Video Save Formats
 
-You can insert a video from either the hosted link or the local machine by clicking the video button in the editor's toolbar. On Clicking the Video button, a dialog opens which allows you to insert video from the Embedded URL or web URL.
+The video files can be saved as `Blob` or `Base64` URLs by using the [insertVideoSettings.saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
 
-### Insert from embed URL
+> The default `saveFormat` property is set to `Blob` format.
 
-The insert video dialog opens with the `Embed URL` option as default which allows you to insert an embedded URL.
+```HTML
+
+<video>
+    <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="video/mp4" >
+</video>
+
+<video>
+    <source src="data:video/mp4;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="video/mp4" >
+</video>
+
+```
+
+## Inserting Video from Web
+
+You can insert a video from either a hosted link or your local machine by clicking the video button in the editor's toolbar. When you click the video button, a dialog opens, allowing you to insert a video using an Embedded code or Web URL.
+
+### Inserting Video via Embed URL
+
+The insert video dialog opens with the `Embedded code` option selected by default. This allows you to insert a video using embedded code.
 
 ![Vue Rich Text Editor Embed URL Video insert](./images/vue-richtexteditor-video-embed.png)
 
-### Insert from web URL
+### Inserting Video via Web URL
 
-You can switch to `Web URL` by selecting the web URL check box. Inserting with the web URL option will add the video URL as the `src` attribute of the `<source>` tag.
+You can switch to the `Web URL` option by selecting the Web URL checkbox. Inserting a video using the Web URL option will add the video URL as the `src` attribute of the `<source>` tag.
 
 ![Vue Rich Text Editor Video insert](./images/vue-richtexteditor-video-web.png)
 
-## Insert video from local machine
+## Uploading Video from Local Machine
 
-You can use the `browse` option on the video dialog, to select the video from the local machine and insert it into the Rich Text Editor content.
+You can use the `browse` option on the video dialog to select the video from the local machine and insert it into the Rich Text Editor content.
 
 If the path field is not specified in the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertvideosettings), the video will be converted into the `Blob` URL or `Base64` and inserted inside the Rich Text Editor.
 
-### Restrict video upload based on size
+## Saving Video to the Server
 
-You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event.
+Upload the selected video to a specified destination using the controller action specified in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveurl). Ensure to map this method name appropriately and provide the required destination path through the [insertVideoSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
 
-> The file size in the argument will be returned in `bytes`.
+Configure [insertVideoSettings.removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#removeurl) to point to the endpoint responsible for deleting video files.
 
-In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
+Set the [insertVideoSettings.saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveformat) property to determine whether the video should be saved as Blob or Base64, aligning with your application's requirements.
 
-```
+> If you want to insert lower-sized video files in the editor and don’t require a specific physical location for saving the video, you can save the format as `Base64`.
 
-<template>
-    <div>
-        <div class="control-section">
-            <div class="sample-container">
-                <div class="default-section">
-                    <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
-                        :toolbarSettings="toolbarSettings" :fileUploading="onFileUpload">
-                    </ejs-richtexteditor>
-                </div>
-            </div>
-        </div>
-    </div>
-</template>
-<script setup>
-import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-const toolbarSettings = {
-    items: ['Video']
-};
-const insertVideoSettings = {
-    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
-    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
-};
-const onFileUpload = (args) => {
-    let sizeInBytes = args.fileData.size;
-    let fileSize = 500000;
-    if (fileSize < sizeInBytes) {
-        args.cancel = true;
-    }
-};
-provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
-</script>
-<style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
-</style>
-
-```
-
-### Server-side action
-
-The selected video can be uploaded to the required destination using the controller action below. Map this method name in [insertVideoSettings.saveUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveurl) and provide the required destination path through [insertVideoSettings.path](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#path) properties.
-
-> If you want to insert lower-sized video files in the editor and don't want a specific physical location for saving the video, you can save the format as `Base64`.
-
-In the following code blocks, the video module has been injected and can insert the video files saved in the specified path.
+In the following Vue code block, the video module has been injected and can insert video files saved in the specified path:
 
 ```ts
 
@@ -154,6 +98,7 @@ In the following code blocks, the video module has been injected and can insert 
         </div>
     </div>
 </template>
+
 <script setup>
 import { provide } from 'vue';
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
@@ -162,10 +107,13 @@ const toolbarSettings = {
 };
 const insertVideoSettings = {
     saveUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/SaveFiles",
+    removeUrl: "[SERVICE_HOSTED_PATH]/api/uploadbox/RemoveFiles",
+    saveFormat: 'Base64',
     path: "[SERVICE_HOSTED_PATH]/Files/"
 };
 provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 </script>
+
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
@@ -259,113 +207,9 @@ namespace FileUpload.Controllers
 
 ```
 
-### Video save format
+### Renaming Video Before Inserting
 
-The video files can be saved as `Blob` or `Base64` URL by using the [insertVideoSettings.saveFormat](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#saveformat) property, which is of enum type, and the generated URL will be set to the `src` attribute of the `<source>` tag.
-
-> The default `saveFormat` property is set to `Blob` format.
-
-```html
-
-<video>
-    <source src="blob:http://ej2.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" type="video/mp4" >
-</video>
-
-<video>
-    <source src="data:video/mp4;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHA" type="video/mp4" >
-</video>
-
-```
-
-## Replacing video
-
-Once a video file has been inserted, you can replace it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `videoReplace` option. You can replace the video file either by using the embedded URL or the web URL and the browse option in the video dialog.
-
-![Vue Rich Text Editor Embed Video replace](./images/vue-richtexteditor-video-replace-embed.png)
-
-![Vue Rich Text Editor Web Video replace](./images/vue-richtexteditor-video-replace-web.png)
-
-## Delete video
-
-To remove a video from the Rich Text Editor content, select the video and click the `videoRemove` button from the quick toolbar. It will delete the video from the Rich Text Editor content as well as from the service location if the [insertVideoSettings.removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#removeurl) is given.
-
-Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
-
-![Vue Rich Text Editor Video delete](./images/vue-richtexteditor-video-del.png)
-
-## Dimension
-
-Set the default width, minWidth, height, and minHeight of the video element, when it is inserted in the Rich Text Editor using the [width](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#width), [minWidth](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minwidth), [height](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#height), [minHeight](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minheight) properties.
-
-Through the [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings), also you can change the width and height using  the `Change Size` button. Once you click on the button, the video size dialog will open as below. In that, specify the width and height of the video in pixels.
-
-![Vue Rich Text Editor Video dimension](./images/vue-richtexteditor-video-size.png)
-
-## Display position
-
-Sets the default display property for the video when it is inserted in the Rich Text Editor using the [insertVideoSettings.layoutOption](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
-
-> The default `layoutOption` property is set to `Inline`.
-
-```
-
-<template>
-    <div>
-        <div class="control-section">
-            <div class="sample-container">
-                <div class="default-section">
-                    <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
-                        :toolbarSettings="toolbarSettings">
-                    </ejs-richtexteditor>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</template>
-<script setup>
-import { provide } from 'vue';
-import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
-const toolbarSettings = {
-    items: ['Video']
-};
-const insertVideoSettings = {
-    layoutOption: 'Inline'
-};
-provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
-</script>
-<style>
-@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
-@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
-@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
-</style>
-
-```
-
-## Resize video
-
-The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
-
-You can disable the resize action by configuring `false` for the [insertVideoSettings.resize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#resize) property.
-
-> If the [minWidth](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minwidth) and [minHeight](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minheight) properties are configured, the video resizing does not shrink below the specified values.
-
-![Vue Rich Text Editor video resize](./images/vue-richtexteditor-video-resize.png)
-
-## Rename video before inserting
-
-You can use the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertvideosettings) property, to specify the server handler to upload the selected video. Then by binding the [fileUploadSuccess](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert video dialog.
+You can use the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#insertvideosettings) property to specify the server handler to upload the selected video. Then, by binding the [fileUploadSuccess](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploadsuccess) event, you can receive the modified file name from the server and update it in the Rich Text Editor's insert video dialog.
 
 ```
 <template>
@@ -374,11 +218,7 @@ You can use the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentati
             <div class="sample-container">
                 <div class="default-section">
                     <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
-                        :toolbarSettings="toolbarSettings" :fileUploadSuccess="onFileUploadSuccess">
-                        <p>The Rich Text Editor is WYSIWYG ("what you see is what you get") editor useful to create and edit
-                            content, and return the valid <a href="https://ej2.syncfusion.com/home/" target="_blank">HTML
-                                markup</a> or <a href="https://ej2.syncfusion.com/home/" target="_blank">markdown</a> of the
-                            content</p>
+                        :toolbarSettings="toolbarSettings" :value="rteValue" :fileUploadSuccess="onFileUploadSuccess">
                     </ejs-richtexteditor>
                 </div>
             </div>
@@ -386,9 +226,12 @@ You can use the [insertVideoSettings](https://ej2.syncfusion.com/vue/documentati
 
     </div>
 </template>
+
 <script setup>
 import { provide } from 'vue';
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+
+const rteValue = `<p>The Syncfudion Rich Text Editor, a WYSIWYG (what you see is what you get) editor, is a user interface that allows you to create, edit, and format rich text content. You can try out a demo of this editor here.</p><p><b>Key features:</b></p><ul><li><p>Provides &lt;IFRAME&gt; and &lt;DIV&gt; modes.</p></li><li><p>Bulleted and numbered lists.</p></li><li><p>Handles images, hyperlinks, videos, hyperlinks, uploads, etc.</p></li><li><p>Contains undo/redo manager. </p></li></ul><div style='display: inline-block; width: 60%; vertical-align: top; cursor: auto;'><img alt='Sky with sun' src='https://cdn.syncfusion.com/ej2/richtexteditor-resources/RTE-Overview.png' width='309' style='min-width: 10px; min-height: 10px; width: 309px; height: 174px;' class='e-rte-image e-imginline e-rte-drag-image' height='174' /></div>`;
 const toolbarSettings = {
     items: ['Video']
 };
@@ -478,14 +321,15 @@ public void Rename()
 
 ```
 
-## Upload video with authentication
+### Restricting Video by Size
 
-You can add additional data with the video uploaded from the Rich Text Editor on the client side, which can even be received on the server side by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+You can restrict the video uploaded from the local machine when the uploaded video file size is greater than the allowed size by using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event.
 
-> By default, it doesn't support the `UseDefaultCredentials` property, you can manually append the default credentials with the upload request.
+> The file size in the argument will be returned in `bytes`.
+
+In the following example, the video size has been validated before uploading and determined whether the video has been uploaded or not.
 
 ```
-
 <template>
     <div>
         <div class="control-section">
@@ -499,6 +343,68 @@ You can add additional data with the video uploaded from the Rich Text Editor on
         </div>
     </div>
 </template>
+
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+
+const toolbarSettings = {
+    items: ['Video']
+};
+const insertVideoSettings = {
+    saveUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Save',
+    removeUrl: 'https://ej2.syncfusion.com/services/api/uploadbox/Remove'
+};
+const onFileUpload = (args) => {
+    let sizeInBytes = args.fileData.size;
+    let fileSize = 500000;
+    if (fileSize < sizeInBytes) {
+        args.cancel = true;
+    }
+};
+provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
+</script>
+
+<style>
+@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
+</style>
+
+```
+
+### Uploading Video with Authentication
+
+You can add additional data with the video uploaded from the Rich Text Editor on the client side, which can even be received on the server side. By using the [fileUploading](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#fileuploading) event and its `customFormData` argument, you can pass parameters to the controller action. On the server side, you can fetch the custom headers by accessing the form collection from the current request, which retrieves the values sent using the POST method.
+
+> By default, it doesn't support the `UseDefaultCredentials` property, you can manually append the default credentials with the upload request.
+
+```
+<template>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
+                        :toolbarSettings="toolbarSettings" :fileUploading="onFileUpload">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
 <script setup>
 import { provide } from 'vue';
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
@@ -517,6 +423,7 @@ const onFileUpload = (args) => {
 };
 provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
 </script>
+
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
@@ -544,7 +451,112 @@ public void SaveFiles(IList<IFormFile> UploadFiles)
 
 ```
 
+## Video Replacement Functionality
+
+Once a video file has been inserted, you can replace it using the Rich Text Editor [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings) `videoReplace` option. You can replace the video file either by using the embedded code or the web URL and the browse option in the video dialog.
+
+![Vue Rich Text Editor Embed Video Replace](./images/vue-richtexteditor-video-replace-embed.png)
+
+![Vue Rich Text Editor Web Video Replace](./images/vue-richtexteditor-video-replace-web.png)
+
+## Deleting Video
+
+To remove a video from the Rich Text Editor content, select the video and click the `videoRemove` button from the quick toolbar. It will delete the video from the Rich Text Editor content as well as from the service location if the [insertVideoSettings.removeUrl](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#removeurl) is given.
+
+Once you select the video from the local machine, the URL for the video will be generated. You can remove the video from the service location by clicking the cross icon.
+
+![Vue Rich Text Editor Video delete](./images/vue-richtexteditor-video-del.png)
+
+## Adjusting Video Dimensions
+
+Set the default width, minWidth, height, and minHeight of the video element when it is inserted in the Rich Text Editor using the [width](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#width), [minWidth](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minwidth), [height](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#height), [minHeight](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minheight) properties.
+
+Through the [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/#quicktoolbarsettings), you can also change the width and height using the `Change Size` button. Once you click on the button, the video size dialog will open as below. In that, specify the width and height of the video in pixels.
+
+![Vue Rich Text Editor Video dimension](./images/vue-richtexteditor-video-size.png)
+
+## Configuring Video Display Position
+
+Sets the default display property for the video when it is inserted in the Rich Text Editor using the [insertVideoSettings.layoutOption](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#layoutOption) property. It has two possible options: `Inline` and `Break`. When updating the display positions, it updates the video elements’ layout position.
+
+> The default `layoutOption` property is set to `Inline`.
+
+
+```
+<template>
+    <div>
+        <div class="control-section">
+            <div class="sample-container">
+                <div class="default-section">
+                    <ejs-richtexteditor ref="rteObj" :height="340" :insertVideoSettings="insertVideoSettings"
+                        :toolbarSettings="toolbarSettings">
+                    </ejs-richtexteditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup>
+import { provide } from 'vue';
+import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Video, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+const toolbarSettings = {
+    items: ['Video']
+};
+const insertVideoSettings = {
+    layoutOption: 'Inline'
+};
+provide('richtexteditor', [Toolbar, Link, Video, HtmlEditor, QuickToolbar]);
+</script>
+
+<style>
+@import 'https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-layouts/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-grids/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-treegrid/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-vue-gantt/styles/material.css";
+</style>
+
+```
+
+## Video Resizing Tools
+
+The Rich Text Editor has built-in video resizing support, which is enabled for the video elements added. The resize points will appear on each corner of the video when focusing, so users can easily resize the video using mouse points or thumb through the resize points. Also, the resize calculation will be done based on the aspect ratio.
+
+You can disable the resize action by configuring `false` for the [insertVideoSettings.resize](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettingsModel/#resize) property.
+
+> If the [minWidth](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minwidth) and [minHeight](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/videoSettings/#minheight) properties are configured, the video resizing does not shrink below the specified values.
+
+![Vue Rich Text Editor video resize](./images/vue-richtexteditor-video-resize.png)
+
+## Customizing the Video Quick Toolbar
+
+The Rich Text Editor enables customization of the video quick toolbar, allowing you to tailor its functionality with essential tools such as VideoReplace, VideoAlign, VideoRemove, VideoLayoutOption, and VideoDimension.
+
+By configuring these options in the [quickToolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/quickToolbarSettings/) property, you enhance the editor's capabilities, facilitating seamless management and editing of embedded videos directly within your content. This customization ensures a user-friendly experience for manipulating video elements efficiently.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/video-quick-tool-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/rich-text-editor/video-quick-tool-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/video-quick-tool-cs1" %}
+
 ## See Also
 
-* [How to edit the quick toolbar settings](./toolbar/#quick-inline-toolbar)
-* [How to use the link editing option in the toolbar items](./link/)
+* [Quick Toolbars in the Toolbar](./toolbar.md/#quick-toolbars)
+* [How to Use the Audio Editing Option in Toolbar Items](./audio)
+* [How to Use the Image Editing Option in Toolbar Items](./insert-images)

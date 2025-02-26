@@ -1,26 +1,26 @@
 <template>
-<div class="control-section">
-    <div class="sample-container">
-        <div class="default-section">
-            <table class="api">
-                <tbody>
-                    <tr>
-                        <td>
-                            <div>
-                                <ejs-dropdownlist ref="enterOptionInstance" :dataSource="enterData" :fields='fields' :popupHeight="height" :change="enterChange" :value='enterValue' :placeholder='enterPlaceHolder' :floatLabelType='floatLabelType'></ejs-dropdownlist>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br/>
-            <ejs-richtexteditor ref="rteInstance" :height="height">
-                <p>In Rich text Editor, the enter key and shift + enter key actions can be customized using the enterKey and shiftEnterKey APIs. And the possible values are as follows:</p><ul><li>P - When 'P' is configured, pressing enter or shift + enter will create a 'p' tag</li><li>DIV - When 'DIV' is configured, pressing enter or shift + enter will create a 'div' tag</li><li>BR - When 'BR' is configured, pressing enter or shift + enter will create a 'br' tag</li></ul>
-            </ejs-richtexteditor>
+    <div class="control-section">
+        <div class="sample-container">
+            <div class="default-section">
+                <table class="api">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <ejs-dropdownlist ref="enterOptionInstance" :dataSource="enterData" :fields='fields' :popupHeight="height" :change="enterChange" :value='enterValue' :placeholder='enterPlaceHolder' :floatLabelType='floatLabelType'></ejs-dropdownlist>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+                <ejs-richtexteditor ref="rteInstance" :height="height" :value="rtevalue">
+                </ejs-richtexteditor>
+            </div>
         </div>
     </div>
-</div>
 </template>
+
 <style>
     .api {
         width: 50%;
@@ -46,23 +46,19 @@
 
 
 <script>
-  
-  import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
-  import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
-  
-  
-  
 
-  export default {
-name: "App",
-components: {
-"ejs-dropdownlist":DropDownListComponent,
-"ejs-richtexteditor":RichTextEditorComponent,
+import { RichTextEditorComponent, Toolbar, Link, Image, HtmlEditor, QuickToolbar } from '@syncfusion/ej2-vue-richtexteditor';
+import { DropDownListComponent } from "@syncfusion/ej2-vue-dropdowns";
 
-},
-
+export default {
+    name: "App",
+    components: {
+        "ejs-dropdownlist":DropDownListComponent,
+        "ejs-richtexteditor":RichTextEditorComponent,
+    },
     data() {
       return {
+        rteValue: `<p>In Rich Text Editor, the enter key and shift + enter key actions can be customized using the enterKey and shiftEnterKey APIs. And the possible values are as follows:</p><ul><li>P - When 'P' is configured, pressing enter or shift + enter will create a 'p' tag</li><li>DIV - When 'DIV' is configured, pressing enter or shift + enter will create a 'div' tag</li><li>BR - When 'BR' is configured, pressing enter or shift + enter will create a 'br' tag</li></ul>`,
         height: 250,
         enterPlaceHolder: 'When pressing the enter key',
         floatLabelType: 'Always',

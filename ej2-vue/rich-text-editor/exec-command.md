@@ -8,10 +8,9 @@ documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Exec command in Vue Rich text editor component
+# Exec command in Vue Rich Text Editor component
 
-In Rich Text Editor, execCommand used to perform commands for the modification of content in editable area.
-The execCommand will perform the following commands.
+The execCommand is used to perform command for the modification of content in editable area. The list of valid execCommand are given in the below table.
 
 | Commands | Description | Code snippets |
 |----------------|---------| -----------|

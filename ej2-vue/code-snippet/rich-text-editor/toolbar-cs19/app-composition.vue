@@ -3,11 +3,7 @@
         <div class="control-section">
             <div class="sample-container">
                 <div class="default-section" id="rteSection" style="min-height: 360px;">
-                    <ejs-richtexteditor ref="customObj" :toolbarSettings="toolbarSettings" :created="onCreate">
-                        <p style="margin-right:10px">The custom command "insert special character" is configured as the last
-                            item of the toolbar. Click on the command and choose the special character you want to include
-                            from the popup.</p>
-                    </ejs-richtexteditor>
+                    <ejs-richtexteditor ref="customObj"   :value="rteValue" :toolbarSettings="toolbarSettings" :created="onCreate"></ejs-richtexteditor>
                     <ejs-dialog id='rteDialog' :buttons='dlgButtons' :width='width' :height="height" :header='header'
                         ref="dialogObj" :overlayClick='dialogOverlay' :visible='visible' :showCloseIcon='showCloseIcon'
                         :isModal='modal' :cssClass="cssClass" target='#rteSection' :created="dialogCreate">
@@ -67,45 +63,13 @@
     </div>
 </template>
 
-<style>
-#rteSpecial_char .char_block {
-    display: inline-block;
-}
-
-#custom_tbar,
-#custom_tbar div {
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#rteSpecial_char {
-    padding: 15px 0 15px 0;
-}
-
-#rteSpecial_char .char_block.e-active {
-    outline: 1px solid #e3165b;
-    border-color: #e3165b;
-}
-
-#rteSpecial_char .char_block {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    margin: 0 5px 5px 0;
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #DDDDDD;
-    font-size: 20px;
-    cursor: pointer;
-    user-select: none;
-}
-</style>
-
 <script setup>
 import { provide, ref } from 'vue';
 import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, NodeSelection, Image, QuickToolbar, HtmlEditor } from "@syncfusion/ej2-vue-richtexteditor";
 import { DialogComponent as EjsDialog } from '@syncfusion/ej2-vue-popups';
+
+const rteValue =`<p style="margin-right:10px">The custom command "insert special character" is configured as the last item of the toolbar. Click on the command and choose the special character you want to include from the popup.</p>`;
 const customObj = ref(null);
 const dialogObj = ref(null);
 const selection = new NodeSelection();
@@ -169,7 +133,39 @@ const onCreate = function (e) {
 }
 provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor]);
 </script >
+
 <style>
+#rteSpecial_char .char_block {
+    display: inline-block;
+}
+
+#custom_tbar,
+#custom_tbar div {
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#rteSpecial_char {
+    padding: 15px 0 15px 0;
+}
+
+#rteSpecial_char .char_block.e-active {
+    outline: 1px solid #e3165b;
+    border-color: #e3165b;
+}
+
+#rteSpecial_char .char_block {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #DDDDDD;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
 @import "https://ej2.syncfusion.com/vue/documentation/../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-inputs/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-lists/styles/material.css";
