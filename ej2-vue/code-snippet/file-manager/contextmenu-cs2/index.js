@@ -25,11 +25,11 @@ new Vue({
             // Custom menu item added to context menu
             contextMenuSettings: {
                 file: ["Custom", "Open", "|", "Delete", "Rename", "|", "Details"],
-                folder: ["Custom", "Open", "|", "Delete", "Rename", "|", "Details","Custom"],
+                folder: ["Custom", "Open", "|", "Delete", "Rename", "|", "Details"],
                 layout: ["Custom", "SortBy", "View", "Refresh", "|", "NewFolder", "Upload", "|", "Details", "|", "SelectAll"],
                 visible: true
             },
-            height: "330px"
+            height: "375px"
         };
     },
     provide: {

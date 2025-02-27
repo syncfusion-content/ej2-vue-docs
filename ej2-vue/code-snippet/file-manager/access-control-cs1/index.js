@@ -22,7 +22,7 @@ new Vue({
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManagerAccess/Download"
             },
-            height: "330px"
+            height: "375px"
         };
     },
     provide: {

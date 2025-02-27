@@ -125,7 +125,7 @@
 
     const fields = { child: 'nodeChild', dataSource: data, iconCss: 'iconCss', id: 'nodeId', text: 'nodeText' };
     const enableDock = true;
-    const dockSize = '52px',
+    const dockSize = '42px',
     const width = '290px';
     const target = '.main-content';
     const mediaQuery = '(min-width: 600px)';
@@ -192,10 +192,10 @@
 
     #sidebar-treeview .main-menu .main-menu-header {
         color: #656a70;
-    padding: 15px;
-    font-size: 14px;
-    width: 13em;
-    margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        width: 13em;
+        margin: 0;
     }
 
     #sidebar-treeview .main-menu .search-icon {

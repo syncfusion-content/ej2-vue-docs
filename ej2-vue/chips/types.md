@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in Vue Chips component | Syncfusion
-description: Learn here all about Types in Syncfusion Vue Chips component of Syncfusion Essential JS 2 and more.
+description: Learn here all about what are the Types in Syncfusion Vue Chips component of Syncfusion Essential JS 2 and more.
 control: Types 
 platform: ej2-vue
 documentation: ug
@@ -34,7 +34,7 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 ## Choice Chip
 
-Choice Chip allows you to select a single chip from the set of ChipList/ChipCollection. It can be enabled by setting the `selection` property to `Single`.
+Choice Chip allows you to select a single chip from the set of ChipList/ChipCollection. It can be enabled by setting the [`selection`](https://ej2.syncfusion.com/vue/documentation/api/chips/#selection) property to `Single`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -49,7 +49,7 @@ Choice Chip allows you to select a single chip from the set of ChipList/ChipColl
 
 ## Filter Chip
 
-Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCollection. It can be enabled by setting the `selection` property to `Multiple`.
+Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCollection. It can be enabled by setting the [`selection`](https://ej2.syncfusion.com/vue/documentation/api/chips/#selection) property to `Multiple`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -64,7 +64,7 @@ Filter Chip allows you to select a multiple chip from the set of ChipList/ChipCo
 
 ## Action Chip
 
-The Action Chip triggers the event like click or delete, which helps doing action based on the event.
+The Action Chip triggers the event like [`click`](https://ej2.syncfusion.com/vue/documentation/api/chips/#click) or [`delete`](https://ej2.syncfusion.com/vue/documentation/api/chips/#delete), which helps doing action based on the event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -79,7 +79,7 @@ The Action Chip triggers the event like click or delete, which helps doing actio
 
 ### Deletable Chip
 
-Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the `enableDelete` property to `true`.
+Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the [`enableDelete`](https://ej2.syncfusion.com/vue/documentation/api/chips/#enabledelete) property to `true`.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

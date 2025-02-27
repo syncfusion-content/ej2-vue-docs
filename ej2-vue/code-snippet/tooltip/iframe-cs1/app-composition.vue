@@ -1,7 +1,7 @@
 <template>
     <div id='app'>
         <ejs-tooltip target='#iframeContent' cssClass='e-tooltip-css' ref="tooltipTitle" :position='position'
-            :opensOn='opensOn' :content='content'>
+            :opensOn='opensOn' :enableHtmlSanitizer='enableHtmlSanitizer' :content='content'>
             <div id='container'>
                 <div id="tooltipContent">
                     <div class="content">
@@ -18,6 +18,7 @@ import { TooltipComponent as EjsTooltip } from '@syncfusion/ej2-vue-popups';
 
 const position = 'BottomCenter';
 const opensOn = 'Click';
+const enableHtmlSanitizer = 'false';
 const content = '<iframe src="https://ej2.syncfusion.com/showcase/typescript/expensetracker/#/dashboard"></iframe>';
 
 </script>

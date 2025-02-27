@@ -1,7 +1,7 @@
 <template>
     <div id='app'>
         <ejs-tooltip target='#iframeContent' cssClass='e-tooltip-css' ref="tooltipTitle" :position='position'
-            :opensOn='opensOn' :content='content'>
+            :opensOn='opensOn' :content='content' :enableHtmlSanitizer='enableHtmlSanitizer'>
             <div id='container'>
                 <div id="tooltipContent">
                     <div class="content">
@@ -26,6 +26,7 @@ export default {
         return {
             position: 'BottomCenter',
             opensOn: 'Click',
+            enableHtmlSanitizer:false,
             content: '<iframe src="https://ej2.syncfusion.com/showcase/typescript/expensetracker/#/dashboard"></iframe>'
         };
     }

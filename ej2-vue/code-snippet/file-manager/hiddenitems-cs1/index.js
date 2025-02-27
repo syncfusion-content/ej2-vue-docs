@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :showHiddenItems="showHiddenItems" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :showHiddenItems="showHiddenItems" :ajaxSettings="ajaxSettings" :height="height">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // The default value set for showHiddenItems is false
-            showHiddenItems: true
+            showHiddenItems: true,
+            height: "375px"
         };
     },
     provide: {

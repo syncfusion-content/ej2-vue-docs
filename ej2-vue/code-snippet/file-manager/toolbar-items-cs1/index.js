@@ -26,7 +26,7 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             view: "Details",
-            height: "330px"
+            height: "375px"
         };
     },
     provide: {

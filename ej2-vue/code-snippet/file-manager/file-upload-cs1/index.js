@@ -26,7 +26,7 @@ new Vue({
             <div id='target' class="control-section">
                 <ejs-dialog ref="uploadDialog" id="dialog" v-bind:visible="false" :header='dialogHeader' :animationSettings='animationSettings' :showCloseIcon='showCloseIcon' :open="dialogOpen" :close="dialogClose" :target='target'
                 :width='dialogWidth'>
-                    <ejs-filemanager ref="filemanagerObj" id="filemanager" :ajaxSettings='ajaxSettings' v-bind:allowMultiSelection="false" :fileOpen="onFileOpen" >
+                    <ejs-filemanager ref="filemanagerObj" :height="height" id="filemanager" :ajaxSettings='ajaxSettings' v-bind:allowMultiSelection="false" :fileOpen="onFileOpen" >
                     </ejs-filemanager>
                 </ejs-dialog>
             </div>
@@ -41,6 +41,7 @@ new Vue({
             target: '#target',
             animationSettings: { effect: 'None' },
             dialogWidth: '850px',
+            height: "375px",
             ajaxSettings:  {
                 url: hostUrl + 'api/FileManager/FileOperations',
                 getImageUrl: hostUrl + 'api/FileManager/GetImage',

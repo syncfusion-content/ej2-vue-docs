@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :showFileExtension="showFileExtension" :ajaxSettings="ajaxSettings" :fileLoad="onBeforeFileLoad" :fileOpen="onBeforeFileOpen">
+        <ejs-filemanager id="file-manager" :showFileExtension="showFileExtension" :height="height" :ajaxSettings="ajaxSettings" :fileLoad="onBeforeFileLoad" :fileOpen="onBeforeFileOpen">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Hides the file extension in File Manager
-            showFileExtension: false
+            showFileExtension: false,
+            height: "375px"
         };
     },
     provide: {

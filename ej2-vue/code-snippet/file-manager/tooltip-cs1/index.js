@@ -14,7 +14,7 @@ new Vue({
     <div class="control-section">
             <div class="filemanagerContainer">
                 <!-- Filemanager element -->
-                <ejs-filemanager id="file" ref="filemanagerObj"  :ajaxSettings="ajaxSettings" :fileLoad="fileLoad">
+                <ejs-filemanager id="file" ref="filemanagerObj"  :ajaxSettings="ajaxSettings" :height="height" :fileLoad="fileLoad">
                 </ejs-filemanager>
             </div>
   </div>
@@ -27,7 +27,8 @@ new Vue({
                 getImageUrl: hostUrl + 'api/FileManager/GetImage',
                 uploadUrl: hostUrl + 'api/FileManager/Upload',
                 downloadUrl: hostUrl + 'api/FileManager/Download'
-            }
+            },
+            height: "375px"
         };
     },
     provide: {

@@ -13,7 +13,7 @@
 
 import { ChipListComponent as EjsChiplist, ChipsDirective as EChips, ChipDirective as EChip } from '@syncfusion/ej2-vue-buttons';
 const chipclick = function (e) {
-  alert('you have clicked ' + e.target.textContent);
+  alert('you have clicked ' + e.text);
 }
 
 </script>

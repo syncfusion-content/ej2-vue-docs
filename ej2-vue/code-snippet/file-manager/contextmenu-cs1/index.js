@@ -24,7 +24,7 @@ new Vue({
             },
             // Context Menu settings customization
             contextMenuSettings: { file: ['Open', '|', 'Details'], folder: ['Open', '|', 'Details'], layout: ['SortBy', 'View', 'Refresh', '|', 'Details', '|'], visible: true},
-            height: "330px"
+            height: "375px"
         };
     },
     provide: {

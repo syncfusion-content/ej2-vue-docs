@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" :toolbarSettings="toolbarSettings">
+        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" :toolbarSettings="toolbarSettings" :height="height">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Toolbar settings customization
-            toolbarSettings: { items: ['NewFolder', 'Refresh', 'View', 'Details'], visible: true}
+            toolbarSettings: { items: ['NewFolder', 'Refresh', 'View', 'Details'], visible: true},
+            height: "375px"
         };
     },
     provide: {

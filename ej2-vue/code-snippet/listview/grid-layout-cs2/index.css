@@ -45,7 +45,7 @@
 }
 
 .headerContainer .e-input-search::before {
-    content: '\\e993';
+    content: '\e993';
     margin-top: 3px;
 }
 
