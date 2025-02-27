@@ -19,6 +19,7 @@
 <script setup>
 
 import { ListViewComponent as EjsListview } from "@syncfusion/ej2-vue-lists";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 import { createApp } from "vue";
 enableRipple(true);

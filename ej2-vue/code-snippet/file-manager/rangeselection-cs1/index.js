@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :fileSelect="onFileSelect" :allowMultiSelection="allowMultiSelection":enableRangeSelection="enableRangeSelection" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :fileSelect="onFileSelect" :height="height" :allowMultiSelection="allowMultiSelection":enableRangeSelection="enableRangeSelection" :ajaxSettings="ajaxSettings">
         </ejs-filemanager>
     </div>
 `,
@@ -24,7 +24,8 @@ new Vue({
             },
             // allowMultiSelection is true by default
             allowMultiSelection: true,
-            enableRangeSelection: true
+            enableRangeSelection: true,
+            height: "375px"
         };
     },
     provide: {

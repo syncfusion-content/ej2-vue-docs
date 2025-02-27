@@ -16,6 +16,7 @@
 </template>
 <script>
 import { ListViewComponent } from "@syncfusion/ej2-vue-lists";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 import { enableRipple } from '@syncfusion/ej2-base';
 import { createApp } from "vue";
 
@@ -26,7 +27,8 @@ const app=createApp();
 export default {
   name: "App",
   components: {
-    "ejs-listview": ListViewComponent
+    "ejs-listview": ListViewComponent,
+    "ejs-button":ButtonComponent
   },
 
   data: function () {

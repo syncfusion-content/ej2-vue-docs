@@ -52,7 +52,7 @@ new Vue({
         return {
          type :'Push',
          target : '.content',
-         content: "Open",
+         contentValue: "Open",
         }
     },
     methods: {
@@ -74,16 +74,16 @@ new Vue({
         changeHandler:  function(args) {
             if(args.event.target.id == 'over') {
                 this.type = 'Over';
-                this.dataBind();
+                this.$refs.sidebar.dataBind();
             } else if (args.event.target.id == 'push') {
                 this.type = 'Push';
-                this.dataBind();
+                this.$refs.sidebar.dataBind();
             } else if (args.event.target.id == 'slide') {
                 this.type = 'Slide';
-                this.dataBind();
+                this.$refs.sidebar.dataBind();
             } else {
                 this.type = 'Auto';
-                this.dataBind();
+                this.$refs.sidebar.dataBind();
             }
         }
     }    

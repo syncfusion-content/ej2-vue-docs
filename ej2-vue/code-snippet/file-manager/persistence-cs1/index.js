@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :enablePersistence="enablePersistence" :ajaxSettings="ajaxSettings" :success="onAjaxSuccess" :failure="onAjaxFailure">
+        <ejs-filemanager id="file-manager" :enablePersistence="enablePersistence" :ajaxSettings="ajaxSettings" :height="height" :success="onAjaxSuccess" :failure="onAjaxFailure">
         </ejs-filemanager>
     </div>
 `,
@@ -22,7 +22,8 @@ new Vue({
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
-            enablePersistence: true
+            enablePersistence: true,
+            height: "375px"
         };
     },
     provide: {

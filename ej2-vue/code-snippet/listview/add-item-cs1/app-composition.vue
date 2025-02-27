@@ -20,7 +20,7 @@
 
 #sample-list-flat .delete-icon::after {
   color: black;
-  content: "\e7e9";
+  content: "\\e7e9";
   float: right;
   cursor: pointer;
   padding-top: 13px;

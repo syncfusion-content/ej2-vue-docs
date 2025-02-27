@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :view="view" :ajaxSettings="ajaxSettings" :uploadSettings="uploadSettings">
+        <ejs-filemanager id="file-manager" :view="view" :ajaxSettings="ajaxSettings" :height="height" :uploadSettings="uploadSettings">
         </ejs-filemanager>
     </div>
 `,
@@ -25,7 +25,8 @@ new Vue({
             // Initial view of File Manager is set to details view
             view: "Details",
             // Upload settings customization
-            uploadSettings: { chunkSize: 5242880, maxFileSize: 73728000}
+            uploadSettings: { chunkSize: 5242880, maxFileSize: 73728000},
+            height: "375px"
         };
     },
     provide: {

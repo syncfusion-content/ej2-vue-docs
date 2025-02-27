@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :fileSelect="onFileSelect" :allowMultiSelection="allowMultiSelection" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :fileSelect="onFileSelect" :allowMultiSelection="allowMultiSelection" :height="height" :ajaxSettings="ajaxSettings">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // allowMultiSelection is true by default
-            allowMultiSelection: true
+            allowMultiSelection: true,
+            height: "375px"
         };
     },
     provide: {

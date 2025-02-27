@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager"  ref="fileManagerInstance" :ajaxSettings="ajaxSettings" :created='create'>
+        <ejs-filemanager id="file-manager"  ref="fileManagerInstance" :ajaxSettings="ajaxSettings" :created='create' :height="height">
         <e-toolbaritems>
                     <e-toolbaritem name="NewFolder"></e-toolbaritem>
                     <e-toolbaritem name="Upload"></e-toolbaritem>
@@ -39,7 +39,8 @@ new Vue({
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
-            checkBoxInstance: null
+            checkBoxInstance: null,
+            height: "375px"
         };
     },
     provide: {

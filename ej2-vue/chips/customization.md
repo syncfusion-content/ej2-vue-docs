@@ -14,7 +14,7 @@ This section explains the customization of styles, leading icons, avatar, and tr
 
 ## Styles
 
-The Chip control has the following predefined styles that can be defined using the `cssClass` property.
+The Chip control has the following predefined styles that can be defined using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/chips/#cssclass) property.
 
 | Class | Description |
 | -------- | -------- |
@@ -37,7 +37,7 @@ The Chip control has the following predefined styles that can be defined using t
 
 ## Leading Icon
 
-You can add and customize the leading icon of chip using the `leadingIconCss` property.
+You can add and customize the leading icon of chip using the [`leadingIconCss`](https://ej2.syncfusion.com/vue/documentation/api/chips/#leadingiconcss) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -52,7 +52,7 @@ You can add and customize the leading icon of chip using the `leadingIconCss` pr
 
 ## Avatar
 
-You can add and customize the avatar of chip using the `avatarIconCss` property.
+You can add and customize the avatar of chip using the [`avatarIconCss`](https://ej2.syncfusion.com/vue/documentation/api/chips/#avatariconcss) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -67,7 +67,7 @@ You can add and customize the avatar of chip using the `avatarIconCss` property.
 
 ## Avatar Content
 
-You can add and customize the avatar content of chip using the `avatarText` property.
+You can add and customize the avatar content of chip using the [`avatarText`](https://ej2.syncfusion.com/vue/documentation/api/chips/#avatartext) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -82,7 +82,7 @@ You can add and customize the avatar content of chip using the `avatarText` prop
 
 ## Trailing Icon
 
-You can add and customize the trailing icon of chip using the `trailingIconCss` property.
+You can add and customize the trailing icon of chip using the [`trailingIconCss`](https://ej2.syncfusion.com/vue/documentation/api/chips/#trailingiconcss) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -97,7 +97,7 @@ You can add and customize the trailing icon of chip using the `trailingIconCss` 
 
 ## Outline Chip
 
-Outline chip has the border with the background transparent. It can be set using the `cssClass` property.
+Outline chip has the border with the background transparent. It can be set using the [`cssClass`](https://ej2.syncfusion.com/vue/documentation/api/chips/#cssclass) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

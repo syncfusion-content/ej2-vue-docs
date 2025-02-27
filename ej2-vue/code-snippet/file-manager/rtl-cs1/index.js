@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :enableRtl="enableRtl" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :enableRtl="enableRtl" :ajaxSettings="ajaxSettings" :height="height">
         </ejs-filemanager>
     </div>
 `,
@@ -22,7 +22,8 @@ new Vue({
                 uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
-            enableRtl: true
+            enableRtl: true,
+            height: "375px"
         };
     },
     provide: {

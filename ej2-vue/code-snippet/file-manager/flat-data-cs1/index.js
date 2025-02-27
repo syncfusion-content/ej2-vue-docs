@@ -14,6 +14,7 @@ new Vue({
           :toolbarSettings="toolbarSettings"
           :contextMenuSettings="contextMenuSettings"
           :fileSystemData="fileSystemData"
+          :height="height"
         >
         </ejs-filemanager>
     </div>
@@ -21,6 +22,7 @@ new Vue({
 
     data() {
         return {
+            height: "375px",
             toolbarSettings: {
                 items: [
                     'NewFolder',

@@ -24,7 +24,7 @@ new Vue({
             },
             // Hides the thumbnail images in File Manager's large icons view
             showThumbnail: false,
-            height: "330px"
+            height: "375px"
         };
     },
     provide: {
