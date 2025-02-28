@@ -29,7 +29,7 @@ new Vue({
                     { field: '_fm_modified', headerText: 'Date Modified',minWidth: 50, width: '190'}
                 ]
             },
-            height: "330px"
+            height: "375px"
         };
     },
     provide: {

@@ -18,15 +18,25 @@ In the Image Editor, the [`toolbar`](https://ej2.syncfusion.com/vue/documentatio
 
 Specifies the toolbar items to perform UI interactions. Refer to the built-in toolbar items for the default value.
 
-* Crop
-* Transform
-* Annotate
+* Open
+* Undo
+* Redo
 * ZoomIn
 * ZoomOut
-* Open
+* Crop
+* RotateLeft
+* RotateRight
+* HorizontalFlip
+* VerticalFlip
+* Straightening
+* Annotate
+* Finetune
+* Filter
+* Frame
+* Resize
+* Redact
 * Reset
 * Save
-* Pan
 
 ## Add a custom toolbar items
 
@@ -62,21 +72,11 @@ Here is an example of hiding the toolbar of the image editor using [`toolbar`](h
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs35" %}
 
-## Enable or disable a toolbar item 
-
-The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property is employed to enable or disable toolbar items in the Image Editor. By default, the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property includes the default toolbar items, and these items cannot be disabled. However, if you have defined custom toolbar items using the toolbarItemModel, you can enable or disable them by configuring their respective properties within the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property. This provides the flexibility to control the availability and functionality of custom toolbar items based on your specific requirements. 
-
-Here is an example of disabling the custom toolbar item using [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property.
-
-## Enable or disable a contextual toolbar item 
-
-The toolbarItems property in the toolbarEventArgs is used to enable or disable contextual toolbar items in the Image Editor. To enable or disable the default toolbar items, you can accomplish this by setting the Disabled property to true in the ImageEditorToolbarItemModel within the ToolbarItems property. This allows you to selectively enable or disable specific default toolbar items based on your requirements, providing a customized toolbar experience in the Image Editor.
-
 ## Show or hide a toolbar item
 
 The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property controls the visibility of the toolbar in the Image Editor. When the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property is set to an empty list, the toolbar is hidden. Conversely, if the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property contains a list of items, the toolbar is shown, displaying the specified items. This feature provides flexibility for users to personalize their image editing experience. 
 
-Here is an example of hiding the toolbar of the image editor using [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property.
+Here is an example of hiding the cropping and selection toolbar items using [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -88,6 +88,46 @@ Here is an example of hiding the toolbar of the image editor using [`toolbar`](h
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs36" %}
+
+## Enable or disable a toolbar item 
+
+The [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property is employed to enable or disable toolbar items in the Image Editor. By default, the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property includes the default toolbar items, and these items cannot be disabled. However, if you have defined custom toolbar items using the toolbarItemModel, you can enable or disable them by configuring their respective properties within the [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property. This provides the flexibility to control the availability and functionality of custom toolbar items based on your specific requirements. 
+
+Here is an example of disabling the custom toolbar item using [`toolbar`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbar) property.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs66/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs66/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs66" %}
+
+## Enable or disable a contextual toolbar item 
+
+The toolbarItems property in the toolbarEventArgs is used to enable or disable contextual toolbar items in the Image Editor. To enable or disable the default toolbar items, you can accomplish this by setting the Disabled property to true in the ImageEditorToolbarItemModel within the ToolbarItems property. This allows you to selectively enable or disable specific default toolbar items based on your requirements, providing a customized toolbar experience in the Image Editor.
+
+## Toolbar created event 
+
+The [`toolbarCreated`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarcreate) event is triggered after the toolbar is created in the Image Editor. This event can be useful when you need to perform any actions or make modifications to the toolbar once it is fully initialized and ready for interaction. By subscribing to the [`toolbarCreated`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarcreate) event, you can access the toolbar object and perform tasks such as adding event handlers, customizing the appearance, or configuring additional functionality. 
+
+## Toolbar item clicked event 
+
+The [`toolbarItemClicked`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbaritemclicked) event is triggered when a toolbar item is clicked in the Image Editor. This event is particularly useful when you have added custom options to both the main toolbar and contextual toolbar, as it allows you to capture the user's interaction with those custom options. By subscribing to the [`toolbarItemClicked`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbaritemclicked) event, you can execute specific actions or handle logic based on the toolbar item that was clicked. 
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs40/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs40/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs40" %}
 
 ## Toolbar template
 
@@ -111,7 +151,7 @@ The toolbar of the Image Editor can be replaced with the user specific UI using 
 
 The [`toolbarUpdating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarupdating) event is triggered when inserting or selecting annotations, which opens the contextual toolbar in the Image Editor. Within this event, the [`toolbarItems`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/toolbarEventArgs/#toolbaritems) property in the [`ToolbarEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/toolbarEventArgs/) is utilized to add or remove contextual toolbar items.
 
-In the following example, the contextual toolbar for rectangle will be rendered with only stroke color by excluding fill color and stroke width using [`toolbarUpdating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarupdating) event.
+In the following example, the contextual toolbar for freehand drawing will be rendered with only the stroke color, while the stroke width, remove, and separator options are excluded using the [`toolbarUpdating`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarupdating) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -123,25 +163,6 @@ In the following example, the contextual toolbar for rectangle will be rendered 
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs18" %}
-
-## Toolbar item clicked event 
-
-The [`toolbarItemClicked`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbaritemclicked) event is triggered when a toolbar item is clicked in the Image Editor. This event is particularly useful when you have added custom options to both the main toolbar and contextual toolbar, as it allows you to capture the user's interaction with those custom options. By subscribing to the [`toolbarItemClicked`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbaritemclicked) event, you can execute specific actions or handle logic based on the toolbar item that was clicked. 
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/image-editor/getting-started-cs40/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/image-editor/getting-started-cs40/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs40" %}
-
-## Toolbar created event 
-
-The [`toolbarCreated`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarcreate) event is triggered after the toolbar is created in the Image Editor. This event can be useful when you need to perform any actions or make modifications to the toolbar once it is fully initialized and ready for interaction. By subscribing to the [`toolbarCreated`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#toolbarcreate) event, you can access the toolbar object and perform tasks such as adding event handlers, customizing the appearance, or configuring additional functionality. 
 
 ## Add an additional contextual Toolbar item to text shape 
 

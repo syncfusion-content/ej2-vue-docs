@@ -32,6 +32,7 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         '@syncfusion/ej2-navigations': 'syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js',
         '@syncfusion/ej2-vue-navigations': 'syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js',
         '@syncfusion/ej2-image-editor': 'syncfusion:ej2-image-editor/dist/ej2-image-editor.umd.min.js',
+        '@syncfusion/ej2-vue-filemanager': 'syncfusion:ej2-vue-filemanager/dist/ej2-vue-filemanager.umd.min.js',
     }
 });
 

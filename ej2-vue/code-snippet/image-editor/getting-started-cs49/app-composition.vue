@@ -1,36 +1,39 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="saveImage">Save Image</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="setImage">Load base64</ejs-button>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
+            :created="created"></ejs-imageeditor>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="getBlob">Get blob</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="setImage">Load blob</ejs-button>
+    </div>
 </template>
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent as EjsButton} from '@syncfusion/ej2-vue-buttons';
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-const blobUrl;
+let blobUrl;
+
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.jpeg');
-    } else {
-        imageEditorObj.value.open('bridge.jpeg');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
-const saveImage = () => {
-    let imageData: any = imageEditorObj.value.ej2Instances.getImageData();
+const getBlob = () => {
+    let imageData = imageEditorObj.value.ej2Instances.getImageData();
     let canvas = document.createElement('canvas');
     let ctx = canvas.getContext('2d');
     canvas.width = imageData.width;
     canvas.height = imageData.height;
     ctx.putImageData(imageData, 0, 0);
-    canvas.toBlob((blob) =>{
-        blobUrl = URL.createObjectURL(blob);// For getting blob.
+    canvas.toBlob((blob) => {
+        blobUrl = URL.createObjectURL(blob);
     });
 };
 const setImage = () => {
@@ -51,7 +54,6 @@ const setImage = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
 
 #image-editor {
     width: 550px !important;

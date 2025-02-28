@@ -1,29 +1,32 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :fileOpened="fileOpened"></ejs-imageeditor>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"
+            @fileOpened="fileOpened"></ejs-imageeditor>
+    </div>
 </template>
 
 <script setup>
-
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent as EjsButton} from '@syncfusion/ej2-vue-buttons';
-import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { Browser } from "@syncfusion/ej2-base";
 
 const imageEditorObj = ref(null);
-const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.jpeg');
-    } else {
-        imageEditorObj.value.open('bridge.jpeg');
-    }
-};
-const fileOpened = () => {
-    let dimension = imageEditorObj.value.ej2Instances.getImageDimension();
-    imageEditorObj.value.ej2Instances.drawText(dimension.x, dimension.y, 'Syncfusion', 'Arial', 40, false, false, '#80330075');
-}
 
+const created = () => {
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
+};
+
+const fileOpened = () => {
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    let dimension = imageEditor.getImageDimension();
+    imageEditor.drawText(dimension.x, dimension.y, "Syncfusion", "Arial", 40, false, false, "#80330075");
+};
 </script>
 
 <style>
@@ -36,7 +39,6 @@ const fileOpened = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
 
 #image-editor {
     width: 550px !important;

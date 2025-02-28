@@ -41,7 +41,7 @@
     const fields = { dataSource: dataSource, id: 'id', parentID: 'pid', text: 'name', hasChildren: 'hasChild' };
 
     const nodeChecked = (args) => {
-        var treeObj =this.$refs.treeview.ej2Instances;
+        var treeObj = treeview.value.ej2Instances;
         var checkedNode = [args.node];
         if (args.event.target.classList.contains('e-fullrow') || args.event.key == "Enter") {
             var getNodeDetails = treeObj.getNode(args.node);

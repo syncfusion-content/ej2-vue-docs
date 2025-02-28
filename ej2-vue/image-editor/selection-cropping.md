@@ -64,22 +64,6 @@ Here is an example of ratio selection using the [`select`](https://ej2.syncfusio
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs14" %}
 
-## Resize selections 
-
-The selection region can be changed programmatically by using [`selectionChanging`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#selectionchanging) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
-
-The [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/selectionChangeEventArgs/#selectionchangeeventargs) is used in this event to customize the selection and it has the following parameters.
-
-SelectionChangeEventArgs.action - The type of action such as inserting or resizing 
-
-SelectionChangeEventArgs.cancel - Specifies to cancel the selection. 
-
-SelectionChangeEventArgs.currentSelectionPoint - Represents all the details of the selection including its type, position, width, and height after the current action as CropSelectionSettings. 
-
-SelectionChangeEventArgs.previousSelectionPoint - Represents all the details of the selection including its type, position, width, and height before this current action as CropSelectionSettings 
-
-Here is an example of changing the selection region using the [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/selectionChangeEventArgs/) event. 
-
 ## Crop an image
 
 The [`crop`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#crop) method allows cropping based on the selected region. Here is an example of cropping the selection region using the [`crop`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#crop) method. 
@@ -115,14 +99,26 @@ In the image editor, when an image is cropped, it is usually enlarged or scaled 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/image-editor/getting-started-cs15/app-composition.vue %}
+{% include code-snippet/image-editor/getting-started-cs65/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/image-editor/getting-started-cs15/app.vue %}
+{% include code-snippet/image-editor/getting-started-cs65/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs15" %}
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs65" %}
+
+## SelectionChanging event
+
+The selection region can be changed programmatically by using [`selectionChanging`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#selectionchanging) event. This event is activated during resizing the selection using mouse, and it allows for alterations to the selection region by adjusting the specified properties. 
+
+The [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/selectionChangeEventArgs/#selectionchangeeventargs) is used in this event to customize the selection and it has the following parameters.
+
+SelectionChangeEventArgs.action - The type of action such as inserting or resizing.
+
+SelectionChangeEventArgs.currentSelectionPoint - Represents all the details of the selection including its type, position, width, and height after the current action as CropSelectionSettings. 
+
+SelectionChangeEventArgs.previousSelectionPoint - Represents all the details of the selection including its type, position, width, and height before this current action as CropSelectionSettings.
 
 ### Locking Selection Area During Cropping 
 
@@ -142,6 +138,8 @@ When selecting an area for cropping, users can typically resize the selection fr
 ### Cropping with Custom Ratio Selection 
 
 Users can perform cropping either through the toolbar or by using our public methods. While predefined ratio selections are available in the toolbar, users can also crop with custom ratios using our public method, [`select`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#select). Regardless of the ratio type used, the selection will adhere to the specified ratio, even when resizing the selection area.
+
+Here is an example of cropping with a custom ratio selection using the [selectionChanging](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#selectionchanging) event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

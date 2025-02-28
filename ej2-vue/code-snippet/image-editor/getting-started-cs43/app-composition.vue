@@ -1,32 +1,33 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Add Image</ejs-button>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"
+            :toolbar="toolbar"></ejs-imageeditor>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Add Image</ejs-button>
+    </div>
 </template>
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-
 const toolbar = [];
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
 
 const btnClick = () => {
     let dimension = imageEditorObj.value.ej2Instances.getImageDimension();
-    imageEditorObj.value.ej2Instances.drawImage('flower.png', dimension.x, dimension.y, 100, 80, true, 0);
+    imageEditorObj.value.ej2Instances.drawImage('https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png', dimension.x, dimension.y, 100, 80, true, 0);
 };
 
 </script>

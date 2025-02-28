@@ -16,13 +16,17 @@ To save an edited image in the Image Editor component, use the toBlob method to 
 
 ## Supported image formats
 
-The Image Editor control supports four common image formats: PNG, JPEG, SVG and WEBP. These formats allow you to work with a wide range of image files within the Image Editor.
+The Image Editor control supports four common image formats: PNG, JPEG, SVG, and WEBP. These formats allow you to work with a wide range of image files within the Image Editor.
 
-When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG or WEBP, based on your specific requirements or preferences.
+When it comes to saving the edited image, the default file type is set as PNG. This means that when you save the edited image without specifying a different file type, it will be saved as a PNG file. However, it's important to note that the Image Editor typically provides options or methods to specify a different file type if desired. This allows you to save the edited image in formats other than the default PNG, such as JPEG, SVG, or WEBP, based on your specific requirements or preferences.
 
 ## Open an image
 
 The [`open`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#open) method in the Image Editor control offers the capability to open an image by providing it in different formats. This method accepts various types of arguments, such as a base64-encoded string, raw image data, or a hosted/online URL. You can pass either the file name or the actual image data as an argument to the [`open`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#open) method, and it will load the specified image into the Image Editor control. This flexibility allows you to work with images from different sources and formats, making it easier to integrate and manipulate images within the Image Editor control.
+
+### Opening Local Images in the Image Editor 
+
+Users can easily open local images in the Image Editor. Simply place the image in the same folder as the sample. By specifying the local file name directly in the open method, the image will be loaded seamlessly into the editor. 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -56,7 +60,7 @@ Users can easily open images in the Image Editor using a Base64-encoded string. 
 
 User can easily open images in the Image Editor from Blob storage. This method allows you to load images directly from Blob storage, ensuring seamless integration and flexibility in your application. Simply retrieve the image Blob from storage and pass it to the open method, and the image will be loaded into the editor. 
 
-`Note:` You can obtain the Base64 representation of an image from the Image Editor using the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method. This process will be explained in the upcoming section. 
+`Note:` You can obtain the Blob URL representation of an image from the Image Editor using the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method. This process will be explained in the upcoming section. 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -84,24 +88,9 @@ User can easily open images in the Image Editor using a file uploader. This meth
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs60" %}
 
-### Open and image from file manager 
+### Open an image from file manager 
 
 User can easily open images in the Image Editor using the File Manager. This method allows you to browse and select an image file directly from the File Manager and load it into the editor. Once the image is selected, pass the file to the open method, and the image will be seamlessly loaded into the editor.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/image-editor/getting-started-cs62/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/image-editor/getting-started-cs62/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs62" %}
-
-### Open an image from treeview 
-
-Users can easily open images in the Syncfusion Image Editor by dragging and dropping nodes from a tree view. This feature allows users to select an image from a tile view interface and load it into the editor. When a node is dropped into the image editor, you can pass the file to the editor’s open method to seamlessly load the image.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -113,6 +102,21 @@ Users can easily open images in the Syncfusion Image Editor by dragging and drop
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs61" %}
+
+### Open an image from treeview 
+
+Users can easily open images in the Syncfusion Image Editor by dragging and dropping nodes from a tree view. This feature allows users to select an image from a tile view interface and load it into the editor. When a node is dropped into the image editor, you can pass the file to the editor’s open method to seamlessly load the image.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs62/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs62/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs62" %}
 
 ### Add watermarks while opening an image 
 
@@ -129,19 +133,11 @@ You can utilize the ‘[`fileOpened`](https://ej2.syncfusion.com/javascript/docu
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs53" %}
 
-## Save
-
-The Image Editor component saves the edited image as Image Data or images like PNG, JPEG, and SVG.
-
-### Save as image data
-
-The [`getImageData`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#getimagedata) method is used to get the image as ImageData and this can be loaded to our Image Editor component using the open method.
-
-### Save as image
+## Save as image
 
 The [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method in the Image Editor component enables you to save the modified image as a file on the local device. This method accepts two parameters: the file name and the file type.
 
-By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, SVG and WEBP. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
+By providing a file name, you can specify the desired name for the saved image file. Additionally, you can also specify the file type to determine the format in which the image should be saved. This allows you to save the image according to your specific requirements or preferences, such as PNG, JPEG, SVG, and WEBP. Users are allowed to save an image with a specified file name, file type, and image quality. This enhancement provides more control over the output, ensuring that users can save their work exactly as they need it.
 
 By utilizing the [`export`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#export) method with the appropriate file name and file type, you can conveniently save the modified image as a file on the local device, ensuring that it is easily accessible and shareable
 
@@ -176,6 +172,17 @@ To save an image as a base64 format, use the [`getImageData`](https://ej2.syncfu
 ### Save the image as byte[]
 
 To save an image as a byte array, use the [`getImageData`](https://ej2.syncfusion.com/javascript/documentation/api/image-editor/#getimagedata) method of the editor to retrieve the image data and convert it into a byte array. You can then invoke the open method on the Syncfusion Image Editor instance to load this byte array into the editor. The resulting byte array can be stored in a database for data management and maintenance.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs7/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/image-editor/getting-started-cs7/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs7" %}
 
 ### Save the image as blob
 
@@ -225,7 +232,7 @@ The [`fileOpened`](https://ej2.syncfusion.com/vue/documentation/api/image-editor
 
 * FileName: This argument is a string that contains the file name of the opened image. It represents the name of the file that was selected or provided when loading the image into the Image Editor. 
 
-* FileType: This argument is a string that contains the type of the opened image. It specifies the format or file type of the image that was loaded, such as PNG, JPEG, or SVG. 
+* FileType: This argument is a string that contains the type of the opened image. It specifies the format or file type of the image that was loaded, such as PNG, JPEG, SVG, or WEBP. 
 
 By accessing these arguments within the [`fileOpened`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#fileopened) event handler, you can retrieve information about the loaded image, such as its file name and file type. This can be useful for performing additional actions or implementing logic based on the specific image that was opened in the Image Editor component.
 
@@ -235,7 +242,7 @@ The [`saving`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor
 
 * FileName: This argument is a string that holds the file name of the saved image. It represents the name of the file that will be used when saving the image to the local disk. 
 
-* FileType: This argument is a string indicating the type or format of the saved image. It specifies the desired file type in which the image will be saved, such as PNG, JPEG, or SVG. 
+* FileType: This argument is a string indicating the type or format of the saved image. It specifies the desired file type in which the image will be saved, such as PNG, JPEG, SVG, or WEBP. 
 
 * Cancel: This argument is a boolean value that can be set to true in order to cancel the saving action. By default, it is set to false, allowing the saving process to proceed. However, if you want to prevent the saving action from occurring, you can set Cancel to true within the event handler. 
 

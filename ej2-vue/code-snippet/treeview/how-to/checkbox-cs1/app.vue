@@ -48,7 +48,7 @@
         },
         methods: {
             nodeChecked: function (args) {
-                var treeObj = treeview.value.ej2Instances;
+                var treeObj =this.$refs.treeview.ej2Instances;
                 var checkedNode = [args.node];
                 if (args.event.target.classList.contains('e-fullrow') || args.event.key == "Enter") {
                     var getNodeDetails = treeObj.getNode(args.node);

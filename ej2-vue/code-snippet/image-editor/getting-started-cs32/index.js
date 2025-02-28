@@ -8,20 +8,25 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :quickAccessToolbarOpen="quickAccessToolbarOpen" :toolbar="toolbar"></ejs-imageeditor>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :quickAccessToolbarOpen="quickAccessToolbarOpen" :created="created"></ejs-imageeditor>
+    </div>
+  `,
+  data: function () {
+    return {};
   },
   methods: {
-    quickAccessToolbarOpen: function(args) {
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    quickAccessToolbarOpen: function (args) {
       args.toolbarItems = ['Clone'];
     }
   }

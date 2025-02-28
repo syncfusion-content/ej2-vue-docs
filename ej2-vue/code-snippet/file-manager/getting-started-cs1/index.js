@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" :height="height">
         </ejs-filemanager>
     </div>
 `,
@@ -19,7 +19,8 @@ new Vue({
            ajaxSettings:
             {
                 url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations"
-            }
+            },
+            height: "375px"
         }
     }
 

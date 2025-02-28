@@ -10,7 +10,7 @@ new Vue({
 	template: `
 <div id="app">
     <div class="wrapper">
-     <ejs-filemanager id="overview_filemanager" :ajaxSettings="ajaxSettings" :view="view">
+     <ejs-filemanager id="overview_filemanager" :ajaxSettings="ajaxSettings" :view="view" :height="height">
      </ejs-filemanager>
     </div>
 `,
@@ -25,7 +25,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Initial view of File Manager is set to details view
-            view:"Details"
+            view:"Details",
+            height: "375px"
         }
     },
     //Injecting additional modules in FileManager

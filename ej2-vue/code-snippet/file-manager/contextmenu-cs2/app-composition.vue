@@ -16,7 +16,7 @@ const ajaxSettings =
     uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
     downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
 };
-const contextMenuSettings = { file: ['Custom', 'Open', '|', 'Delete', 'Rename', '|', 'Details'], folder: ['Custom', 'Open', '|', 'Delete', 'Rename', '|', 'Details','Custom'], layout: ['Custom', 'SortBy', 'View', 'Refresh', '|', 'NewFolder', 'Upload', '|', 'Details', '|', 'SelectAll'], visible: true};
+const contextMenuSettings = { file: ['Custom', 'Open', '|', 'Delete', 'Rename', '|', 'Details'], folder: ['Custom', 'Open', '|', 'Delete', 'Rename', '|', 'Details'], layout: ['Custom', 'SortBy', 'View', 'Refresh', '|', 'NewFolder', 'Upload', '|', 'Details', '|', 'SelectAll'], visible: true};
 provide('filemanager',  [DetailsView, NavigationPane, Toolbar]);
 const file_instance = ref(null);
 const menuOpen = (args) => {

@@ -131,7 +131,7 @@
             return {
                 fields: { child: 'nodeChild', dataSource: data, iconCss: 'iconCss', id: 'nodeId', text: 'nodeText' },
                 enableDock: true,
-                dockSize : '52px',
+                dockSize : '42px',
                 width: '290px',
                 target: '.main-content',
                 mediaQuery: '(min-width: 600px)',
@@ -201,10 +201,10 @@
 
     #sidebar-treeview .main-menu .main-menu-header {
         color: #656a70;
-    padding: 15px;
-    font-size: 14px;
-    width: 13em;
-    margin: 0;
+        padding: 15px;
+        font-size: 14px;
+        width: 13em;
+        margin: 0;
     }
 
     #sidebar-treeview .main-menu .search-icon {

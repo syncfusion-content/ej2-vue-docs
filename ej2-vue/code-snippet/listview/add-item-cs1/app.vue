@@ -21,7 +21,7 @@
 
 #sample-list-flat .delete-icon::after {
   color: black;
-  content: "\e7e9";
+  content: "\\e7e9";
   float: right;
   cursor: pointer;
   padding-top: 13px;
@@ -34,7 +34,7 @@ import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import {createApp} from 'vue';
 
 var demoVue = createApp().component("demo", {
-  template: `<div class='text-content'> {{data.text}} span class = 'e-icons delete-icon'></span> </div>`,
+  template: `<div class='text-content'> {{data.text}} <span class = 'e-icons delete-icon'></span> </div>`,
   data() {
     return {
       data: {}

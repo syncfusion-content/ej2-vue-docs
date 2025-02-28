@@ -1,31 +1,41 @@
-
-import Vue from 'vue';
+import Vue from "vue";
 import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :beforeSave="beforeSaved" :saved="saved"></ejs-imageeditor>
-</div>
-`,
-
-  data: function() {
-      return { };
+  el: "#app",
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" @beforeSave="beforeSaved" @saved="saved" :created="created"></ejs-imageeditor>
+    </div>
+  `,
+  data: function () {
+    return {};
   },
   methods: {
-    beforeSaved: function(event) {
-      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y, 'Syncfusion', 'Arial', 40, false, false, '#80330075');
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
     },
-    saved: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.deleteShape(shapes[shapes.length - 1].id);
+    beforeSaved: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let dimension = imageEditor.getImageDimension();
+      imageEditor.drawText(dimension.x, dimension.y, "Syncfusion", "Arial", 40, false, false, "#80330075");
+    },
+    saved: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let objects = imageEditor.getShapeSettings();
+      if (objects.length > 0) {
+        imageEditor.deleteShape(objects[objects.length - 1].id);
+      }
     }
   }
-
 });

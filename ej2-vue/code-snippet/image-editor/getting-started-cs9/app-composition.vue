@@ -1,26 +1,24 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar">
+        </ejs-imageeditor>
+        <ejs-button id="open-btn" cssClass="e-primary" @click="openImage">Open Image</ejs-button>
+    </div>
 </template>
 
 <script setup>
-
-import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
-import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
 const imageEditorObj = ref(null);
-const toolbar = [];
+const toolbar = ref([]);
 
-const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
+const openImage = () => {
+    if (imageEditorObj.value) {
+        imageEditorObj.value.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
     }
 };
-
 </script>
 
 <style>

@@ -8,35 +8,35 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
+  el: '#app',
+  template: `
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Delete Shape</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="drawShpae">Draw shape</ejs-button>
+<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="deleteShape">Delete shape</ejs-button>
 </div>
 `,
 
-  data: function() {
-      return {
-        toolbar: ['Annotate','Rectangle','Ellipse', 'Line', 'Arrow', 'Path'],
-        id: '',
-      };
+  data: function () {
+    return {
+      toolbar: [],
+    };
   },
   methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
     },
-    shapeChanging: function(event) {
-      if(event.action === 'select') {
-        this.id = event.currentShapeSettings.id;
-      }
+    drawShpae: function () {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawEllipse(dimension.x + 100, dimension.y + 100);
     },
-    btnClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.deleteShape(this.id);
+    deleteShape: function () {
+      this.$refs.imageEditorObj.ej2Instances.deleteShape("shape_1");
     }
   }
 

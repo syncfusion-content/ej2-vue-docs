@@ -1,38 +1,51 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="hueClick">Hue</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="exposureClick">Exposure</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="opacityClick">Opacity</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"
+      :created="onCreated"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="hueClick">Hue</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="exposureClick">Exposure</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="blurClick">Blur</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="opacityClick">Opacity</ejs-button>
+  </div>
 </template>
 
 <script>
 
-import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ImageEditorComponent, ImageFinetuneOption } from "@syncfusion/ej2-vue-image-editor";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent,
-},
-  data: function() {
-      return {
-        toolbar: []
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent,
+  },
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    hueClick: function() {
-      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Hue, 10);
+    onCreated() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
     },
-    exposureClick: function() {
-      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Exposure, 10);
+    hueClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Hue, 20);
     },
-    opacityClick: function() {
-      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Opacity, 10);
+    exposureClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Exposure, 20);
+    },
+    blurClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Blur, 20);
+    },
+    opacityClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Opacity, 70);
     }
   }
 }
@@ -49,9 +62,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

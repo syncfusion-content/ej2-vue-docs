@@ -1,31 +1,37 @@
 
 import Vue from 'vue';
 import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
+import { Browser } from "@syncfusion/ej2-base";
 
 Vue.use(ImageEditorPlugin);
 
-
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarUpdating="toolbarUpdating"></ejs-imageeditor>
-
-</div>
-`,
-
-  data: function() {
-      return {};
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarUpdating="toolbarUpdating" :created="created"></ejs-imageeditor>
+    </div>
+  `,
+  data: function () {
+    return {};
   },
   methods: {
-     toolbarUpdating: function(args) {
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    toolbarUpdating: function (args) {
       if (args.toolbarType === 'pen') {
         args.toolbarItems.forEach(item => {
-            if (item.align === 'Center' && (item.tooltipText === 'Stroke Width' || item.tooltipText === 'Remove' || item.type === 'Separator')) {
-                item.visible = false;
-            }
+          if (item.align === 'Center' && (item.tooltipText === 'Stroke Width' || item.tooltipText === 'Remove' || item.type === 'Separator')) {
+            item.visible = false;
+          }
         });
-      }      
+      }
     }
   }
 

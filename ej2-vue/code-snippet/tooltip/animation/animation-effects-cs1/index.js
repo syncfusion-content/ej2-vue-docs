@@ -21,7 +21,7 @@ new Vue({
   },
   methods: {
         onCustomClick: function(args){
-          if (args.target.getAttribute("data-tooltip-id")) {
+          if (args.currentTarget.getAttribute("data-tooltip-id")) {
         let closeAnimation = { effect: 'FadeOut', duration: 1000 }
         this.$refs.tooltip.close(closeAnimation);
     } else {

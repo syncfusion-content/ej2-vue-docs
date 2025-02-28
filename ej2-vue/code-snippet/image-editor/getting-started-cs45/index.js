@@ -7,37 +7,30 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="straightenleftBtn">Straighten Left</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="straightenRightBtn">Straighten Right</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="resetBtn">Reset</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: [],
-        straighten:  0
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="straightenImage">Straighten Image</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: [],
+    };
   },
   methods: {
-    straightenleftBtn: function(event) {
-      this.straighten -= 3;
-      this.$refs.imageEditorObj.ej2Instances.straightenImage(this.straighten);
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
     },
-
-    straightenRightBtn: function(event) {
-      this.straighten -= 3;
-      this.$refs.imageEditorObj.ej2Instances.straightenImage(this.straighten);
+    straightenImage: function () {
+      this.$refs.imageEditorObj.ej2Instances.straightenImage(45);
     },
-
-    resetBtn: function(event) {
-      this.straighten = 0;
-      this.$refs.imageEditorObj.ej2Instances.straightenImage(this.straighten);
-    }
   }
 
 });

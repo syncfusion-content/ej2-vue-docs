@@ -20,7 +20,7 @@ new Vue({
 
   methods: {
     chipclick: function(e) {
-      alert('you have clicked ' + e.target.textContent);
+      alert('you have clicked ' + e.text);
     }
   }
 

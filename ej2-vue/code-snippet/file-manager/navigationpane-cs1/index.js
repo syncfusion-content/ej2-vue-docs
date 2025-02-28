@@ -8,7 +8,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-        <ejs-filemanager id="file-manager" :navigationPaneSettings="navigationPaneSettings" :ajaxSettings="ajaxSettings">
+        <ejs-filemanager id="file-manager" :navigationPaneSettings="navigationPaneSettings" :ajaxSettings="ajaxSettings" :height="height">
         </ejs-filemanager>
     </div>
 `,
@@ -23,7 +23,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             // Navigation Pane settings customization
-            navigationPaneSettings: { maxWidth: '850px', minWidth: '140px', visible: true}
+            navigationPaneSettings: { maxWidth: '850px', minWidth: '140px', visible: true},
+            height: "375px"
         };
     },
     provide: {

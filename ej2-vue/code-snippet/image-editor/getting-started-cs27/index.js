@@ -8,23 +8,30 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Text</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Add MultiLineText</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    btnClick: function(event) {
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    btnClick: function () {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x,dimension.y,'Enter\nText');
+      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y, 'Enter\nText');
     }
   }
 

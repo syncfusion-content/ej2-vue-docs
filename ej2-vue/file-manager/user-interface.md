@@ -47,9 +47,11 @@ The File Manager provides navigation between files and folders using the followi
 
 ### Navigation pane
 
-The navigation pane is an injectable module, so it should be injected before rendering the File Manager to use its functionality. It displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) minimum and maximum width of the navigation pane can be changed. The navigation pane can be shown or hidden using the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/file-manager/navigationPaneSettingsModel/#visible) option in the [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings).
+The navigation pane is an injectable module, so it should be injected before rendering the File Manager to use its functionality. It displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) minimum and maximum width of the navigation pane can be changed. The navigation pane can be shown or hidden using the [`visible`](https://ej2.syncfusion.com/vue/documentation/api/file-manager/navigationPaneSettingsModel/#visible) option in the [navigationPaneSettings](https://ej2.syncfusion.com/vue/documentation/api/file-manager/#navigationpanesettings) property.
 
-### BreadCrumb
+![Navigation Pane](./images/filemanager-navigationpane.png)
+
+### Breadcrumb
 
 The File Manager provides breadcrumb for navigating to the parent folders. The breadcrumb in the File Manager is responsible for resizing.
 Whenever the path length exceeds the breadcrumb length, a dropdown button will be added at the starting of the breadcrumb to hold the parent folders adjacent to root.

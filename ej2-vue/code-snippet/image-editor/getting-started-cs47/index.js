@@ -8,41 +8,48 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="addRedact">Add Redact</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="updateRedact">Update Redact</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="selRedact">Select Redact</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="delRedact">Delete Redact</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="addRedact">Add Redact</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="updateRedact">Update Redact</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="selRedact">Select Redact</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="delRedact">Delete Redact</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    addRedact: function(event) {
-      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawRedact(RedactType.Blur, dimension?.x, dimension.y, 200, 300);
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
     },
-    updateRedact: function(event) {
+    addRedact: function () {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawRedact(RedactType.Blur, dimension.x + 180, dimension.y + 240, 200, 300);
+    },
+    updateRedact: function () {
       let redacts = this.$refs.imageEditorObj.ej2Instances.getRedacts();
       if (redacts.length > 0) {
         redacts[redacts.length - 1].blurIntensity = 100;
         this.$refs.imageEditorObj.ej2Instances.updateRedact(redacts[redacts.length - 1]);
       }
     },
-    selRedact: function(event) {
+    selRedact: function () {
       let redacts = this.$refs.imageEditorObj.ej2Instances.getRedacts();
       if (redacts.length > 0) {
         this.$refs.imageEditorObj.ej2Instances.selectRedact(redacts[redacts.length - 1].id);
       }
     },
-    delRedact: function(event) {
+    delRedact: function () {
       let redacts = this.$refs.imageEditorObj.ej2Instances.getRedacts();
       if (redacts.length > 0) {
         this.$refs.imageEditorObj.ej2Instances.deleteRedact(redacts[redacts.length - 1].id);

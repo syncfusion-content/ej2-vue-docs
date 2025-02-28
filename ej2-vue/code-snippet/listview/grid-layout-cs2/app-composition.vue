@@ -85,19 +85,13 @@
     dialogObj.value.show();
   };
   const sortItems = () => {
-    let ele = document.getElementById("sort").firstElementChild;
-    let des = ele.classList.contains('e-sort-icon-descending') ? true : false;
-    if (des) {
-      ele.classList.remove('e-sort-icon-descending');
-      ele.classList.add('e-sort-icon-ascending');
-      listViewInstance.value.sortOrder = 'Ascending';
-    } else {
-      ele.classList.remove('e-sort-icon-ascending');
-      ele.classList.add('e-sort-icon-descending');
-      listViewInstance.value.sortOrder = 'Descending'
-    }
+    const sortIcon = document.getElementById("sort").firstElementChild;
+    const isDescending = sortIcon.classList.toggle('e-sort-icon-descending');
+    sortIcon.classList.toggle('e-sort-icon-ascending', !isDescending);
+
+    listViewInstance.value.sortOrder = isDescending ? 'Descending' : 'Ascending';
     listViewInstance.value.dataBind();
-    this.wireEvents();
+    wireEvents();
   };
   const onKeyUp = () => {
     let value = searchEle.value;

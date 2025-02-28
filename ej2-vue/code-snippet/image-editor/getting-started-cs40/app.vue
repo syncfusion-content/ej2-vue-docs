@@ -1,7 +1,8 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarItemClicked="toolbarItemClicked" :toolbar="toolbar"></ejs-imageeditor>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
+      :toolbarItemClicked="toolbarItemClicked" :toolbar="toolbar" :created="onCreated"></ejs-imageeditor>
+  </div>
 </template>
 
 <script>
@@ -10,18 +11,26 @@ import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent
-},
-  data: function() {
-      return {
-        toolbar: [{text: 'Custom'}]
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent
+  },
+  data: function () {
+    return {
+      toolbar: [{ text: 'Custom' }]
+    };
   },
   methods: {
-    toolbarItemClicked: function(args) {
-      if(args.item.text === 'Custom') {
+    onCreated() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
+    },
+    toolbarItemClicked: function (args) {
+      if (args.item.text === 'Custom') {
         this.$refs.imageEditorObj.rotate(90);
       }
     }
@@ -40,9 +49,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

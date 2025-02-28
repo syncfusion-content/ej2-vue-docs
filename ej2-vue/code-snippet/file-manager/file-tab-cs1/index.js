@@ -19,18 +19,19 @@ var Template2 = Vue.component("demo", {
    template: ` <div><div class="content-title">
                    <div class="cnt-text">File Manager with default functionalities</div>
               </div>
-              <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings">
+              <ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" :height="height">
         </ejs-filemanager></div>`,
 
   data() {
     return {
-       ajaxSettings:
-            {
-                url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
-                getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
-                uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
-                downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
-            },
+      ajaxSettings:
+      {
+          url: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/FileOperations",
+          getImageUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/GetImage",
+          uploadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Upload",
+          downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
+      },
+      height: "375px"
     };
   },
    provide: {
@@ -60,7 +61,7 @@ new Vue({
         return {
             headerText0: { text: 'Overview' },
             headerText1: { text: 'FileManager' },
-            height: "330px",
+            height: "375px",
             OverviewTemplate: function () {
               return {
                   template : Template1

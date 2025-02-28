@@ -111,7 +111,7 @@ new Vue({
 	template: `
 <div id="app">
     <div class="wrapper">
-     <ejs-filemanager id="locale_filemanager" :ajaxSettings="ajaxSettings" :locale="locale">
+     <ejs-filemanager id="locale_filemanager" :ajaxSettings="ajaxSettings" :locale="locale" :height="height">
      </ejs-filemanager>
     </div>
 `,
@@ -126,7 +126,8 @@ new Vue({
                 downloadUrl: "https://ej2-aspcore-service.azurewebsites.net/api/FileManager/Download"
             },
             //defining the locale for File Manager
-            locale: "de"
+            locale: "de",
+            height: "375px"
         };
     },
     provide: {

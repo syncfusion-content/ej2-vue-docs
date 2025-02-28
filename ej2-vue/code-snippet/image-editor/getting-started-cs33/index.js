@@ -8,22 +8,33 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Flip</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="drawClick">Freehand draw</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="deleteClick">Delete Freehand Draw</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    btnClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.flip("Horizontal"); // Horizontal flip
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    drawClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.freeHandDraw(true);
+    },
+    deleteClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.deleteShape('pen_1');
     }
   }
 

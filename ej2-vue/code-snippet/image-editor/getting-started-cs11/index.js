@@ -10,10 +10,10 @@ Vue.use(ButtonPlugin);
 new Vue({
 	el: '#app',
 	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Custom selection</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Custom selection</ejs-button>
+  </div>
 `,
 
   data: function() {

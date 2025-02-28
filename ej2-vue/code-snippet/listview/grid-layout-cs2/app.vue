@@ -94,18 +94,11 @@ export default {
             this.$refs.dialogObj.show();
         },
         sortItems: function () {
-            let ele = document.getElementById("sort").firstElementChild;
-            let des = ele.classList.contains('e-sort-icon-descending') ? true : false;
-            if (des) {
-                ele.classList.remove('e-sort-icon-descending');
-                ele.classList.add('e-sort-icon-ascending');
-                this.$refs.listViewInstance.sortOrder = 'Ascending';
-            } else {
-                ele.classList.remove('e-sort-icon-ascending');
-                ele.classList.add('e-sort-icon-descending');
-                this.$refs.listViewInstance.sortOrder = 'Descending'
-            }
-            this.$refs.listViewInstance.dataBind();
+            const sortIcon = document.getElementById("sort").firstElementChild;
+            const isDescending = sortIcon.classList.toggle('e-sort-icon-descending');
+            sortIcon.classList.toggle('e-sort-icon-ascending', !isDescending);
+            
+            this.$refs.listViewInstance.setProperties({ sortOrder: isDescending ? 'Descending' : 'Ascending' });
             this.wireEvents();
         },
         onKeyUp: function () {
