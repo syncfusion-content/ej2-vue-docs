@@ -56,8 +56,6 @@ Below is an example code snippet to integrate WProofreader with the Syncfusion V
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/wproofreader-cs1" %}
-
 Below is a GIF demonstrating how to integrate WProofreader with the Syncfusion Vue Rich Text Editor
 
 ![WebSpellChecker](images/spell-grammar-check.gif)

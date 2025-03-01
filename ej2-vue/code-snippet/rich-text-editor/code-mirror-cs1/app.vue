@@ -25,8 +25,8 @@ components: {
       mirrorConversion: function(e) {
         var textArea = this.$refs.rteObj.ej2Instances.contentModule.getEditPanel();
         var id = this.$refs.rteObj.ej2Instances.getID() +  'mirror-view';
-        var mirrorView = this.$refs.rteObj.ej2Instance.inputElement.parentElement.querySelector('#' + id);
-        var charCount =this.$refs.rteObj.ej2Instance.element.querySelector('.e-rte-character-count');
+        var mirrorView = this.$refs.rteObj.ej2Instances.inputElement.parentElement.querySelector('#' + id);
+        var charCount =this.$refs.rteObj.ej2Instances.element.querySelector('.e-rte-character-count');
         if (e.targetItem === 'Preview') {
           textArea.style.display = 'block';
           mirrorView.style.display = 'none';

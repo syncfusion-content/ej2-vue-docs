@@ -18,9 +18,9 @@ You can set the initial content of the Rich Text Editor using the `value` proper
 
 * Using the [value](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#value) property directly.
 
-* Using the [valuetemplate](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#valuetemplate) property allows you to customize the content of the Rich Text Editor.
+* Using the [valueTemplate](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#valuetemplate) property allows you to customize the content of the Rich Text Editor.
 
-**Reterieving Values**
+**Retrieving Values**
 
 To retrieve the editor contents, use the value property of Rich Text Editor.
 
@@ -54,7 +54,7 @@ The example below demonstrates how two-way binding works in a Vue application us
         
 {% previewsample "page.domainurl/code-snippet/rich-text-editor/editor-value-cs2" %}
 
-## Autosave
+## Auto Save
 
 The auto-save option in the Rich Text Editor allows the content to be automatically saved during idle periods after you have typed. Once this option is enabled, the editor will save the content based on the [saveInterval](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#saveinterval) property's value, which is specified in milliseconds.
 
@@ -71,11 +71,11 @@ In the following example, the `saveInterval=500` property ensures content is sav
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/editor-value-cs3" }
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/editor-value-cs3" %}
 
 ## Programmatic Content Access 
 
- You can use the [getHtml](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#gethtml) public method to retrieve the Rich Text Editor content.
+You can use the [getHtml](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/#gethtml) public method to retrieve the Rich Text Editor content.
 
 ```
   let editorValue = this.$refs.editorRef.getHtml();
@@ -102,7 +102,7 @@ The [enableHtmlEncode](https://ej2.syncfusion.com/vue/documentation/api/rich-tex
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/encoded-editor-value" }
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/encoded-editor-value" %}
 
 ## Styling Editor Content
 

@@ -18,14 +18,14 @@ You can add the `SourceCode` tool in the Rich Text Editor using the `toolbarSett
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/code-mirror-cs1/app-composition.vue %}
+{% include code-snippet/rich-text-editor/code-view-support-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/code-mirror-cs1/app.vue %}
+{% include code-snippet/rich-text-editor/code-view-support-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/code-mirror-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/code-view-support-cs1" %}
 
 
 >This functionality can also be enabled through the use of the [`CodeMirror`](https://codemirror.net/) plugin. It helps to highlight the HTML content and ensures that any modifications in the code view are instantly reflected in the preview mode.
