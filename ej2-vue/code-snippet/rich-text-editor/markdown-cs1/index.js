@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import { RichTextEditorPlugin, Toolbar, Link, Image, MarkdownEditor } from '@syncfusion/ej2-vue-richtexteditor';
+import { marked } from 'marked';
 Vue.use(RichTextEditorPlugin);
 
 new Vue({
@@ -25,6 +26,79 @@ new Vue({
             - *Undo and Redo*: Undo/redo manager.
             - *Lists*:Creates bulleted and numbered list.`,
         editorMode: 'Markdown',
+        toolbarConfig: {
+          items: [
+            'Bold', 'Italic', 'StrikeThrough', '|',
+            'Formats', 'OrderedList', 'UnorderedList', '|',
+            'CreateLink', 'Image', '|',
+            {
+              tooltipText: 'Preview',
+              template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn">' +
+                '<span class="e-btn-icon e-md-preview e-icons"></span></button>'
+            },
+            '|', 'Undo', 'Redo'
+          ]
+        }
+      }
+    },
+    methods: {
+      created: function () {
+        this.textArea = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('.e-content');
+        this.textArea.onkeyup = (Event) => {
+          this.markDownConversion();
+        };
+        document.getElementById('preview-code').onclick = () => {
+          this.fullPreview({ mode: true, type: 'preview' });
+          if (event.target.parentElement.classList.contains('e-active')) {
+            this.$refs.rteInstance.ej2Instances.disableToolbarItem([
+              'Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
+              'UnorderedList', 'CreateLink', 'Image'
+            ]);
+            event.target.parentElement.parentElement.nextElementSibling.classList.add('e-overlay');
+          } else {
+            this.$refs.rteInstance.ej2Instances.enableToolbarItem([
+              'Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
+              'UnorderedList', 'CreateLink', 'Image'
+            ]);
+            event.target.parentElement.parentElement.nextElementSibling.classList.remove('e-overlay');
+          }
+        };
+      },
+      markDownConversion: function () {
+        if (document.getElementById('preview-code').classList.contains('e-active')) {
+          var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
+          var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id);
+          htmlPreview.innerHTML = marked.parse(this.textArea.value);
+        }
+      },
+      fullPreview: function (event) {
+        var mdSource = document.getElementById('preview-code');
+        var id = this.$refs.rteInstance.ej2Instances.getID() + 'html-view';
+        var htmlPreview = this.$refs.rteInstance.$el.ej2_instances[0].element.querySelector('#' + id);
+        if ((mdSource.classList.contains('e-active')) && event.mode) {
+          mdSource.classList.remove('e-active');
+          this.textArea.style.display = 'block';
+          this.textArea.style.width = '100%';
+          htmlPreview.style.display = 'none';
+        } else {
+          mdSource.classList.add('e-active');
+          if (!htmlPreview) {
+            htmlPreview = document.createElement('div');
+            htmlPreview.id = id;
+            htmlPreview.setAttribute('class', 'e-content');
+            this.textArea.parentNode.appendChild(htmlPreview);
+          }
+          if (event.type === 'preview') {
+            this.textArea.style.display = 'none';
+            htmlPreview.classList.add('e-pre-source');
+          } else {
+            htmlPreview.classList.remove('e-pre-source');
+            this.textArea.style.width = '50%';
+          }
+          htmlPreview.style.display = 'block';
+          htmlPreview.innerHTML = marked.parse(this.$refs.rteInstance.ej2Instances.contentModule.getEditPanel().value);
+          mdSource.parentElement.title = 'Code View';
+        }
       }
     },
     

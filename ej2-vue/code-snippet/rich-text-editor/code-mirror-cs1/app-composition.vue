@@ -28,8 +28,8 @@ const actionCompleteHandler = (e) => {
 const mirrorConversion = (e) => {
   var textArea = rteObj.value.ej2Instances.contentModule.getEditPanel();
   var id = rteObj.value.ej2Instances.getID() +  'mirror-view';
-  var mirrorView = rteObj.value.ej2Instance.inputElement.parentElement.querySelector('#' + id);
-  var charCount = rteObj.value.ej2Instance.element.querySelector('.e-rte-character-count');
+  var mirrorView = rteObj.value.ej2Instances.inputElement.parentElement.querySelector('#' + id);
+  var charCount = rteObj.value.ej2Instances.element.querySelector('.e-rte-character-count');
   if (e.targetItem === 'Preview') {
     textArea.style.display = 'block';
     mirrorView.style.display = 'none';

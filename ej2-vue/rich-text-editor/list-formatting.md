@@ -43,14 +43,14 @@ The following example demonstrates how to customize the number format lists in t
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/format-lists-cs2/app-composition.vue %}
+{% include code-snippet/rich-text-editor/format-lists-cs1/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/format-lists-cs2/app.vue %}
+{% include code-snippet/rich-text-editor/format-lists-cs1/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/format-lists-cs2" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/format-lists-cs1" %}
 
 ## Unordered Lists
 
@@ -75,14 +75,14 @@ The following example demonstrates how to customize the bullet format lists in t
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/format-lists-cs1/app-composition.vue %}
+{% include code-snippet/rich-text-editor/format-lists-cs2/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/rich-text-editor/format-lists-cs1/app.vue %}
+{% include code-snippet/rich-text-editor/format-lists-cs2/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/rich-text-editor/format-lists-cs1" %}
+{% previewsample "page.domainurl/code-snippet/rich-text-editor/format-lists-cs2" %}
 
 ## Indentation in Lists
 

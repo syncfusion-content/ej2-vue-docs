@@ -14,7 +14,8 @@ System.config({
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
-vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
+        vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
+        "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
