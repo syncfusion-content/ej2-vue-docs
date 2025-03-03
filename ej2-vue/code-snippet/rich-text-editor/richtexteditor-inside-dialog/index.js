@@ -17,9 +17,8 @@ Vue.use(RichTextEditorPlugin);
 new Vue({
 	el: '#app',
 	template: `
-        <div>
+          <div>
             <ejs-button @click="openDialog">Open Dialog</ejs-button>
-            
             <ejs-dialog
             ref="dialog"
             :width="'350px'"
@@ -42,10 +41,10 @@ new Vue({
         },
         methods: {
             onDialogOpen() {
-                this.$refs.editor.refreshUI();
+              this.$refs.editor.refreshUI();
             },
             openDialog() {
-                this.$refs.dialog.show();
+              this.$refs.dialog.show();
             },
         },
         provide: {

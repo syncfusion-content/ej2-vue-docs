@@ -34,6 +34,7 @@
 <script setup>
 import { provide, ref } from "vue";
 import { createElement, KeyboardEventArgs } from "@syncfusion/ej2-base";
+import { marked } from 'marked';
 import { RichTextEditorComponent as EjsRichtexteditor, Toolbar, Link, Image, MarkdownEditor } from '@syncfusion/ej2-vue-richtexteditor';
 const rteInstance = ref(null);
 const value = `***Overview***

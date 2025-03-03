@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { RichTextEditorComponent, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorComponent, Toolbar, Link, Audio, Image, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 
 export default {
     name: "App",
@@ -33,7 +33,7 @@ export default {
         };
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
+        richtexteditor:[Toolbar, Link, Audio, Image, HtmlEditor, QuickToolbar]
     }
 }
 </script>

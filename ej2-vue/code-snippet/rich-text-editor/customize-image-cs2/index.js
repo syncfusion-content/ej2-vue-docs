@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { RichTextEditorPlugin, Toolbar, Link, Audio, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
+import { RichTextEditorPlugin, Toolbar, Link, Audio, Image, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 
 Vue.use(RichTextEditorPlugin);
 
@@ -31,6 +31,6 @@ new Vue({
         };
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Audio, HtmlEditor, QuickToolbar]
+        richtexteditor:[Toolbar, Link, Audio, Image, HtmlEditor, QuickToolbar]
     }
 });

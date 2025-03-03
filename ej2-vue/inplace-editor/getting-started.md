@@ -18,7 +18,7 @@ To get start quickly with Vue Inplace editor, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -326,4 +326,4 @@ The edited data is submitted to the server and you can see the new values gettin
 
 ## See Also
 
-* [Types of rendering the editor](./integration/)
+* [Types of rendering the editor](./integration)

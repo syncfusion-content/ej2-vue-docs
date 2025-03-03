@@ -271,5 +271,5 @@ function download(fileName: string, extension: string, buffer: Blob, downloadLin
 
 ## See Also
 
-* [Feature modules](../document-editor/feature-module/)
+* [Feature modules](../document-editor/feature-module)
 * [How to export the document as pdf](../document-editor/how-to/export-document-as-pdf).

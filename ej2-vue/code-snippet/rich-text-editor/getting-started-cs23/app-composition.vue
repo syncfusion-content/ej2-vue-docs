@@ -18,9 +18,9 @@ const toolbarData = {
     'SourceCode', 'FullScreen', '|', 'Undo', 'Redo']
 };
 const keyConfig = {
-  'copy': 'ctrl+1',
-  'cut': 'ctrl+2',
-  'paste': 'ctrl+3'
+  'bold': 'ctrl+alt+b',
+  'italic': 'ctrl+alt+i',
+  'underline': 'ctrl+alt+u',
 };
 onMounted(() => {
   document.addEventListener('keyup', onKeyUp);

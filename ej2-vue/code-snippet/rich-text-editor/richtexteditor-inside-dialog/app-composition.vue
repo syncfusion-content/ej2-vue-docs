@@ -35,7 +35,7 @@ const footerTemplate= 'Dialog Footer';
 const onDialogOpen() = {
     this.$refs.editor.refreshUI();
 },
-const  openDialog() = {
+const openDialog() = {
     this.$refs.dialog.show();
 },
 provide('richtexteditor', [Toolbar, Link, Image, HtmlEditor, QuickToolbar]);

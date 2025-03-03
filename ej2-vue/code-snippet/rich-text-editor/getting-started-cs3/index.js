@@ -23,7 +23,7 @@ new Vue({
                         </tbody>
                     </table>
                     <br/>
-                    <ejs-richtexteditor ref="rteInstance" :height="height" :value="rtevalue">
+                    <ejs-richtexteditor ref="rteInstance" :height="height" :value="rteValue">
                     </ejs-richtexteditor>
                 </div>
             </div>
