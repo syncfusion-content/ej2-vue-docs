@@ -137,22 +137,6 @@ const onRangeChanged = () => {
     width: 98%;
 }
 
-.highcontrast form {
-    background: #000000
-}
-
-/* csslint ignore:start */
-.highcontrast label.e-custom-label,
-.highcontrast label.e-float-text,
-.highcontrast label.salary,
-.highcontrast input::placeholder,
-.highcontrast .e-float-input label.e-float-text {
-    color: #fff !important;
-    line-height: 2.3;
-}
-
-/* csslint ignore:end */
-
 .e-error,
 .e-float-text {
     font-weight: 500;

@@ -12,7 +12,7 @@ new Vue({
     <div>
         <div class="control-section">
             <!--  Dashboard Layout component declaration -->
-            <ejs-dashboardlayout id='defaultLayout' :cellSpacing="spacing" :columns="6">
+            <ejs-dashboardlayout id='defaultLayout' :cellSpacing="spacing" :columns="7">
                 <div id="one" class="e-panel" data-row="0" data-col="0" data-sizeX="1" data-sizeY="1">
                     <div class="e-panel-container">
                         <div class="text-align">

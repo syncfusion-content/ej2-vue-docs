@@ -11,7 +11,7 @@ new Vue({
 	template: `
     <div class="col-lg-8 control-section">
         <!--  Dashboard Layout component declaration -->
-        <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="5" :enableRtl="enableRtl">
+        <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="7" :enableRtl="enableRtl">
             <e-panels>
                 <e-panel id="panel0" :row="0" :col="0" :sizeX="1" :sizeY="1" header="<div>Panel 0</div>" content='<div class="content">Panel Content<div>'></e-panel>
                 <e-panel id="panel1" :row="0" :col="1" :sizeX="3" :sizeY="2" header="<div>Panel 1</div>" content='<div class="content">Panel Content<div>'></e-panel>

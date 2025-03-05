@@ -2,7 +2,7 @@
   <div>
     <div class="control-section">
       <!--  Dashboard Layout component declaration -->
-      <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="6">
+      <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="7">
         <e-panels>
           <e-panel :row="0" :col="0" :sizeX="1" :sizeY="1" content="<div class='panel-content'>0</div>"></e-panel>
           <e-panel :row="0" :col="1" :sizeX="3" :sizeY="2" content="<div class='panel-content'>1</div>"></e-panel>

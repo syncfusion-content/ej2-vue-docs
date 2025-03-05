@@ -23,7 +23,7 @@ new Vue({
             <div className="content-wrapper">
                 <div id = "dashboardElement">
                     <!--  Dashboard Layout component declaration -->
-                    <ejs-dashboardlayout id='dashboard_default'  :columns="5">
+                    <ejs-dashboardlayout id='dashboard_default'  :columns="7">
                        <e-panels>
                           <e-panel id="Panel0" :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
                           <e-panel id="Panel1" :sizeX="3" :sizeY="2" :row="0" :col="1" content="<div class='content'>1</div>"></e-panel>
