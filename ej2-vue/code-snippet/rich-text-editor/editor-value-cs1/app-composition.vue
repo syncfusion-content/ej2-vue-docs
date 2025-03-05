@@ -1,9 +1,13 @@
 <template>
-  <h3>Editor 1</h3>
-  <ejs-richtexteditor v-model="editorContent"></ejs-richtexteditor>
-
-  <h3>Editor 2</h3>
-  <ejs-richtexteditor v-model="editorContent"></ejs-richtexteditor>
+  <ejs-richtexteditor
+    ref="defaultRTE"
+    :height="340"
+    :value="value"
+  ></ejs-richtexteditor>
+  <button @click="getEditorValue">Get Editor Value</button>
+  <div v-if="editorContent">
+    <h3>Editor Content:</h3>
+    <div v-html="editorContent"></div>
 </template>
 
 <script setup>

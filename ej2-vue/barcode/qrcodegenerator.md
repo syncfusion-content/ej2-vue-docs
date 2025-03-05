@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Qrcodegenerator in Vue Barcode component | Syncfusion
-description: Learn here all about Qrcodegenerator in Syncfusion Vue Barcode component of Syncfusion Essential JS 2 and more.
+title: Qrcodegenerator in Vue Barcode component | Syncfusion®
+description: Learn here all about Qrcodegenerator in Syncfusion® Vue Barcode component of Syncfusion Essential® JS 2 and more.
 control: Qrcodegenerator 
 platform: ej2-vue
 documentation: ug
