@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Getting started vue 3 with Vue Barcode component | Syncfusion
-description:  Checkout and learn about Getting started vue 3 with Vue Barcode component of Syncfusion Essential JS 2 and more details.
+title: Getting started vue 3 with Vue Barcode component | Syncfusion®
+description:  Checkout and learn about Getting started vue 3 with Vue Barcode component of Syncfusion Essential® JS 2 and more details.
 control: Getting started vue 3 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with Syncfusion Barcode Component in Vue 3
+# Getting Started with Syncfusion® Barcode Component in Vue 3
 
 This section explains how to use Barcode component in Vue 3 application.
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Creating Vue application using Vue CLI
 
@@ -42,16 +42,16 @@ Initiating a new project prompts us to select the type of project to be used for
 
 ![Reference](./images/vue3_barcode.PNG)
 
-## Adding Syncfusion Barcode package in the application
+## Adding Syncfusion® Barcode package in the application
 
-Syncfusion Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
+Syncfusion® Vue packages are maintained in the [`npmjs.com`](https://www.npmjs.com/~syncfusionorg) registry.
 In this example, the Barcode component will be used. Use the following command to install it.
 
 ```bash
 npm install @syncfusion/ej2-vue-barcode-generator
 ```
 
-## Adding CSS reference for Syncfusion Vue Barcode component
+## Adding CSS reference for Syncfusion® Vue Barcode component
 
 Import the necessary css styles for the Barcode component along with dependency styles in the `<style>` section of the `src/App.vue` file as follows.
 
@@ -63,9 +63,9 @@ Import the necessary css styles for the Barcode component along with dependency 
 </style>
 ```
 
-## Adding Syncfusion Vue Barcode component in the application
+## Adding Syncfusion® Vue Barcode component in the application
 
-You have completed all of the necessary configurations required to render the Syncfusion Vue component. Now, you are going to add the Barcode component using the following steps:
+You have completed all of the necessary configurations required to render the Syncfusion® Vue component. Now, you are going to add the Barcode component using the following steps:
 
 1. Import the Barcode component in the `<script>` section of the `src/App.vue` file.
 
@@ -167,7 +167,7 @@ Web server will be initiated, open the quick start app in the browser at port `l
 
 ![Output](./images/barcode1.PNG)
 
-## Adding Syncfusion Vue QR Generator control in the application
+## Adding Syncfusion® Vue QR Generator control in the application
 
 You can add the QR code generator component by using the following code sample.
 
@@ -213,7 +213,7 @@ import {
 
 ![Output](./images/barcode2.PNG)
 
-## Adding Syncfusion Vue Datamatrix Generator control in the application
+## Adding Syncfusion® Vue Datamatrix Generator control in the application
 
 You can add the datamatrix code generator component by using the following code sample.
 

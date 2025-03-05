@@ -223,7 +223,6 @@ To localize the editor’s strings with your own localization, copy the default 
 ``` javascript
     'de-DE': {
         'richtexteditor': {
-            "alignments": "Alignments",
             "alignments": "Ausrichtungen",
             "justifyLeft": "Linksbündig",
             "justifyCenter": "Zentriert",

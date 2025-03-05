@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Datamatrixgenerator in Vue Barcode component | Syncfusion
-description: Learn here all about Datamatrixgenerator in Syncfusion Vue Barcode component of Syncfusion Essential JS 2 and more.
+title: Datamatrixgenerator in Vue Barcode component | Syncfusion®
+description: Learn here all about Datamatrixgenerator in Syncfusion® Vue Barcode component of Syncfusion Essential® JS 2 and more.
 control: Datamatrixgenerator 
 platform: ej2-vue
 documentation: ug

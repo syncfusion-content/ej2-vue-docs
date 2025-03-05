@@ -14,7 +14,7 @@
                     </tbody>
                 </table>
                 <br/>
-                <ejs-richtexteditor ref="rteInstance" :height="height" :value="rtevalue"></ejs-richtexteditor>
+                <ejs-richtexteditor ref="rteInstance" :height="height" :value="rteValue"></ejs-richtexteditor>
             </div>
         </div>
     </div>
