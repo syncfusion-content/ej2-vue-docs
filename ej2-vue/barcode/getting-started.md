@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Vue Barcode component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Barcode component of Syncfusion Essential JS 2 and more details.
+title: Getting started with Vue Barcode component | Syncfusion®
+description:  Checkout and learn about Getting started with Vue Barcode component of Syncfusion Essential® JS 2 and more details.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
@@ -10,11 +10,11 @@ domainurl: ##DomainURL##
 
 # Getting Started with the Vue Barcode Component in Vue 2
 
-This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Barcode component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
+This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion® Vue Barcode component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion® Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
 
 ## Dependencies
 
@@ -56,13 +56,13 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](images/vue3_barcode.PNG)
 
-Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
+Once the `quickstart` project is set up with default settings, proceed to add Syncfusion® components to the project.
 
-## Adding Syncfusion Vue packages
+## Adding Syncfusion® Vue packages
 
-Syncfusion packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
+Syncfusion® packages are available at [npmjs.com](https://www.npmjs.com/search?q=ej2-vue). To use Vue components, install the required npm package.
 
 This article uses the [Vue Barcode component](https://www.syncfusion.com/vue-components/vue-barcode) as an example. Install the `@syncfusion/ej2-vue-barcode-generator` package by running the following command:
 
@@ -75,7 +75,7 @@ or
 yarn add @syncfusion/ej2-vue-barcode-generator
 ```
 
-## Add Syncfusion Vue component
+## Add Syncfusion® Vue component
 
 Follow the below steps to add the Vue Barcode component using `Composition API` or `Options API`:
 

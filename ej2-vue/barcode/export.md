@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Export in Vue Barcode component | Syncfusion
-description: Learn here all about Export in Syncfusion Vue Barcode component of Syncfusion Essential JS 2 and more.
+title: Export in Vue Barcode component | Syncfusion®
+description: Learn here all about Export in Syncfusion® Vue Barcode component of Syncfusion Essential® JS 2 and more.
 control: Export 
 platform: ej2-vue
 documentation: ug

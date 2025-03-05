@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BarcodeGenerator in Vue Barcode component | Syncfusion
-description: Learn here all about BarcodeGenerator in Syncfusion Vue Barcode component of Syncfusion Essential JS 2 and more.
+title: BarcodeGenerator in Vue Barcode component | Syncfusion®
+description: Learn here all about BarcodeGenerator in Syncfusion® Vue Barcode component of Syncfusion Essential® JS 2 and more.
 control: BarcodeGenerator 
 platform: ej2-vue
 documentation: ug

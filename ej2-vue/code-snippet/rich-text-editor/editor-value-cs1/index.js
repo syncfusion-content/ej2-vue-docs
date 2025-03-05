@@ -8,8 +8,6 @@ new Vue({
 	template: `<ejs-richtexteditor
     ref="defaultRTE"
     :height="340"
-    :showCharCount="showCharCount"
-    :maxLength="maxLength"
     :value="value"
   ></ejs-richtexteditor>
   <button @click="getEditorValue">Get Editor Value</button>
