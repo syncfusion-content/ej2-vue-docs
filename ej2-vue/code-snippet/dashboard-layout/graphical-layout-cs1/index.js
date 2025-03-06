@@ -11,7 +11,7 @@ new Vue({
 	template: `
     <div class="control-section">
         <!--  Dashboard Layout component declaration -->
-        <ejs-dashboardlayout id='dashboard_layout' :cellSpacing='cellSpacing' :showGridLines='showGridLines' :columns="5">
+        <ejs-dashboardlayout id='dashboard_layout' :cellSpacing='cellSpacing' :showGridLines='showGridLines' :columns="7">
             <e-panels>
                 <e-panel :sizeX="3" :sizeY="2" :row="0" :col="1" content="<div class='content'>1</div>"></e-panel>
                 <e-panel :sizeX="1" :sizeY="3" :row="0" :col="4" content="<div class='content'>2</div>"></e-panel>

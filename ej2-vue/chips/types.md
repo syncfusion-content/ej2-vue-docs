@@ -77,7 +77,7 @@ The Action Chip triggers the event like [`click`](https://ej2.syncfusion.com/vue
         
 {% previewsample "page.domainurl/code-snippet/chips/default-cs12" %}
 
-### Deletable Chip
+## Deletable Chip
 
 Deletable Chip allows you to delete a chip from ChipList/ChipCollection. It can be enabled by setting the [`enableDelete`](https://ej2.syncfusion.com/vue/documentation/api/chips/#enabledelete) property to `true`.
 

@@ -2,7 +2,7 @@
     <div>
         <div className="col-lg-8 control-section" id="control_dash">
             <div className="content-wrapper">
-                <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="5"
+                <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="7"
                     :created="onSave">
                     <e-panels>
                         <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0"

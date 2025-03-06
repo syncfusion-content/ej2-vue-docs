@@ -1,7 +1,7 @@
 <template>
   <div class="control-section">
     <!--  Dashboard Layout component declaration -->
-    <ejs-dashboardlayout id='dashboard_layout' ref="dashboard" :columns="6" :cellSpacing='cellSpacing'
+    <ejs-dashboardlayout id='dashboard_layout' ref="dashboard" :columns="7" :cellSpacing='cellSpacing'
       :created="onCreated" :change="onChange">
       <e-panels>
         <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>

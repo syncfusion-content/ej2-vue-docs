@@ -1,6 +1,6 @@
 <template>
     <div class="col-lg-8 control-section">
-        <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="5" :enableRtl="enableRtl">
+        <ejs-dashboardlayout id="defaultLayout" :cellSpacing="spacing" :columns="7" :enableRtl="enableRtl">
             <e-panels>
                 <e-panel id="panel0" :row="0" :col="0" :sizeX="1" :sizeY="1" header="<div>Panel 0</div>"
                     content='<div class="content">Panel Content<div>'></e-panel>

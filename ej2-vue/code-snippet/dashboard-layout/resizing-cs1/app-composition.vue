@@ -1,7 +1,7 @@
 <template>
   <div class="control-section">
     <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :allowResizing='true'
-      :resizableHandles='resizableHandles' :columns="6" :resizeStart="onResizeStart" :resize="onResize"
+      :resizableHandles='resizableHandles' :columns="7" :resizeStart="onResizeStart" :resize="onResize"
       :resizeStop="onResizeStop">
       <e-panels>
         <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>

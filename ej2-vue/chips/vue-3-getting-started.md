@@ -120,10 +120,10 @@ Follow the below steps to add the Vue Chips component using `Composition API` or
 
 1.First, import and register the Grid component and its child directives in the `script` section of the **src/App.vue** file. If you are using the `Composition API`, you should add the `setup` attribute to the `script` tag to indicate that Vue will be using the `Composition API`.Find the list of child directives and the tag names that can be used in the Chips component in the following table.
 
-      | Directive Name   | Tag Name    |
-      |------------------|-------------|
-      | `ChipsDirective` | `e-chips` |
-      | `ChipDirective`  | `e-chip`  |
+| Directive Name   | Tag Name    |
+|------------------|-------------|
+| `ChipsDirective` | `e-chips` |
+| `ChipDirective`  | `e-chip`  |
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}

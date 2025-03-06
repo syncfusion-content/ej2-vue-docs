@@ -2,7 +2,7 @@
   <div className="control-section" id="control_dash">
     <div className="content-wrapper">
       <!--  Dashboard Layout component declaration -->
-      <ejs-dashboardlayout ref="DashbordInstance" :columns="6" id='edit_dashboard' :allowResizing="false"
+      <ejs-dashboardlayout ref="DashbordInstance" :columns="7" id='edit_dashboard' :allowResizing="false"
         :allowDragging="true">
         <e-panels>
           <e-panel :row="0" :col="0" :sizeX="3" :sizeY="2" header="<div>Product usage ratio</div>"
