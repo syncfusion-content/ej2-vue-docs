@@ -2,7 +2,7 @@
   <div>
     <div className="col-lg-8 control-section" id="control_dash">
       <div className="content-wrapper">
-        <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="5"
+        <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="7"
           :created="onSave">
           <e-panels>
             <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
@@ -53,12 +53,9 @@
   import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
   import { ref } from 'vue';
   
-  
-  
   const dashboard = ref(null);
   const cellSpacing = [20, 20];
   let restoreModel = [];
-  
   
   // Restore the initial panels
   const onRestore = () => {

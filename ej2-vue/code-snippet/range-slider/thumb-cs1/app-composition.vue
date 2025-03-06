@@ -76,10 +76,6 @@ const ticks = { placement: 'After' };
     margin-top: 40px;
 }
 
-.e-bigger .content-wrapper {
-    width: 80%;
-}
-
 #square_slider .e-handle {
     border-radius: 0;
     background-color: #f9920b;

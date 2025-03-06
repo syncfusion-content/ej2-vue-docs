@@ -231,7 +231,7 @@ yarn run serve
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/getting-started-cs1" %}
 
-### Setting the `panels` property using helper
+## Setting the panels property using helper
 
 You can render the DashboardLayout component by using the [**panels**](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#panels) property through `<e-panels>`.
 

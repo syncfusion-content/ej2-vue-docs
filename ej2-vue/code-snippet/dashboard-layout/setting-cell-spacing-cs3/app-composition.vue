@@ -1,6 +1,6 @@
 <template>
     <div class="control-section">
-        <ejs-dashboardlayout id='dashboard_layout' :columns="5" :cellSpacing='cellSpacing'>
+        <ejs-dashboardlayout id='dashboard_layout' :columns="7" :cellSpacing='cellSpacing'>
             <e-panels>
                 <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
                 <e-panel :sizeX="3" :sizeY="2" :row="0" :col="1" content="<div class='content'>1</div>"></e-panel>
@@ -24,7 +24,7 @@
 </script>
 
 <style>
-    @import "https://ej2.syncfusion.com/vue/documentation/node_modules/@syncfusion/ej2-base/styles/material.css";
+    @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
     @import "../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 
     /.control-section {

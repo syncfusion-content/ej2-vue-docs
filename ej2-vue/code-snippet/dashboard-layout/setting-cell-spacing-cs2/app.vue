@@ -1,6 +1,6 @@
 <template>
   <div class="control-section">
-    <ejs-dashboardlayout id='dashboard_default' :columns="5">
+    <ejs-dashboardlayout id='dashboard_default' :columns="7">
       <e-panels>
         <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
         <e-panel :sizeX="3" :sizeY="2" :row="0" :col="1" content="<div class='content'>1</div>"></e-panel>

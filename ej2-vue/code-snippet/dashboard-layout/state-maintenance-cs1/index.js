@@ -16,7 +16,7 @@ new Vue({
         <div className="col-lg-8 control-section" id="control_dash">
             <div className="content-wrapper">
                 <!--  Dashboard Layout component declaration -->
-                <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="5" :created="onSave">
+                <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :cellSpacing='cellSpacing' :columns="7" :created="onSave">
                     <e-panels>
                         <e-panel :sizeX="1" :sizeY="1" :row="0" :col="0" content="<div class='content'>0</div>"></e-panel>
                         <e-panel :sizeX="3" :sizeY="2" :row="0" :col="1" content="<div class='content'>1</div>"></e-panel>

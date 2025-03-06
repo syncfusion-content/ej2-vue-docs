@@ -4,7 +4,7 @@
       <div className="content-wrapper">
         <div id="dashboardElement">
           <!--  Dashboard Layout component declaration -->
-          <ejs-dashboardlayout ref="dashboard" id='dashboard_default' :columns="5">
+          <ejs-dashboardlayout ref="dashboard" id='dashboard_default' :columns="7">
             <e-panels>
               <e-panel id="Panel0" :sizeX="1" :sizeY="1" :row="0" :col="0"
                 content="<div class='content'>0</div>"></e-panel>

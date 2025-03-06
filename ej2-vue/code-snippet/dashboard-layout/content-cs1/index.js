@@ -156,7 +156,7 @@ new Vue({
   <div className="control-section" id="control_dash">
     <div className="content-wrapper">
       <!--  Dashboard Layout component declaration -->
-      <ejs-dashboardlayout ref="DashbordInstance" :columns="6" id='edit_dashboard' :allowResizing="false" :allowDragging="true" >
+      <ejs-dashboardlayout ref="DashbordInstance" :columns="7" id='edit_dashboard' :allowResizing="false" :allowDragging="true" >
         <e-panels>
           <e-panel :row="0" :col="0" :sizeX="3" :sizeY="2" header="<div>Product usage ratio</div>" :content="pie"></e-panel>
           <e-panel :row="0" :col="3" :sizeX="3" :sizeY="2" header="<div>Mobile browsers usage</div>" :content="pie1"></e-panel>

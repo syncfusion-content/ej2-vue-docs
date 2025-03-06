@@ -9,7 +9,7 @@
         <div id="control_dash">
             <!--  Dashboard Layout component declaration -->
             <ejs-dashboardlayout id='dashboard_default' ref="dashboard" :allowFloating="false"
-                :cellSpacing='cellSpacing' :columns="6">
+                :cellSpacing='cellSpacing' :columns="7">
                 <e-panels>
                     <e-panel :sizeX="2" :sizeY="2" :row="1" :col="0" content="<div class='content'>0</div>"></e-panel>
                     <e-panel :sizeX="2" :sizeY="2" :row="2" :col="2" content="<div class='content'>1</div>"></e-panel>

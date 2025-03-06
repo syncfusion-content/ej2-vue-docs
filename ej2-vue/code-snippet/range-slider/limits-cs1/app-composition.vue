@@ -53,10 +53,6 @@ const value = [30, 70];
   margin-top: 45px;
 }
 
-.e-bigger .content-wrapper {
-  width: 80%;
-}
-
 .sliderwrap label {
   padding-bottom: 50px;
   font-size: 13px;
