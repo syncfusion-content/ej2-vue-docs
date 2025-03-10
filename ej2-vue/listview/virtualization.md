@@ -32,7 +32,7 @@ export default {
 
 ```
 
-## Getting started
+## Enable Virtualization
 
 UI virtualization can be enabled in the ListView by setting the [`enableVirtualization`](https://ej2.syncfusion.com/documentation/api/list-view/#enablevirtualization) property to true.
 
