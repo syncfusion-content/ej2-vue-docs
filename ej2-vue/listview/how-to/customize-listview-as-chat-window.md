@@ -12,8 +12,8 @@ domainurl: ##DomainURL##
 
 ListView can be customized as a chat window. To achieve that, use the ListView [template](https://ej2.syncfusion.com/vue/documentation/api/list-view/#template) property and [Avatar](https://ej2.syncfusion.com/vue/documentation/avatar/getting-started) component.
 
-    * The ListView template property is used to showcase the ListView as a chat window.
-    * The Avatar component is used to design the image of the contact person.
+* The ListView template property is used to showcase the ListView as a chat window.
+* The Avatar component is used to design the image of the contact person.
 
 Refer to the template code snippet below for the chat window template.
 
@@ -49,8 +49,8 @@ In ListView template, we have rendered the list items based on receiver and send
 
 ## Adding messages to chat window
 
-    * Use a textbox to get messages from the user.
-    * Add the textbox message to the ListView dataSource using the [addItem](https://ej2.syncfusion.com/vue/documentation/api/list-view/#additem) method.
+* Use a textbox to get messages from the user.
+* Add the textbox message to the ListView dataSource using the [addItem](https://ej2.syncfusion.com/vue/documentation/api/list-view/#additem) method.
 
 ```ts
 
