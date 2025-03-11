@@ -13,7 +13,7 @@ domainurl: ##DomainURL##
 You can decide the mode in which the Tooltip opens on a page, i.e., on hovering, focusing, or clicking on the target elements.
 
 > On mobile devices, Tooltips appear when you tap and hold the element, even if the [`opensOn`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#openson) option is assigned with `hover`.
-> Tooltips are also displayed as long as you continue to tap and hold the element. OOn release, it disappears after 1.5 seconds.
+> Tooltips are also displayed as long as you continue to tap and hold the element. On release, it disappears after 1.5 seconds.
 > If there is another action before this time elapses, the Tooltip disappears.
 
 The [`opensOn`](https://helpej2.syncfusion.com/vue/documentation/api/tooltip/#openson) property can take either a single or a combination of multiple values, separated by space from the following options. The table  below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `opensOn` property. By default, it takes `auto` value.

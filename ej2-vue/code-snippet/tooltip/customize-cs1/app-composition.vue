@@ -106,18 +106,19 @@ li {
   margin-bottom: 40px;
 }
 
-/* csslint ignore:start */
-
 @font-face {
-  font-family: "tip";
-  src: url("https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.tff") format("truetype"), url("https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.woff") format("woff"), url("https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.eot") format("eot"), url("https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.svg?#tip") format("svg");
+  font-family: 'tip';
+  src: url('https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.tff')
+      format('truetype'),
+    url('https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.woff')
+      format('woff'),
+    url('https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.eot')
+      format('eot'),
+    url('https://ej2.syncfusion.com/products/typescript/tooltip/customization/Fonts/tip.svg?#tip')
+      format('svg');
   font-weight: normal;
   font-style: normal;
 }
-
-/* csslint ignore:end */
-
-/* csslint ignore:start */
 
 #container {
   width: 100%;
@@ -159,7 +160,7 @@ li {
 
 .curvetips.e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom:before,
 .curvetips.e-tooltip-wrap .e-arrow-tip-outer.e-tip-top:before {
-  font-family: "tip" !important;
+  font-family: 'tip' !important;
   speak-as: none;
   font-size: 21px;
   font-style: normal;
@@ -169,7 +170,7 @@ li {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  content: "\\e700";
+  content: '\\e700';
   color: #e86238;
 }
 
@@ -185,11 +186,6 @@ li {
   border-top: none;
 }
 
-.curvetips.e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom:before,
-.curvetips.e-tooltip-wrap .e-arrow-tip-inner.e-tip-top:before {
-  content: none;
-}
-
 .curvetips.e-tooltip-wrap .e-arrow-tip-outer.e-tip-bottom,
 .curvetips.e-tooltip-wrap .e-arrow-tip-outer.e-tip-top {
   top: -1px;
@@ -202,11 +198,7 @@ li {
   width: 28px;
 }
 
-#positions {
-  display: inline-block;
-}
-
-#btn {
+#positions, #btn {
   display: inline-block;
 }
 
@@ -232,16 +224,6 @@ li {
 .bubbletip.e-tooltip-wrap .e-arrow-tip.e-tip-top {
   height: 40px;
   width: 40px;
-}
-
-.bubbletip.e-tooltip-wrap .e-arrow-tip.e-tip-left {
-  height: 12px;
-  width: 20px;
-}
-
-.bubbletip.e-tooltip-wrap .e-arrow-tip.e-tip-right {
-  height: 12px;
-  width: 20px;
 }
 
 .bubbletip.e-tooltip-wrap.e-popup {
@@ -272,18 +254,6 @@ li {
   margin-left: 20px;
 }
 
-.bubbletip.e-tooltip-wrap .e-arrow-tip-outer.e-tip-left {
-  border-bottom: 6px solid transparent;
-  border-right: 20px solid #dfccad;
-  border-top: 6px solid transparent;
-}
-
-.bubbletip.e-tooltip-wrap .e-arrow-tip-outer.e-tip-right {
-  border-bottom: 6px solid transparent;
-  border-left: 20px solid #dfccad;
-  border-top: 6px solid transparent;
-}
-
 .bubbletip.e-tooltip-wrap .e-arrow-tip-inner.e-tip-bottom {
   margin-top: -2px;
   margin-left: 8px;
@@ -301,11 +271,6 @@ li {
   top: -19px !important;
 }
 
-.bubbletip .e-arrow-tip.e-tip-bottom {
-  top: 88.9% !important;
-  left: 4px !important;
-}
-
 .bubbletip.e-tooltip-wrap .e-arrow-tip-inner.e-tip-top {
   top: 10px !important;
   border: 2px solid #dfccad;
@@ -316,17 +281,11 @@ li {
 }
 
 .bubbletip.e-tooltip-wrap .e-arrow-tip-inner.e-tip-top:before {
-  content: None;
-}
-
-.bubbletip.e-tooltip-wrap .e-tip-content {
-  border-radius: inherit;
+  content: none;
 }
 
 .bubbletip.e-tooltip-wrap.bubbletip {
   width: 150px !important;
   border-radius: 50%;
 }
-
-/* csslint ignore:end */
 </style>
