@@ -79,43 +79,32 @@ export default {
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-popups/styles/material.css";
+
 @media (max-width: 500px) {
-    #rectShape {
-        /* csslint ignore:start */
-        left: -11% !important;
-        /* csslint ignore:end */
+    #rectShape {        
+        left: -11% !important;        
     }
 
-    #ellipseShape {
-        /* csslint ignore:start */
-        left: -20% !important;
-        /* csslint ignore:end */
+    #ellipseShape {        
+        left: -20% !important;        
     }
 
-    #polyShape {
-        /* csslint ignore:start */
-        left: 28% !important;
-        /* csslint ignore:end */
+    #polyShape {        
+        left: 28% !important;        
     }
 
-    #circleShape {
-        /* csslint ignore:start */
-        left: 68% !important;
-        /* csslint ignore:end */
+    #circleShape {        
+        left: 68% !important;        
     }
 
-    #triShape {
-        /* csslint ignore:start */
-        left: 65% !important;
-        /* csslint ignore:end */
+    #triShape {        
+        left: 65% !important;        
     }
 }
 
 @media (min-width: 500px) and (max-width: 600px) {
-    #triShape {
-        /* csslint ignore:start */
-        left: 70% !important;
-        /* csslint ignore:end */
+    #triShape {        
+        left: 70% !important;        
     }
 }
 
@@ -129,9 +118,9 @@ export default {
 }
 
 #control-container {
-    /* csslint ignore:start */
+    
     padding: 0 !important;
-    /* csslint ignore:end */
+    
 }
 
 #box {

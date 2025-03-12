@@ -39,8 +39,7 @@ In the following example, the `showCheckBox` property is enabled.
 
 ## Checked nodes
 
-You can get or set the checked nodes in TreeView at initial rendering and dynamically by using the [checkedNodes](https://ej2.syncfusion.com/vue/documentation/api/treeview/#checkednodes)
-property. It returns the checked nodes' ID as an array.
+You can get or set the checked nodes in TreeView at initial rendering and dynamically by using the [checkedNodes](https://ej2.syncfusion.com/vue/documentation/api/treeview/#checkednodes) property. It returns the checked nodes' ID as an array.
 
 In the following example, the **New South Wales** and **Western Australia** nodes are checked at initial rendering. If any more nodes are checked, the checked nodes' IDs will be displayed in alert.
 
