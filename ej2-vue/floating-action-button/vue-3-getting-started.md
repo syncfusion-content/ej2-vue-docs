@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Vue 3 getting started with the Floating Action Button component | Syncfusion
+title: Vue 3 getting started with the Floating Action Button | Syncfusion
 description:  Check out and learn about Vue 3 getting started with the Vue Floating Action Button component of Syncfusion Essential JS 2 and more details.
 control: Vue 3 getting started 
 platform: ej2-vue
@@ -21,7 +21,7 @@ To get started quickly with Vue 3 Floating Action Button, you can check out this
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Set up the Vite project
 
