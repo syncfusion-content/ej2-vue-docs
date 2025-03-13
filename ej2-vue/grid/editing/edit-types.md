@@ -227,6 +227,23 @@ The following sample code demonstrates the customization applied to DatePicker c
         
 {% previewsample "page.domainurl/code-snippet/grid/edit/default-edit-type5" %}
 
+### Disable the date value prior to the selected date value in DatePicker
+
+The Syncfusion Vue Grid allows configuring the [DatePicker](../../datepicker) to dynamically set a minimum selectable date. This ensures that users can only select dates that fall after a specified minimum date, based on the data in each row. This feature is particularly useful for maintaining data consistency and preventing users from selecting inappropriate or illogical dates.
+
+The following example demonstrates how to configure the `DatePicker` within the Grid using the **edit** parameters of a column. This setup dynamically restricts the selection of dates in the DatePicker’s calendar based on the data in the current row.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-hide-dates/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/default-hide-dates/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/edit/default-hide-dates" %}
+
 ## Customize DateTimePicker component of datetimepickeredit type 
 
 You can customize the DateTimePicker component in Grid edit form using its property. This customization allows you to configure various properties of the DateTimePicker, tailoring its behavior and appearance to match your specific requirements within the Grid. The behavior of the editor component can be fine-tuned through the [columns->edit->params](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#edit) property.
