@@ -125,3 +125,49 @@ Here is an example that demonstrates the usage of the `ignoreAccent` property to
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/column/default-cs39" %}
+
+## Column Chooser Template in Syncfusion Vue Grid
+
+The Column Chooser Template feature allows full customization of the column chooser’s header, content, and footer, making it easier to manage column visibility. To enable the column chooser, set [showColumnChooser](https://ej2.syncfusion.com/react/documentation/api/grid/#showcolumnchooser) to **true** and add **ColumnChooser** to the [toolbar](https://ej2.syncfusion.com/react/documentation/api/grid#toolbar) property.
+
+To implement a custom column chooser template in the Grid, use the following properties:
+
+* **columnChooserSettings.headerTemplate** - Defines the header template of the column chooser.
+
+* **columnChooserSettings.template**- Defines the content template.
+
+* **columnChooserSettings.footerTemplate** - Defines the footer template.
+
+In this example, a Syncfusion TreeView component is rendered inside the column chooser. To use the TreeView component, install the Syncfusion TreeView package as described in the [documentation](https://ej2.syncfusion.com/react/documentation/treeview/getting-started). The `columnChooserSettings.template` property is assigned a template using the **v-slot** directive to render the TreeView component with checkboxes for selecting columns.Checkbox selection is handled using the [nodeClicked](https://ej2.syncfusion.com/react/documentation/api/treeview#nodeclicked) and [keyPress](https://ej2.syncfusion.com/react/documentation/api/treeview#keypress) events, which organize columns into **Order Details**, **Shipping Details**, and **Delivery Status**.
+
+The column chooser footer is customized using `columnChooserSettings.footerTemplate` property, which is assigned a template via the **v-slot** directive, replacing the default buttons with customized **Apply** and **Close** buttons. The **Apply** button updates column visibility based on selection, while the **Close** button closes the column chooser via the `onClick` event. Additionally, the header is customized using `columnChooserSettings.headerTemplate` property, which is assigned a template via the **v-slot** directive to include a title and an icon.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-chooser-template/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/column-chooser-template/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/column-chooser-template" %}
+
+## Enable and disable search option
+
+By default, the search option in the column chooser allows filtering specific columns from the Grid's column list.
+
+The search option is enabled by default in the column chooser. However, you can disable it by setting the `columnChooserSettings.enableSearching` property to **false**.
+
+The following example demonstrates how to enable or disable the search option dynamically using a [Switch](https://ej2.syncfusion.com/react/documentation/switch/getting-started) and its [change](https://ej2.syncfusion.com/react/documentation/api/switch#change) event in the Grid.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/columnchooser-enable-disable/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/columnchooser-enable-disable/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/columnchooser-enable-disable" %}

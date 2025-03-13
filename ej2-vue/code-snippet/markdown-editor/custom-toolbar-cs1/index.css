@@ -1,0 +1,32 @@
+#rteSpecial_char .char_block {
+    display: inline-block;
+}
+
+#custom_tbar,
+#custom_tbar div{
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#rteSpecial_char {
+    padding: 15px 0 15px 0;
+}
+
+#rteSpecial_char .char_block.e-active {
+    outline: 1px solid #e3165b;
+    border-color: #e3165b;
+}
+
+#rteSpecial_char .char_block {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #DDDDDD;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+

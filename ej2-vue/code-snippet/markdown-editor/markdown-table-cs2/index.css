@@ -1,0 +1,20 @@
+.e-richtexteditor .e-rte-content .e-content {
+  min-height: 150px;
+}
+.e-richtexteditor .e-rte-content textarea.e-content {
+  float: left;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.e-richtexteditor .e-rte-content {
+  overflow: hidden;
+}
+.e-md-preview::before {
+  content: '\\e345';
+}
+
+.e-rte-content .e-content.e-pre-source {
+  width: 100%;
+}
+.e-icon-btn.e-active .e-md-preview.e-icons::before {
+  content: '\\e350';
+}

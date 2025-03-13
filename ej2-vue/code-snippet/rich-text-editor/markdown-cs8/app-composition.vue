@@ -1,7 +1,14 @@
 <template>
   <div id="defaultRTE">
-    <ejs-richtexteditor id="preview" ref="rteInstance" :toolbarSettings="toolbarSettings" :created="created" :value:"rteValue" :actionComplete='actionComplete' :editorMode="editorMode" :height="height" >
-      </ejs-richtexteditor>
+    <ejs-richtexteditor
+      id="MDdefault"
+      ref="rteInstance"
+      :toolbarSettings="toolbarSettings"
+      :created="created"
+      :editorMode="editorMode"
+      :value="rteValue"
+    >
+    </ejs-richtexteditor>
   </div>
 </template>
 
@@ -29,113 +36,86 @@
 </style>
 
 <script setup>
-import { isNullOrUndefined } from "@syncfusion/ej2-base";
-import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import {
+  RichTextEditorComponent,
+  Toolbar,
+  Link,
+  Image,
+  Table,
+  MarkdownEditor,
+} from '@syncfusion/ej2-vue-richtexteditor';
 import { marked } from 'marked';
 
 const rteInstance = ref(null);
-const rteValue = `***Overview***
-                        The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor used to create and edit the content and return valid HTML markup or markdown (MD) of the content. The editor provides a standard toolbar to format content using its commands. Modular library features to load the necessary functionality on demand. The toolbar contains commands to align the text, insert link, insert image, insert list, undo/redo operation, HTML view, and more.
+const rteValue = `In Rich Text Editor, you click the toolbar buttons to format the words and the changes are visible immediately. Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text. You can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/). The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content.`;
+let textArea = null;
+let id= '';
+let mdsource= null;
+let htmlPreview= null;
+let previewTextArea= null;
 
-                        ***Key features***
-                        - *Mode*: Provides IFRAME and DIV mode.
-                        - *Module*: Modular library to load the necessary functionality on demand.
-                        - *Toolbar*: Provide a fully customizable toolbar.
-                        - *Editing*: HTML view to edit the source directly for developers.
-                        - *Third-party Integration*: Supports to integrate third-party library.
-                        - *Preview*: Preview the modified content before saving it.
-                        - *Tools*: Handling images, hyperlinks, video, uploads and more.
-                        - *Undo and Redo*: Undo/redo manager.
-                        - *Lists*: Creates bulleted and numbered list.`;
-let textArea = '';
-const  height = '300px';
 const toolbarSettings = {
-    items: ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|',
-        { tooltipText: 'Preview', template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn">' +
-            '<span class="e-btn-icon e-md-preview e-icons"></span></button>' },
-        { tooltipText: 'Split Editor', template: '<button id="MD_Preview" class="e-tbar-btn e-control e-btn e-icon-btn">' +
-            '<span class="e-btn-icon e-view-side e-icons"></span></button>' }, 'FullScreen', '|', 'Undo', 'Redo']
+    items: [
+        'CreateTable',
+        {
+                tooltipText: 'Preview',
+                template:
+                '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn" aria-label="Preview Code">' +
+                '<span class="e-btn-icon e-md-preview e-icons"></span></button>',
+        },
+    ],
 };
 const editorMode = 'Markdown';
 const created = () => {
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-    document.head.appendChild(script);
-    textArea = rteInstance.value.$el.parentNode.querySelector('.e-content');
-    textArea.onkeyup = (Event) => {
-        markDownConversion();
+    this.rteObj = this.$refs.rteInstance.ej2Instances;
+    this.textArea = this.rteObj.contentModule.getEditPanel();
+    this.id = this.$refs.rteInstance.ej2Instances.getID() + 'html-preview';
+    this.mdsource = document.getElementById('preview-code');
+    this.htmlPreview = this.rteObj.element.querySelector(this.id);
+    this.previewTextArea =
+        this.rteObj.element.querySelector('.e-rte-content');
+    this.textArea.onkeyup = (Event) => {
+        this.markDownConversion();
     };
-    document.getElementById('preview-code').onclick = () => {
-        fullPreview({ mode: true, type: 'preview'});
-         if (event.target.parentElement.classList.contains('e-active')) {
-            rteInstance.value.ej2Instances.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
-             'UnorderedList', 'CreateLink', 'Image', 'CreateTable']);
-             event.target.parentElement.parentElement.nextElementSibling.classList.add('e-overlay');
+    this.mdsource.onclick = (e) => {
+        this.fullPreview();
+        if (e.currentTarget.classList.contains('e-active')) {
+        this.$refs.rteInstance.disableToolbarItem(['CreateTable']);
         } else {
-            rteInstance.value.ej2Instances.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
-             'UnorderedList', 'CreateLink', 'Image', 'CreateTable']);
-              event.target.parentElement.parentElement.nextElementSibling.classList.remove('e-overlay');
+        this.$refs.rteInstance.enableToolbarItem(['CreateTable']);
         }
-    };
-    document.getElementById('MD_Preview').onclick = () => {
-        if (rteInstance.value.$el.classList.contains('e-rte-full-screen')) {
-            fullPreview({ mode: true, type: '' });
-        }
-        document.getElementById('preview-code').classList.remove('e-active');
-        rteInstance.value.ej2Instances.showFullScreen();
     };
 };
 const markDownConversion = () => {
-    if (document.getElementById('MD_Preview').classList.contains('e-active')) {
-        var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-        var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-        htmlPreview.innerHTML = marked.parse(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
-    }
-};
-const actionComplete = (e) => {
-    var mdsource = document.getElementById('preview-code');
-    var mdSplit = document.getElementById('MD_Preview');
-    var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-    var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-    if (e.targetItem === 'Maximize' && isNullOrUndefined(e.args)) {
-        fullPreview({ mode: true, type: '' });
-    } else if (!mdSplit.parentElement.classList.contains('e-overlay')) {
-        if (e.targetItem === 'Minimize') {
-            textArea.style.display = 'block';
-            textArea.style.width = '100%';
-            if (htmlPreview) { htmlPreview.style.display = 'none'; }
-            mdSplit.classList.remove('e-active');
-            mdsource.classList.remove('e-active');
-        }
-        markDownConversion();
+    if (this.mdsource.classList.contains('e-active')) {
+        this.htmlPreview.innerHTML = marked(this.textArea.value);
     }
 };
 const fullPreview = (event) => {
-    var mdSource = document.getElementById('preview-code');
-    var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-    var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-    if ((mdSource.classList.contains('e-active')) && event.mode) {
-        mdSource.classList.remove('e-active');
-        textArea.style.display = 'block';
-        textArea.style.width = '100%';
-        htmlPreview.style.display = 'none';
+    if (this.mdsource.classList.contains('e-active')) {
+        this.mdsource.classList.remove('e-active');
+        this.textArea.style.display = 'block';
+        this.htmlPreview.style.display = 'none';
+        this.previewTextArea.style.overflow = 'hidden';
     } else {
-        mdSource.classList.add('e-active');
-        if (!htmlPreview) {
-            htmlPreview = document.createElement('div');
-            htmlPreview.id = id;
-            htmlPreview.setAttribute('class', 'e-content');
-            textArea.parentNode.appendChild(htmlPreview);
-        } else {
-            htmlPreview.innerHTML = '';
+        this.mdsource.classList.add('e-active');
+        if (!this.htmlPreview) {
+        this.htmlPreview = document.createElement('div');
+        this.htmlPreview.setAttribute('class', 'e-content e-pre-source');
+        this.htmlPreview.setAttribute('id', this.id);
+        this.textArea.parentNode.appendChild(this.htmlPreview);
+        this.previewTextArea.style.overflow = 'auto';
         }
-        textArea.style.display = 'none';
-        htmlPreview.style.display = 'block';
-        htmlPreview.innerHTML = marked.parse(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
-        mdSource.parentElement.title = 'Code View';
+        if (this.previewTextArea.style.overflow === 'hidden') {
+        this.previewTextArea.style.overflow = 'auto';
+        }
+        this.textArea.style.display = 'none';
+        this.htmlPreview.style.display = 'block';
+        this.htmlPreview.innerHTML = marked(this.textArea.value);
+        this.mdsource.parentElement.title = 'Code View';
     }
 }
-provide('richtexteditor', [Toolbar, Link, Image, MarkdownEditor]);
+provide('richtexteditor', [Toolbar, Link, Image, Table, MarkdownEditor]);
 </script>
 
 <style>
