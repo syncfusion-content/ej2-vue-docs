@@ -14,7 +14,7 @@ This article provides a step-by-step guide for setting up a Vue 2 project using 
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -54,7 +54,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -136,7 +136,7 @@ Follow the below steps to add the Vue Context menu component using `Composition 
 {% endhighlight %}
 {% endtabs %}
 
-3\. Declare the value for the `itemd` property in the `script` section.
+3\. Declare the value for the `item` property in the `script` section.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
