@@ -18,7 +18,7 @@ To get start quickly with Vue Splitter component, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Dependencies
 
@@ -54,7 +54,7 @@ yarn run serve
 
 When creating a new project, choose the option `Default ([Vue 2] babel, eslint)` from the menu.
 
-![Vue 2 project](../appearance/images/vue2-terminal.png)
+![Vue 2 project](./images/vue2-terminal.png)
 
 Once the `quickstart` project is set up with default settings, proceed to add Syncfusion components to the project.
 
@@ -197,6 +197,6 @@ yarn run serve
 
 ## See Also
 
-* [Resizable split panes](./resizing/)
-* [Collapsible panes](./expand-collapse/)
-* [Construct different layouts using Splitter](./different-layouts/)
+* [Resizable split panes](./resizing)
+* [Collapsible panes](./expand-collapse)
+* [Construct different layouts using Splitter](./different-layouts)

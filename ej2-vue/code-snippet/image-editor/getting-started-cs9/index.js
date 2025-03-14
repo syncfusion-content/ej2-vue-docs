@@ -12,7 +12,7 @@ new Vue({
   template: `
     <div>
       <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-      <ejs-button id="open-btn" @click="openImage">Open Image</ejs-button>
+      <ejs-button id="open-btn" v-on:click.native="openImage">Open Image</ejs-button>
     </div>
   `,
   data() {
@@ -22,9 +22,7 @@ new Vue({
   },
   methods: {
     openImage() {
-      if (this.$refs.imageEditorObj) {
-        this.$refs.imageEditorObj.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png");
-      }
+      this.$refs.imageEditorObj.ej2Instances.open("bridge.png");
     },
   },
 });

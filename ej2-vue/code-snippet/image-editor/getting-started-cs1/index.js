@@ -24,24 +24,24 @@ new Vue({
   },
   methods: {
     created: function () {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let imageUrl = Browser.isDevice
-        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+        ? "flower.jpeg"
+        : "bridge.jpeg";
       imageEditor.open(imageUrl);
     },
-    btnClick: function (event) {
+    btnClick: function () {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y);
+      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y, 'Syncfusion');
     },
-    outlineText: function (event) {
+    outlineText: function () {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y + 100, 'Syncfusion', 'Arial', 70, false, false, '', false, null, '', 'green', 8);
+      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x + 50, dimension.y + 50, 'Syncfusion', 'Arial', 30, false, false, '', false, null, '', 'green', 8);
     },
-    bgColor: function (event) {
+    bgColor: function () {
       let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y + 150, 'Syncfusion', 'Arial', 70, false, false, '', false, null, 'red', '', null);
+      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x + 100, dimension.y + 100, 'Syncfusion', 'Arial', 30, false, false, '', false, null, 'red', '', null);
     }
   }
 

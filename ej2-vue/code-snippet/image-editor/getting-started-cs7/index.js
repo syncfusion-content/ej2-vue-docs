@@ -29,15 +29,15 @@ new Vue({
   },
   methods: {
     initializeImageEditor() {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let imageUrl = Browser.isDevice
-        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
-        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+        ? "flower.png"
+        : "bridge.png";;
       imageEditor.open(imageUrl);
     },
     saveAsByteArray() {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let imageData = imageEditor.getImageData();
       let canvas = document.createElement('canvas');

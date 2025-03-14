@@ -21,15 +21,15 @@ new Vue({
   },
   methods: {
     created: function () {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let imageUrl = Browser.isDevice
-        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+        ? "flower.jpeg"
+        : "bridge.jpeg";
       imageEditor.open(imageUrl);
     },
     shapeChanging: function (args) {
-      if (args.action == "insert" && args.currentShapeSettings?.type === 'FreehandDraw') {
+      if (args.action == "insert" && args.currentShapeSettings.type === 'FreehandDraw') {
         args.currentShapeSettings.strokeColor = 'red';
       }
     }

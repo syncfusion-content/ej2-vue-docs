@@ -77,17 +77,17 @@ The Image Editor allows to magnify an image using the [`zoom`](https://ej2.syncf
 
 * zoomPoint - Specifies x and y coordinates of a point as ImageEditorPoint on image to perform zooming. 
 
-### Minimum and Maximum zoom level 
+### Minimum and maximum zoom level 
 
 The [`minZoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) property allows you to specify the minimum level of zoom that is allowed for an image. By setting this property, you can prevent the image from being zoomed out beyond a certain point, ensuring that it remains visible and usable even at the smallest zoom level. 
 
-By default, the [`minZoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) value is set to 0.1, meaning that the image can be zoomed out up to 10 times its original size. 
+By default, the `minZoomFactor` value is set to 0.1, meaning that the image can be zoomed out up to 10 times its original size. 
 
 The [`maxZoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) property is a useful feature in the Image Editor that allows you to define the maximum level of zoom permitted for an image. This property sets a limit on how much the image can be magnified, preventing excessive zooming that may result in a loss of image quality or visibility. 
 
-By default, the [`maxZoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
+By default, the `maxZoomFactor` value is set to 10, meaning that the image can be zoomed in up to 10 times its original size. This ensures that the zooming functionality remains within reasonable bounds and maintains the integrity of the image. 
 
-Here is an example of specifying [`minZoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettingsModel/#minzoomfactor) and [`maxZoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettingsModel/#maxzoomfactor) property in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettings/) options in an image editor.
+Here is an example of specifying `minZoomFactor` and `maxZoomFactor` property in [`zoomSettings`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/zoomSettings/) options in an image editor.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -104,17 +104,7 @@ Here is an example of specifying [`minZoomFactor`](https://ej2.syncfusion.com/vu
 
 The Image Editor allows to pan an image when the image exceeds the canvas size or selection range. When zooming in on an image or applying a selection for cropping, it is common for the image to exceed the size of the canvas or exceed the selection range. So, the panning is used to view the entire image, by clicking on the canvas and dragging it in the direction they want to move.
 
-### Panning event
-
-The [`panning`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/#panning) event is activated when the user begins dragging the image within the canvas. This event provide an opportunity to perform specific actions, like adjusting the position of an image, in response to the gesture of panning. And these event uses [`panEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/panEventArgs/) to handle the panning action when the user starts dragging the image. 
-
-The parameter available in the [`panEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#paneventargs) events are, 
-
-* PanEventArgs.startPoint - The x and y coordinates as ImageEditorPoint for the start point. 
-
-* PanEventArgs.endpoint - The x and y coordinates as ImageEditorPoint for the end point. 
-
-* PanEventArgs.cancel – Specifies the boolean value to cancel the panning action.
+In the following example, you can enable panning using the [`pan`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/#pan) method in the button click event.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -126,6 +116,18 @@ The parameter available in the [`panEventArgs`](https://ej2.syncfusion.com/vue/d
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/image-editor/getting-started-cs23" %}
+
+## Panning event
+
+The [`panning`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/#panning) event is activated when the user begins dragging the image within the canvas. This event provide an opportunity to perform specific actions, like adjusting the position of an image, in response to the gesture of panning. And these event uses [`panEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/panEventArgs/) to handle the panning action when the user starts dragging the image. 
+
+The parameter available in the `panEventArgs` events are, 
+
+* PanEventArgs.startPoint - The x and y coordinates as ImageEditorPoint for the start point. 
+
+* PanEventArgs.endpoint - The x and y coordinates as ImageEditorPoint for the end point. 
+
+* PanEventArgs.cancel – Specifies the boolean value to cancel the panning action.
 
 ## Zooming event 
 
@@ -159,7 +161,7 @@ RotateEventArgs.cancel – Specifies a boolean value to cancel the rotating acti
 
 The [`flipping`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#flipping) event is triggered when performing flipping the image. This event is passed an object that contains information about the flipping event, such as the amount of flip performed. And this event uses [`FlipEventArgs`](https://helpej2.syncfusion.com/vue/documentation/api/image-editor/flipEventArgs/) to handle the flipping action in the image.
 
-The parameter available in the [`flipping`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/#flipping) event is, 
+The parameter available in the `flipping` event is, 
 
 * FlipEventArgs.direction - The flip direction as ImageEditorDirection to be applied in the image editor. 
 

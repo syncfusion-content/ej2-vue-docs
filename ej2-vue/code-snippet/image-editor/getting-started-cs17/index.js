@@ -6,7 +6,7 @@ import { Browser, getComponent } from "@syncfusion/ej2-base";
 Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
-Vue.component('ToolbarTemplate', {
+const ToolbarTemplate = Vue.component('ToolbarTemplate', {
     template: `
         <div class="e-toolbar">
             <ejs-button id="freeHandDrawButton" :isPrimary="true" v-on:click.native="btnClick">
@@ -33,22 +33,16 @@ new Vue({
         </ejs-imageeditor>
     </div>
     `,
-    data: function () {
+    data() {
         return {
-            toolbarTemplate: function () {
-                return Vue.extend({
-                    template: '<ToolbarTemplate />'
-                });
-            }
+            toolbarTemplate: () => ToolbarTemplate
         };
     },
     methods: {
         created() {
             const imageEditor = getComponent(document.getElementById('image-editor'), 'image-editor');
             if (!imageEditor) return;
-            const imageUrl = Browser.isDevice
-                ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-                : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+            const imageUrl = Browser.isDevice ? "flower.png" : "bridge.png";
             imageEditor.open(imageUrl);
         }
     }

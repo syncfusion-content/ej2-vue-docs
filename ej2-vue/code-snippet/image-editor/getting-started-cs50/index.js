@@ -11,8 +11,8 @@ new Vue({
   el: '#app',
   template: `
     <div>
-      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
-      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="getBlob">Get Blob</ejs-button>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="getBlob">Save Blob</ejs-button>
     </div>
   `,
   data: function () {
@@ -21,6 +21,14 @@ new Vue({
     };
   },
   methods: {
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "flower.jpeg"
+        : "bridge.jpeg";
+      imageEditor.open(imageUrl);
+    },
     getBlob: function () {
       let imageData = this.$refs.imageEditorObj.ej2Instances.getImageData();
       let canvas = document.createElement('canvas');

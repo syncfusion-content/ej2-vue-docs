@@ -19,15 +19,15 @@ new Vue({
   },
   methods: {
     created: function () {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let imageUrl = Browser.isDevice
-        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+        ? "flower.jpeg"
+        : "bridge.jpeg";
       imageEditor.open(imageUrl);
     },
     fileOpened: function () {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let dimension = imageEditor.getImageDimension();
       imageEditor.drawText(dimension.x, dimension.y, "Syncfusion", "Arial", 40, false, false, "#80330075");

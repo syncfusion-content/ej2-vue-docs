@@ -24,7 +24,7 @@ new Vue({
   },
   methods: {
     loadInvalidImage: function (event) {
-      this.$refs.imageEditorObj.ej2Instances.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
+      this.$refs.imageEditorObj.ej2Instances.open('bridge.jpeg');
     }
   }
 

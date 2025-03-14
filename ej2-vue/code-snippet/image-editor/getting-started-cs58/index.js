@@ -31,7 +31,7 @@ new Vue({
       this.dialogVisible = true;
       this.$nextTick(() => {
         setTimeout(() => {
-          let imageEditor = this.$refs.imageEditorRef?.ej2Instances;
+          let imageEditor = this.$refs.imageEditorRef.ej2Instances;
           if (imageEditor) {
             imageEditor.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png");
           }

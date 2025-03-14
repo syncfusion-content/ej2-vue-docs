@@ -33,12 +33,12 @@ new Vue({
                   {
                     nodeId: "03-01-01",
                     nodeText: "Flower",
-                    image: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png",
+                    image: "flower.jpeg",
                   },
                   {
                     nodeId: "03-01-02",
                     nodeText: "Bridge",
-                    image: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png",
+                    image: "bridge.jpeg",
                   },
                 ],
               },
@@ -53,12 +53,12 @@ new Vue({
   },
   methods: {
     onNodeClick: function (args) {
-      let treeView = this.$refs.treeViewObj?.ej2Instances;
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let treeView = this.$refs.treeViewObj.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!treeView || !imageEditor) return;
       let nodeId = args.node.getAttribute("data-uid");
       let nodeData = treeView.getTreeData(nodeId)[0];
-      if (nodeData?.image) {
+      if (nodeData.image) {
         imageEditor.open(nodeData.image);
       }
     },

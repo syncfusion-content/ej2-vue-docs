@@ -12,7 +12,6 @@ new Vue({
   template: `
     <div>
       <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :created="created"></ejs-imageeditor>
-      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Draw</ejs-button>
     </div>
   `,
   data: function () {
@@ -20,16 +19,18 @@ new Vue({
   },
   methods: {
     created: function () {
-      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
       if (!imageEditor) return;
       let imageUrl = Browser.isDevice
-        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
-        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+        ? "flower.png"
+        : "bridge.png";
       imageEditor.open(imageUrl);
     },
     shapeChanging: function (args) {
-      args.currentShapeSettings.color = 'red';
-      args.currentShapeSettings.fontFamily = 'italic';
+      if (args.currentShapeSettings.type === 'Text') {
+        args.currentShapeSettings.color = 'red';
+        args.currentShapeSettings.fontFamily = 'italic';
+      }
     }
   }
 });

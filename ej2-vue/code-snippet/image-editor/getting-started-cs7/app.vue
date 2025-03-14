@@ -3,8 +3,6 @@
     <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
       :created="created"></ejs-imageeditor>
     <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="saveAsByteArray">Save as Byte Array</ejs-button>
-    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="loadFromByteArray">Load from Byte
-      Array</ejs-button>
   </div>
 </template>
 
@@ -53,12 +51,6 @@ export default {
         }
       }, 'image/png');
     },
-    loadFromByteArray() {
-      if (!this.byteArray) { return; }
-      const blob = new Blob([this.byteArray], { type: 'image/png' });
-      const url = URL.createObjectURL(blob);
-      this.$refs.imageEditorObj.ej2Instances.open(url);
-    }
   }
 };
 </script>
