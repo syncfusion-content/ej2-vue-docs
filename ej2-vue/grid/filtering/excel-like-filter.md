@@ -395,6 +395,22 @@ The following example demonstrates how to remove the context menu option in the 
         
 {% previewsample "page.domainurl/code-snippet/grid/filter/excel-filter-cs6" %}
 
+## Bind custom remote datasource for excel/checkbox filtering
+
+The Syncfusion Vue Grid allows you to dynamically change the filter data source for the Excel or checkbox filter module using custom remote data as well. This can be done by either assigning a custom remote [DataManager](https://ej2.syncfusion.com/vue/documentation/data/vue-3-getting-started) as the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#datasource) or by fetching the data initially and storing it in a global variable. This data can then be bound directly to the filter module's `dataSource` in the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event for the `filterBeforeOpen` [requestType](https://ej2.syncfusion.com/vue/documentation/api/grid/filterEventArgs/#requesttype), as detailed in our [knowledge base](https://support.syncfusion.com/kb/article/10065/how-to-change-the-data-source-for-checkbox-filter-popup-in-grid).
+
+The following example demonstrates how to dynamically change the remote custom data source for all columns in the Excel or checkbox filter dialog using a `DataManager` with `WebApiAdaptor`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/excelfilter-custom-datasource/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/excelfilter-custom-datasource/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/filter/excel-filter-cs6" %}
 
 ## Hide sorting option in filter dialog
 
