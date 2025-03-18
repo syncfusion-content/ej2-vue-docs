@@ -125,7 +125,7 @@ export default {
         onBeforeDownload: function (args) {
             args.useFormPost = false;
             if (args.ajaxSettings) {
-                (args.ajaxSettings as any).beforeSend = function (args: any) {
+                args.ajaxSettings.beforeSend = function (args) {
                     args.fetchRequest.headers.append('Authorization', 'User1');
                 };
             }
