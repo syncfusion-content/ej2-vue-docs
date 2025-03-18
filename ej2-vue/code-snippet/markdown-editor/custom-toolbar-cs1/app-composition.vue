@@ -165,7 +165,7 @@ const onCreate = function (e) {
     var customBtn = document.getElementById('custom_tbar');
     dialogObj.value.ej2Instances.target = document.getElementById('rteSection');
 }
-provide('richtexteditor', [Toolbar, Link, Image, QuickToolbar, HtmlEditor]);
+provide('richtexteditor', [Toolbar, Link, Image, HtmlEditor]);
 </script >
 
 <style>

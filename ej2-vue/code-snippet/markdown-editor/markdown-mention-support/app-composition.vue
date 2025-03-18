@@ -1,7 +1,7 @@
 <template>
   <div class="control-section rte-markdown-overview">
     <ejs-richtexteditor
-      id="MDdefault"
+      id="markdown-editor"
       ref="rteInstance"
       :toolbarSettings="toolbarSettings"
       :formatter="formatter"
@@ -168,7 +168,7 @@
   line-height: 14px;
 }
 
-#MDdefault_editable-content_popup li {
+#markdown-editor_editable-content_popup li {
   padding: 10px !important;
   height: 60px;
 }
@@ -202,7 +202,7 @@ const height= '250px';
 const editorMode = 'Markdown';
 const value=
             `Hello [@Maria](mailto:maria@gmail.com)\n\nWelcome to the mention integration with markdown editor demo. Type @ character and tag user from the suggestion list.`;
-const target= "#MDdefault_editable-content";
+const target= "#markdown-editor_editable-content";
 const mentionfields= { text: 'name' };
 
 const toolbarSettings = {

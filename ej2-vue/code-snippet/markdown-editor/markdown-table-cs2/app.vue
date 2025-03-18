@@ -1,7 +1,7 @@
 <template>
-  <div id="defaultRTE">
+  <div id="markdown-editor">
     <ejs-richtexteditor
-      id="MDdefault"
+      id="editor"
       ref="rteInstance"
       :toolbarSettings="toolbarSettings"
       :created="created"

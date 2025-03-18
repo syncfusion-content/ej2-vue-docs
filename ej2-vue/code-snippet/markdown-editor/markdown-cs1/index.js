@@ -5,9 +5,9 @@ Vue.use(RichTextEditorPlugin);
  
 new Vue({
 	el: '#app',
-	template: `<div id="defaultRTE">
+	template: `<div id="markdown-editor">
      <ejs-richtexteditor
-        ref="defaultRTE"
+        ref="editor"
         :height="340"
         :width="500"
         editorMode="Markdown"

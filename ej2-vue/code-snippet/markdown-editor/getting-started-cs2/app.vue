@@ -1,6 +1,6 @@
 <template>
     <ejs-richtexteditor
-      ref="defaultRTE"
+      ref="editor"
       :height="340"
       editorMode="Markdown"
       :value="rteValue"

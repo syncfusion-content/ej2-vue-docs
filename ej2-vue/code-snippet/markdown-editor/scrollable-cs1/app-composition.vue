@@ -1,7 +1,7 @@
 <template>
-  <div id="defaultRTE">
+  <div id="markdown-editor">
       <ejs-richtexteditor
-        ref="defaultRTE"
+        ref="markdown-editor"
         :height="340"
         :width="500"
         editorMode="Markdown"

@@ -1,5 +1,5 @@
 <template>
-  <ejs-richtexteditor ref="defaultRTE" :placeholder="placeholder" editorMode="Markdown" :formatter="formatter" :value="rteValue">
+  <ejs-richtexteditor ref="markdown-editor" :placeholder="placeholder" editorMode="Markdown" :formatter="formatter" :value="rteValue">
   </ejs-richtexteditor>
 </template>
 

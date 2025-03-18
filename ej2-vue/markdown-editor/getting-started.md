@@ -142,7 +142,7 @@ export default {
 {% highlight html tabtitle="~/src/App.vue" %}
 
 <template>
-    <ejs-richtexteditor ref="defaultRTE" :height="400" editorMode="Markdown" :value="rteValue"> 
+    <ejs-richtexteditor ref="markdown-editor" :height="400" editorMode="Markdown" :value="rteValue"> 
     </ejs-richtexteditor>
 </template>
 
@@ -183,7 +183,7 @@ Markdown Editor can be initialized on div element.
 
 ## Configure the toolbar
 
-Configure the toolbar with the tools using items field of the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property as your application requires.
+Configure the toolbar with the tools using `items` field of the [toolbarSettings](https://ej2.syncfusion.com/vue/documentation/api/rich-text-editor/toolbarSettings/#toolbarsettings) property as your application requires.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
