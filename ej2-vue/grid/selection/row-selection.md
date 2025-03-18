@@ -686,3 +686,633 @@ components: {
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/select/selection-row-events" %}
+
+## Pass selected records to server using AJAX
+
+The Syncfusion Vue Grid allows you to select multiple or single records and send them to the server using AJAX requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
+
+To achieve passing selected records to the server using AJAX requests in the Grid, follow these steps:
+
+**Step 1:** Open Visual Studio and create an **Vue and ASP.NET Core** project named **SelectedRecord**. To create an Vue and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022) for detailed steps.
+
+**Step 2:** Create a simple Vue Grid by following the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation link.
+
+**Step 3:** In your Vue component file (e.g., **App.vue**), add a button to trigger the AJAX call and include the Grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/vue/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/vue/documentation/api/grid/#getselectedrecords) method from the Grid and send them to the server using AJAX.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="margin-bottom: 5px">
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="handleClick">Pass the selected records to controller</ejs-button>
+    </div>
+    <ejs-grid ref='grid' :dataSource='data' :selectionSettings="selectionSettings">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" width="150" textAlign="Right"></e-column>
+        <e-column field="EmployeeID" headerText="Employee ID" width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
+        <e-column field="OrderDate" headerText="Order Date" format="yMd" width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+
+<script setup>
+  import { ref } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
+  import { Ajax } from '@syncfusion/ej2-base';
+
+  const data = new DataManager({
+    url: 'https://localhost:****/api/Grid', // Replace your hosted link.
+    adaptor: new UrlAdaptor(),
+  });
+  const selectionSettings = { type: "Multiple" };
+  const grid = ref(null);
+  const handleClick = () => {
+    if (grid.value) {
+      const selectedRecords = grid.value.ej2Instances.getSelectedRecords();
+      const rows = JSON.stringify(selectedRecords);
+      let ajax = new Ajax({
+        url: "https://localhost:****/api/Grid/SelectRecord",
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        data: rows,
+      });
+      ajax.onSuccess = (response) => {
+        console.log("Data sent successfully:", response);
+      };
+      ajax.onFailure = (error) => {
+        console.error("Error sending data:", error);
+      };
+      ajax.send();
+    }
+  };
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="margin-bottom: 5px">
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="handleClick">Pass the selected records to controller</ejs-button>
+    </div>
+    <ejs-grid ref='grid' :dataSource='data' :selectionSettings="selectionSettings">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" width="150" textAlign="Right"></e-column>
+        <e-column field="EmployeeID" headerText="Employee ID" width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
+        <e-column field="OrderDate" headerText="Order Date" format="yMd" width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+
+<script>
+  import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
+  import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+  import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+  import { Ajax } from '@syncfusion/ej2-base';
+
+  export default {
+    name: "App",
+    components: {
+      'ejs-grid': GridComponent,
+      'e-columns': ColumnsDirective,
+      'e-column': ColumnDirective,
+      "ejs-button": ButtonComponent,
+    },
+    data() {
+      return {
+        data: new DataManager({
+          url: 'https://localhost:****/api/Grid', // Replace your hosted link.
+          adaptor: new UrlAdaptor(),
+        }),
+        selectionSettings: { type: "Multiple" },
+      };
+    },
+    methods: {
+      handleClick: function () {
+        const selectedRecords = this.$refs.grid.getSelectedRecords();
+        const rows = JSON.stringify(selectedRecords);
+        let ajax = new Ajax({
+          url: "https://localhost:****/api/Grid/SelectRecord",
+          type: "POST",
+          contentType: "application/json; charset=utf-8",
+          data: rows,
+        });
+        ajax.onSuccess = (response) => {
+          console.log("Data sent successfully:", response);
+        };
+        ajax.onFailure = (error) => {
+          console.error("Error sending data:", error);
+        };
+        ajax.send();
+      },
+    }
+  }
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**Step 4:** On the server side, create a controller named **GridController.cs** under the **Controllers** folder to handle incoming requests and process selected records. Add the following code:
+
+```cs
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.EJ2.Base;
+using SelectedReacord.Server.Models;
+namespace SelectedReacord.Server.Controllers
+{
+  [ApiController]
+  public class GridController : Controller
+  {
+    [HttpPost]
+    [Route("api/[controller]")]
+    public object Post()
+    {
+      // Retrieve data from the data source (e.g., database).
+      IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+
+      // Get the total records count.
+      int totalRecordsCount = DataSource.Count();
+
+      // Return data based on the request.
+      return new { result = DataSource, count = totalRecordsCount };
+    }
+    [HttpGet]
+    [Route("api/[controller]")]
+    public List<OrdersDetails> GetOrderData()
+    {
+      var data = OrdersDetails.GetAllRecords().ToList();
+      return data;
+    }
+    [HttpPost]
+    [Route("api/[controller]/SelectRecord")]
+    public ActionResult SelectRecord([FromBody] List<Gridcolumns> row)
+    {
+      return Json(row);
+    }
+    public class SelectedModel
+    {
+      public List<Gridcolumns> rowData { get; set; }
+    }
+    public class Gridcolumns
+    {
+      public int OrderID { get; set; }
+      public string CustomerID { get; set; }
+      public int EmployeeID { get; set; }
+      public DateTime OrderDate { get; set; }
+    }
+  }
+}
+
+```
+
+**Step 5:** Create a model class named **OrdersDetails.cs** under the **Models** folder in the server-side project to represent the order data. Add the following code:
+
+```cs
+namespace SelectedReacord.Server.Models
+{
+  public class OrdersDetails
+  {
+    public static List<OrdersDetails> order = new List<OrdersDetails>();
+    public OrdersDetails() { }
+    public OrdersDetails(
+    int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified,
+    DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry,
+    DateTime ShippedDate, string ShipAddress)
+    {
+      this.OrderID = OrderID;
+      this.CustomerID = CustomerId;
+      this.EmployeeID = EmployeeId;
+      this.Freight = Freight;
+      this.ShipCity = ShipCity;
+      this.Verified = Verified;
+      this.OrderDate = OrderDate;
+      this.ShipName = ShipName;
+      this.ShipCountry = ShipCountry;
+      this.ShippedDate = ShippedDate;
+      this.ShipAddress = ShipAddress;
+    }
+
+    public static List<OrdersDetails> GetAllRecords()
+    {
+      if (order.Count() == 0)
+      {
+        int code = 10000;
+        for (int i = 1; i < 10; i++)
+        {
+          order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
+          order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
+          order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
+          order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
+          order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+          code += 5;
+        }
+      }
+      return order;
+    }
+
+    public int? OrderID { get; set; }
+    public string? CustomerID { get; set; }
+    public int? EmployeeID { get; set; }
+    public double? Freight { get; set; }
+    public string? ShipCity { get; set; }
+    public bool? Verified { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string? ShipName { get; set; }
+    public string? ShipCountry { get; set; }
+    public DateTime ShippedDate { get; set; }
+    public string? ShipAddress { get; set; }
+  }
+}
+
+```
+
+**Step 6:** In the **Program.cs** file, add the following code:
+
+```cs
+
+var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle.
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+  options.AddDefaultPolicy(builder =>
+  {
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+  });
+});
+var app = builder.Build();
+app.UseCors();
+app.UseDefaultFiles();
+app.UseStaticFiles();
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+  app.UseSwagger();
+  app.UseSwaggerUI();
+}
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+app.MapFallbackToFile("/index.html");
+app.Run();
+
+```
+
+The following screenshot shows how to pass selected records to the server:
+
+![Pass selected records to server using ajax](../images/row-selected-record.png)
+
+## Pass selected records to server using FETCH
+
+The Syncfusion Vue Grid allows you to select multiple or single records and send them to the server using Fetch requests. This feature is useful for scenarios where you need to process or manipulate selected data on the server side.
+
+To achieve passing selected records to the server using Fetch requests in the Grid, follow these steps:
+
+**Step 1:** Open Visual Studio and create an **Vue and ASP.NET Core** project named **SelectedRecord**. To create an Vue and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022) for detailed steps.
+
+**Step 2:** Create a simple Vue Grid by following the [Getting Started](https://ej2.syncfusion.com/vue/documentation/grid/getting-started) documentation link.
+
+**Step 3:** In your Vue component file (e.g., **App.vue**), add a button to trigger the AJAX call and include the Grid with necessary configurations. Handle the button [click](https://ej2.syncfusion.com/vue/documentation/api/button#click) event to retrieve the selected records using the [getSelectedRecords](https://ej2.syncfusion.com/vue/documentation/api/grid/#getselectedrecords) method from the Grid and send them to the server using AJAX.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="margin-bottom: 5px">
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="handleClick">Pass the selected records to controller</ejs-button>
+    </div>
+    <ejs-grid ref='grid' :dataSource='data' :selectionSettings="selectionSettings">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" width="150" textAlign="Right"></e-column>
+        <e-column field="EmployeeID" headerText="Employee ID" width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
+        <e-column field="OrderDate" headerText="Order Date" format="yMd" width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+
+<script setup>
+  import { ref } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
+
+  const data = new DataManager({
+    url: 'https://localhost:****/api/Grid', // Replace your hosted link.
+    adaptor: new UrlAdaptor(),
+  });
+  const selectionSettings = { type: "Multiple" };
+  const grid = ref(null);
+  const handleClick = async () => {
+    if (grid.value) {
+      const selectedRecords = grid.value.ej2Instances.getSelectedRecords();
+      const rows = JSON.stringify(selectedRecords);
+      try {
+        const response = await fetch("https://localhost:****/api/Grid/SelectRecord", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: rows,
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const result = await response.json();
+        console.log("Data sent successfully:", result);
+      } 
+      catch (error) {
+        console.error("Error sending data:", error);
+      }
+    }
+  };
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% raw %}
+<template>
+  <div id="app">
+    <div style="margin-bottom: 5px">
+      <ejs-button ref='button' cssClass='e-outline' v-on:click="handleClick">Pass the selected records to controller</ejs-button>
+    </div>
+    <ejs-grid ref='grid' :dataSource='data' :selectionSettings="selectionSettings">
+      <e-columns>
+        <e-column field="OrderID" headerText="Order ID" width="150" textAlign="Right"></e-column>
+        <e-column field="EmployeeID" headerText="Employee ID" width="120"></e-column>
+        <e-column field="CustomerID" headerText="Customer ID" width="150"></e-column>
+        <e-column field="OrderDate" headerText="Order Date" format="yMd" width="150"></e-column>
+      </e-columns>
+    </ejs-grid>
+  </div>
+</template>
+
+<script>
+  import { GridComponent, ColumnsDirective, ColumnDirective } from '@syncfusion/ej2-vue-grids';
+  import { DataManager, UrlAdaptor } from '@syncfusion/ej2-data';
+  import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+
+  export default {
+    name: "App",
+    components: {
+      'ejs-grid': GridComponent,
+      'e-columns': ColumnsDirective,
+      'e-column': ColumnDirective,
+      "ejs-button": ButtonComponent,
+    },
+    data() {
+      return {
+        data: new DataManager({
+          url: 'https://localhost:****/api/Grid', // Replace your hosted link.
+          adaptor: new UrlAdaptor(),
+        }),
+        selectionSettings: { type: "Multiple" },
+      };
+    },
+    methods: {
+      async handleClick() {
+        try {
+          const selectedRecords = this.$refs.grid.ej2Instances.getSelectedRecords();
+          const rows = JSON.stringify(selectedRecords);
+          const response = await fetch("https://localhost:****/api/Grid/SelectRecord", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: rows,
+          });
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+          const result = await response.json();
+          console.log("Data sent successfully:", result);
+        } 
+        catch (error) {
+          console.error("Error sending data:", error);
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+</style>
+{% endraw %}
+{% endhighlight %}
+{% endtabs %}
+
+**Step 4:** On the server side, create a controller named **GridController.cs** under the **Controllers** folder to handle incoming requests and process selected records. Add the following code:
+
+```cs
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Syncfusion.EJ2.Base;
+using SelectedReacord.Server.Models;
+namespace SelectedReacord.Server.Controllers
+{
+  [ApiController]
+  public class GridController : Controller
+  {
+    [HttpPost]
+    [Route("api/[controller]")]
+    public object Post()
+    {
+      // Retrieve data from the data source (e.g., database).
+      IQueryable<OrdersDetails> DataSource = GetOrderData().AsQueryable();
+
+      // Get the total records count.
+      int totalRecordsCount = DataSource.Count();
+
+      // Return data based on the request.
+      return new { result = DataSource, count = totalRecordsCount };
+    }
+    [HttpGet]
+    [Route("api/[controller]")]
+    public List<OrdersDetails> GetOrderData()
+    {
+      var data = OrdersDetails.GetAllRecords().ToList();
+      return data;
+    }
+    [HttpPost]
+    [Route("api/[controller]/SelectRecord")]
+    public ActionResult SelectRecord([FromBody] List<Gridcolumns> row)
+    {
+      return Json(row);
+    }
+    public class SelectedModel
+    {
+      public List<Gridcolumns> rowData { get; set; }
+    }
+    public class Gridcolumns
+    {
+      public int OrderID { get; set; }
+      public string CustomerID { get; set; }
+      public int EmployeeID { get; set; }
+      public DateTime OrderDate { get; set; }
+    }
+  }
+}
+
+```
+
+**Step 5:** Create a model class named **OrdersDetails.cs** under the **Models** folder in the server-side project to represent the order data. Add the following code:
+
+```cs
+namespace SelectedReacord.Server.Models
+{
+  public class OrdersDetails
+  {
+    public static List<OrdersDetails> order = new List<OrdersDetails>();
+    public OrdersDetails() { }
+    public OrdersDetails(
+    int OrderID, string CustomerId, int EmployeeId, double Freight, bool Verified,
+    DateTime OrderDate, string ShipCity, string ShipName, string ShipCountry,
+    DateTime ShippedDate, string ShipAddress)
+    {
+      this.OrderID = OrderID;
+      this.CustomerID = CustomerId;
+      this.EmployeeID = EmployeeId;
+      this.Freight = Freight;
+      this.ShipCity = ShipCity;
+      this.Verified = Verified;
+      this.OrderDate = OrderDate;
+      this.ShipName = ShipName;
+      this.ShipCountry = ShipCountry;
+      this.ShippedDate = ShippedDate;
+      this.ShipAddress = ShipAddress;
+    }
+
+    public static List<OrdersDetails> GetAllRecords()
+    {
+      if (order.Count() == 0)
+      {
+        int code = 10000;
+        for (int i = 1; i < 10; i++)
+        {
+          order.Add(new OrdersDetails(code + 1, "ALFKI", i + 0, 2.3 * i, false, new DateTime(1991, 05, 15), "Berlin", "Simons bistro", "Denmark", new DateTime(1996, 7, 16), "Kirchgasse 6"));
+          order.Add(new OrdersDetails(code + 2, "ANATR", i + 2, 3.3 * i, true, new DateTime(1990, 04, 04), "Madrid", "Queen Cozinha", "Brazil", new DateTime(1996, 9, 11), "Avda. Azteca 123"));
+          order.Add(new OrdersDetails(code + 3, "ANTON", i + 1, 4.3 * i, true, new DateTime(1957, 11, 30), "Cholchester", "Frankenversand", "Germany", new DateTime(1996, 10, 7), "Carrera 52 con Ave. Bolívar #65-98 Llano Largo"));
+          order.Add(new OrdersDetails(code + 4, "BLONP", i + 3, 5.3 * i, false, new DateTime(1930, 10, 22), "Marseille", "Ernst Handel", "Austria", new DateTime(1996, 12, 30), "Magazinweg 7"));
+          order.Add(new OrdersDetails(code + 5, "BOLID", i + 4, 6.3 * i, true, new DateTime(1953, 02, 18), "Tsawassen", "Hanari Carnes", "Switzerland", new DateTime(1997, 12, 3), "1029 - 12th Ave. S."));
+          code += 5;
+        }
+      }
+      return order;
+    }
+
+    public int? OrderID { get; set; }
+    public string? CustomerID { get; set; }
+    public int? EmployeeID { get; set; }
+    public double? Freight { get; set; }
+    public string? ShipCity { get; set; }
+    public bool? Verified { get; set; }
+    public DateTime OrderDate { get; set; }
+    public string? ShipName { get; set; }
+    public string? ShipCountry { get; set; }
+    public DateTime ShippedDate { get; set; }
+    public string? ShipAddress { get; set; }
+  }
+}
+
+```
+
+**Step 6:** In the **Program.cs** file, add the following code:
+
+```cs
+
+var builder = WebApplication.CreateBuilder(args);
+// Add services to the container.
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle.
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options =>
+{
+  options.AddDefaultPolicy(builder =>
+  {
+    builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+  });
+});
+var app = builder.Build();
+app.UseCors();
+app.UseDefaultFiles();
+app.UseStaticFiles();
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+  app.UseSwagger();
+  app.UseSwaggerUI();
+}
+app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
+app.MapFallbackToFile("/index.html");
+app.Run();
+
+```
+
+The following screenshot shows how to pass selected records to the server:
+
+![Pass selected records to server using ajax](../images/row-selected-record.png)
