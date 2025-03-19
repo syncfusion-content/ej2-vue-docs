@@ -85,3 +85,18 @@ textEdit: function (args) {
   },
 
 ```
+
+## Selection change event
+
+The [`selectionChange`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selectionchange) event is triggered when an annotation of a node or connector is selected in the diagram.
+
+You can prevent selection by setting the `cancel` property of [`SelectionChangeEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/diagram/iselectionchangeeventargs/) to true, as shown in the code snippet below.
+
+```ts
+selectionChange: function (args) {
+  if (args.state === 'Changing') {
+    // Prevents selection
+    args.cancel = true;
+  }
+}
+```

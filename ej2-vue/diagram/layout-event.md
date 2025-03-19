@@ -18,7 +18,7 @@ The following code example explains the data loaded event in the diagram.
 
 ```javascript
 
-<ejs-diagram id="diagram" :width="width" :height="height" :nodes="nodes" :connectors="connectors" :click="animationComplete"></ejs-diagram>
+<ejs-diagram id="diagram" :width="width" :height="height" :nodes="nodes" :connectors="connectors" :dataLoaded="dataLoaded"></ejs-diagram>
     
 
   export default {
@@ -77,3 +77,37 @@ The [`animationComplete`](https://ej2.syncfusion.com/vue/documentation/api/diagr
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/diagram/automatic-layout/layoutEvent-cs2" %}
+
+## Layout updated event
+
+The [`layoutUpdated`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#layoutupdated) event is triggered when the layout rendering process in the diagram either starts or completes. This event allows users to track the state of the layout rendering process.
+
+The following code example explains the layout updated event in the diagram.
+
+```ts
+
+<ejs-diagram id="diagram" :width="width" :height="height" :nodes="nodes" :connectors="connectors" :layout="layout" @layoutUpdated="layoutUpdated"></ejs-diagram>
+
+export default {
+  name: 'App',
+  components: {
+      'ejs-diagram': DiagramComponent,
+  },
+  data() {
+      return {
+          width: "100%",
+          height: '550px',
+          nodes: nodes,
+          connectors: connectors,
+          layout: { type: 'HierarchicalTree'},
+      };
+  },
+  methods : {
+    layoutUpdated(args) {
+      if (args.state === 'Started') {
+        console.log('layout started rendering');
+      }
+    }
+  },
+};
+```
