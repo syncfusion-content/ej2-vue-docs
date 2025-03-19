@@ -1,147 +1,162 @@
 <template>
-  <div id="defaultRTE">
-    <ejs-richtexteditor id="preview" ref="rteInstance" :toolbarSettings="toolbarSettings" :created="created" :actionComplete='actionComplete' :editorMode="editorMode" :height="height"></ejs-richtexteditor>
+  <div class="control-section markdown-preview">
+    <ejs-splitter
+      ref="splitterObj"
+      id="splitter-rte-markdown-preview"
+      width="100%"
+      height="450px"
+      :resizing="onRefreshUI"
+      :created="updateOrientation"
+    >
+      <e-panes>
+        <e-pane
+          size="50%"
+          :resizable="true"
+          :content="'pane1Content'"
+          min="40%"
+        >
+          <template v-slot:pane1Content>
+            <ejs-richtexteditor
+              id="defaultRTE"
+              ref="rteObj"
+              :toolbarSettings="toolbarSettings"
+              :value="value"
+              height="100%"
+              saveInterval="1"
+              maxLength="5000"
+              :created="onCreate"
+              :change="onChange"
+              :actionComplete="updateValue"
+              :editorMode="editorMode"
+            >
+            </ejs-richtexteditor>
+          </template>
+        </e-pane>
+        <e-pane :content="'pane2Content'" min="40%">
+          <template v-slot:pane2Content>
+            <div class="heading right">
+              <h4 class="title"><b>Markdown Preview</b></h4>
+              <div
+                class="splitter-default-content source-code pane2"
+                style="padding: 20px"
+              ></div>
+            </div>
+          </template>
+        </e-pane>
+      </e-panes>
+    </ejs-splitter>
   </div>
 </template>
 
 <style>
-    .e-richtexteditor .e-rte-content .e-content{
-        min-height: 150px;
-    }
-    .e-richtexteditor .e-rte-content textarea.e-content {
-        float: left;
-        border-right: 1px solid rgba(0, 0, 0, 0.12);
-    }
-    .e-richtexteditor .e-rte-content {
-        overflow: hidden;
-    }
-    .e-md-preview::before {
-        content: '\e345';
-    }
 
-    .e-rte-content .e-content.e-pre-source {
-        width: 100%;
-    }
-    .e-icon-btn.e-active .e-md-preview.e-icons::before {
-        content: '\e350';
-    }
+.markdown-preview .heading {
+    float: left;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0px;
+    border-left: none;
+    border-top: none;
+}
+.markdown-preview .title {
+    color: #333333;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    text-align: center;
+    margin: 10px 0;
+}
+.fabric-dark .markdown-preview .title,
+.bootstrap5-dark .markdown-preview .title,
+.bootstrap5\.3-dark .markdown-preview .title,
+.bootstrap-dark .markdown-preview .title,
+.fluent-dark .markdown-preview .title,
+.fluent2-dark .markdown-preview .title,
+.material-dark .markdown-preview .title,
+.tailwind-dark .markdown-preview .title,
+.tailwind3-dark .markdown-preview .title,
+.highcontrast .markdown-preview .title {
+    color: #fff;
+}
 </style>
 
 <script setup>
-import { isNullOrUndefined } from "@syncfusion/ej2-base";
-import { RichTextEditorComponent, Toolbar, Link, Image, MarkdownEditor } from "@syncfusion/ej2-vue-richtexteditor";
+import { Browser } from '@syncfusion/ej2-base';
+import {
+    RichTextEditorComponent as EjsRichtexteditor,
+    Toolbar,
+    Link,
+    Image,
+    Table,
+    MarkdownEditor,
+  } from '@syncfusion/ej2-vue-richtexteditor';
+import { SplitterComponent as EjsSplitter, PanesDirective as EPanes, PaneDirective as EPane } from '@syncfusion/ej2-vue-layouts';
 import { marked } from 'marked';
 
-const rteValue = `***Overview***
-                        The Rich Text Editor component is WYSIWYG ("what you see is what you get") editor used to create and edit the content and return valid HTML markup or markdown (MD) of the content. The editor provides a standard toolbar to format content using its commands. Modular library features to load the necessary functionality on demand. The toolbar contains commands to align the text, insert link, insert image, insert list, undo/redo operation, HTML view, and more.
+const rteValue = `In Rich Text Editor, you click the toolbar buttons to format the words and the changes are visible immediately. 
+                    Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words 
+                    and phrases should look different from each other
+                    
+                    Rich Text Editor supports markdown editing when the editorMode set as **markdown** and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
+                    
+                    We can add our own custom formation syntax for the Markdown formation, [sample link](https://ej2.syncfusion.com/home/).
+                    
+                    The third-party library <b>Marked</b> is used in this sample to convert markdown into HTML content`;
 
-                        ***Key features***
-                        - *Mode*: Provides IFRAME and DIV mode.
-                        - *Module*: Modular library to load the necessary functionality on demand.
-                        - *Toolbar*: Provide a fully customizable toolbar.
-                        - *Editing*: HTML view to edit the source directly for developers.
-                        - *Third-party Integration*: Supports to integrate third-party library.
-                        - *Preview*: Preview the modified content before saving it.
-                        - *Tools*: Handling images, hyperlinks, video, uploads and more.
-                        - *Undo and Redo*: Undo/redo manager.
-                        - *Lists*: Creates bulleted and numbered list.`;
-const rteInstance = ref(null);
-let textArea = '';
-const  height = '300px';
+const rteObj = ref(null);
 const toolbarSettings = {
-    items: ['Bold', 'Italic', 'StrikeThrough', '|', 'Formats', 'OrderedList', 'UnorderedList', '|', 'CreateLink', 'Image', '|',
-        { tooltipText: 'Preview', template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn">' +
-            '<span class="e-btn-icon e-md-preview e-icons"></span></button>' },
-        { tooltipText: 'Split Editor', template: '<button id="MD_Preview" class="e-tbar-btn e-control e-btn e-icon-btn">' +
-            '<span class="e-btn-icon e-view-side e-icons"></span></button>' }, 'FullScreen', '|', 'Undo', 'Redo']
+    items: [
+        'Bold',
+        'Italic',
+        'StrikeThrough',
+        '|',
+        'Formats',
+        'Blockquote',
+        'OrderedList',
+        'UnorderedList',
+        '|',
+        'CreateLink',
+        'Image',
+        'CreateTable',
+        '|',
+        'Undo',
+        'Redo',
+    ],
 };
-const editorMode = 'Markdown';
-const created = () => {
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/marked/marked.min.js';
-    document.head.appendChild(script);
-    textArea = rteInstance.value.$el.parentNode.querySelector('.e-content');
-    textArea.onkeyup = (Event) => {
-        markDownConversion();
-    };
-    document.getElementById('preview-code').onclick = () => {
-        fullPreview({ mode: true, type: 'preview'});
-         if (event.target.parentElement.classList.contains('e-active')) {
-            rteInstance.value.ej2Instances.disableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
-             'UnorderedList', 'CreateLink', 'Image']);
-             event.target.parentElement.parentElement.nextElementSibling.classList.add('e-overlay');
-        } else {
-            rteInstance.value.ej2Instances.enableToolbarItem(['Bold', 'Italic', 'StrikeThrough', 'Formats', 'OrderedList',
-             'UnorderedList', 'CreateLink', 'Image']);
-              event.target.parentElement.parentElement.nextElementSibling.classList.remove('e-overlay');
-        }
-    };
-    document.getElementById('MD_Preview').onclick = () => {
-        if (rteInstance.value.$el.classList.contains('e-rte-full-screen')) {
-            fullPreview({ mode: true, type: '' });
-        }
-        document.getElementById('preview-code').classList.remove('e-active');
-        rteInstance.value.ej2Instances.showFullScreen();
-    };
+let textArea= null;
+let srcArea= null;
+const editorMode= 'Markdown';
+
+const onCreate = () => {
+    setTimeout(() => {
+        this.$refs.rteObj.ej2Instances.refreshUI();
+        this.textArea =
+        this.$refs.rteObj.ej2Instances.contentModule.getEditPanel();
+        this.srcArea = document.querySelector('.source-code');
+        this.updateValue();
+    }, 10);
+   
 };
-const markDownConversion = () => {
-    if (document.getElementById('MD_Preview').classList.contains('e-active')) {
-        var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-        var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-        htmlPreview.innerHTML = marked.parse(textArea.value);
+const onChange = () => {
+   this.updateValue();
+};
+
+const updateValue = () => {
+   this.srcArea.innerHTML = marked(
+        this.$refs.rteObj.ej2Instances.contentModule.getEditPanel().value
+    );
+};
+const onRefreshUI = () => {
+   this.$refs.rteObj.ej2Instances.refreshUI();
+};
+
+const updateOrientation = () => {
+   if (Browser.isDevice) {
+        this.$refs.splitterObj.$el.ej2_instances[0].orientation = 'Vertical';
+        document.body.querySelector('.heading').style.width = 'auto';
     }
 };
-const actionComplete = (e) => {
-    var mdsource = document.getElementById('preview-code');
-    var mdSplit = document.getElementById('MD_Preview');
-    var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-    var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-    if (e.targetItem === 'Maximize' && isNullOrUndefined(e.args)) {
-        fullPreview({ mode: true, type: '' });
-    } else if (!mdSplit.parentElement.classList.contains('e-overlay')) {
-        if (e.targetItem === 'Minimize') {
-            textArea.style.display = 'block';
-            textArea.style.width = '100%';
-            if (htmlPreview) { htmlPreview.style.display = 'none'; }
-            mdSplit.classList.remove('e-active');
-            mdsource.classList.remove('e-active');
-        }
-        markDownConversion();
-    }
-};
-const fullPreview = (event) => {
-    var mdsource = document.getElementById('preview-code');
-    var mdSplit = document.getElementById('MD_Preview');
-    var id = rteInstance.value.ej2Instances.getID() + 'html-view';
-    var htmlPreview = rteInstance.value.$el.parentNode.querySelector('#' + id);
-    if ((mdsource.classList.contains('e-active') || mdSplit.classList.contains('e-active')) && event.mode) {
-        mdsource.classList.remove('e-active');
-        mdSplit.classList.remove('e-active');
-        textArea.style.display = 'block';
-        textArea.style.width = '100%';
-        htmlPreview.style.display = 'none';
-    } else {
-        mdsource.classList.add('e-active');
-        mdSplit.classList.add('e-active');
-        if (!htmlPreview) {
-            htmlPreview = document.createElement('div');
-            htmlPreview.id = id;
-            htmlPreview.setAttribute('class', 'e-content');
-            textArea.parentNode.appendChild(htmlPreview);
-        }
-        if (event.type === 'preview') {
-            textArea.style.display = 'none';
-            htmlPreview.classList.add('e-pre-source');
-        } else {
-            htmlPreview.classList.remove('e-pre-source');
-            textArea.style.width = '50%';
-        }
-        htmlPreview.style.display = 'block';
-        htmlPreview.innerHTML = marked.parse(rteInstance.value.ej2Instances.contentModule.getEditPanel().value);
-        mdsource.parentElement.title = 'Code View';
-    }
-}
-provide('richtexteditor', [Toolbar, Link, Image, MarkdownEditor]);
+provide('richtexteditor', [Toolbar, Link, Image, Table, MarkdownEditor]);
 </script>
 
 <style>
@@ -152,5 +167,6 @@ provide('richtexteditor', [Toolbar, Link, Image, MarkdownEditor]);
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>

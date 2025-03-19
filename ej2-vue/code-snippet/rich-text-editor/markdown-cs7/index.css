@@ -1,0 +1,28 @@
+.markdown-preview .heading {
+    float: left;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0px;
+    border-left: none;
+    border-top: none;
+  }
+  .markdown-preview .title {
+    color: #333333;
+    letter-spacing: 1px;
+    padding-left: 10px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .fabric-dark .markdown-preview .title,
+  .bootstrap5-dark .markdown-preview .title,
+  .bootstrap5\.3-dark .markdown-preview .title,
+  .bootstrap-dark .markdown-preview .title,
+  .fluent-dark .markdown-preview .title,
+  .fluent2-dark .markdown-preview .title,
+  .material-dark .markdown-preview .title,
+  .tailwind-dark .markdown-preview .title,
+  .tailwind3-dark .markdown-preview .title,
+  .highcontrast .markdown-preview .title {
+    color: #fff;
+  }
