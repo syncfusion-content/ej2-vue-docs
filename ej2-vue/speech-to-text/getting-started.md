@@ -170,5 +170,5 @@ yarn run serve
 {% include code-snippet/speech-to-text/button-setting/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
+
 {% previewsample "page.domainurl/code-snippet/speech-to-text/button-setting" %}

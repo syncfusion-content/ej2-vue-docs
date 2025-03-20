@@ -83,18 +83,14 @@
 <script setup>
 import { Browser } from '@syncfusion/ej2-base';
 import {
-    RichTextEditorComponent,
+    RichTextEditorComponent as EjsRichtexteditor,
     Toolbar,
     Link,
     Image,
     Table,
     MarkdownEditor,
   } from '@syncfusion/ej2-vue-richtexteditor';
-import {
-    SplitterComponent,
-    PanesDirective,
-    PaneDirective,
-} from '@syncfusion/ej2-vue-layouts';
+import { SplitterComponent as EjsSplitter, PanesDirective as EPanes, PaneDirective as EPane } from '@syncfusion/ej2-vue-layouts';
 import { marked } from 'marked';
 
 const rteValue = `In Rich Text Editor, you click the toolbar buttons to format the words and the changes are visible immediately. 
@@ -160,7 +156,7 @@ const updateOrientation = () => {
         document.body.querySelector('.heading').style.width = 'auto';
     }
 };
-provide('richtexteditor', [Toolbar, Link, Image, Table, MarkdownEditor, PanesDirective, PaneDirective]);
+provide('richtexteditor', [Toolbar, Link, Image, Table, MarkdownEditor]);
 </script>
 
 <style>
@@ -171,5 +167,6 @@ provide('richtexteditor', [Toolbar, Link, Image, Table, MarkdownEditor, PanesDir
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>

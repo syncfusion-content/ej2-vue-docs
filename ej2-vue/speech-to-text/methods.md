@@ -17,3 +17,16 @@ You can use the `startListening` public method to initiate the speech recognitio
 ## Stoplistening
 
 You can use the `stopListening` public method to stop capturing your speech and ends the speech recognition.
+
+Below sample demonstrates the SpeechToText control configured with above methods.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/methods/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/methods/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/methods" %}

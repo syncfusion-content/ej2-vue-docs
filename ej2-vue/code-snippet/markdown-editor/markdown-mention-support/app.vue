@@ -4,7 +4,6 @@
       id="markdown-editor"
       ref="rteInstance"
       :toolbarSettings="toolbarSettings"
-      :formatter="formatter"
       :created="created"
       :editorMode="editorMode"
       :height="height"
@@ -57,16 +56,16 @@
   overflow: hidden;
 }
 .rte-markdown-overview .e-md-preview::before {
-  content: '\\e345';
+  content: '\e345';
 }
 .rte-markdown-overview .e-icon-btn.e-active .e-md-preview.e-icons::before {
-  content: '\\e350';
+  content: '\e350';
 }
 .bootstrap4 .rte-markdown-overview .e-icon-btn.e-active .e-md-preview::before {
-  content: '\\e790';
+  content: '\e790';
 }
 .bootstrap4 .rte-markdown-overview .e-icon-btn .e-md-preview::before {
-  content: '\\e787';
+  content: '\e787';
 }
 .fluent .rte-markdown-overview .e-icon-btn.e-active .e-md-preview::before,
 .fluent-dark .rte-markdown-overview .e-icon-btn.e-active .e-md-preview::before,
@@ -104,7 +103,7 @@
   .rte-markdown-overview
   .e-icon-btn.e-active
   .e-md-preview::before {
-  content: '\\e80e';
+  content: '\e80e';
 }
 .tailwind .rte-markdown-overview .e-icon-btn .e-md-preview::before,
 .tailwind-dark .rte-markdown-overview .e-icon-btn .e-md-preview::before,
@@ -121,7 +120,7 @@
 .fluent2-highcontrast .rte-markdown-overview .e-icon-btn .e-md-preview::before,
 .material3 .rte-markdown-overview .e-icon-btn .e-md-preview::before,
 .material3-dark .rte-markdown-overview .e-icon-btn .e-md-preview::before {
-  content: '\\e7de';
+  content: '\e7de';
 }
 /** Mention template styles **/
 .editor-mention-item-template {
@@ -211,7 +210,6 @@ export default {
           target: '#markdown-editor_editable-content',
           mentionfields: { text: 'name' },
           placeholder: 'Enter your text here...',
-          formatter: new MarkdownFormatter({ listTags: { OL: '1., 2., 3.' } }),
           toolbarSettings: {
             items: [
               'Bold',
@@ -420,7 +418,7 @@ export default {
       },
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Image,Table, MarkdownEditor, MarkdownFormatter]
+        richtexteditor:[Toolbar, Link, Image,Table, MarkdownEditor]
     }
 }
 </script>

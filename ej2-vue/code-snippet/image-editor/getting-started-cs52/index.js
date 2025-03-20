@@ -12,7 +12,7 @@ new Vue({
   template: `
     <div>
       <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"></ejs-imageeditor>
-      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">ClearImage</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Clear Image</ejs-button>
     </div>
   `,
   data: function () {

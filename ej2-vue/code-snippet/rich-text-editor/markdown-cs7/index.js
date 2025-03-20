@@ -12,12 +12,11 @@ import {
   } from '@syncfusion/ej2-vue-richtexteditor';
   import {
     SplitterPlugin,
-    PanesDirective,
-    PaneDirective
   } from '@syncfusion/ej2-vue-layouts';
   import { marked } from 'marked';
 
-  Vue.use(RichTextEditorPlugin, SplitterPlugin );
+  Vue.use(RichTextEditorPlugin );
+  Vue.use(SplitterPlugin);
 
 new Vue({
 	el: '#app',
@@ -81,7 +80,6 @@ new Vue({
                 'StrikeThrough',
                 '|',
                 'Formats',
-                'Blockquote',
                 'OrderedList',
                 'UnorderedList',
                 '|',
@@ -134,6 +132,6 @@ new Vue({
         },
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Image, Table, MarkdownEditor, PanesDirective, PaneDirective]
+        richtexteditor:[Toolbar, Link, Image, Table, MarkdownEditor]
     }
 });

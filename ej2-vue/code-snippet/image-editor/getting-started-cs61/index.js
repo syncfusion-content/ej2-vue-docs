@@ -11,7 +11,7 @@ new Vue({
   el: '#app',
   template: `
   <div>
-    <ejs-filemanager id="file-manager" height="350px" width="550px" :fileSystemData="fileSystemData" @fileOpen="fileOpen"></ejs-filemanager>
+    <ejs-filemanager id="file-manager" height="200px" width="550px" :fileSystemData="fileSystemData" @fileOpen="fileOpen"></ejs-filemanager>
     <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
   </div>
   `,
@@ -41,7 +41,7 @@ new Vue({
           parentId: "0",
           size: 69632,
           type: ".png",
-          imageUrl: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+          imageUrl: "flower.jpeg"
         },
         {
           dateCreated: new Date("2023-11-15T19:02:02.341Z"),
@@ -54,7 +54,7 @@ new Vue({
           parentId: "0",
           size: 48951,
           type: ".png",
-          imageUrl: "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png"
+          imageUrl: "bridge.jpeg"
         }
       ]
     };

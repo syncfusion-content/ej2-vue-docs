@@ -7,7 +7,6 @@ import {
     MarkdownEditor,
     Table,
   } from '@syncfusion/ej2-vue-richtexteditor';
-import { MarkdownFormatter } from '@syncfusion/ej2-vue-richtexteditor';
 import { MentionPlugin } from '@syncfusion/ej2-vue-dropdowns';
 import { marked } from 'marked';
 Vue.use(RichTextEditorPlugin, MentionPlugin);
@@ -19,7 +18,6 @@ new Vue({
                     id="markdown-editor"
                     ref="rteInstance"
                     :toolbarSettings="toolbarSettings"
-                    :formatter="formatter"
                     :created="created"
                     :editorMode="editorMode"
                     :height="height"
@@ -38,7 +36,7 @@ new Vue({
                     popupWidth="250px"
                     popupHeight="200px"
                     >
-                    <template v-slot:iTemplate="{ data }">
+                    <template v-slot:iTemplate="{data}">
                         <div class="editor-mention-item-template">
                         <div class="em-header">
                             <div
@@ -48,17 +46,17 @@ new Vue({
                                 color: data.color,
                             }"
                             >
-                            <div class="em-initial">{{ data.initial }}</div>
+                            <div class="em-initial">{{data.initial}}</div>
                             </div>
                         </div>
                         <div class="em-content">
-                            <div class="em-name">{{ data.name }}</div>
-                            <div class="em-email">{{ data.email }}</div>
+                            <div class="em-name">{{data.name}}</div>
+                            <div class="em-email">{{data.email}}</div>
                         </div>
                         </div>
                     </template>
                     <template v-slot:dTemplate="{ data }"
-                        >[@{{ data.name }}](mailto:${data.email})
+                        >[@{{data.name}}](mailto:${data.email})
                     </template>
                     </ejs-mention>
                 </div>`,
@@ -77,7 +75,6 @@ new Vue({
             target: '#markdown-editor_editable-content',
             mentionfields: { text: 'name' },
             placeholder: 'Enter your text here...',
-            formatter: new MarkdownFormatter({ listTags: { OL: '1., 2., 3.' } }),
             toolbarSettings: {
                 items: [
                 'Bold',
@@ -286,7 +283,7 @@ new Vue({
           },
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Image, Table, MarkdownEditor, MarkdownFormatter]
+        richtexteditor:[Toolbar, Link, Image, Table, MarkdownEditor]
     }
 
 });

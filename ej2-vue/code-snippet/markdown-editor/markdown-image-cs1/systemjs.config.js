@@ -42,7 +42,8 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js",
         "@syncfusion/ej2-vue-buttons": "syncfusion:ej2-vue-buttons/dist/ej2-vue-buttons.umd.min.js",
         "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js",
-        "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js"
+        "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js",
+        "marked": "https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.js"
     }
 });
 

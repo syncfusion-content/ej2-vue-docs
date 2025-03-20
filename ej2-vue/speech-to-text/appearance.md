@@ -38,6 +38,19 @@ You can display the icon on the top, bottom, left, or right side of the button t
 
 You can use the `isPrimary` property to configure the button as a primary action button.
 
+Below code sample demonstrates how to configure the button with above mentioned properties.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/appearance/buttonSettings/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/appearance/buttonSettings/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/buttonSettings" %}
+
 ## Customizing the tooltips
 
 You can use the `tooltipSettings` property to customize the content and positions of the tooltip.
@@ -53,6 +66,19 @@ You can use the `stopContent` property to customize the stop button tooltip text
 ### Setting tooltip position
 
 You can use the `position` property to determine the placement of tooltips relative to the button.
+
+Below code sample demonstrates how to configure the tooltip with above mentioned properties.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/appearance/tooltipSettings/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/appearance/tooltipSettings/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/tooltipSettings" %}
 
 ## Setting button styles
 
@@ -70,3 +96,14 @@ The SpeechToText component supports the following predefined styles that can be 
 ## Setting cssclass
 
 You can use the `cssClass` property to customize the appearance of the SpeechToText component.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/appearance/cssClass/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/appearance/cssClass/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/appearance/cssClass" %}

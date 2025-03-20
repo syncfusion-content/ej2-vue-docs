@@ -6,8 +6,7 @@
 </template>
 
 <script>
-import { SpeechToTextComponent } from "@syncfusion/ej2-vue-inputs";
-import { TextAreaComponent } from "@syncfusion/ej2-vue-inputs";
+import { SpeechToTextComponent, TextAreaComponent  } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 
@@ -27,7 +26,7 @@ export default {
   methods: {
     onTranscriptChange: function(args) {
       this.$refs.textareaObj.ej2Instances.value = args.transcript;
-    },
+    }
   }
 }
 </script>

@@ -2,8 +2,8 @@
   <div>
     <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
       :created="onCreated"></ejs-imageeditor>
-    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="saveImage">open Image</ejs-button>
-    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="setImage">Save base64</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="saveImage">Save Base64</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="setImage">Load Base64</ejs-button>
   </div>
 </template>
 

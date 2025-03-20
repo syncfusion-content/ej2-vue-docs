@@ -1,4 +1,7 @@
 #container {
-    margin-top: 30px;
-    padding: 30px;
+    margin: 50px auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

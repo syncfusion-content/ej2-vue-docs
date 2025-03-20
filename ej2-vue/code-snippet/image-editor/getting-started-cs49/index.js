@@ -13,7 +13,7 @@ new Vue({
     <div>
       <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"></ejs-imageeditor>
       <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="saveBlob">Save Blob</ejs-button>
-      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="setImage">Open Image</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="setImage">Open Blob</ejs-button>
     </div>
   `,
   data: function () {

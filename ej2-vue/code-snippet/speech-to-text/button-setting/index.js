@@ -1,8 +1,9 @@
 import Vue from 'vue';
-import { SpeechToTextPlugin } from "@syncfusion/ej2-vue-inputs";
+import { SpeechToTextPlugin, TextAreaPlugin } from "@syncfusion/ej2-vue-inputs";
 import { enableRipple } from '@syncfusion/ej2-base';
 enableRipple(true);
 Vue.use(SpeechToTextPlugin);
+Vue.use(TextAreaPlugin);
 
 new Vue({
 	el: '#app',
@@ -23,6 +24,6 @@ new Vue({
   methods: {
     onTranscriptChange: function(args) {
       this.$refs.textareaObj.ej2Instances.value = args.transcript;
-    },
+    }
   }
 });

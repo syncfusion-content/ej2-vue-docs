@@ -23,7 +23,7 @@ const created = () => {
 };
 
 const shapeChanging = (args) => {
-    if (args.action == "insert" && args.currentShapeSettings?.type === 'FreehandDraw') {
+    if (args.action == "insert" && args.currentShapeSettings?.type === 'Rectangle') {
         args.currentShapeSettings.strokeColor = 'red';
     }
 };

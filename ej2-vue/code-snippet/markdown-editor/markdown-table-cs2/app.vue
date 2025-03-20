@@ -24,14 +24,14 @@
   overflow: hidden;
 }
 .e-md-preview::before {
-  content: '\\e345';
+  content: '\e345';
 }
 
 .e-rte-content .e-content.e-pre-source {
   width: 100%;
 }
 .e-icon-btn.e-active .e-md-preview.e-icons::before {
-  content: '\\e350';
+  content: '\e350';
 }
 </style>
 

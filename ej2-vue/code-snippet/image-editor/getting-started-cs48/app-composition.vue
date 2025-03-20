@@ -2,7 +2,7 @@
     <div>
         <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
             :created="created"></ejs-imageeditor>
-        <ejs-button cssClass="e-img-button" :isPrimary="true" @click="saveImage">Save Image</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" @click="saveImage">Save Base64</ejs-button>
         <ejs-button cssClass="e-img-button" :isPrimary="true" @click="setImage">Load Base64</ejs-button>
     </div>
 </template>

@@ -13,14 +13,12 @@ new Vue({
   template: `
   <div>
     <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :selected="onSelect" :showFileList="false"></ejs-uploader>
-    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="330px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="330px" width="550px"></ejs-imageeditor>
   </div>
 `,
 
   data: function () {
-    return {
-      toolbar: []
-    };
+    return {};
   },
   methods: {
     onSelect: function (args) {

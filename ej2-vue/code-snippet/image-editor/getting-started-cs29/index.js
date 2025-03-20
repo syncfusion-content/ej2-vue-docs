@@ -29,7 +29,7 @@ new Vue({
     shapeChanging: function (args) {
       if (args.currentShapeSettings.type === 'Text') {
         args.currentShapeSettings.color = 'red';
-        args.currentShapeSettings.fontFamily = 'italic';
+        args.currentShapeSettings.fontFamily = 'Times New Roman';
       }
     }
   }

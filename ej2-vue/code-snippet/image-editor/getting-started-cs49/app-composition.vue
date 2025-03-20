@@ -2,8 +2,8 @@
     <div>
         <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
             :created="created"></ejs-imageeditor>
-        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="getBlob">Get blob</ejs-button>
-        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="setImage">Load blob</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="getBlob">Save Blob</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="setImage">Load Blob</ejs-button>
     </div>
 </template>
 

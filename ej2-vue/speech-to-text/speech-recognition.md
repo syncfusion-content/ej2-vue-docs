@@ -14,13 +14,46 @@ domainurl: ##DomainURL##
 
 You can use the `transcript` property to retrieve the transcribed text from the spoken text. This property allows to display the transcribed text once the speech recognition process is started.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/transcript/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/transcript/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/transcript" %}
+
 ## Setting language
 
 You can use the `lang` property to specify the language for speech recognition. Setting this property ensures that the recognition engine interprets the spoken words correctly based on the specified locale such as `en-US` for American `English`, `fr-FR` for `French`, and more.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/language/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/language/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/language" %}
+
 ## Allowing interim results
 
 You can use the `allowInterimResults` property to enable or disable interim results. When set to `true`, the recognized speech will be displayed in real time as words are spoken. When set to `false`, only final results will be displayed after recognition is complete. By default, the value is `true`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/interimResults/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/interimResults/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/interimResults" %}
 
 ## Managing listening state
 
@@ -38,13 +71,48 @@ It is actively listening which captures and transcribes speech with a stop icon 
 
 Denotes the speech recognition has ended, and no further speech is being processed.
 
+Below sample demonstrates the usage of `listeningState` property.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/listeningState/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/listeningState/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/listeningState" %}
+
 ## Show or hide tooltip
 
 You can use the `showTooltip` property to specify the tooltip text to be displayed on hovering the SpeechToText button. By default, the value is `true`.
 
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/showTooltip/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/showTooltip/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/showTooltip" %}
+
 ## Setting disabled
 
 You can use the `disabled` property to disable the SpeechToText, preventing user interaction when set to `true`. By default, the value is `false`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/disabled/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/speech-to-text/speechRecognition/disabled/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/speech-to-text/speechRecognition/disabled" %}
 
 ## Setting html attributes
 

@@ -116,7 +116,6 @@ export default {
                 'StrikeThrough',
                 '|',
                 'Formats',
-                'Blockquote',
                 'OrderedList',
                 'UnorderedList',
                 '|',
@@ -168,7 +167,7 @@ export default {
         },
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Image, MarkdownEditor, Table, PanesDirective, PaneDirective]
+        richtexteditor:[Toolbar, Link, Image, MarkdownEditor, Table]
     }
 }
 </script>
@@ -181,5 +180,6 @@ export default {
 @import "../../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../../node_modules/@syncfusion/ej2-vue-layouts/styles/material.css";
 @import "../../node_modules/@syncfusion/ej2-vue-richtexteditor/styles/material.css";
 </style>

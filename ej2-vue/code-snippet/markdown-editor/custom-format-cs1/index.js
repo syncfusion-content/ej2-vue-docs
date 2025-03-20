@@ -4,7 +4,6 @@ import {
   Toolbar,
   Link,
   Image,
-  Table,
   MarkdownEditor, MarkdownFormatter
 } from '@syncfusion/ej2-vue-richtexteditor';
 import { marked } from 'marked';
@@ -38,7 +37,7 @@ new Vue({
                 items: [
                     'Bold', 'Italic', 'StrikeThrough', '|',
                     'Formats', 'OrderedList', 'UnorderedList', '|',
-                      'CreateLink', 'Image', '|',
+                      '|',
                       {
                         tooltipText: 'Preview',
                         template: '<button id="preview-code" class="e-tbar-btn e-control e-btn e-icon-btn">' +
@@ -108,7 +107,7 @@ new Vue({
         },
     },
     provide:{
-        richtexteditor:[Toolbar, Link, Image, Table, MarkdownEditor, MarkdownFormatter]
+        richtexteditor:[Toolbar, Link, Image, MarkdownEditor]
     }
 
 });

@@ -2,7 +2,7 @@
   <div>
     <div class="control-section">
       <div class="sample-container">
-        <ejs-filemanager id="flat_data" :fileSystemData="fileSystemData" @fileOpen="fileOpen"></ejs-filemanager>
+        <ejs-filemanager id="flat_data" :fileSystemData="fileSystemData" height="200px" @fileOpen="fileOpen"></ejs-filemanager>
         <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
       </div>
     </div>

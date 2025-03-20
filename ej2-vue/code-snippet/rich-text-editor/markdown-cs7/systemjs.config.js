@@ -14,7 +14,7 @@ System.config({
     },
     map: {
         typescript: "https://unpkg.com/typescript@2.2.2/lib/typescript.js",
-vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
+        vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-base": "syncfusion:ej2-base/dist/ej2-base.umd.min.js",
         "@syncfusion/ej2-data": "syncfusion:ej2-data/dist/ej2-data.umd.min.js",
         "@syncfusion/ej2-lists": "syncfusion:ej2-lists/dist/ej2-lists.umd.min.js",
@@ -36,13 +36,16 @@ vue: "https://unpkg.com/vue@2.6.14/dist/vue.min.js",
         "@syncfusion/ej2-navigations": "syncfusion:ej2-navigations/dist/ej2-navigations.umd.min.js",
         "@syncfusion/ej2-notifications":"syncfusion:ej2-notifications/dist/ej2-notifications.umd.min.js",
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
+        "@syncfusion/ej2-vue-layouts": "syncfusion:ej2-vue-layouts/dist/ej2-vue-layouts.umd.min.js",
         "@syncfusion/ej2-vue-data": "syncfusion:ej2-vue-data/dist/ej2-vue-data.umd.min.js",
         "@syncfusion/ej2-vue-lists": "syncfusion:ej2-vue-lists/dist/ej2-vue-lists.umd.min.js",
         "@syncfusion/ej2-vue-inputs": "syncfusion:ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js",
         "@syncfusion/ej2-vue-popups": "syncfusion:ej2-vue-popups/dist/ej2-vue-popups.umd.min.js",
+
         "@syncfusion/ej2-vue-buttons": "syncfusion:ej2-vue-buttons/dist/ej2-vue-buttons.umd.min.js",
         "@syncfusion/ej2-vue-dropdowns": "syncfusion:ej2-vue-dropdowns/dist/ej2-vue-dropdowns.umd.min.js",
-        "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js"
+        "@syncfusion/ej2-vue-richtexteditor": "syncfusion:ej2-vue-richtexteditor/dist/ej2-vue-richtexteditor.umd.min.js",
+        "marked": "https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.19/marked.js"
     }
 });
 
