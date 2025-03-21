@@ -7,7 +7,7 @@
 </template>
 <script setup>
 import { provide } from "vue";
-import { DiagramComponent as EjsDiagram, LineRouting, AvoidLineOverlapping, DiagramConstraints, PortVisibility  } from '@syncfusion/ej2-vue-diagrams';
+import { DiagramComponent as EjsDiagram, LineRouting, AvoidLineOverlapping, DiagramConstraints, PortVisibility, Snapping  } from '@syncfusion/ej2-vue-diagrams';
 const rulerSettings = { showRulers: true };
 const orData = 'M21.7,76.5L21.7,76.5c6.4-18.1,6.4-37.8,0-55.9l0-0.1h1.6c21.5,0,41.7,10.4,54.2,28l0,0l0,0  c-12.5,17.6-32.7,28-54.2,28H21.7z M99.5,48.5l-22,0 M0,31.5h25 M0,65.5h25';
 const andData = 'M21.5,20.5h28a28,28,0,0,1,28,28v0a28,28,0,0,1-28,28h-28a0,0,0,0,1,0,0v-56a0,0,0,0,1,0,0Z M78,48.5 L 100,48.5Z M0,32.5 L 21.4,32.5Z M0,65.5 L 21.4,65.5Z';
@@ -77,7 +77,7 @@ const constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting 
 const width = "100%";
 const height = "700px";
 
-provide('diagram', [LineRouting, AvoidLineOverlapping]);
+provide('diagram', [LineRouting, AvoidLineOverlapping, Snapping]);
 </script>
 
 <style>

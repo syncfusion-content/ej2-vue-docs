@@ -326,33 +326,39 @@ The following image illustrates how the connector automatically re-routes the se
 The diagram provides flexibility to prevent connectors from overlapping, ensuring better clarity and readability. This feature intelligently adjusts connector paths to avoid stacking orthogonal connectors on top of each other, reducing visual clutter and enhancing diagram structure. It is especially useful in complex diagrams with multiple orthogonal connectors, where overlapping lines can make interpretation difficult.
 
 To enable this feature, inject the `AvoidLineOverlapping` module and add its constraints to the diagram.
-
-N> The `AvoidLineOverlapping` feature applies only to orthogonal connectors and requires the `LineRouting` module to be injected with its constraints enabled.
  
 * Inject both the `LineRouting` and `AvoidLineOverlapping` modules into the application.
 
   ```ts
   /**
    * Inject the line routing and avoid line overlapping module
-   */
+    */
   import { DiagramComponent, LineRouting, AvoidLineOverlapping, DiagramConstraints } from '@syncfusion/ej2-vue-diagrams';
   provide('diagram',  [LineRouting, AvoidLineOverlapping]);
   ```
+
 * Add `LineRouting` and `AvoidLineOverlapping` constraints to the diagram constraints to enable line routing with avoid line overlapping support.
 
   ```ts
-      <template>
-        <div id="app">
-        // Initialize the Diagram
-                <ejs-diagram :constraints='constraints' ></ejs-diagram>
-            </div>
-        </template>
 
-        <script setup>
-        // Enable line routing and avoid line overlapping constraints.
-        let constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting | DiagramConstraints.AvoidLineOverlapping;
-        </script>
+  <template>
+    <div id="app">
+      // Initialize the Diagram
+      <ejs-diagram :constraints='constraints' ></ejs-diagram>
+    </div>
+  </template>
+
+  <script setup>
+  // Enable line routing and avoid line overlapping constraints.
+  let constraints = DiagramConstraints.Default |
+                    DiagramConstraints.LineRouting |
+                    DiagramConstraints.AvoidLineOverlapping;
+  </script>
+  
   ```
+
+![AvoidLineOverlapping GIF](images/avoidconnectoroverlap.gif)
+
 The following example demonstrates how to enable the AvoidLineOverlapping feature in the diagram.
 
 {% tabs %}
@@ -366,9 +372,7 @@ The following example demonstrates how to enable the AvoidLineOverlapping featur
         
 {% previewsample "page.domainurl/code-snippet/diagram/connectors/AvoidLineOverlapping" %}
 
-The following image illustrates how the connector automatically avoid overlapping with other connectors.  
-
-![AvoidLineOverlapping GIF](images/avoidconnectoroverlap.gif)
+N> The `AvoidLineOverlapping` feature applies only to orthogonal connectors and requires the `LineRouting` module to be injected with its constraints enabled.
 
 
 ## See Also

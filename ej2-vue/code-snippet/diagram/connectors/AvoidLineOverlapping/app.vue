@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { DiagramComponent, LineRouting, AvoidLineOverlapping, DiagramConstraints, PortVisibility } from "@syncfusion/ej2-vue-diagrams";
+import { DiagramComponent, LineRouting, AvoidLineOverlapping, DiagramConstraints, PortVisibility, Snapping } from "@syncfusion/ej2-vue-diagrams";
 let orData = 'M21.7,76.5L21.7,76.5c6.4-18.1,6.4-37.8,0-55.9l0-0.1h1.6c21.5,0,41.7,10.4,54.2,28l0,0l0,0  c-12.5,17.6-32.7,28-54.2,28H21.7z M99.5,48.5l-22,0 M0,31.5h25 M0,65.5h25';
 let andData = 'M21.5,20.5h28a28,28,0,0,1,28,28v0a28,28,0,0,1-28,28h-28a0,0,0,0,1,0,0v-56a0,0,0,0,1,0,0Z M78,48.5 L 100,48.5Z M0,32.5 L 21.4,32.5Z M0,65.5 L 21.4,65.5Z';
 let notData = 'M75.5,50.5l-52,28v-56L75.5,50.5z M81.5,50.5h18 M1.5,50.5h22 M78.5,47.5c-1.7,0-3,1.3-3,3s1.3,3,3,3s3-1.3,3-3  S80.2,47.5,78.5,47.5z';
@@ -84,7 +84,7 @@ export default {
     getConnectorDefaults: (connector) => connector.cornerRadius = 5,
   },
   provide: {
-    diagram: [LineRouting, AvoidLineOverlapping]
+    diagram: [LineRouting, AvoidLineOverlapping, Snapping]
   }
 };
 </script>

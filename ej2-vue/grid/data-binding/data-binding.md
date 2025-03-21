@@ -184,3 +184,22 @@ The following code demonstrates, how to use the `changeDataSource` method to bin
 
 * [Binding a firebase data source to Grid using vueFire2](https://www.syncfusion.com/blogs/post/binding-a-firebase-data-source-to-grid-using-vuefire2.aspx)
 * [How to bind SQL Server data in vue DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11453/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
+
+## Prevent to convert local time zone format for date column
+
+By default, Syncfusion Vue Grid automatically converts date values to the local time zone of the client system. However, in some scenarios, you may need to display the original date as received from the server without any timezone conversion.
+
+To prevent timezone conversion for a date column, use the `serverTimezoneOffset` property from `DataUtil`. Setting this property to **0** ensures that dates remain in the original format received from the server without conversion to the local timezone.
+
+The following example demonstrates how to prevent local time zone conversion for date columns in Grid by using the `DataUtil.serverTimezoneOffset` property:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/databinding-timezone/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/databind/databinding-timezone/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/databind/databinding-timezone" %}

@@ -178,6 +178,33 @@ Consider the following sample where the `ignoreAccent` property is set to true i
         
 {% previewsample "page.domainurl/code-snippet/grid/filter/filter-cs5" %}
 
+## Perform ENUM column filtering
+
+The Syncfusion Vue Grid allows you to filter enum-type data using the [filterTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#filtertemplate) feature. This is particularly useful for filtering predefined values, such as categories or statuses.
+
+To achieve this functionality:
+
+1. Render [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) in the `filterTemplate` for the enum-type column.
+
+2. Bind the enumerated list data to the column.
+
+3. Use the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property in the **Type** column to display enum values in a readable format.
+
+4. In the [change](https://ej2.syncfusion.com/vue/documentation/api/drop-down-list#change) event of the **DropDownList**, dynamically filter the column using the [filterByColumn](https://ej2.syncfusion.com/vue/documentation/api/grid#filterbycolumn) method of the Grid.
+
+Below is an example demonstrating how to filter enum-type data in a Grid:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/filter-enum/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/filter/filter-enum/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/filter/filter-enum" %}
+
 ## Filtering with case sensitivity
 
 The Syncfusion Vue Grid provides the flexibility to enable or disable case sensitivity during filtering. This feature is useful when you want to control whether filtering operations should consider the case of characters. It can be achieved by using the  [enableCaseSensitivity](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/#enablecasesensitivity) property within the [filterSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/filterSettings/) of the grid.
