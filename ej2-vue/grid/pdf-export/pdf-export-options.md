@@ -137,6 +137,33 @@ In the following example, the **CustomerID** is initially a hidden column in the
         
 {% previewsample "page.domainurl/code-snippet/grid/pdf/default-cs9" %}
 
+## Show or hide columns while exporting with stacked header
+
+The Syncfusion Vue Grid allows you to control the visibility of columns during export operations. This feature is particularly useful when customizing the data presented in exported files while using stacked headers.
+
+To implement the show or hide columns feature during Excel export in the Grid, follow these steps:
+
+1. Handle the [toolbarClick](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbarclick) event of the Grid.
+
+2. Update the visibility of the desired columns by setting the [visible](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#visible) property of the column to **true** or **false**.
+
+3. Export the Grid to PDF document using [pdfExport](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexport) method.
+
+4. Handle the [pdfExportComplete](https://ej2.syncfusion.com/vue/documentation/api/grid/#pdfexportcomplete) event to restore the column visibility to its original state.
+
+In the following example, the **ShipName** is initially a hidden column in the Grid. However, during the PDF export process, the **ShipName** column is made visible, while the **OrderDate** column is hidden:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/pdf-export-show-hide/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/pdf/pdf-export-show-hide/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/pdf/pdf-option-cs5" %}
+
 ## Change page orientation
 
 The Syncfusion Vue Grid component allows you to change the page orientation of the exported PDF document from the default portrait mode to landscape mode. This feature provides the flexibility to adjust the layout and presentation of the exported PDF according to your needs.
