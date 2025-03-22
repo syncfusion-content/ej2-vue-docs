@@ -37,4 +37,18 @@ const michaleUser = {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#messageTemplate .e-right .message-items {
+  border-radius: 16px 16px 2px 16px;
+  background-color: #c5ffbf;
+}
+
+#messageTemplate .e-left .message-items {
+  border-radius: 16px 16px 16px 2px;
+  background-color: #f5f5f5;
+}
+
+#messageTemplate .message-items {
+  padding: 5px;
+}
 </style>

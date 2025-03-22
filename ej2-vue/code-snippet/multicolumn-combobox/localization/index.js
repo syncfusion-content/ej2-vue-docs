@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import { MultiColumnComboBoxPlugin } from "@syncfusion/ej2-vue-multicolumn-combobox";
 import { L10n, setCulture} from '@syncfusion/ej2-base';
-import { Query, DataManager, ODataV4Adaptor } from '@syncfusion/ej2-data';
 Vue.use(MultiColumnComboBoxPlugin);
 
 L10n.load({
@@ -18,7 +17,7 @@ new Vue({
     <div id="app">
       <div id='container' style="margin:50px auto 0; width:500px;">
           <br>
-          <ejs-multicolumncombobox id='multicolumn' :dataSource='customerData' :fields='fields' :query='query' locale='fr-BE' placeholder='Sélectionnez un client'>
+          <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' :query='query' locale='fr-BE' placeholder='Sélectionnez un client'>
           <e-columns>
             <e-column field='ContactName' header='Contact Name' width={90}></e-column>
             <e-column field='CustomerID' header='Customer ID' width={160}></e-column>
@@ -29,13 +28,8 @@ new Vue({
   `,
     data() {
       return {
-        customerData: new DataManager({
-          url: 'https://services.odata.org/V4/Northwind/Northwind.svc/Customers',
-          adaptor: new ODataV4Adaptor,
-          crossDomain: true
-        }),
-        fields: { text: 'ContactName', value: 'CustomerID' },
-        query: new Query().select(['ContactName', 'CustomerID']).take(0),
+        empData: [],
+        fields: { text: 'ContactName', value: 'CustomerID' }
       }
     }
 });

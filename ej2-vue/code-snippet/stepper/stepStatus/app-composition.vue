@@ -76,15 +76,15 @@ const updateStatus = (stepStatus) => {
 }
 
 .sf-icon-cart:before {
-  content: "\e710";
+  content: '\e710';
 }
 
 .sf-icon-payment:before {
-  content: "\e706";
+  content: '\e706';
 }
 
 .sf-icon-success:before {
-  content: "\e715";
+  content: '\e715';
 }
 
 .stepper-section {

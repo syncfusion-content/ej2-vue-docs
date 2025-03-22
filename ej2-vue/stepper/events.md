@@ -70,6 +70,8 @@ The Stepper component triggers the [stepClick](https://ej2.syncfusion.com/vue/do
 {% endhighlight %}
 {% endtabs %}
 
+{% previewsample "page.domainurl/code-snippet/stepper/step-click" %}
+
 ## beforeStepRender
 
 The Stepper component triggers the [beforeStepRender](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#beforesteprender) event before rendering each step.
@@ -82,3 +84,5 @@ The Stepper component triggers the [beforeStepRender](https://ej2.syncfusion.com
 {% include code-snippet/stepper/beforesteprender/app.vue %}
 {% endhighlight %}
 {% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/stepper/beforesteprender" %}

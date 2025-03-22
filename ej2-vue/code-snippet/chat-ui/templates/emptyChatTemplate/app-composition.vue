@@ -34,4 +34,10 @@ const michaleUser = {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.empty-chat-text {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 90px;
+}
 </style>

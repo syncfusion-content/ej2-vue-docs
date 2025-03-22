@@ -40,7 +40,7 @@ const empData = [
     { "EmpID": 1020, "Name": "James", "Designation": "Developer", "Country": "China" }
 ];
 const fields = { text: 'Name', value: 'EmpID' };
-const gridSettings = { enableAltRow: true };
+const gridSettings = { gridLines: 'Horizontal' };
 </script>
 
 <style>

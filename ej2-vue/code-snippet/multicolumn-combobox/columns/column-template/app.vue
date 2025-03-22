@@ -45,4 +45,29 @@ export default {
 @import "../node_modules/@syncfusion/ej2-grids/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-vue-multicolumn-combobox/styles/material.css";
+
+.multicolumn-customize .ename {
+  opacity: .87;
+  font-size: 16px;
+  margin-top: 8px;
+}
+  
+.multicolumn-customize .country {
+  opacity: .87;
+  font-size: 16px;
+}
+
+.multicolumn-customize .job {
+  opacity: .54;
+  font-size: 14px;
+  margin-top: 15px;
+  margin-bottom: 7px;
+}
+
+.multicolumn-customize .empImage {
+  margin: 6px 16px;
+  float: left;
+  width: 50px;
+  height: 50px;
+}
 </style>

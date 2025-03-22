@@ -20,14 +20,6 @@ new Vue({
                   </e-ribbon-item>
                 </e-ribbon-items>
               </e-ribbon-collection>
-            </e-ribbon-collections>
-          </e-ribbon-group>
-        </e-ribbon-groups>
-      </e-ribbon-tab>
-      <e-ribbon-tab header="Insert">
-        <e-ribbon-groups>
-          <e-ribbon-group header="Tables">
-            <e-ribbon-collections>
               <e-ribbon-collection>
                 <e-ribbon-items>
                   <e-ribbon-item type="Button" :buttonSettings="cutButton">

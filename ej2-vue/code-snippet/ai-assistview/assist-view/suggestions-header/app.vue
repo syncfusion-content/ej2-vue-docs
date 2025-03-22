@@ -20,7 +20,7 @@ export default {
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest: function (args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
         let response1 = "Use clear naming, break code into small functions, avoid repetition, write tests, and follow coding standards.";

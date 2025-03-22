@@ -38,4 +38,9 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.view-container {
+  margin: 20px auto;
+  width: 80%;
+}
 </style>

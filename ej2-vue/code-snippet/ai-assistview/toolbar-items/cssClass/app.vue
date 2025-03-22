@@ -19,7 +19,7 @@ export default {
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest: function (args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
         let defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
@@ -35,4 +35,12 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-btn .e-user::before {
+  color: blue;
+  font-size: 15px;
+}
+.custom-btn.e-toolbar-item button.e-tbar-btn {
+  border: 1px solid #dcdcdc;
+}
 </style>

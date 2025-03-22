@@ -12,15 +12,15 @@ new Vue({
     <div class="e-btn-group">
       <input type="radio" id="start" name="position" value="start" v-on:click="updateLabelPosition" />
       <label class="e-btn" for="start">Start</label>
-      <input type="radio" id="end" name="position" value="end" v-on:click="updateLabelPosition" checked />
+      <input type="radio" id="end" name="position" value="end" v-on:click="updateLabelPosition" />
       <label class="e-btn" for="end">End</label>
       <input type="radio" id="top" name="position" value="top" v-on:click="updateLabelPosition" />
       <label class="e-btn" for="top">Top</label>
-      <input type="radio" id="bottom" name="position" value="bottom" v-on:click="updateLabelPosition" />
+      <input type="radio" id="bottom" name="position" value="bottom" v-on:click="updateLabelPosition" checked />
       <label class="e-btn" for="bottom">Bottom</label>
     </div>
     <div class="label-stepper-control">
-      <ejs-stepper id="stepper" ref="stepper" labelPosition="end" :activeStep="value">
+      <ejs-stepper id="stepper" ref="stepper" :activeStep="value">
         <e-steps>
           <e-step label='Cart' iconCss='sf-icon-cart'></e-step>
           <e-step label='Delivery Address' iconCss='sf-icon-transport'></e-step>

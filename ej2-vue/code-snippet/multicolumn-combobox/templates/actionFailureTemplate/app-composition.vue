@@ -18,7 +18,7 @@ import { MultiColumnComboBoxComponent as EjsMulticolumncombobox } from "@syncfus
 import { DataManager, WebApiAdaptor } from '@syncfusion/ej2-data';
 import { ColumnsDirective as EColumns, ColumnDirective as EColumn } from "@syncfusion/ej2-vue-multicolumn-combobox";
 const empData = new DataManager({
-  url: 'https://services.syncfusion.com/js/production/api/Order',
+  url: 'https://services.syncfusion.com/js/production/api/order-data',
   adaptor: new WebApiAdaptor,
   crossDomain: true
 });

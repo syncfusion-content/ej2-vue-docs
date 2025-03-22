@@ -29,4 +29,12 @@ const onPromptRequest = (args) => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-btn .e-user::before {
+  color: blue;
+  font-size: 15px;
+}
+.custom-btn.e-toolbar-item button.e-tbar-btn {
+  border: 1px solid #dcdcdc;
+}
 </style>

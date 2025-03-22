@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Steps in Vue Stepper component | Syncfusion
-description: Checkout and learn about Steps with Vue Stepper component of Syncfusion Essential JS 2 and more.
+description: Checkout and learn about the Steps with Vue Stepper component of the Syncfusion Essential JS 2 and more.
 control: Stepper
 platform: ej2-vue
 documentation: ug
@@ -77,6 +77,21 @@ You can use the `disabled` property to disable a step, preventing user interacti
 {% endtabs %}
 
 {% previewsample "page.domainurl/code-snippet/stepper/disabled" %}
+
+## Setting readonly
+
+You can use [readOnly](https://ej2.syncfusion.com/vue/documentation/api/stepper/stepperModel/#readonly) property to disable the user interactions in the stepper.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/stepper/readonly/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/stepper/readonly/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/stepper/readonly" %}
 
 ## Setting active step
 

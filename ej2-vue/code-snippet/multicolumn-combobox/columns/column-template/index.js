@@ -10,10 +10,10 @@ new Vue({
         <br>
         <ejs-multicolumncombobox id='multicolumn' :dataSource='empData' :fields='fields' placeholder='Select an employee'>
           <e-columns>
-            <e-column field='Eimg' header='Photos' width='90' :template='columnTemplate1'></e-column>
-            <e-column field='Name' header='Employee Name' width='160' :template='columnTemplate2'></e-column>
-            <e-column field='DateofJoining' header='Date of Joining' width='165' :template='columnTemplate3'></e-column>
-            <e-column field='Country' header='Country' width='100' :template='columnTemplate4'></e-column>
+              <e-column field='Eimg' header='Photos' width='90' template='<div><img class="empImage" src="https://ej2.syncfusion.com/demos/src/multicolumn-combobox/Employees/${Eimg}.png" alt="employee"/> </div>'></e-column>
+              <e-column field='Name' header='Employee Name' width='160' template='<div class="ename"> ${Name} </div> <div class="job"> ${Designation} </div>'></e-column>
+              <e-column field='DateofJoining' header='Date of Joining' width='165' template='<div class="dateOfJoining"> ${DateofJoining} </div>'></e-column>
+              <e-column field='Country' header='Country' width='100' template='<div class="country"> ${Country} </div>'></e-column>
           </e-columns>
         </ejs-multicolumncombobox>
     </div>
@@ -32,23 +32,7 @@ new Vue({
         { "Name": "Robert King", "Eimg": 8, "Designation": "Developer ", "Country": "India", "DateofJoining": "08/09/2018" },
         { "Name": "Steven Buchanan", "Eimg": 10, "Designation": "CEO", "Country": "Ireland", "DateofJoining": "05/03/2020" }
       ],
-      fields: { text: 'Name', value: 'EmpID' }
+      fields: { text: 'Name', value: 'Eimg' }
     }
-  },
-  computed: {
-    columnTemplate1() {
-      return '<div><img class="empImage" src="https://ej2.syncfusion.com/demos/src/multicolumn-combobox/Employees/${Eimg}.png" alt="employee"/> </div>';
-    },
-    columnTemplate2() {
-      return '<div class="ename"> ${Name} </div> <div class="job"> ${Designation} </div>';
-    },
-    columnTemplate3() {
-      return '<div class="dateOfJoining"> ${DateofJoining} </div>';
-    },
-    columnTemplate4() {
-      return '<div class="country"> ${Country} </div>';
-    }
-
   }
-
 });

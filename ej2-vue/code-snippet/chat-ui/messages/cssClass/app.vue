@@ -42,4 +42,10 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.e-chat-ui .e-message-icon.custom-user {
+  background-color: #416fbd;
+  color: white;
+  border-radius: 5px;
+}
 </style>

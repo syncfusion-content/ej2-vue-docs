@@ -45,9 +45,13 @@ export default {
                  { "EmpID": 1019, "Name": "Olivia", "Designation": "Team Lead", "Country": "Ireland" },
                  { "EmpID": 1020, "Name": "James", "Designation": "Developer", "Country": "China" } 
       ],
-      footerTemplate: "<span class='foot' style='font-weight: bolder; margin: 0 10px'> Total list of employees: " + empData.length + "</span>",
       fields: { text: 'Name', value: 'EmpID' }
     }
+  },
+  computed: {
+    footerTemplate() {
+      return `<span class='foot' style='font-weight: bolder; margin: 0 10px'> Total list of employees: ${this.empData.length}</span>`;
+    },
   }
 }
 </script>

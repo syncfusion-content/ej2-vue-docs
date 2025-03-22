@@ -53,18 +53,18 @@ export default {
 }
 
 .step-label .sf-icon-cart:before {
-  content: "\e710";
+  content: '\e710';
 }
 
 .step-label .sf-icon-transport:before {
-  content: "\e702";
+  content: '\e702';
 }
 
 .step-label .sf-icon-payment:before {
-  content: "\e706";
+  content: '\e706';
 }
 
 .step-label .sf-icon-success:before {
-  content: "\e715";
+  content: '\e715';
 }
 </style>

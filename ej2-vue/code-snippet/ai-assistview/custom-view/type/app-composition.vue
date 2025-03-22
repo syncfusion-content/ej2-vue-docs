@@ -35,4 +35,11 @@ const onPromptRequest (args) => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.view-container {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

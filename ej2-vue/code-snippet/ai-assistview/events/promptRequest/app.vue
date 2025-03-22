@@ -16,7 +16,7 @@ export default {
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest: function (args) {
       // Your required action here
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;

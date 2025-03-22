@@ -57,4 +57,11 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#timeBreakTemplate .timebreak-wrapper {
+  background-color: #6495ed;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 2px;
+}
 </style>
