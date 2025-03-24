@@ -208,6 +208,8 @@ export default {
 {% endhighlight %}
 {% endtabs %}
 
+> The SpeechToText component requires an internet connection and browser support for the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition).
+
 ## Run the project
 
 To run the project, use the following command:

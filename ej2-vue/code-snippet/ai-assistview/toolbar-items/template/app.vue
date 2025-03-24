@@ -9,10 +9,12 @@
 </template>
 <script>
 import { AIAssistViewComponent } from "@syncfusion/ej2-vue-interactive-chat";
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 
 export default {
   components: {
-    'ejs-aiassistview': AIAssistViewComponent
+    'ejs-aiassistview': AIAssistViewComponent,
+    'ejs-dropdownbutton': DropDownButtonComponent
   },
   data: function () {
     return {

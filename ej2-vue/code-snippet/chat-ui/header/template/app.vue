@@ -9,7 +9,7 @@
     </ejs-chatui>
   </div>
   <div id="dropdownTemplate">
-    <ejs-dropdownbutton cssClass="custom-dropdown" iconCss="e-icons e-menu" content="Menu" :items='dropdownItemschat'></ejs-dropdownbutton>
+    <ejs-dropdownbutton cssClass="custom-dropdown" iconCss="e-icons e-menu" content="Menu" :items='dropdownItems'></ejs-dropdownbutton>
   </div>
 </template>
 
