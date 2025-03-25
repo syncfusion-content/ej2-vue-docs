@@ -244,6 +244,7 @@ The Rich Text Editor offers an option to localize its strings using the locale A
             "slashMenuItemVideoDescription": "Insert a video.",
             "slashMenuItemEmojiText": "Emojipicker",
             "slashMenuItemEmojiDescription": "Use emojis to express ideas and emoticons.",
+
         }
     }
 ```
