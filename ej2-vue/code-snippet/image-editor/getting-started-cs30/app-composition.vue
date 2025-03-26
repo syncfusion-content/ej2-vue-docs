@@ -1,49 +1,47 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Text</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="undoClick">Undo</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="redoClick">Redo</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"
+      :created="onCreated"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Draw Text</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="undoClick">Undo</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="redoClick">Redo</ejs-button>
+  </div>
 </template>
 
 <script setup>
-
-import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
+import { ref } from "vue";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 import { Browser } from "@syncfusion/ej2-base";
 
+const imageEditorObj = ref(null);
+const toolbar = [];
 
+const onCreated = () => {
+  const imageEditor = imageEditorObj.value?.ej2Instances;
+  if (!imageEditor) return;
+  const imageUrl = Browser.isDevice
+    ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+    : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+  imageEditor.open(imageUrl);
+};
 
-
-export default {
-  data: function() {
-      return {
-        toolbar: []
-      };
-  },
-  methods: {
-     created: function() {
-        if (Browser.isDevice) {
-            this.$refs.imageEditorObj.open('flower.png');
-        } else {
-            this.$refs.imageEditorObj.open('bridge.png');
-        }
-    },
-    btnClick: function(event) {
-      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x,dimension.y,'Enter\nText');
-    },
-    undoClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.undo();
-    },
-    redoClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.redo();
-    }
+const btnClick = () => {
+  const imageEditor = imageEditorObj.value?.ej2Instances;
+  if (imageEditor) {
+    const dimension = imageEditor.getImageDimension();
+    imageEditor.drawText(dimension.x, dimension.y);
   }
-}
-</script>
+};
 
+const undoClick = () => {
+  imageEditorObj.value?.ej2Instances.undo();
+};
+
+const redoClick = () => {
+  imageEditorObj.value?.ej2Instances.redo();
+};
+</script>
 <style>
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
@@ -55,9 +53,8 @@ export default {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

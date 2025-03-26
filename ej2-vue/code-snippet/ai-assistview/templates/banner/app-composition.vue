@@ -33,4 +33,17 @@ const onPromptRequest = (args) => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#aiAssistView .e-view-container {
+  margin: auto;
+}
+#aiAssistView .e-banner-view {
+  margin-left: 0;
+}
+.banner-content .e-assistview-icon:before {
+  font-size: 35px;
+}
+.banner-content {
+  text-align: center;
+}
 </style>

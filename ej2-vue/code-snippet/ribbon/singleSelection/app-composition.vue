@@ -24,7 +24,7 @@ import { RibbonItemSize, RibbonGroupButtonSelection, RibbonComponent as EjsRibbo
 
 
 
-     const size = RibbonItemSize.Medium;
+     const size = RibbonItemSize.Small;
       const groupButtonSingle = { 
         selection: RibbonGroupButtonSelection.Single, 
         items: [

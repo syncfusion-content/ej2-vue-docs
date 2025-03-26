@@ -1,54 +1,55 @@
 <template>
- <div id="target" class="control-section">
-<ejs-dialog id="dialog" ref="dialog" :target='target' :width='width' :animationSettings='animationSettings' :visible='visible' :content='contentTemplate' :closeOnEscape='closeOnEscape'>
-</ejs-dialog>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Open dialog</ejs-button>
-</div>
+  <div>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="openDialog">
+      Open dialog
+    </ejs-button>
+
+    <ejs-dialog id="profile-dialog" ref="dialogRef" :isModal="true" width="340px" height="420px"
+      :visible="dialogVisible" :closeOnEscape="true" @overlayClick="closeDialog">
+      <div class="control-section">
+        <div id="imageeditor">
+          <ejs-imageeditor ref="imageEditorRef" height="350px"></ejs-imageeditor>
+        </div>
+      </div>
+    </ejs-dialog>
+  </div>
 </template>
 
 <script>
+import { ref, nextTick } from "vue";
+import { DialogComponent } from "@syncfusion/ej2-vue-popups";
+import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent } from "@syncfusion/ej2-vue-buttons";
 
-import { DialogComponent } from '@syncfusion/ej2-vue-popups';
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { createApp } from 'vue';
-const app = createApp();
-
-var contentTemplateVue = app.component("contentTemplate", {
-    template: '<div><ejs-imageeditor id="image-editor" :created="created" :toolbar=[]></ejs-imageeditor></div>',
-    data() {
-        return {
-            data: {}
-        };
-    }
-});
 export default {
-name: "App",
-components: {
-"ejs-button":ButtonComponent,
-"ejs-dialog": DialogComponent
-},
-  data: function() {
-      return {
-        contentTemplate: function () {
-                return { template: contentTemplateVue }
-        },
-        target: "#target",
-        width: '340px',
-        height: '420px',
-        closeOnEscape: true,
-        visible: false,
-        animationSettings: { effect: 'None' }
-      };
+  name: "App",
+  components: {
+    "ejs-dialog": DialogComponent,
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent
+  },
+  data() {
+    return {
+      dialogVisible: false
+    };
   },
   methods: {
-    btnClick: function() {
-      this.$refs.dialog.ej2Instances.show();
+    async openDialog() {
+      this.dialogVisible = true;
+      await nextTick();
+      setTimeout(() => {
+        if (this.$refs.imageEditorRef?.ej2Instances) {
+          this.$refs.imageEditorRef.ej2Instances.open(
+            "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+          );
+        }
+      }, 10);
     },
-    created: function() {
-      this.$refs.imageEditorObj.ej2Instances.open('bridge.jpeg');
+    closeDialog() {
+      this.dialogVisible = false;
     }
   }
-}
+};
 </script>
 
 <style>
@@ -62,9 +63,7 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
-#image-editor {
-    width: 550px !important;
-    height: 350px !important;
+#profile-dialog {
+  max-height: 420px !important;
 }
 </style>

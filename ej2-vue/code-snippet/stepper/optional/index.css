@@ -18,10 +18,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.sf-icon-cart:before { content: "\e710"; }
-.sf-icon-transport:before { content: "\e702"; }
-.sf-icon-payment:before { content: "\e706"; }
-.sf-icon-success:before { content: "\e715"; }
+.sf-icon-cart:before { content: '\e710'; }
+.sf-icon-transport:before { content: '\e702'; }
+.sf-icon-payment:before { content: '\e706'; }
+.sf-icon-success:before { content: '\e715'; }
 
 .optional-step {
     margin-top: 30px;

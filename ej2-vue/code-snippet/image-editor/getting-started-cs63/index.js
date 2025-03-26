@@ -7,25 +7,23 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :uploadSettings="uploadSettings"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="showAlert">Show Alert</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        uploadSettings: {
-          allowedExtensions: ".png, .svg"
-        }
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :uploadSettings="uploadSettings"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="loadImage">Load PNG Image</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      uploadSettings: {
+        allowedExtensions: ".jpg, .svg"
+      }
+    };
   },
   methods: {
-    showAlert: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.open('flower.jpeg');
+    loadImage: function () {
+      this.$refs.imageEditorObj.ej2Instances.open('https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png');
     }
   }
-
 });

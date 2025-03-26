@@ -25,7 +25,7 @@ export default {
   data () {
     return {
       empData: new DataManager({
-        url: 'https://services.syncfusion.com/js/production/api/Order',
+        url: 'https://services.syncfusion.com/js/production/api/order-data',
         adaptor: new WebApiAdaptor,
         crossDomain: true
       }),

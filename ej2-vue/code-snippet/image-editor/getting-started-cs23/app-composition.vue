@@ -14,18 +14,18 @@ import { ref } from 'vue';
 
 const imageEditorObj = ref(null);
 const toolbar = [];
-const zoomLevel = 1;
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
 
 const btnClick = () => {
-    imageEditorObj.value.ej2Instances.zoom(zoomLevel); // Zoom in
+    imageEditorObj.value.ej2Instances.zoom(6); // Zoom in
     imageEditorObj.value.ej2Instances.pan(true);
 };
 

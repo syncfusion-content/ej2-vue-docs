@@ -1,19 +1,18 @@
 <template>
-<div>
-<ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :selected="onSelect"></ejs-uploader>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-</div>
+    <div>
+        <ejs-uploader ref="uploadObj" id='defaultfileupload' name="UploadFiles" :selected="onSelect"
+            :showFileList="false"></ejs-uploader>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+    </div>
 </template>
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
-import { UploaderComponent } from '@syncfusion/ej2-vue-inputs';
-import { Browser } from "@syncfusion/ej2-base";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { UploaderComponent as EjsUploader } from '@syncfusion/ej2-vue-inputs';
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-const toolbar = [];
 const onSelect = (args) => {
     if (args.filesData.length > 0) {
         const reader = new FileReader();
@@ -37,9 +36,8 @@ const onSelect = (args) => {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
     width: 550px !important;
-    height: 350px !important;
+    height: 330px !important;
 }
 </style>

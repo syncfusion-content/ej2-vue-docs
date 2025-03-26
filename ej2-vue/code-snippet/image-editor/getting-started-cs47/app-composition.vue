@@ -1,45 +1,49 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="addRedact">Add Redact</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="updateRedact">Update Redact</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="selRedact">Select Redact</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="delRedact">Delete Redact</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"
+      :toolbar="toolbar"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="addRedact">Add Redact</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="updateRedact">Update Redact</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="selRedact">Select Redact</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="delRedact">Delete Redact</ejs-button>
+  </div>
 </template>
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor,  RedactType} from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent as EjsButton} from '@syncfusion/ej2-vue-buttons';
+import { ImageEditorComponent as EjsImageeditor, RedactType } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
 const toolbar = [];
+
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.jpeg');
-    } else {
-        imageEditorObj.value.open('bridge.jpeg');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
+
 const addRedact = () => {
   let dimension = imageEditorObj.value.ej2Instances.getImageDimension();
-  imageEditorObj.value.ej2Instances.drawRedact(RedactType.Blur, dimension?.x, dimension.y, 200, 300);
+  imageEditorObj.value.ej2Instances.drawRedact(RedactType.Blur, dimension.x + 180, dimension.y + 240, 200, 300);
 };
 const updateRedact = () => {
-  let redacts = imageEditorObj.value.ej2Instances..getRedacts();
+  let redacts = imageEditorObj.value.ej2Instances.getRedacts();
   if (redacts.length > 0) {
-      redacts[redacts.length - 1].blurIntensity = 100;
-      imageEditorObj.value.ej2Instances.updateRedact(redacts[redacts.length - 1]);
-   }
+    redacts[redacts.length - 1].blurIntensity = 100;
+    imageEditorObj.value.ej2Instances.updateRedact(redacts[redacts.length - 1]);
+  }
 };
 const selRedact = () => {
-    let redacts = imageEditorObj.value.ej2Instances.getRedacts();
-    if (redacts.length > 0) {
-        imageEditorObj.value.ej2Instances.selectRedact(redacts[redacts.length - 1].id);
-    }
+  let redacts = imageEditorObj.value.ej2Instances.getRedacts();
+  if (redacts.length > 0) {
+    imageEditorObj.value.ej2Instances.selectRedact(redacts[redacts.length - 1].id);
+  }
 };
 const delRedact = () => {
   let redacts = imageEditorObj.value.ej2Instances.getRedacts();
@@ -61,9 +65,8 @@ const delRedact = () => {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

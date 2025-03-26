@@ -170,7 +170,7 @@ export default {
     }
   },
 provide:{
-    smithchart:[Legend, TooltipRender]
+    smithchart:[SmithchartLegend, TooltipRender]
 }
 }
 </script>

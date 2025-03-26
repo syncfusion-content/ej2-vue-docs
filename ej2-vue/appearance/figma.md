@@ -10,7 +10,7 @@ domainurl: ##DomainURL##
 
 # Figma UI Kits for Syncfusion Vue Components
 
-Syncfusion offers [Figma UI kits](https://www.figma.com/@syncfusion) to facilitate effective collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1454123774600129202), [Fluent](https://www.figma.com/community/file/1385969120047188707), [Tailwind](https://www.figma.com/community/file/1385969065626384098), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272). These kits match the themes used in Syncfusion Vue components.
+Syncfusion offers [Figma UI kits](https://www.figma.com/@syncfusion) to facilitate effective collaboration between designers and developers. The Figma UI kits are available in four themes: [Material 3](https://www.figma.com/community/file/1385969023252455137), [Fluent](https://www.figma.com/community/file/1385969120047188707), [Tailwind](https://www.figma.com/community/file/1385969065626384098), and [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272). These kits match the themes used in Syncfusion Vue components.
 
 The kits contain reusable design components with various possible states and variants, along with detailed figures, measurements, and icons, representing the Syncfusion Vue components.
 
@@ -28,7 +28,7 @@ The Syncfusion Figma UI kit offers the following key advantages:
 
 Syncfusion Figma UI kits are available in the [Figma community](https://www.figma.com/@syncfusion). You can download the Syncfusion theme-specific Figma UI kits from the following links:
 
-- [Material 3](https://www.figma.com/community/file/1454123774600129202)
+- [Material 3](https://www.figma.com/community/file/1385969023252455137)
 - [Fluent](https://www.figma.com/community/file/1385969120047188707)
 - [Tailwind](https://www.figma.com/community/file/1385969065626384098)
 - [Bootstrap 5](https://www.figma.com/community/file/1385968977953858272)

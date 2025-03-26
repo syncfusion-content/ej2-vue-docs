@@ -46,4 +46,12 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-btn .e-user::before {
+  color: white;
+  font-size: 15px;
+}
+.custom-btn.e-toolbar-item button.e-tbar-btn {
+  border: 2px solid white;
+}
 </style>

@@ -44,19 +44,19 @@ import { StepperComponent as EjsStepper, StepsDirective as ESteps, StepDirective
 }
 
 .sf-icon-cart:before {
-  content: "\e710";
+  content: '\e710';
 }
 
 .sf-icon-transport:before {
-  content: "\e702";
+  content: '\e702';
 }
 
 .sf-icon-payment:before {
-  content: "\e706";
+  content: '\e706';
 }
 
 .sf-icon-success:before {
-  content: "\e715";
+  content: '\e715';
 }
 
 .vertical-step {

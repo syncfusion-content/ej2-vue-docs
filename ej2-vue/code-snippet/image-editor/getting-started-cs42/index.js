@@ -7,25 +7,32 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="aspectClick">Aspect Ratio</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="nonAspectClick">Non Aspect Ratio</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="aspectClick">Aspect Ratio</ejs-button>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="nonAspectClick">Non Aspect Ratio</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    aspectClick: function(event) {
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "flower.png"
+        : "bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    aspectClick: function () {
       this.$refs.imageEditorObj.ej2Instances.resize(300, 400, true);
     },
-    nonAspectClick: function(event) {
+    nonAspectClick: function () {
       this.$refs.imageEditorObj.ej2Instances.resize(400, 100, false);
     }
   }

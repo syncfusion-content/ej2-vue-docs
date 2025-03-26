@@ -1,7 +1,8 @@
 <template>
 <div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Delete shape</ejs-button>
+<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="drawShpae">Draw shape</ejs-button>
+ <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="deleteShape">Delete shape</ejs-button>
 </div>
 </template>
 
@@ -13,25 +14,24 @@ import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-const toolbar = ['Annotate','Rectangle','Ellipse', 'Line', 'Arrow', 'Path'];
-const id = '';
+const toolbar = [];
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
 
-const shapeChanging = (event) => {
-  if(event.action === 'select') {
-    id = event.currentShapeSettings.id;
-  }
+const drawShpae = () => {
+  let dimension = imageEditorObj.value.ej2Instances.getImageDimension();
+  imageEditorObj.value.ej2Instances.drawEllipse(dimension.x +100, dimension.y + 100);
 };
 
-const btnClick = () => {
-  imageEditorObj.value.ej2Instances.deleteShape(id);
+const deleteShape = () => {
+  imageEditorObj.value.ej2Instances.deleteShape("shape_1");
 };
 
 </script>

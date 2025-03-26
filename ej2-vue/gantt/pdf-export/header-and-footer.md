@@ -154,3 +154,18 @@ The below code illustrates the pdf export customization.
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/pdf-export-customization-cs1" %}
+
+## Disable footer 
+
+By default, the exported PDF file includes a footer. The footer can be disabled by setting the [enableFooter](https://ej2.syncfusion.com/vue/documentation/api/gantt/pdfExportProperties/#enablefooter) property to `false`. 
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/pdf-export-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/pdf-export-cs5" %}

@@ -41,4 +41,18 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-container {
+  border-color: #e0e0e0;
+  background-color: #f4f4f4;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.custom-container .e-chat-header {
+  background: #0c888e;
+}
+
+.custom-container .e-footer .e-input-group {
+  border: 3px solid #bde0e2;
+}
 </style>

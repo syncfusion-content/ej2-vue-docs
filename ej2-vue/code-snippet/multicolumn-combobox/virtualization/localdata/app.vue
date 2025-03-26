@@ -2,7 +2,7 @@
   <div id="app">
     <div id='container' style="margin:50px auto 0; width:500px;">
         <br>
-        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData(150)' :fields='fields' placeholder='Select an engineer' popupHeight='230px' :gridSettings='gridSettings'>
+        <ejs-multicolumncombobox id='multicolumn' :dataSource='empData(150)' :fields='fields' placeholder='Select an engineer' popupHeight='230px' :gridSettings='gridSettings' enableVirtualization='true'>
             <e-columns>
               <e-column field='TaskID' header='Employee ID' width='100'></e-column>
               <e-column field='Engineer' header='Name' width='140'></e-column>

@@ -1,8 +1,9 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :showQuickAccessToolbar=false :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Delete shape</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="onCreated"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="drawShpae">Draw shape</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="deleteShape">Delete shape</ejs-button>
+  </div>
 </template>
 
 <script>
@@ -12,25 +13,31 @@ import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent
-},
-  data: function() {
-      return {
-        toolbar: ['Annotate','Rectangle','Ellipse', 'Line', 'Arrow', 'Path'],
-        id: '',
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent
+  },
+  data: function () {
+    return {
+      toolbar: [],
+    };
   },
   methods: {
-    shapeChanging: function(event) {
-      if(event.action === 'select') {
-        this.id = event.currentShapeSettings.id;
-      }
+    onCreated() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
     },
-    btnClick: function() {
-      this.$refs.imageEditorObj.ej2Instances.deleteShape(this.id);
+    drawShpae: function () {
+      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
+      this.$refs.imageEditorObj.ej2Instances.drawEllipse(dimension.x + 100, dimension.y + 100);
+    },
+    deleteShape: function () {
+      this.$refs.imageEditorObj.ej2Instances.deleteShape("shape_1");
     }
   }
 }
@@ -47,9 +54,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

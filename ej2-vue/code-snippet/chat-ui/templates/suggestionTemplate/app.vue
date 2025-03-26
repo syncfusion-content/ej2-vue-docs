@@ -46,4 +46,28 @@ export default {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#suggestionTemplate .e-suggestion-list li {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+#suggestionTemplate .suggestion-item {
+  display: flex;
+  align-items: center;
+  background-color: #87b6fb;
+  color: black;
+  padding: 4px;
+  gap: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+#suggestionTemplate .suggestion-item .content {
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 </style>

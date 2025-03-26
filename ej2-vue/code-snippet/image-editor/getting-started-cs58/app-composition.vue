@@ -1,60 +1,56 @@
 <template>
-<div id="target" class="control-section">
-<ejs-dialog id="dialog" ref="dialog" :target='target' :width='width' :animationSettings='animationSettings' :visible='visible' :content='contentTemplate' :closeOnEscape='closeOnEscape'>
-</ejs-dialog>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Open dialog</ejs-button>
-</div>
+    <div>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" @click="openDialog">Open dialog</ejs-button>
+        <ejs-dialog id="profile-dialog" ref="dialogRef" :isModal="true" width="340px" height="420px"
+            :visible="dialogVisible" :closeOnEscape="true" @overlayClick="closeDialog">
+            <div class="control-section">
+                <div id="imageeditor">
+                    <ejs-imageeditor ref="imageEditorRef" height="350px"></ejs-imageeditor>
+                </div>
+            </div>
+        </ejs-dialog>
+    </div>
 </template>
 
 <script setup>
+import { ref, nextTick } from "vue";
+import { DialogComponent as EjsDialog } from "@syncfusion/ej2-vue-popups";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { ButtonComponent as EjsButton } from "@syncfusion/ej2-vue-buttons";
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
-import { DialogComponent as EjsDialog } from '@syncfusion/ej2-vue-popups';
-import { ButtonComponent as EjsButton} from '@syncfusion/ej2-vue-buttons';
-import { Browser } from "@syncfusion/ej2-base";
-import { ref } from "vue";
+const dialogRef = ref(null);
+const imageEditorRef = ref(null);
+const dialogVisible = ref(false);
 
-const app = createApp();
-var contentTemplateVue = app.component("contentTemplate", {
-    template: '<div><ejs-imageeditor id="image-editor" :created="created"></ejs-imageeditor></div>',
-    data() {
-        return {
-            data: {}
-        };
-    }
-});
-
-const imageEditorObj = ref(null);
-const target = '#target';
-const height = '75%';
-const width = '435px';
-const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.jpeg');
-    } else {
-        imageEditorObj.value.open('bridge.jpeg');
-    }
-};
-const btnClick = () => {
-  dialog.value.ej2Instances.show();
+const openDialog = async () => {
+    dialogVisible.value = true;
+    await nextTick();
+    setTimeout(() => {
+        if (imageEditorRef.value?.ej2Instances) {
+            imageEditorRef.value.ej2Instances.open(
+                "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+            );
+        }
+    }, 10);
 };
 
+const closeDialog = () => {
+    dialogVisible.value = false;
+};
 </script>
 
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
+@import "@syncfusion/ej2-base/styles/material.css";
+@import "@syncfusion/ej2-buttons/styles/material.css";
+@import "@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "@syncfusion/ej2-lists/styles/material.css";
+@import "@syncfusion/ej2-popups/styles/material.css";
+@import "@syncfusion/ej2-inputs/styles/material.css";
+@import "@syncfusion/ej2-navigations/styles/material.css";
+@import "@syncfusion/ej2-dropdowns/styles/material.css";
+@import "@syncfusion/ej2-image-editor/styles/material.css";
 
-
-#image-editor {
-    width: 550px !important;
-    height: 350px !important;
+#profile-dialog {
+    max-height: 420px !important;
 }
 </style>

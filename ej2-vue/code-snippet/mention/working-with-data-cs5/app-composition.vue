@@ -16,7 +16,7 @@ const dataSource = new DataManager({
     adaptor: new WebApiAdaptor,
     crossDomain: true
 });
-const query = new Query().select(['FirstName', 'EmployeeID']).take(7);
+const query = new Query().select(['FirstName', 'EmployeeID']).take(7).requiresCount();
 const fields = { text: 'FirstName', value: 'EmployeeID' };
 const target = '#mentionElement';
 

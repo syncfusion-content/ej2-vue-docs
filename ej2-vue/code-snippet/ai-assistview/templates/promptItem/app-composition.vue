@@ -46,4 +46,30 @@ const promptsData = [
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.promptItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promptItemContent {
+  align-items: flex-end;
+  margin-right: 20px
+}
+
+.promptItemContent .prompt-header {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.promptItemContent .prompt-header span {
+  margin-left: 10px;
+}
+
+.promptItemContent .content {
+  margin-right: 35px;
+}
 </style>

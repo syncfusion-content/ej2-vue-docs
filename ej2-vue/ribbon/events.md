@@ -3045,8 +3045,6 @@ The [popupOpen](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 {% include code-snippet/ribbon/gallery-items/popupOpen/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/popupOpen" %}
 
 ### popupClose
 
@@ -3060,8 +3058,6 @@ The [popupClose](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonG
 {% include code-snippet/ribbon/gallery-items/popupClose/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/popupClose" %}
 
 ### itemHover
 
@@ -3075,8 +3071,6 @@ The [itemHover](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGa
 {% include code-snippet/ribbon/gallery-items/itemHover/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/itemHover" %}
 
 ### beforeItemRender
 
@@ -3090,8 +3084,6 @@ The [beforeItemRender](https://ej2.syncfusion.com/vue/documentation/api/ribbon/r
 {% include code-snippet/ribbon/gallery-items/beforeItemRender/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/beforeItemRender" %}
 
 ### beforeSelect
 
@@ -3105,8 +3097,6 @@ The [beforeSelect](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbo
 {% include code-snippet/ribbon/gallery-items/beforeSelect/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/beforeSelect" %}
 
 ### select
 
@@ -3120,5 +3110,3 @@ The [select](https://ej2.syncfusion.com/vue/documentation/api/ribbon/ribbonGalle
 {% include code-snippet/ribbon/gallery-items/select/app.vue %}
 {% endhighlight %}
 {% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/ribbon/gallery-items/select" %}

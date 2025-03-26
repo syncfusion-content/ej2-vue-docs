@@ -38,8 +38,6 @@ The [`imageFiltering`](https://ej2.syncfusion.com/vue/documentation/api/image-ed
 
 The parameter available in the [`ImageFilterEventArgs`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/imageFilterEventArgs) event is, 
 
-ImageFilterEventArgs.Filter - The type of filtering as ImageFilterOption to be applied in the image editor. 
+ImageFilterEventArgs.Filter - The type of filtering as [`ImageFilterOption`](https://ej2.syncfusion.com/vue/documentation/api/image-editor/imageFilterOption/) to be applied in the image editor. 
 
 ImageFilterEventArgs.Cancel – Specifies to cancel the filtering action. 
-
-> Please note that the Filter and Finetune features were unavailable on iOS due to the non-functioning CanvasContext.filter property on this platform.

@@ -1,51 +1,45 @@
-
 import Vue from 'vue';
+import { DialogPlugin } from "@syncfusion/ej2-vue-popups";
 import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
 import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
-import { createApp } from 'vue';
 
+Vue.use(DialogPlugin);
 Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
-const app = createApp();
-var contentTemplateVue = app.component("contentTemplate", {
-  template: '<div><ejs-imageeditor id="image-editor" :created="created" :toolbar=[]></ejs-imageeditor></div>',
-  data() {
-      return {
-          data: {}
-      };
-  }
-});
 new Vue({
-	el: '#app',
-	template: `
-  <div id="target" class="control-section">
-  <ejs-dialog id="dialog" ref="dialog" :target='target' :width='width' :animationSettings='animationSettings' :visible='visible' :content='contentTemplate' :closeOnEscape='closeOnEscape'>
-  </ejs-dialog>
-  <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btnClick">Open dialog</ejs-button>
-  </div>
-`,
-
-  data: function() {
-      return {
-        contentTemplate: function () {
-          return { template: contentTemplateVue }
-        },
-        target: "#target",
-        width: '340px',
-        height: '420px',
-        closeOnEscape: true,
-        visible: false,
-        animationSettings: { effect: 'None' }
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="openDialog">Open Dialog</ejs-button>
+      <ejs-dialog id="profile-dialog" ref="dialogRef" :isModal="true" width="340px" height="420px" :visible="dialogVisible" :closeOnEscape="true" @overlayClick="closeDialog">
+        <div class="control-section">
+          <div id="imageeditor">
+            <ejs-imageeditor ref="imageEditorRef" height="350px"></ejs-imageeditor>
+          </div>
+        </div>
+      </ejs-dialog>
+    </div>
+  `,
+  data: function () {
+    return {
+      dialogVisible: false
+    };
   },
   methods: {
-    btnClick: function(event) {
-      this.$refs.dialog.ej2Instances.show();
+    openDialog: function () {
+      this.dialogVisible = true;
+      this.$nextTick(() => {
+        setTimeout(() => {
+          let imageEditor = this.$refs.imageEditorRef.ej2Instances;
+          if (imageEditor) {
+            imageEditor.open("https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png");
+          }
+        }, 10);
+      });
     },
-    created: function() {
-      this.$refs.imageEditorObj.ej2Instances.open('bridge.jpeg');
-    }
+    closeDialog: function () {
+      this.dialogVisible = false;
+    },
   }
-
 });

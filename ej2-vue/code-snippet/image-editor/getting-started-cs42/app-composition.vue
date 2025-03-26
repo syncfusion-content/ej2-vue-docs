@@ -1,9 +1,10 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="aspectClick">Aspect Ratio</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="nonAspectClick">Non Aspect Ratio</ejs-button>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"
+            :toolbar="toolbar"></ejs-imageeditor>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="aspectClick">Aspect Ratio</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="nonAspectClick">Non Aspect Ratio</ejs-button>
+    </div>
 </template>
 
 <script setup>
@@ -18,11 +19,12 @@ const imageEditorObj = ref(null);
 const toolbar = [];
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
 
 const aspectClick = () => {
@@ -45,7 +47,6 @@ const nonAspectClick = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
 
 #image-editor {
     width: 550px !important;

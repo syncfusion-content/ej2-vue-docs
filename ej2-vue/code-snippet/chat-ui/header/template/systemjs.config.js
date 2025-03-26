@@ -27,7 +27,8 @@ System.config({
         "@syncfusion/ej2-vue-base": "syncfusion:ej2-vue-base/dist/ej2-vue-base.umd.min.js",
         "@syncfusion/ej2-vue-interactive-chat": "syncfusion:ej2-vue-interactive-chat/dist/ej2-vue-interactive-chat.umd.min.js",
         "@syncfusion/ej2-vue-inputs": "syncfusion:ej2-vue-inputs/dist/ej2-vue-inputs.umd.min.js",
-        "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js"
+        "@syncfusion/ej2-vue-navigations": "syncfusion:ej2-vue-navigations/dist/ej2-vue-navigations.umd.min.js",
+        "@syncfusion/ej2-vue-splitbuttons": "syncfusion:ej2-vue-splitbuttons/dist/ej2-vue-splitbuttons.umd.min.js"
     }
 });
 

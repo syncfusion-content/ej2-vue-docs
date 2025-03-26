@@ -29,7 +29,7 @@ new Vue({
 `,
 data: function () {
   return {
-    size: RibbonItemSize.Medium,
+    size: RibbonItemSize.Small,
     groupButtonMultiple: {
       selection: RibbonGroupButtonSelection.Multiple, 
       items: [{ iconCss: 'e-icons e-bold', content: 'Bold', selected: true}, 

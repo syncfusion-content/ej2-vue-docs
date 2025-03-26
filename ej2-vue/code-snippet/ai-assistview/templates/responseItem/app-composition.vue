@@ -43,4 +43,34 @@ const promptsData = [
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.e-assistview-icon:before {
+  margin-right: 10px;
+}
+
+.responseItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-left: 20px
+}
+
+.responseItemContent .response-header {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.responseItemContent .assist-response-content {
+  margin-left: 35px;
+}
+
+.responseItemContent .response-header .e-assistview-icon:before {
+  margin-right: 10px;
+}
+
+#aiAssistView .e-response-item-template .e-toolbar-items {
+  margin-left: 35px;
+}
 </style>

@@ -33,7 +33,7 @@ export default {
     };
   },
   methods: {
-    buttonClick: () => {
+    buttonClick: function () {
       let defaultChat = this.$refs.chatInstance.ej2Instances;
       defaultChat.addMessage('Also, let me know if there are any blockers we should address before the next phase.');
     }

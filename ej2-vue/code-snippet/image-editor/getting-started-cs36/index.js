@@ -8,17 +8,26 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: ['Annotate' , 'Finetune' , 'Filter' , 'Confirm' , 'Reset' , 'Save', 'ZoomIn', 'ZoomOut']
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: ['Annotate', 'Finetune', 'Filter', 'Confirm', 'Reset', 'Save', 'ZoomIn', 'ZoomOut']
+    };
+  },
+  methods: {
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "flower.png"
+        : "bridge.png";
+      imageEditor.open(imageUrl);
+    },
   }
 
 });

@@ -45,22 +45,22 @@ import { StepperComponent as EjsStepper, StepsDirective as ESteps, StepDirective
 }
 
 .iconWithLabel .sf-icon-cart:before {
-  content: "\e710";
+  content: '\e710';
 }
 
 .iconWithLabel .sf-icon-user:before {
-  content: "\e708";
+  content: '\e708';
 }
 
 .iconWithLabel .sf-icon-transport:before {
-  content: "\e702";
+  content: '\e702';
 }
 
 .iconWithLabel .sf-icon-payment:before {
-  content: "\e706";
+  content: '\e706';
 }
 
 .iconWithLabel .sf-icon-success:before {
-  content: "\e715";
+  content: '\e715';
 }
 </style>

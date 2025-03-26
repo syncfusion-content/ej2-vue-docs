@@ -23,7 +23,7 @@
 import { RibbonItemSize, RibbonGroupButtonSelection } from "@syncfusion/ej2-vue-ribbon";
 import { RibbonComponent as EjsRibbon, RibbonGroupDirective as ERibbonGroup, RibbonGroupsDirective as ERibbonGroups, RibbonCollectionsDirective as ERibbonCollections, RibbonCollectionDirective as ERibbonCollection, RibbonItemsDirective as ERibbonItems, RibbonItemDirective as ERibbonItem, RibbonTabsDirective as ERibbonTabs, RibbonTabDirective as ERibbonTab } from "@syncfusion/ej2-vue-ribbon";
 
-    const size = RibbonItemSize.Medium;
+    const size = RibbonItemSize.Small;
     const groupButtonMultiple = {
             selection: RibbonGroupButtonSelection.Multiple, 
             items: [{ iconCss: 'e-icons e-bold', content: 'Bold', selected: true}, 

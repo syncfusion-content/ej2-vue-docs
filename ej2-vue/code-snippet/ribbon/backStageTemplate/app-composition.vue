@@ -7,11 +7,18 @@
                         <e-ribbon-collections>
                             <e-ribbon-collection>
                                 <e-ribbon-items>
+                                    <e-ribbon-item type="SplitButton" :allowedSizes="largeSize"
+                                        :splitButtonSettings="pasteSettigs">
+                                    </e-ribbon-item>
+                                </e-ribbon-items>
+                            </e-ribbon-collection>
+                            <e-ribbon-collection>
+                                <e-ribbon-items>
                                     <e-ribbon-item type="Button" :buttonSettings="cutButton">
                                     </e-ribbon-item>
                                     <e-ribbon-item type="Button" :buttonSettings="copyButton">
                                     </e-ribbon-item>
-                                    <e-ribbon-item type="Button" :buttonSettings="pasteButton">
+                                    <e-ribbon-item type="Button" :buttonSettings="formatButton">
                                     </e-ribbon-item>
                                 </e-ribbon-items>
                             </e-ribbon-collection>
@@ -26,7 +33,7 @@
 <script setup>
 
 import { provide } from "vue";
-import { RibbonBackstage } from "@syncfusion/ej2-vue-ribbon";
+import { RibbonBackstage, RibbonItemSize } from "@syncfusion/ej2-vue-ribbon";
 import { RibbonComponent as EjsRibbon, RibbonGroupDirective as ERibbonGroup, RibbonGroupsDirective as ERibbonGroups, RibbonCollectionsDirective as ERibbonCollections, RibbonCollectionDirective as ERibbonCollection, RibbonItemsDirective as ERibbonItems, RibbonItemDirective as ERibbonItem, RibbonTabsDirective as ERibbonTabs, RibbonTabDirective as ERibbonTab } from "@syncfusion/ej2-vue-ribbon";
 import { onMounted } from 'vue';
 
@@ -36,9 +43,13 @@ const backstageSettings = {
     visible: true,
     template: homeContentTemplate()
 };
-const cutButton = { iconCss: "e-icons e-cut", content: "Cut" };
-const copyButton = { iconCss: "e-icons e-copy", content: "Copy" };
-const pasteButton = { iconCss: "e-icons e-paste", content: "Paste" };
+const largeSize = RibbonItemSize.Large;
+const pasteSettigs = { 
+    iconCss: "e-icons e-paste", content: "Paste",
+    items: [{ text: "Keep Source Format" }, { text: "Merge format" }, { text: "Keep text only" }]
+};
+const cutButton =  { iconCss: "e-icons e-cut", content: "Cut" };
+const copyButton =  { iconCss: "e-icons e-copy", content: "Copy" };
 
 displayPopup = () => {
     backstagePopup = ribbonEle.querySelector('#ribbon_backstagepopup');
@@ -57,113 +68,119 @@ const closeContent = () => {
 const homeContentTemplate = () => {
     return `
     <div id="temp-content" style="width: 550px; height: 350px; display: flex">
-      <div id="items-wrapper" style="width: 130px; height:100%; background: #779de8;">
-          <ul>
-              <li id="close" @click="closeContent">
-                  <span class="e-icons e-close"></span>
-                  Close
-              </li>
-              <li id="new" @click="contentClick('new')">
-                  <span class="e-icons e-file-new"></span>
-                  New
-              </li>
-              <li id="open" @click="contentClick('open')">
-                  <span class="e-icons e-folder-open"></span>
-                  Open
-              </li>
-              <li id="save" @click="contentClick('save')">
-                  <span class="e-icons e-save"></span>
-                  Save
-              </li>
-          </ul>
-      </div>
-      <div id="content-wrapper">
-          <div id='new-wrapper' class='content-open' style="padding: 20px;">
-              <div id='new-section' class='new-wrapper'>
-                  <div class='section-title'> New </div>
-                  <div class='category_container'>
-                      <div class='doc_category_image'></div> 
-                      <span class='doc_category_text'> New document </span>
-                  </div>
-              </div>
-          </div>
-          <div id="save-wrapper" class='content-close' style="padding: 20px;">
-              <div class="section-content" style="padding: 12px 0px; cursor: pointer">
-                  <table>
-                      <tbody>
-                          <tr>
-                              <td> <span class="doc_icon e-icons e-save"></span> </td>
-                              <td> 
-                                  <span style="display: block; font-size: 14px"> Save as </span>
-                                  <span style="font-size: 12px"> Save as copy online </span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-              <div class="section-content" style="padding: 12px 0px cursor: pointer">
-                  <table>
-                      <tbody>
-                          <tr>
-                              <td> <span class="doc_icon e-icons e-rename"></span> </td>
-                              <td> 
-                                  <span style="display: block; font-size: 14px"> Rename </span>
-                                  <span style="font-size: 12px">Rename this file. </span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-          <div id="open-wrapper" class='content-close' style="padding: 20px;">
-              <div class="section-content" style="padding: 12px 0px; cursor: pointer">
-                  <table>
-                      <tbody>
-                          <tr>
-                              <td> <span class="doc_icon e-icons e-open-link"></span> </td>
-                              <td> 
-                                  <span style="display: block; font-size: 14px"> Ribbon.docx </span>
-                                  <span style="font-size: 12px"> EJ2 >> Components >> Navigations >> Ribbon >> default </span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-              <div class="section-content" style="padding: 12px 0px; cursor: pointer">
-                  <table>
-                      <tbody>
-                          <tr>
-                              <td> <span class="doc_icon e-icons e-open-link"></span> </td>
-                              <td> 
-                                  <span style="display: block; font-size: 14px"> Classic_layout.docx </span>
-                                  <span style="font-size: 12px">  EJ2 >> Components >> Navigations >> Ribbon >> layouts </span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-              <div class="section-content" style="padding: 12px 0px; cursor: pointer">
-                  <table>
-                      <tbody>
-                          <tr>
-                              <td> <span class="doc_icon e-icons e-open-link"></span> </td>
-                              <td> 
-                                  <span style="display: block; font-size: 14px"> Simplified_layout.docx </span>
-                                  <span style="font-size: 12px"> EJ2 >> Components >> Navigations >> Ribbon >> layouts </span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-      </div>
-  </div>
+            <div id="items-wrapper" style="width: 130px; height:100%; background: #779de8;">
+                <ul>
+                    <li id="close">
+                        <span class="e-icons e-close"></span>
+                        Close
+                    </li>
+                    <li id="new">
+                        <span class="e-icons e-file-new"></span>
+                        New
+                    </li>
+                    <li id="open">
+                        <span class="e-icons e-folder-open"></span>
+                        Open
+                    </li>
+                    <li id="save">
+                        <span class="e-icons e-save"></span>
+                        Save
+                    </li>
+                </ul>
+            </div>
+            <div id="content-wrapper">
+                <div id='new-wrapper' class='content-open' style="padding: 20px;">
+                    <div id='new-section' class='new-wrapper'>
+                        <div class='section-title'> New </div>
+                        <div class='category_container'>
+                            <div class='doc_category_image'></div> 
+                            <span class='doc_category_text'> New document </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="save-wrapper" class='content-close' style="padding: 20px;">
+                    <div class="section-content" style="padding: 12px 0px; cursor: pointer">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td> <span class="doc_icon e-icons e-save"></span> </td>
+                                    <td> 
+                                        <span style="display: block; font-size: 14px"> Save as </span>
+                                        <span style="font-size: 12px"> Save as copy online </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="section-content" style="padding: 12px 0px cursor: pointer">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td> <span class="doc_icon e-icons e-rename"></span> </td>
+                                    <td> 
+                                        <span style="display: block; font-size: 14px"> Rename </span>
+                                        <span style="font-size: 12px">Rename this file. </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="open-wrapper" class='content-close' style="padding: 20px;">
+                    <div class="section-content" style="padding: 12px 0px; cursor: pointer">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td> <span class="doc_icon e-icons e-open-link"></span> </td>
+                                    <td> 
+                                        <span style="display: block; font-size: 14px"> Ribbon.docx </span>
+                                        <span style="font-size: 12px"> EJ2 >> Components >> Navigations >> Ribbon >> default </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="section-content" style="padding: 12px 0px; cursor: pointer">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td> <span class="doc_icon e-icons e-open-link"></span> </td>
+                                    <td> 
+                                        <span style="display: block; font-size: 14px"> Classic_layout.docx </span>
+                                        <span style="font-size: 12px">  EJ2 >> Components >> Navigations >> Ribbon >> layouts </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="section-content" style="padding: 12px 0px; cursor: pointer">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td> <span class="doc_icon e-icons e-open-link"></span> </td>
+                                    <td> 
+                                        <span style="display: block; font-size: 14px"> Simplified_layout.docx </span>
+                                        <span style="font-size: 12px"> EJ2 >> Components >> Navigations >> Ribbon >> layouts </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
       `;
 };
-
+bindBackstageEvents(() => {
+    document.querySelector("#close").addEventListener("click", this.closeContent);
+    document.querySelector("#new").addEventListener("click", () => this.contentClick("new"));
+    document.querySelector("#open").addEventListener("click", () => this.contentClick("open"));
+    document.querySelector("#save").addEventListener("click", () => this.contentClick("save"));
+});
 onMounted(() => {
     ribbonEle = document.getElementById('ribbon');
     document.querySelector('.e-ribbon-backstage').onClick = displayPopup.bind(this);
+    this.bindBackstageEvents();
 });
 
 </script>
