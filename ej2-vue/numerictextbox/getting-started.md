@@ -113,7 +113,7 @@ components: {
 {% endhighlight %}
 {% endtabs %}
 
-2\. In the `template` section, define the Numerictextbox component with the [value](https://ej2.syncfusion.com/staging/vue/documentation/api/numerictextbox#value) property.
+2\. In the `template` section, define the Numerictextbox component with the [value](https://ej2.syncfusion.com/staging/vue/documentation/api/numerictextbox/#value) property.
 
 {% tabs %}
 {% highlight html tabtitle="~/src/App.vue" %}
