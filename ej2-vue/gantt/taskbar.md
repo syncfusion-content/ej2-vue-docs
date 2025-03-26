@@ -182,3 +182,18 @@ A baseline tooltip can be customized using the [`tooltipSettings.baseline`](http
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/gantt/tooltip-cs7" %}
+
+### Timeline tooltip
+
+A timeline tooltip can be customized using the [`tooltipSettings.timeline`](https://ej2.syncfusion.com/vue/documentation/api/gantt/tooltipSettings/#timeline) property. This allows modifying the appearance and content of the tooltip displayed over the timeline. The following code example shows how to customize the timeline tooltip in Gantt.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-tooltip-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/gantt/timeline-tooltip-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/gantt/timeline-tooltip-cs1" %}
