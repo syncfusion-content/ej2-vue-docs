@@ -26,7 +26,7 @@ import { RibbonComponent as EjsRibbon, RibbonGroupDirective as ERibbonGroup, Rib
 
 
 
-const size = RibbonItemSize.Medium;
+const size = RibbonItemSize.Small;
 const groupButtonSelected = {
   items: [
     { iconCss: 'e-icons e-align-left', selected: true, content: 'Align Left' },

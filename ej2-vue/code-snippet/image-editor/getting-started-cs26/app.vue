@@ -1,13 +1,14 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="chromeClick">Chrome</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="coldClick">Cold</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="warmClick">Warm</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="grayScaleClick">GrayScale</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="sepiaClick">Sepia</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="invertClick">Invert</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"
+      :created="onCreated"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="chromeClick">Chrome</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="coldClick">Cold</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="warmClick">Warm</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="grayScaleClick">GrayScale</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="sepiaClick">Sepia</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="invertClick">Invert</ejs-button>
+  </div>
 </template>
 
 <script>
@@ -17,33 +18,41 @@ import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent
-},
-  data: function() {
-      return {
-        toolbar: []
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent
+  },
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    chromeClick: function() {
+    onCreated() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
+    },
+    chromeClick: function () {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Chrome');
     },
-    coldClick: function() {
+    coldClick: function () {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Cold');
     },
-    warmClick: function() {
+    warmClick: function () {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Warm');
     },
-    grayScaleClick: function() {
+    grayScaleClick: function () {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('GrayScale');
     },
-    sepiaClick: function() {
+    sepiaClick: function () {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Sepia');
     },
-    invertClick: function() {
+    invertClick: function () {
       this.$refs.imageEditorObj.ej2Instances.applyImageFilter('Invert');
     }
   }
@@ -61,9 +70,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

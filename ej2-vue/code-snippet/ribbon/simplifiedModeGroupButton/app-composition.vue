@@ -22,7 +22,7 @@
 
 import { RibbonItemSize, RibbonGroupButtonSelection, RibbonComponent as EjsRibbon, RibbonGroupDirective as ERibbonGroup, RibbonGroupsDirective as ERibbonGroups, RibbonCollectionsDirective as ERibbonCollections, RibbonCollectionDirective as ERibbonCollection, RibbonItemsDirective as ERibbonItems, RibbonItemDirective as ERibbonItem, RibbonTabsDirective as ERibbonTabs, RibbonTabDirective as ERibbonTab } from "@syncfusion/ej2-vue-ribbon";
 
-    const size = RibbonItemSize.Medium;
+    const size = RibbonItemSize.Small;
      const groupButtonSingle = { 
         selection: RibbonGroupButtonSelection.Single, 
         items: [

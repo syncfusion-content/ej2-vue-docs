@@ -40,4 +40,28 @@ const onPromptRequest = (args) => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.e-aiassistview .e-views .e-suggestions li {
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  background-color: #686868;
+  color: white;
+  padding: 4px 10px;
+  opacity: 0.8;
+  gap: 5px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.suggestion-item .content {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 </style>

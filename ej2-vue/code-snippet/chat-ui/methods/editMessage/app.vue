@@ -33,7 +33,7 @@ export default {
     };
   },
   methods: {
-    buttonClick: () => {
+    buttonClick: function () {
       let defaultChat = this.$refs.chatInstance.ej2Instances;
       defaultChat.updateMessage({text: "Hi Michael, are we still on schedule to meet the deadline?", author: this.currentUser},'msg1');
     }

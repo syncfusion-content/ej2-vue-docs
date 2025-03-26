@@ -1,54 +1,49 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="chromeClick">Chrome</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="coldClick">Cold</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="warmClick">Warm</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="grayScaleClick">GrayScale</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="sepiaClick">Sepia</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="invertClick">Invert</ejs-button>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"
+            :toolbar="toolbar"></ejs-imageeditor>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="chromeClick">Chrome</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="coldClick">Cold</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="warmClick">Warm</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="grayScaleClick">GrayScale</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="sepiaClick">Sepia</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="invertClick">Invert</ejs-button>
+    </div>
 </template>
 
 <script setup>
 
 import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent as EjsButton} from '@syncfusion/ej2-vue-buttons';
+import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 import { ref } from "vue";
 
 const imageEditorObj = ref(null);
-
 const toolbar = [];
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    let imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
-
 const chromeClick = () => {
     imageEditorObj.value.ej2Instances.applyImageFilter('Chrome');
 };
-
 const coldClick = () => {
     imageEditorObj.value.ej2Instances.applyImageFilter('Cold');
 };
-
 const warmClick = () => {
     imageEditorObj.value.ej2Instances.applyImageFilter('Warm');
 };
-
 const grayScaleClick = () => {
     imageEditorObj.value.ej2Instances.applyImageFilter('GrayScale');
 };
-
 const sepiaClick = () => {
     imageEditorObj.value.ej2Instances.applyImageFilter('Sepia');
 };
-
 const invertClick = () => {
     imageEditorObj.value.ej2Instances.applyImageFilter('Invert');
 };
@@ -65,7 +60,6 @@ const invertClick = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
 
 #image-editor {
     width: 550px !important;

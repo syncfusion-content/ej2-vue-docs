@@ -40,10 +40,10 @@ import { StepperComponent as EjsStepper, StepsDirective as ESteps, StepDirective
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .sf-icon-cart:before { content: "\e710"; }
-  .sf-icon-transport:before { content: "\e702"; }
-  .sf-icon-payment:before { content: "\e706"; }
-  .sf-icon-success:before { content: "\e715"; }
+  .sf-icon-cart:before { content: '\e710'; }
+  .sf-icon-transport:before { content: '\e702'; }
+  .sf-icon-payment:before { content: '\e706'; }
+  .sf-icon-success:before { content: '\e715'; }
 
   .horizontal-step {
     margin-top: 30px;

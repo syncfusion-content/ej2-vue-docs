@@ -8,21 +8,29 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" ></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Draw</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {};
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :shapeChanging="shapeChanging" :created="created"></ejs-imageeditor>
+    </div>
+  `,
+  data: function () {
+    return {};
   },
   methods: {
-    shapeChanging: function(args) {
-      args.currentShapeSettings.fontColor =  'red',
-      args.currentShapeSettings.fontStyle =  'georgia'
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "flower.png"
+        : "bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    shapeChanging: function (args) {
+      if (args.currentShapeSettings.type === 'Text') {
+        args.currentShapeSettings.color = 'red';
+        args.currentShapeSettings.fontFamily = 'Times New Roman';
+      }
     }
   }
 });

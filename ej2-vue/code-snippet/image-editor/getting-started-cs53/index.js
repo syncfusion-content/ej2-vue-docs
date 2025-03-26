@@ -1,29 +1,36 @@
 
 import Vue from 'vue';
 import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonPlugin } from '@syncfusion/ej2-vue-buttons';
+import { Browser } from "@syncfusion/ej2-base";
 
 Vue.use(ImageEditorPlugin);
-Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :fileOpened="fileOpened" ></ejs-imageeditor>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
+        :created="created" @fileOpened="fileOpened">
+      </ejs-imageeditor>
+    </div>
+  `,
+  data: function () {
+    return {};
   },
   methods: {
-    fileOpened: function() {
-      let dimension = this.$refs.imageEditorObj.ej2Instances.getImageDimension();
-      this.$refs.imageEditorObj.ej2Instances.drawText(dimension.x, dimension.y, 'Syncfusion', 'Arial', 40, false, false, '#80330075');
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "flower.jpeg"
+        : "bridge.jpeg";
+      imageEditor.open(imageUrl);
+    },
+    fileOpened: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let dimension = imageEditor.getImageDimension();
+      imageEditor.drawText(dimension.x, dimension.y, "Syncfusion", "Arial", 40, false, false, "#80330075");
     }
   }
-
 });

@@ -1,4 +1,5 @@
 
+
 import Vue from 'vue';
 import { ImageEditorPlugin } from "@syncfusion/ej2-vue-image-editor";
 import { FileManagerPlugin } from "@syncfusion/ej2-vue-filemanager";
@@ -7,41 +8,64 @@ Vue.use(ImageEditorPlugin);
 Vue.use(FileManagerPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-filemanager id="file-manager" :ajaxSettings="ajaxSettings" height="350px" width="550px" :fileOpen='fileOpen'></ejs-filemanager>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
-</div>
-`,
-
+  el: '#app',
+  template: `
+  <div>
+    <ejs-filemanager id="file-manager" height="200px" width="550px" :fileSystemData="fileSystemData" @fileOpen="fileOpen"></ejs-filemanager>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
+  </div>
+  `,
   data() {
-    var hostUrl = 'https://ej2-aspcore-service.azurewebsites.net/';
     return {
-      ajaxSettings:
-      {
-        url: hostUrl + 'api/FileManager/FileOperations',
-        getImageUrl: hostUrl + 'api/FileManager/GetImage',
-        uploadUrl: hostUrl + 'api/FileManager/Upload',
-        downloadUrl: hostUrl + 'api/FileManager/Download'
-      }
+      fileSystemData: [
+        {
+          dateCreated: new Date("2023-11-15T19:02:02.341Z"),
+          dateModified: new Date("2024-01-08T16:55:20.946Z"),
+          filterPath: "\\",
+          hasChild: true,
+          id: "0",
+          isFile: false,
+          name: "Pictures",
+          parentId: "0",
+          size: 0,
+          type: "folder"
+        },
+        {
+          dateCreated: new Date("2023-11-15T19:02:02.341Z"),
+          dateModified: new Date("2024-01-08T16:55:20.946Z"),
+          filterPath: "\\Pictures\\",
+          hasChild: false,
+          id: "1",
+          isFile: true,
+          name: "Flower.png",
+          parentId: "0",
+          size: 69632,
+          type: ".png",
+          imageUrl: "flower.jpeg"
+        },
+        {
+          dateCreated: new Date("2023-11-15T19:02:02.341Z"),
+          dateModified: new Date("2024-01-08T16:55:20.946Z"),
+          filterPath: "\\Pictures\\",
+          hasChild: false,
+          id: "2",
+          isFile: true,
+          name: "Bridge.png",
+          parentId: "0",
+          size: 48951,
+          type: ".png",
+          imageUrl: "bridge.jpeg"
+        }
+      ]
     };
   },
   methods: {
-    fileOpen: function(args) {
+    fileOpen(args) {
       let file = args.fileDetails;
-      let fileName = file.name;
-      let filePath = file.filterPath.replace(/\\/g, '/') + fileName;
-      let basePath = document.getElementById('filemanager')?.ej2_instances[0];
-      let imagePath = `${basePath.ajaxSettings.getImageUrl}?path=${filePath}`;
-      if (file.isFile) {
+      if (file.isFile && file.imageUrl) {
         args.cancel = true;
-        this.$refs.imageEditorObj.ej2Instances.open(imagePath);
+        this.$refs.imageEditorObj.ej2Instances.open(file.imageUrl);
       }
     }
   },
-  provide: {
-    filemanager: [DetailsView, NavigationPane, Toolbar]
-  }
-
 });

@@ -7,10 +7,18 @@
             <e-ribbon-collections>
               <e-ribbon-collection>
                 <e-ribbon-items>
-                  <e-ribbon-item type="SplitButton" :allowedSizes="largeSize" :splitButtonSettings="pasteSettigs">
+                  <e-ribbon-item type="SplitButton" :allowedSizes="largeSize" :splitButtonSettings="pasteSettigs" >
                   </e-ribbon-item>
                 </e-ribbon-items>
               </e-ribbon-collection>
+              <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" :buttonSettings="cutButton">
+                </e-ribbon-item>
+                <e-ribbon-item type="Button" :buttonSettings="copyButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
             </e-ribbon-collections>
           </e-ribbon-group>
         </e-ribbon-groups>
@@ -19,16 +27,12 @@
         <e-ribbon-groups>
           <e-ribbon-group header="Tables">
             <e-ribbon-collections>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item type="Button" :buttonSettings="cutButton">
-                  </e-ribbon-item>
-                  <e-ribbon-item type="Button" :buttonSettings="copyButton">
-                  </e-ribbon-item>
-                  <e-ribbon-item type="Button" :buttonSettings="formatButton">
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
+             <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" :dropDownSettings="tableSettings">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
             </e-ribbon-collections>
           </e-ribbon-group>
         </e-ribbon-groups>
@@ -49,7 +53,14 @@ const pasteSettigs = {
 };
 const cutButton = { iconCss: "e-icons e-cut", content: "Cut" };
 const copyButton = { iconCss: "e-icons e-copy", content: "Copy" };
-const formatButton = { iconCss: "e-icons e-format-painter", content: "Format Painter" };
+const tableSettings = {
+  iconCss: "e-icons e-table",
+  content: "Table",
+  items: [
+    { text: "Insert Table" }, { text: "Draw Table" },
+    { text: "Convert Table" }, { text: "Excel SpreadSheet" }
+  ]
+};
 
 </script>
 

@@ -9,10 +9,12 @@
 </template>
 <script>
 import { AIAssistViewComponent } from "@syncfusion/ej2-vue-interactive-chat";
+import { DropDownButtonComponent } from "@syncfusion/ej2-vue-splitbuttons";
 
 export default {
   components: {
-    'ejs-aiassistview': AIAssistViewComponent
+    'ejs-aiassistview': AIAssistViewComponent,
+    'ejs-dropdownbutton': DropDownButtonComponent
   },
   data: function () {
     return {
@@ -35,7 +37,7 @@ export default {
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest: function (args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
         let defaultResponse = 'For real-time prompt processing, connect the AI AssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
@@ -51,4 +53,8 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-dropdown.e-dropdown-popup ul {
+  min-width: 100px;
+}
 </style>

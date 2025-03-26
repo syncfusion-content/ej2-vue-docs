@@ -77,12 +77,10 @@ const updateTemplate = () => {
 const rowPageClick = (args) => {
   let pivotObj = document.getElementById('pivotview-template').ej2_instances[0];;
   pivotObj.pageSettings.currentRowPage = args.currentPage;
-  pivotObj.refreshData();
 };
 const columnPageClick = (args) => {
   let pivotObj = document.getElementById('pivotview-template').ej2_instances[0];;
   pivotObj.pageSettings.currentColumnPage = args.currentPage;
-  pivotObj.refreshData();
 };
 
 provide('pivotview', [Pager]);

@@ -1,8 +1,9 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="getBlob">Get blob</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
+      :created="created"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="getBlob">Save blob</ejs-button>
+  </div>
 </template>
 
 <script>
@@ -11,28 +12,36 @@ import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
 import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
-var blobUrl;
+var blobUrl = '';
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent
-},
-  data: function() {
-      return {
-        base64String
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent
+  },
+  data: function () {
+    return {
+      blobUrl
+    };
   },
   methods: {
-    getBlob: function() {
+    created() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
+    },
+    getBlob: function () {
       let imageData = this.$refs.imageEditorObj.ej2Instances.getImageData();
       let canvas = document.createElement('canvas');
       let ctx = canvas.getContext('2d');
       canvas.width = imageData.width;
       canvas.height = imageData.height;
       ctx.putImageData(imageData, 0, 0);
-      canvas.toBlob((blob) =>{
-        blobUrl = URL.createObjectURL(blob);// For getting blob.
+      canvas.toBlob((blob) => {
+        blobUrl = URL.createObjectURL(blob);
       });
     }
   }
@@ -50,9 +59,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

@@ -8,22 +8,31 @@ Vue.use(ImageEditorPlugin);
 Vue.use(ButtonPlugin);
 
 new Vue({
-	el: '#app',
-	template: `
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
- <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Save</ejs-button>
-</div>
-`,
-
-  data: function() {
-      return {
-        toolbar: []
-      };
+  el: '#app',
+  template: `
+    <div>
+      <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar" :created="created"></ejs-imageeditor>
+      <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click.native="btnClick">Save</ejs-button>
+    </div>
+  `,
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    btnClick: function(event) {
-      this.$refs.imageEditorObj.ej2Instances.export("PNG", "Syncfusion"); // File type, file name
+    created: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? "flower.png"
+        : "bridge.png";
+      imageEditor.open(imageUrl);
+    },
+    btnClick: function () {
+      let imageEditor = this.$refs.imageEditorObj.ej2Instances;
+      if (!imageEditor) return;
+      imageEditor.export("PNG", "Syncfusion"); // File type, file name
     }
   }
 

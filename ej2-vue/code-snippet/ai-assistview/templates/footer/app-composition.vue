@@ -34,4 +34,23 @@ const buttonClick = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-footer {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+#promptTextArea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#sendPrompt {
+  padding: 5px 15px;
+  align-self: flex-end;
+}
 </style>

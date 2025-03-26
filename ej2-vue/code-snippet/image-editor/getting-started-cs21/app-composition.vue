@@ -1,14 +1,15 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" :created="created" width="550px" :zoomSettings="zoomSettings" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btn1Click">Zoom in</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btn2Click">Zoom out</ejs-button>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" :created="created" width="550px"
+            :zoomSettings="zoomSettings" :toolbar="toolbar"></ejs-imageeditor>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="zoomIn">Zoom in</ejs-button>
+        <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="zoomOut">Zoom out</ejs-button>
+    </div>
 </template>
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
 import { ButtonComponent as EjsButton } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 import { ref } from 'vue';
@@ -16,18 +17,19 @@ import { ref } from 'vue';
 const imageEditorObj = ref(null);
 
 const toolbar = [];
-const zoomSettings = {maxZoomFactor: 30, minZoomFactor: 0.1};
+const zoomSettings = { maxZoomFactor: 30, minZoomFactor: 0.1 };
 let zoomLevel = 1;
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
 
-const btn1Click = () => {
+const zoomIn = () => {
     if (zoomLevel < 1) {
         zoomLevel += 0.1;
     } else {
@@ -39,7 +41,7 @@ const btn1Click = () => {
     imageEditorObj.value.ej2Instances.zoom(zoomLevel); // Zoom in
 };
 
-const btn2Click = () => {
+const zoomOut = () => {
     if (zoomLevel <= 1) {
         zoomLevel -= 0.1;
     } else {
@@ -63,7 +65,6 @@ const btn2Click = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
 
 #image-editor {
     width: 550px !important;

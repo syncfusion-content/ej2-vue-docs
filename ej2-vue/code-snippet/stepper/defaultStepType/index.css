@@ -18,7 +18,7 @@
       -moz-osx-font-smoothing: grayscale;
   }
   
-  .step-default .sf-icon-cart:before { content: "\e710"; }
-  .step-default .sf-icon-transport:before { content: "\e702"; }
-  .step-default .sf-icon-payment:before { content: "\e706"; }
-  .step-default .sf-icon-success:before { content: "\e715"; }
+  .step-default .sf-icon-cart:before { content: '\e710'; }
+  .step-default .sf-icon-transport:before { content: '\e702'; }
+  .step-default .sf-icon-payment:before { content: '\e706'; }
+  .step-default .sf-icon-success:before { content: '\e715'; }

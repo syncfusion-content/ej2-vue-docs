@@ -30,4 +30,8 @@ const buttonClick = () => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#executePrompt {
+  margin-bottom: 10px;
+}
 </style>

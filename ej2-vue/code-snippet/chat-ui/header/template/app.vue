@@ -9,7 +9,7 @@
     </ejs-chatui>
   </div>
   <div id="dropdownTemplate">
-    <ejs-dropdownbutton cssClass="custom-dropdown" iconCss="e-icons e-menu" content="Menu" :items='dropdownItemschat'></ejs-dropdownbutton>
+    <ejs-dropdownbutton cssClass="custom-dropdown" iconCss="e-icons e-menu" content="Menu" :items='dropdownItems'></ejs-dropdownbutton>
   </div>
 </template>
 
@@ -58,4 +58,8 @@ export default {
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-dropdown.e-dropdown-popup ul {
+  min-width: 100px;
+}
 </style>

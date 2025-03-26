@@ -1,9 +1,11 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="brightnessClick">Brightness</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="contrastClick">Contrast</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbar="toolbar"
+      :created="onCreated"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="brightnessClick">Brightness</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="contrastClick">Contrast</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="saturationClick">Saturation</ejs-button>
+  </div>
 </template>
 
 <script>
@@ -13,22 +15,33 @@ import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent
-},
-  data: function() {
-      return {
-        toolbar: []
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent
+  },
+  data: function () {
+    return {
+      toolbar: []
+    };
   },
   methods: {
-    brightnessClick: function() {
+    onCreated() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
+    },
+    brightnessClick: function () {
       this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Brightness, 10);
     },
-    contrastClick: function() {
-      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Contrast, 10);
+    contrastClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Contrast, 30);
+    },
+    saturationClick: function () {
+      this.$refs.imageEditorObj.ej2Instances.finetuneImage(ImageFinetuneOption.Saturation, 100);
     }
   }
 }
@@ -45,9 +58,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

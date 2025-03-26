@@ -23,7 +23,7 @@ export default {
                 adaptor: new WebApiAdaptor,
                 crossDomain: true
             }),
-            query: new Query().select(['FirstName', 'EmployeeID']).take(7),
+            query: new Query().select(['FirstName', 'EmployeeID']).take(7).requiresCount(),
             fields: { text: 'FirstName', value: 'EmployeeID' },
             target: '#mentionElement'
         };

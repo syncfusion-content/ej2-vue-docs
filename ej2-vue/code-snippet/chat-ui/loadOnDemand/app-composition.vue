@@ -18,14 +18,12 @@ const michaleUser = {
 };
 
 let chatMessages = [];
-for (let i = 1; i <= 150; i++) {
-  chatMessages.push({
-    text: i % 2 === 0 
-        ? `Message ${i} from Michale` 
-        : `Message ${i} from Albert`,
-    author: i % 2 === 0 ? michaleUser : currentUser
-  });
-}
+chatMessages = Array.from({ length: 150 }, (_, i) => ({
+  text: i % 2 === 0
+    ? `Message ${i + 1} from Michale`
+    : `Message ${i + 1} from Albert`,
+  author: (i % 2 === 0) ? this.michaleUser : this.currentUser
+}));
 </script>
 
 <style>

@@ -1,53 +1,56 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :toolbarTemplate="toolbarTemplate">
-</ejs-imageeditor>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px"
+      :toolbarTemplate="customToolbar" @created="onCreated"></ejs-imageeditor>
+  </div>
 </template>
 
 <script>
-
-import { ImageEditorComponent } from "@syncfusion/ej2-vue-image-editor";
-import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
-import { Browser, getComponent } from "@syncfusion/ej2-base";
-import {createApp} from 'vue';
-
-const app = createApp({});
-
-const HeadTemplate = app.Component("HeaderTemplate", {
-    components: {
-        "ejs-button": ButtonComponent
-    },
-    template:
-        ` <ejs-button :isPrimary="true" v-on:click='btnClick'>Custom</ejs-button>`,
-        data() {
-            return {
-                imageEditorObj: getComponent(document.getElementById('image-editor'), 'image-editor'),
-            }
-        },
-        methods: {
-            btnClick: function(){
-                this.imageEditorObj.freeHandDraw(true);
-            }
-        }
-});
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
+import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent
-},
+  components: {
+    EjsImageeditor,
+  },
+  data() {
+    return {
+      imageEditorObj: null,
+      customToolbar: `
+        <div class="e-toolbar">
+          <button id="freeHandDrawButton" class="e-btn e-primary">Freehand Draw</button>
+        </div>
+      `,
+    };
+  },
+  methods: {
+    enableFreeHandDraw() {
+      const imageEditor = this.imageEditorObj?.ej2Instances;
+      if (imageEditor) {
+        imageEditor.freeHandDraw(true);
+      }
+    },
+    onCreated() {
+      const imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
 
-  data: function() {
-      return {
-        toolbarTemplate: () => {
-            return {
-                template: HeadTemplate
-            }
+      this.imageEditorObj = this.$refs.imageEditorObj;
+
+      const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+
+      imageEditor.open(imageUrl);
+
+      this.$nextTick(() => {
+        const button = document.getElementById("freeHandDrawButton");
+        if (button) {
+          button.addEventListener("click", this.enableFreeHandDraw);
         }
-      };
-  }
-}
+      });
+    },
+  },
+};
 </script>
 
 <style>
@@ -61,9 +64,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

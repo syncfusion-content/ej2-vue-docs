@@ -40,7 +40,7 @@ components: {
 
   data: function () {
     return {
-      size: RibbonItemSize.Medium,
+      size: RibbonItemSize.Small,
       groupButtonSelected: { 
         items: [
           {iconCss: 'e-icons e-align-left', selected: true, content: 'Align Left'},

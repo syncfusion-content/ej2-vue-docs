@@ -54,4 +54,24 @@ const buttonClick= function() {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#footerTemplate.e-chat-ui .e-footer {
+  margin: unset;
+  align-self: auto;
+}
+
+.custom-footer {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: transparent;
+}
+
+#chatTextArea {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 0;
+  padding: 5px;
+}
 </style>

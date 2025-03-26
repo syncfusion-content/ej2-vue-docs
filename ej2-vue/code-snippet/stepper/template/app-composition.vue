@@ -72,15 +72,15 @@ const tempContent = '<div class="template-content"><span class="${step.iconCss}"
 }
 
 .sf-icon-projector:before {
-  content: "\e700";
+  content: '\e700';
 }
 
 .sf-icon-powerpoint:before {
-  content: "\e701";
+  content: '\e701';
 }
 
 .sf-icon-onedrive:before {
-  content: "\e702";
+  content: '\e702';
 }
 
 

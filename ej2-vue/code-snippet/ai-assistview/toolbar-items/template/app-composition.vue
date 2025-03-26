@@ -47,4 +47,8 @@ const onPromptRequest = (args) => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.custom-dropdown.e-dropdown-popup ul {
+  min-width: 100px;
+}
 </style>

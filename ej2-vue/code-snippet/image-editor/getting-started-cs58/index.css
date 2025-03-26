@@ -14,3 +14,7 @@
     width: 550px !important;
     height: 350px !important;
 }
+
+#profile-dialog {
+    max-height: 420px !important;
+  }

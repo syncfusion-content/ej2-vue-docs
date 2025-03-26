@@ -54,4 +54,19 @@ const getTypingUsersList = (context) => {
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+#typingUsersTemplate .typing-wrapper {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.typing-user {
+  font-weight: bold;
+  color: #0078d4;
+}
 </style>

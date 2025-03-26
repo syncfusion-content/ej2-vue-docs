@@ -46,7 +46,7 @@ export default {
                  { "EmpID": 1020, "Name": "James", "Designation": "Developer", "Country": "China" } 
                ],
       fields: { text: 'Name', value: 'EmpID' },
-      gridSettings: { enableAltRow: true }
+      gridSettings: { gridLines: 'Horizontal' }
     }
   }
 }

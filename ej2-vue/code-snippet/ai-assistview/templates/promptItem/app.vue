@@ -31,10 +31,10 @@ export default {
     }
   },
   methods: {
-    onPromptRequest: (args) => {
+    onPromptRequest: function (args) {
       setTimeout(() => {
         let defaultAiassist = this.$refs.aiassist.ej2Instances;
-        let foundPrompt = promptsData.find((promptObj) => promptObj.prompt === args.prompt);
+        let foundPrompt = this.prompts.find((promptObj) => promptObj.prompt === args.prompt);
         let defaultResponse = 'For real-time prompt processing, connect the AIAssistView component to your preferred AI service, such as OpenAI or Azure Cognitive Services. Ensure you obtain the necessary API credentials to authenticate and enable seamless integration.';
         defaultAiassist.addPromptResponse(foundPrompt ? foundPrompt.response : defaultResponse);
       }, 1000);
@@ -51,4 +51,30 @@ export default {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-notifications/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-interactive-chat/styles/material.css";
+
+.promptItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.promptItemContent {
+  align-items: flex-end;
+  margin-right: 20px
+}
+
+.promptItemContent .prompt-header {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.promptItemContent .prompt-header span {
+  margin-left: 10px;
+}
+
+.promptItemContent .content {
+  margin-right: 35px;
+}
 </style>

@@ -29,7 +29,7 @@ new Vue({
 `,
 data: function () {
   return {
-    size: RibbonItemSize.Medium,
+    size: RibbonItemSize.Small,
     groupButtonIcon: { 
       items: [
         {iconCss: 'e-icons e-align-left'},

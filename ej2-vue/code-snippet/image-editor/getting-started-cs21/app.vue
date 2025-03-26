@@ -1,9 +1,10 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :zoomSettings="zoomSettings" :toolbar="toolbar"></ejs-imageeditor>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btn1Click">Zoom in</ejs-button>
-<ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="btn2Click">Zoom out</ejs-button>
-</div>
+  <div>
+    <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :zoomSettings="zoomSettings"
+      :toolbar="toolbar" :created="onCreated"></ejs-imageeditor>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="zoomIn">Zoom in</ejs-button>
+    <ejs-button cssClass="e-img-button" :isPrimary="true" v-on:click="zoomOut">Zoom out</ejs-button>
+  </div>
 </template>
 
 <script>
@@ -13,20 +14,28 @@ import { ButtonComponent } from '@syncfusion/ej2-vue-buttons';
 import { Browser } from "@syncfusion/ej2-base";
 
 export default {
-name: "App",
-components: {
-"ejs-imageeditor":ImageEditorComponent,
-"ejs-button":ButtonComponent
-},
-  data: function() {
-      return {
-        toolbar: [],
-        zoomSettings: {maxZoomFactor: 30, minZoomFactor: 0.1},
-        zoomLevel: 1
-      };
+  name: "App",
+  components: {
+    "ejs-imageeditor": ImageEditorComponent,
+    "ejs-button": ButtonComponent
+  },
+  data: function () {
+    return {
+      toolbar: [],
+      zoomSettings: { maxZoomFactor: 30, minZoomFactor: 0.1 },
+      zoomLevel: 1
+    };
   },
   methods: {
-    btn1Click: function() {
+    onCreated() {
+      let imageEditor = this.$refs.imageEditorObj?.ej2Instances;
+      if (!imageEditor) return;
+      let imageUrl = Browser.isDevice
+        ? 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png'
+        : 'https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png';
+      imageEditor.open(imageUrl);
+    },
+    zoomIn: function () {
       if (this.zoomLevel < 1) {
         this.zoomLevel += 0.1;
       } else {
@@ -37,7 +46,7 @@ components: {
       }
       this.$refs.imageEditorObj.ej2Instances.zoom(this.zoomLevel); // Zoom in
     },
-    btn2Click: function() {
+    zoomOut: function () {
       if (this.zoomLevel <= 1) {
         this.zoomLevel -= 0.1;
       } else {
@@ -63,9 +72,8 @@ components: {
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
 
-
 #image-editor {
-    width: 550px !important;
-    height: 350px !important;
+  width: 550px !important;
+  height: 350px !important;
 }
 </style>

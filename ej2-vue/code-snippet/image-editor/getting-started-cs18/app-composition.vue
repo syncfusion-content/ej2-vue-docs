@@ -1,23 +1,25 @@
 <template>
-<div>
-<ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created" :toolbarUpdating="toolbarUpdating"></ejs-imageeditor>
-</div>
+    <div>
+        <ejs-imageeditor id="image-editor" ref="imageEditorObj" height="350px" width="550px" :created="created"
+            :toolbarUpdating="toolbarUpdating"></ejs-imageeditor>
+    </div>
 </template>
 
 <script setup>
 
-import { ImageEditorComponent as EjsImageeditor} from "@syncfusion/ej2-vue-image-editor";
+import { ImageEditorComponent as EjsImageeditor } from "@syncfusion/ej2-vue-image-editor";
 import { Browser } from "@syncfusion/ej2-base";
-import {ref} from 'vue';
+import { ref } from 'vue';
 
 const imageEditorObj = ref(null);
 
 const created = () => {
-    if (Browser.isDevice) {
-        imageEditorObj.value.open('flower.png');
-    } else {
-        imageEditorObj.value.open('bridge.png');
-    }
+    const imageEditor = imageEditorObj.value?.ej2Instances;
+    if (!imageEditor) return;
+    const imageUrl = Browser.isDevice
+        ? "https://ej2.syncfusion.com/react/demos/src/image-editor/images/flower.png"
+        : "https://ej2.syncfusion.com/react/demos/src/image-editor/images/bridge.png";
+    imageEditor.open(imageUrl);
 };
 
 const toolbarUpdating = (args) => {
@@ -27,7 +29,7 @@ const toolbarUpdating = (args) => {
                 item.visible = false;
             }
         });
-    }      
+    }
 };
 
 </script>
@@ -42,7 +44,6 @@ const toolbarUpdating = (args) => {
 @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-image-editor/styles/material.css";
-
 
 #image-editor {
     width: 550px !important;

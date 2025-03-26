@@ -1,0 +1,19 @@
+#container {
+    margin: 50px auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.e-speech-to-text.customSpeechBtn {
+    background-color: #ff6347;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.e-speech-to-text.customSpeechBtn:hover,
+.e-speech-to-text.customSpeechBtn:focus {
+    background-color: #ff4500;
+}
+  
