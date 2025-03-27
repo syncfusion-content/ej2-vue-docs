@@ -251,6 +251,33 @@ In the following code, the `Progress Bar` component render in the Grid **Freight
         
 {% previewsample "page.domainurl/code-snippet/grid/column/default-template-progress" %}
 
+### Render RadioButton in a column 
+
+The Syncfusion Vue Grid supports rendering the [RadioButton](https://ej2.syncfusion.com/vue/documentation/radio-button/getting-started) within a column using the [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) property. This feature is particularly useful for displaying selection options, such as order statuses, payment methods, or approval choices, within the Grid.
+
+In the following example, a `RadioButton` is rendered in the **Order Status** column of the Syncfusion Vue Grid by defining the `template` property.
+
+```
+<template v-slot:radioTemplate="{ data }">
+  <div style="display: flex; flex-direction: column; align-items: start; gap: 10px;">
+    <ejs-radiobutton label="Pending" :name="'radio-' + data.OrderID" cssClass="e-warning" :checked="data.OrderStatus === 'Pending'"></ejs-radiobutton>
+    <ejs-radiobutton label="Confirmed" :name="'radio-' + data.OrderID" cssClass="e-success" :checked="data.OrderStatus === 'Confirmed'"></ejs-radiobutton>
+    <ejs-radiobutton label="Shipped" :name="'radio-' + data.OrderID" cssClass="e-success" :checked="data.OrderStatus === 'Shipped'"></ejs-radiobutton>
+  </div>
+</template>
+```
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-radio/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/column/template-radio/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/column/template-radio" %}
+
 ## Using condition template
 
 The conditional column [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template) allows you to display template elements based on specific conditions.
@@ -408,7 +435,7 @@ The Syncfusion Grid component allows you to dynamically add template columns at 
 
 Dynamically adding template columns involves creating and inserting columns with custom templates after the grid has been initialized. This approach provides flexibility in presenting data in a highly customizable manner.
 
-The following example demonstrates how to add template column using external button click. In this example, the **ShipCountry** column with a [DropDownList](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) is added in column [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template), and an icon is displayed using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertemplate) for the **ShipCountry** column. 
+The following example demonstrates how to add template column using external button click. In this example, the **ShipCountry** column with a [Dropdownlist](https://ej2.syncfusion.com/vue/documentation/drop-down-list/getting-started) is added in column [template](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#template), and an icon is displayed using the [headerTemplate](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#headertemplate) for the **ShipCountry** column. 
 
 
 {% tabs %}
@@ -421,22 +448,3 @@ The following example demonstrates how to add template column using external but
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/column/default-dynamically" %}
-
-## Enhancing Grid performance by enabling or disabling Aria Labels
-
-By default, the Syncfusion Vue Grid adds custom **aria-label** attributes to template cells by combining the cell value, the "**is template cell**" identifier, and the column header name. These attributes help screen readers provide meaningful context.
-
-If your application doesn’t require screen reader support and includes multiple template columns, Aria labels may impact performance. To improve rendering, you can disable them for all template columns by setting the `enableAriaLabel` property to **false** in the `templateOptions` of those columns. If accessibility is needed, set it to **true** to retain Aria labels.
-
-The example below enables Aria labels for the **Employee Image** column and disables them for the **First Name** column in the Syncfusion Vue Grid.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/template-aria-label/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/grid/column/template-aria-label/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/grid/column/template-aria-label" %}
