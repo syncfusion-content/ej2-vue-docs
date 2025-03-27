@@ -47,7 +47,7 @@ The toolbar in the Rich Text Editor is assigned the role of 'Toolbar' and includ
 | --- | --- |
 | role="toolbar" | This attribute added to the ToolBar element describes the actual role of the element. |
 | aria-orientation     | Indicates the ToolBar orientation. Default value is `horizontal`. |
-| aria-haspopup       | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled,  attribute value has to be changed to `true`. | |
+| aria-haspopup       | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled,  attribute value has to be changed to `true`. | 
 | aria-disabled       | Indicates the disabled state of the toolbar. |
 | aria-owns | Identifies an element to define a visual, functional, or contextual parent/child relationship between DOM elements when the DOM hierarchy cannot represent the relationship. In the Rich Text Editor, the attribute contains the ID of the Rich Text Editor to indicate the popup as a child element. |
 
@@ -75,7 +75,7 @@ For more details on Toolbar ARIA attributes, refer to the [`Accessibility of Too
 
 The Rich Text Editor component followed the [keyboard interaction](https://www.w3.org/WAI/ARIA/apg/patterns/alert/#keyboardinteraction) guideline, making it easy for people who use assistive technologies (AT) and those who completely rely on keyboard navigation. The following keyboard shortcuts are supported by the Rich Text Editor component.
 
-For more details on keyboard navigation, refer to the [Keyboard support](https://ej2.syncfusion.com/vue/documentation/rich-text-editor/keyboard-support) documentation.
+For more details on keyboard navigation, refer to the [Keyboard support](https://ej2.syncfusion.com/vue/documentation/markdown-editor/keyboard-support) documentation.
 
 ### Customizing Shortcut Keys
 

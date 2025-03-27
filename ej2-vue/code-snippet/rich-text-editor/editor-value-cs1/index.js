@@ -5,15 +5,14 @@ Vue.use(RichTextEditorPlugin);
   
 new Vue({
 	el: '#app',
-	template: `<ejs-richtexteditor
-    ref="defaultRTE"
-    :height="340"
-    :value="value"
-  ></ejs-richtexteditor>
-  <button @click="getEditorValue">Get Editor Value</button>
-  <div v-if="editorContent">
-    <h3>Editor Content:</h3>
-    <div v-html="editorContent"></div>`,
+	template: `<div>
+                  <ejs-richtexteditor ref="defaultRTE" :height="340" :value="value"></ejs-richtexteditor>
+                  <button @click="getEditorValue">Get Editor Value</button>
+                  <div v-if="editorContent">
+                    <h3>Editor Content:</h3>
+                    <div v-html="editorContent"></div>
+                  </div>
+              </div>`,
 
   data: function () {
     return {

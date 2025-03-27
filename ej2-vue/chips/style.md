@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style in Vue Chips component | Syncfusion
-description: Learn here all about Style in Syncfusion Vue Chips component of Syncfusion Essential JS 2 and more.
+description: Learn here all about style and appearance in Syncfusion Vue Chip component of Syncfusion Essential JS 2 and more.
 control: Style 
 platform: ej2-vue
 documentation: ug
@@ -12,7 +12,7 @@ domainurl: ##DomainURL##
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 
-## Customizing the chip text
+## Customizing the Chip text
 
 Use the following CSS to customize the chip text properties.
 
@@ -24,7 +24,7 @@ Use the following CSS to customize the chip text properties.
 }
 ```
 
-## Customizing the chip icon
+## Customizing the Chip icon
 
 Use the following CSS to customize the chip icon properties.
 
@@ -35,7 +35,7 @@ Use the following CSS to customize the chip icon properties.
 }
 ```
 
-## Customizing the chip delete button
+## Customizing the Chip delete button
 
 Use the following CSS to customize the chip delete button.
 
@@ -46,7 +46,7 @@ Use the following CSS to customize the chip delete button.
 }
 ```
 
-## Customizing the chip outline
+## Customizing the Chip outline
 
 Use the following CSS to customize the chip outline.
 
@@ -57,7 +57,7 @@ Use the following CSS to customize the chip outline.
 }
 ```
 
-## Customizing the chip on selection
+## Customizing the Chip on selection
 
 Use the following CSS to customize the chip on selection.
 
@@ -75,7 +75,7 @@ Use the following CSS to customize the chip on selection.
 }
 ```
 
-## Customizing the chip avatar text
+## Customizing the Chip avatar text
 
 Use the following CSS to customize the chip avatar text properties.
 
@@ -84,4 +84,14 @@ Use the following CSS to customize the chip avatar text properties.
     background-color: #d51a1a;
     color: #fafafa;
 }
+```
+
+## Customizing the Chip height
+
+Use the following CSS to customize the Chips height.
+
+```
+.e-chip-list.e-chip {
+    height: 60px;
+  }
 ```

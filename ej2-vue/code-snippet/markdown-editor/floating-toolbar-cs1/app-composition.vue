@@ -19,7 +19,7 @@
         <div class="control-section">
             <div class="sample-container">
                 <div class="default-section">
-                    <ejs-richtexteditor ref="rteInstance" :value="rteValue" :height="340" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>
+                    <ejs-richtexteditor ref="rteInstance" :value="rteValue" :height="750" :toolbarSettings="toolbarSettings"></ejs-richtexteditor>
                 </div>
             </div>
         </div>
