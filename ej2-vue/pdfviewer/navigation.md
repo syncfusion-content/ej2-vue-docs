@@ -1065,5 +1065,5 @@ export default {
 
 ## See also
 
-* [Toolbar items](https://ej2.syncfusion.com/vue/documentation/pdfviewer/toolbar/)
-* [Feature Modules](https://ej2.syncfusion.com/vue/documentation/pdfviewer/feature-module/)
+* [Toolbar items](https://ej2.syncfusion.com/vue/documentation/pdfviewer/toolbar)
+* [Feature Modules](https://ej2.syncfusion.com/vue/documentation/pdfviewer/feature-module)
