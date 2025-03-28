@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Events in Vue Chat UI component | Syncfusion
-description:  Checkout and learn about Events with Vue Chat UI component of Syncfusion Essential JS 2 and more details.
+title: Events in Vue Chat UI Component | Syncfusion
+description:  Checkout and learn about Events with Vue Chat UI Component of Syncfusion Essential JS 2 and more details.
 platform: ej2-vue
 control: Chat UI
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Events in Vue Chat UI component component
+# Events in Vue Chat UI Component
 
 This section describes the Chat UI events that will be triggered when appropriate actions are performed. The following events are available in the Chat UI component.
 
