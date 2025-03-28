@@ -91,3 +91,18 @@ Trackball can be enabled by setting the [`enable`](https://ej2.syncfusion.com/vu
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/trackball-cs1" %}
+
+## Crosshair Highlight Category
+
+The [`highlightCategory`](https://ej2.syncfusion.com/vue/documentation/api/chart/crosshairSettings/#highlightcategory) property in the crosshair highlights the background of the entire category when hovered over. The crosshair color can be customized using the [`color`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/#color) property within the [`line`](https://ej2.syncfusion.com/vue/documentation/api/chart/borderModel/) configuration.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/crosshair-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/crosshair-cs5" %}
