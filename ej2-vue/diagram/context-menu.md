@@ -196,7 +196,7 @@ In the following example, menu items are rendered with shortcut key codes for sp
 |Event|Description|
 |----|----|
 |[`contextMenuBeforeItemRender`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#contextmenubeforeitemrender)|Triggers while initializing each menu item.|
-|[`contextMenuOpen`](https://ej2.syncfusion.com/vue/documentation/api/diagram/diagramBeforeMenuOpenEventArgs/)|Triggers upon right-click before opening the context menu.|
+|[`contextMenuOpen`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#contextmenuopen)|Triggers upon right-click before opening the context menu.|
 |[`contextMenuClick`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#contextmenuclick)|Triggers when a menu item is clicked.|
 
 The following example shows how to get these events.

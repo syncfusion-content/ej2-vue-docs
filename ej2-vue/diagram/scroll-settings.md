@@ -14,7 +14,7 @@ The diagram can be scrolled using both the vertical and horizontal scrollbars. A
 
 ## Access and Customize Scroll Settings
 
-Scroll settings in a diagram allow you to access and customize various properties such as [`horizontalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset), [`verticalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset), [`viewPortWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportwidth), [`viewPortHeight`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportheight), [`currentZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#currentzoom), [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#zoomfactor), [`maxZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#maxzoom), [`minZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#minzoom), [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrolllimit), [`canAutoScroll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#canautoscroll), [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/), [`padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/), [`scrollableArea`](https://ej2.syncfusion.com/vue/documentation/api/diagram/rect/).
+Scroll settings in a diagram allow you to access and customize various properties such as [`horizontalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#horizontaloffset), [`verticalOffset`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#verticaloffset), [`viewPortWidth`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportwidth), [`viewPortHeight`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#viewportheight), [`currentZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#currentzoom), [`zoomFactor`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#zoomfactor), [`maxZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#maxzoom), [`minZoom`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#minzoom), [`scrollLimit`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrolllimit), [`canAutoScroll`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#canautoscroll), [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#autoscrollborder), [`padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#padding), [`scrollableArea`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#scrollablearea).
 
 These properties enable you to read and adjust the scroll status, scroll offset, zoom levels, and more. For a comprehensive overview of these properties, refer to the [`Scroll Settings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/)
 
@@ -116,7 +116,7 @@ Autoscroll behavior can be enabled or disabled using the  [`canAutoScroll`](http
 
 ### Autoscroll border
 
-The autoscroll border defines the maximum distance from the mouse pointer to the diagram edge that triggers autoscroll. By default, this distance is set to 15 pixels for all sides (left, right, top, and bottom). You can adjust this using the [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/) property of the scroll settings.
+The autoscroll border defines the maximum distance from the mouse pointer to the diagram edge that triggers autoscroll. By default, this distance is set to 15 pixels for all sides (left, right, top, and bottom). You can adjust this using the [`autoScrollBorder`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#autoscrollborder) property of the scroll settings.
 
 The following example demonstrates how to configure autoscroll:
 
@@ -168,7 +168,7 @@ The following code example illustrates how to specify the scroll limit and custo
 
 ## Scroll Padding
 
-The [`padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/marginModel/) property of the scroll settings allows you to extend the scrollable region based on the scroll limit. This property is useful for adding extra space around the diagram content, making it easier to navigate and interact with elements near the edges.
+The [`padding`](https://ej2.syncfusion.com/vue/documentation/api/diagram/scrollSettingsModel/#padding) property of the scroll settings allows you to extend the scrollable region based on the scroll limit. This property is useful for adding extra space around the diagram content, making it easier to navigate and interact with elements near the edges.
 
 The following code example illustrates how to set scroll padding for the diagram region:
 

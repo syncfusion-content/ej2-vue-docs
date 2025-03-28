@@ -30,3 +30,22 @@ The following example demonstrates the DatePicker with the custom format (`yyyy-
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/datepicker/getting-started-cs2" %}
+
+## Input formats 
+
+The [`inputFormats`](https://ej2.syncfusion.com/vue/documentation/api/datepicker/#inputformats) property in the DatePicker control allows users to enter dates in various formats, providing flexibility in date entry. This property accepts an array of predefined formats that the control recognizes, enabling users to input dates in different ways while ensuring they are parsed correctly.
+
+When the user types the date in any of the specified input formats, it will be automatically converted to the display format after pressing Enter, the Tab key, or when the input loses focus. This enhances the user experience by allowing intuitive data entry through various custom input formats.
+
+The following example demonstrates the DatePicker with multiple input formats.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/getting-started-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/datepicker/getting-started-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/datepicker/getting-started-cs5" %}

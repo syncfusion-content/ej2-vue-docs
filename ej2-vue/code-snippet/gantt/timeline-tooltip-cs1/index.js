@@ -11,9 +11,9 @@ new Vue({
   <div>
     <ejs-gantt ref='gantt' :dataSource="data" id="GanttContainer" :taskFields="taskFields" :height="height"
       :tooltipSettings="tooltipSettings">
-       <template v-slot:timelineTooltipTemplate="{ data }">
-        <div v-if="data.tier == 'topTier'" v-html="topTierTooltip(data.value, data.date, data.tier)"></div>
-        <div v-if="data.tier == 'bottomTier'" v-html="bottomTierTooltip(data.date, data.tier)"></div>
+      <template v-slot:timelineTooltipTemplate="{ data }">
+        <div v-if="data.tier === 'topTier'" v-html="topTierTooltip(data.value, data.date, data.tier)"></div>
+        <div v-else-if="data.tier === 'bottomTier'" v-html="bottomTierTooltip(data.date, data.tier)"></div>
       </template>
     </ejs-gantt>
   </div>
@@ -27,6 +27,7 @@ new Vue({
         id: 'TaskID',
         name: 'TaskName',
         startDate: 'StartDate',
+        endDate: 'EndDate',
         duration: 'Duration',
         baselineStartDate: "BaselineStartDate",
         baselineEndDate: "BaselineEndDate",
