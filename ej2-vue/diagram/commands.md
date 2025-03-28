@@ -115,7 +115,7 @@ The following code example illustrates how the nodes are distributed using the `
 
 ## Sizing commands
 
-Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram#sameSize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) method are explained below.
+Sizing [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) command enables you to size all selected nodes to match the size of the first selected object or the first node in the objects collection you provide as the second parameter. The parameters for the [`sameSize`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#samesize) method are explained below.
 
 ### Sizing options
 

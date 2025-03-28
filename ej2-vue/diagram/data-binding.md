@@ -18,9 +18,9 @@ domainurl: ##DomainURL##
 
 * The [`ID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel#id-string) property is used to define the unique field of each JSON data.
 
-* The [`parentId`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel#parentid-string) property is used to defines the parent field which builds the relationship between ID and parent field.
+* The [`parentId`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel/#parentid) property is used to defines the parent field which builds the relationship between ID and parent field.
 
-* The [`root`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel#root-string) property is used to define the root node for the diagram populated from the data source.
+* The [`root`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel/#root) property is used to define the root node for the diagram populated from the data source.
 
 * To explore those properties, see [`DataSourceSettings`](https://ej2.syncfusion.com/vue/documentation/api/diagram/dataSourceModel).
 
@@ -91,7 +91,7 @@ This feature allows you to read the data source and perform add or edit or delet
 
 * The connectionDataSource’s [`sourceID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#sourceID) and [`targetID`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#targetID) properties are used to set the sourceID and targetID for connection data source item.
 
-* The connectionDataSource’s [`sourcePointX`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#sourcePointX), [`sourcePointY`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#sourcePointY), [`targetPointX`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#targetPointX), and [`targetPointY`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#targetPointY) properties are used to define the sourcePoint and targetPoint values for connector from data source.
+* The connectionDataSource’s [`sourcePointX`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#sourcePointX), [`sourcePointY`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel#sourcePointY), [`targetPointX`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel/#targetpointx), and [`targetPointY`](https://ej2.syncfusion.com/vue/documentation/api/diagram/connectionDataSourceModel/#targetpointy) properties are used to define the sourcePoint and targetPoint values for connector from data source.
 
 * The dataSourceSettings crudAction’s [`customFields`](https://ej2.syncfusion.com/vue/documentation/api/diagram/crudActionModel#customFields) property is used to maintain the additional information for nodes.
 
