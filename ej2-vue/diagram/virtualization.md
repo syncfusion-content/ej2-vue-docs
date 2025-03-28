@@ -18,7 +18,7 @@ Virtualization optimizes the diagram performance by loading only the diagramming
 
 This feature significantly enhances performance, especially when working with diagrams containing a large number of nodes and connectors. By reducing the number of objects that need to be processed at any given time, virtualization ensures smoother interactions, such as loading and dragging items within the diagram.
 
-To enable virtualization in a diagram, you need to include the virtualization constraint in the diagram's constraints. For more information, refer to the  [`diagram constraints`](.https://ej2.syncfusion.com/vue/documentation/diagram/constraints#diagram-constraints).
+To enable virtualization in a diagram, you need to include the virtualization constraint in the diagram's constraints. For more information, refer to the  [`diagram constraints`](https://ej2.syncfusion.com/vue/documentation/diagram/constraints#diagram-constraints).
 
 The following code example demonstrates how to enable Virtualization mode in the diagram:
 

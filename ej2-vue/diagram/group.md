@@ -16,7 +16,7 @@ Group is used to cluster multiple nodes and connectors into a single element. It
 
 ## Add group when initializing diagram
 
-A group can be added to the diagram model through [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node) collection. To define an object as group, add the child objects to the [`children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node#children-string) collection of the group. The following code illustrates how to create a group node.
+A group can be added to the diagram model through [`nodes`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node) collection. To define an object as group, add the child objects to the [`children`](https://ej2.syncfusion.com/vue/documentation/api/diagram/node/#children) collection of the group. The following code illustrates how to create a group node.
 
 * While creating group, its child node need to be declared before the group declaration.
 

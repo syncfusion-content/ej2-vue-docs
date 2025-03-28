@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Configure minimum width in Vue Pivotview component | Syncfusion
-description: Learn how to configure the minimum width in the Syncfusion Vue Pivotview component of Syncfusion Essential JS 2 and more.
+title: Configure minimum width in Vue Pivot Table component | Syncfusion
+description: Learn how to configure the minimum width in the Syncfusion Vue Pivot Table component of Syncfusion Essential JS 2 and more.
 control: Configuring the minimum width in the Pivot Table component 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Configuring the minimum width in the Vue Pivotview component
+# Configuring the minimum width in the Vue Pivot Table component
 
 The pivot table component allows you to configure its minimum width using the `minWidth` property. This property is useful for ensuring the component maintains a consistent layout and responsiveness across different screen sizes.
 

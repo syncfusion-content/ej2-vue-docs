@@ -240,7 +240,7 @@ Bezier segments are annotated with two thumbs representing the control points. T
 
 ## User handles
 
-* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel#userHandles-userhandlemodel[]) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property. The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
+* User handles are used to add some frequently used commands around the selector. To create user handles, define and add them to the [`userHandles`](https://ej2.syncfusion.com/vue/documentation/api/diagram/selectorModel/#userhandles) collection of the [`selectedItems`](https://ej2.syncfusion.com/vue/documentation/api/diagram/#selecteditems) property. The name property of user handle is used to define the name of the user handle and its further used to find the user handle at runtime and do any customization.
 
 The following events are triggered when interacting with a user handle:
 

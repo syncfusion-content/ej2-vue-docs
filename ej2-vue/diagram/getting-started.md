@@ -506,7 +506,7 @@ You can configure the above "Employee Information" with diagram, so that the nod
 
 ### Rendering layout with Datasource
 
-To create an organizational chart, the [`type`](../api/diagram/layout) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
+To create an organizational chart, the [`type`](../api/diagram/layout/#type) of layout should be set as an `OrganizationalChart`. The following code example shows how DataManager is used to generate Layout based on the DataSourceSettings of the Diagram.
 
 
 {% tabs %}
