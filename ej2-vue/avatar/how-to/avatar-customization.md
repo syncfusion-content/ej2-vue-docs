@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Avatar customization in Vue Avatar component | Syncfusion
-description: Learn here all about Avatar customization in Syncfusion Vue Avatar component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Avatar customization with Syncfusion Essential Studio Vue Avatar component, its elements, and more.
 control: Avatar customization 
 platform: ej2-vue
 documentation: ug

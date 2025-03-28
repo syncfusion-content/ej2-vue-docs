@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Getting started with Vue Avatar component | Syncfusion
-description:  Checkout and learn about Getting started with Vue Avatar component of Syncfusion Essential JS 2 and more details.
+description:  Checkout and learn about Getting started with Syncfusion Essential Studio Vue Avatar component, its elements, and more.
 control: Getting started 
 platform: ej2-vue
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Getting Started with the Vue Avatar Component in Vue 2
+# Getting started with Vue Avatar component
 
 This article provides a step-by-step guide for setting up a Vue 2 project using [Vue-CLI](https://cli.vuejs.org/) and integrating the Syncfusion Vue Avatar component using the [Composition API](https://vuejs.org/guide/introduction.html#composition-api) / [Options API](https://vuejs.org/guide/introduction.html#options-api).
 
@@ -18,7 +18,7 @@ To get start quickly with Vue Avatar component, you can check on this video:
 
 ## Prerequisites
 
-[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements/)
+[System requirements for Syncfusion Vue UI components](https://ej2.syncfusion.com/vue/documentation/system-requirements)
 
 ## Setting up the Vue 2 project
 
