@@ -147,3 +147,18 @@ By default, tooltip shows information of x and y value in points. You can show m
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs6" %}
+
+## Closest Tooltip
+
+The [`showNearestTooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings/#shownearesttooltip) property in the chart tooltip displays tooltips based on the data points closest to the cursor.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/tooltip-cs9/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs9" %}
