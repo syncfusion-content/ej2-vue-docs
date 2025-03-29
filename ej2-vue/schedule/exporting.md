@@ -136,6 +136,31 @@ The Scheduler exports the event data to CSV format with `,` as separator. You ca
         
 {% previewsample "page.domainurl/code-snippet/schedule/excel-export-cs8" %}
 
+### How to customize the excel sheet on before exporting
+
+Customizing an Excel sheet before export is made easy with the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/schedule#excelExport) event. This event provides users with robust flexibility to tailor the exported data, format it according to specific needs, and include additional elements for enhanced presentation.
+
+With the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/schedule#excelExport) event, you can:
+
+- **Adjust the formatting:** Apply specific styles such as font type, size, color, and cell formatting to make the output visually appealing and consistent with your requirements.
+
+- **Customize headers and footers:** Personalize the Excel sheet by modifying the header and footer content, offering more control over the exported document.
+
+- **Cancel the export:** The event supports cancellation of the export process by setting the `cancel` property to `true`. This feature ensures you can prevent export based on specific conditions, offering you full control over the Excel export workflow.
+
+Here’s an example of how you can add a custom header and footer to an Excel sheet before exporting using the [`excelExport`](https://ej2.syncfusion.com/vue/documentation/api/schedule#excelExport) event.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/schedule/excel-export-cs8/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/excel-export-cs9" %}
+
 ## Exporting calendar events as ICS file
 
 You can export the Scheduler events to a calendar (.ics) file format, and open it on any of the other default calendars such as Google or Outlook. To export the events of Scheduler to an ICS file, you need to first import the `ICalendarExport` module from `@syncfusion/ej2-schedule` package and then inject it using the `Schedule.Inject(ICalendarExport)` method.
@@ -227,5 +252,27 @@ You can print the Schedule element based on your needs using the [`print`](../ap
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/schedule/print-cs2" %}
+
+### How to customize the print layout
+
+The [`beforePrint`](https://ej2.syncfusion.com/vue/documentation/api/schedule#beforePrint) event enables users to customize the print layout of the Scheduler control without altering the actual schedule layout or data. This event returns the HTML element used for printing, which can be tailored based on specific requirements before the print operation is triggered. Additionally, users can prevent the print action by setting the `cancel` property to `true`, giving them full control over when and how the print operation takes place.
+
+Key customization options include:
+
+- **Customizing the header and footer:** Add custom header and footer content of the print layout to include additional information.
+- **Controlling print output:** Fine-tune the layout to ensure that only the necessary details are printed, ensuring a clean and structured printout.
+
+Here’s an example of how you can add a custom header and footer to the print layout using the [`beforePrint`](https://ej2.syncfusion.com/vue/documentation/api/schedule#beforePrint) event.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/schedule/print-cs3/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/schedule/print-cs3/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/schedule/print-cs3" %}
 
 > You can refer to our [Vue Scheduler](https://www.syncfusion.com/vue-components/vue-scheduler) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Scheduler example](https://ej2.syncfusion.com/vue/demos/#/material/schedule/overview.html) to knows how to present and manipulate data.

@@ -121,6 +121,24 @@ Using the [`enableScrollbar`](https://ej2.syncfusion.com/vue/documentation/api/c
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs6" %}
 
+### Position
+The [`position`](https://ej2.syncfusion.com/vue/documentation/api/chart/scrollbarSettings/#position) property allows users to specify their preferred scrollbar location. By default, both vertical and horizontal scrollbars are rendered near their respective axes. Using the customization options below, you can position the scrollbar as desired:
+
+* Default: `placeNextToAxisLine`.
+* Horizontal scrollbar: Available positions are `Top` and `Bottom`.
+* Vertical scrollbar: Available positions are `Left` and `Right`.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs12/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/user-interaction/zoom-cs12/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/user-interaction/zoom-cs12" %}
+
 ## Enable animation
 
 Use the [`enableAnimation`](https://ej2.syncfusion.com/vue/documentation/api/chart/zoomSettingsModel/#enableanimation) property to create smooth transitions when zooming in on the chart.

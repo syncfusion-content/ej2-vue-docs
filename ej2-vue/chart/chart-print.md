@@ -98,7 +98,7 @@ Initially, render more than one chart to export, and then add button to export t
 
 ## Exporting chart using base64 string
 
-The chart can be exported as an image in the form of a basering by utilizing HTML canvas. This process involves rendering the chart onto a canvas element and then converting the canvas content to a base64 string.
+The chart can be exported as an image in the form of a base64 string by utilizing HTML canvas. This process involves rendering the chart onto a canvas element and then converting the canvas content to a base64 string.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -110,3 +110,18 @@ The chart can be exported as an image in the form of a basering by utilizing HTM
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/export-cs1" %}
+
+## Excel Export
+
+You can export the rendered chart data to Excel in either `XLSX` or `CSV` format. The [`excelProperties`](https://ej2.syncfusion.com/vue/documentation/api/chart/iExportEventArgs/#excelproperties) property in the [`beforeExport`](https://ej2.syncfusion.com/vue/documentation/api/chart/iExportEventArgs/) event allows users to customize the exported Excel sheet by modifying row, column, and cell properties before the file is generated. You can customize row titles, column titles, cell values, as well as row and column widths.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/export-cs2/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/export-cs2/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/export-cs2" %}
