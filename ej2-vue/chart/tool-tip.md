@@ -148,7 +148,7 @@ By default, tooltip shows information of x and y value in points. You can show m
         
 {% previewsample "page.domainurl/code-snippet/chart/user-interaction/tooltip-cs6" %}
 
-## Closest Tooltip
+## Closest tooltip
 
 The [`showNearestTooltip`](https://ej2.syncfusion.com/vue/documentation/api/chart/tooltipSettings/#shownearesttooltip) property in the chart tooltip displays tooltips based on the data points closest to the cursor.
 
