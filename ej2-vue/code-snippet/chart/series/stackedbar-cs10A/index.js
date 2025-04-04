@@ -12,7 +12,7 @@ new Vue({
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y' name='Apple'> </e-series>
                 <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y1' name='Orange'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y2' name='Wastage'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar100' xName='x' yName='y2' name='Wastage' :cornerRadius = 'cornerRadius'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -39,6 +39,7 @@ new Vue({
         title: 'Percentage (%)',
         labelFormat: '{value}%'
       },
+      cornerRadius: { topRight: 10, bottomRight: 10 },
       title: 'Sales Comparison'
     };
   },

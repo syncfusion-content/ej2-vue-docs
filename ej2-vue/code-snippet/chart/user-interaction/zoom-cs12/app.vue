@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis = 'primaryYAxis' :zoomSettings='zoom'>
             <e-series-collection>
                 <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' opacity=0.3>
                 </e-series>

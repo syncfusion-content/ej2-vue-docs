@@ -46,11 +46,11 @@ new Vue({
   },
   methods: {
     pointRender: function (args) {
-      if (args.point.y <= 40) {
-        args.fill = '#ff6347';
+      if (args.point.index === 1) {
+        args.cornerRadius = { topLeft: 10, bottomLeft: 0, topRight: 10, bottomRight: 0 };
       }
-      else {
-        args.fill = '#009cb8';
+      if (args.point.index === 4) {
+        args.cornerRadius = { topLeft: 10, bottomLeft: 0, topRight: 10, bottomRight: 0 };
       }
     }
   }

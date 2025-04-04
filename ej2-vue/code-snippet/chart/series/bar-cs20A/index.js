@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Bar' xName='x' yName='y'> </e-series>
+                <e-series :dataSource='seriesData' type='Bar' xName='x' yName='y' :cornerRadius = 'cornerRadius'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -39,6 +39,7 @@ new Vue({
         title: 'Percentage',
         labelFormat: '{value}%'
       },
+      cornerRadius: { topRight: 10, bottomRight: 10 },
       title: 'Unemployment rate (%)'
     };
   },

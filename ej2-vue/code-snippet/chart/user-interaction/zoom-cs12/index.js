@@ -23,9 +23,10 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :zoomSettings='zoom'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis = 'primaryYAxis' :zoomSettings='zoom'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' opacity=0.3> </e-series>
+                <e-series :dataSource='seriesData1' type='Area' xName='x' yName='y' name='Product X' opacity=0.3>
+                </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -47,6 +48,19 @@ new Vue({
                 gripColor: 'transparent',
                 trackColor: 'yellow',
                 scrollbarColor: 'red'
+            }
+        },
+        primaryYAxis: {
+            scrollbarSettings: {
+                enable: true,
+                enableZoom: false,
+                height: 14,
+                trackRadius: 8,
+                scrollbarRadius: 8,
+                gripColor: 'transparent',
+                trackColor: 'yellow',
+                scrollbarColor: 'red',
+                position:'Right',
             }
         },
         zoom:

@@ -41,7 +41,7 @@ export default {
         title: 'Temperature(Celsius)',
         labelFormat: '{value}°C'
       },
-      cornerRadius: {topRight: 10 , topLeft: 10},
+      cornerRadius: {topLeft: 10, bottomLeft: 10, topRight: 10, bottomRight: 10},
       title: 'Maximum and Minimum Temperature'
     };
   },

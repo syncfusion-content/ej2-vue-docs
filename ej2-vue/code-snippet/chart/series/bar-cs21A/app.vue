@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :marker = 'marker'>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :stackLabels = 'stackLabels'>
       <e-series-collection>
-        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y' name='Apple'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y1' name='Orange'> </e-series>
-        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y2' name='Wastage'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y' name='Apple' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y1' name='Orange' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y2' name='Wastage' :marker = 'marker'> </e-series>
       </e-series-collection>
     </ejs-chart>
   </div>

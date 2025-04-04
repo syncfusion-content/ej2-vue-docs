@@ -38,7 +38,7 @@ export default {
       ],
       primaryXAxis: {
         valueType: 'Category',
-        title: 'Months'
+        title: 'Years'
       },
       primaryYAxis: {
         title: 'Percentage (%)',

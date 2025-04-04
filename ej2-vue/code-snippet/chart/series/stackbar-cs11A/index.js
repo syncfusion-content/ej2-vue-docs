@@ -10,9 +10,9 @@ new Vue({
     <div id="app">
         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y' name='Apple'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y1' name='Orange'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y2' name='Wastage'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y' name='Apple' :cornerRadius = 'cornerRadius'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y1' name='Orange'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y2' name='Wastage' :cornerRadius = 'cornerRadius'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -45,6 +45,7 @@ new Vue({
         labelFormat: '{value}%',
         edgeLabelPlacement: 'Shift'
       },
+      cornerRadius: {topRight: 10 , topLeft: 10},
       title: 'Sales Comparison'
     };
   },

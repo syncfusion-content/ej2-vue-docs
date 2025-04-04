@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold'> </e-series>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' :cornerRadius = 'cornerRadius'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -38,6 +38,7 @@ new Vue({
         interval: 20, 
         title: 'Medals'
       },
+      cornerRadius: {topRight: 10 , topLeft: 10},
       title: 'Olympic Medals'
     };
   },

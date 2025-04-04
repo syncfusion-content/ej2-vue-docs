@@ -46,14 +46,14 @@ The [`position`](https://helpej2.syncfusion.com/vue/documentation/api/accumulati
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/chart-title-cs2/app-composition.vue %}
+{% include code-snippet/chart/chart-title-cs11/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/chart-title-cs2/app.vue %}
+{% include code-snippet/chart/chart-title-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs11" %}
 
 ## SubTitle
 
@@ -91,11 +91,11 @@ The [`position`](https://helpej2.syncfusion.com/vue/documentation/api/accumulati
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/chart-title-cs2/app-composition.vue %}
+{% include code-snippet/chart/chart-title-cs11/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/chart-title-cs2/app.vue %}
+{% include code-snippet/chart/chart-title-cs11/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/chart-title-cs11" %}
