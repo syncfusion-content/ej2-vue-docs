@@ -9,7 +9,7 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :titleStyle='titleStyle' :primaryXAxis='primaryXAxis'>
+         <ejs-chart id="container" :title='title' :titleStyle='titleStyle' :subTitle = 'subTitle' :primaryXAxis='primaryXAxis'>
             <e-series-collection>
                 <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
             </e-series-collection>
@@ -34,13 +34,14 @@ new Vue({
            title: 'Countries'
         },
       title: "Olympic Medals",
-      titleStyle:{
-            fontFamily: "Arial",
-            fontStyle: 'italic',
-            fontWeight: 'regular',
-            color: "#E27F2D",
-            size: '23px'
-        }
+      titleStyle: {
+        fontFamily: "Arial",
+        fontStyle: 'italic',
+        fontWeight: 'regular',
+        color: "#E27F2D",
+        size: '23px',
+        position: 'Bottom'
+      }
     };
   },
   provide: {

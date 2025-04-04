@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, StackingBarSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingBarSeries, Category, Legend, DataLabel } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -8,13 +8,13 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y' name='Apple'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y1' name='Orange'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y2' name='Wastage'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :stackLabels = 'stackLabels'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y' name='Apple' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y1' name='Orange' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingBar' xName='x' yName='y2' name='Wastage' :marker = 'marker'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
     </div>
 `,
 
@@ -45,11 +45,13 @@ new Vue({
         labelFormat: '{value}%',
         edgeLabelPlacement: 'Shift'
       },
+      marker:{dataLabel : {visible : true}},
+      stackLabels: { visible: true, fill: 'rgba(0, 123, 255, 0.5)', format: '{value}', angle: 45, rx: 10, ry: 10, margin: { left: 10, right: 10, top: 10, bottom: 10 }, border: { width: 2, color: '#000' }, font: { size: '14px', color: '#fff', weight: 'bold', family: 'Arial', textAlignment: 'Left' } },
       title: 'Sales Comparison'
     };
   },
   provide: {
-    chart: [StackingBarSeries, Category, Legend]
+    chart: [StackingBarSeries, Category, Legend, DataLabel]
   }
 
 });

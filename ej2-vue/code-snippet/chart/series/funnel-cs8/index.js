@@ -10,9 +10,10 @@ new Vue({
 	template: `
     <div id="app">
          <ejs-accumulationchart id="container">
-            <e-accumulation-series-collection>
-                <e-accumulation-series :dataSource='seriesData' type='Funnel' xName='x' yName='y' width='60%'  height='80%'> </e-accumulation-series>
-            </e-accumulation-series-collection>
+      <e-accumulation-series-collection>
+        <e-accumulation-series :dataSource='seriesData' type='Funnel' xName='x' yName='y' width='60%' height='80%' funnelMode='Standard'>
+        </e-accumulation-series>
+      </e-accumulation-series-collection>
         </ejs-accumulationchart>
     </div>
 `,

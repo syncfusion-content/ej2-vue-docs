@@ -10,8 +10,8 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :pointRender='pointRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData1' type='RangeColumn' xName='x' low='low' high='high'></e-series>
-                <e-series :dataSource='seriesData2' type='RangeColumn' xName='x' low='low' high='high'></e-series>
+        <e-series :dataSource='seriesData1' type='RangeColumn' xName='x' low='low' high='high' :cornerRadius = 'cornerRadius'></e-series>
+        <e-series :dataSource='seriesData2' type='RangeColumn' xName='x' low='low' high='high' :cornerRadius = 'cornerRadius'></e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -39,6 +39,7 @@ new Vue({
         title: 'Temperature(Celsius)',
         labelFormat: '{value}°C'
       },
+      cornerRadius: {topLeft: 10, bottomLeft: 10, topRight: 10, bottomRight: 10},
       title: 'Maximum and Minimum Temperature'
     };
   },

@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, StackingColumnSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingColumnSeries, Category, Legend, DataLabel} from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -8,12 +8,12 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
+        <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :stackLabels = 'stackLabels'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y' name='UK'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y1' name='Germany'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y2' name='France'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y3' name='Italy'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y' name='UK' :marker = 'marker'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y1' name='Germany' :marker = 'marker'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y2' name='France' :marker = 'marker'> </e-series>
+                <e-series :dataSource='seriesData' type='StackingColumn' xName='x' yName='y3' name='Italy' :marker = 'marker'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -42,11 +42,13 @@ new Vue({
         interval: 100,
         labelFormat: '{value}B'
       },
+      marker:{dataLabel : {visible : true}},
+      stackLabels: { visible: true },
       title: 'Mobile Game Market by Country'
     };
   },
   provide: {
-    chart: [StackingColumnSeries, Category, Legend]
+    chart: [StackingColumnSeries, Category, Legend, DataLabel]
   }
 
 });

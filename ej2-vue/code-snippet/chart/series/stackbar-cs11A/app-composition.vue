@@ -29,7 +29,7 @@ const seriesData = [
 ];
 const primaryXAxis = {
   valueType: 'Category',
-  title: 'Months'
+  title: 'Years'
 };
 const cornerRadius = {topRight: 10 , topLeft: 10};
 const primaryYAxis = {

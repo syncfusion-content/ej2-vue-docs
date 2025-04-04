@@ -124,14 +124,14 @@ The `Standard` funnel mode follows the traditional funnel shape, with the width 
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/funnel-cs2/app-composition.vue %}
+{% include code-snippet/chart/series/funnel-cs8/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/funnel-cs2/app.vue %}
+{% include code-snippet/chart/series/funnel-cs8/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs8" %}
 
 ### Trapezoidal
 
@@ -139,14 +139,14 @@ The `Trapezoidal` mode is a modified funnel shape where the width narrows, but f
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/funnel-cs2/app-composition.vue %}
+{% include code-snippet/chart/series/funnel-cs9/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/funnel-cs2/app.vue %}
+{% include code-snippet/chart/series/funnel-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs2" %}
+{% previewsample "page.domainurl/code-snippet/chart/series/funnel-cs9" %}
 
 ## See Also
 

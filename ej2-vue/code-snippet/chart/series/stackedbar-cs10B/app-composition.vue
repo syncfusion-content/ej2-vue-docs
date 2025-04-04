@@ -26,7 +26,7 @@ const seriesData = [
   { x: 2009, y: 1.70, y1: 0.75, y2: 0.55 }
 ];
 const primaryXAxis = {
-  title: 'Months'
+  title: 'Years'
 };
 const primaryYAxis = {
   title: 'Percentage (%)',

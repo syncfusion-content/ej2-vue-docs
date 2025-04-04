@@ -10,7 +10,7 @@ new Vue({
     <div id="app">
          <ejs-chart id="container" :primaryXAxis='primaryXAxis' :pointRender='pointRender'>
             <e-series-collection>
-                <e-series :dataSource='seriesData' type='Waterfall' xName='x' yName='y' :intermediateSumIndexes='intermediate' :sumIndexes='sum'> </e-series>
+                <e-series :dataSource='seriesData' type='Waterfall' xName='x' yName='y' :intermediateSumIndexes='intermediate' :sumIndexes='sum' :cornerRadius = 'cornerRadius'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -32,6 +32,7 @@ new Vue({
       primaryXAxis: {
         valueType: 'Category'
       },
+      cornerRadius: { topRight: 10, topLeft: 10 },
       sum: [8],
       intermediate: [4]
     };

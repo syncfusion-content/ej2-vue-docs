@@ -53,7 +53,7 @@ new Vue({
         width: 10, 
         height: 10
       },
-      tooltip: { enable: true, enableHighlight: true },
+      tooltip: { enable: true, enableHighlight: true, showNearestTooltip: true },
       title: "Unemployment Rates 1975-2010",
       legendSettings: { visible: true }
     };
