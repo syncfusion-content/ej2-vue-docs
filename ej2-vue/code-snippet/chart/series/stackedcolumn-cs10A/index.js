@@ -13,7 +13,7 @@ new Vue({
               <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y' name='UK'> </e-series>
               <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y1' name='Germany'> </e-series>
               <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y2' name='France'> </e-series>
-              <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y3' name='Italy'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingColumn100' xName='x' yName='y3' name='Italy' :cornerRadius = 'cornerRadius'> </e-series>
             </e-series-collection>
         </ejs-chart>
     </div>
@@ -41,6 +41,7 @@ new Vue({
         rangePadding: 'None',
         labelFormat: '{value}%'
       },
+      cornerRadius: { topRight: 10, topLeft: 10 },
       title: 'Gross Domestic Product Growth'
     };
   },

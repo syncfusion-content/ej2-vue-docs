@@ -38,10 +38,10 @@ provide('chart', [RangeColumnSeries, Category]);
 
 const pointRender = function (args) {
   if (args.point.index === 1) {
-    args.cornerRadius = { topLeft: 10, bottomLeft: 0, topRight: 10, bottomRight: 0 };
+    args.cornerRadius = { topLeft: 10, bottomLeft: 10, topRight: 10, bottomRight: 10 };
   }
   if (args.point.index === 4) {
-    args.cornerRadius = { topLeft: 10, bottomLeft: 0, topRight: 10, bottomRight: 0 };
+    args.cornerRadius = { topLeft: 10, bottomLeft: 10, topRight: 10, bottomRight: 10 };
   }
 };
 

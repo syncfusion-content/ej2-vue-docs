@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, Category, Legend, Tooltip, StackingLineSeries } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, Category, Legend, Tooltip, StackingLineSeries, DataLabel } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -8,7 +8,7 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-        <ejs-chart id="chartcontainer" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea">
+         <ejs-chart id="chartcontainer" :primaryXAxis="primaryXAxis" :primaryYAxis="primaryYAxis" :tooltip="tooltip" :chartArea="chartArea" :stackLabels = 'stackLabels'>
             <e-series-collection>
                 <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y" name="John" :marker="marker"></e-series>
                 <e-series :dataSource="seriesData" type="StackingLine" xName="x" yName="y1" name="Peter" :marker="marker"></e-series>
@@ -49,16 +49,15 @@ new Vue({
           width: 0
         }
       },
-      marker: {
-        visible: true
-      },
+      marker:{dataLabel : {visible : true}},
+      stackLabels: { visible: true },
       tooltip: {
         enable: true
       }
     };
   },
   provide: {
-    chart: [Category, Legend, Tooltip, StackingLineSeries]
+    chart: [Category, Legend, Tooltip, StackingLineSeries, DataLabel]
   }
 
 });

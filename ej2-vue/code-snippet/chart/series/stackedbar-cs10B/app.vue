@@ -35,7 +35,7 @@ export default {
         { x: 2009, y: 1.70, y1: 0.75, y2: 0.55 }
       ],
       primaryXAxis: {
-        title: 'Months'
+        title: 'Years'
       },
       primaryYAxis: {
         title: 'Percentage (%)',

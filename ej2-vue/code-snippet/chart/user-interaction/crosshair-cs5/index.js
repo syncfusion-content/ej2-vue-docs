@@ -1,6 +1,6 @@
 
 import Vue from "vue";
-import { ChartPlugin, ColumnSeries, Category } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, ColumnSeries, Category, Crosshair } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -9,11 +9,11 @@ new Vue({
 	el: '#app',
 	template: `
     <div id="app">
-         <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
+    <ejs-chart id="container" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :crosshair = 'crosshair'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='Column' xName='country' yName='gold' name='Gold'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
     </div>
 `,
 
@@ -38,11 +38,12 @@ new Vue({
             minimum: 0, maximum: 80,
             interval: 20, title: 'Medals'
         },
+        crosshair: { enable: true, line: { color: 'red' }, lineType: 'Vertical', highlightCategory: true },
       title: "Olympic Medals"
     };
   },
   provide: {
-    chart: [ColumnSeries, Category]
+    chart: [ColumnSeries, Category, Crosshair]
   }
 
 });

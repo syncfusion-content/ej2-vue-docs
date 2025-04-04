@@ -8,11 +8,11 @@ Vue.use(ChartPlugin);
 new Vue({
 	el: '#app',
 	template: `
-         <ejs-chart ref="chart" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :loaded='loaded'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Area'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
+  <ejs-chart ref="chart" :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :loaded='loaded' :beforeExport = 'beforeExport'>
+    <e-series-collection>
+      <e-series :dataSource='seriesData' type='Polar' xName='x' yName='y' drawType='Area'> </e-series>
+    </e-series-collection>
+  </ejs-chart>
     </div>
 `,
 
@@ -39,6 +39,12 @@ new Vue({
     chart: [PolarSeries, Category, AreaSeries, Export]
   },
   methods: {
+    beforeExport: function (args) {
+      args.excelProperties.rows[0].cells[0].value = 'Changed Title';
+      args.excelProperties.rows[1].cells[0].value = 'X Title';
+      args.excelProperties.rows[1].cells[1].value = 'Y Title';
+      args.excelProperties.rows[2].cells[1].value = args.excelProperties.rows[2].cells[1].value + 2;
+    },
     loaded: function(args) {
          args.chart.exportModule.export('PNG', 'export');
    }

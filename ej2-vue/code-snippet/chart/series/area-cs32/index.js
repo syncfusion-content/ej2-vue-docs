@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, StackingAreaSeries, DateTime, Legend } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingAreaSeries, DateTime, Legend, DataLabel } from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -8,14 +8,14 @@ new Vue({
   el: '#app',
   template: `
     <div id="app">
-         <ejs-chart :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis'>
-            <e-series-collection>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y' name='Organic'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y1' name='Fair-trade'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y2' name='Veg Alternatives'> </e-series>
-                <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y3' name='Others'> </e-series>
-            </e-series-collection>
-        </ejs-chart>
+    <ejs-chart :title='title' :primaryXAxis='primaryXAxis' :primaryYAxis='primaryYAxis' :stackLabels = 'stackLabels'>
+      <e-series-collection>
+        <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y' name='Organic' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y1' name='Fair-trade' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y2' name='Veg Alternatives' :marker = 'marker'> </e-series>
+        <e-series :dataSource='seriesData' type='StackingArea' xName='x' yName='y3' name='Others' :marker = 'marker'> </e-series>
+      </e-series-collection>
+    </ejs-chart>
     </div>
 `,
 
@@ -54,11 +54,13 @@ new Vue({
         labelFormat: '{value}B',
         majorTickLines: { width: 0 }
       },
+      stackLabels: { visible: true },
+      marker:{dataLabel : {visible : true}},
       title: 'Trend in Sales of Ethical Produce'
     };
   },
   provide: {
-    chart: [StackingAreaSeries, DateTime, Legend]
+    chart: [StackingAreaSeries, DateTime, Legend, DataLabel]
   }
 
 });

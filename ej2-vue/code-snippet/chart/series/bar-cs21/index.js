@@ -1,5 +1,5 @@
 import Vue from "vue";
-import { ChartPlugin, StackingBarSeries, Category, Legend } from "@syncfusion/ej2-vue-charts";
+import { ChartPlugin, StackingBarSeries, Category, Legend, DataLabel} from "@syncfusion/ej2-vue-charts";
 
 Vue.use(ChartPlugin);
 
@@ -45,11 +45,13 @@ new Vue({
         labelFormat: '{value}%',
         edgeLabelPlacement: 'Shift'
       },
+      marker:{dataLabel : {visible : true}},
+      stackLabels: { visible: true },
       title: 'Sales Comparison'
     };
   },
   provide: {
-    chart: [StackingBarSeries, Category, Legend]
+    chart: [StackingBarSeries, Category, Legend, DataLabel]
   }
 
 });
