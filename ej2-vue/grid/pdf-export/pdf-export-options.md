@@ -162,7 +162,7 @@ In the following example, the **ShipName** is initially a hidden column in the G
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/pdf/pdf-option-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/pdf/pdf-export-show-hide" %}
 
 ## Change page orientation
 

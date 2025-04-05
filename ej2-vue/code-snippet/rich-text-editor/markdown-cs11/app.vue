@@ -10,7 +10,7 @@ import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/
 import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.js";
 import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/htmlmixed/htmlmixed.js";
 import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/javascript/javascript.js";
-import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
+import { Browser, addClass, removeClass, createElement,  } from "@syncfusion/ej2-base";
 import { RichTextEditorComponent, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 export default {
   name: "App",
@@ -63,28 +63,37 @@ export default {
     };
   },
   methods: {
-    mirrorConversion: function (e) {
-      var textArea = this.$refs.rteObj.ej2Instances.contentModule.getEditPanel();
-      var id = this.$refs.rteObj.ej2Instances.getID() + 'mirror-view';
-      var mirrorView = this.$refs.rteObj.$el.parentNode.querySelector('#' + id);
-      var charCount = this.$refs.rteObj.$el.parentNode.querySelectorAll('.e-rte-character-count');
+     mirrorConversion: function (e) {
+      var rteInstance = this.$refs.rteObj.ej2Instances;
+      const id = rteInstance.getID() + 'mirror-view';
+      const rteContainer =
+        rteInstance.element.querySelector('.e-rte-container');
+      let mirrorView = rteInstance.element.querySelector('#' + id);
       if (e.targetItem === 'Preview') {
-        textArea.style.display = 'block';
-        mirrorView.style.display = 'none';
-        textArea.innerHTML = this.myCodeMirror.getValue();
-        charCount[0].style.display = 'block';
-        } else {
+        rteInstance.value = this.myCodeMirror.getValue();
+        rteInstance.dataBind();
+        rteContainer.classList.remove('e-rte-code-mirror-enabled');
+        rteInstance.focusIn();
+      } else {
+        rteContainer.classList.add('e-rte-code-mirror-enabled');
+        rteContainer.classList.remove('e-source-code-enabled');
         if (!mirrorView) {
-          mirrorView = document.createElement('div', { className: 'e-content' });
-          mirrorView.id = id;
-          textArea.parentNode.appendChild(mirrorView);
+          mirrorView = createElement('div', {
+            className: 'rte-code-mirror',
+            id: id,
+            styles: 'display: none;',
+          });
+          rteContainer.appendChild(mirrorView);
+          this.renderCodeMirror(
+            mirrorView,
+            rteInstance.value === null ? '' : rteInstance.value
+          );
         } else {
-          mirrorView.innerHTML = '';
+          this.myCodeMirror.setValue(
+            rteInstance.value === null ? '' : rteInstance.value
+          );
         }
-        textArea.style.display = 'none';
-        mirrorView.style.display = 'block';
-        this.renderCodeMirror(mirrorView, this.$refs.rteObj.ej2Instances.value);
-        charCount[0].style.display = 'none';
+        this.myCodeMirror.focus();
       }
     },
     renderCodeMirror: function (mirrorView, content) {
@@ -96,17 +105,13 @@ export default {
       });
     },
     actionCompleteHandler: function (e) {
-      if (e.targetItem && (e.targetItem === 'SourceCode' || e.targetItem === 'Preview')) {
-        this.$refs.rteObj.ej2Instances.sourceCodeModule.getPanel().style.display = 'none';
+      if (
+        e.targetItem &&
+        (e.targetItem === 'SourceCode' || e.targetItem === 'Preview')
+      ) {
         this.mirrorConversion(e);
       }
-      else {
-        var proxy = this;
-        setTimeout(function () {
-          proxy.$refs.rteObj.ej2Instances.toolbarModule.refreshToolbarOverflow();
-        }, 400);
-      }
-    }
+    },
   },
   provide: {
     richtexteditor: [Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar]
@@ -134,5 +139,40 @@ export default {
 .CodeMirror-linenumber,
 .CodeMirror-gutters {
   display: none;
+}
+.CodeMirror-linenumber,
+.CodeMirror-gutters {
+  display: none;
+}
+.e-rte-code-mirror-enabled .rte-code-mirror {
+  display: block !important;
+  /* To show the custom source code view. */
+}
+
+.e-rte-code-mirror-enabled .e-rte-content {
+  display: none !important;
+  /* To hide the editor area when custom source code enabled. */
+}
+body[class*='-dark'] .em-name {
+  color: #fff !important;
+}
+
+/** custom source code styles **/
+body[class*='-dark'] .rte-code-mirror .cm-tag {
+  color: #00ff00;
+}
+
+body[class*='-dark'] .rte-code-mirror .cm-string {
+  color: blue;
+}
+
+body[class*='-dark'] .rte-code-mirror .cm-attribute {
+  color: #f00;
+}
+
+body[class*='-dark'] .rte-code-mirror .CodeMirror-gutters,
+body[class*='-dark'] .rte-code-mirror .CodeMirror {
+  background-color: transparent;
+  color: #fff;
 }
 </style>

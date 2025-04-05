@@ -5,11 +5,11 @@ Vue.use(RichTextEditorPlugin);
   
 new Vue({
 	el: '#app',
-	template: `<h3>Editor 1</h3>
+	template: `<div><h3>Editor 1</h3>
   <ejs-richtexteditor v-model="editorContent"></ejs-richtexteditor>
 
   <h3>Editor 2</h3>
-  <ejs-richtexteditor v-model="editorContent"></ejs-richtexteditor>`,
+  <ejs-richtexteditor v-model="editorContent"></ejs-richtexteditor></div>`,
 
   data: function () {
     return {

@@ -18,7 +18,7 @@ new Vue({
 	el: '#app',
 	template: `
           <div>
-            <ejs-button @click="openDialog">Open Dialog</ejs-button>
+            <ejs-button v-on:click="openDialog">Open Dialog</ejs-button>
             <ejs-dialog
             ref="dialog"
             :width="'350px'"

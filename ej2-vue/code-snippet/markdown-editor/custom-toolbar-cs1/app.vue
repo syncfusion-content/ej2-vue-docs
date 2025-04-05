@@ -154,6 +154,7 @@ export default {
         onClick: function () {
             proxy.$refs.dialogObj.ej2Instances.width =
                 proxy.$refs.customObj.ej2Instances.element.offsetWidth * 0.5;
+            proxy.$refs.dialogObj.ej2Instances.content = document.getElementById('rteSpecial_char');
             proxy.$refs.dialogObj.ej2Instances.show();
             proxy.$refs.dialogObj.ej2Instances.element.style.maxHeight = 'none';
         },

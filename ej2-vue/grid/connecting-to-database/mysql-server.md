@@ -156,7 +156,7 @@ npm install @syncfusion/ej2-data --save
 
 Remove unnecessary default codes in `App.vue` and `main.css`.
 
-**Step 3: Adding CSS Reference**
+**Step 3: Adding CSS reference**
 
 Include the necessary CSS files in your `App.Vue` file to style the Syncfusion Vue Grid:
 
@@ -199,24 +199,24 @@ To add the Grid using **Composition API** or **Options API**, follow these steps
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-	import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid', // Here xxxx represents the port number.
-		adaptor: new UrlAdaptor(),
-	});
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid', // Here xxxx represents the port number.
+    adaptor: new UrlAdaptor(),
+  });
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -257,15 +257,15 @@ To add the Grid using **Composition API** or **Options API**, follow these steps
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -441,26 +441,26 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar } from "@syncfusion/ej2-vue-grids";
-	import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new UrlAdaptor(),
-	});
-	const toolbar = ['Search'];
-	provide('grid', [Toolbar]);
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar } from "@syncfusion/ej2-vue-grids";
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new UrlAdaptor(),
+  });
+  const toolbar = ['Search'];
+  provide('grid', [Toolbar]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -505,15 +505,15 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -579,25 +579,25 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Filter } from "@syncfusion/ej2-vue-grids";
-	import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new UrlAdaptor(),
-	});
-	provide('grid', [Filter]);
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Filter } from "@syncfusion/ej2-vue-grids";
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new UrlAdaptor(),
+  });
+  provide('grid', [Filter]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -641,15 +641,15 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -709,25 +709,25 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
-	import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new UrlAdaptor(),
-	});
-	provide('grid', [Sort]);
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new UrlAdaptor(),
+  });
+  provide('grid', [Sort]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -771,15 +771,15 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -844,25 +844,25 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids"; 
-	import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new UrlAdaptor(),
-	});
-	provide('grid', [Page]);
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids"; 
+  import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new UrlAdaptor(),
+  });
+  provide('grid', [Page]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -906,15 +906,15 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -973,15 +973,15 @@ To enable editing in Grid, refer to the editing [documentation](https://ej2.sync
   provide('grid', [Toolbar, Edit]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1036,15 +1036,15 @@ To enable editing in Grid, refer to the editing [documentation](https://ej2.sync
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1360,25 +1360,25 @@ This section describes step by step process how to retrieve data from a MySQL Se
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
-	import { DataManager } from "@syncfusion/ej2-data";
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
+  import { DataManager } from "@syncfusion/ej2-data";
   import { CustomAdaptor } from './CustomAdaptor';
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new CustomAdaptor(),
-	});
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new CustomAdaptor(),
+  });
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1420,15 +1420,15 @@ This section describes step by step process how to retrieve data from a MySQL Se
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1614,27 +1614,27 @@ export class CustomAdaptor extends UrlAdaptor {
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar } from "@syncfusion/ej2-vue-grids";
-	import { DataManager } from "@syncfusion/ej2-data";
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Toolbar } from "@syncfusion/ej2-vue-grids";
+  import { DataManager } from "@syncfusion/ej2-data";
   import { CustomAdaptor } from './CustomAdaptor';
-	const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new CustomAdaptor(),
-	});
-	const toolbar = ['Search'];
-	provide('grid', [Toolbar]);
+  const data = new DataManager({
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new CustomAdaptor(),
+  });
+  const toolbar = ['Search'];
+  provide('grid', [Toolbar]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1680,15 +1680,15 @@ export class CustomAdaptor extends UrlAdaptor {
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1770,26 +1770,26 @@ export class CustomAdaptor extends UrlAdaptor {
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Filter } from "@syncfusion/ej2-vue-grids";
-	import { DataManager } from "@syncfusion/ej2-data";
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Filter } from "@syncfusion/ej2-vue-grids";
+  import { DataManager } from "@syncfusion/ej2-data";
   import { CustomAdaptor } from './CustomAdaptor';
   const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new CustomAdaptor(),
-	});
-	provide('grid', [Filter]);
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new CustomAdaptor(),
+  });
+  provide('grid', [Filter]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1834,15 +1834,15 @@ export class CustomAdaptor extends UrlAdaptor {
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1918,26 +1918,26 @@ export class CustomAdaptor extends UrlAdaptor {
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
-	import { DataManager } from "@syncfusion/ej2-data";
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Sort } from "@syncfusion/ej2-vue-grids";
+  import { DataManager } from "@syncfusion/ej2-data";
   import { CustomAdaptor } from './CustomAdaptor';
   const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new CustomAdaptor(),
-	});
-	provide('grid', [Sort]);
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new CustomAdaptor(),
+  });
+  provide('grid', [Sort]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -1982,15 +1982,15 @@ export class CustomAdaptor extends UrlAdaptor {
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -2071,26 +2071,26 @@ export class CustomAdaptor extends UrlAdaptor {
   </div> 
 </template>
 <script setup>
-	import { provide } from "vue";
-	import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids"; 
-	import { DataManager } from "@syncfusion/ej2-data";
+  import { provide } from "vue";
+  import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns, Page } from "@syncfusion/ej2-vue-grids"; 
+  import { DataManager } from "@syncfusion/ej2-data";
   import { CustomAdaptor } from './CustomAdaptor';
   const data = new DataManager({
-		url: 'https://localhost:xxxx/api/Grid',
-		adaptor: new CustomAdaptor(),
-	});
-	provide('grid', [Page]);
+    url: 'https://localhost:xxxx/api/Grid',
+    adaptor: new CustomAdaptor(),
+  });
+  provide('grid', [Page]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -2135,15 +2135,15 @@ export class CustomAdaptor extends UrlAdaptor {
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -2194,15 +2194,15 @@ In this scenario, the inline edit [mode](https://ej2.syncfusion.com/vue/document
   provide('grid', [Toolbar, Edit]);
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}
@@ -2258,15 +2258,15 @@ In this scenario, the inline edit [mode](https://ej2.syncfusion.com/vue/document
   };
 </script>
 <style>
-	@import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
-	@import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-base/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-calendars/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/tailwind.css";
+  @import "../node_modules/@syncfusion/ej2-vue-grids/styles/tailwind.css";
 </style>
 
 {% endhighlight %}

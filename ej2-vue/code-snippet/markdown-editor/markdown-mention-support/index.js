@@ -9,7 +9,8 @@ import {
   } from '@syncfusion/ej2-vue-richtexteditor';
 import { MentionPlugin } from '@syncfusion/ej2-vue-dropdowns';
 import { marked } from 'marked';
-Vue.use(RichTextEditorPlugin, MentionPlugin);
+Vue.use(RichTextEditorPlugin, )
+Vue.use(MentionPlugin);
 
 new Vue({
 	el: '#app',
@@ -55,8 +56,8 @@ new Vue({
                         </div>
                         </div>
                     </template>
-                    <template v-slot:dTemplate="{ data }"
-                        >[@{{data.name}}](mailto:${data.email})
+                    <template v-slot:dTemplate="{ data }">
+                          [@{{ data.name }}](mailto:{{ data.email }})
                     </template>
                     </ejs-mention>
                 </div>`,
@@ -82,7 +83,6 @@ new Vue({
                 'StrikeThrough',
                 '|',
                 'Formats',
-                'Blockquote',
                 'OrderedList',
                 'UnorderedList',
                 'SuperScript',

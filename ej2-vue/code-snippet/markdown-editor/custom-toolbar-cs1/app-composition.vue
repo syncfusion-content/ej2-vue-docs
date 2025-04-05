@@ -131,6 +131,7 @@ const cssClass = "customClass e-rte-elements";
 const onClick = function () {
     dialogObj.ej2Instances.width =
     customObj.ej2Instances.element.offsetWidth * 0.5;
+    dialogObj.ej2Instances.content = document.getElementById('rteSpecial_char');
     dialogObj.ej2Instances.show();
     dialogObj.ej2Instances.element.style.maxHeight = 'none';
 }
