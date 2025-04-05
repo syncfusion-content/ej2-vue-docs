@@ -89,7 +89,7 @@ The following example that demonstrates how to use the `rowSelected` event to sc
         
 {% previewsample "page.domainurl/code-snippet/grid/scroll/selectrow-cs1" %}
 
-## Hide the empty placehoder of scrollbar
+## Hide the empty placeholder of scrollbar
 
 The Syncfusion Grid component provides a feature to hide the empty placeholder of the scrollbar, offering a cleaner interface without unnecessary scrollbars. To achieve this, you can utilize the [hideScroll](https://ej2.syncfusion.com/vue/documentation/api/grid/#hidescroll) method. This method allows you to determine whether the scrollbar should be hidden based on the content's overflow.
 
@@ -105,3 +105,27 @@ The following example that demonstrates how to use the `hideScroll` method insid
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/scroll/default-cs2" %}
+
+## Render scrollbar in both top and bottom
+
+The Syncfusion Vue Grid allows rendering scrollbars at both the top and bottom, enhancing horizontal navigation for large datasets. This feature ensures users can scroll the Grid from either direction, enhancing usability and accessibility.
+
+Steps to render scrollbars at the top in the Grid:
+
+1. **Add a Scrollbar** - Insert a `<div id="scroller">` above the Grid in the template to act as a top scrollbar.
+2. **Initialize Scrollbar in [created](https://ej2.syncfusion.com/vue/documentation/api/grid/#created) Event** - Retrieve the Grid's content and move the scroller `div` above it dynamically.
+3. **Synchronize Scroll Events** - Link `onscroll` events of the scroller `div` and the Grid content to scroll together.
+4. **Adjust Scrollbar Width and Visibility** - Use `setScroller()` to match the scrollbar width with the Grid and update it on window resize.
+
+The following example demonstrates how to use the `created` event to insert a scrollbar at the top of the Grid content:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/scroll/default-cs5/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/scroll/default-cs5/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/ej2-vue/code-snippet/grid/scroll/default-cs5" %}

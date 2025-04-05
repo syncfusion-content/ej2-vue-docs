@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Edit in Vue Grid component | Syncfusion
-description: Learn here all about Edit in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
+description: Learn here all about Edit Topic in Syncfusion Vue Grid component of Syncfusion Essential JS 2 and more.
 control: Edit 
 platform: ej2-vue
 documentation: ug
@@ -78,8 +78,8 @@ Here's an example that demonstrates how to disable editing for the column in the
 {% previewsample "page.domainurl/code-snippet/grid/edit/edit-cs3" %}
 
 >* If you have set the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) property to **true** for a column, editing will be automatically disabled for that column.
-> * You can disble the particular row using [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event. Please refer this [link](https://ej2.syncfusion.com/vue/documentation/grid/editing/in-line-editing#disable-editing-for-a-particular-row).
->* You can disble the particular cell using [cellEdit](https://ej2.syncfusion.com/vue/documentation/api/grid/#celledit) event. Please refer this [link](https://ej2.syncfusion.com/vue/documentation/grid/editing/batch-editing#disable-editing-for-a-particular-cell).
+> * You can disable the particular row using [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event. Please refer this [link](https://ej2.syncfusion.com/vue/documentation/grid/editing/in-line-editing#disable-editing-for-a-particular-row).
+>* You can disable the particular cell using [cellEdit](https://ej2.syncfusion.com/vue/documentation/api/grid/#celledit) event. Please refer this [link](https://ej2.syncfusion.com/vue/documentation/grid/editing/batch-editing#disable-editing-for-a-particular-cell).
 
 ## Editing template column
 
@@ -276,6 +276,31 @@ In the following code example, the Employee Name is a foreign key column. When e
         
 {% previewsample "page.domainurl/code-snippet/grid/edit/edit-cs9" %}
 
+## Prevent adding duplicate rows in Syncfusion Vue Grid with custom validation
+
+The Syncfusion Vue Grid allows you to enforce constraints to prevent duplicate rows by customizing the validation logic within the Grid setup. This ensures data integrity by restricting duplicate entries in the **OrderID** column.
+
+To prevent adding duplicate rows in the Grid, follow these steps:
+
+1. Implement Custom Validation: Define the `orderIdCustomValidation` function to check whether the entered **OrderID** already exists in the [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource). This allows editing an existing row without triggering a duplicate error.
+
+2. Add Dynamic Validation Rules: Create the `orderIDRules` object to enforce unique **OrderID** values. Dynamically add this rule to the form during the **save** action.
+
+3. Handle Validation in the [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) event: In the `actionBegin` event, check if the **requestType** is **save**. Apply the validation rule before saving and cancel the action `args.cancel = true` if the validation fails.
+
+For server-side validation to prevent adding duplicate rows, you can refer to the detailed guidance provided in our [knowledge base](https://support.syncfusion.com/kb/article/11608/how-to-do-server-side-validation-for-grid-in-asp-net-mvc-application). If you want to display the Grid's validation tooltip instead of the alert used in our knowledge base, you can call the `grid.editModule.formObj.validate()` method in the `Ajax/Fetch` success function to display the Grid's tooltip validation for the server side.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/edit-cs13/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/edit/edit-cs13/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+
+{% previewsample "page.domainurl/code-snippet/grid/edit/edit-cs13" %}
+
 ## How to perform CRUD action externally 
 
 Performing CRUD (Create, Read, Update, Delete) actions externally in the Syncfusion Grid allows you to manipulate grid data outside the grid itself. This can be useful in scenarios where you want to manage data operations programmatically.
@@ -352,5 +377,5 @@ In the following example, the textbox is rendered in the **Freight** column usin
 * [Is it possible to hide the tool bar or some of the CRUD operations in Vue Grid?](https://www.syncfusion.com/forums/164886/is-it-possible-to-hide-the-tool-bar-or-some-of-the-crud-operations-in-vue-grid)
 * [How to pass a data from parent to child in Vue Grid](https://www.syncfusion.com/forums/144841/how-to-pass-a-data-from-parent-to-child-in-vue-grid)
 * [Need to use different key value while performing delete in Vue Grid](https://www.syncfusion.com/forums/149008/need-to-use-different-key-value-while-performing-delete-in-vue-grid)
-* [How to give custom Headertext name  and validation in ChildData Vue Grid](https://www.syncfusion.com/forums/159167/how-to-give-custom-headertext-name-and-validation-in-childdata-vue-grid)
+* [How to give custom HeaderText name  and validation in ChildData Vue Grid](https://www.syncfusion.com/forums/159167/how-to-give-custom-headertext-name-and-validation-in-childdata-vue-grid)
 * [Calculate column value based on another column with filtering in Vue Grid](https://www.syncfusion.com/forums/157994/calculate-column-value-based-on-another-column-with-filtering-in-vue-grid)

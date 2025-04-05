@@ -1,41 +1,41 @@
 ---
 layout: post
-title: Microsoft SQL Server Data Binding in Syncfusion Grid
-description: Learn how to consume data from SQL Server using Microsoft SQL Client, bind it to Syncfusion Grid, and perform CRUD operations.
+title: PostgreSQL Server Data Binding in Syncfusion Vue Grid
+description: Learn how to consume data from PostgreSQL Server, bind it to Syncfusion Vue Grid, and perform CRUD operations.
 platform: ej2-vue
-control: Grid
-keywords: adaptors, customadaptor, urladaptor, mssql, remotedata 
+control: grid
+keywords: adaptors, customadaptor, urladaptor, postgresql, remotedata 
 documentation: ug
 domainurl: ##DomainURL##
 ---
 
-# Connecting Microsoft SQL Server data to Syncfusion Vue Grid
+# Connecting PostgreSQL Server data to Syncfusion Vue Grid
 
-This section describes how to connect and retrieve data from a Microsoft SQL Server database using [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) and bind it to the Syncfusion Vue Grid.
+This section describes how to connect and retrieve data from a PostgreSQL Server database using [Npgsql EntityFrameworkCore PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) and bind it to the Syncfusion Vue Grid.
 
-Microsoft SQL Server database can be bound to the Grid in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a Microsoft SQL Server database to a Grid. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
+PostgreSQL Server database can be bound to the Grid in different ways (i.e.) using [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource) property, custom adaptor and remote data binding using various adaptors. In this documentation, two approaches will be examined to connect a PostgreSQL Server database to a Grid. Both the approaches have capability to handle data and CRUD operations with built-in methods as well as can be customized as per your own.
 
 **1. Using UrlAdaptor**
 
-The [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion Vue Grid by connecting to an existing pre-configured API service linked to the Microsoft SQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
+The [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor) serves as the base adaptor for facilitating communication between remote data services and an UI component. It enables the remote binding of data to the Syncfusion Vue Grid by connecting to an existing pre-configured API service linked to the PostgreSQL Server database. While the Grid supports various adaptors to fulfill this requirement, including [Web API](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/web-api-adaptor), [ODataV4](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/odatav4-adaptor), [UrlAdaptor](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/url-adaptor), and [GraphQL](https://ej2.syncfusion.com/vue/documentation/grid/connecting-to-adaptors/graphql-adaptor), the `UrlAdaptor` is particularly useful for the scenarios where a custom API service with unique logic for handling data and CRUD operations is in place. This approach allows for custom handling of data and CRUD operations, and the resultant data returned in the `result` and `count` format for display in the Grid.
 
 **2. Using CustomAdaptor**
 
 The `CustomAdaptor` serves as a mediator between the UI component and the database for data binding. While the data source from the database can be directly bound to the Syncfusion Vue Grid locally using the `dataSource` property, the `CustomAdaptor` approach is preferred as it allows for customization of both data operations and CRUD operations according to specific requirements. In this approach, for every action in the Grid, a corresponding request with action details is sent to the `CustomAdaptor`. The Grid provides predefined methods to perform data operations such as **searching**, **filtering**, **sorting**, **aggregation**, **paging** and **grouping**. Alternatively, your own custom methods can be employed to execute operations and return the data in the `result` and `count` format for displaying in the Grid. Additionally, for CRUD operations, predefined methods can be overridden to provide custom functionality. Further details on this can be found in the latter part of the documentation.
 
-## Binding data from Microsoft SQL Server using an API service
+## Binding data from PostgreSQL Server using an API service
 
-This section describes step by step process how to retrieve data from a Microsoft SQL Server using an API service and bind it to the Syncfusion Vue Grid.
+This section describes step by step process how to retrieve data from a PostgreSQL Server using an API service and bind it to the Syncfusion Vue Grid.
 
 ### Creating an API service
 
-**1.** Open Visual Studio and create an Vue and ASP.NET Core project named **Grid_MSSQL**. To create an Vue and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022) for detailed steps.
+**1.** Open Visual Studio and create an Vue and ASP.NET Core project named **Grid_PostgreSQL**. To create an Vue and ASP.NET Core application, follow the documentation [link](https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-vue?view=vs-2022) for detailed steps.
 
-**2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To add **Microsoft.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To connect a PostgreSQL Server database using the PostgreSQL driver in your application, you need to install the [Npgsql.EntityFrameworkCore.PostgreSQL ](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package. To add **Npgsql.EntityFrameworkCore.PostgreSQL** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** Create an API controller (aka, GridController.cs) file under **Controllers** folder that helps to establish data communication with the Syncfusion Vue Grid.
 
-**4.** In an API controller (aka, GridController), connect to Microsoft SQL Server. In the **GetOrderData** method **SqlConnection** helps to connect the Microsoft SQL Server database. Next, using **SqlCommand** and **SqlDataAdapter** you can process the desired SQL query string and retrieve data from the database. The `Fill` method of the **DataAdapter** is used to populate the SQL data into a **DataTable** as shown in the following code snippet.
+**4.** In an API controller (aka, GridController), connect to PostgreSQL Server. In the **GetOrderData()** method **NpgsqlConnection** helps to connect the PostgreSQL Server database. Next, using **NpgsqlCommand** and **NpgsqlDataAdapter** you can process the desired Npgsql query string and retrieve data from the database. The **Fill** method of the **DataAdapter** is used to populate the Npgsql data into a **DataTable** as shown in the following code snippet.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -44,12 +44,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using Syncfusion.EJ2.Base;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 
-namespace Grid_MSSQL.Server.Controllers 
+namespace Grid_PostgreSQL.Server.Controllers
 {
   [ApiController]
-  public class GridController : ControllerBase 
+  public class GridController : ControllerBase
   {
     string ConnectionString = @"<Enter a valid connection string>";
 
@@ -60,7 +60,7 @@ namespace Grid_MSSQL.Server.Controllers
     /// <returns>Returns a JSON object with the filtered, sorted, and paginated data along with the total record count.</returns>
     [HttpPost]
     [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest) 
+    public object Post([FromBody] DataManagerRequest DataManagerRequest)
     {
       // Retrieve data from the data source (e.g., database).
       IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
@@ -74,40 +74,56 @@ namespace Grid_MSSQL.Server.Controllers
 
     /// <summary>
     /// Retrieves the order data from the database.
-    /// </summary>    
+    /// </summary>
     /// <returns>Returns a list of orders fetched from the database.</returns>
     [HttpGet]
     [Route("api/[controller]")]
-    public List<Orders> GetOrderData() 
+    public List<Orders> GetOrderData()
     {
-      string queryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
-      SqlConnection sqlConnection = new(ConnectionString);
-      sqlConnection.Open();
-      SqlCommand sqlCommand = new(queryStr, sqlConnection);
-      SqlDataAdapter DataAdapter = new(sqlCommand);
-      DataTable DataTable = new();
-      DataAdapter.Fill(DataTable);
-      sqlConnection.Close();
+      // Define the SQL query to retrieve all orders from the database, ordered by OrderID.
+      string queryStr = "SELECT * FROM public.\"Orders\" ORDER BY \"OrderID\"";
 
-      // Map data to a list.
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new(ConnectionString);
+
+      // Open the database connection before executing the query.
+      Connection.Open();
+
+      //Using NpgsqlCommand and query create connection with database.
+      NpgsqlCommand Command = new(queryStr, Connection);
+
+      // Using NpgsqlDataAdapter to execute the NpgsqlCommand and fill the results into a DataTable. 
+      NpgsqlDataAdapter DataAdapter = new(Command);
+
+      // Create a DataTable to hold the data retrieved from the database.
+      DataTable DataTable = new();
+
+      // Using NpgsqlDataAdapter, process the query string and fill the data into the dataset.
+      DataAdapter.Fill(DataTable);
+
+      // Close the connection after executing the command.
+      Connection.Close();
+
+      // Cast the data fetched from NpgsqlDataAdapter to List.<T>
       List<Orders> dataSource = (from DataRow Data in DataTable.Rows
-        select new Orders() {
+        select new Orders()
+        {
           OrderID = Convert.ToInt32(Data["OrderID"]),
           CustomerID = Data["CustomerID"].ToString(),
-          EmployeeID = Convert.IsDBNull(Data["EmployeeID"]) ? 0 : Convert.ToUInt16(Data["EmployeeID"]),
+          EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
           ShipCity = Data["ShipCity"].ToString(),
           Freight = Convert.ToDecimal(Data["Freight"])
-        }
-      ).ToList();
+        }).ToList();
       return dataSource;
     }
-    public class Orders 
+
+    public class Orders
     {
       [Key]
       public int? OrderID { get; set; }
       public string? CustomerID { get; set; }
       public int? EmployeeID { get; set; }
-      public decimal? Freight { get; set; }
+      public decimal Freight { get; set; }
       public string? ShipCity { get; set; }
     }
   }
@@ -118,7 +134,7 @@ namespace Grid_MSSQL.Server.Controllers
 
 **5.** Run the application and it will be hosted within the URL `https://localhost:xxxx`.
 
-**6.** Finally, the retrieved data from Microsoft SQL Server database which is in the form of list can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
+**6.** Finally, the retrieved data from PostgreSQL Server database which is in the form of list can be found in an API controller available in the URL link `https://localhost:xxxx/api/Grid`, as shown in the browser page below.
 
 ![Hosted API URL](../images/DB-data.png)
 
@@ -186,7 +202,7 @@ To add the Grid using **Composition API** or **Options API**, follow these steps
   import { GridComponent as EjsGrid, ColumnDirective as EColumn, ColumnsDirective as EColumns } from "@syncfusion/ej2-vue-grids";
   import { DataManager, UrlAdaptor } from "@syncfusion/ej2-data";
   const data = new DataManager({
-    url: 'https://localhost:xxxx/api/Grid', // Replace your hosted link.
+    url: 'https://localhost:xxxx/api/Grid', // Here xxxx represents the port number.
     adaptor: new UrlAdaptor(),
   });
 </script>
@@ -232,7 +248,7 @@ To add the Grid using **Composition API** or **Options API**, follow these steps
     data() {
       return {
         data: new DataManager({
-          url: 'https://localhost:xxxx/api/Grid', // Replace your hosted link.
+          url: 'https://localhost:xxxx/api/Grid', // Here xxxx represents the port number.
           adaptor: new UrlAdaptor(),
         }),
       };
@@ -259,12 +275,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using Syncfusion.EJ2.Base;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 
-namespace Grid_MSSQL.Server.Controllers 
+namespace Grid_PostgreSQL.Server.Controllers
 {
   [ApiController]
-  public class GridController : ControllerBase 
+  public class GridController : ControllerBase
   {
     string ConnectionString = @"<Enter a valid connection string>";
 
@@ -272,59 +288,75 @@ namespace Grid_MSSQL.Server.Controllers
     /// Processes the DataManager request to perform searching, filtering, sorting, and paging operations.
     /// </summary>
     /// <param name="DataManagerRequest">Contains the details of the data operation requested.</param>
-    /// <returns>Returns a JSON object with the filtered, sorted, and paginated data along with the total record count.</returns>    
+    /// <returns>Returns a JSON object with the filtered, sorted, and paginated data along with the total record count.</returns>
     [HttpPost]
     [Route("api/[controller]")]
     public object Post([FromBody] DataManagerRequest DataManagerRequest)
     {
       // Retrieve data from the data source (e.g., database).
       IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
-      
+
       // Get the total count of records.
-      int totalRecordsCount = DataSource.Count();      
-  
+      int totalRecordsCount = DataSource.Count();
+
       // Return data based on the request.
       return new { result = DataSource, count = totalRecordsCount };
     }
-
+    
     /// <summary>
     /// Retrieves the order data from the database.
     /// </summary>
     /// <returns>Returns a list of orders fetched from the database.</returns>
     [HttpGet]
     [Route("api/[controller]")]
-    public List<Orders> GetOrderData() 
+    public List<Orders> GetOrderData()
     {
-      string queryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
-      SqlConnection sqlConnection = new(ConnectionString);
-      sqlConnection.Open();
-      SqlCommand sqlCommand = new(queryStr, sqlConnection);
-      SqlDataAdapter DataAdapter = new(sqlCommand);
-      DataTable DataTable = new();
-      DataAdapter.Fill(DataTable);
-      sqlConnection.Close();
+      // Define the SQL query to retrieve all orders from the database, ordered by OrderID.
+      string queryStr = "SELECT * FROM public.\"Orders\" ORDER BY \"OrderID\"";
 
-      // Map data to a list. 
-      List<Orders> dataSource= (from DataRow Data in DataTable.Rows
-        select new Orders() {
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new(ConnectionString);
+
+      // Open the database connection before executing the query.
+      Connection.Open();
+
+      //Using NpgsqlCommand and Query create connection with database.
+      NpgsqlCommand Command = new(queryStr, Connection);
+
+      // Using NpgsqlDataAdapter to execute the NpgsqlCommand and fill the results into a DataTable.
+      NpgsqlDataAdapter DataAdapter = new(Command);
+
+      // Create a DataTable to hold the data retrieved from the database.
+      DataTable DataTable = new();
+
+      // Using NpgsqlDataAdapter, process the query string and fill the data into the dataset.
+      DataAdapter.Fill(DataTable);
+
+      // Close the connection after executing the command.
+      Connection.Close();
+
+      // Cast the data fetched from NpgsqlDataAdapter to List.<T>
+      List<Orders> dataSource = (from DataRow Data in DataTable.Rows
+        select new Orders()
+        {
           OrderID = Convert.ToInt32(Data["OrderID"]),
           CustomerID = Data["CustomerID"].ToString(),
-          EmployeeID = Convert.IsDBNull(Data["EmployeeID"]) ? 0 : Convert.ToUInt16(Data["EmployeeID"]),
+          EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
           ShipCity = Data["ShipCity"].ToString(),
           Freight = Convert.ToDecimal(Data["Freight"])
-        }
-      ).ToList();
+        }).ToList();
       return dataSource;
-    }    
+    }
 
-    public class Orders {
+    public class Orders
+    {
       [Key]
       public int? OrderID { get; set; }
       public string? CustomerID { get; set; }
       public int? EmployeeID { get; set; }
-      public decimal? Freight { get; set; }
+      public decimal Freight { get; set; }
       public string? ShipCity { get; set; }
-    }    
+    }
   }
 }
 
@@ -349,7 +381,7 @@ var app = builder.Build();
 app.UseCors();
 ```
 
-> * The Syncfusion Vue Grid provides provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
+> * The Syncfusion Vue Grid provides built-in support for handling various data operations such as searching, sorting, filtering, aggregate and paging on the server-side. These operations can be handled using methods such as `PerformSearching`, `PerformFiltering`, `PerformSorting`, `PerformTake` and `PerformSkip` available in the [Syncfusion.EJ2.AspNet.Core](https://www.nuget.org/packages/Syncfusion.EJ2.AspNet.Core/) package. Let’s explore how to manage these data operations using the `UrlAdaptor`.
 > * In an API service project, add `Syncfusion.EJ2.AspNet.Core` by opening the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 > * To access `DataManagerRequest` and `QueryableOperation`, import `Syncfusion.EJ2.Base` in `GridController.cs` file.
 
@@ -1024,7 +1056,7 @@ To enable editing in Grid, refer to the editing [documentation](https://ej2.sync
 To insert a new row, simply click the **Add** toolbar button. The new record edit form will be displayed as shown below. Upon clicking the **Update** toolbar button, record will inserted into the **Orders** table by calling the following **POST** method of an API.
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Inserts a new data item into the data collection.
@@ -1035,19 +1067,25 @@ To insert a new row, simply click the **Add** toolbar button. The new record edi
 [Route("api/[controller]/Insert")]
 public void Insert([FromBody] CRUDModel<Orders> value) 
 {
-  //Create query to insert the specific into the database by accessing its properties.
-  string queryStr = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{value.value.CustomerID}','{value.value.Freight}','{value.value.ShipCity}','{value.value.EmployeeID}')";
-  SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-  SqlConnection.Open();
+  // Create query to insert the specific into the database by accessing its properties.
+  string queryStr = $"Insert into \"Orders\" (\"CustomerID\", \"Freight\", \"ShipCity\", \"EmployeeID\") values('{value.value.CustomerID}',{value.value.Freight},'{value.value.ShipCity}','{value.value.EmployeeID}')";
 
-  //Execute the SQL command.
-  SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
-  
-  //Execute this code to reflect the changes into the database.
-  SqlCommand.ExecuteNonQuery();
-  SqlConnection.Close();
+  // Create a new NpgsqlConnection object using the connection string.
+  NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-  //Add custom logic here if needed and remove above method.
+  // Open the database connection before executing the query.
+  Connection.Open();
+
+  // Execute the Npgsql command.
+  NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+  // Execute this code to reflect the changes into the database.
+  Command.ExecuteNonQuery();
+
+  // Close the database connection after executing the command.
+  Connection.Close();
+
+  // Add custom logic here if needed and remove the above method.
 }
 
 public class CRUDModel<T> where T : class
@@ -1070,7 +1108,7 @@ public class CRUDModel<T> where T : class
 To edit a row, first select desired row and click the **Edit** toolbar button. The edit form will be displayed and proceed to modify any column value as per your requirement. Clicking the **Update** toolbar button will update the edit record in the **Orders** table by involving the following **Post** method of an API.
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Update a existing data item from the data collection.
@@ -1081,19 +1119,25 @@ To edit a row, first select desired row and click the **Edit** toolbar button. T
 [Route("api/[controller]/Update")]
 public void Update([FromBody] CRUDModel<Orders> value) 
 {
-  //Create query to update the changes into the database by accessing its properties.
-  string queryStr = $"Update Orders set CustomerID='{value.value.CustomerID}', Freight='{value.value.Freight}',EmployeeID='{value.value.EmployeeID}',ShipCity='{value.value.ShipCity}' where OrderID='{value.value.OrderID}'";
-  SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-  SqlConnection.Open();
+  // Create query to update the changes into the database by accessing its properties.
+  string queryStr = $"Update \"Orders\" set \"CustomerID\"='{value.value.CustomerID}', \"Freight\"={value.value.Freight},\"EmployeeID\"={value.value.EmployeeID},\"ShipCity\"='{value.value.ShipCity}' where \"OrderID\"={value.value.OrderID}";
 
-  //Execute the SQL command.
-  SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
-  
-  //Execute this code to reflect the changes into the database.
-  SqlCommand.ExecuteNonQuery();
-  SqlConnection.Close();
+  // Create a new NpgsqlConnection object using the connection string.
+  NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-  //Add custom logic here if needed and remove above method.
+  // Open the database connection before executing the query.
+  Connection.Open();
+
+  // Execute the Npgsql command.
+  NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+  // Execute this code to reflect the changes into the database.
+  Command.ExecuteNonQuery();
+
+  // Close the database connection after executing the command.
+  Connection.Close();
+
+  // Add custom logic here if needed and remove the above method.
 }
 
 public class CRUDModel<T> where T : class
@@ -1116,7 +1160,7 @@ public class CRUDModel<T> where T : class
 To delete a row, simply select the desired row and click the **Delete** toolbar button. This action will trigger a **DELETE** request to an API, containing the primary key value of the selected record. As a result corresponding record will be removed from the **Orders** table.
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Remove a specific data item from the data collection.
@@ -1128,16 +1172,22 @@ To delete a row, simply select the desired row and click the **Delete** toolbar 
 public void Remove([FromBody] CRUDModel<Orders> value) 
 {
   //Create query to remove the specific from database by passing the primary key column value.
-  string queryStr = $"Delete from Orders where OrderID={value.key}";
-  SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-  SqlConnection.Open();
+  string queryStr = $"DELETE FROM \"Orders\" WHERE \"OrderID\" = {value.key}";
 
-  //Execute the SQL command.
-  SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+  // Create a new NpgsqlConnection object using the connection string.
+  NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
+
+  // Open the database connection before executing the query.
+  Connection.Open();
+
+  // Execute the Npgsql command.
+  NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
 
   //Execute this code to reflect the changes into the database.
-  SqlCommand.ExecuteNonQuery();
-  SqlConnection.Close();
+  Command.ExecuteNonQuery();
+
+  // Close the database connection after executing the command.
+  Connection.Close();
 
   //Add custom logic here if needed and remove above method.
 }
@@ -1162,7 +1212,7 @@ public class CRUDModel<T> where T : class
 To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) as `Batch` and specify the `batchUrl` property in the `DataManager`. Use the **Add** toolbar button to insert new row in batch editing mode. To edit a cell, double-click the desired cell and update the value as required. To delete a record, simply select the record and press the **Delete** toolbar button. Now, all CRUD operations will be executed in batch editing mode. Clicking the **Update** toolbar button will update the newly added, edited, or deleted records from the **Orders** table using a single API **POST** request.
 
 {% tabs %}
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Batch update (Insert, Update, and Delete) a collection of data items from the data collection.
@@ -1171,61 +1221,79 @@ To perform batch operation, define the edit [mode](https://ej2.syncfusion.com/vu
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/BatchUpdate")]
-public IActionResult BatchUpdate([FromBody] CRUDModel<Orders> value) 
-{  
-  if (value.changed != null && value.changed.Count > 0) 
+public IActionResult BatchUpdate([FromBody] CRUDModel<Orders> value)
+{
+  if (value.changed != null && value.changed.Count > 0)
   {
-    foreach (Orders Record in (IEnumerable<Orders>)value.changed) 
+    foreach (Orders Record in (IEnumerable<Orders>)value.changed)
     {
-      //Create query to update the changes into the database by accessing its properties.
-      string queryStr = $"Update Orders set CustomerID='{Record.CustomerID}', Freight='{Record.Freight}',EmployeeID='{Record.EmployeeID}',ShipCity='{Record.ShipCity}' where OrderID='{Record.OrderID}'";
-      SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-      SqlConnection.Open();
+      // Create query to update the changes into the database by accessing its properties.
+      string queryStr = $"Update \"Orders\" set \"CustomerID\"='{Record.CustomerID}', \"Freight\"={Record.Freight},\"EmployeeID\"={Record.EmployeeID},\"ShipCity\"='{Record.ShipCity}' where \"OrderID\"={Record.OrderID}";
 
-      //Execute the SQL command.
-      SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-      //Execute this code to reflect the changes into the database.
-      SqlCommand.ExecuteNonQuery();
-      SqlConnection.Close();
+      // Open the database connection before executing the query.
+      Connection.Open();
 
-      //Add custom logic here if needed and remove above method.
+      // Execute the Npgsql command.
+      NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+      // Execute this code to reflect the changes into the database.
+      Command.ExecuteNonQuery();
+
+      // Close the database connection after executing the command.
+      Connection.Close();
+
+      // Add custom logic here if needed and remove the above method.
     }
   }
-  if (value.added != null && value.added.Count > 0) 
+  if (value.added != null && value.added.Count > 0)
   {
-    foreach (Orders Record in (IEnumerable<Orders>)value.added) 
+    foreach (Orders Record in (IEnumerable<Orders>)value.added)
     {
-      //Create query to insert the specific into the database by accessing its properties.
-      string queryStr = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{Record.CustomerID}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
-      SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-      SqlConnection.Open();
+      // Create query to insert the specific into the database by accessing its properties.
+      string queryStr = $"Insert into \"Orders\" (\"CustomerID\", \"Freight\", \"ShipCity\", \"EmployeeID\") values('{Record.CustomerID}',{Record.Freight},'{Record.ShipCity}','{Record.EmployeeID}')";
 
-      //Execute the SQL command.
-      SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-      //Execute this code to reflect the changes into the database.
-      SqlCommand.ExecuteNonQuery();
-      SqlConnection.Close();
+      // Open the database connection before executing the query.
+      Connection.Open();
 
-      //Add custom logic here if needed and remove above method.
+      // Execute the Npgsql command.
+      NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+      // Execute this code to reflect the changes into the database.
+      Command.ExecuteNonQuery();
+
+      // Close the database connection after executing the command.
+      Connection.Close();
+
+      // Add custom logic here if needed and remove the above method.
     }
   }
-  if (value.deleted != null && value.deleted.Count > 0) 
+  if (value.deleted != null && value.deleted.Count > 0)
   {
-    foreach (Orders Record in (IEnumerable<Orders>)value.deleted) 
+    foreach (Orders Record in (IEnumerable<Orders>)value.deleted)
     {
       //Create query to remove the specific from database by passing the primary key column value.
-      string queryStr = $"Delete from Orders where OrderID={Record.OrderID}";
-      SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-      SqlConnection.Open();
+      string queryStr = $"DELETE FROM \"Orders\" WHERE \"OrderID\" = {Record.OrderID}";
 
-      //Execute the SQL command.
-      SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
+
+      // Open the database connection before executing the query.
+      Connection.Open();
+
+      // Execute the Npgsql command.
+      NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
 
       //Execute this code to reflect the changes into the database.
-      SqlCommand.ExecuteNonQuery();
-      SqlConnection.Close();
+      Command.ExecuteNonQuery();
+
+      // Close the database connection after executing the command.
+      Connection.Close();
 
       //Add custom logic here if needed and remove above method.
     }
@@ -1250,17 +1318,15 @@ public class CRUDModel<T> where T : class
 
 When you run the application, the resultant Syncfusion Vue Grid will look like this
 
-![Grid bound with Microsoft SQL Server data](../images/DB-grid-action.gif)
+![Grid bound with PostgreSQL Server data](../images/DB-grid-action.gif)
 
-> Please find the sample in this GitHub location.
+## Binding data from PostgreSQL Server using CustomAdaptor
 
-## Binding data from Microsoft SQL Server using CustomAdaptor
-
-This section describes step by step process how to retrieve data from a Microsoft SQL Server using `CustomAdaptor` and bind it to the Syncfusion Vue Grid.
+This section describes step by step process how to retrieve data from a PostgreSQL Server using `CustomAdaptor` and bind it to the Syncfusion Vue Grid.
 
 **1.** To create a simple Grid, the procedure is explained in the above-mentioned topic on [Connecting Syncfusion Vue Grid to an API service](#connecting-syncfusion-vue-grid-to-an-api-service)
 
-**2.** To connect a Microsoft SQL Server database using the Microsoft SQL driver in your application, you need to install the [Microsoft.Data.SqlClient](https://www.nuget.org/packages/Microsoft.Data.SqlClient) NuGet package. To add **Microsoft.Data.SqlClient** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
+**2.** To connect a PostgreSQL Server database using the PostgreSQL driver in your application, you need to install the [Npgsql.EntityFrameworkCore.PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL) NuGet package. To add **Npgsql.EntityFrameworkCore.PostgreSQL** in the app, open the NuGet package manager in Visual Studio (Tools → NuGet Package Manager → Manage NuGet Packages for Solution), search and install it.
 
 **3.** If you intend to inject your own service into the `CustomAdaptor` and utilize it, you can achieve this as follows:
 
@@ -1269,11 +1335,11 @@ This section describes step by step process how to retrieve data from a Microsof
 
 **4.** Within the `processResponse` method of `CustomAdaptor`, fetch data by calling the **GetOrderData** method.
 
-  * In this **GetOrderData** method, fetch data from the Microsoft SQL Server database using the **SqlDataAdapter** class.
+  * In this **GetOrderData** method, fetch data from the PostgreSQL Server database using the **NpgsqlDataAdapter** class.
 
-  * Employ the `Fill` method of the `DataAdapter` to populate a **DataSet** with the results of the `Select` command of the **DataAdapter**, followed by conversion of the **DataSet** into a List.
+  * Employ the **Fill** method of the **DataAdapter** to populate a **DataSet** with the results of the `Select` command of the **DataAdapter**, followed by conversion of the **DataSet** into a List.
 
-  * Finally, return the response as a **result** and **count** pair object in the `Post` method to bind the data to the Grid.
+  * Finally, return the response as a **result** and **count** pair object in the `processResponse` method to bind the data to the Grid.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -1371,7 +1437,6 @@ import {UrlAdaptor} from '@syncfusion/ej2-data';
 
 export class CustomAdaptor extends UrlAdaptor {
   processResponse() {
-    // Calling base class processResponse function.
     const original = super.processResponse(...arguments);
     return original;
   }
@@ -1385,12 +1450,12 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Data;
 using Syncfusion.EJ2.Base;
-using Microsoft.Data.SqlClient;
+using Npgsql;
 
-namespace Grid_MSSQL.Server.Controllers 
+namespace Grid_PostgreSQL.Server.Controllers
 {
   [ApiController]
-  public class GridController : ControllerBase 
+  public class GridController : ControllerBase
   {
     string ConnectionString = @"<Enter a valid connection string>";
 
@@ -1401,7 +1466,7 @@ namespace Grid_MSSQL.Server.Controllers
     /// <returns>Returns a JSON object with the filtered, sorted, and paginated data along with the total record count.</returns>
     [HttpPost]
     [Route("api/[controller]")]
-    public object Post([FromBody] DataManagerRequest DataManagerRequest) 
+    public object Post([FromBody] DataManagerRequest DataManagerRequest)
     {
       // Retrieve data from the data source (e.g., database).
       IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
@@ -1415,40 +1480,56 @@ namespace Grid_MSSQL.Server.Controllers
 
     /// <summary>
     /// Retrieves the order data from the database.
-    /// </summary>    
+    /// </summary>
     /// <returns>Returns a list of orders fetched from the database.</returns>
     [HttpGet]
     [Route("api/[controller]")]
-    public List<Orders> GetOrderData() 
+    public List<Orders> GetOrderData()
     {
-      string queryStr = "SELECT * FROM dbo.Orders ORDER BY OrderID;";
-      SqlConnection sqlConnection = new(ConnectionString);
-      sqlConnection.Open();
-      SqlCommand sqlCommand = new(queryStr, sqlConnection); 
-      SqlDataAdapter DataAdapter = new(sqlCommand);
-      DataTable DataTable = new();
-      DataAdapter.Fill(DataTable);
-      sqlConnection.Close();
+      // Define the SQL query to retrieve all orders from the database, ordered by OrderID.
+      string queryStr = "SELECT * FROM public.\"Orders\" ORDER BY \"OrderID\"";
 
-      // Map data to a list.
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new(ConnectionString);
+
+      // Open the database connection before executing the query.
+      Connection.Open();
+
+      //Using NpgsqlCommand and Query create connection with database.
+      NpgsqlCommand Command = new(queryStr, Connection);
+
+      // Using NpgsqlDataAdapter to execute the NpgsqlCommand and fill the results into a DataTable. 
+      NpgsqlDataAdapter DataAdapter = new(Command);
+
+      // Create a DataTable to hold the data retrieved from the database.
+      DataTable DataTable = new();
+
+      // Using NpgsqlDataAdapter, process the query string and fill the data into the dataset.
+      DataAdapter.Fill(DataTable);
+
+      // Close the connection after executing the command.
+      Connection.Close();
+
+      // Cast the data fetched from NpgsqlDataAdapter to List.<T>
       List<Orders> dataSource = (from DataRow Data in DataTable.Rows
-        select new Orders() {
+        select new Orders()
+        {
           OrderID = Convert.ToInt32(Data["OrderID"]),
           CustomerID = Data["CustomerID"].ToString(),
-          EmployeeID = Convert.IsDBNull(Data["EmployeeID"]) ? 0 : Convert.ToUInt16(Data["EmployeeID"]),
+          EmployeeID = Convert.ToInt32(Data["EmployeeID"]),
           ShipCity = Data["ShipCity"].ToString(),
           Freight = Convert.ToDecimal(Data["Freight"])
-        }
-      ).ToList();
+        }).ToList();
       return dataSource;
     }
-    public class Orders 
+
+    public class Orders
     {
       [Key]
       public int? OrderID { get; set; }
       public string? CustomerID { get; set; }
       public int? EmployeeID { get; set; }
-      public decimal? Freight { get; set; }
+      public decimal Freight { get; set; }
       public string? ShipCity { get; set; }
     }
   }
@@ -1463,7 +1544,7 @@ namespace Grid_MSSQL.Server.Controllers
 
 When utilizing the `CustomAdaptor` in Vue, managing the searching operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, searching a custom data source can be accomplished by employing the built-in `PerformSearching` method of the `QueryableOperation` class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Syncfusion Vue Grid.
+In the code example below, searching a custom data source can be accomplished by employing the built-in `PerformSearching` method of the `QueryableOperation` class. Alternatively, you can implement your own method for searching operation and bind the resultant data to the Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -1502,6 +1583,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
 {% highlight js tabtitle="CustomAdaptor.js" %}
 
 import {UrlAdaptor} from '@syncfusion/ej2-data';
+
 export class CustomAdaptor extends UrlAdaptor {
   processResponse() {
     // Calling base class processResponse function.
@@ -1612,7 +1694,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 When utilizing the `CustomAdaptor` in Vue, managing the filtering operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, filtering a custom data source can be achieved by utilizing the built-in `PerformFiltering` method of the `QueryableOperation` class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Syncfusion Vue Grid.
+In the code example below, filtering a custom data source can be achieved by utilizing the built-in `PerformFiltering` method of the `QueryableOperation` class. Alternatively, you can implement your own method for filtering operation and bind the resulting data to the Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -1632,7 +1714,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   // Initialize QueryableOperation instance.
   QueryableOperation queryableOperation = new QueryableOperation(); 
 
-  // Handling filtering operation.
+  // Handling filtering operation
   if (DataManagerRequest.Where != null && DataManagerRequest.Where.Count > 0) 
   {
     foreach (WhereFilter condition in DataManagerRequest.Where)
@@ -1766,7 +1848,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 When utilizing the `CustomAdaptor` in Vue, managing the sorting operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, sorting a custom data source can be accomplished by employing the built-in `PerformSorting` method of the `QueryableOperation` class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Syncfusion Vue Grid.
+In the code example below, sorting a custom data source can be accomplished by employing the built-in `PerformSorting` method of the `QueryableOperation` class. Alternatively, you can implement your own method for sorting operation and bind the resulting data to the Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -1784,7 +1866,7 @@ public object Post([FromBody] DataManagerRequest DataManagerRequest)
   IQueryable<Orders> DataSource = GetOrderData().AsQueryable();
 
   // Initialize QueryableOperation instance.
-  QueryableOperation queryableOperation = new QueryableOperation(); 
+  QueryableOperation queryableOperation = new QueryableOperation();
 
   // Handling sorting operation.
   if (DataManagerRequest.Sorted != null && DataManagerRequest.Sorted.Count > 0)
@@ -1914,7 +1996,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 When utilizing the `CustomAdaptor` in Vue, managing the paging operation involves overriding the `processResponse` method of the `UrlAdaptor` class.
 
-In the code example below, paging a custom data source can be achieved by utilizing the built-in `PerformTake` and `PerformSkip` method of the `QueryableOperation` class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Syncfusion Vue Grid.
+In the code example below, paging a custom data source can be achieved by utilizing the built-in `PerformTake` and `PerformSkip` method of the `QueryableOperation` class. Alternatively, you can use your own method for paging operation and bind the resulting data to the Grid.
 
 {% tabs %}
 {% highlight cs tabtitle="GridController.cs" %}
@@ -2067,7 +2149,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 To enable editing in the Syncfusion Vue Grid, utilize the [editSettings](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/) property. The Grid offers multiple edit modes including the **Inline/Normal**, **Dialog** and **Batch** editing. For more details, refer to the Grid [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) documentation.
 
-In this scenario, the inline edit `mode` and [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property configured to display toolbar items for editing purpose.
+In this scenario, the inline edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) and [toolbar](https://ej2.syncfusion.com/vue/documentation/api/grid/#toolbar) property configured to display toolbar items for editing purpose.
 
 {% tabs %}
 {% highlight html tabtitle="Composition API (~/src/App.vue)" %}
@@ -2196,7 +2278,7 @@ The CRUD operations can be performed and customized on our own by overriding the
 * update
 * batchRequest
 
-Let’s see how to perform CRUD operation using Microsoft SQL Server data with Syncfusion Vue Grid.
+Let’s see how to perform CRUD operation using PostgreSQL Server data with Grid.
 
 **Insert Operation:**
 
@@ -2229,7 +2311,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Inserts a new data item into the data collection.
@@ -2240,19 +2322,25 @@ export class CustomAdaptor extends UrlAdaptor {
 [Route("api/[controller]/Insert")]
 public void Insert([FromBody] CRUDModel<Orders> value) 
 {
-  //Create query to insert the specific into the database by accessing its properties.
-  string queryStr = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{value.value.CustomerID}','{value.value.Freight}','{value.value.ShipCity}','{value.value.EmployeeID}')";
-  SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-  SqlConnection.Open();
+  // Create query to insert the specific into the database by accessing its properties.
+  string queryStr = $"Insert into \"Orders\" (\"CustomerID\", \"Freight\", \"ShipCity\", \"EmployeeID\") values('{value.value.CustomerID}',{value.value.Freight},'{value.value.ShipCity}','{value.value.EmployeeID}')";
 
-  //Execute the SQL command.
-  SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+  // Create a new NpgsqlConnection object using the connection string.
+  NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-  //Execute this code to reflect the changes into the database.
-  SqlCommand.ExecuteNonQuery();
-  SqlConnection.Close();
+  // Open the database connection before executing the query.
+  Connection.Open();
 
-  //Add custom logic here if needed and remove above method.
+  // Execute the Npgsql command.
+  NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+  // Execute this code to reflect the changes into the database.
+  Command.ExecuteNonQuery();
+
+  // Close the database connection after executing the command.
+  Connection.Close();
+
+  // Add custom logic here if needed and remove the above method.
 }
 
 public class CRUDModel<T> where T : class
@@ -2301,7 +2389,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Update a existing data item from the data collection.
@@ -2312,19 +2400,25 @@ export class CustomAdaptor extends UrlAdaptor {
 [Route("api/[controller]/Update")]
 public void Update([FromBody] CRUDModel<Orders> value) 
 {
-  //Create query to update the changes into the database by accessing its properties.
-  string queryStr = $"Update Orders set CustomerID='{value.value.CustomerID}', Freight='{value.value.Freight}',EmployeeID='{value.value.EmployeeID}',ShipCity='{value.value.ShipCity}' where OrderID='{value.value.OrderID}'";
-  SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-  SqlConnection.Open();
+  // Create query to update the changes into the database by accessing its properties.
+  string queryStr = $"Update \"Orders\" set \"CustomerID\"='{value.value.CustomerID}', \"Freight\"={value.value.Freight},\"EmployeeID\"={value.value.EmployeeID},\"ShipCity\"='{value.value.ShipCity}' where \"OrderID\"={value.value.OrderID}";
 
-  //Execute the SQL command.
-  SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+  // Create a new NpgsqlConnection object using the connection string.
+  NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-  //Execute this code to reflect the changes into the database.
-  SqlCommand.ExecuteNonQuery();
-  SqlConnection.Close();
+  // Open the database connection before executing the query.
+  Connection.Open();
 
-  //Add custom logic here if needed and remove above method.
+  // Execute the Npgsql command.
+  NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+  // Execute this code to reflect the changes into the database.
+  Command.ExecuteNonQuery();
+
+  // Close the database connection after executing the command.
+  Connection.Close();
+
+  // Add custom logic here if needed and remove the above method.
 }
 
 public class CRUDModel<T> where T : class
@@ -2374,7 +2468,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Remove a specific data item from the data collection.
@@ -2386,16 +2480,22 @@ export class CustomAdaptor extends UrlAdaptor {
 public void Remove([FromBody] CRUDModel<Orders> value) 
 {
   //Create query to remove the specific from database by passing the primary key column value.
-  string queryStr = $"Delete from Orders where OrderID={value.key}";
-  SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-  SqlConnection.Open();
+  string queryStr = $"DELETE FROM \"Orders\" WHERE \"OrderID\" = {value.key}";
 
-  //Execute the SQL command.
-  SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+  // Create a new NpgsqlConnection object using the connection string.
+  NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
+
+  // Open the database connection before executing the query.
+  Connection.Open();
+
+  // Execute the Npgsql command.
+  NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
 
   //Execute this code to reflect the changes into the database.
-  SqlCommand.ExecuteNonQuery();
-  SqlConnection.Close();
+  Command.ExecuteNonQuery();
+
+  // Close the database connection after executing the command.
+  Connection.Close();
 
   //Add custom logic here if needed and remove above method.
 }
@@ -2449,7 +2549,7 @@ export class CustomAdaptor extends UrlAdaptor {
 
 {% endhighlight %}
 
-{% highlight cs tabtitle="GridController.cs" %}
+{% highlight c# tabtitle="GridController.cs" %}
 
 /// <summary>
 /// Batch update (Insert, Update, and Delete) a collection of data items from the data collection.
@@ -2458,59 +2558,79 @@ export class CustomAdaptor extends UrlAdaptor {
 /// <returns>Returns void.</returns>
 [HttpPost]
 [Route("api/[controller]/BatchUpdate")]
-public IActionResult BatchUpdate([FromBody] CRUDModel<Orders> value) 
+public IActionResult BatchUpdate([FromBody] CRUDModel<Orders> value)
 {
   if (value.changed != null && value.changed.Count > 0)
   {
-    foreach (Orders Record in (IEnumerable<Orders>)value.changed) 
+    foreach (Orders Record in (IEnumerable<Orders>)value.changed)
     {
-      //Create query to update the changes into the database by accessing its properties.
-      string queryStr = $"Update Orders set CustomerID='{Record.CustomerID}', Freight='{Record.Freight}',EmployeeID='{Record.EmployeeID}',ShipCity='{Record.ShipCity}' where OrderID='{Record.OrderID}'";
-      SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-      SqlConnection.Open();
-      
-      //Execute the SQL command.
-      SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
-      
-      //Execute this code to reflect the changes into the database.
-      SqlCommand.ExecuteNonQuery();
-      SqlConnection.Close();
+      // Create query to update the changes into the database by accessing its properties.
+      string queryStr = $"Update \"Orders\" set \"CustomerID\"='{Record.CustomerID}', \"Freight\"={Record.Freight},\"EmployeeID\"={Record.EmployeeID},\"ShipCity\"='{Record.ShipCity}' where \"OrderID\"={Record.OrderID}";
 
-      //Add custom logic here if needed and remove above method.
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
+
+      // Open the database connection before executing the query.
+      Connection.Open();
+
+      // Execute the Npgsql command.
+      NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+      // Execute this code to reflect the changes into the database.
+      Command.ExecuteNonQuery();
+
+      // Close the database connection after executing the command.
+      Connection.Close();
+
+      // Add custom logic here if needed and remove the above method.
     }
   }
-  if (value.added != null && value.added.Count > 0) {
-    foreach (Orders Record in (IEnumerable<Orders>)value.added) 
+  if (value.added != null && value.added.Count > 0)
+  {
+    foreach (Orders Record in (IEnumerable<Orders>)value.added)
     {
-      //Create query to insert the specific into the database by accessing its properties.
-      string queryStr = $"Insert into Orders(CustomerID,Freight,ShipCity,EmployeeID) values('{Record.CustomerID}','{Record.Freight}','{Record.ShipCity}','{Record.EmployeeID}')";
-      SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-      SqlConnection.Open();
+      // Create query to insert the specific into the database by accessing its properties.
+      string queryStr = $"Insert into \"Orders\" (\"CustomerID\", \"Freight\", \"ShipCity\", \"EmployeeID\") values('{Record.CustomerID}',{Record.Freight},'{Record.ShipCity}','{Record.EmployeeID}')";
 
-      //Execute the SQL command.
-      SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
 
-      //Execute this code to reflect the changes into the database.
-      SqlCommand.ExecuteNonQuery();
-      SqlConnection.Close();
+      // Open the database connection before executing the query.
+      Connection.Open();
 
-      //Add custom logic here if needed and remove above method.
+      // Execute the Npgsql command.
+      NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
+
+      // Execute this code to reflect the changes into the database.
+      Command.ExecuteNonQuery();
+
+      // Close the database connection after executing the command.
+      Connection.Close();
+
+      // Add custom logic here if needed and remove the above method.
     }
   }
-  if (value.deleted != null && value.deleted.Count > 0) {
-    foreach (Orders Record in (IEnumerable<Orders>)value.deleted) 
+  if (value.deleted != null && value.deleted.Count > 0)
+  {
+    foreach (Orders Record in (IEnumerable<Orders>)value.deleted)
     {
       //Create query to remove the specific from database by passing the primary key column value.
-      string queryStr = $"Delete from Orders where OrderID={Record.OrderID}";
-      SqlConnection SqlConnection = new SqlConnection(ConnectionString);
-      SqlConnection.Open();
+      string queryStr = $"DELETE FROM \"Orders\" WHERE \"OrderID\" = {Record.OrderID}";
 
-      //Execute the SQL command.
-      SqlCommand SqlCommand = new SqlCommand(queryStr, SqlConnection);
+      // Create a new NpgsqlConnection object using the connection string.
+      NpgsqlConnection Connection = new NpgsqlConnection(ConnectionString);
+
+      // Open the database connection before executing the query.
+      Connection.Open();
+
+      // Execute the Npgsql command.
+      NpgsqlCommand Command = new NpgsqlCommand(queryStr, Connection);
 
       //Execute this code to reflect the changes into the database.
-      SqlCommand.ExecuteNonQuery();
-      SqlConnection.Close();
+      Command.ExecuteNonQuery();
+
+      // Close the database connection after executing the command.
+      Connection.Close();
 
       //Add custom logic here if needed and remove above method.
     }
@@ -2533,6 +2653,4 @@ public class CRUDModel<T> where T : class
 {% endhighlight %}
 {% endtabs %}
 
-![Grid bound with Microsoft SQL Server data](../images/DB-grid-action.gif)
-
-> Please find the sample in this GitHub location.
+![Grid bound with PostgreSQL Server data](../images/DB-grid-action.gif)

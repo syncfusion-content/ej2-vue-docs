@@ -5,12 +5,12 @@
       <e-views>
         <e-view type="Assist" name="Prompt" view-template="viewTemplate">
           <template v-slot:viewTemplate="">
-            <div class="view-container"><h3>Prompt view content</h3></div>
+            <div class="view-container"><h5>Prompt view content</h5></div>
           </template>
         </e-view>
         <e-view type="Custom" name="Response" view-template="viewTemplate2">
           <template v-slot:viewTemplate2="">
-            <div class="view-container"><h3>Response view content</h3></div>
+            <div class="view-container"><h5>Response view content</h5></div>
           </template>
         </e-view>
       </e-views>

@@ -1,1 +1,14 @@
-
+#typingUsersTemplate .typing-wrapper {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .typing-user {
+    font-weight: bold;
+    color: #0078d4;
+  }
