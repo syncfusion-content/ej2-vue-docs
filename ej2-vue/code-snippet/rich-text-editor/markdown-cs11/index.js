@@ -5,7 +5,7 @@
   import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.js";
   import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/htmlmixed/htmlmixed.js";
   import CodeMirror from "https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/javascript/javascript.js";
-  import { Browser, addClass, removeClass } from "@syncfusion/ej2-base";
+  import { Browser, addClass, removeClass, createElement,  } from "@syncfusion/ej2-base";
   import { RichTextEditorPlugin, Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar } from "@syncfusion/ej2-vue-richtexteditor";
 
   Vue.use(RichTextEditorPlugin);
@@ -63,31 +63,40 @@ new Vue({
       };
     },
     methods: {
-      mirrorConversion: function(e) {
-        var textArea = this.$refs.rteObj.ej2Instances.contentModule.getEditPanel();
-        var id = this.$refs.rteObj.ej2Instances.getID() +  'mirror-view';
-        var mirrorView = this.$refs.rteObj.$el.parentNode.querySelector('#' + id);
-        var charCount = this.$refs.rteObj.$el.parentNode.querySelectorAll('.e-rte-character-count');
+      mirrorConversion: function (e) {
+        var rteInstance = this.$refs.rteObj.ej2Instances;
+        const id = rteInstance.getID() + 'mirror-view';
+        const rteContainer =
+          rteInstance.element.querySelector('.e-rte-container');
+        let mirrorView = rteInstance.element.querySelector('#' + id);
         if (e.targetItem === 'Preview') {
-          textArea.style.display = 'block';
-          mirrorView.style.display = 'none';
-          textArea.innerHTML = this.myCodeMirror.getValue();
-          [charCount[0].style.display = 'block';
+          rteInstance.value = this.myCodeMirror.getValue();
+          rteInstance.dataBind();
+          rteContainer.classList.remove('e-rte-code-mirror-enabled');
+          rteInstance.focusIn();
         } else {
+          rteContainer.classList.add('e-rte-code-mirror-enabled');
+          rteContainer.classList.remove('e-source-code-enabled');
           if (!mirrorView) {
-            mirrorView = document.createElement('div', { className: 'e-content' });
-            mirrorView.id = id;
-            textArea.parentNode.appendChild(mirrorView);
+            mirrorView = createElement('div', {
+              className: 'rte-code-mirror',
+              id: id,
+              styles: 'display: none;',
+            });
+            rteContainer.appendChild(mirrorView);
+            this.renderCodeMirror(
+              mirrorView,
+              rteInstance.value === null ? '' : rteInstance.value
+            );
           } else {
-            mirrorView.innerHTML = '';
+            this.myCodeMirror.setValue(
+              rteInstance.value === null ? '' : rteInstance.value
+            );
           }
-          textArea.style.display = 'none';
-          mirrorView.style.display = 'block';
-          this.renderCodeMirror(mirrorView, this.$refs.rteObj.ej2Instances.value);
-          charCount[0].style.display = 'none';
+          this.myCodeMirror.focus();
         }
       },
-      renderCodeMirror: function(mirrorView, content) {
+      renderCodeMirror: function (mirrorView, content) {
         this.myCodeMirror = CodeMirror(mirrorView, {
           value: content,
           lineNumbers: true,
@@ -95,18 +104,14 @@ new Vue({
           lineWrapping: true,
         });
       },
-      actionCompleteHandler: function(e) {
-        if (e.targetItem && (e.targetItem === 'SourceCode' || e.targetItem === 'Preview')) {
-          this.$refs.rteObj.ej2Instances.sourceCodeModule.getPanel().style.display = 'none';
+      actionCompleteHandler: function (e) {
+        if (
+          e.targetItem &&
+          (e.targetItem === 'SourceCode' || e.targetItem === 'Preview')
+        ) {
           this.mirrorConversion(e);
         }
-        else {
-          var proxy = this;
-          setTimeout(function () {
-            proxy.$refs.rteObj.ej2Instances.toolbarModule.refreshToolbarOverflow();
-          }, 400);
-        }
-      }
+      },
     },
     provide:{
       richtexteditor:[Toolbar, Link, Image, Count, HtmlEditor, QuickToolbar]

@@ -180,11 +180,6 @@ The following code demonstrates, how to use the `changeDataSource` method to bin
 >* The Grid state persistence feature does not support the  `changeDataSource` method.
 >* In this document, the above sample uses the local data for `changeDataSource` method. For those using a remote data source, refer to the [FlexibleData](https://ej2.syncfusion.com/vue/demos/#/bootstrap5/grid/flexible-data) resource.
 
-## See also
-
-* [Binding a firebase data source to Grid using vueFire2](https://www.syncfusion.com/blogs/post/binding-a-firebase-data-source-to-grid-using-vuefire2.aspx)
-* [How to bind SQL Server data in vue DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11453/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)
-
 ## Prevent to convert local time zone format for date column
 
 By default, Syncfusion Vue Grid automatically converts date values to the local time zone of the client system. However, in some scenarios, you may need to display the original date as received from the server without any timezone conversion.
@@ -203,3 +198,8 @@ The following example demonstrates how to prevent local time zone conversion for
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/grid/databind/databinding-timezone" %}
+
+## See also
+
+* [Binding a firebase data source to Grid using vueFire2](https://www.syncfusion.com/blogs/post/binding-a-firebase-data-source-to-grid-using-vuefire2.aspx)
+* [How to bind SQL Server data in vue DataGrid using SqlClient data provider](https://www.syncfusion.com/kb/11453/how-to-bind-sql-server-data-in-vue-datagrid-using-sqlclient-data-provider)

@@ -6,7 +6,7 @@
         <e-view type="Assist" name="Prompt"></e-view>
         <e-view type="Custom" name="Response" icon-css="e-icons e-comment-show" view-template="viewTemplate2">
           <template v-slot:viewTemplate2="">
-            <div class="view-container"><h3>Response view content</h3></div>
+            <div class="view-container"><h5>Response view content</h5></div>
           </template>
         </e-view>
       </e-views>

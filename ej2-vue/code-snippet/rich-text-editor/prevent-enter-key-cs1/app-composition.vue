@@ -16,7 +16,7 @@
                     </tbody>
                 </table>
                 <br />
-                <ejs-richtexteditor ref="rteInstance" :height="height" :value="rtevalue" :actionBegin="onActionBegin">
+                <ejs-richtexteditor ref="rteInstance" :height="height" :value="rteValue" :actionBegin="onActionBegin">
                 </ejs-richtexteditor>
             </div>
         </div>

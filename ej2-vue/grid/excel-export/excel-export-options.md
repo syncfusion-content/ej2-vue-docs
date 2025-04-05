@@ -159,7 +159,7 @@ In the following example, the **ShipName** is initially a hidden column in the G
 {% endhighlight %}
 {% endtabs %}
         
-{% previewsample "page.domainurl/code-snippet/grid/excel/export-option-cs5" %}
+{% previewsample "page.domainurl/code-snippet/grid/excel/excel-export-show-hide" %}
 
 ## Enable filtering in the exported excel file
 

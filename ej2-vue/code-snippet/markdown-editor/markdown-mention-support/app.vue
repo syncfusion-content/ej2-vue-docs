@@ -41,8 +41,8 @@
           </div>
         </div>
       </template>
-      <template v-slot:dTemplate="{ data }"
-        >[@{{ data.name }}](mailto:${data.email})
+      <template v-slot:dTemplate="{ data }">
+        [@{{ data.name }}](mailto:{{ data.email }})
       </template>
     </ejs-mention>
   </div>
