@@ -34,6 +34,7 @@ new Vue({
            title: 'Countries'
         },
       title: "Olympic Medals",
+      subTitle: 'In the year 2014 - 2015',
       titleStyle: {
         fontFamily: "Arial",
         fontStyle: 'italic',
