@@ -170,23 +170,6 @@ Use the [`border`](https://ej2.syncfusion.com/vue/documentation/api/chart/emptyP
         
 {% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs8" %}
 
-## Events
-
-### Series render
-
-The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
-
-{% tabs %}
-{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9/app-composition.vue %}
-{% endhighlight %}
-{% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/chart/series/stackedcolumn-cs9/app.vue %}
-{% endhighlight %}
-{% endtabs %}
-        
-{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs9" %}
-
 ### Point render
 
 The [`pointRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#pointrender) event allows you to customize each data point before it is rendered on the chart.
@@ -231,6 +214,24 @@ We can customize the corner radius for individual points in the chart series usi
 {% endtabs %}
         
 {% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs10B" %}
+
+## Events
+
+### Series render
+
+The [`seriesRender`](https://ej2.syncfusion.com/vue/documentation/api/chart#seriesrender) event allows you to customize series properties, such as data, fill, and name, before they are rendered on the chart.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/stackedcolumn-cs9/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/chart/series/stackedcolumn-cs9/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/chart/series/stackedcolumn-cs9" %}
+
 ## See also
 
 * [Data label](../data-labels/)
