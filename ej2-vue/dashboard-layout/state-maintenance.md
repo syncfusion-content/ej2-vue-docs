@@ -25,4 +25,19 @@ The following sample demonstrates how to save and restore the state of the panel
         
 {% previewsample "page.domainurl/code-snippet/dashboard-layout/state-maintenance-cs1" %}
 
+## State Persistence in React Dashboard Layout Component
+
+State persistence allows the Dashboard Layout component to retain the panel positions ([`row`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#row), [`col`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#col)), width ([`sizeX`]((https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizex))), and height ([`sizeY`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/panelModel/#sizey)) values in the browser's [localStorage](https://www.w3schools.com/html/html5_webstorage.asp) for state maintenance, even if the browser is refreshed or if you navigate to another page within the browser. This feature is controlled through the [`enablePersistence`](https://ej2.syncfusion.com/vue/documentation/api/dashboard-layout/#enablepersistence) property, which is set to `false` by default. When set to `true`, the panel positions and sizes of the Dashboard Layout component will be retained even after refreshing the page.
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/persistence-cs1/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/dashboard-layout/persistence-cs1/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/dashboard-layout/persistence-cs1" %}
+
 > You can refer to our [Vue Dashboard Layout](https://www.syncfusion.com/vue-ui-components/vue-dashboard-layout) feature tour page for its groundbreaking feature representations. You can also explore our [Vue Dashboard Layout example](https://ej2.syncfusion.com/vue/demos/#/material/dashboard-layout/default.html) to knows how to present and manipulate data.
