@@ -3,7 +3,7 @@
         <div id='app'>
             <div id='container'>
                 <ejs-schedule ref="ScheduleObj" :cssClass="cssClass" height="550px" :selectedDate='selectedDate'
-                    :eventSettings='eventSettings' :currentView="currentView" :actionBegin="onActionBegin">
+                    :eventSettings='eventSettings' :currentView="currentView" :actionBegin="onActionBegin" :excelExport="onExcelExport">
                     <e-views>
                         <e-view option="Week"></e-view>
                     </e-views>
@@ -28,15 +28,78 @@ provide('schedule', [Week, Resize, DragAndDrop, ExcelExport]);
 const onActionBegin = function (args) {
     if (args.requestType === 'toolbarItemRendering') {
         let exportItem = {
-            align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icon-schedule-excel-export',
-            text: 'CSV-Export', cssClass: 'e-excel-export', click: onExportClick
+            align: 'Right', showTextOn: 'Both', prefixIcon: 'e-icons e-export-excel',
+            text: 'Excel Export', cssClass: 'e-excel-export', click: onExportClick
         };
         args.items.push(exportItem);
     }
 }
+
+const onExcelExport = function (args) => {
+    const worksheet = args.worksheets[0];
+    worksheet.rows.unshift({
+        index: 1,
+        cells: [
+            {
+                index: 1,
+                value: 'Sales Report',
+                colSpan: worksheet.columns.length,
+                style: {
+                    bold: true,
+                    fontSize: 18,
+                    hAlign: 'Center',
+                    fill: { color: '#1E90FF' },
+                    color: '#FFFFFF',
+                },
+            },
+        ],
+    });
+    worksheet.rows.unshift({
+        index: 2,
+        cells: [
+            {
+                index: 1,
+                value: 'Generated on: ' + new Date().toLocaleDateString(),
+                colSpan: worksheet.columns.length,
+                style: {
+                    italic: true,
+                    fontSize: 12,
+                    hAlign: 'Left',
+                    fill: { color: '#D3D3D3' },
+                },
+            },
+        ],
+    });
+    worksheet.rows.forEach((row, idx) => {
+        row.index = idx + 1;
+      });
+    worksheet.rows.push({
+        index: worksheet.rows.length + 1,
+        cells: [
+            {
+                index: 1,
+                value: 'End of Report',
+                colSpan: worksheet.columns.length,
+                style: {
+                    bold: true,
+                    fontSize: 14,
+                    hAlign: 'Center',
+                    fill: { color: '#FFD700' },
+                },
+            },
+        ],
+    });
+};
 const onExportClick = function () {
     let scheduleObj = ScheduleObj.value;
-    let exportValues = { exportType: 'csv', separator: ';' };
+    let exportFields = [
+        { name: 'Id', text: 'Id' },
+        { name: 'Subject', text: 'Summary' },
+        { name: 'StartTime', text: 'Start Date' },
+        { name: 'EndTime', text: 'End Date' },
+        { name: 'Location', text: 'Place' }
+    ];
+    let exportValues = { fieldsInfo: exportFields };
     scheduleObj.exportToExcel(exportValues);
 }
 
