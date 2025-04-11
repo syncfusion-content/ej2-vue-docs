@@ -1,85 +1,34 @@
 <template>
   <div id='app'>
     <div id='container'>
-      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :selectedDate='selectedDate' :currentView='currentView'
-        :views='views' :eventSettings='eventSettings' @tooltipOpen='onTooltipOpen'>
+      <ejs-schedule ref='scheduleObj' :height='height' :width='width' :selectedDate='selectedDate' :views='views'
+        :eventSettings='eventSettings' :tooltipOpen="onTooltipOpen">
       </ejs-schedule>
     </div>
   </div>
 </template>
 
-<script>
-import { ScheduleComponent, Day, Week, WorkWeek, Month, Year, Agenda, MonthAgenda, TimelineViews, TimelineMonth, TimelineYear, Resize, DragAndDrop } from '@syncfusion/ej2-vue-schedule';
+<script setup>
+import { provide } from "vue";
+import { ScheduleComponent as EjsSchedule, TimelineViews, Week, WorkWeek, Month } from '@syncfusion/ej2-vue-schedule';
+import { eventsData } from './datasource.js';
 
-export default {
-  name: "App",
-  components: {
-    "ejs-schedule": ScheduleComponent
-  },
-  data() {
-    return {
-      height: '550px',
-      width: '100%',
-      selectedDate: new Date(2025, 1, 15),
-      currentView: 'Week',
-      views: ['Day', 'Week', 'WorkWeek', 'Month', 'Year', 'Agenda', 'MonthAgenda', 'TimelineDay', 'TimelineWeek', 'TimelineWorkWeek', 'TimelineMonth', 'TimelineYear'],
-      eventSettings: {
-        dataSource: [
-          {
-            Id: 1,
-            Subject: 'Conference',
-            StartTime: new Date(2025, 1, 7, 10, 0),
-            EndTime: new Date(2025, 1, 7, 11, 0),
-            IsAllDay: false
-          },
-          {
-            Id: 2,
-            Subject: 'Meeting - 1',
-            StartTime: new Date(2025, 1, 15, 10, 0),
-            EndTime: new Date(2025, 1, 16, 12, 30),
-            IsAllDay: false
-          },
-          {
-            Id: 3,
-            Subject: 'Paris',
-            StartTime: new Date(2025, 1, 13, 12, 0),
-            EndTime: new Date(2025, 1, 13, 12, 30),
-            IsAllDay: false
-          },
-          {
-            Id: 4,
-            Subject: 'Vacation',
-            StartTime: new Date(2025, 1, 12, 10, 0),
-            EndTime: new Date(2025, 1, 12, 10, 30),
-            IsAllDay: false
-          }
-        ],
-        enableTooltip: true,
-        fields: {
-          subject: { title: 'Name', name: 'Subject' },
-          location: { title: 'Country Name', name: 'Location' },
-          description: { title: 'Summary', name: 'Description' },
-          startTime: { title: 'From', name: 'StartTime' },
-          endTime: { title: 'To', name: 'EndTime' },
-          startTimezone: { title: 'Origin', name: 'StartTimezone' },
-          endTimezone: { title: 'Destination', name: 'EndTimezone' }
-        }
-      }
-    };
-  },
-  methods: {
-    onTooltipOpen(args) {
-      if (args.data.Subject === 'Vacation') {
-        args.cancel = true;
-      }
-    }
-  },
-  provide: {
-    schedule: [Day, Week, WorkWeek, Month, Year, Agenda, MonthAgenda, TimelineViews, TimelineMonth, TimelineYear, Resize, DragAndDrop]
+const height = '550px';
+const width = '100%';
+const views = ['TimelineDay', 'Week', 'WorkWeek', 'Month'];
+const eventSettings = {
+  dataSource: eventsData,
+  enableTooltip: true
+};
+const onTooltipOpen = (args) => {
+  if (args.data.Subject === "Vacation") {
+    args.cancel = true;
   }
 };
-</script>
+const selectedDate = new Date(2025, 1, 15);
+provide('schedule', [TimelineViews, Week, WorkWeek, Month]);
 
+</script>
 <style>
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-vue-buttons/styles/material.css';
