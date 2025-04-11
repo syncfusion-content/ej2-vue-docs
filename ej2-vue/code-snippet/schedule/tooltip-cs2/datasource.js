@@ -12,7 +12,7 @@ define(["require", "exports"], function (require, exports) {
             CategoryColor: '#1aaa55'
         }, {
             Id: 2,
-            Subject: 'Art & Painting Gallery',
+            Subject: 'Vacation',
             StartTime: new Date(2025, 1, 12, 12, 0),
             EndTime: new Date(2025, 1, 12, 14, 0),
             EventType: 'public-event',
@@ -36,7 +36,7 @@ define(["require", "exports"], function (require, exports) {
             CategoryColor: '#ea7a57'
         }, {
             Id: 5,
-            Subject: 'ISA Annual Conference',
+            Subject: 'Vacation',
             StartTime: new Date(2025, 1, 15, 10, 0),
             EndTime: new Date(2025, 1, 15, 11, 30),
             EventType: 'commercial-event',

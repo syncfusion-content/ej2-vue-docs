@@ -155,7 +155,7 @@ Here’s an example of how you can add a custom header and footer to an Excel sh
 {% include code-snippet/schedule/excel-export-cs9/app-composition.vue %}
 {% endhighlight %}
 {% highlight html tabtitle="Options API (~/src/App.vue)" %}
-{% include code-snippet/schedule/excel-export-cs8/app.vue %}
+{% include code-snippet/schedule/excel-export-cs9/app.vue %}
 {% endhighlight %}
 {% endtabs %}
         

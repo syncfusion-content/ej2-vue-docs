@@ -73,6 +73,9 @@ const onExcelExport = (args) => {
             },
         ],
     });
+    worksheet.rows.forEach((row, idx) => {
+        row.index = idx + 1;
+      });
     worksheet.rows.push({
         index: worksheet.rows.length + 1,
         cells: [
