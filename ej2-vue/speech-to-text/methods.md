@@ -29,4 +29,4 @@ Below sample demonstrates the SpeechToText control configured with above methods
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/methods" %}
+{% previewsample "page.domainurl/code-snippet/speech-to-text/methods/index" %}

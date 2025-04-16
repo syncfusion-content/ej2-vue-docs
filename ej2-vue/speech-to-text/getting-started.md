@@ -156,7 +156,7 @@ or
 yarn run serve
 ```
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1" %}
+{% previewsample "page.domainurl/code-snippet/speech-to-text/getting-started-cs1/index" %}
 
 > The SpeechToText component requires an internet connection and browser support for the [Speech Recognition API](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition).
 
@@ -173,4 +173,4 @@ yarn run serve
 {% endhighlight %}
 {% endtabs %}
 
-{% previewsample "page.domainurl/code-snippet/speech-to-text/button-setting" %}
+{% previewsample "page.domainurl/code-snippet/speech-to-text/button-setting/index" %}
