@@ -150,6 +150,23 @@ Here's a code example that demonstrates how to show a hidden column (CustomerID)
         
 {% previewsample "page.domainurl/code-snippet/grid/print/default-cs5" %}
 
+## Print the expanded state from other pages
+
+By default, when printing, the Syncfusion<sup style="font-size:70%">&reg;</sup> Grid only includes the expanded child Grids visible on the current page. However, you can enhance the printing functionality to include expanded child Grids from other pages. This can be achieved using the [load](https://ej2.syncfusion.com/vue/documentation/api/grid/#load) and [actionBegin](https://ej2.syncfusion.com/vue/documentation/api/grid/#actionbegin) events, which help manage the expanded state of rows across different pages.
+
+The following example demonstrates how to print the expanded child Grids from other pages:
+
+{% tabs %}
+{% highlight html tabtitle="Composition API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/print-expanded-state/app-composition.vue %}
+{% endhighlight %}
+{% highlight html tabtitle="Options API (~/src/App.vue)" %}
+{% include code-snippet/grid/print/print-expanded-state/app.vue %}
+{% endhighlight %}
+{% endtabs %}
+        
+{% previewsample "page.domainurl/code-snippet/grid/print/print-expanded-state" %}
+
 ## Add a title when using Grid print function
 
 You can add a title to the header when printing the Syncfusion Grid by utilizing the [beforePrint](https://ej2.syncfusion.com/vue/documentation/api/grid/#beforeprint) event. This event allows you to customize the print layout, including the addition of a title element, ensuring that the printed document is informative and visually appealing.
