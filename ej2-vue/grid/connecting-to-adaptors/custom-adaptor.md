@@ -19,7 +19,7 @@ There are three types of methods in custom adaptors.
 
 ### ProcessQuery
 
-The `ProcessQuery` method handles the execution of a query sent to a `dataSource`, such as a database or custom data service. This query is responsible for performing operations like data retrieval, insertion, updating, or deletion. The `ProcessQuery` method accepts two arguments: 
+The `ProcessQuery` method handles the execution of a query sent to a [dataSource](https://ej2.syncfusion.com/vue/documentation/api/grid/#datasource), such as a database or custom data service. This query is responsible for performing operations like data retrieval, insertion, updating, or deletion. The `ProcessQuery` method accepts two arguments: 
 
 * `DataManager`: Used to modify the URL dynamically.
 
@@ -86,7 +86,7 @@ The `processResponse` method handles the response received from the server after
     return original;
 }
 ```
-This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update, Delete) actions using the `CustomAdaptor` by extending the `ODataV4Adaptor` in your Syncfusion Vue Grid.
+This guide provides detailed instructions on binding data and performing CRUD (Create, Read, Update and Delete) actions using the `CustomAdaptor` by extending the `ODataV4Adaptor` in your Syncfusion Vue Grid.
 
 ## Creating an Custom service
 
@@ -216,7 +216,7 @@ After running the application, you can verify that the server-side API controlle
 
 ## Connecting Syncfusion Vue Grid to an Custom service extending the ODataV4 service
 
-To integrate the Syncfusion Grid component into your Vue and ASP.NET Core project using Visual Studio, follow the below steps:
+To integrate the Syncfusion Grid into your Vue and ASP.NET Core project using Visual Studio, follow the below steps:
 
 **Step 1: Install Syncfusion Package**
 
@@ -263,7 +263,7 @@ Create a component file (e.g., App.vue). Then, import `DataManager` and `ODataV4
 
 {% tabs %}
 {% highlight js tabtitle="CustomAdaptor.js" %}
-import { ODataV4Adaptor } from '@syncfusion/ej2-data';
+import { DataManager, ODataV4Adaptor, Query } from '@syncfusion/ej2-data';
 import { setValue } from '@syncfusion/ej2-base';
 export default class CustomAdaptor extends ODataV4Adaptor {
  	processQuery(dm, query) {
@@ -301,7 +301,7 @@ In your component file (e.g., App.vue), import `DataManager` from `@syncfusion/e
                 <e-column field="SNo" headerText="SNo" width="120"></e-column>
 				<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 				<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-				<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+				<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 				<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 			</e-columns>
 		</ejs-grid>
@@ -336,7 +336,7 @@ In your component file (e.g., App.vue), import `DataManager` from `@syncfusion/e
           <e-column field="SNo" headerText="SNo" width="120"></e-column>
 			<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 			<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-			<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+			<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 			<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 		</e-columns>
 	</ejs-grid>
@@ -426,7 +426,7 @@ builder.Services.AddControllers().AddOData(
 			<e-columns>
 				<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 				<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-				<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+				<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 				<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 			</e-columns>
 		</ejs-grid>
@@ -461,7 +461,7 @@ builder.Services.AddControllers().AddOData(
 		<e-columns>
 			<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 			<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-			<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+			<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 			<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 		</e-columns>
 	</ejs-grid>
@@ -524,7 +524,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Create an ODataConventionModelBuilder to build the OData model.
 var modelBuilder = new ODataConventionModelBuilder();
 
-// Register the "Orders" entity set with the OData model builder.
+// Register the orders entity set with the OData model builder.
 modelBuilder.EntitySet<OrdersDetails>("Orders");
 
 // Add services to the container.
@@ -543,7 +543,7 @@ builder.Services.AddControllers().AddOData(
 			<e-columns>
 				<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 				<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-				<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+				<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 				<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 			</e-columns>
 		</ejs-grid>
@@ -579,7 +579,7 @@ builder.Services.AddControllers().AddOData(
 		<e-columns>
 			<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 			<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-			<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+			<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 			<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 		</e-columns>
 	</ejs-grid>
@@ -656,7 +656,7 @@ builder.Services.AddControllers().AddOData(
 			<e-columns>
 				<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 				<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-				<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+				<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 				<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 			</e-columns>
 		</ejs-grid>
@@ -691,7 +691,7 @@ builder.Services.AddControllers().AddOData(
 		<e-columns>
 			<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 			<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-			<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+			<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 			<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 		</e-columns>
 	</ejs-grid>
@@ -775,7 +775,7 @@ builder.Services.AddControllers().AddOData(
 			<e-columns>
 				<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 				<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-				<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+				<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 				<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 			</e-columns>
 		</ejs-grid>
@@ -810,7 +810,7 @@ builder.Services.AddControllers().AddOData(
 		<e-columns>
 			<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 			<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
-			<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+			<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 			<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 		</e-columns>
 	</ejs-grid>
@@ -857,7 +857,7 @@ builder.Services.AddControllers().AddOData(
 
 ## Handling CRUD operations
 
-To manage CRUD (Create, Read, Update, Delete) operations using CustomAdaptor, follow the provided guide for configuring the Syncfusion Vue Grid for [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in your server application. This controller processes HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
+To manage CRUD (Create, Read, Update and Delete) operations using CustomAdaptor, follow the provided guide for configuring the Syncfusion Vue Grid for [editing](https://ej2.syncfusion.com/vue/documentation/grid/editing/edit) and utilize the sample implementation of the `OrdersController` in your server application. This controller processes HTTP requests for CRUD operations, including GET, POST, PATCH, and DELETE.
 
 To enable CRUD operations in the Syncfusion Grid within an Vue application, follow the below steps:
 
@@ -867,9 +867,9 @@ To enable CRUD operations in the Syncfusion Grid within an Vue application, foll
 	<div id="app">
 		<ejs-grid :dataSource='data' :editSettings='editSettings' height='270' :toolbar='toolbar'>
 			<e-columns>
-				 <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' :validationRules='orderIDRules' width=100></e-column>
-        <e-column field='CustomerID' headerText='Customer ID' :validationRules='customerIDRules' width=120></e-column>
-				<e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+				<e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' :validationRules='orderIDRules' width=100></e-column>
+        		<e-column field='CustomerID' headerText='Customer ID' :validationRules='customerIDRules' width=120></e-column>
+				<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 				<e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 			</e-columns>
 		</ejs-grid>
@@ -908,7 +908,7 @@ To enable CRUD operations in the Syncfusion Grid within an Vue application, foll
 		<e-columns>
 		  <e-column field='OrderID' headerText='Order ID' textAlign='Right' :isPrimaryKey='true' :validationRules='orderIDRules' width=100></e-column>
           <e-column field='CustomerID' headerText='Customer ID' :validationRules='customerIDRules' width=120></e-column>
-		  <e-column field='ShipCity' headerText='Ship City' width='150'></e-column>
+		  <e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
 		  <e-column field='ShipCountry' headerText='Ship Country' width='150'></e-column>
 		</e-columns>
 	</ejs-grid>
@@ -955,7 +955,7 @@ To enable CRUD operations in the Syncfusion Grid within an Vue application, foll
 {% endhighlight %}
 {% endtabs %}
 
-> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) for the Grid component. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
+> Normal/Inline editing is the default edit [mode](https://ej2.syncfusion.com/vue/documentation/api/grid/editSettings/#mode) for the Grid. To enable CRUD operations, ensure that the [isPrimaryKey](https://ej2.syncfusion.com/vue/documentation/api/grid/column/#isprimarykey) property is set to **true** for a specific Grid column, ensuring that its value is unique.
 
 **Insert Record**
 
