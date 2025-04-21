@@ -333,7 +333,7 @@ In your component file (e.g., App.vue), import `DataManager` from `@syncfusion/e
 <template>
 	<ejs-grid :dataSource='data'>
 		<e-columns>
-          <e-column field="SNo" headerText="SNo" width="120"></e-column>
+          	<e-column field="SNo" headerText="SNo" width="120"></e-column>
 			<e-column field='OrderID' headerText='Order ID' width='120' isPrimaryKey="true"></e-column>
 			<e-column field='CustomerID' headerText='Customer ID' width='160'></e-column>
 			<e-column field='EmployeeID' headerText='Employee ID' width='150'></e-column>
