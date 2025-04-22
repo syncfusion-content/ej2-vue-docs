@@ -1322,6 +1322,8 @@ When you run the application, the resultant Syncfusion Vue Grid will look like t
 
 ![Grid bound with MySQL Server data](../images/DB-grid-action.gif)
 
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-vue-grid/tree/master/Binding%20MySQL%20database%20using%20UrlAdaptor).
+
 ## Binding data from MySQL Server using CustomAdaptor
 
 This section describes step by step process how to retrieve data from a MySQL Server using `CustomAdaptor` and bind it to the Syncfusion Vue Grid.
@@ -2650,3 +2652,5 @@ public class CRUDModel<T> where T : class
 {% endtabs %}
 
 ![Grid bound with MySQL Server data](../images/DB-grid-action.gif)
+
+> Please find the sample in this [GitHub location](https://github.com/SyncfusionExamples/connecting-databases-to-vue-grid/tree/master/Binding%20MySQL%20database%20using%20CustomAdaptor).
